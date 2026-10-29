@@ -1,0 +1,1778 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utilities · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1580 · <code>docs2/comp-utilities</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a class="is-current" style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Compositor › Header › Add Menu › Utilities</div><h1 class="pv-title">Utilities</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 33 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-utilities">Add menu - Utilities</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/add-menu-utilities.png" alt="Add menu - Utilities" loading="lazy"><figcaption>Add menu - Utilities</figcaption></figure>
+<p>Here you find nodes that are used as utilities.</p>
+<h3 id="implicit-conversion">Implicit Conversion</h3>
+<p>Changes a value from one socket type to another, the same way Bforartists does it by itself when you connect sockets of different types. Use it to make the conversion visible and to choose the target type yourself, for example from a color to a single number.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="value">Value</h5>
+<p>The value to convert.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="data-type">Data Type</h5>
+<p>The type to convert to.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="value-2">Value</h5>
+<p>The converted value.</p>
+<h3 id="levels">Levels</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/levels.png" alt="Levels" loading="lazy"></figure>
+<p>The Levels Node reads the inputs color channels and outputs analytical values. It’s useful for evaluating image brightness and contrast, and for driving effects based on image intensity.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="image">Image</h5>
+<p>The image input.</p>
+<h4 id="properties-2">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/properties.png" alt="Properties" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel</td>
+<td>The Red, Green, Blue or Luminance channels</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>1D values based on the levels of an image.</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>The mean is the average value of all image pixels in specified channel (combined, red, green, blue, luminance). It tells you how dark or bright the image is and can be used as such for setups that depend on how is input “bright” or “dark”.</td>
+</tr>
+<tr>
+<td>Standard Deviation</td>
+<td>How much those pixel values differ from the mean. A low standard deviation indicates that the pixel values tend to be very close to the mean. A high standard deviation indicates that the values are spread out over a large range of values. The visualization of such data is just a gray rectangle.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normalize">Normalize</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/normalize.png" alt="Normalize" loading="lazy"></figure>
+<p>Find the minimum and maximum values of a single channel. Then map the values to a range of 0 and 1.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Value</strong>: Standard value input.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Value</strong>: Standard value output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="random-value">Random Value</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/random-value.png" alt="Random Value" loading="lazy"></figure>
+<p>The Random Value node gives a random value for each ID. Use it to vary an effect between images or between values. The same ID and seed always give the same result. Every input can be an image or a single value, and images are processed pixel by pixel.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="min">Min</h5>
+<p>The lowest value that can be returned (default 0). It appears for Float, Integer and Vector.</p>
+<h5 id="max">Max</h5>
+<p>The highest value that can be returned (default 1.0 for Float, 1.0 on each axis for Vector, 100 for Integer). It appears for Float, Integer and Vector.</p>
+<h5 id="probability">Probability</h5>
+<p>The chance that the result is true, from 0.0 to 1.0 (default 0.5). It replaces Min and Max for Boolean.</p>
+<h5 id="id">ID</h5>
+<p>Gives each value its own random number (default 0). In the Compositor it is a plain value input. Connect an image here, for example one with IDs, to get a different random value per pixel.</p>
+<h5 id="seed">Seed</h5>
+<p>Changes the whole set of random values at once (default 0).</p>
+<h4 id="properties-3">Properties</h4>
+<h5 id="data-type-2">Data Type</h5>
+<p>The type of the random value: Float, Integer, Boolean or Vector.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="value-3">Value</h5>
+<p>The random value, in the chosen data type.</p>
+<h3 id="split">Split</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/split.png" alt="Split" loading="lazy"></figure>
+<p>Allows to combine two images horizontally or vertically</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Position</strong>: Line position where the image should be split. · <strong>Rotation</strong>: Line angle where the image should be split. · <strong>Image</strong>: The first image. · <strong>Image</strong>: The second image.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Image</strong>: Image output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="switch">Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
+<p>The Switch node is akin to a boolean, where you can use a toggle to choose what is shown with on or off.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Switch</strong>: The toggle that turns the switch on or off resulting in the final output being whatever is in the on or off input.</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td><strong>Off</strong>: The image that is shown when the toggle is off. · <strong>On</strong>: The image that is shown when the toggle is on. · <strong>Image</strong>: Standard RGB image output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="index-switch">Index Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
+<p>Choose between an arbitrary number of values with an index.</p>
+<h4 id="properties-4">Properties</h4>
+<h5 id="data-type-3">Data Type</h5>
+<p>What data type to evaluate.</p>
+<h4 id="inputs-4">Inputs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/inputs.png" alt="Inputs" loading="lazy"></figure>
+<p>The content changes. dependant of the data type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Index</td>
+<td>The index input value.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>The 0 value</td>
+</tr>
+<tr>
+<td>1</td>
+<td>The 1 value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output">Output</h4>
+<h5 id="output-2">Output</h5>
+<p>The output index value.</p>
+<h3 id="menu-switch">Menu Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
+<p>Select from multiple inputs by name.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="data-type-4">Data Type</h5>
+<p>What data type to evaluate.</p>
+<h4 id="inputs-5">Inputs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/inputs.png" alt="Inputs" loading="lazy"></figure>
+<p>The content changes. dependant of the data type.</p>
+<h5 id="menu-input">Menu input</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/menu-input.png" alt="Menu input" loading="lazy"></figure>
+<p>The default menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>The A input.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>The B input.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output-3">Output</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output</td>
+<td>The output string.</td>
+</tr>
+<tr>
+<td>A</td>
+<td>The A output</td>
+</tr>
+<tr>
+<td>B</td>
+<td>The B output</td>
+</tr>
+</tbody>
+</table>
+<h3 id="switch-stereo-view">Switch Stereo View</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/switch-stereo-view.png" alt="Switch Stereo View" loading="lazy"></figure>
+<p>The Switch View node combines the views (left and right) into a single Stereo 3D output. This can be useful if for example, you need to treat the view as separate images by combining each of the views.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Left</strong>: Left-eye image input. · <strong>Right</strong>: Right-eye image input.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Image</strong>: Stereo 3D image output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relative-to-pixel">Relative to Pixel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/relative-to-pixel.png" alt="Relative to Pixel" loading="lazy"></figure>
+<p>The <strong>Relative to Pixel</strong> node converts values expressed as <strong>relative factors</strong> (e.g., percentages of image size) into <strong>absolute values</strong>. This is especially useful when working with nodes that require pixel-based inputs, such as filters or masks, while still allowing for resolution-independent setups.</p>
+<p>Example: Converting a Value of 10 Using “Per Dimension”</p>
+<p>Let’s say you’re working with an image that’s 1920 pixels wide and 1080 pixels tallwith the following input value and properties.</p>
+<ul>
+<li><strong>Mode</strong>: Per Dimension</li>
+<li><strong>Input Value</strong>: <em>10%</em> (or <em>0.10</em> as a relative value)</li>
+<li><strong>Value Type</strong>: 2D Vector <em>(0.10, 0.10)</em></li>
+</ul>
+<p>Using **Per Dimension **type, each component of the vector is multiplied by its respective X and Y image dimension:</p>
+<ul>
+<li><strong>X = 0.10 × 1920 = 192 pixels</strong></li>
+<li><strong>Y = 0.10 × 1080 = 108 pixelsResulting Pixel Value:</strong> <em>(192, 108)</em></li>
+</ul>
+<h4 id="inputs-6">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>The input float value to convert. This would be your absolute value.</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>The reference image used to determine pixel dimensions. If not connected, the active compositing image is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-6">Properties</h4>
+<h5 id="data-type-5">Data Type</h5>
+<p>Specifies whether the input is a <strong>Float</strong> or a <strong>Vector</strong>. This affects how the conversion is applied.</p>
+<h5 id="reference-dimension">Reference Dimension</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities/reference-dimension.png" alt="Reference Dimension" loading="lazy"></figure>
+<p>Determines how the relative value is interpreted.</p>
+<p><strong>Per Dimension</strong>: Converts each component (X and Y) relative to its corresponding image dimension.</p>
+<p><strong>X</strong>: Converts the value relative to the image width.</p>
+<p><strong>Y</strong>: Converts the value relative to the image height.</p>
+<p><strong>Greater</strong>: Uses the larger of the image’s width or height as the reference.</p>
+<p><strong>Smaller</strong>: Uses the smaller of the image’s width or height.</p>
+<p><strong>Diagonal</strong>: Uses the diagonal length of the image as the reference.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="value-4">Value</h5>
+<p>The converted float value, based on the selected mode and input type.</p>
+<h1 id="math">Math</h1>
+<h2 id="add-menu-utilities-math">Add menu - Utilities - Math</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
+<h3 id="bit-math">Bit Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/bit-math.png" alt="Bit Math" loading="lazy"></figure>
+<p>The Bit Math node works on the individual bits of whole numbers (32-bit integers). It is useful for packing flags into a single number or for building masks from ID values. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="a">A</h5>
+<p>The integer to work on (default 0).</p>
+<h5 id="b">B</h5>
+<p>The second integer (default 0). It is not shown for Not, Shift and Rotate.</p>
+<h5 id="shift">Shift</h5>
+<p>How many bits to shift or rotate A by, from -31 to 31 (default 0). It only appears for Shift and Rotate.</p>
+<h4 id="properties-7">Properties</h4>
+<h5 id="operation">Operation</h5>
+<p>Chooses the bit operation.</p>
+<ul>
+<li><strong>And</strong>: A bit is set when it is set in both A and B.</li>
+<li><strong>Or</strong>: A bit is set when it is set in A or in B.</li>
+<li><strong>Exclusive Or</strong>: A bit is set when it is set in only one of A and B.</li>
+<li><strong>Not</strong>: Flips every bit of A. In decimal this is the same as -A - 1.</li>
+<li><strong>Shift</strong>: Moves the bits of A by the Shift amount. Positive values shift left, negative values shift right.</li>
+<li><strong>Rotate</strong>: Like Shift, but the bits that fall off one end come back in at the other end. Positive values rotate left, negative values rotate right.</li>
+</ul>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="value-5">Value</h5>
+<p>The resulting integer.</p>
+<h3 id="boolean-math">Boolean Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/boolean-math.png" alt="Boolean Math" loading="lazy"></figure>
+<p>The Boolean Math node combines true and false values with a logical operation. Use it to combine masks or conditions, for example to switch an effect on only when two conditions are both true. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="first-boolean">First Boolean</h5>
+<p>The first true or false value (default false).</p>
+<h5 id="second-boolean">Second Boolean</h5>
+<p>The second true or false value (default false). It is not shown for Not.</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="operation-2">Operation</h5>
+<p>Chooses the logical operation.</p>
+<ul>
+<li><strong>And</strong>: True when both inputs are true.</li>
+<li><strong>Or</strong>: True when at least one input is true.</li>
+<li><strong>Not</strong>: The opposite of the input.</li>
+<li><strong>Not And</strong>: True when at least one input is false.</li>
+<li><strong>Nor</strong>: True when both inputs are false.</li>
+<li><strong>Equal</strong>: True when both inputs are the same.</li>
+<li><strong>Not Equal</strong>: True when the inputs are different.</li>
+<li><strong>Imply</strong>: True unless the first input is true and the second is false.</li>
+<li><strong>Subtract</strong>: True when the first input is true and the second is false.</li>
+</ul>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="boolean">Boolean</h5>
+<p>The result of the operation.</p>
+<h3 id="clamp">Clamp</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
+<p>The <strong>Clamp</strong> node restricts a value to lie within a specified range. It’s commonly used in compositing to prevent values from exceeding a desired minimum or maximum, which helps avoid unwanted brightness spikes or clipping in image processing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Value</strong>: Standard Value input. (Value refers to each vector in the set.)</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><strong>Clamp Type</strong>: A dropdown that determines how the clamping is applied: Min / Max or Range. · <strong>Min / Max</strong>: The minimum and maximum allowed value. Any input lower or higher than this will be lowered or raised to this value.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Value</strong>: Standard value output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compare">Compare</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/compare.png" alt="Compare" loading="lazy"></figure>
+<p>The Compare node compares two values and outputs true or false. Use it to turn a value into a mask, for example everything brighter than a limit. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="a-2">A</h5>
+<p>The first value. Its type follows the Input Type property.</p>
+<h5 id="b-2">B</h5>
+<p>The second value. Its type follows the Input Type property.</p>
+<h5 id="c">C</h5>
+<p>The value that the dot product of A and B is compared against (default 0.9). It only appears for Vector inputs in Dot Product mode.</p>
+<h5 id="angle">Angle</h5>
+<p>The angle that the angle between A and B is compared against (default 5 degrees). It only appears for Vector inputs in Direction mode.</p>
+<h5 id="epsilon">Epsilon</h5>
+<p>How close two values must be to count as equal (default 0.001). It only appears for Equal and Not Equal with Float, Vector and Color inputs.</p>
+<h4 id="properties-9">Properties</h4>
+<h5 id="input-type">Input Type</h5>
+<p>The type of the values to compare. In the Compositor you can choose Float, Integer, Vector, Color, String, Object or Font.</p>
+<h5 id="mode">Mode</h5>
+<p>Only for Vector inputs. It decides what part of the vectors is compared.</p>
+<ul>
+<li><strong>Element-Wise</strong>: Compares each of the three elements. The result is true only when the comparison holds for all of them.</li>
+<li><strong>Length</strong>: Compares the lengths of the vectors.</li>
+<li><strong>Average</strong>: Compares the average of the elements of each vector.</li>
+<li><strong>Dot Product</strong>: Compares the dot product of A and B with C.</li>
+<li><strong>Direction</strong>: Compares the angle between A and B with Angle.</li>
+</ul>
+<h5 id="operation-3">Operation</h5>
+<p>Chooses the comparison. The choices depend on the Input Type.</p>
+<ul>
+<li><strong>Less Than</strong>: True when A is smaller than B. For Float, Integer and Vector.</li>
+<li><strong>Less Than or Equal</strong>: True when A is smaller than B or equal to it. For Float, Integer and Vector.</li>
+<li><strong>Greater Than</strong>: True when A is greater than B. For Float, Integer and Vector.</li>
+<li><strong>Greater Than or Equal</strong>: True when A is greater than B or equal to it. For Float, Integer and Vector.</li>
+<li><strong>Equal</strong>: True when both inputs are equal. Float, Vector and Color values only need to be approximately equal, within Epsilon. Available for every type.</li>
+<li><strong>Not Equal</strong>: True when the inputs are not equal. Available for every type.</li>
+<li><strong>Brighter</strong>: True when A is brighter than B. For Color only.</li>
+<li><strong>Darker</strong>: True when A is darker than B. For Color only.</li>
+</ul>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="result">Result</h5>
+<p>True or false.</p>
+<h3 id="float-curve">Float Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
+<p>The Float Curves node maps an input value to a curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Factor</strong>: Input factor.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Standard float value input.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-10">Properties</h4>
+<h5 id="curve-edit-field">Curve edit field</h5>
+<p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
+<h5 id="selecting-points">Selecting Points</h5>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/comp-utilities/docs2/content/interface/properties.md#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h5 id="adding-points">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Tools is a menu where you can find some curve related tools. · <strong>Reset View</strong>: Resets the curve windows zoom. · <strong>Extend horizontal</strong>: Extends the curve before the first curve point and behind the last curve point horizontally. · <strong>Extend extrapolated</strong>: Extends the curve before the first curve point and behind the last curve point extrapolated. · <strong>Reset Curve</strong>: Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clipping-options">Clipping Options</h5>
+<h5 id="use-clipping">Use Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="delete-points">Delete Points</h5>
+<p>Deletes selected curve points.</p>
+<h5 id="vector-handle">Vector Handle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y value</td>
+<td>The position of the selected curve point.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected curve point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="value-6">Value</h5>
+<p>Standard float value output.</p>
+<h3 id="float-to-integer">Float to Integer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/float-to-integer.png" alt="Float to Integer" loading="lazy"></figure>
+<p>The Float to Integer node turns a number with decimals into a whole number. You choose how it rounds. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="float">Float</h5>
+<p>The number to convert (default 0.0).</p>
+<h4 id="properties-11">Properties</h4>
+<h5 id="rounding-mode">Rounding Mode</h5>
+<p>How the decimals are removed.</p>
+<ul>
+<li><strong>Round</strong>: Rounds up or down to the nearest integer.</li>
+<li><strong>Floor</strong>: Rounds down to the next smaller integer.</li>
+<li><strong>Ceiling</strong>: Rounds up to the next larger integer.</li>
+<li><strong>Truncate</strong>: Rounds to the closest integer in the direction of zero. That is floor for positive values and ceiling for negative values.</li>
+</ul>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="integer">Integer</h5>
+<p>The whole number.</p>
+<h3 id="hash-value">Hash Value</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/hash-value.png" alt="Hash Value" loading="lazy"></figure>
+<p>The Hash Value node turns any value into a random-looking whole number. The same value and seed always give the same number, so it is handy for giving each ID, pixel value or name its own stable random number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="value-7">Value</h5>
+<p>The value to hash. Its type follows the Data Type property.</p>
+<h5 id="seed-2">Seed</h5>
+<p>Changes the result without changing the value (default 0).</p>
+<h4 id="properties-12">Properties</h4>
+<h5 id="data-type-6">Data Type</h5>
+<p>The type of the Value input. You can choose Float, Integer, Vector, Color, Rotation, Matrix or String. The default is Integer.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="hash">Hash</h5>
+<p>The random-looking integer.</p>
+<h3 id="integer-math">Integer Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/integer-math.png" alt="Integer Math" loading="lazy"></figure>
+<p>The Integer Math node performs math operations on whole numbers. The result is always a whole number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="first-value">First Value</h5>
+<p>The first number. It is called Base for Power.</p>
+<h5 id="second-value">Second Value</h5>
+<p>The second number (default 0). It is called Multiplier for Multiply Add and Exponent for Power. It is not shown for Absolute, Negate and Sign. For Multiply, Divide, Multiply Add, the Divide variants and both Modulo operations, a node added from the menu starts with 1.</p>
+<h5 id="third-value">Third Value</h5>
+<p>The third number, called Addend. It only appears for Multiply Add.</p>
+<h4 id="properties-13">Properties</h4>
+<h5 id="operation-4">Operation</h5>
+<p>Chooses the operation.</p>
+<ul>
+<li><strong>Add</strong>: A + B.</li>
+<li><strong>Subtract</strong>: A - B.</li>
+<li><strong>Multiply</strong>: A * B.</li>
+<li><strong>Divide</strong>: A / B.</li>
+<li><strong>Multiply Add</strong>: A * B + C.</li>
+<li><strong>Absolute</strong>: The non-negative value of A.</li>
+<li><strong>Negate</strong>: -A.</li>
+<li><strong>Power</strong>: A to the power of B.</li>
+<li><strong>Minimum</strong>: The smaller of A and B.</li>
+<li><strong>Maximum</strong>: The larger of A and B.</li>
+<li><strong>Sign</strong>: The sign of A: -1, 0 or 1.</li>
+<li><strong>Divide Round</strong>: Divides and rounds the result toward zero.</li>
+<li><strong>Divide Floor</strong>: Divides and rounds down to the largest integer that is smaller than or equal to the result.</li>
+<li><strong>Divide Ceiling</strong>: Divides and rounds up to the smallest integer that is greater than or equal to the result.</li>
+<li><strong>Floored Modulo</strong>: A modulo that repeats the same way for negative and positive numbers.</li>
+<li><strong>Modulo</strong>: The remainder of A / B.</li>
+<li><strong>Greatest Common Divisor</strong>: The largest positive integer that divides both A and B. For example GCD(8, 12) = 4.</li>
+<li><strong>Least Common Multiple</strong>: The smallest positive integer that both A and B divide. For example LCM(6, 10) = 30.</li>
+</ul>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="value-8">Value</h5>
+<p>The resulting integer.</p>
+<h3 id="map-range">Map Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
+<p>This node allows to convert (map) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usage</td>
+<td>One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations.</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td>This chapter deals with the input type Float. The same node exists in the Vector menu too. With preselected type Vector. · <strong>Value</strong>: Standard value input. · <strong>From Min/Max</strong>: Start/End of the input value range. · <strong>To Min/Max</strong>: Start/End of the destination range. · <strong>Steps</strong>: The amount of steps. <strong>Note:</strong> <em>Only shows when using the Stepped Linear interpolation type.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-14">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="data-type-7">Data Type</h5>
+<p>Selects between float or vector values to map the range.</p>
+<h5 id="interpolation-type">Interpolation Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<p>Selects between a linear, stepped linear, smooth step or smoother step interpolation types.</p>
+<h5 id="clamp-2">Clamp</h5>
+<p>Clamps values to Min/Max of the destination range.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="value-9">Value</h5>
+<p>Standard value output.</p>
+<h3 id="math-2">Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
+<p>The Math Node performs math operations.</p>
+<h4 id="inputs-13">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>First numerical value. The trigonometric functions accept values in radians.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-15">Properties</h4>
+<h5 id="operation-5">Operation</h5>
+<p>Here you can choose what mathematical operation to perform.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
+<h5 id="clamp-3">Clamp</h5>
+<p>Limits the output to the range (0 to 1). See clamp.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="value-10">Value</h5>
+<p>Numerical value output.</p>
+<h3 id="mix">Mix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
+<p>The Mix Node mixes float values by working on the individual and corresponding pixels of the two input values. Called “Mix” in the shader, Geometry Nodes and texture context.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Factor</strong>: Controls the amount of influence the node exerts on the output Value. · <strong>Value A</strong>: The back value. · <strong>Value B</strong>: The top value.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><strong>Clamp Factor</strong>: Limit the highest color value to not exceed 1.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Result</strong>: Value output.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="matrix">Matrix</h1>
+<h2 id="add-menu-utilities-matrix">Add menu - Utilities - Matrix</h2>
+<p>A matrix is a grid of four by four numbers that stores a transform: where something is, how it is turned and how big it is, all in one value. The Matrix nodes build these values, take them apart and combine them. They are the same nodes as in the Geometry Node editor.</p>
+<h3 id="combine-matrix">Combine Matrix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/combine-matrix.png" alt="Combine Matrix" loading="lazy"></figure>
+<p>Builds a matrix from sixteen separate numbers. Use it when you worked the numbers out yourself, from other nodes or a formula, and need them as one matrix. The numbers fill the matrix column by column: four columns with four rows each.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="column-1-to-column-4">Column 1 to Column 4</h5>
+<p>Each column is a collapsible panel with four values, <strong>Row 1</strong> to <strong>Row 4</strong>.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="matrix-2">Matrix</h5>
+<p>The finished matrix.</p>
+<h3 id="combine-transform">Combine Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/combine-transform.png" alt="Combine Transform" loading="lazy"></figure>
+<p>Builds a matrix from a location, a rotation and a scale. This is the easy way to make a transform: say where it is, how it is turned and how big it is, and the node does the matrix math.</p>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="translation">Translation</h5>
+<p>The location, as a vector.</p>
+<h5 id="rotation">Rotation</h5>
+<p>The rotation.</p>
+<h5 id="scale">Scale</h5>
+<p>The size along each axis. 1 keeps the original size.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="transform">Transform</h5>
+<p>The matrix that holds all three.</p>
+<h3 id="matrix-determinant">Matrix Determinant</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/matrix-determinant.png" alt="Matrix Determinant" loading="lazy"></figure>
+<p>Calculates one number from a matrix, its determinant, which tells how the matrix changes volume. A value of 0 means the matrix squashes space flat and cannot be undone; a negative value means it mirrors. Use it to check a matrix before you invert it.</p>
+<h4 id="inputs-16">Inputs</h4>
+<h5 id="matrix-3">Matrix</h5>
+<p>The matrix to measure.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="determinant">Determinant</h5>
+<p>The determinant as a single value.</p>
+<h3 id="invert-matrix">Invert Matrix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/invert-matrix.png" alt="Invert Matrix" loading="lazy"></figure>
+<p>Gives the matrix that undoes the input matrix. If a matrix moves, turns and scales a point, its inverse puts the point back. Use it to go from world space to local space and back.</p>
+<h4 id="inputs-17">Inputs</h4>
+<h5 id="matrix-4">Matrix</h5>
+<p>The matrix to invert.</p>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="matrix-5">Matrix</h5>
+<p>The inverted matrix.</p>
+<h5 id="invertible">Invertible</h5>
+<p>On when the matrix could be inverted. A matrix that flattens space has no inverse.</p>
+<h3 id="matrix-svd">Matrix SVD</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/matrix-svd.png" alt="Matrix SVD" loading="lazy"></figure>
+<p>Splits a matrix into three parts: a rotation <strong>U</strong>, a scale <strong>S</strong> and a second rotation <strong>V</strong>. Multiplying them back together gives the original matrix. Use it to analyse what a matrix does, for example how much it stretches along each axis.</p>
+<h4 id="inputs-18">Inputs</h4>
+<h5 id="matrix-6">Matrix</h5>
+<p>The matrix to split.</p>
+<h4 id="outputs-17">Outputs</h4>
+<h5 id="u">U</h5>
+<p>The first rotation, as a matrix.</p>
+<h5 id="s">S</h5>
+<p>The scale along each axis, as a vector.</p>
+<h5 id="v">V</h5>
+<p>The second rotation, as a matrix.</p>
+<h3 id="multiply-matrices">Multiply Matrices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/multiply-matrices.png" alt="Multiply Matrices" loading="lazy"></figure>
+<p>Joins two transforms into one. The result does the same as applying one matrix and then the other. The order matters: swapping the two inputs gives a different result.</p>
+<h4 id="inputs-19">Inputs</h4>
+<h5 id="matrix-7">Matrix</h5>
+<p>The first matrix.</p>
+<h5 id="matrix-second">Matrix (second)</h5>
+<p>The second matrix.</p>
+<h4 id="outputs-18">Outputs</h4>
+<h5 id="matrix-8">Matrix</h5>
+<p>The combined matrix.</p>
+<h3 id="project-point">Project Point</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/project-point.png" alt="Project Point" loading="lazy"></figure>
+<p>Moves a point through a matrix and then divides by the depth, the way a camera turns a 3D point into a position on its picture. Use it with the Projection Matrix of the Camera Info node to find where a point of the scene lands in the frame.</p>
+<h4 id="inputs-20">Inputs</h4>
+<h5 id="vector">Vector</h5>
+<p>The point to project.</p>
+<h5 id="transform-2">Transform</h5>
+<p>The projection matrix.</p>
+<h4 id="outputs-19">Outputs</h4>
+<h5 id="vector-2">Vector</h5>
+<p>The projected point.</p>
+<h3 id="separate-matrix">Separate Matrix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/separate-matrix.png" alt="Separate Matrix" loading="lazy"></figure>
+<p>The opposite of Combine Matrix: reads the sixteen numbers out of a matrix. Use it when you need one value of a transform, for example its location, which sits in the fourth column.</p>
+<h4 id="inputs-21">Inputs</h4>
+<h5 id="matrix-9">Matrix</h5>
+<p>The matrix to read.</p>
+<h4 id="outputs-20">Outputs</h4>
+<h5 id="column-1-to-column-4-2">Column 1 to Column 4</h5>
+<p>Each column holds four values, <strong>Row 1</strong> to <strong>Row 4</strong>.</p>
+<h3 id="separate-transform">Separate Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/separate-transform.png" alt="Separate Transform" loading="lazy"></figure>
+<p>The opposite of Combine Transform: reads the location, rotation and scale out of a matrix. Use it to get a clean location or size from a transform that came from an object or a camera.</p>
+<h4 id="inputs-22">Inputs</h4>
+<h5 id="transform-3">Transform</h5>
+<p>The matrix to read.</p>
+<h4 id="outputs-21">Outputs</h4>
+<h5 id="translation-2">Translation</h5>
+<p>The location, as a vector.</p>
+<h5 id="rotation-2">Rotation</h5>
+<p>The rotation.</p>
+<h5 id="scale-2">Scale</h5>
+<p>The size along each axis.</p>
+<h3 id="transform-direction">Transform Direction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transform-direction.png" alt="Transform Direction" loading="lazy"></figure>
+<p>Turns and scales a direction with a matrix, but ignores the matrix's location. A direction has no position, so moving it would be wrong. Use it to bring a direction such as a normal into another space.</p>
+<h4 id="inputs-23">Inputs</h4>
+<h5 id="direction">Direction</h5>
+<p>The direction to transform.</p>
+<h5 id="transform-4">Transform</h5>
+<p>The matrix to apply.</p>
+<h4 id="outputs-22">Outputs</h4>
+<h5 id="direction-2">Direction</h5>
+<p>The transformed direction.</p>
+<h3 id="transform-point">Transform Point</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transform-point.png" alt="Transform Point" loading="lazy"></figure>
+<p>Moves a point with a matrix: it is turned, scaled and moved. Use it to place a position into another space, for example from an object's local space into world space.</p>
+<h4 id="inputs-24">Inputs</h4>
+<h5 id="vector-3">Vector</h5>
+<p>The point to transform.</p>
+<h5 id="transform-5">Transform</h5>
+<p>The matrix to apply.</p>
+<h4 id="outputs-23">Outputs</h4>
+<h5 id="vector-4">Vector</h5>
+<p>The transformed point.</p>
+<h3 id="transpose-matrix">Transpose Matrix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transpose-matrix.png" alt="Transpose Matrix" loading="lazy"></figure>
+<p>Swaps the rows and columns of a matrix. For a matrix that only rotates, the transpose is also its inverse, and it is cheaper to calculate.</p>
+<h4 id="inputs-25">Inputs</h4>
+<h5 id="matrix-10">Matrix</h5>
+<p>The matrix to transpose.</p>
+<h4 id="outputs-24">Outputs</h4>
+<h5 id="matrix-11">Matrix</h5>
+<p>The transposed matrix.</p>
+<h1 id="rotation-3">Rotation</h1>
+<h2 id="add-menu-utilities-rotation">Add menu - Utilities - Rotation</h2>
+<p>A rotation value holds a turn in 3D without fixing how it is written: as angles around X, Y and Z (Euler), as an axis with an angle, or as a quaternion. The Rotation nodes convert between these forms and combine rotations. They are the same nodes as in the Geometry Node editor.</p>
+<h3 id="align-rotation-to-vector">Align Rotation to Vector</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/align-rotation-to-vector.png" alt="Align Rotation to Vector" loading="lazy"><figcaption>Align Rotation to Vector</figcaption></figure>
+<p>Turns a rotation so that one of its axes points along a vector. Use it to make something face a direction, for example a spotlight aimed at a target. The pivot decides which way the rotation swings to get there.</p>
+<h4 id="inputs-26">Inputs</h4>
+<h5 id="rotation-4">Rotation</h5>
+<p>The rotation to start from.</p>
+<h5 id="factor">Factor</h5>
+<p>How much of the alignment is applied. 0 keeps the original rotation, 1 aligns fully.</p>
+<h5 id="vector-5">Vector</h5>
+<p>The direction to point at.</p>
+<h4 id="properties-16">Properties</h4>
+<h5 id="axis">Axis</h5>
+<p>The axis of the rotation that is turned towards the vector: X, Y or Z.</p>
+<h5 id="pivot">Pivot</h5>
+<p>The axis the rotation turns around while it aligns. <strong>Auto</strong> picks the shortest turn; X, Y or Z keep that axis fixed.</p>
+<h4 id="outputs-25">Outputs</h4>
+<h5 id="rotation-5">Rotation</h5>
+<p>The aligned rotation.</p>
+<h3 id="axes-to-rotation">Axes to Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/axes-to-rotation.png" alt="Axes to Rotation" loading="lazy"></figure>
+<p>Builds a rotation from two directions. The primary axis is followed exactly, and the secondary axis is followed as closely as it can be while staying at a right angle. Use it when you know where two axes of a thing should point.</p>
+<h4 id="inputs-27">Inputs</h4>
+<h5 id="primary-axis">Primary Axis</h5>
+<p>The direction the primary axis points to.</p>
+<h5 id="secondary-axis">Secondary Axis</h5>
+<p>The direction the secondary axis should lean towards.</p>
+<h4 id="properties-17">Properties</h4>
+<h5 id="primary-axis-2">Primary Axis</h5>
+<p>Which axis of the rotation follows the primary direction: X, Y or Z.</p>
+<h5 id="secondary-axis-2">Secondary Axis</h5>
+<p>Which axis follows the secondary direction. It has to differ from the primary axis.</p>
+<h4 id="outputs-26">Outputs</h4>
+<h5 id="rotation-6">Rotation</h5>
+<p>The rotation that matches the two directions.</p>
+<h3 id="axis-angle-to-rotation">Axis Angle to Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/axis-angle-to-rotation.png" alt="Axis Angle to Rotation" loading="lazy"><figcaption>Axis Angle to Rotation</figcaption></figure>
+<p>Makes a rotation from an axis and an angle: turn this far around this line. It is the easiest way to describe a single turn around an arbitrary direction.</p>
+<h4 id="inputs-28">Inputs</h4>
+<h5 id="axis-2">Axis</h5>
+<p>The direction of the line to turn around.</p>
+<h5 id="angle-2">Angle</h5>
+<p>How far to turn.</p>
+<h4 id="outputs-27">Outputs</h4>
+<h5 id="rotation-7">Rotation</h5>
+<p>The rotation.</p>
+<h3 id="euler-to-rotation">Euler to Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/euler-to-rotation.png" alt="Euler to Rotation" loading="lazy"></figure>
+<p>Makes a rotation from three angles, one around each of the X, Y and Z axes. This is the way rotations are shown in most fields of the interface.</p>
+<h4 id="inputs-29">Inputs</h4>
+<h5 id="euler">Euler</h5>
+<p>The angles around X, Y and Z.</p>
+<h4 id="outputs-28">Outputs</h4>
+<h5 id="rotation-8">Rotation</h5>
+<p>The rotation.</p>
+<h3 id="invert-rotation">Invert Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/invert-rotation.png" alt="Invert Rotation" loading="lazy"></figure>
+<p>Gives the opposite rotation, the one that turns back what the input turned. Use it to undo a rotation.</p>
+<h4 id="inputs-30">Inputs</h4>
+<h5 id="rotation-9">Rotation</h5>
+<p>The rotation to invert.</p>
+<h4 id="outputs-29">Outputs</h4>
+<h5 id="rotation-10">Rotation</h5>
+<p>The inverted rotation.</p>
+<h3 id="mix-rotation">Mix Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/mix-rotation.png" alt="Mix Rotation" loading="lazy"></figure>
+<p>Blends between two rotations. This is the Mix node set to the Rotation type, so the blend follows the shortest turn from one rotation to the other. Use it to ease from one orientation to another.</p>
+<h4 id="inputs-31">Inputs</h4>
+<h5 id="factor-2">Factor</h5>
+<p>How far to blend. 0 gives A, 1 gives B.</p>
+<h5 id="a-3">A</h5>
+<p>The first rotation.</p>
+<h5 id="b-3">B</h5>
+<p>The second rotation.</p>
+<h4 id="properties-18">Properties</h4>
+<h5 id="clamp-factor">Clamp Factor</h5>
+<p>Keeps the factor between 0 and 1.</p>
+<h4 id="outputs-30">Outputs</h4>
+<h5 id="result-2">Result</h5>
+<p>The blended rotation.</p>
+<h3 id="quaternion-to-rotation">Quaternion to Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/quaternion-to-rotation.png" alt="Quaternion to Rotation" loading="lazy"></figure>
+<p>Makes a rotation from the four numbers of a quaternion. Use it when your rotation comes from software or a file that stores quaternions.</p>
+<h4 id="inputs-32">Inputs</h4>
+<h5 id="w">W</h5>
+<p>The scalar part.</p>
+<h5 id="x">X</h5>
+<p>The X part of the vector.</p>
+<h5 id="y">Y</h5>
+<p>The Y part of the vector.</p>
+<h5 id="z">Z</h5>
+<p>The Z part of the vector.</p>
+<h4 id="outputs-31">Outputs</h4>
+<h5 id="rotation-11">Rotation</h5>
+<p>The rotation.</p>
+<h3 id="rotate-rotation">Rotate Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotate-rotation.png" alt="Rotate Rotation" loading="lazy"></figure>
+<p>Turns a rotation by another rotation. Use it to add a turn to one that already exists, for example a small tilt on top of an orientation.</p>
+<h4 id="inputs-33">Inputs</h4>
+<h5 id="rotation-12">Rotation</h5>
+<p>The rotation to turn.</p>
+<h5 id="rotate-by">Rotate By</h5>
+<p>The turn to add.</p>
+<h4 id="properties-19">Properties</h4>
+<h5 id="rotation-space">Rotation Space</h5>
+<p><strong>Global</strong> turns around the world axes. <strong>Local</strong> turns around the axes of the rotation itself.</p>
+<h4 id="outputs-32">Outputs</h4>
+<h5 id="rotation-13">Rotation</h5>
+<p>The combined rotation.</p>
+<h3 id="rotate-vector">Rotate Vector</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotate-vector.png" alt="Rotate Vector" loading="lazy"></figure>
+<p>Turns a vector by a rotation. Use it to point a direction the way an object is facing.</p>
+<h4 id="inputs-34">Inputs</h4>
+<h5 id="vector-6">Vector</h5>
+<p>The vector to turn.</p>
+<h5 id="rotation-14">Rotation</h5>
+<p>The rotation to apply.</p>
+<h4 id="outputs-33">Outputs</h4>
+<h5 id="vector-7">Vector</h5>
+<p>The turned vector.</p>
+<h3 id="rotation-to-axis-angle">Rotation to Axis Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-axis-angle.png" alt="Rotation to Axis Angle" loading="lazy"><figcaption>Rotation to Axis Angle</figcaption></figure>
+<p>Reads a rotation as an axis and an angle. The opposite of Axis Angle to Rotation.</p>
+<h4 id="inputs-35">Inputs</h4>
+<h5 id="rotation-15">Rotation</h5>
+<p>The rotation to read.</p>
+<h4 id="outputs-34">Outputs</h4>
+<h5 id="axis-3">Axis</h5>
+<p>The line the rotation turns around.</p>
+<h5 id="angle-3">Angle</h5>
+<p>How far it turns.</p>
+<h3 id="rotation-to-euler">Rotation to Euler</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-euler.png" alt="Rotation to Euler" loading="lazy"></figure>
+<p>Reads a rotation as three angles around X, Y and Z. Use it to show or edit a rotation in the familiar way.</p>
+<h4 id="inputs-36">Inputs</h4>
+<h5 id="rotation-16">Rotation</h5>
+<p>The rotation to read.</p>
+<h4 id="outputs-35">Outputs</h4>
+<h5 id="euler-2">Euler</h5>
+<p>The angles around X, Y and Z.</p>
+<h3 id="rotation-to-quaternion">Rotation to Quaternion</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-quaternion.png" alt="Rotation to Quaternion" loading="lazy"></figure>
+<p>Reads a rotation as the four numbers of a quaternion. Use it to hand a rotation to something that works with quaternions.</p>
+<h4 id="inputs-37">Inputs</h4>
+<h5 id="rotation-17">Rotation</h5>
+<p>The rotation to read.</p>
+<h4 id="outputs-36">Outputs</h4>
+<h5 id="w-2">W</h5>
+<p>The scalar part.</p>
+<h5 id="x-2">X</h5>
+<p>The X part of the vector.</p>
+<h5 id="y-2">Y</h5>
+<p>The Y part of the vector.</p>
+<h5 id="z-2">Z</h5>
+<p>The Z part of the vector.</p>
+<h1 id="text">Text</h1>
+<h2 id="add-menu-utilities-text">Add menu - Utilities - Text</h2>
+<p>Text nodes work with strings, pieces of text. In the compositor they build file names and paths, and they make the text for the String to Image node. They are the same nodes as in the Geometry Node editor.</p>
+<h3 id="format-string">Format String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/format-string.png" alt="Format String" loading="lazy"></figure>
+<p>Builds a text from a template with gaps in it. Write the fixed words in the format and put a name in curly brackets wherever a value should go, for example <em>Shot {number}</em>. Each name becomes an input socket. Use it for labels and file names that contain numbers.</p>
+<h4 id="inputs-38">Inputs</h4>
+<h5 id="format">Format</h5>
+<p>The template. Names in curly brackets become inputs.</p>
+<h5 id="section">+</h5>
+<p>Adds another value to fill in.</p>
+<h4 id="outputs-37">Outputs</h4>
+<h5 id="string">String</h5>
+<p>The finished text.</p>
+<h3 id="match-string">Match String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/match-string.png" alt="Match String" loading="lazy"></figure>
+<p>Checks a text against a key and tells you whether it fits. Use it to choose a path in the node tree by the name of something.</p>
+<h4 id="inputs-39">Inputs</h4>
+<h5 id="string-2">String</h5>
+<p>The text to check.</p>
+<h5 id="operation-6">Operation</h5>
+<p>How to compare: <strong>Starts With</strong>, <strong>Ends With</strong> or <strong>Contains</strong>.</p>
+<h5 id="key">Key</h5>
+<p>The text to look for.</p>
+<h4 id="outputs-38">Outputs</h4>
+<h5 id="result-3">Result</h5>
+<p>On when the text matches.</p>
+<h3 id="replace-string">Replace String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/replace-string.png" alt="Replace String" loading="lazy"></figure>
+<p>Swaps every occurrence of one piece of text for another. Use it to clean up a name or to change part of a path.</p>
+<h4 id="inputs-40">Inputs</h4>
+<h5 id="string-3">String</h5>
+<p>The text to change.</p>
+<h5 id="find">Find</h5>
+<p>The part to look for.</p>
+<h5 id="replace">Replace</h5>
+<p>What to put in its place.</p>
+<h4 id="outputs-39">Outputs</h4>
+<h5 id="string-4">String</h5>
+<p>The changed text.</p>
+<h3 id="reverse-string">Reverse String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/reverse-string.png" alt="Reverse String" loading="lazy"></figure>
+<p>Writes a text backwards. Use it for the odd case where the end of a name matters more than the start.</p>
+<h4 id="inputs-41">Inputs</h4>
+<h5 id="string-5">String</h5>
+<p>The text to reverse.</p>
+<h4 id="outputs-40">Outputs</h4>
+<h5 id="string-6">String</h5>
+<p>The reversed text.</p>
+<h3 id="set-string-case">Set String Case</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/set-string-case.png" alt="Set String Case" loading="lazy"></figure>
+<p>Changes a text to all capitals or all small letters. Use it to make names consistent before you compare them.</p>
+<h4 id="inputs-42">Inputs</h4>
+<h5 id="string-7">String</h5>
+<p>The text to change.</p>
+<h5 id="case">Case</h5>
+<p><strong>Uppercase</strong> or <strong>Lowercase</strong>.</p>
+<h4 id="outputs-41">Outputs</h4>
+<h5 id="string-8">String</h5>
+<p>The changed text.</p>
+<h3 id="slice-string">Slice String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/slice-string.png" alt="Slice String" loading="lazy"></figure>
+<p>Cuts a piece out of a text. You say where the piece starts and how long it is. Use it to take a prefix or a number out of a file name.</p>
+<h4 id="inputs-43">Inputs</h4>
+<h5 id="string-9">String</h5>
+<p>The text to cut from.</p>
+<h5 id="position">Position</h5>
+<p>The place where the piece starts, counted from 0.</p>
+<h5 id="length">Length</h5>
+<p>How many characters to keep.</p>
+<h4 id="outputs-42">Outputs</h4>
+<h5 id="string-10">String</h5>
+<p>The piece of text.</p>
+<h3 id="trim-string">Trim String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/trim-string.png" alt="Trim String" loading="lazy"></figure>
+<p>Removes unwanted characters from the start or the end of a text. Use it to strip spaces or a separator from a name.</p>
+<h4 id="inputs-44">Inputs</h4>
+<h5 id="string-11">String</h5>
+<p>The text to trim.</p>
+<h5 id="characters">Characters</h5>
+<p>The characters to remove.</p>
+<h5 id="whitespace">Whitespace</h5>
+<p>Also removes spaces, tabs and line breaks.</p>
+<h5 id="start">Start</h5>
+<p>Trims the start of the text.</p>
+<h5 id="end">End</h5>
+<p>Trims the end of the text.</p>
+<h4 id="outputs-43">Outputs</h4>
+<h5 id="string-12">String</h5>
+<p>The trimmed text.</p>
+<h3 id="find-in-string">Find in String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/find-in-string.png" alt="Find in String" loading="lazy"></figure>
+<p>Looks for a piece of text inside another and tells you where it is and how often it occurs. Use it to test whether a name contains a tag, or to find where to cut it.</p>
+<h4 id="inputs-45">Inputs</h4>
+<h5 id="string-13">String</h5>
+<p>The text to search in.</p>
+<h5 id="search">Search</h5>
+<p>The text to look for.</p>
+<h5 id="mode-2">Mode</h5>
+<p>Where to start looking: <strong>From Start</strong> or from the end.</p>
+<h4 id="outputs-44">Outputs</h4>
+<h5 id="first-found">First Found</h5>
+<p>The position of the first match, counted from 0.</p>
+<h5 id="count">Count</h5>
+<p>How many times the text was found.</p>
+<h3 id="string-length">String Length</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/string-length.png" alt="String Length" loading="lazy"></figure>
+<p>Counts the characters in a text. Use it to check that a name is long enough, or to know how much to cut.</p>
+<h4 id="inputs-46">Inputs</h4>
+<h5 id="string-14">String</h5>
+<p>The text to measure.</p>
+<h4 id="outputs-45">Outputs</h4>
+<h5 id="length-2">Length</h5>
+<p>The number of characters.</p>
+<h3 id="string-to-value">String to Value</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/string-to-value.png" alt="String to Value" loading="lazy"></figure>
+<p>Reads a number from a text. Use it to turn a frame number in a file name back into a value you can calculate with.</p>
+<h4 id="inputs-47">Inputs</h4>
+<h5 id="string-15">String</h5>
+<p>The text to read.</p>
+<h5 id="base">Base</h5>
+<p>The number base, 10 for normal numbers.</p>
+<h4 id="properties-20">Properties</h4>
+<h5 id="data-type-8">Data Type</h5>
+<p>Reads the number as a <strong>Float</strong> or as an <strong>Integer</strong>.</p>
+<h4 id="outputs-46">Outputs</h4>
+<h5 id="value-11">Value</h5>
+<p>The number that was read.</p>
+<h5 id="length-3">Length</h5>
+<p>How many characters of the text were used.</p>
+<h3 id="value-to-string">Value to String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/value-to-string.png" alt="Value to String" loading="lazy"></figure>
+<p>Writes a number as text. Use it to put a frame number or a value into a label or a file name.</p>
+<h4 id="inputs-48">Inputs</h4>
+<h5 id="value-12">Value</h5>
+<p>The number to write.</p>
+<h5 id="decimals">Decimals</h5>
+<p>How many digits to show after the decimal point.</p>
+<h5 id="base-2">Base</h5>
+<p>The number base, 10 for normal numbers.</p>
+<h5 id="padding">Padding</h5>
+<p>The minimum number of digits. Shorter numbers get zeros in front.</p>
+<h4 id="properties-21">Properties</h4>
+<h5 id="data-type-9">Data Type</h5>
+<p>Writes a <strong>Float</strong> or an <strong>Integer</strong>.</p>
+<h4 id="outputs-47">Outputs</h4>
+<h5 id="string-16">String</h5>
+<p>The number as text.</p>
+<h3 id="special-characters">Special Characters</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-text/special-characters.png" alt="Special Characters" loading="lazy"></figure>
+<p>Gives you characters that are hard to type into a text field: a line break and a tab. Use it with Format String to build text over several lines.</p>
+<h4 id="outputs-48">Outputs</h4>
+<h5 id="line-break">Line Break</h5>
+<p>A character that starts a new line.</p>
+<h5 id="tab">Tab</h5>
+<p>A tab character.</p>
+<h1 id="vector-8">Vector</h1>
+<h2 id="add-menu-utilities-vector">Add menu - Utilities - Vector</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
+<p>Here you find mainly nodes for vector data manipulation.</p>
+<h3 id="combine-xyz">Combine XYZ</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
+<p>Same as with Combine RGB node. It combines color values. But instead combining rgb values, which are in the range of 0 to 255, it uses values in the range from 0 to 1.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>X Y and Z</strong>: X, Y and Z values.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Color</strong>: Color output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="map-range-2">Map Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
+<p>This node allows to convert (map) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usage</td>
+<td>One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations.</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td>This chapter deals with the input type Float. The same node exists in the Math menu too. With preselected type Float. · <strong>Vector</strong>: Standard vector input. · <strong>From Min/Max</strong>: Vector 3 of the Start/End of the input value range. · <strong>To Min/Max</strong>: Vector 3 of the Start/End of the destination range. · <strong>Steps</strong>: The amount of steps. <strong>Note:</strong> <em>Only shows when using the Stepped Linear interpolation type.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-22">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="data-type-10">Data Type</h5>
+<p>Selects between float or vector values to map the range.</p>
+<h5 id="interpolation-type-2">Interpolation Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<p>Selects between a linear, stepped linear, smooth step or smoother step interpolation types.</p>
+<h5 id="clamp-4">Clamp</h5>
+<p>Clamps values to Min/Max of the destination range.</p>
+<h4 id="outputs-49">Outputs</h4>
+<h5 id="vector-9">vector</h5>
+<p>Standard value output.</p>
+<h3 id="mix-vector">Mix Vector</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
+<p>The <strong>Mix Vector</strong> node blends two vector inputs using a specified factor. It’s useful for compositing tasks that involve <strong>motion vectors, directional effects, or spatial blending</strong>, offering precise control over how two sets of vector data are combined</p>
+<h4 id="inputs-49">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Controls the amount of influence the node exerts on the output result.</td>
+</tr>
+<tr>
+<td>Value A</td>
+<td>The back value.</td>
+</tr>
+<tr>
+<td>Value B</td>
+<td>The top value.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="properties-23">Properties</h5>
+<h5 id="data-type-11">Data Type</h5>
+<p>Set to <strong>Vector</strong>, indicating the node mixes vector values.</p>
+<h5 id="factor-mode">Factor Mode</h5>
+<p>The method of mixing.</p>
+<ul>
+<li><strong>Uniform</strong>: A single float controls the mix across all vector components.</li>
+<li><strong>Non-Uniform</strong>: A vector input controls the mix per component (X, Y, Z).</li>
+</ul>
+<h5 id="clamp-factor-2">Clamp Factor</h5>
+<p>Limit the highest color value to not exceed 1.</p>
+<h4 id="outputs-50">Outputs</h4>
+<h5 id="result-4">Result</h5>
+<p>Vector output.</p>
+<h3 id="separate-xyz">Separate XYZ</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
+<p>Same as with Separate RGB node. It separates color values. But instead separating rgb values, which are in the range of 0 to 255, it uses a vector with the values in the range from 0 to 1.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Vector</strong>: The Input vector.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>X, Y and Z</strong>: The output vectors for X, Y and Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radial-tiling">Radial Tiling</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
+<p>Transform coordinate system for radial tiling.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Vector</strong>: Vector 2 input · <strong>Sides</strong>: Number of angular segments for tiling. A non integer value results in an irrgeluar segment. · <strong>Roundness</strong>: Roundness of the segment coordindates system.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><strong>Normalize</strong>: Normalize the X coordinate of the segment coordinates output to a <code>[</code> 0 / 1 <code>]</code> interval and offset the Y coordinate into a <code>[0</code>, <code>infinity]</code> interval. This stretches the textures to fit into each angular segment. Else they are cropped.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vector-curves">Vector Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
+<p>The Vector Curves node maps an input vector components to a curve.</p>
+<h4 id="inputs-50">Inputs</h4>
+<p>In the shader context the node also has an additional Factor property.</p>
+<h5 id="vector-10">Vector</h5>
+<p>Standard vector 3 input.</p>
+<h4 id="properties-24">Properties</h4>
+<h5 id="channel">Channel</h5>
+<h5 id="channel-buttons">Channel buttons</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
+<p>X, Y, Z. Clicking on one of the channels displays the curve for each.</p>
+<h5 id="curve-edit-field-2">Curve edit field</h5>
+<p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
+<h5 id="selecting-points-2">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points-2">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<p><strong>Zoom in and out</strong></p>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="clipping-options-2">Clipping options</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-math/use-clipping.png" alt="Clipping options" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend horizontal</td>
+<td>Extends the curve before the first curve point and behind the last curve point horizontally.</td>
+</tr>
+<tr>
+<td>Extend extrapolated</td>
+<td>Extends the curve before the first curve point and behind the last curve point extrapolated.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="vector-handle-2">Vector Handle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y position</td>
+<td>The x y coordinate of the selected curve point. The range goes from -1 to +1</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-51">Outputs</h4>
+<h5 id="vector-11">Vector</h5>
+<p>Standard vector 3 output.</p>
+<h3 id="vector-math">Vector Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
+<p>The Vector Math Node performs math operations.</p>
+<h4 id="inputs-51">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector</td>
+<td>First numerical value. The trigonometric functions accept values in radians.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-25">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="operation-7">Operation</h5>
+<p>Here you can choose what mathematical operation to perform.</p>
+<h4 id="outputs-52">Outputs</h4>
+<h5 id="value-13">Value</h5>
+<p>Numerical value output.</p>
+<h3 id="vector-rotate">Vector Rotate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
+<p>The <strong>Vector Rotate</strong> node rotates a vector around a specified axis and center point. It’s useful for compositing tasks involving <strong>directional transformations</strong>, such as rotating motion vectors, normals, or custom vector fields</p>
+<h4 id="inputs-52">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector</td>
+<td>The input vector to be rotated.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>The pivot point around which the vector is rotated.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis of rotation, defined as am XYZ based 3D vector</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>The amount of rotation in <strong>degrees</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-26">Properties</h4>
+<h5 id="type">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/248226588c9a363cf49e314c01ca54bbf041b54b/docs2/images/editors/compositor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
+<p>Determines the rotation method.</p>
+<ul>
+<li><strong>Axis Angle</strong>: Rotates around a custom axis by a specified angle.</li>
+<li>**X/<strong>Y/Z</strong> Axis: **Rotates the vector around the X/Y/Z-axis.</li>
+<li>**Euler: **Applies rotation using Euler angles in XYZ order.</li>
+</ul>
+<h5 id="invert">Invert</h5>
+<p>When enabled, reverses the direction of the rotation.</p>
+<h4 id="outputs-53">Outputs</h4>
+<h5 id="vector-12">Vector</h5>
+<p>The rotated vector result.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fcomp-utilities/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fcompositor%2Fheader%2Fadd-menu%2Futilities.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/comp-utilities/docs2/content/editors/compositor/header/add-menu/utilities.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-utilities">Add menu - Utilities</a><a class="h3" href="#implicit-conversion">Implicit Conversion</a><a class="h3" href="#levels">Levels</a><a class="h3" href="#normalize">Normalize</a><a class="h3" href="#random-value">Random Value</a><a class="h3" href="#split">Split</a><a class="h3" href="#switch">Switch</a><a class="h3" href="#index-switch">Index Switch</a><a class="h3" href="#menu-switch">Menu Switch</a><a class="h3" href="#switch-stereo-view">Switch Stereo View</a><a class="h3" href="#relative-to-pixel">Relative to Pixel</a><a class="h2" href="#add-menu-utilities-math">Add menu - Utilities - Math</a><a class="h3" href="#bit-math">Bit Math</a><a class="h3" href="#boolean-math">Boolean Math</a><a class="h3" href="#clamp">Clamp</a><a class="h3" href="#compare">Compare</a><a class="h3" href="#float-curve">Float Curve</a><a class="h3" href="#float-to-integer">Float to Integer</a><a class="h3" href="#hash-value">Hash Value</a><a class="h3" href="#integer-math">Integer Math</a><a class="h3" href="#map-range">Map Range</a><a class="h3" href="#math-2">Math</a><a class="h3" href="#mix">Mix</a><a class="h2" href="#add-menu-utilities-matrix">Add menu - Utilities - Matrix</a><a class="h3" href="#combine-matrix">Combine Matrix</a><a class="h3" href="#combine-transform">Combine Transform</a><a class="h3" href="#matrix-determinant">Matrix Determinant</a><a class="h3" href="#invert-matrix">Invert Matrix</a><a class="h3" href="#matrix-svd">Matrix SVD</a><a class="h3" href="#multiply-matrices">Multiply Matrices</a><a class="h3" href="#project-point">Project Point</a><a class="h3" href="#separate-matrix">Separate Matrix</a><a class="h3" href="#separate-transform">Separate Transform</a><a class="h3" href="#transform-direction">Transform Direction</a><a class="h3" href="#transform-point">Transform Point</a><a class="h3" href="#transpose-matrix">Transpose Matrix</a><a class="h2" href="#add-menu-utilities-rotation">Add menu - Utilities - Rotation</a><a class="h3" href="#align-rotation-to-vector">Align Rotation to Vector</a><a class="h3" href="#axes-to-rotation">Axes to Rotation</a><a class="h3" href="#axis-angle-to-rotation">Axis Angle to Rotation</a><a class="h3" href="#euler-to-rotation">Euler to Rotation</a><a class="h3" href="#invert-rotation">Invert Rotation</a><a class="h3" href="#mix-rotation">Mix Rotation</a><a class="h3" href="#quaternion-to-rotation">Quaternion to Rotation</a><a class="h3" href="#rotate-rotation">Rotate Rotation</a><a class="h3" href="#rotate-vector">Rotate Vector</a><a class="h3" href="#rotation-to-axis-angle">Rotation to Axis Angle</a><a class="h3" href="#rotation-to-euler">Rotation to Euler</a><a class="h3" href="#rotation-to-quaternion">Rotation to Quaternion</a><a class="h2" href="#add-menu-utilities-text">Add menu - Utilities - Text</a><a class="h3" href="#format-string">Format String</a><a class="h3" href="#match-string">Match String</a><a class="h3" href="#replace-string">Replace String</a><a class="h3" href="#reverse-string">Reverse String</a><a class="h3" href="#set-string-case">Set String Case</a><a class="h3" href="#slice-string">Slice String</a><a class="h3" href="#trim-string">Trim String</a><a class="h3" href="#find-in-string">Find in String</a><a class="h3" href="#string-length">String Length</a><a class="h3" href="#string-to-value">String to Value</a><a class="h3" href="#value-to-string">Value to String</a><a class="h3" href="#special-characters">Special Characters</a><a class="h2" href="#add-menu-utilities-vector">Add menu - Utilities - Vector</a><a class="h3" href="#combine-xyz">Combine XYZ</a><a class="h3" href="#map-range-2">Map Range</a><a class="h3" href="#mix-vector">Mix Vector</a><a class="h3" href="#separate-xyz">Separate XYZ</a><a class="h3" href="#radial-tiling">Radial Tiling</a><a class="h3" href="#vector-curves">Vector Curves</a><a class="h3" href="#vector-math">Vector Math</a><a class="h3" href="#vector-rotate">Vector Rotate</a></aside></div></body></html>
