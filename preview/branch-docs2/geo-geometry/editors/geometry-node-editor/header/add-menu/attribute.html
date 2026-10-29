@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Attribute · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/geo-geometry · <code>docs2/geo-geometry</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a class="is-current" style="padding-left:3.5rem" href="attribute.html">Attribute</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Attribute</div><h1 class="pv-title">Attribute</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h2 id="add-menu">Add menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/add-menu.png" alt="Add menu" loading="lazy"></figure>
+<p>The Attribute menu contains the attribute nodes. These nodes allows you to work with object attributes.</p>
+<h3 id="attribute-statistics">Attribute Statistics</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/attribute-statistics.png" alt="Attribute Statistics" loading="lazy"></figure>
+<p>Retreive statistic values from the input mesh.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="geometry">Geometry</h5>
+<p>Standard geometry input.</p>
+<h5 id="selection">Selection</h5>
+<p>A selection of the geometry input.</p>
+<h5 id="attribute">Attribute</h5>
+<p>Attribute to get the statistics from.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="domain-type">Domain Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-type.png" alt="Domain Type" loading="lazy"></figure>
+<p>From which domain to retreive the data.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-type-2.png" alt="Domain Type" loading="lazy"></figure>
+<p>Data Type</p>
+<p>What data type to use.</p>
+<p>Float will output a single floating point value.</p>
+<p>Vector will outupt a vector 3 with floating point values.</p>
+<h4 id="outputs">Outputs</h4>
+<p>Outputs the statistics for the different types.</p>
+<h5 id="mean">Mean</h5>
+<p>The average value of all data.</p>
+<h5 id="median">Median</h5>
+<p>The median value of all data.</p>
+<h5 id="sum">Sum</h5>
+<p>The sum value of all data.</p>
+<h5 id="min">Min</h5>
+<p>The min value of all data.</p>
+<h5 id="max">Max</h5>
+<p>The max value of all data.</p>
+<h5 id="range">Range</h5>
+<p>The difference between the max and min value.</p>
+<h5 id="standard-derivation">Standard Derivation</h5>
+<p>How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range.</p>
+<h5 id="variance">Variance</h5>
+<p>The variance of all data, defined as the square of the standard deviation.</p>
+<h3 id="domain-size">Domain Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-size.png" alt="Domain Size" loading="lazy"></figure>
+<p>The Domain Size node has a single geometry input and a selection for the component type. And outputs containing single values for the related domains are shown, based on this chosen component.</p>
+<h4 id="input">Input</h4>
+<h5 id="geometry-2">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>Geometry input.</p>
+<h4 id="properties-2">Properties</h4>
+<h5 id="component">Component</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/component.png" alt="Component" loading="lazy"></figure>
+<p>What component to calculate.</p>
+<h4 id="output">Output</h4>
+<h5 id="with-type-mesh">With type mesh</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-mesh.png" alt="With type mesh" loading="lazy"></figure>
+<h6 id="point-count">Point Count</h6>
+<p>The point count of the mesh.</p>
+<h6 id="edge-count">Edge Count</h6>
+<p>The edge count of the mesh.</p>
+<h6 id="face-count">Face Count</h6>
+<p>The face count of the mesh.</p>
+<h6 id="face-corner-count">Face Corner Count</h6>
+<p>The face corner count of the mesh.</p>
+<h5 id="with-type-point-cloud">With type Point Cloud</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-point-cloud.png" alt="With type Point Cloud" loading="lazy"><figcaption>With type Point Cloud</figcaption></figure>
+<h6 id="point-count-2">Point Count</h6>
+<p>The point count of the point cloud.</p>
+<h5 id="with-type-curve">With type Curve</h5>
+<h6 id="point-count-3">Point Count</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/point-count.png" alt="Point Count" loading="lazy"></figure>
+<p>The point count of the curve.</p>
+<h6 id="spline-count">Spline Count</h6>
+<p>The number of splines in the curve.</p>
+<h5 id="with-type-instances">With type Instances</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-instances.png" alt="With type Instances" loading="lazy"></figure>
+<h6 id="instances-count">Instances count</h6>
+<p>How many instances the input geometry has.</p>
+<h3 id="get-attribute-names">Get Attribute Names</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/get-attribute-names.png" alt="Get Attribute Names" loading="lazy"></figure>
+<p>Lists the names of the attributes of a geometry as a list of strings. You can limit the list to one data type and one domain. Internal attributes, whose names start with a dot, are not listed.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="geometry-3">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The geometry to read the attribute names from. All parts of the geometry are checked.</p>
+<h5 id="filter-data-type">Filter Data Type</h5>
+<p>Data type: Boolean.</p>
+<p>A panel with a checkbox in its header. Turn it on to list only attributes of one data type.</p>
+<h5 id="data-type">Data Type</h5>
+<p>Data type: Menu.</p>
+<p>The data type to list. It is only used when Filter Data Type is on. The default is Float.</p>
+<h5 id="filter-domain">Filter Domain</h5>
+<p>Data type: Boolean.</p>
+<p>A panel with a checkbox in its header. Turn it on to list only attributes on one domain.</p>
+<h5 id="domain">Domain</h5>
+<p>Data type: Menu.</p>
+<p>The domain to list. It is only used when Filter Domain is on. The default is Point.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="names">Names</h5>
+<p>Data type: String list.</p>
+<p>A list of the attribute names, sorted alphabetically. Each name appears once, even if several parts of the geometry have it.</p>
+<h3 id="blur-attribute">Blur Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/blur-attribute.png" alt="Blur Attribute" loading="lazy"></figure>
+<p>The Blur Attribute mixes values of neighbour elements.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="value">Value</h5>
+<p>Data type: follows the Data Type setting.</p>
+<p>Name of the attribute that is used as input. It should be a float attribute with values between zero and one.</p>
+<h5 id="iterations">Iterations</h5>
+<p>Data type: Integer.</p>
+<p>How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements.</p>
+<h4 id="properties-3">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/properties.png" alt="Properties" loading="lazy"></figure>
+<p>Data Type</p>
+<p>What data type to use.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="value-2">Value</h5>
+<p>Data type: follows the Data Type setting.</p>
+<p>The output value.</p>
+<h3 id="capture-attribute">Capture Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/capture-attribute.png" alt="Capture Attribute" loading="lazy"></figure>
+<p>The Capture Attribute node stores the result of a field on a geometry, and outputs the data as a node socket so it can be used by other nodes.</p>
+<p>The result is stored on the geometry just like a regular attribute with a name. But instead of referencing it with a name, it is retrieved whenever the socket is connected to the input of a node. Later on when evaluating the node tree, the attribute will be removed automatically if it is no longer used.</p>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="geometry-4">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry input.</p>
+<h5 id="empty-socket">Empty socket</h5>
+<p>Connect a node to get its attribute. Note that adding a connection creates a new empty socket. Note also that further input and output settings depends of the input socket. For a position node you will get a vector numberfield. For a color node a color output when you disconnect the former connected socket types.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/empty-socket.png" alt="Empty socket" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/empty-socket-2.png" alt="Empty socket" loading="lazy"></figure>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="geometry-5">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry output.</p>
+<h5 id="attribute-2">Attribute</h5>
+<p>Attribute output.</p>
+<h3 id="remove-named-attribute">Remove Named Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/remove-named-attribute.png" alt="Remove Named Attribute" loading="lazy"></figure>
+<h4 id="input-2">Input</h4>
+<h5 id="geometry-6">Geometry</h5>
+<p>Data type: Geometry.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/geometry.png" alt="Geometry" loading="lazy"></figure>
+<p>Geometry input.</p>
+<h6 id="pattern-mode">Pattern Mode</h6>
+<p>How to choose the attribute to remove.</p>
+<h6 id="name">Name</h6>
+<p>The attribute name that you want to remove.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="geometry-7">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The output geometry.</p>
+<h3 id="store-named-attribute">Store Named Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/store-named-attribute.png" alt="Store Named Attribute" loading="lazy"></figure>
+<p>Puts the results of a field in a named attribute.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="geometry-8">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>Geometry input.</p>
+<h5 id="selection-2">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>Selection input.</p>
+<h5 id="name-2">Name</h5>
+<p>Data type: String.</p>
+<p>The attribute name that you want to store.</p>
+<h4 id="value-3">Value</h4>
+<p>The value that is connected with the stored attribute.</p>
+<h4 id="properties-4">Properties</h4>
+<h5 id="data-type-2">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The type for the source and result data.</p>
+<h6 id="domain-2">Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain.png" alt="Domain" loading="lazy"></figure>
+<p>What element to use.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="geometry-9">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The output geometry.</p>
+<h3 id="transfer-attributes">Transfer Attributes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/transfer-attributes.png" alt="Transfer Attributes" loading="lazy"></figure>
+<p>Copies attributes from the Source geometry to the Target geometry. You choose the attributes by name. Elements are matched by their ID. By default the ID is the index, so element 5 of the source goes to element 5 of the target.</p>
+<p>It works for meshes, point clouds, curves, instances and Grease Pencil layers. Only parts that exist in both geometries are used. Grease Pencil layers are matched by their position in the layer list.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="target">Target</h5>
+<p>Data type: Geometry.</p>
+<p>The geometry that receives the attributes.</p>
+<h5 id="target-ids">Target IDs</h5>
+<p>A panel that is closed by default. It has one ID field for each domain: Target Point ID, Target Edge ID, Target Face ID, Target Corner ID, Target Curve ID and Target Instance ID. They are evaluated on the target. By default they are the index.</p>
+<h5 id="source">Source</h5>
+<p>Data type: Geometry.</p>
+<p>The geometry that the attributes are copied from.</p>
+<h5 id="source-ids">Source IDs</h5>
+<p>A panel that is closed by default. It has one ID field for each domain: Source Point ID, Source Edge ID, Source Face ID, Source Corner ID, Source Curve ID and Source Instance ID. They are evaluated on the source. By default they are the index.</p>
+<p>Each target element takes the values of the source element with the same ID. If no source element has that ID, the target element keeps its old value, or gets the default value if the attribute is new. If both IDs are the index, the values are copied by index.</p>
+<h5 id="pattern-mode-2">Pattern Mode</h5>
+<p>Data type: Menu.</p>
+<p>How the attribute names are compared.</p>
+<ul>
+<li>Exact: a name has to match the attribute name exactly.</li>
+<li>Wildcard: a name may contain one wildcard (*) that stands for any text. This is the default.</li>
+</ul>
+<h5 id="attribute-names">Attribute Names</h5>
+<p>Data type: String list.</p>
+<p>A list of the names of the attributes to transfer. You can connect the output of Get Attribute Names here. If the list is empty and Exclude Names is off, nothing is transferred. A message tells you when a name matches no attribute.</p>
+<h5 id="exclude-names">Exclude Names</h5>
+<p>Data type: Boolean.</p>
+<p>Turn it on to transfer all attributes except the ones that match the names.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="target-2">Target</h5>
+<p>Data type: Geometry.</p>
+<p>The target geometry with the transferred attributes.</p>
+<h5 id="transferred-names">Transferred Names</h5>
+<p>Data type: String list.</p>
+<p>A list of the names of the attributes that were transferred. Internal attributes, whose names start with a dot, are not listed.</p>
+<h3 id="rename-attribute">Rename Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/dcf0d792654720ef246ea3985c82c9ce1147f939/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/rename-attribute.png" alt="Rename Attribute" loading="lazy"></figure>
+<p>Changes the name of an attribute. Use it to match the names another node expects, or to move data under a clearer name. Only the name changes; the values stay the same.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="geometry-10">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The geometry that has the attribute.</p>
+<h5 id="mode">Mode</h5>
+<p>Data type: Menu.</p>
+<p><strong>Single</strong> renames one attribute. <strong>Prefix</strong> changes the start of the names: every attribute whose name begins with Old gets New in its place.</p>
+<h5 id="old">Old</h5>
+<p>Data type: String.</p>
+<p>The name, or the prefix, to look for.</p>
+<h5 id="new">New</h5>
+<p>Data type: String.</p>
+<p>The new name, or the new prefix.</p>
+<h5 id="overwrite">Overwrite</h5>
+<p>Data type: Boolean.</p>
+<p>On: an attribute that already has the new name is replaced.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="geometry-11">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The geometry with the attribute renamed.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fgeo-geometry/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fattribute.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/geo-geometry/docs2/content/editors/geometry-node-editor/header/add-menu/attribute.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu">Add menu</a><a class="h3" href="#attribute-statistics">Attribute Statistics</a><a class="h3" href="#domain-size">Domain Size</a><a class="h3" href="#get-attribute-names">Get Attribute Names</a><a class="h3" href="#blur-attribute">Blur Attribute</a><a class="h3" href="#capture-attribute">Capture Attribute</a><a class="h3" href="#remove-named-attribute">Remove Named Attribute</a><a class="h3" href="#store-named-attribute">Store Named Attribute</a><a class="h3" href="#transfer-attributes">Transfer Attributes</a><a class="h3" href="#rename-attribute">Rename Attribute</a></aside></div></body></html>

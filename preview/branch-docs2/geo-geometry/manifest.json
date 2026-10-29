@@ -1,13 +1,15 @@
 {
  "pages": {
-  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html",
-  "docs2/content/getting-started/data-structure.md": "getting-started/data-structure.html",
-  "docs2/content/getting-started/differences.md": "getting-started/differences.html",
-  "docs2/content/getting-started/index.md": "getting-started.html",
-  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
-  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html",
-  "docs2/content/getting-started/migrating-from-blender.md": "getting-started/migrating-from-blender.html",
-  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
+  "docs2/content/editors/compositor/header/add-menu/utilities.md": "editors/compositor/header/add-menu/utilities.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/attribute.md": "editors/geometry-node-editor/header/add-menu/attribute.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/curve.md": "editors/geometry-node-editor/header/add-menu/curve.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/geometry.md": "editors/geometry-node-editor/header/add-menu/geometry.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/grease-pencil.md": "editors/geometry-node-editor/header/add-menu/grease-pencil.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/input.md": "editors/geometry-node-editor/header/add-menu/input.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/mesh.md": "editors/geometry-node-editor/header/add-menu/mesh.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/utilities.md": "editors/geometry-node-editor/header/add-menu/utilities.html",
+  "docs2/content/editors/shader-editor/header/add-menu/input.md": "editors/shader-editor/header/add-menu/input.html",
+  "docs2/content/editors/shader-editor/header/add-menu/utilities.md": "editors/shader-editor/header/add-menu/utilities.html"
  },
- "images": 8
+ "images": 637
 }
