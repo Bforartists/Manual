@@ -39,6 +39,44 @@ replaces:
 
 Nodes to modify the mesh geometry.
 
+### Cluster by Connected
+
+![Cluster by Connected](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/cluster-by-connected.png)
+
+Sorts the vertices of a mesh into groups, but only joins vertices that are connected by an edge and are close together. It works like Cluster by Distance, with the extra rule that two vertices must also share an edge. Use it when nearby vertices of different parts of a mesh must stay apart, for example the tips of two fingers that almost touch.
+
+#### Inputs
+
+##### Selection
+
+Data type: Boolean.
+
+Which vertices are put into clusters.
+
+##### Position
+
+Data type: Vector.
+
+The position used to measure the distance.
+
+##### Distance
+
+Data type: Float (distance).
+
+Connected vertices that are closer than this value belong to the same cluster.
+
+#### Outputs
+
+##### Cluster ID
+
+Data type: Integer.
+
+The number of the cluster of each vertex. The number is the index of the first vertex of the cluster.
+
+#### How to use
+
+With the five points of the Cluster by Distance example and edges between points 0 and 1, 1 and 2, and 3 and 4, the Cluster ID is 0, 0, 2, 3, 3. Points 1 and 2 are connected but 0.0015 apart, which is more than the Distance of 0.001, so they do not share a cluster.
+
 ### Edge Angle
 
 ![Edge Angle](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-angle.png)
@@ -47,11 +85,18 @@ Calculates the angle in radians between two faces that meet at an edge. Without 
 
 #### Outputs
 
+##### Unsigned Angle
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unsigned Angle | The unsigned output angle. The shortest angle will be picked. |
-| Signed Angle | The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle. |
+Data type: Float.
+
+The unsigned output angle. The shortest angle will be picked.
+
+##### Signed Angle
+
+Data type: Float.
+
+The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle.
+
 
 
 ### Edge Neighbours
@@ -74,13 +119,30 @@ Outputs the index and position of the two vertices that defines an edge. Index o
 
 #### Outputs
 
+##### Vertex Index 1
 
-| Entry | What it does |
-| -------------- | ----------------------------------- |
-| Vertex Index 1 | The index of the first vertice. |
-| Vertex Index 2 | The index of the second vertice. |
-| Position 1 | The position of the first vertice. |
-| Position 2 | The position of the second vertice. |
+Data type: Integer.
+
+The index of the first vertice.
+
+##### Vertex Index 2
+
+Data type: Integer.
+
+The index of the second vertice.
+
+##### Position 1
+
+Data type: Vector.
+
+The position of the first vertice.
+
+##### Position 2
+
+Data type: Vector.
+
+The position of the second vertice.
+
 
 
 ### Edges to Face Group
@@ -89,11 +151,18 @@ Outputs the index and position of the two vertices that defines an edge. Index o
 
 Group Faces into regions, surrounded by the selected boundary edges.
 
+#### Inuputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------- |
-| Inuputs | **Boundary Edges**: The input edges. |
-| Outputs | **Face Group ID**: The output face group. |
+##### Boundary Edges
+
+The input edges.
+
+#### Outputs
+
+##### Face Group ID
+
+The output face group.
+
 
 
 ### Face Area
@@ -106,6 +175,8 @@ Gives each face area a unique id. Which can be used in a capture attribute for e
 
 ##### Area
 
+Data type: Float.
+
 The face area output.
 
 ### Face Group Boundaries
@@ -114,12 +185,26 @@ The face area output.
 
 Find edges on the boundaries between face sets
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | — |
-| Face Set | The input face sets to calculate the boundaries from. |
-| Outputs | **Boundary Edges**: The edges that lies on the boundaries between the different face sets · **Face Count**: The face count for the face neighbors. |
+—
+
+#### Face Set
+
+The input face sets to calculate the boundaries from.
+
+#### Outputs
+
+##### Boundary Edges
+
+Data type: Boolean.
+
+The edges that lies on the boundaries between the different face sets
+
+##### Face Count
+
+The face count for the face neighbors.
+
 
 
 ### Face Neighbours
@@ -130,11 +215,14 @@ Outputs the number of vertices or faces connected to each face.
 
 #### Outputs
 
+##### Vertex Count
 
-| Entry | What it does |
-| ------------ | ---------------------------------------- |
-| Vertex Count | The vertex count for the face neighbors. |
-| Face Count | The face count for the face neighbors. |
+The vertex count for the face neighbors.
+
+##### Face Count
+
+The face count for the face neighbors.
+
 
 
 ### Is Face Planar
@@ -143,11 +231,22 @@ Outputs the number of vertices or faces connected to each face.
 
 Returns true if all of the points of the evaluated face are on the same plane.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------- |
-| Inputs | **Threshold**: The threshold to consinder the points to be at the same plane. |
-| Outputs | **Planar**: True if the face is planar. |
+##### Threshold
+
+Data type: Float (distance).
+
+The threshold to consinder the points to be at the same plane.
+
+#### Outputs
+
+##### Planar
+
+Data type: Boolean.
+
+True if the face is planar.
+
 
 
 ### Is Face Smooth
@@ -159,6 +258,8 @@ Retreives if the face is shaded smooth.
 #### Outputs
 
 ##### Smooth
+
+Data type: Boolean.
 
 Smooth output.
 
@@ -172,6 +273,8 @@ Retreives if the edge is shaded smooth.
 
 ##### Smooth
 
+Data type: Boolean.
+
 Smooth output.
 
 ### Mesh Island
@@ -182,11 +285,16 @@ Outputs a separate index for each mesh island. The indices are based on the orde
 
 #### Outputs
 
+##### Index Index
 
-| Entry | What it does |
-| ------------ | ----------------- |
-| Index Index | The index output. |
-| Island Count | The count output. |
+The index output.
+
+##### Island Count
+
+Data type: Integer.
+
+The count output.
+
 
 
 ### Shortest Edge Path
@@ -195,11 +303,26 @@ Outputs a separate index for each mesh island. The indices are based on the orde
 
 Calculates the shortest path from multiple start points.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------- |
-| Input | **End Vertex**: The last point of the path. · **Edge Cost**: The amount of calculation to find the shortest path. |
-| Outputs | **Next Vertex Index**: The vertices index of the shortest path. · **Total Cost**: The calculation amount. |
+##### End Vertex
+
+The last point of the path.
+
+##### Edge Cost
+
+The amount of calculation to find the shortest path.
+
+#### Outputs
+
+##### Next Vertex Index
+
+The vertices index of the shortest path.
+
+##### Total Cost
+
+The calculation amount.
+
 
 
 ### Vertex Neighbors
@@ -210,11 +333,18 @@ Outputs the number of vertices or faces connected to each vertex.
 
 #### Outputs
 
+##### Vertex Count
 
-| Entry | What it does |
-| ------------ | ------------------------------------------ |
-| Vertex Count | The vertex count for the vertex neighbors. |
-| Face Count | The face count for the vertex neighbors. |
+Data type: Integer.
+
+The vertex count for the vertex neighbors.
+
+##### Face Count
+
+Data type: Integer.
+
+The face count for the vertex neighbors.
+
 
 # Sample
 
@@ -232,14 +362,36 @@ Calculate the interpolated value of a mesh attribute on the closest point of its
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Mesh | Input mesh. |
-| Value | The value to calculate. |
-| Group ID | Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id. |
-| Sample Position | The sample position to calculate. |
-| Sample Group ID | Determines in which group the closest nearest surface is detected. |
+Data type: Geometry.
+
+Input mesh.
+
+##### Value
+
+Data type: Float.
+
+The value to calculate.
+
+##### Group ID
+
+Data type: Integer.
+
+Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id.
+
+##### Sample Position
+
+Data type: Vector.
+
+The sample position to calculate.
+
+##### Sample Group ID
+
+Data type: Integer.
+
+Determines in which group the closest nearest surface is detected.
+
 
 
 ##### Properties
@@ -252,11 +404,18 @@ Which data to calculate.
 
 #### Outputs
 
+##### Value
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------- |
-| Value | The output value. |
-| Is Valid | Wether the sampling was successful. It is false when the sampled group is empty. |
+Data type: Float.
+
+The output value.
+
+##### Is Valid
+
+Data type: Boolean.
+
+Wether the sampling was successful. It is false when the sampled group is empty.
+
 
 
 ### Sample UV Surface
@@ -267,13 +426,28 @@ Calculate the interpolated value of a mesh attribute at a UV coordinate.
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------------- | --------------------------------- |
-| Mesh | Input mesh. |
-| Value | The value to calculate. |
-| Source UV Map | The input UV map. |
-| Sample UV | The sample position to calculate. |
+Data type: Geometry.
+
+Input mesh.
+
+##### Value
+
+Data type: Float.
+
+The value to calculate.
+
+##### Source UV Map
+
+The input UV map.
+
+##### Sample UV
+
+Data type: Vector.
+
+The sample position to calculate.
+
 
 
 ##### Properties
@@ -286,11 +460,18 @@ Which data to calculate.
 
 #### Outputs
 
+##### Value
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------ |
-| Value | The output value. |
-| Is Valid | Wether the node could find a single face to sample at the uv coordinate. |
+Data type: Float.
+
+The output value.
+
+##### Is Valid
+
+Data type: Boolean.
+
+Wether the node could find a single face to sample at the uv coordinate.
+
 
 # Write
 
@@ -310,6 +491,8 @@ The **Set Mesh Normal** node is used to modify custom normals on a mesh, providi
 
 ##### Mesh
 
+Data type: Geometry.
+
 Input mesh.
 
 #### Properties
@@ -326,12 +509,18 @@ Controls the intensity of edge sharpness. Higher values create stronger shading 
 
 Store the sharpness of each face or edge. Similar to the "Shade Smooth" and "Shade Flat" operators.
 
+###### Remove Custom
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| Remove Custom | Removes **custom normals** previously set by the user on the original mesh data when enabled. |
-| Edge Sharpness | Sets the normal sharpness to the edge domain to “flat”. |
-| Face Sharpness | Sets the normal sharpness to the face domain to “flat”. |
+Removes **custom normals** previously set by the user on the original mesh data when enabled.
+
+###### Edge Sharpness
+
+Sets the normal sharpness to the edge domain to “flat”.
+
+###### Face Sharpness
+
+Sets the normal sharpness to the face domain to “flat”.
+
 
 
 ##### Free
@@ -340,7 +529,7 @@ Store the sharpness of each face or edge. Similar to the "Shade Smooth" and "Sha
 
 Allows direct manipulation of normals as **free vectors,** rather than constrained by geometry. Useful for custom shading effects and non-destructive normal adjustments.
 
-**Domain**
+###### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/domain.png)
 
@@ -380,23 +569,36 @@ Retrieves if the geometry is shaded smooth.
 
 #### Input
 
+##### Geometry
 
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| Geometry | Input mesh. |
-| Selection | A selection of the input mesh. |
-| Shade Smooth | Set the shading to smooth. |
+Input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input mesh.
+
+##### Shade Smooth
+
+Data type: Boolean.
+
+Set the shading to smooth.
+
 
 
 #### Properties
 
 ##### Domain
 
+###### Edge
 
-| Entry | What it does |
-| ----- | ------------------- |
-| Edge | Set Edge to smooth. |
-| Face | Set Face to smooth |
+Set Edge to smooth.
+
+###### Face
+
+Set Face to smooth
+
 
 
 #### Outputs
@@ -419,11 +621,28 @@ Nodes to modify the mesh geometry.
 
 The Dual Mesh node calculates the dual of the input mesh. This means that faces get replaced with vertices and vertices with faces.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------- |
-| Inputs | **Mesh**: The input mesh. · **Keep Boundaries**: Keep the (non-manifold) boundaries of the mesh intact. |
-| Outputs | **Dual Mesh**: The output mesh. |
+##### Mesh
+
+Data type: Geometry.
+
+The input mesh.
+
+##### Keep Boundaries
+
+Data type: Boolean.
+
+Keep the (non-manifold) boundaries of the mesh intact.
+
+#### Outputs
+
+##### Dual Mesh
+
+Data type: Geometry.
+
+The output mesh.
+
 
 
 ### Edge Paths to Curves
@@ -432,11 +651,34 @@ The Dual Mesh node calculates the dual of the input mesh. This means that faces 
 
 Converts Edge Paths to Curves.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Mesh**: The input mesh. · **Start Vertices**: The start vertices of the edge path. · **Next Vertex Index**: The edge path by index. |
-| Outputs | **Curves**: The output curve. |
+##### Mesh
+
+Data type: Geometry.
+
+The input mesh.
+
+##### Start Vertices
+
+Data type: Boolean.
+
+The start vertices of the edge path.
+
+##### Next Vertex Index
+
+Data type: Integer.
+
+The edge path by index.
+
+#### Outputs
+
+##### Curves
+
+Data type: Geometry.
+
+The output curve.
+
 
 
 ### Edge Path to Selection
@@ -445,11 +687,22 @@ Converts Edge Paths to Curves.
 
 Calculates an edge path, and converts it to a selectoin
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------------------------------- |
-| Inputs | **Start Vertices**: The start vertices of the edge path. · **Next Vertex Index**: The edge path by index. |
-| Outputs | **Selection**: The selection |
+##### Start Vertices
+
+The start vertices of the edge path.
+
+##### Next Vertex Index
+
+The edge path by index.
+
+#### Outputs
+
+##### Selection
+
+The selection
+
 
 
 ### Extrude Mesh
@@ -460,14 +713,36 @@ Extrudes out geometry at the selection by a given amount.
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------- |
-| Mesh | The input mesh. |
-| Selection | A selection of the mesh. |
-| Offset | The offset amount. |
-| Offset Scale | The offset scale. Without an offset this is equal the amount. |
-| Individual | Just Faces mode. Extrude out individual faces. |
+Data type: Geometry.
+
+The input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the mesh.
+
+##### Offset
+
+Data type: Vector (translation).
+
+The offset amount.
+
+##### Offset Scale
+
+Data type: Float.
+
+The offset scale. Without an offset this is equal the amount.
+
+##### Individual
+
+Data type: Boolean.
+
+Just Faces mode. Extrude out individual faces.
+
 
 
 #### Properties
@@ -480,12 +755,24 @@ What kind of elements to extrude out. Vertices, Edges or Faces.
 
 #### Outputs
 
+##### Mesh
 
-| Entry | What it does |
-| ----- | ----------------------------------- |
-| Mesh | The output mesh. |
-| Top | The top elements of the extrusion. |
-| Side | The side elements of the extrusion. |
+Data type: Geometry.
+
+The output mesh.
+
+##### Top
+
+Data type: Boolean.
+
+The top elements of the extrusion.
+
+##### Side
+
+Data type: Boolean.
+
+The side elements of the extrusion.
+
 
 
 ### Flip Faces
@@ -497,11 +784,26 @@ Flips the winding order of the selected faces.
 Blender developers decided not to call it Flip Normals. Since "normals are  
 derived data, changing them is only a side effect." However, what the node does is in fact to flip the normals.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------- |
-| Inputs | **Mesh**: The input mesh. · **Selection**: A selection of the input mesh. |
-| Outputs | **Dual Mesh**: The output mesh. |
+##### Mesh
+
+Data type: Geometry.
+
+The input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input mesh.
+
+#### Outputs
+
+##### Dual Mesh
+
+The output mesh.
+
 
 
 ### Mesh Boolean
@@ -512,13 +814,28 @@ The Boolean Node allows you to cut, subtract, and join the geometry of two input
 
 #### Inputs
 
+##### Mesh 1
 
-| Entry | What it does |
-| -------------- | ------------------------ |
-| Mesh 1 | Standard geometry input. |
-| Mesh 2 | Standard geometry input. |
-| Self Intersect | Allow self intersection. |
-| Hole Tolerant | Allow holes. |
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Mesh 2
+
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Self Intersect
+
+Allow self intersection.
+
+##### Hole Tolerant
+
+Data type: Boolean.
+
+Allow holes.
+
 
 
 #### Properties
@@ -529,33 +846,50 @@ The Boolean Node allows you to cut, subtract, and join the geometry of two input
 
 The boolean operation.
 
+###### Intersect
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------- |
-| Intersect | Produce a new geometry containing only the volume inside of both geometry 1 and geometry 2. |
-| Union | The two input pieces of geometry are joined, then any interior elements are removed. |
-| Difference | Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept). |
+Produce a new geometry containing only the volume inside of both geometry 1 and geometry 2.
+
+###### Union
+
+The two input pieces of geometry are joined, then any interior elements are removed.
+
+###### Difference
+
+Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept).
+
 
 
 ##### Solver
 
 ![Solver](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/solver.png)
 
+###### Float
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------ |
-| Float | Simple solver for the best performance. Does not support overlapping geometry. |
-| Exact | Exact solver for the most accurate result. |
-| Manifold | Fastest solver with best result, but only works on manifold meshes. |
+Simple solver for the best performance. Does not support overlapping geometry.
+
+###### Exact
+
+Exact solver for the most accurate result.
+
+###### Manifold
+
+Fastest solver with best result, but only works on manifold meshes.
+
 
 
 #### Output
 
+##### Geometry
 
-| Entry | What it does |
-| ------------------ | ------------------------------- |
-| Geometry | Standard geometry output. |
-| Intersecting Edges | Outputs the intersecting edges. |
+Standard geometry output.
+
+##### Intersecting Edges
+
+Data type: Boolean.
+
+Outputs the intersecting edges.
+
 
 
 ### Mesh to Curve
@@ -564,12 +898,34 @@ The boolean operation.
 
 Converts a mesh geometry to a curve geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------- |
-| Inputs | **Mesh**: Input mesh. · **Selection**: A selection of the input mesh. |
-| Properties | **Mode**: Edges or Faces. |
-| Outputs | **Curve**: Standard curve output. |
+##### Mesh
+
+Data type: Geometry.
+
+Input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input mesh.
+
+#### Properties
+
+##### Mode
+
+Edges or Faces.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+Standard curve output.
+
 
 
 ### Mesh to Density Grid
@@ -578,11 +934,38 @@ Converts a mesh geometry to a curve geometry.
 
 Converts a mesh geometry to a curve geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Mesh**: Input mesh. · **Density**: Mesh density. · **Voxel Size**: The vodel size. · **Gradient Width**: The width of the gradient. |
-| Outputs | **Density Grid.**: Density Grid output. |
+##### Mesh
+
+Data type: Geometry.
+
+Input mesh.
+
+##### Density
+
+Data type: Float.
+
+Mesh density.
+
+##### Voxel Size
+
+Data type: Float (distance).
+
+The vodel size.
+
+##### Gradient Width
+
+Data type: Float (distance).
+
+The width of the gradient.
+
+#### Outputs
+
+##### Density Grid.
+
+Density Grid output.
+
 
 
 ### Mesh to Points
@@ -593,13 +976,30 @@ Converts a mesh geometry to a point geometry.
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| --------- | ------------------------------ |
-| Mesh | Input mesh. |
-| Selection | A selection of the input mesh. |
-| Position | The position of the points. |
-| Radius | The radius of the points |
+Data type: Geometry.
+
+Input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input mesh.
+
+##### Position
+
+Data type: Vector.
+
+The position of the points.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius of the points
+
 
 
 #### Properties
@@ -622,11 +1022,32 @@ Standard curve output.
 
 Converts a mesh geometry to a curve geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------ |
-| Inputs | **Mesh**: Input mesh. · **Voxel Size**: The vodel size. · **Band Width**: The width of the band. |
-| Outputs | **Density Grid.**: Density Grid output. |
+##### Mesh
+
+Data type: Geometry.
+
+Input mesh.
+
+##### Voxel Size
+
+Data type: Float (distance).
+
+The vodel size.
+
+##### Band Width
+
+Data type: Integer.
+
+The width of the band.
+
+#### Outputs
+
+##### Density Grid.
+
+Density Grid output.
+
 
 
 ### Mesh to Volume
@@ -637,29 +1058,43 @@ Converts a mesh geometry to a Volume.
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------- | ------------------------- |
-| Mesh | Input mesh. |
-| Density | The density of the volume |
+Data type: Geometry.
+
+Input mesh.
+
+##### Density
+
+Data type: Float.
+
+The density of the volume
+
 
 
 ##### Resolution Mode
+
+Data type: Menu.
 
 ![Resolution Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/resolution-mode.png)
 
 How to calculate the volume. Based of the size or based at the amount.
 
+###### Voxel Amount / Voxel Size
 
-| Entry | What it does |
-| ------------------------- | ---------------------------------------------------- |
-| Voxel Amount / Voxel Size | The voxel amount / the voxel size. |
-| Interior Bandwidth | Where to start the calculation inside of the volume. |
+The voxel amount / the voxel size.
+
+###### Interior Bandwidth
+
+Where to start the calculation inside of the volume.
+
 
 
 #### Outputs
 
 ##### Volume
+
+Data type: Geometry.
 
 The volume output.
 
@@ -671,16 +1106,35 @@ Allows to scale the selected elements.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ---------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geometry. |
-| Scale | The scale factor |
-| Center | The center of the scaling. |
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the geometry.
+
+##### Scale
+
+Data type: Float.
+
+The scale factor
+
+##### Center
+
+Data type: Vector (translation).
+
+The center of the scaling.
+
 
 
 ##### Scale Mode
+
+Data type: Menu.
 
 ![Scale Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/scale-mode.png)
 
@@ -689,6 +1143,8 @@ Uniform scales uniformly in all three world coordinates.
 Single Axis scales separately in the single axis.
 
 ##### Axis
+
+Data type: Vector.
 
 ![Axis](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/axis.png)
 
@@ -706,6 +1162,8 @@ What kind of elements to scale.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ### Split Edges
@@ -716,11 +1174,28 @@ Splits the edges of the geometry.
 
 Note that splitting edges breaks the mesh topology.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------- |
-| Inputs | **Mesh**: Input mesh. · **Selection**: A selection of the input mesh. |
-| Outputs | **Mesh**: Standard Mesh output. |
+##### Mesh
+
+Data type: Geometry.
+
+Input mesh.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input mesh.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Standard Mesh output.
+
 
 
 ### Subdivide Mesh
@@ -729,11 +1204,24 @@ Note that splitting edges breaks the mesh topology.
 
 Subdivides the geometry by a simple division.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. · **Level**: To which degree the geometry will be deformed. |
-| Outputs | **Geometry**: Standard geometry output. |
+##### Geometry
+
+Standard geometry input.
+
+##### Level
+
+Data type: Integer.
+
+To which degree the geometry will be deformed.
+
+#### Outputs
+
+##### Geometry
+
+Standard geometry output.
+
 
 
 ### Subdivision Surface
@@ -744,23 +1232,49 @@ The Subdivision Surface node subdivides the geometry using Catmull-Clark deforma
 
 #### Inputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Mesh | Standard geometry input. |
-| Level | To which degree the geometry will be deformed. |
-| Edge Crease | Control how smooth edges should be with Weighted Edge Creases. |
-| Vertex Crease | Control how smooth edges should be with Weighted Vertex Creases. |
-| Limit Surface | Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape. |
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Level
+
+Data type: Integer.
+
+To which degree the geometry will be deformed.
+
+##### Edge Crease
+
+Data type: Float (factor).
+
+Control how smooth edges should be with Weighted Edge Creases.
+
+##### Vertex Crease
+
+Data type: Float (factor).
+
+Control how smooth edges should be with Weighted Vertex Creases.
+
+##### Limit Surface
+
+Data type: Boolean.
+
+Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape.
+
 
 
 ##### UV Smooth
+
+Data type: Menu.
 
 ![UV Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/uv-smooth.png)
 
 The methbod to deal with smoothing the UV.
 
 ##### Boundary Smooth
+
+Data type: Menu.
 
 ![Boundary Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/boundary-smooth.png)
 
@@ -780,11 +1294,14 @@ The Triangulate node triangulates all faces in a mesh.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Minimum Vertices | Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons. |
+Standard geometry input.
+
+##### Minimum Vertices
+
+Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons.
+
 
 
 #### Properties
@@ -795,14 +1312,26 @@ The Triangulate node triangulates all faces in a mesh.
 
 A quad is a polygon with four edges.
 
+###### Beauty
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------- |
-| Beauty | Split the quads in nice triangles, slower method. |
-| Fixed | Split the quads on their 1st and 3rd vertices. |
-| Fixed Alternate | Split the quads on their 2nd and 4th vertices. |
-| Shortest Diagonal | Split the quads based on the shortest diagonal distance between their vertices. |
-| Longest Diagonal | Split the quads based on the longest diagonal distance between their vertices. |
+Split the quads in nice triangles, slower method.
+
+###### Fixed
+
+Split the quads on their 1st and 3rd vertices.
+
+###### Fixed Alternate
+
+Split the quads on their 2nd and 4th vertices.
+
+###### Shortest Diagonal
+
+Split the quads based on the shortest diagonal distance between their vertices.
+
+###### Longest Diagonal
+
+Split the quads based on the longest diagonal distance between their vertices.
+
 
 
 ##### Polygon Method
@@ -811,11 +1340,14 @@ A quad is a polygon with four edges.
 
 Meant are N-Gons. Faces with more than four edges. Tris, Quads and N-Gons are all Polygons.
 
+###### Beauty
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Beauty | Arrange the new triangles nicely, slower method. |
-| Clip | Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering). |
+Arrange the new triangles nicely, slower method.
+
+###### Clip
+
+Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering).
+
 
 
 #### Outputs
@@ -840,15 +1372,42 @@ Cone creates a Cone mesh.
 
 #### Input
 
+##### Vertices
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------ |
-| Vertices | Number of vertices. |
-| Radius Top | The initial radius at the top. |
-| Side Segments | Adjust the number of segments at the side. |
-| Fill Segments | Adjust the number of segments at the fill faces. |
-| Radius Bottom | The initial radius at the bottom. |
-| Depth | The initial height. |
+Data type: Integer.
+
+Number of vertices.
+
+##### Radius Top
+
+Data type: Float (distance).
+
+The initial radius at the top.
+
+##### Side Segments
+
+Data type: Integer.
+
+Adjust the number of segments at the side.
+
+##### Fill Segments
+
+Data type: Integer.
+
+Adjust the number of segments at the fill faces.
+
+##### Radius Bottom
+
+Data type: Float (distance).
+
+The initial radius at the bottom.
+
+##### Depth
+
+Data type: Float (distance).
+
+The initial height.
+
 
 
 #### Properties
@@ -859,24 +1418,52 @@ Cone creates a Cone mesh.
 
 Defines how the Circle mesh is filled.
 
+###### None
 
-| Entry | What it does |
-| --------- | -------------------------------- |
-| None | pure edge geometry. |
-| N-Gon | The circle face is a N-Gon face. |
-| Triangles | The circle face is triangulated. |
+pure edge geometry.
+
+###### N-Gon
+
+The circle face is a N-Gon face.
+
+###### Triangles
+
+The circle face is triangulated.
+
 
 
 #### Outputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------ | --------------------- |
-| Mesh | Mesh output. |
-| Top | Top radius output. |
-| Bottom | Bottom radius output. |
-| Side | The depth output |
-| UV Map | UV map output. |
+Data type: Geometry.
+
+Mesh output.
+
+##### Top
+
+Data type: Boolean.
+
+Top radius output.
+
+##### Bottom
+
+Data type: Boolean.
+
+Bottom radius output.
+
+##### Side
+
+Data type: Boolean.
+
+The depth output
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 
 ### Cube
@@ -885,11 +1472,32 @@ Defines how the Circle mesh is filled.
 
 Cube creates a Cubeoid mesh.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Size**: The initial size in X , Y and Z dimensions · **Vertices**: How much vertices the single edges has. This allows to subdivide the cube. |
-| Output | **Mesh**: Mesh output. · **UV Map**: UV map output. |
+##### Size
+
+Data type: Vector (translation).
+
+The initial size in X , Y and Z dimensions
+
+##### Vertices
+
+How much vertices the single edges has. This allows to subdivide the cube.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Mesh output.
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 
 ### Cylinder
@@ -900,14 +1508,36 @@ Cylinder creates a Cylinder mesh.
 
 #### Input
 
+##### Vertices
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------ |
-| Vertices | Number of vertices. |
-| Side Segments | Adjust the number of segments at the side. |
-| Fill Segments | Adjust the number of segments at the fill faces. |
-| Radius | The initial radius. |
-| Depth | The initial height. |
+Data type: Integer.
+
+Number of vertices.
+
+##### Side Segments
+
+Data type: Integer.
+
+Adjust the number of segments at the side.
+
+##### Fill Segments
+
+Data type: Integer.
+
+Adjust the number of segments at the fill faces.
+
+##### Radius
+
+Data type: Float (distance).
+
+The initial radius.
+
+##### Depth
+
+Data type: Float (distance).
+
+The initial height.
+
 
 
 #### Properties
@@ -918,24 +1548,52 @@ Cylinder creates a Cylinder mesh.
 
 Defines how the Circle mesh is filled.
 
+###### None
 
-| Entry | What it does |
-| --------- | -------------------------------- |
-| None | pure edge geometry. |
-| N-Gon | The circle face is a N-Gon face. |
-| Triangles | The circle face is triangulated. |
+pure edge geometry.
+
+###### N-Gon
+
+The circle face is a N-Gon face.
+
+###### Triangles
+
+The circle face is triangulated.
+
 
 
 #### Outputs
 
+##### Mesh
 
-| Entry | What it does |
-| ------ | --------------------- |
-| Mesh | Mesh output. |
-| Top | Top radius output. |
-| Bottom | Bottom radius output. |
-| Side | The depth output |
-| UV Map | UV map output. |
+Data type: Geometry.
+
+Mesh output.
+
+##### Top
+
+Data type: Boolean.
+
+Top radius output.
+
+##### Bottom
+
+Data type: Boolean.
+
+Bottom radius output.
+
+##### Side
+
+Data type: Boolean.
+
+The depth output
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 
 ### Grid
@@ -944,11 +1602,38 @@ Defines how the Circle mesh is filled.
 
 Grid creates a grid mesh.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Size**: The initial size. · **Vertices X**: The initial number of vertices in X direction. · **Vertices Y**: The initial number of vertices in Y direction. |
-| Outputs | **Mesh**: Mesh output. · **UV Map**: UV map output. |
+##### Size
+
+The initial size.
+
+##### Vertices X
+
+Data type: Integer.
+
+The initial number of vertices in X direction.
+
+##### Vertices Y
+
+Data type: Integer.
+
+The initial number of vertices in Y direction.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Mesh output.
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 
 ### Ico Sphere
@@ -957,11 +1642,34 @@ Grid creates a grid mesh.
 
 Ico Sphere creates a ico Sphere mesh.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------- |
-| Input | **Radius**: The initial radius. · **Subdivisions**: The initial subdivisions. |
-| Outputs | **Mesh**: Mesh output. · **UV Map**: UV map output. |
+##### Radius
+
+Data type: Float (distance).
+
+The initial radius.
+
+##### Subdivisions
+
+Data type: Integer.
+
+The initial subdivisions.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Mesh output.
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 
 ### Mesh Circle
@@ -972,11 +1680,18 @@ Circle creates a Circle mesh.
 
 #### Input
 
+##### Vertices
 
-| Entry | What it does |
-| -------- | ------------------- |
-| Vertices | Number of vertices. |
-| Radius | The initial radius. |
+Data type: Integer.
+
+Number of vertices.
+
+##### Radius
+
+Data type: Float (distance).
+
+The initial radius.
+
 
 
 #### Properties
@@ -987,17 +1702,25 @@ Circle creates a Circle mesh.
 
 Defines how the Circle mesh is filled.
 
+###### None
 
-| Entry | What it does |
-| --------- | -------------------------------- |
-| None | pure edge geometry. |
-| N-Gon | The circle face is a N-Gon face. |
-| Triangles | The circle face is triangulated. |
+pure edge geometry.
+
+###### N-Gon
+
+The circle face is a N-Gon face.
+
+###### Triangles
+
+The circle face is triangulated.
+
 
 
 #### Outputs
 
 ##### Mesh
+
+Data type: Geometry.
 
 Mesh output.
 
@@ -1009,12 +1732,24 @@ Line creates a line mesh.
 
 #### Input
 
+##### Count
 
-| Entry | What it does |
-| -------------- | ------------------------------- |
-| Count | The initial number of segments. |
-| Start Location | The initial location. |
-| Offset | The initial offset. |
+Data type: Integer.
+
+The initial number of segments.
+
+##### Start Location
+
+Data type: Vector (translation).
+
+The initial location.
+
+##### Offset
+
+Data type: Vector (translation).
+
+The initial offset.
+
 
 
 #### Properties
@@ -1031,13 +1766,13 @@ Specify the offset from one vertice to the next.
 
 Specify the line start and endpoints.
 
-**Count ModeCount**
+###### Count ModeCount
 
 ![Count](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/count.png)
 
 Specify the number of total vertices.
 
-**End Points**
+###### End Points
 
 ![End Points](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/end-points.png)
 
@@ -1047,6 +1782,8 @@ Specify the distance between the vertices.
 
 ##### Mesh
 
+Data type: Geometry.
+
 Mesh output.
 
 ### UV Sphere
@@ -1055,11 +1792,40 @@ Mesh output.
 
 UV Sphere creates a uv sphere mesh.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Segments**: The initial number of segments. · **Rings**: The initial number of edgerings. · **Radius**: The initial radius. |
-| Outputs | **Mesh**: Mesh output. · **UV Map**: UV map output. |
+##### Segments
+
+Data type: Integer.
+
+The initial number of segments.
+
+##### Rings
+
+Data type: Integer.
+
+The initial number of edgerings.
+
+##### Radius
+
+Data type: Float (distance).
+
+The initial radius.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Mesh output.
+
+##### UV Map
+
+Data type: Vector.
+
+UV map output.
+
 
 # Topology
 
@@ -1075,11 +1841,38 @@ Mesh topology related nodes.
 
 Retreive the corners that makes up a edge.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Input | **Face Index**: The face to get the data from. · **Weights**: Values used to sort the corners of the face. · **Sort Index**: Which of the corners to output. |
-| Outputs | **Corner Index**: The output corner. · **Total**: The number of corners in the face. |
+##### Face Index
+
+The face to get the data from.
+
+##### Weights
+
+Data type: Float.
+
+Values used to sort the corners of the face.
+
+##### Sort Index
+
+Data type: Integer.
+
+Which of the corners to output.
+
+#### Outputs
+
+##### Corner Index
+
+Data type: Integer.
+
+The output corner.
+
+##### Total
+
+Data type: Integer.
+
+The number of corners in the face.
+
 
 
 ### Corners of Face
@@ -1088,11 +1881,40 @@ Retreive the corners that makes up a edge.
 
 Retreive the corners that makes up a face.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Input | **Face Index**: The face to get the data from. · **Weights**: Values used to sort the corners of the face. · **Sort Index**: Which of the corners to output. |
-| Outputs | **Corner Index**: The output corner. · **Total**: The number of corners in the face. |
+##### Face Index
+
+Data type: Integer.
+
+The face to get the data from.
+
+##### Weights
+
+Data type: Float.
+
+Values used to sort the corners of the face.
+
+##### Sort Index
+
+Data type: Integer.
+
+Which of the corners to output.
+
+#### Outputs
+
+##### Corner Index
+
+Data type: Integer.
+
+The output corner.
+
+##### Total
+
+Data type: Integer.
+
+The number of corners in the face.
+
 
 
 ### Corners of Vertex
@@ -1101,11 +1923,40 @@ Retreive the corners that makes up a face.
 
 Retreive face corners connected to vertices.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Vertex Index**: The vertice to get the data from. · **Weights**: Values used to sort the corners attached to the vertice. · **Sort Index**: Which of the corners to output. |
-| Outputs | **Corner Index**: The output corner. · **Total**: The number of corners connected to each vertice. |
+##### Vertex Index
+
+Data type: Integer.
+
+The vertice to get the data from.
+
+##### Weights
+
+Data type: Float.
+
+Values used to sort the corners attached to the vertice.
+
+##### Sort Index
+
+Data type: Integer.
+
+Which of the corners to output.
+
+#### Outputs
+
+##### Corner Index
+
+Data type: Integer.
+
+The output corner.
+
+##### Total
+
+Data type: Integer.
+
+The number of corners connected to each vertice.
+
 
 
 ### Edges of Corner
@@ -1114,11 +1965,28 @@ Retreive face corners connected to vertices.
 
 Retreive the edges of both sides of a corner.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------- |
-| Input | **Corner Index**: The corner to retreive the data from. |
-| Outputs | **Next Edge Index**: The edge behind the corner. · **Previous Edge Index**: The edge before the corner. |
+##### Corner Index
+
+Data type: Integer.
+
+The corner to retreive the data from.
+
+#### Outputs
+
+##### Next Edge Index
+
+Data type: Integer.
+
+The edge behind the corner.
+
+##### Previous Edge Index
+
+Data type: Integer.
+
+The edge before the corner.
+
 
 
 ### Edges of Vertex
@@ -1127,11 +1995,40 @@ Retreive the edges of both sides of a corner.
 
 Retreive the edges connected to each vertex.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Vertex Index**: The vertice to get the data from. · **Weights**: Values used to sort the edges attached to the vertice. · **Sort Index**: Which of the edges to output. |
-| Outputs | **Edge Index**: The output edge. · **Total**: The number of edges connected to each vertice. |
+##### Vertex Index
+
+Data type: Integer.
+
+The vertice to get the data from.
+
+##### Weights
+
+Data type: Float.
+
+Values used to sort the edges attached to the vertice.
+
+##### Sort Index
+
+Data type: Integer.
+
+Which of the edges to output.
+
+#### Outputs
+
+##### Edge Index
+
+Data type: Integer.
+
+The output edge.
+
+##### Total
+
+Data type: Integer.
+
+The number of edges connected to each vertice.
+
 
 
 ### Face of Corner
@@ -1140,11 +2037,28 @@ Retreive the edges connected to each vertex.
 
 Retreive the faces connected to each corner.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Corner Index**: The corner to get the data from. |
-| Outputs | **Face Index**: The output faces. · **Index in Face**: The index of the corner, starting from the first corner in the face. |
+##### Corner Index
+
+Data type: Integer.
+
+The corner to get the data from.
+
+#### Outputs
+
+##### Face Index
+
+Data type: Integer.
+
+The output faces.
+
+##### Index in Face
+
+Data type: Integer.
+
+The index of the corner, starting from the first corner in the face.
+
 
 
 ### Offset Corner in Face
@@ -1153,11 +2067,28 @@ Retreive the faces connected to each corner.
 
 Retreive corners within the same face as another
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Input | **Corner Index**: The corner to get the data from. · **Offset**: The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary. |
-| Outputs | **Corner Index**: The index of the offset corner. |
+##### Corner Index
+
+Data type: Integer.
+
+The corner to get the data from.
+
+##### Offset
+
+Data type: Integer.
+
+The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary.
+
+#### Outputs
+
+##### Corner Index
+
+Data type: Integer.
+
+The index of the offset corner.
+
 
 
 ### Vertex of corner
@@ -1166,11 +2097,26 @@ Retreive corners within the same face as another
 
 Retreive the vertex each corner is attached to.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Input | **Corner Index**: The corner to get the data from. · **Offset**: The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary. |
-| Outputs | **Vertex Index**: The vertex each corner is attached to. |
+##### Corner Index
+
+Data type: Integer.
+
+The corner to get the data from.
+
+##### Offset
+
+The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary.
+
+#### Outputs
+
+##### Vertex Index
+
+Data type: Integer.
+
+The vertex each corner is attached to.
+
 
 # UV
 
@@ -1188,31 +2134,55 @@ Pack the UV islands to get the most out of the UV mapping.
 
 #### Inputs
 
+##### UV
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------- |
-| UV | The input UV geometry. |
-| Selection | A selection of the UV geometry. |
-| Margin | How big the gap between the single UV patches should be. |
-| Rotate | Rotate island for best fit. |
+Data type: Vector.
+
+The input UV geometry.
+
+##### Selection
+
+Data type: Boolean.
+
+A selection of the UV geometry.
+
+##### Margin
+
+Data type: Float.
+
+How big the gap between the single UV patches should be.
+
+##### Rotate
+
+Data type: Boolean.
+
+Rotate island for best fit.
+
 
 
 ##### Method
+
+Data type: Menu.
 
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method.png)
 
 Method used for packing UV Islands.
 
+###### Bottom Left
 
-| Entry | What it does |
-| ----------- | ------------------------------------- |
-| Bottom Left | Bottom left corner of packing bounds. |
-| Top Right | Top right corner of packing bounds. |
+Bottom left corner of packing bounds.
+
+###### Top Right
+
+Top right corner of packing bounds.
+
 
 
 #### Outputs
 
 ##### UV
+
+Data type: Vector.
 
 The output UV geometry.
 
@@ -1226,17 +2196,23 @@ Generate tangent directions based on a UV map.
 
 ##### Method
 
+Data type: Menu.
+
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-2.png)
 
 Exact or fast calculation.
 
 ##### UV
 
+Data type: Vector (xyz2d).
+
 x and y values of the UV space.
 
 #### Outputs
 
 ##### Tangent
+
+Data type: Vector.
 
 The output UV geometry.
 
@@ -1248,16 +2224,35 @@ Unwrap the mesh to give it an UV mapping.
 
 #### Inputs
 
+##### Selection
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------- |
-| Selection | Which faces of the mesh should be unwrapped. |
-| Seam | Mark edges as a seam for unwrapping. |
-| Margin | How big the gap between the single UV patches should be. |
-| Fill Holes | Virtually fill holes before unwrapping the mesh. This preserves symmetry and can avoids overlaps. |
+Data type: Boolean.
+
+Which faces of the mesh should be unwrapped.
+
+##### Seam
+
+Data type: Boolean.
+
+Mark edges as a seam for unwrapping.
+
+##### Margin
+
+Data type: Float.
+
+How big the gap between the single UV patches should be.
+
+##### Fill Holes
+
+Data type: Boolean.
+
+Virtually fill holes before unwrapping the mesh. This preserves symmetry and can avoids overlaps.
+
 
 
 ##### Method
+
+Data type: Menu.
 
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-3.png)
 
@@ -1266,5 +2261,7 @@ The unwrap method.
 #### Outputs
 
 ##### UV
+
+Data type: Vector.
 
 The output UV geometry.
