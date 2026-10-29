@@ -213,7 +213,7 @@ The domain to list. It is only used when Filter Domain is on. The default is Poi
 
 ##### Names
 
-Data type: String.
+Data type: String list.
 
 A list of the attribute names, sorted alphabetically. Each name appears once, even if several parts of the geometry have it.
 
@@ -227,7 +227,7 @@ The Blur Attribute mixes values of neighbour elements.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Name of the attribute that is used as input. It should be a float attribute with values between zero and one.
 
@@ -249,7 +249,7 @@ What data type to use.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -414,7 +414,7 @@ How the attribute names are compared.
 
 ##### Attribute Names
 
-Data type: String.
+Data type: String list.
 
 A list of the names of the attributes to transfer. You can connect the output of Get Attribute Names here. If the list is empty and Exclude Names is off, nothing is transferred. A message tells you when a name matches no attribute.
 
@@ -434,7 +434,7 @@ The target geometry with the transferred attributes.
 
 ##### Transferred Names
 
-Data type: String.
+Data type: String list.
 
 A list of the names of the attributes that were transferred. Internal attributes, whose names start with a dot, are not listed.
 
