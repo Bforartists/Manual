@@ -41,12 +41,17 @@ Here you find nodes to modify the geometry.
 
 Turns every connected input geometry into an instance. These instances can then for example be used in the Instance on Points node.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------ |
-| Inputs | **Geometry**: The input geometry. |
-| Outputs | **Instances**: The output instances. |
+##### Geometry
 
+The input geometry.
+
+#### Outputs
+
+##### Instances
+
+The output instances.
 
 ### Join Geometry
 
@@ -54,11 +59,17 @@ Turns every connected input geometry into an instance. These instances can then 
 
 The Join Geometry enables you to merge separately generated pieces of geometry into a single one. In case that the inputted pieces contain different types of geometry, the output will contain multiple types of geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Geometry**: Standard geometry output. |
+##### Geometry
+
+Standard geometry input.
+
+#### Outputs
+
+##### Geometry
+
+Standard geometry output.
 
 # Read
 
@@ -126,13 +137,17 @@ Returns a vector for each evaluated point indicating the normal direction. The o
 
 The output depends on where you plug in the normal node.
 
+#### Face
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Face | On the face domain, the normal is the “up” direction of the face. |
-| Mesh Vertices | For mesh vertices, the normal is an average of the surrounding face normals. If the vertex does not have any connected faces, the output is simply the normalized position of that vertex. |
-| Edge | The normal output for each edge is the average of the edge’s two vertex normals. |
+On the face domain, the normal is the “up” direction of the face.
 
+#### Mesh Vertices
+
+For mesh vertices, the normal is an average of the surrounding face normals. If the vertex does not have any connected faces, the output is simply the normalized position of that vertex.
+
+#### Edge
+
+The normal output for each edge is the average of the edge’s two vertex normals.
 
 #### Face Corner
 
@@ -148,12 +163,13 @@ Please keep in mind that for NURBS and Bézier spline curves the value retrieved
 
 #### Outputs
 
+##### Normal
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------- |
-| Normal | The normal vector output. |
-| True Normal | For meshes, outputs normal without custom normal attributes taken into account. |
+The normal vector output.
 
+##### True Normal
+
+For meshes, outputs normal without custom normal attributes taken into account.
 
 ### Position
 
@@ -199,14 +215,21 @@ This node finds the closest position on the target for each point in the input g
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Geometry | The target object. |
-| Group ID | Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id. |
-| Sample Position | The position where the computed location is stored. |
-| Sample Group ID | Determines in which group the closest nearest surface is detected. |
+The target object.
 
+##### Group ID
+
+Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id.
+
+##### Sample Position
+
+The position where the computed location is stored.
+
+##### Sample Group ID
+
+Determines in which group the closest nearest surface is detected.
 
 #### Properties
 
@@ -218,13 +241,17 @@ The element of the target geometry to calculate the distance from.
 
 #### Outputs
 
+##### Position
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------ |
-| Position | Closest location on the surface of the target mesh, or the closest point in the target point cloud in Points mode. |
-| Distance | Distance from the source position to the closest location in the target. |
-| Is Valid | Wether the sampling was successful. It is false when the sampled group is empty. |
+Closest location on the surface of the target mesh, or the closest point in the target point cloud in Points mode.
 
+##### Distance
+
+Distance from the source position to the closest location in the target.
+
+##### Is Valid
+
+Wether the sampling was successful. It is false when the sampled group is empty.
 
 ### Index of Nearest
 
@@ -232,12 +259,25 @@ The element of the target geometry to calculate the distance from.
 
 Retreive values from specific geometry elements.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------- |
-| Inputs | **Position**: The position of the nearest element. · **Group ID**: The group ID of the nearest element. |
-| Outputs | **Index**: The Index of the nearest element. · **Has Neighbor**: Has this element a neighbor. |
+##### Position
 
+The position of the nearest element.
+
+##### Group ID
+
+The group ID of the nearest element.
+
+#### Outputs
+
+##### Index
+
+The Index of the nearest element.
+
+##### Has Neighbor
+
+Has this element a neighbor.
 
 ### Raycast
 
@@ -247,12 +287,13 @@ This node sends a raycast and retreives data from the hit target.
 
 #### Inputs
 
+##### Target Geometry
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------ |
-| Target Geometry | This is actually the source object that sends the ray. |
-| Attribute | Attribute input. |
+This is actually the source object that sends the ray.
 
+##### Attribute
+
+Attribute input.
 
 ##### Interpolation
 
@@ -260,13 +301,17 @@ This node sends a raycast and retreives data from the hit target.
 
 Mapping from the target geometry to hit points.
 
+###### Source Position
 
-| Entry | What it does |
-| --------------- | --------------------------------- |
-| Source Position | Source position input. |
-| Ray Direction | A vector 3 for the ray direction. |
-| Ray Length | The length of the ray. |
+Source position input.
 
+###### Ray Direction
+
+A vector 3 for the ray direction.
+
+###### Ray Length
+
+The length of the ray.
 
 #### Properties
 
@@ -278,15 +323,25 @@ What data to calculate on hit.
 
 #### Output
 
+##### Is Hit
 
-| Entry | What it does |
-| ------------ | -------------------------------- |
-| Is Hit | Has the raycast hit something? |
-| Hit Position | The hit position if any. |
-| Hit Normal | The normal of the hit point. |
-| Hit Distance | The distance of the hit point. |
-| Attribute | The attribute of the hit object. |
+Has the raycast hit something?
 
+##### Hit Position
+
+The hit position if any.
+
+##### Hit Normal
+
+The normal of the hit point.
+
+##### Hit Distance
+
+The distance of the hit point.
+
+##### Attribute
+
+The attribute of the hit object.
 
 ### Sample Index
 
@@ -296,13 +351,17 @@ Retreive values from specific geometry elements.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| -------- | ---------------------------------------- |
-| Geometry | The source object to take the data from. |
-| Value | The value to retreive. |
-| Index | The index position of the value. |
+The source object to take the data from.
 
+##### Value
+
+The value to retreive.
+
+##### Index
+
+The index position of the value.
 
 #### Properties
 
@@ -336,12 +395,13 @@ Retreives the element of a geometry closest to a position.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ---------------------------------------- |
-| Geometry | The source object to take the data from. |
-| Sample Position | The position of the source object. |
+The source object to take the data from.
 
+##### Sample Position
+
+The position of the source object.
 
 #### Properties
 
@@ -371,13 +431,23 @@ Here you find nodes to modify the geometry.
 
 Sets the name of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Name**: The name that you want to set |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Geometry input.
+
+##### Name
+
+The name that you want to set
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
 
 ### Set ID
 
@@ -385,13 +455,27 @@ Sets the name of the target geometry.
 
 Sets the ID of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: Selection input. · **ID**: ID Input |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Geometry input.
+
+##### Selection
+
+Selection input.
+
+##### ID
+
+ID Input
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
 
 ### Set Position
 
@@ -401,12 +485,31 @@ The Set Position node controls the location of each point, the same way as contr
 
 The input node for this data is the Position Node.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: Whether or not to change the position of each point or instance. True values mean the position will be changed, false values mean it will remain the same. · **Position**: The new position for selected elements. By default, this is the same as if the Position Node was connected, meaning the node will do nothing. · **Offset**: An optional translation for each point. This is evaluated at the same time as the Position input, meaning that fields evaluated for it will not reflect the changed position. |
-| Outputs | — |
-| Geometry | Geometry outputs. |
+##### Geometry
+
+Geometry input.
+
+##### Selection
+
+Whether or not to change the position of each point or instance. True values mean the position will be changed, false values mean it will remain the same.
+
+##### Position
+
+The new position for selected elements. By default, this is the same as if the Position Node was connected, meaning the node will do nothing.
+
+##### Offset
+
+An optional translation for each point. This is evaluated at the same time as the Position input, meaning that fields evaluated for it will not reflect the changed position.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry outputs.
 
 # Material
 
@@ -449,13 +552,27 @@ The list of materials, in slot order. If the geometry has no part of the chosen 
 
 Sets the name of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Old**: The material that you want to replace. · **New**: The new material that replaces the old material. |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Geometry input.
+
+##### Old
+
+The material that you want to replace.
+
+##### New
+
+The new material that replaces the old material.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
 
 ### Material Index
 
@@ -463,12 +580,13 @@ Sets the name of the target geometry.
 
 Retreive the material index.
 
+#### Outputs
 
-| Entry | What it does |
-| -------------- | ------------------- |
-| Outputs | — |
-| Material Index | The material index. |
+—
 
+#### Material Index
+
+The material index.
 
 ### Material Selection
 
@@ -476,13 +594,19 @@ Retreive the material index.
 
 Select a mesh part by material.
 
+#### Inputs
 
-| Entry | What it does |
-| -------------- | ----------------------------- |
-| Inputs | **Geometry**: Geometry input. |
-| Outputs | — |
-| Material Index | The material index. |
+##### Geometry
 
+Geometry input.
+
+#### Outputs
+
+—
+
+#### Material Index
+
+The material index.
 
 ### Set Material
 
@@ -490,13 +614,27 @@ Select a mesh part by material.
 
 Assign a material to a selection.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: The selection of the geometry. · **Material**: The material to assign. |
-| Outputs | — |
-| Geometry | The geometry with the new material assigned. |
+##### Geometry
 
+Geometry input.
+
+##### Selection
+
+The selection of the geometry.
+
+##### Material
+
+The material to assign.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+The geometry with the new material assigned.
 
 ### Set Material Index
 
@@ -504,12 +642,27 @@ Assign a material to a selection.
 
 Set the material index of a selection.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: The selection of the geometry. · **Material Index**: The material index to assign to the selection. |
-| Outputs | — |
-| Geometry | The geometry with the new material index assigned. |
+##### Geometry
+
+Geometry input.
+
+##### Selection
+
+The selection of the geometry.
+
+##### Material Index
+
+The material index to assign to the selection.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+The geometry with the new material index assigned.
 
 # Operations
 
@@ -529,14 +682,33 @@ To bake, the file must be saved first.
 
 > **Note:** When baked, the header of the node will show how many frames have been baked.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Geometry**: Standard geometry input. You can bake multiple geometry inputs. |
-| Properties | **Animation / Still**: Bake an animation or a single frame. Note that the bake node does not do automatic caching. |
-| Operators | **Bake**: The bake operator button. Press this to bake. · **Delete Geometry Node Bake**: Delete baked data of a single bake node or simulation. |
-| Output | **Geometry**: Standard geometry output. |
+##### Geometry
 
+Standard geometry input. You can bake multiple geometry inputs.
+
+#### Properties
+
+##### Animation / Still
+
+Bake an animation or a single frame. Note that the bake node does not do automatic caching.
+
+#### Operators
+
+##### Bake
+
+The bake operator button. Press this to bake.
+
+##### Delete Geometry Node Bake
+
+Delete baked data of a single bake node or simulation.
+
+#### Outputs
+
+##### Geometry
+
+Standard geometry output.
 
 ### Bounding Box
 
@@ -544,12 +716,29 @@ To bake, the file must be saved first.
 
 The Bounding Box geometry node allows you to work with the values of a bounding box.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Geometry**: Standard geometry input. · **Use Radius**: Take the radius attribute into account when computing curves, point clouds and grease pencil. |
-| Output | **Bounding Box**: Standard output. · **Min**: The minimum values of the bounding box. · **Max**: The maximum values of the bounding box. |
+##### Geometry
 
+Standard geometry input.
+
+##### Use Radius
+
+Take the radius attribute into account when computing curves, point clouds and grease pencil.
+
+#### Outputs
+
+##### Bounding Box
+
+Standard output.
+
+##### Min
+
+The minimum values of the bounding box.
+
+##### Max
+
+The maximum values of the bounding box.
 
 ### Convex Hull
 
@@ -557,12 +746,17 @@ The Bounding Box geometry node allows you to work with the values of a bounding 
 
 The node allows you to work with the values of a convex hull of this object.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Convex Hull**: Standard output. |
+##### Geometry
 
+Standard geometry input.
+
+#### Outputs
+
+##### Convex Hull
+
+Standard output.
 
 ### Delete Geometry
 
@@ -572,12 +766,13 @@ The node allows you to work with the values of a convex hull of this object.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | --------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geomerty |
+Standard geometry input.
 
+##### Selection
+
+A selection of the geomerty
 
 #### Properties
 
@@ -607,13 +802,17 @@ Duplicates a part of a geometry a dynamic number of times.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | -------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geomerty. |
-| Amount | Number of times the geometry should be duplicated. |
+Standard geometry input.
 
+##### Selection
+
+A selection of the geomerty.
+
+##### Amount
+
+Number of times the geometry should be duplicated.
 
 #### Properties
 
@@ -625,12 +824,13 @@ What element to duplicate.
 
 #### Output
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ------------------------------------- |
-| Geometry | Standard output. |
-| Duplicate Index | The index of the duplicated elements. |
+Standard output.
 
+##### Duplicate Index
+
+The index of the duplicated elements.
 
 ### Merge by Distance
 
@@ -640,23 +840,25 @@ Welds the selected geometry below a given distance into one vertice.
 
 #### Input
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ---------------------------------- |
-| Geometry | The input geometry. |
-| Selection | A selection of the input geometry. |
+The input geometry.
 
+##### Selection
+
+A selection of the input geometry.
 
 ##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode-2.png)
 
+###### All
 
-| Entry | What it does |
-| --------- | ------------------------------------------------- |
-| All | Merges all vertices in reach. |
-| Connected | Merges just vertices that are connected by edges. |
+Merges all vertices in reach.
 
+###### Connected
+
+Merges just vertices that are connected by edges.
 
 ##### Distance
 
@@ -686,26 +888,37 @@ The input geometry.
 
 A selection of the input geometry. If left blank, all elements are sorted. Non selected elements will be keep their current indices.
 
+###### Group ID
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group ID | Group ID input value. A group is defined as all elements with the same group id. Elements with the same group ID are sorted together. If this is not a field, the node has no affect. |
-| Sort Weight | The sorted values used to do the reordering. If this is not a field, the node has no affect. |
+Group ID input value. A group is defined as all elements with the same group id. Elements with the same group ID are sorted together. If this is not a field, the node has no affect.
 
+###### Sort Weight
+
+The sorted values used to do the reordering. If this is not a field, the node has no affect.
 
 #### Properties
 
 ##### Domain
 
+###### Point
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------ |
-| Point | The fields are evaluated on points, control points, and vertices. |
-| Face | The fields are evaluated on the edges of the mesh component. |
-| Edge | The fields are evaluated on the faces of the mesh component. |
-| Spline | The fields are evaluated on the splines in the curve component. |
-| Instance | The fields are evaluated on the top-level instances. Realized instances are ignored. |
+The fields are evaluated on points, control points, and vertices.
 
+###### Face
+
+The fields are evaluated on the edges of the mesh component.
+
+###### Edge
+
+The fields are evaluated on the faces of the mesh component.
+
+###### Spline
+
+The fields are evaluated on the splines in the curve component.
+
+###### Instance
+
+The fields are evaluated on the top-level instances. Realized instances are ignored.
 
 #### Output
 
@@ -731,14 +944,21 @@ The transformation mode for the node.
 
 Uses single values and vectors.
 
+###### Geometry
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Translation | Translates the geometry in local space of the modified object. |
-| Rotation | Euler rotation in local space. |
-| Scale | Scale to transform the geometries in local space. |
+Standard geometry input.
 
+###### Translation
+
+Translates the geometry in local space of the modified object.
+
+###### Rotation
+
+Euler rotation in local space.
+
+###### Scale
+
+Scale to transform the geometries in local space.
 
 ##### Matrix mode
 
@@ -746,12 +966,13 @@ Uses single values and vectors.
 
 Uses a matrix to transform.
 
+###### Geometry
 
-| Entry | What it does |
-| --------- | ------------------------ |
-| Geometry | Standard geometry input. |
-| Transform | Transform matrix input. |
+Standard geometry input.
 
+###### Transform
+
+Transform matrix input.
 
 #### Output
 
@@ -765,12 +986,37 @@ Standard geometry output.
 
 Splits a geometry into its components.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Geometry**: Geometry input. |
-| Outputs | **Mesh**: Mesh component of the input geometry. · **Curve**: Curve component of the input geometry. · **Grease Pencil**: Grease Pencil component of the input geometry. · **Point Cloud**: Point cloud component of the input geometry. · **Volume**: Volume component of the input geometry. In case that the input contains multiple volume instances, only the first volume component will be calculated. · **Instance**: The single instances of the geometry. |
+##### Geometry
 
+Geometry input.
+
+#### Outputs
+
+##### Mesh
+
+Mesh component of the input geometry.
+
+##### Curve
+
+Curve component of the input geometry.
+
+##### Grease Pencil
+
+Grease Pencil component of the input geometry.
+
+##### Point Cloud
+
+Point cloud component of the input geometry.
+
+##### Volume
+
+Volume component of the input geometry. In case that the input contains multiple volume instances, only the first volume component will be calculated.
+
+##### Instance
+
+The single instances of the geometry.
 
 ### Separate Geometry
 
@@ -782,12 +1028,13 @@ Separates a selection of a geometry into its own object.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ---------------- |
-| Geometry | Geometry input. |
-| Selection | Selection input. |
+Geometry input.
 
+##### Selection
+
+Selection input.
 
 #### Properties
 
@@ -799,12 +1046,17 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
+###### Outputs
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------- |
-| Outputs | — |
-| Selection | Separated selection. · **Inverted**: The inverted separated selection. |
+—
 
+###### Selection
+
+Separated selection.
+
+###### Inverted
+
+The inverted separated selection.
 
 ### Split to Instances
 
@@ -816,13 +1068,17 @@ The node supports meshes, curves, point clouds and instances. Note that it only 
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | --------------------- |
-| Geometry | Geometry input. |
-| Selection | Selection input. |
-| Group ID | Group ID input value. |
+Geometry input.
 
+##### Selection
+
+Selection input.
+
+##### Group ID
+
+Group ID input value.
 
 #### Properties
 
@@ -834,8 +1090,49 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
+###### Outputs
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------- |
-| Outputs | — |
-| Instances | Instances output. An Instance per group. · **Group ID**: Group ID output value. |
+—
+
+###### Instances
+
+Instances output. An Instance per group.
+
+###### Group ID
+
+Group ID output value.
+
+### Get Geometry Component
+
+![Get Geometry Component](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/get-geometry-component.png)
+
+Picks one kind of geometry out of a mixed geometry, for example only the mesh of a geometry that also holds curves and instances. Use it to work on one part and leave the rest alone. The node copies the chosen component and can remove it from the original.
+
+#### Inputs
+
+##### Geometry
+
+The geometry to take a component from.
+
+##### Type
+
+Which component to take: Mesh, Point Cloud, Curve, Instances, Grease Pencil or Volume.
+
+##### Remove
+
+On: the component is taken out of the geometry output.
+
+#### Outputs
+
+##### Geometry
+
+The geometry. Without the component if Remove is on.
+
+##### Component
+
+The component that was taken.
+
+##### Exists
+
+True when the geometry had a component of that type.
+
