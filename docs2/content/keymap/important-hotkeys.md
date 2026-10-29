@@ -258,6 +258,18 @@ Shift + Ctrl + Z = Redo
 | Undo | Ctrl + Z |
 | Redo | Shift + Ctrl + Z |
 
+### Menus
+
+```keymap-keys
+MMB drag = Scroll the menu
+```
+
+| Action | Keys |
+|---|---|
+| Scroll a long menu | Hold MMB and drag |
+
+Menus that are taller than the screen can be scrolled with the middle mouse button. This works in every menu, in every editor.
+
 ### F keys
 
 ```keymap-keys
