@@ -379,12 +379,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Grease Pencil</div><h1 class="pv-title">Grease Pencil</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 5 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Grease Pencil</div><h1 class="pv-title">Grease Pencil</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 5 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
 <h2 id="add-menu-grease-pencil-read">Add menu - Grease Pencil - Read</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/add-menu-grease-pencil-read.png" alt="Add menu - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Grease Pencil - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/add-menu-grease-pencil-read.png" alt="Add menu - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Grease Pencil - Read</figcaption></figure>
 <p>Grease pencil nodes.</p>
 <h3 id="grease-pencil-color">Grease Pencil Color</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-color.png" alt="Grease Pencil Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-color.png" alt="Grease Pencil Color" loading="lazy"></figure>
 <p>Reads the color of the points and of the fills. Use it to drive other values from the colors you painted, or to select all strokes of one color with a Compare node. The Point output is the stroke color of each point. The Fill output is the fill color of each stroke.</p>
 <h4 id="outputs">Outputs</h4>
 <h5 id="point">Point</h5>
@@ -394,7 +394,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Color.</p>
 <p>The fill color of each stroke.</p>
 <h3 id="grease-pencil-draw-time">Grease Pencil Draw Time</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-draw-time.png" alt="Grease Pencil Draw Time" loading="lazy"><figcaption>Grease Pencil Draw Time</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-draw-time.png" alt="Grease Pencil Draw Time" loading="lazy"><figcaption>Grease Pencil Draw Time</figcaption></figure>
 <p>Tells you when a stroke was drawn. Use it to replay a drawing in the order it was made, for example by deleting every point whose time is later than the current frame, so that the drawing appears to be drawn live. Both values are in seconds.</p>
 <h4 id="outputs-2">Outputs</h4>
 <h5 id="creation-time">Creation Time</h5>
@@ -404,14 +404,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>How long after the start of its stroke each point was drawn.</p>
 <h3 id="grease-pencil-fill-id">Grease Pencil Fill ID</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-fill-id.png" alt="Grease Pencil Fill ID" loading="lazy"><figcaption>Grease Pencil Fill ID</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-fill-id.png" alt="Grease Pencil Fill ID" loading="lazy"><figcaption>Grease Pencil Fill ID</figcaption></figure>
 <p>Reads the fill group of each stroke. Strokes that have the same Fill ID are filled together as one shape, which is how an outline made of several strokes gets a single fill. Use it to find out which strokes belong to the same fill, or to select all strokes of one fill.</p>
 <h4 id="outputs-3">Outputs</h4>
 <h5 id="fill-id">Fill ID</h5>
 <p>Data type: Integer.</p>
 <p>The number of the fill group. Strokes with the same number share one fill.</p>
 <h3 id="grease-pencil-opacity">Grease Pencil Opacity</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-opacity.png" alt="Grease Pencil Opacity" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-opacity.png" alt="Grease Pencil Opacity" loading="lazy"></figure>
 <p>Reads how opaque the strokes and the fills are. Use it to select faint strokes, for example to delete everything below a chosen opacity, or to fade a drawing by feeding the value into a Set Grease Pencil Color node.</p>
 <h4 id="outputs-4">Outputs</h4>
 <h5 id="point-2">Point</h5>
@@ -421,21 +421,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The opacity of the fill of each stroke, from 0 to 1.</p>
 <h3 id="grease-pencil-stroke-softness">Grease Pencil Stroke Softness</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-stroke-softness.png" alt="Grease Pencil Stroke Softness" loading="lazy"><figcaption>Grease Pencil Stroke Softness</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-stroke-softness.png" alt="Grease Pencil Stroke Softness" loading="lazy"><figcaption>Grease Pencil Stroke Softness</figcaption></figure>
 <p>Reads the softness of each stroke. Softness is the falloff toward the border of the stroke: 1 is a sharp border and lower values fade out toward the edge. Use it to pick out soft or sharp strokes, or to compare values before you change them with Set Grease Pencil Softness.</p>
 <h4 id="outputs-5">Outputs</h4>
 <h5 id="softness">Softness</h5>
 <p>Data type: Float.</p>
 <p>The softness of each stroke.</p>
 <h3 id="grease-pencil-stroke-visibility">Grease Pencil Stroke Visibility</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-stroke-visibility.png" alt="Grease Pencil Stroke Visibility" loading="lazy"><figcaption>Grease Pencil Stroke Visibility</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-stroke-visibility.png" alt="Grease Pencil Stroke Visibility" loading="lazy"><figcaption>Grease Pencil Stroke Visibility</figcaption></figure>
 <p>Tells you which strokes are hidden. Hidden strokes still exist; they are only not drawn. Use it to skip hidden strokes in an operation, or to delete them for good.</p>
 <h4 id="outputs-6">Outputs</h4>
 <h5 id="is-hidden">Is Hidden</h5>
 <p>Data type: Boolean.</p>
 <p>True for strokes that are hidden.</p>
 <h3 id="named-layer-selection">Named Layer Selection</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/named-layer-selection.png" alt="Named Layer Selection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/named-layer-selection.png" alt="Named Layer Selection" loading="lazy"></figure>
 <p>Outputs a selection of a grease pencil layer by its name.</p>
 <h4 id="inputs">Inputs</h4>
 <h5 id="name">Name</h5>
@@ -447,10 +447,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The selected grease pencil geometry.</p>
 <h1 id="write">Write</h1>
 <h2 id="add-menu-grease-pencil-write">Add menu - Grease Pencil - Write</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/add-menu-grease-pencil-write.png" alt="Add menu - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Grease Pencil - Write</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/add-menu-grease-pencil-write.png" alt="Add menu - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Grease Pencil - Write</figcaption></figure>
 <p>Grease pencil nodes.</p>
 <h3 id="set-grease-pencil-color">Set Grease Pencil Color</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-color.png" alt="Set Grease Pencil Color" loading="lazy"><figcaption>Set Grease Pencil Color</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-color.png" alt="Set Grease Pencil Color" loading="lazy"><figcaption>Set Grease Pencil Color</figcaption></figure>
 <p>Sets the color and opacity of grease pencil strokes, fills or both. Use it to recolor a drawing procedurally, for example to tint strokes by their layer or to fade the drawing out over time. Only the selected part of the drawing changes.</p>
 <h4 id="inputs-2">Inputs</h4>
 <h5 id="grease-pencil">Grease Pencil</h5>
@@ -473,7 +473,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>The grease pencil geometry with the new colors.</p>
 <h3 id="set-grease-pencil-depth">Set Grease Pencil Depth</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-depth.png" alt="Set Grease Pencil Depth" loading="lazy"><figcaption>Set Grease Pencil Depth</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-depth.png" alt="Set Grease Pencil Depth" loading="lazy"><figcaption>Set Grease Pencil Depth</figcaption></figure>
 <p>Set the grease pencil depth order to use. By 2d layers, or by the position in 3d space.</p>
 <h4 id="inputs-3">Inputs</h4>
 <h5 id="grease-pencil-3">Grease Pencil</h5>
@@ -481,7 +481,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The grease pencil geometry.</p>
 <h4 id="properties">Properties</h4>
 <h5 id="depth-order">Depth Order</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/depth-order.png" alt="Depth Order" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/depth-order.png" alt="Depth Order" loading="lazy"></figure>
 <h6 id="2d-layers">2D Layers</h6>
 <p>Set the grease pencil depth by the 2d layers.</p>
 <h6 id="3d-location">3D Location</h6>
@@ -491,7 +491,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>The grease pencil geometry.</p>
 <h3 id="set-grease-pencil-softness">Set Grease Pencil Softness</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-softness.png" alt="Set Grease Pencil Softness" loading="lazy"><figcaption>Set Grease Pencil Softness</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-softness.png" alt="Set Grease Pencil Softness" loading="lazy"><figcaption>Set Grease Pencil Softness</figcaption></figure>
 <p>Adjust the falloff towards the stoke border.</p>
 <h4 id="inputs-4">Inputs</h4>
 <h5 id="grease-pencil-5">Grease Pencil</h5>
@@ -509,10 +509,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The grease pencil geometry.</p>
 <h1 id="operations">Operations</h1>
 <h2 id="add-menu-grease-pencil-operations">Add menu - Grease Pencil - Operations</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/add-menu-grease-pencil-operations.png" alt="Add menu - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Grease Pencil - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/add-menu-grease-pencil-operations.png" alt="Add menu - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Grease Pencil - Operations</figcaption></figure>
 <p>Grease Pencil nodes.</p>
 <h3 id="grease-pencil-to-curves">Grease Pencil to Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil-to-curves.png" alt="Grease Pencil to Curves" loading="lazy"><figcaption>Grease Pencil to Curves</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil-to-curves.png" alt="Grease Pencil to Curves" loading="lazy"><figcaption>Grease Pencil to Curves</figcaption></figure>
 <p>Converts a grease pencil geometry to a curve geometry</p>
 <h4 id="inputs-5">Inputs</h4>
 <h5 id="grease-pencil-7">Grease Pencil</h5>
@@ -529,17 +529,17 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>Curves output.</p>
 <h3 id="merge-layers">Merge Layers</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/merge-layers.png" alt="Merge Layers" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/merge-layers.png" alt="Merge Layers" loading="lazy"></figure>
 <p>Merge all grease pencil layers into one layer</p>
 <h4 id="grease-pencil-8">Grease Pencil</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
 <p>The grease pencil geometry.</p>
 <h5 id="selection-5">Selection</h5>
 <p>A selection of the grease pencil geometry.</p>
 <h5 id="group-id">Group ID</h5>
 <p>In By Group ID mode. Input a group ID value.</p>
 <h4 id="properties-2">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1efcce063dd0a8a05eafad99873ea3cafe1e6cca/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd45f2f1848cab010beaeb4e52957a5d3a40a309/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="mode-2">Mode</h5>
 <h6 id="by-name">By Name</h6>
 <p>Combine all layers which have the same name.</p>
