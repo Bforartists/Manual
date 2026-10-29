@@ -117,7 +117,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Render</span>
-<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:3.5rem">Input</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
 <span>Topbar and Statusbar</span>
@@ -379,11 +379,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Shader Editor › Header › Add Menu › Utilities</div><h1 class="pv-title">Utilities</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-utilities-vector">Add menu - Utilities - Vector</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Shader Editor › Header › Add Menu › Utilities</div><h1 class="pv-title">Utilities</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-utilities-vector">Add menu - Utilities - Vector</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
 <p>This menu contains nodes that deals with vector data.</p>
 <h3 id="repeat">Repeat</h3>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/repeat.png" alt="Repeat" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/repeat.png" alt="Repeat" loading="lazy"></figure>
 <p>When adding a repeat zone, two nodes are added with a “zone” set between them. The inputs connected to the <em>Repeat Input</em> node reads and gets data at the beginning of the loop before starting the looping - then the data is processed within the zone, here you can set any changes to the data to then repeat the execution again at the beginning of the chain for the next iteration of the loop. This chain of operations is repeated the specified number of times in the <em>Repeat Input</em> node.</p>
 <p>In the example in the image above, we duplicate the cube, transform it with a rotation, then join it together again. We do this 8 times in a loop, creating a circular array.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> It is not possible to set data outside the Repeat Zone, you can only get data from outside the Repeat Zone. Any data connected from the outside of the zone are constant throughout every iteration based on their value at the current frame. The result of the looping can only be accessed via the Repeat Output node.</p></div>
@@ -406,16 +406,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="geometry-4">Geometry</h6>
 <p>Standard geometry output.</p>
 <h3 id="closure">Closure</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png" alt="Closure" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png" alt="Closure" loading="lazy"></figure>
 <p>Wrap nodes inside a closure that can be executed at a different part of the node-tree</p>
 <h3 id="evaluate-closure">Evaluate Closure</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png" alt="Evaluate Closure" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png" alt="Evaluate Closure" loading="lazy"></figure>
 <p>Execute a given closure.</p>
 <h3 id="combine-bundle">Combine Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png" alt="Combine Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png" alt="Combine Bundle" loading="lazy"></figure>
 <p>Combine multiple socket values into one.</p>
 <h3 id="join-bundle">Join Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png" alt="Join Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png" alt="Join Bundle" loading="lazy"></figure>
 <p>Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.</p>
 <h4 id="inputs-2">Inputs</h4>
 <h5 id="bundle">Bundle</h5>
@@ -426,10 +426,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Bundle.</p>
 <p>One bundle with the items of all input bundles.</p>
 <h3 id="separate-bundle">Separate Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png" alt="Separate Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png" alt="Separate Bundle" loading="lazy"></figure>
 <p>Decompose a bundle of values into the single values.</p>
 <h3 id="index-switch">Index Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
 <p>The Index Switch node chooses one value out of any number of values by its position (index). Only the chosen value is computed. It is a simpler version of the Menu Switch node: the items have no names and no dropdown, but you can have as many as you need.</p>
 <h4 id="inputs-3">Inputs</h4>
 <h5 id="index">Index</h5>
@@ -442,10 +442,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The type of the values that are switched, and of the output. In the Shader Editor you can choose Float, Integer, Boolean, Vector, Color, String, Menu, Shader, Bundle or Closure. The default is Color.</p>
 <h4 id="outputs-3">Outputs</h4>
 <h5 id="output-2">Output</h5>
-<p>Data type: Color.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The value of the chosen item.</p>
 <h3 id="menu-switch">Menu Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
 <p>The Menu Switch node selects and computes one input based on a user-defined menu. Only the selected input is computed.</p>
 <p>Menu entries can be added, removed, renamed, and reordered. Renaming keeps existing input links.</p>
 <p>The menu can be used in node groups and the nodes modifier UI. Connecting the menu to a Group Input node exposes it as a group input. A menu needs to be connected to a Menu Switch node to work. An unconnected menu is empty.</p>
@@ -460,7 +460,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </thead>
 <tbody>
 <tr>
-<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png" alt="Menu Switch" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png" alt="Menu Switch" /> Top Level Grouped Menu Switches with same inputs:</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png" alt="Menu Switch" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png" alt="Menu Switch" /> Top Level Grouped Menu Switches with same inputs:</td>
 <td>Conflict caused by Same Level menu Switch inputs:</td>
 </tr>
 </tbody>
@@ -470,21 +470,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Becomes the output if the value is chosen.</p>
 <h5 id="menu">Menu</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu.png" alt="Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/menu.png" alt="Menu" loading="lazy"></figure>
 <p>Determines which of the input options will be selected and passed through as the default.</p>
 <h5 id="a-b-2">A , B ...</h5>
 <p>The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can add more menu switch options to the empty socket.</p></div>
 <h4 id="properties-2">Properties</h4>
 <h5 id="data-type-2">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>Determines the type of the data that is handled by the node.</p>
 <h4 id="outputs-4">Outputs</h4>
 <h5 id="output-3">Output</h5>
-<p>Data type: Color.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The output index.</p>
 <h3 id="switch">Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
 <p>Switch between two values with a checkbox. Only the chosen value is computed.</p>
 <h4 id="inputs-5">Inputs</h4>
 <h5 id="switch-2">Switch</h5>
@@ -505,10 +505,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The True or False value, depending on Switch.</p>
 <h1 id="math">Math</h1>
 <h2 id="add-menu-utilities-math">Add menu - Utilities - Math</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
 <p>This menu contains nodes that deals with Math data.</p>
 <h3 id="clamp">Clamp</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
 <p>The Clamp node clamps a value between a minimum and a maximum.</p>
 <h4 id="inputs-6">Inputs</h4>
 <h5 id="value">Value</h5>
@@ -522,7 +522,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The maximum value.</p>
 <h4 id="properties-4">Properties</h4>
 <h5 id="clamp-type">Clamp Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp-type.png" alt="Clamp Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp-type.png" alt="Clamp Type" loading="lazy"></figure>
 <h6 id="min-max">Min Max</h6>
 <p>Clamp values using Min and Max values.</p>
 <h6 id="range">Range</h6>
@@ -532,7 +532,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The input value after clamping.</p>
 <h3 id="float-curve">Float Curve</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
 <p>Generates a curve. This curve can then be used for profiles for example.</p>
 <h4 id="inputs-7">Inputs</h4>
 <h5 id="factor">Factor</h5>
@@ -548,10 +548,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="zoom-in-and-out">Zoom in and out</h6>
 <p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
 <h6 id="clipping">Clipping</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
 <p>Clipping options.</p>
 <h6 id="tools">Tools</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/tools.png" alt="Tools" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/tools.png" alt="Tools" loading="lazy"></figure>
 <p>Tools is a menu where you can find some curve related tools.</p>
 <h6 id="reset-view">Reset View</h6>
 <p>Resets the curve windows zoom.</p>
@@ -562,7 +562,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="reset-curve">Reset Curve</h6>
 <p>Resets the curve to the initial shape.</p>
 <h6 id="vector-handle">Vector Handle</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
 <p>Set handle type to Vector.</p>
 <h6 id="auto-handle">Auto Handle</h6>
 <p>Set handle type to Auto.</p>
@@ -573,30 +573,30 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="delete-points">Delete Points</h6>
 <p>Delete the currently selected curve point.</p>
 <h3 id="map-range">Map Range</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
 <p>The Map Range node remaps a value from a range to a target range.</p>
 <h4 id="inputs-8">Inputs</h4>
 <h5 id="value-3">Value</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input value to be remapped.</p>
 <h5 id="from-min">From Min</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The lower bound of the range to remap from.</p>
 <h5 id="from-max">From Max</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The higher bound of the range to remap from.</p>
 <h5 id="to-min">To Min</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The lower bound of the target range.</p>
 <h5 id="to-max">To Max</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The higher bound of the target range.</p>
 <h4 id="properties-6">Properties</h4>
 <h5 id="data-type-3">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The data type to calculate.</p>
 <h5 id="interpolation-type">Interpolation Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
 <h6 id="linear">Linear</h6>
 <p>Linear interpolation between From Min and From Max values.</p>
 <h6 id="stepped-linear">Stepped Linear</h6>
@@ -609,10 +609,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>If enabled, the output is clamped to the target range.</p>
 <h4 id="outputs-7">Outputs</h4>
 <h5 id="result-2">Result</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input value after remapping.</p>
 <h3 id="math-2">Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
 <p>The Math Node performs math operations.</p>
 <h4 id="inputs-9">Inputs</h4>
 <h5 id="value-4">Value</h5>
@@ -624,7 +624,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="properties-7">Properties</h4>
 <h5 id="operation">Operation</h5>
 <p>Here you can choose what mathematical operation to perform.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
 <h5 id="clamp-3">Clamp</h5>
 <p>Limits the output to the range (0 to 1). See clamp.</p>
 <h4 id="outputs-8">Outputs</h4>
@@ -632,10 +632,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>Numerical value output.</p>
 <h3 id="mix">Mix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
 <p>Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color</p>
 <h4 id="input-2">Input</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
 <h5 id="float">Float</h5>
 <h6 id="factor-2">Factor</h6>
 <p>The mix factor.</p>
@@ -645,7 +645,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Float value B input.</p>
 <h5 id="vector">Vector</h5>
 <h5 id="factor-mode-uniform">Factor mode Uniform</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
 <h6 id="factor-3">Factor</h6>
 <p>The mix factor.</p>
 <h6 id="a-2">A</h6>
@@ -653,7 +653,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="b-2">B</h6>
 <p>Vector B input.</p>
 <h5 id="factor-mode-non-uniform">Factor mode Non Uniform</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
 <h6 id="factor-4">Factor</h6>
 <p>The vector mix factor.</p>
 <h6 id="a-3">A</h6>
@@ -661,7 +661,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="b-3">B</h6>
 <p>Vector B input.</p>
 <h5 id="color">Color</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
 <h6 id="factor-5">Factor</h6>
 <p>The mix factor.</p>
 <h6 id="a-4">A</h6>
@@ -670,21 +670,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Color B input.</p>
 <h4 id="properties-8">Properties</h4>
 <h5 id="data-type-4">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Which mode to use.</p>
 <h5 id="float-mode">Float mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
 <h6 id="clamp-factor">Clamp Factor</h6>
 <p>Clamp the factor to 0-1 range.</p>
 <h5 id="vector-mode">Vector mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
 <h6 id="factor-mode">Factor mode</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
 <p>Uniform or non uniform factor.</p>
 <h6 id="clamp-factor-2">Clamp Factor</h6>
 <p>Clamp the factor to 0-1 range.</p>
 <h5 id="color-mode">Color mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
 <h6 id="blending-mode">Blending mode</h6>
 <p>What blending mode to use for the color.</p>
 <h6 id="clamp-result">Clamp Result</h6>
@@ -693,14 +693,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Clamp the input factor to 0-1 range.</p>
 <h4 id="output-5">Output</h4>
 <h5 id="result-3">Result</h5>
-<p>Data type: Float or Vector or Color or Rotation.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The output value or vector.</p>
 <h1 id="vector-2">Vector</h1>
 <h2 id="add-menu-utilities-vector-2">Add menu - Utilities - Vector</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
 <p>This menu contains nodes that deals with vector data.</p>
 <h3 id="combine-xyz">Combine XYZ</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
 <p>Same as with Combine RGB node. It combines color values. But instead combining rgb values, which are in the range of 0 to 255, it uses values in the range from 0 to 1.</p>
 <h4 id="inputs-10">Inputs</h4>
 <h5 id="x-y-and-z">X Y and Z</h5>
@@ -709,27 +709,27 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="color-2">Color</h5>
 <p>Color output.</p>
 <h3 id="map-range-2">Map Range</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
 <p>The Map Range node remaps a value from a range to a target range.</p>
 <h4 id="inputs-11">Inputs</h4>
 <h5 id="value-7">Value</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input value to be remapped.</p>
 <h5 id="from-min-2">From Min</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The lower bound of the range to remap from.</p>
 <h5 id="from-max-2">From Max</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The higher bound of the range to remap from.</p>
 <h5 id="to-min-2">To Min</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The lower bound of the target range.</p>
 <h5 id="to-max-2">To Max</h5>
-<p>Data type: Float or Vector.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The higher bound of the target range.</p>
 <h4 id="properties-9">Properties</h4>
 <h5 id="interpolation-type-2">Interpolation Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
 <h6 id="linear-2">Linear</h6>
 <p>Linear interpolation between From Min and From Max values.</p>
 <h6 id="stepped-linear-2">Stepped Linear</h6>
@@ -742,13 +742,13 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>If enabled, the output is clamped to the target range.</p>
 <h4 id="outputs-10">Outputs</h4>
 <h5 id="result-4">Result</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input value after remapping.</p>
 <h3 id="mix-vector">Mix Vector</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
 <p>A mix node with vector preselected.</p>
 <h4 id="input-3">Input</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
 <h5 id="float-2">Float</h5>
 <h6 id="factor-6">Factor</h6>
 <p>The mix factor.</p>
@@ -758,7 +758,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Float value B input.</p>
 <h5 id="vector-3">Vector</h5>
 <h5 id="factor-mode-uniform-2">Factor mode Uniform</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
 <h6 id="factor-7">Factor</h6>
 <p>The mix factor.</p>
 <h6 id="a-6">A</h6>
@@ -766,7 +766,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="b-6">B</h6>
 <p>Vector B input.</p>
 <h5 id="factor-mode-non-uniform-2">Factor mode Non Uniform</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
 <h6 id="factor-8">Factor</h6>
 <p>The vector mix factor.</p>
 <h6 id="a-7">A</h6>
@@ -774,7 +774,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="b-7">B</h6>
 <p>Vector B input.</p>
 <h5 id="color-3">Color</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
 <h6 id="factor-9">Factor</h6>
 <p>The mix factor.</p>
 <h6 id="a-8">A</h6>
@@ -783,21 +783,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Color B input.</p>
 <h4 id="properties-10">Properties</h4>
 <h5 id="data-type-5">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>Which mode to use.</p>
 <h5 id="float-mode-2">Float mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
 <h6 id="clamp-factor-4">Clamp Factor</h6>
 <p>Clamp the factor to 0-1 range.</p>
 <h5 id="vector-mode-2">Vector mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
 <h6 id="factor-mode-2">Factor mode</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
 <p>Uniform or non uniform factor.</p>
 <h6 id="clamp-factor-5">Clamp Factor</h6>
 <p>Clamp the factor to 0-1 range.</p>
 <h5 id="color-mode-2">Color mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
 <h6 id="blending-mode-2">Blending mode</h6>
 <p>What blending mode to use for the color.</p>
 <h6 id="clamp-result-2">Clamp Result</h6>
@@ -808,7 +808,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="result-5">Result</h5>
 <p>The output value or vector.</p>
 <h3 id="separate-xyz">Separate XYZ</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
 <p>Same as with Separate RGB node. It separates color values. But instead separating rgb values, which are in the range of 0 to 255, it uses a vector with the values in the range from 0 to 1.</p>
 <h4 id="inputs-12">Inputs</h4>
 <h5 id="vector-4">Vector</h5>
@@ -818,7 +818,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="x-y-and-z-2">X, Y and Z</h5>
 <p>The output vectors for X, Y and Z</p>
 <h3 id="mapping">Mapping</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mapping.png" alt="Mapping" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mapping.png" alt="Mapping" loading="lazy"></figure>
 <p>The Mapping node transforms the input vector by applying translation, rotation, and scaling.</p>
 <h4 id="inputs-13">Inputs</h4>
 <p>The inputs of the node are dynamic. In particular, the Location input is only available in the Texture and Point vector types.</p>
@@ -836,7 +836,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The amount of scaling along each axis.</p>
 <h4 id="properties-11">Properties</h4>
 <h5 id="vector-type">Vector type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-type.png" alt="Vector type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-type.png" alt="Vector type" loading="lazy"></figure>
 <p>The node applies the transformation differently depending on the semantic type of the input vector.</p>
 <h5 id="point">Point</h5>
 <p>For this vector type, the node performs a straightforward transformation.</p>
@@ -861,7 +861,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>The input vector after transformation.</p>
 <h3 id="normal-2">Normal</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/normal.png" alt="Normal" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/normal.png" alt="Normal" loading="lazy"></figure>
 <p>The Normal node generates a normal vector and a dot product.</p>
 <h4 id="inputs-14">Inputs</h4>
 <h5 id="normal-3">Normal</h5>
@@ -878,7 +878,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>Dot product output. The dot product is a scalar value. If two normals are pointing in the same direction the dot product is 1. If they are perpendicular the dot product is zero (0). If they are anti parallel (facing directly away from each other) the dot product is -1.</p>
 <h3 id="radial-tiling">Radial Tiling</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
 <h4 id="inputs-15">Inputs</h4>
 <h5 id="vector-8">Vector</h5>
 <p>Data type: Vector (2d).</p>
@@ -902,7 +902,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="segment-rotation">Segment Rotation</h4>
 <p>The rotation of each segment.</p>
 <h3 id="vector-curves">Vector Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
 <p>The Vector Curves node maps an input vector components to a curve.</p>
 <h4 id="inputs-16">Inputs</h4>
 <p>In the shader context the node also has an additional Factor property.</p>
@@ -913,12 +913,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>Standard vector input. Properties Channel</p>
 <h5 id="channel-buttons">Channel buttons</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
 <p>X, Y, Z. Clicking on one of the channels displays the curve for each.</p>
 <h5 id="curve-edit-field">Curve edit field</h5>
 <p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
 <h5 id="selecting-points">Selecting Points</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
 <p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
 <p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
 <h5 id="adding-points">Adding Points</h5>
@@ -930,15 +930,15 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="zoom-in-and-out-2">Zoom in and out</h6>
 <p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
 <h6 id="clipping-2">Clipping</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
 <p>Clipping options.</p>
 <h5 id="tools-2">Tools</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
 <p>Tools is a menu where you can find some curve related tools.</p>
 <h6 id="reset-view-2">Reset View</h6>
 <p>Resets the curve windows zoom.</p>
 <h6 id="vector-handle-2">Vector Handle</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
 <p>Set handle type to Vector.</p>
 <h6 id="auto-handle-2">Auto Handle</h6>
 <p>Set handle type to Auto.</p>
@@ -953,7 +953,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>Standard vector output.</p>
 <h3 id="vector-math">Vector Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
 <p>The Vector Math node performs the selected math operation on the input vectors.</p>
 <h4 id="inputs-17">Inputs</h4>
 <p>The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.</p>
@@ -968,7 +968,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Input Scale.</p>
 <h4 id="properties-14">Properties</h4>
 <h5 id="operation-2">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/operation.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/operation.png" alt="Operation" loading="lazy"></figure>
 <p>The vector math operator to be applied on the input vectors.</p>
 <h4 id="outputs-16">Outputs</h4>
 <p>The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.</p>
@@ -979,7 +979,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>Output value.</p>
 <h3 id="vector-rotate">Vector Rotate</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
 <p>This node provides the ability to rotate a vector around a center point using either Axis Angle, Single Axis or Euler methods.</p>
 <h4 id="inputs-18">Inputs</h4>
 <h5 id="vector-14">Vector</h5>
@@ -996,7 +996,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The rotation angle.</p>
 <h4 id="properties-15">Properties</h4>
 <h5 id="type">Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
 <p>The rotation type.</p>
 <h5 id="invert">Invert</h5>
 <p>Invert the angle</p>
@@ -1005,7 +1005,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>The output vector</p>
 <h3 id="vector-transform">Vector Transform</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-transform.png" alt="Vector Transform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-transform.png" alt="Vector Transform" loading="lazy"></figure>
 <p>The Vector Transform node allows converting a vector, point, or normal between world and camera and object coordinate space.</p>
 <h4 id="inputs-19">Inputs</h4>
 <h5 id="vector-input">Vector Input</h5>
@@ -1015,10 +1015,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Specifies the input/output type.</p>
 <p>Vector, Point, Normal.</p>
 <h5 id="convert-from">Convert From</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-from.png" alt="Convert From" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-from.png" alt="Convert From" loading="lazy"></figure>
 <p>Coordinate Space to convert from World, Object or Camera.</p>
 <h5 id="convert-to">Convert To</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-to.png" alt="Convert To" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ed47002c0284e234735a33c06feebe455a4900b/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-to.png" alt="Convert To" loading="lazy"></figure>
 <p>Coordinate Space to convert to World, Object or Camera.</p>
 <h4 id="outputs-18">Outputs</h4>
 <h5 id="vector-output">Vector Output</h5>
