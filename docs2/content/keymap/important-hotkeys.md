@@ -6,7 +6,7 @@ path:
   - Keymap
   - Important Hotkeys
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 42 Important Hotkeys.odt
