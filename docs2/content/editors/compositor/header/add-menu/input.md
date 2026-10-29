@@ -874,4 +874,5 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 A speed of time factor (from 0.00 to 1.00) relative to the frame rate defined in the Render Dimensions Panel. The factor changes according to the defined curve.
 
-Hint. By using curves it is possible that the Time node may output a number larger than one or less than zero. To be safe, you should use the Min/Max clamping function of the Map Value node to limit output.
+> Note: By using curves it is possible that the Time node may output a number larger than one or less than zero. To be safe, you should use the Min/Max clamping function of the Map Value node to limit output.
+
