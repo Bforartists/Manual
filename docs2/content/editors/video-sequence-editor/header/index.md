@@ -6,9 +6,9 @@ path:
   - Editors
   - Video Sequence Editor
   - Header
-version: "5.1"
-status: draft
-screenshots: "5.1"
+version: 5.2.3
+status: needs-review
+screenshots: 5.2.3
 source:
   - 14.1 Editors - Video Sequence Editor - Header.odt
 replaces:
@@ -25,7 +25,7 @@ replaces:
   - editors.video-sequence-editor.header.text-menu
   - editors.video-sequence-editor.header.scene-menu
 order: 10
-summary: "The Header contains some menus and settings."
+summary: The Header contains some menus and settings.
 ---
 ## Video Sequence Editor - Header
 
@@ -75,11 +75,13 @@ Snap strips during transform.
 
 ##### Snap to
 
+
 | Entry | What it does |
 | ------------ | ---------------------------------------------------------- |
 | Borders | Snap to preview borders. |
 | Center | Snap to preview center. |
 | Other Strips | Snap to borders and origins of deselected, visible strips. |
+
 
 ### Display Mode
 
@@ -123,10 +125,12 @@ Displays a histogram of the image.
 
 What channels of the video to display.
 
+
 | Entry | What it does |
 | --------------- | --------------------------------------------- |
 | Color and Alpha | Display the color channels and alpha channel. |
 | Color | Display just the color channels. |
+
 
 ### Show Gizmo
 
@@ -138,19 +142,23 @@ Show or hide the viewport gizmos.
 
 What kind of gizmos to show.
 
+
 | Entry | What it does |
 | ------------ | ------------------------------- |
 | Active Tools | Toggles the navigation gizmos. |
 | Active Tools | Toggles the active tool gizmos. |
 
+
 ### Options
 
 ![Options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/options.png)
+
 
 | Entry | What it does |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Show Metadata | Show metadata of first visible strip in the viewport. |
 | Zoom to Fit | Automatically zoom preview image to fully fit into the preview window. **Note:** *Zooming in or out turns off the feature automatically.* |
+
 
 ### Show Overlay
 
@@ -160,11 +168,13 @@ Turn on or off all overlays.
 
 #### Preview Overlays
 
+
 | Entry | What it does |
 | ------------- | ----------------------------------- |
 | Image Outline | Outline the selected image element. |
 | Frame Overlay | Show the frame overlays. |
 | Metadata | Show the Metadata overlay. |
+
 
 ##### 2D Cursor
 
@@ -172,10 +182,12 @@ Turn on or off all overlays.
 
 Show the 2d cursor.
 
+
 | Entry | What it does |
 | ----------- | ---------------------------- |
 | Safe Areas | Show the safe area overlays. |
 | Annotations | Show the annotations. |
+
 
 ### Sync
 
@@ -230,6 +242,7 @@ Snap to strip edges or current frame.
 
 ##### Sequencer Snapping
 
+
 | Entry | What it does |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Snap to | **Frame Range**: Snap to the current frame range · **Current Frame**: Snap to the current frame · **Hold Offset**: Snap to strip Hold offsets. · **Markers**: Snap to Markers. |
@@ -237,9 +250,11 @@ Snap to strip edges or current frame.
 | Ignore | **Muted Strips**: Ignores muted strips. · **Sound Strips**: Ignores sound strips. |
 | Current Frame | **Snap to Strips**: Sets the current frame to the start or end point of the selected clip. |
 
+
 ### Options
 
 ![Options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/options-2.png)
+
 
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -251,6 +266,7 @@ Snap to strip edges or current frame.
 | Sync Markers | Transform markers with the strips. |
 | Limit View to Content | Limit timeline height to maximum used channel slots. |
 
+
 ### Show Overlays
 
 Turn on or off all overlays.
@@ -259,12 +275,15 @@ Turn on or off all overlays.
 
 ![Sequencer Overlays](/docs2/images/editors/video-sequence-editor/header/tools-and-options/sequencer-overlays.png)
 
+
 | Entry | What it does |
 | ----- | ----------------------------------------- |
 | Grid | Show the grid in the sequencer timeline. |
 | Cache | Visualize cached images on the timelines. |
 
+
 #### Strips
+
 
 | Entry | What it does |
 | -------- | --------------------------------- |
@@ -272,11 +291,13 @@ Turn on or off all overlays.
 | Source | Show the source of the clip. |
 | Duration | Display the duration of the clip. |
 
+
 ##### Animation Curves
 
 ![Animation Curves](/docs2/images/editors/video-sequence-editor/header/tools-and-options/animation-curves.png)
 
 Display the strip opacity/volume curves.
+
 
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -284,6 +305,7 @@ Display the strip opacity/volume curves.
 | Color Tags | Display the strip color tags in the sequencer. |
 | Offset | What offset frame to use, relative to the current frame position. |
 | Retiming | Display the retiming keys on top of the strips. |
+
 
 ##### Waveforms
 
@@ -297,19 +319,23 @@ How waveforms are displayed.
 
 Shows waveforms
 
+
 | Entry | What it does |
 | ----- | ---------------------------------------------------------------------------- |
 | Strip | Shows strip settings per strip in the Sound panel Display Waveform settings. |
 | Off | Hides all waveforms. |
 
+
 ##### Waveform Style
 
 What waveform style to use.
+
 
 | Entry | What it does |
 | ----- | -------------------------------- |
 | Full | Shows a bidirectional wave form. |
 | Half | Shows a one-sided wave form. |
+
 
 ### Sync
 
@@ -407,11 +433,13 @@ Shows or hides the toolbar at the left.
 
 Shows or hides the sidebar at the right in the viewport.
 
+
 | Entry | What it does |
 | ----------------- | --------------------------------------------------- |
 | Tool Settings | Show or hide the tool settings at the top. |
 | Tool shelf tabs | Show or hide the tool shelf tabs in the tool shelf. |
 | Playback Controls | Reveals the footer with the playback controls. |
+
 
 ### Annotations (Legacy) submenu
 
@@ -420,6 +448,7 @@ Shows or hides the sidebar at the right in the viewport.
 This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
+
 
 | Entry | What it does |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -430,11 +459,14 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Add Annotation Layer | Starts a new annotation layer. |
 | Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
 
+
+
 | Entry | What it does |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Zoom In | Zooms in. |
 | Zoom Out | Zooms out. |
 | Zoom Border | Draw a rectangle around the target area to zoom in or out. Left mouse button zoooms in. Middle mouse button zooms out. |
+
 
 ### Zoom
 
@@ -442,10 +474,12 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 A set of predefined zoom factors.
 
+
 | Entry | What it does |
 | --------------------- | ----------------------------------------------------------------- |
 | Fit Preview in Window | Zooms in or out until the video displays fitting in the viewport. |
 | Frame Selected | Centers the selection and zooms to fit. |
+
 
 ### Proxy
 
@@ -469,12 +503,14 @@ Recreates the proxy images
 
 What render size the display should choose.
 
+
 | Entry | What it does |
 | ------------------------- | ---------------------------------------------------------------- |
 | Refresh All | Refresh the sequence editor. |
 | Sequence render Image | Renders an image of the current frame. |
 | Sequence render Animation | Renders the animation in the preview range. |
 | Toggle Sequencer/Preview | Toggles the type of sequencer view between Sequencer or Preview. |
+
 
 ### Pie Menu
 
@@ -496,10 +532,12 @@ Displays the 3D View divided into four split screen parts. Note that the orthogr
 
 To return to single view reuse the menu item in the View menu.
 
+
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
+
 
 #### Duplicate Area into New Window
 
@@ -507,11 +545,13 @@ To return to single view reuse the menu item in the View menu.
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
+
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar. |
 | Close Area | Closes the area window. |
+
 
 ## View Menu in Sequencer window
 
@@ -541,6 +581,7 @@ Show or hide the tool settings at the top.
 
 Displays the Adjust last operation panel down left.
 
+
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------- |
 | Channels | Display the channels in front of the timeline |
@@ -550,6 +591,7 @@ Displays the Adjust last operation panel down left.
 | Zoom Out | Zooms out. |
 | Zoom Border | Zooms to the selection. |
 | Frame all | Zooms in or out to display all elements fitting into the view. |
+
 
 ### Frame Scene Range / Frame Preview Range
 
@@ -563,6 +605,7 @@ This menu item changes the name and the icon, dependant of if the Use Preview ra
 
 Resize the horizontal view to the current scene or preview frame range.
 
+
 | Entry | What it does |
 | ------------------------- | -------------------------------------------------------------------------------- |
 | Go to current frame | Centers the view at the current frame. |
@@ -571,6 +614,7 @@ Resize the horizontal view to the current scene or preview frame range.
 | Sequence render Image | Renders an image of the current frame. |
 | Sequence render Animation | Renders the animation in the preview range. |
 | Toggle Sequencer/Preview | Toggles the type of sequencer view between Sequencer or Preview. |
+
 
 ### Pie Menu
 
@@ -592,20 +636,24 @@ Displays the 3D View divided into four split screen parts. Note that the orthogr
 
 To return to single view reuse the menu item in the View menu.
 
+
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
+
 #### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/video-sequence-editor/header/view-menu/duplicate-area-into-new-window.png)
+
 
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar. |
 | Close Area | Closes the area window. |
+
 
 # Export Menu
 
@@ -629,6 +677,7 @@ Exports the subtitles of a video in stl format. You need to have a subtitle text
 
 This menu exists in Sequencer view type.
 
+
 | Entry | What it does |
 | ------------------------------ | ------------------------------------------ |
 | Play Animation | Plays the movie. |
@@ -636,6 +685,7 @@ This menu exists in Sequencer view type.
 | Jump to Next Strip | Jumps to the start of the next strip. |
 | Jump to Previous Strip(Center) | Jumps to the center of the previous strip. |
 | Jump to Next Strip(Center) | Jumps to the center of the next strip. |
+
 
 ### Range
 
@@ -649,11 +699,13 @@ Play range related functionality. Most of it can also be adjusted in the play el
 
 Calls a border select tool that allows you to set the range of the preview.
 
+
 | Entry | What it does |
 | --------------------------- | ---------------------------------------------------------------------------------------- |
 | Set Preview Range to Strips | Sets the width of the preview range to the length of the strips. |
 | Clear Preview Range | Removes the preview range. |
 | Set Frame Range to Strips | Sets the start and end frame to the start and end frames of the strips in the sequencer. |
+
 
 > **Tip:** To make the current frame the start or end of playback, use the two buttons next to **Start** and **End** in the timeline footer.
 
@@ -667,26 +719,31 @@ Calls a border select tool that allows you to set the range of the preview.
 
 Select everything.
 
+
 | Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | None | Select nothing. |
 | Invert | Flip the selection: selected strips become unselected and the other way round. |
 | Box Select (Legacy) | Drag a rectangle to select strips. Hold Shift to remove strips from the selection. You rarely need it: dragging with the Tweak tool selects the same way. |
 | Box Select (Include Handles) | Like Box Select, but it also selects the handles at the start and end of each strip, so you can trim several strips at once. |
 | Side of Cursor | Selects every strip on the same side of the playhead as your mouse. |
 
+
 ### Side of Frame submenu
 
 ![Side of Frame submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/side-of-frame-submenu.png)
+
 
 | Entry | What it does |
 | ----- | ----------------------------------------------- |
 | Left | Select the strips left from the current frame. |
 | Right | Select the strips right from the current frame. |
 
+
 ### Handle submenu
 
 ![Handle submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/handle-submenu.png)
+
 
 | Entry | What it does |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -696,6 +753,7 @@ Select everything.
 | Both Neighbours | Select all handles of the selected strips. Plus the handles from the neighbour strips that touches this strip. |
 | Left Neighbours | Select the left handles of the selected strips. Plus the handle from the neighbour strips that touches the left handle of the strip. |
 | Right Neighbours | Select the right handles of the selected strips. Plus the handle from the neighbour strips that touches the right handle of the strip. |
+
 
 #### Adjust Last Operation - Select Handles
 
@@ -709,11 +767,13 @@ Which side to select.
 
 ![Channel submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/channel-submenu.png)
 
+
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------- |
 | Left | Select the strips left from the current frame that are in the same channel. |
 | Right | Select the strips right from the current frame that are in the same channel. |
 | Both sides | Select all strips in the channel of the currently selected strip. |
+
 
 ### Linked
 
@@ -737,11 +797,13 @@ Select all strips that are equal to the current selected strip by the chosen met
 
 Select everything.
 
+
 | Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ------------------- | ---------------------------------------------------------------------------------- |
 | None | Select nothing. |
 | Invert | Flip the selection. |
 | Box Select (Legacy) | Drag a rectangle to select strips. Hold Shift to remove strips from the selection. |
+
 
 ### Grouped
 
@@ -781,10 +843,12 @@ Markers can be pulled around by clicking at them and dragging them left or right
 
 By holding down shift you can select more than one marker.
 
+
 | Entry | What it does |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Add Marker | Adds a marker at the current frame position. |
 | Duplicate Marker | Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination. |
+
 
 ### Duplicate Marker to Scene
 
@@ -824,6 +888,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 
 ![Select submenu](/docs2/images/editors/video-sequence-editor/header/marker-menu/select-submenu.png)
 
+
 | Entry | What it does |
 | -------------------- | ------------------------------------------- |
 | All | Select all markers. |
@@ -832,6 +897,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 | Before Current Frame | Select markers before current frame |
 | After Current Frame | Select markers after current frame. |
 | Jump to Next Marker | Sets the frame position to the next marker. |
+
 
 ### Jump to Previous Marker
 
@@ -897,6 +963,7 @@ Import a video.
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings.png)
 
+
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------- |
 | Relative Path | Use a relative path to the blend file. |
@@ -906,6 +973,7 @@ Import a video.
 | Sound | Import sound. A video is usually made of an image part and an audio part. |
 | Use Movie Frame rate | Use the frame rate of the video to keep video and audio in sync. |
 
+
 ### Sound
 
 Import an audio file.
@@ -913,6 +981,7 @@ Import an audio file.
 #### Import settings
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-2.png)
+
 
 | Entry | What it does |
 | ----------------- | -------------------------------------- |
@@ -922,6 +991,7 @@ Import an audio file.
 | Replace Selection | Replace selected strips at import. |
 | Cache | Cache the sound in memory. |
 | Mono | Import the audio file as mono. |
+
 
 ### Image/Sequence
 
@@ -935,6 +1005,7 @@ When you want to import an image sequence you have to select all the images of t
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-3.png)
 
+
 | Entry | What it does |
 | ----------------- | -------------------------------------- |
 | Relative Path | Use a relative path to the blend file. |
@@ -942,16 +1013,19 @@ When you want to import an image sequence you have to select all the images of t
 | End Frame | End frame of the strip. |
 | Replace Selection | Replace selected strips at import. |
 
+
 ##### Use Placeholders
 
 Use placeholder images in an image sequence with missing images.
 
 Image sequences can use placeholder files. This works by enabling Use placeholders checkbox when adding an image strip. The option detects the frame range of opened images using Blender’s frame naming scheme (filename + frame number +.. .extension) and makes an image sequence with all files in between even if they are missing. This allows you to render an image sequence with a few frames missing and still the image strip will have the correct range to account for the missing frames displayed as black. When the missing frames are rendered or placed in the same folder, you can refresh the Sequencer and get the missing frames in the strip. The option is also available when using the Change Data/File operator and allows you to add more images to the range.
 
+
 | Entry | What it does |
 | ---------- | -------------------------------------------------------------------- |
 | Color | Adds a strip with a plain color. Color is one of many effect strips. |
 | Text Strip | A Text strip allows you to display text in the Sequence. |
+
 
 ### Adjustment Layer
 
@@ -1005,10 +1079,12 @@ Speed Control time-warps the strip, making it play faster or slower than it norm
 
 Playing faster means that some frames are skipped, and the strip will run out of frames before the end frame. When the strip runs out of frames to display, it will just keep repeating the last one; action will appear to freeze. To avoid this, position the next strip under the original at a point where you want the motion to continue.
 
+
 | Entry | What it does |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Glow | This effect makes parts of an image glow brighter. To “animate” the glow effect, mix it with the base image using the Gamma Cross effect, crossing from the base image to the glowing one. |
 | Gaussian Blur | Blurs the input strip in a defined direction. |
+
 
 #### Add
 
@@ -1036,12 +1112,14 @@ For example, if you have a brown pixel RGB(0.50, 0.29, 0.05), and you multiply i
 
 > **Note:** This effect reduces the global luminosity of the picture (the result will always be smaller than the smallest operand). If one of the images is all white, the result is the other picture; if one of the images is all black, the result is all black!
 
+
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Over Drop | Alpha channel effect. With Over Drop the first strip selected is the foreground. But as with Alpha Over, the Opacity controls the transparency of this foreground. Warning! By clicking the Premultiply Alpha button in the Sidebar of the foreground strip, the alpha values of the two strips are not multiplied or added together. |
 | Alpha Over | Alpha channel effect. With Alpha Over the first strip selected is the background, and the second one goes over the first one selected. The Opacity controls the transparency of the foreground. |
 | Alpha Under | Alpha channel effect. With Alpha Under the first strip selected is the foreground, and the second one, the background. The Opacity controls the transparency of the background. |
 | Color Mix | The Color Mix effect strip mixes two strips by working on the individual and corresponding pixels of the two input strips. This effect can do the exact same operation as the Add, Subtract, or Multiply effect strips but also other color blending modes. |
+
 
 ### Transition submenu
 
@@ -1051,12 +1129,14 @@ Adds transitions between two selected strips.
 
 These strips are effect strips. And will have similar adjust last operation panels therefore.
 
+
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sound Crossfade | Adds a cross fade between two selected audio strips. |
 | Cross | The Cross transition adds a cross fade transition. Strips can be overlapping or have a gap between them, But when strips contain a gap the last and first frame of each strip is extend which can cause a pause if any of the strips are a sequence. |
 | Gamma Cross | Similar to the Cross transition. It adds a cross fade transition. But uses color correction while transitioning between the two strips. This results in a smoother transition. |
 | Wipe | Adds a transition from one strip to the next strip. The duration of the wipe is the intersection of the two source strips and cannot be adjusted. To adjust the start and end of the wipe you must adjust the temporal bounds of the source strips in a way that alters their intersection. |
+
 
 ### Fade submenu
 
@@ -1088,6 +1168,7 @@ This sub-menu contains transform operators that you can use on strips.
 
 Moves the selected strip(s).
 
+
 | Entry | What it does |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Move/Extend from Current Frame | Extends the selected strips relative to the frame indicator and the mouse position. All selected strip handles to the mouse side of the current frame indicator will transform together. |
@@ -1096,6 +1177,7 @@ Moves the selected strip(s).
 | Clear Strip Offset | Clear strip offset from the start and end frames. |
 | Swap Strip Left | Swap the active strip with the strip to the left. |
 | Swap Strip Right | Swap the active strip with the strip to the right. |
+
 
 #### Ripple Trim Start
 
@@ -1113,10 +1195,12 @@ Trims the end of the selected strip(s) to the current frame and moves the follow
 
 Removes gaps at the frame indicator position in the current channel. Strips after the indicator will move to the left to close the gap.
 
+
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Remove Gaps (All) | Remove all gaps between all clips at the right side. |
 | Insert Gaps | Inserts a gap at the frame indicator position. Strips after the indicator will move to the right by the amount of gap frames. |
+
 
 ### Retiming - Submenu
 
@@ -1146,10 +1230,12 @@ Sets the speed of a retimed segment. If there is no segment, it will create a ne
 
 > **Note:** The speed is a percentage of total, where 100% is original speed, 110% of the movie playback is 10% faster, and at 90% the movie playback is 10% slower.
 
+
 | Entry | What it does |
 | ------------------------- | ----------------------------------------------------------------------------------------------- |
 | Speed | The new speed value. |
 | Preserve Current Retiming | With preserve current retiming the strip changes length instead of changing next segment speed. |
+
 
 #### Add Retiming Key
 
@@ -1189,6 +1275,7 @@ To do this, create 3 retiming keyframes, select the middle one, then use the ope
 
 Resets the movie strip to original playback speed.
 
+
 | Entry | What it does |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Split | Split the selected strip into two parts at the current frame. |
@@ -1199,6 +1286,7 @@ Resets the movie strip to original playback speed.
 | Duplicate Linked | This creates a **linked duplicate** of the selected strip(s), meaning the new strip shares the same underlying data as the original. |
 | Delete | Deletes the selected strip(s). |
 | Ripple Delete | Deletes the selected strip(s) and moves the following strips to close the gap. |
+
 
 ### Delete Strip & Data
 
@@ -1232,10 +1320,12 @@ First select the source strip. Hold down shift, select the second strip. Perform
 
 Strip type Effects.
 
+
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------------------------------- |
 | Reassign Inputs | Reassigns the input of the strips. Unfortunately not to find out how this works. |
 | Swap Inputs | Swaps the inputs of the selected strips. Unfortunately not to find out how this works. |
+
 
 ### Change Effect Types
 
@@ -1253,10 +1343,12 @@ If a strip cannot be changed, it will advise you to selected a changeable strip,
 
 Strip type Movie.
 
+
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Set Render Size | Set the render size and aspect from the active strip. Attention, there is no feedback if the operation was successful. It simply sets it. |
 | Deinterlace Movies | Deinterlaces the selected movie strips. |
+
 
 ### Set Render Size
 
@@ -1286,10 +1378,12 @@ Creates a meta strip out of the selected strips. A Meta Strip is a strip which c
 
 > **Note:** The default blend mode for a Meta strip is Replace. There are many cases where this alters the results of the animation so be sure to check the results and adjust the blend mode if necessary.
 
+
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------- |
 | UnMeta Strip | Separating (ungrouping) the Meta strip restores the strips to their relative positions and channels. |
 | Toggle Meta | Toggles between the meta and unmeta state. You need to have a meta strip in the sequencer timeline already. |
+
 
 ### Color Tags
 
@@ -1321,15 +1415,18 @@ Unlock locked strips.
 
 Mutes the selected strips. They do not play anymore, and they appear greyed out.
 
+
 | Entry | What it does |
 | ------------------------ | ----------------------------- |
 | Unmute Strips | Unmutes selected muted strip. |
 | Mute unselected strips | Mute the unselected strips. |
 | Unmute deselected Strips | Unmute all deselected strips. |
 
+
 ### Inputs - Submenu
 
 ![Inputs - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/inputs-submenu.png)
+
 
 | Entry | What it does |
 | ------------------------------- | -------------------------------------------------------------------------- |
@@ -1337,6 +1434,7 @@ Mutes the selected strips. They do not play anymore, and they appear greyed out.
 | Reload Strips and Adjust Length | Reloads the strips in the sequencer. |
 | Change Paths/Files | Undocumented Operator. Opens a file selector. |
 | Swap Data | Swaps the data between two selected strips. The strips must be compatible. |
+
 
 ### Connect Strips
 
@@ -1368,11 +1466,13 @@ The strip menu contains strip related functionality.
 
 ![Transform - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/transform-submenu-2.png)
 
+
 | Entry | What it does |
 | ------ | ------------------------- |
 | Move | Move the selected item. |
 | Rotate | Rotate the selected item. |
 | Scale | Scale the selected item. |
+
 
 ### Duplicate
 
@@ -1382,6 +1482,7 @@ Duplicates the selected item.
 
 ![Animation](/docs2/images/editors/video-sequence-editor/header/strip-menu/animation.png)
 
+
 | Entry | What it does |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Insert Keyframe | Insert keyframes on the current frame. It inserts the keyframes in the active keying set. In case there is no keying set defined, it uses the default keying set defined in the User Preferences. |
@@ -1390,15 +1491,18 @@ Duplicates the selected item.
 | Delete Keyframes | Removes keyframes from the selected strip the current frame. |
 | Clear Keyframes | Removes all keyframes for the selected strip across the entire timeline. |
 
+
 ### Show / Hide sub menu
 
 ![Show / Hide sub menu](/docs2/images/editors/video-sequence-editor/header/strip-menu/show-hide-sub-menu.png)
+
 
 | Entry | What it does |
 | ------------------ | ------------------------ |
 | Show hidden strips | Reveals hidden strips. |
 | Hide selected | Hides selected strips. |
 | Hide Unselected | Hides unselected strips. |
+
 
 ### Delete
 
@@ -1426,11 +1530,13 @@ Unlock locked strips.
 
 Mutes the selected strips. They do not play anymore, and they appear greyed out.
 
+
 | Entry | What it does |
 | ------------------------ | ----------------------------- |
 | Unmute Strips | Unmutes selected muted strip. |
 | Mute unselected strips | Mute the unselected strips. |
 | Unmute deselected Strips | Unmute all deselected strips. |
+
 
 # Image Menu
 
@@ -1448,6 +1554,7 @@ The transform sub menu is just displayed in the preview view.
 
 ![Transform](/docs2/images/editors/video-sequence-editor/header/image-menu/transform.png)
 
+
 | Entry | What it does |
 | ----------- | ------------------------------------------------- |
 | Move | Move the image. |
@@ -1455,9 +1562,11 @@ The transform sub menu is just displayed in the preview view.
 | Scale | Scale the image. |
 | Move Origin | Move the origin of the image to another location. |
 
+
 ### Clear
 
 ![Clear](/docs2/images/editors/video-sequence-editor/header/image-menu/clear.png)
+
 
 | Entry | What it does |
 | -------------- | ---------------------------------------- |
@@ -1466,11 +1575,14 @@ The transform sub menu is just displayed in the preview view.
 | Rotation | Resets the rotation of the image. |
 | All Transforms | Resets all transformations of the image. |
 
+
+
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------ |
 | Scale to Fit | Scales the image to fit in the preview window in at least one direction. |
 | Scale to Fill | Scales the image so that the whole preview window is covered. |
 | Stretch to Fill | Stretches the image so that the whole preview window is covered. |
+
 
 # Text Menu
 
@@ -1502,11 +1614,13 @@ Copies the selection.
 
 Pastes a copied selection.
 
+
 | Entry | What it does |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Move Cursor | Set the cursor at specific positions in the text. **Note:** *These operators are typically done through arrow keys, page up/down and home/end keys.* |
 | Delete Character | Deletes the selected text. |
 | Insert Line Break | Inserts a new line. |
+
 
 # Scene Menu
 
@@ -1520,7 +1634,10 @@ Of interest when you deal with more than one scene. Activate the Sync button.
 
 Adjust the timing of the active scene interactively.
 
+
 | Entry | What it does |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Active Scene Strip | Updates the active scene to active scene strip. If synchronization timeline in Sequencer is not set, this toggles the current scene to active scene strip in the sequencer. |
 | Play Master Scene | Starts or stops the playback of synchronization timeline. |
+
+
