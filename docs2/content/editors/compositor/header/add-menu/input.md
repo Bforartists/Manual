@@ -8,7 +8,7 @@ path:
   - Header
   - Add Menu
   - Input
-version: "5.1"
+version: 5.2.3
 status: needs-review
 icon: node
 summary: "Input nodes: Constant, Scene."
