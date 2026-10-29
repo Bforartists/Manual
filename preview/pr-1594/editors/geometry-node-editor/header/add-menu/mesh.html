@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mesh · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1594 · <code>docs2/geo-cluster-merge-points</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a class="is-current" style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Mesh</div><h1 class="pv-title">Mesh</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 19 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
+<h2 id="add-menu-mesh-read">Add menu - Mesh - Read</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/add-menu-mesh-read.png" alt="Add menu - Mesh - Read" loading="lazy"><figcaption>Add menu - Mesh - Read</figcaption></figure>
+<p>Nodes to modify the mesh geometry.</p>
+<h3 id="cluster-by-connected">Cluster by Connected</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/cluster-by-connected.png" alt="Cluster by Connected" loading="lazy"></figure>
+<p>Sorts the vertices of a mesh into groups, but only joins vertices that are connected by an edge and are close together. It works like Cluster by Distance, with the extra rule that two vertices must also share an edge. Use it when nearby vertices of different parts of a mesh must stay apart, for example the tips of two fingers that almost touch.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="selection">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>Which vertices are put into clusters.</p>
+<h5 id="position">Position</h5>
+<p>Data type: Vector.</p>
+<p>The position used to measure the distance.</p>
+<h5 id="distance">Distance</h5>
+<p>Data type: Float (distance).</p>
+<p>Connected vertices that are closer than this value belong to the same cluster.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="cluster-id">Cluster ID</h5>
+<p>Data type: Integer.</p>
+<p>The number of the cluster of each vertex. The number is the index of the first vertex of the cluster.</p>
+<h4 id="how-to-use">How to use</h4>
+<p>With the five points of the Cluster by Distance example and edges between points 0 and 1, 1 and 2, and 3 and 4, the Cluster ID is 0, 0, 2, 3, 3. Points 1 and 2 are connected but 0.0015 apart, which is more than the Distance of 0.001, so they do not share a cluster.</p>
+<h3 id="edge-angle">Edge Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-angle.png" alt="Edge Angle" loading="lazy"></figure>
+<p>Calculates the angle in radians between two faces that meet at an edge. Without two faces on the edge, the angle will be 0.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="unsigned-angle">Unsigned Angle</h5>
+<p>Data type: Float.</p>
+<p>The unsigned output angle. The shortest angle will be picked.</p>
+<h5 id="signed-angle">Signed Angle</h5>
+<p>Data type: Float.</p>
+<p>The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle.</p>
+<h3 id="edge-neighbours">Edge Neighbours</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-neighbours.png" alt="Edge Neighbours" loading="lazy"></figure>
+<p>Outputs the number of faces connected to each edge.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="face-count">Face Count</h5>
+<p>The number of faces.</p>
+<h3 id="edge-vertices">Edge Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-vertices.png" alt="Edge Vertices" loading="lazy"></figure>
+<p>Outputs the index and position of the two vertices that defines an edge. Index outputs an integer. Position a vector.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="vertex-index-1">Vertex Index 1</h5>
+<p>Data type: Integer.</p>
+<p>The index of the first vertice.</p>
+<h5 id="vertex-index-2">Vertex Index 2</h5>
+<p>Data type: Integer.</p>
+<p>The index of the second vertice.</p>
+<h5 id="position-1">Position 1</h5>
+<p>Data type: Vector.</p>
+<p>The position of the first vertice.</p>
+<h5 id="position-2">Position 2</h5>
+<p>Data type: Vector.</p>
+<p>The position of the second vertice.</p>
+<h3 id="edges-to-face-group">Edges to Face Group</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edges-to-face-group.png" alt="Edges to Face Group" loading="lazy"><figcaption>Edges to Face Group</figcaption></figure>
+<p>Group Faces into regions, surrounded by the selected boundary edges.</p>
+<h4 id="inuputs">Inuputs</h4>
+<h5 id="boundary-edges">Boundary Edges</h5>
+<p>The input edges.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="face-group-id">Face Group ID</h5>
+<p>The output face group.</p>
+<h3 id="face-area">Face Area</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-area.png" alt="Face Area" loading="lazy"></figure>
+<p>Gives each face area a unique id. Which can be used in a capture attribute for example, to create instances of other geometry to this now unique face areas.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="area">Area</h5>
+<p>Data type: Float.</p>
+<p>The face area output.</p>
+<h3 id="face-group-boundaries">Face Group Boundaries</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-group-boundaries.png" alt="Face Group Boundaries" loading="lazy"></figure>
+<p>Find edges on the boundaries between face sets</p>
+<h4 id="inputs-2">Inputs</h4>
+<p>—</p>
+<h4 id="face-set">Face Set</h4>
+<p>The input face sets to calculate the boundaries from.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="boundary-edges-2">Boundary Edges</h5>
+<p>Data type: Boolean.</p>
+<p>The edges that lies on the boundaries between the different face sets</p>
+<h5 id="face-count-2">Face Count</h5>
+<p>The face count for the face neighbors.</p>
+<h3 id="face-neighbours">Face Neighbours</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-neighbours.png" alt="Face Neighbours" loading="lazy"></figure>
+<p>Outputs the number of vertices or faces connected to each face.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="vertex-count">Vertex Count</h5>
+<p>The vertex count for the face neighbors.</p>
+<h5 id="face-count-3">Face Count</h5>
+<p>The face count for the face neighbors.</p>
+<h3 id="is-face-planar">Is Face Planar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-face-planar.png" alt="Is Face Planar" loading="lazy"></figure>
+<p>Returns true if all of the points of the evaluated face are on the same plane.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="threshold">Threshold</h5>
+<p>Data type: Float (distance).</p>
+<p>The threshold to consinder the points to be at the same plane.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="planar">Planar</h5>
+<p>Data type: Boolean.</p>
+<p>True if the face is planar.</p>
+<h3 id="is-face-smooth">Is Face Smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-face-smooth.png" alt="Is Face Smooth" loading="lazy"></figure>
+<p>Retreives if the face is shaded smooth.</p>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="smooth">Smooth</h5>
+<p>Data type: Boolean.</p>
+<p>Smooth output.</p>
+<h3 id="is-edge-smooth">Is Edge Smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-edge-smooth.png" alt="Is Edge Smooth" loading="lazy"></figure>
+<p>Retreives if the edge is shaded smooth.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="smooth-2">Smooth</h5>
+<p>Data type: Boolean.</p>
+<p>Smooth output.</p>
+<h3 id="mesh-island">Mesh Island</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/mesh-island.png" alt="Mesh Island" loading="lazy"></figure>
+<p>Outputs a separate index for each mesh island. The indices are based on the order of the lowest-numbered vertex in each island.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="index-index">Index Index</h5>
+<p>The index output.</p>
+<h5 id="island-count">Island Count</h5>
+<p>Data type: Integer.</p>
+<p>The count output.</p>
+<h3 id="shortest-edge-path">Shortest Edge Path</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/shortest-edge-path.png" alt="Shortest Edge Path" loading="lazy"></figure>
+<p>Calculates the shortest path from multiple start points.</p>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="end-vertex">End Vertex</h5>
+<p>The last point of the path.</p>
+<h5 id="edge-cost">Edge Cost</h5>
+<p>The amount of calculation to find the shortest path.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="next-vertex-index">Next Vertex Index</h5>
+<p>The vertices index of the shortest path.</p>
+<h5 id="total-cost">Total Cost</h5>
+<p>The calculation amount.</p>
+<h3 id="vertex-neighbors">Vertex Neighbors</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/vertex-neighbors.png" alt="Vertex Neighbors" loading="lazy"></figure>
+<p>Outputs the number of vertices or faces connected to each vertex.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="vertex-count-2">Vertex Count</h5>
+<p>Data type: Integer.</p>
+<p>The vertex count for the vertex neighbors.</p>
+<h5 id="face-count-4">Face Count</h5>
+<p>Data type: Integer.</p>
+<p>The face count for the vertex neighbors.</p>
+<h1 id="sample">Sample</h1>
+<h2 id="add-menu-mesh-sample">Add menu - Mesh - Sample</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/add-menu-mesh-sample.png" alt="Add menu - Mesh - Sample" loading="lazy"><figcaption>Add menu - Mesh - Sample</figcaption></figure>
+<p>Nodes to modify the mesh geometry.</p>
+<h3 id="sample-nearest-surface">Sample Nearest Surface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/sample-nearest-surface.png" alt="Sample Nearest Surface" loading="lazy"></figure>
+<p>Calculate the interpolated value of a mesh attribute on the closest point of its surface.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="mesh">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="value">Value</h5>
+<p>Data type: Float.</p>
+<p>The value to calculate.</p>
+<h5 id="group-id">Group ID</h5>
+<p>Data type: Integer.</p>
+<p>Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id.</p>
+<h5 id="sample-position">Sample Position</h5>
+<p>Data type: Vector.</p>
+<p>The sample position to calculate.</p>
+<h5 id="sample-group-id">Sample Group ID</h5>
+<p>Data type: Integer.</p>
+<p>Determines in which group the closest nearest surface is detected.</p>
+<h5 id="properties">Properties</h5>
+<h5 id="data-type">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Which data to calculate.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="value-2">Value</h5>
+<p>Data type: Float.</p>
+<p>The output value.</p>
+<h5 id="is-valid">Is Valid</h5>
+<p>Data type: Boolean.</p>
+<p>Wether the sampling was successful. It is false when the sampled group is empty.</p>
+<h3 id="sample-uv-surface">Sample UV Surface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/sample-uv-surface.png" alt="Sample UV Surface" loading="lazy"></figure>
+<p>Calculate the interpolated value of a mesh attribute at a UV coordinate.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="mesh-2">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="value-3">Value</h5>
+<p>Data type: Float.</p>
+<p>The value to calculate.</p>
+<h5 id="source-uv-map">Source UV Map</h5>
+<p>The input UV map.</p>
+<h5 id="sample-uv">Sample UV</h5>
+<p>Data type: Vector.</p>
+<p>The sample position to calculate.</p>
+<h5 id="properties-2">Properties</h5>
+<h5 id="data-type-2">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Which data to calculate.</p>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="value-4">Value</h5>
+<p>Data type: Float.</p>
+<p>The output value.</p>
+<h5 id="is-valid-2">Is Valid</h5>
+<p>Data type: Boolean.</p>
+<p>Wether the node could find a single face to sample at the uv coordinate.</p>
+<h1 id="write">Write</h1>
+<h2 id="add-menu-mesh-write">Add menu - Mesh - Write</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/add-menu-mesh-write.png" alt="Add menu - Mesh - Write" loading="lazy"><figcaption>Add menu - Mesh - Write</figcaption></figure>
+<p>These are nodes for working with Mesh data.</p>
+<h3 id="set-mesh-normal">Set Mesh Normal</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/set-mesh-normal.png" alt="Set Mesh Normal" loading="lazy"></figure>
+<p>The <strong>Set Mesh Normal</strong> node is used to modify custom normals on a mesh, providing control over shading smoothness and surface appearance. This is useful for adjustingnormalsmoothness, sharp edges, and tangent-based effects</p>
+<h4 id="input">Input</h4>
+<h5 id="mesh-3">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h4 id="properties-3">Properties</h4>
+<h5 id="mode">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/mode.png" alt="Mode" loading="lazy"></figure>
+<h5 id="sharpness">Sharpness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/sharpness.png" alt="Sharpness" loading="lazy"></figure>
+<p>Controls the intensity of edge sharpness. Higher values create stronger shading contrasts between faces.</p>
+<p>Store the sharpness of each face or edge. Similar to the &quot;Shade Smooth&quot; and &quot;Shade Flat&quot; operators.</p>
+<h6 id="remove-custom">Remove Custom</h6>
+<p>Removes <strong>custom normals</strong> previously set by the user on the original mesh data when enabled.</p>
+<h6 id="edge-sharpness">Edge Sharpness</h6>
+<p>Sets the normal sharpness to the edge domain to “flat”.</p>
+<h6 id="face-sharpness">Face Sharpness</h6>
+<p>Sets the normal sharpness to the face domain to “flat”.</p>
+<h5 id="free">Free</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/free.png" alt="Free" loading="lazy"></figure>
+<p>Allows direct manipulation of normals as <strong>free vectors,</strong> rather than constrained by geometry. Useful for custom shading effects and non-destructive normal adjustments.</p>
+<h6 id="domain">Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/domain.png" alt="Domain" loading="lazy"></figure>
+<p>Attribute domain to store the free custom normals.</p>
+<ul>
+<li>Point</li>
+<li>Face</li>
+<li>Face Corner</li>
+</ul>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Default object normals are stored to Facecorner, this will “pass-through” the normal data. Face normals will make “flat” sharp edges.</p></div>
+<h5 id="tangent-space">Tangent Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/tangent-space.png" alt="Tangent Space" loading="lazy"></figure>
+<p>Adjusts normals relative to the surface tangentto store the source meshes normals.Storesnormals in a deformation dependent custom transformation space.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This method is slower, but can be better when subsequent operations change the mesh without handling normals specifically.</p></div>
+<h5 id="custom-normal">Custom Normal</h5>
+<p><em>Vector Field based on the normal.</em></p>
+<h4 id="outputs-17">Outputs</h4>
+<h5 id="geometry">Geometry</h5>
+<p>Geometry output.</p>
+<p>Got it! Here's the documentation for the <strong>Set Mesh Normal</strong> node:</p>
+<h3 id="set-shade-smooth">Set Shade Smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/set-shade-smooth.png" alt="Set Shade Smooth" loading="lazy"></figure>
+<p>Retrieves if the geometry is shaded smooth.</p>
+<h4 id="input-2">Input</h4>
+<h5 id="geometry-2">Geometry</h5>
+<p>Input mesh.</p>
+<h5 id="selection-2">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the input mesh.</p>
+<h5 id="shade-smooth">Shade Smooth</h5>
+<p>Data type: Boolean.</p>
+<p>Set the shading to smooth.</p>
+<h4 id="properties-4">Properties</h4>
+<h5 id="domain-2">Domain</h5>
+<h6 id="edge">Edge</h6>
+<p>Set Edge to smooth.</p>
+<h6 id="face">Face</h6>
+<p>Set Face to smooth</p>
+<h4 id="outputs-18">Outputs</h4>
+<h5 id="geometry-3">Geometry</h5>
+<p>Geometry output.</p>
+<h1 id="operations">Operations</h1>
+<h2 id="add-menu-mesh-operations">Add menu - Mesh - Operations</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/add-menu-mesh-operations.png" alt="Add menu - Mesh - Operations" loading="lazy"><figcaption>Add menu - Mesh - Operations</figcaption></figure>
+<p>Nodes to modify the mesh geometry.</p>
+<h3 id="dual-mesh">Dual Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/dual-mesh.png" alt="Dual Mesh" loading="lazy"></figure>
+<p>The Dual Mesh node calculates the dual of the input mesh. This means that faces get replaced with vertices and vertices with faces.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="mesh-4">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The input mesh.</p>
+<h5 id="keep-boundaries">Keep Boundaries</h5>
+<p>Data type: Boolean.</p>
+<p>Keep the (non-manifold) boundaries of the mesh intact.</p>
+<h4 id="outputs-19">Outputs</h4>
+<h5 id="dual-mesh-2">Dual Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The output mesh.</p>
+<h3 id="edge-paths-to-curves">Edge Paths to Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-paths-to-curves.png" alt="Edge Paths to Curves" loading="lazy"><figcaption>Edge Paths to Curves</figcaption></figure>
+<p>Converts Edge Paths to Curves.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="mesh-5">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The input mesh.</p>
+<h5 id="start-vertices">Start Vertices</h5>
+<p>Data type: Boolean.</p>
+<p>The start vertices of the edge path.</p>
+<h5 id="next-vertex-index-2">Next Vertex Index</h5>
+<p>Data type: Integer.</p>
+<p>The edge path by index.</p>
+<h4 id="outputs-20">Outputs</h4>
+<h5 id="curves">Curves</h5>
+<p>Data type: Geometry.</p>
+<p>The output curve.</p>
+<h3 id="edge-path-to-selection">Edge Path to Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-path-to-selection.png" alt="Edge Path to Selection" loading="lazy"><figcaption>Edge Path to Selection</figcaption></figure>
+<p>Calculates an edge path, and converts it to a selectoin</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="start-vertices-2">Start Vertices</h5>
+<p>The start vertices of the edge path.</p>
+<h5 id="next-vertex-index-3">Next Vertex Index</h5>
+<p>The edge path by index.</p>
+<h4 id="outputs-21">Outputs</h4>
+<h5 id="selection-3">Selection</h5>
+<p>The selection</p>
+<h3 id="extrude-mesh">Extrude Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/extrude-mesh.png" alt="Extrude Mesh" loading="lazy"></figure>
+<p>Extrudes out geometry at the selection by a given amount.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="mesh-6">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The input mesh.</p>
+<h5 id="selection-4">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the mesh.</p>
+<h5 id="offset">Offset</h5>
+<p>Data type: Vector (translation).</p>
+<p>The offset amount.</p>
+<h5 id="offset-scale">Offset Scale</h5>
+<p>Data type: Float.</p>
+<p>The offset scale. Without an offset this is equal the amount.</p>
+<h5 id="individual">Individual</h5>
+<p>Data type: Boolean.</p>
+<p>Just Faces mode. Extrude out individual faces.</p>
+<h4 id="properties-5">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="mode-2">Mode</h5>
+<p>What kind of elements to extrude out. Vertices, Edges or Faces.</p>
+<h4 id="outputs-22">Outputs</h4>
+<h5 id="mesh-7">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The output mesh.</p>
+<h5 id="top">Top</h5>
+<p>Data type: Boolean.</p>
+<p>The top elements of the extrusion.</p>
+<h5 id="side">Side</h5>
+<p>Data type: Boolean.</p>
+<p>The side elements of the extrusion.</p>
+<h3 id="flip-faces">Flip Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/flip-faces.png" alt="Flip Faces" loading="lazy"></figure>
+<p>Flips the winding order of the selected faces.</p>
+<p>Blender developers decided not to call it Flip Normals. Since &quot;normals are<br />
+derived data, changing them is only a side effect.&quot; However, what the node does is in fact to flip the normals.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="mesh-8">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>The input mesh.</p>
+<h5 id="selection-5">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the input mesh.</p>
+<h4 id="outputs-23">Outputs</h4>
+<h5 id="dual-mesh-3">Dual Mesh</h5>
+<p>The output mesh.</p>
+<h3 id="mesh-boolean">Mesh Boolean</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-boolean.png" alt="Mesh Boolean" loading="lazy"></figure>
+<p>The Boolean Node allows you to cut, subtract, and join the geometry of two inputs. This node offers the same operations as the Boolean modifier.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="mesh-1">Mesh 1</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry input.</p>
+<h5 id="mesh-2">Mesh 2</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry input.</p>
+<h5 id="self-intersect">Self Intersect</h5>
+<p>Allow self intersection.</p>
+<h5 id="hole-tolerant">Hole Tolerant</h5>
+<p>Data type: Boolean.</p>
+<p>Allow holes.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="operation">Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/operation.png" alt="Operation" loading="lazy"></figure>
+<p>The boolean operation.</p>
+<h6 id="intersect">Intersect</h6>
+<p>Produce a new geometry containing only the volume inside of both geometry 1 and geometry 2.</p>
+<h6 id="union">Union</h6>
+<p>The two input pieces of geometry are joined, then any interior elements are removed.</p>
+<h6 id="difference">Difference</h6>
+<p>Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept).</p>
+<h5 id="solver">Solver</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/solver.png" alt="Solver" loading="lazy"></figure>
+<h6 id="float">Float</h6>
+<p>Simple solver for the best performance. Does not support overlapping geometry.</p>
+<h6 id="exact">Exact</h6>
+<p>Exact solver for the most accurate result.</p>
+<h6 id="manifold">Manifold</h6>
+<p>Fastest solver with best result, but only works on manifold meshes.</p>
+<h4 id="output">Output</h4>
+<h5 id="geometry-4">Geometry</h5>
+<p>Standard geometry output.</p>
+<h5 id="intersecting-edges">Intersecting Edges</h5>
+<p>Data type: Boolean.</p>
+<p>Outputs the intersecting edges.</p>
+<h3 id="mesh-to-curve">Mesh to Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-curve.png" alt="Mesh to Curve" loading="lazy"></figure>
+<p>Converts a mesh geometry to a curve geometry.</p>
+<h4 id="inputs-13">Inputs</h4>
+<h5 id="mesh-9">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="selection-6">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the input mesh.</p>
+<h4 id="properties-7">Properties</h4>
+<h5 id="mode-3">Mode</h5>
+<p>Edges or Faces.</p>
+<h4 id="outputs-24">Outputs</h4>
+<h5 id="curve">Curve</h5>
+<p>Data type: Geometry.</p>
+<p>Standard curve output.</p>
+<h3 id="mesh-to-density-grid">Mesh to Density Grid</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-density-grid.png" alt="Mesh to Density Grid" loading="lazy"><figcaption>Mesh to Density Grid</figcaption></figure>
+<p>Converts a mesh geometry to a curve geometry.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="mesh-10">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="density">Density</h5>
+<p>Data type: Float.</p>
+<p>Mesh density.</p>
+<h5 id="voxel-size">Voxel Size</h5>
+<p>Data type: Float (distance).</p>
+<p>The vodel size.</p>
+<h5 id="gradient-width">Gradient Width</h5>
+<p>Data type: Float (distance).</p>
+<p>The width of the gradient.</p>
+<h4 id="outputs-25">Outputs</h4>
+<h5 id="density-grid">Density Grid.</h5>
+<p>Density Grid output.</p>
+<h3 id="mesh-to-points">Mesh to Points</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-points.png" alt="Mesh to Points" loading="lazy"></figure>
+<p>Converts a mesh geometry to a point geometry.</p>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="mesh-11">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="selection-7">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the input mesh.</p>
+<h5 id="position-2">Position</h5>
+<p>Data type: Vector.</p>
+<p>The position of the points.</p>
+<h5 id="radius">Radius</h5>
+<p>Data type: Float (distance).</p>
+<p>The radius of the points</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="mode-4">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mode.png" alt="Mode" loading="lazy"></figure>
+<p>What geometry to convert to points.</p>
+<h4 id="outputs-26">Outputs</h4>
+<h5 id="curve-2">Curve</h5>
+<p>Standard curve output.</p>
+<h3 id="mesh-to-sdf-grid">Mesh to SDF Grid</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-sdf-grid.png" alt="Mesh to SDF Grid" loading="lazy"><figcaption>Mesh to SDF Grid</figcaption></figure>
+<p>Converts a mesh geometry to a curve geometry.</p>
+<h4 id="inputs-16">Inputs</h4>
+<h5 id="mesh-12">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="voxel-size-2">Voxel Size</h5>
+<p>Data type: Float (distance).</p>
+<p>The vodel size.</p>
+<h5 id="band-width">Band Width</h5>
+<p>Data type: Integer.</p>
+<p>The width of the band.</p>
+<h4 id="outputs-27">Outputs</h4>
+<h5 id="density-grid-2">Density Grid.</h5>
+<p>Density Grid output.</p>
+<h3 id="mesh-to-volume">Mesh to Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-volume.png" alt="Mesh to Volume" loading="lazy"></figure>
+<p>Converts a mesh geometry to a Volume.</p>
+<h4 id="inputs-17">Inputs</h4>
+<h5 id="mesh-13">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="density-2">Density</h5>
+<p>Data type: Float.</p>
+<p>The density of the volume</p>
+<h5 id="resolution-mode">Resolution Mode</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/resolution-mode.png" alt="Resolution Mode" loading="lazy"></figure>
+<p>How to calculate the volume. Based of the size or based at the amount.</p>
+<h6 id="voxel-amount-voxel-size">Voxel Amount / Voxel Size</h6>
+<p>The voxel amount / the voxel size.</p>
+<h6 id="interior-bandwidth">Interior Bandwidth</h6>
+<p>Where to start the calculation inside of the volume.</p>
+<h4 id="outputs-28">Outputs</h4>
+<h5 id="volume">Volume</h5>
+<p>Data type: Geometry.</p>
+<p>The volume output.</p>
+<h3 id="scale-elements">Scale Elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/scale-elements.png" alt="Scale Elements" loading="lazy"></figure>
+<p>Allows to scale the selected elements.</p>
+<h4 id="inputs-18">Inputs</h4>
+<h5 id="geometry-5">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry input.</p>
+<h5 id="selection-8">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the geometry.</p>
+<h5 id="scale">Scale</h5>
+<p>Data type: Float.</p>
+<p>The scale factor</p>
+<h5 id="center">Center</h5>
+<p>Data type: Vector (translation).</p>
+<p>The center of the scaling.</p>
+<h5 id="scale-mode">Scale Mode</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/scale-mode.png" alt="Scale Mode" loading="lazy"></figure>
+<p>Uniform scales uniformly in all three world coordinates.</p>
+<p>Single Axis scales separately in the single axis.</p>
+<h5 id="axis">Axis</h5>
+<p>Data type: Vector.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Scale Mode Single axis only. Scale the selection separately along its single axis.</p>
+<h4 id="properties-9">Properties</h4>
+<h5 id="domain-3">Domain</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/domain.png" alt="Domain" loading="lazy"></figure>
+<p>What kind of elements to scale.</p>
+<h4 id="outputs-29">Outputs</h4>
+<h5 id="geometry-6">Geometry</h5>
+<p>Data type: Geometry.</p>
+<p>The output geometry.</p>
+<h3 id="split-edges">Split Edges</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/split-edges.png" alt="Split Edges" loading="lazy"></figure>
+<p>Splits the edges of the geometry.</p>
+<p>Note that splitting edges breaks the mesh topology.</p>
+<h4 id="inputs-19">Inputs</h4>
+<h5 id="mesh-14">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Input mesh.</p>
+<h5 id="selection-9">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the input mesh.</p>
+<h4 id="outputs-30">Outputs</h4>
+<h5 id="mesh-15">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Standard Mesh output.</p>
+<h3 id="subdivide-mesh">Subdivide Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/subdivide-mesh.png" alt="Subdivide Mesh" loading="lazy"></figure>
+<p>Subdivides the geometry by a simple division.</p>
+<h4 id="inputs-20">Inputs</h4>
+<h5 id="geometry-7">Geometry</h5>
+<p>Standard geometry input.</p>
+<h5 id="level">Level</h5>
+<p>Data type: Integer.</p>
+<p>To which degree the geometry will be deformed.</p>
+<h4 id="outputs-31">Outputs</h4>
+<h5 id="geometry-8">Geometry</h5>
+<p>Standard geometry output.</p>
+<h3 id="subdivision-surface">Subdivision Surface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/subdivision-surface.png" alt="Subdivision Surface" loading="lazy"></figure>
+<p>The Subdivision Surface node subdivides the geometry using Catmull-Clark deformation.</p>
+<h4 id="inputs-21">Inputs</h4>
+<h5 id="mesh-16">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Standard geometry input.</p>
+<h5 id="level-2">Level</h5>
+<p>Data type: Integer.</p>
+<p>To which degree the geometry will be deformed.</p>
+<h5 id="edge-crease">Edge Crease</h5>
+<p>Data type: Float (factor).</p>
+<p>Control how smooth edges should be with Weighted Edge Creases.</p>
+<h5 id="vertex-crease">Vertex Crease</h5>
+<p>Data type: Float (factor).</p>
+<p>Control how smooth edges should be with Weighted Vertex Creases.</p>
+<h5 id="limit-surface">Limit Surface</h5>
+<p>Data type: Boolean.</p>
+<p>Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape.</p>
+<h5 id="uv-smooth">UV Smooth</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/uv-smooth.png" alt="UV Smooth" loading="lazy"></figure>
+<p>The methbod to deal with smoothing the UV.</p>
+<h5 id="boundary-smooth">Boundary Smooth</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/boundary-smooth.png" alt="Boundary Smooth" loading="lazy"></figure>
+<p>Controls if open boundaries and corners are smooth.</p>
+<h4 id="outputs-32">Outputs</h4>
+<h5 id="geometry-9">Geometry</h5>
+<p>Standard geometry output.</p>
+<h3 id="triangulate">Triangulate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/triangulate.png" alt="Triangulate" loading="lazy"></figure>
+<p>The Triangulate node triangulates all faces in a mesh.</p>
+<h4 id="inputs-22">Inputs</h4>
+<h5 id="geometry-10">Geometry</h5>
+<p>Standard geometry input.</p>
+<h5 id="minimum-vertices">Minimum Vertices</h5>
+<p>Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons.</p>
+<h4 id="properties-10">Properties</h4>
+<h5 id="quad-method">Quad Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/quad-method.png" alt="Quad Method" loading="lazy"></figure>
+<p>A quad is a polygon with four edges.</p>
+<h6 id="beauty">Beauty</h6>
+<p>Split the quads in nice triangles, slower method.</p>
+<h6 id="fixed">Fixed</h6>
+<p>Split the quads on their 1st and 3rd vertices.</p>
+<h6 id="fixed-alternate">Fixed Alternate</h6>
+<p>Split the quads on their 2nd and 4th vertices.</p>
+<h6 id="shortest-diagonal">Shortest Diagonal</h6>
+<p>Split the quads based on the shortest diagonal distance between their vertices.</p>
+<h6 id="longest-diagonal">Longest Diagonal</h6>
+<p>Split the quads based on the longest diagonal distance between their vertices.</p>
+<h5 id="polygon-method">Polygon Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/polygon-method.png" alt="Polygon Method" loading="lazy"></figure>
+<p>Meant are N-Gons. Faces with more than four edges. Tris, Quads and N-Gons are all Polygons.</p>
+<h6 id="beauty-2">Beauty</h6>
+<p>Arrange the new triangles nicely, slower method.</p>
+<h6 id="clip">Clip</h6>
+<p>Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering).</p>
+<h4 id="outputs-33">Outputs</h4>
+<h5 id="geometry-11">Geometry</h5>
+<p>Standard geometry output.</p>
+<h1 id="primitives">Primitives</h1>
+<h2 id="add-menu-mesh-primitives">Add menu - Mesh - Primitives</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/add-menu-mesh-primitives.png" alt="Add menu - Mesh - Primitives" loading="lazy"><figcaption>Add menu - Mesh - Primitives</figcaption></figure>
+<p>Nodes to modify the mesh geometry.</p>
+<h3 id="cone">Cone</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cone.png" alt="Cone" loading="lazy"></figure>
+<p>Cone creates a Cone mesh.</p>
+<h4 id="input-3">Input</h4>
+<h5 id="vertices">Vertices</h5>
+<p>Data type: Integer.</p>
+<p>Number of vertices.</p>
+<h5 id="radius-top">Radius Top</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius at the top.</p>
+<h5 id="side-segments">Side Segments</h5>
+<p>Data type: Integer.</p>
+<p>Adjust the number of segments at the side.</p>
+<h5 id="fill-segments">Fill Segments</h5>
+<p>Data type: Integer.</p>
+<p>Adjust the number of segments at the fill faces.</p>
+<h5 id="radius-bottom">Radius Bottom</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius at the bottom.</p>
+<h5 id="depth">Depth</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial height.</p>
+<h4 id="properties-11">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="fill-type">Fill Type</h5>
+<p>Defines how the Circle mesh is filled.</p>
+<h6 id="none">None</h6>
+<p>pure edge geometry.</p>
+<h6 id="n-gon">N-Gon</h6>
+<p>The circle face is a N-Gon face.</p>
+<h6 id="triangles">Triangles</h6>
+<p>The circle face is triangulated.</p>
+<h4 id="outputs-34">Outputs</h4>
+<h5 id="mesh-17">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="top-2">Top</h5>
+<p>Data type: Boolean.</p>
+<p>Top radius output.</p>
+<h5 id="bottom">Bottom</h5>
+<p>Data type: Boolean.</p>
+<p>Bottom radius output.</p>
+<h5 id="side-2">Side</h5>
+<p>Data type: Boolean.</p>
+<p>The depth output</p>
+<h5 id="uv-map">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h3 id="cube">Cube</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cube.png" alt="Cube" loading="lazy"></figure>
+<p>Cube creates a Cubeoid mesh.</p>
+<h4 id="inputs-23">Inputs</h4>
+<h5 id="size">Size</h5>
+<p>Data type: Vector (translation).</p>
+<p>The initial size in X , Y and Z dimensions</p>
+<h5 id="vertices-2">Vertices</h5>
+<p>How much vertices the single edges has. This allows to subdivide the cube.</p>
+<h4 id="outputs-35">Outputs</h4>
+<h5 id="mesh-18">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="uv-map-2">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h3 id="cylinder">Cylinder</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cylinder.png" alt="Cylinder" loading="lazy"></figure>
+<p>Cylinder creates a Cylinder mesh.</p>
+<h4 id="input-4">Input</h4>
+<h5 id="vertices-3">Vertices</h5>
+<p>Data type: Integer.</p>
+<p>Number of vertices.</p>
+<h5 id="side-segments-2">Side Segments</h5>
+<p>Data type: Integer.</p>
+<p>Adjust the number of segments at the side.</p>
+<h5 id="fill-segments-2">Fill Segments</h5>
+<p>Data type: Integer.</p>
+<p>Adjust the number of segments at the fill faces.</p>
+<h5 id="radius-2">Radius</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius.</p>
+<h5 id="depth-2">Depth</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial height.</p>
+<h4 id="properties-12">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="fill-type-2">Fill Type</h5>
+<p>Defines how the Circle mesh is filled.</p>
+<h6 id="none-2">None</h6>
+<p>pure edge geometry.</p>
+<h6 id="n-gon-2">N-Gon</h6>
+<p>The circle face is a N-Gon face.</p>
+<h6 id="triangles-2">Triangles</h6>
+<p>The circle face is triangulated.</p>
+<h4 id="outputs-36">Outputs</h4>
+<h5 id="mesh-19">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="top-3">Top</h5>
+<p>Data type: Boolean.</p>
+<p>Top radius output.</p>
+<h5 id="bottom-2">Bottom</h5>
+<p>Data type: Boolean.</p>
+<p>Bottom radius output.</p>
+<h5 id="side-3">Side</h5>
+<p>Data type: Boolean.</p>
+<p>The depth output</p>
+<h5 id="uv-map-3">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h3 id="grid">Grid</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/grid.png" alt="Grid" loading="lazy"></figure>
+<p>Grid creates a grid mesh.</p>
+<h4 id="inputs-24">Inputs</h4>
+<h5 id="size-2">Size</h5>
+<p>The initial size.</p>
+<h5 id="vertices-x">Vertices X</h5>
+<p>Data type: Integer.</p>
+<p>The initial number of vertices in X direction.</p>
+<h5 id="vertices-y">Vertices Y</h5>
+<p>Data type: Integer.</p>
+<p>The initial number of vertices in Y direction.</p>
+<h4 id="outputs-37">Outputs</h4>
+<h5 id="mesh-20">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="uv-map-4">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h3 id="ico-sphere">Ico Sphere</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/ico-sphere.png" alt="Ico Sphere" loading="lazy"></figure>
+<p>Ico Sphere creates a ico Sphere mesh.</p>
+<h4 id="inputs-25">Inputs</h4>
+<h5 id="radius-3">Radius</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius.</p>
+<h5 id="subdivisions">Subdivisions</h5>
+<p>Data type: Integer.</p>
+<p>The initial subdivisions.</p>
+<h4 id="outputs-38">Outputs</h4>
+<h5 id="mesh-21">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="uv-map-5">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h3 id="mesh-circle">Mesh Circle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mesh-circle.png" alt="Mesh Circle" loading="lazy"></figure>
+<p>Circle creates a Circle mesh.</p>
+<h4 id="input-5">Input</h4>
+<h5 id="vertices-4">Vertices</h5>
+<p>Data type: Integer.</p>
+<p>Number of vertices.</p>
+<h5 id="radius-4">Radius</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius.</p>
+<h4 id="properties-13">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="fill-type-3">Fill Type</h5>
+<p>Defines how the Circle mesh is filled.</p>
+<h6 id="none-3">None</h6>
+<p>pure edge geometry.</p>
+<h6 id="n-gon-3">N-Gon</h6>
+<p>The circle face is a N-Gon face.</p>
+<h6 id="triangles-3">Triangles</h6>
+<p>The circle face is triangulated.</p>
+<h4 id="outputs-39">Outputs</h4>
+<h5 id="mesh-22">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h3 id="mesh-line">Mesh Line</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mesh-line.png" alt="Mesh Line" loading="lazy"></figure>
+<p>Line creates a line mesh.</p>
+<h4 id="input-6">Input</h4>
+<h5 id="count">Count</h5>
+<p>Data type: Integer.</p>
+<p>The initial number of segments.</p>
+<h5 id="start-location">Start Location</h5>
+<p>Data type: Vector (translation).</p>
+<p>The initial location.</p>
+<h5 id="offset-2">Offset</h5>
+<p>Data type: Vector (translation).</p>
+<p>The initial offset.</p>
+<h4 id="properties-14">Properties</h4>
+<h5 id="mode-5">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mode.png" alt="Mode" loading="lazy"></figure>
+<h5 id="offset-3">Offset</h5>
+<p>Specify the offset from one vertice to the next.</p>
+<h5 id="end-points">End Points</h5>
+<p>Specify the line start and endpoints.</p>
+<h6 id="count-modecount">Count ModeCount</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/count.png" alt="Count" loading="lazy"></figure>
+<p>Specify the number of total vertices.</p>
+<h6 id="end-points-2">End Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/end-points.png" alt="End Points" loading="lazy"></figure>
+<p>Specify the distance between the vertices.</p>
+<h4 id="outputs-40">Outputs</h4>
+<h5 id="mesh-23">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h3 id="uv-sphere">UV Sphere</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/uv-sphere.png" alt="UV Sphere" loading="lazy"></figure>
+<p>UV Sphere creates a uv sphere mesh.</p>
+<h4 id="inputs-26">Inputs</h4>
+<h5 id="segments">Segments</h5>
+<p>Data type: Integer.</p>
+<p>The initial number of segments.</p>
+<h5 id="rings">Rings</h5>
+<p>Data type: Integer.</p>
+<p>The initial number of edgerings.</p>
+<h5 id="radius-5">Radius</h5>
+<p>Data type: Float (distance).</p>
+<p>The initial radius.</p>
+<h4 id="outputs-41">Outputs</h4>
+<h5 id="mesh-24">Mesh</h5>
+<p>Data type: Geometry.</p>
+<p>Mesh output.</p>
+<h5 id="uv-map-6">UV Map</h5>
+<p>Data type: Vector.</p>
+<p>UV map output.</p>
+<h1 id="topology">Topology</h1>
+<h2 id="add-menu-mesh-topology">Add menu - Mesh - Topology</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/add-menu-mesh-topology.png" alt="Add menu - Mesh - Topology" loading="lazy"><figcaption>Add menu - Mesh - Topology</figcaption></figure>
+<p>Mesh topology related nodes.</p>
+<h3 id="corners-of-edge">Corners of Edge</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-edge.png" alt="Corners of Edge" loading="lazy"></figure>
+<p>Retreive the corners that makes up a edge.</p>
+<h4 id="inputs-27">Inputs</h4>
+<h5 id="face-index">Face Index</h5>
+<p>The face to get the data from.</p>
+<h5 id="weights">Weights</h5>
+<p>Data type: Float.</p>
+<p>Values used to sort the corners of the face.</p>
+<h5 id="sort-index">Sort Index</h5>
+<p>Data type: Integer.</p>
+<p>Which of the corners to output.</p>
+<h4 id="outputs-42">Outputs</h4>
+<h5 id="corner-index">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The output corner.</p>
+<h5 id="total">Total</h5>
+<p>Data type: Integer.</p>
+<p>The number of corners in the face.</p>
+<h3 id="corners-of-face">Corners of Face</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-face.png" alt="Corners of Face" loading="lazy"></figure>
+<p>Retreive the corners that makes up a face.</p>
+<h4 id="inputs-28">Inputs</h4>
+<h5 id="face-index-2">Face Index</h5>
+<p>Data type: Integer.</p>
+<p>The face to get the data from.</p>
+<h5 id="weights-2">Weights</h5>
+<p>Data type: Float.</p>
+<p>Values used to sort the corners of the face.</p>
+<h5 id="sort-index-2">Sort Index</h5>
+<p>Data type: Integer.</p>
+<p>Which of the corners to output.</p>
+<h4 id="outputs-43">Outputs</h4>
+<h5 id="corner-index-2">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The output corner.</p>
+<h5 id="total-2">Total</h5>
+<p>Data type: Integer.</p>
+<p>The number of corners in the face.</p>
+<h3 id="corners-of-vertex">Corners of Vertex</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-vertex.png" alt="Corners of Vertex" loading="lazy"></figure>
+<p>Retreive face corners connected to vertices.</p>
+<h4 id="inputs-29">Inputs</h4>
+<h5 id="vertex-index">Vertex Index</h5>
+<p>Data type: Integer.</p>
+<p>The vertice to get the data from.</p>
+<h5 id="weights-3">Weights</h5>
+<p>Data type: Float.</p>
+<p>Values used to sort the corners attached to the vertice.</p>
+<h5 id="sort-index-3">Sort Index</h5>
+<p>Data type: Integer.</p>
+<p>Which of the corners to output.</p>
+<h4 id="outputs-44">Outputs</h4>
+<h5 id="corner-index-3">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The output corner.</p>
+<h5 id="total-3">Total</h5>
+<p>Data type: Integer.</p>
+<p>The number of corners connected to each vertice.</p>
+<h3 id="edges-of-corner">Edges of Corner</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/edges-of-corner.png" alt="Edges of Corner" loading="lazy"></figure>
+<p>Retreive the edges of both sides of a corner.</p>
+<h4 id="inputs-30">Inputs</h4>
+<h5 id="corner-index-4">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The corner to retreive the data from.</p>
+<h4 id="outputs-45">Outputs</h4>
+<h5 id="next-edge-index">Next Edge Index</h5>
+<p>Data type: Integer.</p>
+<p>The edge behind the corner.</p>
+<h5 id="previous-edge-index">Previous Edge Index</h5>
+<p>Data type: Integer.</p>
+<p>The edge before the corner.</p>
+<h3 id="edges-of-vertex">Edges of Vertex</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/edges-of-vertex.png" alt="Edges of Vertex" loading="lazy"></figure>
+<p>Retreive the edges connected to each vertex.</p>
+<h4 id="inputs-31">Inputs</h4>
+<h5 id="vertex-index-2">Vertex Index</h5>
+<p>Data type: Integer.</p>
+<p>The vertice to get the data from.</p>
+<h5 id="weights-4">Weights</h5>
+<p>Data type: Float.</p>
+<p>Values used to sort the edges attached to the vertice.</p>
+<h5 id="sort-index-4">Sort Index</h5>
+<p>Data type: Integer.</p>
+<p>Which of the edges to output.</p>
+<h4 id="outputs-46">Outputs</h4>
+<h5 id="edge-index">Edge Index</h5>
+<p>Data type: Integer.</p>
+<p>The output edge.</p>
+<h5 id="total-4">Total</h5>
+<p>Data type: Integer.</p>
+<p>The number of edges connected to each vertice.</p>
+<h3 id="face-of-corner">Face of Corner</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/face-of-corner.png" alt="Face of Corner" loading="lazy"></figure>
+<p>Retreive the faces connected to each corner.</p>
+<h4 id="inputs-32">Inputs</h4>
+<h5 id="corner-index-5">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The corner to get the data from.</p>
+<h4 id="outputs-47">Outputs</h4>
+<h5 id="face-index-3">Face Index</h5>
+<p>Data type: Integer.</p>
+<p>The output faces.</p>
+<h5 id="index-in-face">Index in Face</h5>
+<p>Data type: Integer.</p>
+<p>The index of the corner, starting from the first corner in the face.</p>
+<h3 id="offset-corner-in-face">Offset Corner in Face</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/offset-corner-in-face.png" alt="Offset Corner in Face" loading="lazy"><figcaption>Offset Corner in Face</figcaption></figure>
+<p>Retreive corners within the same face as another</p>
+<h4 id="inputs-33">Inputs</h4>
+<h5 id="corner-index-6">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The corner to get the data from.</p>
+<h5 id="offset-4">Offset</h5>
+<p>Data type: Integer.</p>
+<p>The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary.</p>
+<h4 id="outputs-48">Outputs</h4>
+<h5 id="corner-index-7">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The index of the offset corner.</p>
+<h3 id="vertex-of-corner">Vertex of corner</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/vertex-of-corner.png" alt="Vertex of corner" loading="lazy"></figure>
+<p>Retreive the vertex each corner is attached to.</p>
+<h4 id="inputs-34">Inputs</h4>
+<h5 id="corner-index-8">Corner Index</h5>
+<p>Data type: Integer.</p>
+<p>The corner to get the data from.</p>
+<h5 id="offset-5">Offset</h5>
+<p>The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary.</p>
+<h4 id="outputs-49">Outputs</h4>
+<h5 id="vertex-index-3">Vertex Index</h5>
+<p>Data type: Integer.</p>
+<p>The vertex each corner is attached to.</p>
+<h1 id="uv">UV</h1>
+<h2 id="add-menu-uv">Add menu - UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/add-menu-uv.png" alt="Add menu - UV" loading="lazy"><figcaption>Add menu - UV</figcaption></figure>
+<p>Here you find nodes to modify the UV mapping.</p>
+<h3 id="pack-uv-islands">Pack UV Islands</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/pack-uv-islands.png" alt="Pack UV Islands" loading="lazy"></figure>
+<p>Pack the UV islands to get the most out of the UV mapping.</p>
+<h4 id="inputs-35">Inputs</h4>
+<h5 id="uv-2">UV</h5>
+<p>Data type: Vector.</p>
+<p>The input UV geometry.</p>
+<h5 id="selection-10">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>A selection of the UV geometry.</p>
+<h5 id="margin">Margin</h5>
+<p>Data type: Float.</p>
+<p>How big the gap between the single UV patches should be.</p>
+<h5 id="rotate">Rotate</h5>
+<p>Data type: Boolean.</p>
+<p>Rotate island for best fit.</p>
+<h5 id="method">Method</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method.png" alt="Method" loading="lazy"></figure>
+<p>Method used for packing UV Islands.</p>
+<h6 id="bottom-left">Bottom Left</h6>
+<p>Bottom left corner of packing bounds.</p>
+<h6 id="top-right">Top Right</h6>
+<p>Top right corner of packing bounds.</p>
+<h4 id="outputs-50">Outputs</h4>
+<h5 id="uv-3">UV</h5>
+<p>Data type: Vector.</p>
+<p>The output UV geometry.</p>
+<h3 id="uv-tangent">UV Tangent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/uv-tangent.png" alt="UV Tangent" loading="lazy"></figure>
+<p>Generate tangent directions based on a UV map.</p>
+<h4 id="inputs-36">Inputs</h4>
+<h5 id="method-2">Method</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-2.png" alt="Method" loading="lazy"></figure>
+<p>Exact or fast calculation.</p>
+<h5 id="uv-4">UV</h5>
+<p>Data type: Vector (xyz2d).</p>
+<p>x and y values of the UV space.</p>
+<h4 id="outputs-51">Outputs</h4>
+<h5 id="tangent">Tangent</h5>
+<p>Data type: Vector.</p>
+<p>The output UV geometry.</p>
+<h3 id="uv-unwrap">UV Unwrap</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/uv-unwrap.png" alt="UV Unwrap" loading="lazy"></figure>
+<p>Unwrap the mesh to give it an UV mapping.</p>
+<h4 id="inputs-37">Inputs</h4>
+<h5 id="selection-11">Selection</h5>
+<p>Data type: Boolean.</p>
+<p>Which faces of the mesh should be unwrapped.</p>
+<h5 id="seam">Seam</h5>
+<p>Data type: Boolean.</p>
+<p>Mark edges as a seam for unwrapping.</p>
+<h5 id="margin-2">Margin</h5>
+<p>Data type: Float.</p>
+<p>How big the gap between the single UV patches should be.</p>
+<h5 id="fill-holes">Fill Holes</h5>
+<p>Data type: Boolean.</p>
+<p>Virtually fill holes before unwrapping the mesh. This preserves symmetry and can avoids overlaps.</p>
+<h5 id="method-3">Method</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8074c29df5d9ccfdb84dbbf3d616e927768eb7ac/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-3.png" alt="Method" loading="lazy"></figure>
+<p>The unwrap method.</p>
+<h4 id="outputs-52">Outputs</h4>
+<h5 id="uv-5">UV</h5>
+<p>Data type: Vector.</p>
+<p>The output UV geometry.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fgeo-cluster-merge-points/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fmesh.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/geo-cluster-merge-points/docs2/content/editors/geometry-node-editor/header/add-menu/mesh.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-mesh-read">Add menu - Mesh - Read</a><a class="h3" href="#cluster-by-connected">Cluster by Connected</a><a class="h3" href="#edge-angle">Edge Angle</a><a class="h3" href="#edge-neighbours">Edge Neighbours</a><a class="h3" href="#edge-vertices">Edge Vertices</a><a class="h3" href="#edges-to-face-group">Edges to Face Group</a><a class="h3" href="#face-area">Face Area</a><a class="h3" href="#face-group-boundaries">Face Group Boundaries</a><a class="h3" href="#face-neighbours">Face Neighbours</a><a class="h3" href="#is-face-planar">Is Face Planar</a><a class="h3" href="#is-face-smooth">Is Face Smooth</a><a class="h3" href="#is-edge-smooth">Is Edge Smooth</a><a class="h3" href="#mesh-island">Mesh Island</a><a class="h3" href="#shortest-edge-path">Shortest Edge Path</a><a class="h3" href="#vertex-neighbors">Vertex Neighbors</a><a class="h2" href="#add-menu-mesh-sample">Add menu - Mesh - Sample</a><a class="h3" href="#sample-nearest-surface">Sample Nearest Surface</a><a class="h3" href="#sample-uv-surface">Sample UV Surface</a><a class="h2" href="#add-menu-mesh-write">Add menu - Mesh - Write</a><a class="h3" href="#set-mesh-normal">Set Mesh Normal</a><a class="h3" href="#set-shade-smooth">Set Shade Smooth</a><a class="h2" href="#add-menu-mesh-operations">Add menu - Mesh - Operations</a><a class="h3" href="#dual-mesh">Dual Mesh</a><a class="h3" href="#edge-paths-to-curves">Edge Paths to Curves</a><a class="h3" href="#edge-path-to-selection">Edge Path to Selection</a><a class="h3" href="#extrude-mesh">Extrude Mesh</a><a class="h3" href="#flip-faces">Flip Faces</a><a class="h3" href="#mesh-boolean">Mesh Boolean</a><a class="h3" href="#mesh-to-curve">Mesh to Curve</a><a class="h3" href="#mesh-to-density-grid">Mesh to Density Grid</a><a class="h3" href="#mesh-to-points">Mesh to Points</a><a class="h3" href="#mesh-to-sdf-grid">Mesh to SDF Grid</a><a class="h3" href="#mesh-to-volume">Mesh to Volume</a><a class="h3" href="#scale-elements">Scale Elements</a><a class="h3" href="#split-edges">Split Edges</a><a class="h3" href="#subdivide-mesh">Subdivide Mesh</a><a class="h3" href="#subdivision-surface">Subdivision Surface</a><a class="h3" href="#triangulate">Triangulate</a><a class="h2" href="#add-menu-mesh-primitives">Add menu - Mesh - Primitives</a><a class="h3" href="#cone">Cone</a><a class="h3" href="#cube">Cube</a><a class="h3" href="#cylinder">Cylinder</a><a class="h3" href="#grid">Grid</a><a class="h3" href="#ico-sphere">Ico Sphere</a><a class="h3" href="#mesh-circle">Mesh Circle</a><a class="h3" href="#mesh-line">Mesh Line</a><a class="h3" href="#uv-sphere">UV Sphere</a><a class="h2" href="#add-menu-mesh-topology">Add menu - Mesh - Topology</a><a class="h3" href="#corners-of-edge">Corners of Edge</a><a class="h3" href="#corners-of-face">Corners of Face</a><a class="h3" href="#corners-of-vertex">Corners of Vertex</a><a class="h3" href="#edges-of-corner">Edges of Corner</a><a class="h3" href="#edges-of-vertex">Edges of Vertex</a><a class="h3" href="#face-of-corner">Face of Corner</a><a class="h3" href="#offset-corner-in-face">Offset Corner in Face</a><a class="h3" href="#vertex-of-corner">Vertex of corner</a><a class="h2" href="#add-menu-uv">Add menu - UV</a><a class="h3" href="#pack-uv-islands">Pack UV Islands</a><a class="h3" href="#uv-tangent">UV Tangent</a><a class="h3" href="#uv-unwrap">UV Unwrap</a></aside></div></body></html>
