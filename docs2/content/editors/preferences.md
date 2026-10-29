@@ -8,7 +8,7 @@ path:
   - Editors
   - Preferences
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 30 Editors - Preferences.odt
