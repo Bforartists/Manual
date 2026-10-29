@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Filter"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Filter nodes: Blur."
 order: 50
