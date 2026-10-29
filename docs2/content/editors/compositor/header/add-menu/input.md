@@ -295,6 +295,32 @@ Choose an already loaded video.
 | Scale | The scale of the image taken from the footage camera or tracking. |
 | Angle | The lens angle taken from the footage camera or tracking. |
 
+### Sequencer Strip Info
+
+Reads where a strip of the Video Sequencer sits. This node only appears when the compositor is used as a strip effect in the Sequencer. Use it to make an effect follow the strip it is applied to, for example a title that moves with the strip.
+
+#### Outputs
+
+##### Start Frame
+
+The first frame of the strip.
+
+##### End Frame
+
+The last frame of the strip.
+
+##### Location
+
+The strip's position in the frame.
+
+##### Rotation
+
+The strip's rotation.
+
+##### Scale
+
+The strip's scale.
+
 ### String to Image
 
 ![String to Image](/docs2/images/editors/compositor/header/add-menu-input/string-to-image.png)
@@ -348,6 +374,24 @@ Set a color.
 | Properties | The RGB node uses the color picker widget. |
 | Outputs | **Color / RGBA**: A single RGBA color value. |
 
+### Font
+
+![Font](/docs2/images/editors/compositor/header/add-menu-input-constant/font.png)
+
+Provides a font. Use it to give the String to Image node a typeface without picking it inside that node.
+
+#### Properties
+
+##### Font
+
+The font to use. Pick one from the font browser.
+
+#### Outputs
+
+##### Font
+
+The chosen font.
+
 ### Integer
 
 ![Integer](/docs2/images/editors/compositor/header/add-menu-input-constant/integer.png)
@@ -359,6 +403,46 @@ Provides an integer value.
 | Properties | **Integer**: The value. |
 | Outputs | **Integer**: The output value. |
 
+### Integer Vector
+
+![Integer Vector](/docs2/images/editors/compositor/header/add-menu-input-constant/integer-vector.png)
+
+Provides a vector of whole numbers. Use it for values that have to stay whole, such as pixel positions or counts in two or three directions.
+
+#### Properties
+
+##### Dimensions
+
+How many values the vector has.
+
+##### Vector
+
+The values of the vector.
+
+#### Outputs
+
+##### Vector
+
+The integer vector.
+
+### Menu
+
+![Menu](/docs2/images/editors/compositor/header/add-menu-input-constant/menu.png)
+
+Provides a choice from a menu, for nodes that have a menu socket, for example the Operation of Match String. Use it to set one choice for several nodes.
+
+#### Properties
+
+##### Menu
+
+The list of choices and the one that is picked.
+
+#### Outputs
+
+##### Menu
+
+The picked choice.
+
 ### Normal
 
 ![Normal](/docs2/images/editors/compositor/header/add-menu-input-constant/normal.png)
@@ -369,6 +453,60 @@ Input normalized normal values to the other nodes in the tree.
 | ---------- | ----------------------------------------------------------------------------------------------- |
 | Properties | **Input Value**: Here you can adjust the directory of the light to see how the normals behaves. |
 | Outputs | **Normal**: The output value. |
+
+### Object
+
+![Object](/docs2/images/editors/compositor/header/add-menu-input-constant/object.png)
+
+Provides a scene object. Use it to point several nodes, such as Object Info and Camera Info, at the same object.
+
+#### Properties
+
+##### Object
+
+The object to provide. Pick one from the list.
+
+#### Outputs
+
+##### Object
+
+The chosen object.
+
+### Rotation
+
+![Rotation](/docs2/images/editors/compositor/header/add-menu-input-constant/rotation.png)
+
+Provides a rotation that you type in as angles. Use it to feed a fixed turn into the Rotation nodes.
+
+#### Properties
+
+##### Rotation
+
+The angles around X, Y and Z.
+
+#### Outputs
+
+##### Rotation
+
+The rotation.
+
+### String
+
+![String](/docs2/images/editors/compositor/header/add-menu-input-constant/string.png)
+
+Provides a piece of text. Use it to type a name or a label once and use it in several places.
+
+#### Properties
+
+##### String
+
+The text.
+
+#### Outputs
+
+##### String
+
+The text you typed.
 
 ### Value
 
@@ -398,6 +536,116 @@ Provides a vector 3 value.
 
 ![Add menu - Input - Scene](/docs2/images/editors/compositor/header/add-menu-input-scene/add-menu-input-scene.png)
 
+### Active Camera
+
+![Active Camera](/docs2/images/editors/compositor/header/add-menu-input-scene/active-camera.png)
+
+Gives you the camera the scene is currently using. Use it with Camera Info to read the camera's settings without picking the camera by name, so the node tree keeps working when you switch cameras.
+
+#### Outputs
+
+##### Active Camera
+
+The scene's active camera, as an object.
+
+### Bone Info
+
+![Bone Info](/docs2/images/editors/compositor/header/add-menu-input-scene/bone-info.png)
+
+Reads the position of a bone of an armature. Use it to let a bone drive something in the compositor, for example a mask that follows a hand.
+
+#### Inputs
+
+##### Armature
+
+The armature object that holds the bone.
+
+##### Bone Name
+
+The name of the bone to read.
+
+#### Properties
+
+##### Transform Space
+
+**Original** gives the bone's matrices in the armature's own space. **Relative** gives them relative to the object that uses the node.
+
+#### Outputs
+
+##### Pose
+
+The bone's pose, as a matrix.
+
+##### Local Pose
+
+The pose relative to the parent bone.
+
+##### Transform Pose
+
+The pose with the bone's own transform removed.
+
+##### Rest Pose
+
+The bone in its rest position.
+
+##### Rest Length
+
+The length of the bone at rest.
+
+##### Exists
+
+On when a bone with that name exists.
+
+### Camera Info
+
+![Camera Info](/docs2/images/editors/compositor/header/add-menu-input-scene/camera-info.png)
+
+Reads the settings of a camera: its lens, sensor, clipping and projection. Use it to match an effect to the real camera, for example to scale a blur by the focal length or to feed the Projection Matrix to Project Point.
+
+#### Inputs
+
+##### Camera
+
+The camera object to read.
+
+#### Outputs
+
+##### Projection Matrix
+
+The matrix that turns a point of the scene into a position in the camera's picture.
+
+##### Focal Length
+
+The lens length in millimetres.
+
+##### Sensor
+
+The width and height of the sensor.
+
+##### Shift
+
+The lens shift in X and Y.
+
+##### Clip Start
+
+The nearest distance the camera sees.
+
+##### Clip End
+
+The farthest distance the camera sees.
+
+##### Focus Distance
+
+The distance that is in focus.
+
+##### Is Orthographic
+
+On for an orthographic camera.
+
+##### Orthographic Scale
+
+The size of the view of an orthographic camera.
+
 ### Is Viewport
 
 ![Is Viewport](/docs2/images/editors/compositor/header/add-menu-input-scene/is-viewport.png)
@@ -409,6 +657,50 @@ The Is Viewport node tells you whether the compositor is running in the 3D View 
 ##### Is Viewport
 
 On (true) when the node tree is evaluated by the viewport compositor, off (false) in the node editor and in a final render.
+
+### Object Info
+
+![Object Info](/docs2/images/editors/compositor/header/add-menu-input-scene/object-info.png)
+
+Reads where an object is, how it is turned and how big it is. Use it to let an object in the scene steer the compositor, for example to move a glow to the place of a lamp.
+
+#### Inputs
+
+##### Object
+
+The object to read.
+
+##### As Instance
+
+Passes the geometry as an instance instead of a copy.
+
+#### Properties
+
+##### Transform Space
+
+**Original** reads the object as it is. **Relative** reads it relative to the object that uses the node.
+
+#### Outputs
+
+##### Transform
+
+The object's transform, as a matrix.
+
+##### Location
+
+The location.
+
+##### Rotation
+
+The rotation. Use Rotate Vector or Rotation to Euler to work with it.
+
+##### Scale
+
+The size along each axis.
+
+##### Geometry
+
+The object's geometry.
 
 ### Render Layers
 
@@ -450,20 +742,21 @@ Depending on the Render passes that are enabled, other sockets are available. Se
 
 By default the Z depth pass is enabled.
 
-#### Scene time
+### Scene Time
 
-![Scene time](/docs2/images/editors/compositor/header/add-menu-input-scene/scene-time.png)
+![Scene Time](/docs2/images/editors/compositor/header/add-menu-input-scene/scene-time.png)
 
-Outputs the current scene time in seconds or in frames.  
-The Frame output is a float value to make subframe rendering for motion  
-blur possible.
+Gives you the time of the scene: the current frame and the time in seconds. Use it to animate an effect with the timeline without keyframes, for example to fade a vignette in over the first two seconds. The Frame output is a decimal number so effects such as motion blur can use sub-frame times.
 
-##### Outputs
+#### Outputs
 
-| Entry | What it does |
-| ------- | ------------------ |
-| Seconds | Output in seconds. |
-| Frame | Output in Frames. |
+##### Seconds
+
+The scene time in seconds.
+
+##### Frame
+
+The current frame, as a decimal number.
 
 ### Time Curve
 
