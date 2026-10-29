@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Utilities"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Utilities nodes: Math, Vector."
 order: 60
@@ -63,10 +63,18 @@ Standard geometry output.
 
 The result and output of the iteration or loop. You can define custom attributes outputs here from the
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Input | **Geometry**: Standard geometry output. |
-| Output | **Geometry**: Standard geometry output. |
+##### Inputs
+
+###### Geometry
+
+Standard geometry output.
+
+##### Outputs
+
+###### Geometry
+
+Standard geometry output.
+
 
 ### Closure
 
@@ -86,6 +94,28 @@ Execute a given closure.
 
 Combine multiple socket values into one.
 
+### Join Bundle
+
+![Join Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png)
+
+Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.
+
+#### Inputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One or more bundles. The empty socket at the bottom adds another one.
+
+#### Outputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One bundle with the items of all input bundles.
+
 ### Separate Bundle
 
 ![Separate Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png)
@@ -102,6 +132,8 @@ The Index Switch node chooses one value out of any number of values by its posit
 
 ##### Index
 
+Data type: Integer.
+
 Which item to pass through, counting from 0. If the index is outside the available items, the output is the default value of the chosen data type.
 
 ##### 0 , 1 ...
@@ -117,6 +149,8 @@ The type of the values that are switched, and of the output. In the Shader Edito
 #### Outputs
 
 ##### Output
+
+Data type: follows the Data Type setting.
 
 The value of the chosen item.
 
@@ -135,9 +169,13 @@ Connecting multiple Menu Switch nodes to the same output creates a conflict. To 
 
 > **Note:** You cannot plug in the same value socket into the Menu selector. If you’d like to use the same value for various Menu Switches, group the Menu Switch into a Node Group and use the top-level switch override.
 
-|  |  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| ![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png) ![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png) Top Level Grouped Menu Switches with same inputs: | Conflict caused by Same Level menu Switch inputs: |
+Top level grouped Menu Switches with the same inputs work:
+
+![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png)
+
+Same level Menu Switches with the same input cause a conflict:
+
+![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png)
 
 #### Inputs
 
@@ -146,6 +184,8 @@ Connecting multiple Menu Switch nodes to the same output creates a conflict. To 
 Becomes the output if the value is chosen.
 
 ##### Menu
+
+Data type: Menu.
 
 ![Menu](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu.png)
 
@@ -169,6 +209,8 @@ Determines the type of the data that is handled by the node.
 
 ##### Output
 
+Data type: follows the Data Type setting.
+
 The output index.
 
 ### Switch
@@ -181,13 +223,19 @@ Switch between two values with a checkbox. Only the chosen value is computed.
 
 ##### Switch
 
+Data type: Boolean.
+
 The checkbox. Off passes the False value through, on passes the True value through.
 
 ##### False
 
+Data type: Color.
+
 The value used when Switch is off.
 
 ##### True
+
+Data type: Color.
 
 The value used when Switch is on.
 
@@ -200,6 +248,8 @@ The type of the two values and of the output. In the Shader Editor you can choos
 #### Outputs
 
 ##### Output
+
+Data type: Color.
 
 The True or False value, depending on Switch.
 
@@ -220,11 +270,24 @@ The Clamp node clamps a value between a minimum and a maximum.
 
 #### Inputs
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| Value | The input value to be clamped. |
-| Min | The minimum value. |
-| Max | The maximum value. |
+##### Value
+
+Data type: Float.
+
+The input value to be clamped.
+
+##### Min
+
+Data type: Float.
+
+The minimum value.
+
+##### Max
+
+Data type: Float.
+
+The maximum value.
+
 
 #### Properties
 
@@ -232,14 +295,20 @@ The Clamp node clamps a value between a minimum and a maximum.
 
 ![Clamp Type](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp-type.png)
 
-| Entry | What it does |
-| ------- | --------------------------------------- |
-| Min Max | Clamp values using Min and Max values. |
-| Range | Clamp values between Min and Max range. |
+###### Min Max
+
+Clamp values using Min and Max values.
+
+###### Range
+
+Clamp values between Min and Max range.
+
 
 #### Outputs
 
 ##### Result
+
+Data type: Float.
 
 The input value after clamping.
 
@@ -251,10 +320,18 @@ Generates a curve. This curve can then be used for profiles for example.
 
 #### Inputs
 
-| Entry | What it does |
-| ------ | ----------------- |
-| Factor | The input factor. |
-| Value | The input value. |
+##### Factor
+
+Data type: Float (factor).
+
+The input factor.
+
+##### Value
+
+Data type: Float.
+
+The input value.
+
 
 #### Properties
 
@@ -264,41 +341,61 @@ Generates a curve. This curve can then be used for profiles for example.
 
 The navigation elements at the top are described from left to right.
 
-**Zoom in and out**
+###### Zoom in and out
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-**Clipping**
+###### Clipping
 
 ![Clipping](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png)
 
 Clipping options.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------ |
-| Reset View | Resets the curve windows zoom. |
-| Extend Horizontal | Extends the curve before the last point and after the last point horizontally. |
-| Extend Extrapolation | Extends the curve before the last point and after the last point extrapolated. |
-| Reset Curve | Resets the curve to the initial shape. |
+###### Reset View
 
-**Vector Handle**
+Resets the curve windows zoom.
+
+###### Extend Horizontal
+
+Extends the curve before the last point and after the last point horizontally.
+
+###### Extend Extrapolation
+
+Extends the curve before the last point and after the last point extrapolated.
+
+###### Reset Curve
+
+Resets the curve to the initial shape.
+
+
+###### Vector Handle
 
 ![Vector Handle](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png)
 
 Set handle type to Vector.
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------- |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y | The x and y position of the currently selected curve point. |
-| Delete Points | Delete the currently selected curve point. |
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y
+
+The x and y position of the currently selected curve point.
+
+###### Delete Points
+
+Delete the currently selected curve point.
+
 
 ### Map Range
 
@@ -308,13 +405,36 @@ The Map Range node remaps a value from a range to a target range.
 
 #### Inputs
 
-| Entry | What it does |
-| -------- | -------------------------------------------- |
-| Value | The input value to be remapped. |
-| From Min | The lower bound of the range to remap from. |
-| From Max | The higher bound of the range to remap from. |
-| To Min | The lower bound of the target range. |
-| To Max | The higher bound of the target range. |
+##### Value
+
+Data type: follows the Data Type setting.
+
+The input value to be remapped.
+
+##### From Min
+
+Data type: follows the Data Type setting.
+
+The lower bound of the range to remap from.
+
+##### From Max
+
+Data type: follows the Data Type setting.
+
+The higher bound of the range to remap from.
+
+##### To Min
+
+Data type: follows the Data Type setting.
+
+The lower bound of the target range.
+
+##### To Max
+
+Data type: follows the Data Type setting.
+
+The higher bound of the target range.
+
 
 #### Properties
 
@@ -328,12 +448,22 @@ The data type to calculate.
 
 ![Interpolation Type](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png)
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------- |
-| Linear | Linear interpolation between From Min and From Max values. |
-| Stepped Linear | Stepped linear interpolation between From Min and From Max values. |
-| Smooth Step | Smooth Hermite edge interpolation between From Min and From Max values. |
-| Smoother Step | Smoother Hermite edge interpolation between From Min and From Max values. |
+###### Linear
+
+Linear interpolation between From Min and From Max values.
+
+###### Stepped Linear
+
+Stepped linear interpolation between From Min and From Max values.
+
+###### Smooth Step
+
+Smooth Hermite edge interpolation between From Min and From Max values.
+
+###### Smoother Step
+
+Smoother Hermite edge interpolation between From Min and From Max values.
+
 
 ##### Clamp
 
@@ -342,6 +472,8 @@ If enabled, the output is clamped to the target range.
 #### Outputs
 
 ##### Result
+
+Data type: follows the Data Type setting.
 
 The input value after remapping.
 
@@ -353,10 +485,18 @@ The Math Node performs math operations.
 
 #### Inputs
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Value | First numerical value. The trigonometric functions accept values in radians. |
-| Value | Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute. |
+##### Value
+
+Data type: Float.
+
+First numerical value. The trigonometric functions accept values in radians.
+
+##### Value
+
+Data type: Float.
+
+Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.
+
 
 #### Properties
 
@@ -374,6 +514,8 @@ Limits the output to the range (0 to 1). See clamp.
 
 ##### Value
 
+Data type: Float.
+
 Numerical value output.
 
 ### Mix
@@ -388,11 +530,18 @@ Allows to mix values and vectors in various ways. The node has three different m
 
 ##### Float
 
-| Entry | What it does |
-| ------ | -------------------- |
-| Factor | The mix factor. |
-| A | Float value A input. |
-| B | Float value B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Float value A input.
+
+###### B
+
+Float value B input.
+
 
 ##### Vector
 
@@ -400,31 +549,52 @@ Allows to mix values and vectors in various ways. The node has three different m
 
 ![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
 
-| Entry | What it does |
-| ------ | --------------- |
-| Factor | The mix factor. |
-| A | Vector A input. |
-| B | Vector B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Vector A input.
+
+###### B
+
+Vector B input.
+
 
 ##### Factor mode Non Uniform
 
 ![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
 
-| Entry | What it does |
-| ------ | ---------------------- |
-| Factor | The vector mix factor. |
-| A | Vector A input. |
-| B | Vector B input. |
+###### Factor
+
+The vector mix factor.
+
+###### A
+
+Vector A input.
+
+###### B
+
+Vector B input.
+
 
 ##### Color
 
 ![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
 
-| Entry | What it does |
-| ------ | --------------- |
-| Factor | The mix factor. |
-| A | Color A input. |
-| B | Color B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Color A input.
+
+###### B
+
+Color B input.
+
 
 #### Properties
 
@@ -438,7 +608,7 @@ Which mode to use.
 
 ![Float mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png)
 
-**Clamp Factor**
+###### Clamp Factor
 
 Clamp the factor to 0-1 range.
 
@@ -446,13 +616,13 @@ Clamp the factor to 0-1 range.
 
 ![Vector mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png)
 
-**Factor mode**
+###### Factor mode
 
 ![Factor mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png)
 
 Uniform or non uniform factor.
 
-**Clamp Factor**
+###### Clamp Factor
 
 Clamp the factor to 0-1 range.
 
@@ -460,15 +630,24 @@ Clamp the factor to 0-1 range.
 
 ![Color mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png)
 
-| Entry | What it does |
-| ------------- | ---------------------------------------- |
-| Blending mode | What blending mode to use for the color. |
-| Clamp Result | Clamp the result to 0-1 range. |
-| Clamp Factor | Clamp the input factor to 0-1 range. |
+###### Blending mode
+
+What blending mode to use for the color.
+
+###### Clamp Result
+
+Clamp the result to 0-1 range.
+
+###### Clamp Factor
+
+Clamp the input factor to 0-1 range.
+
 
 #### Output
 
 ##### Result
+
+Data type: follows the Data Type setting.
 
 The output value or vector.
 
@@ -486,10 +665,18 @@ This menu contains nodes that deals with vector data.
 
 Same as with Combine RGB node. It combines color values. But instead combining rgb values, which are in the range of 0 to 255, it uses values in the range from 0 to 1.
 
-| Entry | What it does |
-| ------ | --------------------------------- |
-| Input | **X Y and Z**: X, Y and Z values. |
-| Output | **Color**: Color output. |
+#### Inputs
+
+##### X Y and Z
+
+X, Y and Z values.
+
+#### Outputs
+
+##### Color
+
+Color output.
+
 
 ### Map Range
 
@@ -499,13 +686,36 @@ The Map Range node remaps a value from a range to a target range.
 
 #### Inputs
 
-| Entry | What it does |
-| -------- | -------------------------------------------- |
-| Value | The input value to be remapped. |
-| From Min | The lower bound of the range to remap from. |
-| From Max | The higher bound of the range to remap from. |
-| To Min | The lower bound of the target range. |
-| To Max | The higher bound of the target range. |
+##### Value
+
+Data type: follows the Data Type setting.
+
+The input value to be remapped.
+
+##### From Min
+
+Data type: follows the Data Type setting.
+
+The lower bound of the range to remap from.
+
+##### From Max
+
+Data type: follows the Data Type setting.
+
+The higher bound of the range to remap from.
+
+##### To Min
+
+Data type: follows the Data Type setting.
+
+The lower bound of the target range.
+
+##### To Max
+
+Data type: follows the Data Type setting.
+
+The higher bound of the target range.
+
 
 #### Properties
 
@@ -513,12 +723,22 @@ The Map Range node remaps a value from a range to a target range.
 
 ![Interpolation Type](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png)
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------- |
-| Linear | Linear interpolation between From Min and From Max values. |
-| Stepped Linear | Stepped linear interpolation between From Min and From Max values. |
-| Smooth Step | Smooth Hermite edge interpolation between From Min and From Max values. |
-| Smoother Step | Smoother Hermite edge interpolation between From Min and From Max values. |
+###### Linear
+
+Linear interpolation between From Min and From Max values.
+
+###### Stepped Linear
+
+Stepped linear interpolation between From Min and From Max values.
+
+###### Smooth Step
+
+Smooth Hermite edge interpolation between From Min and From Max values.
+
+###### Smoother Step
+
+Smoother Hermite edge interpolation between From Min and From Max values.
+
 
 ##### Clamp
 
@@ -527,6 +747,8 @@ If enabled, the output is clamped to the target range.
 #### Outputs
 
 ##### Result
+
+Data type: follows the Data Type setting.
 
 The input value after remapping.
 
@@ -542,11 +764,18 @@ A mix node with vector preselected.
 
 ##### Float
 
-| Entry | What it does |
-| ------ | -------------------- |
-| Factor | The mix factor. |
-| A | Float value A input. |
-| B | Float value B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Float value A input.
+
+###### B
+
+Float value B input.
+
 
 ##### Vector
 
@@ -554,31 +783,52 @@ A mix node with vector preselected.
 
 ![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
 
-| Entry | What it does |
-| ------ | --------------- |
-| Factor | The mix factor. |
-| A | Vector A input. |
-| B | Vector B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Vector A input.
+
+###### B
+
+Vector B input.
+
 
 ##### Factor mode Non Uniform
 
 ![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
 
-| Entry | What it does |
-| ------ | ---------------------- |
-| Factor | The vector mix factor. |
-| A | Vector A input. |
-| B | Vector B input. |
+###### Factor
+
+The vector mix factor.
+
+###### A
+
+Vector A input.
+
+###### B
+
+Vector B input.
+
 
 ##### Color
 
 ![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
 
-| Entry | What it does |
-| ------ | --------------- |
-| Factor | The mix factor. |
-| A | Color A input. |
-| B | Color B input. |
+###### Factor
+
+The mix factor.
+
+###### A
+
+Color A input.
+
+###### B
+
+Color B input.
+
 
 #### Properties
 
@@ -592,7 +842,7 @@ Which mode to use.
 
 ![Float mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png)
 
-**Clamp Factor**
+###### Clamp Factor
 
 Clamp the factor to 0-1 range.
 
@@ -600,13 +850,13 @@ Clamp the factor to 0-1 range.
 
 ![Vector mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png)
 
-**Factor mode**
+###### Factor mode
 
 ![Factor mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png)
 
 Uniform or non uniform factor.
 
-**Clamp Factor**
+###### Clamp Factor
 
 Clamp the factor to 0-1 range.
 
@@ -614,11 +864,18 @@ Clamp the factor to 0-1 range.
 
 ![Color mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png)
 
-| Entry | What it does |
-| ------------- | ---------------------------------------- |
-| Blending mode | What blending mode to use for the color. |
-| Clamp Result | Clamp the result to 0-1 range. |
-| Clamp Factor | Clamp the input factor to 0-1 range. |
+###### Blending mode
+
+What blending mode to use for the color.
+
+###### Clamp Result
+
+Clamp the result to 0-1 range.
+
+###### Clamp Factor
+
+Clamp the input factor to 0-1 range.
+
 
 #### Output
 
@@ -632,10 +889,20 @@ The output value or vector.
 
 Same as with Separate RGB node. It separates color values. But instead separating rgb values, which are in the range of 0 to 255, it uses a vector with the values in the range from 0 to 1.
 
-| Entry | What it does |
-| ------ | ------------------------------------------------- |
-| Input | **Vector**: The Input vector. |
-| Output | **X, Y and Z**: The output vectors for X, Y and Z |
+#### Inputs
+
+##### Vector
+
+Data type: Vector.
+
+The Input vector.
+
+#### Outputs
+
+##### X, Y and Z
+
+The output vectors for X, Y and Z
+
 
 ### Mapping
 
@@ -647,12 +914,30 @@ The Mapping node transforms the input vector by applying translation, rotation, 
 
 The inputs of the node are dynamic. In particular, the Location input is only available in the Texture and Point vector types.
 
-| Entry | What it does |
-| -------- | -------------------------------------------------- |
-| Vector | The vector to be transformed. |
-| Location | The amount of translation along each axis. |
-| Rotation | The amount of rotation along each axis. XYZ order. |
-| Scale | The amount of scaling along each axis. |
+##### Vector
+
+Data type: Vector.
+
+The vector to be transformed.
+
+##### Location
+
+Data type: Vector (translation).
+
+The amount of translation along each axis.
+
+##### Rotation
+
+Data type: Vector (euler).
+
+The amount of rotation along each axis. XYZ order.
+
+##### Scale
+
+Data type: Vector (XYZ).
+
+The amount of scaling along each axis.
+
 
 #### Properties
 
@@ -690,14 +975,20 @@ Rotation rotates the input around the translation vector.
 
 Scaling scales the input along the local rotation axis.
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vector | For this vector type, a Point transformation is performed, but with zero translation. |
-| Normal | For this vector type, the node performs the inverse transpose of the transformation and normalize the result. Such transformation ensures correct normals after non-uniform scaling. So this type should be used when transforming normals. |
+###### Vector
+
+For this vector type, a Point transformation is performed, but with zero translation.
+
+###### Normal
+
+For this vector type, the node performs the inverse transpose of the transformation and normalize the result. Such transformation ensures correct normals after non-uniform scaling. So this type should be used when transforming normals.
+
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The input vector after transformation.
 
@@ -707,35 +998,85 @@ The input vector after transformation.
 
 The Normal node generates a normal vector and a dot product.
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Normal**: Normal vector input. |
-| Properties | **Normal Direction**: To manually set a fixed normal direction vector. LMB click and drag on the sphere to set the direction of the normal. Holding Ctrl while dragging snaps to 45 degree rotation increments. |
+#### Inputs
+
+##### Normal
+
+Data type: Vector (direction).
+
+Normal vector input.
+
+#### Properties
+
+##### Normal Direction
+
+To manually set a fixed normal direction vector. LMB click and drag on the sphere to set the direction of the normal. Holding Ctrl while dragging snaps to 45 degree rotation increments.
+
 
 #### Outputs
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Normal | Normal vector output. |
-| Dot | Dot product output. The dot product is a scalar value. If two normals are pointing in the same direction the dot product is 1. If they are perpendicular the dot product is zero (0). If they are anti parallel (facing directly away from each other) the dot product is -1. |
+##### Normal
+
+Data type: Vector (direction).
+
+Normal vector output.
+
+##### Dot
+
+Data type: Float.
+
+Dot product output. The dot product is a scalar value. If two normals are pointing in the same direction the dot product is 1. If they are perpendicular the dot product is zero (0). If they are anti parallel (facing directly away from each other) the dot product is -1.
+
 
 ### Radial Tiling
 
 ![Radial Tiling](/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/radial-tiling.png)
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Vector**: Input vector. · **Sides**: Number of angular elements for tiling. · **Roundness**: Roundness of the segment coordinate system. |
-| Properties | **Normalize**: Normalize the output to a 0/1 range. |
+#### Inputs
+
+##### Vector
+
+Data type: Vector (2d).
+
+Input vector.
+
+##### Sides
+
+Data type: Float.
+
+Number of angular elements for tiling.
+
+##### Roundness
+
+Data type: Float (factor).
+
+Roundness of the segment coordinate system.
+
+#### Properties
+
+##### Normalize
+
+Normalize the output to a 0/1 range.
+
 
 ### Outputs
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------- |
-| Segment Coordinates | Segment coordinates for texture mapping. |
-| Segment ID | Unique ID for every segment. |
-| Segment Width | The width of each segment. |
-| Segment Rotation | The rotation of each segment. |
+#### Segment Coordinates
+
+Segment coordinates for texture mapping.
+
+#### Segment ID
+
+Unique ID for every segment.
+
+#### Segment Width
+
+The width of each segment.
+
+#### Segment Rotation
+
+The rotation of each segment.
+
 
 ### Vector Curves
 
@@ -747,10 +1088,18 @@ The Vector Curves node maps an input vector components to a curve.
 
 In the shader context the node also has an additional Factor property.
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------------- |
-| Factor | Controls the amount of influence the node exerts on the output vector. |
-| Vector | Standard vector input. Properties Channel |
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of influence the node exerts on the output vector.
+
+##### Vector
+
+Data type: Vector.
+
+Standard vector input. Properties Channel
+
 
 ##### Channel buttons
 
@@ -778,11 +1127,11 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 The navigation elements at the top are described from left to right.
 
-**Zoom in and out**
+###### Zoom in and out
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-**Clipping**
+###### Clipping
 
 ![Clipping](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png)
 
@@ -794,26 +1143,38 @@ Clipping options.
 
 Tools is a menu where you can find some curve related tools.
 
-**Reset View**
+###### Reset View
 
 Resets the curve windows zoom.
 
-**Vector Handle**
+###### Vector Handle
 
 ![Vector Handle](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png)
 
 Set handle type to Vector.
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------- |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y | The x and y position of the currently selected curve point. |
-| Delete Points | Delete the currently selected curve point. |
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y
+
+The x and y position of the currently selected curve point.
+
+###### Delete Points
+
+Delete the currently selected curve point.
+
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 Standard vector output.
 
@@ -827,11 +1188,24 @@ The Vector Math node performs the selected math operation on the input vectors.
 
 The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.
 
-| Entry | What it does |
-| ------ | --------------- |
-| Vector | Input vector A. |
-| Vector | Input vector B. |
-| Scale | Input Scale. |
+##### Vector
+
+Data type: Vector.
+
+Input vector A.
+
+##### Vector
+
+Data type: Vector.
+
+Input vector B.
+
+##### Scale
+
+Data type: Float.
+
+Input Scale.
+
 
 #### Properties
 
@@ -845,10 +1219,18 @@ The vector math operator to be applied on the input vectors.
 
 The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.
 
-| Entry | What it does |
-| ------ | -------------- |
-| Vector | Output vector. |
-| Value | Output value. |
+##### Vector
+
+Data type: Vector.
+
+Output vector.
+
+##### Value
+
+Data type: Float.
+
+Output value.
+
 
 ### Vector Rotate
 
@@ -858,12 +1240,30 @@ This node provides the ability to rotate a vector around a center point using ei
 
 #### Inputs
 
-| Entry | What it does |
-| ------ | ---------------------------- |
-| Vector | The input vector. |
-| Center | The center for the rotation. |
-| Axis | The axis angles. |
-| Angle | The rotation angle. |
+##### Vector
+
+Data type: Vector.
+
+The input vector.
+
+##### Center
+
+Data type: Vector.
+
+The center for the rotation.
+
+##### Axis
+
+Data type: Vector.
+
+The axis angles.
+
+##### Angle
+
+Data type: Float (angle).
+
+The rotation angle.
+
 
 #### Properties
 
@@ -880,6 +1280,8 @@ Invert the angle
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The output vector
 

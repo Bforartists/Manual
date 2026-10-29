@@ -1022,6 +1022,44 @@ Data type: Geometry.
 
 The output geometry.
 
+### Merge Points
+
+![Merge Points](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/merge-points.png)
+
+Merges points that share the same Merge ID into a single point. It works on meshes and on point clouds. The node does not decide by itself which points go together, you do: points with the same ID are merged. This makes it more flexible than Merge by Distance, because you can merge by distance, by color, by layer or by any number you can calculate. Edges and faces that belonged to the merged points are kept.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The mesh or point cloud to merge.
+
+##### Selection
+
+Data type: Boolean.
+
+Which points are merged.
+
+##### Merge ID
+
+Data type: Integer.
+
+The group number of each point. Points with the same number become one point.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry with the merged points.
+
+#### How to use
+
+Connect **Cluster by Distance** to Merge ID. Connect the Position node to its Position input and set a small Distance. Points that are closer than the Distance become one point. In a test with five points and four edges, two close pairs were merged, so five points became three and the two edges inside the pairs were kept.
+
 ### Sort Elements
 
 ![Sort Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/sort-elements.png)
@@ -1329,4 +1367,3 @@ The component that was taken.
 Data type: Boolean.
 
 True when the geometry had a component of that type.
-
