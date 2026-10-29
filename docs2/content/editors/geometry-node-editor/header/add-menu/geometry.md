@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Geometry"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Geometry nodes: Read, Sample, Write, Material, Operations."
 order: 40
