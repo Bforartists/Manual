@@ -90,6 +90,8 @@ This node can be used as a way to automatically save the image after a render; I
 
 #### Inputs
 
+Use the **+** under the sockets to add another image input.
+
 ##### Image
 
 The image(s) will be saved on rendering, writing to the current frame. An entire sequence of images will be saved, when an animation is rendered.
@@ -109,6 +111,6 @@ Note. To support subsequent arrangement and layering of images, the node can sup
 
 ![File Name](/docs2/images/editors/compositor/header/add-menu-output/file-name.png)
 
-The base name of the file.
+The base name of the file. The default is `{blend_name}`. A name in curly brackets is a dynamic path: the node replaces it with a real value when it writes the file, so the name follows your project without being retyped. `{blend_name}` becomes the name of the saved blend file. Other information might be added to the final file name depending on the node options.
 
 You can find further export options in the sidebar in the Item tab in the Properties panel.
