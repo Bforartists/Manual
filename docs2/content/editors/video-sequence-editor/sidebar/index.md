@@ -727,6 +727,14 @@ Do crossfade blending between current and previous frame.
 
 Adjust the color of the color strip.
 
+#### Width
+
+The width of the color strip in pixels. The smallest value is 1.
+
+#### Height
+
+The height of the color strip in pixels. The smallest value is 1.
+
 ### Effect strip type Transform
 
 ![Effect strip type Transform](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-transform.png)
