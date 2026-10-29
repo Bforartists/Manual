@@ -33,13 +33,17 @@ Retreive statistic values from the input mesh.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ------------------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geometry input. |
-| Attribute | Attribute to get the statistics from. |
+Standard geometry input.
 
+##### Selection
+
+A selection of the geometry input.
+
+##### Attribute
+
+Attribute to get the statistics from.
 
 #### Properties
 
@@ -63,18 +67,37 @@ Vector will outupt a vector 3 with floating point values.
 
 Outputs the statistics for the different types.
 
+##### Mean
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mean | The average value of all data. |
-| Median | The median value of all data. |
-| Sum | The sum value of all data. |
-| Min | The min value of all data. |
-| Max | The max value of all data. |
-| Range | The difference between the max and min value. |
-| Standard Derivation | How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range. |
-| Variance | The variance of all data, defined as the square of the standard deviation. |
+The average value of all data.
 
+##### Median
+
+The median value of all data.
+
+##### Sum
+
+The sum value of all data.
+
+##### Min
+
+The min value of all data.
+
+##### Max
+
+The max value of all data.
+
+##### Range
+
+The difference between the max and min value.
+
+##### Standard Derivation
+
+How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range.
+
+##### Variance
+
+The variance of all data, defined as the square of the standard deviation.
 
 ### Domain Size
 
@@ -102,14 +125,21 @@ What component to calculate.
 
 ![With type mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-mesh.png)
 
+###### Point Count
 
-| Entry | What it does |
-| ----------------- | ---------------------------------- |
-| Point Count | The point count of the mesh. |
-| Edge Count | The edge count of the mesh. |
-| Face Count | The face count of the mesh. |
-| Face Corner Count | The face corner count of the mesh. |
+The point count of the mesh.
 
+###### Edge Count
+
+The edge count of the mesh.
+
+###### Face Count
+
+The face count of the mesh.
+
+###### Face Corner Count
+
+The face corner count of the mesh.
 
 ##### With type Point Cloud
 
@@ -181,12 +211,13 @@ The Blur Attribute mixes values of neighbour elements.
 
 #### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| Value | Name of the attribute that is used as input. It should be a float attribute with values between zero and one. |
-| Iterations | How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements. |
+Name of the attribute that is used as input. It should be a float attribute with values between zero and one.
 
+##### Iterations
+
+How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements.
 
 #### Properties
 
@@ -226,12 +257,13 @@ Connect a node to get its attribute. Note that adding a connection creates a new
 
 #### Outputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ------------------------- |
-| Geometry | Standard geometry output. |
-| Attribute | Attribute output. |
+Standard geometry output.
 
+##### Attribute
+
+Attribute output.
 
 ### Remove Named Attribute
 
@@ -245,12 +277,13 @@ Connect a node to get its attribute. Note that adding a connection creates a new
 
 Geometry input.
 
+###### Pattern Mode
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Pattern Mode | How to choose the attribute to remove. |
-| Name | The attribute name that you want to remove. |
+How to choose the attribute to remove.
 
+###### Name
+
+The attribute name that you want to remove.
 
 #### Outputs
 
@@ -264,12 +297,23 @@ The output geometry.
 
 Puts the results of a field in a named attribute.
 
+#### Inputs
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------------------------------- |
-| Input | **Geometry**: Geometry input. · **Selection**: Selection input. · **Name**: The attribute name that you want to store. |
-| Value | The value that is connected with the stored attribute. |
+##### Geometry
 
+Geometry input.
+
+##### Selection
+
+Selection input.
+
+##### Name
+
+The attribute name that you want to store.
+
+#### Value
+
+The value that is connected with the stored attribute.
 
 #### Properties
 
@@ -343,3 +387,38 @@ The target geometry with the transferred attributes.
 ##### Transferred Names
 
 A list of the names of the attributes that were transferred. Internal attributes, whose names start with a dot, are not listed.
+
+### Rename Attribute
+
+![Rename Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/rename-attribute.png)
+
+Changes the name of an attribute. Use it to match the names another node expects, or to move data under a clearer name. Only the name changes; the values stay the same.
+
+#### Inputs
+
+##### Geometry
+
+The geometry that has the attribute.
+
+##### Mode
+
+**Single** renames one attribute. **Prefix** changes the start of the names: every attribute whose name begins with Old gets New in its place.
+
+##### Old
+
+The name, or the prefix, to look for.
+
+##### New
+
+The new name, or the new prefix.
+
+##### Overwrite
+
+On: an attribute that already has the new name is replaced.
+
+#### Outputs
+
+##### Geometry
+
+The geometry with the attribute renamed.
+
