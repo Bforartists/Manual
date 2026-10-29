@@ -169,9 +169,13 @@ Connecting multiple Menu Switch nodes to the same output creates a conflict. To 
 
 > **Note:** You cannot plug in the same value socket into the Menu selector. If you’d like to use the same value for various Menu Switches, group the Menu Switch into a Node Group and use the top-level switch override.
 
-|  |  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| ![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png) ![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png) Top Level Grouped Menu Switches with same inputs: | Conflict caused by Same Level menu Switch inputs: |
+Top level grouped Menu Switches with the same inputs work:
+
+![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png)
+
+Same level Menu Switches with the same input cause a conflict:
+
+![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png)
 
 #### Inputs
 
