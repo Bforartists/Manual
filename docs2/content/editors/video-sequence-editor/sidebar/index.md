@@ -7,7 +7,7 @@ path:
   - Video Sequence Editor
   - Sidebar
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.3 Editors - Video Sequence Editor - Sidebar.odt
