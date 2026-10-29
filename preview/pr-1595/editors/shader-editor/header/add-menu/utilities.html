@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utilities · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1595 · <code>docs2/shader-constants-scene-time-join-bundle</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<a class="is-current" style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Shader Editor › Header › Add Menu › Utilities</div><h1 class="pv-title">Utilities</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-utilities-vector">Add menu - Utilities - Vector</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
+<p>This menu contains nodes that deals with vector data.</p>
+<h3 id="repeat">Repeat</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/repeat.png" alt="Repeat" loading="lazy"></figure>
+<p>When adding a repeat zone, two nodes are added with a “zone” set between them. The inputs connected to the <em>Repeat Input</em> node reads and gets data at the beginning of the loop before starting the looping - then the data is processed within the zone, here you can set any changes to the data to then repeat the execution again at the beginning of the chain for the next iteration of the loop. This chain of operations is repeated the specified number of times in the <em>Repeat Input</em> node.</p>
+<p>In the example in the image above, we duplicate the cube, transform it with a rotation, then join it together again. We do this 8 times in a loop, creating a circular array.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> It is not possible to set data outside the Repeat Zone, you can only get data from outside the Repeat Zone. Any data connected from the outside of the zone are constant throughout every iteration based on their value at the current frame. The result of the looping can only be accessed via the Repeat Output node.</p></div>
+<h4 id="repeat-zone-input">Repeat Zone Input</h4>
+<p>The beginning of the iteration or loop.</p>
+<h5 id="input">Input</h5>
+<h6 id="iterations">Iterations</h6>
+<p>Number of repetitions or loops.</p>
+<h6 id="geometry">Geometry</h6>
+<p>Standard geometry input.</p>
+<h5 id="output">Output</h5>
+<h6 id="geometry-2">Geometry</h6>
+<p>Standard geometry output.</p>
+<h4 id="repeat-zone-output">Repeat Zone Output</h4>
+<p>The result and output of the iteration or loop. You can define custom attributes outputs here from the</p>
+<h5 id="inputs">Inputs</h5>
+<h6 id="geometry-3">Geometry</h6>
+<p>Standard geometry output.</p>
+<h5 id="outputs">Outputs</h5>
+<h6 id="geometry-4">Geometry</h6>
+<p>Standard geometry output.</p>
+<h3 id="closure">Closure</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png" alt="Closure" loading="lazy"></figure>
+<p>Wrap nodes inside a closure that can be executed at a different part of the node-tree</p>
+<h3 id="evaluate-closure">Evaluate Closure</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png" alt="Evaluate Closure" loading="lazy"></figure>
+<p>Execute a given closure.</p>
+<h3 id="combine-bundle">Combine Bundle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png" alt="Combine Bundle" loading="lazy"></figure>
+<p>Combine multiple socket values into one.</p>
+<h3 id="join-bundle">Join Bundle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png" alt="Join Bundle" loading="lazy"></figure>
+<p>Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="bundle">Bundle</h5>
+<p>Data type: Bundle.</p>
+<p>One or more bundles. The empty socket at the bottom adds another one.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="bundle-2">Bundle</h5>
+<p>Data type: Bundle.</p>
+<p>One bundle with the items of all input bundles.</p>
+<h3 id="separate-bundle">Separate Bundle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png" alt="Separate Bundle" loading="lazy"></figure>
+<p>Decompose a bundle of values into the single values.</p>
+<h3 id="index-switch">Index Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
+<p>The Index Switch node chooses one value out of any number of values by its position (index). Only the chosen value is computed. It is a simpler version of the Menu Switch node: the items have no names and no dropdown, but you can have as many as you need.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="index">Index</h5>
+<p>Data type: Integer.</p>
+<p>Which item to pass through, counting from 0. If the index is outside the available items, the output is the default value of the chosen data type.</p>
+<h5 id="0-1">0 , 1 ...</h5>
+<p>The values to choose from. A new node starts with two (0 and 1). Add more with the empty socket at the bottom of the node, or with Add Item in the Items panel of the sidebar. The Items panel also removes and reorders items.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="data-type">Data Type</h5>
+<p>The type of the values that are switched, and of the output. In the Shader Editor you can choose Float, Integer, Boolean, Vector, Color, String, Menu, Shader, Bundle or Closure. The default is Color.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="output-2">Output</h5>
+<p>Data type: Color.</p>
+<p>The value of the chosen item.</p>
+<h3 id="menu-switch">Menu Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
+<p>The Menu Switch node selects and computes one input based on a user-defined menu. Only the selected input is computed.</p>
+<p>Menu entries can be added, removed, renamed, and reordered. Renaming keeps existing input links.</p>
+<p>The menu can be used in node groups and the nodes modifier UI. Connecting the menu to a Group Input node exposes it as a group input. A menu needs to be connected to a Menu Switch node to work. An unconnected menu is empty.</p>
+<p>Connecting multiple Menu Switch nodes to the same output creates a conflict. To avoid this, a menu switch can be grouped. Multiple groups of the same type can connect to the same menu.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You cannot plug in the same value socket into the Menu selector. If you’d like to use the same value for various Menu Switches, group the Menu Switch into a Node Group and use the top-level switch override.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-3.png" alt="Menu Switch" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch-2.png" alt="Menu Switch" /> Top Level Grouped Menu Switches with same inputs:</td>
+<td>Conflict caused by Same Level menu Switch inputs:</td>
+</tr>
+</tbody>
+</table>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="a-b">A / B</h5>
+<p>Becomes the output if the value is chosen.</p>
+<h5 id="menu">Menu</h5>
+<p>Data type: Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/menu.png" alt="Menu" loading="lazy"></figure>
+<p>Determines which of the input options will be selected and passed through as the default.</p>
+<h5 id="a-b-2">A , B ...</h5>
+<p>The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can add more menu switch options to the empty socket.</p></div>
+<h4 id="properties-2">Properties</h4>
+<h5 id="data-type-2">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Determines the type of the data that is handled by the node.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="output-3">Output</h5>
+<p>Data type: Color.</p>
+<p>The output index.</p>
+<h3 id="switch">Switch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
+<p>Switch between two values with a checkbox. Only the chosen value is computed.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="switch-2">Switch</h5>
+<p>Data type: Boolean.</p>
+<p>The checkbox. Off passes the False value through, on passes the True value through.</p>
+<h5 id="false">False</h5>
+<p>Data type: Color.</p>
+<p>The value used when Switch is off.</p>
+<h5 id="true">True</h5>
+<p>Data type: Color.</p>
+<p>The value used when Switch is on.</p>
+<h4 id="properties-3">Properties</h4>
+<h5 id="input-type">Input Type</h5>
+<p>The type of the two values and of the output. In the Shader Editor you can choose Float, Integer, Boolean, Vector, Color, String, Menu, Shader, Bundle or Closure. The default is Color.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="output-4">Output</h5>
+<p>Data type: Color.</p>
+<p>The True or False value, depending on Switch.</p>
+<h1 id="math">Math</h1>
+<h2 id="add-menu-utilities-math">Add menu - Utilities - Math</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
+<p>This menu contains nodes that deals with Math data.</p>
+<h3 id="clamp">Clamp</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
+<p>The Clamp node clamps a value between a minimum and a maximum.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="value">Value</h5>
+<p>Data type: Float.</p>
+<p>The input value to be clamped.</p>
+<h5 id="min">Min</h5>
+<p>Data type: Float.</p>
+<p>The minimum value.</p>
+<h5 id="max">Max</h5>
+<p>Data type: Float.</p>
+<p>The maximum value.</p>
+<h4 id="properties-4">Properties</h4>
+<h5 id="clamp-type">Clamp Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clamp-type.png" alt="Clamp Type" loading="lazy"></figure>
+<h6 id="min-max">Min Max</h6>
+<p>Clamp values using Min and Max values.</p>
+<h6 id="range">Range</h6>
+<p>Clamp values between Min and Max range.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="result">Result</h5>
+<p>Data type: Float.</p>
+<p>The input value after clamping.</p>
+<h3 id="float-curve">Float Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
+<p>Generates a curve. This curve can then be used for profiles for example.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="factor">Factor</h5>
+<p>Data type: Float (factor).</p>
+<p>The input factor.</p>
+<h5 id="value-2">Value</h5>
+<p>Data type: Float.</p>
+<p>The input value.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="curve-widget">Curve Widget</h5>
+<h5 id="navigation-elements">Navigation elements</h5>
+<p>The navigation elements at the top are described from left to right.</p>
+<h6 id="zoom-in-and-out">Zoom in and out</h6>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h6 id="clipping">Clipping</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options.</p>
+<h6 id="tools">Tools</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<h6 id="reset-view">Reset View</h6>
+<p>Resets the curve windows zoom.</p>
+<h6 id="extend-horizontal">Extend Horizontal</h6>
+<p>Extends the curve before the last point and after the last point horizontally.</p>
+<h6 id="extend-extrapolation">Extend Extrapolation</h6>
+<p>Extends the curve before the last point and after the last point extrapolated.</p>
+<h6 id="reset-curve">Reset Curve</h6>
+<p>Resets the curve to the initial shape.</p>
+<h6 id="vector-handle">Vector Handle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<h6 id="auto-handle">Auto Handle</h6>
+<p>Set handle type to Auto.</p>
+<h6 id="auto-clamped-handle">Auto Clamped Handle</h6>
+<p>Set handle type to Auto Clamped.</p>
+<h6 id="x-y">X / Y</h6>
+<p>The x and y position of the currently selected curve point.</p>
+<h6 id="delete-points">Delete Points</h6>
+<p>Delete the currently selected curve point.</p>
+<h3 id="map-range">Map Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
+<p>The Map Range node remaps a value from a range to a target range.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="value-3">Value</h5>
+<p>Data type: Float.</p>
+<p>The input value to be remapped.</p>
+<h5 id="from-min">From Min</h5>
+<p>Data type: Float or Vector.</p>
+<p>The lower bound of the range to remap from.</p>
+<h5 id="from-max">From Max</h5>
+<p>Data type: Float or Vector.</p>
+<p>The higher bound of the range to remap from.</p>
+<h5 id="to-min">To Min</h5>
+<p>Data type: Float or Vector.</p>
+<p>The lower bound of the target range.</p>
+<h5 id="to-max">To Max</h5>
+<p>Data type: Float or Vector.</p>
+<p>The higher bound of the target range.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="data-type-3">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The data type to calculate.</p>
+<h5 id="interpolation-type">Interpolation Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<h6 id="linear">Linear</h6>
+<p>Linear interpolation between From Min and From Max values.</p>
+<h6 id="stepped-linear">Stepped Linear</h6>
+<p>Stepped linear interpolation between From Min and From Max values.</p>
+<h6 id="smooth-step">Smooth Step</h6>
+<p>Smooth Hermite edge interpolation between From Min and From Max values.</p>
+<h6 id="smoother-step">Smoother Step</h6>
+<p>Smoother Hermite edge interpolation between From Min and From Max values.</p>
+<h5 id="clamp-2">Clamp</h5>
+<p>If enabled, the output is clamped to the target range.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="result-2">Result</h5>
+<p>Data type: Float.</p>
+<p>The input value after remapping.</p>
+<h3 id="math-2">Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
+<p>The Math Node performs math operations.</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="value-4">Value</h5>
+<p>Data type: Float.</p>
+<p>First numerical value. The trigonometric functions accept values in radians.</p>
+<h5 id="value-5">Value</h5>
+<p>Data type: Float.</p>
+<p>Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.</p>
+<h4 id="properties-7">Properties</h4>
+<h5 id="operation">Operation</h5>
+<p>Here you can choose what mathematical operation to perform.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
+<h5 id="clamp-3">Clamp</h5>
+<p>Limits the output to the range (0 to 1). See clamp.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="value-6">Value</h5>
+<p>Data type: Float.</p>
+<p>Numerical value output.</p>
+<h3 id="mix">Mix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
+<p>Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color</p>
+<h4 id="input-2">Input</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
+<h5 id="float">Float</h5>
+<h6 id="factor-2">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a">A</h6>
+<p>Float value A input.</p>
+<h6 id="b">B</h6>
+<p>Float value B input.</p>
+<h5 id="vector">Vector</h5>
+<h5 id="factor-mode-uniform">Factor mode Uniform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
+<h6 id="factor-3">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a-2">A</h6>
+<p>Vector A input.</p>
+<h6 id="b-2">B</h6>
+<p>Vector B input.</p>
+<h5 id="factor-mode-non-uniform">Factor mode Non Uniform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
+<h6 id="factor-4">Factor</h6>
+<p>The vector mix factor.</p>
+<h6 id="a-3">A</h6>
+<p>Vector A input.</p>
+<h6 id="b-3">B</h6>
+<p>Vector B input.</p>
+<h5 id="color">Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
+<h6 id="factor-5">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a-4">A</h6>
+<p>Color A input.</p>
+<h6 id="b-4">B</h6>
+<p>Color B input.</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="data-type-4">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<p>Which mode to use.</p>
+<h5 id="float-mode">Float mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
+<h6 id="clamp-factor">Clamp Factor</h6>
+<p>Clamp the factor to 0-1 range.</p>
+<h5 id="vector-mode">Vector mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
+<h6 id="factor-mode">Factor mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
+<p>Uniform or non uniform factor.</p>
+<h6 id="clamp-factor-2">Clamp Factor</h6>
+<p>Clamp the factor to 0-1 range.</p>
+<h5 id="color-mode">Color mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
+<h6 id="blending-mode">Blending mode</h6>
+<p>What blending mode to use for the color.</p>
+<h6 id="clamp-result">Clamp Result</h6>
+<p>Clamp the result to 0-1 range.</p>
+<h6 id="clamp-factor-3">Clamp Factor</h6>
+<p>Clamp the input factor to 0-1 range.</p>
+<h4 id="output-5">Output</h4>
+<h5 id="result-3">Result</h5>
+<p>Data type: Float or Vector or Color or Rotation.</p>
+<p>The output value or vector.</p>
+<h1 id="vector-2">Vector</h1>
+<h2 id="add-menu-utilities-vector-2">Add menu - Utilities - Vector</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/add-menu-utilities-vector.png" alt="Add menu - Utilities - Vector" loading="lazy"><figcaption>Add menu - Utilities - Vector</figcaption></figure>
+<p>This menu contains nodes that deals with vector data.</p>
+<h3 id="combine-xyz">Combine XYZ</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
+<p>Same as with Combine RGB node. It combines color values. But instead combining rgb values, which are in the range of 0 to 255, it uses values in the range from 0 to 1.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="x-y-and-z">X Y and Z</h5>
+<p>X, Y and Z values.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="color-2">Color</h5>
+<p>Color output.</p>
+<h3 id="map-range-2">Map Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
+<p>The Map Range node remaps a value from a range to a target range.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="value-7">Value</h5>
+<p>Data type: Float.</p>
+<p>The input value to be remapped.</p>
+<h5 id="from-min-2">From Min</h5>
+<p>Data type: Float or Vector.</p>
+<p>The lower bound of the range to remap from.</p>
+<h5 id="from-max-2">From Max</h5>
+<p>Data type: Float or Vector.</p>
+<p>The higher bound of the range to remap from.</p>
+<h5 id="to-min-2">To Min</h5>
+<p>Data type: Float or Vector.</p>
+<p>The lower bound of the target range.</p>
+<h5 id="to-max-2">To Max</h5>
+<p>Data type: Float or Vector.</p>
+<p>The higher bound of the target range.</p>
+<h4 id="properties-9">Properties</h4>
+<h5 id="interpolation-type-2">Interpolation Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<h6 id="linear-2">Linear</h6>
+<p>Linear interpolation between From Min and From Max values.</p>
+<h6 id="stepped-linear-2">Stepped Linear</h6>
+<p>Stepped linear interpolation between From Min and From Max values.</p>
+<h6 id="smooth-step-2">Smooth Step</h6>
+<p>Smooth Hermite edge interpolation between From Min and From Max values.</p>
+<h6 id="smoother-step-2">Smoother Step</h6>
+<p>Smoother Hermite edge interpolation between From Min and From Max values.</p>
+<h5 id="clamp-4">Clamp</h5>
+<p>If enabled, the output is clamped to the target range.</p>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="result-4">Result</h5>
+<p>Data type: Float.</p>
+<p>The input value after remapping.</p>
+<h3 id="mix-vector">Mix Vector</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
+<p>A mix node with vector preselected.</p>
+<h4 id="input-3">Input</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
+<h5 id="float-2">Float</h5>
+<h6 id="factor-6">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a-5">A</h6>
+<p>Float value A input.</p>
+<h6 id="b-5">B</h6>
+<p>Float value B input.</p>
+<h5 id="vector-3">Vector</h5>
+<h5 id="factor-mode-uniform-2">Factor mode Uniform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png" alt="Factor mode Uniform" loading="lazy"></figure>
+<h6 id="factor-7">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a-6">A</h6>
+<p>Vector A input.</p>
+<h6 id="b-6">B</h6>
+<p>Vector B input.</p>
+<h5 id="factor-mode-non-uniform-2">Factor mode Non Uniform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png" alt="Factor mode Non Uniform" loading="lazy"><figcaption>Factor mode Non Uniform</figcaption></figure>
+<h6 id="factor-8">Factor</h6>
+<p>The vector mix factor.</p>
+<h6 id="a-7">A</h6>
+<p>Vector A input.</p>
+<h6 id="b-7">B</h6>
+<p>Vector B input.</p>
+<h5 id="color-3">Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png" alt="Color" loading="lazy"></figure>
+<h6 id="factor-9">Factor</h6>
+<p>The mix factor.</p>
+<h6 id="a-8">A</h6>
+<p>Color A input.</p>
+<h6 id="b-8">B</h6>
+<p>Color B input.</p>
+<h4 id="properties-10">Properties</h4>
+<h5 id="data-type-5">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Which mode to use.</p>
+<h5 id="float-mode-2">Float mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png" alt="Float mode" loading="lazy"></figure>
+<h6 id="clamp-factor-4">Clamp Factor</h6>
+<p>Clamp the factor to 0-1 range.</p>
+<h5 id="vector-mode-2">Vector mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png" alt="Vector mode" loading="lazy"></figure>
+<h6 id="factor-mode-2">Factor mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png" alt="Factor mode" loading="lazy"></figure>
+<p>Uniform or non uniform factor.</p>
+<h6 id="clamp-factor-5">Clamp Factor</h6>
+<p>Clamp the factor to 0-1 range.</p>
+<h5 id="color-mode-2">Color mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png" alt="Color mode" loading="lazy"></figure>
+<h6 id="blending-mode-2">Blending mode</h6>
+<p>What blending mode to use for the color.</p>
+<h6 id="clamp-result-2">Clamp Result</h6>
+<p>Clamp the result to 0-1 range.</p>
+<h6 id="clamp-factor-6">Clamp Factor</h6>
+<p>Clamp the input factor to 0-1 range.</p>
+<h4 id="output-6">Output</h4>
+<h5 id="result-5">Result</h5>
+<p>The output value or vector.</p>
+<h3 id="separate-xyz">Separate XYZ</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
+<p>Same as with Separate RGB node. It separates color values. But instead separating rgb values, which are in the range of 0 to 255, it uses a vector with the values in the range from 0 to 1.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="vector-4">Vector</h5>
+<p>Data type: Vector.</p>
+<p>The Input vector.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="x-y-and-z-2">X, Y and Z</h5>
+<p>The output vectors for X, Y and Z</p>
+<h3 id="mapping">Mapping</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The Mapping node transforms the input vector by applying translation, rotation, and scaling.</p>
+<h4 id="inputs-13">Inputs</h4>
+<p>The inputs of the node are dynamic. In particular, the Location input is only available in the Texture and Point vector types.</p>
+<h5 id="vector-5">Vector</h5>
+<p>Data type: Vector.</p>
+<p>The vector to be transformed.</p>
+<h5 id="location">Location</h5>
+<p>Data type: Vector (translation).</p>
+<p>The amount of translation along each axis.</p>
+<h5 id="rotation">Rotation</h5>
+<p>Data type: Vector (euler).</p>
+<p>The amount of rotation along each axis. XYZ order.</p>
+<h5 id="scale">Scale</h5>
+<p>Data type: Vector (XYZ).</p>
+<p>The amount of scaling along each axis.</p>
+<h4 id="properties-11">Properties</h4>
+<h5 id="vector-type">Vector type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-type.png" alt="Vector type" loading="lazy"></figure>
+<p>The node applies the transformation differently depending on the semantic type of the input vector.</p>
+<h5 id="point">Point</h5>
+<p>For this vector type, the node performs a straightforward transformation.</p>
+<p>Transforming a texture coordinates is analogous to transforming a UV map. For instance, translating the texture coordinates along the positive X axis would result in the evaluated texture to move in the negative X axis, much like if one translated a UV map. Similarly, scaling the texture coordinates up would result in the evaluated texture to scale down. So transforming the texture coordinates would appear to have the opposite effect on the evaluated texture.</p>
+<p>The order of transformation is: Scale –&gt; Rotate –&gt; Translate, which means:</p>
+<p>Translation moves the input along the local rotation axis.</p>
+<p>Rotation rotates the input around the origin of the space.</p>
+<p>Scaling scales the input along the global axis.</p>
+<h5 id="texture">Texture</h5>
+<p>For this vector type, the node performs an inverse transformation.</p>
+<p>Inverse transforming a texture coordinates would, as opposed to the Point type, transform the evaluated texture itself. For instance, translating the texture coordinates along the positive X axis would result in the evaluated texture to move in the positive X axis, as one would expected. Similarly, scaling the texture coordinates up would result in the evaluated texture to scale up, as one would expect.</p>
+<p>The order of transformation is: Translate –&gt; Rotate –&gt; Scale, which means:</p>
+<p>Translation moves the input along the global axis.</p>
+<p>Rotation rotates the input around the translation vector.</p>
+<p>Scaling scales the input along the local rotation axis.</p>
+<h6 id="vector-6">Vector</h6>
+<p>For this vector type, a Point transformation is performed, but with zero translation.</p>
+<h6 id="normal">Normal</h6>
+<p>For this vector type, the node performs the inverse transpose of the transformation and normalize the result. Such transformation ensures correct normals after non-uniform scaling. So this type should be used when transforming normals.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="vector-7">Vector</h5>
+<p>Data type: Vector.</p>
+<p>The input vector after transformation.</p>
+<h3 id="normal-2">Normal</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/normal.png" alt="Normal" loading="lazy"></figure>
+<p>The Normal node generates a normal vector and a dot product.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="normal-3">Normal</h5>
+<p>Data type: Vector (direction).</p>
+<p>Normal vector input.</p>
+<h4 id="properties-12">Properties</h4>
+<h5 id="normal-direction">Normal Direction</h5>
+<p>To manually set a fixed normal direction vector. LMB click and drag on the sphere to set the direction of the normal. Holding Ctrl while dragging snaps to 45 degree rotation increments.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="normal-4">Normal</h5>
+<p>Data type: Vector (direction).</p>
+<p>Normal vector output.</p>
+<h5 id="dot">Dot</h5>
+<p>Data type: Float.</p>
+<p>Dot product output. The dot product is a scalar value. If two normals are pointing in the same direction the dot product is 1. If they are perpendicular the dot product is zero (0). If they are anti parallel (facing directly away from each other) the dot product is -1.</p>
+<h3 id="radial-tiling">Radial Tiling</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="vector-8">Vector</h5>
+<p>Data type: Vector (2d).</p>
+<p>Input vector.</p>
+<h5 id="sides">Sides</h5>
+<p>Data type: Float.</p>
+<p>Number of angular elements for tiling.</p>
+<h5 id="roundness">Roundness</h5>
+<p>Data type: Float (factor).</p>
+<p>Roundness of the segment coordinate system.</p>
+<h4 id="properties-13">Properties</h4>
+<h5 id="normalize">Normalize</h5>
+<p>Normalize the output to a 0/1 range.</p>
+<h3 id="outputs-14">Outputs</h3>
+<h4 id="segment-coordinates">Segment Coordinates</h4>
+<p>Segment coordinates for texture mapping.</p>
+<h4 id="segment-id">Segment ID</h4>
+<p>Unique ID for every segment.</p>
+<h4 id="segment-width">Segment Width</h4>
+<p>The width of each segment.</p>
+<h4 id="segment-rotation">Segment Rotation</h4>
+<p>The rotation of each segment.</p>
+<h3 id="vector-curves">Vector Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
+<p>The Vector Curves node maps an input vector components to a curve.</p>
+<h4 id="inputs-16">Inputs</h4>
+<p>In the shader context the node also has an additional Factor property.</p>
+<h5 id="factor-10">Factor</h5>
+<p>Data type: Float (factor).</p>
+<p>Controls the amount of influence the node exerts on the output vector.</p>
+<h5 id="vector-9">Vector</h5>
+<p>Data type: Vector.</p>
+<p>Standard vector input. Properties Channel</p>
+<h5 id="channel-buttons">Channel buttons</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
+<p>X, Y, Z. Clicking on one of the channels displays the curve for each.</p>
+<h5 id="curve-edit-field">Curve edit field</h5>
+<p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
+<h5 id="selecting-points">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points">Adding Points</h5>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/shader-constants-scene-time-join-bundle/docs2/content/interface/properties.md#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h5 id="navigation-elements-2">Navigation elements</h5>
+<p>The navigation elements at the top are described from left to right.</p>
+<h6 id="zoom-in-and-out-2">Zoom in and out</h6>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h6 id="clipping-2">Clipping</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options.</p>
+<h5 id="tools-2">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<h6 id="reset-view-2">Reset View</h6>
+<p>Resets the curve windows zoom.</p>
+<h6 id="vector-handle-2">Vector Handle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<h6 id="auto-handle-2">Auto Handle</h6>
+<p>Set handle type to Auto.</p>
+<h6 id="auto-clamped-handle-2">Auto Clamped Handle</h6>
+<p>Set handle type to Auto Clamped.</p>
+<h6 id="x-y-2">X / Y</h6>
+<p>The x and y position of the currently selected curve point.</p>
+<h6 id="delete-points-2">Delete Points</h6>
+<p>Delete the currently selected curve point.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="vector-10">Vector</h5>
+<p>Data type: Vector.</p>
+<p>Standard vector output.</p>
+<h3 id="vector-math">Vector Math</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
+<p>The Vector Math node performs the selected math operation on the input vectors.</p>
+<h4 id="inputs-17">Inputs</h4>
+<p>The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.</p>
+<h5 id="vector-11">Vector</h5>
+<p>Data type: Vector.</p>
+<p>Input vector A.</p>
+<h5 id="vector-12">Vector</h5>
+<p>Data type: Vector.</p>
+<p>Input vector B.</p>
+<h5 id="scale-2">Scale</h5>
+<p>Data type: Float.</p>
+<p>Input Scale.</p>
+<h4 id="properties-14">Properties</h4>
+<h5 id="operation-2">Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/operation.png" alt="Operation" loading="lazy"></figure>
+<p>The vector math operator to be applied on the input vectors.</p>
+<h4 id="outputs-16">Outputs</h4>
+<p>The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.</p>
+<h5 id="vector-13">Vector</h5>
+<p>Data type: Vector.</p>
+<p>Output vector.</p>
+<h5 id="value-8">Value</h5>
+<p>Data type: Float.</p>
+<p>Output value.</p>
+<h3 id="vector-rotate">Vector Rotate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
+<p>This node provides the ability to rotate a vector around a center point using either Axis Angle, Single Axis or Euler methods.</p>
+<h4 id="inputs-18">Inputs</h4>
+<h5 id="vector-14">Vector</h5>
+<p>Data type: Vector.</p>
+<p>The input vector.</p>
+<h5 id="center">Center</h5>
+<p>Data type: Vector.</p>
+<p>The center for the rotation.</p>
+<h5 id="axis">Axis</h5>
+<p>Data type: Vector.</p>
+<p>The axis angles.</p>
+<h5 id="angle">Angle</h5>
+<p>Data type: Float (angle).</p>
+<p>The rotation angle.</p>
+<h4 id="properties-15">Properties</h4>
+<h5 id="type">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
+<p>The rotation type.</p>
+<h5 id="invert">Invert</h5>
+<p>Invert the angle</p>
+<h4 id="outputs-17">Outputs</h4>
+<h5 id="vector-15">Vector</h5>
+<p>Data type: Vector.</p>
+<p>The output vector</p>
+<h3 id="vector-transform">Vector Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/vector-transform.png" alt="Vector Transform" loading="lazy"></figure>
+<p>The Vector Transform node allows converting a vector, point, or normal between world and camera and object coordinate space.</p>
+<h4 id="inputs-19">Inputs</h4>
+<h5 id="vector-input">Vector Input</h5>
+<p>Standard vector input.</p>
+<h4 id="properties-16">Properties</h4>
+<h5 id="type-2">Type</h5>
+<p>Specifies the input/output type.</p>
+<p>Vector, Point, Normal.</p>
+<h5 id="convert-from">Convert From</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-from.png" alt="Convert From" loading="lazy"></figure>
+<p>Coordinate Space to convert from World, Object or Camera.</p>
+<h5 id="convert-to">Convert To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8a299edf48b15abc5b6f740cbaf8210895ec6d0d/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/convert-to.png" alt="Convert To" loading="lazy"></figure>
+<p>Coordinate Space to convert to World, Object or Camera.</p>
+<h4 id="outputs-18">Outputs</h4>
+<h5 id="vector-output">Vector Output</h5>
+<p>The transformed output vector.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fshader-constants-scene-time-join-bundle/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fshader-editor%2Fheader%2Fadd-menu%2Futilities.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/shader-constants-scene-time-join-bundle/docs2/content/editors/shader-editor/header/add-menu/utilities.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-utilities-vector">Add menu - Utilities - Vector</a><a class="h3" href="#repeat">Repeat</a><a class="h3" href="#closure">Closure</a><a class="h3" href="#evaluate-closure">Evaluate Closure</a><a class="h3" href="#combine-bundle">Combine Bundle</a><a class="h3" href="#join-bundle">Join Bundle</a><a class="h3" href="#separate-bundle">Separate Bundle</a><a class="h3" href="#index-switch">Index Switch</a><a class="h3" href="#menu-switch">Menu Switch</a><a class="h3" href="#switch">Switch</a><a class="h2" href="#add-menu-utilities-math">Add menu - Utilities - Math</a><a class="h3" href="#clamp">Clamp</a><a class="h3" href="#float-curve">Float Curve</a><a class="h3" href="#map-range">Map Range</a><a class="h3" href="#math-2">Math</a><a class="h3" href="#mix">Mix</a><a class="h2" href="#add-menu-utilities-vector-2">Add menu - Utilities - Vector</a><a class="h3" href="#combine-xyz">Combine XYZ</a><a class="h3" href="#map-range-2">Map Range</a><a class="h3" href="#mix-vector">Mix Vector</a><a class="h3" href="#separate-xyz">Separate XYZ</a><a class="h3" href="#mapping">Mapping</a><a class="h3" href="#normal-2">Normal</a><a class="h3" href="#radial-tiling">Radial Tiling</a><a class="h3" href="#outputs-14">Outputs</a><a class="h3" href="#vector-curves">Vector Curves</a><a class="h3" href="#vector-math">Vector Math</a><a class="h3" href="#vector-rotate">Vector Rotate</a><a class="h3" href="#vector-transform">Vector Transform</a></aside></div></body></html>
