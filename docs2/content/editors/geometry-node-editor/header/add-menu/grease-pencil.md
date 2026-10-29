@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Grease Pencil"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Grease Pencil nodes: Read, Write, Operations."
 order: 60
