@@ -862,6 +862,8 @@ Value output.
 
 ## Add menu - Utilities - Matrix
 
+![Add menu - Utilities - Matrix](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/add-menu-utilities-matrix.png)
+
 A matrix is a grid of four by four numbers that stores a transform: where something is, how it is turned and how big it is, all in one value. The Matrix nodes build these values, take them apart and combine them. They are the same nodes as in the Geometry Node editor.
 
 ### Combine Matrix
@@ -1127,6 +1129,8 @@ The transposed matrix.
 # Rotation
 
 ## Add menu - Utilities - Rotation
+
+![Add menu - Utilities - Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/add-menu-utilities-rotation.png)
 
 A rotation value holds a turn in 3D without fixing how it is written: as angles around X, Y and Z (Euler), as an axis with an angle, or as a quaternion. The Rotation nodes convert between these forms and combine rotations. They are the same nodes as in the Geometry Node editor.
 
@@ -1441,6 +1445,8 @@ The Z part of the vector.
 # Text
 
 ## Add menu - Utilities - Text
+
+![Add menu - Utilities - Text](/docs2/images/editors/compositor/header/add-menu-utilities-text/add-menu-utilities-text.png)
 
 Text nodes work with strings, pieces of text. In the compositor they build file names and paths, and they make the text for the String to Image node. They are the same nodes as in the Geometry Node editor.
 
