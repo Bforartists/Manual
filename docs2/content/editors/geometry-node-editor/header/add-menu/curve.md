@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Curve"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Curve nodes: Read, Sample, Write, Operations, Primitives, Topology."
 order: 50
