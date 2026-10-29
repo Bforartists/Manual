@@ -49,6 +49,8 @@ The input boolean.
 
 ##### Boolean
 
+Data type: Boolean.
+
 The boolean state.
 
 ### Collection
@@ -67,6 +69,8 @@ The collection to select from the scene.
 
 ##### Collection
 
+Data type: Collection.
+
 The collection data useful to get instances as children.
 
 ### Color
@@ -84,6 +88,8 @@ Clicking at the color field at the bottom will reveal the standard Blender color
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 Standard color output.
 
@@ -167,6 +173,8 @@ For videos. Which frame to use.
 
 ##### Image
 
+Data type: Image.
+
 The output image.
 
 ### Integer
@@ -185,6 +193,8 @@ The input integer.
 
 ##### Integer
 
+Data type: Integer.
+
 The integer value.
 
 ### Material
@@ -196,6 +206,8 @@ Retreive a material.
 #### Outputs
 
 ##### Material
+
+Data type: Material.
 
 The material output.
 
@@ -215,6 +227,8 @@ The object to select from the scene.
 
 ##### Object
 
+Data type: Object.
+
 The object data useful to get object info.
 
 ### Rotation
@@ -232,6 +246,8 @@ The rotation that you want to apply.
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The output rotation vector.
 
@@ -269,6 +285,8 @@ Single numerical value (floating point).
 
 ##### Value
 
+Data type: Float.
+
 The value set in the node properties.
 
 ### Vector
@@ -286,6 +304,8 @@ The values of the vector.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 Standard vector output.
 
@@ -307,21 +327,31 @@ Displays the rotation gizmo in the 3d view.
 
 ##### Value
 
+Data type: Float.
+
 Show or hide the widget.
 
 ##### Position
+
+Data type: Vector (translation).
 
 Where to show the widget in relation to the object.
 
 ##### Up
 
+Data type: Vector (XYZ).
+
 The up vector to define the rotation.
 
 ##### Screen Space
 
+Data type: Boolean.
+
 Use screen space or object space values to display the widget.
 
 ##### Radius
+
+Data type: Float.
 
 The radius of the widget.
 
@@ -341,6 +371,8 @@ Always display the gizmo.
 
 ##### Transform
 
+Data type: Geometry.
+
 The output transform. No positions, no matrices, Gizmos.
 
 ### Linear Gizmo
@@ -353,13 +385,19 @@ Displays the translation gizmo in the 3d view.
 
 ##### Value
 
+Data type: Float.
+
 Show or hide the widget.
 
 ##### Position
 
+Data type: Vector (translation).
+
 Where to show the widget in relation to the object.
 
 ##### Direction
+
+Data type: Vector (XYZ).
 
 The direction vector.
 
@@ -393,6 +431,8 @@ Always display the gizmo.
 
 ##### Transform
 
+Data type: Geometry.
+
 The output transform. No positions, no matrices, Gizmos.
 
 ### Transform Gizmo
@@ -405,13 +445,19 @@ Displays the transform gizmo in the 3d view.
 
 ##### Value
 
+Data type: Matrix.
+
 Show or hide the widget.
 
 ##### Position
 
+Data type: Vector (translation).
+
 Where to show the widget in relation to the object.
 
 ##### Rotation
+
+Data type: Rotation.
 
 The rotation vector.
 
@@ -432,6 +478,8 @@ Always display the gizmo.
 #### Outputs
 
 ##### Transform
+
+Data type: Geometry.
 
 The output transform. No positions, no matrices, Gizmos.
 
@@ -618,6 +666,8 @@ obtain its transform.
 
 ##### Active Camera
 
+Data type: Object.
+
 The active camera.
 
 ### Camera Info
@@ -632,6 +682,8 @@ obtain its transform.
 #### Inputs
 
 ##### Camera
+
+Data type: Object.
 
 The camera object.
 
@@ -685,9 +737,13 @@ The Collection Info node retreives information from collections. This can be use
 
 ##### Collection
 
+Data type: Collection.
+
 Collection to get the properties from.
 
 ##### Separate Children
+
+Data type: Boolean.
 
 Output each child of the collection as a separate instance. The output is sorted alphabetically.
 
@@ -724,6 +780,8 @@ Retreive infos from an image.
 #### Input
 
 ##### Image
+
+Data type: Image.
 
 Load or connect a image.
 
@@ -773,27 +831,39 @@ Removes the image as the active image.
 
 ##### Frame
 
+Data type: Integer.
+
 For videos. Which frame to use.
 
 #### Outputs
 
 ##### Width
 
+Data type: Integer.
+
 The width of the image.
 
 ##### Height
+
+Data type: Integer.
 
 The height of the image
 
 ##### Has Alpha
 
+Data type: Boolean.
+
 Returns true if the image has an alpha channel
 
 ##### Frame Count
 
+Data type: Integer.
+
 For movies. How many frames.
 
 ##### FPS
+
+Data type: Float.
 
 For movies, what FPS rate.
 
@@ -807,6 +877,8 @@ The Is Viewport node outputs true when geometry nodes is evaluated for the viewp
 
 ##### Is Viewport
 
+Data type: Boolean.
+
 A booleran that indicates if the geometry nodes is evaluated for preview.
 
 ### Object Info
@@ -819,27 +891,39 @@ The Object Info node retreives information from objects. And outputs it then.
 
 ##### Object
 
+Data type: Object.
+
 Object to get the properties from.
 
 #### Outputs
 
 ##### Transform
 
+Data type: Matrix.
+
 Transform matrix output.
 
 ##### Location
+
+Data type: Vector.
 
 Location of the object in world space.
 
 ##### Rotation
 
+Data type: Rotation.
+
 Rotation of the object in world space.
 
 ##### Scale
 
+Data type: Vector.
+
 Scale of the object in world space.
 
 ##### Geometry
+
+Data type: Geometry.
 
 Geometry of the object in world space with all its modifiers applied.
 
@@ -855,9 +939,13 @@ blur possible.
 
 ##### Seconds
 
+Data type: Float.
+
 Output in seconds.
 
 ##### Frame
+
+Data type: Float.
 
 Output in Frames.
 
@@ -877,9 +965,13 @@ Lists the objects and the collections that sit inside a collection, sorted by na
 
 ##### Collection
 
+Data type: Collection.
+
 The collection to look into.
 
 ##### Recursive
+
+Data type: Boolean.
 
 On: also include the children of child collections.
 
@@ -887,9 +979,13 @@ On: also include the children of child collections.
 
 ##### Collections
 
+Data type: Collection.
+
 The child collections.
 
 ##### Objects
+
+Data type: Object.
 
 The child objects.
 
