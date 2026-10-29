@@ -113,4 +113,29 @@ The image(s) will be saved on rendering, writing to the current frame. An entire
 
 The base name of the file. The default is `{blend_name}`. A name in curly brackets is a dynamic path: the node replaces it with a real value when it writes the file, so the name follows your project without being retyped. `{blend_name}` becomes the name of the saved blend file. Other information might be added to the final file name depending on the node options.
 
+###### Dynamic names
+
+A name in curly brackets is replaced when the file is written. Use them to name files after the project, the scene or the render settings without retyping them. Type them straight into **File Name** or **Directory**. They also work in the render output path.
+
+| Name | Becomes |
+| ---- | ------- |
+| `{blend_name}` | The name of the saved blend file, without `.blend`. `Unsaved` if the file was never saved. |
+| `{blend_dir}` | The folder of the blend file. |
+| `{blend_name_lib}` | Like `{blend_name}`, for the library file when the data is linked from another file. |
+| `{blend_dir_lib}` | Like `{blend_dir}`, for the library file. |
+| `{project_name}` | The name of the current project. |
+| `{project_root}` | The root folder of the current project. |
+| `{scene_name}` | The name of the scene being rendered. |
+| `{camera_name}` | The name of the active camera. |
+| `{node_name}` | The name of this File Output node. |
+| `{resolution_x}` | The render width in pixels. |
+| `{resolution_y}` | The render height in pixels. |
+| `{fps}` | The frame rate. |
+
+Add a format after a colon to pad or round a number: `{resolution_x:05}` gives `01920` and `{fps:.2f}` gives `24.00`.
+
+> **Tip:** Try `{scene_name}_{camera_name}_{resolution_x}x{resolution_y}` as the File Name. Every render then tells you where it came from, and renders from different cameras never overwrite each other.
+
+If a name is misspelled or a bracket is not closed, the node reports a parse error for the path instead of writing a file.
+
 You can find further export options in the sidebar in the Item tab in the Properties panel.
