@@ -2745,6 +2745,8 @@ The Max output value.
 
 ## Add menu - Utilities - Lists
 
+![Add menu - Utilities - Lists](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-lists/add-menu-utilities-lists.png)
+
 A list holds many values of one type in a fixed order. Lists are new in Geometry Nodes: they let you build, filter and read many values without making a geometry for them.
 
 ### Field to List
@@ -2876,6 +2878,8 @@ The items whose selection is false.
 # Sound
 
 ## Add menu - Utilities - Sound
+
+![Add menu - Utilities - Sound](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-sound/add-menu-utilities-sound.png)
 
 Nodes that read sound.
 
