@@ -220,9 +220,8 @@ Choose between automatic language detection. In this case the system language ge
 
 #### Translate
 
-
 | Entry | What it does |
-| --------- | --------------------------------------------- |
+| --- | --- |
 | Tool tips | Tool tips translates the tool tips too. |
 | Interface | Interface translates all the interface texts. |
 | Reports | Translate report and error messages too. |
@@ -237,6 +236,30 @@ New data is meant to edit the localization texts.
 This can be done in the right click menus of the tools when everything is set up in the correct way.
 
 This is a development feature. You need a repository of Bforartists!
+
+#### Date Format
+
+Choose how dates are displayed in the interface. The default shows the date with the month spelled out, like *20 Mar 1960*.
+
+| Entry | Example pattern |
+| --- | --- |
+| Default | 20 Mar 1960 |
+| dd/mm/yyyy | day/month/year, separated by slashes |
+| dd.mm.yyyy | day.month.year, separated by dots |
+| dd-mm-yyyy | day-month-year, separated by dashes |
+| mm/dd/yyyy | month/day/year, separated by slashes |
+| yyyy/mm/dd | year/month/day, separated by slashes |
+| yyyy.mm.dd | year.month.day, separated by dots |
+| yyyy-mm-dd | year-month-day, separated by dashes |
+
+#### Time
+
+Choose between the 24-hour clock and the 12-hour clock for times shown in the interface.
+
+| Entry | Example |
+| --- | --- |
+| 24-Hour | 23:59 |
+| 12-Hour | 11:59 PM |
 
 > **Note:** This feature is currently not functional in Bforartists. It ends in an error message.
 
@@ -694,9 +717,27 @@ When you insert a new node between two existing connected nodes, then the two no
 
 ![Video Sequencer](/docs2/images/editors/preferences/video-sequencer.png)
 
-#### Connect Movie Strips by Default
+Defaults for the Video Sequencer editor.
 
-Connect new Movie Strips by Default if they have multiple channels.
+#### Clamp Strips by Default
+
+When slipping a strip or adjusting its handles, the movement is clamped to the bounds of the underlying content. This avoids producing extra hold frames or silence at the ends of a strip.
+
+This only sets the default. The behavior can still be switched for a single operation in the Video Sequencer.
+
+#### New Strips
+
+Settings for strips that you add later.
+
+##### Strip Length
+
+The duration of newly added strips that have no length of their own, like Color, Text and Image strips. The value is in seconds. The default is 1 second.
+
+Strips that come from a file with a length, like movies and sounds, always use the length of the file.
+
+##### Connect Movie Strips
+
+Connect new Movie Strips by default if they have multiple channels.
 
 ### Outliner
 
@@ -1844,10 +1885,10 @@ The list of available asset libraries. You can deactivate and activate single li
 
 
 | Entry | What it does |
-| ------------ | ------------------------------------------------ |
+| --- | --- |
 | Add | Add a new asset library to the asset list. |
 | Remove | Remove the selected library from the asset list. |
-| Move Up/Down | Move the selected library up or down the list. |
+| Move Up/Down | Move the selected library up or down the list. This is available for remote libraries. The order of the list sets the order in which the libraries appear in the Asset Browser. |
 | Path | The path to the current selected asset library. |
 
 
@@ -1859,11 +1900,10 @@ How to import the assets from the asset library into the scene.
 
 
 | Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- | --- |
 | Append (Reuse Data) | Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes. |
 | Append | Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data. |
 | Link | Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed. |
-
 
 #### Relative Path
 
