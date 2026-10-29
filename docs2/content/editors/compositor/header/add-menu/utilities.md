@@ -11,7 +11,7 @@ path:
 version: "5.1"
 status: draft
 icon: node
-summary: "Utilities nodes: Math, Vector."
+summary: "Utilities nodes: Math, Matrix, Rotation, Text, Vector, and the nodes for levels, random values and switches."
 order: 110
 cta: "Nodes"
 source:
@@ -28,6 +28,28 @@ replaces:
 ![Add menu - Utilities](/docs2/images/editors/compositor/header/add-menu-utilities/add-menu-utilities.png)
 
 Here you find nodes that are used as utilities.
+
+### Implicit Conversion
+
+Changes a value from one socket type to another, the same way Bforartists does it by itself when you connect sockets of different types. Use it to make the conversion visible and to choose the target type yourself, for example from a color to a single number.
+
+#### Inputs
+
+##### Value
+
+The value to convert.
+
+#### Properties
+
+##### Data Type
+
+The type to convert to.
+
+#### Outputs
+
+##### Value
+
+The converted value.
 
 ### Levels
 
@@ -670,6 +692,934 @@ The Mix Node mixes float values by working on the individual and corresponding p
 | Inputs | **Factor**: Controls the amount of influence the node exerts on the output Value. · **Value A**: The back value. · **Value B**: The top value. |
 | Properties | **Clamp Factor**: Limit the highest color value to not exceed 1. |
 | Outputs | **Result**: Value output. |
+
+# Matrix
+
+## Add menu - Utilities - Matrix
+
+A matrix is a grid of four by four numbers that stores a transform: where something is, how it is turned and how big it is, all in one value. The Matrix nodes build these values, take them apart and combine them. They are the same nodes as in the Geometry Node editor.
+
+### Combine Matrix
+
+![Combine Matrix](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/combine-matrix.png)
+
+Builds a matrix from sixteen separate numbers. Use it when you worked the numbers out yourself, from other nodes or a formula, and need them as one matrix. The numbers fill the matrix column by column: four columns with four rows each.
+
+#### Inputs
+
+##### Column 1 to Column 4
+
+Each column is a collapsible panel with four values, **Row 1** to **Row 4**.
+
+#### Outputs
+
+##### Matrix
+
+The finished matrix.
+
+
+### Combine Transform
+
+![Combine Transform](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/combine-transform.png)
+
+Builds a matrix from a location, a rotation and a scale. This is the easy way to make a transform: say where it is, how it is turned and how big it is, and the node does the matrix math.
+
+#### Inputs
+
+##### Translation
+
+The location, as a vector.
+
+##### Rotation
+
+The rotation.
+
+##### Scale
+
+The size along each axis. 1 keeps the original size.
+
+#### Outputs
+
+##### Transform
+
+The matrix that holds all three.
+
+
+### Matrix Determinant
+
+![Matrix Determinant](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/matrix-determinant.png)
+
+Calculates one number from a matrix, its determinant, which tells how the matrix changes volume. A value of 0 means the matrix squashes space flat and cannot be undone; a negative value means it mirrors. Use it to check a matrix before you invert it.
+
+#### Inputs
+
+##### Matrix
+
+The matrix to measure.
+
+#### Outputs
+
+##### Determinant
+
+The determinant as a single value.
+
+
+### Invert Matrix
+
+![Invert Matrix](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/invert-matrix.png)
+
+Gives the matrix that undoes the input matrix. If a matrix moves, turns and scales a point, its inverse puts the point back. Use it to go from world space to local space and back.
+
+#### Inputs
+
+##### Matrix
+
+The matrix to invert.
+
+#### Outputs
+
+##### Matrix
+
+The inverted matrix.
+
+##### Invertible
+
+On when the matrix could be inverted. A matrix that flattens space has no inverse.
+
+
+### Matrix SVD
+
+![Matrix SVD](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/matrix-svd.png)
+
+Splits a matrix into three parts: a rotation **U**, a scale **S** and a second rotation **V**. Multiplying them back together gives the original matrix. Use it to analyse what a matrix does, for example how much it stretches along each axis.
+
+#### Inputs
+
+##### Matrix
+
+The matrix to split.
+
+#### Outputs
+
+##### U
+
+The first rotation, as a matrix.
+
+##### S
+
+The scale along each axis, as a vector.
+
+##### V
+
+The second rotation, as a matrix.
+
+
+### Multiply Matrices
+
+![Multiply Matrices](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/multiply-matrices.png)
+
+Joins two transforms into one. The result does the same as applying one matrix and then the other. The order matters: swapping the two inputs gives a different result.
+
+#### Inputs
+
+##### Matrix
+
+The first matrix.
+
+##### Matrix (second)
+
+The second matrix.
+
+#### Outputs
+
+##### Matrix
+
+The combined matrix.
+
+
+### Project Point
+
+![Project Point](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/project-point.png)
+
+Moves a point through a matrix and then divides by the depth, the way a camera turns a 3D point into a position on its picture. Use it with the Projection Matrix of the Camera Info node to find where a point of the scene lands in the frame.
+
+#### Inputs
+
+##### Vector
+
+The point to project.
+
+##### Transform
+
+The projection matrix.
+
+#### Outputs
+
+##### Vector
+
+The projected point.
+
+
+### Separate Matrix
+
+![Separate Matrix](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/separate-matrix.png)
+
+The opposite of Combine Matrix: reads the sixteen numbers out of a matrix. Use it when you need one value of a transform, for example its location, which sits in the fourth column.
+
+#### Inputs
+
+##### Matrix
+
+The matrix to read.
+
+#### Outputs
+
+##### Column 1 to Column 4
+
+Each column holds four values, **Row 1** to **Row 4**.
+
+
+### Separate Transform
+
+![Separate Transform](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/separate-transform.png)
+
+The opposite of Combine Transform: reads the location, rotation and scale out of a matrix. Use it to get a clean location or size from a transform that came from an object or a camera.
+
+#### Inputs
+
+##### Transform
+
+The matrix to read.
+
+#### Outputs
+
+##### Translation
+
+The location, as a vector.
+
+##### Rotation
+
+The rotation.
+
+##### Scale
+
+The size along each axis.
+
+
+### Transform Direction
+
+![Transform Direction](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transform-direction.png)
+
+Turns and scales a direction with a matrix, but ignores the matrix's location. A direction has no position, so moving it would be wrong. Use it to bring a direction such as a normal into another space.
+
+#### Inputs
+
+##### Direction
+
+The direction to transform.
+
+##### Transform
+
+The matrix to apply.
+
+#### Outputs
+
+##### Direction
+
+The transformed direction.
+
+
+### Transform Point
+
+![Transform Point](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transform-point.png)
+
+Moves a point with a matrix: it is turned, scaled and moved. Use it to place a position into another space, for example from an object's local space into world space.
+
+#### Inputs
+
+##### Vector
+
+The point to transform.
+
+##### Transform
+
+The matrix to apply.
+
+#### Outputs
+
+##### Vector
+
+The transformed point.
+
+
+### Transpose Matrix
+
+![Transpose Matrix](/docs2/images/editors/compositor/header/add-menu-utilities-matrix/transpose-matrix.png)
+
+Swaps the rows and columns of a matrix. For a matrix that only rotates, the transpose is also its inverse, and it is cheaper to calculate.
+
+#### Inputs
+
+##### Matrix
+
+The matrix to transpose.
+
+#### Outputs
+
+##### Matrix
+
+The transposed matrix.
+
+
+# Rotation
+
+## Add menu - Utilities - Rotation
+
+A rotation value holds a turn in 3D without fixing how it is written: as angles around X, Y and Z (Euler), as an axis with an angle, or as a quaternion. The Rotation nodes convert between these forms and combine rotations. They are the same nodes as in the Geometry Node editor.
+
+### Align Rotation to Vector
+
+![Align Rotation to Vector](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/align-rotation-to-vector.png)
+
+Turns a rotation so that one of its axes points along a vector. Use it to make something face a direction, for example a spotlight aimed at a target. The pivot decides which way the rotation swings to get there.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to start from.
+
+##### Factor
+
+How much of the alignment is applied. 0 keeps the original rotation, 1 aligns fully.
+
+##### Vector
+
+The direction to point at.
+
+#### Properties
+
+##### Axis
+
+The axis of the rotation that is turned towards the vector: X, Y or Z.
+
+##### Pivot
+
+The axis the rotation turns around while it aligns. **Auto** picks the shortest turn; X, Y or Z keep that axis fixed.
+
+#### Outputs
+
+##### Rotation
+
+The aligned rotation.
+
+
+### Axes to Rotation
+
+![Axes to Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/axes-to-rotation.png)
+
+Builds a rotation from two directions. The primary axis is followed exactly, and the secondary axis is followed as closely as it can be while staying at a right angle. Use it when you know where two axes of a thing should point.
+
+#### Inputs
+
+##### Primary Axis
+
+The direction the primary axis points to.
+
+##### Secondary Axis
+
+The direction the secondary axis should lean towards.
+
+#### Properties
+
+##### Primary Axis
+
+Which axis of the rotation follows the primary direction: X, Y or Z.
+
+##### Secondary Axis
+
+Which axis follows the secondary direction. It has to differ from the primary axis.
+
+#### Outputs
+
+##### Rotation
+
+The rotation that matches the two directions.
+
+
+### Axis Angle to Rotation
+
+![Axis Angle to Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/axis-angle-to-rotation.png)
+
+Makes a rotation from an axis and an angle: turn this far around this line. It is the easiest way to describe a single turn around an arbitrary direction.
+
+#### Inputs
+
+##### Axis
+
+The direction of the line to turn around.
+
+##### Angle
+
+How far to turn.
+
+#### Outputs
+
+##### Rotation
+
+The rotation.
+
+
+### Euler to Rotation
+
+![Euler to Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/euler-to-rotation.png)
+
+Makes a rotation from three angles, one around each of the X, Y and Z axes. This is the way rotations are shown in most fields of the interface.
+
+#### Inputs
+
+##### Euler
+
+The angles around X, Y and Z.
+
+#### Outputs
+
+##### Rotation
+
+The rotation.
+
+
+### Invert Rotation
+
+![Invert Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/invert-rotation.png)
+
+Gives the opposite rotation, the one that turns back what the input turned. Use it to undo a rotation.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to invert.
+
+#### Outputs
+
+##### Rotation
+
+The inverted rotation.
+
+
+### Mix Rotation
+
+![Mix Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/mix-rotation.png)
+
+Blends between two rotations. This is the Mix node set to the Rotation type, so the blend follows the shortest turn from one rotation to the other. Use it to ease from one orientation to another.
+
+#### Inputs
+
+##### Factor
+
+How far to blend. 0 gives A, 1 gives B.
+
+##### A
+
+The first rotation.
+
+##### B
+
+The second rotation.
+
+#### Properties
+
+##### Clamp Factor
+
+Keeps the factor between 0 and 1.
+
+#### Outputs
+
+##### Result
+
+The blended rotation.
+
+
+### Quaternion to Rotation
+
+![Quaternion to Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/quaternion-to-rotation.png)
+
+Makes a rotation from the four numbers of a quaternion. Use it when your rotation comes from software or a file that stores quaternions.
+
+#### Inputs
+
+##### W
+
+The scalar part.
+
+##### X
+
+The X part of the vector.
+
+##### Y
+
+The Y part of the vector.
+
+##### Z
+
+The Z part of the vector.
+
+#### Outputs
+
+##### Rotation
+
+The rotation.
+
+
+### Rotate Rotation
+
+![Rotate Rotation](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotate-rotation.png)
+
+Turns a rotation by another rotation. Use it to add a turn to one that already exists, for example a small tilt on top of an orientation.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to turn.
+
+##### Rotate By
+
+The turn to add.
+
+#### Properties
+
+##### Rotation Space
+
+**Global** turns around the world axes. **Local** turns around the axes of the rotation itself.
+
+#### Outputs
+
+##### Rotation
+
+The combined rotation.
+
+
+### Rotate Vector
+
+![Rotate Vector](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotate-vector.png)
+
+Turns a vector by a rotation. Use it to point a direction the way an object is facing.
+
+#### Inputs
+
+##### Vector
+
+The vector to turn.
+
+##### Rotation
+
+The rotation to apply.
+
+#### Outputs
+
+##### Vector
+
+The turned vector.
+
+
+### Rotation to Axis Angle
+
+![Rotation to Axis Angle](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-axis-angle.png)
+
+Reads a rotation as an axis and an angle. The opposite of Axis Angle to Rotation.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to read.
+
+#### Outputs
+
+##### Axis
+
+The line the rotation turns around.
+
+##### Angle
+
+How far it turns.
+
+
+### Rotation to Euler
+
+![Rotation to Euler](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-euler.png)
+
+Reads a rotation as three angles around X, Y and Z. Use it to show or edit a rotation in the familiar way.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to read.
+
+#### Outputs
+
+##### Euler
+
+The angles around X, Y and Z.
+
+
+### Rotation to Quaternion
+
+![Rotation to Quaternion](/docs2/images/editors/compositor/header/add-menu-utilities-rotation/rotation-to-quaternion.png)
+
+Reads a rotation as the four numbers of a quaternion. Use it to hand a rotation to something that works with quaternions.
+
+#### Inputs
+
+##### Rotation
+
+The rotation to read.
+
+#### Outputs
+
+##### W
+
+The scalar part.
+
+##### X
+
+The X part of the vector.
+
+##### Y
+
+The Y part of the vector.
+
+##### Z
+
+The Z part of the vector.
+
+
+# Text
+
+## Add menu - Utilities - Text
+
+Text nodes work with strings, pieces of text. In the compositor they build file names and paths, and they make the text for the String to Image node. They are the same nodes as in the Geometry Node editor.
+
+### Format String
+
+![Format String](/docs2/images/editors/compositor/header/add-menu-utilities-text/format-string.png)
+
+Builds a text from a template with gaps in it. Write the fixed words in the format and put a name in curly brackets wherever a value should go, for example *Shot {number}*. Each name becomes an input socket. Use it for labels and file names that contain numbers.
+
+#### Inputs
+
+##### Format
+
+The template. Names in curly brackets become inputs.
+
+##### +
+
+Adds another value to fill in.
+
+#### Outputs
+
+##### String
+
+The finished text.
+
+
+### Match String
+
+![Match String](/docs2/images/editors/compositor/header/add-menu-utilities-text/match-string.png)
+
+Checks a text against a key and tells you whether it fits. Use it to choose a path in the node tree by the name of something.
+
+#### Inputs
+
+##### String
+
+The text to check.
+
+##### Operation
+
+How to compare: **Starts With**, **Ends With** or **Contains**.
+
+##### Key
+
+The text to look for.
+
+#### Outputs
+
+##### Result
+
+On when the text matches.
+
+
+### Replace String
+
+![Replace String](/docs2/images/editors/compositor/header/add-menu-utilities-text/replace-string.png)
+
+Swaps every occurrence of one piece of text for another. Use it to clean up a name or to change part of a path.
+
+#### Inputs
+
+##### String
+
+The text to change.
+
+##### Find
+
+The part to look for.
+
+##### Replace
+
+What to put in its place.
+
+#### Outputs
+
+##### String
+
+The changed text.
+
+
+### Reverse String
+
+![Reverse String](/docs2/images/editors/compositor/header/add-menu-utilities-text/reverse-string.png)
+
+Writes a text backwards. Use it for the odd case where the end of a name matters more than the start.
+
+#### Inputs
+
+##### String
+
+The text to reverse.
+
+#### Outputs
+
+##### String
+
+The reversed text.
+
+
+### Set String Case
+
+![Set String Case](/docs2/images/editors/compositor/header/add-menu-utilities-text/set-string-case.png)
+
+Changes a text to all capitals or all small letters. Use it to make names consistent before you compare them.
+
+#### Inputs
+
+##### String
+
+The text to change.
+
+##### Case
+
+**Uppercase** or **Lowercase**.
+
+#### Outputs
+
+##### String
+
+The changed text.
+
+
+### Slice String
+
+![Slice String](/docs2/images/editors/compositor/header/add-menu-utilities-text/slice-string.png)
+
+Cuts a piece out of a text. You say where the piece starts and how long it is. Use it to take a prefix or a number out of a file name.
+
+#### Inputs
+
+##### String
+
+The text to cut from.
+
+##### Position
+
+The place where the piece starts, counted from 0.
+
+##### Length
+
+How many characters to keep.
+
+#### Outputs
+
+##### String
+
+The piece of text.
+
+
+### Trim String
+
+![Trim String](/docs2/images/editors/compositor/header/add-menu-utilities-text/trim-string.png)
+
+Removes unwanted characters from the start or the end of a text. Use it to strip spaces or a separator from a name.
+
+#### Inputs
+
+##### String
+
+The text to trim.
+
+##### Characters
+
+The characters to remove.
+
+##### Whitespace
+
+Also removes spaces, tabs and line breaks.
+
+##### Start
+
+Trims the start of the text.
+
+##### End
+
+Trims the end of the text.
+
+#### Outputs
+
+##### String
+
+The trimmed text.
+
+
+### Find in String
+
+![Find in String](/docs2/images/editors/compositor/header/add-menu-utilities-text/find-in-string.png)
+
+Looks for a piece of text inside another and tells you where it is and how often it occurs. Use it to test whether a name contains a tag, or to find where to cut it.
+
+#### Inputs
+
+##### String
+
+The text to search in.
+
+##### Search
+
+The text to look for.
+
+##### Mode
+
+Where to start looking: **From Start** or from the end.
+
+#### Outputs
+
+##### First Found
+
+The position of the first match, counted from 0.
+
+##### Count
+
+How many times the text was found.
+
+
+### String Length
+
+![String Length](/docs2/images/editors/compositor/header/add-menu-utilities-text/string-length.png)
+
+Counts the characters in a text. Use it to check that a name is long enough, or to know how much to cut.
+
+#### Inputs
+
+##### String
+
+The text to measure.
+
+#### Outputs
+
+##### Length
+
+The number of characters.
+
+
+### String to Value
+
+![String to Value](/docs2/images/editors/compositor/header/add-menu-utilities-text/string-to-value.png)
+
+Reads a number from a text. Use it to turn a frame number in a file name back into a value you can calculate with.
+
+#### Inputs
+
+##### String
+
+The text to read.
+
+##### Base
+
+The number base, 10 for normal numbers.
+
+#### Properties
+
+##### Data Type
+
+Reads the number as a **Float** or as an **Integer**.
+
+#### Outputs
+
+##### Value
+
+The number that was read.
+
+##### Length
+
+How many characters of the text were used.
+
+
+### Value to String
+
+![Value to String](/docs2/images/editors/compositor/header/add-menu-utilities-text/value-to-string.png)
+
+Writes a number as text. Use it to put a frame number or a value into a label or a file name.
+
+#### Inputs
+
+##### Value
+
+The number to write.
+
+##### Decimals
+
+How many digits to show after the decimal point.
+
+##### Base
+
+The number base, 10 for normal numbers.
+
+##### Padding
+
+The minimum number of digits. Shorter numbers get zeros in front.
+
+#### Properties
+
+##### Data Type
+
+Writes a **Float** or an **Integer**.
+
+#### Outputs
+
+##### String
+
+The number as text.
+
+
+### Special Characters
+
+![Special Characters](/docs2/images/editors/compositor/header/add-menu-utilities-text/special-characters.png)
+
+Gives you characters that are hard to type into a text field: a line break and a tab. Use it with Format String to build text over several lines.
+
+#### Outputs
+
+##### Line Break
+
+A character that starts a new line.
+
+##### Tab
+
+A tab character.
+
 
 # Vector
 
