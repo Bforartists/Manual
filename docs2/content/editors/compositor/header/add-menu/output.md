@@ -1,21 +1,21 @@
 ---
 id: editors.compositor.header.add-menu.output
-title: "Output"
+title: Output
 section: editors
 path:
-  - "Editors"
-  - "Compositor"
-  - "Header"
-  - "Add Menu"
-  - "Output"
+  - Editors
+  - Compositor
+  - Header
+  - Add Menu
+  - Output
 version: "5.1"
 status: needs-review
 icon: node
-summary: "Output nodes."
+summary: Output nodes.
 order: 20
-cta: "Nodes"
+cta: Nodes
 source:
-  - "10.1.9 Editors - Compositor Editor - Header - Add Menu - Output.odt"
+  - 10.1.9 Editors - Compositor Editor - Header - Add Menu - Output.odt
 replaces:
   - editors.compositor.header.add-menu-output
 ---
@@ -35,7 +35,7 @@ This is especially useful for building clean, context-sensitive node groups.
 
 #### Use
 
-When used inside a **Node Group**, this node helps to **automatically **filter or detect** outputs**.
+When used inside a **Node Group**, this node helps to **automatically filter or detect outputs**.
 
 - If the output always returns a fallback value (e.g. *0*, *false*, empty geometry), this will **hide the output socket** from the node group output socket interface.
 - This behavior is **more efficient and user-friendly** than using a Switch node, which requires manually setting fallback values per type and will always expose the output socket.
@@ -72,7 +72,7 @@ When a Viewer node is selected, then the backdrop shows a widget cage that allow
 
 ![Viewer](/docs2/images/editors/compositor/header/add-menu-output/viewer-3.png)
 
-Furhter settings can be adjusted in the header. In the Backdrop toolsgroup.
+Further settings can be adjusted in the header. In the Backdrop toolsgroup.
 
 #### Input
 
@@ -96,7 +96,7 @@ Use the **+** under the sockets to add another image input.
 
 The image(s) will be saved on rendering, writing to the current frame. An entire sequence of images will be saved, when an animation is rendered.
 
-Note. To support subsequent arrangement and layering of images, the node can supply a Z-depth map. However, please note that only the OpenEXR image formats save the Z information.
+> Note: To support subsequent arrangement and layering of images, the node can supply a Z-depth map. However, please note that only the OpenEXR image formats save the Z information.
 
 #### Properties
 
