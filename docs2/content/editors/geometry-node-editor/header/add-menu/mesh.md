@@ -332,7 +332,7 @@ Input mesh.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The value to calculate.
 
@@ -368,7 +368,7 @@ Which data to calculate.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -396,7 +396,7 @@ Input mesh.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The value to calculate.
 
@@ -424,7 +424,7 @@ Which data to calculate.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
