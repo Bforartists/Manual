@@ -7,7 +7,7 @@ path:
   - Video Sequence Editor
   - Sidebar
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.3 Editors - Video Sequence Editor - Sidebar.odt
@@ -726,6 +726,14 @@ Do crossfade blending between current and previous frame.
 #### Color Picker
 
 Adjust the color of the color strip.
+
+#### Width
+
+The width of the color strip in pixels. The smallest value is 1.
+
+#### Height
+
+The height of the color strip in pixels. The smallest value is 1.
 
 ### Effect strip type Transform
 
