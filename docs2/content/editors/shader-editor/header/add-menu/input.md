@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Input"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Input nodes."
 order: 10
