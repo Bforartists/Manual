@@ -30,7 +30,7 @@ Earlier branches (`master`, `docs2/spike1-migration`, `docs2/tier1-*`) are histo
 |---|---|---|
 | 1. ✍️ Save | Writer | Pages CMS commits to the working branch, or GitHub opens a pull request |
 | 2. 🤖 Check | Bot | Image bot files new images; checks run; a preview link is posted |
-| 3. 👀 Review | Section reviewer | Reads the preview, comments or approves |
+| 3. 👀 Review | Section reviewer | Reads the preview, comments or approves. When the pull request leaves draft the bot marks its pages **In review**; an approval, or the label `reviewed`, marks them **Reviewed** ([page status](Structure-and-Navigation.md#page-status)) |
 | 4. 🔀 Merge | Maintainer | Merges the pull request |
 | 5. 🌐 Sync | Bot | Pages update on Webflow staging |
 | 6. 🚀 Live | Maintainer | Publishes the staging site |

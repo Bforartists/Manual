@@ -1,0 +1,74 @@
+# 📋 Page status follows the pull request.
+#
+#   draft pull request                ->  pages stay `draft`
+#   pull request ready for review     ->  pages it changes become `needs-review` (● In review)
+#   approved, or labelled `reviewed`  ->  pages it changes become `reviewed`  (● Reviewed)
+#
+# The change is a commit on the pull request's own branch, so it merges with the pull request
+# (master is protected: nothing is ever pushed to it directly). The status only goes up.
+# Skipped on purpose: draft pull requests, pull requests from forks, pull requests that
+# change more than 25 pages (bulk edits), and pull requests with the label `no-status`.
+#
+# One-time repository setting (already needed by the other docs workflows):
+#   Settings -> Actions -> General -> Workflow permissions -> "Read and write permissions"
+
+name: Docs 2.0 page status
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize, labeled]
+    paths: ["docs2/content/**"]
+  pull_request_review:
+    types: [submitted]
+
+concurrency:
+  group: docs2-status-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      !github.event.pull_request.draft &&
+      !contains(github.event.pull_request.labels.*.name, 'no-status') &&
+      (github.event_name != 'pull_request_review' || github.event.review.state == 'approved') &&
+      (github.event.action != 'labeled' || github.event.label.name == 'reviewed')
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BRANCH: ${{ github.event.pull_request.head.ref }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: 🎯 Decide the target status
+        id: target
+        run: |
+          to=needs-review
+          if [ "${{ github.event_name }}" = "pull_request_review" ] || [ "${{ github.event.action }}" = "labeled" ] \
+             || echo '${{ toJSON(github.event.pull_request.labels.*.name) }}' | grep -q '"reviewed"'; then
+            to=reviewed
+          fi
+          echo "to=$to" >> "$GITHUB_OUTPUT"
+
+      - name: 📋 Raise the status of the changed pages
+        run: |
+          git fetch -q origin master
+          python3 docs2/tools/page_status.py . --base origin/master --to "${{ steps.target.outputs.to }}" --report _status.md
+          cat _status.md >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$(git status --porcelain docs2/content)" ]; then
+            git config user.name "docs-bot"
+            git config user.email "docs-bot@users.noreply.github.com"
+            git add docs2/content
+            git commit -q -m "docs: page status → ${{ steps.target.outputs.to }} [docs-bot]"
+            git push origin "HEAD:$BRANCH"
+            gh pr comment "$PR" --body "$(cat _status.md)" || true
+          fi

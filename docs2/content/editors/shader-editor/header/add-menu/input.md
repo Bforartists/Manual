@@ -222,6 +222,84 @@ The Layer Weight node outputs a weight typically used for layering shaders with 
 | Facing | Weight that blends from the first to the second shader as the surface goes from facing the viewer to viewing it at a grazing angle. |
 
 
+### Light Evaluation
+
+![Light Evaluation](/docs2/images/editors/shader-editor/header/add-menu-input/light-evaluation.png)
+
+The Light Evaluation node tells you how one light reaches a point on the surface: how strongly it shines on it, from which direction, and from how far away. Use it to build your own lighting, for example a toon or stylized look.
+
+It works on one light at a time. Connect it, through your own nodes, to the Light sockets of a Light Accumulation node, which runs the setup once for every light in the scene. Connecting it anywhere else shows an error. This node only appears in the Add menu for object shaders when the render engine is EEVEE. It is not shown for World or Line Style shaders. 
+
+#### Inputs
+
+##### Position
+
+The point that is lit. If nothing is connected, the position of the surface being shaded is used.
+
+##### Normal
+
+The direction the surface faces at that point. If nothing is connected, the surface normal is used.
+
+##### Roughness
+
+How rough the surface is, from 0.0 to 1.0 (default 0.5). It is used to work out the reflection factor, so it only appears in Glossy mode.
+
+#### Properties
+
+##### Mode
+
+Chooses what kind of light response the Factor output gives.
+
+###### Diffuse
+
+The Factor is the matte light response of the surface.
+
+###### Glossy
+
+The Factor is the shiny reflection of the light. This mode adds the Roughness input.
+
+#### Outputs
+
+##### Factor
+
+How strongly the light reaches the point for the chosen mode. The value is scaled by pi.
+
+##### Mask
+
+A value that smooths the edge where the light stops reaching. For spot lights it also includes the spot cone fade. For sun lights it is always 1.0.
+
+##### Direction
+
+The direction from the point to the light, with length 1. For sun lights it is the sun direction multiplied by -1.0.
+
+##### Distance
+
+The distance from the point to the light. For sun lights it is 1.0.
+
+
+### Light Info
+
+![Light Info](/docs2/images/editors/shader-editor/header/add-menu-input/light-info.png)
+
+The Light Info node gives you the physical properties of the light that is currently being evaluated, so your own lighting setup can react to its color and strength.
+
+It works on one light at a time. Connect it, through your own nodes, to the Light sockets of a Light Accumulation node, which runs the setup once for every light in the scene. Connecting it anywhere else shows an error. This node only appears in the Add menu for object shaders when the render engine is EEVEE. It is not shown for World or Line Style shaders. 
+
+#### Outputs
+
+##### Color
+
+The color of the light.
+
+##### Power
+
+The radiant intensity of the light divided by pi.
+
+##### Position
+
+The position of the light.
+
+
 ### Light Path
 
 ![Light Path](/docs2/images/editors/shader-editor/header/add-menu-input/light-path.png)
@@ -309,6 +387,31 @@ Retreive info from a point cloud. Just cycles. Eevee is not yet supported.
 | Position | The position of the point cloud. |
 | Radius | The radius of the point cloud. |
 | Random | A random point in the point cloud. |
+
+
+### Shadow Raycast
+
+![Shadow Raycast](/docs2/images/editors/shader-editor/header/add-menu-input/shadow-raycast.png)
+
+The Shadow Raycast node checks whether the light being evaluated is blocked by other objects at a point, and returns the shadow as a color. Use it to add real cast shadows to your own lighting setup.
+
+It works on one light at a time. Connect it, through your own nodes, to the Light sockets of a Light Accumulation node, which runs the setup once for every light in the scene. Connecting it anywhere else shows an error. This node only appears in the Add menu for object shaders when the render engine is EEVEE. It is not shown for World or Line Style shaders. 
+
+#### Inputs
+
+##### Position
+
+The point to test for shadow. If nothing is connected, the position of the surface being shaded is used.
+
+##### Softness
+
+Softens the shadow edge, from 0.0 to 1.0 (default 1.0).
+
+#### Outputs
+
+##### Color
+
+The shadow at the point, as a gray color. It is white when the light does not cast shadows.
 
 
 ### Tangent
