@@ -180,7 +180,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Creative</span>
 <span style="padding-left:1.5rem">Channel List</span>
 <span style="padding-left:1.5rem">Channel List</span>
-<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<span style="padding-left:3.5rem">Geometry</span>
 <span style="padding-left:1.5rem">Channel List</span>
 <span>Image Editor</span>
 <span style="padding-left:1.5rem">Channel List</span>
@@ -213,7 +213,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Group</span>
 <span style="padding-left:1.5rem">Armature</span>
 <span style="padding-left:3.5rem">Tracking</span>
-<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<span style="padding-left:3.5rem">Mesh</span>
 <span style="padding-left:1.5rem">Modifiers</span>
 <span style="padding-left:3.5rem">Layout</span>
 <span>UV Editor</span>
@@ -380,10 +380,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
 <span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Utilities</div><h1 class="pv-title">Utilities</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 41 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-utilities">Add menu - Utilities</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/add-menu-utilities.png" alt="Add menu - Utilities" loading="lazy"><figcaption>Add menu - Utilities</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/add-menu-utilities.png" alt="Add menu - Utilities" loading="lazy"><figcaption>Add menu - Utilities</figcaption></figure>
 <p>Utility nodes are mainly for mathematical operations with fields, values and elements.</p>
 <h3 id="for-each-element">For Each Element</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/for-each-element.png" alt="For Each Element" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/for-each-element.png" alt="For Each Element" loading="lazy"></figure>
 <p>The For Each Element Node enables iterative operations on individual elements of a geometry. This node is ideal for tasks requiring unique processing for each element, such as creating distinct objects or attributes for every element: a face, vertex, or curve or other domain.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> The For Each Element Node is best for creating detailed or complex geometry for every element of an input. For instance, you can use it to generate a unique tree for each curve or a distinct building on every face of a mesh.</p></div>
 <p>However, it's less efficient for handling tiny elements, like individual strands of hair. Processing small parts separately can slow things down because Blender isn’t able to optimize the operation effectively. For projects with many elements, it's better to design your node setup to avoid working on very small pieces one at a time. In this case, it is best to run operations directly on field domains.</p>
@@ -394,7 +394,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="selection">Selection</h6>
 <p>Specifies which subset of elements to process. This allows filtering based on boolean attributes or conditions per field – typically used as a true/false mask.</p>
 <h5 id="properties">Properties</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/properties.png" alt="Properties" loading="lazy"></figure>
 <h6 id="element">Element</h6>
 <p>Defines which element of which domain will be used.</p>
 <p>The input geometry is divided into individual geometries, each corresponding to a single element. During each iteration, the node processes one of these single-element geometries.</p>
@@ -405,24 +405,24 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="element-2">Element</h6>
 <p>Returns a Geometry output with the list of elements for iteration.</p>
 <h4 id="for-each-element-output">For Each Element Output</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/for-each-element-output.png" alt="For Each Element Output" loading="lazy"><figcaption>For Each Element Output</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/for-each-element-output.png" alt="For Each Element Output" loading="lazy"><figcaption>For Each Element Output</figcaption></figure>
 <h5 id="inputs-2">Inputs</h5>
 <h6 id="main-geometry">Main Geometry</h6>
 <p>The Main Geometry outputs create attributes on the &quot;main&quot; output geometry (the first output). Each value calculated within the zone becomes part of the attribute at the corresponding index of this output.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Default is blank.</p></div>
 <h6 id="generated">Generated</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/generated.png" alt="Generated" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/generated.png" alt="Generated" loading="lazy"></figure>
 <p>Result of joining generated geometries from each iteration.</p>
 <p>The Generated inputs contain the individual geometry elements processed inside the zone. This includes any fields and attributes from different domains associated with these elements.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Default is the result of joining generated geometries for each iteration.* *You can connect any new attribute or filed and output new generated elements and custom fields from the zone.</p></div>
 <h5 id="properties-2">Properties</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h6 id="main-geometry-2">Main Geometry</h6>
 <p>The main geometry sockets.</p>
 <h6 id="generated-geometry">Generated Geometry</h6>
 <p>The generated geometry sockets from the zone.</p>
 <h6 id="socket-type">Socket Type</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/socket-type.png" alt="Socket Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/socket-type.png" alt="Socket Type" loading="lazy"></figure>
 <p>What input input and output socket type to evaluate from each iteration in the zone.</p>
 <h6 id="inspection-index">Inspection Index</h6>
 <p>Iteration index that is used by inspection features like the viewer node or socket inspection</p>
@@ -432,64 +432,54 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="element-3">Element</h6>
 <p>Result of joining generated geometries or attributes from each iteration.</p>
 <h3 id="index-switch">Index Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/index-switch.png" alt="Index Switch" loading="lazy"></figure>
 <p>The Index Switch node is meant as a simpler version of the Menu Switch node. It doesn't allow naming items or displaying them in a dropdown, but still allows choosing between an arbitrary number of items, unlike the regular Switch node where you can just switch between two states.</p>
 <h4 id="inputs-3">Inputs</h4>
 <h5 id="index-2">Index</h5>
 <p>Data type: Integer.</p>
 <p>Wich input to choose.</p>
 <h5 id="0-1">0 , 1 ...</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/0-1.png" alt="0 , 1 ..." loading="lazy"><figcaption>0 , 1 ...</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/0-1.png" alt="0 , 1 ..." loading="lazy"><figcaption>0 , 1 ...</figcaption></figure>
 <p>The available input index types that you want to switch between. You can define more input sockets in the sidebar.</p>
 <h4 id="properties-3">Properties</h4>
 <h5 id="data-type">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What input type to evaluate.</p>
 <h4 id="outputs">Outputs</h4>
 <h5 id="output-3">Output</h5>
 <p>Data type: follows the Data Type setting.</p>
 <p>The output index.</p>
 <h3 id="menu-switch">Menu Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch.png" alt="Menu Switch" loading="lazy"></figure>
 <p>The Menu Switch node selects and computes one input based on a user-defined menu. Only the selected input is computed.</p>
 <p>Menu entries can be added, removed, renamed, and reordered. Renaming keeps existing input links.</p>
 <p>The menu can be used in node groups and the nodes modifier UI. Connecting the menu to a Group Input node exposes it as a group input. A menu needs to be connected to a Menu Switch node to work. An unconnected menu is empty.</p>
 <p>Connecting multiple Menu Switch nodes to the same output creates a conflict. To avoid this, a menu switch can be grouped. Multiple groups of the same type can connect to the same menu.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> You cannot plug in the same value socket into the Menu selector. If you’d like to use the same value for various Menu Switches, group the Menu Switch into a Node Group and use the top-level switch override.</p></div>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-3.png" alt="Menu Switch" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-2.png" alt="Menu Switch" /> Top Level Grouped Menu Switches with same inputs:</td>
-<td>Conflict caused by Same Level menu Switch inputs:</td>
-</tr>
-</tbody>
-</table>
+<p>Top level grouped Menu Switches with the same inputs work:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-3.png" alt="Menu Switch" loading="lazy"></figure>
+<p>Same level Menu Switches with the same input cause a conflict:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-2.png" alt="Menu Switch" loading="lazy"></figure>
 <h4 id="inputs-4">Inputs</h4>
 <h5 id="a-b">A / B</h5>
 <p>Becomes the output if the value is chosen.</p>
 <h5 id="menu">Menu</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu.png" alt="Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu.png" alt="Menu" loading="lazy"></figure>
 <p>Determines which of the input options will be selected and passed through as the default.</p>
 <h5 id="a-b-2">A , B ...</h5>
 <p>The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can add more menu switch options to the empty socket.</p></div>
 <h4 id="properties-4">Properties</h4>
 <h5 id="data-type-2">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Determines the type of the data that is handled by the node.</p>
 <h4 id="outputs-2">Outputs</h4>
 <h5 id="output-4">Output</h5>
 <p>Data type: Geometry.</p>
 <p>The output index.</p>
 <h3 id="random-value">Random Value</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/random-value.png" alt="Random Value" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/random-value.png" alt="Random Value" loading="lazy"></figure>
 <p>Generates a random value.</p>
 <h4 id="input">Input</h4>
 <h5 id="min">Min</h5>
@@ -506,14 +496,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The random seed for the random number generation.</p>
 <h4 id="properties-5">Properties</h4>
 <h5 id="data-type-3">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type-3.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/data-type-3.png" alt="Data Type" loading="lazy"></figure>
 <p>What kind of random value to create. The items should be self explaining.</p>
 <h4 id="output-5">Output</h4>
 <h5 id="value">Value</h5>
 <p>Data type: follows the Data Type setting.</p>
 <p>The output value.</p>
 <h3 id="repeat">Repeat</h3>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/repeat.png" alt="Repeat" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/repeat.png" alt="Repeat" loading="lazy"></figure>
 <p>When adding a repeat zone, two nodes are added with a “zone” set between them. The inputs connected to the <em>Repeat Input</em> node reads and gets data at the beginning of the loop before starting the looping - then the data is processed within the zone, here you can set any changes to the data to then repeat the execution again at the beginning of the chain for the next iteration of the loop. This chain of operations is repeated the specified number of times in the <em>Repeat Input</em> node.</p>
 <p>In the example in the image above, we duplicate the cube, transform it with a rotation, then join it together again. We do this 8 times in a loop, creating a circular array.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> It is not possible to set data outside the Repeat Zone, you can only get data from outside the Repeat Zone. Any data connected from the outside of the zone are constant throughout every iteration based on their value at the current frame. The result of the looping can only be accessed via the Repeat Output node.</p></div>
@@ -536,7 +526,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="geometry-6">Geometry</h6>
 <p>Standard geometry output.</p>
 <h3 id="switch">Switch</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/switch.png" alt="Switch" loading="lazy"></figure>
 <p>Switch between two inputs values based on a boolean.</p>
 <h4 id="inputs-6">Inputs</h4>
 <h5 id="switch-2">Switch</h5>
@@ -548,7 +538,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The input value B. Used when the switch is on.</p>
 <h4 id="properties-6">Properties</h4>
 <h5 id="input-type">Input Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/input-type.png" alt="Input Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/input-type.png" alt="Input Type" loading="lazy"></figure>
 <p>What input type the values are, which defines what type to output then.</p>
 <h4 id="outputs-4">Outputs</h4>
 <h5 id="output-7">Output</h5>
@@ -556,16 +546,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Numerical value output.</p>
 <h1 id="math">Math</h1>
 <h2 id="add-menu-utilities-math">Add menu - Utilities - Math</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/add-menu-utilities-math.png" alt="Add menu - Utilities - Math" loading="lazy"><figcaption>Add menu - Utilities - Math</figcaption></figure>
 <p>Utility nodes are mainly for mathematical operations.</p>
 <h3 id="bit-math">Bit Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/bit-math.png" alt="Bit Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/bit-math.png" alt="Bit Math" loading="lazy"></figure>
 <p>Performs a bit math operation between its inputs.</p>
 <h4 id="inputs-7">Inputs</h4>
 <p>The inputs depends of the chosen method.</p>
 <h4 id="properties-7">Properties</h4>
 <h5 id="operation">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation.png" alt="Operation" loading="lazy"></figure>
 <h6 id="and">And</h6>
 <p>Returns a value where the bits of A and B are both set.</p>
 <h6 id="or">Or</h6>
@@ -582,7 +572,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="boolean">Boolean</h5>
 <p>Standard Boolean output.</p>
 <h3 id="boolean-math">Boolean Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/boolean-math.png" alt="Boolean Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/boolean-math.png" alt="Boolean Math" loading="lazy"></figure>
 <p>The Boolean Math node performs a basic logical operation between its inputs.</p>
 <h4 id="inputs-8">Inputs</h4>
 <h5 id="boolean-2">Boolean</h5>
@@ -590,7 +580,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Two standard Boolean inputs.</p>
 <h4 id="properties-8">Properties</h4>
 <h5 id="operation-2">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-2.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-2.png" alt="Operation" loading="lazy"></figure>
 <h6 id="and-2">And</h6>
 <p>True if both inputs are true.</p>
 <h6 id="or-2">Or</h6>
@@ -614,7 +604,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Boolean.</p>
 <p>Standard Boolean output.</p>
 <h3 id="integer-math">Integer Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/integer-math.png" alt="Integer Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/integer-math.png" alt="Integer Math" loading="lazy"></figure>
 <p>The Boolean Math node provides mathematical operations with integers.</p>
 <h4 id="inputs-9">Inputs</h4>
 <h5 id="value-2">Value</h5>
@@ -622,14 +612,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Two standard value inputs.</p>
 <h4 id="properties-9">Properties</h4>
 <h5 id="functions">Functions</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/functions.png" alt="Functions" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/functions.png" alt="Functions" loading="lazy"></figure>
 <p>The available mathematical functions to manipulate the input integers.</p>
 <h4 id="output-10">Output</h4>
 <h5 id="value-3">Value</h5>
 <p>Data type: Integer.</p>
 <p>The value output.</p>
 <h3 id="clamp">Clamp</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp.png" alt="Clamp" loading="lazy"></figure>
 <p>Clamps a value between a minimum and a maximum.</p>
 <h4 id="inputs-10">Inputs</h4>
 <h5 id="value-4">Value</h5>
@@ -643,7 +633,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The maximum value.</p>
 <h4 id="properties-10">Properties</h4>
 <h5 id="clamp-type">Clamp Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp-type.png" alt="Clamp Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp-type.png" alt="Clamp Type" loading="lazy"></figure>
 <h6 id="min-max">Min Max</h6>
 <p>Clamp values using Min and Max values.</p>
 <h6 id="range">Range</h6>
@@ -653,18 +643,18 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The input value after clamping.</p>
 <h3 id="compare">Compare</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/compare.png" alt="Compare" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/compare.png" alt="Compare" loading="lazy"></figure>
 <p>The Compare node takes two inputs and does a math comparison between them.</p>
 <h4 id="inputs-11">Inputs</h4>
 <h5 id="a-b-3">A, B</h5>
 <p>Standard float value input.</p>
 <h4 id="properties-11">Properties</h4>
 <h5 id="input-type-2">Input Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input-type.png" alt="Input Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input-type.png" alt="Input Type" loading="lazy"></figure>
 <p>What kind of data to compare.</p>
 <p>Besides numbers, vectors, colors and strings, the Compare node can check whether two <strong>Objects</strong> or two <strong>Collections</strong> are equal.</p>
 <h5 id="operation-3">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-3.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-3.png" alt="Operation" loading="lazy"></figure>
 <h6 id="a-is-less-than-b">A is less than B</h6>
 <p>True if A is smaller than B.</p>
 <h6 id="a-is-lesser-than-or-equal-b">A is lesser than or equal B</h6>
@@ -682,7 +672,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Boolean.</p>
 <p>Standard Boolean output.</p>
 <h3 id="float-curve">Float Curve</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-curve.png" alt="Float Curve" loading="lazy"></figure>
 <p>The Float Curve node maps an input float to a curve and outputs a float value. This curve can then be used for profiles for example.</p>
 <h4 id="inputs-12">Inputs</h4>
 <h5 id="factor">Factor</h5>
@@ -693,19 +683,19 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="properties-12">Properties</h4>
 <h5 id="curve-field">Curve Field</h5>
 <h5 id="channel-buttons">Channel buttons</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
 <p>Clicking on one of the channels displays the curve for each.</p>
 <p>C (Combined RGB), R (Red), G (Green), B (Blue).</p>
 <h5 id="navigation-elements">Navigation elements</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
 <p>They are described from left to right.</p>
 <h6 id="zoom-in-and-out">Zoom in and out</h6>
 <p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
 <h6 id="clipping-options">Clipping Options</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clipping-options.png" alt="Clipping Options" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clipping-options.png" alt="Clipping Options" loading="lazy"></figure>
 <p>Clipping options. Set up clipping for the stroke.</p>
 <h6 id="tools">Tools</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/tools.png" alt="Tools" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/tools.png" alt="Tools" loading="lazy"></figure>
 <p>Tools is a menu where you can find some curve related tools.</p>
 <h6 id="reset-view">Reset View</h6>
 <p>Resets the curve windows zoom.</p>
@@ -718,14 +708,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="curve-edit-field">Curve edit field</h5>
 <p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
 <h6 id="selecting-points">Selecting Points</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
 <p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
 <p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
 <h6 id="adding-points">Adding Points</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/adding-points.png" alt="Adding Points" loading="lazy"></figure>
 <p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
 <h6 id="curve-point-settings">Curve point settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/curve-point-settings.png" alt="Curve point settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/curve-point-settings.png" alt="Curve point settings" loading="lazy"></figure>
 <p>When you have a point selected then you will reveal further settings at the bottom.</p>
 <h6 id="vector-handle">Vector Handle</h6>
 <p>Set handle type to Vector.</p>
@@ -738,7 +728,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The output value.</p>
 <h3 id="float-to-integer">Float to Integer</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-to-integer.png" alt="Float to Integer" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-to-integer.png" alt="Float to Integer" loading="lazy"></figure>
 <p>Converts a floating point value into an integer value.</p>
 <h4 id="inputs-13">Inputs</h4>
 <h5 id="float">Float</h5>
@@ -746,14 +736,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The input float value.</p>
 <h4 id="properties-13">Properties</h4>
 <h5 id="rounding-mode">Rounding Mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/rounding-mode.png" alt="Rounding Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/rounding-mode.png" alt="Rounding Mode" loading="lazy"></figure>
 <p>How the float value should be converted.</p>
 <h4 id="outputs-6">Outputs</h4>
 <h5 id="integer">Integer</h5>
 <p>Data type: Integer.</p>
 <p>The output integer value.</p>
 <h3 id="hash-value">Hash Value</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/hash-value.png" alt="Hash Value" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/hash-value.png" alt="Hash Value" loading="lazy"></figure>
 <p>The hash value converts a value input into a hashed value.</p>
 <p>Note that Hashes cannot be relied upon to be used as unique identifiers because they are not guaranteed to be unique. It can be used to generate somewhat stable randomness especially in cases where White Noise does not offer enough flexibility.</p>
 <h4 id="input-3">Input</h4>
@@ -764,7 +754,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: follows the Data Type setting.</p>
 <p>A seed to randomize the value.</p>
 <h4 id="properties-14">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-4">Data Type</h5>
 <p>What data type to create.</p>
 <h4 id="output-13">Output</h4>
@@ -772,7 +762,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: follows the Data Type setting.</p>
 <p>The hash value output.</p>
 <h3 id="map-range">Map Range</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/map-range.png" alt="Map Range" loading="lazy"></figure>
 <p>This node converts (maps) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.</p>
 <h4 id="inputs-14">Inputs</h4>
 <h5 id="value-7">Value</h5>
@@ -792,10 +782,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>End of the destination range.</p>
 <h4 id="properties-15">Properties</h4>
 <h5 id="data-type-5">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The data type to calculate.</p>
 <h5 id="interpolation-type">Interpolation Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
 <p>how to interpolate the values between min and max.</p>
 <h5 id="clamp-2">Clamp</h5>
 <p>Clamps values to Min/Max of the destination range.</p>
@@ -803,7 +793,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="value-8">Value</h5>
 <p>Standard value output.</p>
 <h3 id="math-2">Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/math.png" alt="Math" loading="lazy"></figure>
 <p>The Math Node performs math operations.</p>
 <h4 id="inputs-15">Inputs</h4>
 <p>The inputs of the node are dynamic. Some inputs are only available with certain operations. For example, the Addend input is only available in the Multiply Add operator.</p>
@@ -834,7 +824,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Input Radians.</p>
 <h4 id="properties-16">Properties</h4>
 <h5 id="operation-4">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-4.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-4.png" alt="Operation" loading="lazy"></figure>
 <p>The mathematical operator to be applied to the input values:</p>
 <h6 id="functions-2">Functions</h6>
 <h6 id="add">Add</h6>
@@ -928,10 +918,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>Numerical value output.</p>
 <h3 id="mix">Mix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/mix.png" alt="Mix" loading="lazy"></figure>
 <p>Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color. This node covers the Float mode</p>
 <h4 id="input-4">Input</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input.png" alt="Input" loading="lazy"></figure>
 <h5 id="float-2">Float</h5>
 <h6 id="factor-2">Factor</h6>
 <p>The mix factor.</p>
@@ -940,7 +930,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="b-2">B</h6>
 <p>Float value B input.</p>
 <h4 id="properties-17">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-6">Data Type</h5>
 <p>The data type to calculate.</p>
 <h4 id="output-14">Output</h4>
@@ -949,10 +939,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output value or vector.</p>
 <h1 id="text">Text</h1>
 <h2 id="add-menu-utilities-text">Add menu - Utilities - Text</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/add-menu-utilities-text.png" alt="Add menu - Utilities - Text" loading="lazy"><figcaption>Add menu - Utilities - Text</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/add-menu-utilities-text.png" alt="Add menu - Utilities - Text" loading="lazy"><figcaption>Add menu - Utilities - Text</figcaption></figure>
 <p>Text object related nodes.</p>
 <h3 id="format-string">Format String</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/format-string.png" alt="Format String" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/format-string.png" alt="Format String" loading="lazy"></figure>
 <p>Insert Values into a string using a Python and path template compatible formatting syntax.</p>
 <p>The syntax can be found here: <a href="https://docs.python.org/3/library/string.html#format-string-syntax">https://docs.python.org/3/library/string.html#format-string-syntax</a></p>
 <h4 id="inputs-16">Inputs</h4>
@@ -966,7 +956,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: String.</p>
 <p>The output string.</p>
 <h3 id="join-strings">Join Strings</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/join-strings.png" alt="Join Strings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/join-strings.png" alt="Join Strings" loading="lazy"></figure>
 <p>Allows you to join several string into a text string.</p>
 <h4 id="inputs-17">Inputs</h4>
 <h5 id="delimiter">Delimiter</h5>
@@ -980,7 +970,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: String.</p>
 <p>The output string.</p>
 <h3 id="match-strings">Match Strings</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/match-strings.png" alt="Match Strings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/match-strings.png" alt="Match Strings" loading="lazy"></figure>
 <p>Allows you to compare strings to match conditions</p>
 <h4 id="inputs-18">Inputs</h4>
 <h5 id="string-4">String</h5>
@@ -988,14 +978,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="key">Key</h5>
 <p>An input key.</p>
 <h4 id="properties-19">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="operation-5">Operation</h5>
 <p>What string condition to match.</p>
 <h4 id="output-15">Output</h4>
 <h5 id="result-4">Result</h5>
 <p>The output strings that matches the condition.</p>
 <h3 id="replace-strings">Replace Strings</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/replace-strings.png" alt="Replace Strings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/replace-strings.png" alt="Replace Strings" loading="lazy"></figure>
 <p>Find and replace strings inside of the input string.</p>
 <h4 id="inputs-19">Inputs</h4>
 <h5 id="string-5">String</h5>
@@ -1008,7 +998,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="string-6">String</h5>
 <p>The strings that you want to join into one text string.</p>
 <h3 id="slice-string">Slice String</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/slice-string.png" alt="Slice String" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/slice-string.png" alt="Slice String" loading="lazy"></figure>
 <p>Allows you to extract a string from a substring at given position with given length.</p>
 <h4 id="inputs-20">Inputs</h4>
 <h5 id="string-7">String</h5>
@@ -1025,7 +1015,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: String.</p>
 <p>The output substring.</p>
 <h3 id="find-in-string">Find in String</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/find-in-string.png" alt="Find in String" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/find-in-string.png" alt="Find in String" loading="lazy"></figure>
 <p>Returns an integer of the total count of matching strings or the first integer position of a matching string</p>
 <h4 id="inputs-21">Inputs</h4>
 <h5 id="string-9">String</h5>
@@ -1042,7 +1032,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Integer.</p>
 <p>Returns an integer position of the first character of the found string.</p>
 <h3 id="string-length">String length</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-length.png" alt="String length" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-length.png" alt="String length" loading="lazy"></figure>
 <p>Gives back the number of characters in this string.</p>
 <h4 id="inputs-22">Inputs</h4>
 <h5 id="string-10">String</h5>
@@ -1053,7 +1043,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Integer.</p>
 <p>How many characters the string has.</p>
 <h3 id="string-to-curves">String to Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-curves.png" alt="String to Curves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-curves.png" alt="String to Curves" loading="lazy"></figure>
 <p>Converts the letters of a text into curve objects.</p>
 <h4 id="inputs-23">Inputs</h4>
 <h5 id="string-11">String</h5>
@@ -1075,9 +1065,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The maximum width of the string.</p>
 <h4 id="properties-20">Properties</h4>
 <h5 id="font-property">Font property</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-property.png" alt="Font property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-property.png" alt="Font property" loading="lazy"></figure>
 <h5 id="font-browser">Font browser</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-browser.png" alt="Font browser" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-browser.png" alt="Font browser" loading="lazy"></figure>
 <p>A list of the loaded fonts.</p>
 <h6 id="font-edit-box">Font Edit Box</h6>
 <p>The active font.</p>
@@ -1090,16 +1080,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="remove">Remove</h6>
 <p>Removes the active font. The default font is special in this regards. You cannot delete it.</p>
 <h5 id="overflow">Overflow</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow.png" alt="Overflow" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow.png" alt="Overflow" loading="lazy"></figure>
 <p>The overflow method for the text.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow-2.png" alt="Overflow" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow-2.png" alt="Overflow" loading="lazy"></figure>
 <h5 id="align-x">Align X</h5>
 <p>How to align the text horizontally</p>
 <h5 id="align-y">Align Y</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/align-y.png" alt="Align Y" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/align-y.png" alt="Align Y" loading="lazy"></figure>
 <p>How to align the text vertically.</p>
 <h5 id="pivot-point">Pivot Point</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
 <p>What point of the string to use as the pivot point.</p>
 <h4 id="output-16">Output</h4>
 <h5 id="curve-instances">Curve Instances</h5>
@@ -1112,14 +1102,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>Outputs the selected pivot point position per character.</p>
 <h3 id="string-to-value">String to Value</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-value.png" alt="String to Value" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-value.png" alt="String to Value" loading="lazy"></figure>
 <p>Converts a <strong>string input</strong> (e.g. <em>&quot;3.14&quot;</em> or <em>&quot;42&quot;</em>) into a <strong>numeric value</strong> that can be used in fields, modifiers, or procedural logic. It also outputs the <strong>length</strong> of the string for additional control or validation.</p>
 <h4 id="inputs-24">Inputs</h4>
 <h5 id="string-12">String</h5>
 <p>Data type: String.</p>
 <p>The input string.</p>
 <h4 id="properties-21">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-7">Data Type</h5>
 <p>Specifies the target data type for conversion</p>
 <h5 id="outputs-15">Outputs</h5>
@@ -1128,7 +1118,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="length-3">Length</h6>
 <p>The number of characters in the input string as an Integer.</p>
 <h3 id="value-to-string">Value to String</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/value-to-string.png" alt="Value to String" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/value-to-string.png" alt="Value to String" loading="lazy"></figure>
 <p>Converts a value to a string.</p>
 <h4 id="inputs-25">Inputs</h4>
 <h5 id="value-12">Value</h5>
@@ -1138,14 +1128,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Integer.</p>
 <p>How many decimals the value has.</p>
 <h4 id="properties-22">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-8">Data Type</h5>
 <p>Specifies the target data type for conversion</p>
 <h5 id="outputs-16">Outputs</h5>
 <h6 id="string-13">String</h6>
 <p>The output string.</p>
 <h3 id="special-character">Special Character</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/special-character.png" alt="Special Character" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/special-character.png" alt="Special Character" loading="lazy"></figure>
 <p>Adds special characters to the text string.</p>
 <h4 id="outputs-17">Outputs</h4>
 <h5 id="line-break">Line Break</h5>
@@ -1154,10 +1144,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Adds a tab to the text string.</p>
 <h1 id="vector">Vector</h1>
 <h2 id="add-menu-vector">Add menu - Vector</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/add-menu-vector.png" alt="Add menu - Vector" loading="lazy"><figcaption>Add menu - Vector</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/add-menu-vector.png" alt="Add menu - Vector" loading="lazy"><figcaption>Add menu - Vector</figcaption></figure>
 <p>Vector nodes are for calculating vector operations.</p>
 <h3 id="combine-xyz">Combine XYZ</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/combine-xyz.png" alt="Combine XYZ" loading="lazy"></figure>
 <p>The Combine XYZ Node combines a vector from its individual components.</p>
 <h4 id="inputs-26">Inputs</h4>
 <h5 id="x-y-and-z">X Y and Z</h5>
@@ -1166,7 +1156,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="color">Color</h5>
 <p>Color output.</p>
 <h3 id="map-range-2">Map Range</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/map-range.png" alt="Map Range" loading="lazy"></figure>
 <p>Remap a value from a range to a target range.</p>
 <h4 id="input-5">Input</h4>
 <h5 id="from-min-2">From Min</h5>
@@ -1183,10 +1173,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Vector 3 to the maximum input.</p>
 <h4 id="properties-23">Properties</h4>
 <h5 id="data-type-9">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What data to calculate.</p>
 <h5 id="interpolation-type-2">Interpolation Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
 <p>The interpolation method for the operation.</p>
 <h5 id="clamp-4">Clamp</h5>
 <p>Clamp the result to the target range of To Min - To Max.</p>
@@ -1195,30 +1185,30 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>The output vector.</p>
 <h3 id="mix-vector">Mix Vector</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/mix-vector.png" alt="Mix Vector" loading="lazy"></figure>
 <p>Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color. This here is the node in Vector mode.</p>
 <h4 id="input-6">Input</h4>
 <h5 id="factor-3">Factor</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor.png" alt="Factor" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-2.png" alt="Factor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor.png" alt="Factor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-2.png" alt="Factor" loading="lazy"></figure>
 <p>The mix factor. With mode Uniform it is a single value. With mode Non Uniform it is a vector.</p>
 <h5 id="a-3">A</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/a.png" alt="A" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/a.png" alt="A" loading="lazy"></figure>
 <p>Vector A input.</p>
 <h5 id="b-3">B</h5>
 <p>Vector B input.</p>
 <h4 id="properties-24">Properties</h4>
 <h5 id="data-type-10">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Which mode to use. We cover here the Vector mode.</p>
 <h5 id="factor-mode">Factor Mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-mode.png" alt="Factor Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-mode.png" alt="Factor Mode" loading="lazy"></figure>
 <p>Use a single value or a vector for the factor.</p>
 <h4 id="output-17">Output</h4>
 <h5 id="result-5">Result</h5>
 <p>The output value or vector.</p>
 <h3 id="separate-xyz">Separate XYZ</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/separate-xyz.png" alt="Separate XYZ" loading="lazy"></figure>
 <p>The Separate XYZ Node splits a vector into its individual components.</p>
 <h4 id="inputs-27">Inputs</h4>
 <h5 id="vector-3">Vector</h5>
@@ -1228,7 +1218,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="x-y-and-z-2">X, Y and Z</h5>
 <p>The output vectors for X, Y and Z.</p>
 <h3 id="radial-tiling">Radial Tiling</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/radial-tiling.png" alt="Radial Tiling" loading="lazy"></figure>
 <p>The Separate XYZ Node splits a vector into its individual components.</p>
 <h4 id="inputs-28">Inputs</h4>
 <h5 id="vector-4">Vector</h5>
@@ -1257,7 +1247,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The rotation of every segment.</p>
 <h3 id="vector-curves">Vector Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-curves.png" alt="Vector Curves" loading="lazy"></figure>
 <p>The Vector Curves node maps an input vector components to a curve.</p>
 <h4 id="inputs-29">Inputs</h4>
 <h5 id="factor-4">Factor</h5>
@@ -1269,29 +1259,29 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="properties-26">Properties</h4>
 <h5 id="channel">Channel</h5>
 <h5 id="x-y-z">X Y Z</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/x-y-z.png" alt="X Y Z" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/x-y-z.png" alt="X Y Z" loading="lazy"></figure>
 <p>X, Y, Z Channel buttons. Clicking on one of the channels displays the curve for each.</p>
 <h5 id="curve-edit-field-2">Curve edit field</h5>
 <p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
 <h5 id="selecting-points-2">Selecting Points</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-color/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-color/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
 <p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
 <p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-color/adding-points.png" alt="Selecting Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-color/adding-points.png" alt="Selecting Points" loading="lazy"></figure>
 <h5 id="adding-points-2">Adding Points</h5>
 <blockquote>
 <p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/geo-cluster-merge-points/docs2/content/interface/properties.md#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
 </blockquote>
 <h5 id="navigation-elements-2">Navigation elements</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
 <p>The navigation elements at the top are described from left to right.</p>
 <h6 id="zoom-in-and-out-2">Zoom in and out</h6>
 <p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
 <h5 id="clipping">Clipping</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/clipping.png" alt="Clipping" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/clipping.png" alt="Clipping" loading="lazy"></figure>
 <p>Clipping options. Set up clipping for the stroke.</p>
 <h5 id="tools-2">Tools</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/tools.png" alt="Tools" loading="lazy"></figure>
 <p>Tools is a menu where you can find some curve related tools.</p>
 <h6 id="reset-view-2">Reset View</h6>
 <p>Resets the curve windows zoom.</p>
@@ -1302,7 +1292,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="reset-curve-2">Reset Curve</h6>
 <p>Resets the curve to the initial shape.</p>
 <h6 id="vector-handle-2">Vector Handle</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
 <p>Set handle type to Vector.</p>
 <h6 id="auto-handle-2">Auto Handle</h6>
 <p>Set handle type to Auto.</p>
@@ -1317,7 +1307,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>Standard vector output.</p>
 <h3 id="vector-math">Vector Math</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-math.png" alt="Vector Math" loading="lazy"></figure>
 <p>The Vector Math node performs the selected math operation on the input vectors.</p>
 <h4 id="inputs-30">Inputs</h4>
 <p>The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.</p>
@@ -1332,7 +1322,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Input Scale.</p>
 <h4 id="properties-27">Properties</h4>
 <h5 id="operation-6">Operation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/operation.png" alt="Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/operation.png" alt="Operation" loading="lazy"></figure>
 <p>The vector math operator to be applied on the input vectors.</p>
 <h4 id="outputs-23">Outputs</h4>
 <p>The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.</p>
@@ -1343,7 +1333,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>Output value.</p>
 <h3 id="vector-rotate">Vector Rotate</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-rotate.png" alt="Vector Rotate" loading="lazy"></figure>
 <p>The Vector Rotate node allows rotations by a vector.</p>
 <h4 id="inputs-31">Inputs</h4>
 <p>The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Angle input is just available with the Axis Angle type.</p>
@@ -1361,7 +1351,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Input Angle</p>
 <h4 id="properties-28">Properties</h4>
 <h5 id="type">Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/type.png" alt="Type" loading="lazy"></figure>
 <p>The rotation type.</p>
 <h4 id="outputs-24">Outputs</h4>
 <h5 id="vector-11">Vector</h5>
@@ -1369,23 +1359,23 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The Output vector.</p>
 <h1 id="bundle">Bundle</h1>
 <h2 id="add-menu-bundle">Add menu - Bundle</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/add-menu-bundle.png" alt="Add menu - Bundle" loading="lazy"><figcaption>Add menu - Bundle</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/add-menu-bundle.png" alt="Add menu - Bundle" loading="lazy"><figcaption>Add menu - Bundle</figcaption></figure>
 <p><strong>Bundles</strong> are like packed containers—they let you group multiple values (like vectors, floats, booleans) into a single wire. Think of them as a way to <strong>package data</strong> together and pass it around cleanly.</p>
 <h3 id="combine-bundle">Combine Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/combine-bundle.png" alt="Combine Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/combine-bundle.png" alt="Combine Bundle" loading="lazy"></figure>
 <p>This node takes multiple inputs and wraps them into a single bundle.</p>
 <h4 id="inputs-32">Inputs</h4>
 <h5 id="sockets">Sockets</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/sockets.png" alt="Sockets" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/sockets.png" alt="Sockets" loading="lazy"></figure>
 <p>This is a dynamic socket that will populate with whatever you want to plug into it for later use. Accepts one or more bundle-compatible data streams.</p>
 <p>These could represent attributes, geometry sets, vales, vectors, or grouped attributes depending on context.</p>
 <h4 id="outputs-25">Outputs</h4>
 <h5 id="bundle-socket">Bundle Socket</h5>
 <p>Standard bundle socket with a unified bundle containing all input elements. Use this to pass the packaged sockets to a Separate Bundle node for later user down the node tree lines.</p>
 <h3 id="separate-bundle">Separate Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle.png" alt="Separate Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle.png" alt="Separate Bundle" loading="lazy"></figure>
 <p>This node unpacks a bundle back into its individual components.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle-2.png" alt="Separate Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle-2.png" alt="Separate Bundle" loading="lazy"></figure>
 <h4 id="inputs-33">Inputs</h4>
 <p>The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.</p>
 <h5 id="bundle-2">Bundle</h5>
@@ -1395,9 +1385,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="sockets-2">Sockets</h5>
 <p>This is a dynamic series of socket that will populate with whatever is available from the incoming bundle line. Ouptuts one or more bundle-compatible data streams. These could represent attributes, geometry sets, vales, vectors, or grouped attributes depending on context.</p>
 <h3 id="join-bundle">Join Bundle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle.png" alt="Join Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle.png" alt="Join Bundle" loading="lazy"></figure>
 <p>Merges two or more <em>Bundle</em> inputs into a single output bundle.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle-2.png" alt="Join Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle-2.png" alt="Join Bundle" loading="lazy"></figure>
 <p>This enables modular data structuring, reuse, and override logic in procedural workflows—similar to combining structs in programming.</p>
 <h4 id="inputs-34">Inputs</h4>
 <h5 id="bundle-3">Bundle</h5>
@@ -1407,7 +1397,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="bundle-socket-2">Bundle Socket</h5>
 <p>Standard bundle socket with a unified bundle containing all input elements. Use this to pass the packaged sockets to a Separate Bundle node for later user down the node tree lines.</p>
 <h4 id="get-nested-bundle-paths">Get Nested Bundle Paths</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-nested-bundle-paths.png" alt="Get Nested Bundle Paths" loading="lazy"><figcaption>Get Nested Bundle Paths</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-nested-bundle-paths.png" alt="Get Nested Bundle Paths" loading="lazy"><figcaption>Get Nested Bundle Paths</figcaption></figure>
 <p>Lists where things are stored inside a bundle that has other bundles in it. Each path is a string, with the names of the nested bundles and the item joined by <code>/</code>. Use it to find items without knowing their names in advance.</p>
 <p>A nested bundle that has a Type item is handled as one item. The node does not look inside it.</p>
 <h5 id="inputs-35">Inputs</h5>
@@ -1430,7 +1420,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="paths">Paths</h6>
 <p>A list of strings, one path per item found, sorted alphabetically. If no bundle is connected, the list is empty.</p>
 <h4 id="get-geometry-bundle">Get Geometry Bundle</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png" alt="Get Geometry Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png" alt="Get Geometry Bundle" loading="lazy"></figure>
 <p>Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.</p>
 <h5 id="inputs-36">Inputs</h5>
 <h6 id="geometry-7">Geometry</h6>
@@ -1443,16 +1433,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="bundle-5">Bundle</h6>
 <p>The bundle that was stored on the geometry.</p>
 <h4 id="typed-bundle">Typed Bundle</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png" alt="Typed Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png" alt="Typed Bundle" loading="lazy"></figure>
 <p>Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.</p>
 <p>Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.</p>
 <h1 id="closure">Closure</h1>
 <h2 id="add-menu-closure">Add menu - Closure</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/add-menu-closure.png" alt="Add menu - Closure" loading="lazy"><figcaption>Add menu - Closure</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/add-menu-closure.png" alt="Add menu - Closure" loading="lazy"><figcaption>Add menu - Closure</figcaption></figure>
 <p>Vector nodes are for calculating vector operations.</p>
 <p><strong>Closures</strong> allow you to pass custom logic into node groups—like injecting a mini-function or behavior block. They’re ideal for creating reusable, pluggable systems where the user can define part of the logic externally.</p>
 <h3 id="closure-zone">Closure Zone</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/closure-zone.png" alt="Closure Zone" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/closure-zone.png" alt="Closure Zone" loading="lazy"></figure>
 <p>The closure function to be executed.</p>
 <h4 id="purpose">Purpose</h4>
 <p>Defines logic that will be injected into a node group or node tree. Think of it as a sandbox where the user builds a mini-node tree that gets executed when the closure is evaluated during the execution of another node tree.</p>
@@ -1465,7 +1455,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <li>Behavior overrides for geometry processing pipelines.</li>
 </ul>
 <h4 id="behavior">Behavior</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/behavior.png" alt="Behavior" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/behavior.png" alt="Behavior" loading="lazy"></figure>
 <p>The Closure Node creates a <strong>Closure Zone</strong>—a subgraph where the logic is built using the declared inputs. This zone behaves like a function.</p>
 <ul>
 <li><strong>Closure Inputs</strong> appear as sockets at the top of the zone. Data from outside the zone can also be referenced.</li>
@@ -1487,7 +1477,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Input and output names in the Closure Zone must match those expected by the Evaluate Closure node.</p>
 <p>Can include any Geometry Nodes logic, including fields, math, distribution patterns, etc.</p>
 <h4 id="properties-29">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties.png" alt="Properties" loading="lazy"></figure>
 <p>These panel defines the <strong>parameters</strong> that the closure will pass when evaluated. Each item becomes a socket in the Closure Zone.</p>
 <p>You can access these properties in the sidebar to the right in the Node tab.</p>
 <h5 id="sync-button">Sync Button</h5>
@@ -1506,7 +1496,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h6 id="structure-type">Structure Type</h6>
 <p>Defines how the input is treated: <em>Auto, Dynamic, Field, Grid, List</em>, or <em>Single</em>.</p>
 <h3 id="evaluate-closure">Evaluate Closure</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/evaluate-closure.png" alt="Evaluate Closure" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/evaluate-closure.png" alt="Evaluate Closure" loading="lazy"></figure>
 <p>This node <strong>calls</strong> the logic stored in the Closure object.</p>
 <p>It <strong>passes in</strong> the provided parameters and <strong>returns</strong> the result of the closure’s internal node tree. Execution is <strong>deferred</strong>—the logic only runs when this node is evaluated in the context of the node group.</p>
 <h4 id="closure-input">Closure Input</h4>
@@ -1514,7 +1504,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="interface-inputs-outputs">Interface Inputs / Outputs</h4>
 <p>Named inputs/outputs from the Closure properties that match the Closure Zone’s expected parameters for the enclosed logic to be evaluated.</p>
 <h4 id="properties-30">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties-2.png" alt="Properties" loading="lazy"></figure>
 <p>This panel defines the <strong>parameters</strong> that the closure will accept when evaluated. Each item becomes a socket in the Closure Zone.</p>
 <p>You can access these properties in the sidebar to the right in the Node tab.</p>
 <h5 id="sync-button-2">Sync Button</h5>
@@ -1530,10 +1520,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Defines how the input is treated: <em>Auto, Dynamic, Field, Grid, List</em>, or <em>Single</em>.</p>
 <h1 id="field">Field</h1>
 <h2 id="add-menu-utilities-field">Add menu - Utilities - Field</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/add-menu-utilities-field.png" alt="Add menu - Utilities - Field" loading="lazy"><figcaption>Add menu - Utilities - Field</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/add-menu-utilities-field.png" alt="Add menu - Utilities - Field" loading="lazy"><figcaption>Add menu - Utilities - Field</figcaption></figure>
 <p>Field nodes.</p>
 <h3 id="accumulate-field">Accumulate Field</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/accumulate-field.png" alt="Accumulate Field" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/accumulate-field.png" alt="Accumulate Field" loading="lazy"></figure>
 <p>Creates a running total of a given Vector, Float, or Int field.</p>
 <h4 id="inputs-37">Inputs</h4>
 <h5 id="value-14">Value</h5>
@@ -1543,9 +1533,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The values of this input are used to aggregate the input into separate 'bins', creating multiple accumulations.</p>
 <h4 id="properties-31">Properties</h4>
 <h5 id="data-type-12">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What data type to work with.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Domain</p>
 <p>From which domain to use the data.</p>
 <h4 id="outputs-30">Outputs</h4>
@@ -1555,7 +1545,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: follows the Data Type setting.</p>
 <p>Returns the total accumulation at all positions of the field.</p>
 <h3 id="cluster-by-distance">Cluster by Distance</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/cluster-by-distance.png" alt="Cluster by Distance" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/cluster-by-distance.png" alt="Cluster by Distance" loading="lazy"></figure>
 <p>Sorts elements into groups by how close together they are. Every group gets a number, the Cluster ID, and all elements in one group share it. Use it to find points that belong to the same blob, to give each pile of scattered points its own random color, or to feed Merge Points so that near points are merged into one. Elements within the Distance of each other end up in the same cluster, and a cluster can grow as a chain from one element to the next.</p>
 <h4 id="inputs-38">Inputs</h4>
 <h5 id="selection-2">Selection</h5>
@@ -1577,7 +1567,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="how-to-use">How to use</h4>
 <p>Take five points at x = 0, 0.0005, 0.002, 1 and 1.0005, and set Distance to 0.001. The Cluster ID is 0, 0, 2, 3, 3. The first two points are close enough to share a cluster, the third is too far away and is alone, and the last two form a second cluster. Store the Cluster ID with Store Named Attribute to look at it in the spreadsheet.</p>
 <h3 id="evaluate-at-index">Evaluate at Index</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-at-index.png" alt="Evaluate at Index" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-at-index.png" alt="Evaluate at Index" loading="lazy"></figure>
 <p>This node allows accessing data of other elements in the context geometry.<br />
 It is similar to the Transfer Attribute node in Index mode. The main difference<br />
 is that this node does not require a geometry input, because the context<br />
@@ -1590,36 +1580,36 @@ is used.</p>
 <p>Data type: follows the Data Type setting.</p>
 <p>Input Value.</p>
 <h4 id="properties-32">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-13">Data Type</h5>
 <p>What data type to calculate.</p>
 <h5 id="domain">Domain</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain.png" alt="Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain.png" alt="Domain" loading="lazy"></figure>
 <p>What geometry to calculate.</p>
 <h4 id="output-18">Output</h4>
 <h5 id="value-16">Value</h5>
 <p>Data type: follows the Data Type setting.</p>
 <p>The output value.</p>
 <h3 id="evaluate-on-domain">Evaluate on Domain</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-on-domain.png" alt="Evaluate on Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-on-domain.png" alt="Evaluate on Domain" loading="lazy"></figure>
 <p>This node evaluates an existing field on a separate domain in a larger field context - an alternative to the Capture Attribute node. This nodes gets the field type of an existing field from the input socket and interpolates the field type as an array in the output socket.</p>
 <h4 id="inputs-40">Inputs</h4>
 <h5 id="value-17">Value</h5>
 <p>Data type: follows the Data Type setting.</p>
 <p>The input value to get the field.</p>
 <h4 id="properties-33">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-14">Data Type</h5>
 <p>Select the Data Type - which can be float, integer, vector, color and boolean.</p>
 <h5 id="domain-2">Domain</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-2.png" alt="Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-2.png" alt="Domain" loading="lazy"></figure>
 <p>The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.</p>
 <h4 id="outputs-32">Outputs</h4>
 <h5 id="value-18">Value</h5>
 <p>Data type: follows the Data Type setting.</p>
 <p>The output value.</p>
 <h3 id="field-average">Field Average</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-average.png" alt="Field Average" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-average.png" alt="Field Average" loading="lazy"></figure>
 <p>Calculate the mean and median of a given field.</p>
 <h4 id="inputs-41">Inputs</h4>
 <h5 id="value-19">Value</h5>
@@ -1629,11 +1619,11 @@ is used.</p>
 <p>Data type: Integer.</p>
 <p>The input Group ID to get the field.</p>
 <h4 id="properties-34">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-15">Data Type</h5>
 <p>Select the Data Type - which can be float, integer, vector, color and boolean.</p>
 <h5 id="domain-3">Domain</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
 <p>The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.</p>
 <h4 id="outputs-33">Outputs</h4>
 <h5 id="mean">Mean</h5>
@@ -1643,7 +1633,7 @@ is used.</p>
 <p>Data type: follows the Data Type setting.</p>
 <p>The Median output value.</p>
 <h3 id="field-min-max">Field Min &amp; Max</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-min-and-max.png" alt="Field Min &amp; Max" loading="lazy"><figcaption>Field Min &amp; Max</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-min-and-max.png" alt="Field Min &amp; Max" loading="lazy"><figcaption>Field Min &amp; Max</figcaption></figure>
 <p>Calculate the minimum and maximum of a given field.</p>
 <h4 id="inputs-42">Inputs</h4>
 <h5 id="value-20">Value</h5>
@@ -1653,11 +1643,11 @@ is used.</p>
 <p>Data type: Integer.</p>
 <p>The input Group ID to get the field.</p>
 <h4 id="properties-35">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-16">Data Type</h5>
 <p>Select the Data Type - which can be float, integer, vector, color and boolean.</p>
 <h5 id="domain-4">Domain</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
 <p>The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.</p>
 <h4 id="outputs-34">Outputs</h4>
 <h5 id="min-4">Min</h5>
@@ -1667,7 +1657,7 @@ is used.</p>
 <p>Data type: follows the Data Type setting.</p>
 <p>The Max output value.</p>
 <h3 id="field-variance">Field Variance</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-variance.png" alt="Field Variance" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-variance.png" alt="Field Variance" loading="lazy"></figure>
 <p>Calculate the standard derivation and variance of a given field.</p>
 <h4 id="inputs-43">Inputs</h4>
 <h5 id="value-21">Value</h5>
@@ -1677,11 +1667,11 @@ is used.</p>
 <p>Data type: Integer.</p>
 <p>The input Group ID to get the field.</p>
 <h4 id="properties-36">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-17">Data Type</h5>
 <p>Select the Data Type - which can be float, integer, vector, color and boolean.</p>
 <h5 id="domain-5">Domain</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png" alt="Domain" loading="lazy"></figure>
 <p>The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.</p>
 <h4 id="outputs-35">Outputs</h4>
 <h5 id="standard-derivation">Standard derivation</h5>
@@ -1691,13 +1681,13 @@ is used.</p>
 <p>The Max output value.</p>
 <h1 id="matrix">Matrix</h1>
 <h2 id="add-menu-utilities-matrix">Add menu - Utilities - Matrix</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/add-menu-utilities-matrix.png" alt="Add menu - Utilities - Matrix" loading="lazy"><figcaption>Add menu - Utilities - Matrix</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/add-menu-utilities-matrix.png" alt="Add menu - Utilities - Matrix" loading="lazy"><figcaption>Add menu - Utilities - Matrix</figcaption></figure>
 <p>Matrix nodes.</p>
 <h3 id="combine-matrix">Combine Matrix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-matrix.png" alt="Combine Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-matrix.png" alt="Combine Matrix" loading="lazy"></figure>
 <p>Combines values into a matrix. A matrix is something like a transform cage. A vector 4 in 4 dimensions.</p>
 <h4 id="inputs-44">Inputs</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/inputs.png" alt="Inputs" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/inputs.png" alt="Inputs" loading="lazy"></figure>
 <h5 id="column-1-2-3-4">Column 1 , 2, 3, 4</h5>
 <p>Allows you to combine values into the matrix. A matrix is made of four vector 4 in 4 dimensions. So 16 values.</p>
 <h4 id="output-19">Output</h4>
@@ -1705,7 +1695,7 @@ is used.</p>
 <p>Data type: Matrix.</p>
 <p>The output matrix.</p>
 <h3 id="combine-transform">Combine Transform</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-transform.png" alt="Combine Transform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-transform.png" alt="Combine Transform" loading="lazy"></figure>
 <p>Combines transforms.</p>
 <h4 id="inputs-45">Inputs</h4>
 <h5 id="translation">Translation</h5>
@@ -1722,7 +1712,7 @@ is used.</p>
 <p>Data type: Matrix.</p>
 <p>The output transform.</p>
 <h3 id="matrix-determinant">Matrix Determinant</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/matrix-determinant.png" alt="Matrix Determinant" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/matrix-determinant.png" alt="Matrix Determinant" loading="lazy"></figure>
 <p>The Matrix Determinant Node is used for calculating the determinant of a given matrix. Use this node to evaluate whether a matrix has properties for invertibility, scaling, and orientation.</p>
 <h4 id="inputs-46">Inputs</h4>
 <h5 id="matgrix">Matgrix</h5>
@@ -1732,7 +1722,7 @@ is used.</p>
 <p>Data type: Float.</p>
 <p>Returns a single numerical value representing the determinant of the input matrix. If the determinant is zero, the matrix is non-invertible.</p>
 <h3 id="invert-matrix">Invert Matrix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/invert-matrix.png" alt="Invert Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/invert-matrix.png" alt="Invert Matrix" loading="lazy"></figure>
 <p>Inverts the matrix values.</p>
 <h4 id="inputs-47">Inputs</h4>
 <h5 id="matrix-3">Matrix</h5>
@@ -1746,7 +1736,7 @@ is used.</p>
 <p>Data type: Boolean.</p>
 <p>The inverted values.</p>
 <h3 id="multiply-matrix">Multiply Matrix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/multiply-matrix.png" alt="Multiply Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/multiply-matrix.png" alt="Multiply Matrix" loading="lazy"></figure>
 <p>Multiplies the values of two matrices.</p>
 <h4 id="inputs-48">Inputs</h4>
 <h5 id="matrix-matrix">Matrix, Matrix</h5>
@@ -1755,7 +1745,7 @@ is used.</p>
 <h5 id="matrix-5">Matrix</h5>
 <p>The output matrix.</p>
 <h3 id="project-point">Project Point</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/project-point.png" alt="Project Point" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/project-point.png" alt="Project Point" loading="lazy"></figure>
 <p>Projects a transform point by a vector.</p>
 <h4 id="inputs-49">Inputs</h4>
 <h5 id="vector-12">Vector</h5>
@@ -1769,18 +1759,18 @@ is used.</p>
 <p>Data type: Vector (XYZ).</p>
 <p>The output vector.</p>
 <h3 id="separate-matrix">Separate Matrix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-matrix.png" alt="Separate Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-matrix.png" alt="Separate Matrix" loading="lazy"></figure>
 <p>Extract single values from a matrix. A matrix is something like a transform cage. A vector 4 in 4 dimensions.</p>
 <h4 id="inputs-50">Inputs</h4>
 <h5 id="matrix-6">Matrix</h5>
 <p>Data type: Matrix.</p>
 <p>The input matrix.</p>
 <h4 id="output-20">Output</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/output.png" alt="Output" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/output.png" alt="Output" loading="lazy"></figure>
 <h5 id="column-1-2-3-4-2">Column 1 , 2, 3, 4</h5>
 <p>Extract the values from a row in a column. A matrix is made of four vector 4 in 4 dimensions. So 16 values.</p>
 <h3 id="separate-transform">Separate Transform</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-transform.png" alt="Separate Transform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-transform.png" alt="Separate Transform" loading="lazy"></figure>
 <p>Extracts the translation, rotation or scale values from a transform.</p>
 <h4 id="inputs-51">Inputs</h4>
 <h5 id="transform-3">Transform</h5>
@@ -1797,7 +1787,7 @@ is used.</p>
 <p>Data type: Vector (XYZ).</p>
 <p>The scale output vector.</p>
 <h3 id="transform-direction">Transform Direction</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-direction.png" alt="Transform Direction" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-direction.png" alt="Transform Direction" loading="lazy"></figure>
 <p>Set the direction of a transform.</p>
 <h4 id="inputs-52">Inputs</h4>
 <h5 id="direction">Direction</h5>
@@ -1811,7 +1801,7 @@ is used.</p>
 <p>Data type: Vector (XYZ).</p>
 <p>The output direction.</p>
 <h3 id="transform-point">Transform Point</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-point.png" alt="Transform Point" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-point.png" alt="Transform Point" loading="lazy"></figure>
 <p>Transform a transform point.</p>
 <h4 id="inputs-53">Inputs</h4>
 <h5 id="vector-14">Vector</h5>
@@ -1824,7 +1814,7 @@ is used.</p>
 <h5 id="direction-3">Direction</h5>
 <p>The output vector.</p>
 <h3 id="transpose-matrix">Transpose Matrix</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transpose-matrix.png" alt="Transpose Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transpose-matrix.png" alt="Transpose Matrix" loading="lazy"></figure>
 <p>Retreive the transpose matrix from a matrix.</p>
 <h4 id="inputs-54">Inputs</h4>
 <h5 id="matrix-7">Matrix</h5>
@@ -1836,10 +1826,10 @@ is used.</p>
 <p>The output transpose matrix.</p>
 <h1 id="rotation-3">Rotation</h1>
 <h2 id="add-menu-utilities-rotation">Add menu - Utilities - Rotation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/add-menu-utilities-rotation.png" alt="Add menu - Utilities - Rotation" loading="lazy"><figcaption>Add menu - Utilities - Rotation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/add-menu-utilities-rotation.png" alt="Add menu - Utilities - Rotation" loading="lazy"><figcaption>Add menu - Utilities - Rotation</figcaption></figure>
 <p>Utility nodes are mainly for mathematical operations.</p>
 <h3 id="align-rotation-to-vector">Align Rotation to Vector</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/align-rotation-to-vector.png" alt="Align Rotation to Vector" loading="lazy"><figcaption>Align Rotation to Vector</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/align-rotation-to-vector.png" alt="Align Rotation to Vector" loading="lazy"><figcaption>Align Rotation to Vector</figcaption></figure>
 <p>Aligns a rotation to a vector.</p>
 <h4 id="inputs-55">Inputs</h4>
 <h5 id="rotation-4">Rotation</h5>
@@ -1855,14 +1845,14 @@ is used.</p>
 <h5 id="align-axis">Align Axis</h5>
 <p>To which axis to align the vector.</p>
 <h5 id="pivot">Pivot</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png" alt="Pivot" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png" alt="Pivot" loading="lazy"></figure>
 <p>The pivot axis.</p>
 <h4 id="output-21">Output</h4>
 <h5 id="rotation-5">Rotation</h5>
 <p>Data type: Rotation.</p>
 <p>The output rotation euler angle.</p>
 <h3 id="axes-to-rotation">Axes to rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axes-to-rotation.png" alt="Axes to rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axes-to-rotation.png" alt="Axes to rotation" loading="lazy"></figure>
 <p>Creates a rotation from a primary and a secondary axis. The axis should be ideally orthogonal.</p>
 <h4 id="inputs-56">Inputs</h4>
 <h5 id="primary-axis">Primary Axis</h5>
@@ -1881,7 +1871,7 @@ is used.</p>
 <p>Data type: Rotation.</p>
 <p>The output rotation euler angle.</p>
 <h3 id="axis-angle-to-rotation">Axis Angle to Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axis-angle-to-rotation.png" alt="Axis Angle to Rotation" loading="lazy"><figcaption>Axis Angle to Rotation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axis-angle-to-rotation.png" alt="Axis Angle to Rotation" loading="lazy"><figcaption>Axis Angle to Rotation</figcaption></figure>
 <p>Converts an axis angle to a rotation.</p>
 <h4 id="inputs-57">Inputs</h4>
 <h5 id="axis-2">Axis</h5>
@@ -1895,7 +1885,7 @@ is used.</p>
 <p>Data type: Rotation.</p>
 <p>The output rotation value.</p>
 <h3 id="euler-to-rotation">Euler to Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/euler-to-rotation.png" alt="Euler to Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/euler-to-rotation.png" alt="Euler to Rotation" loading="lazy"></figure>
 <p>Converts an euler angle to a rotation.</p>
 <h4 id="inputs-58">Inputs</h4>
 <h5 id="euler">Euler</h5>
@@ -1906,7 +1896,7 @@ is used.</p>
 <p>Data type: Rotation.</p>
 <p>The output rotation value.</p>
 <h3 id="invert-rotation">Invert Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/invert-rotation.png" alt="Invert Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/invert-rotation.png" alt="Invert Rotation" loading="lazy"></figure>
 <p>Inverts a rotation</p>
 <h4 id="inputs-59">Inputs</h4>
 <h5 id="rotation-9">Rotation</h5>
@@ -1917,7 +1907,7 @@ is used.</p>
 <p>Data type: Rotation.</p>
 <p>The output rotation value.</p>
 <h3 id="mix-rotation">Mix Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/mix-rotation.png" alt="Mix Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/mix-rotation.png" alt="Mix Rotation" loading="lazy"></figure>
 <p>Rotates an euler rotation by another euler rotation.</p>
 <h4 id="inputs-60">Inputs</h4>
 <h5 id="factor-6">Factor</h5>
@@ -1925,14 +1915,14 @@ is used.</p>
 <h5 id="a-b-4">A, B</h5>
 <p>The input.</p>
 <h4 id="properties-39">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/properties.png" alt="Properties" loading="lazy"></figure>
 <h5 id="data-type-18">Data Type</h5>
 <p>What data to calculate.</p>
 <h4 id="outputs-49">Outputs</h4>
 <h5 id="rotation-11">Rotation</h5>
 <p>The euler angle output.</p>
 <h3 id="rotate-rotation">Rotate Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-rotation.png" alt="Rotate Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-rotation.png" alt="Rotate Rotation" loading="lazy"></figure>
 <p>Rotates an euler rotation by another euler rotation.</p>
 <h4 id="inputs-61">Inputs</h4>
 <h5 id="rotation-12">Rotation</h5>
@@ -1952,7 +1942,7 @@ is used.</p>
 <p>Data type: Rotation.</p>
 <p>The euler angle output.</p>
 <h3 id="rotate-vector">Rotate Vector</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-vector.png" alt="Rotate Vector" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-vector.png" alt="Rotate Vector" loading="lazy"></figure>
 <p>Rotates a vector.</p>
 <h4 id="inputs-62">Inputs</h4>
 <h5 id="vector-16">Vector</h5>
@@ -1965,7 +1955,7 @@ is used.</p>
 <h5 id="rotation-15">Rotation</h5>
 <p>The output rotation value.</p>
 <h3 id="rotation-to-axis-angle">Rotation to Axis Angle</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-axis-angle.png" alt="Rotation to Axis Angle" loading="lazy"><figcaption>Rotation to Axis Angle</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-axis-angle.png" alt="Rotation to Axis Angle" loading="lazy"><figcaption>Rotation to Axis Angle</figcaption></figure>
 <p>Converts a rotation vector to axis angle.</p>
 <h4 id="inputs-63">Inputs</h4>
 <h5 id="rotation-16">Rotation</h5>
@@ -1979,7 +1969,7 @@ is used.</p>
 <p>Data type: Float (angle).</p>
 <p>The angle output.</p>
 <h3 id="rotation-euler">Rotation Euler</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-euler.png" alt="Rotation Euler" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-euler.png" alt="Rotation Euler" loading="lazy"></figure>
 <p>Converts a rotation vector to an euler angle.</p>
 <h4 id="inputs-64">Inputs</h4>
 <h5 id="rotation-17">Rotation</h5>
@@ -1988,7 +1978,7 @@ is used.</p>
 <h5 id="euler-2">Euler</h5>
 <p>The euler angle.</p>
 <h3 id="rotation-to-quaternion">Rotation to Quaternion</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-quaternion.png" alt="Rotation to Quaternion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-quaternion.png" alt="Rotation to Quaternion" loading="lazy"></figure>
 <p>Converts a quaternion to a rotation vector.</p>
 <h4 id="inputs-65">Inputs</h4>
 <h5 id="rotation-18">Rotation</h5>
@@ -1998,7 +1988,7 @@ is used.</p>
 <h5 id="w-x-y-z">W, X, Y, Z</h5>
 <p>The single output values of the quaternion.</p>
 <h3 id="quaternion-to-rotation">Quaternion to Rotation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/quaternion-to-rotation.png" alt="Quaternion to Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/quaternion-to-rotation.png" alt="Quaternion to Rotation" loading="lazy"></figure>
 <p>Converts a rotation vector to a quaternion.</p>
 <h4 id="inputs-66">Inputs</h4>
 <h5 id="w-x-y-z-2">W, X, Y, Z</h5>
@@ -2009,10 +1999,10 @@ is used.</p>
 <p>The output rotation.</p>
 <h1 id="deprecated">Deprecated</h1>
 <h2 id="add-menu-deprecated">Add menu - Deprecated</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/add-menu-deprecated.png" alt="Add menu - Deprecated" loading="lazy"><figcaption>Add menu - Deprecated</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/add-menu-deprecated.png" alt="Add menu - Deprecated" loading="lazy"><figcaption>Add menu - Deprecated</figcaption></figure>
 <p>These deprecated nodes are kept for compatibility reasons.</p>
 <h3 id="align-euler-to-vector-deprecated">Align Euler to Vector (Deprecated)</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/align-euler-to-vector-deprecated.png" alt="Align Euler to Vector (Deprecated)" loading="lazy"><figcaption>Align Euler to Vector (Deprecated)</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/align-euler-to-vector-deprecated.png" alt="Align Euler to Vector (Deprecated)" loading="lazy"><figcaption>Align Euler to Vector (Deprecated)</figcaption></figure>
 <p>Aligns a euler value to a vector.</p>
 <h4 id="inputs-67">Inputs</h4>
 <h5 id="rotation-20">Rotation</h5>
@@ -2025,13 +2015,13 @@ is used.</p>
 <h5 id="align-axis-2">Align Axis</h5>
 <p>To which axis to align the vector.</p>
 <h5 id="pivot-2">Pivot</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png" alt="Pivot" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png" alt="Pivot" loading="lazy"></figure>
 <p>The pivot axis.</p>
 <h4 id="output-22">Output</h4>
 <h5 id="rotation-21">Rotation</h5>
 <p>The output rotation euler angle.</p>
 <h3 id="rotate-euler-deprecated">Rotate Euler (Deprecated)</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b25ac57210064e4a8abad912947e7fd43e114751/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/rotate-euler-deprecated.png" alt="Rotate Euler (Deprecated)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f20a840de191b7fa227839ffed70c1e703faf962/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/rotate-euler-deprecated.png" alt="Rotate Euler (Deprecated)" loading="lazy"></figure>
 <p>Rotates an euler rotation. This node will be removed in the near future. Alternatively use the Rotate Rotation node.</p>
 <h4 id="inputs-68">Inputs</h4>
 <h5 id="rotation-22">Rotation</h5>

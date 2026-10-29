@@ -1,8 +1,6 @@
 {
  "pages": {
-  "docs2/content/editors/geometry-node-editor/header/add-menu/geometry.md": "editors/geometry-node-editor/header/add-menu/geometry.html",
-  "docs2/content/editors/geometry-node-editor/header/add-menu/mesh.md": "editors/geometry-node-editor/header/add-menu/mesh.html",
   "docs2/content/editors/geometry-node-editor/header/add-menu/utilities.md": "editors/geometry-node-editor/header/add-menu/utilities.html"
  },
- "images": 300
+ "images": 160
 }
