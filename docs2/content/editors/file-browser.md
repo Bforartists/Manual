@@ -43,11 +43,30 @@ There are two header areas. The header area that contains the navigation and fil
 
 For this content see Footer Header chapter below.
 
+### Navigation
 
-| Entry | What it does |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Navigation | Navigate in the folder hierarchy. · **Previous Folder**: Navigate to the previous folder. · **Next Folder**: Navigate to the next folder. · **Parent File**: Go upwards in the hierarchy. · **Refresh**: Refresh the file list. |
-| ![](/docs2/images/editors/file-browser/new-folder-icon.png) New Folder | Creates a new folder. |
+Navigate in the folder hierarchy.
+
+#### Previous Folder
+
+Navigate to the previous folder.
+
+#### Next Folder
+
+Navigate to the next folder.
+
+#### Parent File
+
+Go upwards in the hierarchy.
+
+#### Refresh
+
+Refresh the file list.
+
+### ![](/docs2/images/editors/file-browser/new-folder-icon.png) New Folder
+
+Creates a new folder.
+
 
 
 ### File path
@@ -132,12 +151,18 @@ Reverts the sorting direction.
 
 ![Filter](/docs2/images/editors/file-browser/filter.png)
 
+#### Filter
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Filter | Enable the filtering. |
-| Folders, etc. | The different file types that should be filtered. What is ticked here and what file types shows depends of what file browser you call. If you want to load a blend file. Or a FBX file from the File menu in the header. Or an image in the UV Editor for example. |
-| Show Hidden | Shows hidden Dot files. This is a Unix feature. Unix systems like Linux or Mac hides files from file browsers and explorers by having a dot before the file. A good example is the .htaccess file at servers. Show hidden Dot Files makes such files visible to the file browser. |
+Enable the filtering.
+
+#### Folders, etc.
+
+The different file types that should be filtered. What is ticked here and what file types shows depends of what file browser you call. If you want to load a blend file. Or a FBX file from the File menu in the header. Or an image in the UV Editor for example.
+
+#### Show Hidden
+
+Shows hidden Dot files. This is a Unix feature. Unix systems like Linux or Mac hides files from file browsers and explorers by having a dot before the file. A good example is the .htaccess file at servers. Show hidden Dot Files makes such files visible to the file browser.
+
 
 
 ### Toggle Region
@@ -204,11 +229,14 @@ At the right you see the import dialog for FBX.
 
 As an example, and to explain the two settings for loading a blend file:
 
+### Load UI
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Load UI | Bforartists comes with the feature `*Load` `UI*` unticked. This means the Bforartists UI will not change when you load a scene. Here you can temporary enable to load the scene with the layout and UI arrangement in which the scene was saved. |
-| Trusted Source | With Load UI you can also load script files, which can execute. This is a potential security risk when the file comes from an unknown source. |
+Bforartists comes with the feature `*Load` `UI*` unticked. This means the Bforartists UI will not change when you load a scene. Here you can temporary enable to load the scene with the layout and UI arrangement in which the scene was saved.
+
+### Trusted Source
+
+With Load UI you can also load script files, which can execute. This is a potential security risk when the file comes from an unknown source.
+
 
 
 ### Advanced panel
@@ -223,13 +251,22 @@ When you append from a blend file, then you will find an Advanced panel with fur
 
 The file dialog is the actual place where your files and directories gets listed.
 
+### Click navigation.
 
-| Entry | What it does |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Click navigation. | Double clicking at a folder enters the folder. To go upwards in the hierarchy see Parent File button in the header. |
-| Double Click to load | Double clicking at a file loads the chosen file when you are in a load dialog. The file dialog will then close. |
-| Double click to save | Double clicking at a file overwrites the chosen file when you are in a save dialog. The file dialog will then close. |
-| Select and load more than one file | Holding down shift allows you to select and to load more than one file. |
+Double clicking at a folder enters the folder. To go upwards in the hierarchy see Parent File button in the header.
+
+### Double Click to load
+
+Double clicking at a file loads the chosen file when you are in a load dialog. The file dialog will then close.
+
+### Double click to save
+
+Double clicking at a file overwrites the chosen file when you are in a save dialog. The file dialog will then close.
+
+### Select and load more than one file
+
+Holding down shift allows you to select and to load more than one file.
+
 
 
 ### Box select
@@ -248,11 +285,14 @@ You can rename files and folders from within this list. Holding down ctrl and cl
 
 The file that you want to load or to save.
 
+#### Open / Save
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------- |
-| Open / Save | Open or save the current file(s). |
-| Cancel | Cancel the loading or save process and close the file browser. |
+Open or save the current file(s).
+
+#### Cancel
+
+Cancel the loading or save process and close the file browser.
+
 
 
 ## Footer / Header
@@ -265,18 +305,24 @@ You can reveal the footer by clicking at the triangle button at the right.
 
 ![Footer / Header](/docs2/images/editors/file-browser/footer-header-2.png)
 
-And then you will see the footer bar. Which will reveal two menus. View and Select.
+And then you will see the footer bar. Which will reveal three menus. View, Navigation and Select.
 
 ### View Menu
 
 ![View Menu](/docs2/images/editors/file-browser/view-menu.png)
 
+#### Source List
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------- |
-| Source List | Shows or hides the tool shelf at the left side. |
-| File Path | Shows the header region with the file path and the navigation and filter elements. |
-| Frame selected | Centers the selected elements. |
+Shows or hides the tool shelf at the left side.
+
+#### File Path
+
+Shows the header region with the file path and the navigation and filter elements.
+
+#### Frame selected
+
+Centers the selected elements.
+
 
 
 #### Area Menu
@@ -285,13 +331,22 @@ And then you will see the footer bar. Which will reveal two menus. View and Sele
 
 Area is a menu with window related settings.
 
+##### Horizontal Split
 
-| Entry | What it does |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal Split | Splits the editor horizontally into two editors. |
-| Vertical Split | Splits the editor vertically into two editors. |
-| Duplicate Area into new Window | Creates a floating window out of the current editor. |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu. |
+Splits the editor horizontally into two editors.
+
+##### Vertical Split
+
+Splits the editor vertically into two editors.
+
+##### Duplicate Area into new Window
+
+Creates a floating window out of the current editor.
+
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.
+
 
 
 #### Close Area
@@ -309,6 +364,38 @@ Reveals the View pie menu.
 #### Region Toggle
 
 Press `T` to open a pie menu that shows or hides the regions of the editor, such as the tool shelf and the sidebar. It works the same in the Asset Browser.
+
+### Navigation Menu
+
+![Navigation Menu](/docs2/images/editors/file-browser/navigation-menu.png)
+
+The Navigation menu has the commands to move between folders and through the file list. The hotkeys are shown at the right of the entries.
+
+#### Back
+
+Goes back to the previous folder. Hotkey: Alt + Left Arrow.
+
+#### Forward
+
+Goes forward to the next folder. Hotkey: Alt + Right Arrow.
+
+#### Parent Directory
+
+Goes up to the folder that contains this folder. Hotkey: Alt + Up Arrow.
+
+#### Refresh
+
+Reads the content of the folder again.
+
+#### To Top
+
+Selects the first file in the list. Hotkey: Home.
+
+#### To Bottom
+
+Selects the last file in the list. Hotkey: Ctrl + Home.
+
+To Top and To Bottom are handy in long folders. You don't need to scroll down to the last file any more.
 
 ### Select menu
 
@@ -347,13 +434,22 @@ Move the selection to the file on the left or right, like the **Left / Right Arr
 
 When you right click into the view at one of the browser items, then a files context menu opens. This menu comes from the File browser, and contains a few menu items that are not vaild for the asset browser. Like create a folder. And the importer does not have the possibility to incresase Number for example.
 
+### Back
 
-| Entry | What it does |
-| ------------ | -------------------------------- |
-| Back | Go to previous folder. |
-| Forward | Go to next folder. |
-| Go to Parent | Go upwards the hierarchy by one. |
-| Refresh | Refresh the file list. |
+Go to previous folder.
+
+### Forward
+
+Go to next folder.
+
+### Go to Parent
+
+Go upwards the hierarchy by one.
+
+### Refresh
+
+Refresh the file list.
+
 
 
 ### External submenu
@@ -384,29 +480,70 @@ Opens the command prompt at the location of the file.
 
 Shows the file properties.
 
+##### Edit
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit | Opens the file in the corresponding software that is defined as the software to open the file with. A bitmap with Windows Paint for example. |
-| Print | Prints the file. |
-| Play | Plays the selected file. A movie in the Windows Media Player for example. |
-| Find | Search for files of this type. |
-| Show | Show this file in the explorer |
-| Browse | Browse this file. |
-| Preview | Preview this file. |
-| Install | Install this file. |
-| Runas | Run this file as a specific user. |
-| Find in Folder | Search for items in this folder. |
+Opens the file in the corresponding software that is defined as the software to open the file with. A bitmap with Windows Paint for example.
 
+##### Print
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------- |
-| Increase Number | Increases the number at the selected data file in the file name edit box. |
-| Decrease Number | Decreases the number at the selected data file in the file name edit box. |
-| Rename | Rename the selected item. |
-| Delete | Delete the selected item. |
-| New Folder | Add a new folder. |
-| Add Bookmark | Adds a bookmark in the file browser tool shelf in the Bookmark panel. |
+Prints the file.
+
+##### Play
+
+Plays the selected file. A movie in the Windows Media Player for example.
+
+##### Find
+
+Search for files of this type.
+
+##### Show
+
+Show this file in the explorer
+
+##### Browse
+
+Browse this file.
+
+##### Preview
+
+Preview this file.
+
+##### Install
+
+Install this file.
+
+##### Runas
+
+Run this file as a specific user.
+
+##### Find in Folder
+
+Search for items in this folder.
+
+##### Increase Number
+
+Increases the number at the selected data file in the file name edit box.
+
+##### Decrease Number
+
+Decreases the number at the selected data file in the file name edit box.
+
+##### Rename
+
+Rename the selected item.
+
+##### Delete
+
+Delete the selected item.
+
+##### New Folder
+
+Add a new folder.
+
+##### Add Bookmark
+
+Adds a bookmark in the file browser tool shelf in the Bookmark panel.
+
 
 
 ### Display Mode
