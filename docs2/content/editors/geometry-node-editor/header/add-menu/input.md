@@ -979,13 +979,13 @@ On: also include the children of child collections.
 
 ##### Collections
 
-Data type: Collection.
+Data type: Collection list.
 
 The child collections.
 
 ##### Objects
 
-Data type: Object.
+Data type: Object list.
 
 The child objects.
 
