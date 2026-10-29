@@ -8,7 +8,7 @@ path:
   - Editors
   - Preferences
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 30 Editors - Preferences.odt
@@ -41,11 +41,14 @@ Changes at the preferences are saved automatically when Auto Save Preferences is
 
 Note that when Auto Save Preferecnes is unticked, then the Save Preferences button is displayed in the sidebar besides the Save Preferences menu, and not longer in the Save Preferences menu.
 
+###### Save Preferences
 
-| Entry | What it does |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Save Preferences | Manually saves the current state. |
-| Revert to Saved Preferences | This option is just available when Auto Save preferences is off. It reverts the settings to the last saved state. |
+Manually saves the current state.
+
+###### Revert to Saved Preferences
+
+This option is just available when Auto Save preferences is off. It reverts the settings to the last saved state.
+
 
 
 ##### Load Factory Preferences
@@ -82,11 +85,14 @@ Define the size of the line between the editors. This is a theming setting.
 
 Changes the appearance of only lines in the 3D Viewport.
 
+##### Splash Screen
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Splash Screen | Display the Splash Screen when starting Bforartists. |
-| Tool tips | Display tool tips in the UI. With this feature unticked you won't see any tool tips anymore. It is not recommended to turn this feature off. The icon buttons needs the tool tips to display the tool name. |
+Display the Splash Screen when starting Bforartists.
+
+##### Tool tips
+
+Display tool tips in the UI. With this feature unticked you won't see any tool tips anymore. It is not recommended to turn this feature off. The icon buttons needs the tool tips to display the tool name.
+
 
 
 #### Python Tool tips
@@ -109,13 +115,22 @@ The tools in the tool shelf doesn't have a Python tool tip by design. This butto
 
 This tick box turns on or off the developer entries in the right click menus.
 
+##### Sort Search by Most Recent
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sort Search by Most Recent | This affects all search fields. Sort the recently searched items at the top. |
-| Show Hidden | Show hidden data that are hidden away with a dot before the name in search menus. |
-| Disable Search on Key Press | Ignore menus toggling with Search on Key Press, and fallback to using accelerator keys instead. This is a Bforartists only feature. |
-| Disable Material Icon Rendering | Stops the preview icons on the material properties from rendering, which helps avoid causing the UI to stutter or freeze. This is a Bforartists only feature. |
+This affects all search fields. Sort the recently searched items at the top.
+
+##### Show Hidden
+
+Show hidden data that are hidden away with a dot before the name in search menus.
+
+##### Disable Search on Key Press
+
+Ignore menus toggling with Search on Key Press, and fallback to using accelerator keys instead. This is a Bforartists only feature.
+
+##### Disable Material Icon Rendering
+
+Stops the preview icons on the material properties from rendering, which helps avoid causing the UI to stutter or freeze. This is a Bforartists only feature.
+
 
 
 ### Editors Panel
@@ -220,12 +235,18 @@ Choose between automatic language detection. In this case the system language ge
 
 #### Translate
 
+##### Tool tips
 
-| Entry | What it does |
-| --------- | --------------------------------------------- |
-| Tool tips | Tool tips translates the tool tips too. |
-| Interface | Interface translates all the interface texts. |
-| Reports | Translate report and error messages too. |
+Tool tips translates the tool tips too.
+
+##### Interface
+
+Interface translates all the interface texts.
+
+##### Reports
+
+Translate report and error messages too.
+
 
 
 ##### New Data
@@ -238,27 +259,29 @@ This can be done in the right click menus of the tools when everything is set up
 
 This is a development feature. You need a repository of Bforartists!
 
-> **Note:** This feature is currently not functional in Bforartists. It ends in an error message.
+#### Date Format
 
-Let's nevertheless document the way how it should work. Note that you need a Bforartists repository for that. The binary version does not come with the editable `*.po` files, but with already compiled `*.mo` files for the translation.
+Choose how dates are displayed in the interface. The default shows the date with the month spelled out.
 
-![New Data](/docs2/images/editors/preferences/new-data-2.png)
+| Format | Example |
+| --- | --- |
+| Default | 20 Mar 1960 |
+| dd/mm/yyyy | 20/03/1960 |
+| dd.mm.yyyy | 20.03.1960 |
+| dd-mm-yyyy | 20-03-1960 |
+| mm/dd/yyyy | 03/20/1960 |
+| yyyy/mm/dd | 1960/03/20 |
+| yyyy.mm.dd | 1960.03.20 |
+| yyyy-mm-dd | 1960-03-20 |
 
-Note that you first need to set the path to the translation files for that. Or you will get an error. This is done in the File tab. The |18n string.
+#### Time
 
-![New Data](/docs2/images/editors/preferences/new-data-3.png)
+Choose between the 24-hour clock and the 12-hour clock for times shown in the interface.
 
-The path should lead to the `*.po` files that you want to translate. Which can be found in the Bforartists repository.
-
-And you need to enable the Manage UI translations add-on. And to fix the paths in this add-on. The default paths are currently set for Blender.
-
-![New Data](/docs2/images/editors/preferences/new-data-4.png)
-
-And then you might end in this error here ...
-
-![New Data](/docs2/images/editors/preferences/new-data-5.png)
-
-In case somebody has an idea what's going on here, every hint is welcome …
+| Format | Example |
+| --- | --- |
+| 24-Hour | 23:59 |
+| 12-Hour | 11:59 PM |
 
 ### Accessibility Panel
 
@@ -266,7 +289,7 @@ In case somebody has an idea what's going on here, every hint is welcome …
 
 #### Reduced Motion
 
-T**he Reduce Motion optio**n is designed to improve usability for users sensitive to motion effects. When enabled, the interface minimizes or disables non-essential animations in the interface.
+The **Reduce Motion** option is designed to improve usability for users sensitive to motion effects. When enabled, the interface minimizes or disables non-essential animations in the interface.
 
 ### Text Rendering Panel
 
@@ -274,11 +297,14 @@ T**he Reduce Motion optio**n is designed to improve usability for users sensitiv
 
 Text related settings for the font of the interface.
 
+#### Anti-Aliasing
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------ |
-| Anti-Aliasing | Use Anti Alias at the UI elements to prevent pixelated look of the font. |
-| Subpixel Anti-Aliasing | Use subpixel calculations to refine the horizontal spacing between characters. |
+Use Anti Alias at the UI elements to prevent pixelated look of the font.
+
+#### Subpixel Anti-Aliasing
+
+Use subpixel calculations to refine the horizontal spacing between characters.
+
 
 
 #### Hinting
@@ -287,22 +313,60 @@ Text related settings for the font of the interface.
 
 What sharpening method to use to make the text render sharp.
 
+##### Interface Font
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------- |
-| Interface Font | Define a custom interface font. The font in the whole UI. |
-| Monospace Font | Define a custom Monospace font. That's the one used in the python console for example. |
+Define a custom interface font. The font in the whole UI.
+
+##### Monospace Font
+
+Define a custom Monospace font. That's the one used in the python console for example.
+
 
 
 ### Menus Panel
 
 ![Menus Panel](/docs2/images/editors/preferences/menus-panel.png)
 
+#### Open on Mouse Over
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Open on Mouse Over | Normally you click at a menu to open it. With Open on Mouse Over the menu opens up when you just hover with the mouse over it. · **Top Level**: Adjust the time delay before the top level menu opens on mouse over. · **Sub Level**: Adjust the time delay before a sub level menu opens on mouse over. |
-| Pie Menus | Bforartists has some pie menus that can be called by hotkeys. Here you find some settings for it. · **Animation Timeout**: The pie menu fades in with an animation. Adjust the time needed to fully unfold the pie menu. · **Top Key Timeout**: Pie menu button longer held than this time will dismiss the menu on release. · **Recenter Timeout**: Pie menus will use the initial mouse position as center for this amount of time. The value is in 1/100 seconds. · **Radius**: The pie menu size in pixels. · **Threshold**: The distance that is needed from the center to move the mouse so that a selection can be made. · **Confirm Threshold**: Distance threshold after which selection is made. A value of zero disables this feature. |
+Normally you click at a menu to open it. With Open on Mouse Over the menu opens up when you just hover with the mouse over it.
+
+##### Top Level
+
+Adjust the time delay before the top level menu opens on mouse over.
+
+##### Sub Level
+
+Adjust the time delay before a sub level menu opens on mouse over.
+
+#### Pie Menus
+
+Bforartists has some pie menus that can be called by hotkeys. Here you find some settings for it.
+
+##### Animation Timeout
+
+The pie menu fades in with an animation. Adjust the time needed to fully unfold the pie menu.
+
+##### Top Key Timeout
+
+Pie menu button longer held than this time will dismiss the menu on release.
+
+##### Recenter Timeout
+
+Pie menus will use the initial mouse position as center for this amount of time. The value is in 1/100 seconds.
+
+##### Radius
+
+The pie menu size in pixels.
+
+##### Threshold
+
+The distance that is needed from the center to move the mouse so that a selection can be made.
+
+##### Confirm Threshold
+
+Distance threshold after which selection is made. A value of zero disables this feature.
+
 
 
 ## Viewport
@@ -371,13 +435,13 @@ Hides the Mini axis widget
 
 Shows simple axis. This widget type is not interactive. It just shows the state of the viewport rotation.
 
-**Size**
+###### Size
 
 ![Size](/docs2/images/editors/preferences/size.png)
 
 The size of the simple mini axis widget.
 
-**Brightness**
+###### Brightness
 
 The brighness of th simple mini axis widget.
 
@@ -387,11 +451,14 @@ The brighness of th simple mini axis widget.
 
 The default mini axis widget. This widget is interactive. Clicking and dragging will rotate the viewport. Clicking at one of the colored spots at the end of the axis will snap to the neares orthographic view.
 
+###### Size
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the interactive navigation widget. |
-| Fresnel in Edit Mode | Enable a fresnel effect on edit mesh overlays. This feature improves shape readability of very dense meshes. But can increase eye fatigue when modeling lower poly. |
+The size of the interactive navigation widget.
+
+###### Fresnel in Edit Mode
+
+Enable a fresnel effect on edit mesh overlays. This feature improves shape readability of very dense meshes. But can increase eye fatigue when modeling lower poly.
+
 
 
 ### Quality
@@ -400,17 +467,25 @@ The default mini axis widget. This widget is interactive. Clicking and dragging 
 
 How smooth and detailed the 3D Viewport looks. Higher settings look better but need a faster graphics card.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Viewport Anti-Aliasing | Smooths jagged edges in the 3D Viewport. More samples look smoother but are slower. |
-| Overlay Smooth Wires | Smooths the lines of overlays such as wireframes and grids. |
-| Edit Mode Smooth Wires | Smooths the edges you see in Edit Mode. Bforartists needs a restart before this change shows. |
+#### Viewport Anti-Aliasing
+
+Smooths jagged edges in the 3D Viewport. More samples look smoother but are slower.
+
+#### Overlay Smooth Wires
+
+Smooths the lines of overlays such as wireframes and grids.
+
+#### Edit Mode Smooth Wires
+
+Smooths the edges you see in Edit Mode. Bforartists needs a restart before this change shows.
+
 
 #### Shadows
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Hardware Raytracing | Draws viewport shadows with raytracing on your graphics card. It needs Vulkan and a graphics card with hardware raytracing. Without them, the option is greyed out. |
+##### Hardware Raytracing
+
+Draws viewport shadows with raytracing on your graphics card. It needs Vulkan and a graphics card with hardware raytracing. Without them, the option is greyed out.
+
 
 ### Textures
 
@@ -422,11 +497,14 @@ How smooth and detailed the 3D Viewport looks. Higher settings look better but n
 
 Limit the maximum resolution for pictures used in textured display to save memory. The limit options are specified in a square of pixels, (e.g.: the option 256 means a texture of 256×256 pixels) This is useful for game engineers, whereas the texture limit matches paging blocks of the textures in the target graphic card memory. Available Options are: *Off* (No limit), *128*, *256*, *512*, *1024*, *2048*, *4096*, and *8192*.
 
+##### Anisotropic Filtering
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Anisotropic Filtering | Sets the level of anisotropic filtering. This improves the quality of how textures are drawn at the cost of performance. Available Options are: *Off* (No Filtering), *2x*, *4x*, *8x*, and *16x*. |
-| Clip Alpha | Clip alpha when the value is below the here defined value. |
+Sets the level of anisotropic filtering. This improves the quality of how textures are drawn at the cost of performance. Available Options are: *Off* (No Filtering), *2x*, *4x*, *8x*, and *16x*.
+
+##### Clip Alpha
+
+Clip alpha when the value is below the here defined value.
+
 
 
 #### Image Display Method
@@ -481,16 +559,34 @@ Deletes the studio light.
 
 The editor settings does not update immediately. It shows the default studio light setting. So when you want to edit the studio light, then you want to press this button to update the editor values first.
 
+###### Edit Studio Light
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Studio Light | Enable the editing of the studio light setup. |
-| Save as Studio Light | Save the current light setup as a studio light setup. Note that this does not export the light, but saves its settings internally in the appdata directory. |
-| Use Light | Turn on or off this specific light. |
-| Diffuse | **Diffuse** color is the constant color of the lamp. |
-| Specular | **Specular** is the highlight color of the lamp. |
-| Smooth | Smooth the lighting from this specific light. |
-| Direction | Adjust the direction. Click into the field and drag the sphere around until you have your desired light setup. |
+Enable the editing of the studio light setup.
+
+###### Save as Studio Light
+
+Save the current light setup as a studio light setup. Note that this does not export the light, but saves its settings internally in the appdata directory.
+
+###### Use Light
+
+Turn on or off this specific light.
+
+###### Diffuse
+
+**Diffuse** color is the constant color of the lamp.
+
+###### Specular
+
+**Specular** is the highlight color of the lamp.
+
+###### Smooth
+
+Smooth the lighting from this specific light.
+
+###### Direction
+
+Adjust the direction. Click into the field and drag the sphere around until you have your desired light setup.
+
 
 
 ### MatCaps
@@ -531,28 +627,36 @@ Contains the settings around editing. Objects, Data, etc.
 
 Define how materials will be linked to its objects. Almost everything in Bforartists is organized in a hierarchy of data-blocks. A data-block can be thought of as containers for certain pieces of information. For example, the Object data-block contains information about the Object’s location while the Object Data *ObData* data-block contains information about the mesh.
 
+###### ObData
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------------- |
-| ObData | Any created material will be created as part of the ObData data-block. |
-| Object | Any created material will be created as part of the Object data-block. |
+Any created material will be created as part of the ObData data-block.
+
+###### Object
+
+Any created material will be created as part of the Object data-block.
+
 
 
 ##### Align To
 
 ![Align To](/docs2/images/editors/preferences/align-to.png)
 
+###### World
 
-| Entry | What it does |
-| ----- | ----------------------------------------- |
-| World | New objects align with world coordinates. |
-| View | New object align with view coordinates. |
+New objects align with world coordinates.
 
+###### View
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Enter Edit Mode | If selected, Edit Mode is automatically activated when you create a new object. |
-| Instance Empty Size | Increase or decrease the size of collection empties. |
+New object align with view coordinates.
+
+###### Enter Edit Mode
+
+If selected, Edit Mode is automatically activated when you create a new object.
+
+###### Instance Empty Size
+
+Increase or decrease the size of collection empties.
+
 
 
 #### Copy on Duplicate Data subtab
@@ -565,22 +669,28 @@ When you duplicate data, then most or all its subpart gets duplicated too. Defin
 
 ![3D Cursor](/docs2/images/editors/preferences/3d-cursor.png)
 
+#### Surface Project
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------------------------------------------------- |
-| Surface Project | Use the surface depth to place the 3D cursor. That way you can place the 3D cursor at the surface of an object. |
-| Lock Adjust | Place the cursor without a jumping effect at the new location when lock to cursor is used. |
+Use the surface depth to place the 3D cursor. That way you can place the 3D cursor at the surface of an object.
+
+#### Lock Adjust
+
+Place the cursor without a jumping effect at the new location when lock to cursor is used.
+
 
 
 ### Annotations
 
 ![Annotations](/docs2/images/editors/preferences/annotations.png)
 
+#### Default Color
 
-| Entry | What it does |
-| ------------- | --------------------------------------------- |
-| Default Color | The default color for the annotations pencil. |
-| Eraser radius | The eraser radius. |
+The default color for the annotations pencil.
+
+#### Eraser radius
+
+The eraser radius.
+
 
 
 ### Weight Paint
@@ -651,11 +761,14 @@ Set the gradient stroke mode.
 
 ![Grease Pencil](/docs2/images/editors/preferences/grease-pencil.png)
 
+#### Manhattan Distance
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------------- |
-| Manhattan Distance | The minimum number of pixels the mouse has to move horizontally or vertically before the movement is recorded. |
-| Euclidean Distance | The minimum distance that mouse has to travel before movement is recorded. |
+The minimum number of pixels the mouse has to move horizontally or vertically before the movement is recorded.
+
+#### Euclidean Distance
+
+The minimum distance that mouse has to travel before movement is recorded.
+
 
 
 ### Text
@@ -682,21 +795,45 @@ Minimum distance in the node editor between nodes for auto offsetting.
 
 When you insert a new node between two existing connected nodes, then the two nodes gets pushed to left and right, with an offset. Adjust this offset.
 
+##### Preview Resolution
 
-| Entry | What it does |
-| ------------------------- | ------------------------------------------------------------------------------------ |
-| Preview Resolution | Resolution used for shader node previews, which are displayed above the nodes. |
-| Auto position Viewer Node | Automatically reposition the Viewer node near the selected socket when viewing data. |
-| Node Color Blend | Bforartists blends node type color to its body, disable if the color is enabled. |
+Resolution used for shader node previews, which are displayed above the nodes.
+
+##### Auto position Viewer Node
+
+Automatically reposition the Viewer node near the selected socket when viewing data.
+
+##### Node Color Blend
+
+Bforartists blends node type color to its body, disable if the color is enabled.
+
 
 
 ### Video Sequencer
 
 ![Video Sequencer](/docs2/images/editors/preferences/video-sequencer.png)
 
-#### Connect Movie Strips by Default
+Defaults for the Video Sequencer editor.
 
-Connect new Movie Strips by Default if they have multiple channels.
+#### Clamp Strips by Default
+
+When slipping a strip or adjusting its handles, the movement is clamped to the bounds of the underlying content. This avoids producing extra hold frames or silence at the ends of a strip.
+
+This only sets the default. The behavior can still be switched for a single operation in the Video Sequencer.
+
+#### New Strips
+
+Settings for strips that you add later.
+
+##### Strip Length
+
+The duration of newly added strips that have no length of their own, like Color, Text and Image strips. The value is in seconds. The default is 1 second.
+
+Strips that come from a file with a length, like movies and sounds, always use the length of the file.
+
+##### Connect Movie Strips
+
+Connect new Movie Strips by default if they have multiple channels.
 
 ### Outliner
 
@@ -756,11 +893,14 @@ Timeline, Dope sheet, Graph and NLE. Define how zooming to frame focuses around 
 
 ![Keyframes](/docs2/images/editors/preferences/keyframes.png)
 
+##### Default Key channels
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Default Key channels | Define which channels are recorded by default In case no keyingset is defined. |
-| Visual Keying | When an object is using constraints, the objects property value doesn't actually change. *Visual Keying* will add keyframes to the object property, with a value based on the visual transformation from the constraint. |
+Define which channels are recorded by default In case no keyingset is defined.
+
+##### Visual Keying
+
+When an object is using constraints, the objects property value doesn't actually change. *Visual Keying* will add keyframes to the object property, with a value based on the visual transformation from the constraint.
+
 
 
 ##### Only Insert Needed
@@ -773,12 +913,18 @@ If there is no keyframe, and it has no changes, skip recording the keyframe.
 
 ###### Auto Keyframing subpanel
 
+###### Show Warning
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------- |
-| Show Warning | Displays a warning at the top right of the *3D View*, when moving objects, if *Auto Keyframe* is on. |
-| Only Insert Available | This will only add keyframes to channel F-Curves that already exist. |
-| Enable in new scenes | Automatic keyframe insertion for objects and bones as Default setting for new scenes. |
+Displays a warning at the top right of the *3D View*, when moving objects, if *Auto Keyframe* is on.
+
+###### Only Insert Available
+
+This will only add keyframes to channel F-Curves that already exist.
+
+###### Enable in new scenes
+
+Automatic keyframe insertion for objects and bones as Default setting for new scenes.
+
 
 
 #### F-Curves
@@ -807,13 +953,22 @@ This controls how the state between two keyframes is computed. Default interpola
 
 The default handle types for F-Curves.
 
+###### XYZ to RGB
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| XYZ to RGB | Color for X, Y or Z animation curves (location, scale or rotation) are the same as the color for the X, Y and Z axis. |
-| Channel Group Colors | Use animation channel group colors. Uses the bone group colors. |
-| Only Show Selected F-Curve Keyframes | Just show the keyframes from the selected curves only. |
-| F-Curve High Quality Drawing | Display the curves in highest quality. |
+Color for X, Y or Z animation curves (location, scale or rotation) are the same as the color for the X, Y and Z axis.
+
+###### Channel Group Colors
+
+Use animation channel group colors. Uses the bone group colors.
+
+###### Only Show Selected F-Curve Keyframes
+
+Just show the keyframes from the selected curves only.
+
+###### F-Curve High Quality Drawing
+
+Display the curves in highest quality.
+
 
 
 ## Extensions
@@ -844,11 +999,14 @@ Filters the extensions content by tags and repositories. This allows users to fi
 
 #### Filter Extensions Settings Dropdown
 
+##### Dropdown – Repository Filter
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Dropdown – Repository Filter | Filters extensions by repository source. Selecting a repository updates the tag list and extension visibility accordingly. |
-| Show Tags | Toggles the visibility of the tag filter list. When enabled, displays all available functional tags as checkboxes or none. |
+Filters extensions by repository source. Selecting a repository updates the tag list and extension visibility accordingly.
+
+##### Show Tags
+
+Toggles the visibility of the tag filter list. When enabled, displays all available functional tags as checkboxes or none.
+
 
 
 ##### Tag List (Checkboxes)
@@ -875,11 +1033,14 @@ extensions.blender.org is the official extension repository from Blender, which 
 
 User Default is the offline default repository. This includes the core addons and the addons that you have installed.
 
+#### Enable
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable | Enable the repository. |
-| URL field | In case the selected repository is a online source you will see the URL property to this repository. You can also edit this URL here. |
+Enable the repository.
+
+#### URL field
+
+In case the selected repository is a online source you will see the URL property to this repository. You can also edit this URL here.
+
 
 
 ### Add
@@ -894,13 +1055,30 @@ Add a repository.
 
 Add a repository from an online source. It should ideally contain extensions. A dialog will pop up.
 
+##### Add New Extension Repository dialog
 
-| Entry | What it does |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add New Extension Repository dialog | — |
-| URL | The url for the online repository |
-| Check for Updates on Startup | Check if updates are available. |
-| Authentification | For addons that requires an authentification. · **Requires Access Token**: Enable Requires Access Token. · **Secret**: The secret password for the authentification. |
+—
+
+##### URL
+
+The url for the online repository
+
+##### Check for Updates on Startup
+
+Check if updates are available.
+
+##### Authentification
+
+For addons that requires an authentification.
+
+###### Requires Access Token
+
+Enable Requires Access Token.
+
+###### Secret
+
+The secret password for the authentification.
+
 
 
 #### Custom Directory
@@ -915,11 +1093,14 @@ VERSIONNUMBER stands for the Blender version number here.
 
 The custom directory that you want to use.
 
+###### Create
 
-| Entry | What it does |
-| ------ | -------------------------- |
-| Create | Create the new repository. |
-| Cancel | Cancel. |
+Create the new repository.
+
+###### Cancel
+
+Cancel.
+
 
 
 #### Add Local Repository
@@ -928,14 +1109,26 @@ The custom directory that you want to use.
 
 Add a local repository.
 
+##### Name
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name | The name of the repository |
-| Use Custom Directory | `Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.` |
-| Custom Directory | The custom directory that you want to use. |
-| Create | Create the new repository. |
-| Cancel | Cancel. |
+The name of the repository
+
+##### Use Custom Directory
+
+`Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.`
+
+##### Custom Directory
+
+The custom directory that you want to use.
+
+##### Create
+
+Create the new repository.
+
+##### Cancel
+
+Cancel.
+
 
 
 ### Remove
@@ -968,11 +1161,14 @@ Refreshes the content. You must be online to set the menu item to active.
 
 You must be online to set the menu items to active.
 
+#### Install Available Updates
 
-| Entry | What it does |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Install Available Updates | Install all available updates. Note that this feature requires to allow online access. Also note that this feature works at the selected repository only. |
-| Force Unlock Repository | Remove the repository file-system lock in case it is locked. |
+Install all available updates. Note that this feature requires to allow online access. Also note that this feature works at the selected repository only.
+
+#### Force Unlock Repository
+
+Remove the repository file-system lock in case it is locked.
+
 
 
 ### Check for Updates on Startup
@@ -993,11 +1189,18 @@ Adjust settings for the repositories.
 
 The content differs, dependant of the chosen repository.
 
+#### Custom Directory
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Custom Directory | `Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.` |
-| Directory | The custom directory that you want to use. · **Browse**: Browse for the directoriy that you want to use |
+`Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.`
+
+#### Directory
+
+The custom directory that you want to use.
+
+##### Browse
+
+Browse for the directoriy that you want to use
+
 
 
 #### Source
@@ -1006,23 +1209,52 @@ The content differs, dependant of the chosen repository.
 
 Select if the repository is a system directory, or a user directory. Normally this updates automatically when you use a system or a user directory in the list above. But here you can customize it.
 
+##### Authentification
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authentification | For addons that requires an authentification. · **Requires Access Token**: Enable Requires Access Token. · **Secret**: The secret password for the authentification. |
-| Module | The unique module identifier. It identifies the repositories. |
+For addons that requires an authentification.
+
+###### Requires Access Token
+
+Enable Requires Access Token.
+
+###### Secret
+
+The secret password for the authentification.
+
+##### Module
+
+The unique module identifier. It identifies the repositories.
+
 
 
 ### Extensions Settings
 
 ![Extensions Settings](/docs2/images/editors/preferences/extensions-settings.png)
 
+#### Visit extensions website
 
-| Entry | What it does |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Visit extensions website | Opens the Blender extension page in a web browser. · **Install Available Updates**: Install all available updates. Note that this feature requires to allow online access. · **Refresh Remote**: Check if updates for extensions are available for the online extensions. Note that this feature requires to allow online access. Also note that this feature works on ALL repositories. |
-| Install from Disk | You can optionally also install addons and extensions from a disk location using the install from disk operators. · **Refresh Local**: Refresh local extensions to apply changes. Note that this feature works on ALL repositories. |
-| Legacy Add-ons / Pre-downloaded Extensions | Install or remove the add-ons that ship with Bforartists, as classic add-ons or as extensions. See *Working offline* below. |
+Opens the Blender extension page in a web browser.
+
+##### Install Available Updates
+
+Install all available updates. Note that this feature requires to allow online access.
+
+##### Refresh Remote
+
+Check if updates for extensions are available for the online extensions. Note that this feature requires to allow online access. Also note that this feature works on ALL repositories.
+
+#### Install from Disk
+
+You can optionally also install addons and extensions from a disk location using the install from disk operators.
+
+##### Refresh Local
+
+Refresh local extensions to apply changes. Note that this feature works on ALL repositories.
+
+#### Legacy Add-ons / Pre-downloaded Extensions
+
+Install or remove the add-ons that ship with Bforartists, as classic add-ons or as extensions. See *Working offline* below.
+
 
 
 ### Allow Online Access
@@ -1106,11 +1338,14 @@ You can install addons and extensions from a disk location. It will open a file 
 
 ![Install from Disk](/docs2/images/editors/preferences/install-from-disk.png)
 
+##### Extension Tags
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------- |
-| Extension Tags | Filter the content by tags. |
-| Refresh Local | Refresh the local add-ons. Any probems will be reported. |
+Filter the content by tags.
+
+##### Refresh Local
+
+Refresh the local add-ons. Any probems will be reported.
+
 
 
 ### List of Addons
@@ -1177,33 +1412,102 @@ The list of the editors that you can theme. Every editor can have its own themin
 
 ![List of Editors](/docs2/images/editors/preferences/list-of-editors.png)
 
+#### User Interface
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| User Interface | Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors. |
-| Text Style | Defines font colors and styles used in labels, tooltips, and text-based editors. |
-| Bone Color Sets | Lets you assign custom colors to bone groups in Pose Mode, useful for rigging and animation clarity. |
-| Collection Colors | Sets colors for collections in the Outliner, helping visually organize scene hierarchies. |
-| Strip Color Tags | Applies tag colors to strips in the Video Sequencer and Nonlinear Animation editors for quick identification. |
-| Regions | Handles the common region areas like Asset Shelves, channels, scrubbing and marker settings and toolbars and sidebars. |
-| Common | Handles shared UI elements like animation and curve settings. |
-| Asset Shelf | Customizes the appearance of the Asset Shelf, including preview thumbnails, labels, and background styling. |
-| 3D Viewport | Controls mesh display, overlays, selection highlights, and shading in the main modeling and animation workspace. |
-| Dope Sheet / Timeline | Defines keyframe colors, channel backgrounds, and marker styles for animation timelines. |
-| File / Asset Browser | Sets visual styles for file lists, asset previews, and tag indicators in the browser interface. |
-| Graph Editor / Drivers | Colors for animation curves, handles, and driver indicators—essential for fine-tuning motion. |
-| Image / UV Editor | Controls UV line colors, grid backgrounds, selection highlights, and image overlays. |
-| Info | Styles the header and system log messages, including warnings, errors, and notifications. |
-| Movie Clip Editor | Customizes tracking marker colors, clip overlays, and annotation visuals for motion tracking workflows. |
-| Node Editor | Defines node socket colors, wire styles, backdrop shading, and node selection highlights. |
-| Nonlinear Animation | Sets strip colors, selection highlights, and timeline overlays in the NLA editor for layered animation. |
-| Outliner | Controls tree view colors, selection highlights, and hierarchy lines for scene organization. |
-| Preferences | Applies theme settings to the Preferences window itself, including tabs and panels. |
-| Properties | Styles the Properties editor, which includes modifiers, materials, constraints, and more. |
-| Spreadsheet | Controls cell background, grid lines, and selection colors for data views and attribute inspection. |
-| Text Editor | Defines syntax highlighting, background, cursor, and line number colors for scripting and notes. |
-| Top Bar | Customizes the global top menu bar and tool headers for consistent branding or visibility. |
-| Video Sequencer | Sets strip colors, waveform display, and timeline elements for video editing workflows. |
+Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.
+
+#### Text Style
+
+Defines font colors and styles used in labels, tooltips, and text-based editors.
+
+#### Bone Color Sets
+
+Lets you assign custom colors to bone groups in Pose Mode, useful for rigging and animation clarity.
+
+#### Collection Colors
+
+Sets colors for collections in the Outliner, helping visually organize scene hierarchies.
+
+#### Strip Color Tags
+
+Applies tag colors to strips in the Video Sequencer and Nonlinear Animation editors for quick identification.
+
+#### Regions
+
+Handles the common region areas like Asset Shelves, channels, scrubbing and marker settings and toolbars and sidebars.
+
+#### Common
+
+Handles shared UI elements like animation and curve settings.
+
+#### Asset Shelf
+
+Customizes the appearance of the Asset Shelf, including preview thumbnails, labels, and background styling.
+
+#### 3D Viewport
+
+Controls mesh display, overlays, selection highlights, and shading in the main modeling and animation workspace.
+
+#### Dope Sheet / Timeline
+
+Defines keyframe colors, channel backgrounds, and marker styles for animation timelines.
+
+#### File / Asset Browser
+
+Sets visual styles for file lists, asset previews, and tag indicators in the browser interface.
+
+#### Graph Editor / Drivers
+
+Colors for animation curves, handles, and driver indicators—essential for fine-tuning motion.
+
+#### Image / UV Editor
+
+Controls UV line colors, grid backgrounds, selection highlights, and image overlays.
+
+#### Info
+
+Styles the header and system log messages, including warnings, errors, and notifications.
+
+#### Movie Clip Editor
+
+Customizes tracking marker colors, clip overlays, and annotation visuals for motion tracking workflows.
+
+#### Node Editor
+
+Defines node socket colors, wire styles, backdrop shading, and node selection highlights.
+
+#### Nonlinear Animation
+
+Sets strip colors, selection highlights, and timeline overlays in the NLA editor for layered animation.
+
+#### Outliner
+
+Controls tree view colors, selection highlights, and hierarchy lines for scene organization.
+
+#### Preferences
+
+Applies theme settings to the Preferences window itself, including tabs and panels.
+
+#### Properties
+
+Styles the Properties editor, which includes modifiers, materials, constraints, and more.
+
+#### Spreadsheet
+
+Controls cell background, grid lines, and selection colors for data views and attribute inspection.
+
+#### Text Editor
+
+Defines syntax highlighting, background, cursor, and line number colors for scripting and notes.
+
+#### Top Bar
+
+Customizes the global top menu bar and tool headers for consistent branding or visibility.
+
+#### Video Sequencer
+
+Sets strip colors, waveform display, and timeline elements for video editing workflows.
+
 
 
 ## Input
@@ -1214,11 +1518,14 @@ This tab contains some input related settings.
 
 ### Keyboard
 
+#### Emulate Numpad
 
-| Entry | What it does |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Emulate Numpad | Laptops usually doesn't have Numpad keys. Choose to use the number keys above the letters as Numpad keys. |
-| Default to advanced numeric input | When entering numbers while transforming default to advanced mode for full math expression evaluation. |
+Laptops usually doesn't have Numpad keys. Choose to use the number keys above the letters as Numpad keys.
+
+#### Default to advanced numeric input
+
+When entering numbers while transforming default to advanced mode for full math expression evaluation.
+
 
 
 ### Mouse
@@ -1251,11 +1558,14 @@ This panel contains some tablet related settings.
 
 Choose which API Bforartists should choose for the pressure sensitivity of your tablet.
 
+##### Max Threshold
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------ |
-| Max Threshold | The raw input pressure value which is interpreted as 100 % by Bforartists. |
-| Softness | Adjust the pressure softness of the low pressure response onset using a gamma curve. |
+The raw input pressure value which is interpreted as 100 % by Bforartists.
+
+##### Softness
+
+Adjust the pressure softness of the low pressure response onset using a gamma curve.
+
 
 
 ### Touchpad
@@ -1272,21 +1582,60 @@ Use multi touch gestures for navigation with touchpad instead of scroll wheel em
 
 You can use a 3D mouse in Bforartists. Here you find some 3D mouse related settings.
 
+#### Pan Sensitivity
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pan Sensitivity | Adjust the pan sensitivity. |
-| Orbit Sensitivity | Adjust the orbit sensitivity |
-| Deadzone | The initial movement that is needed before the movement gets recognized. |
-| Navigation | Choose the navigation style between Free and Orbit. |
-| Rotation | Adjust in what style you rotate the 3D View. Turntable and Trackball navigation reacts a bit different. Turntable navigation tries to hold the horizon line while rotation. Turntable rotation rotates also the horizon line. |
-| Show Navigation Guide | Display the axis and center during rotation. |
-| Invert Zoom | Zoom using opposite direction. |
-| Lock Camera Pan/Zoom | Pan / Zoom the camera view instead of leaving the camera view when orbitting. |
-| Pan Swap Y and X Axes | Pan uses up - down instead of forward - backward |
-| Invert Axis Pan | The invert axis for panning. Inactive axis are not inverted. |
-| Orbit | The axis to orbit around when panning. |
-| Fly / Walk | **Lock Horizon**: Keep horizon level while flying with 3D mouse. · **Helicopter Mode**: Using up/down directly controls the Z position in the 3D viewport. |
+Adjust the pan sensitivity.
+
+#### Orbit Sensitivity
+
+Adjust the orbit sensitivity
+
+#### Deadzone
+
+The initial movement that is needed before the movement gets recognized.
+
+#### Navigation
+
+Choose the navigation style between Free and Orbit.
+
+#### Rotation
+
+Adjust in what style you rotate the 3D View. Turntable and Trackball navigation reacts a bit different. Turntable navigation tries to hold the horizon line while rotation. Turntable rotation rotates also the horizon line.
+
+#### Show Navigation Guide
+
+Display the axis and center during rotation.
+
+#### Invert Zoom
+
+Zoom using opposite direction.
+
+#### Lock Camera Pan/Zoom
+
+Pan / Zoom the camera view instead of leaving the camera view when orbitting.
+
+#### Pan Swap Y and X Axes
+
+Pan uses up - down instead of forward - backward
+
+#### Invert Axis Pan
+
+The invert axis for panning. Inactive axis are not inverted.
+
+#### Orbit
+
+The axis to orbit around when panning.
+
+#### Fly / Walk
+
+##### Lock Horizon
+
+Keep horizon level while flying with 3D mouse.
+
+##### Helicopter Mode
+
+Using up/down directly controls the Z position in the 3D viewport.
+
 
 
 ## Navigation
@@ -1305,13 +1654,22 @@ Adjust in what style you rotate the 3D View. Turntable and Trackball navigation 
 
 The selected object becomes the rotation center of the viewport. When there is no selection the point of the last selection will be used.
 
+##### Auto Perspective
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Perspective | With Auto perspective off when you switch to one of the side views, then the chosen orthographic or perspectivic view is kept. Means when you have the distorted perspectivic view, and switch to top view, then your mesh will be perspectivic distorted here too. With Auto Perspective the view in the side views will be orthographic, and not perspectivic, no matter what View Persp/Ortho is chosen. |
-| Auto Depth | Use the depth under the mouse to improve view pan, rotate, zoom functionality. |
-| Smooth View | The switch to change to another view is animated. Adjust the length of time the animation takes when changing the view with the Numpad (Top/Side/Front/Camera...). A value of zero will remove the animation, and immediately switch to the chosen view. |
-| Rotation Angle | Rotation step size in degrees, when **Numpad4**, **Numpad6**, **Numpad8**, or **Numpad2** are used to rotate the 3D View. |
+With Auto perspective off when you switch to one of the side views, then the chosen orthographic or perspectivic view is kept. Means when you have the distorted perspectivic view, and switch to top view, then your mesh will be perspectivic distorted here too. With Auto Perspective the view in the side views will be orthographic, and not perspectivic, no matter what View Persp/Ortho is chosen.
+
+##### Auto Depth
+
+Use the depth under the mouse to improve view pan, rotate, zoom functionality.
+
+##### Smooth View
+
+The switch to change to another view is animated. Adjust the length of time the animation takes when changing the view with the Numpad (Top/Side/Front/Camera...). A value of zero will remove the animation, and immediately switch to the chosen view.
+
+##### Rotation Angle
+
+Rotation step size in degrees, when **Numpad4**, **Numpad6**, **Numpad8**, or **Numpad2** are used to rotate the 3D View.
+
 
 
 ### Zoom
@@ -1324,12 +1682,18 @@ The selected object becomes the rotation center of the viewport. When there is n
 
 Adjust the zoom style.
 
+##### Continue
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Continue | The *Continue* zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click point. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be. |
-| Dolly | *Dolly* zooming works similarly to *Continue* zooming except that zoom speed is constant. |
-| Scale | *Scale* zooming depends on where you first click in the view. |
+The *Continue* zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click point. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be.
+
+##### Dolly
+
+*Dolly* zooming works similarly to *Continue* zooming except that zoom speed is constant.
+
+##### Scale
+
+*Scale* zooming depends on where you first click in the view.
+
 
 
 #### Zoom Axis
@@ -1338,12 +1702,18 @@ Adjust the zoom style.
 
 With Vertical moving up zooms out and moving down zooms in. With Horizontal moving left zooms in and moving right zooms out.
 
+##### Invert Mouse Zoom Direction
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Invert Mouse Zoom Direction | Inverts the Zoom direction for **Dolly** and **Continue** zooming. |
-| Invert Wheel Zoom Direction | Inverts the direction of the mouse wheel zoom. |
-| Zoom to Mouse Position | When enabled, the mouse pointer position becomes the focus point of zooming instead of the 2D window center. |
+Inverts the Zoom direction for **Dolly** and **Continue** zooming.
+
+##### Invert Wheel Zoom Direction
+
+Inverts the direction of the mouse wheel zoom.
+
+##### Zoom to Mouse Position
+
+When enabled, the mouse pointer position becomes the focus point of zooming instead of the 2D window center.
+
 
 
 ### Fly & Walk
@@ -1362,26 +1732,44 @@ Adjust how the View navigation in the 3D view behaves. You can choose between wa
 
 ![Walk](/docs2/images/editors/preferences/walk.png)
 
+##### Reverse Mouse
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reverse Mouse | Reverse the mouse movement when you move upwards or downwards |
-| Horizontal Lock | Locks horizontal movement in Walk Mode, keeping the viewpoint level and aligned with the ground. This ensures stable navigation within scenes, preventing any vertical shifts and maintaining a consistent horizontal plane. This is a Bforartists exclusive feature. |
-| Mouse Sensitivity | Adjust how strong the viewport movement reacts to the mouse movement |
-| Teleport Duration | Adjust the teleport duration when teleporting in navigation mode. |
-| Walk Speed | Adjust the walk speed |
-| Speed Factor | Adjust the run speed. |
+Reverse the mouse movement when you move upwards or downwards
+
+##### Horizontal Lock
+
+Locks horizontal movement in Walk Mode, keeping the viewpoint level and aligned with the ground. This ensures stable navigation within scenes, preventing any vertical shifts and maintaining a consistent horizontal plane. This is a Bforartists exclusive feature.
+
+##### Mouse Sensitivity
+
+Adjust how strong the viewport movement reacts to the mouse movement
+
+##### Teleport Duration
+
+Adjust the teleport duration when teleporting in navigation mode.
+
+##### Walk Speed
+
+Adjust the walk speed
+
+##### Speed Factor
+
+Adjust the run speed.
+
 
 
 #### Gravity
 
 Choose if the virtual character, your point of view, uses gravity.
 
+##### View Height
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------ |
-| View Height | Adjust the height of the point of view for your virtual character. This setting requires to have Gravity on. |
-| Jump Height | Adjust the maximal jump height for your virtual character. This setting requires to have Gravity on. |
+Adjust the height of the point of view for your virtual character. This setting requires to have Gravity on.
+
+##### Jump Height
+
+Adjust the maximal jump height for your virtual character. This setting requires to have Gravity on.
+
 
 
 #### Fly
@@ -1408,13 +1796,22 @@ The key map allows you to customize how Bforartists reacts to mouse and keyboard
 
 A drop down menu to choose existing key maps. The + button at the right adds a new key map. The current configuration will then be saved as a new key map.
 
+##### Import
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------- |
-| Import | Import an external key map. This opens up a file selector to choose the python file. |
-| Export | Export a key configuration python file from Bforartists. |
-| Filter Type | Define if you want to search for a tool name or for a hotkey. By tool name, or by the hotkey name |
-| Search Field | Enter a search string. |
+Import an external key map. This opens up a file selector to choose the python file.
+
+##### Export
+
+Export a key configuration python file from Bforartists.
+
+##### Filter Type
+
+Define if you want to search for a tool name or for a hotkey. By tool name, or by the hotkey name
+
+##### Search Field
+
+Enter a search string.
+
 
 
 ### Key map Editor
@@ -1485,14 +1882,26 @@ The system tab contains system relevant settings. Such as Cuda for Cycles render
 
 The Options here will set the compute device used by the Cycles render engine.
 
+#### None
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| None | When set to *None* or the only option is *None*: your CPU will be used as a computing device for Cycles Render Engine. |
-| CUDA | If the system has a compatible Nvidia CUDA enabled graphics card you will be able to use it to render with the Cycles render engine. |
-| OptiX | Optix is a raytracing framework from Nvidia that runs on the GPU. |
-| HIP | If the system has a compatible HIP device, it will show up has an option for rendering cycles. |
-| OneAPI | If the system has a compatible oneAPI device, it will show up has an option for rendering cycles. |
+When set to *None* or the only option is *None*: your CPU will be used as a computing device for Cycles Render Engine.
+
+#### CUDA
+
+If the system has a compatible Nvidia CUDA enabled graphics card you will be able to use it to render with the Cycles render engine.
+
+#### OptiX
+
+Optix is a raytracing framework from Nvidia that runs on the GPU.
+
+#### HIP
+
+If the system has a compatible HIP device, it will show up has an option for rendering cycles.
+
+#### OneAPI
+
+If the system has a compatible oneAPI device, it will show up has an option for rendering cycles.
+
 
 
 #### Metal (Mac-OS only)
@@ -1511,11 +1920,14 @@ This setting is which display graphics will be used in the viewport.
 
 > **Note:** Changing this will require restarting Bforartists.
 
+##### OpenGL
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------- |
-| OpenGL | Use the OpenGL backend. |
-| Vulkan (Experimental) | Use the Vulkan backend. Bare in mind this is experimental. |
+Use the OpenGL backend.
+
+##### Vulkan (Experimental)
+
+Use the Vulkan backend. Bare in mind this is experimental.
+
 
 
 ### Operating System Settings
@@ -1526,11 +1938,14 @@ Windows only.
 
 Register or unregister to connect the blend file with this Bforartists version.
 
+#### For all Users
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| For all Users | Register the file association for all users, or just for the current user. |
-| Make default | Associates the .blend file with this installation of Bforartists. This means that double clicking at a .blend file will now open this file with the currently open Bforartists installation. This is useful when you work with different versions of Bforartists, and want to open the files with an older or newer version. |
+Register the file association for all users, or just for the current user.
+
+#### Make default
+
+Associates the .blend file with this installation of Bforartists. This means that double clicking at a .blend file will now open this file with the currently open Bforartists installation. This is useful when you work with different versions of Bforartists, and want to open the files with an older or newer version.
+
 
 
 ### Network
@@ -1541,29 +1956,56 @@ Allow or disallow Online Access.
 
 Online access is required to install extensions from external online repositories, and to update them.
 
+#### Allow Online Access
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Allow Online Access | Allow internet access. Bforartists may access configured online extension repositories. Installed third party add-ons may access the internet for their own functionality. |
-| Time Out | The time in seconds to wait for online operattions before a connection may fail with a time-out error. Zero uses the system defaults. |
-| Connection Limit | Limit the number of simultaneous internet connections online operations may make at once. Zero disables the limit. |
+Allow internet access. Bforartists may access configured online extension repositories. Installed third party add-ons may access the internet for their own functionality.
+
+#### Time Out
+
+The time in seconds to wait for online operattions before a connection may fail with a time-out error. Zero uses the system defaults.
+
+#### Connection Limit
+
+Limit the number of simultaneous internet connections online operations may make at once. Zero disables the limit.
+
 
 
 ### Memory and Limits
 
 ![Memory and Limits](/docs2/images/editors/preferences/memory-and-limits.png)
 
+#### Undo Steps
 
-| Entry | What it does |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Undo Steps | Number of Undo steps available. |
-| Undo Memory Limit | Maximum memory usage in Mb (0 is unlimited). |
-| Global Undo | Bforartists Undo system is split in several subpart. Global undo stores the undo step outside of Edit mode. For example for duplicating Objects, changing panel settings or switching between modes. |
-| Console Scrollback Lines | Maximum number of lines to store for the console buffer. |
-| Texture Time Out | Time since last access of a GL texture in seconds, after which it is freed. Set to 0 to keep textures allocated. Minimum: *0*, Maximum: *3600*. |
-| Garbage Collection Rate | Number of seconds between each run of the GL texture garbage collector. Minimum: *0*, Maximum: *3600*. |
-| VBO Time Out | Time since last access of a GL Vertex buffer object, in short VBO, in seconds after which it is freed. Set to 0 to keep VBO allocated. |
-| Garbage Collection Rate | Number of seconds between each run of the GL vertex buffer garbage collector. Minimum: *0*, Maximum: *3600*. |
+Number of Undo steps available.
+
+#### Undo Memory Limit
+
+Maximum memory usage in Mb (0 is unlimited).
+
+#### Global Undo
+
+Bforartists Undo system is split in several subpart. Global undo stores the undo step outside of Edit mode. For example for duplicating Objects, changing panel settings or switching between modes.
+
+#### Console Scrollback Lines
+
+Maximum number of lines to store for the console buffer.
+
+#### Texture Time Out
+
+Time since last access of a GL texture in seconds, after which it is freed. Set to 0 to keep textures allocated. Minimum: *0*, Maximum: *3600*.
+
+#### Garbage Collection Rate
+
+Number of seconds between each run of the GL texture garbage collector. Minimum: *0*, Maximum: *3600*.
+
+#### VBO Time Out
+
+Time since last access of a GL Vertex buffer object, in short VBO, in seconds after which it is freed. Set to 0 to keep VBO allocated.
+
+#### Garbage Collection Rate
+
+Number of seconds between each run of the GL vertex buffer garbage collector. Minimum: *0*, Maximum: *3600*.
+
 
 
 ### Video Sequencer
@@ -1578,11 +2020,14 @@ Upper limit of the sequence's memory cache (megabytes). For optimum clip editor 
 
 Store cached images to disk.
 
+##### Directory
 
-| Entry | What it does |
-| ----------- | ---------------------------------- |
-| Directory | The disk cache directory. |
-| Cache Limit | The disk cache limit in gigabytes. |
+The disk cache directory.
+
+##### Cache Limit
+
+The disk cache limit in gigabytes.
+
 
 
 ##### Compression
@@ -1597,11 +2042,14 @@ What compression method to use. Note that compression saves space, but costs per
 
 Proxies are preview objects, reduced in size to make a smooth working possible. Images for example.
 
+##### Automatic
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------- |
-| Automatic | Automatically create proxies for each image material. |
-| Manual | You have to create the proxies by hand. |
+Automatically create proxies for each image material.
+
+##### Manual
+
+You have to create the proxies by hand.
+
 
 
 ### Sound
@@ -1614,13 +2062,22 @@ Proxies are preview objects, reduced in size to make a smooth working possible. 
 
 Set the audio device.
 
+##### OpenAL
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------------------------------------------------------------------- |
-| OpenAL | Provides buffered sound rendering with 3D/spatial support. |
-| OpenAL - OpenAL Soft | Provides buffered sound rendering with 3D/spatial support. |
-| SDL | Uses Simple Direct Media Layer API from libsdl.org to render sounds directly to the sound device output. |
-| Null | No Audio support. No audio output, but audio strips can be loaded normally. |
+Provides buffered sound rendering with 3D/spatial support.
+
+##### OpenAL - OpenAL Soft
+
+Provides buffered sound rendering with 3D/spatial support.
+
+##### SDL
+
+Uses Simple Direct Media Layer API from libsdl.org to render sounds directly to the sound device output.
+
+##### Null
+
+No Audio support. No audio output, but audio strips can be loaded normally.
+
 
 
 #### Channels
@@ -1655,14 +2112,26 @@ Set the audio sample format. Available options are: *32 bit float*, *8 bit Unsig
 
 Blend file related settings. What happens at load, what happens at save …
 
+#### Save Prompt
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Save Prompt | Ask for confirmation when quitting with unsaved changes. |
-| Relative Paths | By default, external files use a relative path. |
-| Compress File | Compress blend-file when saving. The option to Compress files will compact your files whenever Blender is saving them. Dense meshes, large packed textures or lots of elements in your scene will result in a large blend being created. This option may slow down Blender when you quit, or under normal operation when Blender is saving your backup files. Using this option traces processor time for file-size. |
-| Load UI | In Bforartists you can load the scene in the screen layout in which you have saved it. Default is off. This can also be changed individually when loading a file from the *Open blend-file* panel of the File Browser. |
-| Tabs as Spaces | For text files, automatically convert tabs into spaces when loading a blend file that contains a text file. Correct indentation is relevant for python scripts. |
+Ask for confirmation when quitting with unsaved changes.
+
+#### Relative Paths
+
+By default, external files use a relative path.
+
+#### Compress File
+
+Compress blend-file when saving. The option to Compress files will compact your files whenever Blender is saving them. Dense meshes, large packed textures or lots of elements in your scene will result in a large blend being created. This option may slow down Blender when you quit, or under normal operation when Blender is saving your backup files. Using this option traces processor time for file-size.
+
+#### Load UI
+
+In Bforartists you can load the scene in the screen layout in which you have saved it. Default is off. This can also be changed individually when loading a file from the *Open blend-file* panel of the File Browser.
+
+#### Tabs as Spaces
+
+For text files, automatically convert tabs into spaces when loading a blend file that contains a text file. Correct indentation is relevant for python scripts.
+
 
 
 #### Save Versions
@@ -1671,31 +2140,56 @@ Number of versions created for the same file (for backup).
 
 This option tells Bforartists to keep the indicated number of saved versions of your file in your current working directory when you manually save a file. These files will have the extension: *.blend1*, *.blend2*, etc., with the number increasing to the number of versions you specify. Older files will be named with a higher number. e.g. With the default setting of 2, you will have three versions of your file: `*.blend` (your last save), `*.blend1` (your second last save) and `*.blend2` (your third last save).
 
+##### Recent Files
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Recent Files | The number of recent files to display in the Recent panel. |
-| Save Modified Images | **Ask Every Time**: Show dialog to save modified images when saving the .blend file. · **Always Save**: Always save modified images when saving the .blend file. · **Never Save**: Never save modified images when saving the .blend file. |
+The number of recent files to display in the Recent panel.
+
+##### Save Modified Images
+
+###### Ask Every Time
+
+Show dialog to save modified images when saving the .blend file.
+
+###### Always Save
+
+Always save modified images when saving the .blend file.
+
+###### Never Save
+
+Never save modified images when saving the .blend file.
+
 
 
 #### File Preview
 
+##### None
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| None | When this option is off, previews of images and materials in the File Browser are created on demand. |
-| Auto | Automatically create previews of images and materials in the File Browser. The best preview type is chosen automatically. |
-| Screenshot | Capture the entire window to create previews of images and materials in the File Browser. |
-| Camera Preview | Use a workbench render to create the previews of images and materials in the File Browser. |
+When this option is off, previews of images and materials in the File Browser are created on demand.
+
+##### Auto
+
+Automatically create previews of images and materials in the File Browser. The best preview type is chosen automatically.
+
+##### Screenshot
+
+Capture the entire window to create previews of images and materials in the File Browser.
+
+##### Camera Preview
+
+Use a workbench render to create the previews of images and materials in the File Browser.
+
 
 
 ##### Auto Save
 
+###### Auto Save Temporary File
 
-| Entry | What it does |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Save Temporary File | Enable Auto Save. Auto save creates a temporary file. Checking this box tells Bforartists to **automatically** save a backup copy of your work-in-progress to the Temp directory (refer to the **File** tab in the **Preferences** for its location). The Auto Saved files are named using a random number and have a blend extension. |
-| Timer | Adjust the number of minutes between each Auto Save. The minimum is 1, and the Maximum is 60 (Save at every one hour). |
+Enable Auto Save. Auto save creates a temporary file. Checking this box tells Bforartists to **automatically** save a backup copy of your work-in-progress to the Temp directory (refer to the **File** tab in the **Preferences** for its location). The Auto Saved files are named using a random number and have a blend extension.
+
+###### Timer
+
+Adjust the number of minutes between each Auto Save. The minimum is 1, and the Maximum is 60 (Save at every one hour).
+
 
 
 ##### Auto Run Python Scripts
@@ -1742,13 +2236,22 @@ Contains everything file path related.
 
 ### Data
 
+#### Fonts
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------- |
-| Fonts | Default location when searching for font files. |
-| Textures | Default location when searching for image textures. |
-| Sounds | Default location when searching for sound files. |
-| Temporary Files | The location where temporary files are stored. |
+Default location when searching for font files.
+
+#### Textures
+
+Default location when searching for image textures.
+
+#### Sounds
+
+Default location when searching for sound files.
+
+#### Temporary Files
+
+The location where temporary files are stored.
+
 
 
 ### Script Directories
@@ -1784,22 +2287,28 @@ Python scripts (including driver expressions) are not executed by default for se
 
 ![Render](/docs2/images/editors/preferences/render.png)
 
+#### Render Output
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------- |
-| Render Output | Where rendered images/videos are saved. |
-| Render Cache | The location where cached render images are stored. |
+Where rendered images/videos are saved.
+
+#### Render Cache
+
+The location where cached render images are stored.
+
 
 
 ### Applications
 
 ![Applications](/docs2/images/editors/preferences/applications.png)
 
+#### Image Editor
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Editor | The path to an external image editing software to use for image editing. Photoshop, Gimp, etc. |
-| Animation Player | By default Bforartists uses the internal player to play back animations. Choose an external program to use for playback of rendered animations. There are also some presets available. |
+The path to an external image editing software to use for image editing. Photoshop, Gimp, etc.
+
+#### Animation Player
+
+By default Bforartists uses the internal player to play back animations. Choose an external program to use for playback of rendered animations. There are also some presets available.
+
 
 
 #### Text Editor
@@ -1842,13 +2351,22 @@ To remove a path click at the X button at the end.
 
 The list of available asset libraries. You can deactivate and activate single libraries.
 
+##### Add
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------ |
-| Add | Add a new asset library to the asset list. |
-| Remove | Remove the selected library from the asset list. |
-| Move Up/Down | Move the selected library up or down the list. |
-| Path | The path to the current selected asset library. |
+Add a new asset library to the asset list.
+
+##### Remove
+
+Remove the selected library from the asset list.
+
+##### Move Up/Down
+
+Move the selected library up or down the list. This is available for remote libraries. The order of the list sets the order in which the libraries appear in the Asset Browser.
+
+##### Path
+
+The path to the current selected asset library.
+
 
 
 #### Import Method
@@ -1857,12 +2375,17 @@ The list of available asset libraries. You can deactivate and activate single li
 
 How to import the assets from the asset library into the scene.
 
+##### Append (Reuse Data)
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Append (Reuse Data) | Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes. |
-| Append | Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data. |
-| Link | Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed. |
+Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes.
+
+##### Append
+
+Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data.
+
+##### Link
+
+Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed.
 
 
 #### Relative Path
