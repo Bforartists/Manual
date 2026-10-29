@@ -162,6 +162,28 @@ The Inpaint node is used to extend borders of an image into transparent or maske
 | Outputs | **Image**: Standard image output. |
 
 
+### Mask To SDF
+
+![Mask To SDF](/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf.png)
+
+Turns a black and white mask into a distance map. Every pixel is given its distance to the nearest edge of the mask. Use it to grow or shrink a mask smoothly, to make soft glows that follow a shape, or to make outlines of any width. The sign of the value tells whether a pixel is inside or outside the mask.
+
+#### Inputs
+
+##### Mask
+
+The mask to measure. White (true) pixels are inside the shape.
+
+#### Outputs
+
+##### SDF
+
+The distance of each pixel to the edge, in pixels.
+
+##### Nearest Pixel
+
+The position of the nearest pixel of the shape, as two whole numbers.
+
 ### Filter
 
 ![Filter](/docs2/images/editors/compositor/header/add-menu-filter/filter.png)
