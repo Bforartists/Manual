@@ -315,7 +315,7 @@ The input geometry.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Input Value.
 
@@ -337,7 +337,7 @@ The resample amount with method Factor.
 
 ##### Length
 
-Data type: Float (distance).
+Data type: follows the Data Type setting.
 
 The resample amount with method Length.
 
@@ -365,7 +365,7 @@ Sample lengths based on the length of all curves.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Output Value.
 
