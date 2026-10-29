@@ -150,7 +150,7 @@ The type of the values that are switched, and of the output. In the Shader Edito
 
 ##### Output
 
-Data type: Color.
+Data type: follows the Data Type setting.
 
 The value of the chosen item.
 
@@ -205,7 +205,7 @@ Determines the type of the data that is handled by the node.
 
 ##### Output
 
-Data type: Color.
+Data type: follows the Data Type setting.
 
 The output index.
 
@@ -403,31 +403,31 @@ The Map Range node remaps a value from a range to a target range.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to be remapped.
 
 ##### From Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The lower bound of the range to remap from.
 
 ##### From Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The higher bound of the range to remap from.
 
 ##### To Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The lower bound of the target range.
 
 ##### To Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The higher bound of the target range.
 
@@ -469,7 +469,7 @@ If enabled, the output is clamped to the target range.
 
 ##### Result
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value after remapping.
 
@@ -643,7 +643,7 @@ Clamp the input factor to 0-1 range.
 
 ##### Result
 
-Data type: Float or Vector or Color or Rotation.
+Data type: follows the Data Type setting.
 
 The output value or vector.
 
@@ -684,31 +684,31 @@ The Map Range node remaps a value from a range to a target range.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to be remapped.
 
 ##### From Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The lower bound of the range to remap from.
 
 ##### From Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The higher bound of the range to remap from.
 
 ##### To Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The lower bound of the target range.
 
 ##### To Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 The higher bound of the target range.
 
@@ -744,7 +744,7 @@ If enabled, the output is clamped to the target range.
 
 ##### Result
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value after remapping.
 
