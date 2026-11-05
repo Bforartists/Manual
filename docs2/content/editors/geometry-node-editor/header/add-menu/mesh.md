@@ -97,8 +97,6 @@ Data type: Float.
 
 The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle.
 
-
-
 ### Edge Neighbours
 
 ![Edge Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-neighbours.png)
@@ -143,8 +141,6 @@ Data type: Vector.
 
 The position of the second vertice.
 
-
-
 ### Edges to Face Group
 
 ![Edges to Face Group](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edges-to-face-group.png)
@@ -162,8 +158,6 @@ The input edges.
 ##### Face Group ID
 
 The output face group.
-
-
 
 ### Face Area
 
@@ -205,8 +199,6 @@ The edges that lies on the boundaries between the different face sets
 
 The face count for the face neighbors.
 
-
-
 ### Face Neighbours
 
 ![Face Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-neighbours.png)
@@ -222,8 +214,6 @@ The vertex count for the face neighbors.
 ##### Face Count
 
 The face count for the face neighbors.
-
-
 
 ### Is Face Planar
 
@@ -246,8 +236,6 @@ The threshold to consinder the points to be at the same plane.
 Data type: Boolean.
 
 True if the face is planar.
-
-
 
 ### Is Face Smooth
 
@@ -295,8 +283,6 @@ Data type: Integer.
 
 The count output.
 
-
-
 ### Shortest Edge Path
 
 ![Shortest Edge Path](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/shortest-edge-path.png)
@@ -323,8 +309,6 @@ The vertices index of the shortest path.
 
 The calculation amount.
 
-
-
 ### Vertex Neighbors
 
 ![Vertex Neighbors](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/vertex-neighbors.png)
@@ -344,7 +328,6 @@ The vertex count for the vertex neighbors.
 Data type: Integer.
 
 The face count for the vertex neighbors.
-
 
 # Sample
 
@@ -392,8 +375,6 @@ Data type: Integer.
 
 Determines in which group the closest nearest surface is detected.
 
-
-
 ##### Properties
 
 ##### Data Type
@@ -415,8 +396,6 @@ The output value.
 Data type: Boolean.
 
 Wether the sampling was successful. It is false when the sampled group is empty.
-
-
 
 ### Sample UV Surface
 
@@ -448,8 +427,6 @@ Data type: Vector.
 
 The sample position to calculate.
 
-
-
 ##### Properties
 
 ##### Data Type
@@ -471,7 +448,6 @@ The output value.
 Data type: Boolean.
 
 Wether the node could find a single face to sample at the uv coordinate.
-
 
 # Write
 
@@ -520,8 +496,6 @@ Sets the normal sharpness to the edge domain to “flat”.
 ###### Face Sharpness
 
 Sets the normal sharpness to the face domain to “flat”.
-
-
 
 ##### Free
 
@@ -585,8 +559,6 @@ Data type: Boolean.
 
 Set the shading to smooth.
 
-
-
 #### Properties
 
 ##### Domain
@@ -598,8 +570,6 @@ Set Edge to smooth.
 ###### Face
 
 Set Face to smooth
-
-
 
 #### Outputs
 
@@ -643,8 +613,6 @@ Data type: Geometry.
 
 The output mesh.
 
-
-
 ### Edge Paths to Curves
 
 ![Edge Paths to Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-paths-to-curves.png)
@@ -679,8 +647,6 @@ Data type: Geometry.
 
 The output curve.
 
-
-
 ### Edge Path to Selection
 
 ![Edge Path to Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-path-to-selection.png)
@@ -702,8 +668,6 @@ The edge path by index.
 ##### Selection
 
 The selection
-
-
 
 ### Extrude Mesh
 
@@ -743,8 +707,6 @@ Data type: Boolean.
 
 Just Faces mode. Extrude out individual faces.
 
-
-
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/properties.png)
@@ -772,8 +734,6 @@ The top elements of the extrusion.
 Data type: Boolean.
 
 The side elements of the extrusion.
-
-
 
 ### Flip Faces
 
@@ -804,7 +764,135 @@ A selection of the input mesh.
 
 The output mesh.
 
+### Mesh Bevel
 
+![Mesh Bevel](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-bevel.png)
+
+Rounds off the sharp edges or corners of a mesh. A bevel cuts a small slope or curve into the edge so that it catches light and looks less like a computer-made corner. This is useful on hard-surface models such as furniture, machines and buildings. The node works only on the edges or vertices you select, so you can bevel just the outer edges and leave the rest sharp.
+
+#### Inputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The mesh to bevel.
+
+##### Selection
+
+Data type: Boolean.
+
+Which elements are affected. Elements that are not selected are left as they are.
+
+##### Affect Kind
+
+Data type: Menu.
+
+What is beveled: **Edges** rounds the selected edges. **Vertices** rounds the selected corners.
+
+##### Start Left Offset
+
+Data type: Float (distance).
+
+Edges only. How far the bevel reaches into the face on the left of the edge, measured at the start of the edge.
+
+##### Start Right Offset
+
+Data type: Float (distance).
+
+Edges only. The same for the face on the right of the edge.
+
+##### End Left Offset
+
+Data type: Float (distance).
+
+Edges only. How far the bevel reaches on the left side at the end of the edge.
+
+##### End Right Offset
+
+Data type: Float (distance).
+
+Edges only. The same for the right side at the end of the edge. Use different start and end values to make a bevel that changes width along the edge, and different left and right values to make it lopsided.
+
+##### Offset
+
+Data type: Float (distance).
+
+Vertices only. How far the bevel reaches along the edges that meet at the corner.
+
+##### Miter
+
+Data type: Boolean.
+
+On: where several beveled edges meet, the outer edges of the bevel are carried on to a sharp corner instead of being rounded off.
+
+##### Spread
+
+Data type: Float (distance).
+
+How far the mitered corner reaches. It only has an effect when Miter is on.
+
+##### Segments
+
+Data type: Integer.
+
+How many faces the bevel is made of. 1 gives a flat slope. Higher values give a smoother curve.
+
+##### Shape
+
+Data type: Float (factor).
+
+The profile of the bevel. 0.5 is a circular arc. Move the value away from 0.5 to bow the profile in or out.
+
+##### Profile
+
+Data type: Geometry.
+
+Optional. A curve that replaces the Shape setting with a profile you draw yourself.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The beveled mesh.
+
+##### Vertex Face
+
+Data type: Boolean.
+
+Selection of the new faces that were made at beveled corners.
+
+##### Edge Face
+
+Data type: Boolean.
+
+Selection of the new faces that were made along beveled edges.
+
+##### Outer Edge
+
+Data type: Boolean.
+
+Selection of the edges on the outer border of the bevel.
+
+##### Mid Edge
+
+Data type: Boolean.
+
+Selection of the edges that run along the middle of the bevel.
+
+#### How to use
+
+Connect a mesh, for example a Cube node, to Mesh and connect the Mesh output to the Group Output. With the defaults all edges are beveled by 0.1 m with one segment. Raise **Segments** to make the bevel round. Plug a Compare node or an Edge Angle node into **Selection** to bevel only the sharp edges.
+
+A default cube shows the effect on the number of mesh elements:
+
+- Edges, 1 segment: 24 vertices and 26 faces.
+- Edges, 3 segments: 96 vertices and 98 faces.
+- Vertices, 1 segment: 24 vertices and 14 faces.
+
+Use the four selection outputs to add detail only to the new geometry, for example to give the Edge Face selection a different material with Set Material.
 
 ### Mesh Boolean
 
@@ -836,8 +924,6 @@ Data type: Boolean.
 
 Allow holes.
 
-
-
 #### Properties
 
 ##### Operation
@@ -858,8 +944,6 @@ The two input pieces of geometry are joined, then any interior elements are remo
 
 Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept).
 
-
-
 ##### Solver
 
 ![Solver](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/solver.png)
@@ -876,8 +960,6 @@ Exact solver for the most accurate result.
 
 Fastest solver with best result, but only works on manifold meshes.
 
-
-
 #### Output
 
 ##### Geometry
@@ -889,8 +971,6 @@ Standard geometry output.
 Data type: Boolean.
 
 Outputs the intersecting edges.
-
-
 
 ### Mesh to Curve
 
@@ -925,8 +1005,6 @@ Edges or Faces.
 Data type: Geometry.
 
 Standard curve output.
-
-
 
 ### Mesh to Density Grid
 
@@ -966,8 +1044,6 @@ The width of the gradient.
 
 Density Grid output.
 
-
-
 ### Mesh to Points
 
 ![Mesh to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-points.png)
@@ -999,8 +1075,6 @@ The position of the points.
 Data type: Float (distance).
 
 The radius of the points
-
-
 
 #### Properties
 
@@ -1048,8 +1122,6 @@ The width of the band.
 
 Density Grid output.
 
-
-
 ### Mesh to Volume
 
 ![Mesh to Volume](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-volume.png)
@@ -1070,8 +1142,6 @@ Data type: Float.
 
 The density of the volume
 
-
-
 ##### Resolution Mode
 
 Data type: Menu.
@@ -1087,8 +1157,6 @@ The voxel amount / the voxel size.
 ###### Interior Bandwidth
 
 Where to start the calculation inside of the volume.
-
-
 
 #### Outputs
 
@@ -1129,8 +1197,6 @@ The scale factor
 Data type: Vector (translation).
 
 The center of the scaling.
-
-
 
 ##### Scale Mode
 
@@ -1196,8 +1262,6 @@ Data type: Geometry.
 
 Standard Mesh output.
 
-
-
 ### Subdivide Mesh
 
 ![Subdivide Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/subdivide-mesh.png)
@@ -1221,8 +1285,6 @@ To which degree the geometry will be deformed.
 ##### Geometry
 
 Standard geometry output.
-
-
 
 ### Subdivision Surface
 
@@ -1262,8 +1324,6 @@ Data type: Boolean.
 
 Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape.
 
-
-
 ##### UV Smooth
 
 Data type: Menu.
@@ -1302,8 +1362,6 @@ Standard geometry input.
 
 Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons.
 
-
-
 #### Properties
 
 ##### Quad Method
@@ -1332,8 +1390,6 @@ Split the quads based on the shortest diagonal distance between their vertices.
 
 Split the quads based on the longest diagonal distance between their vertices.
 
-
-
 ##### Polygon Method
 
 ![Polygon Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/polygon-method.png)
@@ -1347,8 +1403,6 @@ Arrange the new triangles nicely, slower method.
 ###### Clip
 
 Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering).
-
-
 
 #### Outputs
 
@@ -1408,8 +1462,6 @@ Data type: Float (distance).
 
 The initial height.
 
-
-
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
@@ -1429,8 +1481,6 @@ The circle face is a N-Gon face.
 ###### Triangles
 
 The circle face is triangulated.
-
-
 
 #### Outputs
 
@@ -1464,8 +1514,6 @@ Data type: Vector.
 
 UV map output.
 
-
-
 ### Cube
 
 ![Cube](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cube.png)
@@ -1497,8 +1545,6 @@ Mesh output.
 Data type: Vector.
 
 UV map output.
-
-
 
 ### Cylinder
 
@@ -1538,8 +1584,6 @@ Data type: Float (distance).
 
 The initial height.
 
-
-
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
@@ -1559,8 +1603,6 @@ The circle face is a N-Gon face.
 ###### Triangles
 
 The circle face is triangulated.
-
-
 
 #### Outputs
 
@@ -1593,8 +1635,6 @@ The depth output
 Data type: Vector.
 
 UV map output.
-
-
 
 ### Grid
 
@@ -1634,8 +1674,6 @@ Data type: Vector.
 
 UV map output.
 
-
-
 ### Ico Sphere
 
 ![Ico Sphere](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/ico-sphere.png)
@@ -1670,8 +1708,6 @@ Data type: Vector.
 
 UV map output.
 
-
-
 ### Mesh Circle
 
 ![Mesh Circle](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mesh-circle.png)
@@ -1692,8 +1728,6 @@ Data type: Float (distance).
 
 The initial radius.
 
-
-
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
@@ -1713,8 +1747,6 @@ The circle face is a N-Gon face.
 ###### Triangles
 
 The circle face is triangulated.
-
-
 
 #### Outputs
 
@@ -1749,8 +1781,6 @@ The initial location.
 Data type: Vector (translation).
 
 The initial offset.
-
-
 
 #### Properties
 
@@ -1826,7 +1856,6 @@ Data type: Vector.
 
 UV map output.
 
-
 # Topology
 
 ## Add menu - Mesh - Topology
@@ -1873,8 +1902,6 @@ Data type: Integer.
 
 The number of corners in the face.
 
-
-
 ### Corners of Face
 
 ![Corners of Face](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-face.png)
@@ -1914,8 +1941,6 @@ The output corner.
 Data type: Integer.
 
 The number of corners in the face.
-
-
 
 ### Corners of Vertex
 
@@ -1957,8 +1982,6 @@ Data type: Integer.
 
 The number of corners connected to each vertice.
 
-
-
 ### Edges of Corner
 
 ![Edges of Corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/edges-of-corner.png)
@@ -1986,8 +2009,6 @@ The edge behind the corner.
 Data type: Integer.
 
 The edge before the corner.
-
-
 
 ### Edges of Vertex
 
@@ -2029,8 +2050,6 @@ Data type: Integer.
 
 The number of edges connected to each vertice.
 
-
-
 ### Face of Corner
 
 ![Face of Corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/face-of-corner.png)
@@ -2058,8 +2077,6 @@ The output faces.
 Data type: Integer.
 
 The index of the corner, starting from the first corner in the face.
-
-
 
 ### Offset Corner in Face
 
@@ -2089,8 +2106,6 @@ Data type: Integer.
 
 The index of the offset corner.
 
-
-
 ### Vertex of corner
 
 ![Vertex of corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/vertex-of-corner.png)
@@ -2116,7 +2131,6 @@ The numbers of corners to move around the face before getting the result. It cir
 Data type: Integer.
 
 The vertex each corner is attached to.
-
 
 # UV
 
@@ -2158,8 +2172,6 @@ Data type: Boolean.
 
 Rotate island for best fit.
 
-
-
 ##### Method
 
 Data type: Menu.
@@ -2175,8 +2187,6 @@ Bottom left corner of packing bounds.
 ###### Top Right
 
 Top right corner of packing bounds.
-
-
 
 #### Outputs
 
@@ -2247,8 +2257,6 @@ How big the gap between the single UV patches should be.
 Data type: Boolean.
 
 Virtually fill holes before unwrapping the mesh. This preserves symmetry and can avoids overlaps.
-
-
 
 ##### Method
 
