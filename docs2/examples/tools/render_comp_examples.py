@@ -5,7 +5,7 @@ HOW TO USE (no agent needed)
 2. Set OUT (writable folder), EXAMPLE (the 480x300 example image) and SPECS.
 3. For every asset a scene "<PREFIX> <Name>" is created: a camera (needed to render, not seen), the example image,
    the asset node group with its DEFAULT values and the output. The render is saved as <OUT>/<slug>-after.png.
-   SPECS kind: "image" = example image goes into the input "Image"; "pattern" = the first output is shown (patterns cover the image by default); anything else is skipped.
+   SPECS kind: "image" = example image goes into the input named by "input" (default "Image") and the output named by "output" (default "Image"); "pattern" = the first output is shown (patterns cover the image by default); anything else is skipped.
 4. The scenes stay in the file, so the picture can be re-rendered with F12 (Render > Render Image) at any time.
 Render settings: 480 x 300, 100 %, PNG. The scene notes are in the scene custom property 'capture'.
 """
@@ -35,10 +35,10 @@ def build(name, spec, img):
     out = tree.nodes.new("NodeGroupOutput"); out.location = (650, 0)
     if spec["kind"] == "image":
         im = tree.nodes.new("CompositorNodeImage"); im.image = img; im.location = (0, 0)
-        tree.links.new(im.outputs[0], gn.inputs["Image"])
-        tree.links.new(gn.outputs["Image"], out.inputs[0])
+        tree.links.new(im.outputs[0], gn.inputs[spec.get("input", "Image")])
+        tree.links.new(gn.outputs[spec.get("output", "Image")], out.inputs[0])
     else:
-        tree.links.new(gn.outputs[0], out.inputs[0])
+        tree.links.new(gn.outputs[spec.get("output", 0)], out.inputs[0])
     for k, v in spec.get("set", {}).items(): gn.inputs[k].default_value = v
     sc["capture"] = json.dumps({"type": "Compositor example", "setup": "example image > " + name + " (default values) > output",
                                 "render": "480x300, 100 %, PNG", "image": "the render is the 'after' picture; 'before' is " + EXAMPLE,

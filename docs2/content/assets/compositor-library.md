@@ -4152,12 +4152,3626 @@ The pattern with default values:
 
 # Texture / Shapes
 
-_Assets in this category will be documented here._
+Assets that draw a vector shape: curves, flowers, hearts and polygons. They cover the whole image by default, and Value is the smooth shape while Mask is the sharp one.
+
+## Ampersand Curve
+
+![Ampersand Curve asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ampersand-curve.png)
+
+![Ampersand Curve](/docs2/images/assets/compositor-library/shapes/ampersand-curve.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Ampersand Curve output](/docs2/images/assets/compositor-library/shapes/ampersand-curve-output.png)
+
+## Astroid
+
+![Astroid asset thumbnail](/docs2/images/assets/compositor-library/thumbs/astroid.png)
+
+![Astroid](/docs2/images/assets/compositor-library/shapes/astroid.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Astroid output](/docs2/images/assets/compositor-library/shapes/astroid-output.png)
+
+## Bean
+
+![Bean asset thumbnail](/docs2/images/assets/compositor-library/thumbs/bean.png)
+
+![Bean](/docs2/images/assets/compositor-library/shapes/bean.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Size
+
+Data type: Float.
+
+The scale of the shape. Default: 0.5.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Size sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Bean output](/docs2/images/assets/compositor-library/shapes/bean-output.png)
+
+## Bicorn
+
+![Bicorn asset thumbnail](/docs2/images/assets/compositor-library/thumbs/bicorn.png)
+
+![Bicorn](/docs2/images/assets/compositor-library/shapes/bicorn.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Bicorn output](/docs2/images/assets/compositor-library/shapes/bicorn-output.png)
+
+## Bicuspid Curve
+
+![Bicuspid Curve asset thumbnail](/docs2/images/assets/compositor-library/thumbs/bicuspid-curve.png)
+
+![Bicuspid Curve](/docs2/images/assets/compositor-library/shapes/bicuspid-curve.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Value of the second vector input.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Bicuspid Curve output](/docs2/images/assets/compositor-library/shapes/bicuspid-curve-output.png)
+
+## Boat Propeller
+
+![Boat Propeller asset thumbnail](/docs2/images/assets/compositor-library/thumbs/boat-propeller.png)
+
+![Boat Propeller](/docs2/images/assets/compositor-library/shapes/boat-propeller.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Boat Propeller output](/docs2/images/assets/compositor-library/shapes/boat-propeller-output.png)
+
+## Brush Tip
+
+![Brush Tip asset thumbnail](/docs2/images/assets/compositor-library/thumbs/brush-tip.png)
+
+![Brush Tip](/docs2/images/assets/compositor-library/shapes/brush-tip.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Brush Tip output](/docs2/images/assets/compositor-library/shapes/brush-tip-output.png)
+
+## Bullet Nose
+
+![Bullet Nose asset thumbnail](/docs2/images/assets/compositor-library/thumbs/bullet-nose.png)
+
+![Bullet Nose](/docs2/images/assets/compositor-library/shapes/bullet-nose.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Bullet Nose output](/docs2/images/assets/compositor-library/shapes/bullet-nose-output.png)
+
+## Burnside Curve
+
+![Burnside Curve asset thumbnail](/docs2/images/assets/compositor-library/thumbs/burnside-curve.png)
+
+![Burnside Curve](/docs2/images/assets/compositor-library/shapes/burnside-curve.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Burnside Curve output](/docs2/images/assets/compositor-library/shapes/burnside-curve-output.png)
+
+## Butterfly 1
+
+![Butterfly 1 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/butterfly-1.png)
+
+![Butterfly 1](/docs2/images/assets/compositor-library/shapes/butterfly-1.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 4.
+
+#### Offset
+
+Data type: Float.
+
+The offset of the shape. Default: 1.
+
+#### Number of Wings
+
+Data type: Integer.
+
+The number of wings the shape will have. Default: 4.
+
+#### Form
+
+Data type: Float.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Offset moves it. Number of Wings sets the wings. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Butterfly 1 output](/docs2/images/assets/compositor-library/shapes/butterfly-1-output.png)
+
+## Butterfly 2
+
+![Butterfly 2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/butterfly-2.png)
+
+![Butterfly 2](/docs2/images/assets/compositor-library/shapes/butterfly-2.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Offset
+
+Data type: Float.
+
+The offset of the shape. Default: 0.
+
+#### Form
+
+Data type: Vector.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: (2, 6, 6).
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Offset moves it. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Butterfly 2 output](/docs2/images/assets/compositor-library/shapes/butterfly-2-output.png)
+
+## Capsule
+
+![Capsule asset thumbnail](/docs2/images/assets/compositor-library/thumbs/capsule.png)
+
+![Capsule](/docs2/images/assets/compositor-library/shapes/capsule.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Dimensions
+
+Data type: Vector.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: (0.5, 1).
+
+#### Radius
+
+Data type: Float.
+
+The offset of the shape. Default: 0.5.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Dimensions set its width and height. Radius sets its roundness. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Capsule output](/docs2/images/assets/compositor-library/shapes/capsule-output.png)
+
+## Cardioid
+
+![Cardioid asset thumbnail](/docs2/images/assets/compositor-library/thumbs/cardioid.png)
+
+![Cardioid](/docs2/images/assets/compositor-library/shapes/cardioid.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Form
+
+Data type: Vector.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: (0.5, 0.5).
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Cardioid output](/docs2/images/assets/compositor-library/shapes/cardioid-output.png)
+
+## Circumcircle
+
+![Circumcircle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/circumcircle.png)
+
+![Circumcircle](/docs2/images/assets/compositor-library/shapes/circumcircle.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Point A
+
+Data type: Vector.
+
+Vector of point A, modifies the shape procedurally. Default: (1, 0, 0).
+
+#### Point B
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally. Default: (0, 1, 0).
+
+#### Point C
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Point A, Point B and Point C set the corners. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Circumcircle output](/docs2/images/assets/compositor-library/shapes/circumcircle-output.png)
+
+## Dumbbell Curve
+
+![Dumbbell Curve asset thumbnail](/docs2/images/assets/compositor-library/thumbs/dumbbell-curve.png)
+
+![Dumbbell Curve](/docs2/images/assets/compositor-library/shapes/dumbbell-curve.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Dumbbell Curve output](/docs2/images/assets/compositor-library/shapes/dumbbell-curve-output.png)
+
+## Ellipsoid
+
+![Ellipsoid asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ellipsoid.png)
+
+![Ellipsoid](/docs2/images/assets/compositor-library/shapes/ellipsoid.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Dimensions
+
+Data type: Vector.
+
+The Dimensions of the shape. Default: (1, 0.5).
+
+#### Position
+
+Data type: Vector.
+
+The position of the shape.
+
+#### Roundness
+
+Data type: Float.
+
+The rounndness order of the shape. Default: 1.
+
+#### Softness
+
+Data type: Float.
+
+The rounndness order of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Dimensions set its width and height. Position moves it. Roundness rounds the corners. Softness blurs its edge. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Ellipsoid output](/docs2/images/assets/compositor-library/shapes/ellipsoid-output.png)
+
+## Epispiral
+
+![Epispiral asset thumbnail](/docs2/images/assets/compositor-library/thumbs/epispiral.png)
+
+![Epispiral](/docs2/images/assets/compositor-library/shapes/epispiral.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Number of lines
+
+Data type: Integer.
+
+Modifies the shape procedurally. Default: 4.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Value of the second vector input.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Number of lines sets how many lines it draws. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Epispiral output](/docs2/images/assets/compositor-library/shapes/epispiral-output.png)
+
+## Equilateral Triangle
+
+![Equilateral Triangle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/equilateral-triangle.png)
+
+![Equilateral Triangle](/docs2/images/assets/compositor-library/shapes/equilateral-triangle.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Height
+
+Data type: Float.
+
+The scale/height of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Height sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Equilateral Triangle output](/docs2/images/assets/compositor-library/shapes/equilateral-triangle-output.png)
+
+## Figure Eight
+
+![Figure Eight asset thumbnail](/docs2/images/assets/compositor-library/thumbs/figure-eight.png)
+
+![Figure Eight](/docs2/images/assets/compositor-library/shapes/figure-eight.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Figure Eight output](/docs2/images/assets/compositor-library/shapes/figure-eight-output.png)
+
+## Habenicht Trefoil
+
+![Habenicht Trefoil asset thumbnail](/docs2/images/assets/compositor-library/thumbs/habenicht-trefoil.png)
+
+![Habenicht Trefoil](/docs2/images/assets/compositor-library/shapes/habenicht-trefoil.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Form
+
+Data type: Vector.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: (3, 2, 0.25).
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Habenicht Trefoil output](/docs2/images/assets/compositor-library/shapes/habenicht-trefoil-output.png)
+
+## Heart 1
+
+![Heart 1 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/heart-1.png)
+
+![Heart 1](/docs2/images/assets/compositor-library/shapes/heart-1.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Heart 1 output](/docs2/images/assets/compositor-library/shapes/heart-1-output.png)
+
+## Heart 2
+
+![Heart 2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/heart-2.png)
+
+![Heart 2](/docs2/images/assets/compositor-library/shapes/heart-2.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Heart 2 output](/docs2/images/assets/compositor-library/shapes/heart-2-output.png)
+
+## Heart 3
+
+![Heart 3 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/heart-3.png)
+
+![Heart 3](/docs2/images/assets/compositor-library/shapes/heart-3.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+#### Factor
+
+Data type: Boolean.
+
+Amount of mixing between the A and B inputs. Default: Off.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Factor changes the shape. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Heart 3 output](/docs2/images/assets/compositor-library/shapes/heart-3-output.png)
+
+## Hexagon
+
+![Hexagon asset thumbnail](/docs2/images/assets/compositor-library/thumbs/hexagon.png)
+
+![Hexagon](/docs2/images/assets/compositor-library/shapes/hexagon.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Hexagon output](/docs2/images/assets/compositor-library/shapes/hexagon-output.png)
+
+## Links Curve
+
+![Links Curve asset thumbnail](/docs2/images/assets/compositor-library/thumbs/links-curve.png)
+
+![Links Curve](/docs2/images/assets/compositor-library/shapes/links-curve.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 3.
+
+#### Form
+
+Data type: Vector.
+
+Modifies the shape procedurallyModifies the shape procedurally. Default: (2, 2, 3).
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Form changes the shape of the curve. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Links Curve output](/docs2/images/assets/compositor-library/shapes/links-curve-output.png)
+
+## Petal 2
+
+![Petal 2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/petal-2.png)
+
+![Petal 2](/docs2/images/assets/compositor-library/shapes/petal-2.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 0.75.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Petal 2 output](/docs2/images/assets/compositor-library/shapes/petal-2-output.png)
+
+## Petal 4
+
+![Petal 4 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/petal-4.png)
+
+![Petal 4](/docs2/images/assets/compositor-library/shapes/petal-4.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 0.5.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Petal 4 output](/docs2/images/assets/compositor-library/shapes/petal-4-output.png)
+
+## Regular Polygon
+
+![Regular Polygon asset thumbnail](/docs2/images/assets/compositor-library/thumbs/regular-polygon.png)
+
+![Regular Polygon](/docs2/images/assets/compositor-library/shapes/regular-polygon.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Number of sides
+
+Data type: Integer.
+
+The number of sides of the shape. Default: 5.
+
+#### Curviness Exponent
+
+Data type: Float.
+
+The edge curviness exponent of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Value of the second vector input.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Number of sides sets the corners. Curviness Exponent rounds the sides. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Regular Polygon output](/docs2/images/assets/compositor-library/shapes/regular-polygon-output.png)
+
+## Ring
+
+![Ring asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ring.png)
+
+![Ring](/docs2/images/assets/compositor-library/shapes/ring.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Position
+
+Data type: Vector.
+
+The position of the shape.
+
+#### Outer
+
+Data type: Float.
+
+The outer edge of the shape. Default: 1.
+
+#### Inner
+
+Data type: Float.
+
+The inner edge of the shape. Default: 0.5.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Position moves it. Outer and Inner set the two radii. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Ring output](/docs2/images/assets/compositor-library/shapes/ring-output.png)
+
+## Rose
+
+![Rose asset thumbnail](/docs2/images/assets/compositor-library/thumbs/rose.png)
+
+![Rose](/docs2/images/assets/compositor-library/shapes/rose.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Number of Petals
+
+Data type: Integer.
+
+The offset of the shape. Default: 5.
+
+#### Rotate
+
+Data type: Float (angle).
+
+Rotates the shape. Default: 0°.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Scale sets its size. Number of Petals sets how many petals it has. Rotate turns it. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Rose output](/docs2/images/assets/compositor-library/shapes/rose-output.png)
+
+## Rounded Rectangle
+
+![Rounded Rectangle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/rounded-rectangle.png)
+
+![Rounded Rectangle](/docs2/images/assets/compositor-library/shapes/rounded-rectangle.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Width
+
+Data type: Float.
+
+The width of the shape. Default: 1.
+
+#### Height
+
+Data type: Float.
+
+The height of the shape. Default: 1.
+
+#### Bevel
+
+Data type: Float.
+
+The bevel of the shape. Default: 0.5.
+
+#### Bevel Clamp
+
+Data type: Float.
+
+The bevel clamp of the shape. Default: 0.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Width and Height set its size. Height sets its size. Bevel rounds the corners. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Rounded Rectangle output](/docs2/images/assets/compositor-library/shapes/rounded-rectangle-output.png)
+
+## Sphere-Circle
+
+![Sphere-Circle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/sphere-circle.png)
+
+![Sphere-Circle](/docs2/images/assets/compositor-library/shapes/sphere-circle.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Position
+
+Data type: Vector.
+
+The position of the shape.
+
+#### Radius
+
+Data type: Float.
+
+The radius of the shape. Default: 1.
+
+#### Softness
+
+Data type: Float.
+
+The softness of the shape. Default: 1.
+
+#### Border Thickness
+
+Data type: Float.
+
+The border thickness of the shape. Default: 0.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+#### Border
+
+Data type: Float.
+
+The border  of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Position moves it. Radius sets its roundness. Softness blurs its edge. Border Thickness sets the width of the border. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Sphere-Circle output](/docs2/images/assets/compositor-library/shapes/sphere-circle-output.png)
+
+## Superellipse
+
+![Superellipse asset thumbnail](/docs2/images/assets/compositor-library/thumbs/superellipse.png)
+
+![Superellipse](/docs2/images/assets/compositor-library/shapes/superellipse.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Point A
+
+Data type: Vector.
+
+The Dimensions of the shape. Default: (4, 2, 2).
+
+#### Point B
+
+Data type: Vector.
+
+The position of the shape. Default: (1, 1, 1).
+
+#### Offset
+
+Data type: Float.
+
+The rounndness order of the shape. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Point A, Point B and Point C set the corners. Offset moves it. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Superellipse output](/docs2/images/assets/compositor-library/shapes/superellipse-output.png)
+
+## Triangle
+
+![Triangle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/triangle.png)
+
+![Triangle](/docs2/images/assets/compositor-library/shapes/triangle.png)
+
+Creates a a vector shape with vector coordinates and controls
+
+### Inputs
+
+#### Point A
+
+Data type: Vector.
+
+Vector of point A, modifies the shape procedurally. Default: (1, 0).
+
+#### Point B
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally. Default: (0, 1).
+
+#### Point C
+
+Data type: Vector.
+
+Vector of point C, modifies the shape procedurally.
+
+#### Smooth
+
+Data type: Float.
+
+The smoothness/roundness of the shape. Default: 0.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+A gradient output of the shape.
+
+#### Mask
+
+Data type: Float.
+
+A black and white mask of the shape.
+
+#### UV
+
+Data type: Vector.
+
+Outputs the UV of the shape.
+
+### How to use
+
+A vector shape that covers the whole image by default. Point A, Point B and Point C set the corners. Smooth softens the edge. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+
+The pattern with default values:
+
+![Triangle output](/docs2/images/assets/compositor-library/shapes/triangle-output.png)
+
 
 # Utilities
 
-_Assets in this category will be documented here._
+Small helper assets for colors, masks and normal maps.
+
+## Channel Invert
+
+![Channel Invert asset thumbnail](/docs2/images/assets/compositor-library/thumbs/channel-invert.png)
+
+![Channel Invert](/docs2/images/assets/compositor-library/utilities/channel-invert.png)
+
+Inverts the red, green, blue and alpha channels separately
+
+### Inputs
+
+#### Color
+
+Data type: Color.
+
+Color to change.
+
+#### Alpha
+
+Data type: Float.
+
+Alpha to change. Default: 1.
+
+#### Invert Red
+
+Data type: Float.
+
+How much to invert red. Default: 1.
+
+#### Invert Green
+
+Data type: Float.
+
+How much to invert green. Default: 1.
+
+#### Invert Blue
+
+Data type: Float.
+
+How much to invert blue. Default: 1.
+
+#### Invert Alpha
+
+Data type: Float.
+
+How much to invert alpha. Default: 1.
+
+### Outputs
+
+#### Color
+
+Data type: Color.
+
+The result.
+
+#### Alpha
+
+Data type: Float.
+
+The resulting alpha.
+
+### How to use
+
+Connect a color to Color and an alpha to Alpha. Invert Red, Invert Green, Invert Blue and Invert Alpha (0 to 1) set how much of each channel is inverted, so you can invert only one of them. In the slider every value is at its default of 1, so all color channels are inverted.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: all color channels inverted](/docs2/images/assets/compositor-library/utilities/channel-invert-after.png)
+
+## Color Boolean
+
+![Color Boolean asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-boolean.png)
+
+![Color Boolean](/docs2/images/assets/compositor-library/utilities/color-boolean.png)
+
+Combines two colors per channel with union, intersection, subtract and difference
+
+### Inputs
+
+#### Color A
+
+Data type: Color.
+
+First color.
+
+#### Color B
+
+Data type: Color.
+
+Second color.
+
+### Outputs
+
+#### Union (OR)
+
+Data type: Color.
+
+Brightest of the two, per channel.
+
+#### Intersection (AND)
+
+Data type: Color.
+
+Darkest of the two, per channel.
+
+#### Subtract
+
+Data type: Color.
+
+Color A with Color B removed.
+
+#### Difference
+
+Data type: Color.
+
+Where the two colors differ.
+
+### How to use
+
+Connect two colors to Color A and Color B. The four outputs combine them per channel like boolean operations: Union (OR), Intersection (AND), Subtract and Difference.
+
+## Combine CMYK
+
+![Combine CMYK asset thumbnail](/docs2/images/assets/compositor-library/thumbs/combine-cmyk.png)
+
+![Combine CMYK](/docs2/images/assets/compositor-library/utilities/combine-cmyk.png)
+
+Builds a color from cyan, magenta, yellow and black
+
+### Inputs
+
+#### C
+
+Data type: Float (factor).
+
+Amount of cyan. Default: 0.
+
+#### M
+
+Data type: Float (factor).
+
+Amount of magenta. Default: 0.
+
+#### Y
+
+Data type: Float (factor).
+
+Amount of yellow. Default: 0.
+
+#### K
+
+Data type: Float (factor).
+
+Amount of black. Default: 0.
+
+### Outputs
+
+#### Color
+
+Data type: Color.
+
+The combined color.
+
+### How to use
+
+Connect values to C, M, Y and K. Color is the color that these four print inks make. It is the opposite of Separate CMYK.
+
+## Compare Color
+
+![Compare Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/compare-color.png)
+
+![Compare Color](/docs2/images/assets/compositor-library/utilities/compare-color.png)
+
+Creates a mask from how closely two colors match
+
+### Inputs
+
+#### Base Color
+
+Data type: Color.
+
+Color or image to test.
+
+#### Comparison Color
+
+Data type: Color.
+
+Color to match against.
+
+#### Threshold
+
+Data type: Float (factor).
+
+How close colors must be to count as a match. Default: 0.5.
+
+#### Contrast
+
+Data type: Float (factor).
+
+Sharpness of the mask edge. Default: 1.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+White where the colors match.
+
+### How to use
+
+Connect two colors to Base Color and Comparison Color. The output is white where they match closely and black where they differ. Threshold sets how close counts as a match and Contrast sharpens the mask. Use it to pick a color out of an image.
+
+## Float Boolean
+
+![Float Boolean asset thumbnail](/docs2/images/assets/compositor-library/thumbs/float-boolean.png)
+
+![Float Boolean](/docs2/images/assets/compositor-library/utilities/float-boolean.png)
+
+Combines two masks with union, intersection, subtract and difference
+
+### Inputs
+
+#### Value A
+
+Data type: Float.
+
+First mask. Default: 0.
+
+#### Value B
+
+Data type: Float.
+
+Second mask. Default: 0.
+
+### Outputs
+
+#### Union (OR)
+
+Data type: Float.
+
+White where either mask is white.
+
+#### Intersection (AND)
+
+Data type: Float.
+
+White where both masks are white.
+
+#### Subtract
+
+Data type: Float.
+
+Value A with Value B removed.
+
+#### Difference
+
+Data type: Float.
+
+White where only one mask is white.
+
+### How to use
+
+Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union (OR) adds them, Intersection (AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
+
+## Layer Color
+
+![Layer Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/layer-color.png)
+
+![Layer Color](/docs2/images/assets/compositor-library/utilities/layer-color.png)
+
+Stacks two color layers over a background, with a mask for each
+
+### Inputs
+
+#### Background
+
+Data type: Color.
+
+Color behind the layers.
+
+#### Layer 1
+
+Data type: Color.
+
+First layer, above the background.
+
+#### Alpha 1
+
+Data type: Float.
+
+Mask for Layer 1. Default: 0.
+
+#### Layer 2
+
+Data type: Color.
+
+Second layer, on top.
+
+#### Alpha 2
+
+Data type: Float.
+
+Mask for Layer 2. Default: 0.
+
+### Outputs
+
+#### Color
+
+Data type: Color.
+
+The layered result.
+
+### How to use
+
+Connect a color to Background and up to two layers to Layer 1 and Layer 2. Alpha 1 and Alpha 2 are the masks of the layers: where the mask is white the layer shows. Color is the stack of all three.
+
+## Normal Blend Angle
+
+![Normal Blend Angle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/normal-blend-angle.png)
+
+![Normal Blend Angle](/docs2/images/assets/compositor-library/utilities/normal-blend-angle.png)
+
+Blends two normal maps by angle
+
+### Inputs
+
+#### Base
+
+Data type: Color.
+
+Main normal map.
+
+#### Details
+
+Data type: Color.
+
+Normal map to add on top.
+
+#### Blend
+
+Data type: Float (factor).
+
+How much of Details to add. Default: 1.
+
+#### Strength
+
+Data type: Float (factor).
+
+Strength of the result. Default: 1.
+
+#### OpenGL / DirectX
+
+Data type: Boolean.
+
+Off for OpenGL normal maps, on for DirectX. Default: Off.
+
+### Outputs
+
+#### Normal
+
+Data type: Vector.
+
+Blended normal, in tangent space.
+
+#### Color
+
+Data type: Color.
+
+Blended normal map color.
+
+### How to use
+
+Connect two normal maps to Base and Details. Blend mixes the details into the base by rotating the normals, which keeps the angles correct on strong details. Strength sets how strong the details are. Switch OpenGL / DirectX to match the green channel of your maps.
+
+## Normal Blend Channels
+
+![Normal Blend Channels asset thumbnail](/docs2/images/assets/compositor-library/thumbs/normal-blend-channels.png)
+
+![Normal Blend Channels](/docs2/images/assets/compositor-library/utilities/normal-blend-channels.png)
+
+Blends two normal maps by channel
+
+### Inputs
+
+#### Base
+
+Data type: Color.
+
+Main normal map.
+
+#### Details
+
+Data type: Color.
+
+Normal map to add on top.
+
+#### Blend
+
+Data type: Float.
+
+How much of Details to add. Default: 1.
+
+#### Strength
+
+Data type: Float (factor).
+
+Strength of the result. Default: 1.
+
+#### OpenGL / DirectX
+
+Data type: Boolean.
+
+Off for OpenGL normal maps, on for DirectX. Default: Off.
+
+### Outputs
+
+#### Normal
+
+Data type: Vector.
+
+Blended normal, in tangent space.
+
+#### Color
+
+Data type: Color.
+
+Blended normal map color.
+
+### How to use
+
+Connect two normal maps to Base and Details. Blend mixes the details into the base channel by channel. Strength sets how strong the details are. Switch OpenGL / DirectX to match the green channel of your maps. Normal is the result as a vector and Color the same as a picture.
+
+## Select Color
+
+![Select Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/select-color.png)
+
+![Select Color](/docs2/images/assets/compositor-library/utilities/select-color.png)
+
+Picks one of four colors by index
+
+### Inputs
+
+#### Background
+
+Data type: Color.
+
+Color used when no slot matches. Chain another Select Color here for more colors.
+
+#### Index
+
+Data type: Float.
+
+Which color to pick. Use whole numbers. Default: 1.
+
+#### Counter
+
+Data type: Integer.
+
+Position of this node in a chain. Connect the Counter output of the previous Select Color. Default: 0.
+
+#### Color 1
+
+Data type: Color.
+
+First color.
+
+#### Color 2
+
+Data type: Color.
+
+Second color.
+
+#### Color 3
+
+Data type: Color.
+
+Third color.
+
+#### Color 4
+
+Data type: Color.
+
+Fourth color.
+
+### Outputs
+
+#### Color
+
+Data type: Color.
+
+The selected color.
+
+#### Index
+
+Data type: Float.
+
+Passes the Index through, for chaining.
+
+#### Counter
+
+Data type: Integer.
+
+Connect to the Counter input of the next Select Color.
+
+### How to use
+
+Connect an integer to Index. The color with that number (1 to 4) is the output, and every other index gives Background. Counter keeps count of the steps and can be reused.
+
+## Separate CMYK
+
+![Separate CMYK asset thumbnail](/docs2/images/assets/compositor-library/thumbs/separate-cmyk.png)
+
+![Separate CMYK](/docs2/images/assets/compositor-library/utilities/separate-cmyk.png)
+
+Splits a color into cyan, magenta, yellow and black
+
+### Inputs
+
+#### Color
+
+Data type: Color.
+
+Color to split.
+
+### Outputs
+
+#### C
+
+Data type: Float.
+
+Amount of cyan.
+
+#### M
+
+Data type: Float.
+
+Amount of magenta.
+
+#### Y
+
+Data type: Float.
+
+Amount of yellow.
+
+#### K
+
+Data type: Float.
+
+Amount of black.
+
+### How to use
+
+Connect a color to Color. The four outputs C, M, Y and K are the cyan, magenta, yellow and black parts of it, as used in printing.
+
 
 # Utilities / Vector
 
-_Assets in this category will be documented here._
+Assets that change or create vector coordinates. Connect their output to the Vector input of a pattern or shape to move, repeat, mirror or distort it.
+
+## Advanced Tiling
+
+![Advanced Tiling asset thumbnail](/docs2/images/assets/compositor-library/thumbs/advanced-tiling.png)
+
+![Advanced Tiling](/docs2/images/assets/compositor-library/vector/advanced-tiling.png)
+
+Repeats coordinates as tiles, with position, random and mask outputs
+
+### Inputs
+
+#### Position
+
+Data type: Vector.
+
+Offset for the whole tile grid. Default: (0.5, 0.5, 0).
+
+#### Tile Dimensions
+
+Data type: Vector.
+
+Width and height of each tile. Default: (1, 1, 0).
+
+#### Tile Center
+
+Data type: Vector.
+
+Center point inside each tile.
+
+#### Scale
+
+Data type: Float.
+
+Overall size of the tiles. Default: 5.
+
+#### Repeat X
+
+Data type: Float.
+
+Number of tiles across. Default: 5.
+
+#### Repeat Y
+
+Data type: Float.
+
+Number of tiles down. Default: 5.
+
+#### Quincunx Flip
+
+Data type: Boolean.
+
+Offset every other row, like a five on a die. Default: Off.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates inside each tile.
+
+#### Position
+
+Data type: Vector.
+
+Position of each tile.
+
+#### Random
+
+Data type: Float.
+
+Random value for each item.
+
+#### Random
+
+Data type: Color.
+
+Random color for each item.
+
+#### Mask
+
+Data type: Float.
+
+White inside tiles, black outside.
+
+### How to use
+
+Repeats coordinates as tiles. Tile Dimensions and Tile Center set the tile, Repeat X and Repeat Y how often, Quincunx Flip flips every second tile. Vector is the new coordinate and Position, Random and Mask describe each tile.
+
+## Axis Symmetry
+
+![Axis Symmetry asset thumbnail](/docs2/images/assets/compositor-library/thumbs/axis-symmetry.png)
+
+![Axis Symmetry](/docs2/images/assets/compositor-library/vector/axis-symmetry.png)
+
+Mirrors coordinates across the X, Y or Z axis
+
+### Inputs
+
+#### Origin
+
+Data type: Vector.
+
+Center of the mirror. Default: (0.5, 0.5, 0).
+
+#### X
+
+Data type: Boolean.
+
+Mirror across X. Default: On.
+
+#### Y
+
+Data type: Boolean.
+
+Mirror across Y. Default: On.
+
+#### Z
+
+Data type: Boolean.
+
+Mirror across Z. Default: Off.
+
+#### Invert
+
+Data type: Boolean.
+
+Swap which side is mirrored. Default: On.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+The coordinates are mirrored across the X, Y or Z axis: Origin sets the center, X, Y and Z choose the axes and Invert swaps the sides. Vector Coordinates uses your own Vector.
+
+## Brick Mapping
+
+![Brick Mapping asset thumbnail](/docs2/images/assets/compositor-library/thumbs/brick-mapping.png)
+
+![Brick Mapping](/docs2/images/assets/compositor-library/vector/brick-mapping.png)
+
+Brick layout with mask, UV, position and random outputs
+
+### Inputs
+
+#### Frequency
+
+Data type: Float.
+
+How often rows are offset. Default: 2.
+
+#### Offset
+
+Data type: Float (factor).
+
+How far each offset row shifts. Default: 0.5.
+
+#### Mortar Size
+
+Data type: Float (factor).
+
+Width of the gaps between bricks. Default: 0.5.
+
+#### Mortar Smooth
+
+Data type: Float (factor).
+
+Softness of the brick edges. Default: 1.
+
+#### Brick Width
+
+Data type: Float.
+
+Width of each brick. Default: 2.
+
+#### Invert
+
+Data type: Boolean.
+
+Swap bricks and mortar. Default: Off.
+
+#### Scale
+
+Data type: Float.
+
+Overall size of the bricks. Default: 5.
+
+#### Align UVs to Brick Border
+
+Data type: Boolean.
+
+Start each brick's UVs at its edge instead of its center. Default: Off.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Value
+
+Data type: Float.
+
+Smooth height of each brick.
+
+#### Mask
+
+Data type: Float.
+
+White bricks with black mortar.
+
+#### UVs
+
+Data type: Vector.
+
+UV coordinates inside each brick.
+
+#### Position
+
+Data type: Vector.
+
+Position of each brick.
+
+#### Random
+
+Data type: Float.
+
+Random value for each item.
+
+#### Random
+
+Data type: Color.
+
+Random color for each item.
+
+### How to use
+
+A brick layout. Frequency and Brick Width set the rows, Offset shifts every second row, Mortar Size and Mortar Smooth set the joints. Value, Mask, UVs, Position and Random give shading, a sharp mask, a coordinate for each brick and random values.
+
+## Distortion Blur
+
+![Distortion Blur asset thumbnail](/docs2/images/assets/compositor-library/thumbs/distortion-blur.png)
+
+![Distortion Blur](/docs2/images/assets/compositor-library/vector/distortion-blur.png)
+
+Blurs coordinates with random noise, for a grainy blur
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Factor
+
+Data type: Float (factor).
+
+Amount of blur. Default: 0.2.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. The coordinates are shaken with random noise, Factor sets how much. Use the result as the vector of a texture for a grainy blur.
+
+## Equirectangular
+
+![Equirectangular asset thumbnail](/docs2/images/assets/compositor-library/thumbs/equirectangular.png)
+
+![Equirectangular](/docs2/images/assets/compositor-library/vector/equirectangular.png)
+
+Converts 3D directions to equirectangular coordinates
+
+### Inputs
+
+#### Cartesian
+
+Data type: Vector.
+
+Direction to convert, as X, Y and Z.
+
+#### Flip
+
+Data type: Boolean.
+
+Flip the result. Default: On.
+
+### Outputs
+
+#### Equirectangular
+
+Data type: Vector.
+
+Equirectangular coordinates.
+
+### How to use
+
+Connect a 3D direction to Cartesian. The output is the matching position on an equirectangular (360° panorama) image. Flip mirrors the result.
+
+## Flipbook
+
+![Flipbook asset thumbnail](/docs2/images/assets/compositor-library/thumbs/flipbook.png)
+
+![Flipbook](/docs2/images/assets/compositor-library/vector/flipbook.png)
+
+Plays frames from an image grid. Connect Scene Time to Index to animate
+
+### Inputs
+
+#### Index
+
+Data type: Float.
+
+Which frame to show. Default: 0.
+
+#### Columns
+
+Data type: Float.
+
+Number of columns in the image grid. Default: 1.
+
+#### Rows
+
+Data type: Float.
+
+Number of rows in the image grid. Default: 1.
+
+#### Mask Coordinates
+
+Data type: Boolean.
+
+Hide everything outside the selected frame. Default: On.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates of the selected frame.
+
+#### Alpha
+
+Data type: Float.
+
+Mask of the selected frame.
+
+### How to use
+
+Connect an image sheet with frames in a grid. Columns and Rows set the grid and Index picks the frame, connect Scene Time to Index to animate it. Vector is the coordinate inside the frame and Alpha masks it.
+
+## Inherit Image Coordinates
+
+![Inherit Image Coordinates asset thumbnail](/docs2/images/assets/compositor-library/thumbs/inherit-image-coordinates.png)
+
+![Inherit Image Coordinates](/docs2/images/assets/compositor-library/vector/inherit-image-coordinates.png)
+
+Gets the vector coordinates of the pixels of the default image resolution
+
+### Inputs
+
+#### Image Coordinates
+
+Data type: Menu.
+
+Returns the vector coordinates of the pixels of an image.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+Zero centered coordinates normalizes along the larger dimension for uniform scaling.
+
+### How to use
+
+Connect the image coordinates to Image Coordinates. Vector is the position of every pixel in the default image size, so a pattern can cover the image.
+
+## Mirror
+
+![Mirror asset thumbnail](/docs2/images/assets/compositor-library/thumbs/mirror.png)
+
+![Mirror](/docs2/images/assets/compositor-library/vector/mirror.png)
+
+Mirrors coordinates across a line
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Normal
+
+Data type: Vector.
+
+Direction the mirror line faces. Default: (1, 0, 0).
+
+#### Offset
+
+Data type: Vector.
+
+Moves the mirror line along its direction. Default: (-1, 0, 0).
+
+#### Mirror Position
+
+Data type: Vector.
+
+A point the mirror line passes through.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+#### Is Original
+
+Data type: Float.
+
+White on the original side of the mirror, black on the mirrored side.
+
+### How to use
+
+Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. Is Original is white on the side that was not mirrored.
+
+## Polar-Cylindrical
+
+![Polar-Cylindrical asset thumbnail](/docs2/images/assets/compositor-library/thumbs/polar-cylindrical.png)
+
+![Polar-Cylindrical](/docs2/images/assets/compositor-library/vector/polar-cylindrical.png)
+
+Converts X, Y, Z coordinates to polar coordinates, keeping Z
+
+### Inputs
+
+#### Cartesian
+
+Data type: Vector.
+
+Coordinates to convert.
+
+### Outputs
+
+#### Cylindrical
+
+Data type: Vector.
+
+Radius, angle and height.
+
+### How to use
+
+Connect cartesian coordinates (X, Y, Z) to Cartesian. The output is the same position as polar coordinates in the XY plane, and Z stays as it is.
+
+## Radial Symmetry 1
+
+![Radial Symmetry 1 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/radial-symmetry-1.png)
+
+![Radial Symmetry 1](/docs2/images/assets/compositor-library/vector/radial-symmetry-1.png)
+
+Repeats coordinates around a center, like a kaleidoscope
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Center Axis
+
+Data type: Vector.
+
+Center point of the repeat. Default: (0.5, 0.5, 0).
+
+#### Number of Repetitions
+
+Data type: Float.
+
+How many times the image repeats around the center. Default: 3.
+
+#### Scale
+
+Data type: Float.
+
+Scales the result. Default: 1.
+
+### Outputs
+
+#### UV
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of Repetitions sets how often and Scale the size. UV is the result.
+
+## Radial Symmetry 2
+
+![Radial Symmetry 2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/radial-symmetry-2.png)
+
+![Radial Symmetry 2](/docs2/images/assets/compositor-library/vector/radial-symmetry-2.png)
+
+Repeats coordinates around a center, with phase and rotation
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Center Axis
+
+Data type: Vector.
+
+Center point of the repeat.
+
+#### Number of Repetitions
+
+Data type: Float.
+
+How many times the image repeats around the center. Default: 5.
+
+#### Phase
+
+Data type: Float.
+
+Shifts where the repeats begin. Default: 0.
+
+#### Rotate
+
+Data type: Float.
+
+Rotates the whole result. Default: 0.
+
+#### Scale
+
+Data type: Float.
+
+Scales the result. Default: 1.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. Space is repeated around Center Axis, Number of Repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
+
+## Separate Coordinates
+
+![Separate Coordinates asset thumbnail](/docs2/images/assets/compositor-library/thumbs/separate-coordinates.png)
+
+![Separate Coordinates](/docs2/images/assets/compositor-library/vector/separate-coordinates.png)
+
+Seperate the image coordinates into X and Y values
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+Image that sets the coordinate size.
+
+### Outputs
+
+#### X
+
+Data type: Float.
+
+Horizontal image coordinates.
+
+#### Y
+
+Data type: Float.
+
+Vertical image coordinates.
+
+### How to use
+
+Connect an image to Image. X and Y are the horizontal and vertical coordinates of every pixel as two separate values, for example to make a gradient.
+
+## Spherical
+
+![Spherical asset thumbnail](/docs2/images/assets/compositor-library/thumbs/spherical.png)
+
+![Spherical](/docs2/images/assets/compositor-library/vector/spherical.png)
+
+Converts X, Y, Z coordinates to spherical coordinates
+
+### Inputs
+
+#### Cartesian
+
+Data type: Vector.
+
+Coordinates to convert.
+
+### Outputs
+
+#### Spherical
+
+Data type: Vector.
+
+Radius and the two angles.
+
+### How to use
+
+Connect cartesian coordinates (X, Y, Z) to Cartesian. The output is the same position as spherical coordinates: radius and two angles.
+
+## Vector Mapping
+
+![Vector Mapping asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-mapping.png)
+
+![Vector Mapping](/docs2/images/assets/compositor-library/vector/vector-mapping.png)
+
+Defines Vector Coordinates with rotation, scale and translation
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+The vector to be transformed.
+
+#### Location
+
+Data type: Vector.
+
+The amount of translations along each axis.
+
+#### Rotation
+
+Data type: Vector.
+
+The amount of rotation on each axis, around the X, Y, then Z axes in that order.
+
+#### Scale
+
+Data type: Vector.
+
+The amount of scaling along each axis. Default: (1, 1, 1).
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The transformed coordinates.
+
+### How to use
+
+Connect a vector to Vector. Location, Rotation and Scale move, turn and size it, like the Mapping node does for textures.
+
+## Vector Pan
+
+![Vector Pan asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-pan.png)
+
+![Vector Pan](/docs2/images/assets/compositor-library/vector/vector-pan.png)
+
+Scrolls coordinates over time
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### FPS
+
+Data type: Float.
+
+Frames per second. Match the scene frame rate. Default: 24.
+
+#### Speed
+
+Data type: Float.
+
+How fast the coordinates scroll. Default: 1.
+
+#### Offset
+
+Data type: Float.
+
+Starting position of the scroll. Default: 0.
+
+#### Direction
+
+Data type: Vector.
+
+Direction of the scroll. Default: (1, 0, 0).
+
+#### Current Frame
+
+Data type: Float.
+
+Current frame. Connect a Scene Time node to animate. Default: 0.5.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. The coordinates scroll over time: Speed and Direction set the movement, FPS and Current Frame the timing, Offset a start position.
+
+## Vector Pixelate
+
+![Vector Pixelate asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-pixelate.png)
+
+![Vector Pixelate](/docs2/images/assets/compositor-library/vector/vector-pixelate.png)
+
+Snaps coordinates to a grid, for a pixelated look
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Dimensions
+
+Data type: Vector.
+
+Number of pixels across X and Y. Default: (32, 32, 32).
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. The coordinates snap to a grid, Dimensions sets the number of cells, so what is drawn with this vector looks pixelated.
+
+## Vector Skew
+
+![Vector Skew asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-skew.png)
+
+![Vector Skew](/docs2/images/assets/compositor-library/vector/vector-skew.png)
+
+Slants coordinates along X and Y
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Origin
+
+Data type: Vector.
+
+Point that stays in place. Default: (0.5, 0.5, 0).
+
+#### X
+
+Data type: Float.
+
+Amount of slant along X. Default: 0.
+
+#### Y
+
+Data type: Float.
+
+Amount of slant along Y. Default: 0.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. The coordinates are slanted around Origin, X and Y set how far along each axis.
+
+## Vector Whirl
+
+![Vector Whirl asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-whirl.png)
+
+![Vector Whirl](/docs2/images/assets/compositor-library/vector/vector-whirl.png)
+
+Twists coordinates around a point
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Origin
+
+Data type: Vector.
+
+Center of the whirl. Default: (0.5, 0.5, 0).
+
+#### Radius
+
+Data type: Float.
+
+Size of the whirl. Default: 1.
+
+#### Factor
+
+Data type: Float.
+
+Strength of the twist. Default: 0.1.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. The coordinates are twisted around Origin inside Radius, and Factor sets how strong the twist is. Use the result as the vector of a texture or pattern.
+
+## Vector Zoom
+
+![Vector Zoom asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-zoom.png)
+
+![Vector Zoom](/docs2/images/assets/compositor-library/vector/vector-zoom.png)
+
+Zooms coordinates in or out around a point
+
+### Inputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates to change. Plug in Image Coordinates or another vector node.
+
+#### Location
+
+Data type: Vector.
+
+Point to zoom around.
+
+#### Factor
+
+Data type: Float.
+
+Amount of zoom. Default: 1.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+The changed coordinates.
+
+### How to use
+
+Connect a vector to Vector. Location is the point the zoom comes from and Factor is how far it zooms in or out. Use the result as the vector of a texture or pattern.
+
+## Voronoi Distribute
+
+![Voronoi Distribute asset thumbnail](/docs2/images/assets/compositor-library/thumbs/voronoi-distribute.png)
+
+![Voronoi Distribute](/docs2/images/assets/compositor-library/vector/voronoi-distribute.png)
+
+Scatters coordinates at random cell points, to place copies of an image
+
+### Inputs
+
+#### Spawn Threshold (Mask)
+
+Data type: Float (factor).
+
+Hides some copies. Higher values hide more. Default: 0.5.
+
+#### Rotation Limit
+
+Data type: Float (factor).
+
+Maximum random rotation. Default: 1.
+
+#### Randomness
+
+Data type: Float (factor).
+
+How far copies move from a regular grid. Default: 1.
+
+#### Scale Distribution
+
+Data type: Float.
+
+How much copy sizes vary. Default: 0.
+
+#### Seed
+
+Data type: Float.
+
+Changes the random layout. Default: 11.
+
+#### Scale
+
+Data type: Float.
+
+Overall size of the layout. Default: 1.
+
+#### Vector Coordinates
+
+##### Vector Coordinates
+
+Data type: Boolean.
+
+Use the Vector input instead of the automatic image coordinates. Default: Off.
+
+##### Vector
+
+Data type: Vector.
+
+Vector Coordinates input. Best used with the Vector Mapping node group.
+
+### Outputs
+
+#### Vector
+
+Data type: Vector.
+
+Coordinates of each scattered copy.
+
+#### Random
+
+Data type: Float.
+
+Random value for each item.
+
+#### Random
+
+Data type: Color.
+
+Random color for each item.
+
+### How to use
+
+Connect your own Vector, or leave Vector Coordinates off for the whole image. Space is cut into random cells and each cell gets its own coordinate, so a texture or image placed with this vector is repeated in different places. Spawn Threshold (Mask) leaves some cells empty, Rotation Limit and Scale Distribution vary the copies, Seed changes the layout.
+
