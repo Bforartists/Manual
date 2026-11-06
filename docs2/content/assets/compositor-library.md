@@ -6,7 +6,7 @@ path:
   - "Assets"
   - "Compositor Library"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node_compositing
 summary: "Node groups for the compositor that come with Bforartists."
 cta: "Browse"
