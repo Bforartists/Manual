@@ -104,10 +104,23 @@ def figure(src, alt, cls=""):
     return f'<figure{cls}><img src="{src}" alt="{htmllib.escape(alt)}" loading="lazy">{cap}</figure>'
 
 
+def compare(imgs):
+    """Two images whose alt texts start with Before / After -> the website's comparison slider (playhead, sweeps once when scrolled into view)."""
+    (s1, a1), (s2, a2) = imgs
+    a1, a2 = htmllib.unescape(a1), htmllib.unescape(a2)
+    return ('<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after">'
+            f'<img class="ui-compare-img" src="{s2}" alt="{htmllib.escape(a2)}" loading="lazy">'
+            f'<img class="ui-compare-img is-before" src="{s1}" alt="{htmllib.escape(a1)}" loading="lazy">'
+            '<div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div>'
+            '<div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>')
+
+
 def figures(html, image_width):
     """An image alone in a paragraph -> figure (caption = alt text); two or more -> gallery."""
     def fix(m):
         imgs = IMG.findall(m.group(1))
+        if len(imgs) == 2 and imgs[0][1].lower().startswith("before") and imgs[1][1].lower().startswith("after"):
+            return compare(imgs)
         if len(imgs) > 1:
             return '<div class="ui-doc-gallery">' + "".join(figure(s, htmllib.unescape(a)) for s, a in imgs) + "</div>"
         src, alt = imgs[0]

@@ -24,6 +24,8 @@ Assets that change the color of an image.
 
 ## Adjust RGB
 
+![Adjust RGB asset thumbnail](/docs2/images/assets/compositor-library/thumbs/adjust-rgb.png)
+
 ![Adjust RGB](/docs2/images/assets/compositor-library/color/adjust-rgb.png)
 
 Adjusts the red, green and blue channels of an image individually.
@@ -70,11 +72,18 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and the output to the next node. In the picture, Red is 30 and Blue is -30.
+Connect an image to Image and the output to the next node. In the slider, Red is 30 and Blue is -30.
 
-![Adjust RGB in use](/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the red and orange tones get stronger and the blue ones weaker](/docs2/images/assets/compositor-library/color/adjust-rgb-after.png)
+
+The setup used for the slider:
+
+![Adjust RGB setup](/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png)
 
 ## Average Color
+
+![Average Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/average-color.png)
 
 ![Average Color](/docs2/images/assets/compositor-library/color/average-color.png)
 
@@ -100,9 +109,16 @@ The output color after processing the effect.
 
 Connect an image to Image. The output is a single color, shown here as a flat fill.
 
-![Average Color in use](/docs2/images/assets/compositor-library/color/average-color-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the whole image becomes its average color](/docs2/images/assets/compositor-library/color/average-color-after.png)
+
+The setup used for the slider:
+
+![Average Color setup](/docs2/images/assets/compositor-library/color/average-color-usage.png)
 
 ## Color Temperature
+
+![Color Temperature asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-temperature.png)
 
 ![Color Temperature](/docs2/images/assets/compositor-library/color/color-temperature.png)
 
@@ -138,11 +154,18 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 3500.
+Connect an image to Image and set Temp Kelvin. In the slider, Temp Kelvin is 3500.
 
-![Color Temperature in use](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: a warm, orange tone](/docs2/images/assets/compositor-library/color/color-temperature-after.png)
+
+The setup used for the slider:
+
+![Color Temperature setup](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
 
 ## Color Tint
+
+![Color Tint asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-tint.png)
 
 ![Color Tint](/docs2/images/assets/compositor-library/color/color-tint.png)
 
@@ -184,11 +207,18 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and pick a Color. In the picture, Color is blue and Strength is 0.6.
+Connect an image to Image and pick a Color. In the slider, Color is blue and Strength is 0.6.
 
-![Color Tint in use](/docs2/images/assets/compositor-library/color/color-tint-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: a blue tint over the image](/docs2/images/assets/compositor-library/color/color-tint-after.png)
+
+The setup used for the slider:
+
+![Color Tint setup](/docs2/images/assets/compositor-library/color/color-tint-usage.png)
 
 ## Color Variation
+
+![Color Variation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-variation.png)
 
 ![Color Variation](/docs2/images/assets/compositor-library/color/color-variation.png)
 
@@ -230,11 +260,18 @@ The image with color variation applied.
 
 ### How to use
 
-Connect an image to Image. In the picture, Strength is 1.0.
+Connect an image to Image. In the slider, Strength is 1.0.
 
-![Color Variation in use](/docs2/images/assets/compositor-library/color/color-variation-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: soft patches of color](/docs2/images/assets/compositor-library/color/color-variation-after.png)
+
+The setup used for the slider:
+
+![Color Variation setup](/docs2/images/assets/compositor-library/color/color-variation-usage.png)
 
 ## Desaturator
+
+![Desaturator asset thumbnail](/docs2/images/assets/compositor-library/thumbs/desaturator.png)
 
 ![Desaturator](/docs2/images/assets/compositor-library/color/desaturator.png)
 
@@ -270,11 +307,20 @@ The desaturated image.
 
 ### How to use
 
-Connect an image to Image. In the picture, Saturation Strength is 0.8.
+Connect an image to Image. Saturation Strength sets how much color is removed: 1 leaves the image as it is, and lower values remove more.
 
-![Desaturator in use](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
+Hue Ratio changes which colors lose their saturation. In the slider, Saturation Strength is 0.3 and Hue Ratio is 1. At Hue Ratio 0 every color is desaturated evenly. At Hue Ratio 1 the strongly colored areas stay vivid and the muted areas lose their color.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the muted areas lose their color](/docs2/images/assets/compositor-library/color/desaturator-after.png)
+
+The setup used for the slider:
+
+![Desaturator setup](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
 
 ## Halftone Color
+
+![Halftone Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone-color.png)
 
 ![Halftone Color](/docs2/images/assets/compositor-library/color/halftone-color.png)
 
@@ -328,11 +374,22 @@ Black and white dots.
 
 ### How to use
 
-Connect the Distance output of Halftone Pattern to Distance, an image to Foreground, and set Background to white. Connect Color to the next node.
+Connect an image to Foreground and set Background to the color between the dots. Distance decides where the dots are. It is normally connected to the Distance output of Halftone Pattern, as shown in the next section.
 
-![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
+In the setup picture below the slider, Distance is a single value (0.5) instead of a pattern, so the image is cut at one brightness: the dark parts of the spheres turn to the Background color. Dots need a Distance that changes across the image.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: dots in the image color on a dark blue background](/docs2/images/assets/compositor-library/color/halftone-color-after.png)
+
+In the slider, Distance comes from Halftone Pattern (Scale 64) and Background is dark blue.
+
+The setup picture shows Distance as a single value:
+
+![Halftone Color setup](/docs2/images/assets/compositor-library/color/halftone-color-usage.png)
 
 ## Halftone Pattern
+
+![Halftone Pattern asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone-pattern.png)
 
 ![Halftone Pattern](/docs2/images/assets/compositor-library/color/halftone-pattern.png)
 
@@ -392,11 +449,23 @@ Coordinates inside each dot.
 
 ### How to use
 
-Use it together with Halftone Color: connect Distance to the Distance input of Halftone Color.
+Halftone Pattern does not need an image. Connect its Distance output to any node that takes a number to see how far each pixel is from the center of its dot. In the picture, Scale is 16 and the Distance output goes straight to the viewer.
 
-![Halftone Pattern in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
+The Vector output gives the coordinates inside each dot.
+
+![Halftone Pattern in use](/docs2/images/assets/compositor-library/color/halftone-pattern-usage.png)
+
+## Halftone Pattern and Halftone Color together
+
+Halftone Pattern makes the dot grid and Halftone Color colors it. Connect the Distance output of Halftone Pattern to the Distance input of Halftone Color, and connect an image to Foreground. Halftone Color sizes each dot by the brightness of the image: dots are Max Dot Size in the brightest areas and Min Dot Size in the darkest.
+
+Keeping them apart lets you change the grid (Rotation, Scale, Ink Noise) separately from the colors (Foreground, Background and the dot sizes). The Mask output of Halftone Color shows the same dots in black and white.
+
+![Halftone Pattern and Halftone Color together](/docs2/images/assets/compositor-library/color/halftone-chain-usage.png)
 
 ## Simple Saturation
+
+![Simple Saturation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/simple-saturation.png)
 
 ![Simple Saturation](/docs2/images/assets/compositor-library/color/simple-saturation.png)
 
@@ -426,21 +495,974 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image. In the picture, Saturation is 0.25.
+Connect an image to Image. In the slider, Saturation is 0.25.
 
-![Simple Saturation in use](/docs2/images/assets/compositor-library/color/simple-saturation-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: most of the color is gone](/docs2/images/assets/compositor-library/color/simple-saturation-after.png)
+
+The setup used for the slider:
+
+![Simple Saturation setup](/docs2/images/assets/compositor-library/color/simple-saturation-usage.png)
 
 # Creative / Design
 
-_Assets in this category will be documented here._
+Assets that create a designed look from render passes.
+
+## Blueprint
+
+![Blueprint asset thumbnail](/docs2/images/assets/compositor-library/thumbs/blueprint.png)
+
+![Blueprint](/docs2/images/assets/compositor-library/creative-design/blueprint.png)
+
+Generates a blueprint-style effect with grid lines and outlines based on depth and normals.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Depth
+
+Data type: Float.
+
+Depth Pass input to define object distances.
+
+#### Normal
+
+Data type: Vector.
+
+Normal Pass for surface normal data for edge detection.
+
+#### Position
+
+Data type: Vector.
+
+Position Pass for camera or object position data for effect calculations.
+
+#### Settings
+
+##### Strength
+
+Data type: Float (factor).
+
+Controls the overall intensity of the blueprint effect.
+
+##### Range
+
+Data type: Float.
+
+Sets the range for depth-based calculations.
+
+##### Line Color
+
+Data type: Color.
+
+Color of the blueprint lines.
+
+##### Background Color
+
+Data type: Color.
+
+Color of the background in the blueprint effect.
+
+#### Lines
+
+##### Line Thickness
+
+Data type: Integer.
+
+Controls the thickness of the geometry lines
+
+##### Line Variation Intensity
+
+Data type: Float.
+
+Adjusts the intensity of line variation patterns.
+
+##### Line Variation Strength
+
+Data type: Float (factor).
+
+Controls the intensity of line variation effects.
+
+#### Main Grid
+
+##### Grid Strength
+
+Data type: Float.
+
+Controls the intensity of the grid pattern.
+
+##### Grid Size
+
+Data type: Float.
+
+Sets the size of the grid pattern.
+
+##### Grid Thickness
+
+Data type: Float.
+
+Adjusts the thickness of the grid lines.
+
+#### Secondary Grid
+
+##### Detailed Grid Strength
+
+Data type: Float.
+
+Controls the intensity of a finer grid pattern.
+
+##### Detailed Grid Size
+
+Data type: Float.
+
+Sets the size of the finer grid pattern.
+
+##### Detailed Grid Thickness
+
+Data type: Float.
+
+Adjusts the thickness of the finer grid lines.
+
+#### Border Line
+
+##### Border Strength
+
+Data type: Float.
+
+Controls the intensity of the object borders.
+
+##### Border Size
+
+Data type: Float.
+
+Sets the size of the object borders.
+
+##### Border Thickness
+
+Data type: Float.
+
+Adjusts the thickness of the object borders.
+
+##### Border Double Line
+
+Data type: Boolean.
+
+Enables or disables a double-line effect for borders.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Blueprint needs render passes. Connect the Depth, Normal and Position passes of a Render Layers node to the inputs of the same name, and the rendered image to Image. Line Color and Background Color set the two colors of the blueprint. The panels Main Grid, Secondary Grid and Border Line control the grid and the outlines.
+
+## Breakdown Animation
+
+![Breakdown Animation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/breakdown-animation.png)
+
+![Breakdown Animation](/docs2/images/assets/compositor-library/creative-design/breakdown-animation.png)
+
+Creates an animated breakdown effect using multiple render passes and UV data.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Normal
+
+Data type: Vector.
+
+Surface normal data for effect calculations.
+
+#### UV/Position
+
+Data type: Vector.
+
+UV map data for texture mapping.
+
+#### Diffuse Direct
+
+Data type: Color.
+
+Direct diffuse lighting render pass.
+
+#### Diffuse Indirect
+
+Data type: Color.
+
+Indirect diffuse lighting render pass.
+
+#### Layer 0 (UV)
+
+Data type: Color.
+
+Custom layer. It is replaced by the UV pass when UV Pass is on.
+
+#### Layer 1
+
+Data type: Color.
+
+Custom layer, for example a diffuse color render pass.
+
+#### Layer 2
+
+Data type: Color.
+
+Custom layer, for example a direct glossy lighting render pass.
+
+#### Layer 3
+
+Data type: Color.
+
+Custom layer, for example an ambient occlusion render pass.
+
+#### UV Pass
+
+##### UV Pass
+
+Data type: Boolean.
+
+UV pass from Render Layers
+
+##### UV Texture Scale
+
+Data type: Float.
+
+Scales the UV texture for the effect.
+
+##### Color1
+
+Data type: Color.
+
+Color of the first checker
+
+##### Color2
+
+Data type: Color.
+
+Color of the second checker
+
+#### Settings
+
+##### Frame Start
+
+Data type: Float.
+
+The starting frame for the animation effect.
+
+##### Frame End
+
+Data type: Float.
+
+The ending frame for the animation effect.
+
+##### Transition Speed
+
+Data type: Float.
+
+Controls the speed of the animation transition.
+
+##### Transition Feather
+
+Data type: Float.
+
+Adjusts the softness of the transition edges.
+
+##### Transition Rotation
+
+Data type: Float.
+
+Rotates the transition effect.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+#### UV Texture Scale Checker
+
+Data type: Color.
+
+Indicator of the separate UV checker texture mapping channel.
+
+#### Transition Feather Checker
+
+Data type: Float.
+
+Indicator of the separate transition mask channel.
+
+### How to use
+
+Breakdown Animation works on render passes. Connect the passes of a Render Layers node to Normal, UV/Position, Diffuse Direct and Diffuse Indirect, and the rendered image to Image. Frame Start and Frame End set when the transition runs, and Transition Speed, Transition Feather and Transition Rotation shape it. The two extra outputs, UV Texture Scale Checker and Transition Feather Checker, show the checker texture and the transition mask as separate channels.
+
 
 # Distortion
 
-_Assets in this category will be documented here._
+Assets that shift, split or mirror the image.
+
+## Glitch Block
+
+![Glitch Block asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-block.png)
+
+![Glitch Block](/docs2/images/assets/compositor-library/distortion/glitch-block.png)
+
+Applies a block-based glitch effect to the image with customizable parameters.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Strength
+
+Data type: Float (factor).
+
+Controls the intensity of the glitch effect.
+
+#### Scale
+
+Data type: Float.
+
+Determines the size or frequency of the glitch pattern.
+
+#### Offset X
+
+Data type: Float (factor).
+
+Shifts the glitch effect along the X-axis.
+
+#### Offset Y
+
+Data type: Float (factor).
+
+Shifts the glitch effect along the Y-axis.
+
+#### Time
+
+Data type: Float.
+
+Controls the time-based variation of the glitch effect.
+
+#### Threshold
+
+Data type: Float.
+
+Sets the brightness threshold for triggering the glitch effect.
+
+#### Wrap
+
+Data type: Float.
+
+Controls how the glitch wraps around the image edges.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Blocks of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 5, Offset X 0.25. Time changes the pattern, so animate it for a flickering glitch.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: blocks shifted sideways](/docs2/images/assets/compositor-library/distortion/glitch-block-after.png)
+
+The setup used for the slider:
+
+![Glitch Block setup](/docs2/images/assets/compositor-library/distortion/glitch-block-setup.png)
+
+## Glitch Offset
+
+![Glitch Offset asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-offset.png)
+
+![Glitch Offset](/docs2/images/assets/compositor-library/distortion/glitch-offset.png)
+
+Applies an offset-based glitch effect to the image with customizable parameters.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Strength
+
+Data type: Float (factor).
+
+Controls the intensity of the glitch effect.
+
+#### Scale
+
+Data type: Float.
+
+Determines the size or frequency of the glitch pattern.
+
+#### Offset X
+
+Data type: Float (factor).
+
+Shifts the glitch effect along the X-axis.
+
+#### Offset Y
+
+Data type: Float (factor).
+
+Shifts the glitch effect along the Y-axis.
+
+#### Time
+
+Data type: Float.
+
+Controls the time-based variation of the glitch effect.
+
+#### Threshold
+
+Data type: Float.
+
+Sets the brightness threshold for triggering the glitch effect.
+
+#### Wrap
+
+Data type: Float.
+
+Controls how the glitch wraps around the image edges.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Parts of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 1, Offset X 0.25. Time changes the pattern.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: parts shifted sideways](/docs2/images/assets/compositor-library/distortion/glitch-offset-after.png)
+
+The setup used for the slider:
+
+![Glitch Offset setup](/docs2/images/assets/compositor-library/distortion/glitch-offset-setup.png)
+
+## Glitch RGB
+
+![Glitch RGB asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-rgb.png)
+
+![Glitch RGB](/docs2/images/assets/compositor-library/distortion/glitch-rgb.png)
+
+Applies an RGB channel offset glitch effect to the image.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Strength
+
+Data type: Float (factor).
+
+Controls the intensity of the RGB glitch effect.
+
+#### Scale
+
+Data type: Float.
+
+Determines the size or frequency of the glitch pattern.
+
+#### Offset X
+
+Data type: Float.
+
+Shifts the glitch effect along the X-axis.
+
+#### Offset Y
+
+Data type: Float.
+
+Shifts the glitch effect along the Y-axis.
+
+#### Time
+
+Data type: Float.
+
+Controls the time-based variation of the glitch effect.
+
+#### Wrap
+
+Data type: Float.
+
+Controls how the glitch wraps around the image edges.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. The red, green and blue channels are shifted apart, which leaves colored edges around the shapes. In the slider every value is at its default: Strength 1, Scale 1, Offset X 1.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: color channels shifted apart](/docs2/images/assets/compositor-library/distortion/glitch-rgb-after.png)
+
+The setup used for the slider:
+
+![Glitch RGB setup](/docs2/images/assets/compositor-library/distortion/glitch-rgb-setup.png)
+
+## Simple Distortion
+
+![Simple Distortion asset thumbnail](/docs2/images/assets/compositor-library/thumbs/simple-distortion.png)
+
+![Simple Distortion](/docs2/images/assets/compositor-library/distortion/simple-distortion.png)
+
+Applies a distortion effect to the image based on a vector field.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Vector
+
+Data type: Vector.
+
+Vector field input to control distortion direction and magnitude.
+
+#### X Scale
+
+Data type: Float.
+
+Scales the distortion effect along the X-axis.
+
+#### Y Scale
+
+Data type: Float.
+
+Scales the distortion effect along the Y-axis.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and a vector field to Vector, for example from a texture. The vector sets the direction and strength of the distortion, and X Scale and Y Scale scale it along each axis.
+
+## Symmetry
+
+![Symmetry asset thumbnail](/docs2/images/assets/compositor-library/thumbs/symmetry.png)
+
+![Symmetry](/docs2/images/assets/compositor-library/distortion/symmetry.png)
+
+Creates a symmetrical effect by flipping and offsetting the image.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Strength
+
+Data type: Float (factor).
+
+Controls the intensity of the symmetry effect.
+
+#### X Flip
+
+Data type: Boolean.
+
+Enables or disables flipping along the X-axis.
+
+#### Y Flip
+
+Data type: Boolean.
+
+Enables or disables flipping along the Y-axis.
+
+#### X Offset
+
+Data type: Float.
+
+Shifts the symmetry effect along the X-axis.
+
+#### Y Offset
+
+Data type: Float.
+
+Shifts the symmetry effect along the Y-axis.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. In the slider X Flip is on, so the right half of the image is a mirror of the left half. Y Flip does the same from top to bottom, and X Offset and Y Offset move the mirror line.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: right half mirrors the left](/docs2/images/assets/compositor-library/distortion/symmetry-after.png)
+
+The setup used for the slider:
+
+![Symmetry setup](/docs2/images/assets/compositor-library/distortion/symmetry-setup.png)
+
 
 # Filters
 
-_Assets in this category will be documented here._
+Assets that filter the image into a new look.
+
+## Halftone
+
+![Halftone asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone.png)
+
+![Halftone](/docs2/images/assets/compositor-library/filters/halftone.png)
+
+Applies a halftone pattern effect to simulate printed media visuals.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Display
+
+Data type: Menu.
+
+Selects the display mode or style of the halftone effect.
+
+#### Resolution
+
+Data type: Float.
+
+Controls the resolution or density of the halftone pattern.
+
+#### Size
+
+Data type: Float.
+
+Controls the dot size. Higher values may clip into pixels.
+
+#### Minimum Size
+
+Data type: Float.
+
+Controls the minimum dot size in shaded areas
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+#### Mask
+
+Data type: Float.
+
+Black and white halftone dots
+
+### How to use
+
+Connect an image to Image and the output to the next node. With Display on BW the result is white dots on black, and the dot size follows the brightness of the image. Resolution sets how many dots there are, Size sets the dot size and Minimum Size sets the dot size in the shaded areas. The Mask output gives the black and white dots on their own. In the slider every value is at its default.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: white dots on black](/docs2/images/assets/compositor-library/filters/halftone-after.png)
+
+The setup used for the slider:
+
+![Halftone setup](/docs2/images/assets/compositor-library/filters/halftone-setup.png)
+
+## Ordered Dithering 2x2
+
+![Ordered Dithering 2x2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-2x2.png)
+
+![Ordered Dithering 2x2](/docs2/images/assets/compositor-library/filters/ordered-dithering-2x2.png)
+
+Applies a 2x2 ordered dithering effect to create a patterned texture.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Display
+
+Data type: Menu.
+
+Selects the display mode or style of the dithering effect.
+
+#### Resolution
+
+Data type: Float.
+
+Controls the resolution or density of the dithering pattern.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Display sets the display mode and Resolution sets the density of the dither pattern. The 2x2 matrix gives the coarsest pattern of the three Ordered Dithering assets.
+
+## Ordered Dithering 4x4
+
+![Ordered Dithering 4x4 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-4x4.png)
+
+![Ordered Dithering 4x4](/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4.png)
+
+Applies a 4x4 ordered dithering effect to create a patterned texture.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Display
+
+Data type: Menu.
+
+Selects the display mode or style of the dithering effect.
+
+#### Resolution
+
+Data type: Float.
+
+Controls the resolution or density of the dithering pattern.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: black and white pattern](/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-after.png)
+
+The setup used for the slider:
+
+![Ordered Dithering 4x4 setup](/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-setup.png)
+
+## Ordered Dithering 8x8
+
+![Ordered Dithering 8x8 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-8x8.png)
+
+![Ordered Dithering 8x8](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8.png)
+
+Applies an 8x8 ordered dithering effect to create a patterned texture.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Display
+
+Data type: Menu.
+
+Selects the display mode or style of the dithering effect.
+
+#### Resolution
+
+Data type: Float.
+
+Controls the resolution or density of the dithering pattern.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: black and white pattern](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-after.png)
+
+The setup used for the slider:
+
+![Ordered Dithering 8x8 setup](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-setup.png)
+
+## Screen Space Pixelate
+
+![Screen Space Pixelate asset thumbnail](/docs2/images/assets/compositor-library/thumbs/screen-space-pixelate.png)
+
+![Screen Space Pixelate](/docs2/images/assets/compositor-library/filters/screen-space-pixelate.png)
+
+Applies a pixelation effect to the image in screen space.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Resolution
+
+Data type: Float.
+
+Controls the resolution or size of the pixelation effect.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. Resolution controls the size of the pixelation. In the slider Resolution is 50.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: pixelated image](/docs2/images/assets/compositor-library/filters/screen-space-pixelate-after.png)
+
+The setup used for the slider:
+
+![Screen Space Pixelate setup](/docs2/images/assets/compositor-library/filters/screen-space-pixelate-setup.png)
+
+## Sepia Advanced
+
+![Sepia Advanced asset thumbnail](/docs2/images/assets/compositor-library/thumbs/sepia-advanced.png)
+
+![Sepia Advanced](/docs2/images/assets/compositor-library/filters/sepia-advanced.png)
+
+Applies a sepia tone effect to the image for a vintage look.
+
+### Inputs
+
+#### Image
+
+Data type: Color.
+
+The input image to process.
+
+#### Strength
+
+Data type: Float (factor).
+
+Controls the intensity of the sepia effect.
+
+#### Intensity
+
+Data type: Float (factor).
+
+Adjusts the overall intensity of the sepia tone.
+
+#### Shadows
+
+Data type: Float (factor).
+
+Adjusts the intensity of the sepia effect in shadow areas.
+
+#### Highlights
+
+Data type: Float (factor).
+
+Adjusts the intensity of the sepia effect in highlight areas.
+
+#### Tint Color
+
+Data type: Float (factor).
+
+The color used for the sepia tint.
+
+### Outputs
+
+#### Image
+
+Data type: Color.
+
+The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and the output to the next node. The image gets a brown sepia tone. Strength sets how much of the effect is applied, Shadows and Highlights set how strongly it acts in the dark and bright areas. In the slider every value is at its default.
+
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: brown sepia tone](/docs2/images/assets/compositor-library/filters/sepia-advanced-after.png)
+
+The setup used for the slider:
+
+![Sepia Advanced setup](/docs2/images/assets/compositor-library/filters/sepia-advanced-setup.png)
+
 
 # Lenses
 
