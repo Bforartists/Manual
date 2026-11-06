@@ -24,6 +24,8 @@ Assets that change the color of an image.
 
 ## Adjust RGB
 
+![Adjust RGB asset thumbnail](/docs2/images/assets/compositor-library/thumbs/adjust-rgb.png)
+
 ![Adjust RGB](/docs2/images/assets/compositor-library/color/adjust-rgb.png)
 
 Adjusts the red, green and blue channels of an image individually.
@@ -76,6 +78,8 @@ Connect an image to Image and the output to the next node. In the picture, Red i
 
 ## Average Color
 
+![Average Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/average-color.png)
+
 ![Average Color](/docs2/images/assets/compositor-library/color/average-color.png)
 
 Calculates the average color of the input image.
@@ -103,6 +107,8 @@ Connect an image to Image. The output is a single color, shown here as a flat fi
 ![Average Color in use](/docs2/images/assets/compositor-library/color/average-color-usage.png)
 
 ## Color Temperature
+
+![Color Temperature asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-temperature.png)
 
 ![Color Temperature](/docs2/images/assets/compositor-library/color/color-temperature.png)
 
@@ -143,6 +149,8 @@ Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 35
 ![Color Temperature in use](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
 
 ## Color Tint
+
+![Color Tint asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-tint.png)
 
 ![Color Tint](/docs2/images/assets/compositor-library/color/color-tint.png)
 
@@ -190,6 +198,8 @@ Connect an image to Image and pick a Color. In the picture, Color is blue and St
 
 ## Color Variation
 
+![Color Variation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/color-variation.png)
+
 ![Color Variation](/docs2/images/assets/compositor-library/color/color-variation.png)
 
 Adds subtle random color variation across the image.
@@ -236,6 +246,8 @@ Connect an image to Image. In the picture, Strength is 1.0.
 
 ## Desaturator
 
+![Desaturator asset thumbnail](/docs2/images/assets/compositor-library/thumbs/desaturator.png)
+
 ![Desaturator](/docs2/images/assets/compositor-library/color/desaturator.png)
 
 Desaturates the image, with control over strength and hue.
@@ -275,6 +287,8 @@ Connect an image to Image. In the picture, Saturation Strength is 0.8.
 ![Desaturator in use](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
 
 ## Halftone Color
+
+![Halftone Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone-color.png)
 
 ![Halftone Color](/docs2/images/assets/compositor-library/color/halftone-color.png)
 
@@ -333,6 +347,8 @@ Connect the Distance output of Halftone Pattern to Distance, an image to Foregro
 ![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
 
 ## Halftone Pattern
+
+![Halftone Pattern asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone-pattern.png)
 
 ![Halftone Pattern](/docs2/images/assets/compositor-library/color/halftone-pattern.png)
 
@@ -398,6 +414,8 @@ Use it together with Halftone Color: connect Distance to the Distance input of H
 
 ## Simple Saturation
 
+![Simple Saturation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/simple-saturation.png)
+
 ![Simple Saturation](/docs2/images/assets/compositor-library/color/simple-saturation.png)
 
 Adjusts the saturation level of the image.
@@ -435,6 +453,8 @@ Connect an image to Image. In the picture, Saturation is 0.25.
 Assets that create a designed look from render passes.
 
 ## Blueprint
+
+![Blueprint asset thumbnail](/docs2/images/assets/compositor-library/thumbs/blueprint.png)
 
 ![Blueprint](/docs2/images/assets/compositor-library/creative-design/blueprint.png)
 
@@ -592,6 +612,8 @@ Blueprint needs render passes. Connect the Depth, Normal and Position passes of 
 
 ## Breakdown Animation
 
+![Breakdown Animation asset thumbnail](/docs2/images/assets/compositor-library/thumbs/breakdown-animation.png)
+
 ![Breakdown Animation](/docs2/images/assets/compositor-library/creative-design/breakdown-animation.png)
 
 Creates an animated breakdown effect using multiple render passes and UV data.
@@ -741,6 +763,8 @@ Assets that shift, split or mirror the image.
 
 ## Glitch Block
 
+![Glitch Block asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-block.png)
+
 ![Glitch Block](/docs2/images/assets/compositor-library/distortion/glitch-block.png)
 
 Applies a block-based glitch effect to the image with customizable parameters.
@@ -815,6 +839,8 @@ The setup used for the slider:
 ![Glitch Block setup](/docs2/images/assets/compositor-library/distortion/glitch-block-setup.png)
 
 ## Glitch Offset
+
+![Glitch Offset asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-offset.png)
 
 ![Glitch Offset](/docs2/images/assets/compositor-library/distortion/glitch-offset.png)
 
@@ -891,6 +917,8 @@ The setup used for the slider:
 
 ## Glitch RGB
 
+![Glitch RGB asset thumbnail](/docs2/images/assets/compositor-library/thumbs/glitch-rgb.png)
+
 ![Glitch RGB](/docs2/images/assets/compositor-library/distortion/glitch-rgb.png)
 
 Applies an RGB channel offset glitch effect to the image.
@@ -960,6 +988,8 @@ The setup used for the slider:
 
 ## Simple Distortion
 
+![Simple Distortion asset thumbnail](/docs2/images/assets/compositor-library/thumbs/simple-distortion.png)
+
 ![Simple Distortion](/docs2/images/assets/compositor-library/distortion/simple-distortion.png)
 
 Applies a distortion effect to the image based on a vector field.
@@ -1003,6 +1033,8 @@ The output image after processing the effect.
 Connect an image to Image and a vector field to Vector, for example from a texture. The vector sets the direction and strength of the distortion, and X Scale and Y Scale scale it along each axis.
 
 ## Symmetry
+
+![Symmetry asset thumbnail](/docs2/images/assets/compositor-library/thumbs/symmetry.png)
 
 ![Symmetry](/docs2/images/assets/compositor-library/distortion/symmetry.png)
 
@@ -1072,6 +1104,8 @@ Assets that filter the image into a new look.
 
 ## Halftone
 
+![Halftone asset thumbnail](/docs2/images/assets/compositor-library/thumbs/halftone.png)
+
 ![Halftone](/docs2/images/assets/compositor-library/filters/halftone.png)
 
 Applies a halftone pattern effect to simulate printed media visuals.
@@ -1135,6 +1169,8 @@ The setup used for the slider:
 
 ## Ordered Dithering 2x2
 
+![Ordered Dithering 2x2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-2x2.png)
+
 ![Ordered Dithering 2x2](/docs2/images/assets/compositor-library/filters/ordered-dithering-2x2.png)
 
 Applies a 2x2 ordered dithering effect to create a patterned texture.
@@ -1172,6 +1208,8 @@ The output image after processing the effect.
 Connect an image to Image and the output to the next node. Display sets the display mode and Resolution sets the density of the dither pattern. The 2x2 matrix gives the coarsest pattern of the three Ordered Dithering assets.
 
 ## Ordered Dithering 4x4
+
+![Ordered Dithering 4x4 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-4x4.png)
 
 ![Ordered Dithering 4x4](/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4.png)
 
@@ -1218,6 +1256,8 @@ The setup used for the slider:
 
 ## Ordered Dithering 8x8
 
+![Ordered Dithering 8x8 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/ordered-dithering-8x8.png)
+
 ![Ordered Dithering 8x8](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8.png)
 
 Applies an 8x8 ordered dithering effect to create a patterned texture.
@@ -1263,6 +1303,8 @@ The setup used for the slider:
 
 ## Screen Space Pixelate
 
+![Screen Space Pixelate asset thumbnail](/docs2/images/assets/compositor-library/thumbs/screen-space-pixelate.png)
+
 ![Screen Space Pixelate](/docs2/images/assets/compositor-library/filters/screen-space-pixelate.png)
 
 Applies a pixelation effect to the image in screen space.
@@ -1301,6 +1343,8 @@ The setup used for the slider:
 ![Screen Space Pixelate setup](/docs2/images/assets/compositor-library/filters/screen-space-pixelate-setup.png)
 
 ## Sepia Advanced
+
+![Sepia Advanced asset thumbnail](/docs2/images/assets/compositor-library/thumbs/sepia-advanced.png)
 
 ![Sepia Advanced](/docs2/images/assets/compositor-library/filters/sepia-advanced.png)
 
