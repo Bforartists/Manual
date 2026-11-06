@@ -223,61 +223,9 @@ Select a Smart Primitive and its gizmos appear in the 3D Viewport. A gizmo is a 
 
 Not every primitive has every gizmo. Each asset below lists the gizmos it has.
 
-## Using the Sidebar and Modifier properties
+## Properties and operators
 
-Every Smart Primitive can also be changed with numbers.
-
-- In the 3D Viewport, open the sidebar (**N**), go to the **Item** tab and find the **Asset Properties** panel.
-- The same properties are in the **Modifiers** tab of the Properties editor, in the Geometry Nodes modifier of the object.
-
-The properties are grouped the same way on every primitive:
-
-### Top-level properties
-
-The properties that most primitives share sit at the top: sizes, distances and angles. Change them with sliders and check boxes for quick edits.
-
-### Bevel properties
-
-Set the bevel size and the bevel resolution on the primitives that have a bevel.
-
-### Resolution properties
-
-Change the loop resolution and the subdivision detail.
-
-### UV properties
-
-Turn on **Relative** to scale the UVs with the primitive when the asset supports it.
-
-> **Note:** Planned: UV scaling and alignment controls, and a choice between relative and absolute UVs.
-
-## Operators and properties
-
-Smart Primitives stay editable until you apply them. The **Apply Selected Objects** operator turns the selected objects into regular mesh objects, using their visual geometry. It is in **Object › Apply**, in three forms:
-
-| Menu entry | What it does |
-|---|---|
-| Visual Geometry and Join | Applies the selected objects and joins them into one mesh object without changing the geometry. This is the **Join on Apply** property. |
-| Visual Geometry and Boolean | Applies the selected objects and combines them into one mesh object with a Float boolean union. This is the **Boolean on Apply** property. |
-| Visual Geometry and Remesh | Applies the selected objects and combines them into one voxel remeshed object. This is the **Remesh on Apply** property. |
-
-### Apply Selected Objects
-
-1. Select one or more meshes with Smart Primitives in the 3D Viewport.
-2. Choose **Object › Apply › Visual Geometry and Join** (or one of the other entries).
-
-### Join on Apply
-
-Joins all applied objects into a single mesh object without changing the geometry. It gives a group of solid meshes as one object.
-
-### Boolean on Apply
-
-Uses Float boolean union operations to combine the applied objects into a single mesh object.
-
-> **Note:** Works best with manifold meshes (no holes).
-
-### Remesh on Apply
-
-Creates a voxel-based remesh with a custom resolution to combine the applied objects into a single remeshed object. It has the properties **Voxel Size**, **Preserve Volume**, **Preserve Attributes**, **Fix Poles** and **Adaptivity**.
+Every Smart Primitive can also be changed with numbers, in the **Asset Properties** panel of the 3D View sidebar (**Item** tab) or in its Geometry Nodes modifier. The properties are grouped into top-level, bevel, resolution and UV properties. To turn Smart Primitives into regular meshes, use **Object › Apply**, with the Join, Boolean and Remesh options. Both are explained in [Default Library](default-library.md#using-the-sidebar-to-change-asset-properties).
 
 ## Basic Shapes
 
