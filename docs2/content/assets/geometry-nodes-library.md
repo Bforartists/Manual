@@ -284,6 +284,7 @@ Creates a voxel-based remesh with a custom resolution to combine the applied obj
 ### Cube
 
 ![Cube thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cube-thumb.png)
+![Cube with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cube.png)
 
 A standard six-sided shape, great for solid modeling. Includes relative UVs and resolution gizmos.
 
@@ -354,6 +355,7 @@ The generated shape.
 ### Cube Rounded
 
 ![Cube Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded-thumb.png)
+![Cube Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded.png)
 
 A cube with softened edges for a more organic feel.
 
@@ -432,6 +434,7 @@ The generated shape.
 ### Sphere
 
 ![Sphere thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/sphere-thumb.png)
+![Sphere with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/sphere.png)
 
 A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.
 
@@ -484,6 +487,7 @@ The generated shape.
 ### Icosphere
 
 ![Icosphere thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/icosphere-thumb.png)
+![Icosphere with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/icosphere.png)
 
 A low-poly spherical shape made of triangles, great for optimization, with various levels of resolution.
 
@@ -527,6 +531,7 @@ The generated shape.
 ### Cone
 
 ![Cone thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-thumb.png)
+![Cone with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone.png)
 
 A tapered shape with a circular base, useful for pointed structures.
 
@@ -582,6 +587,7 @@ The generated shape.
 ### Cone Rounded
 
 ![Cone Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-thumb.png)
+![Cone Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded.png)
 
 A cone with a smoother, more organic tip.
 
@@ -653,6 +659,7 @@ The generated shape.
 ### Cylinder
 
 ![Cylinder thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-thumb.png)
+![Cylinder with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder.png)
 
 A uniform circular primitive, essential for pipes and tubes.
 
@@ -709,6 +716,7 @@ The generated shape.
 ### Cylinder Rounded
 
 ![Cylinder Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-thumb.png)
+![Cylinder Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded.png)
 
 A cylinder with softened edges for better transitions.
 
@@ -794,6 +802,7 @@ The generated shape.
 ### Tube
 
 ![Tube thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-thumb.png)
+![Tube with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube.png)
 
 A hollow cylindrical primitive, great for mechanical parts.
 
@@ -876,6 +885,7 @@ The generated shape.
 ### Tube Rounded
 
 ![Tube Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-thumb.png)
+![Tube Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded.png)
 
 A tube with smooth edges for a more natural look.
 
@@ -975,6 +985,7 @@ The generated shape.
 ### Capsule
 
 ![Capsule thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/capsule-thumb.png)
+![Capsule with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/capsule.png)
 
 A stretched sphere useful for stylized characters and smooth objects.
 
@@ -1045,6 +1056,7 @@ The generated shape.
 ### Capsule Revolved
 
 ![Capsule Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved-thumb.png)
+![Capsule Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved.png)
 
 A capsule rotated for unique geometry shaping. Includes the ability to revolve around an angle.
 
@@ -1135,6 +1147,7 @@ The generated shape.
 ### Grid
 
 ![Grid thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/grid-thumb.png)
+![Grid with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/grid.png)
 
 A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative UVs.
 
@@ -1193,6 +1206,7 @@ The generated shape.
 ### Torus
 
 ![Torus thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/torus-thumb.png)
+![Torus with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/torus.png)
 
 A ring-shaped primitive, ideal for looped structures.
 
@@ -1263,6 +1277,7 @@ The generated shape.
 ### Torus Revolved
 
 ![Torus Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved-thumb.png)
+![Torus Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved.png)
 
 A torus rotated for specialized forms. Includes the ability to revolve around an angle.
 
@@ -1333,6 +1348,7 @@ The generated shape.
 ### Spiral
 
 ![Spiral thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/spiral-thumb.png)
+![Spiral with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/spiral.png)
 
 A coiled shape, useful for decorative and mechanical designs.
 
@@ -1444,6 +1460,7 @@ The generated shape.
 ### Circle
 
 ![Circle thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/circle-thumb.png)
+![Circle with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/circle.png)
 
 A simple 2D shape for base geometry and cutouts. Includes stamped or path based UVs.
 
@@ -1509,6 +1526,7 @@ The generated shape.
 ### Circle Revolved
 
 ![Circle Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved-thumb.png)
+![Circle Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved.png)
 
 A circular shape rotated into a 3D form. Includes the ability to revolve around an angle.
 
@@ -1582,6 +1600,7 @@ The generated shape.
 ### Curve Lofted
 
 ![Curve Lofted thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted-thumb.png)
+![Curve Lofted with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted.png)
 
 Generates complex surfaces using lofted curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.
 
@@ -1733,6 +1752,7 @@ The generated shape.
 ### Cylinder Revolved
 
 ![Cylinder Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved-thumb.png)
+![Cylinder Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved.png)
 
 A cylindrical shape rotated for varied effects. Includes the ability to revolve around an angle.
 
@@ -1818,6 +1838,7 @@ The generated shape.
 ### Cylinder Rounded Revolved
 
 ![Cylinder Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved-thumb.png)
+![Cylinder Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved.png)
 
 A rounded cylinder adapted for more curvature. Includes the ability to revolve around an angle.
 
@@ -1903,6 +1924,7 @@ The generated shape.
 ### Tube Revolved
 
 ![Tube Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved-thumb.png)
+![Tube Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved.png)
 
 A tube rotated for improved modeling flexibility. Includes the ability to revolve around an angle.
 
@@ -1985,6 +2007,7 @@ The generated shape.
 ### Tube Rounded Revolved
 
 ![Tube Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved-thumb.png)
+![Tube Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved.png)
 
 A smoothed, rotated tube for streamlined designs. Includes the ability to revolve around an angle.
 
@@ -2082,6 +2105,7 @@ The generated shape.
 ### Cone Rounded Revolved
 
 ![Cone Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved-thumb.png)
+![Cone Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved.png)
 
 A tapered primitive that blends sharpness with curvature. Includes the ability to revolve around an angle.
 
@@ -2173,6 +2197,7 @@ The generated shape.
 ### Sphere Revolved
 
 ![Sphere Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved-thumb.png)
+![Sphere Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved.png)
 
 A sphere adjusted through rotation for unique formations. Includes the ability to revolve around an angle.
 
