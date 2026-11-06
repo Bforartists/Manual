@@ -123,6 +123,20 @@ jobs:
         run: |
           bash docs2/tools/publish_pages.sh _preview "preview/${PREVIEW_DIR}" "preview: ${PREVIEW_DIR} [docs-bot]"
 
+      - name: ⏳ Wait until the preview is live
+        if: env.SAME_REPO == 'true'
+        continue-on-error: true
+        run: |
+          owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
+          url="https://${owner,,}.github.io/${repo}/preview/${PREVIEW_DIR}/"
+          # GitHub Pages needs a minute or two after the push; the link in the comment must not 404
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -H "Cache-Control: no-cache" "${url}?t=$(date +%s)")
+            if [ "$code" = "200" ]; then echo "PREVIEW_READY=true" >> "$GITHUB_ENV"; echo "Preview live after ~$((i*10))s"; exit 0; fi
+            sleep 10
+          done
+          echo "Preview not live after 5 min (last status $code)"
+
       - name: Keep the preview as a download too
         uses: actions/upload-artifact@v4
         with:
@@ -150,12 +164,19 @@ jobs:
             const branch = process.env.BRANCH;
             const cms = 'https://app.pagescms.org/bforartists/manual/' + encodeURIComponent(branch) + '/collection/';
             const changed = (process.env.CHANGED_FILES || '').split(/\s+/).filter(f => /^docs2\/(content|snippets)\/.*\.md$/.test(f)).slice(0, 8);
-            const edit = [`[![Edit this branch in Pages CMS](https://img.shields.io/badge/Edit_this_branch-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](${cms}docs)`]
-              .concat(changed.length ? ['', 'Changed pages: ' + changed.map(f => `[${f.replace(/^docs2\/(content|snippets)\//, '').replace(/\/index\.md$|\.md$/, '')}](${cms}${f.startsWith('docs2/snippets/') ? 'snippets' : 'docs'}/edit/${encodeURIComponent(f)})`).join(' · ')] : [])
+            const label = f => f.replace(/^docs2\/(content|snippets)\//, '').replace(/\/index\.md$|\.md$/, '');
+            const link = f => `${cms}${f.startsWith('docs2/snippets/') ? 'snippets' : 'docs'}/edit/${encodeURIComponent(f)}`;
+            // one button: straight into the first changed page (the whole branch when nothing changed); every changed page listed beside it
+            const target = changed.length ? link(changed[0]) : `${cms}docs`;
+            const btn = changed.length ? 'Edit_changed_pages' : 'Edit_this_branch';
+            const edit = [`[![Edit in Pages CMS](https://img.shields.io/badge/${btn}-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](${target})`]
+              .concat(changed.length ? ['', 'Changed pages: ' + changed.map(f => `[${label(f)}](${link(f)})`).join(' · ')] : [])
               .join('\n');
+            const ready = process.env.PREVIEW_READY === 'true';
             const body = [marker, edit, '',
-              `## 👀 [Open the preview](${process.env.PREVIEW_URL})`,
-              'Built with the website\'s doc kit styles. Updates on every push.', '',
+              ready ? `## 👀 [Open the preview](${process.env.PREVIEW_URL})` : `## 👀 Preview: ⏳ still being published`,
+              ready ? 'Built with the website\'s doc kit styles. Updates on every push.'
+                    : `The preview link is [${process.env.PREVIEW_URL}](${process.env.PREVIEW_URL}). GitHub Pages needs a few minutes after a push, so it can show 404 until then. Reload shortly.`, '',
               fs.readFileSync('_check.md', 'utf8'), '',
               fs.readFileSync('_bot.md', 'utf8')].join('\n');
             const { owner, repo } = context.repo;
