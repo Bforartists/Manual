@@ -130,3 +130,63 @@ A boolean. This forwards the output of the simulation input node directly to the
 | ------ | --------------------------------------- |
 | Inputs | **Geometry**: Standard geometry input. |
 | Output | **Geometry**: Standard geometry output. |
+
+### XPBD Solver (Experimental)
+
+![XPBD Solver (Experimental)](/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/xpbd-solver.png)
+
+Simulates physics with the XPBD method (Extended Position Based Dynamics). It takes a World bundle that describes what is simulated, moves it forward by one time step, and gives back the updated World.
+
+> **Warning:** This node is experimental. Its sockets and behavior can change in later versions.
+
+#### Inputs
+
+##### World
+
+The bundle that holds the state of the simulation. The solver updates it.
+
+##### Delta Time
+
+The length of the time step in seconds. The default is 0.04 (one 25th of a second). Negative values are treated as 0.
+
+##### Filter
+
+Only geometry whose tags match this filter is simulated. An empty filter simulates everything.
+
+##### Simulation to World
+
+A transform from the space the simulation runs in to world space.
+
+##### Solver
+
+A panel that is closed by default.
+
+##### Substeps
+
+How many smaller steps the time step is split into. More substeps are more accurate but slower. The default is 10, the minimum is 1.
+
+##### Constraint Iterations
+
+How many times the constraints are solved in each substep. The default is 1, the minimum is 1.
+
+##### Solver Path
+
+An optional path inside the World bundle. If you fill it in, the solver stores a small bundle there with the value residual_error: the average remaining error of the constraints. Values below one are below the constraint threshold. If it is empty, nothing is stored.
+
+##### Interpolation Range
+
+A panel that is closed by default. It controls how colliders that change shape are blended during the substeps.
+
+##### Begin
+
+Where the blend starts, from 0 (the previous shape of the collider) to 1 (its current shape). The default is 0.
+
+##### End
+
+Where the blend ends, from 0 to 1. The default is 1. The substeps are spread evenly between Begin and End.
+
+#### Outputs
+
+##### World
+
+The updated World bundle.

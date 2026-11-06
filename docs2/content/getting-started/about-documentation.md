@@ -117,7 +117,7 @@ Certain actions open **floating menus**, temporary overlays that give you fast a
 
 **Pie menus** are radial menus that let you select options quickly with directional input. They are designed for speed and efficiency.
 
-### Last Operator Panel
+### Adjust Last Operation - Panel
 
 After performing an action, the **Last Operator panel** appears to the bottom left of the Editor. It lets you **adjust the values** of the most recent operation, such as moving, scaling, or extruding.
 

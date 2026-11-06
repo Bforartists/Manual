@@ -81,28 +81,24 @@ Sets the current frame position as the start frame.
 
 ![Playhead Snapping](/docs2/images/editors/video-sequence-editor/footer-tools-and-options/playhead-snapping.png)
 
-Playhead controls in animation editors help position the current frame indicator with precision, improving navigation and editing across the Timeline, Dope Sheet, Graph Editor, NLA, and Video Sequencer.
-
+Turn on the magnet next to the arrow in the footer, then click the arrow to open these options. When you drag the playhead, it jumps to the things you pick here. The same options are shared by the Timeline, Dope Sheet, Graph Editor, NLA and Video Sequencer.
 
 | Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snap Distance | Sets the snapping threshold in pixels. Determines how close the playhead must be to a target for snapping to occur. |
-| Snap Target | **Frames**: Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame cursor placement. · **Seconds**: Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing. · **Markers**: Snaps to the closest timeline marker. Great for aligning actions to scene events or beats. · **Keyframes**: Snaps to keyframe positions. Ensures precise alignment for editing and playback. · **Strips**: Snaps to the start or end of video/audio strips. Useful in the Video Sequencer and NLA editor. |
+| -------- | ---------------------------------------------------------------------------------------------- |
+| Distance | How close, in pixels, the playhead has to get before it jumps to a target. |
+| Snap to | Pick one or more targets. Shift+click to pick several. |
+| Frame | Only shows when **Frames** is on. Snap every this many frames, for example every 2nd frame. |
+| Second | Only shows when **Seconds** is on. Snap every this many seconds. |
 
+**Snap to** targets:
 
-### Frame Step
-
-![Frame Step](/docs2/images/editors/video-sequence-editor/footer-tools-and-options/frame-step.png)
-
-Defines the step size for frame-by-frame navigation. Controls how far the playhead moves when stepping through frames manually.
-
-> **Note:** Only available with Frames Snap Target
-
-### Second Step
-
-Defines the step size for second-by-second navigation. Controls how far the playhead moves when stepping through the timeline manually.
-
-> **Note:** Only available with Second Snap Target
+| Target | Snaps to |
+| --------- | ------------------------------------------------------------------- |
+| Frames | Whole frames, so you never land between two frames. |
+| Seconds | Full seconds. Handy for pacing a cut or syncing to audio. |
+| Markers | The nearest marker, for example a beat you marked in the music. |
+| Keyframes | Keyframe positions. |
+| Strips | The start or end of a strip. |
 
 ## Active Keying Set
 

@@ -4,13 +4,13 @@ The official manual of [Bforartists](https://www.bforartists.com), the free and 
 
 <p>
 <a href="https://www.bforartists.com/docs/home"><img alt="Read the docs" src="https://img.shields.io/badge/Read_the-docs-0969da?style=for-the-badge&logo=readthedocs&logoColor=white"></a>
-<a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs"><img alt="Edit the docs" src="https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white"></a>
+<a href="https://app.pagescms.org/bforartists/manual/master/collection/docs"><img alt="Edit the docs" src="https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white"></a>
 <a href="https://github.com/Bforartists/Manual/wiki"><img alt="Help document" src="https://img.shields.io/badge/Help_document-Wiki-6f42c1?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
 <p>
-<a href="https://app.pagescms.org/Bforartists/Manual/master/collection/snippets"><img alt="Shared snippets" src="https://img.shields.io/badge/Shared-snippets-555555?style=flat-square&logo=files&logoColor=white"></a>
-<a href="https://app.pagescms.org/Bforartists/Manual/master/media/images"><img alt="Image library" src="https://img.shields.io/badge/Image-library-555555?style=flat-square&logo=googlephotos&logoColor=white"></a>
+<a href="https://app.pagescms.org/bforartists/manual/master/collection/snippets"><img alt="Shared snippets" src="https://img.shields.io/badge/Shared-snippets-555555?style=flat-square&logo=files&logoColor=white"></a>
+<a href="https://app.pagescms.org/bforartists/manual/master/media/images"><img alt="Image library" src="https://img.shields.io/badge/Image-library-555555?style=flat-square&logo=googlephotos&logoColor=white"></a>
 <a href="https://github.com/Bforartists/Manual/wiki/Editing-the-docs-online"><img alt="First edit guide" src="https://img.shields.io/badge/First_edit-5_minute_guide-555555?style=flat-square&logo=rocket&logoColor=white"></a>
 <a href="https://github.com/Bforartists/Manual/releases"><img alt="Releases" src="https://img.shields.io/badge/Old-releases-555555?style=flat-square&logo=github&logoColor=white"></a>
 </p>

@@ -41,7 +41,7 @@ Weights the vertices from the connected bone envelopes. And takes the distance t
 
 Weights the vertices connected with the bone. And takes the distance to the bone into account.
 
-##### Last Operator Weight from Bones
+##### Adjust Last Operation - Weight from Bones
 
 ![Last Operator Weight from Bones](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-weight-from-bones.png)
 
@@ -57,7 +57,7 @@ Choose if you want to Assign from Bone Envelopes, or from Bones.
 
 Normalize all normalizes the weight of all Vertex groups so that the values for the single vertices in the sum is 1.
 
-##### Last Operator Normalize all
+##### Adjust Last Operation - Normalize all
 
 | Entry | What it does |
 | ----------- | ------------------------------------------------------ |
@@ -72,7 +72,7 @@ Normalize normalizes the weight of the current selected Vertex group so that the
 
 Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It only edits selected Vertices. It flips when both sides are selected. Otherwise it copies from Unselected.
 
-##### Last Operator Mirror Vertex Group
+##### Adjust Last Operation - Mirror Vertex Group
 
 ![Last Operator Mirror Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-mirror-vertex-group.png)
 
@@ -87,7 +87,7 @@ Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It onl
 
 Invert inverts the weight painting for the selected vertex group.
 
-##### Last Operator Invert Vertex Group
+##### Adjust Last Operation - Invert Vertex Group
 
 ![Last Operator Invert Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-invert-vertex-group.png)
 
@@ -106,7 +106,7 @@ Subset is a drop-down menu choose the Subset method.
 
 Removes Vertex group assignments that are not required from the active vertex group.
 
-##### Last Operator Clean Vertex Group
+##### Adjust Last Operation - Clean Vertex Group
 
 ![Last Operator Clean Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-clean-vertex-group.png)
 
@@ -130,7 +130,7 @@ Keep Vertices assigned to at least one vertex group when cleaning.
 
 Quantize quantizes the weight paint values. It starts with 4 steps. With a step of 1 you have a single vertex color, no matter how you have painted it before.
 
-##### Last Operator Quantize Vertex Weights
+##### Adjust Last Operation - Quantize Vertex Weights
 
 ![Last Operator Quantize Vertex Weights](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png)
 
@@ -145,7 +145,7 @@ Quantize quantizes the weight paint values. It starts with 4 steps. With a step 
 
 Adds some offset to the Weight paint, and multiplys it with some gain.
 
-##### Last Operator Levels
+##### Adjust Last Operation - Levels
 
 ###### Subset
 
@@ -167,7 +167,7 @@ Here you adjust the gain.
 
 Smooths the weight for selected vertices.
 
-##### Last Operator Smooth Vertex Weights
+##### Adjust Last Operation - Smooth Vertex Weights
 
 ###### Subset
 
@@ -206,7 +206,7 @@ You can adjust the result in the Last Operator Transfer Mesh Data panel.
 
 ![Usage](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/usage-2.png)
 
-##### Last Operator Transfer Mesh Data
+##### Adjust Last Operation - Transfer Mesh Data
 
 ![Last Operator Transfer Mesh Data](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-transfer-mesh-data.png)
 
@@ -266,7 +266,7 @@ The strength of the chosen mix mode.
 
 Limit the number of deform weights for a vertex by removing the lowest weights. For example when five vertex groups are assigned to one vertice, and you set the limit to 4, then the vertice will just be assigned to the four vertex groups with the highest weight. This is useful for game content where the game engine has a limit for how much bones can be connected to one vertice.
 
-#### Last Operator Limit Number of Weights
+#### Adjust Last Operation - Limit Number of Weights
 
 ![Last Operator Limit Number of Weights](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-limit-number-of-weights.png)
 
@@ -293,7 +293,7 @@ The names should be self explaining.
 
 ![Locks](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/locks-2.png)
 
-##### Last Operator Change Lock
+##### Adjust Last Operation - Change Lock
 
 ![Last Operator Change Lock](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-change-lock.png)
 
@@ -445,7 +445,7 @@ Deletes the selected curve point.
 
 Predefined curve presets.
 
-##### Last Operator Weight Gradient
+##### Adjust Last Operation - Weight Gradient
 
 ![Last Operator Weight Gradient](/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/last-operator-weight-gradient.png)
 

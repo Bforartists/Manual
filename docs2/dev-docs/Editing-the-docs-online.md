@@ -4,7 +4,7 @@
 
 Every save is a Git commit with your name, and changes are reviewed before they reach the website.
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/docs)
 
 ---
 
@@ -19,7 +19,7 @@ Every save is a Git commit with your name, and changes are reviewed before they 
 | **Drag and drop images** | ✅ Into the page; the image bot files them | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/_inbox/` |
 | **Insert a tip, image, table** | ✅ `/` menu | ❌ Type it | ❌ Type it |
 | **Review** | Saves to your own branch (`master` is protected); you open the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
-| **Open it** | [Edit the docs](https://app.pagescms.org/Bforartists/Manual/master/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
+| **Open it** | [Edit the docs](https://app.pagescms.org/bforartists/manual/master/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
 | **Verdict** | ⭐ **The advertised way** | Typos | Bulk and developer work |
 
 On the website, every page has **Edit this page** at the bottom: it opens that exact file in GitHub's editor, and **Propose changes** makes the branch and pull request for you.
@@ -68,6 +68,12 @@ You only type the title. The bot fills in the page ID, section and breadcrumb af
 | ♻️ A shared section | Pick it in **Shared sections on this page**; edit its text in **♻️ Shared snippets** |
 
 More: [Plain writing](Plain-writing.md).
+
+### 🤖 Your pull request opens by itself
+
+Save your edits to a branch named `docs2/edit/<your-topic>` (in Pages CMS, use the branch menu to create it). The first save opens the pull request into `master` automatically, and the preview and checks follow in a comment. Every further save on that branch updates the same pull request.
+
+One-time setting for the maintainer: **Settings → Actions → General → Workflow permissions → tick "Allow GitHub Actions to create and approve pull requests"**.
 
 ### ⚠️ Good to know
 

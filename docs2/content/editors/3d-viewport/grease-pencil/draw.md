@@ -57,7 +57,7 @@ Inserts a keyframe into the active layer.
 
 Inserts a keyframe into all layers.
 
-###### Last Operator Insert Blank Frame
+###### Adjust Last Operation - Insert Blank Frame
 
 ![Last Operator Insert Blank Frame](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-insert-blank-frame.png)
 
@@ -85,7 +85,7 @@ Interpolate strokes between the previous and next keyframe by adding multiple ke
 
 Hides the not selected layers. The selected layers stays visible.
 
-###### Last Operator Hide Layers
+###### Adjust Last Operation - Hide Layers
 
 ![Last Operator Hide Layers](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-hide-layers.png)
 
@@ -101,7 +101,7 @@ Hides the not selected layers.
 
 Deletes not connected stroke geometry that is made of loose points.
 
-###### Last Operator Clean Loose Points
+###### Adjust Last Operation - Clean Loose Points
 
 ![Last Operator Clean Loose Points](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png)
 
@@ -113,7 +113,7 @@ The number of vertices below which a stroke gets counted as a loose point.
 
 Deletes all duplicated frames.
 
-###### Last Operator Clean Duplicated Frames
+###### Adjust Last Operation - Clean Duplicated Frames
 
 ![Last Operator Clean Duplicated Frames](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png)
 
@@ -133,7 +133,7 @@ Re project the selected strokes onto a new plane from the current viewport. So t
 
 Using this tool opens a popup menu. Choose the projection type method.
 
-###### Last Operator Re project Strokes
+###### Adjust Last Operation - Re project Strokes
 
 ![Last Operator Re project Strokes](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-re-project-strokes.png)
 
@@ -146,7 +146,7 @@ Using this tool opens a popup menu. Choose the projection type method.
 
 In Draw mode with the fill tool you are able to draw so called fill guide with holding down the Alt key. They act as the boundary of the fill area. This tool removes these fill guides.
 
-###### Last Operator Remove Fill Guides
+###### Adjust Last Operation - Remove Fill Guides
 
 ![Last Operator Remove Fill Guides](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png)
 

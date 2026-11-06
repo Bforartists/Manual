@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Input"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Input nodes: Constant, Gizmo, Import, Scene."
 order: 10
@@ -27,39 +27,53 @@ replaces:
 ---
 # Constant
 
-### Add menu - Input - Constant
+## Add menu - Input - Constant
 
 ![Add menu - Input - Constant](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/add-menu-input-constant.png)
 
 Here you find input nodes.
 
-#### Boolean
+### Boolean
 
 ![Boolean](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/boolean.png)
 
 Inputs a boolean value.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------- |
-| Properties | **Value**: The input boolean. |
-| Outputs | **Boolean**: The boolean state. |
+##### Value
 
+The input boolean.
 
-#### Collection
+#### Outputs
+
+##### Boolean
+
+Data type: Boolean.
+
+The boolean state.
+
+### Collection
 
 ![Collection](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/collection.png)
 
 Outputs a single collection.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------ |
-| Properties | **Collection**: The collection to select from the scene. |
-| Outputs | **Collection**: The collection data useful to get instances as children. |
+##### Collection
 
+The collection to select from the scene.
 
-#### Color
+#### Outputs
+
+##### Collection
+
+Data type: Collection.
+
+The collection data useful to get instances as children.
+
+### Color
 
 ![Color](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/color.png)
 
@@ -71,40 +85,43 @@ This node is a color wheel.
 
 Clicking at the color field at the bottom will reveal the standard Blender color dialog, where you can input numeric values.
 
-##### Outputs
+#### Outputs
 
-###### Color
+##### Color
+
+Data type: Color.
 
 Standard color output.
 
-#### Font
+### Font
 
 ![Font](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/font.png)
 
 Provides a constant reference to a font data inside Geometry Nodes. Useful for procedural text generation, typography-driven effects, and node-based workflows where font consistency is required
 
-##### Parameters
+#### Parameters
 
+##### Font Selector
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Font Selector | Dropdown or file browser to choose the font datablock. Can reference internal fonts or external font files. |
-| Output | Provides a **Font datablock reference** that other nodes can consume. Typically used as input for text-related nodes. |
+Dropdown or file browser to choose the font datablock. Can reference internal fonts or external font files.
 
+##### Outputs
 
-#### Image
+Provides a **Font datablock reference** that other nodes can consume. Typically used as input for text-related nodes.
+
+### Image
 
 ![Image](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image.png)
 
 Add a input image.
 
-##### Properties
+#### Properties
 
-###### Image
+##### Image
 
 Load or connect a image.
 
-###### New
+##### New
 
 ![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
 
@@ -112,23 +129,27 @@ Create a new image.
 
 Opens a new image dialog where you can adjust the color, size and further settings.
 
-###### Open
+##### Open
 
 Open a existing image.
 
-###### Image prop
+##### Image prop
 
 ![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
 
+###### Image browser
 
-| Entry | What it does |
-| ------------- | ------------------------------ |
-| Image browser | A list of available images |
-| Image name | The name of the image |
-| Fake user | Add a fake user to this asset. |
+A list of available images
 
+###### Image name
 
-**New**
+The name of the image
+
+###### Fake user
+
+Add a fake user to this asset.
+
+###### New
 
 ![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new-2.png)
 
@@ -136,101 +157,139 @@ Create a new image.
 
 Opens a new image dialog where you can adjust the color, size and further settings.
 
+###### Open Image
 
-| Entry | What it does |
-| ---------- | -------------------------------------- |
-| Open Image | Open a existing image. |
-| Remove | Removes the image as the active image. |
+Open a existing image.
 
+###### Remove
 
-###### Frame
+Removes the image as the active image.
+
+##### Frame
 
 For videos. Which frame to use.
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
+
+Data type: Image.
 
 The output image.
 
-#### Integer
+### Integer
 
 ![Integer](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/integer.png)
 
 Inputs a integer value.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------- |
-| Properties | **Value**: The input integer. |
-| Outputs | **Integer**: The integer value. |
+##### Value
 
+The input integer.
 
-#### Material
+#### Outputs
+
+##### Integer
+
+Data type: Integer.
+
+The integer value.
+
+### Material
 
 ![Material](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/material.png)
 
 Retreive a material.
 
-##### Outputs
+#### Outputs
 
-###### Material
+##### Material
+
+Data type: Material.
 
 The material output.
 
-#### Object
+### Object
 
 ![Object](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/object.png)
 
 Retrieves a single object.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------ |
-| Properties | **Object**: The object to select from the scene. |
-| Outputs | **Object**: The object data useful to get object info. |
+##### Object
 
+The object to select from the scene.
 
-#### Rotation
+#### Outputs
+
+##### Object
+
+Data type: Object.
+
+The object data useful to get object info.
+
+### Rotation
 
 ![Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/rotation.png)
 
 Apply a constant rotation.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------ |
-| Properties | **X, Y Z**: The rotation that you want to apply. |
-| Outputs | **Rotation**: The output rotation vector. |
+##### X, Y Z
 
+The rotation that you want to apply.
 
-#### String
+#### Outputs
+
+##### Rotation
+
+Data type: Rotation.
+
+The output rotation vector.
+
+### String
 
 ![String](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/string.png)
 
 Input a string.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------ |
-| Properties | **String**: The string that you want to input. |
-| Outputs | **Value**: The value set in the node properties. |
+##### String
 
+The string that you want to input.
 
-#### Value
+#### Outputs
+
+##### Value
+
+The value set in the node properties.
+
+### Value
 
 ![Value](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/value.png)
 
 Input numerical values to other nodes in the tree.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------- |
-| Properties | **Value**: Single numerical value (floating point). |
-| Outputs | **Value**: The value set in the node properties. |
+##### Value
 
+Single numerical value (floating point).
 
-#### Vector
+#### Outputs
+
+##### Value
+
+Data type: Float.
+
+The value set in the node properties.
+
+### Vector
 
 ![Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/vector.png)
 
@@ -238,181 +297,287 @@ Creates a single vector of three values that can be used as an input.
 
 Properties
 
+#### X Y Z
 
-| Entry | What it does |
-| ------ | ----------------------------------- |
-| X Y Z | The values of the vector. |
-| Output | **Vector**: Standard vector output. |
+The values of the vector.
+
+#### Outputs
+
+##### Vector
+
+Data type: Vector.
+
+Standard vector output.
 
 # Gizmo
 
-### Add menu - Input - Gizmo
+## Add menu - Input - Gizmo
 
 ![Add menu - Input - Gizmo](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/add-menu-input-gizmo.png)
 
 Here you find input nodes.
 
-#### Dial Gizmo
+### Dial Gizmo
 
 ![Dial Gizmo](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/dial-gizmo.png)
 
 Displays the rotation gizmo in the 3d view.
 
-##### Inputs
+#### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------- |
-| Value | Show or hide the widget. |
-| Position | Where to show the widget in relation to the object. |
-| Up | The up vector to define the rotation. |
-| Screen Space | Use screen space or object space values to display the widget. |
-| Radius | The radius of the widget. |
+Data type: Float.
 
+Show or hide the widget.
 
-##### Properties
+##### Position
 
-###### Color
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Up
+
+Data type: Vector (XYZ).
+
+The up vector to define the rotation.
+
+##### Screen Space
+
+Data type: Boolean.
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+Data type: Float.
+
+The radius of the widget.
+
+#### Properties
+
+##### Color
 
 ![Color](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/color.png)
 
 The widget color, defined in the theming.
 
-###### Pin Gizmo
+##### Pin Gizmo
 
 Always display the gizmo.
 
-##### Outputs
+#### Outputs
 
-###### Transform
+##### Transform
+
+Data type: Geometry.
 
 The output transform. No positions, no matrices, Gizmos.
 
-#### Linear Gizmo
+### Linear Gizmo
 
 ![Linear Gizmo](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/linear-gizmo.png)
 
 Displays the translation gizmo in the 3d view.
 
-##### Inputs
+#### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------- |
-| Value | Show or hide the widget. |
-| Position | Where to show the widget in relation to the object. |
-| Direction | The direction vector. |
-| Screen Space | Use screen space or object space values to display the widget. |
-| Radius | The radius of the widget. |
+Data type: Float.
 
+Show or hide the widget.
 
-##### Properties
+##### Position
 
-###### Color
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Direction
+
+Data type: Vector (XYZ).
+
+The direction vector.
+
+##### Screen Space
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+The radius of the widget.
+
+#### Properties
+
+##### Color
 
 ![Color](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/color.png)
 
 The widget color, defined in the theming.
 
-###### Draw Style
+##### Draw Style
 
 ![Draw Style](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/draw-style.png)
 
 How to draw the widget.
 
-###### Pin Gizmo
+##### Pin Gizmo
 
 Always display the gizmo.
 
-##### Outputs
+#### Outputs
 
-###### Transform
+##### Transform
+
+Data type: Geometry.
 
 The output transform. No positions, no matrices, Gizmos.
 
-#### Transform Gizmo
+### Transform Gizmo
 
 ![Transform Gizmo](/docs2/images/editors/geometry-node-editor/header/add-menu-input-gizmo/transform-gizmo.png)
 
 Displays the transform gizmo in the 3d view.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Value**: Show or hide the widget. · **Position**: Where to show the widget in relation to the object. · **Rotation**: The rotation vector. · **Screen Space**: Use screen space or object space values to display the widget. · **Radius**: The radius of the widget. |
-| Properties | **Pin Gizmo**: Always display the gizmo. |
-| Outputs | **Transform**: The output transform. No positions, no matrices, Gizmos. |
+##### Value
+
+Data type: Matrix.
+
+Show or hide the widget.
+
+##### Position
+
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Rotation
+
+Data type: Rotation.
+
+The rotation vector.
+
+##### Screen Space
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+The radius of the widget.
+
+#### Properties
+
+##### Pin Gizmo
+
+Always display the gizmo.
+
+#### Outputs
+
+##### Transform
+
+Data type: Geometry.
+
+The output transform. No positions, no matrices, Gizmos.
 
 # Import
 
-### Add menu - Input - Import
+## Add menu - Input - Import
 
 ![Add menu - Input - Import](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/add-menu-input-import.png)
 
 Here you find import nodes. These are useful for importing file based data into the Geometry Nodes trees.
 
-#### Import CSV (.csv)
+### Import CSV (.csv)
 
 ![Import CSV (.csv)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-csv-csv.png)
 
 The **Import CSV** node is used to bring structured tabular data into Geometry NOdes, particularly for workflows involving **point cloud generation**. You can select a CSV file, specify the appropriate delimiter, and extract formatted data to use in the node tree.
 
-##### Inputs
+#### Inputs
 
+##### Path
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Path | Specifies the location of the CSV file to be imported. This can also be a string input. · **Open**: Includes a folder icon button for browsing files. |
-| Delimiter | Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil |
+Specifies the location of the CSV file to be imported. This can also be a string input.
 
+###### Open
 
-##### Outputs
+Includes a folder icon button for browsing files.
+
+##### Delimiter
+
+Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil
+
+#### Outputs
 
 Generates a point cloud data type from the imported CSV file.
 
-#### Import Wavefront (.obj)
+### Import Wavefront (.obj)
 
 ![Import Wavefront (.obj)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-wavefront-obj.png)
 
 The **Import OBJ** node is used to load **Wavefront OBJ** files into Geometry Nodes, allowing you to integrate external 3D models into the Geometry Nodes tree. Useful for importing static meshes into a procedural workflow
 
-##### Inputs
+#### Inputs
 
-###### Path
+##### Path
 
 Specifies the location of the OBJ file to be imported. This can also be a string input.
 
-###### Open
+##### Open
 
 Includes a **folder icon button** for browsing files.
 
-##### Outputs
+#### Outputs
 
-###### Instances
+##### Instances
 
 Outputs the imported OBJ file as an instance within the node tree. You can later realize the instance for mesh data.
 
-#### Import Standford (.ply)
+### Import Standford (.ply)
 
 ![Import Standford (.ply)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-standford-ply.png)
 
 The **Import PLY** node is used to bring **Polygon File Format (PLY) meshes** into Geometry Nodes, facilitating workflows that incorporate 3D scanned data or procedural mesh generation. It allows you to load PLY files with vertex color and geometry information into the Geometry Nodes node tree.
 
+#### Inputs
+
+##### Path
+
+Specifies the location of the PLY file to be imported. This can also be a string input.
+
+##### Open
+
+Includes a **folder icon button** for browsing files.
+
+#### Outputs
+
+##### Mesh
+
+Outputs the imported PLY file as a **mesh**, including vertex positions, colors, and potential additional attributes.
+
+#### Import SPZ (.spz)
+
+![Import SPZ (.spz)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-spz.png)
+
+Loads an SPZ file as a point cloud that is shown as a 3D Gaussian Splat. The file is read again only when the path changes.
+
+If your version of Bforartists was built without SPZ support, the node shows the error "Disabled, Blender was compiled without SPZ I/O".
+
 ##### Inputs
 
 ###### Path
 
-Specifies the location of the PLY file to be imported. This can also be a string input.
-
-###### Open
-
-Includes a **folder icon button** for browsing files.
+The path to the SPZ file. Use the folder button to browse for a file. Only files that end with .spz are offered.
 
 ##### Outputs
 
-###### Mesh
+###### Points
 
-Outputs the imported PLY file as a **mesh**, including vertex positions, colors, and potential additional attributes.
+The imported point cloud. Warnings from the import are shown on the node.
 
 #### Import STL (.stl)
 
@@ -420,75 +585,75 @@ Outputs the imported PLY file as a **mesh**, including vertex positions, colors,
 
 The **Import STL** node is used to bring **Stereolithography (STL) files** into Geometry Nodes, making it ideal for workflows involving 3D printing, CAD models, and mesh-based processing. This node allows you to load STL files and integrate them into Geometry Nodes tree.
 
-##### Inputs
+#### Inputs
 
-###### Path
+##### Path
 
 Specifies the location of the STL file to be imported. This can also be a string input.
 
-###### Open
+##### Open
 
 Includes a **folder icon button** for browsing files.
 
-##### Outputs
+#### Outputs
 
-###### Mesh
+##### Mesh
 
 Outputs the imported STL file as a **mesh**. Typically this may be curve data, so you can use the Mesh to Curve node to convert to curves without a problem.
 
-#### Import Text (.txt)
+### Import Text (.txt)
 
 ![Import Text (.txt)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-text-txt.png)
 
 The Text Node is used to generate and manipulate text within Geometry Nodes. It allowsyouto input and format text dynamically, making it useful for procedural labeling, engraving, and other text-based effects.
 
-##### Inputs
+#### Inputs
 
-###### Path
+##### Path
 
 Specifies the location of the TXT file to be imported. This can also be a string input.
 
-###### Open
+##### Open
 
 Includes a **folder icon button** for browsing files.
 
-##### Outputs
+#### Outputs
 
-###### String
+##### String
 
 Outputs the imported text file as string value.
 
-#### Import OpenVDB (.vdb)
+### Import OpenVDB (.vdb)
 
 ![Import OpenVDB (.vdb)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-openvdb-vdb.png)
 
 The** I**mport VDB node is used to bring** OpenVDB volumetric data **into Geometry Nodes, making it an essential tool for fluid simulations, smoke, and cloud-based effects. It allowsyouto import voxel-based data and integrate it into procedural workflows.
 
-##### Inputs
+#### Inputs
 
-###### Path
+##### Path
 
 Specifies the location of the VDB file to be imported. This can also be a string input.
 
-###### Open
+##### Open
 
 Includes a **folder icon button** for browsing files.
 
-##### Outputs
+#### Outputs
 
-###### Volume
+##### Volume
 
 Outputs the imported VDB file as a volumetric grid, which can be modified within the node tree.
 
 # Scene
 
-### Add menu - Input - Scene
+## Add menu - Input - Scene
 
 ![Add menu - Input - Scene](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/add-menu-input-scene.png)
 
 Here you find input nodes.
 
-#### Active Camera
+### Active Camera
 
 ![Active Camera](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/active-camera.png)
 
@@ -497,13 +662,15 @@ The node outputs the the scene's current active camera.
 Typical usage would be to connect this node to an Object Info node to  
 obtain its transform.
 
-##### Outputs
+#### Outputs
 
-###### Active Camera
+##### Active Camera
+
+Data type: Object.
 
 The active camera.
 
-#### Camera Info
+### Camera Info
 
 ![Camera Info](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/active-camera.png)
 
@@ -512,54 +679,139 @@ The node outputs settings from the chosen camera.
 Typical usage would be to connect this node to an Object Info node to  
 obtain its transform.
 
+#### Inputs
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------- |
-| Inputs | **Camera**: The camera object. |
-| Outputs | — |
-| Projection Matrix | The projection matrix. |
-| Focal length | The focal length. |
-| Sensor | The sensor size. |
-| Shift | The camera shift. |
-| Clip Start | The camera near clipping distance. |
-| Clip End | The camera far clipping distance. |
-| Focus Distance | Distance to the focus point for depth of field. |
-| Is Orthographic | If the camera is using orthographic view. |
-| Orthographic Scale | The orthographic camera scale in case it is using Orthographic view. |
+##### Camera
 
+Data type: Object.
 
-#### Collection Info
+The camera object.
+
+#### Outputs
+
+—
+
+#### Projection Matrix
+
+The projection matrix.
+
+#### Focal length
+
+The focal length.
+
+#### Sensor
+
+The sensor size.
+
+#### Shift
+
+The camera shift.
+
+#### Clip Start
+
+The camera near clipping distance.
+
+#### Clip End
+
+The camera far clipping distance.
+
+#### Focus Distance
+
+Distance to the focus point for depth of field.
+
+#### Is Orthographic
+
+If the camera is using orthographic view.
+
+#### Orthographic Scale
+
+The orthographic camera scale in case it is using Orthographic view.
+
+### Collection Info
 
 ![Collection Info](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/collection-info.png)
 
 The Collection Info node retreives information from collections. This can be useful to use an external collection to control parameters in the geometry node tree.
 
-##### Inputs
+#### Inputs
 
+##### Collection
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Collection | Collection to get the properties from. |
-| Separate Children | Output each child of the collection as a separate instance. The output is sorted alphabetically. · **Reset Children**: Reset the transform of every child instance in the output. This setting is just active when Separate Children is active. |
+Data type: Collection.
 
+Collection to get the properties from.
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Properties | **Transform Space**: The transformation of the geometry outputs. · **Original**: Output the geometry relative to the collection offset. · **Relative**: Bring the input collection geometry into the modified object, maintaining the relative position between the objects in the scene. |
-| Outputs | **Geometry**: Geometry of the collection in world space with all its modifiers applied. |
+##### Separate Children
 
+Data type: Boolean.
 
-#### Image Info
+Output each child of the collection as a separate instance. The output is sorted alphabetically.
+
+###### Reset Children
+
+Reset the transform of every child instance in the output. This setting is just active when Separate Children is active.
+
+##### Properties
+
+###### Transform Space
+
+The transformation of the geometry outputs.
+
+###### Original
+
+Output the geometry relative to the collection offset.
+
+###### Relative
+
+Bring the input collection geometry into the modified object, maintaining the relative position between the objects in the scene.
+
+##### Outputs
+
+###### Geometry
+
+Geometry of the collection in world space with all its modifiers applied.
+
+### Image Info
 
 ![Image Info](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/image-info.png)
 
 Retreive infos from an image.
 
-##### Input
+#### Input
 
-###### Image
+##### Image
+
+Data type: Image.
 
 Load or connect a image.
+
+##### New
+
+![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
+
+Create a new image.
+
+Opens a new image dialog where you can adjust the color, size and further settings.
+
+##### Open
+
+Open a existing image.
+
+##### Image prop
+
+![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
+
+###### Image browser
+
+A list of available images
+
+###### Image name
+
+The name of the image
+
+###### Fake user
+
+Add a fake user to this asset.
 
 ###### New
 
@@ -569,79 +821,113 @@ Create a new image.
 
 Opens a new image dialog where you can adjust the color, size and further settings.
 
-###### Open
+###### Open Image
 
 Open a existing image.
 
-###### Image prop
+###### Remove
 
-![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
+Removes the image as the active image.
 
+##### Frame
 
-| Entry | What it does |
-| ------------- | ------------------------------ |
-| Image browser | A list of available images |
-| Image name | The name of the image |
-| Fake user | Add a fake user to this asset. |
-
-
-**New**
-
-![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
-
-Create a new image.
-
-Opens a new image dialog where you can adjust the color, size and further settings.
-
-
-| Entry | What it does |
-| ---------- | -------------------------------------- |
-| Open Image | Open a existing image. |
-| Remove | Removes the image as the active image. |
-
-
-###### Frame
+Data type: Integer.
 
 For videos. Which frame to use.
 
-##### Outputs
+#### Outputs
 
+##### Width
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------- |
-| Width | The width of the image. |
-| Height | The height of the image |
-| Has Alpha | Returns true if the image has an alpha channel |
-| Frame Count | For movies. How many frames. |
-| FPS | For movies, what FPS rate. |
+Data type: Integer.
 
+The width of the image.
 
-#### Is Viewport
+##### Height
+
+Data type: Integer.
+
+The height of the image
+
+##### Has Alpha
+
+Data type: Boolean.
+
+Returns true if the image has an alpha channel
+
+##### Frame Count
+
+Data type: Integer.
+
+For movies. How many frames.
+
+##### FPS
+
+Data type: Float.
+
+For movies, what FPS rate.
+
+### Is Viewport
 
 ![Is Viewport](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/is-viewport.png)
 
 The Is Viewport node outputs true when geometry nodes is evaluated for the viewport. For the final render the node outputs false.
 
-##### Outputs
+#### Outputs
 
-###### Is Viewport
+##### Is Viewport
+
+Data type: Boolean.
 
 A booleran that indicates if the geometry nodes is evaluated for preview.
 
-#### Object Info
+### Object Info
 
 ![Object Info](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/object-info.png)
 
 The Object Info node retreives information from objects. And outputs it then.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Object**: Object to get the properties from. |
-| Outputs | **Transform**: Transform matrix output. · **Location**: Location of the object in world space. · **Rotation**: Rotation of the object in world space. · **Scale**: Scale of the object in world space. · **Geometry**: Geometry of the object in world space with all its modifiers applied. |
+##### Object
 
+Data type: Object.
 
-#### Scene time
+Object to get the properties from.
+
+#### Outputs
+
+##### Transform
+
+Data type: Matrix.
+
+Transform matrix output.
+
+##### Location
+
+Data type: Vector.
+
+Location of the object in world space.
+
+##### Rotation
+
+Data type: Rotation.
+
+Rotation of the object in world space.
+
+##### Scale
+
+Data type: Vector.
+
+Scale of the object in world space.
+
+##### Geometry
+
+Data type: Geometry.
+
+Geometry of the object in world space with all its modifiers applied.
+
+### Scene time
 
 ![Scene time](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/scene-time.png)
 
@@ -649,17 +935,57 @@ Outputs the current scene time in seconds or in frames.
 The Frame output is a float value to make subframe rendering for motion  
 blur possible.
 
-##### Outputs
+#### Outputs
 
+##### Seconds
 
-| Entry | What it does |
-| ------- | ------------------ |
-| Seconds | Output in seconds. |
-| Frame | Output in Frames. |
+Data type: Float.
 
+Output in seconds.
 
-#### Self Object
+##### Frame
+
+Data type: Float.
+
+Output in Frames.
+
+### Self Object
 
 ![Self Object](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/self-object.png)
 
 Retreives the parent object of the geometry nodegroup.
+
+### Collection Children
+
+![Collection Children](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/collection-children.png)
+
+Lists the objects and the collections that sit inside a collection, sorted by name. Use it to loop over everything in a collection, for example to instance every object it holds. With Recursive on, the node also looks inside the collections it finds.
+
+#### Inputs
+
+##### Collection
+
+Data type: Collection.
+
+The collection to look into.
+
+##### Recursive
+
+Data type: Boolean.
+
+On: also include the children of child collections.
+
+#### Outputs
+
+##### Collections
+
+Data type: Collection list.
+
+The child collections.
+
+##### Objects
+
+Data type: Object list.
+
+The child objects.
+

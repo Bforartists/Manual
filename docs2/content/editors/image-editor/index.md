@@ -81,7 +81,7 @@ A right click in paint mode opens a color picker with some further settings.
 
 Opens a sub menu where you can choose different handle types.
 
-##### Last Operator Set Handle Type
+##### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
 

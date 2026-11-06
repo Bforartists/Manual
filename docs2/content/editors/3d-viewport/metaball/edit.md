@@ -49,7 +49,7 @@ Select the elements, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/3d-viewport/header/metaball-edit-mode-metaball-menu/usage.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
@@ -85,7 +85,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
 
@@ -137,7 +137,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
@@ -169,7 +169,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a selection between two defined points. This also works with Metaballs. You need more than one metaball element.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
 
 
 | Entry | What it does |
@@ -192,7 +192,7 @@ The end point.
 
 This tool allows randomizes the positions of the selected meta elements.
 
-##### Last Operator Randomize Transform
+##### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
@@ -221,7 +221,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
@@ -272,7 +272,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -317,7 +317,7 @@ Set dimensions allows to scale object selections in absolute world values. No ma
 
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
-##### Last Operator Set Dimensions
+##### Adjust Last Operation - Set Dimensions
 
 ###### New Dimensions
 
@@ -339,7 +339,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png)
 
@@ -363,7 +363,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -386,7 +386,7 @@ The copy sticks to the mouse until you release it. A Right click while moving wi
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
@@ -417,7 +417,7 @@ Makes all curve geometry in the scene visible again.
 
 Hides the selected curve geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png)
 
@@ -476,7 +476,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png)
 
@@ -517,7 +517,7 @@ The copy sticks to the mouse until you release it. A Right click while moving wi
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-duplicate.png)
 
@@ -558,7 +558,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-mirror.png)
 
@@ -580,7 +580,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last Operator Snap
+##### Adjust Last Operation - Snap
 
 ![Last Operator Snap](/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-snap.png)
 
@@ -607,7 +607,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
 

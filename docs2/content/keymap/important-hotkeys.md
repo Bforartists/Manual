@@ -6,13 +6,12 @@ path:
   - Keymap
   - Important Hotkeys
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 42 Important Hotkeys.odt
-summary: "The usage of Bforartists is UI centered."
+summary: The usage of Bforartists is UI centered.
 ---
-
 The usage of Bforartists is UI centered. You should get away with using the tools from the UI, and not by hotkeys. And we have reduced the keymap dramatically compared to the Blender keymap.
 
 There are however a few important hotkeys left that makes your life easier. And there are still some hotkeys that you simply need. Like the navigation with the mouse, which is also some kind of a hotkey.
@@ -45,8 +44,9 @@ F12 = Render Image
 Numpad 0 = Switch to Cameraview
 ```
 
+
 | Action | Keys |
-|---|---|
+| -------------------- | ------------------------ |
 | Move view | `MMB` |
 | Move selection | `W` |
 | Rotate view | `RMB` / Alt + MMB |
@@ -56,6 +56,7 @@ Numpad 0 = Switch to Cameraview
 | Trackball rotation | 2 x `E` |
 | Render Image | `F12` |
 | Switch to Cameraview | `Numpad 0` |
+
 
 ### Switch views to orthographic
 
@@ -68,14 +69,16 @@ Ctrl + Numpad 3 = Ortho left
 Ctrl + Numpad 7 = Ortho bottom
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------------ | --------------- |
 | Ortho front | `Numpad 1` |
 | Ortho right | `Numpad 3` |
 | Ortho back | Ctrl + Numpad 1 |
 | Ortho top | `Numpad 7` |
 | Ortho left | Ctrl + Numpad 3 |
 | Ortho bottom | Ctrl + Numpad 7 |
+
 
 To leave the orthographic views rotate the view.
 
@@ -89,13 +92,15 @@ Shift = Add to / Remove from selection
 G = Select Circle
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------------------------------ | ------------ |
 | Tweak | `D` |
 | Lasso Select | `RMB` |
 | Box Select | `B` |
 | Add to / Remove from selection | Hold `Shift` |
 | Select Circle | `G` |
+
 
 ### Modes
 
@@ -109,8 +114,9 @@ Shift + 2 = Draw / Pose Mode
 6 = Texture Paint
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------------------------- | --------- |
 | Object Mode | `1` |
 | Edit Mode | `2` |
 | Draw Mode (Grease Pencil) | Shift + 2 |
@@ -119,6 +125,7 @@ Shift + 2 = Draw / Pose Mode
 | Vertex Paint | `4` |
 | Weight Paint | `5` |
 | Texture Paint | `6` |
+
 
 ### Edit Mode with a Mesh object
 
@@ -133,8 +140,9 @@ S = Extrude
 Shift = Add to selection
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------------------ | ----------------- |
 | Edge Select | `C` |
 | Select Edgeloop | Alt + LMB |
 | Vertice Select | `X` |
@@ -143,6 +151,9 @@ Shift = Add to selection
 | Pick shortest Path | Ctrl + Left Click |
 | Extrude | `S` |
 | Add to selection | Hold `Shift` |
+
+
+> **Tip:** Press **S** again to cycle through the other extrude tools in the tool shelf group, like Extrude Along Normals and Extrude Individual. There are several ways to extrude, and S gets you to each of them without reaching for the mouse.
 
 ### Edit mode with a Bone object
 
@@ -154,13 +165,15 @@ P = Separate Bones
 Ctrl + P = Make Parent
 ```
 
+
 | Action | Keys |
-|---|---|
+| -------------- | --------- |
 | Extrude | `S` |
 | Clear Parent | Alt + P |
 | Extrude Forked | Shift + S |
 | Separate Bones | `P` |
 | Make Parent | Ctrl + P |
+
 
 ### Sculpt Mode with a Mesh object
 
@@ -170,11 +183,13 @@ V = Brush Angle
 C = Brush Strength
 ```
 
+
 | Action | Keys |
-|---|---|
+| -------------- | ---- |
 | Brush Size | `X` |
 | Brush Angle | `V` |
 | Brush Strength | `C` |
+
 
 ### Vertex Mode with a Mesh object
 
@@ -184,11 +199,13 @@ C = Brush Angle
 V = Brush Strength
 ```
 
+
 | Action | Keys |
-|---|---|
+| -------------- | ---- |
 | Brush Size | `X` |
 | Brush Angle | `C` |
 | Brush Strength | `V` |
+
 
 ### Texture Paint Mode with a Mesh object
 
@@ -199,12 +216,14 @@ C = Brush Strength
 Ctrl + Alt + F = Radial Control Mask Angle
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------------------------- | -------------- |
 | Brush Size | `X` |
 | Brush Angle | `V` |
 | Brush Strength | `C` |
 | Radial Control Mask Angle | Ctrl + Alt + F |
+
 
 ### Paint modes when working with a stencil map
 
@@ -217,14 +236,16 @@ Ctrl + RMB = Scale stencil Texture
 Ctrl + Alt + RMB = Scale secondary stencil Texture
 ```
 
+
 | Action | Keys |
-|---|---|
+| -------------------------------- | ------------------------ |
 | Move stencil Texture | Alt + RMB |
 | Move secondary stencil Texture | Shift + Ctrl + Alt + RMB |
 | Rotate stencil Texture | Shift + RMB |
 | Rotate secondary stencil Texture | Shift + Alt + RMB |
 | Scale stencil Texture | Ctrl + RMB |
 | Scale secondary stencil Texture | Ctrl + Alt + RMB |
+
 
 ## Global keys
 
@@ -237,12 +258,14 @@ Ctrl + S = Save File
 Ctrl + N = New File
 ```
 
+
 | Action | Keys |
-|---|---|
+| --------- | ---------------- |
 | Open File | Ctrl + O |
 | Save as | Shift + Ctrl + S |
 | Save File | Ctrl + S |
 | New File | Ctrl + N |
+
 
 ### Undo Redo
 
@@ -251,10 +274,26 @@ Ctrl + Z = Undo
 Shift + Ctrl + Z = Redo
 ```
 
+
 | Action | Keys |
-|---|---|
+| ------ | ---------------- |
 | Undo | Ctrl + Z |
 | Redo | Shift + Ctrl + Z |
+
+
+### Menus
+
+```keymap-keys
+MMB drag = Scroll the menu
+```
+
+
+| Action | Keys |
+| ------------------ | ----------------- |
+| Scroll a long menu | Hold MMB and drag |
+
+
+Menus that are taller or wider than the screen or editor area can be scrolled with the middle mouse button. This works in every menu and area in every editor.
 
 ### F keys
 
@@ -272,8 +311,9 @@ F12 = Render Still
 Ctrl + F12 = Render Animation
 ```
 
+
 | Action | Keys |
-|---|---|
+| ----------------------------------------------------------------- | ---------- |
 | Rename active item | `F2` |
 | Batch rename item | Ctrl + F2 |
 | Search Menu | `F3` |
@@ -286,8 +326,10 @@ Ctrl + F12 = Render Animation
 | Render Still | `F12` |
 | Render Animation | Ctrl + F12 |
 
+
 ## See them in the viewport
 
 Bforartists can show these keys right in the 3D Viewport, so you don't need this page open. In the 3D Viewport sidebar, open the **View** tab and find the **Important Hotkeys** panel, then click **Show Text**. The list appears in the top left corner of the viewport and changes with the mode you are in. The same panel sets the text colour and size.
 
 > **Tip:** No Important Hotkeys panel? It comes from the **Important Hotkeys Overlays** add-on that ships with Bforartists. Turn it on in Edit › Preferences › Add-ons.
+

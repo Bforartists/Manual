@@ -1,0 +1,33 @@
+# 🧹 Deletes docs2/edit/* branches that never got a save (no commits ahead of master)
+# and are older than 3 days. Branches that have commits are left alone.
+
+name: Docs 2.0 clean up edit branches
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete empty edit branches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cutoff=$(date -u -d '3 days ago' +%s)
+          gh api "repos/$GITHUB_REPOSITORY/git/matching-refs/heads/docs2/edit/" --paginate --jq '.[].ref' | while read -r ref; do
+            branch="${ref#refs/heads/}"
+            enc=$(printf '%s' "$branch" | jq -sRr @uri)
+            ahead=$(gh api "repos/$GITHUB_REPOSITORY/compare/master...$enc" --jq '.ahead_by' 2>/dev/null || echo 1)
+            when=$(gh api "repos/$GITHUB_REPOSITORY/commits/$enc" --jq '.commit.committer.date' 2>/dev/null || echo "")
+            ts=$(date -u -d "$when" +%s 2>/dev/null || echo 9999999999)
+            if [ "$ahead" = "0" ] && [ "$ts" -lt "$cutoff" ]; then
+              echo "Deleting empty branch $branch"
+              gh api -X DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$branch"
+            fi
+          done

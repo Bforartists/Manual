@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Attribute"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Attribute nodes."
 order: 30
@@ -33,13 +33,17 @@ Retreive statistic values from the input mesh.
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ------------------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geometry input. |
-| Attribute | Attribute to get the statistics from. |
+Standard geometry input.
 
+##### Selection
+
+A selection of the geometry input.
+
+##### Attribute
+
+Attribute to get the statistics from.
 
 #### Properties
 
@@ -63,18 +67,37 @@ Vector will outupt a vector 3 with floating point values.
 
 Outputs the statistics for the different types.
 
+##### Mean
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mean | The average value of all data. |
-| Median | The median value of all data. |
-| Sum | The sum value of all data. |
-| Min | The min value of all data. |
-| Max | The max value of all data. |
-| Range | The difference between the max and min value. |
-| Standard Derivation | How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range. |
-| Variance | The variance of all data, defined as the square of the standard deviation. |
+The average value of all data.
 
+##### Median
+
+The median value of all data.
+
+##### Sum
+
+The sum value of all data.
+
+##### Min
+
+The min value of all data.
+
+##### Max
+
+The max value of all data.
+
+##### Range
+
+The difference between the max and min value.
+
+##### Standard Derivation
+
+How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range.
+
+##### Variance
+
+The variance of all data, defined as the square of the standard deviation.
 
 ### Domain Size
 
@@ -85,6 +108,8 @@ The Domain Size node has a single geometry input and a selection for the compone
 #### Input
 
 ##### Geometry
+
+Data type: Geometry.
 
 Geometry input.
 
@@ -102,14 +127,21 @@ What component to calculate.
 
 ![With type mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-mesh.png)
 
+###### Point Count
 
-| Entry | What it does |
-| ----------------- | ---------------------------------- |
-| Point Count | The point count of the mesh. |
-| Edge Count | The edge count of the mesh. |
-| Face Count | The face count of the mesh. |
-| Face Corner Count | The face corner count of the mesh. |
+The point count of the mesh.
 
+###### Edge Count
+
+The edge count of the mesh.
+
+###### Face Count
+
+The face count of the mesh.
+
+###### Face Corner Count
+
+The face corner count of the mesh.
 
 ##### With type Point Cloud
 
@@ -139,6 +171,52 @@ The number of splines in the curve.
 
 How many instances the input geometry has.
 
+### Get Attribute Names
+
+![Get Attribute Names](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/get-attribute-names.png)
+
+Lists the names of the attributes of a geometry as a list of strings. You can limit the list to one data type and one domain. Internal attributes, whose names start with a dot, are not listed.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to read the attribute names from. All parts of the geometry are checked.
+
+##### Filter Data Type
+
+Data type: Boolean.
+
+A panel with a checkbox in its header. Turn it on to list only attributes of one data type.
+
+##### Data Type
+
+Data type: Menu.
+
+The data type to list. It is only used when Filter Data Type is on. The default is Float.
+
+##### Filter Domain
+
+Data type: Boolean.
+
+A panel with a checkbox in its header. Turn it on to list only attributes on one domain.
+
+##### Domain
+
+Data type: Menu.
+
+The domain to list. It is only used when Filter Domain is on. The default is Point.
+
+#### Outputs
+
+##### Names
+
+Data type: String list.
+
+A list of the attribute names, sorted alphabetically. Each name appears once, even if several parts of the geometry have it.
+
 ### Blur Attribute
 
 ![Blur Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/blur-attribute.png)
@@ -147,12 +225,17 @@ The Blur Attribute mixes values of neighbour elements.
 
 #### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| Value | Name of the attribute that is used as input. It should be a float attribute with values between zero and one. |
-| Iterations | How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements. |
+Data type: follows the Data Type setting.
 
+Name of the attribute that is used as input. It should be a float attribute with values between zero and one.
+
+##### Iterations
+
+Data type: Integer.
+
+How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements.
 
 #### Properties
 
@@ -165,6 +248,8 @@ What data type to use.
 #### Outputs
 
 ##### Value
+
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -180,6 +265,8 @@ The result is stored on the geometry just like a regular attribute with a name. 
 
 ##### Geometry
 
+Data type: Geometry.
+
 Standard geometry input.
 
 ##### Empty socket
@@ -192,12 +279,15 @@ Connect a node to get its attribute. Note that adding a connection creates a new
 
 #### Outputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ------------------------- |
-| Geometry | Standard geometry output. |
-| Attribute | Attribute output. |
+Data type: Geometry.
 
+Standard geometry output.
+
+##### Attribute
+
+Attribute output.
 
 ### Remove Named Attribute
 
@@ -207,20 +297,25 @@ Connect a node to get its attribute. Note that adding a connection creates a new
 
 ##### Geometry
 
+Data type: Geometry.
+
 ![Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/geometry.png)
 
 Geometry input.
 
+###### Pattern Mode
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Pattern Mode | How to choose the attribute to remove. |
-| Name | The attribute name that you want to remove. |
+How to choose the attribute to remove.
 
+###### Name
+
+The attribute name that you want to remove.
 
 #### Outputs
 
 ##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
@@ -230,12 +325,29 @@ The output geometry.
 
 Puts the results of a field in a named attribute.
 
+#### Inputs
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------------------------------- |
-| Input | **Geometry**: Geometry input. · **Selection**: Selection input. · **Name**: The attribute name that you want to store. |
-| Value | The value that is connected with the stored attribute. |
+##### Geometry
 
+Data type: Geometry.
+
+Geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+Selection input.
+
+##### Name
+
+Data type: String.
+
+The attribute name that you want to store.
+
+#### Value
+
+The value that is connected with the stored attribute.
 
 #### Properties
 
@@ -255,4 +367,120 @@ What element to use.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
+
+### Transfer Attributes
+
+![Transfer Attributes](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/transfer-attributes.png)
+
+Copies attributes from the Source geometry to the Target geometry. You choose the attributes by name. Elements are matched by their ID. By default the ID is the index, so element 5 of the source goes to element 5 of the target.
+
+It works for meshes, point clouds, curves, instances and Grease Pencil layers. Only parts that exist in both geometries are used. Grease Pencil layers are matched by their position in the layer list.
+
+#### Inputs
+
+##### Target
+
+Data type: Geometry.
+
+The geometry that receives the attributes.
+
+##### Target IDs
+
+A panel that is closed by default. It has one ID field for each domain: Target Point ID, Target Edge ID, Target Face ID, Target Corner ID, Target Curve ID and Target Instance ID. They are evaluated on the target. By default they are the index.
+
+##### Source
+
+Data type: Geometry.
+
+The geometry that the attributes are copied from.
+
+##### Source IDs
+
+A panel that is closed by default. It has one ID field for each domain: Source Point ID, Source Edge ID, Source Face ID, Source Corner ID, Source Curve ID and Source Instance ID. They are evaluated on the source. By default they are the index.
+
+Each target element takes the values of the source element with the same ID. If no source element has that ID, the target element keeps its old value, or gets the default value if the attribute is new. If both IDs are the index, the values are copied by index.
+
+##### Pattern Mode
+
+Data type: Menu.
+
+How the attribute names are compared.
+
+- Exact: a name has to match the attribute name exactly.
+- Wildcard: a name may contain one wildcard (*) that stands for any text. This is the default.
+
+##### Attribute Names
+
+Data type: String list.
+
+A list of the names of the attributes to transfer. You can connect the output of Get Attribute Names here. If the list is empty and Exclude Names is off, nothing is transferred. A message tells you when a name matches no attribute.
+
+##### Exclude Names
+
+Data type: Boolean.
+
+Turn it on to transfer all attributes except the ones that match the names.
+
+#### Outputs
+
+##### Target
+
+Data type: Geometry.
+
+The target geometry with the transferred attributes.
+
+##### Transferred Names
+
+Data type: String list.
+
+A list of the names of the attributes that were transferred. Internal attributes, whose names start with a dot, are not listed.
+
+### Rename Attribute
+
+![Rename Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/rename-attribute.png)
+
+Changes the name of an attribute. Use it to match the names another node expects, or to move data under a clearer name. Only the name changes; the values stay the same.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry that has the attribute.
+
+##### Mode
+
+Data type: Menu.
+
+**Single** renames one attribute. **Prefix** changes the start of the names: every attribute whose name begins with Old gets New in its place.
+
+##### Old
+
+Data type: String.
+
+The name, or the prefix, to look for.
+
+##### New
+
+Data type: String.
+
+The new name, or the new prefix.
+
+##### Overwrite
+
+Data type: Boolean.
+
+On: an attribute that already has the new name is replaced.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry with the attribute renamed.
+

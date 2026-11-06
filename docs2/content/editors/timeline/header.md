@@ -75,38 +75,47 @@ The preview range is displayed in orange color. The original playback range that
 | Insert Keyframe | Inserts a keyframe. If you do not have a keying set assigned, this will default to the default keying set defined in the Preferences. |
 | Delete Keyframe | Removes the keyframe at the current position in the current active keying set. |
 
-## Active Keying Set
+## Keyframing
 
-![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set.png)
+![Keyframing](/docs2/images/ui/timeline/header/keyframing-group.png)
 
-Objects needs a so called keying set so that you can record animation for it. It is a container for the animation, a set of keyframe channels. When you try to record an animation without an existing keying set, then you will get a warning since the channels for the keyframes are missing.
+All the keyframing buttons now sit together in one group, from left to right. The snapping buttons come right after them.
 
-In this property you can choose a method from the builtin keying sets.
+### Insert Keyframe
+
+Adds a keyframe on the current frame, for whatever you have selected. In the NLA editor it keys the active strip's action, so it does the right thing there too.
+
+### Delete Keyframe
+
+Removes the keyframe on the current frame from whatever you have selected.
 
 ### Auto Keying
 
-With auto keying on every manipulation in the 3d view will automatically create a keyframe, or update the existing keyframe at the current position.
+The round button turns **Auto Keying** on. With it on, every change you make in the 3D View sets a keyframe on the current frame, or updates the one that's there. It works for transforms of objects and bones, not for things like colors in the Properties Editor.
 
-Note that Auto Keying just works with transform properties ( Objects and Bones) in the 3d View. It will not work to animate colors in the Properties Editor for example.
+### Keying Set
 
-### Auto Keyframing Popover
+The **Keying Set** field picks which channels get keyed, for example only Location, or Location and Rotation.
 
-![Auto Keyframing Popover](/docs2/images/ui/timeline/header/auto-keyframing-popover.png)
+### Keyframing settings
 
-Auto keying settings. These settings shows when you have auto keying activated.
+The last button, with the diamond, opens the **Keyframing** settings. Its icon shows the current keyframe type.
 
-| Property | What it changes |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto keying mode | **Add & Replace**: Replace existing keyframes and add new ones where no keyframes exists. · **Replace**: Just replace existing keyframes. |
-| Only Active Keying Set | Automatic keyframe insertion using active keying set only. |
-| Layered Recording | Add a new nla track and strip for every loop or pass made over the animation. This allows non destructive tweaking. |
-| Cycle aware keying | For channels with cyclic extrapolation, the keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
+![Keyframing popover](/docs2/images/ui/timeline/header/keyframing-popover.png)
 
-### Active Keying Set
+The popover has two parts. **Auto Keyframing** only shows while Auto Keying is on, and **Keyframing** is always there.
 
-![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set-2.png)
+**Auto Keyframing**
 
-Choose your keying set.
+- **Mode** chooses whether auto keying adds new keyframes and replaces existing ones (**Add & Replace**), or only replaces keyframes that already exist (**Replace**). Both have icons.
+- **Only Active Keying Set** keys just the channels in the keying set you picked.
+
+**Keyframing**
+
+- **Type** sets the type, and with it the color, of new keyframes: Keyframe, Breakdown, Moving Hold, Extreme, Jitter or Generated. It is right at the top level, so you can pick it without digging.
+- **Only Active Keying Set** inserts keyframes only into the active keying set.
+- **Cycle-Aware Keying** keeps cyclic animations in sync. New keys on looping channels are mapped back into the loop.
+- **Layered Recording** adds a new NLA track and strip for every pass you record over the animation, so you can tweak without destroying earlier passes. It only shows while *Only Insert Available* is off in the Preferences.
 
 ## Playback Panel
 
@@ -179,32 +188,6 @@ Defines the step size for second-by-second navigation. Controls how far the play
 
 > **Note:** Only available with Second Snap Target
 
-## Keying Panel
-
-![Keying Panel](/docs2/images/ui/timeline/header/keying-panel.png)
-
-Some more keying options.
-
-### New Keyframe Type
-
-![New Keyframe Type](/docs2/images/ui/timeline/header/new-keyframe-type.png)
-
-Recolor the currently selected keyframes. Or create the new keyframes with this chosen keyframe color.
-
-### Auto Keyframing
-
-![Auto Keyframing](/docs2/images/ui/timeline/header/auto-keyframing.png)
-
-| Property | What it changes |
-| ------------------------------- | -------------------------------------------------------------- |
-| Auto Keying Mode | Just replace existing keyframes, or add keyframes too. |
-| Auto Keyframe Insert Keying Set | Automatic Keyframe Insertion using the active keying set only. |
-
-| Property | What it changes |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layered Recording | Add a new NLA Track and Strip for every loop/ pass made over the animation to allow non destructive tweaking. |
-| Cycle Aware Keying | For channels with cyclic extrapolation, keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
-
 ## Options
 
 ![Options](/docs2/images/ui/timeline/header/options.png)
@@ -251,7 +234,7 @@ When using Scene Time Synchronisation in the video sequence editor, then display
 
 The View menu contains all View related tools.
 
-### Adjust Last Operation
+### Adjust Last Operation - View Menu
 
 ![Adjust Last Operation](/docs2/images/ui/timeline/header/adjust-last-operation.png)
 

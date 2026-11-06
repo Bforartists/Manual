@@ -65,7 +65,7 @@ When you double right click into the viewport, then you will open a menu. The UV
 
 Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. But can then in the adjust last operator set to the other two methods too. Conformal ( LSCM) and Minium Stretch.
 
-#### Last Operator Unwrap
+#### Adjust Last Operation - Unwrap
 
 ##### Method
 
@@ -139,7 +139,7 @@ The distance between the single UV patches.
 
 Follow Active quads maps UV coordinates starting from an active face, and maps all adjacent faces in quad shape then. This way you can for example unwrap a pipe or a road. You first need to have a face selected. Then select everything. And then click at Follow Active Quads.
 
-#### Last Operator Follow Active Quads
+#### Adjust Last Operation - Follow Active Quads
 
 The Last Operator contains the same settings than the Settings dialogue.
 
@@ -159,7 +159,7 @@ Pinned vertices are marked red.
 
 A use case is for example when you have a distorted result for symmetric geometry like a face with the Conformal method. Then you can try to align two center vertices, pin them, and repeat the conformal method. It may be more symmetrical afterwards.
 
-#### Last Operator Pin
+#### Adjust Last Operation - Pin
 
 ![Last Operator Pin](/docs2/images/editors/uv-editor/last-operator-pin.png)
 
@@ -178,7 +178,7 @@ Unpins pinned geometry.
 
 Snap is a sub menu with some snapping tools. The menu items should be pretty self explaining. Selected to Pixels snaps the selected geometry to the pixels of the image, and so on.
 
-#### Last Operator Snap Selection and Snap Cursor
+#### Adjust Last Operation - Snap Selection and Snap Cursor
 
 ![Last Operator Snap Selection and Snap Cursor](/docs2/images/editors/uv-editor/last-operator-snap-selection-and-snap-cursor.png)
 
@@ -198,7 +198,7 @@ Mirrors the selection along the X axis. The mirror point is the pivot of the sel
 
 Mirrors the selection along the Y axis. The mirror point is the pivot of the selection.
 
-#### Last Operator Mirror
+#### Adjust Last Operation - Mirror
 
 The Last Operator Mirror panel gives you tools to adjust the mirror action.
 
@@ -224,7 +224,7 @@ Constraint Axis gives you the possibility to define the mirror axis. You can cho
 
 Aligns the selection along the Y axis. The align point is the pivot of the selection.
 
-#### Last operator Align
+#### Adjust Last Operation - Align
 
 ![Last operator Align](/docs2/images/editors/uv-editor/last-operator-align.png)
 
@@ -249,7 +249,7 @@ Lists the straighten and align methods again.
 
 Merge vertices that are below a specified distance to each other.
 
-##### Last operator Merge UVs by Distance
+##### Adjust Last Operation - Merge UVs by Distance
 
 ![Last operator Merge UVs by Distance](/docs2/images/editors/uv-editor/last-operator-merge-uvs-by-distance.png)
 
@@ -267,7 +267,7 @@ Stitch tries to union UV patches along the selected edges or vertices.
 
 ![Stitch](/docs2/images/editors/uv-editor/stitch-2.png)
 
-#### Last Operator Stitch
+#### Adjust Last Operation - Stitch
 
 ![Last Operator Stitch](/docs2/images/editors/uv-editor/last-operator-stitch.png)
 
@@ -337,7 +337,7 @@ Select an edge ring. Adds to selection.
 
 Unwraps the selected geometry. This operator starts with the method Angle based.
 
-#### Last Operator Unwrap
+#### Adjust Last Operation - Unwrap
 
 ##### Method
 
@@ -411,7 +411,7 @@ The distance between the single UV patches.
 
 Click at the first edge or vertice, **hold down ctrl,click** at the last edge or vertice.
 
-#### Last operator Pick shortest path
+#### Adjust Last Operation - Pick shortest path
 
 ![Last operator Pick shortest path](/docs2/images/editors/uv-editor/last-operator-pick-shortest-path.png)
 

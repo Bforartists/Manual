@@ -1174,7 +1174,7 @@ Show the active view layer and switch between available view layers.
 
 The original drop down box is in the Properties editor in the View Layer Properties in the View Layer panel.
 
-#### Adjust last Operation
+#### Adjust Last Operation - Viewport
 
 ![Adjust last Operation](/docs2/images/editors/toolbar/adjust-last-operation.png)
 

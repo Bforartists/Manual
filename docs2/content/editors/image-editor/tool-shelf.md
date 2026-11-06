@@ -157,7 +157,7 @@ You can move the stencil image around with the right mouse button.
 
 ![Clone](/docs2/images/editors/image-editor/tool-shelf/clone-2.png)
 
-#### Last Operator Grab Clone
+#### Adjust Last Operation - Grab Clone
 
 ![Last Operator Grab Clone](/docs2/images/editors/image-editor/tool-shelf/last-operator-grab-clone.png)
 

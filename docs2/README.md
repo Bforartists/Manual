@@ -2,9 +2,9 @@
 
 The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **The official manual on `master`** since October 2026. The old `.odt` chapters are archived in [`../docs1/`](../docs1).
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
-[![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/snippets)
-[![Image library](https://img.shields.io/badge/Image-library-0969da?style=for-the-badge&logo=googlephotos&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/media/images)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/docs)
+[![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/snippets)
+[![Image library](https://img.shields.io/badge/Image-library-0969da?style=for-the-badge&logo=googlephotos&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/media/images)
 [![Developer wiki](https://img.shields.io/badge/Developer-wiki-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/wiki)
 
 > ✏️ **To edit:** click **Edit the docs**, sign in with GitHub, pick a page, change it, click **Save**. First time? Read [Editing the docs online](dev-docs/Editing-the-docs-online.md).

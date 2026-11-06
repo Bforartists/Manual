@@ -191,6 +191,51 @@ Note that the holdout shader can only create alpha when Transparent is enabled. 
 
 Standard shader output.
 
+### Light Accumulation
+
+![Light Accumulation](/docs2/images/editors/shader-editor/header/add-menu-shader/light-accumulation.png)
+
+The Light Accumulation node adds up the result of all the lights in the scene and gives it back as a shader. Use it to replace EEVEE's built-in lighting with a lighting setup of your own, built from Light Info, Light Evaluation and Shadow Raycast nodes.
+
+The nodes connected to its Light sockets are run once for every light. Each input is also stored in its own Compositing pass. This node only appears in the Add menu for object shaders when the render engine is EEVEE.
+
+The final result is (Diffuse Light x Diffuse Color) + (Glossy Light x Glossy Color).
+
+Lighting nodes (Light Info, Light Evaluation, Shadow Raycast) must reach the Material Output through a Light socket of this node. They cannot be connected to the Color sockets. A Shader to RGB node cannot evaluate a Light Accumulation node.
+
+#### Inputs
+
+##### Diffuse Light
+
+The matte light that reaches the surface, from your lighting nodes (default black).
+
+##### Diffuse Color
+
+The color that tints the diffuse light (default white). Connect surface colors here, not lighting nodes.
+
+##### Glossy Light
+
+The shiny light that reaches the surface, from your lighting nodes (default black).
+
+##### Glossy Color
+
+The color that tints the glossy light (default white). Connect surface colors here, not lighting nodes.
+
+##### Transmission Light
+
+The light that passes through the surface, from your lighting nodes (default black).
+
+##### Transmission Color
+
+The color that tints the transmitted light (default white). Connect surface colors here, not lighting nodes.
+
+#### Outputs
+
+##### Shader
+
+The lit result, to connect to the Material Output.
+
+
 ### Metallic BSDF
 
 ![Metallic BSDF](/docs2/images/editors/shader-editor/header/add-menu-shader/metallic-bsdf.png)

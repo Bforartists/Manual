@@ -87,7 +87,7 @@ A strip has a drag handler at the left and a drag handler at the right. This han
 
 When the handlers are active you will see the frame numbers at the start and/or end of the clip. You can't move the strip as a whole while one of the handlers is active. Click in the off to deactivate the handlers. Then you can move the whole clip again.
 
-#### Last operator Sequence Slide
+#### Adjust Last Operation - Sequence Slide
 
 ![Last operator Sequence Slide](/docs2/images/editors/video-sequence-editor/last-operator-sequence-slide.png)
 

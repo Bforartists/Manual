@@ -59,7 +59,7 @@ replaces:
 ---
 # Geometry
 
-### Add menu - Geometry nodes - Geometry
+## Add menu - Geometry nodes - Geometry
 
 ![Add menu - Geometry nodes - Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/add-menu-geometry-nodes-geometry.png)
 
@@ -79,7 +79,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Geometry Input
+### Geometry Input
 
 ![Geometry Input](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/geometry-input.png)
 
@@ -87,7 +87,7 @@ Geometry input
 
 # Geometry › Operations
 
-### Add menu - Geometry nodes - Geometry - Operations
+## Add menu - Geometry nodes - Geometry - Operations
 
 ![Add menu - Geometry nodes - Geometry - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/add-menu-geometry-nodes-geometry-operations.png)
 
@@ -107,13 +107,13 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Geometry - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Displace Geometry
+### Displace Geometry
 
 ![Displace Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/displace-geometry.png)
 
 Displaces the geometry.
 
-#### Smooth Geometry
+### Smooth Geometry
 
 ![Smooth Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/smooth-geometry.png)
 
@@ -121,7 +121,7 @@ Smoothens the geometry.
 
 # Geometry › Selection
 
-### Add menu - Geometry nodes - Geometry - Selection
+## Add menu - Geometry nodes - Geometry - Selection
 
 ![Add menu - Geometry nodes - Geometry - Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/add-menu-geometry-nodes-geometry-selection.png)
 
@@ -141,19 +141,19 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Geometry - Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Box Selection
+### Box Selection
 
 ![Box Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/box-selection.png)
 
 Box select geometry.
 
-#### Normal Selection
+### Normal Selection
 
 ![Normal Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/normal-selection.png)
 
 Select geometry by the normals direction.
 
-#### Sphere Selection
+### Sphere Selection
 
 ![Sphere Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/sphere-selection.png)
 
@@ -161,7 +161,7 @@ Select geometry by a sphere shape.
 
 # Grease Pencil › Operations
 
-### Add menu - Geometry nodes - Grease Pencil - Operations
+## Add menu - Geometry nodes - Grease Pencil - Operations
 
 ![Add menu - Geometry nodes - Grease Pencil - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/add-menu-geometry-nodes-grease-pencil-operations.png)
 
@@ -181,7 +181,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Grease Pencil - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Delete Empty Layers
+### Delete Empty Layers
 
 ![Delete Empty Layers](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/delete-empty-layers.png)
 
@@ -189,7 +189,7 @@ Deletes empty grease pencil layers
 
 # Grease Pencil › Read
 
-### Add menu - Geometry nodes - Grease Pencil - Read
+## Add menu - Geometry nodes - Grease Pencil - Read
 
 ![Add menu - Geometry nodes - Grease Pencil - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/add-menu-geometry-nodes-grease-pencil-read.png)
 
@@ -209,19 +209,19 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Grease Pencil - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Layer Size
+### Layer Size
 
 ![Layer Size](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/layer-size.png)
 
 Retreive the point count and spline count of a grease pencil layer.
 
-#### Material Fill Info
+### Material Fill Info
 
 ![Material Fill Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/material-fill-info.png)
 
 Retreive the color and opacity of a grease pencil layer.
 
-#### Stroke Info
+### Stroke Info
 
 ![Stroke Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/stroke-info.png)
 
@@ -229,7 +229,7 @@ Retreive the color, opacity and softness of a grease pencil stroke.
 
 # Grease Pencil › Write
 
-### Add menu - Geometry nodes - Grease Pencil - Write
+## Add menu - Geometry nodes - Grease Pencil - Write
 
 ![Add menu - Geometry nodes - Grease Pencil - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/add-menu-geometry-nodes-grease-pencil-write.png)
 
@@ -249,25 +249,25 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Grease Pencil - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Set Screenspace Radius
+### Set Screenspace Radius
 
 ![Set Screenspace Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-screenspace-radius.png)
 
 Set the screenspace radius of the grease pencil.
 
-#### Material Fill Info
+### Material Fill Info
 
 ![Material Fill Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/material-fill-info.png)
 
 Set the stroke softness of the grease pencil.
 
-#### Set Stroke / Fill Color
+### Set Stroke / Fill Color
 
 ![Set Stroke / Fill Color](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-color.png)
 
 Set the stroke fill color of the grease pencil.
 
-#### Set Stroke / Fill Opacity
+### Set Stroke / Fill Opacity
 
 ![Set Stroke / Fill Opacity](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-opacity.png)
 
@@ -275,7 +275,7 @@ Set the stroke fill opacity of the grease pencil.
 
 # Hair › Deformation
 
-### Add menu - Hair - Deformation
+## Add menu - Hair - Deformation
 
 ![Add menu - Hair - Deformation](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate.png)
 
@@ -295,7 +295,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Deformation](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Blend Hair Curves
+### Blend Hair Curves
 
 ![Blend Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/blend-hair-curves.png)
 
@@ -308,13 +308,13 @@ Blends the shape between multiple hair curves in a certain radius together.
 | Output | **Geometry**: The output geometry. |
 
 
-#### Displace Hair Curves
+### Displace Hair Curves
 
 ![Displace Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/displace-hair-curves.png)
 
 Displaces hair curves by a vector based on options.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -330,13 +330,13 @@ Displaces hair curves by a vector based on options.
 | Surface Normal Displacement | Amount of displacement along the surface normals. |
 
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
 
 The output geometry.
 
-#### Frizz Hair Curves
+### Frizz Hair Curves
 
 ![Frizz Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/frizz-hair-curves.png)
 
@@ -349,13 +349,13 @@ Deforms hair curves using a random vector per point to frizz them.
 | Output | **Geometry**: The output geometry. · **Offset Vector**: The vector by which each point was offset during deformation. |
 
 
-#### Hair Curves Noise
+### Hair Curves Noise
 
 ![Hair Curves Noise](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/hair-curves-noise.png)
 
 Deforms hair curves using noise texture.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -372,7 +372,7 @@ Deforms hair curves using noise texture.
 | Preserve Length | Preserve the length of each curve during deformation. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -381,13 +381,13 @@ Deforms hair curves using noise texture.
 | Offset Vector | The vector by which each point was offset during deformation. |
 
 
-#### Roll Hair Curves
+### Roll Hair Curves
 
 ![Roll Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/roll-hair-curves.png)
 
 Rolls up hair curves, starting from their tips.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -406,13 +406,13 @@ Rolls up hair curves, starting from their tips.
 | Preserve Length | Preserve the length of each curve during deformation. |
 
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
 
 The output geometry.
 
-#### Rotate Hair Curves
+### Rotate Hair Curves
 
 ![Rotate Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/rotate-hair-curves.png)
 
@@ -425,7 +425,7 @@ Rotates each hair curve around an axis.
 | Output | **Geometry**: The output geometry. |
 
 
-#### Shrinkwrap Hair Curves
+### Shrinkwrap Hair Curves
 
 ![Shrinkwrap Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/shrinkwrap-hair-curves.png)
 
@@ -438,7 +438,7 @@ Shrinkwrap hair curves to a mesh surface from below and optionally from above.
 | Output | **Geometry**: The output geometry. |
 
 
-#### Smooth Hair Curves
+### Smooth Hair Curves
 
 ![Smooth Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/smooth-hair-curves.png)
 
@@ -451,7 +451,7 @@ Smoothes the shape of hair curves.
 | Output | **Geometry**: The output geometry. |
 
 
-#### Straighten Hair Curves
+### Straighten Hair Curves
 
 ![Straighten Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/straighten-hair-curves.png)
 
@@ -464,13 +464,13 @@ Straighten hair curves between root and tip.
 | Output | **Geometry**: The output geometry. |
 
 
-#### Trim Hair Curves
+### Trim Hair Curves
 
 ![Trim Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/trim-hair-curves.png)
 
 Trims or scales hair curves to a certain length.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -486,15 +486,15 @@ Trims or scales hair curves to a certain length.
 | Seed | Random seed for the operation. |
 
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
 
 The output geometry.
 
 # Hair › Generation
 
-### Add menu - Hair - Generation
+## Add menu - Hair - Generation
 
 ![Add menu - Hair - Generation](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/add-menu-hair-generation.png)
 
@@ -514,7 +514,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Generation](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Duplicate Hair Curves
+### Duplicate Hair Curves
 
 ![Duplicate Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/duplicate-hair-curves.png)
 
@@ -527,13 +527,13 @@ Duplicates hair curves a certain amouunt of times in the given radius.
 | Output | **Geometry**: The output geometry. · **Guide Index**: The guide index map that was used for the operation. |
 
 
-#### Generate Hair Curves
+### Generate Hair Curves
 
 ![Generate Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/generate-hair-curves.png)
 
 Generates new hair curves on a surface mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -553,7 +553,7 @@ Generates new hair curves on a surface mesh.
 | Seed | Random seed for operation. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -563,13 +563,13 @@ Generates new hair curves on a surface mesh.
 | Surface Normal | The surface normals. |
 
 
-#### Interpolate Hair Curves
+### Interpolate Hair Curves
 
 ![Interpolate Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/interpolate-hair-curves.png)
 
 Interpolates existing guide curves on a surface.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -591,7 +591,7 @@ Interpolates existing guide curves on a surface.
 | Seed | Random seed for operation. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -602,7 +602,7 @@ Interpolates existing guide curves on a surface.
 
 # Hair › Guides
 
-### Add menu - Hair - Guides
+## Add menu - Hair - Guides
 
 ![Add menu - Hair - Guides](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/add-menu-hair-guides.png)
 
@@ -622,13 +622,13 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Guides](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Braid Hair Curves
+### Braid Hair Curves
 
 ![Braid Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/braid-hair-curves.png)
 
 Deforms existing hair curves into braids.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -656,7 +656,7 @@ Deforms existing hair curves into braids.
 | Hair Tie Scale | Scale of the hair tie instance. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -667,13 +667,13 @@ Deforms existing hair curves into braids.
 | Strand Index | Index of the strand within a braid that each curve belongs to. |
 
 
-#### Clump Hair Curves
+### Clump Hair Curves
 
 ![Clump Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/clump-hair-curves.png)
 
 Clumps together existing hair curves.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -692,7 +692,7 @@ Clumps together existing hair curves.
 | Preserve Length | Preserve the length of each curve during deformation. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -701,7 +701,7 @@ Clumps together existing hair curves.
 | Guide Index | The guide index map that was used for the operation. |
 
 
-#### Create Guide Index Map
+### Create Guide Index Map
 
 ![Create Guide Index Map](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/create-guide-index-map.png)
 
@@ -714,13 +714,13 @@ Creates an attribute that maps each curve to its nearest guide via index.
 | Output | **Geometry**: The output geometry. · **Guide Curves**: The output guides · **Guide Index**: The guide index map that was used for the operation. · **Guide Selection**: The output guide selection. |
 
 
-#### Curl Hair Curves
+### Curl Hair Curves
 
 ![Curl Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/curl-hair-curves.png)
 
 Deform existing hair curves into curls.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -741,15 +741,15 @@ Deform existing hair curves into curls.
 | Seed | Random seed for the operation. |
 
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
 
 The output geometry.
 
 # Hair › Read
 
-### Add menu - Hair - Read
+## Add menu - Hair - Read
 
 ![Add menu - Hair - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/add-menu-hair-read.png)
 
@@ -769,13 +769,13 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Curve Info
+### Curve Info
 
 ![Curve Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-info.png)
 
 Reads information about each curve.
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -788,13 +788,13 @@ Reads information about each curve.
 | Surface UV | Attachment surface UV coordinate of each curve. |
 
 
-#### Curve Root
+### Curve Root
 
 ![Curve Root](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-root.png)
 
 Reads information about the root point of each curve.
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -805,7 +805,7 @@ Reads information about the root point of each curve.
 | Root Index | Index of the root point of a curve. |
 
 
-#### Curve Segment
+### Curve Segment
 
 ![Curve Segment](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-segment.png)
 
@@ -820,7 +820,7 @@ Reads the information of the curve segment before the current point.
 | Neighbor Index | Index of the neighbouring point on segment. |
 
 
-#### Curve Tip
+### Curve Tip
 
 ![Curve Tip](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-tip.png)
 
@@ -836,7 +836,7 @@ Reads information about the tip point of each curve.
 | Tip Index | Index of the tip point of a curve. |
 
 
-#### Hair Attachment Info
+### Hair Attachment Info
 
 ![Hair Attachment Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/hair-attachment-info.png)
 
@@ -850,7 +850,7 @@ Reads attatchment information regarding a surface mesh.
 
 # Hair › Utility
 
-### Add menu - Hair - Utility
+## Add menu - Hair - Utility
 
 ![Add menu - Hair - Utility](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/add-menu-hair-utility.png)
 
@@ -870,13 +870,13 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Utility](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Attach Hair Curves to Surface
+### Attach Hair Curves to Surface
 
 ![Attach Hair Curves to Surface](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/attach-hair-curves-to-surface.png)
 
 Attaches hair curves to a surface mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -892,7 +892,7 @@ Attaches hair curves to a surface mesh.
 | Blend along Curve | Blend deformation along eacah curve from the root. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -902,7 +902,7 @@ Attaches hair curves to a surface mesh.
 | Surface Normal | Surface Normal at the attachment point. |
 
 
-#### Redistribute Curve Points
+### Redistribute Curve Points
 
 ![Redistribute Curve Points](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/redistribute-curve-points.png)
 
@@ -915,7 +915,7 @@ Redistributes existing control points evenly along each curve.
 | Output | **Curves**: The output curves. |
 
 
-#### Restore Curve Segment Length
+### Restore Curve Segment Length
 
 ![Restore Curve Segment Length](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/restore-curve-segment-length.png)
 
@@ -927,7 +927,7 @@ Redistributes existing control points evenly along each curve.
 
 # Hair › Write
 
-### Add menu - Hair - Write
+## Add menu - Hair - Write
 
 ![Add menu - Hair - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/add-menu-hair-write.png)
 
@@ -947,7 +947,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Hair - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Set Hair Curve Profile
+### Set Hair Curve Profile
 
 ![Set Hair Curve Profile](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/set-hair-curve-profile.png)
 
@@ -961,7 +961,7 @@ Set the radius attribute of hair curces according to a profile shape.
 
 # Instances
 
-### Add menu - Geometry nodes - Instances
+## Add menu - Geometry nodes - Instances
 
 ![Add menu - Geometry nodes - Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/add-menu-geometry-nodes-instances.png)
 
@@ -981,13 +981,13 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Instance on Elements
+### Instance on Elements
 
 ![Instance on Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/instance-on-elements.png)
 
 Create copies of referenced geometry on geometry elements.
 
-#### Randomize Transforms
+### Randomize Transforms
 
 ![Randomize Transforms](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/randomize-transforms.png)
 
@@ -995,7 +995,7 @@ Randomize the transform of instances.
 
 # Material
 
-### Add menu - Geometry nodes - Material
+## Add menu - Geometry nodes - Material
 
 ![Add menu - Geometry nodes - Material](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/add-menu-geometry-nodes-material.png)
 
@@ -1015,7 +1015,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Material](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Inherit Material
+### Inherit Material
 
 ![Inherit Material](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png)
 
@@ -1023,7 +1023,7 @@ Applies an existing material from the source geometry at the target geometry.
 
 # Mesh
 
-### Add menu - Geometry nodes - Mesh
+## Add menu - Geometry nodes - Mesh
 
 ![Add menu - Geometry nodes - Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh/add-menu-geometry-nodes-mesh.png)
 
@@ -1043,7 +1043,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Mesh Lines and Silhouette
+### Mesh Lines and Silhouette
 
 ![Mesh Lines and Silhouette](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png)
 
@@ -1051,7 +1051,7 @@ Creates a Inverses Hull lines with a mesh silhouette. This also contains overrid
 
 # Mesh › Read
 
-### Add menu - Geometry nodes - Mesh - Read
+## Add menu - Geometry nodes - Mesh - Read
 
 ![Add menu - Geometry nodes - Mesh - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/add-menu-geometry-nodes-mesh-read.png)
 
@@ -1071,37 +1071,37 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodes - Mesh - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Edge Length
+### Edge Length
 
 ![Edge Length](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/edge-length.png)
 
 Returns the length of an edge.
 
-#### Face Corner Angle
+### Face Corner Angle
 
 ![Face Corner Angle](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/face-corner-angle.png)
 
 Returns the angle between two edges.
 
-#### Is Edge Boundary
+### Is Edge Boundary
 
 ![Is Edge Boundary](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-boundary.png)
 
 Returns a selection of boundary edges.
 
-#### Is Edge Loose
+### Is Edge Loose
 
 ![Is Edge Loose](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-loose.png)
 
 Returns a selection of loose edges.
 
-#### Is Edge Manifold
+### Is Edge Manifold
 
 ![Is Edge Manifold](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-manifold.png)
 
 Returns a selection of manifold edges.
 
-#### Is UV Split
+### Is UV Split
 
 ![Is UV Split](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-uv-split.png)
 
@@ -1109,7 +1109,7 @@ Returns a selection of seam edges at the border of UV patches.
 
 # Normals
 
-### Add menu - Geometry nodegroups - Normals
+## Add menu - Geometry nodegroups - Normals
 
 ![Add menu - Geometry nodegroups - Normals](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/add-menu-geometry-nodegroups-normals.png)
 
@@ -1129,7 +1129,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodegroups - Normals](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Inherit Smoothness
+### Inherit Smoothness
 
 ![Inherit Smoothness](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/inherit-smoothness.png)
 
@@ -1137,7 +1137,7 @@ Passes normal smoothness of the parent object.
 
 # Utilities
 
-### Add menu - Geometry nodegroups - Utilities
+## Add menu - Geometry nodegroups - Utilities
 
 ![Add menu - Geometry nodegroups - Utilities](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/add-menu-geometry-nodegroups-utilities.png)
 
@@ -1157,7 +1157,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodegroups - Utilities](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Random Rotation
+### Random Rotation
 
 ![Random Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/random-rotation.png)
 
@@ -1165,7 +1165,7 @@ Returns a uniformly distributed random rotation
 
 # Utilities › Vector
 
-### Add menu - Geometry nodegroups - Utilities - Vector
+## Add menu - Geometry nodegroups - Utilities - Vector
 
 ![Add menu - Geometry nodegroups - Utilities - Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/add-menu-geometry-nodegroups-utilities-vector.png)
 
@@ -1185,25 +1185,25 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodegroups - Utilities - Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### Combined Cylindrical
+### Combined Cylindrical
 
 ![Combined Cylindrical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-cylindrical.png)
 
 Create a vector from its cylindrical components.
 
-#### Combined Spherical
+### Combined Spherical
 
 ![Combined Spherical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-spherical.png)
 
 Create a vector from its spherical components.
 
-#### Separate Cylindrical
+### Separate Cylindrical
 
 ![Separate Cylindrical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png)
 
 Decompose into its cylindrical components.
 
-#### Separate Spherical
+### Separate Spherical
 
 ![Separate Spherical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png)
 
@@ -1211,7 +1211,7 @@ Decompose into its spherical components.
 
 # Utility
 
-### Add menu - Geometry nodegroups - Utility
+## Add menu - Geometry nodegroups - Utility
 
 ![Add menu - Geometry nodegroups - Utility](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/add-menu-geometry-nodegroups-utility.png)
 
@@ -1231,7 +1231,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodegroups - Utility](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-#### G Index Mask U
+### G Index Mask U
 
 ![G Index Mask U](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/g-index-mask-u.png)
 

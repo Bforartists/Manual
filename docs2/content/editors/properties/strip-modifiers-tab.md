@@ -25,9 +25,28 @@ The Strip Modifiers tab allows non-destructive adjustments to video, image, and 
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Breadcrumb | This shows what scene and what strip the active selected strip tab modifiers are showing. |
 | Pin | This pins the active selected strip modifier stack so that when you select another strip, the modifiers won’t change and remembers the pinned strip modifiers. |
-| Copy to Selected Strips | This copies the entire modifier stack to selected strips in the Sequencer Editor timeline. Opens a dropdown list of available modifiers to apply to the active strip. Ensures modifiers operate in linear color space. Recommended for accurate color grading and compositing workflows |
+| Copy to Selected Strips | Copies the whole modifier stack of the active strip to the other selected strips in the Sequencer timeline. |
+
+### Adding modifiers
+
+![Add Modifier and Add Asset Modifier buttons](/docs2/images/editors/properties/strip-modifiers-tab/add-buttons.png)
+
+Two buttons sit at the top of the tab. Built-in modifiers and ready-made asset modifiers each have their own menu, just like in the Geometry Nodes editor.
+
+| Entry | What it does |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Add Modifier | Opens the list of built-in modifiers, like Color Balance, Curves or Brightness/Contrast. Pick one to add it to the bottom of the stack. |
+| Add Asset Modifier | Opens your asset libraries, sorted by catalog. Pick a ready-made modifier to add it to the strip. Use **Search...** at the top to find one by name. |
+
+![Add Asset Modifier menu](/docs2/images/editors/properties/strip-modifiers-tab/asset-modifier-menu.png)
+
+The catalogs you see depend on the asset libraries you have set up. Modifiers without a catalog are listed under **Unassigned**.
 
 ## Strip Modifier Headers
+
+![Modifier header](/docs2/images/editors/properties/strip-modifiers-tab/modifier-header.png)
+
+Every modifier has a header with the same buttons, from left to right.
 
 ### Arrow Toggle
 
@@ -39,7 +58,9 @@ Expands or collapses the modifier panel. Used to show or hide parameter controls
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Icon | The modifier icon that indicates what kind of modifier is placed in the stack. |
 | Label | Displays the name of the modifier. Helps identify the effect applied to the strip. Double clicking this will rename the modifier. |
-| Camera Icon | Hide/Show the modifier. This will be evaluated when activated. |
+| Preview (screen icon) | Shows the modifier in the Sequencer preview. Turn it off to compare with and without the effect while you work. |
+| Render (camera icon) | Uses the modifier when you render. Turn it off to leave the effect out of the final video. |
+| Arrow menu | More options for this modifier. |
 | Close Button (X) | Removes the modifier from the strip. |
 
 ## Strip Modifier Masks

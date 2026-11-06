@@ -1,0 +1,14 @@
+name = "bforartists-docs-edit"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# After deploying, add the secret (a fine-grained GitHub token, see README.md):
+#   npx wrangler secret put GITHUB_TOKEN_EDIT
+
+# At most 20 edit clicks per minute per visitor (key = IP address).
+# If your Cloudflare plan does not offer this, delete this block: the Worker works without it.
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 20, period = 60 }

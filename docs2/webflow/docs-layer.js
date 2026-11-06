@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.21
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.26
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -17,6 +17,7 @@
   R.dataset.dkLayer = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
   var NAVURL = 'https://bforartists.github.io/Manual/nav/nav.json', NK = 'bfa-docs-nav';
+  var EDIT_GATE = 'https://bforartists-docs-edit.trinumedia.workers.dev/edit';   /* the edit gateway Worker, e.g. 'https://bforartists-docs-edit.<account>.workers.dev/edit'. Empty = Edit this page opens GitHub's editor (see docs2/worker/edit-gateway/README.md) */
   var BRANCH = 'master', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
   var HOME = '/docs/home', DISCORD = 'https://discord.gg/yKuR77v', PRO = 'https://www.trinumedia.com';
   var ISSUE = 'https://github.com/Bforartists/Manual/issues/new';
@@ -225,8 +226,8 @@
     '@media(min-width:1280px){html.dk-wide .ui-doc-outline{display:none!important}html.dk-wide .ui-doc-grid{grid-template-columns:17rem minmax(0,1fr)}}',
     '@media(min-width:1680px){html.dk-wide .ui-doc-grid{grid-template-columns:288px minmax(0,1fr)}}',
     /* Q6 · sidebar fades where it is cut off */
-    '.ui-doc-grid>.ui-doc-side{--ft:0px;--fb:0px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%)}',
-    '.ui-doc-grid>.ui-doc-side.dk-more-b{--fb:3.5rem}.ui-doc-grid>.ui-doc-side.dk-more-t{--ft:1.5rem}',
+    '.ui-doc-grid>.ui-doc-side,.ui-doc-outline{--ft:0px;--fb:0px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%)}',
+    '.ui-doc-grid>.ui-doc-side.dk-more-b,.ui-doc-outline.dk-more-b{--fb:3.5rem}.ui-doc-grid>.ui-doc-side.dk-more-t,.ui-doc-outline.dk-more-t{--ft:1.5rem}',
     '.ui-doc-bar-row2.dk-empty{display:none!important}.ui-doc-bar-in{align-content:center}',
     '.dk-secs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}',
     /* sinks: the same inset well the website uses under groups of cards */
@@ -277,6 +278,7 @@
     '.dk-teaser-when{position:absolute;top:1rem;right:1rem;padding:.25rem .625rem;border-radius:.25rem;background:repeating-linear-gradient(135deg,#f2c94c 0 8px,#e0b53c 8px 16px);color:#1a1a1a;font:800 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}',
     '@media(max-width:767px){.dk-teaser{grid-template-columns:1fr}.dk-teaser-when{position:static;justify-self:start}}',
     '@media(max-width:991px){.dk-h-top{grid-template-columns:1fr}.dk-paths{grid-template-columns:repeat(3,minmax(0,1fr))}.dk-secs{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-sink{padding:.875rem}}',
+    '.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}',
     '@media(max-width:600px){.dk-h h1{font-size:2.25rem}.dk-paths{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-secs,.dk-two{grid-template-columns:1fr}}'
   ].join('\n');
   var st = d.createElement('style'); st.id = 'bfa-docs-layer'; st.textContent = CSS; d.head.appendChild(st);
@@ -342,6 +344,13 @@
       if (a.dataset.dk) return; a.dataset.dk = '1';
       var m = /\/edit\/([^?#]+)/.exec(a.getAttribute('href') || ''), src = m ? decodeURIComponent(m[1]) : ((q('.ui-doc-article') || {}).getAttribute ? q('.ui-doc-article').getAttribute('data-doc-source') : '');
       if (!src) return;
+      if (EDIT_GATE) {
+        /* Pages CMS on a fresh branch: the gateway makes the branch, the first save opens the pull request */
+        var snip = /^docs2\/snippets\//.test(src), inner = src.replace(/^docs2\/(content|snippets)\//, '');
+        a.href = EDIT_GATE + '?kind=' + (snip ? 'snippets' : 'docs') + '&path=' + encodeURIComponent(inner);
+        a.title = 'Opens the page in Pages CMS on your own branch (sign in with GitHub)';
+        return;
+      }
       a.href = 'https://github.com/Bforartists/Manual/edit/' + BRANCH + '/' + src;
       a.title = 'Edit on GitHub, starting from the latest docs: GitHub makes your own branch and a pull request for you';
     });
@@ -373,13 +382,15 @@
     var f = function () { b.classList.toggle('is-on', (window.scrollY || d.documentElement.scrollTop) > 700); };
     window.addEventListener('scroll', f, { passive: true }); f();
   }
-  /* the sidebar fades where it is cut off, so you can tell there is more */
+  /* both sidebars (left chapters, right page sections) fade where they are cut off, so you can tell there is more */
   function sideFade() {
-    var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';
-    var f = function () { var more = s.scrollHeight - s.clientHeight - s.scrollTop > 4; s.classList.toggle('dk-more-b', more); s.classList.toggle('dk-more-t', s.scrollTop > 4); };
-    s.addEventListener('scroll', f, { passive: true }); window.addEventListener('resize', f);
-    if (window.ResizeObserver) new ResizeObserver(f).observe(s);
-    f(); setTimeout(f, 600);
+    qa('.ui-doc-grid > .ui-doc-side, .ui-doc-outline').forEach(function (s) {
+      if (s.dataset.dkFade) return; s.dataset.dkFade = '1';
+      var f = function () { var more = s.scrollHeight - s.clientHeight - s.scrollTop > 4; s.classList.toggle('dk-more-b', more); s.classList.toggle('dk-more-t', s.scrollTop > 4); };
+      s.addEventListener('scroll', f, { passive: true }); window.addEventListener('resize', f);
+      if (window.ResizeObserver) new ResizeObserver(f).observe(s);
+      f(); setTimeout(f, 600); setTimeout(f, 2000);   /* the right list is filled in after the page loads */
+    });
   }
   function polishSoon() {
     polish(); var n = 0, t = setInterval(function () { polish(); if (++n > 12) clearInterval(t); }, 500);
@@ -620,4 +631,5 @@
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });
   else setTimeout(start, 0);
+  (function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
 })();

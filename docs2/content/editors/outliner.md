@@ -550,7 +550,7 @@ Moves the selected object to a collection. The object is removed from the collec
 
 By clicking at this menu item a popup will appear to choose the new collection. Allows also to create a new collection. Once done, the object will be moved to this new created collection.
 
-##### Last Operator Move to Collection
+##### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/outliner/last-operator-move-to-collection.png)
 
@@ -568,7 +568,7 @@ Links the object to a collection. The object remains in the collection it was in
 
 By clicking at this menu item a popup will appear to choose the collection. Here you can also create a new collection. Once done, the object will be linked to this new created collection.
 
-##### Last Operator Link to Collection
+##### Adjust Last Operation - Link to Collection
 
 ![Last Operator Link to Collection](/docs2/images/editors/outliner/last-operator-link-to-collection.png)
 
@@ -745,6 +745,20 @@ Keep the selection in synchronization with the other editors. 3D View and VSE.
 ![Blend File Mode](/docs2/images/editors/outliner/blend-file-mode.png)
 
 This mode lists the whole content of the current Blender file. It includes also things like the default brushes, which comes from the startup defaults.
+
+### Drag into the Video Sequencer
+
+![Masks listed in Blend File mode](/docs2/images/editors/outliner/blend-file-drag-to-sequencer.png)
+
+You can drag items from Blend File mode straight into the Video Sequencer timeline to add them as strips:
+
+| Drag this | You get |
+| ---------- | ------------------------------------------------------------------ |
+| Scene | A Scene strip that plays that scene, like a shot from your 3D work. |
+| Mask | A Mask strip, handy for wipes, titles or cutting out part of a shot. |
+| Movie Clip | A Movie Clip strip, for example a tracked clip from the Movie Clip Editor. |
+
+Open the category, then drag the item to the frame and channel where you want the strip. This is quicker than going through the Add menu when you already see the item in the Outliner.
 
 ### Filter
 

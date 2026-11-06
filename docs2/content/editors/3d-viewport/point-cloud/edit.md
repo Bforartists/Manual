@@ -49,7 +49,7 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ![Usage](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/usage-2.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
@@ -85,7 +85,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
 
@@ -137,7 +137,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
@@ -169,7 +169,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a selection between two defined points. This also works with curves.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
 
 
 | Entry | What it does |
@@ -192,7 +192,7 @@ The end point.
 
 This tool allows randomizes the positions of the selected vertices.
 
-##### Last Operator Randomize
+##### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
@@ -213,7 +213,7 @@ A positive value pushes the vertices outwards. A negative value pushes the verti
 
 The curve needs to have geometry !
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
 
@@ -256,7 +256,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
@@ -307,7 +307,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -352,7 +352,7 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
-##### Last Operator Set Dimensions
+##### Adjust Last Operation - Set Dimensions
 
 ###### New Dimensions
 
@@ -370,7 +370,7 @@ The copy sticks to the mouse until you release it. A Right click while moving wi
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/last-operator-duplicate.png)
 
@@ -393,7 +393,7 @@ Choose the orientation.
 
 Set values of the active attribute for selected elements.
 
-##### Last Operator Set Attribute
+##### Adjust Last Operation - Set Attribute
 
 ![Last Operator Set Attribute](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/last-operator-set-attribute.png)
 

@@ -66,7 +66,7 @@ Mesh objects are geometrical objects made of vertices, edges and faces. The geom
 
 Plane creates a simple quad face mesh.
 
-#### Last Operator Add Plane Panel
+#### Adjust Last Operation - Add Plane Panel
 
 
 | Entry | What it does |
@@ -96,7 +96,7 @@ Note that this option is dysfunctional when you call the Adjust Last Operator pa
 
 Cube creates a Cube mesh.
 
-#### Last Operator Add Cube Panel
+#### Adjust Last Operation - Add Cube Panel
 
 ##### Size
 
@@ -122,7 +122,7 @@ creates UV's for this primitive.
 
 Circle creates a Circle mesh.
 
-#### Last Operator Add Circle Panel
+#### Adjust Last Operation - Add Circle Panel
 
 
 | Entry | What it does |
@@ -165,7 +165,7 @@ creates UV's for this primitive.
 
 UV Sphere creates a sphere mesh.
 
-#### Last Operator Add UV Sphere Panel
+#### Adjust Last Operation - Add UV Sphere Panel
 
 
 | Entry | What it does |
@@ -195,7 +195,7 @@ creates UV's for this primitive.
 
 Ico Sphere creates a sphere mesh.
 
-#### Last Operator Add Ico Sphere Panel
+#### Adjust Last Operation - Add Ico Sphere Panel
 
 
 | Entry | What it does |
@@ -224,7 +224,7 @@ creates UV's for this primitive.
 
 Cylinder creates a Cylinder mesh.
 
-#### Last Operator Add Circle Panel
+#### Adjust Last Operation - Add Circle Panel
 
 
 | Entry | What it does |
@@ -271,7 +271,7 @@ creates UV's for this primitive.
 
 Cone creates a Cone mesh
 
-#### Last Operator Add Cone Panel
+#### Adjust Last Operation - Add Cone Panel
 
 
 | Entry | What it does |
@@ -314,7 +314,7 @@ Creates UV's for this primitive.
 
 Torus creates a Torus mesh.
 
-#### Last Operator Add Torus Panel
+#### Adjust Last Operation - Add Torus Panel
 
 ![Last Operator Add Torus Panel](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-torus-panel.png)
 
@@ -373,7 +373,7 @@ Creates UV's for this primitive.
 
 Grid creates a subidividable plane mesh
 
-#### Last Operator Add Grid Panel
+#### Adjust Last Operation - Add Grid Panel
 
 ![Last Operator Add Grid Panel](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-grid-panel.png)
 
@@ -405,7 +405,7 @@ Creates UV's for this primitive.
 
 Monkey creates a monkey head mesh.
 
-#### Last Operator Add Monkey Panel
+#### Adjust Last Operation - Add Monkey Panel
 
 
 | Entry | What it does |
@@ -454,7 +454,7 @@ Note that Curves is no mesh data. You have to convert the Curves data to Mesh da
 
 **Path** creates a Nurbs type curve.
 
-#### Last Operator Add Curve
+#### Adjust Last Operation - Add Curve
 
 ![Last Operator Add Curve](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-curve.png)
 
@@ -505,7 +505,7 @@ A curve radius node is for example needed to control the thickness of the hair. 
 
 Adds a quick fur setup. Similar to Empty Hair, but with content. And all required modifiers.
 
-#### Last operator Quick Fur
+#### Adjust Last Operation - Quick Fur
 
 ![Last operator Quick Fur](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-quick-fur.png)
 
@@ -548,7 +548,7 @@ Note that Surfaces similar to Curves is no mesh data. You have to convert the Su
 
 Surface Torus creates a Nurbs type Torus.
 
-#### Last Operator Add Surface
+#### Adjust Last Operation - Add Surface
 
 ![Last Operator Add Surface](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-surface.png)
 
@@ -592,7 +592,7 @@ Meta-balls are procedural primitives. They are not defined by vertices or curves
 
 **Cube** creates a meta-ball in Cube shape.
 
-#### Last Operator Add Metaball
+#### Adjust Last Operation - Add Metaball
 
 ![Last Operator Add Metaball](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-metaball.png)
 
@@ -705,7 +705,7 @@ Some examples.
 
 ± - Minus, Alt-Backspace, Plus
 
-### Last Operator Add Text
+### Adjust Last Operation - Add Text
 
 ![Last Operator Add Text](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-text.png)
 
@@ -728,7 +728,7 @@ Note that this option is dysfunctional when you call the Adjust Last Operator pa
 | Rotation | Defines the rotation of the primitive. In Edit mode you can navigate the cursor with the arrow buttons. Enter adds a new paragraph. When you use the navigator you will see a last operator Move Cursor with further options. |
 
 
-### Last Operator Move Cursor
+### Adjust Last Operation - Move Cursor
 
 ![Last Operator Move Cursor](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-move-cursor.png)
 
@@ -746,7 +746,7 @@ Creates a object of type Point Cloud. Point clouds can represent 3D scans. It is
 
 At the moment there is not this much that can be done with Point Clouds. But you can convert a object to a point cloud and vice versa.
 
-### Last Operator Add Point Cloud
+### Adjust Last Operation - Add Point Cloud
 
 ![Last Operator Add Point Cloud](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-point-cloud.png)
 
@@ -779,7 +779,7 @@ Imports a volume object of type OpenVDB. This button opens a file browser.
 
 Create an empty Volume object.
 
-#### Last Operator Add Volume
+#### Adjust Last Operation - Add Volume
 
 ![Last Operator Add Volume](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-volume.png)
 
@@ -843,7 +843,7 @@ Line Art is a modifier for the grease pencil object. Scene Line Art adds a greas
 | Object Line Art | This menu item just shows when you have a mesh object selected. Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for the selected mesh object. |
 
 
-### Last Operator Add Grease Pencil
+### Adjust Last Operation - Add Grease Pencil
 
 ![Last Operator Add Grease Pencil](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-grease-pencil.png)
 
@@ -905,7 +905,7 @@ A bone can also have an influence area. The so called envelope.
 
 The bones of an armature can be edited in Edit mode. And posed in Pose mode.
 
-### Last Operator Add Armature
+### Adjust Last Operation - Add Armature
 
 ![Last Operator Add Armature](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-armature.png)
 
@@ -941,7 +941,7 @@ In the Object box of the Lattice Modifier add our created Lattice object.
 
 Select Lattice Object. Enter Edit mode. And here you can deform the Lattice Object now, and the object to deform will follow.
 
-### Last Operator Add Object
+### Adjust Last Operation - Add Object
 
 ![Last Operator Add Object](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-object.png)
 
@@ -988,7 +988,7 @@ The image empty has also a transform widget, presented by the yellow color. It b
 
 Empties, no matter what shape, does not render to file.
 
-### Last Operator Add Empty
+### Adjust Last Operation - Add Empty
 
 ![Last Operator Add Empty](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-empty.png)
 
@@ -1075,7 +1075,7 @@ A reference image is double sided. A background image not. When you look from th
 
 A speaker object allows you to add a sound source to the scene. This can be used in a movie for example.
 
-### Last Operator Add Speaker
+### Adjust Last Operation - Add Speaker
 
 ![Last Operator Add Speaker](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-speaker.png)
 
@@ -1100,7 +1100,7 @@ A camera object allows you to render your scene.
 
 Camera objects can be further adjusted in the properties editor.
 
-### Last Operator Add Camera
+### Adjust Last Operation - Add Camera
 
 ![Last Operator Add Camera](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-camera.png)
 
@@ -1133,7 +1133,7 @@ Lights can be further adjusted in the properties editor.
 
 **Area** creates an Area light. It's a directional light.
 
-#### Last Operator Add Light
+#### Adjust Last Operation - Add Light
 
 ![Last Operator Add Light](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-light.png)
 
@@ -1193,7 +1193,7 @@ To work with the light probes you need to bake them. Baking lightpropbes happens
 
 Adds a volumetric array light probe.
 
-#### Last Operator Add Light Probe
+#### Adjust Last Operation - Add Light Probe
 
 ![Last Operator Add Light Probe](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-light-probe.png)
 
@@ -1234,7 +1234,7 @@ A Force Field is for physical simulations. It provides you with tools to add dif
 
 The added Force Fields can be further adjusted in the Properties panel.
 
-### Last Operator Add Effector
+### Adjust Last Operation - Add Effector
 
 ![Last Operator Add Effector](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-effector.png)
 
@@ -1271,7 +1271,7 @@ Note that this option is dysfunctional when you call the Adjust Last Operator pa
 
 Add an instance of an existing collection. By default it is just one. But the menu lists all available collections in the scene.
 
-### Last Operator Add Collection Instance
+### Adjust Last Operation - Add Collection Instance
 
 ![Last Operator Add Collection Instance](/docs2/images/editors/3d-viewport/header/add-menu/last-operator-add-collection-instance.png)
 
@@ -1374,7 +1374,7 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ![Usage](/docs2/images/editors/3d-viewport/header/object-menu/usage-3.png)
 
-#### Last Operator To Sphere
+#### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
@@ -1410,7 +1410,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-#### Last Operator Shear
+#### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
 
@@ -1464,7 +1464,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-#### Last Operator Push/Pull
+#### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
@@ -1498,7 +1498,7 @@ The yellow cage represents the texture space. The actual UV mapping does not cha
 
 ![Move Texture Space](/docs2/images/editors/3d-viewport/header/object-menu/move-texture-space.png)
 
-#### Last Operator Move
+#### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
@@ -1535,7 +1535,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Scale Texture space is similar to the Move texture Space. With the only difference that it scales the UV space instead of moving it.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -1576,7 +1576,7 @@ Align to Transform Orientation rotates the selected objects so that their local 
 
 For example when you have a few cubes that are rotated differently, then perform align to transform orientation with Global coordinates, then the cubes rotations gets set back to 0/0/0
 
-#### Last Operator Transform
+#### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-transform.png)
 
@@ -1618,7 +1618,7 @@ This tool allows to randomize position rotation and scale of selected objects. E
 
 It starts with zeroed values. You need to adjust the values in the last operator.
 
-#### Last Operator Randomize Transform
+#### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-randomize-transform.png)
 
@@ -1640,7 +1640,7 @@ It starts with zeroed values. You need to adjust the values in the last operator
 
 Align Objects allows you to align the selected objects in various ways. You need to adjust the settings in the Last operator panel. The align operation happens in world coordinates.
 
-#### Last Operator Align Objects
+#### Adjust Last Operation - Align Objects
 
 ![Last Operator Align Objects](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-align-objects.png)
 
@@ -1685,7 +1685,7 @@ Set origin sets the origin of the selected objects to a chosen location.
 
 Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normals.
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-set-origin.png)
 
@@ -1727,7 +1727,7 @@ Mirrors along the global axis.
 
 Mirrors along the object axis.
 
-#### Last Operator Mirror
+#### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-mirror.png)
 
@@ -1755,7 +1755,7 @@ When you have for example a cube at X 5, and clear the location, then the cube g
 
 Resets the location of the selected object(s).
 
-##### Last Operator Clear Location
+##### Adjust Last Operation - Clear Location
 
 ![Last Operator Clear Location](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-clear-location.png)
 
@@ -1767,7 +1767,7 @@ With Clear Delta ticked it clears the delta transform instead of the transform.
 
 Resets the rotation of the selected object(s).
 
-##### Last Operator Clear Rotation
+##### Adjust Last Operation - Clear Rotation
 
 ![Last Operator Clear Rotation](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-clear-rotation.png)
 
@@ -1779,7 +1779,7 @@ With Clear Delta ticked it clears the delta transform instead of the transform.
 
 Resets the scaling of the selected object(s).
 
-##### Last Operator Clear Scale
+##### Adjust Last Operation - Clear Scale
 
 ![Last Operator Clear Scale](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-clear-scale.png)
 
@@ -1805,7 +1805,7 @@ Apply is a menu where you can apply transforms in various combinations. For exam
 
 This applies the location, rotation and scale of the object.
 
-##### Last Operator Apply Object Transform
+##### Adjust Last Operation - Apply Object Transform
 
 ![Last Operator Apply Object Transform](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-apply-object-transform.png)
 
@@ -1830,7 +1830,7 @@ Example use case:
 1. Key frame a object rotation from 0 to 90 degrees. Rotate the object by 45 degrees. When you play the animation it will still rotate from 0 to 90 degrees.
 2. Now key frame a delta rotation from 0 to 90 degrees and rotate the object by 45 degrees. When you playback the animation it will rotate from 45 to 135 degrees now. (a 90 degree difference from the current state)
 
-##### Last Operator Transforms to Deltas
+##### Adjust Last Operation - Transforms to Deltas
 
 ![Last Operator Transforms to Deltas](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-transforms-to-deltas.png)
 
@@ -1856,7 +1856,7 @@ Applies (set) the result of a constraint, and applies this back to the Object’
 
 Make Instances real makes any duplicates attached to this Object real so that they can be edited.
 
-#### Last Operator Make Instances Real
+#### Adjust Last Operation - Make Instances Real
 
 ![Last Operator Make Instances Real](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-make-instances-real.png)
 
@@ -1891,7 +1891,7 @@ Converts evaluated visual geometry and instanced data from the modifier stack in
 
 > **Note:** These operators are from the Default Asset Library addon
 
-#### Last operator Apply Selected Objects
+#### Adjust Last Operation - Apply Selected Objects
 
 ![Last operator Apply Selected Objects](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-apply-selected-objects.png)
 
@@ -1916,7 +1916,7 @@ Snaps the currently selected object(s) to the cursor location.
 
 Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.
 
-#### Last operator Snap Selection to Cursor
+#### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-snap-selection-to-cursor.png)
 
@@ -1951,7 +1951,7 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-duplicate.png)
 
@@ -2007,7 +2007,7 @@ Explanation: Each Bforartists object type (mesh, lamp, curve, camera *etc.*) is 
 
 Each object has a link to its associated object-data, and a single object-data, like a material, may be shared by many objects.
 
-#### Last Operator Duplicate Linked
+#### Adjust Last Operation - Duplicate Linked
 
 ![Last Operator Duplicate Linked](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-duplicate-linked.png)
 
@@ -2055,7 +2055,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Pastes copied object(s).
 
-#### Last Operator Paste Objects
+#### Adjust Last Operation - Paste Objects
 
 ![Last Operator Paste Objects](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-paste-objects.png)
 
@@ -2280,7 +2280,7 @@ Do the vertex parenting in Edit mode. You need to have an object type that has v
 
 Create a mesh or curve object, create an object, hold down shift and select the mesh object, make parent ...
 
-### Last Operator Make Parent
+### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-make-parent.png)
 
@@ -2318,7 +2318,7 @@ Clear Parent Inverse resets the transform corrections applied to the parenting r
 
 the parenting itself.
 
-#### Last Operator Clear Parent
+#### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-clear-parent.png)
 
@@ -2354,7 +2354,7 @@ As a result a constraints panel gets created in the Constraints tab in the Prope
 
 In the 3D view a dotted line indicates the relationship.
 
-#### Last Operator Add Constraints (with Target)
+#### Adjust Last Operation - Add Constraints (with Target)
 
 ![Last Operator Add Constraints (with Target)](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-add-constraints-with-target.png)
 
@@ -2413,7 +2413,7 @@ You need to have a Track constraint applied. It removes the track constraint.
 
 This menu item is just relevant when you have a Track constraint applied. Removes the track constraint. But keeps the current position.
 
-##### Last Operator Clear track
+##### Adjust Last Operation - Clear track
 
 ![Last Operator Clear track](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-clear-track.png)
 
@@ -2451,7 +2451,7 @@ Copy Modifiers and Copy Grease Pencil Effects transfers over the modifiers or gr
 
 Select the source object, hold down shift, select the target objects. Perform the action.
 
-#### Last Operator Link / Tranfer Data
+#### Adjust Last Operation - Link / Tranfer Data
 
 ![Last Operator Link / Tranfer Data](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-link-tranfer-data.png)
 
@@ -2475,7 +2475,7 @@ Select the object that you want to copy the data to, hold down shift, select the
 
 The caveat here is that the operator works in object mode. When you switch modes then the operator quits. And so you can't check if the UV seam transfer for example arrives as it should. This means that you sometimes end in trial and error with the last operator setting until you have your desired result.
 
-#### Last Operator Transfer Mesh Data
+#### Adjust Last Operation - Transfer Mesh Data
 
 ![Last Operator Transfer Mesh Data](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-transfer-mesh-data.png)
 
@@ -2858,7 +2858,7 @@ Select the object that you want to copy the data to, hold down shift, select the
 
 The menu has basically the same menu items like Transfer Mesh Data. The difference is in what you can do in the last operator. It transfers the whole data layer.
 
-#### Last Operator Transfer Mesh Data Layout
+#### Adjust Last Operation - Transfer Mesh Data Layout
 
 ![Last Operator Transfer Mesh Data Layout](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-transfer-mesh-data-layout.png)
 
@@ -2963,7 +2963,7 @@ Moves the selected object to a collection. The object is removed from the collec
 
 By clicking at this menu item a popup will appear to choose the new collection. Allows also to create a new collection. Once done, the object will be moved to this new created collection.
 
-#### Last Operator Move to Collection
+#### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move-to-collection.png)
 
@@ -2981,7 +2981,7 @@ Links the object to a collection. The object remains in the collection it was in
 
 By clicking at this menu item a popup will appear to choose the collection. Here you can also create a new collection. Once done, the object will be linked to this new created collection.
 
-#### Last Operator Link to Collection
+#### Adjust Last Operation - Link to Collection
 
 ![Last Operator Link to Collection](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-link-to-collection.png)
 
@@ -3012,7 +3012,7 @@ Shows with a mesh object. Sets the shading for the object to smooth. Smooth mean
 
 Sets the shading for the object to smooth with Autosmooth activated. Autosmooth means that sharp edges above an angle threshold will have sharp faceted faces, meanwhile angles under the threshold will be smooth.
 
-#### Last Operator Shade Smooth by angle
+#### Adjust Last Operation - Shade Smooth by angle
 
 ![Last Operator Shade Smooth by angle](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shade-smooth-by-angle.png)
 
@@ -3078,7 +3078,7 @@ Bake Action bakes the object animation to a new action. Bake action calls a pane
 
 The upcoming panel has the same settings than the last operator panel.
 
-#### Last Operator Bake Action
+#### Adjust Last Operation - Bake Action
 
 ![Last Operator Bake Action](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-bake-action.png)
 
@@ -3124,7 +3124,7 @@ When you use the Bake Mesh to Grease Pencil tool then a menu pops up with furthe
 | OK | Accept the settings. |
 
 
-#### Last Operator Bake Mesh Animation to Grease Pencil
+#### Adjust Last Operation - Bake Mesh Animation to Grease Pencil
 
 In the last operator you can again adjust the settings. It is the same settings than in the settings dialog. So we won't cover it again.
 
@@ -3146,7 +3146,7 @@ When you perform this tool then an option panel will open up.
 | Projection Type | If the grease pencil object should be reprojected, and with what method. |
 
 
-##### Last Operator Bake Transform to Grease Pencil panel
+##### Adjust Last Operation - Bake Transform to Grease Pencil panel
 
 The last operator contains the same settings than the settings panel.
 
@@ -3178,7 +3178,7 @@ actively moving object. Characters, bullets, etc.
 
 Add Active adds a rigid body to the selected object. The type of this rigid body is passive. This is useful for any static object, like ground for example.
 
-#### Last Operator Add Rigid bodies
+#### Adjust Last Operation - Add Rigid bodies
 
 ![Last Operator Add Rigid bodies](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-add-rigid-bodies.png)
 
@@ -3194,7 +3194,7 @@ Remove simply removes the rigid body from the current object.
 
 Change Shape opens a pop-up menu change the shape of your rigid body.
 
-#### Last Operator Change Collision shape
+#### Adjust Last Operation - Change Collision shape
 
 ![Last Operator Change Collision shape](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-change-collision-shape.png)
 
@@ -3208,7 +3208,7 @@ Rigid Body Shape is a pop-up menu change the shape of your rigid body again.
 
 Calculate Mass does NOT calculate the mass. But gives you a long pop-up menu list choose between different predefined mass set-ups. The corresponding value will then be set in the physics settings in the Rigid Body settings.
 
-#### Last Operator Calculate Mass
+#### Adjust Last Operation - Calculate Mass
 
 ![Last Operator Calculate Mass](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-calculate-mass.png)
 
@@ -3337,7 +3337,7 @@ Subdivide is a menu where you can quickly set the subdivision level of the selec
 
 SDS happens at Object mode level. Even when you apply it in the Edit Mode! And it happens at the whole object.
 
-### Last Operator Subdivision Set
+### Adjust Last Operation - Subdivision Set
 
 ![Last Operator Subdivision Set](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-subdivision-set.png)
 
@@ -3390,7 +3390,7 @@ Converts a selected object to a Mesh Object.
 
 Convert a curves hair object to a particle system.
 
-#### Last Operator Convert to
+#### Adjust Last Operation - Convert to
 
 ![Last Operator Convert to](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-convert-to.png)
 
@@ -3422,7 +3422,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-#### Last Operator Hide Selected
+#### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-hide-selected.png)
 

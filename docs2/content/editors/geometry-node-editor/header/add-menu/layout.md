@@ -1,29 +1,102 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.layout
-title: "Layout"
+title: Layout
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Layout"
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Layout
 version: "5.1"
 status: draft
 icon: node
-summary: "Layout nodes."
+summary: Layout nodes.
 order: 190
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.77 Editors - Geometry Nodes Editor - Header - Add Menu - Layout.odt"
+  - 12.1.77 Editors - Geometry Nodes Editor - Header - Add Menu - Layout.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-layout
 ---
 ## Add menu - Layout
 
-![Add menu - Layout](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/add-menu-layout.png)
+![Add menu - Layout](/docs2/images/editors/geometry-node-editor/header/add-menu/layout/add-menu-layout.png)
 
 These nodes helps organizing the node layout.
+
+### Comment
+
+![Comment](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/comment.png)
+
+Adds a note to the node tree. Use it to explain what a part of your nodes does. The text can use Markdown formatting. The new node shows the heading Comment.
+
+The Comment node is shared by all node editors. You find it in the Layout menu of each node editor. It has no sockets and does not change the result of the tree.
+
+To change the text, select the node and click the pencil button in its top right corner, or edit Text in the Node tab of the sidebar.
+
+#### Markdown Formatting
+
+![A Comment node showing rendered Markdown, and the same text in edit mode](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/comment-markdown.png)
+
+The text in a Comment node is shown as formatted text. On the left the node shows the result, on the right the same node in edit mode shows the plain text you type. [Markdown](https://en.wikipedia.org/wiki/Markdown) is a way to format text with a few plain characters, so you never need a menu for it.
+
+Here is the text of the example, so you can copy it into your own Comment node and change it:
+
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+
+---
+
+This is a paragraph with **bold** and *italic* text.
+
+You can also use `inline code` and [links](https://www.blender.org).
+
+> This is a blockquote.
+>
+> It can span multiple lines.
+
+- Unordered list item
+- Another item
+  - Nested item
+
+1. Ordered list item
+2. Another item
+3. Final item
+
+```python
+def hello():
+  print("Hello World!")```
+```
+
+The quick version of the same thing:
+
+
+| You type | You get |
+| ---------------------------------------------- | -------------------------------------------------- |
+| `# Heading 1`, `## Heading 2`, `### Heading 3` | Headings, from large to small |
+| `---` on its own line | A horizontal line |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `code` | `code` in a box |
+| `[text](https://…)` | A link |
+| `> quote` | An indented quote |
+| `- item` | A bullet list; indent two spaces for a nested item |
+| `1. item` | A numbered list |
+| Three backticks around lines | A code block |
+
+
+Leave a blank line between paragraphs and between different kinds of block, such as a paragraph and a list.
+
+> Note: The same formatting is available to scripts and add-ons: Blender has a `label_markdown` widget for formatted text in a layout, and a `label_multiline` widget for long text that wraps. 
+
+#### Properties
+
+##### Text
+
+The text shown in the node.
 
 ### Frame
 
@@ -72,3 +145,8 @@ When you exceed a specific angle amount between the reroute nodes, then the node
 ![Move, Rotate, Scale](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/move-rotate-scale.png)
 
 A normal node has a handler. The reroute dot not. You can't simply move it around with the mouse by clicking at the top area. It has none. You have to use the move, rotate and scale commands. They can be found in the View menu.
+
+```
+
+```
+

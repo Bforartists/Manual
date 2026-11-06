@@ -69,7 +69,9 @@ class Webflow:
                 if e.code == 429 and attempt < 5:
                     time.sleep(int(e.headers.get("Retry-After", "10")))
                     continue
-                if e.code >= 500 and attempt < 3:
+                # a 5xx on a create may still have made the item: retrying here made duplicates
+                # (Oct 2026), so creates (retry_timeouts=False) leave the retry to create()
+                if e.code >= 500 and attempt < 3 and retry_timeouts:
                     time.sleep(5 * (attempt + 1))
                     continue
                 raise SyncError(f"Webflow {method} {path} failed: {e.code} {e.read().decode()[:800]}")
@@ -351,7 +353,15 @@ def parse_checksum(value):
 
 
 def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: {}, prune=False):
-    existing = {it["fieldData"].get(key_field): it for it in wf.items(cid) if it["fieldData"].get(key_field)}
+    all_items = wf.items(cid)
+    # a live item wins over an archived one with the same key (archived duplicates must never
+    # shadow the page the site shows)
+    existing = {}
+    for it in all_items:
+        k = it["fieldData"].get(key_field)
+        if k and (k not in existing or existing[k].get("isArchived") and not it.get("isArchived")):
+            existing[k] = it
+    archived_slugs = {it["fieldData"].get("slug"): it for it in all_items if it.get("isArchived")}
     ids, pending = {}, []
     for w in wanted:
         fields = dict(w["fields"], **extra(w))
@@ -378,6 +388,10 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
             report.append(("🔄", w["key"], "updated"))
         else:
             data = dict(w.get("create", {}), **fields, slug=w["slug"])
+            old = archived_slugs.get(w["slug"])
+            if old:   # an archived item holds the address: move it aside, or Webflow adds a suffix and the sidebar link breaks
+                wf.req("PATCH", f"/collections/{cid}/items", {"items": [{"id": old["id"], "isArchived": True,
+                       "fieldData": {"slug": f"{w['slug']}-old-{old['id'][-5:]}"}}]})
             if "checksum" in KNOWN.get(cid, {"checksum"}):
                 data["checksum"] = stamp
             res = wf.create(cid, data)
@@ -391,7 +405,8 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
         if k in keys or it.get("isArchived"):
             continue
         if prune and it["fieldData"].get("checksum"):          # made by the sync, gone from the repo
-            gone.append({"id": it["id"], "isArchived": True, "fieldData": {"name": it["fieldData"].get("name", k)}})
+            gone.append({"id": it["id"], "isArchived": True, "fieldData": {"name": it["fieldData"].get("name", k),
+                         "slug": f"{it['fieldData'].get('slug', k)}-old-{it['id'][-5:]}"}})
             report.append(("🗄️", k, "gone from the repo; archived"))
         else:
             report.append(("🧹", k, "in Webflow but not in the repo; left alone"))

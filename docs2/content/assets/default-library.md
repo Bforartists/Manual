@@ -7,7 +7,7 @@ path:
   - Asset Browser
   - Asset Browser - Default Asset LIbrary
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28.1 Asset Browser - Default Asset LIbrary.odt
@@ -168,23 +168,57 @@ You can also go to the 3D View - Header – Object – Assets – Open Asset Wiz
 
 #### Using the Sidebar to change asset properties
 
-![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png)
+![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/asset-properties-panel.png)
 
-You can adjust Geometry Nodes Asset Modifier settings and common properties through slider properties and check boxes directly from the 3D View in the Sidebar.
+You can adjust the settings of a Geometry Nodes asset, like the size, distance or angle of a primitive, right in the 3D View sidebar.
 
-You can modify numerical inputs for quick parameter changes by size, distance or angle.
+Find them in the sidebar **Item** tab, in the **Asset Properties** panel.
 
-Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.
+> **Note:** This panel only shows for the Default Library's Geometry Nodes assets, like the Primitives or Blend Mesh by Proximity.
 
-> **Note:** This panel will only enable for specific assets like Primitives or Blend mesh by Proximity
+##### Open Asset Wizard
 
+Opens the wizard again for the selected asset, so you can redo the choices you made when you placed it.
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| Open Asset Wizard | This will re-trigger the wizard for the selected asset. |
-| Modifier Name | The selected asset name. |
-| Modifier Properties | These are the asset properties also found in the Properties Editor in the Modifier stack. |
+Below the button you see the name of the asset's node group, and then the asset's settings. They're the same inputs as in the modifier stack, grouped in fold-open panels just like in the modifier, with the label in front of each field. Click the dot at the right of a field to keyframe it.
 
+#### Property groups
+
+The settings are grouped the same way on every Smart primitive. Open or close a group by clicking its title.
+
+- 📏 **Top-level properties**: the settings most assets share, as sliders and check boxes. Numeric fields change the size, a distance or an angle, so you can adjust the asset quickly.
+- 🧊 **Bevel**: the bevel depth and the bevel resolution.
+- 🔁 **Resolution**: the loop resolution and the subdivision detail.
+- 🗺️ **UV**: **Relative** scales the UVs with the asset, when the asset supports it.
+
+> **Note:** Planned for the UV group: UV scaling and alignment, and a choice between relative and absolute UVs.
+
+### Applying Smart assets
+
+Smart assets stay editable until you apply them. **Apply Selected Objects** turns the selected objects into regular mesh objects, using their visual geometry. You find it in the 3D View header under **Object › Apply**, in three forms:
+
+- 🧩 **Visual Geometry and Join** is **Join on Apply**.
+- ➕ **Visual Geometry and Boolean** is **Boolean on Apply**.
+- 🧱 **Visual Geometry and Remesh** is **Remesh on Apply**.
+
+#### Apply Selected Objects
+
+1. Select one or more meshes with Smart assets in the 3D View.
+2. Choose **Object › Apply › Visual Geometry and Join**, or one of the other entries.
+
+#### Join on Apply
+
+Joins the applied objects into a single mesh object without changing their geometry. Use it to turn a group of solid meshes into one object.
+
+#### Boolean on Apply
+
+Combines the applied objects into a single mesh object with Float boolean union operations.
+
+> **Note:** Works best with manifold meshes (no holes).
+
+#### Remesh on Apply
+
+Combines the applied objects into one voxel remeshed object with a resolution you set. The options are **Voxel Size**, **Preserve Volume**, **Preserve Attributes**, **Fix Poles** and **Adaptivity**.
 
 ## Default Library
 

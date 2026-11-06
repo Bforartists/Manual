@@ -5,7 +5,7 @@ These are the original Bforartists manual chapters, one LibreOffice / OpenOffice
 > ⚠️ **Archive, not the manual.** Every chapter here was converted word for word into Markdown in [`docs2/`](../docs2), which is what the website shows today. Please make new changes there, not in these files.
 
 [![Read the docs](https://img.shields.io/badge/Read_the-docs-0969da?style=for-the-badge&logo=readthedocs&logoColor=white)](https://www.bforartists.com/docs/home)
-[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
+[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/docs)
 
 ## Why it is kept
 

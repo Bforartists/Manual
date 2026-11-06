@@ -292,6 +292,68 @@ Base the voxel resolution at the amount or the size of the point cloud.
 
 Standard geometry output.
 
+### Rasterize Points
+
+![Rasterize Points](/docs2/images/editors/geometry-node-editor/header/add-menu-point/rasterize-points.png)
+
+Turns points into volume grids. Each point adds its values to the voxels around it with a weighted sum. The Kernel Type decides how far a point reaches and how the weight falls off.
+
+You choose what to rasterize by adding items. Each item has a name and a type. It gives the node one input for the value of each point, and one grid output with the same name. To add an item, connect a link to the empty socket at the bottom of the node, or use the Items panel in the Node tab of the sidebar.
+
+#### Inputs
+
+##### Points
+
+The geometry to rasterize. The points of meshes, point clouds and curves are used.
+
+##### Grid Transform Mode
+
+How the transform of the new grids is set.
+
+- Voxel Size: all grids use a uniform voxel size, without any move or rotation. This is the default.
+- Matrix: you set the transform of the grids with a matrix.
+
+##### Voxel Size
+
+The size of one voxel. The default is 0.3 m, the minimum is 0.01. It is only shown for Voxel Size.
+
+##### Matrix
+
+The transform of the grids. It is only shown for Matrix. If the matrix is not valid for a grid, no grids are created.
+
+##### Kernel Type
+
+How the weight of a point is spread over the voxels.
+
+- Constant: the point only goes to the closest voxel.
+- Linear: the weight falls off linearly over the voxel range. This is the default.
+- Quadratic B-Spline: a quadratic B-spline kernel over 1.5 voxels.
+- Cubic B-Spline: a cubic B-spline kernel over 2 voxels.
+
+##### Position
+
+A field with the position of each point. By default it is the position of the point.
+
+##### Items
+
+For each item you add, there is an input with its name. It is a field that gives the value to rasterize for each point.
+
+#### Properties
+
+##### Items
+
+The Items panel in the Node tab of the sidebar lists the items. You can add, remove and move items there.
+
+##### Type
+
+The type of the active item. Scalar rasterizes a single number for each point. Vector rasterizes a vector for each point.
+
+#### Outputs
+
+##### Items
+
+For each item there is a grid output with the same name as the item. A scalar item gives a scalar grid, a vector item gives a vector grid. If a grid cannot be made, the node shows a warning with the name of the item.
+
 ### Set Point Radius
 
 ![Set Point Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-radius.png)
@@ -303,3 +365,28 @@ The Set Point Radius node controls the size each selected point cloud point shou
 | ------- | ----------------------------------------------------------------------------------------------------- |
 | Inputs | **Points**: Geometry input. · **Selection**: Selection input. · **Radius**: The radius of the points. |
 | Outputs | **Points**: Standard geometry output. |
+
+### Set Point Cloud Type
+
+![Set Point Cloud Type](/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-cloud-type.png)
+
+Changes how a point cloud is represented. Use it to show the points of a point cloud as 3D Gaussian Splats, or to turn them back into simple points. The points themselves are not changed.
+
+#### Inputs
+
+##### Points
+
+The point cloud to change the type of. Point clouds inside instances are changed too.
+
+##### Type
+
+The new type of the point cloud.
+
+- Points: a simple point cloud with a position and a radius for each point. This is the default.
+- 3D Gaussian Splat: a point cloud that works as the original 3D Gaussian Splats technique.
+
+#### Outputs
+
+##### Points
+
+The geometry with the new point cloud type.

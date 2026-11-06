@@ -109,7 +109,7 @@ In the upper right corner you will find two navigation elements.
 
 In Mask mode you will see a 2d cursor down left. It is for example the point at which the mask primitives are created. This 2D cursor can be set and moved by hotkey Alt + Right Mouse
 
-#### Last Operator Set 2D cursor
+#### Adjust Last Operation - Set 2D cursor
 
 ![Last Operator Set 2D cursor](/docs2/images/editors/movie-clip-editor/last-operator-set-2d-cursor.png)
 
@@ -123,7 +123,7 @@ Adjust the position of the 2D cursor.
 
 You can create mask spline primitives from the Add menu. But you can also draw your own mask spline with hotkey Ctrl + Left Mouse.
 
-#### Last Operator Add Vertex and Slide
+#### Adjust Last Operation - Add Vertex and Slide
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/last-operator-add-vertex-and-slide.png)
 
@@ -164,7 +164,7 @@ Graph and Dope sheet sub modes does not have a context menu.
 
 Enables the currently selected marker(s)
 
-#### Last operator Disable Markers
+#### Adjust Last Operation - Disable Markers
 
 ![Last operator Disable Markers](/docs2/images/editors/movie-clip-editor/last-operator-disable-markers.png)
 
@@ -180,7 +180,7 @@ Hides the selected track(s)
 
 Shows the selected track(s)
 
-#### Last Operator Hide Tracks
+#### Adjust Last Operation - Hide Tracks
 
 ![Last Operator Hide Tracks](/docs2/images/editors/movie-clip-editor/last-operator-hide-tracks.png)
 
@@ -196,7 +196,7 @@ Locks the selected tracks. You will see the locks in the Dopesheet view.
 
 Unlocks the selected tracks. You will see the locks in the Dopesheet view.
 
-#### Last Operator Lock Tracks
+#### Adjust Last Operation - Lock Tracks
 
 ![Last Operator Lock Tracks](/docs2/images/editors/movie-clip-editor/last-operator-lock-tracks.png)
 
@@ -229,7 +229,7 @@ This tool is hotkey only, and should only be used with the mouse.
 
 In this sub menu you can set the handle type for the currently selected spline points.
 
-#### Last operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last operator Set Handle Type](/docs2/images/editors/movie-clip-editor/last-operator-set-handle-type.png)
 
