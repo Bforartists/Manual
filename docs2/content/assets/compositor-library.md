@@ -483,7 +483,7 @@ The input image to process.
 
 Data type: Float.
 
-Controls the intensity of the image's color saturation. The range is 0 to 2.
+Controls the intensity of the image's color saturation. The range is 0 to 2. At 0 the image is fully desaturated.
 
 ### Outputs
 
@@ -774,19 +774,19 @@ The ending frame for the animation effect.
 
 Data type: Float.
 
-Controls the speed of the animation transition.
+Controls the speed of the animation transition. The time between transitions is worked out automatically from Frame Start and Frame End.
 
 ##### Transition Feather
 
 Data type: Float.
 
-Adjusts the softness of the transition edges.
+Adjusts the softness of the transition edges. It sets the blur radius of the transition border.
 
 ##### Transition Rotation
 
 Data type: Float.
 
-Rotates the transition effect.
+Rotates the transition effect. It sets the direction of the transition.
 
 ### Outputs
 
@@ -843,7 +843,7 @@ Controls the intensity of the glitch effect.
 
 Data type: Float.
 
-Determines the size or frequency of the glitch pattern.
+Determines the size or frequency of the glitch pattern. Higher values make smaller blocks.
 
 #### Offset X
 
@@ -920,7 +920,7 @@ Controls the intensity of the glitch effect.
 
 Data type: Float.
 
-Determines the size or frequency of the glitch pattern.
+Determines the size or frequency of the glitch pattern. Higher values make smaller blocks.
 
 #### Offset X
 
@@ -997,7 +997,7 @@ Controls the intensity of the RGB glitch effect.
 
 Data type: Float.
 
-Determines the size or frequency of the glitch pattern.
+Determines the size or frequency of the glitch pattern. Higher values make smaller blocks.
 
 #### Offset X
 
