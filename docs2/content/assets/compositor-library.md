@@ -72,9 +72,14 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and the output to the next node. In the picture, Red is 30 and Blue is -30.
+Connect an image to Image and the output to the next node. In the slider, Red is 30 and Blue is -30.
 
-![Adjust RGB in use](/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the red and orange tones get stronger and the blue ones weaker](/docs2/images/assets/compositor-library/color/adjust-rgb-after.png)
+
+The setup used for the slider:
+
+![Adjust RGB setup](/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png)
 
 ## Average Color
 
@@ -104,7 +109,12 @@ The output color after processing the effect.
 
 Connect an image to Image. The output is a single color, shown here as a flat fill.
 
-![Average Color in use](/docs2/images/assets/compositor-library/color/average-color-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the whole image becomes its average color](/docs2/images/assets/compositor-library/color/average-color-after.png)
+
+The setup used for the slider:
+
+![Average Color setup](/docs2/images/assets/compositor-library/color/average-color-usage.png)
 
 ## Color Temperature
 
@@ -144,9 +154,14 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 3500.
+Connect an image to Image and set Temp Kelvin. In the slider, Temp Kelvin is 3500.
 
-![Color Temperature in use](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: a warm, orange tone](/docs2/images/assets/compositor-library/color/color-temperature-after.png)
+
+The setup used for the slider:
+
+![Color Temperature setup](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
 
 ## Color Tint
 
@@ -192,9 +207,14 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image and pick a Color. In the picture, Color is blue and Strength is 0.6.
+Connect an image to Image and pick a Color. In the slider, Color is blue and Strength is 0.6.
 
-![Color Tint in use](/docs2/images/assets/compositor-library/color/color-tint-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: a blue tint over the image](/docs2/images/assets/compositor-library/color/color-tint-after.png)
+
+The setup used for the slider:
+
+![Color Tint setup](/docs2/images/assets/compositor-library/color/color-tint-usage.png)
 
 ## Color Variation
 
@@ -240,9 +260,14 @@ The image with color variation applied.
 
 ### How to use
 
-Connect an image to Image. In the picture, Strength is 1.0.
+Connect an image to Image. In the slider, Strength is 1.0.
 
-![Color Variation in use](/docs2/images/assets/compositor-library/color/color-variation-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: soft patches of color](/docs2/images/assets/compositor-library/color/color-variation-after.png)
+
+The setup used for the slider:
+
+![Color Variation setup](/docs2/images/assets/compositor-library/color/color-variation-usage.png)
 
 ## Desaturator
 
@@ -284,9 +309,14 @@ The desaturated image.
 
 Connect an image to Image. Saturation Strength sets how much color is removed: 1 leaves the image as it is, and lower values remove more.
 
-Hue Ratio changes which colors lose their saturation. In the picture, Saturation Strength is 0.3. At Hue Ratio 0 every color is desaturated evenly. At Hue Ratio 1 the strongly colored areas stay vivid and the muted areas lose their color.
+Hue Ratio changes which colors lose their saturation. In the slider, Saturation Strength is 0.3 and Hue Ratio is 1. At Hue Ratio 0 every color is desaturated evenly. At Hue Ratio 1 the strongly colored areas stay vivid and the muted areas lose their color.
 
-![Desaturator in use](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: the muted areas lose their color](/docs2/images/assets/compositor-library/color/desaturator-after.png)
+
+The setup used for the slider:
+
+![Desaturator setup](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
 
 ## Halftone Color
 
@@ -346,9 +376,16 @@ Black and white dots.
 
 Connect an image to Foreground and set Background to the color between the dots. Distance decides where the dots are. It is normally connected to the Distance output of Halftone Pattern, as shown in the next section.
 
-In the picture, Distance is a single value (0.5) instead of a pattern, so the image is cut at one brightness: the dark parts of the spheres turn to the Background color. Dots need a Distance that changes across the image.
+In the setup picture below the slider, Distance is a single value (0.5) instead of a pattern, so the image is cut at one brightness: the dark parts of the spheres turn to the Background color. Dots need a Distance that changes across the image.
 
-![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-color-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: dots in the image color on a dark blue background](/docs2/images/assets/compositor-library/color/halftone-color-after.png)
+
+In the slider, Distance comes from Halftone Pattern (Scale 64) and Background is dark blue.
+
+The setup picture shows Distance as a single value:
+
+![Halftone Color setup](/docs2/images/assets/compositor-library/color/halftone-color-usage.png)
 
 ## Halftone Pattern
 
@@ -458,9 +495,14 @@ The output image after processing the effect.
 
 ### How to use
 
-Connect an image to Image. In the picture, Saturation is 0.25.
+Connect an image to Image. In the slider, Saturation is 0.25.
 
-![Simple Saturation in use](/docs2/images/assets/compositor-library/color/simple-saturation-usage.png)
+![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![After: most of the color is gone](/docs2/images/assets/compositor-library/color/simple-saturation-after.png)
+
+The setup used for the slider:
+
+![Simple Saturation setup](/docs2/images/assets/compositor-library/color/simple-saturation-usage.png)
 
 # Creative / Design
 
