@@ -105,12 +105,14 @@ def figure(src, alt, cls=""):
 
 
 def compare(imgs):
-    """Two images whose alt texts start with Before / After -> a full-width comparison slider."""
+    """Two images whose alt texts start with Before / After -> the website's comparison slider (playhead, sweeps once when scrolled into view)."""
     (s1, a1), (s2, a2) = imgs
     a1, a2 = htmllib.unescape(a1), htmllib.unescape(a2)
-    return ('<div class="ui-doc-compare">'
-            f'<img src="{s1}" alt="{htmllib.escape(a1)}" loading="lazy"><img src="{s2}" alt="{htmllib.escape(a2)}" loading="lazy">'
-            '<span class="cmp-l">Before</span><span class="cmp-r">After</span></div>')
+    return ('<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after">'
+            f'<img class="ui-compare-img" src="{s2}" alt="{htmllib.escape(a2)}" loading="lazy">'
+            f'<img class="ui-compare-img is-before" src="{s1}" alt="{htmllib.escape(a1)}" loading="lazy">'
+            '<div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div>'
+            '<div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>')
 
 
 def figures(html, image_width):
