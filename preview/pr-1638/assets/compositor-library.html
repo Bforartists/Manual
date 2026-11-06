@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Compositor Library · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="doc-kit.css"><style>.ui-doc-compare{position:relative;width:100%;margin:1rem 0;overflow:hidden;border-radius:.375rem;line-height:0;user-select:none;touch-action:pan-y;--pos:50%;background:#222;box-shadow:0 1px 3px #0008}.ui-doc-compare img{display:block;width:100%;height:auto;margin:0;max-width:none;box-shadow:none;border-radius:0}.ui-doc-compare img+img{position:absolute;inset:0;height:100%;clip-path:inset(0 0 0 var(--pos))}.ui-doc-compare .cmp-l,.ui-doc-compare .cmp-r{position:absolute;top:.5rem;padding:.15rem .5rem;border-radius:.25rem;background:#000a;color:#fff;font:600 12px/1.4 sans-serif;pointer-events:none}.ui-doc-compare .cmp-l{left:.5rem}.ui-doc-compare .cmp-r{right:.5rem}.ui-doc-compare .cmp-bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 4px #000a;pointer-events:none}.ui-doc-compare .cmp-bar:after{content:"\25C0 \25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.35rem .5rem;border-radius:999px;background:#fff;color:#222;font:700 10px/1 sans-serif;white-space:nowrap;letter-spacing:2px}.ui-doc-compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+<link rel="stylesheet" href="doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
 
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
@@ -32,7 +32,7 @@ a{color:var(--dk-link)}
 .pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
 @media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
-</style><script>function bfaCompare(){document.querySelectorAll('.ui-doc-compare:not([data-ready])').forEach(function(c){c.dataset.ready='1';var i=document.createElement('input');i.type='range';i.min=0;i.max=100;i.value=50;i.setAttribute('aria-label','Compare before and after');var b=document.createElement('span');b.className='cmp-bar';i.addEventListener('input',function(){c.style.setProperty('--pos',i.value+'%')});c.appendChild(b);c.appendChild(i);});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bfaCompare);else bfaCompare();
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
 
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
@@ -389,7 +389,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h1 id="color">Color</h1>
 <p>Assets that change the color of an image.</p>
 <h2 id="adjust-rgb">Adjust RGB</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/adjust-rgb.png" alt="Adjust RGB" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/adjust-rgb.png" alt="Adjust RGB" loading="lazy"></figure>
 <p>Adjusts the red, green and blue channels of an image individually.</p>
 <h3 id="inputs">Inputs</h3>
 <h4 id="image">Image</h4>
@@ -413,9 +413,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use">How to use</h3>
 <p>Connect an image to Image and the output to the next node. In the picture, Red is 30 and Blue is -30.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png" alt="Adjust RGB in use" loading="lazy"><figcaption>Adjust RGB in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png" alt="Adjust RGB in use" loading="lazy"><figcaption>Adjust RGB in use</figcaption></figure>
 <h2 id="average-color">Average Color</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/average-color.png" alt="Average Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/average-color.png" alt="Average Color" loading="lazy"></figure>
 <p>Calculates the average color of the input image.</p>
 <h3 id="inputs-2">Inputs</h3>
 <h4 id="image-3">Image</h4>
@@ -427,9 +427,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output color after processing the effect.</p>
 <h3 id="how-to-use-2">How to use</h3>
 <p>Connect an image to Image. The output is a single color, shown here as a flat fill.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/average-color-usage.png" alt="Average Color in use" loading="lazy"><figcaption>Average Color in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/average-color-usage.png" alt="Average Color in use" loading="lazy"><figcaption>Average Color in use</figcaption></figure>
 <h2 id="color-temperature">Color Temperature</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-temperature.png" alt="Color Temperature" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-temperature.png" alt="Color Temperature" loading="lazy"></figure>
 <p>Adjusts the color temperature of the image to simulate different lighting conditions.</p>
 <h3 id="inputs-3">Inputs</h3>
 <h4 id="image-4">Image</h4>
@@ -447,9 +447,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-3">How to use</h3>
 <p>Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 3500.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-temperature-usage.png" alt="Color Temperature in use" loading="lazy"><figcaption>Color Temperature in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-temperature-usage.png" alt="Color Temperature in use" loading="lazy"><figcaption>Color Temperature in use</figcaption></figure>
 <h2 id="color-tint">Color Tint</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-tint.png" alt="Color Tint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-tint.png" alt="Color Tint" loading="lazy"></figure>
 <p>Applies a color tint to the image with adjustable strength and power.</p>
 <h3 id="inputs-4">Inputs</h3>
 <h4 id="image-6">Image</h4>
@@ -470,9 +470,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-4">How to use</h3>
 <p>Connect an image to Image and pick a Color. In the picture, Color is blue and Strength is 0.6.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-tint-usage.png" alt="Color Tint in use" loading="lazy"><figcaption>Color Tint in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-tint-usage.png" alt="Color Tint in use" loading="lazy"><figcaption>Color Tint in use</figcaption></figure>
 <h2 id="color-variation">Color Variation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-variation.png" alt="Color Variation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-variation.png" alt="Color Variation" loading="lazy"></figure>
 <p>Adds subtle random color variation across the image.</p>
 <h3 id="inputs-5">Inputs</h3>
 <h4 id="image-8">Image</h4>
@@ -493,9 +493,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The image with color variation applied.</p>
 <h3 id="how-to-use-5">How to use</h3>
 <p>Connect an image to Image. In the picture, Strength is 1.0.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/color-variation-usage.png" alt="Color Variation in use" loading="lazy"><figcaption>Color Variation in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/color-variation-usage.png" alt="Color Variation in use" loading="lazy"><figcaption>Color Variation in use</figcaption></figure>
 <h2 id="desaturator">Desaturator</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/desaturator.png" alt="Desaturator" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/desaturator.png" alt="Desaturator" loading="lazy"></figure>
 <p>Desaturates the image, with control over strength and hue.</p>
 <h3 id="inputs-6">Inputs</h3>
 <h4 id="image-10">Image</h4>
@@ -513,9 +513,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The desaturated image.</p>
 <h3 id="how-to-use-6">How to use</h3>
 <p>Connect an image to Image. In the picture, Saturation Strength is 0.8.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/desaturator-usage.png" alt="Desaturator in use" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/desaturator-usage.png" alt="Desaturator in use" loading="lazy"></figure>
 <h2 id="halftone-color">Halftone Color</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/halftone-color.png" alt="Halftone Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/halftone-color.png" alt="Halftone Color" loading="lazy"></figure>
 <p>Colors a halftone pattern, sizing dots by brightness. Use it together with Halftone Pattern: connect the Distance output of Halftone Pattern to the Distance input here.</p>
 <h3 id="inputs-7">Inputs</h3>
 <h4 id="distance">Distance</h4>
@@ -542,9 +542,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Black and white dots.</p>
 <h3 id="how-to-use-7">How to use</h3>
 <p>Connect the Distance output of Halftone Pattern to Distance, an image to Foreground, and set Background to white. Connect Color to the next node.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Color in use" loading="lazy"><figcaption>Halftone Color in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Color in use" loading="lazy"><figcaption>Halftone Color in use</figcaption></figure>
 <h2 id="halftone-pattern">Halftone Pattern</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/halftone-pattern.png" alt="Halftone Pattern" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/halftone-pattern.png" alt="Halftone Pattern" loading="lazy"></figure>
 <p>Creates a halftone dot pattern with distance and vector outputs. Use it together with Halftone Color: connect the Distance output to Halftone Color.</p>
 <h3 id="inputs-8">Inputs</h3>
 <h4 id="rotation">Rotation</h4>
@@ -574,9 +574,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Coordinates inside each dot.</p>
 <h3 id="how-to-use-8">How to use</h3>
 <p>Use it together with Halftone Color: connect Distance to the Distance input of Halftone Color.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Pattern in use" loading="lazy"><figcaption>Halftone Pattern in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Pattern in use" loading="lazy"><figcaption>Halftone Pattern in use</figcaption></figure>
 <h2 id="simple-saturation">Simple Saturation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/simple-saturation.png" alt="Simple Saturation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/simple-saturation.png" alt="Simple Saturation" loading="lazy"></figure>
 <p>Adjusts the saturation level of the image.</p>
 <h3 id="inputs-9">Inputs</h3>
 <h4 id="image-12">Image</h4>
@@ -591,11 +591,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-9">How to use</h3>
 <p>Connect an image to Image. In the picture, Saturation is 0.25.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/color/simple-saturation-usage.png" alt="Simple Saturation in use" loading="lazy"><figcaption>Simple Saturation in use</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/color/simple-saturation-usage.png" alt="Simple Saturation in use" loading="lazy"><figcaption>Simple Saturation in use</figcaption></figure>
 <h1 id="creative-design">Creative / Design</h1>
 <p>Assets that create a designed look from render passes.</p>
 <h2 id="blueprint">Blueprint</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/creative-design/blueprint.png" alt="Blueprint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/creative-design/blueprint.png" alt="Blueprint" loading="lazy"></figure>
 <p>Generates a blueprint-style effect with grid lines and outlines based on depth and normals.</p>
 <h3 id="inputs-10">Inputs</h3>
 <h4 id="image-14">Image</h4>
@@ -673,7 +673,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="how-to-use-10">How to use</h3>
 <p>Blueprint needs render passes. Connect the Depth, Normal and Position passes of a Render Layers node to the inputs of the same name, and the rendered image to Image. Line Color and Background Color set the two colors of the blueprint. The panels Main Grid, Secondary Grid and Border Line control the grid and the outlines.</p>
 <h2 id="breakdown-animation">Breakdown Animation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/creative-design/breakdown-animation.png" alt="Breakdown Animation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/creative-design/breakdown-animation.png" alt="Breakdown Animation" loading="lazy"></figure>
 <p>Creates an animated breakdown effect using multiple render passes and UV data.</p>
 <h3 id="inputs-11">Inputs</h3>
 <h4 id="image-16">Image</h4>
@@ -747,7 +747,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h1 id="distortion">Distortion</h1>
 <p>Assets that shift, split or mirror the image.</p>
 <h2 id="glitch-block">Glitch Block</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-block.png" alt="Glitch Block" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-block.png" alt="Glitch Block" loading="lazy"></figure>
 <p>Applies a block-based glitch effect to the image with customizable parameters.</p>
 <h3 id="inputs-12">Inputs</h3>
 <h4 id="image-18">Image</h4>
@@ -780,11 +780,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-12">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Blocks of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 5, Offset X 0.25. Time changes the pattern, so animate it for a flickering glitch.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-block-after.png" alt="After: blocks shifted sideways" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-block-after.png" alt="After: blocks shifted sideways" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-block-setup.png" alt="Glitch Block setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-block-setup.png" alt="Glitch Block setup" loading="lazy"></figure>
 <h2 id="glitch-offset">Glitch Offset</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-offset.png" alt="Glitch Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-offset.png" alt="Glitch Offset" loading="lazy"></figure>
 <p>Applies an offset-based glitch effect to the image with customizable parameters.</p>
 <h3 id="inputs-13">Inputs</h3>
 <h4 id="image-20">Image</h4>
@@ -817,11 +817,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-13">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Parts of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 1, Offset X 0.25. Time changes the pattern.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-offset-after.png" alt="After: parts shifted sideways" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-offset-after.png" alt="After: parts shifted sideways" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-offset-setup.png" alt="Glitch Offset setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-offset-setup.png" alt="Glitch Offset setup" loading="lazy"></figure>
 <h2 id="glitch-rgb">Glitch RGB</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-rgb.png" alt="Glitch RGB" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-rgb.png" alt="Glitch RGB" loading="lazy"></figure>
 <p>Applies an RGB channel offset glitch effect to the image.</p>
 <h3 id="inputs-14">Inputs</h3>
 <h4 id="image-22">Image</h4>
@@ -851,11 +851,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-14">How to use</h3>
 <p>Connect an image to Image and the output to the next node. The red, green and blue channels are shifted apart, which leaves colored edges around the shapes. In the slider every value is at its default: Strength 1, Scale 1, Offset X 1.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-rgb-after.png" alt="After: color channels shifted apart" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-rgb-after.png" alt="After: color channels shifted apart" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/glitch-rgb-setup.png" alt="Glitch RGB setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/glitch-rgb-setup.png" alt="Glitch RGB setup" loading="lazy"></figure>
 <h2 id="simple-distortion">Simple Distortion</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/simple-distortion.png" alt="Simple Distortion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/simple-distortion.png" alt="Simple Distortion" loading="lazy"></figure>
 <p>Applies a distortion effect to the image based on a vector field.</p>
 <h3 id="inputs-15">Inputs</h3>
 <h4 id="image-24">Image</h4>
@@ -877,7 +877,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="how-to-use-15">How to use</h3>
 <p>Connect an image to Image and a vector field to Vector, for example from a texture. The vector sets the direction and strength of the distortion, and X Scale and Y Scale scale it along each axis.</p>
 <h2 id="symmetry">Symmetry</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/symmetry.png" alt="Symmetry" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/symmetry.png" alt="Symmetry" loading="lazy"></figure>
 <p>Creates a symmetrical effect by flipping and offsetting the image.</p>
 <h3 id="inputs-16">Inputs</h3>
 <h4 id="image-26">Image</h4>
@@ -904,13 +904,13 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-16">How to use</h3>
 <p>Connect an image to Image and the output to the next node. In the slider X Flip is on, so the right half of the image is a mirror of the left half. Y Flip does the same from top to bottom, and X Offset and Y Offset move the mirror line.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/symmetry-after.png" alt="After: right half mirrors the left" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/symmetry-after.png" alt="After: right half mirrors the left" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/distortion/symmetry-setup.png" alt="Symmetry setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/distortion/symmetry-setup.png" alt="Symmetry setup" loading="lazy"></figure>
 <h1 id="filters">Filters</h1>
 <p>Assets that filter the image into a new look.</p>
 <h2 id="halftone">Halftone</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/halftone.png" alt="Halftone" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/halftone.png" alt="Halftone" loading="lazy"></figure>
 <p>Applies a halftone pattern effect to simulate printed media visuals.</p>
 <h3 id="inputs-17">Inputs</h3>
 <h4 id="image-28">Image</h4>
@@ -937,11 +937,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Black and white halftone dots</p>
 <h3 id="how-to-use-17">How to use</h3>
 <p>Connect an image to Image and the output to the next node. With Display on BW the result is white dots on black, and the dot size follows the brightness of the image. Resolution sets how many dots there are, Size sets the dot size and Minimum Size sets the dot size in the shaded areas. The Mask output gives the black and white dots on their own. In the slider every value is at its default.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/halftone-after.png" alt="After: white dots on black" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/halftone-after.png" alt="After: white dots on black" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/halftone-setup.png" alt="Halftone setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/halftone-setup.png" alt="Halftone setup" loading="lazy"></figure>
 <h2 id="ordered-dithering-2x2">Ordered Dithering 2x2</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-2x2.png" alt="Ordered Dithering 2x2" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-2x2.png" alt="Ordered Dithering 2x2" loading="lazy"></figure>
 <p>Applies a 2x2 ordered dithering effect to create a patterned texture.</p>
 <h3 id="inputs-18">Inputs</h3>
 <h4 id="image-30">Image</h4>
@@ -960,7 +960,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="how-to-use-18">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Display sets the display mode and Resolution sets the density of the dither pattern. The 2x2 matrix gives the coarsest pattern of the three Ordered Dithering assets.</p>
 <h2 id="ordered-dithering-4x4">Ordered Dithering 4x4</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4.png" alt="Ordered Dithering 4x4" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4.png" alt="Ordered Dithering 4x4" loading="lazy"></figure>
 <p>Applies a 4x4 ordered dithering effect to create a patterned texture.</p>
 <h3 id="inputs-19">Inputs</h3>
 <h4 id="image-32">Image</h4>
@@ -978,11 +978,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-19">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-after.png" alt="After: black and white pattern" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-after.png" alt="After: black and white pattern" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-setup.png" alt="Ordered Dithering 4x4 setup" loading="lazy"><figcaption>Ordered Dithering 4x4 setup</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-setup.png" alt="Ordered Dithering 4x4 setup" loading="lazy"><figcaption>Ordered Dithering 4x4 setup</figcaption></figure>
 <h2 id="ordered-dithering-8x8">Ordered Dithering 8x8</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8.png" alt="Ordered Dithering 8x8" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8.png" alt="Ordered Dithering 8x8" loading="lazy"></figure>
 <p>Applies an 8x8 ordered dithering effect to create a patterned texture.</p>
 <h3 id="inputs-20">Inputs</h3>
 <h4 id="image-34">Image</h4>
@@ -1000,11 +1000,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-20">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-after.png" alt="After: black and white pattern" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-after.png" alt="After: black and white pattern" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-setup.png" alt="Ordered Dithering 8x8 setup" loading="lazy"><figcaption>Ordered Dithering 8x8 setup</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-setup.png" alt="Ordered Dithering 8x8 setup" loading="lazy"><figcaption>Ordered Dithering 8x8 setup</figcaption></figure>
 <h2 id="screen-space-pixelate">Screen Space Pixelate</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/screen-space-pixelate.png" alt="Screen Space Pixelate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/screen-space-pixelate.png" alt="Screen Space Pixelate" loading="lazy"></figure>
 <p>Applies a pixelation effect to the image in screen space.</p>
 <h3 id="inputs-21">Inputs</h3>
 <h4 id="image-36">Image</h4>
@@ -1019,11 +1019,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-21">How to use</h3>
 <p>Connect an image to Image and the output to the next node. Resolution controls the size of the pixelation. In the slider Resolution is 50.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/screen-space-pixelate-after.png" alt="After: pixelated image" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/screen-space-pixelate-after.png" alt="After: pixelated image" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/screen-space-pixelate-setup.png" alt="Screen Space Pixelate setup" loading="lazy"><figcaption>Screen Space Pixelate setup</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/screen-space-pixelate-setup.png" alt="Screen Space Pixelate setup" loading="lazy"><figcaption>Screen Space Pixelate setup</figcaption></figure>
 <h2 id="sepia-advanced">Sepia Advanced</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/sepia-advanced.png" alt="Sepia Advanced" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/sepia-advanced.png" alt="Sepia Advanced" loading="lazy"></figure>
 <p>Applies a sepia tone effect to the image for a vintage look.</p>
 <h3 id="inputs-22">Inputs</h3>
 <h4 id="image-38">Image</h4>
@@ -1050,9 +1050,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The output image after processing the effect.</p>
 <h3 id="how-to-use-22">How to use</h3>
 <p>Connect an image to Image and the output to the next node. The image gets a brown sepia tone. Strength sets how much of the effect is applied, Shadows and Highlights set how strongly it acts in the dark and bright areas. In the slider every value is at its default.</p>
-<div class="ui-doc-compare"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/sepia-advanced-after.png" alt="After: brown sepia tone" loading="lazy"><span class="cmp-l">Before</span><span class="cmp-r">After</span></div>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/sepia-advanced-after.png" alt="After: brown sepia tone" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
 <p>The setup used for the slider:</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/94c01ef5678aedb8b743c68175bd293645081709/docs2/images/assets/compositor-library/filters/sepia-advanced-setup.png" alt="Sepia Advanced setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6d4f4cf99e02c30f47ae997eb39117bfdc4ad54d/docs2/images/assets/compositor-library/filters/sepia-advanced-setup.png" alt="Sepia Advanced setup" loading="lazy"></figure>
 <h1 id="lenses">Lenses</h1>
 <p><em>Assets in this category will be documented here.</em></p>
 <h1 id="output">Output</h1>
