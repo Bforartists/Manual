@@ -95,7 +95,7 @@ def callouts(html):
 
 
 FILE_ALT = re.compile(r"^[\w.-]+\.(png|jpe?g|webp|gif)$", re.I)
-IMG = re.compile(r'<img src="([^"]+)" alt="([^"]*)"\s*/?>')
+IMG = re.compile(r'<img src="([^"]+)" alt="([^"]*)"(?: title="[^"]*")?\s*/?>')
 
 
 def figure(src, alt, cls=""):
@@ -125,8 +125,9 @@ def figures(html, image_width):
             return '<div class="ui-doc-gallery">' + "".join(figure(s, htmllib.unescape(a)) for s, a in imgs) + "</div>"
         src, alt = imgs[0]
         w = image_width(src) or 0
-        return figure(src, htmllib.unescape(alt), ' class="is-right"' if 0 < w < FLOAT_BELOW else "")
-    return re.sub(r'<p>((?:\s*<img src="[^"]+" alt="[^"]*"\s*/?>\s*)+)</p>', fix, html)
+        small = 'title="small"' in m.group(1)          # ![alt](src "small") floats a picture of unknown size (e.g. a remote one) to the right
+        return figure(src, htmllib.unescape(alt), ' class="is-right"' if small or 0 < w < FLOAT_BELOW else "")
+    return re.sub(r'<p>((?:\s*<img src="[^"]+" alt="[^"]*"(?: title="[^"]*")?\s*/?>\s*)+)</p>', fix, html)
 
 
 def videos(html):

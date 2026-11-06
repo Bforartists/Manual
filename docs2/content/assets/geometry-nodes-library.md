@@ -34,6 +34,8 @@ The UV assets write UV coordinates onto a mesh. Drag one onto an object from the
 
 ![Camera UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/camera-uv.png)
 
+![The Camera UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/camera-uv-node.png)
+
 ![Camera UV](/docs2/images/assets/geometry-nodes-library/uv/camera-uv.png)
 
 Creates UV coordinates by projecting the mesh through a camera. Use it to place a texture on an object as the camera sees it. Size, Rotation, Offset and Scale adjust the projection, and Custom Camera lets you choose another camera.
@@ -137,6 +139,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ## Cube UV
 
 ![Cube UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv.png)
+
+![The Cube UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/cube-uv-node.png)
 
 ![Cube UV](/docs2/images/assets/geometry-nodes-library/uv/cube-uv.png)
 
@@ -244,6 +248,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 ![Cube UV Island asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv-island.png)
 
+![The Cube UV Island node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island-node.png)
+
 ![Cube UV Island](/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island.png)
 
 Creates cube projected UV coordinates on a single island. Island Index chooses the island. It works like Cube UV with Mode set to one island.
@@ -343,6 +349,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ## Cut Cylinder UV
 
 ![Cut Cylinder UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/cut-cylinder-uv.png)
+
+![The Cut Cylinder UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv-node.png)
 
 ![Cut Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png)
 
@@ -447,6 +455,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ## Cylinder UV
 
 ![Cylinder UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv.png)
+
+![The Cylinder UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-node.png)
 
 ![Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png)
 
@@ -560,6 +570,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 ![Cylinder UV Island asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv-island.png)
 
+![The Cylinder UV Island node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island-node.png)
+
 ![Cylinder UV Island](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png)
 
 Creates cylinder projected UV coordinates on a single island. Island Index chooses the island. It works like Cylinder UV with Mode set to one island.
@@ -666,6 +678,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 ![Generated UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/generated-uv.png)
 
+![The Generated UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/generated-uv-node.png)
+
 ![Generated UV](/docs2/images/assets/geometry-nodes-library/uv/generated-uv.png)
 
 Creates the default generated UV coordinates for procedural meshes. It has no settings beyond the UV name and the selection.
@@ -715,6 +729,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ## Smart UV
 
 ![Smart UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/smart-uv.png)
+
+![The Smart UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/smart-uv-node.png)
 
 ![Smart UV](/docs2/images/assets/geometry-nodes-library/uv/smart-uv.png)
 
@@ -856,6 +872,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 ![Sphere UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv.png)
 
+![The Sphere UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-node.png)
+
 ![Sphere UV](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png)
 
 Creates sphere projected UV coordinates, with longitude and latitude. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the poles.
@@ -962,6 +980,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 ![Sphere UV Island asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv-island.png)
 
+![The Sphere UV Island node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island-node.png)
+
 ![Sphere UV Island](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island.png)
 
 Creates sphere projected UV coordinates on a single island. Island Index chooses the island. It works like Sphere UV with Mode set to one island.
@@ -1061,6 +1081,8 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ## Triplanar UV
 
 ![Triplanar UV asset thumbnail](/docs2/images/assets/geometry-nodes-library/uv/thumbs/triplanar-uv.png)
+
+![The Triplanar UV node in the Geometry Nodes editor](/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv-node.png)
 
 ![Triplanar UV](/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png)
 
@@ -1198,7 +1220,7 @@ This contains a setup Wizard to begin.
 
 #### Wizard Options
 
-![Wizard dialogue that pops up](https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694ad9d2e4a404d95df9820c_036_document_start.png)
+![Wizard dialogue that pops up](https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694ad9d2e4a404d95df9820c_036_document_start.png "small")
 
 ##### Target Collection
 
