@@ -1,8 +1,8 @@
-"""Docs 2.0: takes the node picture and the thumbnail of Compositor Library assets.
+"""Docs 2.0: takes the node picture and the thumbnail of Compositor Library or Shader Library assets.
 
 HOW TO USE (no agent needed)
 1. Run from the Text Editor (Run Script) in Bforartists 5.4 with the Compositor Nodes Library set up.
-2. Set OUT (folder must be writable) and ASSETS (node group names, e.g. "C Bokeh").
+2. Set EDITOR ("COMPOSITOR" or "SHADER"), LIB (the library .blend), OUT (folder must be writable) and ASSETS (node group names, e.g. "C Bokeh").
 3. The script puts each group in a temporary compositor tree, selects the node, fits it in the biggest area
    (the area is switched to the Compositor and put back afterwards), screenshots it, auto-crops the node,
    and writes <OUT>/nodes/<slug>.png plus <OUT>/thumbs/<slug>.png (the 256x256 asset preview).
@@ -13,11 +13,14 @@ import bpy, os, re
 import numpy as np
 
 OUT = r"//comp_pictures"
+EDITOR = "COMPOSITOR"       # or "SHADER"
 ASSETS = ["C Bokeh"]
 LIB = r"C:\Users\USER\AppData\Roaming\Bforartists\Bforartists\5.4\asset_libraries\Compositor Nodes Library\C_Library_01.blend"
 
 def slug(n):
-    return re.sub(r"[^a-z0-9]+", "-", re.sub(r"^C ", "", n).lower()).strip("-")
+    n = re.sub(r"^(C |S_)", "", n)         # library prefix (C = compositor, S_ = shader)
+    n = re.sub(r"_[A-Z]$", "", n)        # shader library suffix (_P, _S, _M, _U, _C)
+    return re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-")
 
 def save_rgba(arr, path, w, h):
     im = bpy.data.images.new("_tmp", w, h, alpha=True)
@@ -36,11 +39,18 @@ def main():
     win = bpy.context.window_manager.windows[0]
     sc = win.scene
     area = max([a for a in win.screen.areas if a.type in ('VIEW_3D', 'NODE_EDITOR')], key=lambda a: a.width * a.height)
-    keep = dict(ui=area.ui_type, group=sc.compositing_node_group)
-    tree = bpy.data.node_groups.new("_cshot", "CompositorNodeTree")
-    sc.compositing_node_group = tree
-    area.ui_type = 'CompositorNodeTree'
-    sp = area.spaces[0]
+    keep = dict(ui=area.ui_type, group=sc.compositing_node_group if EDITOR != "SHADER" else None)
+    if EDITOR == "SHADER":
+        mat = bpy.data.materials.new("_cshot"); mat.use_nodes = True
+        tree = mat.node_tree
+        for n in list(tree.nodes): tree.nodes.remove(n)
+        area.ui_type = 'ShaderNodeTree'
+        sp = area.spaces[0]; sp.node_tree = tree; sp.pin = True
+    else:
+        tree = bpy.data.node_groups.new("_cshot", "CompositorNodeTree")
+        sc.compositing_node_group = tree
+        area.ui_type = 'CompositorNodeTree'
+        sp = area.spaces[0]
     flags = [a for a in ('show_region_ui', 'show_region_toolbar', 'show_region_header', 'show_region_tool_header',
                          'show_region_hud', 'show_region_asset_shelf', 'show_region_footer') if hasattr(sp, a)]
     saved = {a: getattr(sp, a) for a in flags}
@@ -48,15 +58,17 @@ def main():
     ctxp = getattr(sp.overlay, "show_context_path", None)
     if ctxp is not None: sp.overlay.show_context_path = False
     reg = [r for r in area.regions if r.type == 'WINDOW'][0]
-    node = tree.nodes.new("CompositorNodeGroup")
+    node = tree.nodes.new("ShaderNodeGroup" if EDITOR == "SHADER" else "CompositorNodeGroup")
     names = [n for n in ASSETS if n in groups]
     st = {"i": 0, "phase": 0, "tries": 0}
     tmp = os.path.join(out, "_shot.png")
 
     def finish():
-        tree_ = tree
-        sc.compositing_node_group = keep["group"]
-        bpy.data.node_groups.remove(tree_)
+        if EDITOR == "SHADER":
+            sp.pin = False; bpy.data.materials.remove(mat)
+        else:
+            sc.compositing_node_group = keep["group"]
+            bpy.data.node_groups.remove(tree)
         for a, v in saved.items(): setattr(sp, a, v)
         if ctxp is not None: sp.overlay.show_context_path = ctxp
         area.ui_type = keep["ui"]
@@ -84,7 +96,7 @@ def main():
             finish(); return None
         name = names[st["i"]]
         if st["phase"] == 0:
-            node.node_tree = groups[name]; node.label = name   # clean header, no .001 suffix
+            node.node_tree = groups[name]; node.label = name if EDITOR != "SHADER" else re.sub(r"^S_|_[A-Z]$", "", name)   # clean header, no .001 suffix
             for n in tree.nodes: n.select = False
             node.select = True; tree.nodes.active = node
             with bpy.context.temp_override(window=win, area=area, region=reg):
