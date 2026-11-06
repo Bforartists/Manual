@@ -8,7 +8,7 @@ path:
   - Editors
   - File browser
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 27 Editors - File browser.odt
