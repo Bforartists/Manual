@@ -1,0 +1,149 @@
+/* Bforartists website · site-foot.css · @version 1.0.0 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Moved out of the page so browsers cache it (Nov 2026). */
+/* ---- block ---- */
+/* BFA Feature Cards 1.0 - a feature card (picture card + text card in one sink) keeps both cards the same height. */
+.ui-card.is-feature{align-items:stretch}
+.ui-card.is-feature>.ui-art{aspect-ratio:auto;height:auto;min-height:calc(20rem * var(--mf,1))}
+.ui-card.is-feature>.ui-feature-copy{height:auto}
+@media (max-width:991px){.ui-card.is-feature>.ui-art{aspect-ratio:16/10;min-height:0}}
+/* ---- block ---- */
+/* BFA Hero Rows 1.0 - the picture-row heroes (Home, Art, News: .ui-art-stage).
+   - The link runs through the decor card (the hero copy card, or the News title bar), out to both page edges, with a socket
+     on each card edge. In the colour of the section light (BFA Sockets). The picture lane stays clean.
+   - The hero title runs the full width of its card; the row arrows sit at the bottom right, beside the buttons.
+   - Hover a picture: the specular rim lights up on top of the zoom (follows the mouse light). */
+body{overflow-x:clip}
+.ui-art-stage{--hero-link:var(--sock,#70b2ff);--hero-edge:rgba(0,0,0,.62)}
+html.theme-light .ui-art-stage{--hero-edge:rgba(0,0,0,.22)}
+.ui-art-stage>.is-hero-copy,.ui-art-stage>.ui-news-titlebar{position:relative}
+.ui-art-stage>.is-hero-copy::before,.ui-art-stage>.is-hero-copy::after,.ui-art-stage>.ui-news-titlebar::before,.ui-art-stage>.ui-news-titlebar::after{content:"";position:absolute;top:50%;z-index:3;width:calc(50vw - 50% + 8px);height:14px;margin-top:-7px;pointer-events:none;background-repeat:no-repeat}
+.ui-art-stage>.is-hero-copy::before,.ui-art-stage>.ui-news-titlebar::before{right:calc(100% - 6px);background-image:radial-gradient(circle at calc(100% - 6px) 50%,var(--hero-link) 0 4.4px,var(--hero-edge) 4.9px 6.2px,transparent 6.7px),linear-gradient(transparent 4.6px,var(--hero-edge) 4.6px,var(--hero-edge) 5.7px,var(--hero-link) 5.7px,var(--hero-link) 8.3px,var(--hero-edge) 8.3px,var(--hero-edge) 9.4px,transparent 9.4px)}
+.ui-art-stage>.is-hero-copy::after,.ui-art-stage>.ui-news-titlebar::after{left:calc(100% - 6px);background-image:radial-gradient(circle at 6px 50%,var(--hero-link) 0 4.4px,var(--hero-edge) 4.9px 6.2px,transparent 6.7px),linear-gradient(transparent 4.6px,var(--hero-edge) 4.6px,var(--hero-edge) 5.7px,var(--hero-link) 5.7px,var(--hero-link) 8.3px,var(--hero-edge) 8.3px,var(--hero-edge) 9.4px,transparent 9.4px)}
+@media print{.ui-art-stage>.is-hero-copy::before,.ui-art-stage>.is-hero-copy::after,.ui-art-stage>.ui-news-titlebar::before,.ui-art-stage>.ui-news-titlebar::after{display:none}}
+.ui-art-stage>.is-hero-copy .ui-cover-copy{max-width:none!important;width:100%}
+.ui-art-stage>.is-hero-copy h1,.ui-art-stage>.is-hero-copy h2{max-width:none!important}
+@media (min-width:768px){.ui-art-stage>.is-hero-copy>.ui-cover-copy{grid-column:1/-1;grid-row:1}
+.ui-art-stage>.is-hero-copy>.ui-art-strip-nav{grid-column:2;grid-row:1;align-self:end;justify-self:end;position:relative;z-index:2}}
+.ui-art-stage .ui-art-slide>a::after{content:"";position:absolute;inset:0;z-index:4;border-radius:inherit;padding:2px;pointer-events:none;opacity:0;transition:opacity .25s ease;background:radial-gradient(circle var(--bfa-lr,34rem) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1h),var(--l-rim2h) 45%,var(--l-rim3h,rgba(255,255,255,.12))) border-box;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.ui-art-stage .ui-art-slide>a::before{content:"";position:absolute;inset:0;z-index:3;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .25s ease;background:radial-gradient(60% 45% at var(--light-x,30%) 0%,var(--l-rim2h),transparent 70%)}
+.ui-art-stage .ui-art-slide>a:hover::after,.ui-art-stage .ui-art-slide>a:focus-visible::after{opacity:1}
+.ui-art-stage .ui-art-slide>a:hover::before,.ui-art-stage .ui-art-slide>a:focus-visible::before{opacity:.5;mix-blend-mode:screen}
+/* ---- block ---- */
+/* BFA Round 8 to 10 (site footer) - phones and wide phones.
+   1. Hero rows: the picture labels sit top-left, so the decor card that overlaps the bottom of the row never covers them.
+   2. Comparison sliders: on phones the two labels sit in the bottom corners, so the middle stays free for the handle.
+   3. Three cards: on wide phones and tablets one card centred on top, then two side by side (four cards: two by two).
+   4. Choice lines (BFA Paths 4.0): the link styles live here, for every page. */
+.ui-art-stage .ui-art-tile-cap{top:0;bottom:auto;padding:.875rem 1rem 1.75rem;background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,0));transform:translateY(-6px)}
+.ui-art-stage .ui-art-tile:hover .ui-art-tile-cap,.ui-art-stage .ui-art-tile:focus-visible .ui-art-tile-cap{transform:none}
+@media (hover:none){.ui-art-stage .ui-art-tile-cap{padding:.875rem 1rem 1.75rem;transform:none}}
+@media (max-width:767px){.ui-compare-tag{top:auto;bottom:.75rem;padding:.3125rem .625rem;font-size:.75rem}.ui-compare-tag.is-left{left:.75rem}.ui-compare-tag.is-right{right:.75rem}}
+@media (min-width:560px) and (max-width:991px){
+ .ui-grid-3:not(.is-four):not(.is-seven):has(>:nth-child(3):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}
+ .ui-grid-3:not(.is-four):not(.is-seven):has(>:nth-child(3):last-child)>:nth-child(1){grid-column:2/span 2}
+ .ui-grid-3:not(.is-four):not(.is-seven):has(>:nth-child(3):last-child)>:nth-child(2){grid-column:1/span 2}
+ .ui-grid-3:not(.is-four):not(.is-seven):has(>:nth-child(3):last-child)>:nth-child(3){grid-column:3/span 2}
+ .ui-grid-3.is-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.bfa-paths-layer{position:absolute;left:0;top:0;width:100%;height:0;overflow:visible;pointer-events:none;z-index:4;--link:var(--sock,#1fc49a);--link-hi:#ffffff;--link-edge:rgba(0,0,0,.62)}
+.bfa-paths-layer.is-top{z-index:5}
+.bfa-paths-layer.is-pink{--link:#cca6d6}
+html.theme-light .bfa-paths-layer{--link-hi:#1c1c1c;--link-edge:rgba(0,0,0,.22)}
+html.theme-light .bfa-paths-layer.is-pink{--link:#a46fb3}
+.bfa-paths-layer.is-live .ui-link.is-hot .ui-link-flow{animation:bfa-link-flow .8s linear infinite}
+.ui-link-edge{fill:none;stroke:var(--link-edge);stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.ui-link-core{fill:none;stroke:var(--link);stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round;transition:stroke .15s ease}
+.ui-link-flow{fill:none;stroke:var(--link);stroke-width:2.25;stroke-linecap:round;stroke-dasharray:3 15;opacity:0;transition:opacity .15s ease}
+.ui-link-hit{fill:none;stroke:transparent;stroke-width:16;pointer-events:stroke;cursor:pointer}
+.ui-link.is-hot .ui-link-core{stroke:var(--link-hi)}
+.ui-link.is-hot .ui-link-flow{opacity:1}
+@keyframes bfa-link-flow{to{stroke-dashoffset:-18}}
+.ui-sock{fill:var(--link);stroke:var(--link-edge);stroke-width:1.5;transition:fill .15s ease,stroke .15s ease}
+.ui-sock.is-hot{stroke:var(--link-hi);stroke-width:2}
+html.motion-reduced .ui-link-flow{animation:none!important}
+@media (prefers-reduced-motion:reduce){.ui-link-flow{animation:none!important}}
+@media print{.bfa-paths-layer{display:none}}
+/* room for the lines between chained cards (Paths 4.7), and picture card over copy card columns (.ui-pic-stack: the copy cards line up) */
+[data-paths-chain]{row-gap:2.75rem!important;column-gap:2rem!important}
+.ui-pic-stack>.ui-card{flex:1 1 auto}.ui-pic-stack>.ui-art{flex:0 0 auto}
+/* room for the lines between rows of path cards */
+@media (max-width:991px){[data-paths] .ui-grid-3{row-gap:2.75rem}}
+/* story links (BFA Story 1.2): drawn on every width, phones included; a little more room between the steps so the link shows */
+.ui-story-svg{display:block!important}
+@media (max-width:767px){[data-story] .ui-steps.is-path{row-gap:2.25rem}}
+/* 5. Round 9: no lone card floating left. Odd last items centre under the pair above them.
+   Footer link columns (5): phones 2+2+1, tablets 3+2, always from the left (Oct 23). Community doors (7): 2+2+2+1 centred. 404 help row centres when it wraps. */
+@media (max-width:767px){
+ .ui-footer-cols:has(>:nth-child(5):last-child){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .ui-footer-cols:has(>:nth-child(5):last-child)>*{grid-column:span 2}
+ .ui-lost-help{justify-content:center}
+}
+@media (min-width:768px) and (max-width:991px){
+ .ui-footer-cols:has(>:nth-child(5):last-child){grid-template-columns:repeat(6,minmax(0,1fr))!important}
+ .ui-footer-cols:has(>:nth-child(5):last-child)>*{grid-column:span 2}
+}
+@media (min-width:480px) and (max-width:991px){
+ .ui-grid-3.is-seven:has(>:nth-child(7):last-child){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .ui-grid-3.is-seven:has(>:nth-child(7):last-child)>*{grid-column:span 2}
+ .ui-grid-3.is-seven:has(>:nth-child(7):last-child)>:nth-child(7){grid-column:2/span 2}
+}
+/* 6. Round 10: notices (ui-callout: info, tip, warning) fill the width of their row, like the docs info / warning / error tags.
+   The text runs the full width of the notice instead of stopping at a reading measure, at every screen size. */
+.ui-callout{width:100%;max-width:none}
+.ui-callout>.ui-callout-body{flex:1 1 auto;min-width:0;max-width:none}
+.ui-callout .ui-callout-body>*{max-width:none}
+.ui-measure:has(>.ui-callout){max-width:none}
+/* 7. BFA Site Path 2.1 (2.1: the bar sits just before <main>, so it always draws above the link lines) - breadcrumb for About, Community and Support: a floating pill at the content's left edge, sticky under the header
+   (no full-width bar). Section (nav icon) > this page (its menu icon); the page name opens a menu of the section's pages (Bforartists menu).
+   It floats over the hero when there is room (is-over), else it takes a slim row of its own. */
+.ui-doc-bar.is-site{position:-webkit-sticky!important;position:sticky!important;top:var(--bfa-nav-h,4.25rem)!important;z-index:40;padding:.625rem 0 0!important;background:none!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;pointer-events:none}
+.ui-doc-bar.is-site.is-over{margin-bottom:calc(-1*var(--bfa-path-h,3rem))}
+.ui-doc-bar.is-site .ui-doc-bar-in{min-height:0!important;display:block!important;padding-top:0!important;padding-bottom:0!important}
+.ui-doc-bar.is-site .ui-doc-crumb{pointer-events:auto;position:relative;display:inline-flex;align-items:center;flex-wrap:nowrap;column-gap:.125rem;max-width:100%;padding:.25rem;border-radius:10px;background-color:rgba(38,38,38,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--bfa-mid);font-size:.8125rem;line-height:1.2}
+.ui-doc-bar.is-site .ui-doc-crumb-link,.ui-doc-bar.is-site .ui-doc-crumb-here{display:inline-flex;align-items:center;column-gap:.375rem;min-width:0;padding:.3125rem .5rem;border:0;border-radius:6px;background:none;color:#d6d6d6;font:inherit;white-space:nowrap;text-decoration:none;transition:background-color .15s ease,color .15s ease}
+.ui-doc-bar.is-site .ui-doc-crumb-link{flex:0 0 auto}
+.ui-doc-bar.is-site .ui-doc-crumb-here{color:#fff;font-weight:500}
+.ui-doc-bar.is-site button.ui-doc-crumb-here{cursor:pointer}
+.ui-doc-bar.is-site .ui-doc-crumb-link:hover,.ui-doc-bar.is-site button.ui-doc-crumb-here:hover,.ui-doc-bar.is-site button.ui-doc-crumb-here[aria-expanded=true]{background-color:#4a4a4a;color:#fff}
+.ui-doc-bar.is-site .ui-doc-crumb-here>span{overflow:hidden;text-overflow:ellipsis}
+.ui-doc-bar.is-site .ui-doc-crumb-sep{opacity:.45;font-size:.625rem}
+.ui-doc-bar.is-site .ui-icon{flex:0 0 auto}
+.bfa-crumb-caret{width:10px;height:10px;transform:rotate(90deg);opacity:.7}
+.bfa-crumb-menu{position:absolute!important;top:calc(100% + .375rem);left:0;z-index:41;min-width:15rem;max-height:70vh;overflow:auto;display:none!important;flex-direction:column;row-gap:2px}
+.bfa-crumb-menu.is-open{display:flex!important}
+.bfa-crumb-menu a{display:flex;align-items:center;column-gap:.5rem;padding:.375rem .5rem;border-radius:4px;color:#e6e6e6;font-size:.8125rem;text-decoration:none;white-space:nowrap}
+.bfa-crumb-menu a:hover,.bfa-crumb-menu a:focus-visible{background-color:#4f7fc0;color:#fff;outline:0}
+.bfa-crumb-menu a[aria-current]{background-color:rgba(79,127,192,.28);color:#fff}
+html.theme-light .ui-doc-bar.is-site .ui-doc-crumb{background-color:rgba(250,250,250,.92)}
+html.theme-light .ui-doc-bar.is-site .ui-doc-crumb-link,html.theme-light .ui-doc-bar.is-site .ui-doc-crumb-here{color:#333}
+html.theme-light .ui-doc-bar.is-site .ui-doc-crumb-link:hover,html.theme-light .ui-doc-bar.is-site button.ui-doc-crumb-here:hover,html.theme-light .ui-doc-bar.is-site button.ui-doc-crumb-here[aria-expanded=true]{background-color:#e2e2e2;color:#111}
+html.theme-light .bfa-crumb-menu a{color:#222}html.theme-light .bfa-crumb-menu a:hover,html.theme-light .bfa-crumb-menu a[aria-current]{color:#fff}
+@media (max-width:767px){.ui-doc-bar.is-site .ui-doc-crumb{font-size:.75rem;max-width:calc(100vw - 2rem)}}
+html.has-site-path main .ui-titleband .ui-crumbs{display:none}
+html.has-site-path{scroll-padding-top:calc(88px + var(--bfa-path-h,3rem))}
+html.has-site-path .ui-sticky{top:calc(6rem + var(--bfa-path-h,3rem))}
+@media print{.ui-doc-bar.is-site{display:none}}
+/* 9. BFA Sockets 1.0 - every link line takes the colour of the section light, in node socket colours: blue string, orange object,
+   green geometry, purple vector, yellow image (new yellow light). Pink (boolean) lines stay pink. */
+@property --sock{syntax:'<color>';inherits:true;initial-value:#70b2ff}
+:root{--sock:#70b2ff;transition:--w-blue 1.1s ease,--w-blue2 1.1s ease,--l-rim1 1.1s ease,--l-rim2 1.1s ease,--l-rim1h 1.1s ease,--l-rim2h 1.1s ease,--sock 1.1s ease}
+html[data-sector=orange]{--sock:#ed9e5c}html[data-sector=green]{--sock:#1fc49a}html[data-sector=purple]{--sock:#aa82f0}
+html[data-sector=yellow]{--sock:#e8c53a;--w-blue:rgba(232,197,58,.12);--w-blue2:rgba(232,197,58,.035);--l-rim1:#f5e2a099;--l-rim2:#e8c53a33;--l-rim1h:#f8ecc0d9;--l-rim2h:#e8c53a52}
+html.theme-light{--sock:#2f7fd6}html.theme-light[data-sector=orange]{--sock:#c0702a}html.theme-light[data-sector=green]{--sock:#12a07c}html.theme-light[data-sector=purple]{--sock:#7a55c0}
+html.theme-light[data-sector=yellow]{--sock:#b8920f;--w-blue:rgba(184,146,15,.1);--w-blue2:rgba(184,146,15,.03);--l-rim1:#b8920f66;--l-rim2:#b8920f1a;--l-rim1h:#b8920fa6;--l-rim2h:#b8920f2e}
+html body [data-story][data-story]{--link:var(--sock)}.ui-story-link{--lc:var(--sock)!important}
+@media (prefers-reduced-motion:reduce){:root{transition:none}}
+/* 10. tag bars (News, People ...): button-like tags, the same 2px edge as the buttons */
+.ui-segment-item.is-tag{border:2px solid rgba(0,0,0,.55);border-radius:4.6px}
+html.theme-light .ui-segment-item.is-tag{border-color:rgba(0,0,0,.18)}
+/* 11. header: search button next to View (Site Nav) */
+.ui-nav-view{display:flex;align-items:center;column-gap:.25rem}
+/* 12. Performance (Oct 23): cards inside moving rows (testimonials, picture rows) can't keep a fixed background anyway (their row moves),
+   so they draw it as scroll: same look, and the browser can scroll the page on the GPU. */
+.ui-quote-track .ui-card,.ui-quote-track>*,[data-art-strip] .ui-card,[data-news-strip] .ui-card{background-attachment:scroll!important}
+/* ---- block ---- */
+/* 8. BFA Perf Note 1.0 - the one-time note when BFA Perf Guard (registered header script) pauses animation on a slower device. */
+.bfa-perf-note{position:fixed;right:1rem;bottom:1rem;z-index:80;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;max-width:calc(100vw - 2rem);padding:.75rem .875rem;border-radius:14px;background:rgba(40,40,40,.97);color:#e6e6e6;font-size:.875rem;line-height:1.4;box-shadow:0 12px 32px -12px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08)}
+.bfa-perf-note button{flex:0 0 auto;padding:.375rem .75rem;border:0;border-radius:8px;background:#5cb4f0;color:#111;font:inherit;font-weight:600;cursor:pointer}
+.bfa-perf-note button+button{background:transparent;color:#bbb}
+html.theme-light .bfa-perf-note{background:rgba(250,250,250,.97);color:#222;box-shadow:0 12px 32px -12px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.08)}
+@media print{.bfa-perf-note{display:none}}
