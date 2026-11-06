@@ -28,7 +28,1121 @@ _Assets in this category will be documented here._
 
 # Mesh
 
-_Assets in this category will be documented here._
+The UV assets write UV coordinates onto a mesh. Drag one onto an object from the Asset Shelf or the Asset Browser. Each picture shows the result on a checker texture, next to the UV layout.
+
+## Camera UV
+
+![Camera UV](/docs2/images/assets/geometry-nodes-library/uv/camera-uv.png)
+
+Creates UV coordinates by projecting the mesh through a camera. Use it to place a texture on an object as the camera sees it. Size, Rotation, Offset and Scale adjust the projection, and Custom Camera lets you choose another camera.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Size
+
+Data type: Float.
+
+Size of the UVs. Default: 1.
+
+#### Rotation
+
+Data type: Float.
+
+The rotation of the UVs. Default: 0.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Offset
+
+##### Offset X
+
+Data type: Float.
+
+Offset the UV in the X axis. Default: 0.
+
+##### Offset Y
+
+Data type: Float.
+
+Offset the UV in the Y axis. Default: 0.
+
+#### Scale
+
+##### Scale X
+
+Data type: Float.
+
+Scale UVs in X. Default: 1.
+
+##### Scale Y
+
+Data type: Float.
+
+Scale UVs in Y. Default: 1.
+
+#### Custom Camera
+
+##### Custom Camera
+
+Data type: Boolean.
+
+Turns the custom camera on or off. Default: Off.
+
+##### Camera
+
+Data type: Object.
+
+Selects the Custom Camera object. Make sure this is a camera object.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Cube UV
+
+![Cube UV](/docs2/images/assets/geometry-nodes-library/uv/cube-uv.png)
+
+Creates cube projected UV coordinates, with each side of the box mapped flat. Mode switches between all islands and a single island chosen by Island Index. Axis and Angle turn the projection.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Mode
+
+Data type: Menu.
+
+Toggles if the UV should evaluate on an individual island or all islands. Default: All.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Angle
+
+Data type: Float.
+
+Sets the angle of the projection. Default: 0°.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: Z.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.
+
+#### Pack UV Islands
+
+##### Pack UV Islands
+
+Data type: Boolean.
+
+Toggles UV Island Packing. Default: Off.
+
+##### Margin
+
+Data type: Float.
+
+Adjusts the UV island margins. Default: 0.001.
+
+##### Rotate
+
+Data type: Boolean.
+
+Toggles if the packing rotates UV Islands for a best fit. Default: Off.
+
+##### Method
+
+Data type: Menu.
+
+The method of UV island packing. Default: Bounding Box.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Cube UV Island
+
+![Cube UV Island](/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island.png)
+
+Creates cube projected UV coordinates on a single island. Island Index chooses the island. It works like Cube UV with Mode set to one island.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Angle
+
+Data type: Float.
+
+Sets the angle of the projection. Default: 0°.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: Z.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.
+
+#### Pack UV Islands
+
+##### Pack UV Islands
+
+Data type: Boolean.
+
+Toggles UV Island Packing. Default: Off.
+
+##### Margin
+
+Data type: Float.
+
+Adjusts the UV island margins. Default: 0.001.
+
+##### Rotate
+
+Data type: Boolean.
+
+Toggles if the packing rotates UV Islands for a best fit. Default: Off.
+
+##### Method
+
+Data type: Menu.
+
+The method of UV island packing. Default: Bounding Box.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Cut Cylinder UV
+
+![Cut Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png)
+
+Creates cylinder projected UV coordinates by cutting the cylinder open. Cut Angle sets where the cut is made, and Top and Bottom set the limits of the projection. The side and the caps become separate islands.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Cut Angle
+
+Data type: Float.
+
+Adjusts the cut angle. Default: 180°.
+
+#### Top Angle
+
+Data type: Float.
+
+Adjusts the top angle of the cut. Default: 0°.
+
+#### Bottom Angle
+
+Data type: Float.
+
+Adjusts the bottom angle of the cut. Default: 0°.
+
+#### Radius
+
+Data type: Float.
+
+The radius of the Cylinder UV Projection. Default: 1.
+
+#### Top
+
+Data type: Float.
+
+Moves the top limits of the UV Projection. Default: 1.
+
+#### Bottom
+
+Data type: Float.
+
+Moves the bottom limits of the UV Projection. Default: -1.
+
+#### Smoothing Iterations
+
+Data type: Integer.
+
+Number of iterations to run the SLIM solver for. Default: 3.
+
+#### Use UV Seams
+
+Data type: Boolean.
+
+Use user marked UV seams in object Edit Mode. Default: On.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Cylinder UV
+
+![Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png)
+
+Creates cylinder projected UV coordinates, with the side and the caps scaled separately. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the cylinder.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Mode
+
+Data type: Menu.
+
+Toggles if the UV should evaluate on an individual island or all islands. Default: All.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Top
+
+Data type: Float.
+
+Moves the top limits of the UV Projection. Default: 1.
+
+#### Bottom
+
+Data type: Float.
+
+Moves the bottom limits of the UV Projection. Default: -1.
+
+#### Cylinder Scale
+
+Data type: Float.
+
+Changes the scale of the side cylinder UV Projection. Default: 1.
+
+#### Cap Scale
+
+Data type: Float.
+
+Changes the scale of the cylinder caps UV Projection. Default: 1.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: X.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.
+
+#### UV Map
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Pole Settings
+
+##### Pole Center
+
+Data type: Vector.
+
+Translates the axis pole center with an offset.
+
+##### Tilt
+
+Data type: Rotation.
+
+Rotates and tilts the axis pole by degrees.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Cylinder UV Island
+
+![Cylinder UV Island](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png)
+
+Creates cylinder projected UV coordinates on a single island. Island Index chooses the island. It works like Cylinder UV with Mode set to one island.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Top
+
+Data type: Float.
+
+Moves the top limits of the UV Projection. Default: 1.
+
+#### Bottom
+
+Data type: Float.
+
+Moves the bottom limits of the UV Projection. Default: -1.
+
+#### Cylinder Scale
+
+Data type: Float.
+
+Changes the scale of the side cylinder UV Projection. Default: 1.
+
+#### Cap Scale
+
+Data type: Float.
+
+Changes the scale of the cylinder caps UV Projection. Default: 1.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: X.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.
+
+#### UV Map
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Pole Settings
+
+##### Pole Center
+
+Data type: Vector.
+
+Translates the axis pole center with an offset.
+
+##### Tilt
+
+Data type: Rotation.
+
+Rotates and tilts the axis pole by degrees.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Generated UV
+
+![Generated UV](/docs2/images/assets/geometry-nodes-library/uv/generated-uv.png)
+
+Creates the default generated UV coordinates for procedural meshes. It has no settings beyond the UV name and the selection.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Smart UV
+
+![Smart UV](/docs2/images/assets/geometry-nodes-library/uv/smart-uv.png)
+
+Creates smart projected UV coordinates. It uses signed angles to find seams on the edges, then unwraps the geometry into islands. Angle Limit and Minimum Edge Length decide which edges become seams.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Mode
+
+Data type: Menu.
+
+The method the seams are detected on edges by angle. Default: Unsigned.
+
+#### Angle Limit
+
+Data type: Float.
+
+The detection angle for the seams for the auto-unwrap. Default: 30°.
+
+#### Minimum Edge Length
+
+Data type: Float.
+
+The minimum length of each edge to qualify for the angle detection. Default: 0.1.
+
+#### Use UV Seams
+
+Data type: Boolean.
+
+Use user marked UV seams in object Edit Mode. Default: On.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Extend Seams
+
+##### Extend Seams
+
+Data type: Boolean.
+
+Turns extending the seams on or off. Default: On.
+
+##### Iterations
+
+Data type: Integer.
+
+Number of iterations of extended edges. Default: 8.
+
+#### Cleanup Seams
+
+##### Cleanup Seams
+
+Data type: Boolean.
+
+Turns cleaning up the seams on or off. Default: On.
+
+##### Iterations
+
+Data type: Integer.
+
+Number of iterations to remove and cleanup small edges by iterations. Default: 4.
+
+##### Remove Poles
+
+Data type: Boolean.
+
+Removes corner and pole edges. You can use a Vertex Group as an Attribute mask. Default: Off.
+
+#### UV Unwrap Settings
+
+##### Island Margin
+
+Data type: Float.
+
+Space between islands. Default: 0.001.
+
+##### Fill Holes
+
+Data type: Boolean.
+
+Virtually fill holes in mesh before unwrapping, to better avoid overlaps and preserve symmetry. Default: Off.
+
+##### Method
+
+Data type: Menu.
+
+The method of UV island packing. Default: Angle Based.
+
+##### Iterations
+
+Data type: Integer.
+
+Number of iterations to run the SLIM solver to unwrap UVs. Default: 10.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Sphere UV
+
+![Sphere UV](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png)
+
+Creates sphere projected UV coordinates, with longitude and latitude. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the poles.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Mode
+
+Data type: Menu.
+
+Toggles if the UV should evaluate on an individual island or all islands. Default: All.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Scale Longitude
+
+Data type: Float.
+
+Scale the UV along the horizontal longitude axis. Default: 1.
+
+#### Scale Latitude
+
+Data type: Float.
+
+Scale the UV along the vertical latitude axis. Default: 1.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: Z.
+
+#### UV Map
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.
+
+#### Pole Settings
+
+##### Pole Pinch
+
+Data type: Boolean.
+
+Pinches the pole to get cleaner UVs at the axis poles. Default: On.
+
+##### Pole Center
+
+Data type: Vector.
+
+Translates the axis pole center with an offset.
+
+##### Tilt
+
+Data type: Rotation.
+
+Rotates and tilts the axis pole by degrees.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Sphere UV Island
+
+![Sphere UV Island](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island.png)
+
+Creates sphere projected UV coordinates on a single island. Island Index chooses the island. It works like Sphere UV with Mode set to one island.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Island Index
+
+Data type: Integer.
+
+The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
+
+#### Scale Longitude
+
+Data type: Float.
+
+Scale the UV along the horizontal longitude axis. Default: 1.
+
+#### Scale Latitude
+
+Data type: Float.
+
+Scale the UV along the vertical latitude axis. Default: 1.
+
+#### Axis
+
+Data type: Menu.
+
+Changes the active axis of the UV Projection. Default: Z.
+
+#### UV Map
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.
+
+#### Pole Settings
+
+##### Pole Pinch
+
+Data type: Boolean.
+
+Pinches the pole to get cleaner UVs at the axis poles. Default: On.
+
+##### Pole Center
+
+Data type: Vector.
+
+Translates the axis pole center with an offset.
+
+##### Tilt
+
+Data type: Rotation.
+
+Rotates and tilts the axis pole by degrees.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+## Triplanar UV
+
+![Triplanar UV](/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png)
+
+Creates triplanar cube projected UV coordinates, with scaling that stays relative to the object. Translation, Rotation and Scale move the projection.
+
+### Inputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh to create the UV coordinates for.
+
+#### Relative Position
+
+Data type: Boolean.
+
+Toggles relative UV positions to world space or local space. Default: On.
+
+#### Translation
+
+Data type: Vector.
+
+Translates the triplanar UV projection in XYZ vectors.
+
+#### Rotation
+
+Data type: Rotation.
+
+Rotates the triplanar UV projection.
+
+#### Scale
+
+Data type: Vector.
+
+Scales the triplanar UV projection.
+
+#### Gizmo Helpers
+
+Data type: Boolean.
+
+Toggles helper gizmos made with Grease Pencil. These will not render. Default: On.
+
+#### UV Name
+
+Data type: String.
+
+Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.
+
+#### Pack UV Islands
+
+##### Pack UV Islands
+
+Data type: Boolean.
+
+Toggles UV Island Packing. Default: Off.
+
+##### Island Margin
+
+Data type: Float.
+
+Adjusts the UV island margins. Default: 0.001.
+
+##### Rotate
+
+Data type: Boolean.
+
+Toggles if the packing rotates UV Islands for a best fit. Default: On.
+
+##### Method
+
+Data type: Menu.
+
+The method of UV island packing. Default: Bounding Box.
+
+#### Use Selection
+
+##### Use Selection
+
+Data type: Boolean.
+
+Set UVs on a Vertex Group Selection. Default: Off.
+
+##### Vertex Group
+
+Data type: String.
+
+The name of the Vertex Group to set UVs.
+
+##### Attribute Selection
+
+Data type: Boolean.
+
+Or set the selection by attribute with a boolean on a domain. Default: Off.
+
+### Outputs
+
+#### Geometry
+
+Data type: Geometry.
+
+The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
+
+_The Mesh Operations assets will be documented here._
 
 # Normals
 
