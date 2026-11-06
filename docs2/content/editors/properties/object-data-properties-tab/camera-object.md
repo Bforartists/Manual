@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Camera Object
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.13 Editors - Properties Editor - Object Data Properties Tab - Camera Object.odt
@@ -556,6 +556,12 @@ Displays a diagonal line from the lower left to upper right corners, then lines 
 ![Triangle B](/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-b-2.png)
 
 Same as A, but with the opposite corners.
+
+##### Color
+
+Sets the color of the composition guide lines in the camera view. Pick a color that stands out from your scene. A bright color helps on dark shots, a dark color on bright shots.
+
+The color changes all the guides at once.
 
 ## Custom Properties Panel
 
