@@ -115,6 +115,16 @@ The X offset.
 
 The Y offset.
 
+#### Width
+
+For a Color strip: the width of the strip in pixels. The smallest value is 1.
+
+#### Height
+
+For a Color strip: the height of the strip in pixels. The smallest value is 1.
+
+![Transform panel of a Color strip](/docs2/images/editors/properties/strip-tab/transform-panel-color-strip.png)
+
 #### Scale X
 
 The X scale.

@@ -315,6 +315,10 @@ How much the strip color affects other strips.
 
 ![Transform Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel.png)
 
+A Color strip also shows Width and Height here:
+
+![Transform panel of a Color strip](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel-color-strip.png)
+
 ### Filter
 
 ![Filter](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/filter.png)
@@ -336,6 +340,8 @@ Filter type to use for transformations.
 | ---------- | ------------------------------------- |
 | Position X | The X offset. |
 | Y | The Y offset. |
+| Width | For a Color strip: the width of the strip in pixels. The smallest value is 1. |
+| Height | For a Color strip: the height of the strip in pixels. The smallest value is 1. |
 | Scale X | The X scale. |
 | Y | The Y scale. |
 | Rotation | The rotation around the image center. |
@@ -726,14 +732,6 @@ Do crossfade blending between current and previous frame.
 #### Color Picker
 
 Adjust the color of the color strip.
-
-#### Width
-
-The width of the color strip in pixels. The smallest value is 1.
-
-#### Height
-
-The height of the color strip in pixels. The smallest value is 1.
 
 ### Effect strip type Transform
 
