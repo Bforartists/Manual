@@ -1,0 +1,7 @@
+/* Bforartists website · docs-head.js · @version 1.0.0 · Doc Pages template, page head code. Each original <script> block is wrapped on its own, so one failing block cannot stop the next. */
+try{
+/* BFA Docs Icons 1.0 - a docs section with no icon in the CMS gets a Bforartists icon by its name (else the documents icon), never Webflow's broken empty-image path. Runs after the sidebar is built (and again on load). */
+(function(){function fix(){var C='https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/',M={'interface':'68b8d7589dacef091df81759_window.svg',editors:'68b9b6ce4911512ef9f0c69d_area.svg',workspaces:'68b8cd9563b35e0ca05c7797_workspace.svg',keymap:'68b9b7ae7c8055e6f2eb1007_key_command.svg',assets:'68b8dd6dccedb1bebc2d6787_asset_manager.svg',extensions:'68b8dd5437d89c2ce615eb61_plugin.svg',advanced:'68b9b9402d131603f8283ec8_preferences.svg',development:'68b9bb34f63df100f2aad61f_script.svg',appendix:'68b8dbecbfd9caf36c6c3800_info.svg','getting started':'68b8ce3c9b4a4c5d5f171a5d_startpoint.svg'};
+[].forEach.call(document.querySelectorAll('img[src*="website-files.com/webflow-prod-assets/"]'),function(i){if(i.closest('.ui-panel-link'))return;var h=i.closest('.ui-panel-head')||i.parentNode,t=((h.querySelector('.ui-panel-title')||h).textContent||'').trim().toLowerCase();i.src=C+(M[t]||'68b9b72e6ab175721a9bf7cb_documents.svg');i.classList.remove('w-dyn-bind-empty')})}
+document.addEventListener('DOMContentLoaded',function(){setTimeout(fix,0)});addEventListener('load',fix)})();
+}catch(e){console.error("docs-head block 1",e)}
