@@ -6,7 +6,7 @@ path:
   - "Assets"
   - "Shader Library"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node_material
 summary: "Shader node groups and materials that come with Bforartists."
 cta: "Browse"
