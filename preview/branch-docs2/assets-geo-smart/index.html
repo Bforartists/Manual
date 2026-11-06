@@ -2,7 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Docs preview · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/doc-kit.css"><style>
+<link rel="stylesheet" href="assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
@@ -31,7 +32,8 @@ a{color:var(--dk-link)}
 .pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
 @media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
-</style><script>
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
 </script></head>
@@ -345,7 +347,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Assets</span>
 <span>Essentials Library</span>
 <span>Default Library</span>
-<span>Compositor Library</span>
+<a href="assets/compositor-library.html">Compositor Library</a>
 <a href="assets/geometry-nodes-library.html">Geometry Nodes Library</a>
 <span>Shader Library</span>
 <h4>Extensions and Addons</h4>
@@ -403,7 +405,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tr>
 <tr>
 <td>🏷️ Alt text</td>
-<td>✅ 12486 ok</td>
+<td>✅ 12612 ok</td>
 </tr>
 <tr>
 <td>📄 Front matter</td>
@@ -411,7 +413,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tr>
 <tr>
 <td>🔗 Links</td>
-<td>✅ 162 ok</td>
+<td>✅ 163 ok</td>
 </tr>
 <tr>
 <td>🖋️ Editor-safe</td>
@@ -419,7 +421,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tr>
 <tr>
 <td>🖼️ Images</td>
-<td>✅ 12486 ok</td>
+<td>✅ 12612 ok</td>
 </tr>
 <tr>
 <td>🗺️ Workspace maps</td>
@@ -435,4 +437,4 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Every page already has its ID, address and section.</p>
 <h3>🤖 Image bot</h3>
 <p>No new images.</p>
-</div><h2>📝 Changed pages (1)</h2><div class="pv-cards"><a href="assets/geometry-nodes-library.html"><b>Geometry Nodes Library</b><small>docs2/content/assets/geometry-nodes-library.md</small></a></div></main><aside class="pv-outline"></aside></div></body></html>
+</div><h2>📝 Changed pages (2)</h2><div class="pv-cards"><a href="assets/compositor-library.html"><b>Compositor Library</b><small>docs2/content/assets/compositor-library.md</small></a><a href="assets/geometry-nodes-library.html"><b>Geometry Nodes Library</b><small>docs2/content/assets/geometry-nodes-library.md</small></a></div></main><aside class="pv-outline"></aside></div></body></html>

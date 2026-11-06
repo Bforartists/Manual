@@ -1,6 +1,7 @@
 {
  "pages": {
+  "docs2/content/assets/compositor-library.md": "assets/compositor-library.html",
   "docs2/content/assets/geometry-nodes-library.md": "assets/geometry-nodes-library.html"
  },
- "images": 25
+ "images": 153
 }
