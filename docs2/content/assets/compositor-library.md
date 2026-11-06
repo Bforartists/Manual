@@ -68,6 +68,12 @@ Data type: Color.
 
 The output image after processing the effect.
 
+### How to use
+
+Connect an image to Image and the output to the next node. In the picture, Red is 30 and Blue is -30.
+
+![Adjust RGB in use](/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png)
+
 ## Average Color
 
 ![Average Color](/docs2/images/assets/compositor-library/color/average-color.png)
@@ -89,6 +95,12 @@ The input image to process.
 Data type: Color.
 
 The output color after processing the effect.
+
+### How to use
+
+Connect an image to Image. The output is a single color, shown here as a flat fill.
+
+![Average Color in use](/docs2/images/assets/compositor-library/color/average-color-usage.png)
 
 ## Color Temperature
 
@@ -123,6 +135,12 @@ Sets the color temperature in Kelvin.
 Data type: Color.
 
 The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 3500.
+
+![Color Temperature in use](/docs2/images/assets/compositor-library/color/color-temperature-usage.png)
 
 ## Color Tint
 
@@ -164,6 +182,12 @@ Data type: Color.
 
 The output image after processing the effect.
 
+### How to use
+
+Connect an image to Image and pick a Color. In the picture, Color is blue and Strength is 0.6.
+
+![Color Tint in use](/docs2/images/assets/compositor-library/color/color-tint-usage.png)
+
 ## Color Variation
 
 ![Color Variation](/docs2/images/assets/compositor-library/color/color-variation.png)
@@ -204,6 +228,12 @@ Data type: Color.
 
 The image with color variation applied.
 
+### How to use
+
+Connect an image to Image. In the picture, Strength is 1.0.
+
+![Color Variation in use](/docs2/images/assets/compositor-library/color/color-variation-usage.png)
+
 ## Desaturator
 
 ![Desaturator](/docs2/images/assets/compositor-library/color/desaturator.png)
@@ -237,6 +267,12 @@ Adjusts a biased ratio of the saturation.
 Data type: Color.
 
 The desaturated image.
+
+### How to use
+
+Connect an image to Image. In the picture, Saturation Strength is 0.8.
+
+![Desaturator in use](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
 
 ## Halftone Color
 
@@ -289,6 +325,12 @@ The colored halftone.
 Data type: Float.
 
 Black and white dots.
+
+### How to use
+
+Connect the Distance output of Halftone Pattern to Distance, an image to Foreground, and set Background to white. Connect Color to the next node.
+
+![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
 
 ## Halftone Pattern
 
@@ -348,6 +390,12 @@ Data type: Vector.
 
 Coordinates inside each dot.
 
+### How to use
+
+Use it together with Halftone Color: connect Distance to the Distance input of Halftone Color.
+
+![Halftone Pattern in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
+
 ## Simple Saturation
 
 ![Simple Saturation](/docs2/images/assets/compositor-library/color/simple-saturation.png)
@@ -375,6 +423,12 @@ Controls the intensity of the image's color saturation. The range is 0 to 2.
 Data type: Color.
 
 The output image after processing the effect.
+
+### How to use
+
+Connect an image to Image. In the picture, Saturation is 0.25.
+
+![Simple Saturation in use](/docs2/images/assets/compositor-library/color/simple-saturation-usage.png)
 
 # Creative / Design
 
