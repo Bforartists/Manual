@@ -1308,6 +1308,20 @@ Connect an image to Image and the output to the next node. Display on BW turns t
 
 The setup used for the slider:
 
+### Display modes and Resolution
+
+The Display menu changes how the dither is shown. The same example image with each mode, at Resolution 50:
+
+| BW | Posterized | Color |
+|---|---|---|
+| ![BW](/docs2/images/assets/compositor-library/filters/dither-4x4-bw.png) | ![Posterized](/docs2/images/assets/compositor-library/filters/dither-4x4-posterized.png) | ![Color](/docs2/images/assets/compositor-library/filters/dither-4x4-color.png) |
+
+Resolution changes the density of the pattern. Display set to BW, Resolution 15 on the left and 100 on the right:
+
+| Resolution 15 | Resolution 100 |
+|---|---|
+| ![Resolution 15](/docs2/images/assets/compositor-library/filters/dither-4x4-bw-res15.png) | ![Resolution 100](/docs2/images/assets/compositor-library/filters/dither-4x4-bw-res100.png) |
+
 ![Ordered Dithering 4x4 setup](/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-setup.png)
 
 ## Ordered Dithering 8x8
@@ -1354,6 +1368,20 @@ Connect an image to Image and the output to the next node. Display on BW turns t
 ![After: black and white pattern](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-after.png)
 
 The setup used for the slider:
+
+### Display modes and Resolution
+
+The Display menu changes how the dither is shown. The same example image with each mode, at Resolution 50:
+
+| BW | Posterized | Color |
+|---|---|---|
+| ![BW](/docs2/images/assets/compositor-library/filters/dither-8x8-bw.png) | ![Posterized](/docs2/images/assets/compositor-library/filters/dither-8x8-posterized.png) | ![Color](/docs2/images/assets/compositor-library/filters/dither-8x8-color.png) |
+
+Resolution changes the density of the pattern. Display set to BW, Resolution 15 on the left and 100 on the right:
+
+| Resolution 15 | Resolution 100 |
+|---|---|
+| ![Resolution 15](/docs2/images/assets/compositor-library/filters/dither-8x8-bw-res15.png) | ![Resolution 100](/docs2/images/assets/compositor-library/filters/dither-8x8-bw-res100.png) |
 
 ![Ordered Dithering 8x8 setup](/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-setup.png)
 
