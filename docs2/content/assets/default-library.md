@@ -186,12 +186,10 @@ Below the button you see the name of the asset's node group, and then the asset'
 
 The settings are grouped the same way on every Smart primitive. Open or close a group by clicking its title.
 
-| Group | What it has |
-|---|---|
-| 📏 Top-level properties | The settings most assets share, as sliders and check boxes. Numeric fields change the size, a distance or an angle, so you can adjust the asset quickly. |
-| 🧊 Bevel | The bevel depth and the bevel resolution. |
-| 🔁 Resolution | The loop resolution and the subdivision detail. |
-| 🗺️ UV | **Relative** scales the UVs with the asset, when the asset supports it. |
+- 📏 **Top-level properties**: the settings most assets share, as sliders and check boxes. Numeric fields change the size, a distance or an angle, so you can adjust the asset quickly.
+- 🧊 **Bevel**: the bevel depth and the bevel resolution.
+- 🔁 **Resolution**: the loop resolution and the subdivision detail.
+- 🗺️ **UV**: **Relative** scales the UVs with the asset, when the asset supports it.
 
 > **Note:** Planned for the UV group: UV scaling and alignment, and a choice between relative and absolute UVs.
 
@@ -199,11 +197,9 @@ The settings are grouped the same way on every Smart primitive. Open or close a 
 
 Smart assets stay editable until you apply them. **Apply Selected Objects** turns the selected objects into regular mesh objects, using their visual geometry. You find it in the 3D View header under **Object › Apply**, in three forms:
 
-| Menu entry | What it does |
-|---|---|
-| 🧩 Visual Geometry and Join | Applies the selected objects and joins them into one mesh object. This is **Join on Apply**. |
-| ➕ Visual Geometry and Boolean | Applies the selected objects and combines them into one mesh object with a Float boolean union. This is **Boolean on Apply**. |
-| 🧱 Visual Geometry and Remesh | Applies the selected objects and combines them into one voxel remeshed object. This is **Remesh on Apply**. |
+- 🧩 **Visual Geometry and Join** is **Join on Apply**.
+- ➕ **Visual Geometry and Boolean** is **Boolean on Apply**.
+- 🧱 **Visual Geometry and Remesh** is **Remesh on Apply**.
 
 #### Apply Selected Objects
 
