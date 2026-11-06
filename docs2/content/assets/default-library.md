@@ -7,7 +7,7 @@ path:
   - Asset Browser
   - Asset Browser - Default Asset LIbrary
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28.1 Asset Browser - Default Asset LIbrary.odt
@@ -181,6 +181,44 @@ Find them in the sidebar **Item** tab, in the **Asset Properties** panel.
 Opens the wizard again for the selected asset, so you can redo the choices you made when you placed it.
 
 Below the button you see the name of the asset's node group, and then the asset's settings. They're the same inputs as in the modifier stack, grouped in fold-open panels just like in the modifier, with the label in front of each field. Click the dot at the right of a field to keyframe it.
+
+#### Property groups
+
+The settings are grouped the same way on every Smart primitive. Open or close a group by clicking its title.
+
+- 📏 **Top-level properties**: the settings most assets share, as sliders and check boxes. Numeric fields change the size, a distance or an angle, so you can adjust the asset quickly.
+- 🧊 **Bevel**: the bevel depth and the bevel resolution.
+- 🔁 **Resolution**: the loop resolution and the subdivision detail.
+- 🗺️ **UV**: **Relative** scales the UVs with the asset, when the asset supports it.
+
+> **Note:** Planned for the UV group: UV scaling and alignment, and a choice between relative and absolute UVs.
+
+### Applying Smart assets
+
+Smart assets stay editable until you apply them. **Apply Selected Objects** turns the selected objects into regular mesh objects, using their visual geometry. You find it in the 3D View header under **Object › Apply**, in three forms:
+
+- 🧩 **Visual Geometry and Join** is **Join on Apply**.
+- ➕ **Visual Geometry and Boolean** is **Boolean on Apply**.
+- 🧱 **Visual Geometry and Remesh** is **Remesh on Apply**.
+
+#### Apply Selected Objects
+
+1. Select one or more meshes with Smart assets in the 3D View.
+2. Choose **Object › Apply › Visual Geometry and Join**, or one of the other entries.
+
+#### Join on Apply
+
+Joins the applied objects into a single mesh object without changing their geometry. Use it to turn a group of solid meshes into one object.
+
+#### Boolean on Apply
+
+Combines the applied objects into a single mesh object with Float boolean union operations.
+
+> **Note:** Works best with manifold meshes (no holes).
+
+#### Remesh on Apply
+
+Combines the applied objects into one voxel remeshed object with a resolution you set. The options are **Voxel Size**, **Preserve Volume**, **Preserve Attributes**, **Fix Poles** and **Adaptivity**.
 
 ## Default Library
 

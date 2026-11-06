@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Input"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Input nodes: Constant, Gizmo, Import, Scene."
 order: 10
@@ -39,12 +39,19 @@ Here you find input nodes.
 
 Inputs a boolean value.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------- |
-| Properties | **Value**: The input boolean. |
-| Outputs | **Boolean**: The boolean state. |
+##### Value
 
+The input boolean.
+
+#### Outputs
+
+##### Boolean
+
+Data type: Boolean.
+
+The boolean state.
 
 ### Collection
 
@@ -52,12 +59,19 @@ Inputs a boolean value.
 
 Outputs a single collection.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------ |
-| Properties | **Collection**: The collection to select from the scene. |
-| Outputs | **Collection**: The collection data useful to get instances as children. |
+##### Collection
 
+The collection to select from the scene.
+
+#### Outputs
+
+##### Collection
+
+Data type: Collection.
+
+The collection data useful to get instances as children.
 
 ### Color
 
@@ -75,6 +89,8 @@ Clicking at the color field at the bottom will reveal the standard Blender color
 
 ##### Color
 
+Data type: Color.
+
 Standard color output.
 
 ### Font
@@ -85,12 +101,13 @@ Provides a constant reference to a font data inside Geometry Nodes. Useful for p
 
 #### Parameters
 
+##### Font Selector
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Font Selector | Dropdown or file browser to choose the font datablock. Can reference internal fonts or external font files. |
-| Output | Provides a **Font datablock reference** that other nodes can consume. Typically used as input for text-related nodes. |
+Dropdown or file browser to choose the font datablock. Can reference internal fonts or external font files.
 
+##### Outputs
+
+Provides a **Font datablock reference** that other nodes can consume. Typically used as input for text-related nodes.
 
 ### Image
 
@@ -120,15 +137,19 @@ Open a existing image.
 
 ![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
 
+###### Image browser
 
-| Entry | What it does |
-| ------------- | ------------------------------ |
-| Image browser | A list of available images |
-| Image name | The name of the image |
-| Fake user | Add a fake user to this asset. |
+A list of available images
 
+###### Image name
 
-**New**
+The name of the image
+
+###### Fake user
+
+Add a fake user to this asset.
+
+###### New
 
 ![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new-2.png)
 
@@ -136,12 +157,13 @@ Create a new image.
 
 Opens a new image dialog where you can adjust the color, size and further settings.
 
+###### Open Image
 
-| Entry | What it does |
-| ---------- | -------------------------------------- |
-| Open Image | Open a existing image. |
-| Remove | Removes the image as the active image. |
+Open a existing image.
 
+###### Remove
+
+Removes the image as the active image.
 
 ##### Frame
 
@@ -151,6 +173,8 @@ For videos. Which frame to use.
 
 ##### Image
 
+Data type: Image.
+
 The output image.
 
 ### Integer
@@ -159,12 +183,19 @@ The output image.
 
 Inputs a integer value.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------- |
-| Properties | **Value**: The input integer. |
-| Outputs | **Integer**: The integer value. |
+##### Value
 
+The input integer.
+
+#### Outputs
+
+##### Integer
+
+Data type: Integer.
+
+The integer value.
 
 ### Material
 
@@ -176,6 +207,8 @@ Retreive a material.
 
 ##### Material
 
+Data type: Material.
+
 The material output.
 
 ### Object
@@ -184,12 +217,19 @@ The material output.
 
 Retrieves a single object.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------ |
-| Properties | **Object**: The object to select from the scene. |
-| Outputs | **Object**: The object data useful to get object info. |
+##### Object
 
+The object to select from the scene.
+
+#### Outputs
+
+##### Object
+
+Data type: Object.
+
+The object data useful to get object info.
 
 ### Rotation
 
@@ -197,12 +237,19 @@ Retrieves a single object.
 
 Apply a constant rotation.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------ |
-| Properties | **X, Y Z**: The rotation that you want to apply. |
-| Outputs | **Rotation**: The output rotation vector. |
+##### X, Y Z
 
+The rotation that you want to apply.
+
+#### Outputs
+
+##### Rotation
+
+Data type: Rotation.
+
+The output rotation vector.
 
 ### String
 
@@ -210,12 +257,17 @@ Apply a constant rotation.
 
 Input a string.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------ |
-| Properties | **String**: The string that you want to input. |
-| Outputs | **Value**: The value set in the node properties. |
+##### String
 
+The string that you want to input.
+
+#### Outputs
+
+##### Value
+
+The value set in the node properties.
 
 ### Value
 
@@ -223,12 +275,19 @@ Input a string.
 
 Input numerical values to other nodes in the tree.
 
+#### Properties
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------- |
-| Properties | **Value**: Single numerical value (floating point). |
-| Outputs | **Value**: The value set in the node properties. |
+##### Value
 
+Single numerical value (floating point).
+
+#### Outputs
+
+##### Value
+
+Data type: Float.
+
+The value set in the node properties.
 
 ### Vector
 
@@ -238,11 +297,17 @@ Creates a single vector of three values that can be used as an input.
 
 Properties
 
+#### X Y Z
 
-| Entry | What it does |
-| ------ | ----------------------------------- |
-| X Y Z | The values of the vector. |
-| Output | **Vector**: Standard vector output. |
+The values of the vector.
+
+#### Outputs
+
+##### Vector
+
+Data type: Vector.
+
+Standard vector output.
 
 # Gizmo
 
@@ -260,15 +325,35 @@ Displays the rotation gizmo in the 3d view.
 
 #### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------- |
-| Value | Show or hide the widget. |
-| Position | Where to show the widget in relation to the object. |
-| Up | The up vector to define the rotation. |
-| Screen Space | Use screen space or object space values to display the widget. |
-| Radius | The radius of the widget. |
+Data type: Float.
 
+Show or hide the widget.
+
+##### Position
+
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Up
+
+Data type: Vector (XYZ).
+
+The up vector to define the rotation.
+
+##### Screen Space
+
+Data type: Boolean.
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+Data type: Float.
+
+The radius of the widget.
 
 #### Properties
 
@@ -286,6 +371,8 @@ Always display the gizmo.
 
 ##### Transform
 
+Data type: Geometry.
+
 The output transform. No positions, no matrices, Gizmos.
 
 ### Linear Gizmo
@@ -296,15 +383,31 @@ Displays the translation gizmo in the 3d view.
 
 #### Inputs
 
+##### Value
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------- |
-| Value | Show or hide the widget. |
-| Position | Where to show the widget in relation to the object. |
-| Direction | The direction vector. |
-| Screen Space | Use screen space or object space values to display the widget. |
-| Radius | The radius of the widget. |
+Data type: Float.
 
+Show or hide the widget.
+
+##### Position
+
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Direction
+
+Data type: Vector (XYZ).
+
+The direction vector.
+
+##### Screen Space
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+The radius of the widget.
 
 #### Properties
 
@@ -328,6 +431,8 @@ Always display the gizmo.
 
 ##### Transform
 
+Data type: Geometry.
+
 The output transform. No positions, no matrices, Gizmos.
 
 ### Transform Gizmo
@@ -336,12 +441,47 @@ The output transform. No positions, no matrices, Gizmos.
 
 Displays the transform gizmo in the 3d view.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Value**: Show or hide the widget. · **Position**: Where to show the widget in relation to the object. · **Rotation**: The rotation vector. · **Screen Space**: Use screen space or object space values to display the widget. · **Radius**: The radius of the widget. |
-| Properties | **Pin Gizmo**: Always display the gizmo. |
-| Outputs | **Transform**: The output transform. No positions, no matrices, Gizmos. |
+##### Value
+
+Data type: Matrix.
+
+Show or hide the widget.
+
+##### Position
+
+Data type: Vector (translation).
+
+Where to show the widget in relation to the object.
+
+##### Rotation
+
+Data type: Rotation.
+
+The rotation vector.
+
+##### Screen Space
+
+Use screen space or object space values to display the widget.
+
+##### Radius
+
+The radius of the widget.
+
+#### Properties
+
+##### Pin Gizmo
+
+Always display the gizmo.
+
+#### Outputs
+
+##### Transform
+
+Data type: Geometry.
+
+The output transform. No positions, no matrices, Gizmos.
 
 # Import
 
@@ -359,12 +499,17 @@ The **Import CSV** node is used to bring structured tabular data into Geometry N
 
 #### Inputs
 
+##### Path
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Path | Specifies the location of the CSV file to be imported. This can also be a string input. · **Open**: Includes a folder icon button for browsing files. |
-| Delimiter | Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil |
+Specifies the location of the CSV file to be imported. This can also be a string input.
 
+###### Open
+
+Includes a folder icon button for browsing files.
+
+##### Delimiter
+
+Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil
 
 #### Outputs
 
@@ -521,6 +666,8 @@ obtain its transform.
 
 ##### Active Camera
 
+Data type: Object.
+
 The active camera.
 
 ### Camera Info
@@ -532,21 +679,53 @@ The node outputs settings from the chosen camera.
 Typical usage would be to connect this node to an Object Info node to  
 obtain its transform.
 
+#### Inputs
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------- |
-| Inputs | **Camera**: The camera object. |
-| Outputs | — |
-| Projection Matrix | The projection matrix. |
-| Focal length | The focal length. |
-| Sensor | The sensor size. |
-| Shift | The camera shift. |
-| Clip Start | The camera near clipping distance. |
-| Clip End | The camera far clipping distance. |
-| Focus Distance | Distance to the focus point for depth of field. |
-| Is Orthographic | If the camera is using orthographic view. |
-| Orthographic Scale | The orthographic camera scale in case it is using Orthographic view. |
+##### Camera
 
+Data type: Object.
+
+The camera object.
+
+#### Outputs
+
+—
+
+#### Projection Matrix
+
+The projection matrix.
+
+#### Focal length
+
+The focal length.
+
+#### Sensor
+
+The sensor size.
+
+#### Shift
+
+The camera shift.
+
+#### Clip Start
+
+The camera near clipping distance.
+
+#### Clip End
+
+The camera far clipping distance.
+
+#### Focus Distance
+
+Distance to the focus point for depth of field.
+
+#### Is Orthographic
+
+If the camera is using orthographic view.
+
+#### Orthographic Scale
+
+The orthographic camera scale in case it is using Orthographic view.
 
 ### Collection Info
 
@@ -556,18 +735,41 @@ The Collection Info node retreives information from collections. This can be use
 
 #### Inputs
 
+##### Collection
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Collection | Collection to get the properties from. |
-| Separate Children | Output each child of the collection as a separate instance. The output is sorted alphabetically. · **Reset Children**: Reset the transform of every child instance in the output. This setting is just active when Separate Children is active. |
+Data type: Collection.
 
+Collection to get the properties from.
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Properties | **Transform Space**: The transformation of the geometry outputs. · **Original**: Output the geometry relative to the collection offset. · **Relative**: Bring the input collection geometry into the modified object, maintaining the relative position between the objects in the scene. |
-| Outputs | **Geometry**: Geometry of the collection in world space with all its modifiers applied. |
+##### Separate Children
 
+Data type: Boolean.
+
+Output each child of the collection as a separate instance. The output is sorted alphabetically.
+
+###### Reset Children
+
+Reset the transform of every child instance in the output. This setting is just active when Separate Children is active.
+
+##### Properties
+
+###### Transform Space
+
+The transformation of the geometry outputs.
+
+###### Original
+
+Output the geometry relative to the collection offset.
+
+###### Relative
+
+Bring the input collection geometry into the modified object, maintaining the relative position between the objects in the scene.
+
+##### Outputs
+
+###### Geometry
+
+Geometry of the collection in world space with all its modifiers applied.
 
 ### Image Info
 
@@ -578,6 +780,8 @@ Retreive infos from an image.
 #### Input
 
 ##### Image
+
+Data type: Image.
 
 Load or connect a image.
 
@@ -597,15 +801,19 @@ Open a existing image.
 
 ![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
 
+###### Image browser
 
-| Entry | What it does |
-| ------------- | ------------------------------ |
-| Image browser | A list of available images |
-| Image name | The name of the image |
-| Fake user | Add a fake user to this asset. |
+A list of available images
 
+###### Image name
 
-**New**
+The name of the image
+
+###### Fake user
+
+Add a fake user to this asset.
+
+###### New
 
 ![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
 
@@ -613,28 +821,51 @@ Create a new image.
 
 Opens a new image dialog where you can adjust the color, size and further settings.
 
+###### Open Image
 
-| Entry | What it does |
-| ---------- | -------------------------------------- |
-| Open Image | Open a existing image. |
-| Remove | Removes the image as the active image. |
+Open a existing image.
 
+###### Remove
+
+Removes the image as the active image.
 
 ##### Frame
+
+Data type: Integer.
 
 For videos. Which frame to use.
 
 #### Outputs
 
+##### Width
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------- |
-| Width | The width of the image. |
-| Height | The height of the image |
-| Has Alpha | Returns true if the image has an alpha channel |
-| Frame Count | For movies. How many frames. |
-| FPS | For movies, what FPS rate. |
+Data type: Integer.
 
+The width of the image.
+
+##### Height
+
+Data type: Integer.
+
+The height of the image
+
+##### Has Alpha
+
+Data type: Boolean.
+
+Returns true if the image has an alpha channel
+
+##### Frame Count
+
+Data type: Integer.
+
+For movies. How many frames.
+
+##### FPS
+
+Data type: Float.
+
+For movies, what FPS rate.
 
 ### Is Viewport
 
@@ -646,6 +877,8 @@ The Is Viewport node outputs true when geometry nodes is evaluated for the viewp
 
 ##### Is Viewport
 
+Data type: Boolean.
+
 A booleran that indicates if the geometry nodes is evaluated for preview.
 
 ### Object Info
@@ -654,12 +887,45 @@ A booleran that indicates if the geometry nodes is evaluated for preview.
 
 The Object Info node retreives information from objects. And outputs it then.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Object**: Object to get the properties from. |
-| Outputs | **Transform**: Transform matrix output. · **Location**: Location of the object in world space. · **Rotation**: Rotation of the object in world space. · **Scale**: Scale of the object in world space. · **Geometry**: Geometry of the object in world space with all its modifiers applied. |
+##### Object
 
+Data type: Object.
+
+Object to get the properties from.
+
+#### Outputs
+
+##### Transform
+
+Data type: Matrix.
+
+Transform matrix output.
+
+##### Location
+
+Data type: Vector.
+
+Location of the object in world space.
+
+##### Rotation
+
+Data type: Rotation.
+
+Rotation of the object in world space.
+
+##### Scale
+
+Data type: Vector.
+
+Scale of the object in world space.
+
+##### Geometry
+
+Data type: Geometry.
+
+Geometry of the object in world space with all its modifiers applied.
 
 ### Scene time
 
@@ -671,15 +937,55 @@ blur possible.
 
 #### Outputs
 
+##### Seconds
 
-| Entry | What it does |
-| ------- | ------------------ |
-| Seconds | Output in seconds. |
-| Frame | Output in Frames. |
+Data type: Float.
 
+Output in seconds.
+
+##### Frame
+
+Data type: Float.
+
+Output in Frames.
 
 ### Self Object
 
 ![Self Object](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/self-object.png)
 
 Retreives the parent object of the geometry nodegroup.
+
+### Collection Children
+
+![Collection Children](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/collection-children.png)
+
+Lists the objects and the collections that sit inside a collection, sorted by name. Use it to loop over everything in a collection, for example to instance every object it holds. With Recursive on, the node also looks inside the collections it finds.
+
+#### Inputs
+
+##### Collection
+
+Data type: Collection.
+
+The collection to look into.
+
+##### Recursive
+
+Data type: Boolean.
+
+On: also include the children of child collections.
+
+#### Outputs
+
+##### Collections
+
+Data type: Collection list.
+
+The child collections.
+
+##### Objects
+
+Data type: Object list.
+
+The child objects.
+
