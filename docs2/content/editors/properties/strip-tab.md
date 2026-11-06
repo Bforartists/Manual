@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Strip Tab
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.19 Editors - Properties Editor - Strip Tab.odt
