@@ -876,7 +876,7 @@ Sets the start and end frame to the start and end frames of the strips in the se
 
 ![Select menu](/docs2/images/editors/video-sequence-editor/header/select-menu/select-menu.png)
 
-The Select menu has all the tools to choose strips. The entries that have a hotkey show it at the right.
+The Select menu has all the tools to choose strips.
 
 ### All
 
@@ -906,10 +906,6 @@ Selects every strip on the same side of the playhead as your mouse. If the mouse
 
 This entry used to be hidden in the Side of Frame menu. It sits at the top level of the Select menu now, so it is easy to find.
 
-| Hotkey | Action |
-| --- | --- |
-| Ctrl + LMB | Select the strips on the side of the cursor |
-
 ### Side of Frame submenu
 
 ![Side of Frame submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/side-of-frame-submenu.png)
@@ -918,13 +914,9 @@ This entry used to be hidden in the Side of Frame menu. It sits at the top level
 
 Select the strips left from the current frame.
 
-Hotkey: `[`
-
 #### Right
 
 Select the strips right from the current frame.
-
-Hotkey: `]`
 
 ### Handle submenu
 
