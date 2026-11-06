@@ -282,7 +282,9 @@ The desaturated image.
 
 ### How to use
 
-Connect an image to Image. In the picture, Saturation Strength is 0.8.
+Connect an image to Image. Saturation Strength sets how much color is removed: 1 leaves the image as it is, and lower values remove more.
+
+Hue Ratio changes which colors lose their saturation. In the picture, Saturation Strength is 0.3. At Hue Ratio 0 every color is desaturated evenly. At Hue Ratio 1 the strongly colored areas stay vivid and the muted areas lose their color.
 
 ![Desaturator in use](/docs2/images/assets/compositor-library/color/desaturator-usage.png)
 
@@ -342,9 +344,11 @@ Black and white dots.
 
 ### How to use
 
-Connect the Distance output of Halftone Pattern to Distance, an image to Foreground, and set Background to white. Connect Color to the next node.
+Connect an image to Foreground and set Background to the color between the dots. Distance decides where the dots are. It is normally connected to the Distance output of Halftone Pattern, as shown in the next section.
 
-![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
+In the picture, Distance is a single value (0.5) instead of a pattern, so the image is cut at one brightness: the dark parts of the spheres turn to the Background color. Dots need a Distance that changes across the image.
+
+![Halftone Color in use](/docs2/images/assets/compositor-library/color/halftone-color-usage.png)
 
 ## Halftone Pattern
 
@@ -408,9 +412,19 @@ Coordinates inside each dot.
 
 ### How to use
 
-Use it together with Halftone Color: connect Distance to the Distance input of Halftone Color.
+Halftone Pattern does not need an image. Connect its Distance output to any node that takes a number to see how far each pixel is from the center of its dot. In the picture, Scale is 16 and the Distance output goes straight to the viewer.
 
-![Halftone Pattern in use](/docs2/images/assets/compositor-library/color/halftone-usage.png)
+The Vector output gives the coordinates inside each dot.
+
+![Halftone Pattern in use](/docs2/images/assets/compositor-library/color/halftone-pattern-usage.png)
+
+## Halftone Pattern and Halftone Color together
+
+Halftone Pattern makes the dot grid and Halftone Color colors it. Connect the Distance output of Halftone Pattern to the Distance input of Halftone Color, and connect an image to Foreground. Halftone Color sizes each dot by the brightness of the image: dots are Max Dot Size in the brightest areas and Min Dot Size in the darkest.
+
+Keeping them apart lets you change the grid (Rotation, Scale, Ink Noise) separately from the colors (Foreground, Background and the dot sizes). The Mask output of Halftone Color shows the same dots in black and white.
+
+![Halftone Pattern and Halftone Color together](/docs2/images/assets/compositor-library/color/halftone-chain-usage.png)
 
 ## Simple Saturation
 
