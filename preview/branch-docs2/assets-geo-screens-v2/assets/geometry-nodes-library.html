@@ -1,0 +1,2228 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geometry Nodes Library · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/assets-geo-screens-v2 · <code>docs2/assets-geo-screens-v2</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<a class="is-current" href="geometry-nodes-library.html">Geometry Nodes Library</a>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Assets › Geometry Nodes Library</div><h1 class="pv-title">Geometry Nodes Library</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 49 min read</span></div><article class="ui-doc-body"><p>Geometry node groups that come with Bforartists: grease pencil, material, mesh, normals, primitives and utilities.</p>
+<blockquote>
+<p><strong>Draft:</strong> the assets of this library will be listed here: one section per category, one entry per asset with what it does and how to use it.</p>
+</blockquote>
+<h1 id="grease-pencil">Grease Pencil</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="material">Material</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="mesh">Mesh</h1>
+<p>The UV assets write UV coordinates onto a mesh. Drag one onto an object from the Asset Shelf or the Asset Browser. Each picture shows the result on a checker texture, next to the UV layout.</p>
+<h2 id="camera-uv">Camera UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/camera-uv.png" alt="Camera UV asset thumbnail" loading="lazy"><figcaption>Camera UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/camera-uv-node.png" alt="The Camera UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Camera UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/camera-uv.png" alt="Camera UV" loading="lazy"></figure>
+<p>Creates UV coordinates by projecting the mesh through a camera. Use it to place a texture on an object as the camera sees it. Size, Rotation, Offset and Scale adjust the projection, and Custom Camera lets you choose another camera.</p>
+<h3 id="gizmos">Gizmos</h3>
+<p>The projection frame is drawn in the viewport and has gizmos:</p>
+<ul>
+<li>A <strong>dial gizmo</strong> sets the <strong>Rotation</strong>.</li>
+<li><strong>Linear gizmos</strong> change the <strong>Size</strong> and the <strong>Scale X</strong> and <strong>Scale Y</strong> of the frame, and move it with <strong>Offset X</strong> and <strong>Offset Y</strong>.</li>
+</ul>
+<h3 id="inputs">Inputs</h3>
+<h4 id="geometry">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="size">Size</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Size of the UVs. Default: 1.</p>
+<h4 id="rotation">Rotation</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>The rotation of the UVs. Default: 0.</p>
+<h4 id="uv-name">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="offset">Offset</h4>
+<h5 id="offset-x">Offset X</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Offset the UV in the X axis. Default: 0.</p>
+<h5 id="offset-y">Offset Y</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Offset the UV in the Y axis. Default: 0.</p>
+<h4 id="scale">Scale</h4>
+<h5 id="scale-x">Scale X</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale UVs in X. Default: 1.</p>
+<h5 id="scale-y">Scale Y</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale UVs in Y. Default: 1.</p>
+<h4 id="custom-camera">Custom Camera</h4>
+<h5 id="custom-camera-2">Custom Camera</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Turns the custom camera on or off. Default: Off.</p>
+<h5 id="camera">Camera</h5>
+<p class="ui-doc-dtype" style="--dt:#ed9e5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Object</b></p>
+<p>Selects the Custom Camera object. Make sure this is a camera object.</p>
+<h4 id="use-selection">Use Selection</h4>
+<h5 id="use-selection-2">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs">Outputs</h3>
+<h4 id="geometry-2">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="cube-uv">Cube UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv.png" alt="Cube UV asset thumbnail" loading="lazy"><figcaption>Cube UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cube-uv-node.png" alt="The Cube UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cube-uv.png" alt="Cube UV" loading="lazy"></figure>
+<p>Creates cube projected UV coordinates, with each side of the box mapped flat. Mode switches between all islands and a single island chosen by Island Index. Axis and Angle turn the projection.</p>
+<h3 id="inputs-2">Inputs</h3>
+<h4 id="geometry-3">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="mode">Mode</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Toggles if the UV should evaluate on an individual island or all islands. Default: All.</p>
+<h4 id="island-index">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="angle">Angle</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Sets the angle of the projection. Default: 0°.</p>
+<h4 id="axis">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: Z.</p>
+<h4 id="uv-name-2">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="gizmo-helpers">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.</p>
+<h4 id="pack-uv-islands">Pack UV Islands</h4>
+<h5 id="pack-uv-islands-2">Pack UV Islands</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles UV Island Packing. Default: Off.</p>
+<h5 id="margin">Margin</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the UV island margins. Default: 0.001.</p>
+<h5 id="rotate">Rotate</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles if the packing rotates UV Islands for a best fit. Default: Off.</p>
+<h5 id="method">Method</h5>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>The method of UV island packing. Default: Bounding Box.</p>
+<h4 id="use-selection-3">Use Selection</h4>
+<h5 id="use-selection-4">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-2">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-2">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-2">Outputs</h3>
+<h4 id="geometry-4">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="cube-uv-island">Cube UV Island</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv-island.png" alt="Cube UV Island asset thumbnail" loading="lazy"><figcaption>Cube UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island-node.png" alt="The Cube UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island.png" alt="Cube UV Island" loading="lazy"></figure>
+<p>Creates cube projected UV coordinates on a single island. Island Index chooses the island. It works like Cube UV with Mode set to one island.</p>
+<h3 id="gizmos-2">Gizmos</h3>
+<p>The <strong>Angle</strong> input has a <strong>dial gizmo</strong> in the viewport on the selected island. Drag the dial to rotate the projection, instead of typing a number. Island Index decides which island shows the gizmo.</p>
+<h3 id="inputs-3">Inputs</h3>
+<h4 id="geometry-5">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="island-index-2">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="angle-2">Angle</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Sets the angle of the projection. Default: 0°.</p>
+<h4 id="axis-2">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: Z.</p>
+<h4 id="uv-name-3">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="gizmo-helpers-2">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.</p>
+<h4 id="pack-uv-islands-3">Pack UV Islands</h4>
+<h5 id="pack-uv-islands-4">Pack UV Islands</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles UV Island Packing. Default: Off.</p>
+<h5 id="margin-2">Margin</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the UV island margins. Default: 0.001.</p>
+<h5 id="rotate-2">Rotate</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles if the packing rotates UV Islands for a best fit. Default: Off.</p>
+<h5 id="method-2">Method</h5>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>The method of UV island packing. Default: Bounding Box.</p>
+<h4 id="use-selection-5">Use Selection</h4>
+<h5 id="use-selection-6">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-3">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-3">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-3">Outputs</h3>
+<h4 id="geometry-6">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="cut-cylinder-uv">Cut Cylinder UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/cut-cylinder-uv.png" alt="Cut Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cut Cylinder UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv-node.png" alt="The Cut Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cut Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png" alt="Cut Cylinder UV" loading="lazy"></figure>
+<p>Creates cylinder projected UV coordinates by cutting the cylinder open. Cut Angle sets where the cut is made, and Top and Bottom set the limits of the projection. The side and the caps become separate islands.</p>
+<h3 id="gizmos-3">Gizmos</h3>
+<p>The projection cylinder is drawn in the viewport and can be tuned directly:</p>
+<ul>
+<li><strong>Linear gizmos</strong> move <strong>Top</strong> and <strong>Bottom</strong> and change the <strong>Radius</strong>.</li>
+<li><strong>Dial gizmos</strong> set the <strong>Cut Angle</strong>, <strong>Top Angle</strong> and <strong>Bottom Angle</strong>.</li>
+</ul>
+<p>The example above uses a head, which is the typical use: cut the cylinder open at the back and the face unwraps in one piece.</p>
+<h3 id="inputs-4">Inputs</h3>
+<h4 id="geometry-7">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="cut-angle">Cut Angle</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the cut angle. Default: 180°.</p>
+<h4 id="top-angle">Top Angle</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the top angle of the cut. Default: 0°.</p>
+<h4 id="bottom-angle">Bottom Angle</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the bottom angle of the cut. Default: 0°.</p>
+<h4 id="radius">Radius</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>The radius of the Cylinder UV Projection. Default: 1.</p>
+<h4 id="top">Top</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the top limits of the UV Projection. Default: 1.</p>
+<h4 id="bottom">Bottom</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the bottom limits of the UV Projection. Default: -1.</p>
+<h4 id="smoothing-iterations">Smoothing Iterations</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Number of iterations to run the SLIM solver for. Default: 3.</p>
+<h4 id="use-uv-seams">Use UV Seams</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Use user marked UV seams in object Edit Mode. Default: On.</p>
+<h4 id="gizmo-helpers-3">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.</p>
+<h4 id="uv-name-4">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="use-selection-7">Use Selection</h4>
+<h5 id="use-selection-8">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-4">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-4">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-4">Outputs</h3>
+<h4 id="geometry-8">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="cylinder-uv">Cylinder UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv.png" alt="Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cylinder UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-node.png" alt="The Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png" alt="Cylinder UV" loading="lazy"></figure>
+<p>Creates cylinder projected UV coordinates, with the side and the caps scaled separately. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the cylinder.</p>
+<h3 id="inputs-5">Inputs</h3>
+<h4 id="geometry-9">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="mode-2">Mode</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Toggles if the UV should evaluate on an individual island or all islands. Default: All.</p>
+<h4 id="island-index-3">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="top-2">Top</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the top limits of the UV Projection. Default: 1.</p>
+<h4 id="bottom-2">Bottom</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the bottom limits of the UV Projection. Default: -1.</p>
+<h4 id="cylinder-scale">Cylinder Scale</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the scale of the side cylinder UV Projection. Default: 1.</p>
+<h4 id="cap-scale">Cap Scale</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the scale of the cylinder caps UV Projection. Default: 1.</p>
+<h4 id="axis-3">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: X.</p>
+<h4 id="gizmo-helpers-4">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.</p>
+<h4 id="uv-map">UV Map</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="pole-settings">Pole Settings</h4>
+<h5 id="pole-center">Pole Center</h5>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Translates the axis pole center with an offset.</p>
+<h5 id="tilt">Tilt</h5>
+<p class="ui-doc-dtype" style="--dt:#a463c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Rotation</b></p>
+<p>Rotates and tilts the axis pole by degrees.</p>
+<h4 id="use-selection-9">Use Selection</h4>
+<h5 id="use-selection-10">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-5">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-5">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-5">Outputs</h3>
+<h4 id="geometry-10">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="cylinder-uv-island">Cylinder UV Island</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv-island.png" alt="Cylinder UV Island asset thumbnail" loading="lazy"><figcaption>Cylinder UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island-node.png" alt="The Cylinder UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png" alt="Cylinder UV Island" loading="lazy"></figure>
+<p>Creates cylinder projected UV coordinates on a single island. Island Index chooses the island. It works like Cylinder UV with Mode set to one island.</p>
+<h3 id="gizmos-4">Gizmos</h3>
+<p>The projection can be tuned in the viewport with gizmos on the selected island:</p>
+<ul>
+<li><strong>Linear gizmos</strong> move the <strong>Top</strong> and <strong>Bottom</strong> limits and scale the <strong>Cylinder Scale</strong> and <strong>Cap Scale</strong>.</li>
+<li><strong>Dial gizmos</strong> (red, green, blue) rotate the projection around X, Y and Z. This is the same as the <strong>Tilt</strong> input.</li>
+</ul>
+<h3 id="inputs-6">Inputs</h3>
+<h4 id="geometry-11">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="island-index-4">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="top-3">Top</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the top limits of the UV Projection. Default: 1.</p>
+<h4 id="bottom-3">Bottom</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Moves the bottom limits of the UV Projection. Default: -1.</p>
+<h4 id="cylinder-scale-2">Cylinder Scale</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the scale of the side cylinder UV Projection. Default: 1.</p>
+<h4 id="cap-scale-2">Cap Scale</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the scale of the cylinder caps UV Projection. Default: 1.</p>
+<h4 id="axis-4">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: X.</p>
+<h4 id="gizmo-helpers-5">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: On.</p>
+<h4 id="uv-map-2">UV Map</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="pole-settings-2">Pole Settings</h4>
+<h5 id="pole-center-2">Pole Center</h5>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Translates the axis pole center with an offset.</p>
+<h5 id="tilt-2">Tilt</h5>
+<p class="ui-doc-dtype" style="--dt:#a463c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Rotation</b></p>
+<p>Rotates and tilts the axis pole by degrees.</p>
+<h4 id="use-selection-11">Use Selection</h4>
+<h5 id="use-selection-12">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-6">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-6">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-6">Outputs</h3>
+<h4 id="geometry-12">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="generated-uv">Generated UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/generated-uv.png" alt="Generated UV asset thumbnail" loading="lazy"><figcaption>Generated UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/generated-uv-node.png" alt="The Generated UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Generated UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/generated-uv.png" alt="Generated UV" loading="lazy"></figure>
+<p>Creates the default generated UV coordinates for procedural meshes. It has no settings beyond the UV name and the selection.</p>
+<h3 id="inputs-7">Inputs</h3>
+<h4 id="geometry-13">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="uv-name-5">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="use-selection-13">Use Selection</h4>
+<h5 id="use-selection-14">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-7">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-7">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-7">Outputs</h3>
+<h4 id="geometry-14">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="smart-uv">Smart UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/smart-uv.png" alt="Smart UV asset thumbnail" loading="lazy"><figcaption>Smart UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/smart-uv-node.png" alt="The Smart UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Smart UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/smart-uv.png" alt="Smart UV" loading="lazy"></figure>
+<p>Creates smart projected UV coordinates. It uses signed angles to find seams on the edges, then unwraps the geometry into islands. Angle Limit and Minimum Edge Length decide which edges become seams.</p>
+<h3 id="inputs-8">Inputs</h3>
+<h4 id="geometry-15">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="mode-3">Mode</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>The method the seams are detected on edges by angle. Default: Unsigned.</p>
+<h4 id="angle-limit">Angle Limit</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>The detection angle for the seams for the auto-unwrap. Default: 30°.</p>
+<h4 id="minimum-edge-length">Minimum Edge Length</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>The minimum length of each edge to qualify for the angle detection. Default: 0.1.</p>
+<h4 id="use-uv-seams-2">Use UV Seams</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Use user marked UV seams in object Edit Mode. Default: On.</p>
+<h4 id="gizmo-helpers-6">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.</p>
+<h4 id="uv-name-6">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="extend-seams">Extend Seams</h4>
+<h5 id="extend-seams-2">Extend Seams</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Turns extending the seams on or off. Default: On.</p>
+<h5 id="iterations">Iterations</h5>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Number of iterations of extended edges. Default: 8.</p>
+<h4 id="cleanup-seams">Cleanup Seams</h4>
+<h5 id="cleanup-seams-2">Cleanup Seams</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Turns cleaning up the seams on or off. Default: On.</p>
+<h5 id="iterations-2">Iterations</h5>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Number of iterations to remove and cleanup small edges by iterations. Default: 4.</p>
+<h5 id="remove-poles">Remove Poles</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Removes corner and pole edges. You can use a Vertex Group as an Attribute mask. Default: Off.</p>
+<h4 id="uv-unwrap-settings">UV Unwrap Settings</h4>
+<h5 id="island-margin">Island Margin</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Space between islands. Default: 0.001.</p>
+<h5 id="fill-holes">Fill Holes</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Virtually fill holes in mesh before unwrapping, to better avoid overlaps and preserve symmetry. Default: Off.</p>
+<h5 id="method-3">Method</h5>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>The method of UV island packing. Default: Angle Based.</p>
+<h5 id="iterations-3">Iterations</h5>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Number of iterations to run the SLIM solver to unwrap UVs. Default: 10.</p>
+<h4 id="use-selection-15">Use Selection</h4>
+<h5 id="use-selection-16">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-8">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-8">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-8">Outputs</h3>
+<h4 id="geometry-16">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="sphere-uv">Sphere UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv.png" alt="Sphere UV asset thumbnail" loading="lazy"><figcaption>Sphere UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-node.png" alt="The Sphere UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png" alt="Sphere UV" loading="lazy"></figure>
+<p>Creates sphere projected UV coordinates, with longitude and latitude. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the poles.</p>
+<h3 id="inputs-9">Inputs</h3>
+<h4 id="geometry-17">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="mode-4">Mode</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Toggles if the UV should evaluate on an individual island or all islands. Default: All.</p>
+<h4 id="island-index-5">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="scale-longitude">Scale Longitude</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale the UV along the horizontal longitude axis. Default: 1.</p>
+<h4 id="scale-latitude">Scale Latitude</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale the UV along the vertical latitude axis. Default: 1.</p>
+<h4 id="axis-5">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: Z.</p>
+<h4 id="uv-map-3">UV Map</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="gizmo-helpers-7">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.</p>
+<h4 id="pole-settings-3">Pole Settings</h4>
+<h5 id="pole-pinch">Pole Pinch</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Pinches the pole to get cleaner UVs at the axis poles. Default: On.</p>
+<h5 id="pole-center-3">Pole Center</h5>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Translates the axis pole center with an offset.</p>
+<h5 id="tilt-3">Tilt</h5>
+<p class="ui-doc-dtype" style="--dt:#a463c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Rotation</b></p>
+<p>Rotates and tilts the axis pole by degrees.</p>
+<h4 id="use-selection-17">Use Selection</h4>
+<h5 id="use-selection-18">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-9">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-9">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-9">Outputs</h3>
+<h4 id="geometry-18">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="sphere-uv-island">Sphere UV Island</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv-island.png" alt="Sphere UV Island asset thumbnail" loading="lazy"><figcaption>Sphere UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island-node.png" alt="The Sphere UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island.png" alt="Sphere UV Island" loading="lazy"></figure>
+<p>Creates sphere projected UV coordinates on a single island. Island Index chooses the island. It works like Sphere UV with Mode set to one island.</p>
+<h3 id="gizmos-5">Gizmos</h3>
+<p>The projection sphere is drawn in the viewport and has gizmos on the selected island:</p>
+<ul>
+<li><strong>Linear gizmos</strong> change <strong>Scale Longitude</strong> and <strong>Scale Latitude</strong>.</li>
+<li><strong>Dial gizmos</strong> (red, green, blue) rotate the projection around X, Y and Z. This is the same as the <strong>Tilt</strong> input.</li>
+</ul>
+<h3 id="inputs-10">Inputs</h3>
+<h4 id="geometry-19">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="island-index-6">Island Index</h4>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>The mesh Island Index. This defines where the gizmos will also draw. Default: 0.</p>
+<h4 id="scale-longitude-2">Scale Longitude</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale the UV along the horizontal longitude axis. Default: 1.</p>
+<h4 id="scale-latitude-2">Scale Latitude</h4>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale the UV along the vertical latitude axis. Default: 1.</p>
+<h4 id="axis-6">Axis</h4>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Changes the active axis of the UV Projection. Default: Z.</p>
+<h4 id="uv-map-4">UV Map</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="gizmo-helpers-8">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil to assist tuning other gizmos. These will not render. Default: Off.</p>
+<h4 id="pole-settings-4">Pole Settings</h4>
+<h5 id="pole-pinch-2">Pole Pinch</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Pinches the pole to get cleaner UVs at the axis poles. Default: On.</p>
+<h5 id="pole-center-4">Pole Center</h5>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Translates the axis pole center with an offset.</p>
+<h5 id="tilt-4">Tilt</h5>
+<p class="ui-doc-dtype" style="--dt:#a463c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Rotation</b></p>
+<p>Rotates and tilts the axis pole by degrees.</p>
+<h4 id="use-selection-19">Use Selection</h4>
+<h5 id="use-selection-20">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-10">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-10">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-10">Outputs</h3>
+<h4 id="geometry-20">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<h2 id="triplanar-uv">Triplanar UV</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/thumbs/triplanar-uv.png" alt="Triplanar UV asset thumbnail" loading="lazy"><figcaption>Triplanar UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv-node.png" alt="The Triplanar UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Triplanar UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png" alt="Triplanar UV" loading="lazy"></figure>
+<p>Creates triplanar cube projected UV coordinates, with scaling that stays relative to the object. Translation, Rotation and Scale move the projection.</p>
+<h3 id="gizmos-6">Gizmos</h3>
+<p>The projection box is drawn in the viewport and has gizmos:</p>
+<ul>
+<li><strong>Linear gizmos</strong> per axis move the box (<strong>Translation</strong>) and scale it (<strong>Scale</strong>). The white linear gizmo scales all three axes together.</li>
+<li><strong>Dial gizmos</strong> (red, green, blue) set the <strong>Rotation</strong> around X, Y and Z.</li>
+</ul>
+<h3 id="inputs-11">Inputs</h3>
+<h4 id="geometry-21">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh to create the UV coordinates for.</p>
+<h4 id="relative-position">Relative Position</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles relative UV positions to world space or local space. Default: On.</p>
+<h4 id="translation">Translation</h4>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Translates the triplanar UV projection in XYZ vectors.</p>
+<h4 id="rotation-2">Rotation</h4>
+<p class="ui-doc-dtype" style="--dt:#a463c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Rotation</b></p>
+<p>Rotates the triplanar UV projection.</p>
+<h4 id="scale-2">Scale</h4>
+<p class="ui-doc-dtype" style="--dt:#6363c7"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Vector</b></p>
+<p>Scales the triplanar UV projection.</p>
+<h4 id="gizmo-helpers-9">Gizmo Helpers</h4>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles helper gizmos made with Grease Pencil. These will not render. Default: On.</p>
+<h4 id="uv-name-7">UV Name</h4>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>Defines the name of the UVMap to be referenced either on the mesh data or as an attribute in the material. Default: UVMap.</p>
+<h4 id="pack-uv-islands-5">Pack UV Islands</h4>
+<h5 id="pack-uv-islands-6">Pack UV Islands</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles UV Island Packing. Default: Off.</p>
+<h5 id="island-margin-2">Island Margin</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Adjusts the UV island margins. Default: 0.001.</p>
+<h5 id="rotate-3">Rotate</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles if the packing rotates UV Islands for a best fit. Default: On.</p>
+<h5 id="method-4">Method</h5>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>The method of UV island packing. Default: Bounding Box.</p>
+<h4 id="use-selection-21">Use Selection</h4>
+<h5 id="use-selection-22">Use Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Set UVs on a Vertex Group Selection. Default: Off.</p>
+<h5 id="vertex-group-11">Vertex Group</h5>
+<p class="ui-doc-dtype" style="--dt:#70b2ff"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>String</b></p>
+<p>The name of the Vertex Group to set UVs.</p>
+<h5 id="attribute-selection-11">Attribute Selection</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Or set the selection by attribute with a boolean on a domain. Default: Off.</p>
+<h3 id="outputs-11">Outputs</h3>
+<h4 id="geometry-22">Geometry</h4>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
+<p><em>The Mesh Operations assets will be documented here.</em></p>
+<h1 id="normals">Normals</h1>
+<h2 id="smart-mesh-blend-by-proximity">Smart Mesh Blend by Proximity</h2>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694ad96f61365e532ba6c473_009_document_start.webp" alt="Smart Mesh Blend by Proximity" loading="lazy"><figcaption>Smart Mesh Blend by Proximity</figcaption></figure>
+<p>Adds an object that references a collection to merge all children mesh objects with blended normals and materials by proximity, through intersection distance and blur. This also displaces meshes at intersections.</p>
+<p>This asset is ideal for smoothing transitions between intersecting surfaces, faking lighting continuity, or unifying shading across modular components.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> In order to blend reliably, you will need topology to interpolate the blending. This means you will need to either subdivide, bevel or remesh your source meshes to blend smoothly. If you use only default cubes and a plane, it won't blend due to a lack of topology, but if you use a rounded subdivided cube with bevels and a grid, it will blend.</p></div>
+<h3 id="use-the-wizard">Use: the Wizard</h3>
+<p>This contains a setup Wizard to begin.</p>
+<ol>
+<li><strong>Drag and drop the asset</strong> into the scene from the Asset Shelf or Asset Browser.</li>
+<li>You will be prompted to select a <strong>Target Collection</strong>; this will then convert the target collection into driver objects.</li>
+<li>Toggle optional <strong>Bounds Display</strong>, <strong>Relative Position</strong> and <strong>Material Blending</strong>. This will change and affect the Target Collection viewport display after applying. You can add or remove properties from the Target Collection by rerunning the Wizard and toggling the settings.</li>
+<li>After confirming, this will create a new purple collection with a new Smart Mesh Blend by Proximity object. This is where the blended mesh is stored.</li>
+<li>Change the settings by selecting the blended mesh and going to the Item tab in the Viewport Sidebar or the Modifier tab in the Properties Editor.</li>
+</ol>
+<h4 id="asset-structure">Asset Structure</h4>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694aefc1690bcba927ab5fe1_3c.jpg" alt="Asset structure" loading="lazy"></figure>
+<ul>
+<li>The <strong>Blend Normals by Proximity object</strong> is where the Geometry Nodes asset is stored. This is where the settings are stored.</li>
+<li>The <strong>Purple collection</strong> is where the asset is stored as a point of reference.</li>
+<li>The <strong>Default Blend Collection</strong> can be used as a reference if you have no Target Collection.</li>
+</ul>
+<h4 id="wizard-options">Wizard Options</h4>
+<figure class="is-right"><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694ad9d2e4a404d95df9820c_036_document_start.png" alt="Wizard dialogue that pops up" loading="lazy"><figcaption>Wizard dialogue that pops up</figcaption></figure>
+<h5 id="target-collection">Target Collection</h5>
+<p>Specifies the collection of the group of mesh objects used to influence the normal blending.</p>
+<h5 id="apply-blend-to-materials">Apply Blend to Materials</h5>
+<p>This applies an intersection gradient alpha node group to the target collection object materials. This will iterate through all objects and materials and then apply the alpha at the Geometry Nodes intersection.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If you add new materials or objects to the target collection, re-running the wizard will re-apply to those new materials and objects.</p></div>
+<p>If you toggle this option off and re-apply the Wizard, it will remove the Material Blend from all materials and objects in the target collection.</p>
+<h5 id="use-relative-position">Use Relative Position</h5>
+<p>This will enable the relative position of the source target collection objects, making the new blended mesh snap to the original position. If you keep this off, the new blended mesh will spawn or move to its asset placement position.</p>
+<h5 id="enable-bounds-display">Enable Bounds Display</h5>
+<p>This will turn on Bounds display for all the objects in the target collection, useful to remove any z-fighting normals when using a Relative Position on the new blended normals mesh object.</p>
+<p>If you turn it off and re-run and re-apply the wizard, it will remove the Bounds display from all objects in the target collection.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If you add new objects to the target collection, re-running the wizard will re-apply the visibility settings on the new objects.</p></div>
+<h3 id="modifier-properties">Modifier Properties</h3>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694adbda6b7a87ffd293152d_037_document_start.png" alt="Modifier properties" loading="lazy"></figure>
+<h4 id="target-collection-2">Target Collection</h4>
+<p>Specifies the group of objects used to influence the normal blending.</p>
+<h4 id="normal-distance">Normal Distance</h4>
+<p>Sets the range within which intersecting geometry will contribute to the normal blending by proximity process.</p>
+<h4 id="blending-iterations">Blending Iterations</h4>
+<p>Adds another blending iteration to the group of objects to assist in solving self-intersecting blending issues. This will affect performance as this repeats the operation.</p>
+<h4 id="relative-position-2">Relative Position</h4>
+<p>When enabled, calculates blending based on object-relative coordinates. Useful for maintaining orientation consistency with source objects from the target collection.</p>
+<h4 id="quality">Quality</h4>
+<p>This defines the quality of the normal blending which affects performance.</p>
+<ul>
+<li><strong>High</strong>: Uses blending by proximity. Default. This can be low on performance if there are many islands or instances being evaluated.</li>
+<li><strong>Low</strong>: Uses a &quot;neutral&quot; normal at the intersections. This is more performant but less noticeable.</li>
+</ul>
+<h4 id="process">Process</h4>
+<p>This defines the method the blending evaluates mesh islands or instances.</p>
+<ul>
+<li><strong>Islands</strong>: Uses blending by proximity. Default. This can be low on performance if there are many islands or instances being evaluated.</li>
+<li><strong>Instances</strong>: Uses a &quot;neutral&quot; normal at the intersections. This is more performant but less noticeable.</li>
+</ul>
+<h4 id="material-blend">Material Blend</h4>
+<h5 id="strength">Strength</h5>
+<p>Controls how strongly materials are blended at the intersections.</p>
+<h5 id="offset-2">Offset</h5>
+<p>Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins.</p>
+<h5 id="debug-intersections">Debug Intersections</h5>
+<p>Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture.</p>
+<h5 id="noise">Noise</h5>
+<p>Adds procedural noise to the blend region. Useful for organic or stylized transitions.</p>
+<h6 id="scale-3">Scale</h6>
+<p>Controls the scale of the noise pattern. Higher values produce larger, more visible noise features.</p>
+<h4 id="intersection-displacement">Intersection Displacement</h4>
+<p>Enables geometry displacement at intersection zones. Controls how intersection regions between meshes are offset and displaced before normal blending. Used to create bulges, dents, or organic merging effects.</p>
+<h5 id="distance">Distance</h5>
+<p>The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface.</p>
+<h5 id="offset-3">Offset</h5>
+<p>Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts.</p>
+<h5 id="blur">Blur</h5>
+<p>Softens the influence of blended normals across adjacent geometry.</p>
+<h6 id="iterations-4">Iterations</h6>
+<p>Number of smoothing passes on the displacement.</p>
+<h6 id="weight">Weight</h6>
+<p>Intensity of smoothing. Higher values lead to broader averaging.</p>
+<h4 id="normal-blur">Normal Blur</h4>
+<p>Optional secondary blur targeting only normals.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This only blurs normals at the intersections. Object normals are preserved.</p></div>
+<h5 id="iterations-5">Iterations</h5>
+<p>Number of blur passes applied to normals.</p>
+<h5 id="weight-2">Weight</h5>
+<p>Strength of normals blur smoothing.</p>
+<h4 id="material-override">Material Override</h4>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/694af1aac890202d4ed93dd6_024_document_start.png" alt="Material override" loading="lazy"></figure>
+<p>Toggles material overrides; otherwise each object inherits its material from the target collection.</p>
+<h5 id="material-2">Material</h5>
+<p>Selects the material for the material override.</p>
+<h5 id="inherit-material">Inherit Material</h5>
+<p>This toggles the use of the material in the Material tab of the Properties editor as the override.</p>
+<h4 id="info">Info</h4>
+<p>Displays how many mesh islands are currently being blended. Useful for performance monitoring and debugging.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This may also show when the target collection is nested, or if there are not enough objects to blend.</p></div>
+<h1 id="primitives">Primitives</h1>
+<p>Smart Primitives are shapes built with geometry nodes. Drag one into the scene from the Asset Shelf or the Asset Browser, then change it with the gizmos in the 3D Viewport or with its properties. Nothing is destructive until you apply it.</p>
+<h2 id="using-the-gizmos">Using the Gizmos</h2>
+<p>Select a Smart Primitive and its gizmos appear in the 3D Viewport. A gizmo is a handle you drag to change a setting without typing a number. The color and the shape tell you what a gizmo changes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Gizmo</th>
+<th>Color</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟥 Square</td>
+<td>🔴🟢🔵 Red, green, blue (X, Y, Z)</td>
+<td>📏 Scales the primitive along that axis</td>
+</tr>
+<tr>
+<td>➡️ Arrow</td>
+<td>🔴🟢🔵 Red, green, blue (X, Y, Z)</td>
+<td>🔁 Loop resolution along that axis</td>
+</tr>
+<tr>
+<td>⭕ Circle</td>
+<td>🟡 Primary (yellow)</td>
+<td>🔄 Revolve Angle</td>
+</tr>
+<tr>
+<td>🟨 Square</td>
+<td>🟡 Primary (yellow)</td>
+<td>🔍 Scale All</td>
+</tr>
+<tr>
+<td>↗️ Arrow</td>
+<td>🟡 Primary (yellow)</td>
+<td>🌀 Bend the profile</td>
+</tr>
+<tr>
+<td>➡️ Arrow</td>
+<td>🔵 Secondary (cyan)</td>
+<td>🧊 Bevel Resolution</td>
+</tr>
+<tr>
+<td>🟦 Square</td>
+<td>🔵 Secondary (cyan)</td>
+<td>📐 Bevel Scale</td>
+</tr>
+</tbody>
+</table>
+<p>Not every primitive has every gizmo. Each asset below lists the gizmos it has.</p>
+<h2 id="properties-and-operators">Properties and operators</h2>
+<p>Every Smart Primitive can also be changed with numbers, in the <strong>Asset Properties</strong> panel of the 3D View sidebar (<strong>Item</strong> tab) or in its Geometry Nodes modifier. The properties are grouped into top-level, bevel, resolution and UV properties. To turn Smart Primitives into regular meshes, use <strong><span class="ui-doc-menu">Object › Apply</span></strong>, with the Join, Boolean and Remesh options. Both are explained in <a href="https://github.com/Bforartists/Manual/blob/docs2/assets-geo-screens-v2/docs2/content/assets/default-library.md#using-the-sidebar-to-change-asset-properties">Default Library</a>.</p>
+<h2 id="basic-shapes">Basic Shapes</h2>
+<h3 id="cube">Cube</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cube-thumb.png" alt="Cube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cube.png" alt="Cube with its gizmos" loading="lazy"><figcaption>Cube with its gizmos</figcaption></figure></div>
+<p>A standard six-sided shape, great for solid modeling. Includes relative UVs and resolution gizmos.</p>
+<p>This asset uses the <strong>Smart Cube</strong> node group.</p>
+<h4 id="gizmos-7">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 3</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="x">X</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the width of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="y">Y</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the depth of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="z">Z</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="resolution">Resolution</h5>
+<h6 id="x-2">X</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="y-2">Y</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="z-2">Z</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 3.</p>
+<h5 id="uvs">UVs</h5>
+<h6 id="relative">Relative</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Creates a triplanar UV projection that is relative to object scale. Default: on.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="geometry-23">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cube-rounded">Cube Rounded</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded-thumb.png" alt="Cube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded.png" alt="Cube Rounded with its gizmos" loading="lazy"><figcaption>Cube Rounded with its gizmos</figcaption></figure></div>
+<p>A cube with softened edges for a more organic feel.</p>
+<p>This asset uses the <strong>Smart Cube Rounded</strong> node group.</p>
+<h4 id="gizmos-8">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 3</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-13">Inputs</h4>
+<h5 id="x-3">X</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the width of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="y-3">Y</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the depth of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="z-3">Z</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="bevel">Bevel</h5>
+<h6 id="bevel-amount">Bevel Amount</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. Default: 50.</p>
+<h6 id="resolution-2">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 3.</p>
+<h5 id="resolution-3">Resolution</h5>
+<h6 id="x-4">X</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="y-4">Y</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="z-4">Z</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 3.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="geometry-24">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="sphere">Sphere</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/sphere-thumb.png" alt="Sphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/sphere.png" alt="Sphere with its gizmos" loading="lazy"><figcaption>Sphere with its gizmos</figcaption></figure></div>
+<p>A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.</p>
+<p>This asset uses the <strong>Smart Sphere</strong> node group.</p>
+<h4 id="gizmos-9">Gizmos</h4>
+<ul>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bend profile</strong>: 1</li>
+</ul>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="radius-2">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="resolution-4">Resolution</h5>
+<h6 id="horizontal">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="vertical">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 32.</p>
+<h5 id="uvs-2">UVs</h5>
+<h6 id="relative-2">Relative</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Creates a UV projection that is relative to object scale. Default: off.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="geometry-25">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="icosphere">Icosphere</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/icosphere-thumb.png" alt="Icosphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/icosphere.png" alt="Icosphere with its gizmos" loading="lazy"><figcaption>Icosphere with its gizmos</figcaption></figure></div>
+<p>A low-poly spherical shape made of triangles, great for optimization, with various levels of resolution.</p>
+<p>This asset uses the <strong>Smart Icosphere</strong> node group.</p>
+<h4 id="gizmos-10">Gizmos</h4>
+<ul>
+<li><strong>Bend profile</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="radius-3">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="resolution-5">Resolution</h5>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Subdivisions of the icosphere. Default: 1.</p>
+<h5 id="uvs-3">UVs</h5>
+<h6 id="relative-3">Relative</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Creates a UV projection that is relative to object scale. Default: on.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="geometry-26">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cone">Cone</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone-thumb.png" alt="Cone thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone.png" alt="Cone with its gizmos" loading="lazy"><figcaption>Cone with its gizmos</figcaption></figure></div>
+<p>A tapered shape with a circular base, useful for pointed structures.</p>
+<p>This asset uses the <strong>Smart Cone</strong> node group.</p>
+<h4 id="gizmos-11">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+</ul>
+<h4 id="inputs-16">Inputs</h4>
+<h5 id="height">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Change the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="radius-4">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="resolution-6">Resolution</h5>
+<h6 id="horizontal-2">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 10.</p>
+<h6 id="vertical-2">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="base">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 4.</p>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="geometry-27">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cone-rounded">Cone Rounded</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-thumb.png" alt="Cone Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded.png" alt="Cone Rounded with its gizmos" loading="lazy"><figcaption>Cone Rounded with its gizmos</figcaption></figure></div>
+<p>A cone with a smoother, more organic tip.</p>
+<p>This asset uses the <strong>Smart Cone Rounded</strong> node group.</p>
+<h4 id="gizmos-12">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+</ul>
+<h4 id="inputs-17">Inputs</h4>
+<h5 id="height-2">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="radius-5">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="bevel-2">Bevel</h5>
+<h6 id="radius-6">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.</p>
+<h6 id="resolution-7">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 3.</p>
+<h5 id="resolution-8">Resolution</h5>
+<h6 id="horizontal-3">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="vertical-3">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="base-2">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 3.</p>
+<h4 id="outputs-17">Outputs</h4>
+<h5 id="geometry-28">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cylinder">Cylinder</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-thumb.png" alt="Cylinder thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder.png" alt="Cylinder with its gizmos" loading="lazy"><figcaption>Cylinder with its gizmos</figcaption></figure></div>
+<p>A uniform circular primitive, essential for pipes and tubes.</p>
+<p>This asset uses the <strong>Smart Cylinder</strong> node group.</p>
+<h4 id="gizmos-13">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-18">Inputs</h4>
+<h5 id="radius-7">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="height-3">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="resolution-9">Resolution</h5>
+<h6 id="horizontal-4">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 5.</p>
+<h6 id="vertical-4">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="base-3">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 3.</p>
+<h4 id="outputs-18">Outputs</h4>
+<h5 id="geometry-29">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cylinder-rounded">Cylinder Rounded</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-thumb.png" alt="Cylinder Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded.png" alt="Cylinder Rounded with its gizmos" loading="lazy"><figcaption>Cylinder Rounded with its gizmos</figcaption></figure></div>
+<p>A cylinder with softened edges for better transitions.</p>
+<p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Revolved, Cylinder Rounded Revolved; each asset starts from its own settings.</p>
+<h4 id="gizmos-14">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-19">Inputs</h4>
+<h5 id="angle-3">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.</p>
+<h5 id="height-4">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 1.</p>
+<h5 id="width">Width</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1.</p>
+<h5 id="bevel-3">Bevel</h5>
+<h6 id="radius-8">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. Default: 25.</p>
+<h6 id="resolution-10">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 4.</p>
+<h5 id="resolution-11">Resolution</h5>
+<h6 id="horizontal-5">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-5">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="triangulate-center">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-19">Outputs</h4>
+<h5 id="geometry-30">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="tube">Tube</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-thumb.png" alt="Tube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube.png" alt="Tube with its gizmos" loading="lazy"><figcaption>Tube with its gizmos</figcaption></figure></div>
+<p>A hollow cylindrical primitive, great for mechanical parts.</p>
+<p>This asset uses the <strong>Smart Tube Revolved</strong> node group. The same group is used by Tube Revolved; each asset starts from its own settings.</p>
+<h4 id="gizmos-15">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+</ul>
+<h4 id="inputs-20">Inputs</h4>
+<h5 id="angle-4">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.</p>
+<h5 id="radius-9">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="height-5">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="inner-radius">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="resolution-12">Resolution</h5>
+<h6 id="horizontal-6">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-6">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="base-4">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 2.</p>
+<h6 id="triangulate-center-2">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-2">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-20">Outputs</h4>
+<h5 id="geometry-31">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="tube-rounded">Tube Rounded</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-thumb.png" alt="Tube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded.png" alt="Tube Rounded with its gizmos" loading="lazy"><figcaption>Tube Rounded with its gizmos</figcaption></figure></div>
+<p>A tube with smooth edges for a more natural look.</p>
+<p>This asset uses the <strong>Smart Tube Rounded Revolved</strong> node group. The same group is used by Tube Rounded Revolved; each asset starts from its own settings.</p>
+<h4 id="gizmos-16">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+</ul>
+<h4 id="inputs-21">Inputs</h4>
+<h5 id="angle-5">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.</p>
+<h5 id="radius-10">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="inner-radius-2">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="height-6">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="bevel-4">Bevel</h5>
+<h6 id="radius-11">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius percentage of the bevel. Default: 0.15 m.</p>
+<h6 id="resolution-13">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 3.</p>
+<h5 id="resolution-14">Resolution</h5>
+<h6 id="horizontal-7">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-7">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="base-5">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 2.</p>
+<h6 id="triangulate-center-3">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-3">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-21">Outputs</h4>
+<h5 id="geometry-32">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h2 id="advanced-forms">Advanced Forms</h2>
+<h3 id="capsule">Capsule</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/capsule-thumb.png" alt="Capsule thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/capsule.png" alt="Capsule with its gizmos" loading="lazy"><figcaption>Capsule with its gizmos</figcaption></figure></div>
+<p>A stretched sphere useful for stylized characters and smooth objects.</p>
+<p>This asset uses the <strong>Smart Capsule</strong> node group.</p>
+<h4 id="gizmos-17">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+</ul>
+<h4 id="inputs-22">Inputs</h4>
+<h5 id="height-7">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="radius-12">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 0.5 m.</p>
+<h5 id="cap">Cap</h5>
+<h6 id="resolution-15">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the cap geometry edges/loops resolution. Default: 8.</p>
+<h6 id="height-8">Height</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Changes the height of the cap with a factor. Smaller values flattens the cap. Default: 1.</p>
+<h6 id="corrective-tangent">Corrective Tangent</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Controls the corrrective tangent of the cap. Tangent can be positive or negative. Useful to correct the cap shape. Default: 0.03.</p>
+<h5 id="resolution-16">Resolution</h5>
+<h6 id="horizontal-8">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="vertical-8">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 6.</p>
+<h4 id="outputs-22">Outputs</h4>
+<h5 id="geometry-33">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="capsule-revolved">Capsule Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved-thumb.png" alt="Capsule Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved.png" alt="Capsule Revolved with its gizmos" loading="lazy"><figcaption>Capsule Revolved with its gizmos</figcaption></figure></div>
+<p>A capsule rotated for unique geometry shaping. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Capsule Revolved</strong> node group.</p>
+<h4 id="gizmos-18">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-23">Inputs</h4>
+<h5 id="angle-6">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 271.5°.</p>
+<h5 id="height-9">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 1 m. This asset starts at 1.8 m.</p>
+<h5 id="radius-13">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 0.5 m.</p>
+<h5 id="cap-2">Cap</h5>
+<h6 id="resolution-17">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the cap geometry edges/loops resolution. Default: 8.</p>
+<h6 id="height-10">Height</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Control the cap height roundeness or flattness. Default: 1.</p>
+<h6 id="corrective-tangent-2">Corrective Tangent</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Controls the tangent of the roundness of the cap. Useful to correct the shape. Default: 0.03.</p>
+<h5 id="resolution-18">Resolution</h5>
+<h6 id="horizontal-9">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-9">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="triangulate-center-4">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-4">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-23">Outputs</h4>
+<h5 id="geometry-34">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="grid">Grid</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/grid-thumb.png" alt="Grid thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/grid.png" alt="Grid with its gizmos" loading="lazy"><figcaption>Grid with its gizmos</figcaption></figure></div>
+<p>A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative UVs.</p>
+<p>This asset uses the <strong>Smart Grid</strong> node group.</p>
+<h4 id="gizmos-19">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-24">Inputs</h4>
+<h5 id="x-5">X</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the width of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="y-5">Y</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="resolution-19">Resolution</h5>
+<h6 id="x-6">X</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 5.</p>
+<h6 id="y-6">Y</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 5.</p>
+<h5 id="uvs-4">UVs</h5>
+<h6 id="relative-4">Relative</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Creates a UV projection that is relative to object scale. Default: on.</p>
+<h4 id="outputs-24">Outputs</h4>
+<h5 id="geometry-35">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="torus">Torus</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/torus-thumb.png" alt="Torus thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/torus.png" alt="Torus with its gizmos" loading="lazy"><figcaption>Torus with its gizmos</figcaption></figure></div>
+<p>A ring-shaped primitive, ideal for looped structures.</p>
+<p>This asset uses the <strong>Smart Torus</strong> node group. The same group is used by Torus Revolved; each asset starts from its own settings.</p>
+<h4 id="gizmos-20">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 2</li>
+<li><strong>Size</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-25">Inputs</h4>
+<h5 id="angle-7">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.</p>
+<h5 id="radius-14">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="thickness">Thickness</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the thickness. Default: 0.25 m.</p>
+<h5 id="twist">Twist</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Controls the twist of the torus is not fully revolved. Default: 0°.</p>
+<h5 id="resolution-20">Resolution</h5>
+<h6 id="horizontal-10">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 8.</p>
+<h6 id="vertical-10">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="triangulate-caps">Triangulate Caps</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the cap faces to remove NGONs. Default: off.</p>
+<h4 id="outputs-25">Outputs</h4>
+<h5 id="geometry-36">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="torus-revolved">Torus Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved-thumb.png" alt="Torus Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved.png" alt="Torus Revolved with its gizmos" loading="lazy"><figcaption>Torus Revolved with its gizmos</figcaption></figure></div>
+<p>A torus rotated for specialized forms. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Torus</strong> node group. The same group is used by Torus; each asset starts from its own settings.</p>
+<h4 id="gizmos-21">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 2</li>
+<li><strong>Size</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-26">Inputs</h4>
+<h5 id="angle-8">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="radius-15">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="thickness-2">Thickness</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the thickness. Default: 0.25 m.</p>
+<h5 id="twist-2">Twist</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Controls the twist of the torus is not fully revolved. Default: 0°.</p>
+<h5 id="resolution-21">Resolution</h5>
+<h6 id="horizontal-11">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 8.</p>
+<h6 id="vertical-11">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="triangulate-caps-2">Triangulate Caps</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the cap faces to remove NGONs. Default: off.</p>
+<h4 id="outputs-26">Outputs</h4>
+<h5 id="geometry-37">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="spiral">Spiral</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/spiral-thumb.png" alt="Spiral thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/spiral.png" alt="Spiral with its gizmos" loading="lazy"><figcaption>Spiral with its gizmos</figcaption></figure></div>
+<p>A coiled shape, useful for decorative and mechanical designs.</p>
+<p>This asset uses the <strong>Smart Spiral</strong> node group.</p>
+<h4 id="gizmos-22">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 3</li>
+<li><strong>Revolve Angle</strong>: 2</li>
+<li><strong>Bevel Scale</strong>: 2</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bend profile</strong>: 1</li>
+</ul>
+<h4 id="inputs-27">Inputs</h4>
+<h5 id="height-11">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="rotations">Rotations</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the rotations amount of the spiral. Default: 3.</p>
+<h5 id="start-radius">Start Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the start of the spiral radius. Default: 1 m.</p>
+<h5 id="end-radius">End Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the end of the spiral radius. Default: 0.25 m.</p>
+<h5 id="profile">Profile</h5>
+<h6 id="radius-16">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the profile that is lofted on the spiral. Default: 0.2 m.</p>
+<h6 id="taper">Taper</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Changes the taper of the spiral by a factor. Negative values thickens the end radius. Default: 0.</p>
+<h6 id="twist-3">Twist</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the tilt of the profile loft which creates a twist. Default: 0°.</p>
+<h5 id="resolution-22">Resolution</h5>
+<h6 id="horizontal-12">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 12.</p>
+<h6 id="vertical-12">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 32.</p>
+<h6 id="triangulate-caps-3">Triangulate Caps</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the cap faces to remove NGONs. Default: off.</p>
+<h5 id="uvs-5">UVs</h5>
+<h6 id="scale-4">Scale</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale the UVs. Default: 2.</p>
+<h6 id="u-scale">U Scale</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale UV's on the U axis. Default: 0.</p>
+<h6 id="v-scale">V Scale</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Scale UV's on the V axis. Default: 0.</p>
+<h4 id="outputs-27">Outputs</h4>
+<h5 id="geometry-38">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="circle">Circle</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/circle-thumb.png" alt="Circle thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/circle.png" alt="Circle with its gizmos" loading="lazy"><figcaption>Circle with its gizmos</figcaption></figure></div>
+<p>A simple 2D shape for base geometry and cutouts. Includes stamped or path based UVs.</p>
+<p>This asset uses the <strong>Smart Circle</strong> node group.</p>
+<h4 id="gizmos-23">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+</ul>
+<h4 id="inputs-28">Inputs</h4>
+<h5 id="outer-radius">Outer Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the outer radius in unit sizes. Default: 1 m.</p>
+<h5 id="inner-radius-3">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="inner-height">Inner Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Change the inner edge height offset. This is clamped to 1, but it is essentially limitless. Default: 0.</p>
+<h5 id="resolution-23">Resolution</h5>
+<h6 id="horizontal-13">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 32.</p>
+<h6 id="vertical-13">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 4.</p>
+<h5 id="uvs-6">UVs</h5>
+<h6 id="stamped-uvs">Stamped UVs</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Changes the UV's to stamped UV's, which is a flat top down projection. Otherwise, use path based UVs. Default: off.</p>
+<h4 id="outputs-28">Outputs</h4>
+<h5 id="geometry-39">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="circle-revolved">Circle Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved-thumb.png" alt="Circle Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved.png" alt="Circle Revolved with its gizmos" loading="lazy"><figcaption>Circle Revolved with its gizmos</figcaption></figure></div>
+<p>A circular shape rotated into a 3D form. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Circle Revolved</strong> node group.</p>
+<h4 id="gizmos-24">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-29">Inputs</h4>
+<h5 id="angle-9">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="outer-radius-2">Outer Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the outer radius in unit sizes. Default: 1 m.</p>
+<h5 id="inner-radius-4">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="inner-height-2">Inner Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Change the inner edge height offset. This is clamped to 1, but it is essentially limitless. Default: 0.</p>
+<h5 id="resolution-24">Resolution</h5>
+<h6 id="horizontal-14">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 32.</p>
+<h6 id="vertical-14">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 4.</p>
+<h5 id="uvs-7">UVs</h5>
+<h6 id="stamped-uvs-2">Stamped UVs</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Changes the UV's to stamped UV's, which is a flat top down projection. Otherwise, use path based UVs. Default: off.</p>
+<h4 id="outputs-29">Outputs</h4>
+<h5 id="geometry-40">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="curve-lofted">Curve Lofted</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted-thumb.png" alt="Curve Lofted thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted.png" alt="Curve Lofted with its gizmos" loading="lazy"><figcaption>Curve Lofted with its gizmos</figcaption></figure></div>
+<p>Generates complex surfaces using lofted curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.</p>
+<p>This asset uses the <strong>Smart Curve Lofted</strong> node group.</p>
+<h4 id="gizmos-25">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 3</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Scale</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Bend profile</strong>: 1</li>
+</ul>
+<h4 id="inputs-30">Inputs</h4>
+<h5 id="volume">Volume</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Controls the volume of the lofted curve or grease pencil. Default: 2.</p>
+<h5 id="tips">Tips</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the width of the tips of the loftes curve or grease pencil. Default: 0.</p>
+<h5 id="bias">Bias</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Changes the bias of volume to the start or end of the curve or grease pencil. Default: 0.5.</p>
+<h5 id="helper-gizmos">Helper Gizmos</h5>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles the custom object selector if you want to use a grease pencil or another curve object. Default: on.</p>
+<h5 id="custom-object">Custom Object</h5>
+<h6 id="custom-object-2">Custom Object</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Toggles the custom object selector if you want to use a grease pencil or another curve object. Default: off.</p>
+<h6 id="curve-object">Curve Object</h6>
+<p class="ui-doc-dtype" style="--dt:#ed9e5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Object</b></p>
+<p>Chooses the custom object or grease pencil.</p>
+<h5 id="profile-2">Profile</h5>
+<h6 id="width-2">Width</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the width of the profile shape that is used to loft. Default: 1.</p>
+<h6 id="depth">Depth</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the depth of the profile shape that is used to loft. Default: 0.72.</p>
+<h6 id="swell">Swell</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the swell of the profile shape that is used to loft. Default: 0.</p>
+<h6 id="bend">Bend</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the internal bend of the profile shape that is used to loft. Default: 0.</p>
+<h5 id="resolution-25">Resolution</h5>
+<h6 id="resolution-method">Resolution Method</h6>
+<p class="ui-doc-dtype" style="--dt:#8a8ad6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Menu</b></p>
+<p>Selects the resample method for horizontal resolution. Warning: length could be imperformant. Default: Count.</p>
+<h6 id="length">Length</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>If the resolution method is by length, this creates a point per length distance unit. Default: 0.1 m.</p>
+<h6 id="count">Count</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>If the resolution method is by count, this creates a total number of points per spline. Default: 10.</p>
+<h6 id="vertical-15">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 5.</p>
+<h6 id="depth-2">Depth</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the depth resolution of the geometry edges/loops. Default: 2.</p>
+<h5 id="bevel-5">Bevel</h5>
+<h6 id="radius-17">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (factor)</b></p>
+<p>Changes the bevel radius factor. Warning: bevel could be imperformant. Default: 0.</p>
+<h6 id="resolution-26">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the resolution of the bevel. Default: 3. This asset starts at 2.</p>
+<h5 id="smoothness">Smoothness</h5>
+<h6 id="inheriit">Inheriit</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Inherits the normals smoothness settings of the Curve object. Warning: Grease Pencil objects do not have smoothness information to inherit. Default: off.</p>
+<h6 id="smooth">Smooth</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Turns normals smoothness override on or off. Useful for Grease Pencil objects. Default: on.</p>
+<h4 id="outputs-30">Outputs</h4>
+<h5 id="geometry-41">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cylinder-revolved">Cylinder Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved-thumb.png" alt="Cylinder Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved.png" alt="Cylinder Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Revolved with its gizmos</figcaption></figure></div>
+<p>A cylindrical shape rotated for varied effects. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Rounded, Cylinder Rounded Revolved; each asset starts from its own settings.</p>
+<h4 id="gizmos-26">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-31">Inputs</h4>
+<h5 id="angle-10">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 270°.</p>
+<h5 id="height-12">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 1.</p>
+<h5 id="width-3">Width</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1.</p>
+<h5 id="bevel-6">Bevel</h5>
+<h6 id="radius-18">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. Default: 25. This asset starts at 0.</p>
+<h6 id="resolution-27">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 4.</p>
+<h5 id="resolution-28">Resolution</h5>
+<h6 id="horizontal-15">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-16">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="triangulate-center-5">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-5">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-31">Outputs</h4>
+<h5 id="geometry-42">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cylinder-rounded-revolved">Cylinder Rounded Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved-thumb.png" alt="Cylinder Rounded Revolved thumbnail" loading="lazy"><figcaption>Cylinder Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved.png" alt="Cylinder Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Rounded Revolved with its gizmos</figcaption></figure></div>
+<p>A rounded cylinder adapted for more curvature. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Revolved, Cylinder Rounded; each asset starts from its own settings.</p>
+<h4 id="gizmos-27">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-32">Inputs</h4>
+<h5 id="angle-11">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="height-13">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 1.</p>
+<h5 id="width-4">Width</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1.</p>
+<h5 id="bevel-7">Bevel</h5>
+<h6 id="radius-19">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. Default: 25.</p>
+<h6 id="resolution-29">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 4.</p>
+<h5 id="resolution-30">Resolution</h5>
+<h6 id="horizontal-16">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-17">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="triangulate-center-6">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-6">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-32">Outputs</h4>
+<h5 id="geometry-43">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="tube-revolved">Tube Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved-thumb.png" alt="Tube Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved.png" alt="Tube Revolved with its gizmos" loading="lazy"><figcaption>Tube Revolved with its gizmos</figcaption></figure></div>
+<p>A tube rotated for improved modeling flexibility. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Tube Revolved</strong> node group. The same group is used by Tube; each asset starts from its own settings.</p>
+<h4 id="gizmos-28">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+</ul>
+<h4 id="inputs-33">Inputs</h4>
+<h5 id="angle-12">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="radius-20">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="height-14">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="inner-radius-5">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="resolution-31">Resolution</h5>
+<h6 id="horizontal-17">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-18">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="base-6">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 2.</p>
+<h6 id="triangulate-center-7">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-7">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-33">Outputs</h4>
+<h5 id="geometry-44">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="tube-rounded-revolved">Tube Rounded Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved-thumb.png" alt="Tube Rounded Revolved thumbnail" loading="lazy"><figcaption>Tube Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved.png" alt="Tube Rounded Revolved with its gizmos" loading="lazy"><figcaption>Tube Rounded Revolved with its gizmos</figcaption></figure></div>
+<p>A smoothed, rotated tube for streamlined designs. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Tube Rounded Revolved</strong> node group. The same group is used by Tube Rounded; each asset starts from its own settings.</p>
+<h4 id="gizmos-29">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 2</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+</ul>
+<h4 id="inputs-34">Inputs</h4>
+<h5 id="angle-13">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="radius-21">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="inner-radius-6">Inner Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.</p>
+<h5 id="height-15">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="bevel-8">Bevel</h5>
+<h6 id="radius-22">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius percentage of the bevel. Default: 0.15 m.</p>
+<h6 id="resolution-32">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 3.</p>
+<h5 id="resolution-33">Resolution</h5>
+<h6 id="horizontal-18">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 6.</p>
+<h6 id="vertical-19">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="base-7">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 2.</p>
+<h6 id="triangulate-center-8">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-8">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-34">Outputs</h4>
+<h5 id="geometry-45">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="cone-rounded-revolved">Cone Rounded Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved-thumb.png" alt="Cone Rounded Revolved thumbnail" loading="lazy"><figcaption>Cone Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved.png" alt="Cone Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cone Rounded Revolved with its gizmos</figcaption></figure></div>
+<p>A tapered primitive that blends sharpness with curvature. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Cone Rounded Revolved</strong> node group.</p>
+<h4 id="gizmos-30">Gizmos</h4>
+<ul>
+<li><strong>Size</strong>: 2</li>
+<li><strong>Loop resolution</strong>: 3</li>
+<li><strong>Bevel Resolution</strong>: 1</li>
+<li><strong>Bevel Scale</strong>: 1</li>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+</ul>
+<h4 id="inputs-35">Inputs</h4>
+<h5 id="angle-14">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="height-16">Height</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the height of the primitive in unit sizes. Default: 2 m.</p>
+<h5 id="radius-23">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="bevel-9">Bevel</h5>
+<h6 id="radius-24">Radius</h6>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float</b></p>
+<p>Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.</p>
+<h6 id="resolution-34">Resolution</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the bevel geometry edges/loops resolution. Default: 3.</p>
+<h5 id="resolution-35">Resolution</h5>
+<h6 id="horizontal-19">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="vertical-20">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 24.</p>
+<h6 id="base-8">Base</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the base resolution of the geometry edges/loops. Default: 3.</p>
+<h6 id="triangulate-center-9">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h6 id="triangulate-all-9">Triangulate All</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates all faces. Default: off.</p>
+<h4 id="outputs-35">Outputs</h4>
+<h5 id="geometry-46">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h3 id="sphere-revolved">Sphere Revolved</h3>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved-thumb.png" alt="Sphere Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b3a04587e1dcdd2150fa0a2d648cde464dee83eb/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved.png" alt="Sphere Revolved with its gizmos" loading="lazy"><figcaption>Sphere Revolved with its gizmos</figcaption></figure></div>
+<p>A sphere adjusted through rotation for unique formations. Includes the ability to revolve around an angle.</p>
+<p>This asset uses the <strong>Smart Sphere Revolved</strong> node group.</p>
+<h4 id="gizmos-31">Gizmos</h4>
+<ul>
+<li><strong>Revolve Angle</strong>: 1</li>
+<li><strong>Scale All</strong>: 1</li>
+<li><strong>Loop resolution</strong>: 2</li>
+<li><strong>Bend profile</strong>: 1</li>
+</ul>
+<h4 id="inputs-36">Inputs</h4>
+<h5 id="angle-15">Angle</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (angle)</b></p>
+<p>Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.</p>
+<h5 id="radius-25">Radius</h5>
+<p class="ui-doc-dtype" style="--dt:#a1a1a1"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Float (distance)</b></p>
+<p>Changes the radius of the primitive in unit sizes. Default: 1 m.</p>
+<h5 id="resolution-36">Resolution</h5>
+<h6 id="horizontal-20">Horizontal</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the horizontal resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="vertical-21">Vertical</h6>
+<p class="ui-doc-dtype" style="--dt:#598c5c"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Integer</b></p>
+<p>Changes the vertical resolution of the geometry edges/loops. Default: 16.</p>
+<h6 id="triangulate-center-10">Triangulate Center</h6>
+<p class="ui-doc-dtype" style="--dt:#cca6d6"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Boolean</b></p>
+<p>Triangulates the center faces to remove NGONs. Default: on.</p>
+<h4 id="outputs-36">Outputs</h4>
+<h5 id="geometry-47">Geometry</h5>
+<p class="ui-doc-dtype" style="--dt:#00d6a3"><span class="ui-doc-dtype-dot"></span><span>Data type</span><b>Geometry</b></p>
+<p>The generated shape.</p>
+<h1 id="utilities">Utilities</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fassets-geo-screens-v2/collection/docs/edit/docs2%2Fcontent%2Fassets%2Fgeometry-nodes-library.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/assets-geo-screens-v2/docs2/content/assets/geometry-nodes-library.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#camera-uv">Camera UV</a><a class="h3" href="#gizmos">Gizmos</a><a class="h3" href="#inputs">Inputs</a><a class="h3" href="#outputs">Outputs</a><a class="h2" href="#cube-uv">Cube UV</a><a class="h3" href="#inputs-2">Inputs</a><a class="h3" href="#outputs-2">Outputs</a><a class="h2" href="#cube-uv-island">Cube UV Island</a><a class="h3" href="#gizmos-2">Gizmos</a><a class="h3" href="#inputs-3">Inputs</a><a class="h3" href="#outputs-3">Outputs</a><a class="h2" href="#cut-cylinder-uv">Cut Cylinder UV</a><a class="h3" href="#gizmos-3">Gizmos</a><a class="h3" href="#inputs-4">Inputs</a><a class="h3" href="#outputs-4">Outputs</a><a class="h2" href="#cylinder-uv">Cylinder UV</a><a class="h3" href="#inputs-5">Inputs</a><a class="h3" href="#outputs-5">Outputs</a><a class="h2" href="#cylinder-uv-island">Cylinder UV Island</a><a class="h3" href="#gizmos-4">Gizmos</a><a class="h3" href="#inputs-6">Inputs</a><a class="h3" href="#outputs-6">Outputs</a><a class="h2" href="#generated-uv">Generated UV</a><a class="h3" href="#inputs-7">Inputs</a><a class="h3" href="#outputs-7">Outputs</a><a class="h2" href="#smart-uv">Smart UV</a><a class="h3" href="#inputs-8">Inputs</a><a class="h3" href="#outputs-8">Outputs</a><a class="h2" href="#sphere-uv">Sphere UV</a><a class="h3" href="#inputs-9">Inputs</a><a class="h3" href="#outputs-9">Outputs</a><a class="h2" href="#sphere-uv-island">Sphere UV Island</a><a class="h3" href="#gizmos-5">Gizmos</a><a class="h3" href="#inputs-10">Inputs</a><a class="h3" href="#outputs-10">Outputs</a><a class="h2" href="#triplanar-uv">Triplanar UV</a><a class="h3" href="#gizmos-6">Gizmos</a><a class="h3" href="#inputs-11">Inputs</a><a class="h3" href="#outputs-11">Outputs</a><a class="h2" href="#smart-mesh-blend-by-proximity">Smart Mesh Blend by Proximity</a><a class="h3" href="#use-the-wizard">Use: the Wizard</a><a class="h3" href="#modifier-properties">Modifier Properties</a><a class="h2" href="#using-the-gizmos">Using the Gizmos</a><a class="h2" href="#properties-and-operators">Properties and operators</a><a class="h2" href="#basic-shapes">Basic Shapes</a><a class="h3" href="#cube">Cube</a><a class="h3" href="#cube-rounded">Cube Rounded</a><a class="h3" href="#sphere">Sphere</a><a class="h3" href="#icosphere">Icosphere</a><a class="h3" href="#cone">Cone</a><a class="h3" href="#cone-rounded">Cone Rounded</a><a class="h3" href="#cylinder">Cylinder</a><a class="h3" href="#cylinder-rounded">Cylinder Rounded</a><a class="h3" href="#tube">Tube</a><a class="h3" href="#tube-rounded">Tube Rounded</a><a class="h2" href="#advanced-forms">Advanced Forms</a><a class="h3" href="#capsule">Capsule</a><a class="h3" href="#capsule-revolved">Capsule Revolved</a><a class="h3" href="#grid">Grid</a><a class="h3" href="#torus">Torus</a><a class="h3" href="#torus-revolved">Torus Revolved</a><a class="h3" href="#spiral">Spiral</a><a class="h3" href="#circle">Circle</a><a class="h3" href="#circle-revolved">Circle Revolved</a><a class="h3" href="#curve-lofted">Curve Lofted</a><a class="h3" href="#cylinder-revolved">Cylinder Revolved</a><a class="h3" href="#cylinder-rounded-revolved">Cylinder Rounded Revolved</a><a class="h3" href="#tube-revolved">Tube Revolved</a><a class="h3" href="#tube-rounded-revolved">Tube Rounded Revolved</a><a class="h3" href="#cone-rounded-revolved">Cone Rounded Revolved</a><a class="h3" href="#sphere-revolved">Sphere Revolved</a></aside></div></body></html>
