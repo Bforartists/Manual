@@ -7,7 +7,7 @@ path:
   - Asset Browser
   - Asset Browser - Default Asset LIbrary
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28.1 Asset Browser - Default Asset LIbrary.odt
