@@ -170,9 +170,29 @@ def shared_sections(html, load_snippet):
 BADGE = re.compile(r"\[(New|Changed|Removed) in ([\d.]+)\]")
 
 
+# Socket colours of the node editor (default theme); the dot is the socket, like in the editor.
+DTYPE_COLORS = {"float": "#a1a1a1", "integer": "#598c5c", "boolean": "#cca6d6", "vector": "#6363c7", "color": "#c7c729",
+                "string": "#70b2ff", "geometry": "#00d6a3", "object": "#ed9e5c", "collection": "#f5f5f5",
+                "material": "#eb7582", "image": "#8c5c8c", "rotation": "#a463c7", "matrix": "#db8f49",
+                "menu": "#8a8ad6", "bundle": "#d6c28a", "sound": "#6fd6a0", "shader": "#63c75f"}
+DTYPE_DIAMOND = {"float", "integer", "boolean", "vector", "color", "string", "rotation", "matrix"}   # fields can be diamonds
+
+
+def dtype_flag(m):
+    text = m.group(1).rstrip(".").strip()
+    key = re.match(r"[A-Za-z]+", text)
+    key = key.group(0).lower() if key else ""
+    key = {"int": "integer", "bool": "boolean"}.get(key, key)
+    color = DTYPE_COLORS.get(key, "#9a9a9a")
+    shape = " is-list" if "list" in text.lower() else ""
+    return (f'<p class="ui-doc-dtype{shape}" style="--dt:{color}"><span class="ui-doc-dtype-dot"></span>'
+            f'<span>Data type</span><b>{text}</b></p>')
+
+
 def small_parts(html):
     """Find it rows, version badges, go links and download buttons."""
     html = re.sub(r"<p>(?:<strong>)?Find it:(?:</strong>)?", '<p class="ui-doc-find"><strong>Find it:</strong>', html)
+    html = re.sub(r"<p>Data type: ([^<]*?)</p>", dtype_flag, html)
     html = on_text(html, lambda t: BADGE.sub(
         lambda m: f'<span class="ui-doc-badge is-{m.group(1).lower()}">{m.group(1)} in {m.group(2)}</span>', t))
 

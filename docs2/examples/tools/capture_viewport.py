@@ -13,6 +13,7 @@ The script restores the viewport (panels, overlays, scene) when it is done.
 import bpy, os, re
 
 OUT = r"//captures"          # change me: folder for the pictures ("//" = next to the .blend)
+ONLY = ""                     # only scenes whose name starts with this (empty = all), e.g. "UV " or "Primitive "
 SETTLE = 0.5                  # seconds the viewport gets to refresh gizmos before every picture
 
 def slug(s):
@@ -25,7 +26,7 @@ def main():
     reg = [r for r in area.regions if r.type == 'WINDOW'][0]
     out = bpy.path.abspath(OUT)
     os.makedirs(out, exist_ok=True)
-    scenes = [s for s in bpy.data.scenes if s.get("capture")]
+    scenes = [s for s in bpy.data.scenes if s.get("capture") and s.name.startswith(ONLY)]
     keep = dict(scene=win.scene, persp=sp.region_3d.view_perspective, shading=sp.shading.type, light=sp.shading.light,
                 color=sp.shading.color_type, over=sp.overlay.show_overlays, wire=sp.overlay.show_wireframes,
                 text=sp.overlay.show_text, stats=sp.overlay.show_stats, cursor=sp.overlay.show_cursor,

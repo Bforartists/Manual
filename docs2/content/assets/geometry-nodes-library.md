@@ -40,6 +40,13 @@ The UV assets write UV coordinates onto a mesh. Drag one onto an object from the
 
 Creates UV coordinates by projecting the mesh through a camera. Use it to place a texture on an object as the camera sees it. Size, Rotation, Offset and Scale adjust the projection, and Custom Camera lets you choose another camera.
 
+### Gizmos
+
+The projection frame is drawn in the viewport and has gizmos:
+
+- A **dial gizmo** sets the **Rotation**.
+- **Linear gizmos** change the **Size** and the **Scale X** and **Scale Y** of the frame, and move it with **Offset X** and **Offset Y**.
+
 ### Inputs
 
 #### Geometry
@@ -254,6 +261,10 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 Creates cube projected UV coordinates on a single island. Island Index chooses the island. It works like Cube UV with Mode set to one island.
 
+### Gizmos
+
+The **Angle** input has a **dial gizmo** in the viewport on the selected island. Drag the dial to rotate the projection, instead of typing a number. Island Index decides which island shows the gizmo.
+
 ### Inputs
 
 #### Geometry
@@ -355,6 +366,15 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ![Cut Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png)
 
 Creates cylinder projected UV coordinates by cutting the cylinder open. Cut Angle sets where the cut is made, and Top and Bottom set the limits of the projection. The side and the caps become separate islands.
+
+### Gizmos
+
+The projection cylinder is drawn in the viewport and can be tuned directly:
+
+- **Linear gizmos** move **Top** and **Bottom** and change the **Radius**.
+- **Dial gizmos** set the **Cut Angle**, **Top Angle** and **Bottom Angle**.
+
+The example above uses a head, which is the typical use: cut the cylinder open at the back and the face unwraps in one piece.
 
 ### Inputs
 
@@ -575,6 +595,13 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ![Cylinder UV Island](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png)
 
 Creates cylinder projected UV coordinates on a single island. Island Index chooses the island. It works like Cylinder UV with Mode set to one island.
+
+### Gizmos
+
+The projection can be tuned in the viewport with gizmos on the selected island:
+
+- **Linear gizmos** move the **Top** and **Bottom** limits and scale the **Cylinder Scale** and **Cap Scale**.
+- **Dial gizmos** (red, green, blue) rotate the projection around X, Y and Z. This is the same as the **Tilt** input.
 
 ### Inputs
 
@@ -986,6 +1013,13 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 Creates sphere projected UV coordinates on a single island. Island Index chooses the island. It works like Sphere UV with Mode set to one island.
 
+### Gizmos
+
+The projection sphere is drawn in the viewport and has gizmos on the selected island:
+
+- **Linear gizmos** change **Scale Longitude** and **Scale Latitude**.
+- **Dial gizmos** (red, green, blue) rotate the projection around X, Y and Z. This is the same as the **Tilt** input.
+
 ### Inputs
 
 #### Geometry
@@ -1087,6 +1121,13 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ![Triplanar UV](/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png)
 
 Creates triplanar cube projected UV coordinates, with scaling that stays relative to the object. Translation, Rotation and Scale move the projection.
+
+### Gizmos
+
+The projection box is drawn in the viewport and has gizmos:
+
+- **Linear gizmos** per axis move the box (**Translation**) and scale it (**Scale**). The white linear gizmo scales all three axes together.
+- **Dial gizmos** (red, green, blue) set the **Rotation** around X, Y and Z.
 
 ### Inputs
 
