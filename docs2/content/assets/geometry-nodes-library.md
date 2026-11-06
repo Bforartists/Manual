@@ -213,13 +213,13 @@ Select a Smart Primitive and its gizmos appear in the 3D Viewport. A gizmo is a 
 
 | Gizmo | Color | What it changes |
 |---|---|---|
-| Square | Red, green, blue (X, Y, Z) | Scales the primitive along that axis |
-| Arrow | Red, green, blue (X, Y, Z) | Loop resolution along that axis |
-| Circle | Primary (yellow) | Revolve Angle |
-| Square | Primary (yellow) | Scale All |
-| Arrow | Primary (yellow) | Bend the profile |
-| Arrow | Secondary (cyan) | Bevel Resolution |
-| Square | Secondary (cyan) | Bevel Scale |
+| 🟥 Square | 🔴🟢🔵 Red, green, blue (X, Y, Z) | 📏 Scales the primitive along that axis |
+| ➡️ Arrow | 🔴🟢🔵 Red, green, blue (X, Y, Z) | 🔁 Loop resolution along that axis |
+| ⭕ Circle | 🟡 Primary (yellow) | 🔄 Revolve Angle |
+| 🟨 Square | 🟡 Primary (yellow) | 🔍 Scale All |
+| ↗️ Arrow | 🟡 Primary (yellow) | 🌀 Bend the profile |
+| ➡️ Arrow | 🔵 Secondary (cyan) | 🧊 Bevel Resolution |
+| 🟦 Square | 🔵 Secondary (cyan) | 📐 Bevel Scale |
 
 Not every primitive has every gizmo. Each asset below lists the gizmos it has.
 
