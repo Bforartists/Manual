@@ -6,7 +6,7 @@ path:
   - "Assets"
   - "Geometry Nodes Library"
 version: "5.1"
-status: draft
+status: needs-review
 source:
   - "webflow:assets/geometry-nodes/normals"
 icon: geometry_nodes
