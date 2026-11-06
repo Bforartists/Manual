@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compositor Library · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/vse-text-line-spacing · <code>docs2/vse-text-line-spacing</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="../editors/3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../editors/image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/compositor.html">Compositor</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../editors/properties/material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../editors/geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../editors/properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../editors/properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../editors/shader-editor.html">Shader Editor</a>
+<a href="../editors/video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../editors/movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../editors/graph-editor.html">Graph Editor</a>
+<a href="../editors/drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<a href="../editors/text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="../editors/toolbar.html">Toolbar</a>
+<a href="../editors/outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<a href="../editors/file-browser.html">File browser</a>
+<a href="../editors/asset-browser.html">Asset Browser</a>
+<span>Spreadsheet</span>
+<a href="../editors/preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<a href="default-library.html">Default Library</a>
+<a class="is-current" href="compositor-library.html">Compositor Library</a>
+<a href="geometry-nodes-library.html">Geometry Nodes Library</a>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Documentation History</a>
+<a href="../appendix/gpl-license.html">About the GPL License</a>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Assets › Compositor Library</div><h1 class="pv-title">Compositor Library</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 18 min read</span></div><article class="ui-doc-body"><p>Node groups for the compositor that come with Bforartists.</p>
+<blockquote>
+<p><strong>Draft:</strong> this page is being filled asset by asset, one category at a time. Categories that are not written yet are marked below.</p>
+</blockquote>
+<p>Each asset is a node group. Drag it from the Asset Shelf or the Asset Browser into the node editor.</p>
+<h1 id="color">Color</h1>
+<p>Assets that change the color of an image.</p>
+<h2 id="adjust-rgb">Adjust RGB</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/adjust-rgb.png" alt="Adjust RGB asset thumbnail" loading="lazy"><figcaption>Adjust RGB asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/adjust-rgb.png" alt="Adjust RGB" loading="lazy"></figure>
+<p>Adjusts the red, green and blue channels of an image individually.</p>
+<h3 id="inputs">Inputs</h3>
+<h4 id="image">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the overall intensity of the RGB adjustment.</p>
+<h4 id="red">Red</h4>
+<p>Data type: Float.</p>
+<p>Adjusts the intensity of the red channel.</p>
+<h4 id="green">Green</h4>
+<p>Data type: Float.</p>
+<p>Adjusts the intensity of the green channel.</p>
+<h4 id="blue">Blue</h4>
+<p>Data type: Float.</p>
+<p>Adjusts the intensity of the blue channel.</p>
+<h3 id="outputs">Outputs</h3>
+<h4 id="image-2">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use">How to use</h3>
+<p>Connect an image to Image and the output to the next node. In the slider, Red is 30 and Blue is -30.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/adjust-rgb-after.png" alt="After: the red and orange tones get stronger and the blue ones weaker" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png" alt="Adjust RGB setup" loading="lazy"></figure>
+<h2 id="average-color">Average Color</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/average-color.png" alt="Average Color asset thumbnail" loading="lazy"><figcaption>Average Color asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/average-color.png" alt="Average Color" loading="lazy"></figure>
+<p>Calculates the average color of the input image.</p>
+<h3 id="inputs-2">Inputs</h3>
+<h4 id="image-3">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h3 id="outputs-2">Outputs</h3>
+<h4 id="color-2">Color</h4>
+<p>Data type: Color.</p>
+<p>The output color after processing the effect.</p>
+<h3 id="how-to-use-2">How to use</h3>
+<p>Connect an image to Image. The output is a single color, shown here as a flat fill.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/average-color-after.png" alt="After: the whole image becomes its average color" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/average-color-usage.png" alt="Average Color setup" loading="lazy"></figure>
+<h2 id="color-temperature">Color Temperature</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/color-temperature.png" alt="Color Temperature asset thumbnail" loading="lazy"><figcaption>Color Temperature asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-temperature.png" alt="Color Temperature" loading="lazy"></figure>
+<p>Adjusts the color temperature of the image to simulate different lighting conditions.</p>
+<h3 id="inputs-3">Inputs</h3>
+<h4 id="image-4">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-2">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the color temperature adjustment.</p>
+<h4 id="temp-kelvin">Temp Kelvin</h4>
+<p>Data type: Float.</p>
+<p>Sets the color temperature in Kelvin.</p>
+<h3 id="outputs-3">Outputs</h3>
+<h4 id="image-5">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-3">How to use</h3>
+<p>Connect an image to Image and set Temp Kelvin. In the slider, Temp Kelvin is 3500.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-temperature-after.png" alt="After: a warm, orange tone" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-temperature-usage.png" alt="Color Temperature setup" loading="lazy"></figure>
+<h2 id="color-tint">Color Tint</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/color-tint.png" alt="Color Tint asset thumbnail" loading="lazy"><figcaption>Color Tint asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-tint.png" alt="Color Tint" loading="lazy"></figure>
+<p>Applies a color tint to the image with adjustable strength and power.</p>
+<h3 id="inputs-4">Inputs</h3>
+<h4 id="image-6">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-3">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the color tint effect.</p>
+<h4 id="color-3">Color</h4>
+<p>Data type: Color.</p>
+<p>The color to apply as a tint.</p>
+<h4 id="power">Power</h4>
+<p>Data type: Float.</p>
+<p>Adjusts the strength of the tint blending.</p>
+<h3 id="outputs-4">Outputs</h3>
+<h4 id="image-7">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-4">How to use</h3>
+<p>Connect an image to Image and pick a Color. In the slider, Color is blue and Strength is 0.6.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-tint-after.png" alt="After: a blue tint over the image" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-tint-usage.png" alt="Color Tint setup" loading="lazy"></figure>
+<h2 id="color-variation">Color Variation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/color-variation.png" alt="Color Variation asset thumbnail" loading="lazy"><figcaption>Color Variation asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-variation.png" alt="Color Variation" loading="lazy"></figure>
+<p>Adds subtle random color variation across the image.</p>
+<h3 id="inputs-5">Inputs</h3>
+<h4 id="image-8">Image</h4>
+<p>Data type: Color.</p>
+<p>The image to vary.</p>
+<h4 id="strength-4">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>How strong the color variation is.</p>
+<h4 id="scale">Scale</h4>
+<p>Data type: Vector.</p>
+<p>Size of the variation pattern.</p>
+<h4 id="offset">Offset</h4>
+<p>Data type: Vector.</p>
+<p>Shifts the variation pattern.</p>
+<h3 id="outputs-5">Outputs</h3>
+<h4 id="image-9">Image</h4>
+<p>Data type: Color.</p>
+<p>The image with color variation applied.</p>
+<h3 id="how-to-use-5">How to use</h3>
+<p>Connect an image to Image. In the slider, Strength is 1.0.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-variation-after.png" alt="After: soft patches of color" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/color-variation-usage.png" alt="Color Variation setup" loading="lazy"></figure>
+<h2 id="desaturator">Desaturator</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/desaturator.png" alt="Desaturator asset thumbnail" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/desaturator.png" alt="Desaturator" loading="lazy"></figure>
+<p>Desaturates the image, with control over strength and hue.</p>
+<h3 id="inputs-6">Inputs</h3>
+<h4 id="image-10">Image</h4>
+<p>Data type: Color.</p>
+<p>The image to desaturate.</p>
+<h4 id="saturation-strength">Saturation Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Adjust the strength of desaturation.</p>
+<h4 id="hue-ratio">Hue Ratio</h4>
+<p>Data type: Float.</p>
+<p>Adjusts a biased ratio of the saturation.</p>
+<h3 id="outputs-6">Outputs</h3>
+<h4 id="image-11">Image</h4>
+<p>Data type: Color.</p>
+<p>The desaturated image.</p>
+<h3 id="how-to-use-6">How to use</h3>
+<p>Connect an image to Image. Saturation Strength sets how much color is removed: 1 leaves the image as it is, and lower values remove more.</p>
+<p>Hue Ratio changes which colors lose their saturation. In the slider, Saturation Strength is 0.3 and Hue Ratio is 1. At Hue Ratio 0 every color is desaturated evenly. At Hue Ratio 1 the strongly colored areas stay vivid and the muted areas lose their color.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/desaturator-after.png" alt="After: the muted areas lose their color" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/desaturator-usage.png" alt="Desaturator setup" loading="lazy"></figure>
+<h2 id="halftone-color">Halftone Color</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/halftone-color.png" alt="Halftone Color asset thumbnail" loading="lazy"><figcaption>Halftone Color asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-color.png" alt="Halftone Color" loading="lazy"></figure>
+<p>Colors a halftone pattern, sizing dots by brightness. Use it together with Halftone Pattern: connect the Distance output of Halftone Pattern to the Distance input here.</p>
+<h3 id="inputs-7">Inputs</h3>
+<h4 id="distance">Distance</h4>
+<p>Data type: Float.</p>
+<p>Connect the Distance output of Halftone Pattern.</p>
+<h4 id="foreground">Foreground</h4>
+<p>Data type: Color.</p>
+<p>Image or color that sets dot color and size.</p>
+<h4 id="background">Background</h4>
+<p>Data type: Color.</p>
+<p>Color between the dots.</p>
+<h4 id="min-dot-size">Min Dot Size</h4>
+<p>Data type: Float (factor).</p>
+<p>Dot size in the darkest areas.</p>
+<h4 id="max-dot-size">Max Dot Size</h4>
+<p>Data type: Float (factor).</p>
+<p>Dot size in the brightest areas.</p>
+<h3 id="outputs-7">Outputs</h3>
+<h4 id="color-4">Color</h4>
+<p>Data type: Color.</p>
+<p>The colored halftone.</p>
+<h4 id="mask">Mask</h4>
+<p>Data type: Float.</p>
+<p>Black and white dots.</p>
+<h3 id="how-to-use-7">How to use</h3>
+<p>Connect an image to Foreground and set Background to the color between the dots. Distance decides where the dots are. It is normally connected to the Distance output of Halftone Pattern, as shown in the next section.</p>
+<p>In the setup picture below the slider, Distance is a single value (0.5) instead of a pattern, so the image is cut at one brightness: the dark parts of the spheres turn to the Background color. Dots need a Distance that changes across the image.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-color-after.png" alt="After: dots in the image color on a dark blue background" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>In the slider, Distance comes from Halftone Pattern (Scale 64) and Background is dark blue.</p>
+<p>The setup picture shows Distance as a single value:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-color-usage.png" alt="Halftone Color setup" loading="lazy"></figure>
+<h2 id="halftone-pattern">Halftone Pattern</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/halftone-pattern.png" alt="Halftone Pattern asset thumbnail" loading="lazy"><figcaption>Halftone Pattern asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-pattern.png" alt="Halftone Pattern" loading="lazy"></figure>
+<p>Creates a halftone dot pattern with distance and vector outputs. Use it together with Halftone Color: connect the Distance output to Halftone Color.</p>
+<h3 id="inputs-8">Inputs</h3>
+<h4 id="rotation">Rotation</h4>
+<p>Data type: Float.</p>
+<p>Rotates the dot grid.</p>
+<h4 id="scale-2">Scale</h4>
+<p>Data type: Float.</p>
+<p>Number of dots. Higher values give more, smaller dots.</p>
+<h4 id="ink-noise">Ink Noise</h4>
+<p>Data type: Float.</p>
+<p>Adds roughness to the dots.</p>
+<h4 id="noise-scale">Noise Scale</h4>
+<p>Data type: Float.</p>
+<p>Size of the roughness.</p>
+<h4 id="vector-coordinates">Vector Coordinates</h4>
+<p>Data type: Boolean.</p>
+<p>Use the Vector input instead of the automatic image coordinates.</p>
+<h4 id="vector">Vector</h4>
+<p>Data type: Vector.</p>
+<p>Used when Vector Coordinates is on. Best used with the Vector Mapping node group.</p>
+<h3 id="outputs-8">Outputs</h3>
+<h4 id="distance-2">Distance</h4>
+<p>Data type: Float.</p>
+<p>Distance from each dot center. Connect to Halftone Color.</p>
+<h4 id="vector-2">Vector</h4>
+<p>Data type: Vector.</p>
+<p>Coordinates inside each dot.</p>
+<h3 id="how-to-use-8">How to use</h3>
+<p>Halftone Pattern does not need an image. Connect its Distance output to any node that takes a number to see how far each pixel is from the center of its dot. In the picture, Scale is 16 and the Distance output goes straight to the viewer.</p>
+<p>The Vector output gives the coordinates inside each dot.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-pattern-usage.png" alt="Halftone Pattern in use" loading="lazy"><figcaption>Halftone Pattern in use</figcaption></figure>
+<h2 id="halftone-pattern-and-halftone-color-together">Halftone Pattern and Halftone Color together</h2>
+<p>Halftone Pattern makes the dot grid and Halftone Color colors it. Connect the Distance output of Halftone Pattern to the Distance input of Halftone Color, and connect an image to Foreground. Halftone Color sizes each dot by the brightness of the image: dots are Max Dot Size in the brightest areas and Min Dot Size in the darkest.</p>
+<p>Keeping them apart lets you change the grid (Rotation, Scale, Ink Noise) separately from the colors (Foreground, Background and the dot sizes). The Mask output of Halftone Color shows the same dots in black and white.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/halftone-chain-usage.png" alt="Halftone Pattern and Halftone Color together" loading="lazy"><figcaption>Halftone Pattern and Halftone Color together</figcaption></figure>
+<h2 id="simple-saturation">Simple Saturation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/simple-saturation.png" alt="Simple Saturation asset thumbnail" loading="lazy"><figcaption>Simple Saturation asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/simple-saturation.png" alt="Simple Saturation" loading="lazy"></figure>
+<p>Adjusts the saturation level of the image.</p>
+<h3 id="inputs-9">Inputs</h3>
+<h4 id="image-12">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="saturation">Saturation</h4>
+<p>Data type: Float.</p>
+<p>Controls the intensity of the image's color saturation. The range is 0 to 2.</p>
+<h3 id="outputs-9">Outputs</h3>
+<h4 id="image-13">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-9">How to use</h3>
+<p>Connect an image to Image. In the slider, Saturation is 0.25.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/simple-saturation-after.png" alt="After: most of the color is gone" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/color/simple-saturation-usage.png" alt="Simple Saturation setup" loading="lazy"></figure>
+<h1 id="creative-design">Creative / Design</h1>
+<p>Assets that create a designed look from render passes.</p>
+<h2 id="blueprint">Blueprint</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/blueprint.png" alt="Blueprint asset thumbnail" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/creative-design/blueprint.png" alt="Blueprint" loading="lazy"></figure>
+<p>Generates a blueprint-style effect with grid lines and outlines based on depth and normals.</p>
+<h3 id="inputs-10">Inputs</h3>
+<h4 id="image-14">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="depth">Depth</h4>
+<p>Data type: Float.</p>
+<p>Depth Pass input to define object distances.</p>
+<h4 id="normal">Normal</h4>
+<p>Data type: Vector.</p>
+<p>Normal Pass for surface normal data for edge detection.</p>
+<h4 id="position">Position</h4>
+<p>Data type: Vector.</p>
+<p>Position Pass for camera or object position data for effect calculations.</p>
+<h4 id="settings">Settings</h4>
+<h5 id="strength-5">Strength</h5>
+<p>Data type: Float (factor).</p>
+<p>Controls the overall intensity of the blueprint effect.</p>
+<h5 id="range">Range</h5>
+<p>Data type: Float.</p>
+<p>Sets the range for depth-based calculations.</p>
+<h5 id="line-color">Line Color</h5>
+<p>Data type: Color.</p>
+<p>Color of the blueprint lines.</p>
+<h5 id="background-color">Background Color</h5>
+<p>Data type: Color.</p>
+<p>Color of the background in the blueprint effect.</p>
+<h4 id="lines">Lines</h4>
+<h5 id="line-thickness">Line Thickness</h5>
+<p>Data type: Integer.</p>
+<p>Controls the thickness of the geometry lines</p>
+<h5 id="line-variation-intensity">Line Variation Intensity</h5>
+<p>Data type: Float.</p>
+<p>Adjusts the intensity of line variation patterns.</p>
+<h5 id="line-variation-strength">Line Variation Strength</h5>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of line variation effects.</p>
+<h4 id="main-grid">Main Grid</h4>
+<h5 id="grid-strength">Grid Strength</h5>
+<p>Data type: Float.</p>
+<p>Controls the intensity of the grid pattern.</p>
+<h5 id="grid-size">Grid Size</h5>
+<p>Data type: Float.</p>
+<p>Sets the size of the grid pattern.</p>
+<h5 id="grid-thickness">Grid Thickness</h5>
+<p>Data type: Float.</p>
+<p>Adjusts the thickness of the grid lines.</p>
+<h4 id="secondary-grid">Secondary Grid</h4>
+<h5 id="detailed-grid-strength">Detailed Grid Strength</h5>
+<p>Data type: Float.</p>
+<p>Controls the intensity of a finer grid pattern.</p>
+<h5 id="detailed-grid-size">Detailed Grid Size</h5>
+<p>Data type: Float.</p>
+<p>Sets the size of the finer grid pattern.</p>
+<h5 id="detailed-grid-thickness">Detailed Grid Thickness</h5>
+<p>Data type: Float.</p>
+<p>Adjusts the thickness of the finer grid lines.</p>
+<h4 id="border-line">Border Line</h4>
+<h5 id="border-strength">Border Strength</h5>
+<p>Data type: Float.</p>
+<p>Controls the intensity of the object borders.</p>
+<h5 id="border-size">Border Size</h5>
+<p>Data type: Float.</p>
+<p>Sets the size of the object borders.</p>
+<h5 id="border-thickness">Border Thickness</h5>
+<p>Data type: Float.</p>
+<p>Adjusts the thickness of the object borders.</p>
+<h5 id="border-double-line">Border Double Line</h5>
+<p>Data type: Boolean.</p>
+<p>Enables or disables a double-line effect for borders.</p>
+<h3 id="outputs-10">Outputs</h3>
+<h4 id="image-15">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-10">How to use</h3>
+<p>Blueprint needs render passes. Connect the Depth, Normal and Position passes of a Render Layers node to the inputs of the same name, and the rendered image to Image. Line Color and Background Color set the two colors of the blueprint. The panels Main Grid, Secondary Grid and Border Line control the grid and the outlines.</p>
+<h2 id="breakdown-animation">Breakdown Animation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/breakdown-animation.png" alt="Breakdown Animation asset thumbnail" loading="lazy"><figcaption>Breakdown Animation asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/creative-design/breakdown-animation.png" alt="Breakdown Animation" loading="lazy"></figure>
+<p>Creates an animated breakdown effect using multiple render passes and UV data.</p>
+<h3 id="inputs-11">Inputs</h3>
+<h4 id="image-16">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="normal-2">Normal</h4>
+<p>Data type: Vector.</p>
+<p>Surface normal data for effect calculations.</p>
+<h4 id="uv-position">UV/Position</h4>
+<p>Data type: Vector.</p>
+<p>UV map data for texture mapping.</p>
+<h4 id="diffuse-direct">Diffuse Direct</h4>
+<p>Data type: Color.</p>
+<p>Direct diffuse lighting render pass.</p>
+<h4 id="diffuse-indirect">Diffuse Indirect</h4>
+<p>Data type: Color.</p>
+<p>Indirect diffuse lighting render pass.</p>
+<h4 id="layer-0-uv">Layer 0 (UV)</h4>
+<p>Data type: Color.</p>
+<p>Custom layer. It is replaced by the UV pass when UV Pass is on.</p>
+<h4 id="layer-1">Layer 1</h4>
+<p>Data type: Color.</p>
+<p>Custom layer, for example a diffuse color render pass.</p>
+<h4 id="layer-2">Layer 2</h4>
+<p>Data type: Color.</p>
+<p>Custom layer, for example a direct glossy lighting render pass.</p>
+<h4 id="layer-3">Layer 3</h4>
+<p>Data type: Color.</p>
+<p>Custom layer, for example an ambient occlusion render pass.</p>
+<h4 id="uv-pass">UV Pass</h4>
+<h5 id="uv-pass-2">UV Pass</h5>
+<p>Data type: Boolean.</p>
+<p>UV pass from Render Layers</p>
+<h5 id="uv-texture-scale">UV Texture Scale</h5>
+<p>Data type: Float.</p>
+<p>Scales the UV texture for the effect.</p>
+<h5 id="color1">Color1</h5>
+<p>Data type: Color.</p>
+<p>Color of the first checker</p>
+<h5 id="color2">Color2</h5>
+<p>Data type: Color.</p>
+<p>Color of the second checker</p>
+<h4 id="settings-2">Settings</h4>
+<h5 id="frame-start">Frame Start</h5>
+<p>Data type: Float.</p>
+<p>The starting frame for the animation effect.</p>
+<h5 id="frame-end">Frame End</h5>
+<p>Data type: Float.</p>
+<p>The ending frame for the animation effect.</p>
+<h5 id="transition-speed">Transition Speed</h5>
+<p>Data type: Float.</p>
+<p>Controls the speed of the animation transition.</p>
+<h5 id="transition-feather">Transition Feather</h5>
+<p>Data type: Float.</p>
+<p>Adjusts the softness of the transition edges.</p>
+<h5 id="transition-rotation">Transition Rotation</h5>
+<p>Data type: Float.</p>
+<p>Rotates the transition effect.</p>
+<h3 id="outputs-11">Outputs</h3>
+<h4 id="image-17">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h4 id="uv-texture-scale-checker">UV Texture Scale Checker</h4>
+<p>Data type: Color.</p>
+<p>Indicator of the separate UV checker texture mapping channel.</p>
+<h4 id="transition-feather-checker">Transition Feather Checker</h4>
+<p>Data type: Float.</p>
+<p>Indicator of the separate transition mask channel.</p>
+<h3 id="how-to-use-11">How to use</h3>
+<p>Breakdown Animation works on render passes. Connect the passes of a Render Layers node to Normal, UV/Position, Diffuse Direct and Diffuse Indirect, and the rendered image to Image. Frame Start and Frame End set when the transition runs, and Transition Speed, Transition Feather and Transition Rotation shape it. The two extra outputs, UV Texture Scale Checker and Transition Feather Checker, show the checker texture and the transition mask as separate channels.</p>
+<h1 id="distortion">Distortion</h1>
+<p>Assets that shift, split or mirror the image.</p>
+<h2 id="glitch-block">Glitch Block</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/glitch-block.png" alt="Glitch Block asset thumbnail" loading="lazy"><figcaption>Glitch Block asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-block.png" alt="Glitch Block" loading="lazy"></figure>
+<p>Applies a block-based glitch effect to the image with customizable parameters.</p>
+<h3 id="inputs-12">Inputs</h3>
+<h4 id="image-18">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-6">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the glitch effect.</p>
+<h4 id="scale-3">Scale</h4>
+<p>Data type: Float.</p>
+<p>Determines the size or frequency of the glitch pattern.</p>
+<h4 id="offset-x">Offset X</h4>
+<p>Data type: Float (factor).</p>
+<p>Shifts the glitch effect along the X-axis.</p>
+<h4 id="offset-y">Offset Y</h4>
+<p>Data type: Float (factor).</p>
+<p>Shifts the glitch effect along the Y-axis.</p>
+<h4 id="time">Time</h4>
+<p>Data type: Float.</p>
+<p>Controls the time-based variation of the glitch effect.</p>
+<h4 id="threshold">Threshold</h4>
+<p>Data type: Float.</p>
+<p>Sets the brightness threshold for triggering the glitch effect.</p>
+<h4 id="wrap">Wrap</h4>
+<p>Data type: Float.</p>
+<p>Controls how the glitch wraps around the image edges.</p>
+<h3 id="outputs-12">Outputs</h3>
+<h4 id="image-19">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-12">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Blocks of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 5, Offset X 0.25. Time changes the pattern, so animate it for a flickering glitch.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-block-after.png" alt="After: blocks shifted sideways" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-block-setup.png" alt="Glitch Block setup" loading="lazy"></figure>
+<h2 id="glitch-offset">Glitch Offset</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/glitch-offset.png" alt="Glitch Offset asset thumbnail" loading="lazy"><figcaption>Glitch Offset asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-offset.png" alt="Glitch Offset" loading="lazy"></figure>
+<p>Applies an offset-based glitch effect to the image with customizable parameters.</p>
+<h3 id="inputs-13">Inputs</h3>
+<h4 id="image-20">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-7">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the glitch effect.</p>
+<h4 id="scale-4">Scale</h4>
+<p>Data type: Float.</p>
+<p>Determines the size or frequency of the glitch pattern.</p>
+<h4 id="offset-x-2">Offset X</h4>
+<p>Data type: Float (factor).</p>
+<p>Shifts the glitch effect along the X-axis.</p>
+<h4 id="offset-y-2">Offset Y</h4>
+<p>Data type: Float (factor).</p>
+<p>Shifts the glitch effect along the Y-axis.</p>
+<h4 id="time-2">Time</h4>
+<p>Data type: Float.</p>
+<p>Controls the time-based variation of the glitch effect.</p>
+<h4 id="threshold-2">Threshold</h4>
+<p>Data type: Float.</p>
+<p>Sets the brightness threshold for triggering the glitch effect.</p>
+<h4 id="wrap-2">Wrap</h4>
+<p>Data type: Float.</p>
+<p>Controls how the glitch wraps around the image edges.</p>
+<h3 id="outputs-13">Outputs</h3>
+<h4 id="image-21">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-13">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Parts of the image are shifted sideways. In the slider every value is at its default: Strength 1, Scale 1, Offset X 0.25. Time changes the pattern.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-offset-after.png" alt="After: parts shifted sideways" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-offset-setup.png" alt="Glitch Offset setup" loading="lazy"></figure>
+<h2 id="glitch-rgb">Glitch RGB</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/glitch-rgb.png" alt="Glitch RGB asset thumbnail" loading="lazy"><figcaption>Glitch RGB asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-rgb.png" alt="Glitch RGB" loading="lazy"></figure>
+<p>Applies an RGB channel offset glitch effect to the image.</p>
+<h3 id="inputs-14">Inputs</h3>
+<h4 id="image-22">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-8">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the RGB glitch effect.</p>
+<h4 id="scale-5">Scale</h4>
+<p>Data type: Float.</p>
+<p>Determines the size or frequency of the glitch pattern.</p>
+<h4 id="offset-x-3">Offset X</h4>
+<p>Data type: Float.</p>
+<p>Shifts the glitch effect along the X-axis.</p>
+<h4 id="offset-y-3">Offset Y</h4>
+<p>Data type: Float.</p>
+<p>Shifts the glitch effect along the Y-axis.</p>
+<h4 id="time-3">Time</h4>
+<p>Data type: Float.</p>
+<p>Controls the time-based variation of the glitch effect.</p>
+<h4 id="wrap-3">Wrap</h4>
+<p>Data type: Float.</p>
+<p>Controls how the glitch wraps around the image edges.</p>
+<h3 id="outputs-14">Outputs</h3>
+<h4 id="image-23">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-14">How to use</h3>
+<p>Connect an image to Image and the output to the next node. The red, green and blue channels are shifted apart, which leaves colored edges around the shapes. In the slider every value is at its default: Strength 1, Scale 1, Offset X 1.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-rgb-after.png" alt="After: color channels shifted apart" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/glitch-rgb-setup.png" alt="Glitch RGB setup" loading="lazy"></figure>
+<h2 id="simple-distortion">Simple Distortion</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/simple-distortion.png" alt="Simple Distortion asset thumbnail" loading="lazy"><figcaption>Simple Distortion asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/simple-distortion.png" alt="Simple Distortion" loading="lazy"></figure>
+<p>Applies a distortion effect to the image based on a vector field.</p>
+<h3 id="inputs-15">Inputs</h3>
+<h4 id="image-24">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="vector-3">Vector</h4>
+<p>Data type: Vector.</p>
+<p>Vector field input to control distortion direction and magnitude.</p>
+<h4 id="x-scale">X Scale</h4>
+<p>Data type: Float.</p>
+<p>Scales the distortion effect along the X-axis.</p>
+<h4 id="y-scale">Y Scale</h4>
+<p>Data type: Float.</p>
+<p>Scales the distortion effect along the Y-axis.</p>
+<h3 id="outputs-15">Outputs</h3>
+<h4 id="image-25">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-15">How to use</h3>
+<p>Connect an image to Image and a vector field to Vector, for example from a texture. The vector sets the direction and strength of the distortion, and X Scale and Y Scale scale it along each axis.</p>
+<h2 id="symmetry">Symmetry</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/symmetry.png" alt="Symmetry asset thumbnail" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/symmetry.png" alt="Symmetry" loading="lazy"></figure>
+<p>Creates a symmetrical effect by flipping and offsetting the image.</p>
+<h3 id="inputs-16">Inputs</h3>
+<h4 id="image-26">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-9">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the symmetry effect.</p>
+<h4 id="x-flip">X Flip</h4>
+<p>Data type: Boolean.</p>
+<p>Enables or disables flipping along the X-axis.</p>
+<h4 id="y-flip">Y Flip</h4>
+<p>Data type: Boolean.</p>
+<p>Enables or disables flipping along the Y-axis.</p>
+<h4 id="x-offset">X Offset</h4>
+<p>Data type: Float.</p>
+<p>Shifts the symmetry effect along the X-axis.</p>
+<h4 id="y-offset">Y Offset</h4>
+<p>Data type: Float.</p>
+<p>Shifts the symmetry effect along the Y-axis.</p>
+<h3 id="outputs-16">Outputs</h3>
+<h4 id="image-27">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-16">How to use</h3>
+<p>Connect an image to Image and the output to the next node. In the slider X Flip is on, so the right half of the image is a mirror of the left half. Y Flip does the same from top to bottom, and X Offset and Y Offset move the mirror line.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/symmetry-after.png" alt="After: right half mirrors the left" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/distortion/symmetry-setup.png" alt="Symmetry setup" loading="lazy"></figure>
+<h1 id="filters">Filters</h1>
+<p>Assets that filter the image into a new look.</p>
+<h2 id="halftone">Halftone</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/halftone.png" alt="Halftone asset thumbnail" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/halftone.png" alt="Halftone" loading="lazy"></figure>
+<p>Applies a halftone pattern effect to simulate printed media visuals.</p>
+<h3 id="inputs-17">Inputs</h3>
+<h4 id="image-28">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="display">Display</h4>
+<p>Data type: Menu.</p>
+<p>Selects the display mode or style of the halftone effect.</p>
+<h4 id="resolution">Resolution</h4>
+<p>Data type: Float.</p>
+<p>Controls the resolution or density of the halftone pattern.</p>
+<h4 id="size">Size</h4>
+<p>Data type: Float.</p>
+<p>Controls the dot size. Higher values may clip into pixels.</p>
+<h4 id="minimum-size">Minimum Size</h4>
+<p>Data type: Float.</p>
+<p>Controls the minimum dot size in shaded areas</p>
+<h3 id="outputs-17">Outputs</h3>
+<h4 id="image-29">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h4 id="mask-2">Mask</h4>
+<p>Data type: Float.</p>
+<p>Black and white halftone dots</p>
+<h3 id="how-to-use-17">How to use</h3>
+<p>Connect an image to Image and the output to the next node. With Display on BW the result is white dots on black, and the dot size follows the brightness of the image. Resolution sets how many dots there are, Size sets the dot size and Minimum Size sets the dot size in the shaded areas. The Mask output gives the black and white dots on their own. In the slider every value is at its default.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/halftone-after.png" alt="After: white dots on black" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/halftone-setup.png" alt="Halftone setup" loading="lazy"></figure>
+<h2 id="ordered-dithering-2x2">Ordered Dithering 2x2</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/ordered-dithering-2x2.png" alt="Ordered Dithering 2x2 asset thumbnail" loading="lazy"><figcaption>Ordered Dithering 2x2 asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-2x2.png" alt="Ordered Dithering 2x2" loading="lazy"></figure>
+<p>Applies a 2x2 ordered dithering effect to create a patterned texture.</p>
+<h3 id="inputs-18">Inputs</h3>
+<h4 id="image-30">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="display-2">Display</h4>
+<p>Data type: Menu.</p>
+<p>Selects the display mode or style of the dithering effect.</p>
+<h4 id="resolution-2">Resolution</h4>
+<p>Data type: Float.</p>
+<p>Controls the resolution or density of the dithering pattern.</p>
+<h3 id="outputs-18">Outputs</h3>
+<h4 id="image-31">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-18">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Display sets the display mode and Resolution sets the density of the dither pattern. The 2x2 matrix gives the coarsest pattern of the three Ordered Dithering assets.</p>
+<h2 id="ordered-dithering-4x4">Ordered Dithering 4x4</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/ordered-dithering-4x4.png" alt="Ordered Dithering 4x4 asset thumbnail" loading="lazy"><figcaption>Ordered Dithering 4x4 asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4.png" alt="Ordered Dithering 4x4" loading="lazy"></figure>
+<p>Applies a 4x4 ordered dithering effect to create a patterned texture.</p>
+<h3 id="inputs-19">Inputs</h3>
+<h4 id="image-32">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="display-3">Display</h4>
+<p>Data type: Menu.</p>
+<p>Selects the display mode or style of the dithering effect.</p>
+<h4 id="resolution-3">Resolution</h4>
+<p>Data type: Float.</p>
+<p>Controls the resolution or density of the dithering pattern.</p>
+<h3 id="outputs-19">Outputs</h3>
+<h4 id="image-33">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-19">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-after.png" alt="After: black and white pattern" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-4x4-setup.png" alt="Ordered Dithering 4x4 setup" loading="lazy"><figcaption>Ordered Dithering 4x4 setup</figcaption></figure>
+<h2 id="ordered-dithering-8x8">Ordered Dithering 8x8</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/ordered-dithering-8x8.png" alt="Ordered Dithering 8x8 asset thumbnail" loading="lazy"><figcaption>Ordered Dithering 8x8 asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8.png" alt="Ordered Dithering 8x8" loading="lazy"></figure>
+<p>Applies an 8x8 ordered dithering effect to create a patterned texture.</p>
+<h3 id="inputs-20">Inputs</h3>
+<h4 id="image-34">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="display-4">Display</h4>
+<p>Data type: Menu.</p>
+<p>Selects the display mode or style of the dithering effect.</p>
+<h4 id="resolution-4">Resolution</h4>
+<p>Data type: Float.</p>
+<p>Controls the resolution or density of the dithering pattern.</p>
+<h3 id="outputs-20">Outputs</h3>
+<h4 id="image-35">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-20">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Display on BW turns the image into a black and white pattern. Resolution sets the density of the pattern. The slider shows the result with the default values.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-after.png" alt="After: black and white pattern" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/ordered-dithering-8x8-setup.png" alt="Ordered Dithering 8x8 setup" loading="lazy"><figcaption>Ordered Dithering 8x8 setup</figcaption></figure>
+<h2 id="screen-space-pixelate">Screen Space Pixelate</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/screen-space-pixelate.png" alt="Screen Space Pixelate asset thumbnail" loading="lazy"><figcaption>Screen Space Pixelate asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/screen-space-pixelate.png" alt="Screen Space Pixelate" loading="lazy"></figure>
+<p>Applies a pixelation effect to the image in screen space.</p>
+<h3 id="inputs-21">Inputs</h3>
+<h4 id="image-36">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="resolution-5">Resolution</h4>
+<p>Data type: Float.</p>
+<p>Controls the resolution or size of the pixelation effect.</p>
+<h3 id="outputs-21">Outputs</h3>
+<h4 id="image-37">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-21">How to use</h3>
+<p>Connect an image to Image and the output to the next node. Resolution controls the size of the pixelation. In the slider Resolution is 50.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/screen-space-pixelate-after.png" alt="After: pixelated image" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/screen-space-pixelate-setup.png" alt="Screen Space Pixelate setup" loading="lazy"><figcaption>Screen Space Pixelate setup</figcaption></figure>
+<h2 id="sepia-advanced">Sepia Advanced</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/thumbs/sepia-advanced.png" alt="Sepia Advanced asset thumbnail" loading="lazy"><figcaption>Sepia Advanced asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/sepia-advanced.png" alt="Sepia Advanced" loading="lazy"></figure>
+<p>Applies a sepia tone effect to the image for a vintage look.</p>
+<h3 id="inputs-22">Inputs</h3>
+<h4 id="image-38">Image</h4>
+<p>Data type: Color.</p>
+<p>The input image to process.</p>
+<h4 id="strength-10">Strength</h4>
+<p>Data type: Float (factor).</p>
+<p>Controls the intensity of the sepia effect.</p>
+<h4 id="intensity">Intensity</h4>
+<p>Data type: Float (factor).</p>
+<p>Adjusts the overall intensity of the sepia tone.</p>
+<h4 id="shadows">Shadows</h4>
+<p>Data type: Float (factor).</p>
+<p>Adjusts the intensity of the sepia effect in shadow areas.</p>
+<h4 id="highlights">Highlights</h4>
+<p>Data type: Float (factor).</p>
+<p>Adjusts the intensity of the sepia effect in highlight areas.</p>
+<h4 id="tint-color">Tint Color</h4>
+<p>Data type: Float (factor).</p>
+<p>The color used for the sepia tint.</p>
+<h3 id="outputs-22">Outputs</h3>
+<h4 id="image-39">Image</h4>
+<p>Data type: Color.</p>
+<p>The output image after processing the effect.</p>
+<h3 id="how-to-use-22">How to use</h3>
+<p>Connect an image to Image and the output to the next node. The image gets a brown sepia tone. Strength sets how much of the effect is applied, Shadows and Highlights set how strongly it acts in the dark and bright areas. In the slider every value is at its default.</p>
+<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after"><img class="ui-compare-img" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/sepia-advanced-after.png" alt="After: brown sepia tone" loading="lazy"><img class="ui-compare-img is-before" src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/example-before.png" alt="Before: the example image" loading="lazy"><div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div><div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>
+<p>The setup used for the slider:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29076682b9c1a946c49f4307f6aec3ea6d6f99c7/docs2/images/assets/compositor-library/filters/sepia-advanced-setup.png" alt="Sepia Advanced setup" loading="lazy"></figure>
+<h1 id="lenses">Lenses</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="output">Output</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="texture-patterns">Texture / Patterns</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="texture-shapes">Texture / Shapes</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="utilities">Utilities</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+<h1 id="utilities-vector">Utilities / Vector</h1>
+<p><em>Assets in this category will be documented here.</em></p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fvse-text-line-spacing/collection/docs/edit/docs2%2Fcontent%2Fassets%2Fcompositor-library.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/vse-text-line-spacing/docs2/content/assets/compositor-library.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#adjust-rgb">Adjust RGB</a><a class="h3" href="#inputs">Inputs</a><a class="h3" href="#outputs">Outputs</a><a class="h3" href="#how-to-use">How to use</a><a class="h2" href="#average-color">Average Color</a><a class="h3" href="#inputs-2">Inputs</a><a class="h3" href="#outputs-2">Outputs</a><a class="h3" href="#how-to-use-2">How to use</a><a class="h2" href="#color-temperature">Color Temperature</a><a class="h3" href="#inputs-3">Inputs</a><a class="h3" href="#outputs-3">Outputs</a><a class="h3" href="#how-to-use-3">How to use</a><a class="h2" href="#color-tint">Color Tint</a><a class="h3" href="#inputs-4">Inputs</a><a class="h3" href="#outputs-4">Outputs</a><a class="h3" href="#how-to-use-4">How to use</a><a class="h2" href="#color-variation">Color Variation</a><a class="h3" href="#inputs-5">Inputs</a><a class="h3" href="#outputs-5">Outputs</a><a class="h3" href="#how-to-use-5">How to use</a><a class="h2" href="#desaturator">Desaturator</a><a class="h3" href="#inputs-6">Inputs</a><a class="h3" href="#outputs-6">Outputs</a><a class="h3" href="#how-to-use-6">How to use</a><a class="h2" href="#halftone-color">Halftone Color</a><a class="h3" href="#inputs-7">Inputs</a><a class="h3" href="#outputs-7">Outputs</a><a class="h3" href="#how-to-use-7">How to use</a><a class="h2" href="#halftone-pattern">Halftone Pattern</a><a class="h3" href="#inputs-8">Inputs</a><a class="h3" href="#outputs-8">Outputs</a><a class="h3" href="#how-to-use-8">How to use</a><a class="h2" href="#halftone-pattern-and-halftone-color-together">Halftone Pattern and Halftone Color together</a><a class="h2" href="#simple-saturation">Simple Saturation</a><a class="h3" href="#inputs-9">Inputs</a><a class="h3" href="#outputs-9">Outputs</a><a class="h3" href="#how-to-use-9">How to use</a><a class="h2" href="#blueprint">Blueprint</a><a class="h3" href="#inputs-10">Inputs</a><a class="h3" href="#outputs-10">Outputs</a><a class="h3" href="#how-to-use-10">How to use</a><a class="h2" href="#breakdown-animation">Breakdown Animation</a><a class="h3" href="#inputs-11">Inputs</a><a class="h3" href="#outputs-11">Outputs</a><a class="h3" href="#how-to-use-11">How to use</a><a class="h2" href="#glitch-block">Glitch Block</a><a class="h3" href="#inputs-12">Inputs</a><a class="h3" href="#outputs-12">Outputs</a><a class="h3" href="#how-to-use-12">How to use</a><a class="h2" href="#glitch-offset">Glitch Offset</a><a class="h3" href="#inputs-13">Inputs</a><a class="h3" href="#outputs-13">Outputs</a><a class="h3" href="#how-to-use-13">How to use</a><a class="h2" href="#glitch-rgb">Glitch RGB</a><a class="h3" href="#inputs-14">Inputs</a><a class="h3" href="#outputs-14">Outputs</a><a class="h3" href="#how-to-use-14">How to use</a><a class="h2" href="#simple-distortion">Simple Distortion</a><a class="h3" href="#inputs-15">Inputs</a><a class="h3" href="#outputs-15">Outputs</a><a class="h3" href="#how-to-use-15">How to use</a><a class="h2" href="#symmetry">Symmetry</a><a class="h3" href="#inputs-16">Inputs</a><a class="h3" href="#outputs-16">Outputs</a><a class="h3" href="#how-to-use-16">How to use</a><a class="h2" href="#halftone">Halftone</a><a class="h3" href="#inputs-17">Inputs</a><a class="h3" href="#outputs-17">Outputs</a><a class="h3" href="#how-to-use-17">How to use</a><a class="h2" href="#ordered-dithering-2x2">Ordered Dithering 2x2</a><a class="h3" href="#inputs-18">Inputs</a><a class="h3" href="#outputs-18">Outputs</a><a class="h3" href="#how-to-use-18">How to use</a><a class="h2" href="#ordered-dithering-4x4">Ordered Dithering 4x4</a><a class="h3" href="#inputs-19">Inputs</a><a class="h3" href="#outputs-19">Outputs</a><a class="h3" href="#how-to-use-19">How to use</a><a class="h2" href="#ordered-dithering-8x8">Ordered Dithering 8x8</a><a class="h3" href="#inputs-20">Inputs</a><a class="h3" href="#outputs-20">Outputs</a><a class="h3" href="#how-to-use-20">How to use</a><a class="h2" href="#screen-space-pixelate">Screen Space Pixelate</a><a class="h3" href="#inputs-21">Inputs</a><a class="h3" href="#outputs-21">Outputs</a><a class="h3" href="#how-to-use-21">How to use</a><a class="h2" href="#sepia-advanced">Sepia Advanced</a><a class="h3" href="#inputs-22">Inputs</a><a class="h3" href="#outputs-22">Outputs</a><a class="h3" href="#how-to-use-22">How to use</a></aside></div></body></html>
