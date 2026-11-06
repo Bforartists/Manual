@@ -1341,7 +1341,2000 @@ Displays how many mesh islands are currently being blended. Useful for performan
 
 # Primitives
 
-_Assets in this category will be documented here._
+Smart Primitives are shapes built with geometry nodes. Drag one into the scene from the Asset Shelf or the Asset Browser, then change it with the gizmos in the 3D Viewport or with its properties. Nothing is destructive until you apply it.
+
+## Using the Gizmos
+
+Select a Smart Primitive and its gizmos appear in the 3D Viewport. A gizmo is a handle you drag to change a setting without typing a number. The color and the shape tell you what a gizmo changes.
+
+| Gizmo | Color | What it changes |
+|---|---|---|
+| 🟥 Square | 🔴🟢🔵 Red, green, blue (X, Y, Z) | 📏 Scales the primitive along that axis |
+| ➡️ Arrow | 🔴🟢🔵 Red, green, blue (X, Y, Z) | 🔁 Loop resolution along that axis |
+| ⭕ Circle | 🟡 Primary (yellow) | 🔄 Revolve Angle |
+| 🟨 Square | 🟡 Primary (yellow) | 🔍 Scale All |
+| ↗️ Arrow | 🟡 Primary (yellow) | 🌀 Bend the profile |
+| ➡️ Arrow | 🔵 Secondary (cyan) | 🧊 Bevel Resolution |
+| 🟦 Square | 🔵 Secondary (cyan) | 📐 Bevel Scale |
+
+Not every primitive has every gizmo. Each asset below lists the gizmos it has.
+
+## Properties and operators
+
+Every Smart Primitive can also be changed with numbers, in the **Asset Properties** panel of the 3D View sidebar (**Item** tab) or in its Geometry Nodes modifier. The properties are grouped into top-level, bevel, resolution and UV properties. To turn Smart Primitives into regular meshes, use **Object › Apply**, with the Join, Boolean and Remesh options. Both are explained in [Default Library](default-library.md#using-the-sidebar-to-change-asset-properties).
+
+## Basic Shapes
+
+### Cube
+
+![Cube thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cube-thumb.png)
+![Cube with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cube.png)
+
+A standard six-sided shape, great for solid modeling. Includes relative UVs and resolution gizmos.
+
+This asset uses the **Smart Cube** node group.
+
+#### Gizmos
+
+- **Size**: 3
+- **Loop resolution**: 3
+- **Scale All**: 1
+
+#### Inputs
+
+##### X
+
+Data type: Float (distance).
+
+Changes the width of the primitive in unit sizes. Default: 2 m.
+
+##### Y
+
+Data type: Float (distance).
+
+Changes the depth of the primitive in unit sizes. Default: 2 m.
+
+##### Z
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Resolution
+
+###### X
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 3.
+
+###### Y
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 3.
+
+###### Z
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 3.
+
+##### UVs
+
+###### Relative
+
+Data type: Boolean.
+
+Creates a triplanar UV projection that is relative to object scale. Default: on.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cube Rounded
+
+![Cube Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded-thumb.png)
+![Cube Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded.png)
+
+A cube with softened edges for a more organic feel.
+
+This asset uses the **Smart Cube Rounded** node group.
+
+#### Gizmos
+
+- **Size**: 3
+- **Loop resolution**: 3
+- **Bevel Scale**: 1
+- **Bevel Resolution**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### X
+
+Data type: Float (distance).
+
+Changes the width of the primitive in unit sizes. Default: 2 m.
+
+##### Y
+
+Data type: Float (distance).
+
+Changes the depth of the primitive in unit sizes. Default: 2 m.
+
+##### Z
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Bevel
+
+###### Bevel Amount
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. Default: 50.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 3.
+
+##### Resolution
+
+###### X
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 3.
+
+###### Y
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 3.
+
+###### Z
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 3.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Sphere
+
+![Sphere thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/sphere-thumb.png)
+![Sphere with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/sphere.png)
+
+A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.
+
+This asset uses the **Smart Sphere** node group.
+
+#### Gizmos
+
+- **Scale All**: 1
+- **Loop resolution**: 2
+- **Bend profile**: 1
+
+#### Inputs
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 16.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 32.
+
+##### UVs
+
+###### Relative
+
+Data type: Boolean.
+
+Creates a UV projection that is relative to object scale. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Icosphere
+
+![Icosphere thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/icosphere-thumb.png)
+![Icosphere with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/icosphere.png)
+
+A low-poly spherical shape made of triangles, great for optimization, with various levels of resolution.
+
+This asset uses the **Smart Icosphere** node group.
+
+#### Gizmos
+
+- **Bend profile**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Resolution
+
+Data type: Integer.
+
+Subdivisions of the icosphere. Default: 1.
+
+##### UVs
+
+###### Relative
+
+Data type: Boolean.
+
+Creates a UV projection that is relative to object scale. Default: on.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cone
+
+![Cone thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-thumb.png)
+![Cone with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone.png)
+
+A tapered shape with a circular base, useful for pointed structures.
+
+This asset uses the **Smart Cone** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+
+#### Inputs
+
+##### Height
+
+Data type: Float (distance).
+
+Change the height of the primitive in unit sizes. Default: 2 m.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 10.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 4.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cone Rounded
+
+![Cone Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-thumb.png)
+![Cone Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded.png)
+
+A cone with a smoother, more organic tip.
+
+This asset uses the **Smart Cone Rounded** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+- **Bevel Resolution**: 1
+- **Bevel Scale**: 1
+
+#### Inputs
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 3.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 3.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 3.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cylinder
+
+![Cylinder thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-thumb.png)
+![Cylinder with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder.png)
+
+A uniform circular primitive, essential for pipes and tubes.
+
+This asset uses the **Smart Cylinder** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+- **Scale All**: 1
+
+#### Inputs
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 5.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 3.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cylinder Rounded
+
+![Cylinder Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-thumb.png)
+![Cylinder Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded.png)
+
+A cylinder with softened edges for better transitions.
+
+This asset uses the **Smart Cylinder Rounded Revolved** node group. The same group is used by Cylinder Revolved, Cylinder Rounded Revolved; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 2
+- **Bevel Resolution**: 1
+- **Bevel Scale**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.
+
+##### Height
+
+Data type: Float.
+
+Changes the height of the primitive in unit sizes. Default: 1.
+
+##### Width
+
+Data type: Float.
+
+Changes the radius of the primitive in unit sizes. Default: 1.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. Default: 25.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 4.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Tube
+
+![Tube thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-thumb.png)
+![Tube with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube.png)
+
+A hollow cylindrical primitive, great for mechanical parts.
+
+This asset uses the **Smart Tube Revolved** node group. The same group is used by Tube Revolved; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 3
+- **Scale All**: 1
+- **Bevel Scale**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 2.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Tube Rounded
+
+![Tube Rounded thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-thumb.png)
+![Tube Rounded with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded.png)
+
+A tube with smooth edges for a more natural look.
+
+This asset uses the **Smart Tube Rounded Revolved** node group. The same group is used by Tube Rounded Revolved; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 3
+- **Scale All**: 1
+- **Bevel Scale**: 2
+- **Bevel Resolution**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float (distance).
+
+Changes the radius percentage of the bevel. Default: 0.15 m.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 3.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 2.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+## Advanced Forms
+
+### Capsule
+
+![Capsule thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/capsule-thumb.png)
+![Capsule with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/capsule.png)
+
+A stretched sphere useful for stylized characters and smooth objects.
+
+This asset uses the **Smart Capsule** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+- **Bevel Scale**: 1
+
+#### Inputs
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 1 m.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 0.5 m.
+
+##### Cap
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the cap geometry edges/loops resolution. Default: 8.
+
+###### Height
+
+Data type: Float (factor).
+
+Changes the height of the cap with a factor. Smaller values flattens the cap. Default: 1.
+
+###### Corrective Tangent
+
+Data type: Float (factor).
+
+Controls the corrrective tangent of the cap. Tangent can be positive or negative. Useful to correct the cap shape. Default: 0.03.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 16.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 6.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Capsule Revolved
+
+![Capsule Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved-thumb.png)
+![Capsule Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved.png)
+
+A capsule rotated for unique geometry shaping. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Capsule Revolved** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+- **Bevel Scale**: 1
+- **Revolve Angle**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 271.5°.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 1 m. This asset starts at 1.8 m.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 0.5 m.
+
+##### Cap
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the cap geometry edges/loops resolution. Default: 8.
+
+###### Height
+
+Data type: Float (factor).
+
+Control the cap height roundeness or flattness. Default: 1.
+
+###### Corrective Tangent
+
+Data type: Float (factor).
+
+Controls the tangent of the roundness of the cap. Useful to correct the shape. Default: 0.03.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Grid
+
+![Grid thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/grid-thumb.png)
+![Grid with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/grid.png)
+
+A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative UVs.
+
+This asset uses the **Smart Grid** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 2
+- **Scale All**: 1
+
+#### Inputs
+
+##### X
+
+Data type: Float (distance).
+
+Changes the width of the primitive in unit sizes. Default: 2 m.
+
+##### Y
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Resolution
+
+###### X
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 5.
+
+###### Y
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 5.
+
+##### UVs
+
+###### Relative
+
+Data type: Boolean.
+
+Creates a UV projection that is relative to object scale. Default: on.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Torus
+
+![Torus thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/torus-thumb.png)
+![Torus with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/torus.png)
+
+A ring-shaped primitive, ideal for looped structures.
+
+This asset uses the **Smart Torus** node group. The same group is used by Torus Revolved; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 2
+- **Size**: 1
+- **Bevel Scale**: 1
+- **Loop resolution**: 2
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 360°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Thickness
+
+Data type: Float (distance).
+
+Changes the radius of the thickness. Default: 0.25 m.
+
+##### Twist
+
+Data type: Float (angle).
+
+Controls the twist of the torus is not fully revolved. Default: 0°.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 8.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Triangulate Caps
+
+Data type: Boolean.
+
+Triangulates the cap faces to remove NGONs. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Torus Revolved
+
+![Torus Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved-thumb.png)
+![Torus Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved.png)
+
+A torus rotated for specialized forms. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Torus** node group. The same group is used by Torus; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 2
+- **Size**: 1
+- **Bevel Scale**: 1
+- **Loop resolution**: 2
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Thickness
+
+Data type: Float (distance).
+
+Changes the radius of the thickness. Default: 0.25 m.
+
+##### Twist
+
+Data type: Float (angle).
+
+Controls the twist of the torus is not fully revolved. Default: 0°.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 8.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Triangulate Caps
+
+Data type: Boolean.
+
+Triangulates the cap faces to remove NGONs. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Spiral
+
+![Spiral thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/spiral-thumb.png)
+![Spiral with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/spiral.png)
+
+A coiled shape, useful for decorative and mechanical designs.
+
+This asset uses the **Smart Spiral** node group.
+
+#### Gizmos
+
+- **Size**: 3
+- **Revolve Angle**: 2
+- **Bevel Scale**: 2
+- **Scale All**: 1
+- **Loop resolution**: 2
+- **Bend profile**: 1
+
+#### Inputs
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Rotations
+
+Data type: Float.
+
+Changes the rotations amount of the spiral. Default: 3.
+
+##### Start Radius
+
+Data type: Float (distance).
+
+Changes the start of the spiral radius. Default: 1 m.
+
+##### End Radius
+
+Data type: Float (distance).
+
+Changes the end of the spiral radius. Default: 0.25 m.
+
+##### Profile
+
+###### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the profile that is lofted on the spiral. Default: 0.2 m.
+
+###### Taper
+
+Data type: Float (factor).
+
+Changes the taper of the spiral by a factor. Negative values thickens the end radius. Default: 0.
+
+###### Twist
+
+Data type: Float (angle).
+
+Changes the tilt of the profile loft which creates a twist. Default: 0°.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 12.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 32.
+
+###### Triangulate Caps
+
+Data type: Boolean.
+
+Triangulates the cap faces to remove NGONs. Default: off.
+
+##### UVs
+
+###### Scale
+
+Data type: Float.
+
+Scale the UVs. Default: 2.
+
+###### U Scale
+
+Data type: Float.
+
+Scale UV's on the U axis. Default: 0.
+
+###### V Scale
+
+Data type: Float.
+
+Scale UV's on the V axis. Default: 0.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Circle
+
+![Circle thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/circle-thumb.png)
+![Circle with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/circle.png)
+
+A simple 2D shape for base geometry and cutouts. Includes stamped or path based UVs.
+
+This asset uses the **Smart Circle** node group.
+
+#### Gizmos
+
+- **Size**: 1
+- **Bevel Scale**: 1
+- **Loop resolution**: 2
+- **Bevel Resolution**: 1
+
+#### Inputs
+
+##### Outer Radius
+
+Data type: Float (distance).
+
+Changes the outer radius in unit sizes. Default: 1 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Inner Height
+
+Data type: Float (factor).
+
+Change the inner edge height offset. This is clamped to 1, but it is essentially limitless. Default: 0.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 32.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 4.
+
+##### UVs
+
+###### Stamped UVs
+
+Data type: Boolean.
+
+Changes the UV's to stamped UV's, which is a flat top down projection. Otherwise, use path based UVs. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Circle Revolved
+
+![Circle Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved-thumb.png)
+![Circle Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved.png)
+
+A circular shape rotated into a 3D form. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Circle Revolved** node group.
+
+#### Gizmos
+
+- **Size**: 1
+- **Bevel Scale**: 1
+- **Loop resolution**: 2
+- **Revolve Angle**: 1
+- **Bevel Resolution**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Outer Radius
+
+Data type: Float (distance).
+
+Changes the outer radius in unit sizes. Default: 1 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Inner Height
+
+Data type: Float (factor).
+
+Change the inner edge height offset. This is clamped to 1, but it is essentially limitless. Default: 0.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 32.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 4.
+
+##### UVs
+
+###### Stamped UVs
+
+Data type: Boolean.
+
+Changes the UV's to stamped UV's, which is a flat top down projection. Otherwise, use path based UVs. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Curve Lofted
+
+![Curve Lofted thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted-thumb.png)
+![Curve Lofted with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted.png)
+
+Generates complex surfaces using lofted curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.
+
+This asset uses the **Smart Curve Lofted** node group.
+
+#### Gizmos
+
+- **Size**: 3
+- **Loop resolution**: 3
+- **Bevel Scale**: 2
+- **Bevel Resolution**: 1
+- **Scale All**: 1
+- **Bend profile**: 1
+
+#### Inputs
+
+##### Volume
+
+Data type: Float.
+
+Controls the volume of the lofted curve or grease pencil. Default: 2.
+
+##### Tips
+
+Data type: Float.
+
+Changes the width of the tips of the loftes curve or grease pencil. Default: 0.
+
+##### Bias
+
+Data type: Float (factor).
+
+Changes the bias of volume to the start or end of the curve or grease pencil. Default: 0.5.
+
+##### Helper Gizmos
+
+Data type: Boolean.
+
+Toggles the custom object selector if you want to use a grease pencil or another curve object. Default: on.
+
+##### Custom Object
+
+###### Custom Object
+
+Data type: Boolean.
+
+Toggles the custom object selector if you want to use a grease pencil or another curve object. Default: off.
+
+###### Curve Object
+
+Data type: Object.
+
+Chooses the custom object or grease pencil.
+
+##### Profile
+
+###### Width
+
+Data type: Float.
+
+Changes the width of the profile shape that is used to loft. Default: 1.
+
+###### Depth
+
+Data type: Float.
+
+Changes the depth of the profile shape that is used to loft. Default: 0.72.
+
+###### Swell
+
+Data type: Float.
+
+Changes the swell of the profile shape that is used to loft. Default: 0.
+
+###### Bend
+
+Data type: Float.
+
+Changes the internal bend of the profile shape that is used to loft. Default: 0.
+
+##### Resolution
+
+###### Resolution Method
+
+Data type: Menu.
+
+Selects the resample method for horizontal resolution. Warning: length could be imperformant. Default: Count.
+
+###### Length
+
+Data type: Float (distance).
+
+If the resolution method is by length, this creates a point per length distance unit. Default: 0.1 m.
+
+###### Count
+
+Data type: Integer.
+
+If the resolution method is by count, this creates a total number of points per spline. Default: 10.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 5.
+
+###### Depth
+
+Data type: Integer.
+
+Changes the depth resolution of the geometry edges/loops. Default: 2.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float (factor).
+
+Changes the bevel radius factor. Warning: bevel could be imperformant. Default: 0.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the resolution of the bevel. Default: 3. This asset starts at 2.
+
+##### Smoothness
+
+###### Inheriit
+
+Data type: Boolean.
+
+Inherits the normals smoothness settings of the Curve object. Warning: Grease Pencil objects do not have smoothness information to inherit. Default: off.
+
+###### Smooth
+
+Data type: Boolean.
+
+Turns normals smoothness override on or off. Useful for Grease Pencil objects. Default: on.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cylinder Revolved
+
+![Cylinder Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved-thumb.png)
+![Cylinder Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved.png)
+
+A cylindrical shape rotated for varied effects. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Cylinder Rounded Revolved** node group. The same group is used by Cylinder Rounded, Cylinder Rounded Revolved; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 2
+- **Bevel Resolution**: 1
+- **Bevel Scale**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°. This asset starts at 270°.
+
+##### Height
+
+Data type: Float.
+
+Changes the height of the primitive in unit sizes. Default: 1.
+
+##### Width
+
+Data type: Float.
+
+Changes the radius of the primitive in unit sizes. Default: 1.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. Default: 25. This asset starts at 0.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 4.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cylinder Rounded Revolved
+
+![Cylinder Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved-thumb.png)
+![Cylinder Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved.png)
+
+A rounded cylinder adapted for more curvature. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Cylinder Rounded Revolved** node group. The same group is used by Cylinder Revolved, Cylinder Rounded; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 2
+- **Bevel Resolution**: 1
+- **Bevel Scale**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Height
+
+Data type: Float.
+
+Changes the height of the primitive in unit sizes. Default: 1.
+
+##### Width
+
+Data type: Float.
+
+Changes the radius of the primitive in unit sizes. Default: 1.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. Default: 25.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 4.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Tube Revolved
+
+![Tube Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved-thumb.png)
+![Tube Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved.png)
+
+A tube rotated for improved modeling flexibility. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Tube Revolved** node group. The same group is used by Tube; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 3
+- **Scale All**: 1
+- **Bevel Scale**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 2.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Tube Rounded Revolved
+
+![Tube Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved-thumb.png)
+![Tube Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved.png)
+
+A smoothed, rotated tube for streamlined designs. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Tube Rounded Revolved** node group. The same group is used by Tube Rounded; each asset starts from its own settings.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Size**: 2
+- **Loop resolution**: 3
+- **Scale All**: 1
+- **Bevel Scale**: 2
+- **Bevel Resolution**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Inner Radius
+
+Data type: Float.
+
+Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float (distance).
+
+Changes the radius percentage of the bevel. Default: 0.15 m.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 3.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 6.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 2.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Cone Rounded Revolved
+
+![Cone Rounded Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved-thumb.png)
+![Cone Rounded Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved.png)
+
+A tapered primitive that blends sharpness with curvature. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Cone Rounded Revolved** node group.
+
+#### Gizmos
+
+- **Size**: 2
+- **Loop resolution**: 3
+- **Bevel Resolution**: 1
+- **Bevel Scale**: 1
+- **Revolve Angle**: 1
+- **Scale All**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Height
+
+Data type: Float (distance).
+
+Changes the height of the primitive in unit sizes. Default: 2 m.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Bevel
+
+###### Radius
+
+Data type: Float.
+
+Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.
+
+###### Resolution
+
+Data type: Integer.
+
+Changes the bevel geometry edges/loops resolution. Default: 3.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 3.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 24.
+
+###### Base
+
+Data type: Integer.
+
+Changes the base resolution of the geometry edges/loops. Default: 3.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+###### Triangulate All
+
+Data type: Boolean.
+
+Triangulates all faces. Default: off.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
+
+### Sphere Revolved
+
+![Sphere Revolved thumbnail](/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved-thumb.png)
+![Sphere Revolved with its gizmos](/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved.png)
+
+A sphere adjusted through rotation for unique formations. Includes the ability to revolve around an angle.
+
+This asset uses the **Smart Sphere Revolved** node group.
+
+#### Gizmos
+
+- **Revolve Angle**: 1
+- **Scale All**: 1
+- **Loop resolution**: 2
+- **Bend profile**: 1
+
+#### Inputs
+
+##### Angle
+
+Data type: Float (angle).
+
+Changes the revolve angle in degrees. 360° closes the revolution. Default: 270°.
+
+##### Radius
+
+Data type: Float (distance).
+
+Changes the radius of the primitive in unit sizes. Default: 1 m.
+
+##### Resolution
+
+###### Horizontal
+
+Data type: Integer.
+
+Changes the horizontal resolution of the geometry edges/loops. Default: 16.
+
+###### Vertical
+
+Data type: Integer.
+
+Changes the vertical resolution of the geometry edges/loops. Default: 16.
+
+###### Triangulate Center
+
+Data type: Boolean.
+
+Triangulates the center faces to remove NGONs. Default: on.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The generated shape.
 
 # Utilities
 
