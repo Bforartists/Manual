@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.24
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.25
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -278,6 +278,7 @@
     '.dk-teaser-when{position:absolute;top:1rem;right:1rem;padding:.25rem .625rem;border-radius:.25rem;background:repeating-linear-gradient(135deg,#f2c94c 0 8px,#e0b53c 8px 16px);color:#1a1a1a;font:800 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}',
     '@media(max-width:767px){.dk-teaser{grid-template-columns:1fr}.dk-teaser-when{position:static;justify-self:start}}',
     '@media(max-width:991px){.dk-h-top{grid-template-columns:1fr}.dk-paths{grid-template-columns:repeat(3,minmax(0,1fr))}.dk-secs{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-sink{padding:.875rem}}',
+    '.ui-doc-compare{position:relative;width:100%;margin:1rem 0;overflow:hidden;border-radius:.375rem;line-height:0;user-select:none;touch-action:pan-y;--pos:50%;background:#222;box-shadow:0 1px 3px #0008}.ui-doc-compare img{display:block;width:100%;height:auto;margin:0;max-width:none;box-shadow:none;border-radius:0}.ui-doc-compare img+img{position:absolute;inset:0;height:100%;clip-path:inset(0 0 0 var(--pos))}.ui-doc-compare .cmp-l,.ui-doc-compare .cmp-r{position:absolute;top:.5rem;padding:.15rem .5rem;border-radius:.25rem;background:#000a;color:#fff;font:600 12px/1.4 sans-serif;pointer-events:none}.ui-doc-compare .cmp-l{left:.5rem}.ui-doc-compare .cmp-r{right:.5rem}.ui-doc-compare .cmp-bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 4px #000a;pointer-events:none}.ui-doc-compare .cmp-bar:after{content:"\\25C0 \\25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.35rem .5rem;border-radius:999px;background:#fff;color:#222;font:700 10px/1 sans-serif;white-space:nowrap;letter-spacing:2px}.ui-doc-compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}',
     '@media(max-width:600px){.dk-h h1{font-size:2.25rem}.dk-paths{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-secs,.dk-two{grid-template-columns:1fr}}'
   ].join('\n');
   var st = d.createElement('style'); st.id = 'bfa-docs-layer'; st.textContent = CSS; d.head.appendChild(st);
@@ -630,4 +631,5 @@
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });
   else setTimeout(start, 0);
+  function bfaCompare(){document.querySelectorAll('.ui-doc-compare:not([data-ready])').forEach(function(c){c.dataset.ready='1';var i=document.createElement('input');i.type='range';i.min=0;i.max=100;i.value=50;i.setAttribute('aria-label','Compare before and after');var b=document.createElement('span');b.className='cmp-bar';i.addEventListener('input',function(){c.style.setProperty('--pos',i.value+'%')});c.appendChild(b);c.appendChild(i);});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bfaCompare);else bfaCompare();
 })();

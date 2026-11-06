@@ -26,7 +26,8 @@ REPO_URL = os.environ.get("DOCS_REPO_URL", "https://github.com/Bforartists/Manua
 CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/bforartists/manual")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-PREVIEW_CSS = """
+PREVIEW_CSS = """.ui-doc-compare{position:relative;width:100%;margin:1rem 0;overflow:hidden;border-radius:.375rem;line-height:0;user-select:none;touch-action:pan-y;--pos:50%;background:#222;box-shadow:0 1px 3px #0008}.ui-doc-compare img{display:block;width:100%;height:auto;margin:0;max-width:none;box-shadow:none;border-radius:0}.ui-doc-compare img+img{position:absolute;inset:0;height:100%;clip-path:inset(0 0 0 var(--pos))}.ui-doc-compare .cmp-l,.ui-doc-compare .cmp-r{position:absolute;top:.5rem;padding:.15rem .5rem;border-radius:.25rem;background:#000a;color:#fff;font:600 12px/1.4 sans-serif;pointer-events:none}.ui-doc-compare .cmp-l{left:.5rem}.ui-doc-compare .cmp-r{right:.5rem}.ui-doc-compare .cmp-bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 4px #000a;pointer-events:none}.ui-doc-compare .cmp-bar:after{content:"\\25C0 \\25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.35rem .5rem;border-radius:999px;background:#fff;color:#222;font:700 10px/1 sans-serif;white-space:nowrap;letter-spacing:2px}.ui-doc-compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
@@ -57,7 +58,8 @@ a{color:var(--dk-link)}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
 """
 
-THEME_JS = """
+THEME_JS = """function bfaCompare(){document.querySelectorAll('.ui-doc-compare:not([data-ready])').forEach(function(c){c.dataset.ready='1';var i=document.createElement('input');i.type='range';i.min=0;i.max=100;i.value=50;i.setAttribute('aria-label','Compare before and after');var b=document.createElement('span');b.className='cmp-bar';i.addEventListener('input',function(){c.style.setProperty('--pos',i.value+'%')});c.appendChild(b);c.appendChild(i);});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bfaCompare);else bfaCompare();
+
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
 """
