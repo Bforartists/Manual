@@ -379,7 +379,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Assets › Compositor Library</div><h1 class="pv-title">Compositor Library</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><p>Node groups for the compositor that come with Bforartists.</p>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Assets › Compositor Library</div><h1 class="pv-title">Compositor Library</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 5 min read</span></div><article class="ui-doc-body"><p>Node groups for the compositor that come with Bforartists.</p>
 <blockquote>
 <p><strong>Draft:</strong> this page is being filled asset by asset, one category at a time. Categories that are not written yet are marked below.</p>
 </blockquote>
@@ -387,7 +387,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h1 id="color">Color</h1>
 <p>Assets that change the color of an image.</p>
 <h2 id="adjust-rgb">Adjust RGB</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/adjust-rgb.png" alt="Adjust RGB" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/adjust-rgb.png" alt="Adjust RGB" loading="lazy"></figure>
 <p>Adjusts the red, green and blue channels of an image individually.</p>
 <h3 id="inputs">Inputs</h3>
 <h4 id="image">Image</h4>
@@ -409,8 +409,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-2">Image</h4>
 <p>Data type: Color.</p>
 <p>The output image after processing the effect.</p>
+<h3 id="how-to-use">How to use</h3>
+<p>Connect an image to Image and the output to the next node. In the picture, Red is 30 and Blue is -30.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/adjust-rgb-usage.png" alt="Adjust RGB in use" loading="lazy"><figcaption>Adjust RGB in use</figcaption></figure>
 <h2 id="average-color">Average Color</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/average-color.png" alt="Average Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/average-color.png" alt="Average Color" loading="lazy"></figure>
 <p>Calculates the average color of the input image.</p>
 <h3 id="inputs-2">Inputs</h3>
 <h4 id="image-3">Image</h4>
@@ -420,8 +423,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="color-2">Color</h4>
 <p>Data type: Color.</p>
 <p>The output color after processing the effect.</p>
+<h3 id="how-to-use-2">How to use</h3>
+<p>Connect an image to Image. The output is a single color, shown here as a flat fill.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/average-color-usage.png" alt="Average Color in use" loading="lazy"><figcaption>Average Color in use</figcaption></figure>
 <h2 id="color-temperature">Color Temperature</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/color-temperature.png" alt="Color Temperature" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-temperature.png" alt="Color Temperature" loading="lazy"></figure>
 <p>Adjusts the color temperature of the image to simulate different lighting conditions.</p>
 <h3 id="inputs-3">Inputs</h3>
 <h4 id="image-4">Image</h4>
@@ -437,8 +443,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-5">Image</h4>
 <p>Data type: Color.</p>
 <p>The output image after processing the effect.</p>
+<h3 id="how-to-use-3">How to use</h3>
+<p>Connect an image to Image and set Temp Kelvin. In the picture, Temp Kelvin is 3500.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-temperature-usage.png" alt="Color Temperature in use" loading="lazy"><figcaption>Color Temperature in use</figcaption></figure>
 <h2 id="color-tint">Color Tint</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/color-tint.png" alt="Color Tint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-tint.png" alt="Color Tint" loading="lazy"></figure>
 <p>Applies a color tint to the image with adjustable strength and power.</p>
 <h3 id="inputs-4">Inputs</h3>
 <h4 id="image-6">Image</h4>
@@ -457,8 +466,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-7">Image</h4>
 <p>Data type: Color.</p>
 <p>The output image after processing the effect.</p>
+<h3 id="how-to-use-4">How to use</h3>
+<p>Connect an image to Image and pick a Color. In the picture, Color is blue and Strength is 0.6.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-tint-usage.png" alt="Color Tint in use" loading="lazy"><figcaption>Color Tint in use</figcaption></figure>
 <h2 id="color-variation">Color Variation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/color-variation.png" alt="Color Variation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-variation.png" alt="Color Variation" loading="lazy"></figure>
 <p>Adds subtle random color variation across the image.</p>
 <h3 id="inputs-5">Inputs</h3>
 <h4 id="image-8">Image</h4>
@@ -477,8 +489,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-9">Image</h4>
 <p>Data type: Color.</p>
 <p>The image with color variation applied.</p>
+<h3 id="how-to-use-5">How to use</h3>
+<p>Connect an image to Image. In the picture, Strength is 1.0.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/color-variation-usage.png" alt="Color Variation in use" loading="lazy"><figcaption>Color Variation in use</figcaption></figure>
 <h2 id="desaturator">Desaturator</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/desaturator.png" alt="Desaturator" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/desaturator.png" alt="Desaturator" loading="lazy"></figure>
 <p>Desaturates the image, with control over strength and hue.</p>
 <h3 id="inputs-6">Inputs</h3>
 <h4 id="image-10">Image</h4>
@@ -494,8 +509,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-11">Image</h4>
 <p>Data type: Color.</p>
 <p>The desaturated image.</p>
+<h3 id="how-to-use-6">How to use</h3>
+<p>Connect an image to Image. In the picture, Saturation Strength is 0.8.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/desaturator-usage.png" alt="Desaturator in use" loading="lazy"></figure>
 <h2 id="halftone-color">Halftone Color</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/halftone-color.png" alt="Halftone Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/halftone-color.png" alt="Halftone Color" loading="lazy"></figure>
 <p>Colors a halftone pattern, sizing dots by brightness. Use it together with Halftone Pattern: connect the Distance output of Halftone Pattern to the Distance input here.</p>
 <h3 id="inputs-7">Inputs</h3>
 <h4 id="distance">Distance</h4>
@@ -520,8 +538,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="mask">Mask</h4>
 <p>Data type: Float.</p>
 <p>Black and white dots.</p>
+<h3 id="how-to-use-7">How to use</h3>
+<p>Connect the Distance output of Halftone Pattern to Distance, an image to Foreground, and set Background to white. Connect Color to the next node.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Color in use" loading="lazy"><figcaption>Halftone Color in use</figcaption></figure>
 <h2 id="halftone-pattern">Halftone Pattern</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/halftone-pattern.png" alt="Halftone Pattern" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/halftone-pattern.png" alt="Halftone Pattern" loading="lazy"></figure>
 <p>Creates a halftone dot pattern with distance and vector outputs. Use it together with Halftone Color: connect the Distance output to Halftone Color.</p>
 <h3 id="inputs-8">Inputs</h3>
 <h4 id="rotation">Rotation</h4>
@@ -549,8 +570,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="vector-2">Vector</h4>
 <p>Data type: Vector.</p>
 <p>Coordinates inside each dot.</p>
+<h3 id="how-to-use-8">How to use</h3>
+<p>Use it together with Halftone Color: connect Distance to the Distance input of Halftone Color.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/halftone-usage.png" alt="Halftone Pattern in use" loading="lazy"><figcaption>Halftone Pattern in use</figcaption></figure>
 <h2 id="simple-saturation">Simple Saturation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/38a2b01538165a44546f82978bf140c0561b1dfd/docs2/images/assets/compositor-library/color/simple-saturation.png" alt="Simple Saturation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/simple-saturation.png" alt="Simple Saturation" loading="lazy"></figure>
 <p>Adjusts the saturation level of the image.</p>
 <h3 id="inputs-9">Inputs</h3>
 <h4 id="image-12">Image</h4>
@@ -563,6 +587,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="image-13">Image</h4>
 <p>Data type: Color.</p>
 <p>The output image after processing the effect.</p>
+<h3 id="how-to-use-9">How to use</h3>
+<p>Connect an image to Image. In the picture, Saturation is 0.25.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a45157ccda47924f69388ce9b67687a42e0cfc34/docs2/images/assets/compositor-library/color/simple-saturation-usage.png" alt="Simple Saturation in use" loading="lazy"><figcaption>Simple Saturation in use</figcaption></figure>
 <h1 id="creative-design">Creative / Design</h1>
 <p><em>Assets in this category will be documented here.</em></p>
 <h1 id="distortion">Distortion</h1>
@@ -581,4 +608,4 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p><em>Assets in this category will be documented here.</em></p>
 <h1 id="utilities-vector">Utilities / Vector</h1>
 <p><em>Assets in this category will be documented here.</em></p>
-</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fassets-compositor-color/collection/docs/edit/docs2%2Fcontent%2Fassets%2Fcompositor-library.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/assets-compositor-color/docs2/content/assets/compositor-library.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#adjust-rgb">Adjust RGB</a><a class="h3" href="#inputs">Inputs</a><a class="h3" href="#outputs">Outputs</a><a class="h2" href="#average-color">Average Color</a><a class="h3" href="#inputs-2">Inputs</a><a class="h3" href="#outputs-2">Outputs</a><a class="h2" href="#color-temperature">Color Temperature</a><a class="h3" href="#inputs-3">Inputs</a><a class="h3" href="#outputs-3">Outputs</a><a class="h2" href="#color-tint">Color Tint</a><a class="h3" href="#inputs-4">Inputs</a><a class="h3" href="#outputs-4">Outputs</a><a class="h2" href="#color-variation">Color Variation</a><a class="h3" href="#inputs-5">Inputs</a><a class="h3" href="#outputs-5">Outputs</a><a class="h2" href="#desaturator">Desaturator</a><a class="h3" href="#inputs-6">Inputs</a><a class="h3" href="#outputs-6">Outputs</a><a class="h2" href="#halftone-color">Halftone Color</a><a class="h3" href="#inputs-7">Inputs</a><a class="h3" href="#outputs-7">Outputs</a><a class="h2" href="#halftone-pattern">Halftone Pattern</a><a class="h3" href="#inputs-8">Inputs</a><a class="h3" href="#outputs-8">Outputs</a><a class="h2" href="#simple-saturation">Simple Saturation</a><a class="h3" href="#inputs-9">Inputs</a><a class="h3" href="#outputs-9">Outputs</a></aside></div></body></html>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fassets-compositor-color/collection/docs/edit/docs2%2Fcontent%2Fassets%2Fcompositor-library.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/assets-compositor-color/docs2/content/assets/compositor-library.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#adjust-rgb">Adjust RGB</a><a class="h3" href="#inputs">Inputs</a><a class="h3" href="#outputs">Outputs</a><a class="h3" href="#how-to-use">How to use</a><a class="h2" href="#average-color">Average Color</a><a class="h3" href="#inputs-2">Inputs</a><a class="h3" href="#outputs-2">Outputs</a><a class="h3" href="#how-to-use-2">How to use</a><a class="h2" href="#color-temperature">Color Temperature</a><a class="h3" href="#inputs-3">Inputs</a><a class="h3" href="#outputs-3">Outputs</a><a class="h3" href="#how-to-use-3">How to use</a><a class="h2" href="#color-tint">Color Tint</a><a class="h3" href="#inputs-4">Inputs</a><a class="h3" href="#outputs-4">Outputs</a><a class="h3" href="#how-to-use-4">How to use</a><a class="h2" href="#color-variation">Color Variation</a><a class="h3" href="#inputs-5">Inputs</a><a class="h3" href="#outputs-5">Outputs</a><a class="h3" href="#how-to-use-5">How to use</a><a class="h2" href="#desaturator">Desaturator</a><a class="h3" href="#inputs-6">Inputs</a><a class="h3" href="#outputs-6">Outputs</a><a class="h3" href="#how-to-use-6">How to use</a><a class="h2" href="#halftone-color">Halftone Color</a><a class="h3" href="#inputs-7">Inputs</a><a class="h3" href="#outputs-7">Outputs</a><a class="h3" href="#how-to-use-7">How to use</a><a class="h2" href="#halftone-pattern">Halftone Pattern</a><a class="h3" href="#inputs-8">Inputs</a><a class="h3" href="#outputs-8">Outputs</a><a class="h3" href="#how-to-use-8">How to use</a><a class="h2" href="#simple-saturation">Simple Saturation</a><a class="h3" href="#inputs-9">Inputs</a><a class="h3" href="#outputs-9">Outputs</a><a class="h3" href="#how-to-use-9">How to use</a></aside></div></body></html>
