@@ -160,6 +160,10 @@ Enables proportional editing. Activating proportional editing reveals further se
 - **Connected**: The proportional falloff gets calculated for connected parts only.
 - **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
+
+#### Align to Transform Orientation
+
+Rotates the selected bones so their axes line up with the current transform orientation, set in the header. Use it to straighten posed bones to the world, the view or a custom orientation. It is only in Pose Mode.
 ### Clear Transform - Submenu
 
 #### Clear Transform
@@ -299,6 +303,21 @@ Bake all selected objects location/scale/rotation animation to an action.
 
 Only works on Mesh objects.
 
+
+#### Convert Rotation Mode
+
+Changes the rotation mode of the selected bones and converts their existing animation to the new mode, so the motion stays the same. Use it when a bone was animated in Euler and you need Quaternion, for example to avoid gimbal lock. It is also in Object Mode for objects. The hotkey in Pose Mode is **Ctrl R**.
+
+##### Adjust Last Operation - Convert Rotation Mode
+
+Change the settings of **Convert Rotation Mode** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Convert Rotation Mode](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-convert-rotation-mode.png)
+
+| Entry | What it does |
+| --- | --- |
+| Rotation Mode | The rotation mode to convert to: Quaternion (WXYZ), one of the six Euler orders, or Axis Angle. |
+| Bake | Adds a key on every frame before the conversion, so the motion between keys stays exactly the same in the new mode. |
 ### In-Between - Submenu
 
 #### In Between
