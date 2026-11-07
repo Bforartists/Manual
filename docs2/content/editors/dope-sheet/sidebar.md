@@ -48,12 +48,13 @@ In Dope Sheet and Action Editor sub mode.
 
 Use a manual frame range.
 
+#### Start / End
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------- |
-| Start / End | The start and end frame of the manual range. |
-| Cyclic Animation | If the animation in the manual frame range should cycle. |
+The start and end frame of the manual range.
 
+#### Cyclic Animation
+
+If the animation in the manual frame range should cycle.
 
 ## Sidebar - Layer panel
 
@@ -67,12 +68,13 @@ Grease Pencil mode only. This panel contains further settings for the grease pen
 
 The blend mode for the current layer.
 
+#### Opacity
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------ |
-| Opacity | The layer opacity. |
-| Lights | Enable the use of lights on stroke and fill materials. |
+The layer opacity.
 
+#### Lights
+
+Enable the use of lights on stroke and fill materials.
 
 ### Masks subpanel
 
@@ -96,13 +98,17 @@ Choose the grease pencil layer that you want to add and use as a mask.
 
 The list of the mask layers.
 
+##### Layer name
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------- |
-| Layer name | The name of the layer. Double clicking at it enables to edit the name. |
-| Invert | Invert the mask. |
-| Hide | Show or hide the mask. |
+The name of the layer. Double clicking at it enables to edit the name.
 
+##### Invert
+
+Invert the mask.
+
+##### Hide
+
+Show or hide the mask.
 
 ##### Search
 
@@ -128,24 +134,29 @@ Transform values.
 
 ![Adjustment subpanel](/docs2/images/editors/dope-sheet/sidebar/adjustment-subpanel.png)
 
+#### Tint color
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------ |
-| Tint color | Color for tinting stroke colors. |
-| Factor | Factor of tinting color. |
-| Stroke Thickness | Radius change to apply to current strokes. |
+Color for tinting stroke colors.
 
+#### Factor
+
+Factor of tinting color.
+
+#### Stroke Thickness
+
+Radius change to apply to current strokes.
 
 ### Relations subpanel
 
 ![Relations subpanel](/docs2/images/editors/dope-sheet/sidebar/relations-subpanel.png)
 
+#### Parent
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| Parent | Parent object. |
-| Type | The object type to parent to. |
+Parent object.
 
+#### Type
+
+The object type to parent to.
 
 ### Display subpanel
 
@@ -173,12 +184,18 @@ This panel just shows when you have a armature selected and when you are in pose
 
 Creates a pose asset from the selected armature in pose mode. It opens a dialog. The dialog is pretty self explaining.
 
+#### Pose name
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Pose name | Name of the pose. |
-| Library | The library where you want to store the pose. |
-| Catalog | Catalog to use for the new asset. |
-| Copy Pose as Asset | Copies the current pose of the selected armature as an asset. You can then paste it into the asset library. |
+Name of the pose.
 
+#### Library
 
+The library where you want to store the pose.
+
+#### Catalog
+
+Catalog to use for the new asset.
+
+#### Copy Pose as Asset
+
+Copies the current pose of the selected armature as an asset. You can then paste it into the asset library.

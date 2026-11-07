@@ -59,14 +59,21 @@ A proxy is a smaller replacement image for the main image. Think of it as a thum
 
 Make sure to disable the Proxy images before doing the final render!
 
+### Use Proxy / Timecode
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------- |
-| Use Proxy / Timecode | Use Proxy / Timecode for this clip. |
-| Build Original | Define the resolution of the proxy images. |
-| Build Undistorted | Builds the proxy images from the undistorted original images for the sizes set above. |
-| Quality | Defines the quality of the JPEG images used for proxies. |
+Use Proxy / Timecode for this clip.
 
+### Build Original
+
+Define the resolution of the proxy images.
+
+### Build Undistorted
+
+Builds the proxy images from the undistorted original images for the sizes set above.
+
+### Quality
+
+Defines the quality of the JPEG images used for proxies.
 
 ### Proxy Custom Directory
 
@@ -74,12 +81,13 @@ Make sure to disable the Proxy images before doing the final render!
 
 By default, all generated proxy images are storing to the *&lt;path of original footage&gt;/BL_proxy/&lt;clip name&gt;* folder. Define a custom directory.
 
+#### Build Proxy / Time code
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------- |
-| Build Proxy / Time code | (Re)creates the proxy images and the time code. |
-| Delete Proxy | Deletes the proxy images and the time code. |
+(Re)creates the proxy images and the time code.
 
+#### Delete Proxy
+
+Deletes the proxy images and the time code.
 
 ### Time code Index
 
@@ -103,13 +111,17 @@ This content shows in Tracking Mode and Masking mode.
 
 The panel contains some footage related settings.
 
+### File Path
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| File Path | The file path for the currently loaded and active video. Here you can also load another video, or refresh the video. |
-| Start Frame | The start frame for the currently loaded and active video. |
-| Frame Offset | Define a frame offset. |
+The file path for the currently loaded and active video. Here you can also load another video, or refresh the video.
 
+### Start Frame
+
+The start frame for the currently loaded and active video.
+
+### Frame Offset
+
+Define a frame offset.
 
 ### Color Space
 
@@ -145,12 +157,13 @@ Marker settings for the currently selected marker.
 
 Read and edit the name of the currently selected marker.
 
+#### Enable
 
-| Entry | What it does |
-| ------ | ------------------------------------- |
-| Enable | Enable the currently selected marker. |
-| Lock | Lock the currently selected marker. |
+Enable the currently selected marker.
 
+#### Lock
+
+Lock the currently selected marker.
 
 ### Track Scope
 
@@ -170,19 +183,25 @@ If an anchor is used (the position in the image which is tracking is different f
 
 Use red, green and blue color in the preview image.
 
+##### B/W
 
-| Entry | What it does |
-| ----- | --------------------------------------------- |
-| B/W | Use a greyscale preview image. |
-| Alpha | Use existing alpha channel for preview image. |
+Use a greyscale preview image.
 
+##### Alpha
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Weight | The influence of this track to the final solution. Altering the weights of problem tracking markers can correct or greatly reduce undesirable jumps. This parameter can be animated. |
-| Stab Weight | Stabilization weight. The influence of this track on 2D stabilization. |
-| Average Error | The average error of this marker. |
+Use existing alpha channel for preview image.
 
+##### Weight
+
+The influence of this track to the final solution. Altering the weights of problem tracking markers can correct or greatly reduce undesirable jumps. This parameter can be animated.
+
+##### Stab Weight
+
+Stabilization weight. The influence of this track on 2D stabilization.
+
+##### Average Error
+
+The average error of this marker.
 
 ### Custom Color
 
@@ -236,23 +255,25 @@ This content is just active and visible when you have a Plane track in your foot
 
 See also in the Tool shelf in the Solve tab in the Plane Track panel.
 
+### Name
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------- |
-| Name | The name of the Plane track. |
-| Auto Keyframe | Use Auto Keyframe when moving plane track corners. |
+The name of the Plane track.
 
+### Auto Keyframe
+
+Use Auto Keyframe when moving plane track corners.
 
 ### Image prop
 
 ![Image prop](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/image-prop.png)
 
+#### Image browser
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image browser | See and load images or movies that you want to display inside of the Plane track. Note that this image needs to exist already so that it gets displayed in the list. As a image node for example. |
-| Edit Box | The name of the current active image or movie. Click at it to change the name. |
+See and load images or movies that you want to display inside of the Plane track. Note that this image needs to exist already so that it gets displayed in the list. As a image node for example.
 
+#### Edit Box
+
+The name of the current active image or movie. Click at it to change the name.
 
 #### Fake User
 
@@ -260,12 +281,13 @@ Wit this button you assign a fake user to this selected mask. Masks gets created
 
 Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behaviour. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
+##### New Image
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| New Image | Calls a file browser to choose a image or movie. |
-| Remove | Removes the current active image or movie. It is still in the Image browser though. To delete it completely you can use the Purge command in the File menu in the Cleanup submenu. See also Fake User. |
+Calls a file browser to choose a image or movie.
 
+##### Remove
+
+Removes the current active image or movie. It is still in the Image browser though. To delete it completely you can use the Purge command in the File menu in the Cleanup submenu. See also Fake User.
 
 ### Opacity
 
@@ -289,12 +311,13 @@ Choose the motion model for the marker.
 
 Choose the pattern match method.
 
+#### Prepass
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------- |
-| Prepass | Use a brute-force translation only pre-track before refinement. |
-| Normalize | Normalize light intensities while tracking. |
+Use a brute-force translation only pre-track before refinement.
 
+#### Normalize
+
+Normalize light intensities while tracking.
 
 ### Tracking Options Extras
 
@@ -302,14 +325,21 @@ Choose the pattern match method.
 
 A sub menu that contains some not so often used settings.
 
+#### Correlation
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Correlation | Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking. |
-| Margin | Default distance from image boundary at which markers stops tracking. |
-| Use Mask | Use a Grease Pencil data block as a mask. |
-| Frames Limit | In every tracking cycle the numbers of given frames are tracked. |
+Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking.
 
+#### Margin
+
+Default distance from image boundary at which markers stops tracking.
+
+#### Use Mask
+
+Use a Grease Pencil data block as a mask.
+
+#### Frames Limit
+
+In every tracking cycle the numbers of given frames are tracked.
 
 #### Speed
 
@@ -335,12 +365,13 @@ A drop down box to choose between different camera presets. When your camera is 
 
 This is at the end of the list. Add a new preset, and give it a name. To remove the preset click at the minus sign besides the preset in the list
 
+##### Sensor Width
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sensor Width | The width of the CCD Sensor in your used camera. This value can be found in the camera specifications. |
-| Pixel Aspect | The Pixel Aspect ratio of the CCD Sensor in your used camera. This value can be found in the camera specifications. This value can also be guessed. For example, when the footage should be 1920×1080, but the images themselves are 1280×1080, then the pixel aspect is: 1920 / 1280 = 1.5. |
+The width of the CCD Sensor in your used camera. This value can be found in the camera specifications.
 
+##### Pixel Aspect
+
+The Pixel Aspect ratio of the CCD Sensor in your used camera. This value can be found in the camera specifications. This value can also be guessed. For example, when the footage should be 1920×1080, but the images themselves are 1280×1080, then the pixel aspect is: 1920 / 1280 = 1.5.
 
 ## Track tab - Camera Panel - Lens Subpanel
 
@@ -358,12 +389,13 @@ The focal length units with which the movie was shot. You can choose between mil
 
 The units to use for the camera focal length.
 
+#### Optical center
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Optical center | The optical center. Usually in the middle of the movie. But some cameras also have an offset here. In most cases it is equal to the image center, but it can be different in some special cases. Check camera/lens specifications in such cases. To set the optical center to the center of image, there is a **Enter** button below the sliders. |
-| Set Center | Center the optical center. |
+The optical center. Usually in the middle of the movie. But some cameras also have an offset here. In most cases it is equal to the image center, but it can be different in some special cases. Check camera/lens specifications in such cases. To set the optical center to the center of image, there is a **Enter** button below the sliders.
 
+#### Set Center
+
+Center the optical center.
 
 ### Lens Distortion
 
@@ -389,12 +421,13 @@ The brown model also provides P1 and P2 values.
 
 The Marker panel contains the settings for the selected marker(s). Here you can also enable or disable the marker.
 
+### Enabled
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------- |
-| Enabled | Enable the selected marker(s). |
-| Position | The position of the selected marker(s) in pixel. Zero is down left. |
+Enable the selected marker(s).
 
+### Position
+
+The position of the selected marker(s) in pixel. Zero is down left.
 
 ### Offset
 
@@ -468,13 +501,17 @@ The maximum value for Autoscale. This slider appears when you activate Autoscale
 
 ### Expected Position
 
+#### X / Y
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| X / Y | The position of the movie at the canvas. |
-| Expected Rotation | Rotate the movie at the canvas manually. |
-| Expected Scale | Scale the movie at the canvas manually. Note that this slider is not showing when you have Autoscale activated. |
+The position of the movie at the canvas.
 
+#### Expected Rotation
+
+Rotate the movie at the canvas manually.
+
+#### Expected Scale
+
+Scale the movie at the canvas manually. Note that this slider is not showing when you have Autoscale activated.
 
 #### Influence
 
@@ -528,14 +565,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -549,8 +593,10 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. · **Delete Active Frame**: This feature is active when there is an animation. Delete the active frame from the active annotations layer. |
+The thickness of the annotation stroke.
+
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. · **Delete Active Frame**: This feature is active when there is an animation. Delete the active frame from the active annotations layer.

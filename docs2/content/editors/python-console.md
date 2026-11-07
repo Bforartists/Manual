@@ -23,17 +23,33 @@ The Python console is a quick way to execute commands, with access to the entire
 
 The Console menu provides some console editor window specific functionality.
 
+### Console Execute
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Console Execute | The expressions in the python console are not read only. You can execute them like you would do from a script. This button executes a selected command. |
-| Clear | Clears all lines. The blue help text remains. |
-| Clear Line | Clears the selected line(s). |
-| Copy as Script | Copies the whole content of the console as a script that can be pasted into the Text editor. |
-| Cut | Cuts out selected content. |
-| Copy | Copies selected content. |
-| Paste | Pastes copied content. |
+The expressions in the python console are not read only. You can execute them like you would do from a script. This button executes a selected command.
 
+### Clear
+
+Clears all lines. The blue help text remains.
+
+### Clear Line
+
+Clears the selected line(s).
+
+### Copy as Script
+
+Copies the whole content of the console as a script that can be pasted into the Text editor.
+
+### Cut
+
+Cuts out selected content.
+
+### Copy
+
+Copies selected content.
+
+### Paste
+
+Pastes copied content.
 
 ### Zoom Text Out
 
@@ -103,42 +119,75 @@ Closes the area window.
 
 The Edit menu provides you with text specific functionality. Its content should be used by hotkeys. The menu is more to show that this functionality exists.
 
+### Indent
 
-| Entry | What it does |
-| -------- | --------------------------------------- |
-| Indent | Indents the selected text. |
-| Unindent | Removes indention of the selected text. |
+Indents the selected text.
 
+### Unindent
+
+Removes indention of the selected text.
 
 ### Select Text sub menu
 
 ![Select Text sub menu](/docs2/images/editors/python-console/select-text-sub-menu.png)
 
+#### Select all
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------- |
-| Select all | Selects all text. |
-| Line Begin | Selects the text to line begin. |
-| Line End | Selects the text to line end. |
-| Previous word | Selects the text in front of the current word. |
-| Next word | Selects the text behind the current word. |
-| Previous Character | Selects the previous character. |
-| Next character | Selects the next character. |
+Selects all text.
 
+#### Line Begin
+
+Selects the text to line begin.
+
+#### Line End
+
+Selects the text to line end.
+
+#### Previous word
+
+Selects the text in front of the current word.
+
+#### Next word
+
+Selects the text behind the current word.
+
+#### Previous Character
+
+Selects the previous character.
+
+#### Next character
+
+Selects the next character.
 
 ### Move Cursor sub menu
 
+#### Cursor to Next character
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------- |
-| Cursor to Next character | Sets the caret in front of the next character. |
-| Cursor to Previous word | Sets the caret in front of the previous word. |
-| Cursor to Next word | Sets the caret in front of the next word. |
-| Cursor to Line Begin | Sets the caret to line begin. |
-| Cursor to Line End | Sets the caret to line end. |
-| Cursor to Previous Character | Sets the caret in front of the previous character. |
-| Cursor to Next character | Sets the caret in front of the next character. |
+Sets the caret in front of the next character.
 
+#### Cursor to Previous word
+
+Sets the caret in front of the previous word.
+
+#### Cursor to Next word
+
+Sets the caret in front of the next word.
+
+#### Cursor to Line Begin
+
+Sets the caret to line begin.
+
+#### Cursor to Line End
+
+Sets the caret to line end.
+
+#### Cursor to Previous Character
+
+Sets the caret in front of the previous character.
+
+#### Cursor to Next character
+
+Sets the caret in front of the next character.
 
 ### Delete
 
@@ -146,14 +195,21 @@ The Edit menu provides you with text specific functionality. Its content should 
 
 Delete is a sub menu with several delete methods.
 
+#### Next character
 
-| Entry | What it does |
-| ------------------ | --------------------------------------- |
-| Next character | Deletes the character beyond the caret. |
-| Previous Character | Deletes the character before the caret. |
-| Next Word | Deletes the word beyond the caret. |
-| Previous Word | Deletes the word before the caret. |
+Deletes the character beyond the caret.
 
+#### Previous Character
+
+Deletes the character before the caret.
+
+#### Next Word
+
+Deletes the word beyond the caret.
+
+#### Previous Word
+
+Deletes the word before the caret.
 
 ### History Cycle
 
