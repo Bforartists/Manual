@@ -50,12 +50,13 @@ When used inside a **Node Group**, this node helps to **automatically **filter o
 
 Defines the type of the **Value** input and output. Options include **Float**, **Vector**, **Color**, **Boolean**, **Geometry**, etc. This ensures compatibility with the group output socket.
 
+###### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Enable**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**. |
-| Outputs | **Value**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group output interface. |
+**Enable**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**.
 
+###### Outputs
+
+**Value**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group output interface.
 
 ### Viewer
 
@@ -77,12 +78,13 @@ Allows node groups to throw expectations.
 
 #### Inputs
 
+##### Show
 
-| Entry | What it does |
-| ------ | --------------------------------- |
-| Show | Is true or false. |
-| String | The string to show at evaluation. |
+Is true or false.
 
+##### String
+
+The string to show at evaluation.
 
 #### Properties
 

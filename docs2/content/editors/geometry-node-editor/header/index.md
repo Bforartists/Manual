@@ -47,10 +47,13 @@ Example: *You can create a node tree in the Tools mode of the Geometry Nodes edi
 
 ![Geometry Nodes Type](/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type-2.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modifier | The context mode to create procedural modifier stack tool. |
-| Tool | The context mode to create act once operator tools. In this mode some exclusive nodes are displayed in the Add header menu and Add sidebar. |
+### Modifier
+
+The context mode to create procedural modifier stack tool.
+
+### Tool
+
+The context mode to create act once operator tools. In this mode some exclusive nodes are displayed in the Add header menu and Add sidebar.
 
 ### Use
 
@@ -157,11 +160,17 @@ Wit this button you assign a fake user to this selected geometry node tree.
 
 Data, like node trees, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| Fake User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
-| Duplicate | Duplicates the current node group. |
-| Remove | Removes the geometry node tree. To delete it completely you need to purge it. See Fake user. |
+#### Fake User
+
+The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists.
+
+#### Duplicate
+
+Duplicates the current node group.
+
+#### Remove
+
+Removes the geometry node tree. To delete it completely you need to purge it. See Fake user.
 
 ## Options
 
@@ -169,10 +178,13 @@ Data, like node trees, that is not longer linked to anything else gets removed w
 
 At the right side you will see some options.
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pin (pin icon) | The pin button will keep the current node tree selection fixed. When a node tree is pinned, it will remain visible in the shader editor even when another object is selected. |
-| Snap | Activates snapping. The snapping happens relative to the groundgrid. |
+### Pin (pin icon)
+
+The pin button will keep the current node tree selection fixed. When a node tree is pinned, it will remain visible in the shader editor even when another object is selected.
+
+### Snap
+
+Activates snapping. The snapping happens relative to the groundgrid.
 
 ### Geometry node Overlays
 
@@ -322,24 +334,57 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-| Entry | What it does |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Draw Annotation | Starts the annotation free hand draw tool in the editor. |
-| Draw Line Annotation | Starts the annotation line draw tool to draw straight lines in the editor. |
-| Draw Polyline Annotation | Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor. |
-| Erase Annotation | Starts the annotation erase tool in the editor which erases any strokes in the editor. |
-| Add Annotation Layer | Starts a new annotation layer. |
-| Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
+#### Draw Annotation
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Link to Output | Creates a connection to the Output Node. ***Note:** This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.* |
-| Link to Viewer | Creates a temporary connection to the Viewer Node, allowing to quickly preview the output of any node within the shader editor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.* |
-| Zoom In | Zooms into the viewport. |
-| Zoom Out | Zooms out of the viewport. |
-| Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Frame Selected | Zooms to the selection. |
-| Frame All | View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
+Starts the annotation free hand draw tool in the editor.
+
+#### Draw Line Annotation
+
+Starts the annotation line draw tool to draw straight lines in the editor.
+
+#### Draw Polyline Annotation
+
+Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.
+
+#### Erase Annotation
+
+Starts the annotation erase tool in the editor which erases any strokes in the editor.
+
+#### Add Annotation Layer
+
+Starts a new annotation layer.
+
+#### Erase Annotation Active Keyframe
+
+Erases the active keyframe of the annotation.
+
+#### Link to Output
+
+Creates a connection to the Output Node. ***Note:** This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.*
+
+#### Link to Viewer
+
+Creates a temporary connection to the Viewer Node, allowing to quickly preview the output of any node within the shader editor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.*
+
+#### Zoom In
+
+Zooms into the viewport.
+
+#### Zoom Out
+
+Zooms out of the viewport.
+
+#### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+#### Frame Selected
+
+Zooms to the selection.
+
+#### Frame All
+
+View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.
 
 ### Pie menus
 
@@ -353,10 +398,13 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+#### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+#### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 #### Duplicate Area into New Window
 
@@ -364,11 +412,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the area window. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the area window.
 
 # Select Menu
 
@@ -384,10 +438,13 @@ Here you will find the select functionality.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+#### Box select
+
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
+
+#### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ### Lasso Select
 
@@ -395,17 +452,41 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Linked From | Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy. |
-| Linked To | Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy. |
-| Grouped | Select grouped nodes. |
-| Grouped Extend | Select grouped nodes, and extend from the current selection. |
-| Activate same type previous | Activate same node type before the current selection, step by step. |
-| Activate same type next | Activate same node type after the current selection, step by step. |
+#### All
+
+Select everything.
+
+#### None
+
+Select nothing.
+
+#### Inverse
+
+Invert the current selection.
+
+#### Linked From
+
+Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy.
+
+#### Linked To
+
+Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy.
+
+#### Grouped
+
+Select grouped nodes.
+
+#### Grouped Extend
+
+Select grouped nodes, and extend from the current selection.
+
+#### Activate same type previous
+
+Activate same node type before the current selection, step by step.
+
+#### Activate same type next
+
+Activate same node type after the current selection, step by step.
 
 ### Find Node
 
@@ -532,23 +613,41 @@ A group can be further collapsed by clicking at the triangle button in the upper
 
 The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Insert into Group | Allows you to insert a node into a node group. Select the node, hold down Shift, then select the node group so that both are selected. Then perform the operator. |
-| Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
-| Toggle Edit Group | Enters a node group for editing. Or when you are in a node group, exits the node group editing. |
+##### Insert into Group
+
+Allows you to insert a node into a node group. Select the node, hold down Shift, then select the node group so that both are selected. Then perform the operator.
+
+##### Ungroup
+
+Ungroups an existing group. You need to be outside of the group edit mode.
+
+##### Toggle Edit Group
+
+Enters a node group for editing. Or when you are in a node group, exits the node group editing.
 
 ### Links
 
 ![Links](/docs2/images/editors/geometry-node-editor/header/node-menu/links.png)
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------- |
-| Make Links | Tries to connect nodes where it makes sense. |
-| Make and Replace Links | Same as Make Links. But it will replace existing links. |
-| Cut Links | Mouse only tool. Cut links by moving with the mouse over the connection |
-| Detach Links | Removes all connections from the selected node, but tries to reconnect the remaining nodes. |
-| Detach Links Move | Removes all connections from the selected node by dragging. |
+#### Make Links
+
+Tries to connect nodes where it makes sense.
+
+#### Make and Replace Links
+
+Same as Make Links. But it will replace existing links.
+
+#### Cut Links
+
+Mouse only tool. Cut links by moving with the mouse over the connection
+
+#### Detach Links
+
+Removes all connections from the selected node, but tries to reconnect the remaining nodes.
+
+#### Detach Links Move
+
+Removes all connections from the selected node by dragging.
 
 #### Mute Links
 
@@ -562,10 +661,13 @@ Allows you to mute links instead of disconnecting it by painting over the link c
 
 Node group functionality. You need to be in edit group mode.
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------- |
-| Copy | Copies the selected node, and pastes a copy of it outside of the node group. The node group remains unchanged. |
-| Move | Moves the selected to outside of the node group, and removes it from the node group. |
+#### Copy
+
+Copies the selected node, and pastes a copy of it outside of the node group. The node group remains unchanged.
+
+#### Move
+
+Moves the selected to outside of the node group, and removes it from the node group.
 
 ### Hide / Toggle
 

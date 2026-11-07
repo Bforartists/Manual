@@ -33,12 +33,13 @@ This node rotates an image.
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------- |
-| Image | Standard image input. |
-| Angle | Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise. |
+Standard image input.
 
+##### Angle
+
+Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise.
 
 #### Sampling Subpanel
 
@@ -50,13 +51,17 @@ This node rotates an image.
 
 The interpolation mode.
 
+###### Nearest
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
+No interpolation. This method uses the nearest neighboring pixel.
 
+###### Bilinear
+
+Simple interpolation between adjacent pixels.
+
+###### Bicubic
+
+Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -98,13 +103,17 @@ Standard image input.
 
 Coordinate Space to scale relative to.
 
+###### Relative
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relative | Percentage values relative to the dimensions of the image input. |
-| Absolute | Size of an image by using absolute pixel values. |
-| Scene Size | Sizes an image to the size of the final render resolution for the scene. For example, rendering a scene at the standard 1080p resolution but setting the render percentage at 50%, will produce a 1080p image with the scene scaled down 50% and leaving the rest of the image as alpha. |
+Percentage values relative to the dimensions of the image input.
 
+###### Absolute
+
+Size of an image by using absolute pixel values.
+
+###### Scene Size
+
+Sizes an image to the size of the final render resolution for the scene. For example, rendering a scene at the standard 1080p resolution but setting the render percentage at 50%, will produce a 1080p image with the scene scaled down 50% and leaving the rest of the image as alpha.
 
 ###### Render Size
 
@@ -130,13 +139,9 @@ Scale in the axis directions, only available if Space is set to Relative or Abso
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -168,14 +173,21 @@ The Transform node combines the functionality of three other nodes: Scale, trans
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Image | Standard image input. |
-| X, Y | Used to move the input image horizontally and vertically. |
-| Angle | Used to rotate an image around its center. Positive values rotate counter-clockwise and negative ones clockwise. |
-| Scale | Used to resize the image. The scaling is relative, meaning a value of 0.5 gives half the size and a value of 2.0 gives twice the size of the original image. |
+Standard image input.
 
+##### X, Y
+
+Used to move the input image horizontally and vertically.
+
+##### Angle
+
+Used to rotate an image around its center. Positive values rotate counter-clockwise and negative ones clockwise.
+
+##### Scale
+
+Used to resize the image. The scaling is relative, meaning a value of 0.5 gives half the size and a value of 2.0 gives twice the size of the original image.
 
 ##### Sampling Subpanel
 
@@ -187,13 +199,9 @@ The Transform node combines the functionality of three other nodes: Scale, trans
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -227,12 +235,13 @@ Could also be used to add a 2D camera shake.
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | --------------------------------------------------------- |
-| Image | Standard image input. |
-| X, Y | Used to move the input image horizontally and vertically. |
+Standard image input.
 
+##### X, Y
+
+Used to move the input image horizontally and vertically.
 
 ##### Sampling Subpanel
 
@@ -244,13 +253,9 @@ Could also be used to add a 2D camera shake.
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -300,13 +305,9 @@ Four vector inputs to define the plane warping. (Z component of vector inputs is
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -326,12 +327,13 @@ The extension mode applied to the Y axis.
 
 #### Outputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------- |
-| Image | Standard image output. (The image after distorting.) |
-| Plane | A black-and-white alpha mask of the plane. |
+Standard image output. (The image after distorting.)
 
+##### Plane
+
+A black-and-white alpha mask of the plane.
 
 ### Crop
 
@@ -339,12 +341,13 @@ The extension mode applied to the Y axis.
 
 The Crop Node takes an input image and crops it to a selected region.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Image**: Standard image input. · **X / Y**: X and Y position of the origin. · **Width / Height**: The size of the crop area. · **Alpha Crop**: Make the outer areas of the area transparent instead of cropping the image. |
-| Outputs | **Image**: Standard image output. |
+**Image**: Standard image input. · **X / Y**: X and Y position of the origin. · **Width / Height**: The size of the crop area. · **Alpha Crop**: Make the outer areas of the area transparent instead of cropping the image.
 
+#### Outputs
+
+**Image**: Standard image output.
 
 ### Displace
 
@@ -356,13 +359,17 @@ This node could be used to model phenomena, like hot air distortion, refraction'
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image | Standard image input. |
-| Displacement | Input of the displacement map. If the a color output is implicitly converted in the vector input, the first channel (red) value determines displacement along X axis. The second channel (green) the displacement along Y axis. If the input is a greyscale image, where both the channel values are equal, the input image will be displaced equally in both X and Y directions. |
-| Scale X, Y | Separate scaling of the vector input in X and Y direction. Acting as multipliers by increasing or decreasing the strength of the displacement along their respective axes. |
+Standard image input.
 
+##### Displacement
+
+Input of the displacement map. If the a color output is implicitly converted in the vector input, the first channel (red) value determines displacement along X axis. The second channel (green) the displacement along Y axis. If the input is a greyscale image, where both the channel values are equal, the input image will be displaced equally in both X and Y directions.
+
+##### Scale X, Y
+
+Separate scaling of the vector input in X and Y direction. Acting as multipliers by increasing or decreasing the strength of the displacement along their respective axes.
 
 ##### Sampling Subpanel
 
@@ -374,13 +381,9 @@ This node could be used to model phenomena, like hot air distortion, refraction'
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -412,13 +415,17 @@ This node flips an image at defined axis.
 
 You can use this node to just flip or use it as a part of mirror setting. Mix half of the image to be mirrored with its flipped version to produce mirrored image.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------- |
-| Inputs | **Image**: Standard image input. |
-| Flip X | Flip the image along the X axis. · **Flip Y**: Flip the image along the Y axis. |
-| Outputs | **Image**: Standard image output. |
+**Image**: Standard image input.
 
+#### Flip X
+
+Flip the image along the X axis. · **Flip Y**: Flip the image along the Y axis.
+
+#### Outputs
+
+**Image**: Standard image output.
 
 ### Map UV
 
@@ -430,12 +437,13 @@ To apply a texture to individual enumerated objects the ID Mask Node could be us
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Image | The new 2D texture. |
-| UV | The input for UV render pass. See Cycles render passes. Hint. To store the UV pass a multi-layer OpenEXR format could be used. |
+The new 2D texture.
 
+##### UV
+
+The input for UV render pass. See Cycles render passes. Hint. To store the UV pass a multi-layer OpenEXR format could be used.
 
 ##### Sampling Subpanel
 
@@ -447,13 +455,9 @@ To apply a texture to individual enumerated objects the ID Mask Node could be us
 
 The interpolation mode.
 
-
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------- |
-| Nearest | No interpolation. This method uses the nearest neighboring pixel. |
-| Bilinear | Simple interpolation between adjacent pixels. |
-| Bicubic | Highest quality interpolation. |
-
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
 
 ###### Anisotropic
 
@@ -499,14 +503,10 @@ The lens distortion type.
 
 ![Type Radial](/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png)
 
-
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Distortion | This creates a bulging or pinching effect from the center of the image. |
-| Dispersion | This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe. |
-| Jitter | Adds jitter to the distortion. Faster, but noisier. |
-| Fit | Scales image so black areas are not visible. Only works for positive distortion. |
-
+- **Distortion**: This creates a bulging or pinching effect from the center of the image.
+- **Dispersion**: This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
+- **Jitter**: Adds jitter to the distortion. Faster, but noisier.
+- **Fit**: Scales image so black areas are not visible. Only works for positive distortion.
 
 ###### Type Radial
 

@@ -73,13 +73,17 @@ enter.
 
 Changes the header color of the current node group.
 
+#### Node Width
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Node Width | The width for newly created node groups. Value can range between 40 and 700 px. · **Set default group node width**: Sets the width based of the parent node group in the current context. |
-| Show Manage Panel | Display the manage panel when creating a modifier. |
-| Usage subpanel | **Modifier**: The node group is used as a geometry modifier. This setting is only relevant for marked nodegroups as an asset. · **Tool**: The node group is used as a tool. This setting is only relevant for marked nodegroups as an asset. |
+The width for newly created node groups. Value can range between 40 and 700 px. · **Set default group node width**: Sets the width based of the parent node group in the current context.
 
+#### Show Manage Panel
+
+Display the manage panel when creating a modifier.
+
+#### Usage subpanel
+
+**Modifier**: The node group is used as a geometry modifier. This setting is only relevant for marked nodegroups as an asset. · **Tool**: The node group is used as a tool. This setting is only relevant for marked nodegroups as an asset.
 
 ## Group Sockets Panel
 
@@ -111,13 +115,17 @@ Change the name of the current selected input socket by double clicking on the s
 
 Adds a new input sockets to the list.
 
+##### Input
 
-| Entry | What it does |
-| ------ | ------------------------------------- |
-| Input | Adds a new input sockets to the list. |
-| Output | Adds a new output socket to the list. |
-| Panel | Adds a new panel socket to the list. |
+Adds a new input sockets to the list.
 
+##### Output
+
+Adds a new output socket to the list.
+
+##### Panel
+
+Adds a new panel socket to the list.
 
 ##### Panel Toggle
 
@@ -133,12 +141,13 @@ When converting a boolean to a panel boolean, the parent panel of the Boolean so
 
 When adding a panel toggle to a panel then a subpanel appears.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------- |
-| Default | Input value used for unconnected sockets. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+Input value used for unconnected sockets.
 
+###### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 ###### Shape
 
@@ -146,12 +155,8 @@ When adding a panel toggle to a panel then a subpanel appears.
 
 What kind of higher order types are expected to flow through this socket.
 
-
-| Entry | What it does |
-| -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item | Duplicates the active socket. |
-| ![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. Node tree interface specials |
-
+- **![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item**: Duplicates the active socket.
+- **![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/remove-item-icon.png) Remove Item**: Removes the selected input socket from the list. Node tree interface specials
 
 #### Move Item Up/Down
 
@@ -209,16 +214,29 @@ The default attribute.
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional label
+
+Hide the label if not needed.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -254,13 +272,17 @@ The default attribute.
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
 
 ##### Default Input
 
@@ -268,13 +290,17 @@ Subtype of the default value.
 
 Input to use when the socket is unconnected.
 
+###### Optional label
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------- |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Hide the label if not needed.
 
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -300,16 +326,29 @@ Add a tooltip to the socket description.
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
+###### Default Attribute
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------- |
-| Default Attribute | The default attribute that is used by a geometry nodes modifier. |
-| Default | The default value for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
-| Layer Selection | Take grease pencil or layer group as selection field. |
+The default attribute that is used by a geometry nodes modifier.
 
+###### Default
+
+The default value for the socket.
+
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+###### Layer Selection
+
+Take grease pencil or layer group as selection field.
 
 ##### Shape
 
@@ -345,13 +384,17 @@ The default attribute that is used by a geometry nodes modifier.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Dimensions
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------- |
-| Dimensions | How much dimensions to calculate. |
-| Default | The default vector. It changes, dependant of what dimensions you use. |
-| Min / Max | Minimum value and maximum value. |
+How much dimensions to calculate.
 
+###### Default
+
+The default vector. It changes, dependant of what dimensions you use.
+
+###### Min / Max
+
+Minimum value and maximum value.
 
 ##### Default Input
 
@@ -359,13 +402,17 @@ What special math operation is required. The subtype menu allows you to define t
 
 Input to use when the socket is unconnected.
 
+###### Optional Label
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Make the label optional. This may resul tin the label being skipped in some cases.
 
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -391,15 +438,25 @@ Add a tooltip to the socket description.
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
+###### Default Attribute
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------- |
-| Default Attribute | The default attribute that is used by a geometry nodes modifier. |
-| Default | The default color for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default attribute that is used by a geometry nodes modifier.
 
+###### Default
+
+The default color for the socket.
+
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -425,15 +482,25 @@ Add a tooltip to the socket description.
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
+###### Default Attribute
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------- |
-| Default Attribute | The default attribute that is used by a geometry nodes modifier. |
-| Default | The default rotation values |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default attribute that is used by a geometry nodes modifier.
 
+###### Default
+
+The default rotation values
+
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -469,13 +536,17 @@ The default attribute that is used by a geometry nodes modifier.
 
 Input to use when the socket is unconnected.
 
+###### Optional Label
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Make the label optional. This may resul tin the label being skipped in some cases.
 
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -501,14 +572,21 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Default | The default string. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default string.
 
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Menu
 
@@ -516,16 +594,29 @@ What special math operation is required. The subtype menu allows you to define t
 
 ![Type Menu](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-menu-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default menu. |
-| Expanded | Draw the menu socket as an expanded drop down menu. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default menu.
+
+##### Expanded
+
+Draw the menu socket as an expanded drop down menu.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ##### Shape
 
@@ -541,14 +632,21 @@ The shape of the socket.
 
 ![Type Geometry](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-geometry-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Object
 
@@ -556,15 +654,25 @@ The shape of the socket.
 
 ![Type Object](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-object-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default object. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default object.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Collection
 
@@ -572,15 +680,25 @@ The shape of the socket.
 
 ![Type Collection](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-collection-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default collection. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default collection.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Image
 
@@ -588,15 +706,25 @@ The shape of the socket.
 
 ![Type Image](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-image-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default image. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default image.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Material
 
@@ -604,15 +732,25 @@ The shape of the socket.
 
 ![Type Material](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-material-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default image. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default image.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Font
 
@@ -620,15 +758,25 @@ The shape of the socket.
 
 ![Type Font](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-font-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default font. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default font.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Bundle
 
@@ -636,14 +784,21 @@ The shape of the socket.
 
 ![Type Bundle](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-bundle-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Closure
 
@@ -651,14 +806,21 @@ The shape of the socket.
 
 ![Type Closure](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-closure-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ## Group Sockets Panel - Type Panel
 
@@ -676,13 +838,17 @@ Panel is closed by default on new nodes.
 
 > **Note:** The Panel Toggle properties are only for the Panel Boolean type of panels.
 
+#### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------- |
-| Default | The default value for the boolean toggles. |
-| Hide in Modifier | Hides the panel boolean toggle from the modifier stack. |
-| Single Value | The default value for the panel boolean toggle. |
+The default value for the boolean toggles.
 
+#### Hide in Modifier
+
+Hides the panel boolean toggle from the modifier stack.
+
+#### Single Value
+
+The default value for the panel boolean toggle.
 
 ## Animation Panel
 
@@ -690,11 +856,13 @@ Panel is closed by default on new nodes.
 
 Animation panels are about the Animation Slots for scene wide animation clips.
 
+### New
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode. |
-| Action Selector | This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source. |
+Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode.
+
+### Action Selector
+
+This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source.
 
 # Node Tab
 
@@ -722,10 +890,13 @@ Allows you to define a custom name for the selected node. This text does change 
 
 Type exact numbers to size and place the selected node. Handy for keeping big node trees tidy and lined up.
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------- |
-| Width | How wide the node is. Same as dragging its side edge. |
-| Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
+#### Width
+
+How wide the node is. Same as dragging its side edge.
+
+#### Location
+
+Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor.
 
 ### Warning Propagation
 
@@ -797,14 +968,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -818,12 +996,13 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin
 

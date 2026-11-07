@@ -55,11 +55,17 @@ This menu is hidden by default. It is meant to edit the layouts, and should not 
 
 The Shader Editor has three shader type sub modes. Every sub mode has some different set of shaders for its own purpose.
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object | The Object mode is for the scene objects. It shows materials and shader for the scene objects. |
-| World | In the World mode you can change the shaders and materials for the world settings. It shows the world shaders and materials. |
-| Line Style | The Line Style mode allows you to set up materials for the Freestyle renderer. Freestyle rendering must be active for this. It shows the Freestyle materials and shaders. |
+### Object
+
+The Object mode is for the scene objects. It shows materials and shader for the scene objects.
+
+### World
+
+In the World mode you can change the shaders and materials for the world settings. It shows the world shaders and materials.
+
+### Line Style
+
+The Line Style mode allows you to set up materials for the Freestyle renderer. Freestyle rendering must be active for this. It shows the Freestyle materials and shaders.
 
 # Tools and Options
 
@@ -75,11 +81,17 @@ The text menus are covered in a own chapter each. They vary too much, dependent 
 
 The Mode drop-down box allows you to switch between the different shader type modes. An object has a different set of available shaders than the world or a line style shading.
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------ |
-| Object | In this mode you work with the scene objects and its materials. |
-| World | In this mode you work with the world settings. HDRI's for example. |
-| Line Style | In this mode you work with Freestyle renderer materials. |
+### Object
+
+In this mode you work with the scene objects and its materials.
+
+### World
+
+In this mode you work with the world settings. HDRI's for example.
+
+### Line Style
+
+In this mode you work with Freestyle renderer materials.
 
 ### Object Context menu
 
@@ -99,11 +111,17 @@ When you add a material by clicking at the new button in the material prop, or b
 
 ![Slot](/docs2/images/editors/shader-editor/header/tools-and-options/slot-2.png)
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------- |
-| List of materials | The list of materials in the slot list. |
-| Add Material Slot | Adds a new material slot. When you do this manually then this slot will be empty. |
-| Remove Material Slot | Remove the selected material slot. The removed material will not longer be part of the currently active mesh. |
+### List of materials
+
+The list of materials in the slot list.
+
+### Add Material Slot
+
+Adds a new material slot. When you do this manually then this slot will be empty.
+
+### Remove Material Slot
+
+Remove the selected material slot. The removed material will not longer be part of the currently active mesh.
 
 ### Copy and Paste menu
 
@@ -111,19 +129,37 @@ When you add a material by clicking at the new button in the material prop, or b
 
 Copy and paste materials. But just at the current active mesh. Means in Edit Mode.
 
-| Entry | What it does |
-| ------------------------- | ---------------------------------------------------------------------- |
-| Copy Material | Copies the currently selected material |
-| Copy Material to Selected | Copies the currently selected material, and pastes it to the selection |
-| Paste Material | Pastes the material. |
-| Remove unused Slots | Clean up unused slots. |
+#### Copy Material
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Move Material Up / Down | Moves the selected material up or down in the list. |
-| Assign | This button appears when you are in Edit mode in the 3D view. Assign the selected material to the selected geometry. |
-| Select | This button appears when you are in Edit mode in the 3D view. Select the geometry where this material is assigned to. |
-| Deselect | This button appears when you are in Edit mode in the 3D view. Deselects the geometry where this material is assigned to. |
+Copies the currently selected material
+
+#### Copy Material to Selected
+
+Copies the currently selected material, and pastes it to the selection
+
+#### Paste Material
+
+Pastes the material.
+
+#### Remove unused Slots
+
+Clean up unused slots.
+
+#### Move Material Up / Down
+
+Moves the selected material up or down in the list.
+
+#### Assign
+
+This button appears when you are in Edit mode in the 3D view. Assign the selected material to the selected geometry.
+
+#### Select
+
+This button appears when you are in Edit mode in the 3D view. Select the geometry where this material is assigned to.
+
+#### Deselect
+
+This button appears when you are in Edit mode in the 3D view. Deselects the geometry where this material is assigned to.
 
 ### Search Field
 
@@ -159,12 +195,21 @@ The name of the current active material. Here you can also rename the material.
 
 Note that the name and available materials differs, dependent in which mode you are. In Object mode you will see the object materials. In World mode the world materials. And in Line Style mode the materials for Freestyle rendering.
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Clear Asset | When you have marked the material as asset, then the fake user button is replaced by a Clear Asset button. It allows you to clear the asset. |
-| New | Creates a new material. |
-| Remove | Removes the material. To delete it completely you need to purge it. See Fake user. |
+#### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+#### Clear Asset
+
+When you have marked the material as asset, then the fake user button is replaced by a Clear Asset button. It allows you to clear the asset.
+
+#### New
+
+Creates a new material.
+
+#### Remove
+
+Removes the material. To delete it completely you need to purge it. See Fake user.
 
 ### Right Click menus
 
@@ -190,10 +235,13 @@ At the right side you will see some options.
 
 The Use Nodes setting is mostly a legacy setting. And displays just in Line Style mode.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pin (pin icon) | The pin button will keep the current material selection fixed. When a material is pinned, it will remain visible in the shader editor even when another object or material is selected elsewhere. |
-| Snap | Activates snapping. |
+#### Pin (pin icon)
+
+The pin button will keep the current material selection fixed. When a material is pinned, it will remain visible in the shader editor even when another object or material is selected elsewhere.
+
+#### Snap
+
+Activates snapping.
 
 ### Node Editor Overlays
 
@@ -321,23 +369,53 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-| Entry | What it does |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Draw Annotation | Starts the annotation free hand draw tool in the editor. |
-| Draw Line Annotation | Starts the annotation line draw tool to draw straight lines in the editor. |
-| Draw Polyline Annotation | Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor. |
-| Erase Annotation | Starts the annotation erase tool in the editor which erases any strokes in the editor. |
-| Add Annotation Layer | Starts a new annotation layer. |
-| Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
+#### Draw Annotation
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Link to Output | Creates a temporary connection to the Output Node, allowing to quickly preview the output of any node within the shader editor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.* |
-| Zoom In | Zooms into the viewport. |
-| Zoom Out | Zooms out of the viewport. |
-| Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Frame Selected | Zooms to the selection. |
-| Frame All | View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
+Starts the annotation free hand draw tool in the editor.
+
+#### Draw Line Annotation
+
+Starts the annotation line draw tool to draw straight lines in the editor.
+
+#### Draw Polyline Annotation
+
+Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.
+
+#### Erase Annotation
+
+Starts the annotation erase tool in the editor which erases any strokes in the editor.
+
+#### Add Annotation Layer
+
+Starts a new annotation layer.
+
+#### Erase Annotation Active Keyframe
+
+Erases the active keyframe of the annotation.
+
+#### Link to Output
+
+Creates a temporary connection to the Output Node, allowing to quickly preview the output of any node within the shader editor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.*
+
+#### Zoom In
+
+Zooms into the viewport.
+
+#### Zoom Out
+
+Zooms out of the viewport.
+
+#### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+#### Frame Selected
+
+Zooms to the selection.
+
+#### Frame All
+
+View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.
 
 ### Pie menus
 
@@ -361,12 +439,21 @@ Splits the current view horizontally into two independent editor windows.
 
 Splits the current view vertically into two independent editor windows.
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Duplicate Area into New Window | Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore. A separated window cannot be merged into the main window again. You have to close it when not longer needed. |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the editor. |
+##### Duplicate Area into New Window
+
+Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore. A separated window cannot be merged into the main window again. You have to close it when not longer needed.
+
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the editor.
 
 # Select Menu
 
@@ -382,10 +469,13 @@ Here you will find the select functionality.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+#### Box select
+
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
+
+#### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ### Lasso Select
 
@@ -393,17 +483,41 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Linked From | Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy. |
-| Linked To | Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy. |
-| Grouped | Select grouped nodes. |
-| Grouped Extend | Select grouped nodes, and extend from the current selection. |
-| Activate same type previous | Activate same node type before the current selection, step by step. |
-| Activate same type next | Activate same node type after the current selection, step by step. |
+#### All
+
+Select everything.
+
+#### None
+
+Select nothing.
+
+#### Inverse
+
+Invert the current selection.
+
+#### Linked From
+
+Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy.
+
+#### Linked To
+
+Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy.
+
+#### Grouped
+
+Select grouped nodes.
+
+#### Grouped Extend
+
+Select grouped nodes, and extend from the current selection.
+
+#### Activate same type previous
+
+Activate same node type before the current selection, step by step.
+
+#### Activate same type next
+
+Activate same node type after the current selection, step by step.
 
 ### Find Node
 
@@ -528,24 +642,45 @@ A group can be further collapsed by clicking at the triangle button in the upper
 
 The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Insert into Group | Allows you to insert a node into a node group. Select the node, hold down Shift, then select the node group so that both are selected. Then perform the operator. |
-| Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
-| Toggle Edit Group | Enters a node group for editing. Or when you are in a node group, exits the node group editing. |
+##### Insert into Group
+
+Allows you to insert a node into a node group. Select the node, hold down Shift, then select the node group so that both are selected. Then perform the operator.
+
+##### Ungroup
+
+Ungroups an existing group. You need to be outside of the group edit mode.
+
+##### Toggle Edit Group
+
+Enters a node group for editing. Or when you are in a node group, exits the node group editing.
 
 ### Links submenu
 
 ![Links submenu](/docs2/images/editors/shader-editor/header/node-menu/links-submenu.png)
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Links | Tries to connect nodes where it makes sense. For example, the BSDF output of a Principled shader with the Surface input of the Material Output node. |
-| Make and Replace Links | Same as Make Links. But it will replace existing links. |
-| Cut Links | Cut the links under the mouse. |
-| Detach Links | Removes all connections from the selected node, but tries to reconnect the remaining nodes. |
-| Detach Links Move | Removes all connections from the selected node by dragging. |
-| Mute Links | Mute the links under the mouse. |
+#### Make Links
+
+Tries to connect nodes where it makes sense. For example, the BSDF output of a Principled shader with the Surface input of the Material Output node.
+
+#### Make and Replace Links
+
+Same as Make Links. But it will replace existing links.
+
+#### Cut Links
+
+Cut the links under the mouse.
+
+#### Detach Links
+
+Removes all connections from the selected node, but tries to reconnect the remaining nodes.
+
+#### Detach Links Move
+
+Removes all connections from the selected node by dragging.
+
+#### Mute Links
+
+Mute the links under the mouse.
 
 ### Separate submenu
 
@@ -553,10 +688,13 @@ The group can be renamed in the sidebar in the Item tab and in the Properties ta
 
 Node group functionality. You need to be in edit group mode.
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------- |
-| Copy | Copies the selected node, and pastes a copy of it outside of the node group. The node group remains unchanged. |
-| Move | Moves the selected to outside of the node group, and removes it from the node group. |
+#### Copy
+
+Copies the selected node, and pastes a copy of it outside of the node group. The node group remains unchanged.
+
+#### Move
+
+Moves the selected to outside of the node group, and removes it from the node group.
 
 ### Show/Hide submenu
 
