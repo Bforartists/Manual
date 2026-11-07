@@ -1358,35 +1358,6 @@ The proportional falloff gets calculated for connected parts only.
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
-### To Circle
-
-Transforms selected vertices into a circular arrangement.  
-Useful for reshaping loops, aligning geometry, or creating radial structures with precision.
-
-#### Usage
-
-![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-3.png)
-
-Select the loop of mesh geometry, activate the tool. In the Last Operator panel, you can then adjust properties after the operation.
-
-#### Adjust Last Operation - To Sphere
-
-![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-to-sphere.png)
-
-Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
-
-
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Factor | Controls the strength of the circular transformation.   – **1.000**: full circle.   – **&lt; 1.000**: partial influence, blending with original shape. |
-| Method | Defines how the circle is calculated:   – **Best Fit**: fits a circle to the selection using least-squares approximation.   – Interior Fit: Moves vertices inward toward the center of the selection. |
-| Rotation | Applies a rotational offset to the resulting circle. |
-| Radius | Sets a fixed radius for the circle. |
-| Space Evenly | Distributes vertices evenly along the circle’s perimeter.   – Enabled: uniform spacing.   – Disabled: preserves original spacing. |
-| Flatten | Controls how much the selection is flattened onto a plane before circularization.   – **1.000**: full flattening.   – **0.000**: preserves original depth variation. |
-| Lock Axis (X, Y, Z) | Constrains transformation to specific axes. Useful for maintaining symmetry or aligning with existing geometry. |
-
-
 ### Shear
 
 Shear shears the selection.
@@ -1496,53 +1467,50 @@ The proportional falloff gets calculated for connected parts only.
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
-### Warp
+### To Circle
 
-![Warp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/warp.png)
+Transforms selected vertices into a circular arrangement.  
+Useful for reshaping loops, aligning geometry, or creating radial structures with precision.
 
-Warps a mesh selection between two defined points.
+#### Usage
 
-#### Adjust Last Operation - Warp
+![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-3.png)
 
-Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Select the loop of mesh geometry, activate the tool. In the Last Operator panel, you can then adjust properties after the operation.
 
-![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
+#### Adjust Last Operation - To Circle
 
+![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-to-sphere.png)
 
-| Entry | What it does |
-| ------------ | ----------------------------------- |
-| Warp Angle | The strength of the warp effect |
-| Offset Angle | An offset angle to bend side wards. |
-
-
-##### Min
-
-![Min](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/min.png)
-
-The start point.
-
-##### Max
-
-The end point.
-
-### Randomize
-
-This tool allows randomizes the positions of the selected vertices.
-
-#### Adjust Last Operation - Randomize
-
-![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
-
-Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **To Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
-| ----------- | ------------------------------------------ |
-| Amount | Adjust the amount. |
-| Uniform | The uniform offset distance. |
-| Normal | Align the offset direction to the normals. |
-| Random Seed | The seed value for randomization. |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Factor | Controls the strength of the circular transformation.   – **1.000**: full circle.   – **&lt; 1.000**: partial influence, blending with original shape. |
+| Method | Defines how the circle is calculated:   – **Best Fit**: fits a circle to the selection using least-squares approximation.   – Interior Fit: Moves vertices inward toward the center of the selection. |
+| Rotation | Applies a rotational offset to the resulting circle. |
+| Radius | Sets a fixed radius for the circle. |
+| Space Evenly | Distributes vertices evenly along the circle’s perimeter.   – Enabled: uniform spacing.   – Disabled: preserves original spacing. |
+| Flatten | Controls how much the selection is flattened onto a plane before circularization.   – **1.000**: full flattening.   – **0.000**: preserves original depth variation. |
+| Lock Axis (X, Y, Z) | Constrains transformation to specific axes. Useful for maintaining symmetry or aligning with existing geometry. |
 
+
+### Flatten
+
+Moves the selected vertices onto one flat plane. Use it to level a bumpy area, for example the base of a model or a wall that should be flat. The plane is found from the selection itself, from its face normals, or from the view.
+
+#### Adjust Last Operation - Flatten
+
+Change the settings of **Flatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Flatten](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-flatten.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How far the vertices move onto the plane. 1 makes them fully flat. |
+| Method | The plane to flatten on. **Best Fit** uses the plane that fits the selection best. **Normal** uses the average of the face normals. **View** uses a plane that faces the view. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
 
 ### Shrink/Fatten
 
@@ -1585,6 +1553,74 @@ The proportional falloff gets calculated for connected parts only.
 ###### Projected(2D)
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+### Space Edge Loops Evenly
+
+Moves the vertices of the selected edge loops so they are the same distance apart along the loop. Use it to clean up uneven spacing after cutting or sculpting. The shape of the loop stays, only the spacing changes.
+
+#### Adjust Last Operation - Space Edge Loops Evenly
+
+Change the settings of **Space Edge Loops Evenly** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Space Edge Loops Evenly](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-space-edge-loops-evenly.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How much of the effect to apply. 1 is fully even. |
+| Interpolation | **Cubic** follows a smooth curve through the vertices. **Linear** keeps the vertices on the existing edges. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+
+### Relax Edge Loops
+
+Smooths the selected edge loops so they have fewer bumps and zigzags, like a rope that is pulled loose. Use it to clean up a wobbly loop without moving it by hand. Each iteration smooths the loop a bit more.
+
+#### Adjust Last Operation - Relax Edge Loops
+
+Change the settings of **Relax Edge Loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Relax Edge Loops](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-relax-edge-loops.png)
+
+| Entry | What it does |
+| --- | --- |
+| Iterations | How many times the loop is relaxed. More iterations give a smoother loop. |
+| Space Evenly | Also spaces the vertices at the same distance along the loop. |
+| Interpolation | **Cubic** gives smooth results. **Linear** relaxes with straight lines between the vertices. |
+
+### Curve Edge Loops Between Selected
+
+Bends edge loops into a smooth curve that passes through the selected vertices. Use it to shape a row of edges into an arc, for example the rim of a bowl, by selecting a few vertices as guides. The unselected parts of each loop follow the curve.
+
+#### Adjust Last Operation - Curve Edge Loops Between Selected
+
+Change the settings of **Curve Edge Loops Between Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Curve Edge Loops Between Selected](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-curve-edge-loops-between-selected.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How much the loops are curved. 1 follows the curve fully. |
+| Clamp Elevation | Limits how the vertices move. **None** has no limit. **Only Raise** only moves them outward. **Only Lower** only moves them inward. |
+| Extend Loop | Also curves the parts of the loop beyond the selected vertices. |
+| Space Evenly | Spaces the vertices at the same distance along the curve. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+| Interpolation | **Cubic** gives a smooth curve. **Linear** is simpler and faster. |
+
+### Fit Edge Loops To Annotation
+
+Moves the selected vertices onto the active annotation stroke. Use it to shape a loop by drawing it: draw an annotation stroke where the edges should go, select the loop, then run the tool. The vertices are spread along the stroke.
+
+#### Adjust Last Operation - Fit Edge Loops To Annotation
+
+Change the settings of **Fit Edge Loops To Annotation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fit Edge Loops To Annotation](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fit-edge-loops-to-annotation.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How far the vertices move onto the stroke. 1 moves them fully. |
+| Method | How the vertices are placed. **Spread** uses the whole stroke and keeps the spacing between the vertices. **Spread Evenly** uses the whole stroke and spaces the vertices evenly. **Project** moves each vertex to the stroke along its normal; the stroke must be close to the mesh, or nothing happens. |
+| Delete Strokes | Removes the annotation stroke after it is used. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
 
 ### Skin Resize
 
@@ -1636,123 +1672,53 @@ The proportional falloff gets calculated for connected parts only.
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
-### Move Texture Space
+### Warp
 
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space.png)
+![Warp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/warp.png)
 
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png)
+Warps a mesh selection between two defined points.
 
-This tool relies at the move tool. With the difference that it moves the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.
+#### Adjust Last Operation - Warp
 
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png)
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
-Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.
 
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
+| Entry | What it does |
+| ------------ | ----------------------------------- |
+| Warp Angle | The strength of the warp effect |
+| Offset Angle | An offset angle to bend side wards. |
 
-#### Adjust Last Operation - Move
 
-![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
+##### Min
 
-Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+![Min](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/min.png)
 
-##### Move
+The start point.
 
-Adjust in which directions you want to transform.
+##### Max
 
-##### Orientation
+The end point.
 
-![Orientation](/docs2/images/editors/3d-viewport/header/object-menu/orientation.png)
+### Randomize
 
-Choose the orientation.
+This tool allows randomizes the positions of the selected vertices.
 
-##### Mirror Editing
+#### Adjust Last Operation - Randomize
 
-Enable mirror editing.
+![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
-##### Proportional editing
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
 
-Enables proportional editing. Activating proportional editing reveals further settings.
+| Entry | What it does |
+| ----------- | ------------------------------------------ |
+| Amount | Adjust the amount. |
+| Uniform | The uniform offset distance. |
+| Normal | Align the offset direction to the normals. |
+| Random Seed | The seed value for randomization. |
 
-###### Proportional Falloff
-
-Adjust the falloff methods.
-
-###### Proportional Size
-
-See and adjust the falloff radius.
-
-###### Connected
-
-The proportional falloff gets calculated for connected parts only.
-
-###### Projected(2D)
-
-The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
-
-### Scale Texture Space
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space.png)
-
-Scale Texture space is similar to the Move texture Space. With the only difference that it scales the UV space instead of moving it.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png)
-
-This tool relies at the scale tool. With the difference that it scales the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png)
-
-In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.
-
-Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
-
-#### Adjust Last Operation - Resize
-
-![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
-
-Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
-
-##### Scale
-
-Adjust in which directions you want to transform.
-
-##### Orientation
-
-![Orientation](/docs2/images/editors/3d-viewport/header/object-menu/orientation.png)
-
-Choose the orientation.
-
-##### Mirror Editing
-
-Enable mirror editing.
-
-##### Proportional editing
-
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
-
-Enables proportional editing. Activating proportional editing reveals further settings.
-
-###### Proportional Falloff
-
-Adjust the falloff methods.
-
-###### Proportional Size
-
-See and adjust the falloff radius.
-
-###### Connected
-
-The proportional falloff gets calculated for connected parts only.
-
-###### Projected(2D)
-
-The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Set Dimensions
 
