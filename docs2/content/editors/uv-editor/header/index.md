@@ -7,7 +7,7 @@ path:
   - UV Editor
   - Header
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 9.1 Editors - UV Editor - Header.odt

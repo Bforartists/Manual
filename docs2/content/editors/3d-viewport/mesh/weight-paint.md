@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Weight Paint"
 version: "5.3"
-status: draft
+status: needs-review
 icon: wpaint_hlt
 summary: "Paint vertex group weights on the mesh: menus, brushes and settings."
 order: 40
