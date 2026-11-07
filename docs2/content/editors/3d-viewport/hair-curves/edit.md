@@ -102,12 +102,10 @@ Change the settings of **Shear** right after you use it, in the Adjust Last Oper
 
 ![Adjust Last Operation - Shear](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-shear.png)
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
 | Offset | Adjust an offset. |
 | Axis | Defines one axis of the imaginary shear axis plane. |
-
 
 ###### Axis Ortho
 
@@ -181,12 +179,10 @@ Change the settings of **Warp** right after you use it, in the Adjust Last Opera
 
 ![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
-
 | Entry | What it does |
 | ------------ | ----------------------------------- |
 | Warp Angle | The strength of the warp effect. |
 | Offset Angle | An offset angle to bend side wards. |
-
 
 ###### Min
 
@@ -277,12 +273,10 @@ Choose several methods to snap one element to another. The menu items should be 
 
 Some snap operations shows a last operation panel, some not.
 
-
 | Entry | What it does |
 | -------- | ---------------------------------------------------------------------------------------------------- |
 | Offset | If the selection should snap as a whole, or if each individual element of the selection should snap. |
 | Rotation | If the selection should be rotated to match the cursor. |
-
 
 #### Set Attribute
 
@@ -344,12 +338,10 @@ With set Spline Type, you can set the type of the curve.
 
 Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
 | Type | Type is a drop-down box . Choose the spline type |
 | Handles | Use Handles when converting Bezier curves into polygons. |
-
 
 #### Set Attribute
 
@@ -370,17 +362,6 @@ The vector 3 values.
 ![Toggle Cyclic](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/toggle-cyclic.png)
 
 Toggle Cyclic closes or opens the curve.
-
-##### Adjust Last Operation - Toggle Cyclic
-
-Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
-
-###### Direction
-
-Direction is a drop-down box . Choose the direction in which the curve gets closed.
-
-- **Separate**: Separates the selection into a new object.
-- **Delete**: Deletes the selected hair geomety.
 
 ## Segments menu
 
@@ -529,14 +510,12 @@ The plane for the projected strokes.
 
 Change the settings of **Draw Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------- |
 | Error | Adjust the error distance threshold in object units |
 | Fit Method | The curve fitting method. Choose between Refit and Split. |
 | Corner Angle | Corners above this angle are considered as corners. |
 | Cyclic | With curve type Bezier the curve gets closed. Has no effect at curve type Poly. |
-
 
 #### Curve Pen
 
@@ -587,12 +566,10 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-
 | Entry | What it does |
 | -------------- | ---------------------------------------------------------------------------- |
 | Values X Y Z W | The axis to increase the radius. Just X has an effect with the curve radius. |
 | Axis | The axis to use. This has no effect with a curve object. |
-
 
 ###### Orientation
 
@@ -633,7 +610,6 @@ When you click at the widget of the active tool, then you perform the tool actio
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png)
 
 Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
-
 
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -795,12 +771,10 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
 | Type | Type is a drop-down box choose the spline type |
 | Handles | Use Handles when converting Bezier curves into polygons. |
-
 
 #### Set Handle Type
 
@@ -845,14 +819,6 @@ Type is a drop-down box where you can set the handle type. You have the choice b
 ![Toggle Cyclic](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/toggle-cyclic.png)
 
 Toggle Cyclic closes or opens the curve.
-
-##### Adjust Last Operation - Toggle Cyclic
-
-Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
-
-###### Direction
-
-Direction is a drop-down box choose the direction in which the curve gets closed.
 
 #### Switch Direction
 

@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Particle Edit"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: particlemode
 summary: "Comb, cut and style particle hair: menus, tools and settings."
@@ -62,6 +62,8 @@ Manually set a weight for the selected keys to interpolate between the current k
 ##### Adjust Last Operation - Weight Set
 
 Change the settings of **Weight Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Weight Set](/docs2/images/editors/3d-viewport/mesh/particle-edit/adjust-last-operation-weight-set.png)
 
 ###### Factor
 

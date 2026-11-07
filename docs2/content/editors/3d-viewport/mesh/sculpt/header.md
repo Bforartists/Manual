@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Sculpt Mode"
   - "Header"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: topbar
 summary: "The header menus of Mesh › Sculpt Mode."
@@ -761,6 +761,8 @@ Flood fills the vertex colors with the current vertex color value. Applies a ver
 #### Adjust Last Operation - Fill
 
 Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fill](/docs2/images/editors/3d-viewport/mesh/sculpt/adjust-last-operation-set-vertex-color.png)
 
 
 | Entry | What it does |

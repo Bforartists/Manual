@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Armature"
   - "Pose Mode"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: pose_hlt
 summary: "Pose and animate the armature: menus, tools, sidebar and context menus of Pose Mode."
@@ -722,6 +722,8 @@ You can define an own target object too. The armature needs to be in pose mode. 
 ###### Adjust Last Operation - Add IK to Bone
 
 Change the settings of **Add IK to Bone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add IK to Bone](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-add-ik-to-bone.png)
 
 ###### With Targets
 

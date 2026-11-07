@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Grease Pencil"
   - "Edit Mode"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: editmode_hlt
 summary: "Edit the grease pencil itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
@@ -563,32 +563,31 @@ Change the settings of **Outline** right after you use it, in the Adjust Last Op
 
 Separates the selection into a new grease pencil object.
 
-##### Selected Points
+##### Selection
 
-Separate the selected points with its edges.
+Separates the selected points or strokes into a new object.
 
-##### Selected Strokes
+##### By Material
 
-Separate the whole stroke of the current selection.
+Separates each material into its own object.
 
-##### Active Layer
+##### By Layer
 
-Separate all the strokes at the current active layer.
+Separates each layer into its own object.
 
 ##### Adjust Last Operation - Separate Strokes
 
 Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Separate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-separate-strokes.png)
+
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-- **Selected Strokes**: Separate the whole stroke of the current selection.
-- **Selected Points**: Separate the selected points with its edges.
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.
 
 ## Point menu
 
@@ -694,9 +693,11 @@ Change the settings of **Subdivide** right after you use it, in the Adjust Last 
 
 Subdivides the selected grease pencil geometry, and smoothens it.
 
-##### Adjust Last Operation - Subdivide
+##### Adjust Last Operation - Subdivide and Smooth
 
-Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Subdivide and Smooth](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-subdivide-and-smooth.png)
 
 ###### Number of Cuts
 
@@ -1514,11 +1515,7 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-###### Mode
-
-![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-duplicate-strokes.png)
 
 ###### Move X, Y, Z
 
@@ -1662,14 +1659,11 @@ Change the settings of **Separate Strokes** right after you use it, in the Adjus
 
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-- **Selected Strokes**: Separate the whole stroke of the current selection.
-- **Selected Points**: Separate the selected points with its edges.
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.
 
 #### Set Spline Type – Sub Menu
 
@@ -1693,17 +1687,17 @@ Converts strokes into Bézier curves with editable handles. Provides precise con
 
 Uses Non-Uniform Rational B-Splines for interpolation. Allows smooth curves with weighted control points.
 
-##### Adjust Last Operation - Separate Strokes
+##### Adjust Last Operation - Set Curve Type
 
 ![Last Operator Separate Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes-2.png)
 
-Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Set Curve Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
-| --------- | ---------------------------------------------------------------- |
-| Type | The curve types. |
-| Threshold | The distance that the resulting points are allowed to be within. |
+| ------- | ------------------------------------------------------- |
+| Type | The curve type to convert to. |
+| Handles | Uses the handle information in the conversion. |
 
 
 #### Set Handle Type – Sub Menu
@@ -1999,11 +1993,7 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-###### Mode
-
-![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-duplicate-strokes.png)
 
 ###### Move X, Y, Z
 
@@ -2080,13 +2070,12 @@ Separates the selection into a new grease pencil object.
 
 Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Separate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-separate-strokes.png)
+
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-- **Selected Strokes**: Separate the whole stroke of the current selection.
-- **Selected Points**: Separate the selected points with its edges.
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.
