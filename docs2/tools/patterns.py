@@ -179,14 +179,16 @@ DTYPE_DIAMOND = {"float", "integer", "boolean", "vector", "color", "string", "ro
 
 
 def dtype_flag(m):
+    """Data type line -> a small flag in the socket colour. Webflow rich text keeps classes on <div> but drops them
+    (and style attributes) on <p>, <span> and <b>, so the colour comes from a class on the div (dt-<type>)."""
     text = m.group(1).rstrip(".").strip()
     key = re.match(r"[A-Za-z]+", text)
     key = key.group(0).lower() if key else ""
     key = {"int": "integer", "bool": "boolean"}.get(key, key)
-    color = DTYPE_COLORS.get(key, "#9a9a9a")
+    if key not in DTYPE_COLORS:
+        key = "other"
     shape = " is-list" if "list" in text.lower() else ""
-    return (f'<p class="ui-doc-dtype{shape}" style="--dt:{color}"><span class="ui-doc-dtype-dot"></span>'
-            f'<span>Data type</span><b>{text}</b></p>')
+    return f'<div class="ui-doc-dtype dt-{key}{shape}"><p><em>Data type</em><strong>{text}</strong></p></div>'
 
 
 def small_parts(html):
