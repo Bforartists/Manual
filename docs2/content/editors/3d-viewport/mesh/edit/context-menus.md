@@ -1114,13 +1114,17 @@ Here you find the UV mapping methods and some further functionality. You use it 
 
 The UV menu is just available for Mesh objects
 
-#### Unwrap ABF
+#### Angle Based
 
-Unwrap ABF unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes.
+Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes.
 
-#### Unwrap Conformal
+#### Conformal
 
-Unwrap Conformal unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes.
+Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes.
+
+#### Minimum Stretch
+
+Unwraps the selected geometry with the method SLIM, an iterative method that keeps the stretch of the UVs as low as possible.
 
 #### Adjust Last Operation - Unwrap
 
@@ -1136,7 +1140,7 @@ Method is a drop down box where you can choose the unwrap method.
 
 ![Method Angle based + Conformal](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/method-angle-based-conformal.png)
 
-Unwrap ABF and Unwrap LSCM shares the same Last Operator.
+Angle Based and Conformal share the same settings.
 
 ###### Method
 

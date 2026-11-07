@@ -329,6 +329,24 @@ Choose the locking method again.
 
 Choose what vertex groups should be affected.
 
+#### Show/Hide
+
+Shows and hides parts of the mesh while **Face Selection Masking** or **Vertex Selection Masking** is on, so you can paint only the parts you can see. The submenu follows the masking mode that is on.
+
+##### Show Hidden
+
+Shows all hidden faces or vertices again.
+
+##### Hide Selected
+
+Hides the selected faces or vertices.
+
+##### Hide Unselected
+
+Hides everything that is not selected.
+
+In Weight Paint the submenu is in the **Weights** menu. Before, these entries were in **Select > More/Less**.
+
 # Tool Shelf
 
 ## Tools
