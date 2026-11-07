@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Particle Edit"
 version: "5.3"
-status: draft
+status: needs-review
 icon: particlemode
 summary: "Comb, cut and style particle hair: menus, tools and settings."
 order: 60

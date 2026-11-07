@@ -9,7 +9,7 @@ path:
   - "Sculpt Mode"
   - "Header"
 version: "5.3"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The header menus of Mesh › Sculpt Mode."
 order: 10

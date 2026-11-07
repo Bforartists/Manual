@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Vertex Paint"
 version: "5.3"
-status: draft
+status: needs-review
 icon: vpaint_hlt
 summary: "Paint colours onto the vertices of the mesh: menus, brushes and settings."
 order: 30

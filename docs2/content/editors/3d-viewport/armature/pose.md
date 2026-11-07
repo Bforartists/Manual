@@ -8,7 +8,7 @@ path:
   - "Armature"
   - "Pose Mode"
 version: "5.3"
-status: draft
+status: needs-review
 icon: pose_hlt
 summary: "Pose and animate the armature: menus, tools, sidebar and context menus of Pose Mode."
 order: 20

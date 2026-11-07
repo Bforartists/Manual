@@ -9,7 +9,7 @@ path:
   - "Edit Mode"
   - "Tool Shelf"
 version: "5.3"
-status: draft
+status: needs-review
 icon: tool_settings
 summary: "The tools of Mesh › Edit Mode in the tool shelf."
 order: 20

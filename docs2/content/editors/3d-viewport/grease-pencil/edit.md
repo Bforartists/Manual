@@ -8,7 +8,7 @@ path:
   - "Grease Pencil"
   - "Edit Mode"
 version: "5.3"
-status: draft
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the grease pencil itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 20
