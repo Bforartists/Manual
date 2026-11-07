@@ -8,7 +8,7 @@ path:
   - "All Modes"
   - "Sidebar"
 version: "5.3"
-status: draft
+status: needs-review
 icon: sidebar
 summary: "The sidebar tabs and panels of All Modes."
 order: 30

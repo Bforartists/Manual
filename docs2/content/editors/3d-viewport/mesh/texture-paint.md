@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Texture Paint"
 version: "5.3"
-status: draft
+status: needs-review
 icon: tpaint_hlt
 summary: "Paint textures right on the mesh: menus, brushes and settings."
 order: 50
