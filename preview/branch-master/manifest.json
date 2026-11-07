@@ -1,9 +1,6 @@
 {
  "pages": {
-  "docs2/content/editors/image-editor/header/index.md": "editors/image-editor/header.html",
-  "docs2/content/editors/movie-clip-editor/header/index.md": "editors/movie-clip-editor/header.html",
-  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
-  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
+  "docs2/content/assets/compositor-library.md": "assets/compositor-library.html"
  },
- "images": 429
+ "images": 362
 }
