@@ -6,7 +6,7 @@ path:
   - Editors
   - Graph Editor
   - Sidebar
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -542,6 +542,18 @@ The start and end frame of the generated curve.
 Fade the curve in or out for chosen frame numbers.
 
 # View Tab
+
+## Smooth (Gaussian) modifier
+
+Smooths the curve with a Gaussian filter: each frame takes the average of the frames around it, with the nearest frames counting most. Use it to remove jitter from motion capture or other noisy animation while the keys stay as they are.
+
+### Filter Width
+
+How many frames around each frame are averaged. Higher values smooth more but are slower.
+
+### Sigma
+
+The shape of the Gaussian curve, in frames. Lower values keep the result sharper within the Filter Width.
 
 ## Show Cursor panel
 

@@ -6,7 +6,7 @@ path:
   - Editors
   - Graph Editor
   - Header
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 replaces:
@@ -780,6 +780,10 @@ Limit curve values to specified X and Y ranges.
 #### Stepped Interpolation
 
 Gives the curve a stepped appearance by rounding values down within a certain range of frames.
+
+#### Smooth (Gaussian)
+
+Smooths the curve by averaging the values around each frame. Use it to calm down shaky motion, for example from motion capture, without changing the keys.
 
 ### Extrapolation Mode
 

@@ -469,6 +469,30 @@ Show the overlays.
 
 Show the scene strip range when synchronizing the time with the sequencer.
 
+##### Scene Strip Gizmo
+
+Shows interactive gizmos on the scene strip in the Dope Sheet: retime, move or slip the current scene strip, and scrub the master sequence, without going to the Video Sequencer. It works with or without scene time synchronization. Turn it off to hide all scene strip gizmos.
+
+###### Set Preview Range
+
+Also sets the preview range of the strip's scene to match the strip while you retime, move or slip it. Only when the scene uses a preview range.
+
+###### Set Frame Range
+
+Sets the start and end frame of the strip's scene to the visible part of the strip while you change it. **Lead In** and **Lead Out** add extra frames before and after.
+
+###### Show All Strips
+
+Shows every scene strip of the master timeline, so you see overlapping strips too. Off: only the strips that use the same scene.
+
+###### Show Strip Names / Show Scene Names
+
+Shows the name of the strip, and the name of the scene it uses, on the strip bar.
+
+###### Strips Opacity
+
+How visible the other strips are.
+
 # Quick Menu
 
 ## Quick Menu
@@ -1040,6 +1064,11 @@ The proportional falloff gets calculated in the screen space. Depth doesn't play
 
 Snaps the selected keyframes by the chosen method.
 
+- **Current Frame**: Snaps the keys to the current frame.
+- **Nearest Frame**: Snaps the keys to the nearest whole frame.
+- **Nearest Second**: Snaps the keys to the nearest second.
+- **Nearest Marker**: Snaps the keys to the nearest marker.
+
 ### Mirror
 
 ![Mirror](/docs2/images/editors/dope-sheet/header/key-menu/mirror.png)
@@ -1141,6 +1170,10 @@ Swap all users of one action to another one. The normal action slot assignment r
 ### Replace Action New
 
 Swap all users of one action to a new action. This ignores the NLA and Action Constraints
+
+### Replace with Duplicate Action
+
+Makes a copy of the active object's action and swaps all users of that action to the copy. Use it to try a variation of an animation while the original action stays as it is.
 
 ### Move Slots to new Action
 

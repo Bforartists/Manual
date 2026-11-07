@@ -187,6 +187,10 @@ Limit curve values to specified X and Y ranges.
 
 Gives the curve a stepped appearance by rounding values down within a certain range of frames.
 
+#### Smooth (Gaussian)
+
+Smooths the curve by averaging the values around each frame. Use it to calm down shaky motion, for example from motion capture, without changing the keys.
+
 ### Reveal Curves
 
 Reveals all hidden curves.
