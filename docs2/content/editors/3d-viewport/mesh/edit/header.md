@@ -3431,7 +3431,7 @@ Method is a drop down box where you can choose the unwrap method.
 
 ![Method Angle based + Conformal](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/method-angle-based-conformal.png)
 
-Unwrap ABF and Unwrap LSCM shares the same Last Operator.
+Angle Based and Conformal share the same settings.
 
 ###### Method
 

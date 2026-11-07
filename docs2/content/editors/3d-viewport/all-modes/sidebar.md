@@ -440,6 +440,12 @@ Adjust the stiffness of the selected meta element.
 
 Type is a drop down box. Adjust the meta element type.
 
+##### Size
+
+![Metaball Transform panel with an Ellipsoid](/docs2/images/editors/3d-viewport/sidebar/item-tab/metaball-transform.png)
+
+The size of the meta element along each axis, shown for the types that have one. Ellipsoid and Cube have X, Y and Z, Plane has X and Y, and Capsule has X.
+
 ### Text Objects
 
 ![Text Objects](/docs2/images/editors/3d-viewport/sidebar/item-tab/text-objects.jpg)

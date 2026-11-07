@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Texture Paint"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: tpaint_hlt
 summary: "Paint textures right on the mesh: menus, brushes and settings."
 order: 50
@@ -38,6 +38,24 @@ With texture mapping type stencil you will see the navigation controls to naviga
 #### Color Picker
 
 Allows you to pick a color in the 3D view. Hotkey tool!
+
+#### Show/Hide
+
+Shows and hides parts of the mesh while **Face Selection Masking** or **Vertex Selection Masking** is on, so you can paint only the parts you can see. The submenu follows the masking mode that is on.
+
+##### Show Hidden
+
+Shows all hidden faces or vertices again.
+
+##### Hide Selected
+
+Hides the selected faces or vertices.
+
+##### Hide Unselected
+
+Hides everything that is not selected.
+
+In Texture Paint the submenu is in the **Brush** menu.
 
 # Tool Shelf
 
