@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "All Modes"
   - "Sidebar"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: sidebar
 summary: "The sidebar tabs and panels of All Modes."
@@ -619,6 +619,18 @@ Normally when you render an image it gets rendered from the currently active cam
 ![Passepartout](/docs2/images/editors/3d-viewport/sidebar/view-tab/passepartout.png)
 
 Toggles and shows all camera passepartout overlays.
+
+### View Roll
+
+![View Roll](/docs2/images/editors/3d-viewport/sidebar/view-tab/view-roll.png)
+
+Shows and sets how much the view is rolled, tilted sideways against the horizon. 0° is level. Drag or type a value to roll the view; hover it and press **Backspace**, or right-click > **Reset to Default Value**, to level the view again. The value follows along while you roll with the roll ring of the navigation gizmo or the hotkey. View Roll shows outside the camera view and does nothing when view rotation is locked.
+
+### Camera Roll
+
+Shown instead of View Roll while you look through the camera. It rolls the camera view without moving the camera object, which is handy when you draw on the camera with Grease Pencil and want to turn the canvas. Press **Backspace** or right-click > **Reset to Default Value** to set it back to 0°.
+
+> **Tip:** **Ctrl + Alt + middle mouse drag** rolls the view in every view, including the camera view (Cmd + Alt + middle mouse on macOS).
 
 ### Use Render Region
 
