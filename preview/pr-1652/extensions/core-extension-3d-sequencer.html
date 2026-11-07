@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Sequencer · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1652 · <code>docs2/tables-rest</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<a href="../workspaces/workspaces.html">Managing Workspaces</a>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a href="../editors/topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../editors/introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/channel-list.html">Channel List</a>
+<a href="../editors/image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<a href="../editors/video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../editors/movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../editors/dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../editors/graph-editor.html">Graph Editor</a>
+<a href="../editors/drivers-editor.html">Drivers Editor</a>
+<a href="../editors/nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<span>Text Editor</span>
+<a href="../editors/python-console.html">Python Console</a>
+<a href="../editors/info-editor.html">Info Editor</a>
+<a href="../editors/toolbar.html">Toolbar</a>
+<a href="../editors/outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<a href="../editors/asset-browser.html">Asset Browser</a>
+<a href="../editors/spreadsheet.html">Spreadsheet</a>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<a href="../assets/essentials-library.html">Essentials Library</a>
+<a href="../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a class="is-current" href="core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="core-extension-power-user-tools.html">Power User Tools</a>
+<a href="core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="core-extension-brush-panels.html">Brush Panels</a>
+<a href="built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Extensions › Bforartists Extensions › Core Extension- 3D Sequencer</div><h1 class="pv-title">3D Sequencer</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 6 min read</span></div><article class="ui-doc-body"><figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/core-extension-3d-sequencer.png" alt="Core Extension- 3D Sequencer" loading="lazy"><figcaption>Core Extension- 3D Sequencer</figcaption></figure>
+<p>This addon is activated by default.</p>
+<p>This adds the ability to use the sequencer with the 3D View with a timeline. Using Scene Strips, you can switch the 3D View scenes with a master sequencer scene, like in a video editor.</p>
+<p>This addon is thanks to Spa Studios, Znight, and Draise.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To activate/deactivate an addon, go to Edit – Preferences – Addons tab – and untick any activated addons.</p>
+<p>If you’d like to keep your addons for future use, you can either <strong>save the preferences</strong>, or activate them on demand per workspace in the workspace settings in the property shelf.</p></div>
+<h2 id="header-tools">Header Tools</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/header-tools.png" alt="Header Tools" loading="lazy"></figure>
+<h3 id="sync-header-button">Sync Header Button</h3>
+<p>Toggles Synchronization Timeline to 3D View.</p>
+<p>To use, set the sequencer timeline to the master scene then toggle to synchronize the 3D with the Sequencer.</p>
+<h2 id="header">Header</h2>
+<h3 id="sequencer-scene">Sequencer – Scene</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/sequencer-scene.png" alt="Sequencer – Scene" loading="lazy"></figure>
+<p>An additional header menu for Scene Strip operators in the Sequencer Editor.</p>
+<h4 id="adjust-timing">Adjust Timing</h4>
+<p>Adjusts the timing of the active Scene Strip by extending or compressing the Scene Strip length directly from the Sequencer timeline.</p>
+<h4 id="toggle-active-scene-strip">Toggle Active Scene Strip</h4>
+<p>Updates the current scene to the active scene strip. If the timeline in sequencer header is not set, this toggles the current scene to active Scene Strip in the sequencer.</p>
+<h4 id="play-master-scene">Play Master Scene</h4>
+<p>Toggle playback of the master scene from the sequencer timeline.</p>
+<h2 id="panels-and-operators">Panels and Operators</h2>
+<h3 id="sequencer-3d-view-sync-panel">Sequencer – 3D View Sync panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/sequencer-3d-view-sync-panel.png" alt="Sequencer – 3D View Sync panel" loading="lazy"><figcaption>Sequencer – 3D View Sync panel</figcaption></figure>
+<p>This panel located in the Sequencer sidebar View tab has the group of operators, properties and buttons define how the Sequencer synchronizes the Timeline to 3D View.</p>
+<h4 id="master-scene-selector">Master Scene Selector</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/master-scene-selector.png" alt="Master Scene Selector" loading="lazy"></figure>
+<p>The master scene selector is where you define which the scene should contain all the children Scene Strips in the Sequencer timeline. The selected scene with the containing children Scene Strips in the Sequencer will be your Master Scene.</p>
+<p>Each Scene Strip in the timeline will change the active 3D View camera and active scene when the Synchronize Timeline to 3D View operator is on.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/master-scene-selector-2.png" alt="Master Scene Selector" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The Master Scene should also be selected in the sequencer header to be “pinned” before syncing the 3D View, as the synchronization only work on the selected Sequencer timeline.</p></div>
+<h4 id="advanced-settings-sub-panel">Advanced Settings Sub-Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/advanced-settings-sub-panel.png" alt="Advanced Settings Sub-Panel" loading="lazy"></figure>
+<p>These define the advanced settings for Sequencer synchronizes the Timeline to the 3D View.</p>
+<h5 id="keep-grease-pencil-settings">Keep Grease Pencil Settings</h5>
+<p>Keep active Grease Pencil tool settings while switching and navigating Scene Strips from the timeline.</p>
+<h5 id="bidirectional">Bidirectional</h5>
+<p>Whether changing the Active Scene’s time should update the Master Scene’s current frame.</p>
+<h5 id="use-preview-range">Use Preview Range</h5>
+<p>Update the preview range of current strip’s scenes to match the useful range of the strip.</p>
+<h5 id="synchronize-all-windows">Synchronize all Windows</h5>
+<p>Whether the 3D View Sync impacts all the Main Windows.</p>
+<h5 id="active-follows-playhead">Active Follows Playhead</h5>
+<p>Update the active strip while scrubbing the sequencer.</p>
+<h3 id="3d-view-sequencer-sync-panel">3D View - Sequencer Sync Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/3d-view-sequencer-sync-panel.png" alt="3D View - Sequencer Sync Panel" loading="lazy"><figcaption>3D View - Sequencer Sync Panel</figcaption></figure>
+<p>This panel displays information from the Sequencer in the 3D View, including the active Scene Strip with assigned scene and camera. This panel is located in the View tab of the 3D View sidebar.</p>
+<h4 id="master-scene-selector-2">Master Scene Selector</h4>
+<p>The master scene selector is where you define which the scene should contain all the children Scene Strips in the Sequencer timeline to influence the 3D View. The selected scene with the containing children Scene Strips in the Sequencer will be your Master Scene.</p>
+<p>Each Scene Strip in the timeline will change the active 3D View camera and active scene when the Synchronize Timeline to 3D View operator is on in the Sequencer View tab.</p>
+<h4 id="sequencer-scene-strips-list">Sequencer Scene Strips List</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/sequencer-scene-strips-list.png" alt="Sequencer Scene Strips List" loading="lazy"><figcaption>Sequencer Scene Strips List</figcaption></figure>
+<p>This shows the list of scene strips from the Master Scene timeline from the Sequencer. On the left is the Scene Strip name, center is the active camera, and to right is the assigned scene to the Scene Strip.</p>
+<h4 id="scene-strip-settings">Scene Strip Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/scene-strip-settings.png" alt="Scene Strip Settings" loading="lazy"></figure>
+<p>This box shows the active Scene Strip in the 3D View with properties to select the assigned scene, the active camera selector and other operators.</p>
+<h5 id="scene-selector">Scene Selector</h5>
+<p>Select the active scene for the active Scene Strip.</p>
+<h5 id="create-child-scene-setup">Create Child Scene Setup</h5>
+<p>Duplicate Linked the active scene as a new scene then update the active Scene Strip to the new scene.</p>
+<h5 id="active-camera-selector">Active Camera Selector</h5>
+<p>Overrides the scene active camera and camera markers to a fixed camera.</p>
+<h5 id="set-active-camera">Set Active Camera</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/set-active-camera.png" alt="Set Active Camera" loading="lazy"></figure>
+<p>If None is set, the Scene Strip camera behavior defaults to no active camera or last active Scene camera.</p>
+<h5 id="set-active-scene-camera">Set Active Scene Camera</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/set-active-scene-camera.png" alt="Set Active Scene Camera" loading="lazy"><figcaption>Set Active Scene Camera</figcaption></figure>
+<p>Sets the camera for the Scene Strip to the Active Camera. If Active is set, the Scene Strip camera behavior defaults to the bound cameras to timeline marker or to the active Scene camera.</p>
+<h5 id="set-active-camera-to-none">Set Active Camera to None</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/set-active-camera-to-none.png" alt="Set Active Camera to None" loading="lazy"><figcaption>Set Active Camera to None</figcaption></figure>
+<p>If the Scene Strip has an active camera override, you can set it to None to revert the Scene Strip camera behavior defaults to no active camera or last active Scene camera.</p>
+<h5 id="select-the-active-camera">Select the Active Camera</h5>
+<p>Selects the Active Camera in the scene.</p>
+<h2 id="overlays">Overlays</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/overlays.png" alt="Overlays" loading="lazy"></figure>
+<h3 id="dopesheet-options">Dopesheet - Options</h3>
+<h4 id="sequencer-sync-scene-strip-overlay-property">Sequencer Sync – Scene Strip Overlay Property</h4>
+<p>Toggles the retiming widget of the active Scene Strip in the Dopesheet. Changing the preview start and end of the strip will also change the Scene Strip length in the Sequencer.</p>
+<p>The green handle retimes the start of the Scene Strip.</p>
+<p>The red handle retimes the end of the Scene Strip.</p>
+<h2 id="use">Use</h2>
+<h3 id="1-create-scenes">1. Create Scenes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/1-create-scenes.png" alt="1. Create Scenes" loading="lazy"></figure>
+<p>To set a timeline in the sequencer, first create a master scene and concurrent scenes for your shots. Each scene can have their individual cameras, collections, animation and render settings. You can also link collections and data between scenes.</p>
+<h3 id="2-set-the-master-scene">2. Set the Master Scene</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/2-set-the-master-scene.png" alt="2. Set the Master Scene" loading="lazy"><figcaption>2. Set the Master Scene</figcaption></figure>
+<p>The Master Scene is where the Scene Strip cameras and animation strips are defined. This timeline information will synchronize with the 3D view and vice versa.</p>
+<p>In the view tab of the 3D View in the Sequencer Sync panel, you can set the Master Scene in the panel, or set the Master Scene in the view tab of the Sequencer in the 3D View Sync panel. This master scene will define how the Scene Strips control the 3D View.</p>
+<h3 id="3-set-the-master-scene-to-the-sequencer-timeline">3. Set the Master Scene to the sequencer Timeline</h3>
+<p>After you have defined the Master Scene, you must define the Timeline to the Master Scene. Once you have this set, you can now playback amd synchronize the 3D View to the sequencer Timeline.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can also “pin” the any scene to the sequencer timeline.</p></div>
+<h3 id="4-add-scene-strips-to-the-sequencer-timeline">4. Add Scene Strips to the sequencer Timeline.</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cf45073a9bdc4984d6f6bd861096006c9853a4d3/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/4-add-scene-strips-to-the-sequencer-timeline.png" alt="4. Add Scene Strips to the sequencer Timeline." loading="lazy"><figcaption>4. Add Scene Strips to the sequencer Timeline.</figcaption></figure>
+<p>You can add Scene Strip to the sequencer Timeline from from the add menu.</p>
+<p>Now you can use the Dopesheet overlay to retime your scenes, and the Sequencer to change the sequence, cut, and re-order your scenes.</p>
+<p>You can also retime your Scene Strips in the sequencer.</p>
+<h3 id="5-synchronize-timeline-to-3d-view">5. Synchronize Timeline to 3D View</h3>
+<p>This button in the header will start the realtime sequencer timeline synchronization to the 3D View.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If you are in the master scene in the 3D View, toggle or switch to one of the Scene Strip scenes and then it will update from the sequencer timeline.</p></div>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ftables-rest/collection/docs/edit/docs2%2Fcontent%2Fextensions%2Fcore-extension-3d-sequencer.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/tables-rest/docs2/content/extensions/core-extension-3d-sequencer.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#header-tools">Header Tools</a><a class="h3" href="#sync-header-button">Sync Header Button</a><a class="h2" href="#header">Header</a><a class="h3" href="#sequencer-scene">Sequencer – Scene</a><a class="h2" href="#panels-and-operators">Panels and Operators</a><a class="h3" href="#sequencer-3d-view-sync-panel">Sequencer – 3D View Sync panel</a><a class="h3" href="#3d-view-sequencer-sync-panel">3D View - Sequencer Sync Panel</a><a class="h2" href="#overlays">Overlays</a><a class="h3" href="#dopesheet-options">Dopesheet - Options</a><a class="h2" href="#use">Use</a><a class="h3" href="#1-create-scenes">1. Create Scenes</a><a class="h3" href="#2-set-the-master-scene">2. Set the Master Scene</a><a class="h3" href="#3-set-the-master-scene-to-the-sequencer-timeline">3. Set the Master Scene to the sequencer Timeline</a><a class="h3" href="#4-add-scene-strips-to-the-sequencer-timeline">4. Add Scene Strips to the sequencer Timeline.</a><a class="h3" href="#5-synchronize-timeline-to-3d-view">5. Synchronize Timeline to 3D View</a></aside></div></body></html>
