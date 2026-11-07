@@ -6,8 +6,8 @@ path:
   - Editors
   - Video Sequence Editor
   - Tool Shelf
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.2 Editors - Video Sequence Editor - Tool Shelf.odt
@@ -50,6 +50,8 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
 
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
+
 ##### Tool Settings
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-2.png)
@@ -65,6 +67,8 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 #### Select Circle
 
 Circle select several elements at once. Click at the start point, then drag.
+
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -471,6 +475,8 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
 
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
+
 ##### Tool Settings
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-2.png)
@@ -486,6 +492,8 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 #### Select Circle
 
 Circle select several elements at once. Click at the start point, then drag.
+
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -509,18 +517,25 @@ Clicking at the clip will cut the strip at the mouse position. When you drag thi
 
 ##### Active Tool settings
 
-###### Split Type
+The settings come in two groups, one for each way of using the tool. In the header you see the Split type; the rest is behind the **...** button.
 
-Create a soft split or a hard split.
+###### Split
 
-###### Remove Gaps
+Settings for a click on a strip.
 
-![Remove Gaps](/docs2/images/editors/video-sequence-editor/tool-shelf/remove-gaps.png)
+- **Soft / Hard**: A **Soft** split keeps the cut-off content, so you can drag the strip ends back out later. A **Hard** split removes it.
+- **All Channels**: Splits the strips in all channels at that frame, not only the strip under the mouse.
+- **Only Selected**: Splits only selected strips.
+- **Ignore Connections**: Splits only the strip itself, not the strips that are connected to it. Not available with All Channels.
 
-Close gaps between cut strips.
+###### Box Blade
 
-- **Ignore Selection**: Make cuts to all strips. Even if they are not connected.
-- **Ignore Connections**: Don’t propagate split to connected strips.
+Settings for dragging a box. Everything inside the box is cut away.
+
+- **Soft / Hard**: The type of the cuts, as above.
+- **Remove Gaps**: Closes the gaps that the cut leaves, and moves the later strips on the same channel to the left.
+- **Only Selected**: Cuts only selected strips.
+- **Ignore Connections**: Doesn't cut the strips that are connected to the cut strips.
 
 #### Retime
 
