@@ -2093,6 +2093,8 @@ The Output vector.
 
 **Bundles** are like packed containers—they let you group multiple values (like vectors, floats, booleans) into a single wire. Think of them as a way to **package data** together and pass it around cleanly.
 
+> **Note:** The nodes that store a bundle on a geometry and read it back are in the Geometry menu: [Get Geometry Bundle](geometry.md#get-geometry-bundle) in **Read** and [Set Geometry Bundle](geometry.md#set-geometry-bundle) in **Write**.
+
 ### Combine Bundle
 
 ![Combine Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/combine-bundle.png)
@@ -2300,6 +2302,14 @@ The type of the values in the list. Pick the type that matches what you put in o
 Data type: Bundle.
 
 The bundle with the new item.
+
+### Typed Bundle
+
+![Typed Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png)
+
+Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.
+
+Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.
 
 # Closure
 
