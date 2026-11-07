@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Header"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: topbar
 summary: "The header menus of Mesh › Edit Mode."

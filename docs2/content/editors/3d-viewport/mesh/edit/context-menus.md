@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Context Menus"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: menu
 summary: "The right-click menus of Mesh › Edit Mode."
