@@ -43,6 +43,8 @@ A more unknown functionality is that it can also randomize the result with the F
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Number of Cuts
 
 The number of cuts defines the amount of subdivisions.
@@ -78,6 +80,8 @@ Extrudes out the selected edges by moving the mouse.
 #### Adjust Last Operation - Extrude Only Edges and Move
 
 ![Last Operator Extrude Only Edges and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-extrude-only-edges-and-move.png)
+
+Change the settings of **Extrude Only Edges and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -124,6 +128,8 @@ Adds a bevel at the selected edges.
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png)
 
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Affect
 
 Affect vertices or edges.
@@ -163,19 +169,19 @@ When enabled, the per-vertex face normals of the bevel faces are adjusted to mat
 
 How the outer miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Patch**
+###### Patch
 
 ![Patch](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png)
 
 This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
@@ -187,19 +193,19 @@ This replaces the vertex of a miter with 2 vertices, joined by an arc. A separat
 
 How the inner miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
 This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.
 
-**Spread**
+###### Spread
 
 ![Spread](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/spread.png)
 
@@ -239,21 +245,21 @@ Set Face Strength on the faces involved in the bevel, according to the specified
 
 The profile type.
 
-**Superellipse**
+###### Superellipse
 
 Uses a mathematically smooth curve for bevel profiles
 
-**Custom**
+###### Custom
 
 Allows manual control of the bevel profile shape via a curve widget.
 
-**Presets**
+###### Presets
 
 ![Presets](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png)
 
 Curve presets.
 
-**Navigation elements**
+###### Navigation elements
 
 
 | Entry | What it does |
@@ -263,7 +269,7 @@ Curve presets.
 | Toggle Profile Clipping | Turns the profile clipping on or off. |
 
 
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
@@ -288,7 +294,7 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
-**Handler and node position**
+###### Handler and node position
 
 ![Handler and node position](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png)
 
@@ -336,6 +342,8 @@ The Bridge edge loops tool bridges selected edges, and adds a polygon between th
 
 ![Last Operator Bridge Edge loops](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-bridge-edge-loops.png)
 
+Change the settings of **Bridge Edge loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -356,6 +364,8 @@ The Bridge edge loops tool bridges selected edges, and adds a polygon between th
 Fill closes holes in the selected mesh geometry, and triangulates the faces.
 
 #### Adjust Last Operation - Fill
+
+Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Beauty
 
@@ -415,6 +425,8 @@ Adds left and right an edge from the selected edge and slides it outwards.
 #### Adjust Last Operation - Offset Edge Slide
 
 ![Last Operator Offset Edge Slide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-offset-edge-slide.png)
+
+Change the settings of **Offset Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Cap Endpoint
 
@@ -477,6 +489,8 @@ Rotate Edge rotates the selected edge clockwise.
 
 #### Adjust Last Operation - Rotate Selected Edge
 
+Change the settings of **Rotate Selected Edge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Counter Clockwise
 
 ![Counter Clockwise](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/counter-clockwise.png)
@@ -492,6 +506,8 @@ Splits selected edges so that each neighbor face gets its own copy. You have two
 #### Adjust Last Operation - Edge Split
 
 ![Last Operator Edge Split](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-split.png)
+
+Change the settings of **Edge Split** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -512,6 +528,8 @@ A negative crease value will subtract from the current active crease value in ca
 #### Adjust Last Operation - Edge Crease
 
 ![Last Operator Edge Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-crease.png)
+
+Change the settings of **Edge Crease** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
@@ -535,6 +553,8 @@ A negative Edge Bevel Weight value will subtract from the current active crease 
 
 #### Adjust Last Operation - Edge Bevel Weight
 
+Change the settings of **Edge Bevel Weight** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Factor
 
 ![Factor](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/factor.png)
@@ -553,6 +573,8 @@ Mark Sharp is a tool that you need for the Edge Split modifier. Marked edges are
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp.png)
 
+Change the settings of **Mark Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Vertices
 
 Calculate by the selected vertices instead of edges to mark the edges.
@@ -565,6 +587,8 @@ Clears formerly as sharp marked selected edges.
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp-2.png)
 
+Change the settings of **Mark Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Vertices
 
 Calculate by the selected vertices instead of edges to mark the edges.
@@ -576,6 +600,8 @@ Sets the sharpness of edges by their angle to the neighbour face.
 #### Adjust Last Operation - Set sharpness by Angle
 
 ![Last Operator Set sharpness by Angle](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-set-sharpness-by-angle.png)
+
+Change the settings of **Set sharpness by Angle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -597,6 +623,8 @@ Sets the sharpness of edges by their angle to the neighbour face.
 Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.
 
 #### Adjust Last Operation - Un-Subdivide
+
+Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Iterations
 
@@ -632,6 +660,8 @@ Note that pressing Del in Vertice select mode calls Dissolve Vertices already. I
 
 ![Last Operator Dissolve Edges](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-dissolve-edges.png)
 
+Change the settings of **Dissolve Edges** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------------- | ------------------------------------------------------------------------------------------------------ |
@@ -661,6 +691,8 @@ Hides the selected geometry.
 ##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 
@@ -698,6 +730,8 @@ A more unknown functionality is that it can also randomize the result with the F
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Number of Cuts
 
 The number of cuts defines the amount of subdivisions.
@@ -733,6 +767,8 @@ Extrudes out the selected faces into the face direction by moving the mouse. Whe
 #### Adjust Last Operation - Extrude Region and Move
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-move.png)
+
+Change the settings of **Extrude Region and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -783,6 +819,8 @@ This tool works like a shrink fatten extrude. And so you will see a correspondin
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-shrink-fatten.png)
 
+Change the settings of **Extrude Region and Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -825,6 +863,8 @@ This tool works like a shrink fatten extrude. And so you will see a correspondin
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-individual-faces-and-move.png)
 
+Change the settings of **Extrude Individual Faces and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -859,6 +899,8 @@ Activate the tool, drag the mouse. But carefully. The control is not the best. Y
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
 
+Change the settings of **Inset Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Boundary
 
 With Boundary ticked you will get the connect edges in the corners. Without the edges ends straight.
@@ -888,6 +930,8 @@ This tool is basically the Bridge Edge Loops tool, just that it operates in Face
 Note that this tool just shows when you are in Face Select Mode.
 
 #### Adjust Last Operation - Bridge Edge loops
+
+Change the settings of **Bridge Edge loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Connect Loops
 
@@ -921,6 +965,8 @@ The merge factor determines at which distance between the selected edges the mer
 Splits the selected faces to create a triangulated geometry.
 
 #### Adjust Last Operation - Poke Faces
+
+Change the settings of **Poke Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Poke Offset
 
@@ -959,6 +1005,8 @@ The UV menu is just available for Mesh objects
 
 #### Adjust Last Operation - Unwrap
 
+Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Method
 
 Method is a drop down box where you can choose the unwrap method.
@@ -969,11 +1017,11 @@ Method is a drop down box where you can choose the unwrap method.
 
 Unwrap ABF and Unwrap LSCM shares the same Last Operator.
 
-**Method**
+###### Method
 
 Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.
 
-**Fill Holes**
+###### Fill Holes
 
 ![Fill Holes](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/fill-holes.png)
 
@@ -986,7 +1034,7 @@ Fill holes in the mesh before unwrapping.
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
@@ -998,7 +1046,7 @@ Fill holes in the mesh before unwrapping.
 | Fraction | Specify a precise fraction of specific UV. |
 
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -1019,7 +1067,7 @@ Number of iterations.
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
@@ -1031,7 +1079,7 @@ Number of iterations.
 | Fraction | Specify a precise fraction of specific UV. |
 
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -1125,6 +1173,8 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 ![Last Operator Cube Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cube-projection.png)
 
+Change the settings of **Cube Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------- |
@@ -1141,6 +1191,8 @@ Cylinder Projection tries to map the geometry cylindric.
 ##### Adjust Last Operation - Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cylinder-projection.png)
+
+Change the settings of **Cylinder Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -1178,6 +1230,8 @@ Sphere Projection tries to map the geometry spherical.
 
 ![Last Operator Sphere Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-sphere-projection.png)
 
+Change the settings of **Sphere Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Direction
 
 ![Direction](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/direction.png)
@@ -1212,6 +1266,8 @@ Project from View projects the UV from the current 3D view.
 ##### Adjust Last Operation - Project from View
 
 ![Last Operator Project from View](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-project-from-view.png)
+
+Change the settings of **Project from View** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1253,6 +1309,8 @@ Mark seam marks the currently selected edge(s) as a seam. Seam edges will be dis
 Triangulate Faces triangulates the faces of the selected geometry.
 
 #### Adjust Last Operation - Triangulate Faces
+
+Change the settings of **Triangulate Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Quad Method
 
@@ -1298,6 +1356,8 @@ Tris to quads tries to convert triangulated geometry back to a quad geometry by 
 
 #### Adjust Last Operation - Tris to Quads
 
+Change the settings of **Tris to Quads** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Max Face Angle
 
 ![Max Face Angle](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/max-face-angle.png)
@@ -1341,6 +1401,8 @@ Decimates the geometry by trying to make one quad out of four quads. But can als
 
 #### Adjust Last Operation - Un-Subdivide
 
+Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Iterations
 
 ![Iterations](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/iterations.png)
@@ -1373,6 +1435,8 @@ Dissolves the selected faces, which unions the involved faces to one.
 
 ![Last Operator Dissolve Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-dissolve-vertices.png)
 
+Change the settings of **Dissolve Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Dissolve Vertices
 
 Dissolve remaining vertices.
@@ -1398,6 +1462,8 @@ Hides the selected geometry.
 ##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 
@@ -1435,6 +1501,8 @@ A more unknown functionality is that it can also randomize the result with the F
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Number of Cuts
 
 The number of cuts defines the amount of subdivisions.
@@ -1470,6 +1538,8 @@ Extrudes out the selected vertices by moving the mouse.
 #### Adjust Last Operation - Extrude Only Vertices and Move
 
 ![Last Operator Extrude Only Vertices and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-extrude-only-vertices-and-move.png)
+
+Change the settings of **Extrude Only Vertices and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X Y Z
 
@@ -1510,6 +1580,8 @@ Adds a bevel at the selected vertices.
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png)
 
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Affect
 
 Affect vertices or edges.
@@ -1549,19 +1621,19 @@ When enabled, the per-vertex face normals of the bevel faces are adjusted to mat
 
 How the outer miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Patch**
+###### Patch
 
 ![Patch](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png)
 
 This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
@@ -1573,19 +1645,19 @@ This replaces the vertex of a miter with 2 vertices, joined by an arc. A separat
 
 How the inner miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
 This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.
 
-**Spread**
+###### Spread
 
 ![Spread](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/spread.png)
 
@@ -1625,21 +1697,21 @@ Set Face Strength on the faces involved in the bevel, according to the specified
 
 The profile type.
 
-**Superellipse**
+###### Superellipse
 
 Uses a mathematically smooth curve for bevel profiles
 
-**Custom**
+###### Custom
 
 Allows manual control of the bevel profile shape via a curve widget.
 
-**Presets**
+###### Presets
 
 ![Presets](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png)
 
 Curve presets.
 
-**Navigation elements**
+###### Navigation elements
 
 
 | Entry | What it does |
@@ -1649,7 +1721,7 @@ Curve presets.
 | Toggle Profile Clipping | Turns the profile clipping on or off. |
 
 
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
@@ -1674,7 +1746,7 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
-**Handler and node position**
+###### Handler and node position
 
 ![Handler and node position](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png)
 
@@ -1733,6 +1805,8 @@ In Object mode this tool requires to have more than one object selected.
 #### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1832,6 +1906,8 @@ This tool allows randomizes the positions of the selected vertices.
 
 ![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | ------------------------------------------ |
@@ -1848,6 +1924,8 @@ Laplacian Smooth Vertex smooths out the angles between the selected vertices. It
 #### Adjust Last Operation - Laplacian Smooth Vertices
 
 ![Last Operator Laplacian Smooth Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-laplacian-smooth-vertices.png)
+
+Change the settings of **Laplacian Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1914,6 +1992,8 @@ A negative crease value will subtract from the current active crease value in ca
 
 ![Last Operator Vertex Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-vertex-crease.png)
 
+Change the settings of **Vertex Crease** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Factor
 
 Adjust the crease factor.
@@ -1932,6 +2012,8 @@ Merges the geometry with the given methods.
 
 ![Last Operator Merge](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge.png)
 
+Change the settings of **Merge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----- | ------------------------------------- |
@@ -1946,6 +2028,8 @@ Merge the vertices by their distance to each other. This tool is meant to remove
 #### Adjust Last Operation - Merge by Distance
 
 ![Last Operator Merge by Distance](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge-by-distance.png)
+
+Change the settings of **Merge by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1983,6 +2067,8 @@ Note that pressing Del in Vertice select mode calls Dissolve Vertices already. I
 
 ![Last Operator Dissolve Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-dissolve-vertices.png)
 
+Change the settings of **Dissolve Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------- | ------------------------------------------------------- |
@@ -2012,6 +2098,8 @@ Hides the not selected elements. The selected elements stays visible.
 #### Adjust Last Operation - Reveal Hidden / Hide Selected
 
 ![Last Operator Reveal Hidden / Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-reveal-hidden-hide-selected.png)
+
+Change the settings of **Reveal Hidden / Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Select
 

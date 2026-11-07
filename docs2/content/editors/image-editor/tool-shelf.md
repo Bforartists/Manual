@@ -161,6 +161,8 @@ You can move the stencil image around with the right mouse button.
 
 ![Last Operator Grab Clone](/docs2/images/editors/image-editor/tool-shelf/last-operator-grab-clone.png)
 
+Change the settings of **Grab Clone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Delta X Y
 
 The position of the stencil image. The position gets calculated from the lower left corner. It is not calculated in pixels, but relative to the source image. The width and height of it is the range between 0 and 1

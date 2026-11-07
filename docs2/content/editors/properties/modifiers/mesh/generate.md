@@ -501,13 +501,13 @@ Choose some profile presets.
 
 ###### Tools
 
-**Reset View**
+###### Reset View
 
 ![Reset View](/docs2/images/ui/properties/modifiers/mesh-generate/reset-view.png)
 
 Resets the zoom factor of the curve view.
 
-**Reset Curve**
+###### Reset Curve
 
 Resets the curve to the defaults. This means when you choose a curve preset to reset it to the values of the latest chosen preset.
 
@@ -1169,7 +1169,7 @@ If the special cases are not present it is recommended to choose Simple because 
 
 Fills the gap between the inner and outer edges.
 
-**Only Rim**
+###### Only Rim
 
 Will only leave the generated perpendicular rim
 

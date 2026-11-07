@@ -77,11 +77,11 @@ Use the render result or an external image as the base image for cryptomatte.
 
 Use Cryptomatte data that are stored as part of the render.
 
-**Scene Property**
+###### Scene Property
 
 Pick the scene that you want to use.
 
-**Cryptomatte Layer**
+###### Cryptomatte Layer
 
 ![Cryptomatte Layer](/docs2/images/editors/compositor/header/add-menu-mask/cryptomatte-layer.png)
 
@@ -93,11 +93,11 @@ Pick the cryptomatte layer that you want to use.
 
 Use Cryptomatte data that are stored inside a multilayered OpenEXR image.
 
-**Image Property**
+###### Image Property
 
 Pick the image that you want to use.
 
-**Cryptomatte Layer**
+###### Cryptomatte Layer
 
 ![Cryptomatte Layer](/docs2/images/editors/compositor/header/add-menu-mask/cryptomatte-layer-2.png)
 

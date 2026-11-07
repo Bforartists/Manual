@@ -197,6 +197,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move
 
 Adjust in which directions you want to transform.
@@ -293,6 +295,8 @@ Define what kind of transform should happen when you click not at the widget but
 #### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -397,6 +401,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Scale
 
 Adjust in which directions you want to transform.
@@ -479,6 +485,8 @@ What to do at dragging with the mouse with an active tool. Active Tool means the
 #### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scale
 
@@ -867,7 +875,7 @@ Lock frame displayed by current layer. This toggles whether the active layer is 
 
 Deletes the active frame from the active grease pencil layer.
 
-**Placement**
+###### Placement
 
 ![Placement](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/placement.jpg)
 
@@ -1006,25 +1014,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1091,25 +1099,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1129,6 +1137,8 @@ Triangle Fan means that the base face is triangulated.
 #### Adjust Last Operation - Add Cone Panel
 
 ![Last Operator Add Cone Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cone-panel.png)
+
+Change the settings of **Add Cone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -1206,25 +1216,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1243,6 +1253,8 @@ The number of vertices.
 
 ![Last Operator Add Circle Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-circle-panel.png)
 
+Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
@@ -1256,7 +1268,7 @@ Defines the length of the Cylinder.
 
 ![Depth](/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png)
 
-**Cap Fill Type**
+###### Cap Fill Type
 
 defines how the cap face is filled.
 
@@ -1265,7 +1277,7 @@ Nothing means you have no face at the top and the bottom of the Cylinder.
 N-Gon means that the cap face is an N-Gon face.  
 Triangle Fan means that the cap face is triangulated.
 
-**Generate UV's**
+###### Generate UV's
 
 Creates UV's for this primitive.
 
@@ -1329,25 +1341,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1423,25 +1435,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1453,26 +1465,28 @@ The subdivision level of the Ico Sphere.
 
 ![Last Operator Add Ico Sphere Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-ico-sphere-panel.png)
 
-**Subdivisions**
+Change the settings of **Add Ico Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+##### Subdivisions
 
 Defines the subdivision level of the Ico Sphere.
 
-**Size**
+##### Size
 
 Defines the radius of the Ico Sphere.
 
-**Generate UV's**
+##### Generate UV's
 
 Creates UV's for this primitive.
 
-**Align to view**
+##### Align to view
 
 Aligns the geometry to the chosen view. World, View or 3D cursor.
 
-**Location**
+##### Location
 
 Defines the location of the Sphere.
 
-**Rotation**
+##### Rotation
 
 Defines the rotation of the Sphere.

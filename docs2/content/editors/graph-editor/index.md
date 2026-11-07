@@ -144,6 +144,8 @@ Reveals all hidden curves.
 
 ![Last Operator Reveal Curves](/docs2/images/editors/graph-editor/last-operator-reveal-curves.png)
 
+Change the settings of **Reveal Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Select
 
 Select all revealed curves.
@@ -159,6 +161,8 @@ Hides the unselected curves.
 #### Adjust Last Operation - Hide Curves
 
 ![Last Operator Hide Curves](/docs2/images/editors/graph-editor/last-operator-hide-curves.png)
+
+Change the settings of **Hide Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 
@@ -198,6 +202,8 @@ Pastes copied keyframe(s), but flipped.
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/graph-editor/last-operator-paste-keyframes-flipped.png)
 
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Frame Offset
 
 ![Frame Offset](/docs2/images/editors/graph-editor/frame-offset.png)
@@ -232,6 +238,8 @@ This is a feature for the Graph editor, where each curve point has its own handl
 
 #### Adjust Last Operation - Set Keyframe Handle Type
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 ![Type](/docs2/images/editors/graph-editor/type-2.png)
@@ -248,6 +256,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 #### Adjust Last Operation - Set Keyframe Interpolation
 
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 ![Type](/docs2/images/editors/graph-editor/type-3.png)
@@ -261,6 +271,8 @@ Set the interpolation mode.
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
 #### Adjust Last Operation - Set Keyframe Easing Type
+
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -279,6 +291,8 @@ Duplicate the selected keyframe(s).
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/graph-editor/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -323,6 +337,8 @@ Mirrors the animation by the given method.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/graph-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -336,6 +352,8 @@ Snaps the selected keyframes by the given method.
 #### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/graph-editor/last-operator-snap-keys.png)
+
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 

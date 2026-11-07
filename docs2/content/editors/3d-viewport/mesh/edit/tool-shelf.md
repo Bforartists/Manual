@@ -117,6 +117,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-move.png)
 
+Change the settings of **Extrude Region and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -184,6 +186,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Extrude Manifold
 
 ![Last Operator Extrude Manifold](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-manifold.png)
+
+Change the settings of **Extrude Manifold** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -257,6 +261,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-shrink-fatten.png)
 
+Change the settings of **Extrude Region and Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -316,6 +322,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Extrude Individual Faces and Move
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-individual-faces-and-move.png)
+
+Change the settings of **Extrude Individual Faces and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -393,6 +401,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 #### Adjust Last Operation - Inset Faces
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
+
+Change the settings of **Inset Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Boundary
 
@@ -558,11 +568,11 @@ Choose some profile presets.
 
 ##### Tools
 
-**Reset View**
+###### Reset View
 
 Resets the zoom factor of the curve view.
 
-**Reset Curve**
+###### Reset Curve
 
 ![Reset Curve](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/reset-curve.png)
 
@@ -622,6 +632,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 #### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bevel.png)
+
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -746,11 +758,11 @@ Choose some profile presets.
 
 ##### Tools
 
-**Reset View**
+###### Reset View
 
 Resets the zoom factor of the curve view.
 
-**Reset Curve**
+###### Reset Curve
 
 ![Reset Curve](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/reset-curve.png)
 
@@ -890,6 +902,8 @@ You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
 ![Last Operator Offset Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-offset-edge-slide.png)
 
+Change the settings of **Offset Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Cap Endpoint
 
 ![Cap Endpoint](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/cap-endpoint.png)
@@ -975,7 +989,7 @@ The measurements modes. The names should be self explaining.
 
 Activate snap to angles. When active then the knife cut snaps to an angle either aligned to the screen or relative to the object.
 
-**Angle Snapping Increment**
+###### Angle Snapping Increment
 
 The snapping angle in case the angle snappping tool is active.
 
@@ -1022,6 +1036,8 @@ Fills the cut.
 ##### Adjust Last Operation - Bisect
 
 ![Last Operator Bisect](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bisect.png)
+
+Change the settings of **Bisect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1189,6 +1205,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ##### Adjust Last Operation - Spin
 
+Change the settings of **Spin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Steps
 
 ![Steps](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/steps.png)
@@ -1243,6 +1261,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-smooth-vertices.png)
 
+Change the settings of **Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------ |
@@ -1287,6 +1307,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-smooth-vertices.png)
+
+Change the settings of **Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1346,6 +1368,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-edge-slide.png)
 
+Change the settings of **Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------------------------------------ |
@@ -1398,6 +1422,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Vertex Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-vertex-slide.png)
 
+Change the settings of **Vertex Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------------------------------------ |
@@ -1447,6 +1473,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Shrink/Fatten
 
 ![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shrink-fatten.png)
+
+Change the settings of **Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1505,6 +1533,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1565,6 +1595,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shear.png)
 
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ---------- | --------------------------------------------------------- |
@@ -1615,6 +1647,8 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 #### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
@@ -1678,6 +1712,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Rip](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-rip.png)
 
+Change the settings of **Rip** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X , Y , Z
 
 Adjust the position.
@@ -1740,6 +1776,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Extend Vertices
 
 ![Last Operator Extend Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extend-vertices.png)
+
+Change the settings of **Extend Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |

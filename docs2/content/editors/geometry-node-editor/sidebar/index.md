@@ -140,7 +140,7 @@ When adding a panel toggle to a panel then a subpanel appears.
 | Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
 
 
-**Shape**
+###### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape.png)
 

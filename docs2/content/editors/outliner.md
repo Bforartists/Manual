@@ -554,6 +554,8 @@ By clicking at this menu item a popup will appear to choose the new collection. 
 
 ![Last Operator Move to Collection](/docs2/images/editors/outliner/last-operator-move-to-collection.png)
 
+Change the settings of **Move to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Name
 
 Set a name for your new collection. When you haven't created a new collection, then this name stays blank.
@@ -571,6 +573,8 @@ By clicking at this menu item a popup will appear to choose the collection. Here
 ##### Adjust Last Operation - Link to Collection
 
 ![Last Operator Link to Collection](/docs2/images/editors/outliner/last-operator-link-to-collection.png)
+
+Change the settings of **Link to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Name
 

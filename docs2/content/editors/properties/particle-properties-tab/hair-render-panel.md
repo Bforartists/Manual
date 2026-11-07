@@ -197,17 +197,17 @@ Choose the object to render instead of the path.
 
 Use objects multiple times in the collection.
 
-**Active Dupli Object Index list**
+###### Active Dupli Object Index list
 
 The list with the objects from the collection. The number behind the object tells you how often this object is used in the particles, relative to the other objects.
 
-**Drag Handler**
+###### Drag Handler
 
 ![Drag Handler](/docs2/images/editors/properties/particle-properties-tab/hair-render-panel/drag-handler.png)
 
 The two vertical lines at the end is a handler with which you can expand the list.
 
-**Search Field**
+###### Search Field
 
 ![Search Field](/docs2/images/editors/properties/particle-properties-tab/hair-render-panel/search-field.png)
 

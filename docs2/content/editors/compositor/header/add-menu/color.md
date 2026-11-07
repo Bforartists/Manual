@@ -266,7 +266,7 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
 | - | Deletes the selected color stop from the list. |
 
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/compositor/header/add-menu-color/tools-menu.png)
 
@@ -277,20 +277,20 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
 
-**Reset Color Ramp**
+###### Reset Color Ramp
 
 ![Reset Color Ramp](/docs2/images/editors/compositor/header/add-menu-color/reset-color-ramp.png)
 
 Resets the color ramp to its default state.
 
-**Color Mode**
+###### Color Mode
 
 | Entry | What it does |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RGB | Blends color by mixing each color channel and combining. |
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
-**Interpolation**
+###### Interpolation
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-color/interpolation.png)
 
@@ -302,13 +302,13 @@ Resets the color ramp to its default state.
 | B-Spline | Uses a B-Spline Interpolation for the color stops. |
 | Constant | Uses a Constant Interpolation for the color stops. |
 
-**Color Ramp**
+###### Color Ramp
 
 ![Color Ramp](/docs2/images/editors/compositor/header/add-menu-color/color-ramp.png)
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
-**Active Color Stop elements**
+###### Active Color Stop elements
 
 ![Active Color Stop elements](/docs2/images/editors/compositor/header/add-menu-color/active-color-stop-elements.png)
 
@@ -510,7 +510,7 @@ When you click at one of the colors then you will call a color wheel where you c
 | Power | Over-all exponent. (Adjusts the mid tones. |
 | Slope | Multiplier. (Adjusts the highlights.) |
 
-**Color wheel**
+###### Color wheel
 
 ![Color wheel](/docs2/images/editors/compositor/header/add-menu-color-adjust/color-wheel.png)
 
@@ -641,7 +641,7 @@ Defines the start and the end of mid tones range, i.e. values where the whole to
 
 ![Channels](/docs2/images/editors/compositor/header/add-menu-color-adjust/channels.png)
 
-**Red, Green, Blue**
+###### Red, Green, Blue
 
 Specifies which RGB channels will be affected by correction.
 
@@ -820,17 +820,17 @@ Tools is a menu where you can find some curve related tools.
 | Reset Curve | Resets the curve to the initial shape. |
 | Curve edit field | Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis). |
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/compositor/header/add-menu-color-adjust/selecting-points.png)
 
 > This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/compositor/header/add-menu-color-adjust/adding-points.png)
 
-**Curve point settings**
+###### Curve point settings
 
 ![Curve point settings](/docs2/images/editors/compositor/header/add-menu-color-adjust/curve-point-settings.png)
 

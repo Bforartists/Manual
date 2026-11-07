@@ -65,13 +65,13 @@ Get the latest version of Bforartists and get directly involved here:
 🪟**Windows App Store**  
 [https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
-**Flatpak App Store**  
+#### Flatpak App Store
 [https://flathub.org/en/apps/de.bforartists.Bforartists](https://flathub.org/en/apps/de.bforartists.Bforartists)
 
 🧡 **Blender Launcher**  
 [https://github.com/Victor-IX/Blender-Launcher-V2/releases](https://github.com/Victor-IX/Blender-Launcher-V2/releases)
 
-**📄Manual Tracker**  
+#### 📄Manual Tracker
 [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)
 
 📁**Files**  
@@ -79,25 +79,25 @@ Get the latest version of Bforartists and get directly involved here:
 
 Join the community, share your work, and stay updated:
 
-**💜  Discord**  
+#### 💜  Discord
 [https://discord.gg/yKuR77v](https://discord.gg/yKuR77v)
 
-**💙 Facebook**  
+#### 💙 Facebook
 [https://www.facebook.com/bforartists/](https://www.facebook.com/bforartists/)
 
-**🖤 X**  
+#### 🖤 X
 [https://twitter.com/bforartists](https://twitter.com/bforartists)
 
-**🖤 Threads**  
+#### 🖤 Threads
 [https://www.threads.net/@bforartists_official](https://www.threads.net/@bforartists_official)
 
-**❤️ Youtube**  
+#### ❤️ Youtube
 [https://www.youtube.com/@bforartists](https://www.youtube.com/@bforartists)
 
-**🧡 Reddit**  
+#### 🧡 Reddit
 [https://www.reddit.com/r/Bforartists/](https://www.reddit.com/r/Bforartists/)
 
-**💙 Bluesky**  
+#### 💙 Bluesky
 [https://bsky.app/profile/bforartists.bsky.social](https://bsky.app/profile/bforartists.bsky.social)
 
 ## From the .odt manual (1 Introduction)
@@ -138,7 +138,7 @@ Official Bug and Feature Request Tracker
 
 [https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)
 
-**🪟Windows App Store**
+#### 🪟Windows App Store
 
 [https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
@@ -148,19 +148,19 @@ Official Bug and Feature Request Tracker
 
 #### 🔗Other Links
 
-**Forum**  
+##### Forum
 [https://www.bforartists.de/forum](https://www.bforartists.de/forum)  
   
-**FAQ**  
+##### FAQ
 [https://www.bforartists.de/wiki/FAQ](https://www.bforartists.de/wiki/FAQ)  
   
-**Wiki**  
+##### Wiki
 [https://www.bforartists.de/wiki/bforartists-wiki](https://www.bforartists.de/wiki/bforartists-wiki)
 
-**Manual Tracker**  
+##### Manual Tracker
 [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)  
   
-**Files**  
+##### Files
 [https://github.com/Bforartists/files](https://github.com/Bforartists/files)
 
 #### 🫂 Socials

@@ -152,6 +152,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Move](/docs2/images/editors/uv-editor/tool-shelf/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move
 
 Adjust in which directions you want to transform.
@@ -229,6 +231,8 @@ Define what kind of transform should happen when you click not at the widget but
 #### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/tool-shelf/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -310,6 +314,8 @@ Define what kind of transform should happen when you click not at the widget but
 #### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/uv-editor/tool-shelf/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scale
 

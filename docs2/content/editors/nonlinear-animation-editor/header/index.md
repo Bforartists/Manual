@@ -289,6 +289,8 @@ The selection gets applied when you release the mouse. You leave the mode automa
 
 ![Last Operator Box Select](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-select-menu/last-operator-box-select.png)
 
+Change the settings of **Box Select** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------ |
 | Axis Range | What's inside the horizontal range of the rectangle gets selected. |
@@ -313,6 +315,8 @@ Select the keyframes after the current frame.
 #### Adjust Last Operation - Select Left/Right
 
 ![Last Operator Select Left/Right](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-select-menu/last-operator-select-left-right.png)
+
+Change the settings of **Select Left/Right** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -350,6 +354,8 @@ Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until yo
 
 ![Last Operator Duplicate Time Marker](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-duplicate-time-marker.png)
 
+Change the settings of **Duplicate Time Marker** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Frames
 
 The target frame to position the duplicated marker.
@@ -365,6 +371,8 @@ Duplicate markers to other scenes. A blend file can contain more than one scene.
 #### Adjust Last Operation - Make Links to Scene
 
 ![Last Operator Make Links to Scene](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-make-links-to-scene.png)
+
+Change the settings of **Make Links to Scene** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scene
 
@@ -397,6 +405,8 @@ Note that for the hotkey to work you need to hover over the Marker region. In th
 #### Adjust Last Operation - Rename Marker
 
 ![Last Operator Rename Marker](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-rename-marker.png)
+
+Change the settings of **Rename Marker** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Name
 
@@ -498,6 +508,8 @@ Moves the selected keyframe(s).
 
 ![Last Operator Move](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -525,6 +537,8 @@ Moves the last keyframes of the selection.
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------------- | ------------------------ |
@@ -554,6 +568,8 @@ Scales the selected keyframes. You need to have more than one keyframe selected.
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

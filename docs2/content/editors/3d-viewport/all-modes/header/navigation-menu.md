@@ -79,6 +79,8 @@ The widget can have different orientations. The menu items should be self explai
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -156,6 +158,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -232,6 +236,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 #### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |

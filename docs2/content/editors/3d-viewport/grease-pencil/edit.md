@@ -49,6 +49,8 @@ Transforms the selected geometry into a sphere shape.
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ------------------------- |
@@ -86,6 +88,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -139,6 +143,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
@@ -170,6 +176,8 @@ A positive value pushes the vertices outwards. A negative value pushes the verti
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -205,6 +213,8 @@ To use, activate then drag left or right to change the stroke opacity.
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -364,6 +374,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move X , Y , Z
 
 ###### Orientation
@@ -394,6 +406,8 @@ Pastes a copied selection to same, original layer. You can have more than one la
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
 
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Choose between the paste methods again.
@@ -418,6 +432,8 @@ Dissolves the vertices that are not selected.
 ###### Adjust Last Operation - Dissolve
 
 ![Last Operator Dissolve](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png)
+
+Change the settings of **Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -447,6 +463,8 @@ Deletes not connected stroke geometry that is made of loose points.
 
 ![Last Operator Clean Loose Points](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png)
 
+Change the settings of **Clean Loose Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Limit
 
 The number of vertices below which a stroke gets counted as a loose point.
@@ -458,6 +476,8 @@ Deletes all duplicated frames.
 ###### Adjust Last Operation - Clean Duplicated Frames
 
 ![Last Operator Clean Duplicated Frames](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png)
+
+Change the settings of **Clean Duplicated Frames** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -472,6 +492,8 @@ Merge selected geometry that is in a specific range to each other.
 ###### Adjust Last Operation - Merge by Distance
 
 ![Last Operator Merge by Distance](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-merge-by-distance.png)
+
+Change the settings of **Merge by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -494,6 +516,8 @@ Using this tool opens a popup menu. Choose the projection type method.
 
 ![Last Operator Re projectStrokes](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-re-projectstrokes.png)
 
+Change the settings of **Re projectStrokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Projection Type
 
 A popup menu. Choose the projection type method.
@@ -505,6 +529,8 @@ In Draw mode with the fill tool you are able to draw so called fill guide with h
 ###### Adjust Last Operation - Remove Fill Guides
 
 ![Last Operator Remove Fill Guides](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png)
+
+Change the settings of **Remove Fill Guides** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -528,6 +554,8 @@ Hides the selected curve geometry.
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png)
 
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Unselected
 
 Hides the not selected curve geometry.
@@ -543,6 +571,8 @@ Convert selected strokes to perimeter.
 ##### Adjust Last Operation - Outline
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-outline.png)
+
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -568,6 +598,8 @@ Separates the selection into a new grease pencil object.
 
 
 ##### Adjust Last Operation - Separate Strokes
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -599,6 +631,8 @@ Extrude does not show in Select mode Stroke.
 
 ![Last Operator Extrude Stroke Points](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png)
 
+Change the settings of **Extrude Stroke Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move
 
 The vector coordinates. They start relative to the initial vector.
@@ -623,6 +657,8 @@ Smoothens out the selected geometry.
 ##### Adjust Last Operation - Smooth Stroke
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/last-operator-smooth-stroke.png)
+
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -674,6 +710,8 @@ Subdivides the selected grease pencil geometry.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------- |
@@ -686,6 +724,8 @@ Subdivides the selected grease pencil geometry.
 Subdivides the selected grease pencil geometry, and smoothens it.
 
 ##### Adjust Last Operation - Subdivide
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Number of Cuts
 
@@ -797,6 +837,8 @@ New Layer button adds a new grease pencil layer.
 
 ![Last Operator Move Strokes to Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png)
 
+Change the settings of **Move Strokes to Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Grease Pencil Layer
 
 Internal the layers are enumerated. So here you move by number.
@@ -818,6 +860,8 @@ The materials can be found and edited in the Properties editor. Here you can als
 ##### Adjust Last Operation - Change Stroke Color
 
 ![Last Operator Change Stroke Color](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png)
+
+Change the settings of **Change Stroke Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Material
 
@@ -849,6 +893,8 @@ Moves to the bottom the selected points/strokes.
 
 ![Last Operator Arrange Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png)
 
+Change the settings of **Arrange Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Direction
 
 Choose the method again.
@@ -864,6 +910,8 @@ When the curve is open, then it Closes the current stroke by connecting the firs
 ##### Adjust Last Operation - Set Cyclical State
 
 ![Last Operator Set Cyclical State](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-cyclical-state.png)
+
+Change the settings of **Set Cyclical State** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -895,6 +943,8 @@ Sets stroke start and end points to rounded (default).
 ##### Adjust Last Operation - Set Caps Mode
 
 ![Last Operator Set Caps Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-caps-mode.png)
+
+Change the settings of **Set Caps Mode** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -1060,6 +1110,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ---------------------------------------------------------------------------- |
@@ -1147,6 +1199,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png)
 
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
@@ -1191,6 +1245,8 @@ When you move the mouse then you will see some values in the header, which shows
 ##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Factor
 
@@ -1279,6 +1335,8 @@ Extrude selected points and move them. The new points stay connected with the or
 
 ![Last Operator Extrude Stroke Points](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png)
 
+Change the settings of **Extrude Stroke Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move
 
 The vector coordinates. They start relative to the initial vector.
@@ -1304,6 +1362,8 @@ Subdivides the selected grease pencil geometry.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------- |
@@ -1324,6 +1384,8 @@ Subdivides the selected grease pencil geometry.
 ##### Adjust Last Operation - Subdivide and Smooth
 
 ![Last Operator Subdivide and Smooth](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png)
+
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1379,6 +1441,8 @@ Smoothens out the selected geometry.
 ##### Adjust Last Operation - Smooth Stroke
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png)
+
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1476,6 +1540,8 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 ##### Adjust Last Operation - Duplicate Strokes
 
+Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
@@ -1523,6 +1589,8 @@ Pastes a copied selection to active layer. You can have more than one layer.
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
 
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Choose between the paste methods again.
@@ -1547,6 +1615,8 @@ Dissolves the vertices that are not selected.
 ##### Adjust Last Operation - Dissolve
 
 ![Last Operator Dissolve](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png)
+
+Change the settings of **Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -1596,6 +1666,8 @@ Adds an outline to the grease pencil.
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png)
 
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Projection Mode
 
 ![Projection Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/projection-mode.png)
@@ -1617,6 +1689,8 @@ Separates the selection into a new grease pencil object.
 ##### Adjust Last Operation - Separate Strokes
 
 ![Last Operator Separate Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes.png)
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -1651,6 +1725,8 @@ Convert the curve type of the grease pencil to another curve type. These differe
 ##### Adjust Last Operation - Separate Strokes
 
 ![Last Operator Separate Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes-2.png)
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1693,6 +1769,8 @@ Subdivides the selected grease pencil geometry.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------- |
@@ -1713,6 +1791,8 @@ Subdivides the selected grease pencil geometry.
 ##### Adjust Last Operation - Subdivide and Smooth
 
 ![Last Operator Subdivide and Smooth](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png)
+
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1768,6 +1848,8 @@ Smoothens out the selected geometry.
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png)
 
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------ |
@@ -1796,6 +1878,8 @@ New Layer button adds a new grease pencil layer.
 
 ![Last Operator Move Strokes to Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png)
 
+Change the settings of **Move Strokes to Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Grease Pencil Layer
 
 Internal the layers are enumerated. So here you move by number.
@@ -1817,6 +1901,8 @@ The materials can be found and edited in the Properties editor. Here you can als
 ##### Adjust Last Operation - Change Stroke Color
 
 ![Last Operator Change Stroke Color](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png)
+
+Change the settings of **Change Stroke Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Material
 
@@ -1847,6 +1933,8 @@ Moves to the bottom the selected points/strokes.
 ###### Adjust Last Operation - Arrange Stroke
 
 ![Last Operator Arrange Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png)
+
+Change the settings of **Arrange Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -1905,6 +1993,8 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 ##### Adjust Last Operation - Duplicate Strokes
 
+Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
@@ -1957,6 +2047,8 @@ Pastes a copied selection to same, original layer. You can have more than one la
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
 
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Choose between the paste methods again.
@@ -1968,6 +2060,8 @@ Adds an outline to the grease pencil.
 ##### Adjust Last Operation - Outline
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png)
+
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Projection Mode
 
@@ -1994,6 +2088,8 @@ Splits the selection.
 Separates the selection into a new grease pencil object.
 
 ##### Adjust Last Operation - Separate Strokes
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 

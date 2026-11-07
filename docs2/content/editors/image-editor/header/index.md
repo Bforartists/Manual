@@ -287,7 +287,7 @@ Display existing metadata in the viewport.
 
 ##### Spline
 
-**Edge Display type**
+###### Edge Display type
 
 ![Edge Display type](/docs2/images/editors/image-editor/header/header-tools-and-options/edge-display-type.png)
 
@@ -297,7 +297,7 @@ How to display the spline.
 
 ![Overlay](/docs2/images/editors/image-editor/header/header-tools-and-options/overlay.png)
 
-**Alpha Channel**
+###### Alpha Channel
 
 Show the alpha channel of the mask.
 
@@ -794,6 +794,8 @@ Adds a circle shaped spline curve.
 
 ![Last Operator Add Circle](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-circle.png)
 
+Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | Size | The size of the circle spline curve. |
@@ -808,6 +810,8 @@ Adds a square shaped spline curve.
 #### Adjust Last Operation - Add Square
 
 ![Last Operator Add Square](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-square.png)
+
+Change the settings of **Add Square** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
@@ -824,6 +828,8 @@ Allows you to draw freehand curves by holding down shift and clicking into the v
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-vertex-and-slide.png)
 
+Change the settings of **Add Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Location X / Y
 
 Adjust the location of the last created curve point.
@@ -839,6 +845,8 @@ Usage: Hold down shift + control, click at a vertex, and pull outwards. This wil
 #### Adjust Last Operation - Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-feather-vertex-and-slide.png)
+
+Change the settings of **Add Feather Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Location X / Y
 
@@ -865,6 +873,8 @@ Move the selection.
 ##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/image-editor/header/mask-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X, Y Z
 
@@ -901,6 +911,8 @@ Rotate the selection.
 
 ![Last Operator Rotate](/docs2/images/editors/image-editor/header/mask-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
@@ -936,6 +948,8 @@ Scale the selection.
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/image-editor/header/mask-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -983,6 +997,8 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Last Operator To Sphere](/docs2/images/editors/image-editor/header/mask-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
 | Factor | The factor to transform the selection into a shape form. |
@@ -1019,6 +1035,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/image-editor/header/mask-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -1069,6 +1087,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/image-editor/header/mask-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
 | Distance | Adjust the distance of influence of the tool. |
@@ -1096,6 +1116,8 @@ The curve type that is used to create mask splines is almost a Bezier curve. But
 Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.
 
 ##### Adjust Last Operation - Transform
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Values
 
@@ -1174,6 +1196,8 @@ Opens a sub menu where you can choose different handle types.
 #### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
+
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 

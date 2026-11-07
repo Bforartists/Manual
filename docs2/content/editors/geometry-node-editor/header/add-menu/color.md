@@ -72,7 +72,7 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
 | - | Deletes the selected color stop from the list. |
 
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/geometry-node-editor/header/add-menu-color/tools-menu.png)
 
@@ -83,20 +83,20 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
 
-**Reset Color Ramp**
+###### Reset Color Ramp
 
 ![Reset Color Ramp](/docs2/images/editors/geometry-node-editor/header/add-menu-color/reset-color-ramp.png)
 
 Resets the color ramp to its default state.
 
-**Color Mode**
+###### Color Mode
 
 | Entry | What it does |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RGB | Blends color by mixing each color channel and combining. |
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
-**Interpolation**
+###### Interpolation
 
 ![Interpolation](/docs2/images/editors/geometry-node-editor/header/add-menu-color/interpolation.png)
 
@@ -108,13 +108,13 @@ Resets the color ramp to its default state.
 | B-Spline | Uses a B-Spline Interpolation for the color stops. |
 | Constant | Uses a Constant Interpolation for the color stops. |
 
-**Color Ramp**
+###### Color Ramp
 
 ![Color Ramp](/docs2/images/editors/geometry-node-editor/header/add-menu-color/color-ramp-2.png)
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
-**Active Color Stop elements**
+###### Active Color Stop elements
 
 ![Active Color Stop elements](/docs2/images/editors/geometry-node-editor/header/add-menu-color/active-color-stop-elements.png)
 
@@ -172,13 +172,13 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/geometry-node-editor/header/add-menu-color/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/geometry-node-editor/header/add-menu-color/tools.png)
 
@@ -191,7 +191,7 @@ Tools is a menu where you can find some curve related tools.
 | Extend Extrapolated | Extend the curve before the first and after the last point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/geometry-node-editor/header/add-menu-color/handles.png)
 

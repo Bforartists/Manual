@@ -55,6 +55,8 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
@@ -90,6 +92,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -143,6 +147,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
@@ -173,6 +179,8 @@ Warps a mesh selection between two defined points.
 
 ##### Adjust Last Operation - Warp
 
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------ | ---------------------------------- |
@@ -197,6 +205,8 @@ This tool allows randomizes the positions of the selected vertices.
 ##### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -271,6 +281,8 @@ The menu items are pretty self explaining. So we will not repeat the description
 #### Adjust Last Operation - Recalculate Roll
 
 ![Last Operator Recalculate Roll](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-recalculate-roll.png)
+
+Change the settings of **Recalculate Roll** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -347,6 +359,8 @@ Set the bone roll value directly.
 
 ##### Adjust Last Operation - Clear Roll
 
+Change the settings of **Clear Roll** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Roll
 
 Set the bone roll.
@@ -360,6 +374,8 @@ Extrudes out a bone from the selected joints.
 ##### Adjust Last Operation - Extrude
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-extrude.png)
+
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Forked
 
@@ -394,6 +410,8 @@ Hotkey only tool. Extrude to the mouse position.
 
 ![Last Operator Extrude to Cursor or Add](/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu/last-operator-extrude-to-cursor-or-add.png)
 
+Change the settings of **Extrude to Cursor or Add** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Location X Y Z
 
 The location to extrude to.
@@ -411,6 +429,8 @@ When you drag the duplicate around you will see the position values in the heade
 ##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -473,6 +493,8 @@ The bones that you want to symmetrize needs to follow the left right name conven
 
 ![Last Operator Symmetrize](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-symmetrize.png)
 
+Change the settings of **Symmetrize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Direction
 
 Define the calculation direction. From -X to + X or from +X to -X
@@ -484,6 +506,8 @@ Subdivide subdivides the current selection.
 ##### Adjust Last Operation - Subdivide Multi
 
 ![Last Operator Subdivide Multi](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-subdivide-multi.png)
+
+Change the settings of **Subdivide Multi** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Number of Cuts
 
@@ -518,6 +542,8 @@ Renames the bones from top to bottom.
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png)
 
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Axis
 
 Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and Top/Bottom is Z axis.
@@ -529,6 +555,8 @@ When you mirror a half of an armature you end in names like Bone.001.R.001. But 
 ###### Adjust Last Operation - Flip Names
 
 ![Last operator Flip Names](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-flip-names.png)
+
+Change the settings of **Flip Names** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Strip Numbers
 
@@ -584,6 +612,8 @@ Add selected bones to a new collection with a new name.
 
 ![Last Operator Add Selected Bones to Collection](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-add-selected-bones-to-collection.png)
 
+Change the settings of **Add Selected Bones to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Bone Collection
 
 Change name of the new collection.
@@ -612,6 +642,8 @@ The bone will remain in its original position. The relationship will be displaye
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-make-parent.png)
 
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Parent Type
 
 Choose between Connected and Keep Offset method again.
@@ -632,6 +664,8 @@ Clears the parent relationship of the selected bone(s). It calls a pop-up menu. 
 ##### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-clear-parent.png)
+
+Change the settings of **Clear Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Clear Type
 
@@ -731,6 +765,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -815,6 +851,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -822,7 +860,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Axis | The axis to use. Axis has no effect, the bone axis X is always used. |
 
 
-**Orientation**
+###### Orientation
 
 ![Orientation](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/orientation.png)
 
@@ -834,7 +872,7 @@ Orientation has no effect, the bone axis X is always used.
 
 Enable Mirror editing.
 
-**Proportional editing**
+###### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/proportional-editing.png)
 
@@ -848,7 +886,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 
 
-**Projected(2D)**
+###### Projected(2D)
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
@@ -898,6 +936,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -905,7 +945,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Axis | The axis to use. Axis has no effect, the bone axis X is always used. |
 
 
-**Orientation**
+###### Orientation
 
 ![Orientation](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/orientation.png)
 
@@ -917,7 +957,7 @@ Orientation has no effect, the bone axis X is always used.
 
 Enable Mirror editing.
 
-**Proportional editing**
+###### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/proportional-editing.png)
 
@@ -1012,6 +1052,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-extrude.png)
 
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Forked
 
 You need to tick X Axis Mirror. When you tick Forked, then the bone that you extrude to the one side will now be extruded to the other side too. The extrude gets mirrored along the x axis. This allows you to create a symmetrical armature.
@@ -1077,6 +1119,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-shear.png)
 
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
@@ -1131,6 +1175,8 @@ Subdivide subdivides the current selection.
 
 ![Last Operator Subdivide Multi](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-subdivide-multi.png)
 
+Change the settings of **Subdivide Multi** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Number of Cuts
 
 Adjust the number of subdivisions.
@@ -1148,6 +1194,8 @@ When you drag the duplicate around you will see the position values in the heade
 ##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1176,6 +1224,8 @@ Extrudes out a bone from the selected joints.
 ##### Adjust Last Operation - Extrude
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-extrude.png)
+
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Forked
 
@@ -1273,6 +1323,8 @@ The bones that you want to symmetrize needs to follow the left right name conven
 
 ![Last Operator Symmetrize](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-symmetrize.png)
 
+Change the settings of **Symmetrize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Direction
 
 Define the calculation direction. From -X to + X or from +X to -X
@@ -1302,6 +1354,8 @@ Renames the bones from top to bottom.
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png)
 
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Axis
 
 Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and Top/Bottom is Z axis.
@@ -1313,6 +1367,8 @@ When you mirror a half of an armature you end in names like Bone.001.R.001. But 
 ###### Adjust Last Operation - Autoname by Axis
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis-2.png)
+
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Strip Numbers
 
@@ -1342,6 +1398,8 @@ The bone will remain in its original position. The relationship will be displaye
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-make-parent.png)
 
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Parent Type
 
 Choose between Connected and Keep Offset method again.
@@ -1362,6 +1420,8 @@ Clears the parent relationship of the selected bone(s). It calls a popup menu ch
 ##### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-clear-parent.png)
+
+Change the settings of **Clear Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Clear Type
 
@@ -1404,6 +1464,8 @@ Hides the selected geometry.
 ###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 

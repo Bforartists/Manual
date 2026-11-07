@@ -310,6 +310,8 @@ Pick the shortest path by selecting the first element, holding down ctrl, then s
 
 ![Last Operator Pick shortest path](/docs2/images/editors/3d-viewport/last-operator-pick-shortest-path.png)
 
+Change the settings of **Pick shortest path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Face Stepping
 
 ![Face Stepping](/docs2/images/editors/3d-viewport/face-stepping.png)

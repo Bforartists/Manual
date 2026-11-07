@@ -557,7 +557,7 @@ For H.264, H.265, and AV1, a 10-bit option is available. Additionally, for H.265
 
 ###### Custom quality
 
-**CRF**
+###### CRF
 
 ![CRF](/docs2/images/editors/properties/output-properties-tab/crf.png)
 
@@ -694,21 +694,21 @@ The single color channels.
 
 The navigation elements at the top are described from left to right.
 
-**Zoom in and out**
+###### Zoom in and out
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-**Clipping**
+###### Clipping
 
 ![Clipping](/docs2/images/editors/properties/output-properties-tab/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-**Delete Points**
+###### Delete Points
 
 Deletes selected curve points.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/properties/output-properties-tab/tools.png)
 
@@ -738,7 +738,7 @@ The color that Black is mapped to.
 
 The color that White is mapped to.
 
-**Hotkeys for Black and White Level**
+###### Hotkeys for Black and White Level
 
 You may want to sample the black and white level colors directly in the image by clicking at an area. There are hotkeys for that.
 
