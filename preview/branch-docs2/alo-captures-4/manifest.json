@@ -1,12 +1,14 @@
 {
  "pages": {
-  "docs2/content/assets/compositor-library.md": "assets/compositor-library.html",
-  "docs2/content/editors/3d-viewport/all-modes/header/select-menu.md": "editors/3d-viewport/all-modes/header/select-menu.html",
+  "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
+  "docs2/content/editors/3d-viewport/curve/edit.md": "editors/3d-viewport/curve/edit.html",
+  "docs2/content/editors/3d-viewport/hair-curves/edit.md": "editors/3d-viewport/hair-curves/edit.html",
+  "docs2/content/editors/3d-viewport/lattice/edit.md": "editors/3d-viewport/lattice/edit.html",
   "docs2/content/editors/3d-viewport/mesh/edit/context-menus.md": "editors/3d-viewport/mesh/edit/context-menus.html",
   "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html",
-  "docs2/content/editors/3d-viewport/mesh/weight-paint.md": "editors/3d-viewport/mesh/weight-paint.html",
-  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
-  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
+  "docs2/content/editors/3d-viewport/metaball/edit.md": "editors/3d-viewport/metaball/edit.html",
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html",
+  "docs2/content/editors/3d-viewport/point-cloud/edit.md": "editors/3d-viewport/point-cloud/edit.html"
  },
- "images": 1141
+ "images": 910
 }
