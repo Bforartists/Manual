@@ -688,7 +688,7 @@ Define the colors of the color ramp.
 | - | Deletes the selected color stop from the list. |
 
 
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
@@ -701,13 +701,13 @@ Define the colors of the color ramp.
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
 
 
-**Reset Color Ramp**
+###### Reset Color Ramp
 
 ![Reset Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png)
 
 Resets the color ramp to its default state.
 
-**Color Mode**
+###### Color Mode
 
 
 | Entry | What it does |
@@ -716,7 +716,7 @@ Resets the color ramp to its default state.
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
 
-**Interpolation**
+###### Interpolation
 
 ![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
@@ -730,13 +730,13 @@ Resets the color ramp to its default state.
 | Constant | Uses a Constant Interpolation for the color stops. |
 
 
-**Color Ramp**
+###### Color Ramp
 
 ![Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png)
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
-**Active Color Stop elements**
+###### Active Color Stop elements
 
 ![Active Color Stop elements](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/active-color-stop-elements.png)
 

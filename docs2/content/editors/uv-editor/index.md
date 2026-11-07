@@ -67,6 +67,8 @@ Unwraps the selected geometry with the method Angle based. ABF stands for Angle 
 
 #### Adjust Last Operation - Unwrap
 
+Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Method
 
 Method is a drop down box where you can choose the unwrap method.
@@ -77,11 +79,11 @@ Method is a drop down box where you can choose the unwrap method.
 
 Unwrap ABF and Unwrap LSCM shares the same Last Operator.
 
-**Method**
+###### Method
 
 Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.
 
-**Fill Holes**
+###### Fill Holes
 
 ![Fill Holes](/docs2/images/editors/uv-editor/fill-holes.png)
 
@@ -92,7 +94,7 @@ Fill holes in the mesh before unwrapping.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -102,7 +104,7 @@ Fill holes in the mesh before unwrapping.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -121,7 +123,7 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -131,7 +133,7 @@ Number of iterations.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -163,6 +165,8 @@ A use case is for example when you have a distorted result for symmetric geometr
 
 ![Last Operator Pin](/docs2/images/editors/uv-editor/last-operator-pin.png)
 
+Change the settings of **Pin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------ | ----------------------------------------------------------- |
 | Clear | Clear the pinning instead of setting it for the selection. |
@@ -181,6 +185,8 @@ Snap is a sub menu with some snapping tools. The menu items should be pretty sel
 #### Adjust Last Operation - Snap Selection and Snap Cursor
 
 ![Last Operator Snap Selection and Snap Cursor](/docs2/images/editors/uv-editor/last-operator-snap-selection-and-snap-cursor.png)
+
+Change the settings of **Snap Selection and Snap Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Target
 
@@ -252,6 +258,8 @@ Merge vertices that are below a specified distance to each other.
 ##### Adjust Last Operation - Merge UVs by Distance
 
 ![Last operator Merge UVs by Distance](/docs2/images/editors/uv-editor/last-operator-merge-uvs-by-distance.png)
+
+Change the settings of **Merge UVs by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------- | ----------------------------------------------------- |
@@ -339,6 +347,8 @@ Unwraps the selected geometry. This operator starts with the method Angle based.
 
 #### Adjust Last Operation - Unwrap
 
+Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Method
 
 Method is a drop down box where you can choose the unwrap method.
@@ -349,11 +359,11 @@ Method is a drop down box where you can choose the unwrap method.
 
 Unwrap ABF and Unwrap LSCM shares the same Last Operator.
 
-**Method**
+###### Method
 
 Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.
 
-**Fill Holes**
+###### Fill Holes
 
 ![Fill Holes](/docs2/images/editors/uv-editor/fill-holes.png)
 
@@ -364,7 +374,7 @@ Fill holes in the mesh before unwrapping.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -374,7 +384,7 @@ Fill holes in the mesh before unwrapping.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -393,7 +403,7 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -403,7 +413,7 @@ Number of iterations.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -414,6 +424,8 @@ Click at the first edge or vertice, **hold down ctrl,click** at the last edge or
 #### Adjust Last Operation - Pick shortest path
 
 ![Last operator Pick shortest path](/docs2/images/editors/uv-editor/last-operator-pick-shortest-path.png)
+
+Change the settings of **Pick shortest path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----------------- | --------------------------------------------------------------------- |

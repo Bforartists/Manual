@@ -228,7 +228,7 @@ Copy and Paste buttons allows you to copy and paste Driver variable panels.
 
 ##### Driver Variable panel
 
-**Variable type**
+###### Variable type
 
 ![Variable type](/docs2/images/editors/3d-viewport/sidebar/item-tab/variable-type.png)
 

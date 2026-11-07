@@ -20,7 +20,7 @@ The pages of this part are listed in the sidebar under *Sidebar*.
 
 # Animation Data Panel
 
-**Animation Data panel**
+## Animation Data panel
 
 ![NLA Editor - Sidebar - Animation Data panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/nla-editor-sidebar-animation-data-panel.png)
 
@@ -277,6 +277,8 @@ The list of modifiers. Choose by clicking.
 ### Adjust Last Operation - Add F-Curve Modifier
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/last-operator-add-f-curve-modifier.png)
+
+Change the settings of **Add F-Curve Modifier** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |

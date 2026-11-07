@@ -168,7 +168,7 @@ Activate Denoising.
 
 Use the OptiX Denoiser.
 
-**Passes**
+###### Passes
 
 ![Passes](/docs2/images/editors/properties/render-properties-tab/cycles/passes.png)
 
@@ -180,25 +180,25 @@ What input passes to use.
 
 Use the OpenImageDenoiser.
 
-**Passes**
+###### Passes
 
 ![Passes](/docs2/images/editors/properties/render-properties-tab/cycles/passes.png)
 
 What input passes to use.
 
-**Prefilter**
+###### Prefilter
 
 ![Prefilter](/docs2/images/editors/properties/render-properties-tab/cycles/prefilter.png)
 
 Prefilter noisy guiding to improve quality.
 
-**Quality**
+###### Quality
 
 ![Quality](/docs2/images/editors/properties/render-properties-tab/cycles/quality.png)
 
 Overall denoising quality.
 
-**Use GPU**
+###### Use GPU
 
 Perform Denoising on the GPU.
 

@@ -157,7 +157,7 @@ Metric Units
 
 Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
 
-**Selecting Points**
+### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/selecting-points.png)
 
@@ -165,13 +165,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+### Adding Points
 
 ![Adding Points](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Curve point settings**
+### Curve point settings
 
 ![Curve point settings](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/curve-point-settings.png)
 

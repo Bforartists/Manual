@@ -829,7 +829,7 @@ Rayleigh: For small particles like atmospheric haze.
 
 Mie: For large particles like clouds or mist.
 
-**Henyey-Greenstein**
+###### Henyey-Greenstein
 
 ![Henyey-Greenstein](/docs2/images/editors/shader-editor/header/add-menu-shader/henyey-greenstein-2.png)
 
@@ -840,7 +840,7 @@ Mie: For large particles like clouds or mist.
 | Anisotropy | A float value controlling the directionality of scattering. |
 
 
-**Fournier-Forand**
+###### Fournier-Forand
 
 ![Fournier-Forand](/docs2/images/editors/shader-editor/header/add-menu-shader/fournier-forand-2.png)
 
@@ -852,7 +852,7 @@ Mie: For large particles like clouds or mist.
 | Backscatter | Fraction of light that is scattered backwards. |
 
 
-**Draine**
+###### Draine
 
 ![Draine](/docs2/images/editors/shader-editor/header/add-menu-shader/draine-2.png)
 
@@ -864,15 +864,15 @@ Mie: For large particles like clouds or mist.
 | Anisotropy | Controls the look of the scatter effect depending on the direction of the light passing through it. |
 
 
-**Raileigh**
+###### Raileigh
 
 ![Raileigh](/docs2/images/editors/shader-editor/header/add-menu-shader/raileigh.png)
 
-**Coefficients**
+###### Coefficients
 
 A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
 
-**Mie**
+###### Mie
 
 ![Mie](/docs2/images/editors/shader-editor/header/add-menu-shader/mie-2.png)
 

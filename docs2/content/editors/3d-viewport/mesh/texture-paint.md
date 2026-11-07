@@ -278,7 +278,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 The position of the selectedc curve point.
 
-**Delete Points**
+###### Delete Points
 
 Deletes the selected curve point.
 
@@ -358,7 +358,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 The position of the selectedc curve point.
 
-**Delete Points**
+###### Delete Points
 
 Deletes the selected curve point.
 

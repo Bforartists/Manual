@@ -165,13 +165,13 @@ Allows you to retrieve a single value of a RNA Property, specified by a data blo
 
 ##### Prop
 
-**Type**
+###### Type
 
 ![Type](/docs2/images/editors/drivers-editor/sidebar/drivers-tab/type.png)
 
 Define the input type of the object. You can retrieve values from nearly every object type.
 
-**ID**
+###### ID
 
 ![ID](/docs2/images/editors/drivers-editor/sidebar/drivers-tab/id.png)
 
@@ -183,7 +183,7 @@ The source object. This is also a drop down field where you can pick objects fro
 
 The path string to use. This defines the property where you get the value from.
 
-**Setting up by hand**
+###### Setting up by hand
 
 Have a look at the python tool tip in the property of the source object. The bpy.data string gives you a hint of the expression that you need.
 
@@ -201,7 +201,7 @@ To use `location[2]` in the path will already work. But you can point directly t
 
 location.z
 
-**Setting up by Copy as New Driver**
+###### Setting up by Copy as New Driver
 
 The easier way is to right click at the value that you want to use as the driver value. Here choose Copy as new Driver. In the target property choose Paste Driver. And this creates a driver with the correct values then that contains all relevant settings.
 
@@ -277,7 +277,7 @@ The distance between two bones or objects is used for the driver.
 
 The source armature.
 
-**Bone Name**
+###### Bone Name
 
 The source bone of this armature.
 
@@ -361,6 +361,8 @@ The list of modifiers. Choose by clicking.
 ### Adjust Last Operation - Add F-Curve Modifier
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/last-operator-add-f-curve-modifier.png)
+
+Change the settings of **Add F-Curve Modifier** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |

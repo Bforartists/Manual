@@ -254,6 +254,8 @@ The widget can have different orientations. The menu items should be self explai
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -318,6 +320,8 @@ This can be combined with the numerical input. Type in X, type in X again to use
 ##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -387,6 +391,8 @@ This can be combined with the numerical input. Hold down mouse, type in X, type 
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -475,6 +481,8 @@ Activate the tool, click at the mesh, and adjust the sphere shape in the last op
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
 
+Change the settings of **Filter Mesh** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------- | ---------------------------------- |
@@ -509,6 +517,8 @@ Creates a smooth as possible geometry patch from the face set, miniming changes 
 #### Adjust Last Operation - Edit Face Sets
 
 ![Last Operator Edit Face Sets](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-edit-face-sets.png)
+
+Change the settings of **Edit Face Sets** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -565,6 +575,8 @@ An act-once operator that randomizes the mesh topology.
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
 
+Change the settings of **Filter Mesh** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------- | ---------------------------------- |
@@ -596,6 +608,8 @@ SDS happens at Object mode level. Even when you apply it in the Sculpt Mode! And
 
 ![Last Operator Subdivision Set](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-subdivision-set.png)
 
+Change the settings of **Subdivision Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Level
 
 Adjust the SDS level.
@@ -618,6 +632,8 @@ Flood fills the vertex colors with the current vertex color value. Applies a ver
 
 #### Adjust Last Operation - Fill
 
+Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------ |
@@ -635,6 +651,8 @@ Sets the pivot to the chosen location. The menu items should be self explaining.
 
 ![Last operator Set Pivot Position](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-set-pivot-position.png)
 
+Change the settings of **Set Pivot Position** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-2.png)
@@ -651,6 +669,8 @@ Toggles the visibility of face sets.
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
 
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-3.png)
@@ -664,6 +684,8 @@ Makes the active face sets invisible.
 ##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
+
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -682,6 +704,8 @@ Toggles the visibility of the selected face sets.
 ##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
+
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 

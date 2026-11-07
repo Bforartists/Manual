@@ -41,6 +41,8 @@ Sets the color of all selected vertices to the current active vertex color.
 
 ![Last operator Vertex Paint Set Color](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-vertex-paint-set-color.png)
 
+Change the settings of **Vertex Paint Set Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/mode.png)
@@ -59,6 +61,8 @@ Resets all vertex color to white.
 
 ![Last operator Reset Vertex Color](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-reset-vertex-color.png)
 
+Change the settings of **Reset Vertex Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/mode.png)
@@ -73,6 +77,8 @@ Inverts the stroke colors.
 
 ![Last operator Vertex Paint Invert](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-vertex-paint-invert.png)
 
+Change the settings of **Vertex Paint Invert** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/mode.png)
@@ -86,6 +92,8 @@ Adjust the levels of the vertex colors.
 ##### Adjust Last Operation - Vertex Paint Levels
 
 ![Last operator Vertex Paint Levels](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-vertex-paint-levels.png)
+
+Change the settings of **Vertex Paint Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -108,6 +116,8 @@ Adjust the HSV colors of the vertex colors.
 
 ![Last operator Vertex Paint Hue Saturation Value](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-vertex-paint-hue-saturation-value.png)
 
+Change the settings of **Vertex Paint Hue Saturation Value** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/mode.png)
@@ -129,6 +139,8 @@ Adjust the brightness and contrast of the vertex colors.
 ##### Adjust Last Operation - Vertex Paint Bright/Contrast
 
 ![Last operator Vertex Paint Bright/Contrast](/docs2/images/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu/last-operator-vertex-paint-bright-contrast.png)
+
+Change the settings of **Vertex Paint Bright/Contrast** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -488,6 +500,8 @@ Hides the active grease pencil layer.
 ###### Adjust Last Operation - Hide Layer(s)
 
 ![Last Operator Hide Layer(s)](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu/last-operator-hide-layer-s.png)
+
+Change the settings of **Hide Layer(s)** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 

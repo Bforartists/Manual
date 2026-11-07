@@ -72,7 +72,7 @@ Take any Modifiers above the Particle Modifier in the modifier stack into accoun
 
 These settings control how the emissions of particles are distributed throughout the emission locations when emitting from either Faces or Volume.
 
-**JitteredRandom Order**
+###### JitteredRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order.png)
 
@@ -86,17 +86,17 @@ The emitter element indices are gone through in a random order instead of linear
 | Jittering Amount | Amount of jitter applied to the sampling. |
 
 
-**RandomRandom Order**
+###### RandomRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order-2.png)
 
 The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
-**Even Distribution**
+###### Even Distribution
 
 Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
 
-**GridInvert Grid**
+###### GridInvert Grid
 
 ![Invert Grid](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/invert-grid.png)
 

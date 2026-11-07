@@ -243,23 +243,23 @@ The draw mode for the stroke. The modes should be self explaining. Most settings
 
 The draw style.
 
-**Solid**
+###### Solid
 
 ![Solid](/docs2/images/editors/properties/material-properties-tab/solid.png)
 
-**Base Color**
+###### Base Color
 
 The color of the stroke.
 
-**Texture**
+###### Texture
 
 ![Texture](/docs2/images/editors/properties/material-properties-tab/texture.png)
 
-**Base Color**
+###### Base Color
 
 The base color of the stroke. You can blend the texture with this color.
 
-**Image Prop**
+###### Image Prop
 
 ![Image Prop](/docs2/images/editors/properties/material-properties-tab/image-prop.png)
 
@@ -299,23 +299,23 @@ From left to right ...
 
 The draw style.
 
-**Solid**
+###### Solid
 
 ![Solid](/docs2/images/editors/properties/material-properties-tab/solid.png)
 
-**Base Color**
+###### Base Color
 
 The color of the stroke.
 
-**Texture**
+###### Texture
 
 ![Texture](/docs2/images/editors/properties/material-properties-tab/texture.png)
 
-**Base Color**
+###### Base Color
 
 The base color of the stroke. You can blend the texture with this color.
 
-**Image Prop**
+###### Image Prop
 
 ![Image Prop](/docs2/images/editors/properties/material-properties-tab/image-prop.png)
 
@@ -514,7 +514,7 @@ Bump mapping simulates the displacement mapping.
 
 Use true displacement. Requires fine subdivision.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -524,7 +524,7 @@ The maximum distance the vertices can be displaced.
 
 Uses a mixture of displacement and bump mapping.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -702,7 +702,7 @@ Bump mapping simulates the displacement mapping.
 
 Use true displacement. Requires fine subdivision.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -712,7 +712,7 @@ The maximum distance the vertices can be displaced.
 
 Uses a mixture of displacement and bump mapping.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 

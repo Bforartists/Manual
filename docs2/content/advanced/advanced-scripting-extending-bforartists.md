@@ -51,7 +51,7 @@ Registered Text-Blocks
 
 A text block can have its *Register* option enabled which means it will load on start.
 
-**Animation Drivers**
+##### Animation Drivers
 
 Python expressions can be used to *Drive* values and are often used in more advanced rigs and animations.
 

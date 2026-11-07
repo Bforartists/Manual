@@ -112,7 +112,7 @@ Coordinate Space to scale relative to.
 
 Image dimensions set in the Render panel.
 
-**Stretch, Fit, Crop**
+###### Stretch, Fit, Crop
 
 Render Size setting. Stretch distorts the image so that it fits into the render size. Fit scales the image until the bigger axis “fits” into the render size. Crop cuts the image so that it is the same aspect ratio as the render size.
 
@@ -138,7 +138,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -195,7 +195,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -252,7 +252,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -308,7 +308,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -382,7 +382,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -455,7 +455,7 @@ The interpolation mode.
 | Bicubic | Highest quality interpolation. |
 
 
-**Anisotropic**
+###### Anisotropic
 
 ![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
@@ -512,7 +512,7 @@ The lens distortion type.
 
 ![Type Radial](/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png)
 
-**Dispersion**
+###### Dispersion
 
 This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
 

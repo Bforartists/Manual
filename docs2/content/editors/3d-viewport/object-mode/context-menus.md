@@ -42,6 +42,8 @@ Pastes copied object(s).
 
 #### Adjust Last Operation - Paste Selection from Buffer
 
+Change the settings of **Paste Selection from Buffer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Select
 
 Select pasted object(s).
@@ -67,6 +69,8 @@ When you drag the duplicate around you will see the position values in the heade
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -129,6 +133,8 @@ Activate the tool. In the header you will now see further instructions. Which is
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
 
+Change the settings of **Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png)
 
 ##### Orientation
@@ -165,6 +171,8 @@ Snaps the currently selected object(s) to the cursor location, but keeps the off
 ##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
+
+Change the settings of **Snap Selection to Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -318,6 +326,8 @@ Create a mesh or curve object, create an object, hold down shift and select the 
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-make-parent.png)
 
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | ---------------------------------------------------------------------------------------------- |
@@ -359,6 +369,8 @@ This operator can also be found in the Header Object menu.
 #### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-move-to-collection.png)
+
+Change the settings of **Move to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Name
 
@@ -413,6 +425,8 @@ Hides the selected geometry.
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
 
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hides the not selected geometry.
@@ -435,6 +449,8 @@ Sets the shading for the object to smooth. Smooth means that the sharp edges are
 
 ![Last Operator Shade Smooth](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth.png)
 
+Change the settings of **Shade Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Keep Sharp Edges
 
 Don't remove as sharp marked edges.
@@ -446,6 +462,8 @@ Sets the shading for the object to smooth with Autosmooth activated. Autosmooth 
 #### Adjust Last Operation - Shade Smooth by angle
 
 ![Last Operator Shade Smooth by angle](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth-by-angle.png)
+
+Change the settings of **Shade Smooth by angle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Auto Smooth
 
@@ -467,6 +485,8 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 ![Last Operator Shade Smooth](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth-2.png)
 
+Change the settings of **Shade Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Keep Sharp Edges
 
 Don't remove as sharp marked edges.
@@ -487,6 +507,8 @@ Don't remove as sharp marked edges.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -501,6 +523,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -597,6 +621,8 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -611,6 +637,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -687,6 +715,8 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -701,6 +731,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -765,6 +797,8 @@ The last operator is the same for all set origin methods.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -779,6 +813,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -865,6 +901,8 @@ Width size is just of interest when you have an extruded surface at the curve. I
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -879,6 +917,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -949,6 +989,8 @@ Just default settings.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
+Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -963,6 +1005,8 @@ Target is a drop-down box that allows you to choose the convert method again.
 
 
 #### Adjust Last Operation - Convert Grease Pencil
+
+Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 

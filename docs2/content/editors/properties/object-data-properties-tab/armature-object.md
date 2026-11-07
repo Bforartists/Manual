@@ -369,19 +369,19 @@ In Animation mode, iTaSC operates like an IK solver: it is stateless and uses th
 | Iterations | The upper bound for the number of iterations. |
 
 
-**Solver**
+###### Solver
 
 ![Solver](/docs2/images/editors/properties/object-data-properties-tab/armature-object/solver.png)
 
 Select the inverse Jacobian solver that iTaSC will use.
 
-**SDLS**
+###### SDLS
 
 Computes the damping automatically by estimating the level of ‘cancellation’ in the armature kinematics. This method works well with the Copy Pose constraint but has the drawback of damping more than necessary around the singular pose, which means slower movements. Note that this is only noticeable in Simulation mode.
 
 The SDLS solver does not work together with a Distance constraint. You must use the DLS solver if you are going to have a singular pose in your animation with the Distance constraint.
 
-**DLS**
+###### DLS
 
 ![DLS](/docs2/images/editors/properties/object-data-properties-tab/armature-object/dls.png)
 
@@ -400,21 +400,21 @@ Computes the damping manually. Damping and Epsilon must be tuned for each armatu
 
 The Simulation mode estimates the target’s velocity, operates in a ‘true time’ context, ignores rotation from keyframes (except via a joint rotation constraint) and builds up a state cache automatically.
 
-**Translate Roots**
+###### Translate Roots
 
 Translate root bones to the armature origin.
 
-**ReiterationNever**
+###### ReiterationNever
 
 The solver starts from the rest pose and does not reiterate (converges) even for the first frame. This means that it will take a few frames to get to the target at the start of the animation.
 
 Never will grey out most of the options.
 
-**Initial**
+###### Initial
 
 The solver starts from the rest pose and re-iterates until the given precision is achieved, but only on the first frame (i.e. a frame which doesn’t have any previous frame in the cache). This option basically allows you to choose a different start pose than the rest pose and it is the default value. For the subsequent frames, the solver will track the target by integrating the joint velocity computed by the Jacobian solver over the time interval that the frame represents. The precision of the tracking depends on the feedback coefficient, number of substeps and velocity of the target.
 
-**Always**
+###### Always
 
 The solver re-iterates on each frame until the given precision is achieved. This option omits most of the iTaSC dynamic behavior: the maximum joint velocity and the continuity between frames is not guaranteed anymore in compensation of better precision on the end effector positions. It is an intermediate mode between Animation and real-time Simulation.
 
@@ -425,13 +425,13 @@ The solver re-iterates on each frame until the given precision is achieved. This
 | Iterations | The upper bound for the number of iterations. |
 
 
-**Solver**
+###### Solver
 
 ![Solver](/docs2/images/editors/properties/object-data-properties-tab/armature-object/solver.png)
 
 Select the inverse Jacobian solver that iTaSC will use.
 
-**SDLS**
+###### SDLS
 
 ![SDLS](/docs2/images/editors/properties/object-data-properties-tab/armature-object/sdls.png)
 
@@ -439,21 +439,21 @@ Computes the damping automatically by estimating the level of ‘cancellation’
 
 The SDLS solver does not work together with a Distance constraint. You must use the DLS solver if you are going to have a singular pose in your animation with the Distance constraint.
 
-**Feedback**
+###### Feedback
 
 Coefficient on end effector position error to set corrective joint velocity. The time constant of the error correction is the inverse of this value. However, this parameter has little effect on the dynamic of the armature since the algorithm evaluates the target velocity in any case. Setting this parameter to 0 means ‘opening the loop’: the solver tracks the velocity but not the position; the error will accumulate rapidly. Setting this value too high means an excessive amount of correction and risk of instability. The value should be in the range 20-100. Default value is 20, which means that tracking errors are corrected in a typical time of 100-200 ms. The feedback coefficient is the reason why the armature continues to move slightly in Simulation mode even if the target has stopped moving: the residual error is progressively suppressed frame after frame.
 
-**Max Velocity**
+###### Max Velocity
 
 Indicative maximum joint velocity in radian per second. This parameter has an important effect on the armature dynamic. Smaller value will cause the armature to move slowly and lag behind if the targets are moving rapidly. You can simulate an inertia by setting this parameter to a low value.
 
-**DLS**
+###### DLS
 
 ![DLS](/docs2/images/editors/properties/object-data-properties-tab/armature-object/dls-2.png)
 
 Computes the damping manually. Damping and Epsilon must be tuned for each armature. You should use the smallest values that preserve stability.
 
-**Feedback**
+###### Feedback
 
 Coefficient on end effector position error to set corrective joint velocity. The time constant of the error correction is the inverse of this value. However, this parameter has little effect on the dynamic of the armature since the algorithm evaluates the target velocity in any case. Setting this parameter to 0 means ‘opening the loop’: the solver tracks the velocity but not the position; the error will accumulate rapidly. Setting this value too high means an excessive amount of correction and risk of instability. The value should be in the range 20-100. Default value is 20, which means that tracking errors are corrected in a typical time of 100-200 ms. The feedback coefficient is the reason why the armature continues to move slightly in Simulation mode even if the target has stopped moving: the residual error is progressively suppressed frame after frame.
 

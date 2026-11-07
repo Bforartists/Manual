@@ -59,6 +59,8 @@ Normalize all normalizes the weight of all Vertex groups so that the values for 
 
 ##### Adjust Last Operation - Normalize all
 
+Change the settings of **Normalize all** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ----------- | ------------------------------------------------------ |
 | Subset | Subset is a drop-down menu choose the Subset method. |
@@ -76,6 +78,8 @@ Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It onl
 
 ![Last Operator Mirror Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-mirror-vertex-group.png)
 
+Change the settings of **Mirror Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------ |
 | Mirror Weights | With Mirror Weights ticked it mirrors the weights. |
@@ -90,6 +94,8 @@ Invert inverts the weight painting for the selected vertex group.
 ##### Adjust Last Operation - Invert Vertex Group
 
 ![Last Operator Invert Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-invert-vertex-group.png)
+
+Change the settings of **Invert Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Subset
 
@@ -109,6 +115,8 @@ Removes Vertex group assignments that are not required from the active vertex gr
 ##### Adjust Last Operation - Clean Vertex Group
 
 ![Last Operator Clean Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-clean-vertex-group.png)
+
+Change the settings of **Clean Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Subset
 
@@ -134,6 +142,8 @@ Quantize quantizes the weight paint values. It starts with 4 steps. With a step 
 
 ![Last Operator Quantize Vertex Weights](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png)
 
+Change the settings of **Quantize Vertex Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------ | ---------------------------------------------------------------------------- |
 | Subset | Subset is a drop-down menu choose the Subset method. |
@@ -146,6 +156,8 @@ Quantize quantizes the weight paint values. It starts with 4 steps. With a step 
 Adds some offset to the Weight paint, and multiplys it with some gain.
 
 ##### Adjust Last Operation - Levels
+
+Change the settings of **Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Subset
 
@@ -168,6 +180,8 @@ Here you adjust the gain.
 Smooths the weight for selected vertices.
 
 ##### Adjust Last Operation - Smooth Vertex Weights
+
+Change the settings of **Smooth Vertex Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Subset
 
@@ -209,6 +223,8 @@ You can adjust the result in the Last Operator Transfer Mesh Data panel.
 ##### Adjust Last Operation - Transfer Mesh Data
 
 ![Last Operator Transfer Mesh Data](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-transfer-mesh-data.png)
+
+Change the settings of **Transfer Mesh Data** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Freeze Operator
 
@@ -270,6 +286,8 @@ Limit the number of deform weights for a vertex by removing the lowest weights. 
 
 ![Last Operator Limit Number of Weights](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-limit-number-of-weights.png)
 
+Change the settings of **Limit Number of Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------- |
 | Subset | A drop down box choose to work with the Active Group or All Groups. |
@@ -296,6 +314,8 @@ The names should be self explaining.
 ##### Adjust Last Operation - Change Lock
 
 ![Last Operator Change Lock](/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-change-lock.png)
+
+Change the settings of **Change Lock** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Action
 
@@ -448,6 +468,8 @@ Predefined curve presets.
 ##### Adjust Last Operation - Weight Gradient
 
 ![Last Operator Weight Gradient](/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/last-operator-weight-gradient.png)
+
+Change the settings of **Weight Gradient** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 

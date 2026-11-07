@@ -448,11 +448,11 @@ How to import textures.
 
 Copy files to texture directory.
 
-**Textures Directory**
+###### Textures Directory
 
 The textures directory.
 
-**File Name Collision**
+###### File Name Collision
 
 ![File Name Collision](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/file-name-collision.png)
 

@@ -63,6 +63,8 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
@@ -98,6 +100,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -151,6 +155,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
@@ -181,6 +187,8 @@ Warps a mesh selection between two defined points. This also works with curves.
 
 ##### Adjust Last Operation - Warp
 
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------ | ----------------------------------- |
@@ -206,6 +214,8 @@ This tool allows randomizes the positions of the selected vertices.
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
+Change the settings of **Randomize Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | ------------------------------------------ |
@@ -228,6 +238,8 @@ The curve needs to have geometry !
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -271,6 +283,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 ##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move
 
@@ -323,6 +337,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Scale
 
 Adjust in which directions you want to transform.
@@ -365,6 +381,8 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
 ##### Adjust Last Operation - Set Dimensions
+
+Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### New Dimensions
 
@@ -437,6 +455,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move X , Y , Z
 
 ###### Orientation
@@ -466,6 +486,8 @@ Toggle Cyclic closes or opens the curve.
 
 ##### Adjust Last Operation - Toggle Cyclic
 
+Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Direction
 
 Direction is a drop-down box . Choose the direction in which the curve gets closed.
@@ -475,6 +497,8 @@ Direction is a drop-down box . Choose the direction in which the curve gets clos
 Decimates the currently selected geometry. It starts with a Ratio of 1. Which means no decimation. The lower the ratio the more decimation you will get.
 
 ##### Adjust Last Operation - Decimate Curve
+
+Change the settings of **Decimate Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Ratio
 
@@ -500,6 +524,8 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
+Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
@@ -522,6 +548,8 @@ Hides the selected curve geometry.
 ###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 
@@ -558,6 +586,8 @@ Extrudes the selected curve point(s).
 
 ![Last operator Extrude Curve and Move](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-extrude-curve-and-move.png)
 
+Change the settings of **Extrude Curve and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mode.png)
@@ -591,6 +621,8 @@ Hotkey only tool. Extrude to the mouse position.
 
 ![Last Operator Extrude to Cursor or Add](/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu/last-operator-extrude-to-cursor-or-add.png)
 
+Change the settings of **Extrude to Cursor or Add** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Location X Y Z
 
 The location to extrude to.
@@ -614,6 +646,8 @@ The Tilt angle always starts at zero. It is relative. To modify the Mean Tilt us
 ##### Adjust Last Operation - Tilt
 
 ![Last Operator Tilt](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-tilt.png)
+
+Change the settings of **Tilt** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Angle
 
@@ -645,6 +679,8 @@ Recalculates the normals of the selected curve and adjusts the handles according
 ##### Adjust Last Operation - Recalc Normals
 
 ![Last Operator Recalc Normals](/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu/last-operator-recalc-normals.png)
+
+Change the settings of **Recalc Normals** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Length
 
@@ -683,6 +719,8 @@ Does the same as *Hook to New Object*, but instead of hooking the vertices to a 
 ###### Adjust Last Operation - Hook to Selected Object
 
 ![Last Operator Hook to Selected Object](/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu/last-operator-hook-to-selected-object.png)
+
+Change the settings of **Hook to Selected Object** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Active Bone
 
@@ -729,6 +767,8 @@ Subdivides the selected curve geometry, and adds more control points.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Number of Cuts
 
 Number of subdivision cuts.
@@ -771,6 +811,8 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
@@ -806,6 +848,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -859,6 +903,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
@@ -889,6 +935,8 @@ Warps a mesh selection between two defined points. This also works with curves.
 
 ##### Adjust Last Operation - Warp
 
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------------ | ----------------------------------- |
@@ -913,6 +961,8 @@ This tool allows randomizes the positions of the selected vertices.
 ##### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -942,6 +992,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 ##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move
 
@@ -994,6 +1046,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Scale
 
 Adjust in which directions you want to transform.
@@ -1036,6 +1090,8 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
 ##### Adjust Last Operation - Set Dimensions
+
+Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### New Dimensions
 
@@ -1104,6 +1160,8 @@ Extrude selected boundary row around the pivot point and the current view axis.
 
 ![Last Operator Spin](/docs2/images/editors/3d-viewport/header/surface-edit-mode-surface-menu/last-operator-spin.png)
 
+Change the settings of **Spin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------ | ------------------------------ |
@@ -1122,6 +1180,8 @@ When you drag the duplicate around you will see the position values in the heade
 ##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move X , Y , Z
 
@@ -1152,6 +1212,8 @@ Toggle Cyclic closes or opens the curve.
 
 ##### Adjust Last Operation - Toggle Cyclic
 
+Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Direction
 
 Direction is a drop-down box. Choose the direction in which the curve gets closed.
@@ -1171,6 +1233,8 @@ Hides the selected curve geometry.
 ###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 
@@ -1295,7 +1359,7 @@ Apply a fixed offset, and don't scale by the radius.
 
 Use the start of the stroke for the depth.
 
-**Plane**
+###### Plane
 
 ![Plane](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/plane.png)
 
@@ -1318,6 +1382,8 @@ The plane for the projected strokes.
 ##### Adjust Last Operation - Draw Curve
 
 ![Last Operator Draw Curve](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-draw-curve.png)
+
+Change the settings of **Draw Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1424,6 +1490,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last operator Extrude Curve and Move](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-extrude-curve-and-move.png)
 
+Change the settings of **Extrude Curve and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mode.png)
@@ -1465,6 +1533,8 @@ Extrudes the control points to where you click.
 
 ###### Adjust Last Operation - Add Vertex
 
+Change the settings of **Add Vertex** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Location X Y Z
 
 The location of the new created control point(s).
@@ -1501,6 +1571,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1555,6 +1627,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1595,6 +1669,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1659,6 +1735,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-3.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1709,6 +1787,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1770,6 +1850,8 @@ Subdivides the selected curve geometry, and adds more control points.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Number of Cuts
 
 Number of subdivision cuts.
@@ -1781,6 +1863,8 @@ Extrudes the selected curve point(s).
 ##### Adjust Last Operation - Extrude Curve and Move
 
 ![Last operator Extrude Curve and Move](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-extrude-curve-and-move.png)
+
+Change the settings of **Extrude Curve and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -1823,6 +1907,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move X , Y , Z
 
 ###### Orientation
@@ -1851,6 +1937,8 @@ The curve needs to have geometry !
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -1890,6 +1978,8 @@ The Tilt angle always starts at zero. It is relative. To modify the Mean Tilt us
 ##### Adjust Last Operation - Tilt
 
 ![Last Operator Tilt](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-tilt.png)
+
+Change the settings of **Tilt** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Angle
 
@@ -1984,6 +2074,8 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
+Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
@@ -2019,6 +2111,8 @@ Toggle Free/Aligned.
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
 
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Type is a drop-down box where you can set the handle type. You have the choice between Auto, Vector, Align, Free. And the fifth possibility toggles between Free and Align.
@@ -2030,6 +2124,8 @@ Type is a drop-down box where you can set the handle type. You have the choice b
 Toggle Cyclic closes or opens the curve.
 
 ##### Adjust Last Operation - Toggle Cyclic
+
+Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -2048,6 +2144,8 @@ Recalculates the normals of the selected curve.
 ##### Adjust Last Operation - Recalc Normals
 
 ![Last Operator Recalc Normals](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-recalc-normals.png)
+
+Change the settings of **Recalc Normals** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Length
 
@@ -2074,6 +2172,8 @@ Splits the curve at the selected control point(s). You need to select two contro
 Decimates the currently selected geometry. It starts with a Ratio of 1. Which means no decimation. The lower the ratio the more decimation you will get.
 
 ##### Adjust Last Operation - Decimate Curve
+
+Change the settings of **Decimate Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Ratio
 
@@ -2107,6 +2207,8 @@ Hides the selected geometry.
 ###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 

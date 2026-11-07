@@ -1669,6 +1669,8 @@ Add a new mask layer to the list.
 
 ![Last Operator Add Mask Layer](/docs2/images/editors/image-editor/sidebar/mask-tab/last-operator-add-mask-layer.png)
 
+Change the settings of **Add Mask Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Name
 
 Rename the new created mask layer.

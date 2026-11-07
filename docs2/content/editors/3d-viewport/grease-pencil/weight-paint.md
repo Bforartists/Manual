@@ -43,6 +43,8 @@ Normalizes the weight of all Vertex groups so that the values for the single ver
 
 ![Last Operator Normalize all Vertex Group](/docs2/images/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu/last-operator-normalize-all-vertex-group.png)
 
+Change the settings of **Normalize all Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Lock Active
 
 Keep the values of the active group while normalizing others.
@@ -61,6 +63,8 @@ Smooths the weight for selected vertices.
 ##### Adjust Last Operation - Smooth Vertex Group
 
 ![Last Operator Smooth Vertex Group](/docs2/images/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu/last-operator-smooth-vertex-group.png)
+
+Change the settings of **Smooth Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |

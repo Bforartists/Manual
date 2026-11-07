@@ -89,6 +89,8 @@ Hides the not selected layers. The selected layers stays visible.
 
 ![Last Operator Hide Layers](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-hide-layers.png)
 
+Change the settings of **Hide Layers** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Unselected
 
 Hides the not selected layers.
@@ -105,6 +107,8 @@ Deletes not connected stroke geometry that is made of loose points.
 
 ![Last Operator Clean Loose Points](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png)
 
+Change the settings of **Clean Loose Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Limit
 
 The number of vertices below which a stroke gets counted as a loose point.
@@ -116,6 +120,8 @@ Deletes all duplicated frames.
 ###### Adjust Last Operation - Clean Duplicated Frames
 
 ![Last Operator Clean Duplicated Frames](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png)
+
+Change the settings of **Clean Duplicated Frames** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -137,6 +143,8 @@ Using this tool opens a popup menu. Choose the projection type method.
 
 ![Last Operator Re project Strokes](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-re-project-strokes.png)
 
+Change the settings of **Re project Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------- |
 | Projection Type | A popup menu. Choose the reprojection Strokes type method again. |
@@ -149,6 +157,8 @@ In Draw mode with the fill tool you are able to draw so called fill guide with h
 ###### Adjust Last Operation - Remove Fill Guides
 
 ![Last Operator Remove Fill Guides](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png)
+
+Change the settings of **Remove Fill Guides** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -546,13 +556,13 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -563,7 +573,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -574,7 +584,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -625,13 +635,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -642,7 +652,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -782,13 +792,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -799,7 +809,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -810,7 +820,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -856,13 +866,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -873,7 +883,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -884,7 +894,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -930,13 +940,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -947,7 +957,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -958,7 +968,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1015,13 +1025,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -1032,7 +1042,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -1043,7 +1053,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1089,13 +1099,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -1106,7 +1116,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -1117,7 +1127,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1162,13 +1172,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -1179,7 +1189,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -1190,7 +1200,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1254,13 +1264,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -1271,7 +1281,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -1282,7 +1292,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1327,13 +1337,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -1344,7 +1354,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -1355,7 +1365,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 

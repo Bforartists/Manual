@@ -127,6 +127,8 @@ You can create mask spline primitives from the Add menu. But you can also draw y
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/last-operator-add-vertex-and-slide.png)
 
+Change the settings of **Add Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Location X / Y
 
 The location of the latest created vertex point.
@@ -168,6 +170,8 @@ Enables the currently selected marker(s)
 
 ![Last operator Disable Markers](/docs2/images/editors/movie-clip-editor/last-operator-disable-markers.png)
 
+Change the settings of **Disable Markers** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Action
 
 Edit box where you can again choose if you want to enable or disable the selected marker(s).
@@ -184,6 +188,8 @@ Shows the selected track(s)
 
 ![Last Operator Hide Tracks](/docs2/images/editors/movie-clip-editor/last-operator-hide-tracks.png)
 
+Change the settings of **Hide Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hide the unselected tracks.
@@ -199,6 +205,8 @@ Unlocks the selected tracks. You will see the locks in the Dopesheet view.
 #### Adjust Last Operation - Lock Tracks
 
 ![Last Operator Lock Tracks](/docs2/images/editors/movie-clip-editor/last-operator-lock-tracks.png)
+
+Change the settings of **Lock Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Action
 
@@ -232,6 +240,8 @@ In this sub menu you can set the handle type for the currently selected spline p
 #### Adjust Last Operation - Set Handle Type
 
 ![Last operator Set Handle Type](/docs2/images/editors/movie-clip-editor/last-operator-set-handle-type.png)
+
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 

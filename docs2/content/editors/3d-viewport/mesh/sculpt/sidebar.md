@@ -158,7 +158,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 The position of the selectedc curve point.
 
-**Delete Points**
+###### Delete Points
 
 Deletes the selected curve point.
 
@@ -2034,7 +2034,7 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
 
-**Reset Color Ramp**
+###### Reset Color Ramp
 
 ![Reset Color Ramp](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/reset-color-ramp.png)
 
@@ -2071,17 +2071,17 @@ The color band. A click at one of the color stops makes it the active one. You c
 
 Adjust the active color stop.
 
-**Choose active color stop**
+###### Choose active color stop
 
 Choose the color stop by index.
 
-**Pos**
+###### Pos
 
 ![Pos](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/active-color-stop-elements.png)
 
 The position of the active color stop. The range goes from 0.000 to 1.000
 
-**Color**
+###### Color
 
 The color of the active color stop. Click at it to change the color.
 
@@ -2105,7 +2105,7 @@ Paint the gradient by tablet pressure. Obviously you need a tablet for this.
 
 Paint the gradient by repeating the colors.
 
-**Gradient Spacing**
+###### Gradient Spacing
 
 The spacing between the colors in screen pixels. You need to have a gradient spacing higher than 0.
 
@@ -2115,7 +2115,7 @@ The spacing between the colors in screen pixels. You need to have a gradient spa
 
 Paint the gradient from first color to last color, and then sticks with the last color. You need to have a gradient spacing higher than 0.
 
-**Gradient Spacing**
+###### Gradient Spacing
 
 The spacing between the colors in screen pixels.
 

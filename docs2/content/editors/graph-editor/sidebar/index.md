@@ -139,6 +139,8 @@ The list of modifiers. Choose by clicking.
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/graph-editor/sidebar/modifiers-tab/last-operator-add-f-curve-modifier.png)
 
+Change the settings of **Add F-Curve Modifier** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------- |

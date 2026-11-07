@@ -105,12 +105,12 @@ The last button, with the diamond, opens the **Keyframing** settings. Its icon s
 
 The popover has two parts. **Auto Keyframing** only shows while Auto Keying is on, and **Keyframing** is always there.
 
-**Auto Keyframing**
+#### Auto Keyframing
 
 - **Mode** chooses whether auto keying adds new keyframes and replaces existing ones (**Add & Replace**), or only replaces keyframes that already exist (**Replace**). Both have icons.
 - **Only Active Keying Set** keys just the channels in the keying set you picked.
 
-**Keyframing**
+#### Keyframing
 
 - **Type** sets the type, and with it the color, of new keyframes: Keyframe, Breakdown, Moving Hold, Extreme, Jitter or Generated. It is right at the top level, so you can pick it without digging.
 - **Only Active Keying Set** inserts keyframes only into the active keying set.

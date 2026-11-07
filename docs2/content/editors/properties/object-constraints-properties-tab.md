@@ -598,7 +598,7 @@ A tab to switch between the available location, rotation and scale values.
 
 What axis to use for the X Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 
@@ -608,7 +608,7 @@ Edit the minimum and maximum values for the source object.
 
 What axis to use for the Y Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 
@@ -618,7 +618,7 @@ Edit the minimum and maximum values for the source object.
 
 What axis to use for the Z Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 

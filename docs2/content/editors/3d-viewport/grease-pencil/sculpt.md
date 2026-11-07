@@ -175,13 +175,13 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -192,7 +192,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -203,7 +203,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -277,7 +277,7 @@ Behind the pressure size button there is a button to reveal the size pressure cu
 
 The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png)
 
@@ -285,13 +285,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Navigation elements**
+###### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
@@ -300,13 +300,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -317,7 +317,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -328,7 +328,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -402,7 +402,7 @@ Behind the pressure size button there is a button to reveal the size pressure cu
 
 The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png)
 
@@ -410,13 +410,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Navigation elements**
+###### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
@@ -425,13 +425,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -442,7 +442,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -453,7 +453,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -540,7 +540,7 @@ Behind the pressure size button there is a button to reveal the size pressure cu
 
 The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png)
 
@@ -548,13 +548,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Navigation elements**
+###### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
@@ -563,13 +563,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -580,7 +580,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -591,7 +591,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -648,7 +648,7 @@ Behind the pressure size button there is a button to reveal the size pressure cu
 
 The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png)
 
@@ -656,13 +656,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Navigation elements**
+###### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
@@ -671,13 +671,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -688,7 +688,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -699,7 +699,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -749,7 +749,7 @@ Behind the pressure size button there is a button to reveal the size pressure cu
 
 The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.
 
-**Selecting Points**
+###### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png)
 
@@ -757,13 +757,13 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-**Adding Points**
+###### Adding Points
 
 ![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-**Navigation elements**
+###### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
@@ -772,13 +772,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
@@ -789,7 +789,7 @@ Tools is a menu where you can find some curve related tools.
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
@@ -800,7 +800,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
