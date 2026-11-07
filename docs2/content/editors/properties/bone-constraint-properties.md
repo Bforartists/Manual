@@ -119,17 +119,33 @@ Pole target is a secondary IK target. An object that lets the IK solution point 
 
 Think of a knee here for example. Without a Pole target the knee might dance around when you try to pose the leg. And it will point in all directions but the one in that it should bend. With a Pole target you can let the IK solution point towards this target object.
 
+#### Bone
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bone | If the target is an armature, then you can choose the bone here that you want to use as a Pole Target. |
-| Pole Angle | The IK solution might not point correctly into the direction of the Pole target. Or you might need some offset. This property allows you define an offset for the pole angle. |
-| Iterations | The maximum number of iterations to calculate the IK solution · **Chain Length**: How many bones are included into this IK solution. A value of 0 uses all bones. |
-| Use Tail | Include the Bone's tail as the last element in chain. |
-| Stretch | Enable IK stretching. |
-| Weight | **Position**: For Tree IK (multiple IK targets): Weight of Position Control for this target. · **Rotation**: For Tree IK (multiple IK targets): Weight of Orientation Control for this target. |
-| Influence | The influence level of this constraints. |
+If the target is an armature, then you can choose the bone here that you want to use as a Pole Target.
 
+#### Pole Angle
+
+The IK solution might not point correctly into the direction of the Pole target. Or you might need some offset. This property allows you define an offset for the pole angle.
+
+#### Iterations
+
+The maximum number of iterations to calculate the IK solution · **Chain Length**: How many bones are included into this IK solution. A value of 0 uses all bones.
+
+#### Use Tail
+
+Include the Bone's tail as the last element in chain.
+
+#### Stretch
+
+Enable IK stretching.
+
+#### Weight
+
+**Position**: For Tree IK (multiple IK targets): Weight of Position Control for this target. · **Rotation**: For Tree IK (multiple IK targets): Weight of Orientation Control for this target.
+
+#### Influence
+
+The influence level of this constraints.
 
 ## Spine IK Constraint
 
@@ -139,23 +155,25 @@ Think of a knee here for example. Without a Pole target the knee might dance aro
 
 The *Spline IK* constraint aligns a chain of bones along a curve. This constraint requires to have a curve object in the scene as the target object. So you should create one beforehand.
 
+### Target
 
-| Entry | What it does |
-| --------- | ---------------------------------------- |
-| Target | Choose the target curve. |
-| Influence | The influence level of this constraints. |
+Choose the target curve.
 
+### Influence
+
+The influence level of this constraints.
 
 ### Fitting subpanel
 
 ![Fitting subpanel](/docs2/images/editors/properties/bone-constraint-properties/fitting-subpanel.png)
 
+#### Chain Length
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------- |
-| Chain Length | How many bones are included in the chain. Set it to 0 to influence the whole chain. |
-| Even Division | Ignore the relative length of the bones when fitting to the curve. Every bone in the chain will be equal long. |
+How many bones are included in the chain. Set it to 0 to influence the whole chain.
 
+#### Even Division
+
+Ignore the relative length of the bones when fitting to the curve. Every bone in the chain will be equal long.
 
 #### Chain Offset
 
@@ -181,24 +199,29 @@ Average radius of the endpoints is used to tweak the X and Z scaling of the bone
 
 Choose how the bone length should fit into the curve length.
 
+##### None
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------- |
-| None | Don’t scale the X and Z axes. |
-| Fit Curve | Fit the bone chain length into the length of the curve. |
-| Bone Original | Use the original scaling of the bones. |
+Don’t scale the X and Z axes.
 
+##### Fit Curve
+
+Fit the bone chain length into the length of the curve.
+
+##### Bone Original
+
+Use the original scaling of the bones.
 
 #### XZ Scale Mode:
 
 ![XZ Scale Mode:](/docs2/images/editors/properties/bone-constraint-properties/xz-scale-mode.png)
 
+##### None
 
-| Entry | What it does |
-| ------------- | -------------------------------------- |
-| None | Don’t scale the X and Z axes. |
-| Bone Original | Use the original scaling of the bones. |
+Don’t scale the X and Z axes.
 
+##### Bone Original
+
+Use the original scaling of the bones.
 
 ##### Inverse Scale
 
@@ -216,11 +239,14 @@ Apply volume preservation over the original scaling.
 
 Scale of the X and Z axes is the inverse of the Y scale. With enabling Volume Preservation you will reveal some further options for this method.
 
+###### Use Original Scale
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Original Scale | Apply volume preservation over the original scaling. |
-| Volume Variation | Factor between volume variation and stretching. |
-| Volume Min / Volume Max | Minimum and maximum volume stretching factor. · **Smooth**: You need to have either Volume min or Volume max set to active to show this setting. Adjust the factor between volume variation and stretching. |
+Apply volume preservation over the original scaling.
 
+###### Volume Variation
 
+Factor between volume variation and stretching.
+
+###### Volume Min / Volume Max
+
+Minimum and maximum volume stretching factor. · **Smooth**: You need to have either Volume min or Volume max set to active to show this setting. Adjust the factor between volume variation and stretching.

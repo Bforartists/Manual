@@ -20,10 +20,10 @@ summary: "Animation panels are about the Animation Slots for scene wide animatio
 
 Animation panels are about the Animation Slots for scene wide animation clips.
 
+### New
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode. |
-| Action Selector | This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source. |
+Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode.
 
+### Action Selector
 
+This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source.

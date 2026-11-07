@@ -40,27 +40,41 @@ The light emits from a point, and has falloff.
 
 The **Point Light** emits light uniformly in all directions from a single point in space. It’s ideal for simulating small, localized light sources like bulbs or candles. In Eevee, the Point Light includes several real-time rendering options to control its appearance, behavior, and performance.
 
+#### Color / Tint
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Color / Tint | The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
-| Radius | Defines the physical size of the light source. Larger values produce **softer shadows** and **broader highlights**. When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights. |
+The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
+
+#### Radius
+
+Defines the physical size of the light source. Larger values produce **softer shadows** and **broader highlights**. When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights.
 
 #### Shadow subpanel
 
 Toggles shadow casting for the light. Allows the light source to cast shadows in the scene.
 
+##### Jitter
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jitter | Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality. |
-| Filter | Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows. |
+Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality.
 
+##### Filter
+
+Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows.
 
 ##### Resolution Limit
 
@@ -92,14 +106,21 @@ When Absolute Resolution Limit is enabled:
 
 Slider properties that define how much the light affects certain elements, including diffuse, glossy, transmission and volume scattering. Useful for Non-Photo-Real (NPR) rendering.
 
+##### Diffuse
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------- |
-| Diffuse | Diffuse reflection multiplier. |
-| Specular | Specular light intensity multiplier. |
-| Transmission | Transmission or subsurface scattering light multiplier. |
-| Volume Scatter | Volume Light multiplier within volumetric materials. |
+Diffuse reflection multiplier.
 
+##### Specular
+
+Specular light intensity multiplier.
+
+##### Transmission
+
+Transmission or subsurface scattering light multiplier.
+
+##### Volume Scatter
+
+Volume Light multiplier within volumetric materials.
 
 #### Custom Distance subpanel
 
@@ -117,17 +138,33 @@ The distance where light influence will be set to 0.
 
 The light emits from a point, and has falloff.
 
+#### Color/Tint
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color/Tint | The color of the light. Clicking at the color field will open a color picker. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
-| Soft Falloff | Apply falloff to avoid sharp edges when the light geometry intersects with other objects. |
-| Radius | When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights. |
+The color of the light. Clicking at the color field will open a color picker.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
+
+#### Soft Falloff
+
+Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
+
+#### Radius
+
+When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights.
 
 ### Sun Light Eeevee
 
@@ -135,16 +172,29 @@ The light emits from a point, and has falloff.
 
 The light has no falloff, and goes one direction, a lot like a sun.
 
+#### Color / Tint
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color / Tint | The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default. **Example:** *2000-3000 K produces a neutral white light.* |
-| Strength | Power of the light in **Watts per square meter**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
-| Angle | The size of the sun light according to its angular diameter as seen from earth. |
+The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default. **Example:** *2000-3000 K produces a neutral white light.*
+
+#### Strength
+
+Power of the light in **Watts per square meter**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
+
+#### Angle
+
+The size of the sun light according to its angular diameter as seen from earth.
 
 #### Shadow subpanel
 
@@ -152,12 +202,13 @@ The light has no falloff, and goes one direction, a lot like a sun.
 
 Toggles shadow casting for the light. Allows the light source to cast shadows in the scene.
 
+##### Jitter
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jitter | Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality. |
-| Filter | Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows. |
+Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality.
 
+##### Filter
+
+Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows.
 
 ##### Resolution Limit
 
@@ -176,14 +227,21 @@ Think of it as setting the "zoom level" of shadow detail. If the value is too hi
 
 Slider properties that define how much the light affects certain elements, including diffuse, glossy, transmission and volume scattering. Useful for Non-Photo-Real (NPR) rendering.
 
+##### Diffuse
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------- |
-| Diffuse | Diffuse reflection multiplier. |
-| Specular | Specular light intensity multiplier. |
-| Transmission | Transmission or subsurface scattering light multiplier. |
-| Volume Scatter | Volume Light multiplier within volumetric materials. |
+Diffuse reflection multiplier.
 
+##### Specular
+
+Specular light intensity multiplier.
+
+##### Transmission
+
+Transmission or subsurface scattering light multiplier.
+
+##### Volume Scatter
+
+Volume Light multiplier within volumetric materials.
 
 ### Sun Light Cycles
 
@@ -191,16 +249,29 @@ Slider properties that define how much the light affects certain elements, inclu
 
 The light has no falloff, and goes into one direction.
 
+#### Color/Tint
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color/Tint | The color of the light. Clicking at the color field will open a color picker. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Strength | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
-| Angle | The size of the sun light according to its angular diameter as seen from earth. |
+The color of the light. Clicking at the color field will open a color picker.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Strength
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
+
+#### Angle
+
+The size of the sun light according to its angular diameter as seen from earth.
 
 ### Spot Light Eevee
 
@@ -208,16 +279,29 @@ The light has no falloff, and goes into one direction.
 
 The light has falloff. And gets distributed in a cone shape.
 
+#### Color / Tint
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Color / Tint | The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
-| Radius | Defines the physical size of the light source. Larger values produce **softer shadows** and **broader highlights**. When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights. |
+The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
+
+#### Radius
+
+Defines the physical size of the light source. Larger values produce **softer shadows** and **broader highlights**. When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights.
 
 #### Beam Shape subpanel
 
@@ -225,12 +309,13 @@ The light has falloff. And gets distributed in a cone shape.
 
 Controls the shape of the spotlight.
 
+##### Size
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the outer cone of a spot. |
-| Blend | Blending to the inner cone of a spot. The inner cone boundary line indicates the point at which light from the Spot will start to blur/soften. |
+The size of the outer cone of a spot.
 
+##### Blend
+
+Blending to the inner cone of a spot. The inner cone boundary line indicates the point at which light from the Spot will start to blur/soften.
 
 ##### Show cone
 
@@ -244,12 +329,13 @@ Shows the cone opaque in the 3D view.
 
 Toggles shadow casting for the light. Allows the light source to cast shadows in the scene.
 
+##### Jitter
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jitter | Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality. |
-| Filter | Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows. |
+Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality.
 
+##### Filter
+
+Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows.
 
 ##### Resolution Limit
 
@@ -281,14 +367,21 @@ When Absolute Resolution Limit is enabled:
 
 Slider properties that define how much the light affects certain elements, including diffuse, glossy, transmission and volume scattering. Useful for Non-Photo-Real (NPR) rendering.
 
+##### Diffuse
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------- |
-| Diffuse | Diffuse reflection multiplier. |
-| Specular | Specular light intensity multiplier. |
-| Transmission | Transmission or subsurface scattering light multiplier. |
-| Volume Scatter | Volume Light multiplier within volumetric materials. |
+Diffuse reflection multiplier.
 
+##### Specular
+
+Specular light intensity multiplier.
+
+##### Transmission
+
+Transmission or subsurface scattering light multiplier.
+
+##### Volume Scatter
+
+Volume Light multiplier within volumetric materials.
 
 #### Custom Distance subpanel
 
@@ -306,15 +399,25 @@ The distance where light influence will be set to 0.
 
 The light has falloff. And gets distributed in a cone shape.
 
+#### Color/Tint
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color/Tint | The color of the light. Clicking at the color field will open a color picker. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Soft Falloff | Apply falloff to avoid sharp edges when the light geometry intersects with other objects. |
-| Radius | When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights. |
+The color of the light. Clicking at the color field will open a color picker.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Soft Falloff
+
+Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
+
+#### Radius
+
+When larger than zero, light will be emitted from a spherical surfaces with the specified radius. Lights with larger size have softer shadows and specular highlights.
 
 #### Beam shape subpanel
 
@@ -322,12 +425,13 @@ The light has falloff. And gets distributed in a cone shape.
 
 Eevee renderer.
 
+##### Size
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the outer cone of a spot. |
-| Blend | Blending to the inner cone of a spot. The inner cone boundary line indicates the point at which light from the Spot will start to blur/soften. |
+The size of the outer cone of a spot.
 
+##### Blend
+
+Blending to the inner cone of a spot. The inner cone boundary line indicates the point at which light from the Spot will start to blur/soften.
 
 ##### Show cone
 
@@ -341,15 +445,25 @@ Shows the cone opaque in the 3D view
 
 The light emits from a 2D surface, and has falloff.
 
+#### Color / Tint
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color / Tint | The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
+The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
 
 #### Shape
 
@@ -379,12 +493,13 @@ Controls the **dimensions of the light-emitting surface**, which directly influe
 
 Toggles shadow casting for the light. Allows the light source to cast shadows in the scene.
 
+##### Jitter
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jitter | Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality. |
-| Filter | Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows. |
+Enables jittered soft shadows to increase the precision of shadows. This option is disabled in the viewport unless it is also enabled in the render settings. **Note:** *Enabling this can have a significant performance impact.* · **Overblur**: Applies shadow tracing to each jittered sample to reduce under-sampling artifacts. The default setting is 10%, which helps mitigate shadow noise and improve shadow quality.
 
+##### Filter
+
+Blurs the aliasing in shadows, creating smoother transitions and reducing the harsh edges of shadows.
 
 ##### Resolution Limit
 
@@ -414,14 +529,21 @@ When Absolute Resolution Limit is enabled:
 
 Slider properties that define how much the light affects certain elements, including diffuse, glossy, transmission and volume scattering. Useful for Non-Photo-Real (NPR) rendering.
 
+##### Diffuse
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------- |
-| Diffuse | Diffuse reflection multiplier. |
-| Specular | Specular light intensity multiplier. |
-| Transmission | Transmission or subsurface scattering light multiplier. |
-| Volume Scatter | Volume Light multiplier within volumetric materials. |
+Diffuse reflection multiplier.
 
+##### Specular
+
+Specular light intensity multiplier.
+
+##### Transmission
+
+Transmission or subsurface scattering light multiplier.
+
+##### Volume Scatter
+
+Volume Light multiplier within volumetric materials.
 
 #### Custom Distance
 
@@ -433,13 +555,17 @@ Eevee Renderer. If enabled uses Distance as the custom attenuation distance inst
 
 The distance where light influence will be set to 0.
 
+###### Cast Shadow
 
-| Entry | What it does |
-| ---------------- | ------------------------------------- |
-| Cast Shadow | Light source casts shadow. |
-| Shadow Softness | Scale light shape for softer shadows. |
-| Filtering Radius | Blur shadow aliasing. |
+Light source casts shadow.
 
+###### Shadow Softness
+
+Scale light shape for softer shadows.
+
+###### Filtering Radius
+
+Blur shadow aliasing.
 
 #### Custom Distance
 
@@ -457,15 +583,25 @@ The distance where light influence will be set to 0.
 
 The light emits from a surface, and has falloff.
 
+#### Color / Tint
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color / Tint | The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color. |
-| Temperature | Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.* |
-| Power | Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result. |
-| Exposure | Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power |
-| Normalize | When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size. |
+The color of the light. Clicking at the color field will open a color picker. If you are using Temperature, it will Tint the color.
 
+#### Temperature
+
+Enables physically-based color temperature control (in Kelvin). Checked by default.   **Example:** *5748 K produces a neutral white light.*
+
+#### Power
+
+Power of the light in **Watts**. Higher values increase the intensity of the light. Negative values can be set, but should be avoided for predictable and physically based result.
+
+#### Exposure
+
+Adjusts the light’s exposure level. Useful for fine-tuning brightness without changing power
+
+#### Normalize
+
+When enabled, keeps the light’s intensity consistent regardless of radius.   Helps maintain predictable lighting when adjusting size.
 
 #### Shape
 
@@ -503,14 +639,21 @@ How widely the emitted light fans out.
 
 > **Note:** These settings are **Cycles** only.
 
+### Max Bounces
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Max Bounces | Cycles only. Maximum number of times light from the light is allowed to bounce. Limited by scene-wide bounce settings. |
-| Cast Shadow | Light casts shadow. |
-| Multiple Importance | Multiple importance sampling reduces noise for area lights and sharp glossy materials. |
-| Shadow Caustics | Enables the generation of approximate caustics in the shadows of refractive surfaces. Requires that lights, caster objects, and receiver objects have the shadow caustics option activated. This feature enhances the realism of light interaction with transparent materials by simulating caustic patterns in shadows. |
+Cycles only. Maximum number of times light from the light is allowed to bounce. Limited by scene-wide bounce settings.
 
+### Cast Shadow
+
+Light casts shadow.
+
+### Multiple Importance
+
+Multiple importance sampling reduces noise for area lights and sharp glossy materials.
+
+### Shadow Caustics
+
+Enables the generation of approximate caustics in the shadows of refractive surfaces. Requires that lights, caster objects, and receiver objects have the shadow caustics option activated. This feature enhances the realism of light interaction with transparent materials by simulating caustic patterns in shadows.
 
 ### Portal
 

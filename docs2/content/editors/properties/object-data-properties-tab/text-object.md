@@ -22,12 +22,13 @@ summary: "The resolution of the text curve geometry in the viewport."
 
 The resolution of the text curve geometry in the viewport.
 
+#### Render U
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Render U | The resolution of the text curve geometry when rendering. If Render U is set to zero (0), then the Preview U setting is used for both the 3D Viewport and render resolution. |
-| Fast Editing | Do not fill the letters in Edit Mode, only show their outline. Object mode display is not affected |
+The resolution of the text curve geometry when rendering. If Render U is set to zero (0), then the Preview U setting is used for both the 3D Viewport and render resolution.
 
+#### Fast Editing
+
+Do not fill the letters in Edit Mode, only show their outline. Object mode display is not affected
 
 ### Fill Mode
 
@@ -53,12 +54,13 @@ In this panel you can adjust settings of the texture space used by generated tex
 
 The display of the texture space cage can be activated in the Viewport Display in the Object properties.
 
+### Texture Mesh
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture Mesh | Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects. |
-| Auto Texture Space | Adjusts the active object’s texture space automatically when transforming the object. |
+Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
 
+### Auto Texture Space
+
+Adjusts the active object’s texture space automatically when transforming the object.
 
 ### Location, Size
 
@@ -121,13 +123,17 @@ For curves using a Taper Object and with modifications to the Start/End Bevel Fa
 
 A curve can not only be extruded, but the extruded geometry can also be beveled.
 
+#### Depth
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Depth | The size of the bevel. |
-| Resolution | The subdivision of the bevel. |
-| Object | Use another curve object to define the shape of the bevel. This curve can be closed, a Bezier circle for example. Or open. Which creates an open bevel shape then. Be careful with using this at a text object. · **Fill Caps**: Fills the ends of a beveled curve created by another curve object. And creates a solid object. Note that this makes for a text object no sense since an n extruded Text object is already a closed object. |
+The size of the bevel.
 
+#### Resolution
+
+The subdivision of the bevel.
+
+#### Object
+
+Use another curve object to define the shape of the bevel. This curve can be closed, a Bezier circle for example. Or open. Which creates an open bevel shape then. Be careful with using this at a text object. · **Fill Caps**: Fills the ends of a beveled curve created by another curve object. And creates a solid object. Note that this makes for a text object no sense since an n extruded Text object is already a closed object.
 
 ## Font panel
 
@@ -147,15 +153,25 @@ The fonts.
 
 A list of the available fonts in the scene.
 
+##### Name
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name | The name of the active font. |
-| Number of Users | The number of users for this font. |
-| Fake User | Keep this font in the scene even if it has no fake user. Note that the builtin Bfont does not require a fake user to stay available. |
-| Open Font | `Load a font. · **Location of Fonts in Windows**: C:\Windows\Fonts · **Location of Fonts on Unix**: Fonts are typically located under /usr/lib/fonts, or some variant like /usr/lib/X11/fonts, but not always. They may be in other locations as well, such as /usr/share/local or /usr/local/share, and possibly related sub-trees.` |
-| Remove font | Removes the font as the active font. It is still in the list though. |
+The name of the active font.
 
+##### Number of Users
+
+The number of users for this font.
+
+##### Fake User
+
+Keep this font in the scene even if it has no fake user. Note that the builtin Bfont does not require a fake user to stay available.
+
+##### Open Font
+
+`Load a font. · **Location of Fonts in Windows**: C:\Windows\Fonts · **Location of Fonts on Unix**: Fonts are typically located under /usr/lib/fonts, or some variant like /usr/lib/X11/fonts, but not always. They may be in other locations as well, such as /usr/share/local or /usr/local/share, and possibly related sub-trees.`
+
+##### Remove font
+
+Removes the font as the active font. It is still in the list though.
 
 ### Style
 
@@ -167,12 +183,13 @@ Edit mode only. Choose what style to use to write the text.
 
 ![Transform](/docs2/images/editors/properties/object-data-properties-tab/text-object/transform.png)
 
+#### Size
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| Size | Controls the size of the text. |
-| Shear | Shears the text. |
+Controls the size of the text.
 
+#### Shear
+
+Shears the text.
 
 #### Object Font
 
@@ -196,13 +213,17 @@ In the Font tab, fill the Object Font field with the “common prefix” of your
 
 Show the text aligned at a curve.
 
+##### Underline Position
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------- |
-| Underline Position | Shift vertically the position of the underline. |
-| Underline Thickness | This controls the thickness of the underline. |
-| Small Caps Scale | The scaling applied to capital letters to turn them into small caps. |
+Shift vertically the position of the underline.
 
+##### Underline Thickness
+
+This controls the thickness of the underline.
+
+##### Small Caps Scale
+
+The scaling applied to capital letters to turn them into small caps.
 
 ## Paragraph panel
 
@@ -216,15 +237,25 @@ Show the text aligned at a curve.
 
 How to align the text horizontally.
 
+##### Left
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Left | Aligns text to the left of the frames when using them, else uses the origin of the text object as the starting point of the text (which grows to the right). |
-| Center | Centers text in the frames when using them, else uses the origin of the text object as the mid-point of the text (which grows equally to the left and right). |
-| Right | Aligns text to the right of the frames when using them, else uses the origin of the text object as the ending point of the text (which grows to the left). |
-| Justify | Only flushes a line when it is terminated by a word-wrap (not by a newline), and uses white-space instead of character spacing (kerning) to fill lines. |
-| Flush | Always flushes the line, even when it is still being typed-in. It uses character spacing (kerning) to fill lines. Note! Both Justify and Flush only work within frames. |
+Aligns text to the left of the frames when using them, else uses the origin of the text object as the starting point of the text (which grows to the right).
 
+##### Center
+
+Centers text in the frames when using them, else uses the origin of the text object as the mid-point of the text (which grows equally to the left and right).
+
+##### Right
+
+Aligns text to the right of the frames when using them, else uses the origin of the text object as the ending point of the text (which grows to the left).
+
+##### Justify
+
+Only flushes a line when it is terminated by a word-wrap (not by a newline), and uses white-space instead of character spacing (kerning) to fill lines.
+
+##### Flush
+
+Always flushes the line, even when it is still being typed-in. It uses character spacing (kerning) to fill lines. Note! Both Justify and Flush only work within frames.
 
 #### Vertical Alignment
 
@@ -232,24 +263,35 @@ How to align the text horizontally.
 
 How to align the text vertically.
 
+##### Top Base-Line
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Top Base-Line | With text boxes, aligns the ‘top’ base-line of the text to the top of the frames. With no text box, aligns the actual base-line of the text to the origin of the object, and grows to the bottom. Note! That difference of reference point in the first line depending on usage of boxes or not is indeed confusing. |
-| Top | With text boxes, aligns the top of the text to the top of the frames. With no text box, aligns the top of the text to the origin of the object, and grows to the bottom. |
-| Center | With text boxes, centers the text in the frames. With no text box, centers the text on the origin of the object, and grows in both top and bottom directions equally. |
-| Bottom | With text boxes, align the bottom of the text to the bottom of the frames. With no text box, align the bottom of the text to the origin of the object, and grows to the top. |
-| Bottom Base-Line | With text boxes, aligns the base-line of the text to the bottom of the frames. With no text box, aligns the base-line of the text to the origin of the object, and grows to the top. |
+With text boxes, aligns the ‘top’ base-line of the text to the top of the frames. With no text box, aligns the actual base-line of the text to the origin of the object, and grows to the bottom. Note! That difference of reference point in the first line depending on usage of boxes or not is indeed confusing.
 
+##### Top
+
+With text boxes, aligns the top of the text to the top of the frames. With no text box, aligns the top of the text to the origin of the object, and grows to the bottom.
+
+##### Center
+
+With text boxes, centers the text in the frames. With no text box, centers the text on the origin of the object, and grows in both top and bottom directions equally.
+
+##### Bottom
+
+With text boxes, align the bottom of the text to the bottom of the frames. With no text box, align the bottom of the text to the origin of the object, and grows to the top.
+
+##### Bottom Base-Line
+
+With text boxes, aligns the base-line of the text to the bottom of the frames. With no text box, aligns the base-line of the text to the origin of the object, and grows to the top.
 
 ### Spacing sub tab
 
+#### Character Spacing
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Character Spacing | A factor by which space between each character (kerning) is scaled in width. In Edit Mode in the 3D View, you can also control individual kerning at text cursor position by pressing Alt-Left / Alt-Right to decrease/increase it. |
-| Word Spacing | A factor by which white-space between words is scaled in width. · **Line Spacing**: A factor by which the vertical space between lines is scaled. · **Offset X/Y**: These settings control the X and Y offset of the text position within the object. This applies relatively to the object’s origin, either to the whole text or, when using text boxes, to each frame. |
+A factor by which space between each character (kerning) is scaled in width. In Edit Mode in the 3D View, you can also control individual kerning at text cursor position by pressing Alt-Left / Alt-Right to decrease/increase it.
 
+#### Word Spacing
+
+A factor by which white-space between words is scaled in width. · **Line Spacing**: A factor by which the vertical space between lines is scaled. · **Offset X/Y**: These settings control the X and Y offset of the text position within the object. This applies relatively to the object’s origin, either to the whole text or, when using text boxes, to each frame.
 
 ## Text Boxes panel
 
@@ -275,25 +317,33 @@ Inserts a new frame, just after the current one (in text flow order). The new fr
 
 How to handle text overflowing available space in the defined boxes.
 
+#### Overflow
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Overflow | Just keep text running out of the last box. |
-| Scale to Fit | Scale text to fit into the available space. |
-| Truncate | Hide the end of the text that does not fit into the available space. Note! It will only truncate in Object Mode, in Edit Mode the whole text remains visible (and overflows as needed). |
+Just keep text running out of the last box.
 
+#### Scale to Fit
+
+Scale text to fit into the available space.
+
+#### Truncate
+
+Hide the end of the text that does not fit into the available space. Note! It will only truncate in Object Mode, in Edit Mode the whole text remains visible (and overflows as needed).
 
 ### Text box
 
 ![Text box](/docs2/images/editors/properties/object-data-properties-tab/text-object/text-boxes-panel-3.png)
 
+#### Delete X
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete X | Delete the current text box frame. |
-| Size X/Y | Specifies the width and height of the text box, if set to zero no word-wrap happens (it is ignored, and the whole text box system is disabled if all are set to a null size). |
-| Offset X/Y | Controls the X and Y offset of the frame, i.e. its position. |
+Delete the current text box frame.
 
+#### Size X/Y
+
+Specifies the width and height of the text box, if set to zero no word-wrap happens (it is ignored, and the whole text box system is disabled if all are set to a null size).
+
+#### Offset X/Y
+
+Controls the X and Y offset of the frame, i.e. its position.
 
 ## Custom Properties Panel
 

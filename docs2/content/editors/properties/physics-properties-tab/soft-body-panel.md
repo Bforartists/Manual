@@ -63,13 +63,17 @@ Limit the soft body simulation to objects in a collection
 
 ![Object subpanel](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/object-subpanel.png)
 
+### Friction
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Friction | The friction of the surrounding medium. Generally friction dampens a movement. The larger the friction, the more viscous is the medium. Friction always appears when a vertex moves relative to its surround medium. |
-| Mass | Mass value for vertices. Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass. Larger mass means larger inertia, so also braking a soft body is more difficult. |
-| Control Point | You can paint weights and use a specified vertex group for mass values. |
+The friction of the surrounding medium. Generally friction dampens a movement. The larger the friction, the more viscous is the medium. Friction always appears when a vertex moves relative to its surround medium.
 
+### Mass
+
+Mass value for vertices. Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass. Larger mass means larger inertia, so also braking a soft body is more difficult.
+
+### Control Point
+
+You can paint weights and use a specified vertex group for mass values.
 
 ## Simulation subpanel
 
@@ -116,22 +120,37 @@ The list of available caches. The caches have no name by default. Double click t
 
 You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.
 
+#### Drag Handler
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The two vertical lines at the end is a handler with which you can expand the list.
 
+#### Search Field
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Add New Cache | Add a new cache. |
-| Delete current Cache | Deletes the selected cache. |
-| Simulation start | The start frame of the simulation. |
-| End | The end frame of the simulation. |
-| Cache Step | Number of frames between cached frames. |
-| Info string | An info string. Gives different messages, dependent of the status. |
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
+#### Add New Cache
+
+Add a new cache.
+
+#### Delete current Cache
+
+Deletes the selected cache.
+
+#### Simulation start
+
+The start frame of the simulation.
+
+#### End
+
+The end frame of the simulation.
+
+#### Cache Step
+
+Number of frames between cached frames.
+
+#### Info string
+
+An info string. Gives different messages, dependent of the status.
 
 ### Disk Cache
 
@@ -149,13 +168,17 @@ When this option is enabled, linked versions of the object will reference the sa
 
 The compression level for cached files. It becomes available when Disk Cache is ticked
 
+##### None
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------- |
-| None | Do not compress the cache. |
-| Light | Compression will optimize the speed of compressing/decompressing operations over file size. |
-| Heavy | Compression will result in smaller cache files, but requires more CPU power to compress / decompress. |
+Do not compress the cache.
 
+##### Light
+
+Compression will optimize the speed of compressing/decompressing operations over file size.
+
+##### Heavy
+
+Compression will result in smaller cache files, but requires more CPU power to compress / decompress.
 
 ### Bake / Delete Bake
 
@@ -165,15 +188,25 @@ The baking progress can be seen in the footer. You need to be in Object Mode to 
 
 ![Bake / Delete Bake](/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png)
 
+#### Calculate To Frame
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Calculate To Frame | Bake only up to the current frame. Limited by End frame set in the cache settings. |
-| Current Cache to Bake | Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save”it. |
-| Bake All Dynamics | Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types. |
-| Delete All Bakes | Free bakes of all physics systems in the scene, even those of different types. |
-| Update All To Frame | Bake all physics systems in the scene to the current frame. |
+Bake only up to the current frame. Limited by End frame set in the cache settings.
 
+#### Current Cache to Bake
+
+Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save”it.
+
+#### Bake All Dynamics
+
+Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.
+
+#### Delete All Bakes
+
+Free bakes of all physics systems in the scene, even those of different types.
+
+#### Update All To Frame
+
+Bake all physics systems in the scene to the current frame.
 
 ## Goal subpanel
 
@@ -201,23 +234,25 @@ The friction coefficient for Goal. Higher values give damping of the spring effe
 
 ![Goal Strength sub subpanel](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-strength-sub-subpanel.png)
 
+#### Default
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Default | Goal weight/strength for all vertices when no Vertex Group is assigned. If you use a vertex group the weight of a vertex defines its goal. |
-| Min / Max | When you use a vertex group, you can use the Minimum and Maximum to fine-tune (clamp) the weight values. The lowest vertex weight will become Minimum, the highest value becomes Maximum. |
+Goal weight/strength for all vertices when no Vertex Group is assigned. If you use a vertex group the weight of a vertex defines its goal.
 
+#### Min / Max
+
+When you use a vertex group, you can use the Minimum and Maximum to fine-tune (clamp) the weight values. The lowest vertex weight will become Minimum, the highest value becomes Maximum.
 
 ## Edges subpanel
 
 ![Edges subpanel](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/edges-subpanel.png)
 
+### Use Edges
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------------- |
-| Use Edges | Allow the edges in a mesh object to act like springs. See interior forces. |
-| Springs | Use a specified vertex group for spring strength values. |
+Allow the edges in a mesh object to act like springs. See interior forces.
 
+### Springs
+
+Use a specified vertex group for spring strength values.
 
 ### Pull
 
@@ -225,16 +260,29 @@ The spring stiffness for edges (how much the edges are allowed to stretch). A lo
 
 A value of 0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or leather. The soft body simulation tends to get unstable if you use a value of 0.999, so you should lower this value a bit if that happens.
 
+#### Push
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Push | How much the soft body resists being scrunched together, like a compression spring. Low values for fabric, high values for inflated objects and stiff material. |
-| Damp | The friction for edge springs. High values (max of 50) dampen the Push/Pull effect and calm down the cloth. |
-| Plastic | Permanent deformation of the object after a collision. The vertices take a new position without applying the modifier. |
-| Bending | This option creates virtual connections between a vertex and the vertices connected to its neighbors. This includes diagonal edges. Damping also applies to these connections. |
-| Length | The edges can shrink or be blown up. This value is given in percent, 0 disables this function. 100% means no change, the body keeps 100% of its size. |
-| Collision Edge | Checks for edges of the soft body mesh colliding. |
+How much the soft body resists being scrunched together, like a compression spring. Low values for fabric, high values for inflated objects and stiff material.
 
+#### Damp
+
+The friction for edge springs. High values (max of 50) dampen the Push/Pull effect and calm down the cloth.
+
+#### Plastic
+
+Permanent deformation of the object after a collision. The vertices take a new position without applying the modifier.
+
+#### Bending
+
+This option creates virtual connections between a vertex and the vertices connected to its neighbors. This includes diagonal edges. Damping also applies to these connections.
+
+#### Length
+
+The edges can shrink or be blown up. This value is given in percent, 0 disables this function. 100% means no change, the body keeps 100% of its size.
+
+#### Collision Edge
+
+Checks for edges of the soft body mesh colliding.
 
 ### Face
 
@@ -250,13 +298,17 @@ Force from surrounding media. See exterior forces for details.
 
 ![Type](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/type.png)
 
+##### Simple
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------- |
-| Simple | Edges receive a drag force from the surrounding media. |
-| Lift Force | Edges receive a lift force when passing through the surrounding media. |
-| Factor | How much aerodynamic force to use. Try a value of 30 at first. |
+Edges receive a drag force from the surrounding media.
 
+##### Lift Force
+
+Edges receive a lift force when passing through the surrounding media.
+
+##### Factor
+
+How much aerodynamic force to use. Try a value of 30 at first.
 
 ### Stiffness subpanel
 
@@ -280,25 +332,33 @@ Allow self collision and avoid self intersection. Every vertex is surrounded wit
 
 ![Calculation Type](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/calculation-type.png)
 
+#### Manual
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Manual | The Ball Size directly sets the ball size. |
-| Average | The average length of all edges attached to the vertex is calculated and then multiplied with the Ball Size setting. Works well with evenly distributed vertices. |
-| Minimal / Maximal | The ball size is as large as the smallest/largest spring length of the vertex multiplied with the Ball Size. |
-| Average Min Max | Size = ((Min + Max)/2) × Ball Size. |
+The Ball Size directly sets the ball size.
 
+#### Average
+
+The average length of all edges attached to the vertex is calculated and then multiplied with the Ball Size setting. Works well with evenly distributed vertices.
+
+#### Minimal / Maximal
+
+The ball size is as large as the smallest/largest spring length of the vertex multiplied with the Ball Size.
+
+#### Average Min Max
+
+Size = ((Min + Max)/2) × Ball Size.
 
 ### Ball Size
 
 Fraction of the length of attached edges. The edge length is computed based on the chosen algorithm. This setting is the factor that is multiplied by the spring length. It is a spherical distance (radius) within which, if another vertex of the same mesh enters, the vertex starts to deflect in order to avoid a self-collision. Set this value to the fractional distance between vertices that you want them to have their own “space”. Too high of a value will include too many vertices all the time and slow down the calculation. Too low of a level will let other vertices get too close and thus possibly intersect because there will not be enough time to slow them down.
 
+#### Stiffness
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Stiffness | How elastic that ball of personal space is. A high stiffness means that the vertex reacts immediately to another vertex enters their space. |
-| Dampening | How the vertex reacts. A low value just slows down the vertex as it gets too close. A high value repulses it. Collisions with other objects are set in the (other) Collision panel. To collide with another object they have to share at least one common layer. |
+How elastic that ball of personal space is. A high stiffness means that the vertex reacts immediately to another vertex enters their space.
 
+#### Dampening
+
+How the vertex reacts. A low value just slows down the vertex as it gets too close. A high value repulses it. Collisions with other objects are set in the (other) Collision panel. To collide with another object they have to share at least one common layer.
 
 ## Solver subpanel
 
@@ -306,13 +366,17 @@ Fraction of the length of attached edges. The edge length is computed based on t
 
 The settings in the Soft Body Solver panel determine the accuracy of the simulation.
 
+### Step Size Min
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Step Size Min | Minimum simulation steps per frame. Increase this value, if the soft body misses fast-moving collision objects. |
-| Max | Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the Error Limit) but you have probably a good reason to change it. |
-| Auto-Step | Use velocities for automatic step sizes. Helps the Solver figure out how much work it needs to do based on how fast things are moving. |
+Minimum simulation steps per frame. Increase this value, if the soft body misses fast-moving collision objects.
 
+### Max
+
+Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the Error Limit) but you have probably a good reason to change it.
+
+### Auto-Step
+
+Use velocities for automatic step sizes. Helps the Solver figure out how much work it needs to do based on how fast things are moving.
 
 ### Error Limit
 
@@ -336,12 +400,13 @@ Estimate matrix, split to COM, ROT, SCALE.
 
 These settings allow you to control how Bforartists will react (deform) the soft body once it either gets close to or actually intersects (cuts into) another collision object on the same layer.
 
+##### Choke
 
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Choke | Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh. |
-| Fuzzy | Fuzziness while on collision, high values make collision handling faster but less stable. Simulation is faster, but less accurate. |
+Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.
 
+##### Fuzzy
+
+Fuzziness while on collision, high values make collision handling faster but less stable. Simulation is faster, but less accurate.
 
 ## Field Weights subpanel
 

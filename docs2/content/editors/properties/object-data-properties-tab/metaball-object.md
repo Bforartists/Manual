@@ -40,14 +40,21 @@ How much the surface of a meta object influences the surface of other meta objec
 
 Define how the metas updates on editing.
 
+#### Always
 
-| Entry | What it does |
-| ------ | -------------------------------------------------------------------------- |
-| Always | Fully display the meta during transformations. |
-| Half | During transformations, display the meta at half its Wire size resolution. |
-| Fast | Do not display meta during transformations. |
-| Never | Never show meta mesh at editing. It is just shown while rendering then. |
+Fully display the meta during transformations.
 
+#### Half
+
+During transformations, display the meta at half its Wire size resolution.
+
+#### Fast
+
+Do not display meta during transformations.
+
+#### Never
+
+Never show meta mesh at editing. It is just shown while rendering then.
 
 ## Texture Space panel
 
@@ -65,12 +72,13 @@ In this panel you can adjust settings of the texture space used by generated tex
 
 The display of the texture space cage can be activated in the Viewport Display in the Object properties.
 
+### Texture Mesh
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture Mesh | Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects. |
-| Auto Texture Space | Adjusts the active object’s texture space automatically when transforming the object. |
+Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
 
+### Auto Texture Space
+
+Adjusts the active object’s texture space automatically when transforming the object.
 
 ### Location, Size
 
