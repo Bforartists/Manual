@@ -794,6 +794,8 @@ Like the Shortest Path operator, this will select the shortest path under the mo
 
 Change the settings of **Shortest Path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Shortest Path](/docs2/images/editors/uv-editor/adjust-last-operation-shortest-path.png)
+
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Face Stepping | When enabled, selection prefers paths that follow face adjacency. Useful for maintaining logical flow across quads or structured meshes. |
@@ -846,6 +848,8 @@ Select all UV faces that overlaps each other.
 #### Adjust Last Operation - Select Overlap
 
 Change the settings of **Select Overlap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Overlap](/docs2/images/editors/uv-editor/adjust-last-operation-select-overlap.png)
 
 ##### Extend
 
@@ -1877,6 +1881,8 @@ The header shows a help text while the algorithm works. The Blend factor is the 
 #### Adjust Last Operation - Minimize Stretch
 
 Change the settings of **Minimize Stretch** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Minimize Stretch](/docs2/images/editors/uv-editor/adjust-last-operation-minimize-stretch.png)
 
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------- |

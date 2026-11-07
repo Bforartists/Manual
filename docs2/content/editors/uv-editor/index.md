@@ -202,7 +202,9 @@ Mirrors the selection along the Y axis. The mirror point is the pivot of the sel
 
 #### Adjust Last Operation - Mirror
 
-The Last Operator Mirror panel gives you tools to adjust the mirror action.
+Change the settings of **Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Mirror](/docs2/images/editors/uv-editor/adjust-last-operation-mirror.png)
 
 ##### Orientation
 
