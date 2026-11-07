@@ -6,8 +6,8 @@ path:
   - Editors
   - Topbar and Statusbar
   - Topbar menus
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.topbar-and-statusbar.topbar-menus.file-menu
@@ -1038,6 +1038,14 @@ Select the imported objects once the import has finished.
 ##### Import Scene Extras
 
 Import Scene Extras as custom properties. Existing custom properties will be overwritten.
+
+### OpenTimelineIO (.otio)
+
+Imports an OpenTimelineIO file into the sequencer scene. Use it to bring an edit from other editing software, for example DaVinci Resolve, into the Video Sequencer: the strips, their timing and their channels come in as sequencer strips. Media that the file points to must be found on your disk.
+
+#### Relative Path
+
+Select the file relative to the blend file.
 
 ## Export
 
@@ -2322,6 +2330,14 @@ Shows all the action clips of the file.
 ###### Action Filter Refresh
 
 Refreshes the action clip list.
+
+### OpenTimelineIO (.otio)
+
+Exports the sequencer scene as an OpenTimelineIO file, to move your edit into other editing software. The strips, their timing and their channels go out; effects that the other software doesn't know may get lost.
+
+#### Export DaVinci Resolve Metadata
+
+Writes extra data so that DaVinci Resolve can recreate generated strips, transforms and blending.
 
 ## Export All Collections
 
