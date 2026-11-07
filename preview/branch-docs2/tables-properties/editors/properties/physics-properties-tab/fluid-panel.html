@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fluid panel · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/tables-properties · <code>docs2/tables-properties</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<a style="padding-left:2.5rem" href="force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="soft-body-panel.html">Soft Body panel</a>
+<a class="is-current" style="padding-left:2.5rem" href="fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Physics Properties Tab › Fluid panel</div><h1 class="pv-title">Fluid panel</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 39 min read</span></div><article class="ui-doc-body"><h2 id="fluid-simulation">Fluid Simulation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/fluid-simulation.png" alt="Fluid Simulation" loading="lazy"></figure>
+<p>Fluid physics are used to simulate physical properties of liquids. Gas or smoke simulations are a subset of the fluids system.</p>
+<p>A fluid system is made of at least two objects. The domain object defines the space in which the simulation happens. And the flow object defines the fluid simulation. There is a third object type called effector. This is a collider object for the simulation.</p>
+<p>The smoke movement is controlled by airflow inside the domain, which can be influenced by Effector objects. Smoke will also be affected by the scene’s gravity and force fields. Airflow inside the domain can affect other physics simulations via the Smoke Flow force field.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/fluid-simulation-2.png" alt="Fluid Simulation" loading="lazy"></figure>
+<p>Note that you can create quick smoke and liquid effects in the Object menu in the Quick Effects sub menu. They come with the correct setup already.</p>
+<h3 id="workflow-liquid">Workflow Liquid</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>At least a Domain object and one Flow object are required to create a fluid simulation.</p>
+<p>First create the flow object. Add a cube. Set the flow type to Liquid.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid-2.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>Now create a second cube. This will be our Domain object that defines the bounds of the simulation volume. Scale it a bit bigger. You should also set the render type to wire frame. So that you can see the fluid simulation. Object properties, Viewport Display, Display as ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid-3.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>In the Fluid tab set the domain type to Liquid.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid-4.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>Add Effector objects. Effector objects are objects at which the fluid will collide.</p>
+<p>Assign a material to the domain object. Glass for example.</p>
+<p>Save the blend-file.</p>
+<p>Bake the Cache for the simulation by hitting play. There is no bake data button with the default cache settings. It happens by playing the animation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid-5.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>The liquid animation may not appear immediately. You need to play the animation through for at least one time. That's how the simulation gets calculated.</p>
+<p>In case it does not show, let it play through a few more times until it does. It may also help to save the file and reload it. In case it still doesn't show you should check your setup.</p>
+<p>Note, when you add effectors afterwards, then the effectors are not calculated. You need to update the cache. This can for example be done by changing cache settings for a moment. Ticking and unticking is resumable does the trick. You need to play the animation through again then.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> There are Quick Liquid and Quick Smoke tools which will automatically create a domain object with a basic liquid or smoke and fire material.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid-6.png" alt="Workflow Liquid" loading="lazy"></figure>
+<p>To render the fluid animation you need to activate Mesh in the Liquid tab. The Flip particles will not render.</p>
+<p>You may also want to add some environment content like a hdri to have something to reflect in the water.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/workflow-liquid.jpg" alt="Workflow Liquid" loading="lazy"></figure>
+<h2 id="fluid-tab">Fluid Tab</h2>
+<h3 id="type">Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/type.png" alt="Type" loading="lazy"></figure>
+<p>Fluid simulation is made of three object types. Two are needed to get the simulation going. Domain and Flow. Effectors are additional collider objects.</p>
+<h4 id="none">None</h4>
+<p>No fluid type defined.</p>
+<h4 id="domain">Domain</h4>
+<p>The domain object contains the entire simulation. Fluid simulations cannot leave the domain, it will either collide with the edge or disappear, depending on the domain’s settings.</p>
+<h4 id="flow">Flow</h4>
+<p>Fluid Flow types are used to add or remove fluid to a domain object. Flow objects should be contained within the domain’s bounding box in order to work.</p>
+<h4 id="effector">Effector</h4>
+<p>Effector objects are used as colliders and to influence the fluid flow.</p>
+<h2 id="type-domain-settings-subpanel">Type Domain - Settings subpanel</h2>
+<h3 id="domain-type">Domain type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-type.png" alt="Domain type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-type-2.png" alt="Domain type" loading="lazy"></figure>
+<p>A fluid domain can control either liquid or gas flows. Liquid domains take all liquid flow objects that intersect with the domain into consideration. Gas domains consider all intersecting Smoke, Fire, and Smoke + Fire flow objects. It is not possible to change the domain type dynamically.</p>
+<h3 id="resolution-divisions">Resolution Divisions</h3>
+<p>The fluid domain is subdivided into many “cells” called voxels which make up “pixels” of fluid. This setting controls the number of subdivisions in the domain. Higher numbers of subdivisions are one way of creating higher resolution fluids.</p>
+<p>Since the resolution is defined in terms of “subdivisions”, larger domains will need more divisions to get an equivalent resolution to a small domain. For example, a one meter cube with 64 Resolution Divisions will need 128 divisions to match a 2 meter cube. The dimension used as the base division is the longest dimension of the objects bounding box. To help visualize the voxel size, the Resolution Divisions can be previewed with a small cube shown in the 3D Viewport, to show the size of these divisions.</p>
+<h3 id="time-scale">Time Scale</h3>
+<p>Controls the speed of the simulation. Low values result in a “slow motion” simulation, while higher values can be used to advance the simulation faster. Which is good for generating fluids to be used in still renders.</p>
+<h3 id="cfl-number">CFL Number</h3>
+<p>Determines the maximum velocity per grid cell and is measured in grid cells per time step. Fluid is only allowed to move up to this velocity in one time step. If this threshold is exceeded the solver will subdivide the simulation step.</p>
+<p>In general, greater CFL (Courant–Friedrichs–Lewy) numbers will minimize the number of simulation steps and the computation time. Yet it will yield less physically accurate behavior for fast fluid flows. Smaller CFL numbers result in more simulation steps per frame, longer simulation times but more accurate behavior at high velocities (e.g. fast fluid flow colliding with obstacle).</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When lowering the CFL number it is recommended to increase the maximum number of time steps. Similarly, when increasing the CFL number the minimum number of time steps should be adjusted.</p></div>
+<h4 id="use-adaptive-time-steps">Use Adaptive Time Steps</h4>
+<p>Lets the solver automatically decide when to perform multiple simulation steps per frame. It takes into account the maximum and minimum number of time steps, the current Frame Rate, and the Time Scale.</p>
+<h4 id="timesteps-maximum">Timesteps Maximum</h4>
+<p>Maximum number of allowed time steps per frame. If needed, the solver will divide a simulation step up to this number of sub-steps. · <strong>Minimum</strong>: Minimum number of allowed time steps per frame. The solver will always perform at least this number of simulation steps per frame.</p>
+<h3 id="using-scene-gravity-x-y-z">Using Scene Gravity X, Y , Z</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/using-scene-gravity-x-y-z.png" alt="Using Scene Gravity X, Y , Z" loading="lazy"><figcaption>Using Scene Gravity X, Y , Z</figcaption></figure>
+<p>By default the fluid solver will use the global scene gravity. This behavior can be disabled in the scene settings. Disabling the global gravity will enable the fluid gravity options. And then this props becomes enabled.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/using-scene-gravity-x-y-z-2.png" alt="Using Scene Gravity X, Y , Z" loading="lazy"><figcaption>Using Scene Gravity X, Y , Z</figcaption></figure>
+<h4 id="empty-space">Empty Space</h4>
+<p>Gas Only! Value under which voxels are considered empty space to optimize rendering.</p>
+<h4 id="delete-in-obstacle">Delete In Obstacle</h4>
+<p>Remover any volume of fluid that intersects with an obstacle inside the domain.</p>
+<h3 id="border-collisions-subpanel">Border Collisions subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/border-collisions-subpanel.png" alt="Border Collisions subpanel" loading="lazy"></figure>
+<p>Enable collisions with the following domain sides.</p>
+<h3 id="adaptive-domain">Adaptive Domain</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/adaptive-domain.png" alt="Adaptive Domain" loading="lazy"></figure>
+<p>Gas only! The domain will adaptively shrink to best fit the gas, saving computation time by leaving voxels without gas out of the simulation. Unless the Add Resolution is used, the adaptive domain will not exceed the bounds of the original domain.</p>
+<h4 id="add-resolution">Add Resolution</h4>
+<p>Number of voxels to add around the outside of the domain.</p>
+<h4 id="margin">Margin</h4>
+<p>Amount of extra space to leave around gas, measured in voxels. With very fast-moving gas larger margins may be required to prevent the gas from being cut off by the adaptive boundary, but note this will increase the number of voxels which need to be computed.</p>
+<h4 id="threshold">Threshold</h4>
+<p>Smallest amount of gas a voxel can contain before it is considered empty and the adaptive domain is allowed to cut it out of the simulation.</p>
+<h2 id="type-domain-gas-subpanel">Type Domain - Gas subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/type-domain-gas-subpanel.png" alt="Type Domain - Gas subpanel" loading="lazy"><figcaption>Type Domain - Gas subpanel</figcaption></figure>
+<p>Domain type Gas only!</p>
+<h3 id="buoyancy-density">Buoyancy Density</h3>
+<p>Buoyant force based on smoke density.</p>
+<p>Values above 0 will cause the smoke to rise (simulating smoke which is lighter than ambient air).</p>
+<p>Values below 0 will cause smoke to sink (simulating smoke which is heavier than ambient air).</p>
+<h3 id="buoyancy-heat">Buoyancy Heat</h3>
+<p>Controls how much smoke is affected by temperature. The effect this setting has on smoke depends on the per flow object Initial Temperature:</p>
+<p>Values above 0 will result in the smoke rising when the flow object Initial Temperature is set to a positive value, and smoke sinking when the flow object Initial Temperature is set to a negative value.</p>
+<p>Values below 0 will result in the opposite of positive values, i.e. smoke emitted from flow objects with a positive Initial Temperature will sink, and smoke from flow objects with a negative Initial Temperature will rise.</p>
+<p>Note that smoke from multiple flow objects with different temperatures will mix and warm up or cool down until an equilibrium is reached.</p>
+<h3 id="vorticity">Vorticity</h3>
+<p>Controls the amount of turbulence in the smoke. Higher values will make lots of small swirls, while lower values make smoother shapes.</p>
+<h3 id="dissolve-subpanel">Dissolve subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/dissolve-subpanel.png" alt="Dissolve subpanel" loading="lazy"></figure>
+<h4 id="dissolve-smoke">Dissolve smoke</h4>
+<p>Lets smoke disappear over time.</p>
+<h4 id="time">Time</h4>
+<p>Determine how quickly the smoke dissolves. Lower values gives faster disappearing.</p>
+<h4 id="slow">Slow</h4>
+<p>Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.</p>
+<h3 id="noise-subpanel">Noise subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/dissolve-subpanel.png" alt="Noise subpanel" loading="lazy"></figure>
+<h4 id="dissolve-smoke-2">Dissolve smoke</h4>
+<p>Lets smoke disappear over time.</p>
+<h3 id="fire-subpanel">Fire subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/fire-subpanel.png" alt="Fire subpanel" loading="lazy"></figure>
+<h4 id="reaction-speed">Reaction Speed</h4>
+<p>Speed of the burning reaction. Higher values means smaller flames.</p>
+<h4 id="flame-smoke">Flame Smoke</h4>
+<p>Amount of smoke created by burning fuel.</p>
+<h4 id="vorticity-2">Vorticity</h4>
+<p>Additional vorticity for the flames.</p>
+<h4 id="temperature-maximum">Temperature Maximum</h4>
+<p>Maxiumum temperature of the flames. Higher values results in faster rising flames.</p>
+<h4 id="minimum">Minimum</h4>
+<p>Minimum temperature of the flames. Higher values results in faster rising flames.</p>
+<h4 id="smoke-color">Smoke Color</h4>
+<p>The color of the smoke.</p>
+<h2 id="type-domain-liquid-subpanel">Type Domain - Liquid subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/type-domain-liquid-subpanel.png" alt="Type Domain - Liquid subpanel" loading="lazy"><figcaption>Type Domain - Liquid subpanel</figcaption></figure>
+<p>Domain type Liquid only!</p>
+<h3 id="simulation-method">Simulation Method</h3>
+<p>Determines the particle simulation method. Currently, FLIP is the only option to choose from.</p>
+<h3 id="flip-ratio">FLIP Ratio</h3>
+<p>How much FLIP velocity to use when updating liquid particle velocities. A value of 1.0 will result in a completely FLIP based simulation. Completely FLIP based simulations produce more chaotic splashes and are preferable when simulating greater quantities of liquid. When using smaller values the behavior will be less turbulent and splashes are more subtle. This is optimal when simulating scenes where the liquid is supposed to be on a small scale.</p>
+<h3 id="particle-radius">Particle Radius</h3>
+<p>The radius of one liquid particle in grid cells units. This value describes how much area is covered by a particle and thus determines how much area around it can be considered as liquid. A greater radius will let particles cover more area. This will result in more grids cell being tagged as liquid instead of just being empty.</p>
+<p>Whenever the simulation appears to leak or gain volume in an undesired, non physically accurate way it is a good idea to adjust this value. That is, when liquid seems to disappear this value needs to be increased. The inverse applies when too much liquid is being produced.</p>
+<h4 id="sampling">Sampling</h4>
+<p>Factor that is used when sampling particles. A higher value will sample more particles. Note that particle resampling occurs at every single simulation step.</p>
+<h4 id="randomness">Randomness</h4>
+<p>New particles are sampled with some randomness attached to their position which can be controlled by this field. Higher values will sample the liquid particles more randomly in inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside their corresponding grid cells. When trying to create a laminar inflow (with little randomness) or more turbulent flows (with greater randomness) this value can be useful.</p>
+<h3 id="particles-maximum">Particles Maximum</h3>
+<p>The maximum number of liquid particles per grid cell. During a simulation the number of liquid particles in a cell can fluctuate: Particles can flow into other cells or can get deleted if they move outside the narrow band. Resampling will add new particles considering this maximum.</p>
+<p>This value sets the upper threshold of particles per cell. It is also a good way to estimate how many particles there can be in your simulation (one needs to take grid resolution into account too). This can be useful before baking and when planning a simulation.</p>
+<h3 id="minimum-2">Minimum</h3>
+<p>The minimum number of liquid particles per grid cell. Similarly to the maximum particle threshold, this value ensures that there are at least a certain amount of particles per cell.</p>
+<h3 id="narrow-band-width">Narrow Band Width</h3>
+<p>Controls the width in grid cell units of the narrow band that liquid particles are allowed to flow in. A high value will result in a thicker band and can result in an inflow region completely filled with particles. Unless the goal of the simulation is to visualize the liquid particles it is recommended to not increase the band width significantly as more particles slow down the simulation.</p>
+<p>In some situations increasing this value can help create volume when the simulation appears to leak. In all other cases it is best to keep the narrow band as thin as possible since the liquid surface contains most details and simulating particles inside the liquid is not an optimal use of computing resources.</p>
+<h3 id="fractional-obstacles">Fractional Obstacles</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/fractional-obstacles.png" alt="Fractional Obstacles" loading="lazy"></figure>
+<p>Enables finer resolution in fluid / obstacle regions (second order obstacles). This option reduces the “stepping effect” that results when an obstacles lies inclined inside the domain. It also makes liquid flow more smoothly over an obstacle.</p>
+<h4 id="obstacle-distance">Obstacle Distance</h4>
+<p>How far apart fluid and obstacle are.</p>
+<h4 id="threshold-2">Threshold</h4>
+<p>How much fluid is allowed in an obstacle cell</p>
+<h3 id="diffusion-subpanel">Diffusion subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/diffusion-subpanel.png" alt="Diffusion subpanel" loading="lazy"></figure>
+<p>Liquid diffusion defines the physical properties of a liquid and in turn define how a liquid interacts with its environment. The main factors of diffusion are the Viscosity and Surface Tension. These properties can be adjusted to create virtual liquids that behave like water, oil, honey, or any other liquid.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> The simulator is not suitable for non-fluids, such as materials that do not “flow”. Simply setting the viscosity to very large values will not result in rigid body behavior, but might cause instabilities.</p></div>
+<h4 id="presets">Presets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Diffusion presets. To add a preset type in a name and click at the plus button. To remove a preset click at the minus button</p>
+<h5 id="base">Base</h5>
+<p>The base of the viscosity value.</p>
+<h5 id="exponent">Exponent</h5>
+<p>The exponent of the viscosity value.</p>
+<h5 id="surface-tension">Surface Tension</h5>
+<p>Surface tension in grid units. Higher value will produce liquids with greater surface tension.</p>
+<h3 id="high-viscosity-solver-subpanel">High viscosity Solver subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/high-viscosity-solver-subpanel.png" alt="High viscosity Solver subpanel" loading="lazy"><figcaption>High viscosity Solver subpanel</figcaption></figure>
+<h4 id="high-viscosity-solver">High viscosity Solver</h4>
+<p>Simulate fluids with high viscosity using a special viscosity solver.</p>
+<h4 id="strength">Strength</h4>
+<p>The viscosity of the fluid.</p>
+<h3 id="particles-subpanel">Particles subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/particles-subpanel.png" alt="Particles subpanel" loading="lazy"></figure>
+<h4 id="spray">Spray</h4>
+<p>Create spray particles during the secondary particle simulation. Spray particles are those that appear to fly through the air above the liquid surface when there is a bigger splash.</p>
+<h4 id="foam">Foam</h4>
+<p>Create foam particles during the secondary particle simulation. Foam particles are those that solely move on the liquid surface.</p>
+<h4 id="bubbles">Bubbles</h4>
+<p>Create bubble particles during the secondary particle simulation. Bubble particles are those that move below the liquid surface. Note! Enabling a secondary particle type will also create a particle system for that type of particles. Disabling a particle type will delete this particle system including its settings.</p>
+<h4 id="combined-export">Combined Export</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/combined-export.png" alt="Combined Export" loading="lazy"></figure>
+<p>Select particle types that should go into the same particle system. This option has no effect on the outcome of the simulation. It only changes the way particle systems are allocated in the particle settings.</p>
+<h5 id="upres-factor">Upres Factor</h5>
+<p>Factor by which to enhance the resolution of the particle simulation. The scaling factor is coupled to the Resolution Divisions (i.e. the particle simulation is this times bigger than the base simulation).</p>
+<h5 id="wave-crest-potential-maximum">Wave Crest Potential Maximum</h5>
+<p>Upper clamping threshold for marking fluid cells as wave crests. A higher value results in less marked cells.</p>
+<h5 id="wave-crest-potential-minimum">Wave Crest Potential Minimum</h5>
+<p>Lower clamping threshold for marking fluid cells as wave crests. A lower value results in more marked cells.</p>
+<h5 id="trapped-air-potential-maximum">Trapped Air Potential Maximum</h5>
+<p>Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells.</p>
+<h5 id="trapped-air-potential-minimum">Trapped Air Potential Minimum</h5>
+<p>Lower clamping threshold for marking fluid cells where air is trapped. A lower value results in more marked cells.</p>
+<h5 id="kinetic-energy-potential-maximum">Kinetic Energy Potential Maximum</h5>
+<p>Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells.</p>
+<h5 id="kinetic-energy-potential-minimum">Kinetic Energy Potential Minimum</h5>
+<p>Lower clamping threshold that indicates the fluid speed where cells start to emit particles. A lower values result in generally more particles.</p>
+<h5 id="potential-radius">Potential Radius</h5>
+<p>Radius to compute potential for each cell. Higher values are slower but create smoother potential grids.</p>
+<h5 id="particle-update-radius">Particle Update Radius</h5>
+<p>Radius to compute position update for each particle. Higher values are slower but particles move less chaotic.</p>
+<h5 id="wave-crest-particle-sampling">Wave Crest Particle Sampling</h5>
+<p>Maximum number of particles generated per wave crest cell per frame.</p>
+<h5 id="trapper-air-particle-sampling">Trapper Air Particle Sampling</h5>
+<p>Maximum number of particles generated per trapped air cell per frame.</p>
+<h5 id="particle-life-maximum">Particle Life Maximum</h5>
+<p>Highest possible particle lifetime.</p>
+<h5 id="particle-life-minimum">Particle Life Minimum</h5>
+<p>Lowest possible particle lifetime.</p>
+<h5 id="bubble-buoyancy">Bubble Buoyancy</h5>
+<p>Amount of buoyancy force that rises bubbles. A high value results in bubble movement mainly upwards.</p>
+<h5 id="bubble-drag">Bubble Drag</h5>
+<p>Amount of drag force that moves bubbles along with the fluid. A high value results in bubble movement mainly along with the fluid.</p>
+<h4 id="particles-in-boundary">Particles in Boundary</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/particles-in-boundary.png" alt="Particles in Boundary" loading="lazy"></figure>
+<h5 id="delete">Delete</h5>
+<p>Delete secondary particles that are inside obstacles or left the domain.</p>
+<h5 id="push-out">Push Out</h5>
+<p>Push secondary particles that left the domain back into the domain.</p>
+<h3 id="mesh-sub-tab">Mesh Sub tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/mesh-sub-tab.png" alt="Mesh Sub tab" loading="lazy"></figure>
+<p>Enables the display for the fluid as a mesh. When you want to render a liquid simulation then you need to convert it to a mesh object.</p>
+<h4 id="upres-factor-2">Upres Factor</h4>
+<p>Factor by which to enhance the resolution of the mesh. The scaling factor is coupled to the Resolution Divisions (i.e. the mesh is this times bigger than the base simulation).</p>
+<h4 id="particle-radius-2">Particle Radius</h4>
+<p>The radius of one liquid particle in grid cells units. This value describes how much area is covered by a particle and thus determines how much area around it can be considered as liquid. A greater radius will let particles cover more area. This will result in meshes covering more volume around liquid particles.</p>
+<h4 id="use-speed-vectors">Use Speed Vectors</h4>
+<p>Store speed vectors on drive.</p>
+<h4 id="mesh-generator">Mesh Generator</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/mesh-generator.png" alt="Mesh Generator" loading="lazy"></figure>
+<p>The mesh generator method determines the accuracy of the mesh.</p>
+<p>The Final option produces a higher quality mesh and provides more configuration option.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/mesh-generator-2.png" alt="Mesh Generator" loading="lazy"></figure>
+<p>The Preview option is faster. But not as smooth. And has no settings.</p>
+<h5 id="smoothing-positive">Smoothing Positive</h5>
+<p>Positive mesh smoothing iterations. Higher values will make the mesh outline increasingly smooth. Yet higher values can prevent small details (e.g. smaller liquid drops) from getting meshed.</p>
+<h5 id="negative">Negative</h5>
+<p>Negative mesh smoothing iterations. Higher values will make the mesh outline sharper. High values will preserve details, however, the mesh outline will become more ragged. A single mesh particle will become less rounded and have more flat sides.</p>
+<h5 id="concavity-upper">Concavity Upper</h5>
+<p>Upper mesh concavity bound. High values tend to smoothen and fill out concave regions.</p>
+<h5 id="concavity-lower">Concavity Lower</h5>
+<p>Lower mesh concavity bound. High values tend to smoothen and fill out concave regions. Using a lower concavity which is greater the upper concavity can result in distorted, non-manifold meshes.</p>
+<h2 id="domain-guides-subpanel">Domain - Guides subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-guides-subpanel.png" alt="Domain - Guides subpanel" loading="lazy"><figcaption>Domain - Guides subpanel</figcaption></figure>
+<p>Fluid guides are used to apply forces onto the simulation. They are like simple external forces but also seek to preserve the physically accurate flow of the fluid. The Guides panel allows you to adjust guiding forces globally, for the entire domain. Enabling the guides hints the fluid solver to use the more accurate, but also computationally more expensive pressure solving step.</p>
+<p>Even when there are no guiding objects baked or there is no guiding domain attached, the fluid solver will still perform the more expensive pressure guiding algorithm if guiding is enabled. It is therefore recommended to only enable Guides when there is a clear intention to use guiding in the simulation.</p>
+<h3 id="weight">Weight</h3>
+<p>The guiding weight.</p>
+<h3 id="size">Size</h3>
+<p>This setting determines the size of the vertices that the guiding produces. A greater guiding size (also known as the blur radius or “beta” guiding value) results in larger vertices.</p>
+<h3 id="velocity-factor">Velocity Factor</h3>
+<p>All guiding velocities are multiplied by this factor. That is, every cell of the guiding grid, which has the same size as the domain object, is multiplied by this factor.</p>
+<h3 id="velocity-source">Velocity Source</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/velocity-source.png" alt="Velocity Source" loading="lazy"></figure>
+<p>The velocity guiding source. Guiding velocities can either come from objects that move inside the domain or from other fluid domains.</p>
+<h4 id="effector-2">Effector</h4>
+<p>All effector objects inside the domain will be considered for the global guiding velocity grid. Once effector objects have been baked it is not possible to change the fluid domain resolution anymore.</p>
+<h5 id="bake-guides-free-guides">Bake Guides, Free Guides</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/bake-guides-free-guides.png" alt="Bake Guides, Free Guides" loading="lazy"><figcaption>Bake Guides, Free Guides</figcaption></figure>
+<p>This option is only available when using the Modular cache type and when using Effector as the Velocity Source. Bake Guides writes vertex velocities of effector objects to drive. It is meant to be used before baking the fluid simulation.</p>
+<p>The progress will be displayed in the status bar. Pressing Esc will pause the simulation.</p>
+<p>Once the simulation has been baked, the cache can be deleted by pressing Free Guides. It is possible to pause or resume a Bake Guides process.</p>
+<h4 id="domain-2">Domain</h4>
+<p>When using another fluid domain as the guiding velocity source this domain may have a different resolution and may also be of a different type (e.g. the guiding domain is of type Gas while the actual domain with the guiding effect in it is of type Liquid).</p>
+<p>In order to use a domain as the velocity source, this domain needs to be baked already.</p>
+<h5 id="guide-parent">Guide Parent</h5>
+<p>Pick the guiding domain object when using Domain as the velocity source.</p>
+<h2 id="domain-collections-subpanel">Domain - Collections subpanel</h2>
+<h3 id="flow-2">Flow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow.png" alt="Flow" loading="lazy"></figure>
+<p>If set, only objects in the specified Collection will be allowed to act as Flow objects in this domain.</p>
+<h3 id="effector-3">Effector</h3>
+<p>If set, only objects in the specified Collection will be allowed to act as Effector objects in this domain.</p>
+<h2 id="domain-cache-subpanel">Domain - Cache subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-cache-subpanel.png" alt="Domain - Cache subpanel" loading="lazy"><figcaption>Domain - Cache subpanel</figcaption></figure>
+<p>The Cache panel is used to Bake the fluid simulation and stores the outcome of a simulation so it does not need to be recalculated.</p>
+<p>If the mesh has modifiers, the rendering settings are used for exporting the mesh to the fluid solver. Depending on the setting, calculation times and memory use might exponentially increase. For example, when using a moving mesh with Subdivision Surface as an obstacle, it might help to decrease simulation time by switching it off, or to a low subdivision level. When the setup/rig is correct, you can always increase settings to yield a more realistic result.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Fluid simulations use their own cache. All other physics simulations make use of the General Baking operators.</p></div>
+<h3 id="cache-directory">Cache Directory</h3>
+<p>Directory to store baked simulation files in. Inside this directory each simulation type (i.e. mesh, particles, noise) will have its own directory containing the simulation data. · <strong>Accept</strong>: Open a file browser to set a directory.</p>
+<h3 id="frame-start">Frame Start</h3>
+<p>Frame on which to start the simulation. This is the first frame that will be baked.</p>
+<h3 id="end">End</h3>
+<p>Frame on which to stop the simulation. This is the last frame that will be baked. Note! The simulation is only calculated for positive frames between the Start and End frames of the Cache panel. So if you want a simulation that is longer than the default frame range you have to change the End frame.</p>
+<h3 id="offset">Offset</h3>
+<p>Type Modular and All. Frame offset that is used when loading the simulation from the cache. It is not considered when baking the simulation, only when loading it.</p>
+<h3 id="type-2">Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The type of the cache determines how the cache can be baked.</p>
+<h4 id="replay">Replay</h4>
+<p>The cache will be baked as the simulation is being played in the viewport.</p>
+<h4 id="modular">Modular</h4>
+<p>The cache will be baked step by step: The bake operators for this type are spread across various panels within the domain settings (e.g. the bake tool for the mesh can be found in the Mesh panel).</p>
+<h4 id="all">All</h4>
+<p>The cache will be baked with a single tool. All selected settings will be considered during this bake. The bake tool for this type can be found in the Cache panel.</p>
+<h3 id="is-resumable">Is Resumable</h3>
+<p>Extra data will be saved so that you can resumed baking after pausing. Since more data will be written to drive it is recommended to avoid enabling this option when baking at high resolutions.</p>
+<h3 id="volumetric-data-subpanel">Volumetric data subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/volumetric-data-subpanel.png" alt="Volumetric data subpanel" loading="lazy"></figure>
+<h4 id="format">Format</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/format.png" alt="Format" loading="lazy"></figure>
+<p>File format for volume based simulation data (i.e. grids and particles).</p>
+<h5 id="uni-cache">Uni Cache</h5>
+<p>Blender’s own caching format with some compression. Each simulation object is stored in its own .uni cache file.</p>
+<h5 id="openvdb">OpenVDB</h5>
+<p>Advanced and efficient storage format. All simulation objects (i.e. grids and particles) are stored in a single .vdb file per frame.</p>
+<h4 id="compression">Compression</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/compression.png" alt="Compression" loading="lazy"></figure>
+<p>The compression method for the cache.</p>
+<h5 id="precision">Precision</h5>
+<p>Precision level that is used when writing OpenVDB cache files. · <strong>Float (Full)</strong>: Volumetric data (e.g. grid values, particle positions) will be written with full precision (32 bit). · <strong>Float (Half)</strong>: Volumetric data (e.g. grid values, particle positions) will be written with half precision (16 bit).</p>
+<h5 id="mini">Mini</h5>
+<p>8 Bit floating values.</p>
+<h3 id="meshes">Meshes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/meshes.png" alt="Meshes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/meshes-2.png" alt="Meshes" loading="lazy"></figure>
+<p>With Mesh activated.</p>
+<p>File format for the mesh cache files.</p>
+<h4 id="binary-object">Binary Object</h4>
+<p>Mesh data files with some compression.</p>
+<h4 id="object">Object</h4>
+<p>Simple, standard data format for mesh data.</p>
+<h3 id="bake-all-free-all">Bake All, Free All</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/bake-all-free-all.png" alt="Bake All, Free All" loading="lazy"><figcaption>Bake All, Free All</figcaption></figure>
+<p>This option is only available when using the All cache type. Bake All will run the simulation considering all parameters from the settings.</p>
+<p>The progress will be displayed in the status bar. Pressing Esc will abort the simulation.</p>
+<p>Once the simulation has been baked, the cache can be deleted by pressing Free All. It is not possible to pause or resume a Bake All process as only the most essential cache files are stored on drive.</p>
+<h3 id="advanced">Advanced</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/advanced.png" alt="Advanced" loading="lazy"></figure>
+<p>Shows with Format Volumes OpenVDB.</p>
+<h3 id="export-mantaflow-script">Export Mantaflow Script</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/export-mantaflow-script.png" alt="Export Mantaflow Script" loading="lazy"></figure>
+<p>Hidden debug feature!</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/export-mantaflow-script-2.png" alt="Export Mantaflow Script" loading="lazy"></figure>
+<p>Export the simulation as a standalone Mantaflow script when baking the scene (exported on « Bake Data »). Usually, only developers and advanced users who know how to use the Mantaflow GUI will make use of this functionality. Use a Debug Value of 3001 to enable. The debug menu can be found in the Text editor in the File menu.</p>
+<h2 id="domain-field-weights-subpanel">Domain - Field Weights subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-field-weights-subpanel.png" alt="Domain - Field Weights subpanel" loading="lazy"><figcaption>Domain - Field Weights subpanel</figcaption></figure>
+<p>This panel allows you to adjust the single forces that affects the fluid simulation.</p>
+<h2 id="domain-viewport-display-subpanel">Domain - Viewport Display subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domain-viewport-display-subpanel.png" alt="Domain - Viewport Display subpanel" loading="lazy"><figcaption>Domain - Viewport Display subpanel</figcaption></figure>
+<p>How to display the domain in the viewport.</p>
+<h3 id="thickness">Thickness</h3>
+<p>Thickness of smoke drawing in the viewport.</p>
+<h3 id="interpolation">Interpolation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation method to use for smoke or fire volumes in solid mode.</p>
+<h3 id="slice-per-voxel">Slice per Voxel</h3>
+<p>How many slices per voxel should be generated. This prop is just active with domain type gas and Slice off.</p>
+<h3 id="slice-subpanel">Slice subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/slice-subpanel.png" alt="Slice subpanel" loading="lazy"></figure>
+<p>Use manual slicing. Slice per Voxel will deactivate.</p>
+<h4 id="axis">Axis</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/axis.png" alt="Axis" loading="lazy"></figure>
+<p>What axis to use. Auto uses the viewport orientation The orientation will change when you rotate the view. X Y and Z uses the world axis.</p>
+<h4 id="position">Position</h4>
+<p>The position of the slice.</p>
+<h4 id="gridlines">Gridlines</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/gridlines.png" alt="Gridlines" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/gridlines-2.png" alt="Gridlines" loading="lazy"></figure>
+<p>Displays a grid inside the domain. This feature requires the Interpolation to be at Closest. It is inactive with the other two methods.</p>
+<p>Activating grid lines reveals further contentwhere you can tweak this grid further.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/gridlines-3.png" alt="Gridlines" loading="lazy"></figure>
+<h5 id="color-gridlines">Color Gridlines</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/color-gridlines.png" alt="Color Gridlines" loading="lazy"></figure>
+<p>The simulation field to color map onto grid lines.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/color-gridlines-2.png" alt="Color Gridlines" loading="lazy"></figure>
+<p>None and Flags have no further settings. The following settings belongs to Highlight Range. You need to have Grid Display ticked to get the settings for Highlight Range.</p>
+<h6 id="lower-bound">Lower Bound</h6>
+<p>The lower bound of the highlight range.</p>
+<h6 id="upper-bound">Upper Bound</h6>
+<p>The upper bound of the highlight range.</p>
+<h6 id="color">Color</h6>
+<p>The color to highlight the range</p>
+<h6 id="cell-type">Cell Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/cell-type.png" alt="Cell Type" loading="lazy"></figure>
+<p>The cell type to be highlighted.</p>
+<h3 id="grid-display-subpanel">Grid display subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/grid-display-subpanel.png" alt="Grid display subpanel" loading="lazy"></figure>
+<p>Render a simulation field while mapping its voxel values to the color of a ramp or using a predefined color code.</p>
+<h4 id="domaintype-liquid">Domaintype Liquid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domaintype-liquid.png" alt="Domaintype Liquid" loading="lazy"></figure>
+<h5 id="field">Field</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/field.png" alt="Field" loading="lazy"></figure>
+<p>Choose the levelset representation of the fluid.</p>
+<h5 id="scale">Scale</h5>
+<p>The multiplier to scale the selected field to color map.</p>
+<h4 id="domaintype-gas">Domaintype Gas</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/domaintype-gas.png" alt="Domaintype Gas" loading="lazy"></figure>
+<h5 id="field-2">Field</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/field-2.png" alt="Field" loading="lazy"></figure>
+<p>Choose the levelset representation of the fluid.</p>
+<h5 id="scale-2">Scale</h5>
+<p>The multiplier to scale the selected field to color map.</p>
+<h5 id="color-ramp">Color ramp</h5>
+<p>Define the colors of the color ramp.</p>
+<h6 id="controls">Controls</h6>
+<ul>
+<li><strong>+</strong>: Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.</li>
+<li><strong>-</strong>: Deletes the selected color stop from the list.</li>
+</ul>
+<h6 id="tools-menu">Tools menu</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<ul>
+<li><strong>Flip Color Ramp</strong>: Flips the gradient, inverting the values of the color ramp.</li>
+<li><strong>Distribute Stops from Left</strong>: Rearrange the stops so that every step has the same space to the right.</li>
+<li><strong>Distribute Stops Evenly</strong>: Space between all neighboring stops becomes equal.</li>
+<li><strong>Eyedropper (pipette icon) E</strong>: An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.</li>
+</ul>
+<h6 id="reset-color-ramp">Reset Color Ramp</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png" alt="Reset Color Ramp" loading="lazy"></figure>
+<p>Resets the color ramp to its default state.</p>
+<h6 id="color-mode">Color Mode</h6>
+<ul>
+<li><strong>RGB</strong>: Blends color by mixing each color channel and combining.</li>
+<li><strong>HSV/HSL</strong>: Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.</li>
+</ul>
+<h6 id="interpolation-2">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<ul>
+<li><strong>Ease</strong>: Uses an Ease Interpolation for the color stops.</li>
+<li><strong>Cardinal</strong>: Uses a Cardinal Interpolation for the color stops.</li>
+<li><strong>Linear</strong>: Uses a Linear Interpolation for the color stops.</li>
+<li><strong>B-Spline</strong>: Uses a B-Spline Interpolation for the color stops.</li>
+<li><strong>Constant</strong>: Uses a Constant Interpolation for the color stops.</li>
+</ul>
+<h6 id="color-ramp-2">Color Ramp</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png" alt="Color Ramp" loading="lazy"></figure>
+<p>The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.</p>
+<h6 id="active-color-stop-elements">Active Color Stop elements</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/active-color-stop-elements.png" alt="Active Color Stop elements" loading="lazy"><figcaption>Active Color Stop elements</figcaption></figure>
+<p>Adjust the active color stop.</p>
+<ul>
+<li><strong>Choose active color stop</strong>: Choose the color stop by index.</li>
+<li><strong>Pos</strong>: The position of the active color stop. The range goes from 0.000 to 1.000</li>
+</ul>
+<h3 id="vector-display-subpanel">Vector display subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/vector-display-subpanel.png" alt="Vector display subpanel" loading="lazy"></figure>
+<h4 id="display-as">Display as</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/display-as.png" alt="Display as" loading="lazy"></figure>
+<p>Display the vectors as Needles, Streamlines or MAC Grid.</p>
+<h5 id="magnitude">Magnitude</h5>
+<p>Needles and Streamlines. Scale the vectors with their magnitudes.</p>
+<h5 id="mac-grid-x-y-z">MAC Grid X Y Z</h5>
+<p>Show the x y or z component of the grid.</p>
+<h4 id="field-3">Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/field-3.png" alt="Field" loading="lazy"></figure>
+<p>The vector field to be represented by the display vectors</p>
+<h4 id="scale-3">Scale</h4>
+<p>The multiplier for scaling the vectors.</p>
+<h3 id="advanced-subpanel">Advanced subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/advanced-subpanel.png" alt="Advanced subpanel" loading="lazy"></figure>
+<p>This panel is connected to the Gridlines in the Slice panel. It just shows when Gridlines is activated. And it is jut active when Slice is activated.</p>
+<h4 id="color-gridlines-2">Color Gridlines</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/color-gridlines-3.png" alt="Color Gridlines" loading="lazy"></figure>
+<p>The simulation field to color map onto grid lines.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/color-gridlines-4.png" alt="Color Gridlines" loading="lazy"></figure>
+<p>None and Flags have no further settings. The following settings belongs to Highlight Range.</p>
+<h5 id="lower-bound-2">Lower Bound</h5>
+<p>The lower bound of the highlight range.</p>
+<h5 id="upper-bound-2">Upper Bound</h5>
+<p>The upper bound of the highlight range.</p>
+<h5 id="color-2">Color</h5>
+<p>The color to highlight the range</p>
+<h5 id="cell-type-2">Cell Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/cell-type.png" alt="Cell Type" loading="lazy"></figure>
+<p>The cell type to be highlighted.</p>
+<h2 id="flow-settings-subpanel">Flow - Settings subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel.png" alt="Flow - Settings subpanel" loading="lazy"><figcaption>Flow - Settings subpanel</figcaption></figure>
+<h3 id="flow-type">Flow Type</h3>
+<p>The type of the fluid in the simulation.</p>
+<p>Fluid Flow types are used to add or remove fluid to a domain object. Flow objects should be contained within the domain’s bounding box in order to work.</p>
+<h2 id="flow-settings-subpanel-flow-type-smoke">Flow - Settings subpanel - Flow Type Smoke</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-flow-type-smoke.png" alt="Flow - Settings subpanel - Flow Type Smoke" loading="lazy"><figcaption>Flow - Settings subpanel - Flow Type Smoke</figcaption></figure>
+<p>Emit only smoke.</p>
+<h3 id="flow-behavior">Flow Behavior</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-behavior.png" alt="Flow Behavior" loading="lazy"></figure>
+<p>Controls if the Flow object either adds (Inflow), removes (Outflow), or turns the mesh itself into fluid (Geometry).</p>
+<h4 id="inflow">Inflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/inflow.png" alt="Inflow" loading="lazy"></figure>
+<p>This object will emit fluid into the simulation, like a water tap or base of a fire.</p>
+<h5 id="use-flow">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-2">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="vertex-group">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h4 id="outflow">Outflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/outflow.png" alt="Outflow" loading="lazy"></figure>
+<p>Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.</p>
+<h5 id="use-flow-2">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-2">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h4 id="geometry">Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/geometry.png" alt="Geometry" loading="lazy"></figure>
+<p>All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.</p>
+<h5 id="sampling-substeps-3">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-3">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density-2">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature-2">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density-2">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="vertex-group-2">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h2 id="flow-settings-subpanel-flow-type-fire-and-smoke">Flow - Settings subpanel - Flow Type Fire and Smoke</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-flow-type-fire-and-smoke.png" alt="Flow - Settings subpanel - Flow Type Fire and Smoke" loading="lazy"><figcaption>Flow - Settings subpanel - Flow Type Fire and Smoke</figcaption></figure>
+<p>Emit fire and smoke.</p>
+<h3 id="flow-behavior-2">Flow Behavior</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-behavior.png" alt="Flow Behavior" loading="lazy"></figure>
+<p>Controls if the Flow object either adds (Inflow), removes (Outflow), or turns the mesh itself into fluid (Geometry).</p>
+<h4 id="inflow-2">Inflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/inflow-2.png" alt="Inflow" loading="lazy"></figure>
+<p>This object will emit fluid into the simulation, like a water tap or base of a fire.</p>
+<h5 id="use-flow-3">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-4">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-4">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density-3">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature-3">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density-3">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="fuel">Fuel</h5>
+<p>Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.</p>
+<h5 id="vertex-group-3">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h4 id="outflow-2">Outflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/outflow.png" alt="Outflow" loading="lazy"></figure>
+<p>Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.</p>
+<h5 id="use-flow-4">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-5">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h4 id="geometry-2">Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/geometry.png" alt="Geometry" loading="lazy"></figure>
+<p>All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.</p>
+<h5 id="sampling-substeps-6">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-5">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density-4">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature-4">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density-4">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="fuel-2">Fuel</h5>
+<p>Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.</p>
+<h5 id="vertex-group-4">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h2 id="flow-settings-subpanel-flow-type-fire">Flow - Settings subpanel - Flow Type Fire</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-flow-type-fire.png" alt="Flow - Settings subpanel - Flow Type Fire" loading="lazy"><figcaption>Flow - Settings subpanel - Flow Type Fire</figcaption></figure>
+<p>Emit only fire. Note that the domain will automatically create some smoke to simulate smoke left by burnt fuel.</p>
+<h3 id="flow-behavior-3">Flow Behavior</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-behavior.png" alt="Flow Behavior" loading="lazy"></figure>
+<p>Controls if the Flow object either adds (Inflow), removes (Outflow), or turns the mesh itself into fluid (Geometry).</p>
+<h4 id="inflow-3">Inflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/inflow-2.png" alt="Inflow" loading="lazy"></figure>
+<p>This object will emit fluid into the simulation, like a water tap or base of a fire.</p>
+<h5 id="use-flow-5">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-7">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-6">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density-5">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature-5">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density-5">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="fuel-3">Fuel</h5>
+<p>Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.</p>
+<h5 id="vertex-group-5">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h4 id="outflow-3">Outflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/outflow.png" alt="Outflow" loading="lazy"></figure>
+<p>Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.</p>
+<h5 id="use-flow-6">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-8">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h4 id="geometry-3">Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/geometry.png" alt="Geometry" loading="lazy"></figure>
+<p>All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.</p>
+<h5 id="sampling-substeps-9">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="smoke-color-7">Smoke Color</h5>
+<p>The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.</p>
+<h5 id="absolute-density-6">Absolute Density</h5>
+<p>If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.</p>
+<h5 id="initial-temperature-6">Initial Temperature</h5>
+<p>Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.</p>
+<h5 id="density-6">Density</h5>
+<p>Amount of smoke to emit at once. Larger values result in more density being produced.</p>
+<h5 id="fuel-4">Fuel</h5>
+<p>Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.</p>
+<h5 id="vertex-group-6">Vertex Group</h5>
+<p>When set, use the specified Vertex Group to control where smoke is emitted.</p>
+<h2 id="flow-settings-subpanel-flow-type-liquid">Flow - Settings subpanel - Flow Type Liquid</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-flow-type-liquid.png" alt="Flow - Settings subpanel - Flow Type Liquid" loading="lazy"><figcaption>Flow - Settings subpanel - Flow Type Liquid</figcaption></figure>
+<p>Emit liquid.</p>
+<h3 id="flow-behavior-4">Flow Behavior</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-behavior.png" alt="Flow Behavior" loading="lazy"></figure>
+<p>Controls if the Flow object either adds (Inflow), removes (Outflow), or turns the mesh itself into fluid (Geometry).</p>
+<h4 id="inflow-4">Inflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/inflow-3.png" alt="Inflow" loading="lazy"></figure>
+<p>This object will emit fluid into the simulation, like a water tap or base of a fire.</p>
+<h5 id="use-flow-7">Use Flow</h5>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h5 id="sampling-substeps-10">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h5 id="outflow-4">Outflow</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/outflow-2.png" alt="Outflow" loading="lazy"></figure>
+<p>Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.</p>
+<h6 id="use-flow-8">Use Flow</h6>
+<p>Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.</p>
+<h6 id="sampling-substeps-11">Sampling Substeps</h6>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h4 id="geometry-4">Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/geometry-2.png" alt="Geometry" loading="lazy"></figure>
+<p>All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.</p>
+<h5 id="sampling-substeps-12">Sampling Substeps</h5>
+<p>Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.</p>
+<h2 id="flow-settings-subpanel-flow-source">Flow - Settings subpanel - Flow Source</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-flow-source.png" alt="Flow - Settings subpanel - Flow Source" loading="lazy"><figcaption>Flow - Settings subpanel - Flow Source</figcaption></figure>
+<p>This setting defines the method used to emit fluid.</p>
+<h3 id="flow-source">Flow Source</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-source.png" alt="Flow Source" loading="lazy"></figure>
+<p>How fluid is emitted. By a mesh or a particle system. Flow Type Fluid does just show the option mesh.</p>
+<h4 id="mesh">Mesh</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/mesh.png" alt="Mesh" loading="lazy"></figure>
+<p>Emit fluid directly from the object’s mesh.</p>
+<h5 id="is-planar">Is Planar</h5>
+<p>Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes.</p>
+<h5 id="surface-emission">Surface Emission</h5>
+<p>Maximum distance in voxels from the surface of the mesh in which fluid is emitted. Since this setting uses voxels to determine the distance, results will vary depending on the domain’s resolution.</p>
+<h5 id="volume-emission">Volume Emission</h5>
+<p>Fire or Smoke Only. Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount. Note that emitting fluid based on volume can have unpredictable results if your mesh is non-manifold.</p>
+<h4 id="particle-system">Particle System</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/particle-system.png" alt="Particle System" loading="lazy"></figure>
+<p>Not for Flow Type Fluid. Create smoke or fire from a particle system on the flow object. which can be select with a Data ID.</p>
+<p>Note that only Emitter type particle systems can add smoke. See Particles for information on how to create a particle system.</p>
+<h5 id="particle-system-2">Particle System</h5>
+<p>Pick the particle system to use. It must be at the same mesh.</p>
+<h5 id="set-size">Set Size</h5>
+<p>Define the maximum distance in voxels at which particles can emit smoke, similar to the Surface Emission setting for mesh sources. When disabled, particles will fill the nearest voxel with smoke. · <strong>Size</strong>: Particle size in simulation cells.</p>
+<h2 id="flow-settings-subpanel-initial-velocity">Flow - Settings subpanel - Initial Velocity</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-initial-velocity.png" alt="Flow - Settings subpanel - Initial Velocity" loading="lazy"><figcaption>Flow - Settings subpanel - Initial Velocity</figcaption></figure>
+<p>Note that with Flow Source Type Particles just the Source slider is showing.</p>
+<h3 id="source">Source</h3>
+<p>Factor for the inherited velocity. A value of 1 will emit fluid moving at the same speed as the source.</p>
+<h3 id="normal">Normal</h3>
+<p>This option controls how much velocity fluid is given along a face normal. Note that, initial velocities will always be applied along all face normals. Thus with a closed flow source mesh, fluid will always be emitted in more than one direction. To set initial velocities along only one direction all normals need to point in the same direction. This is can be achieved when using a plane as the flow object.</p>
+<h3 id="initial-x-y-z">Initial X, Y, Z</h3>
+<p>Initial velocity along X, Y, Z coordinates in world space. This can be used in addition to the initial velocity along the Normal.</p>
+<h2 id="flow-settings-subpanel-texture">Flow - Settings subpanel - Texture</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/flow-settings-subpanel-texture.png" alt="Flow - Settings subpanel - Texture" loading="lazy"><figcaption>Flow - Settings subpanel - Texture</figcaption></figure>
+<p>Use a specified texture and settings to control where on the mesh smoke or fire can be emitted from. These settings have no effect on Outflow Flow Behavior.</p>
+<h3 id="texture">Texture</h3>
+<p>Choose the Texture. It must be created in the textures tab first.</p>
+<h3 id="mapping">Mapping</h3>
+<p>Controls whether to use Generated UV's or manual UV mapping.</p>
+<h4 id="generated">Generated</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/generated.png" alt="Generated" loading="lazy"></figure>
+<p>Generated UV coordinates centered to flow object.</p>
+<h5 id="size-2">Size</h5>
+<p>Overall texture scale.</p>
+<h4 id="uv">UV</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/uv.png" alt="UV" loading="lazy"></figure>
+<p>Use an UV map of the flow object.</p>
+<h5 id="uv-map">UV Map</h5>
+<p>Choose the UV map.</p>
+<h3 id="offset-2">Offset</h3>
+<p>Translates the texture along the Z axis.</p>
+<h2 id="effector-settings-subpanel">Effector - Settings Subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/effector-settings-subpanel.png" alt="Effector - Settings Subpanel" loading="lazy"><figcaption>Effector - Settings Subpanel</figcaption></figure>
+<p>Effector objects are used to deflect fluids and influence the fluid flow. They can act as colliders or guides.</p>
+<h3 id="effector-type">Effector Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/effector-type.png" alt="Effector Type" loading="lazy"></figure>
+<h4 id="collision">Collision</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/collision.png" alt="Collision" loading="lazy"></figure>
+<p>Objects of this type will collide with fluid.</p>
+<h4 id="guide">Guide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/guide.png" alt="Guide" loading="lazy"></figure>
+<p>The velocity of objects of this type will be used when baking the guiding. So fluid guiding objects should move and have some velocity.</p>
+<h5 id="sampling-substeps-13">Sampling Substeps</h5>
+<p>Number of substeps used to reduce gaps in collision of fluid from fast-moving effectors.</p>
+<h5 id="surface-thickness">Surface Thickness</h5>
+<p>Additional area around the effector that will be considered as an effector.</p>
+<h5 id="use-effector">Use Effector</h5>
+<p>Enables or disables the effector object effect on the fluid, this property is useful for animations to selectively enable and disable when the effector affects the fluid.</p>
+<h5 id="is-planar-2">Is Planar</h5>
+<p>Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes. A manifold mesh can also be declared as planar. The fluid solver will then ignore the volume inside the mesh and just emit fluid from the mesh sides.</p>
+<h5 id="velocity-factor-2">Velocity Factor</h5>
+<p>Effector type Guide only. Multiply the guiding object velocities by this factor. This is useful when working with multiple guiding objects and some of them should have higher or smaller velocities.</p>
+<h4 id="guide-mode">Guide Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fdc5b2bbf7da0ff36d21627d6356439772a5532e/docs2/images/editors/properties/physics-properties-tab/fluid-panel/guide-mode.png" alt="Guide Mode" loading="lazy"></figure>
+<p>Effector type Guide only. The mode describes how guiding velocities should be written into the global guiding velocity field of the domain.</p>
+<h5 id="maximize">Maximize</h5>
+<p>The guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is greater than the absolute value in the velocity field the guiding velocity will be kept.</p>
+<h5 id="minimize">Minimize</h5>
+<p>A guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is smaller than the absolute value in the velocity field the guiding velocity will be kept.</p>
+<h5 id="override">Override</h5>
+<p>The most intuitive option. A guiding object will always write its own current velocity into the global guiding velocity field. Values in the velocity field from a previous frame or guiding object will be overridden.</p>
+<h5 id="averaged">Averaged</h5>
+<p>A guiding object will write the average of its own current velocity and the existing guiding velocity at that cell into the global guiding velocity field.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ftables-properties/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fphysics-properties-tab%2Ffluid-panel.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/tables-properties/docs2/content/editors/properties/physics-properties-tab/fluid-panel.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#fluid-simulation">Fluid Simulation</a><a class="h3" href="#workflow-liquid">Workflow Liquid</a><a class="h2" href="#fluid-tab">Fluid Tab</a><a class="h3" href="#type">Type</a><a class="h2" href="#type-domain-settings-subpanel">Type Domain - Settings subpanel</a><a class="h3" href="#domain-type">Domain type</a><a class="h3" href="#resolution-divisions">Resolution Divisions</a><a class="h3" href="#time-scale">Time Scale</a><a class="h3" href="#cfl-number">CFL Number</a><a class="h3" href="#using-scene-gravity-x-y-z">Using Scene Gravity X, Y , Z</a><a class="h3" href="#border-collisions-subpanel">Border Collisions subpanel</a><a class="h3" href="#adaptive-domain">Adaptive Domain</a><a class="h2" href="#type-domain-gas-subpanel">Type Domain - Gas subpanel</a><a class="h3" href="#buoyancy-density">Buoyancy Density</a><a class="h3" href="#buoyancy-heat">Buoyancy Heat</a><a class="h3" href="#vorticity">Vorticity</a><a class="h3" href="#dissolve-subpanel">Dissolve subpanel</a><a class="h3" href="#noise-subpanel">Noise subpanel</a><a class="h3" href="#fire-subpanel">Fire subpanel</a><a class="h2" href="#type-domain-liquid-subpanel">Type Domain - Liquid subpanel</a><a class="h3" href="#simulation-method">Simulation Method</a><a class="h3" href="#flip-ratio">FLIP Ratio</a><a class="h3" href="#particle-radius">Particle Radius</a><a class="h3" href="#particles-maximum">Particles Maximum</a><a class="h3" href="#minimum-2">Minimum</a><a class="h3" href="#narrow-band-width">Narrow Band Width</a><a class="h3" href="#fractional-obstacles">Fractional Obstacles</a><a class="h3" href="#diffusion-subpanel">Diffusion subpanel</a><a class="h3" href="#high-viscosity-solver-subpanel">High viscosity Solver subpanel</a><a class="h3" href="#particles-subpanel">Particles subpanel</a><a class="h3" href="#mesh-sub-tab">Mesh Sub tab</a><a class="h2" href="#domain-guides-subpanel">Domain - Guides subpanel</a><a class="h3" href="#weight">Weight</a><a class="h3" href="#size">Size</a><a class="h3" href="#velocity-factor">Velocity Factor</a><a class="h3" href="#velocity-source">Velocity Source</a><a class="h2" href="#domain-collections-subpanel">Domain - Collections subpanel</a><a class="h3" href="#flow-2">Flow</a><a class="h3" href="#effector-3">Effector</a><a class="h2" href="#domain-cache-subpanel">Domain - Cache subpanel</a><a class="h3" href="#cache-directory">Cache Directory</a><a class="h3" href="#frame-start">Frame Start</a><a class="h3" href="#end">End</a><a class="h3" href="#offset">Offset</a><a class="h3" href="#type-2">Type</a><a class="h3" href="#is-resumable">Is Resumable</a><a class="h3" href="#volumetric-data-subpanel">Volumetric data subpanel</a><a class="h3" href="#meshes">Meshes</a><a class="h3" href="#bake-all-free-all">Bake All, Free All</a><a class="h3" href="#advanced">Advanced</a><a class="h3" href="#export-mantaflow-script">Export Mantaflow Script</a><a class="h2" href="#domain-field-weights-subpanel">Domain - Field Weights subpanel</a><a class="h2" href="#domain-viewport-display-subpanel">Domain - Viewport Display subpanel</a><a class="h3" href="#thickness">Thickness</a><a class="h3" href="#interpolation">Interpolation</a><a class="h3" href="#slice-per-voxel">Slice per Voxel</a><a class="h3" href="#slice-subpanel">Slice subpanel</a><a class="h3" href="#grid-display-subpanel">Grid display subpanel</a><a class="h3" href="#vector-display-subpanel">Vector display subpanel</a><a class="h3" href="#advanced-subpanel">Advanced subpanel</a><a class="h2" href="#flow-settings-subpanel">Flow - Settings subpanel</a><a class="h3" href="#flow-type">Flow Type</a><a class="h2" href="#flow-settings-subpanel-flow-type-smoke">Flow - Settings subpanel - Flow Type Smoke</a><a class="h3" href="#flow-behavior">Flow Behavior</a><a class="h2" href="#flow-settings-subpanel-flow-type-fire-and-smoke">Flow - Settings subpanel - Flow Type Fire and Smoke</a><a class="h3" href="#flow-behavior-2">Flow Behavior</a><a class="h2" href="#flow-settings-subpanel-flow-type-fire">Flow - Settings subpanel - Flow Type Fire</a><a class="h3" href="#flow-behavior-3">Flow Behavior</a><a class="h2" href="#flow-settings-subpanel-flow-type-liquid">Flow - Settings subpanel - Flow Type Liquid</a><a class="h3" href="#flow-behavior-4">Flow Behavior</a><a class="h2" href="#flow-settings-subpanel-flow-source">Flow - Settings subpanel - Flow Source</a><a class="h3" href="#flow-source">Flow Source</a><a class="h2" href="#flow-settings-subpanel-initial-velocity">Flow - Settings subpanel - Initial Velocity</a><a class="h3" href="#source">Source</a><a class="h3" href="#normal">Normal</a><a class="h3" href="#initial-x-y-z">Initial X, Y, Z</a><a class="h2" href="#flow-settings-subpanel-texture">Flow - Settings subpanel - Texture</a><a class="h3" href="#texture">Texture</a><a class="h3" href="#mapping">Mapping</a><a class="h3" href="#offset-2">Offset</a><a class="h2" href="#effector-settings-subpanel">Effector - Settings Subpanel</a><a class="h3" href="#effector-type">Effector Type</a></aside></div></body></html>
