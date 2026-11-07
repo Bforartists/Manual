@@ -8,7 +8,7 @@ path:
   - "Point Cloud"
   - "Edit Mode"
 version: "5.1"
-status: draft
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the point cloud itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
