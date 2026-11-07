@@ -9,7 +9,7 @@ path:
   - "Header"
   - "Navigation Menu"
 version: "5.3"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The Navigation menu provides you with all tools around viewport navigation."
 order: 20

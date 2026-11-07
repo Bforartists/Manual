@@ -9,7 +9,7 @@ path:
   - "Header"
   - "Header tools and Options"
 version: "5.3"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The header in the 3D view contains various menus and tools."
 order: 10
