@@ -8,7 +8,7 @@ path:
   - Editors
   - Asset Browser
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28 Editors - Asset Browser.odt
