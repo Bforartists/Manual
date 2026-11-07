@@ -6,7 +6,7 @@ path:
   - Editors
   - Video Sequence Editor
   - Sidebar
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:
@@ -715,6 +715,10 @@ Display the font italic.
 ###### Size
 
 Size of the text.
+
+##### Line Spacing
+
+The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels.
 
 ###### Color
 
