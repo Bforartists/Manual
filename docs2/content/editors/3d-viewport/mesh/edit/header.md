@@ -352,6 +352,8 @@ You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
 Change the settings of **Offset Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Offset Edge Slide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-offset-edge-slide.png)
+
 ##### Cap Endpoint
 
 ![Cap Endpoint](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/cap-endpoint.png)
@@ -527,6 +529,8 @@ Decimates the geometry by trying to make one quad out of four quads. But can als
 
 Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Un-Subdivide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-un-subdivide.png)
+
 ##### Iterations
 
 ![Iterations](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/iterations.png)
@@ -548,6 +552,8 @@ Rotate Edge rotates the selected edge counter clockwise.
 #### Adjust Last Operation - Rotate Selected Edge
 
 Change the settings of **Rotate Selected Edge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Rotate Selected Edge](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-rotate-selected-edge.png)
 
 ##### Counter Clockwise
 
@@ -596,6 +602,8 @@ A negative Edge Bevel Weight value will subtract from the current active crease 
 #### Adjust Last Operation - Edge Bevel Weight
 
 Change the settings of **Edge Bevel Weight** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Edge Bevel Weight](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-edge-bevel-weight.png)
 
 ##### Factor
 
@@ -806,6 +814,8 @@ Splits the selected faces to create a triangulated geometry.
 
 Change the settings of **Poke Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Poke Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-poke-faces.png)
+
 ##### Poke Offset
 
 ![Poke Offset](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/poke-offset.png)
@@ -833,6 +843,8 @@ Triangulate Faces triangulates the faces of the selected geometry.
 #### Adjust Last Operation - Triangulate Faces
 
 Change the settings of **Triangulate Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Triangulate Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-triangulate-faces.png)
 
 ##### Quad Method
 
@@ -881,6 +893,8 @@ Tris to quads tries to convert triangulated geometry back to a quad geometry by 
 #### Adjust Last Operation - Tris to Quads
 
 Change the settings of **Tris to Quads** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Tris to Quads](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-tris-to-quads.png)
 
 ##### Max Face Angle
 
@@ -934,6 +948,8 @@ There is also a Solidify modifier available.
 
 Change the settings of **Solidify** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Solidify](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-solidify.png)
+
 ##### Thickness
 
 Adjust the thickness. You can scale also into the negative range.
@@ -947,6 +963,8 @@ Wire frame grabs the edges of the faces and turns them into tubes.
 #### Adjust Last Operation - Wire Frame
 
 Change the settings of **Wire Frame** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Wire Frame](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-wire-frame.png)
 
 #### Boundary
 
@@ -2342,6 +2360,8 @@ Creates a convex hull around the outside of selected vertices. The old faces and
 
 Change the settings of **Convex Hull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Convex Hull](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-convex-hull.png)
+
 ##### Delete Unused
 
 Removes vertices that are not part of the convex geometry.
@@ -3074,6 +3094,8 @@ Delete loose deletes not connected geometry. Vertices, Edges, and Faces. The too
 
 Change the settings of **Delete Loose** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Delete Loose](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-delete-loose.png)
+
 ##### Vertices
 
 ![Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vertices.png)
@@ -3097,6 +3119,8 @@ Decimate Geometry decimates the currently selected geometry. It starts with a Ra
 #### Adjust Last Operation - Decimate Geometry
 
 Change the settings of **Decimate Geometry** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Decimate Geometry](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-decimate-geometry.png)
 
 ##### Ratio
 
@@ -3128,6 +3152,8 @@ Removes zero size Faces and Edges.
 
 Change the settings of **Degenerate Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Degenerate Dissolve](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-degenerate-dissolve.png)
+
 ##### Merge Distance
 
 ![Merge Distance](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/merge-distance.png)
@@ -3143,6 +3169,8 @@ Make Planar Faces tries to make the selected faces planar. Quads or N-Gons for e
 #### Adjust Last Operation - Make Planar Faces
 
 Change the settings of **Make Planar Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Make Planar Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-make-planar-faces.png)
 
 ##### Factor
 
@@ -3163,6 +3191,8 @@ Split Non Planar Faces splits up non planar Quads and N-Gons to end in planar fa
 #### Adjust Last Operation - Split Non-Planar Faces
 
 Change the settings of **Split Non-Planar Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Split Non-Planar Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-split-non-planar-faces.png)
 
 ##### Max Angle
 
@@ -3187,6 +3217,8 @@ Fill holes can just calculate one face size at one time. So when you have severa
 #### Adjust Last Operation - Fill Holes
 
 Change the settings of **Fill Holes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fill Holes](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fill-holes.png)
 
 ##### Sides
 
@@ -3283,6 +3315,8 @@ Note that pressing Del in Edge select mode calls Dissolve Edges already. It's th
 
 Change the settings of **Dissolve Edges** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Dissolve Edges](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-dissolve-edges.png)
+
 ##### Dissolve Vertices
 
 ![Dissolve Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/dissolve-vertices.png)
@@ -3318,6 +3352,8 @@ Dissolve selected edges and vertices, limited by the surrounded angles.
 #### Adjust Last Operation - Limited Dissolve
 
 Change the settings of **Limited Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Limited Dissolve](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-limited-dissolve.png)
 
 ##### Max Angle
 
