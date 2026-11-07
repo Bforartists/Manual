@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Asset Browser
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 28 Editors - Asset Browser.odt
@@ -448,6 +448,8 @@ These catalogs are currently disfunctional. You can just add or remove the categ
 
 Here you can choose what asset library to use.
 
+The list is grouped by where the libraries come from: **your libraries** (set in the Preferences), **project libraries** (set in the Project Setup) and **extension libraries** (installed with an extension). Each group has its own icon.
+
 #### Current File
 
 Uses the current Blend file as the asset library. All assets are stored into the current blend file. And this means that when you remove objects from the scene, then the assets in the assets library will also vanish.
@@ -667,25 +669,37 @@ Assigns the “Shader” tag to show the Node Group in the Shader Asset Shelf in
 
 When you right click into the view then an Asset context menu opens.
 
+### Download Assets
+
+Downloads the selected assets of an online library, so you can use them offline.
+
 ### Refresh Asset Library
 
 Refresh the file list.
+
+### Refresh Remote Listing
+
+Downloads the list of assets of a remote library again, for example to see new assets. Only available for remote libraries and the Essentials library.
 
 ### Clear Asset
 
 Removes the asset from the asset library.
 
-### Clear Asset ( Set Fake User)
+### Clear Asset (Set Fake User)
 
 Removes the asset from the asset library. But sets it to fake user, so that it remains in the scene.
 
 ### Open Blend File
 
-Opens the path for the blend file that contains the active asset. Just active with User Library.
+Opens the blend file that contains the active asset. Just active with User Library.
 
-### Display Size
+### Open File Location
 
-Set the display size of the file browser to four predefined sizes.
+Opens the file browser of your system at the blend file that contains the active asset.
+
+### View Extension
+
+Opens the extension that provides the active asset in Preferences > Extensions. Only available for assets that come from an extension library.
 
 ## Pose Assets context menu
 
