@@ -68,14 +68,10 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -109,12 +105,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -122,14 +114,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -160,14 +148,10 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -245,12 +229,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Move Texture Space
 
@@ -294,14 +274,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale Texture Space
 
@@ -347,14 +323,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Dimensions
 
@@ -402,12 +374,8 @@ Change the settings of **Duplicate** right after you use it, in the Adjust Last 
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Attribute
 
@@ -421,8 +389,5 @@ Change the settings of **Set Attribute** right after you use it, in the Adjust L
 
 ###### position X , Y , Z
 
-
-| Entry | What it does |
-| -------- | --------------------------------------------------------- |
-| Delete | Deletes the selected element. |
-| Separate | Separates the selection and makes a new object out of it. |
+- **Delete**: Deletes the selected element.
+- **Separate**: Separates the selection and makes a new object out of it.

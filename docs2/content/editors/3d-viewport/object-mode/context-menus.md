@@ -91,14 +91,21 @@ Orientation is a drop-down box choose the type of orientation for the duplicate 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Rename active Item / Object
 
@@ -122,12 +129,13 @@ Mirrors the selection.
 
 Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.
 
+###### X Y Z Global
 
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| X Y Z Global | Mirrors along the global axis. |
-| X Y Z Local | Mirrors along the object axis. |
+Mirrors along the global axis.
 
+###### X Y Z Local
+
+Mirrors along the object axis.
 
 #### Adjust Last Operation - Mirror
 
@@ -147,14 +155,21 @@ Choose the orientation in which the transform should happen.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Snap sub menu
 
@@ -182,16 +197,29 @@ Keep the offset of the selected objects to each other.
 
 Rotate to match the cursor.
 
+###### Selection to Active
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------- |
-| Selection to Active | Snaps the currently selected object(s) to the active object. |
-| Selection to Grid | Snaps the currently selected object(s) to the nearest grid point. |
-| Cursor to Selected | Moves the cursor to the center of the selected object(s). |
-| Cursor to World Origin | Moves the cursor to the world origin. |
-| Cursor to Active | Moves the cursor to the center of the active object. |
-| Cursor to Grid | Moves the cursor to the nearest grid point. |
+Snaps the currently selected object(s) to the active object.
 
+###### Selection to Grid
+
+Snaps the currently selected object(s) to the nearest grid point.
+
+###### Cursor to Selected
+
+Moves the cursor to the center of the selected object(s).
+
+###### Cursor to World Origin
+
+Moves the cursor to the world origin.
+
+###### Cursor to Active
+
+Moves the cursor to the center of the active object.
+
+###### Cursor to Grid
+
+Moves the cursor to the nearest grid point.
 
 ### Parent sub menu
 
@@ -217,16 +245,29 @@ Sets the parent to selected object, but applies all transform before the operati
 
 Armature parenting creates an armature modifier at the mesh.
 
+##### Armature Deform
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------- |
-| Armature Deform | Sets the parent to selected Armature. |
-| With empty Groups | Sets the parent to selected Armature, using empty groups. |
-| With Envelope Weights | Sets the parent to selected Armature, using envelope weights |
-| With automatic Weights | Sets the parent to selected Armature, with automatic weights. |
-| Bone | Sets the parent absolute to selected Bone. |
-| Bone Relative | Sets the parent relative to selected Bone. |
+Sets the parent to selected Armature.
 
+##### With empty Groups
+
+Sets the parent to selected Armature, using empty groups.
+
+##### With Envelope Weights
+
+Sets the parent to selected Armature, using envelope weights
+
+##### With automatic Weights
+
+Sets the parent to selected Armature, with automatic weights.
+
+##### Bone
+
+Sets the parent absolute to selected Bone.
+
+##### Bone Relative
+
+Sets the parent relative to selected Bone.
 
 #### Curve Deform
 
@@ -314,13 +355,17 @@ Do the vertex parenting in Edit mode. You need to have an object type that has v
 
 Create a mesh or curve object, create an object, hold down shift and select the mesh object, make parent ...
 
+##### Make Parent without Inverse
 
-| Entry | What it does |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Parent without Inverse | With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting. |
-| Make Parent without Inverse (Keep Transform ) | Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position. |
-| Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
+With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting.
 
+##### Make Parent without Inverse (Keep Transform )
+
+Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position.
+
+##### Object (Attach Curves to Surface)
+
+Parent a Hair Curve to the surface of a new object.
 
 #### Adjust Last Operation - Make Parent
 
@@ -341,12 +386,13 @@ Change the settings of **Make Parent** right after you use it, in the Adjust Las
 
 Clear Parent clears the parent relation completely, including involved modifiers.
 
+##### Clear and Keep Transformation
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Clear and Keep Transformation | Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation. |
-| Clear Parent Inverse | Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself. |
+Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation.
 
+##### Clear Parent Inverse
+
+Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself.
 
 ##### Adjust Last Operation - Clear Parent
 
@@ -382,12 +428,13 @@ Set a name for your new collection. When you haven't created a new collection, t
 
 Toggles local view isolating the selection in the viewport. You can find this operator in the Header View menu.
 
+#### Remove from Local
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Remove from Local | Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.* |
-| Insert Key frame | Inserts a key frame. It uses the default keying set that is defined in the Preferences. |
+Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.*
 
+#### Insert Key frame
+
+Inserts a key frame. It uses the default keying set that is defined in the Preferences.
 
 ### Insert Key frame with keying sets
 
@@ -495,15 +542,25 @@ Don't remove as sharp marked edges.
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -515,12 +572,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -532,29 +590,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | — |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+—
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -609,15 +687,25 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -629,12 +717,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -646,29 +735,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | — |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+—
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -703,15 +812,25 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -723,12 +842,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -740,29 +860,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | — |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+—
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -785,15 +925,25 @@ The last operator is the same for all set origin methods.
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -805,12 +955,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -822,29 +973,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | Link strokes with zero radius sections of curves. |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+Link strokes with zero radius sections of curves.
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -889,15 +1060,25 @@ Width size is just of interest when you have an extruded surface at the curve. I
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -909,12 +1090,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -926,29 +1108,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | Link strokes with zero radius sections of curves. |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+Link strokes with zero radius sections of curves.
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -977,15 +1179,25 @@ Just default settings.
 
 ![Convert to](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/convert-to.png)
 
+#### Mesh
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------- |
-| Mesh | Converts a selected object to a Mesh Object. |
-| Curve | Converts a selected Mesh or Text Object to a Curve Object. |
-| Curves | Converts a selected Mesh or Text Object to a Hair Curves Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
-| Point Cloud | Converts a selected object to a point cloud object. |
+Converts a selected object to a Mesh Object.
 
+#### Curve
+
+Converts a selected Mesh or Text Object to a Curve Object.
+
+#### Curves
+
+Converts a selected Mesh or Text Object to a Hair Curves Object.
+
+#### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
+
+#### Point Cloud
+
+Converts a selected object to a point cloud object.
 
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
@@ -997,12 +1209,13 @@ Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right af
 
 Target is a drop-down box that allows you to choose the convert method again.
 
+###### Keep Original
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------- |
-| Keep Original | With this option ticked the original object gets kept. And a new object gets created. |
-| Merge UV's | Merge UV coordinates that shares a vertex. |
+With this option ticked the original object gets kept. And a new object gets created.
 
+###### Merge UV's
+
+Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
@@ -1014,29 +1227,49 @@ Change the settings of **Convert Grease Pencil** right after you use it, in the 
 
 Type is a drop-down box that allows you to choose the convert method again.
 
+###### Bevel Depth
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Bevel Depth | A curve can have a extruded geometry with bevel. Adjust the bevel depth. |
-| Bevel Resolution | A curve can have a extruded geometry with bevel. Adjust the bevel resolution. |
-| Normalize Weight | Normalize the weight, set from stroke width. |
-| Radius Factor | Multiplier for the points radii, set from stroke width. |
-| Link Stroke | Link strokes with zero radius sections of curves. |
+A curve can have a extruded geometry with bevel. Adjust the bevel depth.
 
+###### Bevel Resolution
+
+A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
+
+###### Normalize Weight
+
+Normalize the weight, set from stroke width.
+
+###### Radius Factor
+
+Multiplier for the points radii, set from stroke width.
+
+###### Link Stroke
+
+Link strokes with zero radius sections of curves.
 
 ### Set Origin
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -1059,15 +1292,25 @@ The last operator is the same for all set origin methods.
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -1090,15 +1333,25 @@ The last operator is the same for all set origin methods.
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 
@@ -1307,15 +1560,25 @@ Note, this value does not show elsewhere. And there is no way to reset it to the
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+#### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+#### Origin to Geometry
+
+Sets the origin to geometry.
+
+#### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+#### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+#### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 #### Adjust Last Operation - Set Origin
 

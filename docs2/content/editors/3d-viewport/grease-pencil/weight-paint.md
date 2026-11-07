@@ -49,12 +49,8 @@ Change the settings of **Normalize all Vertex Group** right after you use it, in
 
 Keep the values of the active group while normalizing others.
 
-
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Normalize | Normalize normalizes the weight of the current selected Vertex group so that the values for the single vertices in the sum is 1. Means when there is influence from other groups, then those values are kept, but the one for the current group gets lowered so that the sum is 1. |
-| Invert | Invert inverts the weight painting for the selected vertex group. |
-
+- **Normalize**: Normalize normalizes the weight of the current selected Vertex group so that the values for the single vertices in the sum is 1. Means when there is influence from other groups, then those values are kept, but the one for the current group gets lowered so that the sum is 1.
+- **Invert**: Invert inverts the weight painting for the selected vertex group.
 
 #### Smooth
 
@@ -99,13 +95,21 @@ Draws a weight on a stroke. This draws to the active vertex group of the grease 
 
 Allows you to weight paint the current stroke with the settings defined in the brush panel.
 
+##### Blur
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blur | Smooths out the weights of adjacent vertices of a grease pencil stroke. The strength defines how much the weights are blurred. |
-| Average | Smooths weights by painting the average resulting value from all values under the brush. |
-| Smear | Smudges weight by grabbing the values under the brush and “dragging” them over. |
-| Annotate tools | The annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here. |
+Smooths out the weights of adjacent vertices of a grease pencil stroke. The strength defines how much the weights are blurred.
+
+##### Average
+
+Smooths weights by painting the average resulting value from all values under the brush.
+
+##### Smear
+
+Smudges weight by grabbing the values under the brush and “dragging” them over.
+
+##### Annotate tools
+
+The annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.
 
 # Sidebar
 
@@ -141,21 +145,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+The asset catalog in which the brush is stored.
 
+###### Author
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The brush author.
 
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -175,12 +191,13 @@ The edit box below the Image shows the name of the current active brush.
 
 The Brush Settings Panel contains the Brush settings. The content differs, dependent of which brush you have chosen.
 
+#### Use unified Size
 
-| Entry | What it does |
-| ---------------- | -------------------------------------- |
-| Use unified Size | The size is shared across the brushes. |
-| Size Pressure | Enable tablet pressure sensity. |
+The size is shared across the brushes.
 
+#### Size Pressure
+
+Enable tablet pressure sensity.
 
 ### Brush Settings Panel - Average brush
 
@@ -188,12 +205,13 @@ The Brush Settings Panel contains the Brush settings. The content differs, depen
 
 Smoothens the weight to an average value.
 
+#### Size
 
-| Entry | What it does |
-| -------- | -------------------------- |
-| Size | The Size of the brush. |
-| Strength | The strength of the brush. |
+The Size of the brush.
 
+#### Strength
+
+The strength of the brush.
 
 ### Brush Settings Panel - Blur brush
 
@@ -201,12 +219,13 @@ Smoothens the weight to an average value.
 
 Blurs the weight.
 
+#### Size
 
-| Entry | What it does |
-| -------- | -------------------------- |
-| Size | The Size of the brush. |
-| Strength | The strength of the brush. |
+The Size of the brush.
 
+#### Strength
+
+The strength of the brush.
 
 ### Brush Settings Panel - Paint brush
 
@@ -214,14 +233,21 @@ Blurs the weight.
 
 Paints the weight with the current value.
 
+#### Size
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Size | The Size of the brush. |
-| Strength | The strength of the brush. |
-| Weight | The target weight. Everything below gets added towards this value. Everything above gets subtracted from this value. Usually you work with the maximum value of 1. |
-| Direction | Add or subtract the weight. |
+The Size of the brush.
 
+#### Strength
+
+The strength of the brush.
+
+#### Weight
+
+The target weight. Everything below gets added towards this value. Everything above gets subtracted from this value. Usually you work with the maximum value of 1.
+
+#### Direction
+
+Add or subtract the weight.
 
 ### Brush Settings Panel - Smear brush
 
@@ -229,23 +255,25 @@ Paints the weight with the current value.
 
 A smear brush.
 
+#### Size
 
-| Entry | What it does |
-| -------- | -------------------------- |
-| Size | The Size of the brush. |
-| Strength | The strength of the brush. |
+The Size of the brush.
 
+#### Strength
+
+The strength of the brush.
 
 ### Brush settings panel - Cursor Sub panel
 
 ![Brush settings panel - Cursor Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode/brush-settings-panel-cursor-sub-panel.png)
 
+#### Show Brush
 
-| Entry | What it does |
-| ---------- | ---------------------------------- |
-| Show Brush | Show the brush icon when painting. |
-| Color | The brush icon color. |
+Show the brush icon when painting.
 
+#### Color
+
+The brush icon color.
 
 ### Brush settings panel - Falloff Sub panel
 
@@ -279,10 +307,18 @@ Call this menu with right click in the 3D viewport. You need to be in Weight Pai
 
 In Weight Paint mode you will call a context menu with the sliders from the Brush settings.
 
+#### Radius
 
-| Entry | What it does |
-| --------- | --------------------------------- |
-| Radius | The radius of the sculpt brush. |
-| Strength | The strength of the sculpt brush. |
-| Weight | The vertex weight to paint to. |
-| Direction | Add or subtract the brush stroke. |
+The radius of the sculpt brush.
+
+#### Strength
+
+The strength of the sculpt brush.
+
+#### Weight
+
+The vertex weight to paint to.
+
+#### Direction
+
+Add or subtract the brush stroke.

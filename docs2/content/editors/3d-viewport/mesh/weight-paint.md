@@ -103,10 +103,8 @@ Change the settings of **Invert Vertex Group** right after you use it, in the Ad
 
 Subset is a drop-down menu choose the Subset method.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------- |
-| Add Weights | Add Vertices from Groups that have zero Weighting before inverting. |
-| Remove Weights | Remove Vertices from Groups that have zero weight after inverting. |
+- **Add Weights**: Add Vertices from Groups that have zero Weighting before inverting.
+- **Remove Weights**: Remove Vertices from Groups that have zero weight after inverting.
 
 #### Clean
 
@@ -193,10 +191,8 @@ Subset is a drop-down menu choose the Subset method.
 
 Here you adjust the factor.
 
-| Entry | What it does |
-| --------------- | -------------------------------------------- |
-| Iterations | Here you adjust how many iterations you use. |
-| Expand/Contract | Expand or contract the weights. |
+- **Iterations**: Here you adjust how many iterations you use.
+- **Expand/Contract**: Expand or contract the weights.
 
 #### Transfer Weights
 
@@ -246,11 +242,9 @@ Add Data layers on target object if needed.
 
 A drop down box choose the vertex mapping method.
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to get the best possible match between source and target object. |
-| Object Transform | Calculate the objects in Global space. Unticked means the transfer happens from and to the origin of the objects. |
-| Only Neighbor Geometry | Source Objects must be closer than given distance to the target objects. |
+- **Auto Transform**: Automatically compute transformation to get the best possible match between source and target object.
+- **Object Transform**: Calculate the objects in Global space. Unticked means the transfer happens from and to the origin of the objects.
+- **Only Neighbor Geometry**: Source Objects must be closer than given distance to the target objects.
 
 ###### Ray Radius
 
@@ -390,11 +384,17 @@ Pressing Ctrl F allows you to change the weight size onscreen. Drag the mouse to
 
 Paint brush.
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blur | Smooths out the colors of adjacent vertices. In this mode the Color Value is ignored. The strength defines how much the colors are blurred. |
-| Average | Smooths color by painting the average resulting color from all colors under the brush. |
-| Smear | Smudges colors by grabbing the colors under the brush and “dragging” them. |
+##### Blur
+
+Smooths out the colors of adjacent vertices. In this mode the Color Value is ignored. The strength defines how much the colors are blurred.
+
+##### Average
+
+Smooths color by painting the average resulting color from all colors under the brush.
+
+##### Smear
+
+Smudges colors by grabbing the colors under the brush and “dragging” them.
 
 #### Gradient
 
@@ -406,11 +406,17 @@ Allows you to draw a gradient between two defined points. The gradient gets draw
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/tool-settings.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------- |
-| Weight | The starting weight. |
-| Strength | The strength with which it mixes with the existing weighting. |
-| Type | Choose the gradient type. Linear or Radial. |
+###### Weight
+
+The starting weight.
+
+###### Strength
+
+The strength with which it mixes with the existing weighting.
+
+###### Type
+
+Choose the gradient type. Linear or Radial.
 
 ###### Falloff
 
@@ -444,10 +450,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 The navigation elements at the top are described from left to right.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape. |
+- **Zoom in and out**: The two buttons with the magnifying glass at it zooms in and out in the curve window.
+- **Tools**: Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Use Clipping
 
@@ -623,18 +627,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The asset catalog in which the brush is stored.
+
+###### Author
+
+The brush author.
+
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -660,11 +679,17 @@ The Brush Settings Panel contains the Brush settings. The content differs, depen
 
 Define how the stroke will blend. You can choose between various blend modes.
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Weight | Adjust the strength of the weight painting. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. |
-| Radius | The Radius edit box allows you to adjust the radius of the brush. The button behind the edit box enables tablet pressure sensitivity for radius. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
-| Strength | The Strength edit box allows you to adjust the strength of the brush. The button behind the edit box enables tablet pressure sensitivity for strength. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
+##### Weight
+
+Adjust the strength of the weight painting. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius.
+
+##### Radius
+
+The Radius edit box allows you to adjust the radius of the brush. The button behind the edit box enables tablet pressure sensitivity for radius. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
+
+##### Strength
+
+The Strength edit box allows you to adjust the strength of the brush. The button behind the edit box enables tablet pressure sensitivity for strength. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
 
 ### Brush Settings Panel - Advanced Sub panel
 
@@ -696,10 +721,8 @@ The drawing happens by mapping the pencil onto the mouse position. And when you 
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Dash Ratio | Ratio of samples in a cycle that the brush is enabled. |
-| Dash Length | Length of a dash cycle measured in stroke samples. |
+- **Dash Ratio**: Ratio of samples in a cycle that the brush is enabled.
+- **Dash Length**: Length of a dash cycle measured in stroke samples.
 
 ##### Jitter Edit Box
 
@@ -707,10 +730,13 @@ The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+If the jitter happens in screen space in pixels, or relative to the brush size.
 
 ###### Input Samples Edit Box
 
@@ -724,10 +750,8 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------------------------------------------------------- |
-| Smooth Stroke Radius Edit Box | Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+- **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.
+- **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 #### Stroke Panel with Stroke method Curve
 
@@ -779,11 +803,17 @@ A click at it to turns the curve into a sculpt stroke.
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+If the jitter happens in screen space in pixels, or relative to the brush size.
+
+###### Input Samples Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
 
 #### Stroke Panel with Stroke method Line
 
@@ -811,10 +841,13 @@ The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+If the jitter happens in screen space in pixels, or relative to the brush size.
 
 ##### Input Samples Edit Box
 
@@ -838,10 +871,13 @@ Define the rate of the drawing.
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+If the jitter happens in screen space in pixels, or relative to the brush size.
 
 ##### Input Samples Edit Box
 
@@ -853,10 +889,13 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------------------------------------------------------- |
-| Smooth Stroke Radius Edit Box | Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+###### Smooth Stroke Radius Edit Box
+
+Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.
+
+###### Smooth Stroke Factor Edit Box
+
+Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 #### Stroke Panel with Stroke method Dots
 
@@ -872,10 +911,13 @@ The stroke method Dots draws dots of the pencil onto the surface. The mapping ha
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+If the jitter happens in screen space in pixels, or relative to the brush size.
 
 ##### Input Samples Edit Box
 
@@ -887,10 +929,13 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------------------------------------------------------- |
-| Smooth Stroke Radius Edit Box | Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+###### Smooth Stroke Radius Edit Box
+
+Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.
+
+###### Smooth Stroke Factor Edit Box
+
+Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 ### Brush Settings Panel - Falloff Sub panel
 
@@ -920,10 +965,13 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 The navigation elements at the top are described from left to right.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape. |
+###### Zoom in and out
+
+The two buttons with the magnifying glass at it zooms in and out in the curve window.
+
+###### Tools
+
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape.
 
 ##### Use Clipping
 
@@ -971,19 +1019,25 @@ Choose another color for the brush cursor. Double clicking at the color field wi
 
 You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | -------------------------------------- |
-| Override Overlay | Hide the Cursor Overlay when painting. |
-| Use Cursor Overlay | Turn on Cursor Overlay. |
+##### Override Overlay
+
+Hide the Cursor Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Cursor Overlay.
 
 #### Texture Opacity
 
 This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | --------------------------------------- |
-| Override Overlay | Hide the Texture Overlay when painting. |
-| Use Cursor Overlay | Turn on Texture Overlay. |
+##### Override Overlay
+
+Hide the Texture Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Texture Overlay.
 
 ### Symmetry Panel
 
@@ -991,11 +1045,17 @@ This is for the case when you paint with a texture brush. You can turn on the Te
 
 The same buttons plus the whole Symmetry Lock Panel as a drop down menu can also be found in the tool settings bar as icon buttons. This allows quicker access and better.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mirror Vertex Groups | Mirror the left/right vertex groups when painting. · **Topology Mirror**: Not available with Mirror Vertex Groups deactivated. Use topology based mirroring. Both sides of the mesh needs matching geometry. |
-| Mirror | Mirror along given axis. With Mirror Vertex groups on you just can turn on or off the X axis. |
-| Radial | Tiling. The number of times to repeat the strokes across the surface. Not available with Mirror Vertex Groups activated. |
+#### Mirror Vertex Groups
+
+Mirror the left/right vertex groups when painting. · **Topology Mirror**: Not available with Mirror Vertex Groups deactivated. Use topology based mirroring. Both sides of the mesh needs matching geometry.
+
+#### Mirror
+
+Mirror along given axis. With Mirror Vertex groups on you just can turn on or off the X axis.
+
+#### Radial
+
+Tiling. The number of times to repeat the strokes across the surface. Not available with Mirror Vertex Groups activated.
 
 ### Options Panel
 
@@ -1005,11 +1065,17 @@ The same buttons plus the whole Symmetry Lock Panel as a drop down menu can also
 
 Ensure that all bone deforming vertex groups adds up to 1.0 while weight painting.
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Lock - Relative | Display bone-deforming groups as if all locked defom groups were deleted, and the remaining ones were re-normalized. |
-| Multi Paint | Paint across the weights of all selected bones, maintaining their relative influence. |
-| Restrict | Restrict painting to vertices in the group. |
+##### Lock - Relative
+
+Display bone-deforming groups as if all locked defom groups were deleted, and the remaining ones were re-normalized.
+
+##### Multi Paint
+
+Paint across the weights of all selected bones, maintaining their relative influence.
+
+##### Restrict
+
+Restrict painting to vertices in the group.
 
 # Context Menus
 
@@ -1023,8 +1089,14 @@ Call this menu with right click in the 3D viewport. You need to be in Weight Pai
 
 In Weight Paint mode you will call a context menu with the sliders from the Brush settings.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Weight | Adjust the strength of the weight painting. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. |
-| Radius | The Radius edit box allows you to adjust the radius of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
-| Strength | The Strength edit box allows you to adjust the strength of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
+#### Weight
+
+Adjust the strength of the weight painting. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius.
+
+#### Radius
+
+The Radius edit box allows you to adjust the radius of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
+
+#### Strength
+
+The Strength edit box allows you to adjust the strength of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
