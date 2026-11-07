@@ -9,7 +9,7 @@ path:
   - "Edit Mode"
   - "Header"
 version: "5.1"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The header menus of Mesh › Edit Mode."
 order: 10

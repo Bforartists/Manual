@@ -9,7 +9,7 @@ path:
   - "Edit Mode"
   - "Context Menus"
 version: "5.1"
-status: draft
+status: needs-review
 icon: menu
 summary: "The right-click menus of Mesh › Edit Mode."
 order: 40
