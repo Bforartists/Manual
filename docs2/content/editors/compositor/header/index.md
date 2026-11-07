@@ -70,12 +70,21 @@ Manage the compositing nodetrees.
 
 The list of the available nodetrees.
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------- |
-| Nodetree name | The name of the active nodetree. |
-| Fake User | Protect this nodetree to be removed when it has no user. |
-| New compositing node group | Generate a new compositing node group. |
-| Remove | Remove the active compositing node group. |
+#### Nodetree name
+
+The name of the active nodetree.
+
+#### Fake User
+
+Protect this nodetree to be removed when it has no user.
+
+#### New compositing node group
+
+Generate a new compositing node group.
+
+#### Remove
+
+Remove the active compositing node group.
 
 ## Options
 
@@ -83,10 +92,13 @@ The list of the available nodetrees.
 
 At the right side of the header you will see the options.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pin (pin icon) | The pin button will keep the current material selection fixed. When a material is pinned, it will remain visible in the shader editor even when another object or material is selected elsewhere. |
-| Parent Node Tree | Grouping nodes can simplify a node tree by allowing instancing and hiding parts of the tree. Both material and composite nodes can be grouped. This button becomes active when you work with such grouped nodes, and you are in a child group. it allows you to switch to the parent group. |
+### Pin (pin icon)
+
+The pin button will keep the current material selection fixed. When a material is pinned, it will remain visible in the shader editor even when another object or material is selected elsewhere.
+
+### Parent Node Tree
+
+Grouping nodes can simplify a node tree by allowing instancing and hiding parts of the tree. Both material and composite nodes can be grouped. This button becomes active when you work with such grouped nodes, and you are in a child group. it allows you to switch to the parent group.
 
 ### Backdrop
 
@@ -96,12 +108,21 @@ At the right side of the header you will see the options.
 
 By adding a viewer node you can display the compositing result as a background in the viewport. Here you can activate it, and adjust the look. It also contains controls to adjust the zoom and position of the backdrop image.
 
-| Entry | What it does |
-| -------------------------------- | -------------------------------------------------------------- |
-| Background Image Move | Move the background image. A click confirms. Watch the hotkey. |
-| Background Image Zoom in and out | Zoom in and out the Background image. |
-| Background Image Fit | Fits the background image into the view. |
-| Display channels | What channels to display in the backdrop. |
+#### Background Image Move
+
+Move the background image. A click confirms. Watch the hotkey.
+
+#### Background Image Zoom in and out
+
+Zoom in and out the Background image.
+
+#### Background Image Fit
+
+Fits the background image into the view.
+
+#### Display channels
+
+What channels to display in the backdrop.
 
 ### Viewport Gizmos
 
@@ -149,12 +170,21 @@ Label reroute nodes based on the label of connected reroute nodes.
 
 Display breadcrumbs for the editor’s context up left.
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Annotation | Shows annotations for this editor view that have been drawn by the annotation tool. |
-| Previews | Shows each nodes preview thumbnails if the node has previews toggled on. |
-| Timings | Shows a timing box above each node to indicate the evaluation time of it.. This option is only available for compositing and geometry nodes. |
-| Canvas Center | Display the canvas center. · **Alpha**: How transparent the green and red canvas center lines are displayed |
+##### Annotation
+
+Shows annotations for this editor view that have been drawn by the annotation tool.
+
+##### Previews
+
+Shows each nodes preview thumbnails if the node has previews toggled on.
+
+##### Timings
+
+Shows a timing box above each node to indicate the evaluation time of it.. This option is only available for compositing and geometry nodes.
+
+##### Canvas Center
+
+Display the canvas center. · **Alpha**: How transparent the green and red canvas center lines are displayed
 
 # Quick Menu
 
@@ -244,14 +274,29 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-| Entry | What it does |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Draw Annotation | Starts the annotation free hand draw tool in the editor. |
-| Draw Line Annotation | Starts the annotation line draw tool to draw straight lines in the editor. |
-| Draw Polyline Annotation | Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor. |
-| Erase Annotation | Starts the annotation erase tool in the editor which erases any strokes in the editor. |
-| Add Annotation Layer | Starts a new annotation layer. |
-| Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
+#### Draw Annotation
+
+Starts the annotation free hand draw tool in the editor.
+
+#### Draw Line Annotation
+
+Starts the annotation line draw tool to draw straight lines in the editor.
+
+#### Draw Polyline Annotation
+
+Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.
+
+#### Erase Annotation
+
+Starts the annotation erase tool in the editor which erases any strokes in the editor.
+
+#### Add Annotation Layer
+
+Starts a new annotation layer.
+
+#### Erase Annotation Active Keyframe
+
+Erases the active keyframe of the annotation.
 
 ### Viewer
 
@@ -259,12 +304,21 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 The viewer contains a series of quick actions to link a node to a viewer to preview compositor results.
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Link to Viewer | Creates a temporary connection to the Viewer Node, allowing to quickly preview the output of any node within the compositor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.* |
-| Unassign Viewer | Removes any quick number assignment linked to a Viewer, allowing it to revert to an unassigned state. |
-| Viewer 1-6 | Activates a viewer that has been assigned a quick number. When you press a number from the keyboard numbers row, it will toggle the Viewer in the Image Preview Editor. |
-| Set Viewer 1-6 | Sets a viewer to a quick number assigment. When you assign a number, you can use the numbers row on the keyboard to toggle the Viewer for the Image Preview Editor. |
+#### Link to Viewer
+
+Creates a temporary connection to the Viewer Node, allowing to quickly preview the output of any node within the compositor by clicking on it. **Note:** *This operator only works under the mouse cursor and is shown in this menu for discoverability purposes only.*
+
+#### Unassign Viewer
+
+Removes any quick number assignment linked to a Viewer, allowing it to revert to an unassigned state.
+
+#### Viewer 1-6
+
+Activates a viewer that has been assigned a quick number. When you press a number from the keyboard numbers row, it will toggle the Viewer in the Image Preview Editor.
+
+#### Set Viewer 1-6
+
+Sets a viewer to a quick number assigment. When you assign a number, you can use the numbers row on the keyboard to toggle the Viewer for the Image Preview Editor.
 
 ### Zoom In
 
@@ -272,12 +326,21 @@ The viewer contains a series of quick actions to link a node to a viewer to prev
 
 Zooms into the viewport.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Zoom Out | Zooms out of the viewport. |
-| Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Frame Selected | Zooms to the selection. |
-| Frame All | View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
+#### Zoom Out
+
+Zooms out of the viewport.
+
+#### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+#### Frame Selected
+
+Zooms to the selection.
+
+#### Frame All
+
+View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.
 
 ### Pie menus
 
@@ -291,10 +354,13 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+#### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+#### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 #### Duplicate Area into New Window
 
@@ -302,11 +368,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the editor. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the editor.
 
 ## View Menu with Backdrop
 
@@ -316,10 +388,13 @@ When you activate the Backdrop in the header, then the View menu reveals some mo
 
 ![View Menu with Backdrop](/docs2/images/editors/compositor/header/view-menu/view-menu-with-backdrop-2.png)
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Set Viewer Region | Allows you to define an area of the Backdrop. Then just this are gets processed. |
-| Clear Viewer Region | Removes the Viewer Region. |
+### Set Viewer Region
+
+Allows you to define an area of the Backdrop. Then just this are gets processed.
+
+### Clear Viewer Region
+
+Removes the Viewer Region.
 
 # Select Menu
 
@@ -335,10 +410,13 @@ Here you will find the select functionality.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+#### Box select
+
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
+
+#### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ### Lasso Select
 
@@ -346,17 +424,41 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Linked From | Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy. |
-| Linked To | Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy. |
-| Grouped | Select grouped nodes. |
-| Grouped Extend | Select grouped nodes, and extend from the current selection. |
-| Activate same type previous | Activate same node type before the current selection, step by step. |
-| Activate same type next | Activate same node type after the current selection, step by step. |
+#### All
+
+Select everything.
+
+#### None
+
+Select nothing.
+
+#### Inverse
+
+Invert the current selection.
+
+#### Linked From
+
+Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy.
+
+#### Linked To
+
+Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy.
+
+#### Grouped
+
+Select grouped nodes.
+
+#### Grouped Extend
+
+Select grouped nodes, and extend from the current selection.
+
+#### Activate same type previous
+
+Activate same node type before the current selection, step by step.
+
+#### Activate same type next
+
+Activate same node type after the current selection, step by step.
 
 ### Find Node
 
@@ -378,12 +480,21 @@ If you include an input/output node in the group, there will not be an input/out
 
 > **Note:** The icons will show what state the nodegroup is in, either in a Nodegroup state (used in file), Forced User state (saved in file even if not used), Asset state (stored to the Asset Browser) or Overridden/Linked state (referenced from another file).
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------- |
-| Add Empty Group | Add an empty node group, with no other nodes in the node group. |
-| Group Input | Adds a Group Input node. This node is usually already part of a new created group. |
-| Group Output | Adds a Group Output node. This node is usually already part of a new created group. |
-| Smooth by Angle | An example node group. |
+### Add Empty Group
+
+Add an empty node group, with no other nodes in the node group.
+
+### Group Input
+
+Adds a Group Input node. This node is usually already part of a new created group.
+
+### Group Output
+
+Adds a Group Output node. This node is usually already part of a new created group.
+
+### Smooth by Angle
+
+An example node group.
 
 ### List of Node Groups
 
