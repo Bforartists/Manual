@@ -1,8 +1,8 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/all-modes/header/header-tools-and-options.md": "editors/3d-viewport/all-modes/header/header-tools-and-options.html",
-  "docs2/content/editors/3d-viewport/all-modes/header/navigation-menu.md": "editors/3d-viewport/all-modes/header/navigation-menu.html",
-  "docs2/content/editors/3d-viewport/all-modes/sidebar.md": "editors/3d-viewport/all-modes/sidebar.html"
+  "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
+  "docs2/content/editors/3d-viewport/armature/pose.md": "editors/3d-viewport/armature/pose.html",
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html"
  },
- "images": 352
+ "images": 432
 }
