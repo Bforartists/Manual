@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Armature"
   - "Edit Mode"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: editmode_hlt
 summary: "Edit the armature itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
