@@ -1,8 +1,9 @@
 {
  "pages": {
-  "docs2/content/editors/dope-sheet/header/index.md": "editors/dope-sheet/header.html",
-  "docs2/content/editors/nonlinear-animation-editor/header/index.md": "editors/nonlinear-animation-editor/header.html",
-  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html"
+  "docs2/content/editors/image-editor/header/index.md": "editors/image-editor/header.html",
+  "docs2/content/editors/movie-clip-editor/header/index.md": "editors/movie-clip-editor/header.html",
+  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
+  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
  },
- "images": 148
+ "images": 429
 }
