@@ -1,13 +1,10 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/all-modes/sidebar.md": "editors/3d-viewport/all-modes/sidebar.html",
-  "docs2/content/editors/3d-viewport/mesh/edit/context-menus.md": "editors/3d-viewport/mesh/edit/context-menus.html",
-  "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html",
-  "docs2/content/editors/3d-viewport/mesh/texture-paint.md": "editors/3d-viewport/mesh/texture-paint.html",
-  "docs2/content/editors/3d-viewport/mesh/vertex-paint.md": "editors/3d-viewport/mesh/vertex-paint.html",
-  "docs2/content/editors/3d-viewport/mesh/weight-paint.md": "editors/3d-viewport/mesh/weight-paint.html",
-  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
-  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
+  "docs2/content/editors/properties/material-properties-tab.md": "editors/properties/material-properties-tab.html",
+  "docs2/content/editors/properties/modifiers/mesh/generate.md": "editors/properties/modifiers/mesh/generate.html",
+  "docs2/content/editors/properties/object-properties-tab.md": "editors/properties/object-properties-tab.html",
+  "docs2/content/editors/properties/render-properties-tab/eevee.md": "editors/properties/render-properties-tab/eevee.html",
+  "docs2/content/editors/properties/world-properties-tab.md": "editors/properties/world-properties-tab.html"
  },
- "images": 921
+ "images": 355
 }
