@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scripting · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/style-warnings-quick · <code>docs2/style-warnings-quick</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<a href="../getting-started/introduction.html">Introduction</a>
+<span>Using the Documentation</span>
+<a href="../getting-started/installation.html">Installation</a>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/text/edit.html">Edit Mode</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../editors/timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/properties/output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../editors/3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../editors/image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/mask.html">Mask</a>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../editors/properties/object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../editors/properties/modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../editors/properties/object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../editors/properties/material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<a href="../editors/movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../editors/graph-editor.html">Graph Editor</a>
+<a href="../editors/drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<a href="../editors/python-console.html">Python Console</a>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<a href="../editors/outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<a style="padding-left:2.5rem" href="../editors/properties/render-properties-tab/cycles.html">Cycles</a>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<a href="../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<a class="is-current" href="advanced-scripting-extending-bforartists.html">Scripting</a>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Advanced › Advanced - Scripting &amp; Extending Bforartists</div><h1 class="pv-title">Scripting</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h2 id="scripting-extending-bforartists">Scripting &amp; Extending Bforartists</h2>
+<h3 id="python">Python</h3>
+<p>Python is an interpreted, interactive, object-oriented programming language.</p>
+<p>Python scripts are a way to extend Bforartists functionality. Most areas of Bforartists can be scripted, including Animation, Rendering, Import and Export, Object Creation and the scripting of repetitive tasks.</p>
+<p>This can be done by the Blender Python API (Application Programming Interface). It comes also with an introduction to scripting and some examples. <a href="https://docs.blender.org/api/blender2.8/index.html">https://docs.blender.org/api/blender2.8/index.html</a></p>
+<h3 id="extending-bforartists">Extending Bforartists</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/advanced/advanced-scripting-extending-bforartists/extending-bforartists.png" alt="Extending Bforartists" loading="lazy"></figure>
+<p>You can either write scripts, and perform them in the text editor. Scripts must be loaded and executed from scratch every time you need them. Or you can write complete addons. Addons can be activated, and loads with Bforartists.</p>
+<p>You can find quite a few example scripts in the text editor in the file menu.</p>
+<h2 id="scripting-security">Scripting &amp; Security</h2>
+<p>The ability to include Python scripts within blend files is valuable for advanced tasks such as rigging, automation and using the game-engine, however it poses a security risk since Python doesn’t restrict what a script can do.</p>
+<p>Therefore, you should only run scripts from sources you know and trust.</p>
+<p>Automatic execution is disabled by default, however some blend files need this to function properly.</p>
+<p>When a blend file tries to execute a script and is not allowed, a message will appear in the header with the option to <strong>Reload Trusted</strong> or <strong>Ignore</strong> the message.</p>
+<h3 id="scripts-in-blend-files">Scripts in Blend Files</h3>
+<h4 id="auto-execution">Auto Execution</h4>
+<p>Here are the different ways blend files may automatically run scripts.</p>
+<p>Registered Text-Blocks</p>
+<p>A text block can have its <em>Register</em> option enabled which means it will load on start.</p>
+<h5 id="animation-drivers">Animation Drivers</h5>
+<p>Python expressions can be used to <em>Drive</em> values and are often used in more advanced rigs and animations.</p>
+<p>Game Engine Auto-Start</p>
+<p>Scripts are often used for game logic, blend files can have <em>Auto Start</em> enabled with runs the game on load.</p>
+<h4 id="manual-execution">Manual Execution</h4>
+<p>There are other ways scripts in a <em>blend</em> file may execute that require user interaction (therefor will run even when auto-execution is off), but you should be aware that this is the case since it’s not necessarily obvious.</p>
+<ul>
+<li>Running a script in the text editor <em>(ok, this is obvious!)</em>.</li>
+<li>Rendering with FreeStyle - <em>FreeStyle uses scripts to control line styles</em></li>
+<li>Running the Game-Engine.</li>
+</ul>
+<h3 id="controlling-script-execution">Controlling Script Execution</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/advanced/advanced-scripting-extending-bforartists/controlling-script-execution.png" alt="Controlling Script Execution" loading="lazy"></figure>
+<p>Blender files can also contain scripts. Which can be auto run when you load the blend file. Auto running scripts can be a security issue. There are two ways to control script execution in blend files. In the load dialog for a blend file. Or in the Preferences.</p>
+<p>In the .blend file selector you will see down left the checkbox <strong>Trusted source</strong>. Enable it to allow auto execution of the scripts in the blend file.</p>
+<p>**Auto-Run Python Scripts **in the Preferences in the Save &amp; Load Panelallows you to run scripts in blend files automatically.</p>
+<p>The Excluded Paths edit box below allows you to exclude certain directories. You can for example exclude the download directory. And allow auto run from all other directories at your computer.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/advanced/advanced-scripting-extending-bforartists/controlling-script-execution-2.png" alt="Controlling Script Execution" loading="lazy"></figure>
+<p>BAM Asset Manager</p>
+<p>Refactoring linked .blend files is a common practice in a production environment. While some basic operations can be accomplished within Blender, sometimes it is more practical to perform them on the command line or via a script. During the production of Cosmos Laundromat (Gooseberry Open Movie Project) the <em>BAM Asset Manager</em> (BAM) was developed. The original scope of BAM included client-server asset management tools going beyond Blender, but it was later refocused on core utilities to perform two operations:</p>
+<ul>
+<li>blendfile packing</li>
+<li>automatic dependencies remapping</li>
+</ul>
+<h4 id="installing-bam">Installing BAM</h4>
+<p>BAM is a standalone Python package, that can be run on any system without any particular configuration. The only requirement is Python 3 (and pip, the Python package manager, to easily install BAM).</p>
+<p>Windows, Linux and macOS provide different ways to install Python 3 and pip. Check out the online docs to learn more about a specific platform.</p>
+<p>Once Python 3 and pip are available, BAM can be installed via command line by typing:</p>
+<p>pip3 install blender-bam</p>
+<p>After a successful installation, the <em>bam</em> command will be available. By typing it and pressing the Enter key, all the available sub commands will be displayed.</p>
+<h4 id="bam-pack">bam pack</h4>
+<p>This command is used for packing a <em>.blend</em> file and <em>all</em> its dependencies into a <em>.zip</em> file for redistribution.</p>
+<p>usage: bam pack <code>[-h]</code> <code>[-o</code> <code>FILE]</code> <code>[-m</code> <code>MODE]</code> <code>[-e</code> <code>PATTERNS]</code> <code>[-a]</code> <code>[-q]</code> <code>[-c</code> <code>LEVEL]</code></p>
+<p>paths <code>[paths</code> <code>...]</code></p>
+<p>You can simply pack a blend file like this to create a zip-file of the same name.</p>
+<p>bam pack /path/to/scene.blend</p>
+<p>You may also want to give an explicit output directory. The example shows how to pack a blend with maximum compression for online downloads</p>
+<p>bam pack /path/to/scene.blend --output my_scene.zip --compress=best</p>
+<p>The command provides several options to adapt to different workflows (final distribution, partial extraction, rendering).</p>
+<p><em>-o</em>, <em>--output</em> <em>&lt;FILE&gt;</em></p>
+<p>Output file or a directory when multiple inputs are passed</p>
+<p><em>-m</em>, <em>--mode</em> <em>&lt;MODE&gt;</em></p>
+<p>Output file or a directory when multiple inputs are passed. Possible choices: <em>ZIP</em>, <em>FILE</em></p>
+<p><em>-e</em>, <em>--exclude</em> <em>&lt;PATTERN(S)&gt;</em></p>
+<p>Optionally exclude files from the pack.</p>
+<p><code>--exclude=&quot;*.png&quot;</code></p>
+<p>Using Unix shell-style wildcards <em>(case insensitive)</em>.</p>
+<p><code>--exclude=&quot;*.txt;*.avi;*.wav&quot;</code></p>
+<p>Multiple patterns can be passed using the <em>;</em> separator.</p>
+<p><em>-a</em>, <em>--all-deps</em></p>
+<p>Follow all dependencies (unused indirect dependencies too)</p>
+<p><em>-q</em>, <em>--quiet</em></p>
+<p>Suppress status output</p>
+<p><em>-c</em>, <em>--compress</em> <em>&lt;LEVEL&gt;</em></p>
+<p>Compression level for resulting archive Possible choices: <em>default</em>, <em>fast</em>, <em>best</em>, <em>store</em></p>
+<p><em>--repo</em> <em>&lt;DIR PATH&gt;</em></p>
+<p>Specify a “root” path from where to pack the selected file. This allows for the creation of a sparse copy of the production tree, without any remapping.</p>
+<p><em>--warn-external</em></p>
+<p>Report external libraries errors (missing paths)</p>
+<h5 id="examples">Examples</h5>
+<p>Consider the following directory layout, and in particular the file <em>01_01_A.lighting.blend</em> with its linked libraries.</p>
+<p>~/agent327/</p>
+<p>└─ lib/</p>
+<p>├─ chars/</p>
+<p>| ├─ agent.blend -------------&gt;|</p>
+<p>| ├─ boris.blend -------------&gt;|</p>
+<p>| └─ barber.blend |</p>
+<p>└─ scenes/ |</p>
+<p>├─ 01-opening |</p>
+<p>├─ 01_01_A.lighting.blend &lt;--| &lt; BAM pack this file</p>
+<p>└─ 01_01_A.anim.blend ------&gt;|</p>
+<p>Once we run <em>bam pack /scenes/01-opening/01_01_A.lighting.blend</em> we obtain a <em>01_01_A.lighting.zip</em> inside of which we find the following structure.</p>
+<p>~/01_01_A.lighting</p>
+<p>├─ 01_01_A.lighting.blend</p>
+<p>└─ <code>__/</code></p>
+<p>├─ 01_01_A.anim.blend</p>
+<p>└─ <code>__/</code></p>
+<p>└─ lib/</p>
+<p>└─ chars/</p>
+<p>├─ agent.blend</p>
+<p>└─ boris.blend</p>
+<p>Note how all paths have been remapped relative to the placement of <em>01_01_A.lighting.blend</em> in the root of the output. If we run <em>bam pack /scenes/01-opening/01_01_A.lighting.blend --repo ~/agent327</em>, the output will be different.</p>
+<p>~/01_01_A.lighting</p>
+<p>├─ lib/</p>
+<p>| └─ chars/</p>
+<p>| ├─ agent.blend</p>
+<p>| └─ boris.blend</p>
+<p>└─ scenes</p>
+<p>└─ 01-opening/</p>
+<p>├─ 01_01_A.lighting.blend &lt; The BAM packed file</p>
+<p>└─ 01_01_A.anim.blend</p>
+<p>In this case no path is remapped, and we simply strip out any file that is not referenced as a direct or indirect dependency of <em>01_01_A.lighting.blend</em>. This is effectively a sparse copy of the original production tree.</p>
+<h4 id="bam-remap">bam remap</h4>
+<p>Remap blend file paths</p>
+<p>usage: bam remap <code>[-h]</code> {start,finish,reset} ...</p>
+<p>This command is a 3 step process:</p>
+<ul>
+<li>first run <em>bam remap start .</em> which stores the current state of your project (recursively).</li>
+<li>then re-arrange the files on the file system (rename, relocate).</li>
+<li>finally run <em>bam remap finish</em> to apply the changes, updating the <em>.blend</em> files internal paths.</li>
+</ul>
+<p>cd /my/project</p>
+<p>bam remap start .</p>
+<p>mv photos textures</p>
+<p>mv barbershop_v14_library.blend barberhop_libraray.blend</p>
+<p>bam remap finish</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Remapping creates a file called <em>bam_remap.data</em> in the current directory. You can relocate the entire project to a new location but on executing <em>finish</em>, this file must be accessible from the current directory.
+<strong>Note:</strong> This command depends on files unique contents, take care not to modify the files once remap is started.</p></div>
+<h5 id="subcommands">Subcommands</h5>
+<h6 id="remap-start">remap start</h6>
+<p>Start remapping the blend files</p>
+<p>usage: bam remap start <code>[-h]</code> <code>[-j]</code> <code>[paths</code> <code>[paths</code> <code>...]]</code></p>
+<p><em>-j</em>, <em>--json</em></p>
+<p>Generate JSON output</p>
+<h6 id="remap-finish">remap finish</h6>
+<p>Finish remapping the blend files</p>
+<p>usage: bam remap finish <code>[-h]</code> <code>[-r]</code> <code>[-d]</code> <code>[-j]</code> <code>[paths</code> <code>[paths</code> <code>...]]</code></p>
+<p><em>-r</em>, <em>--force-relative</em></p>
+<p>Make all remapped paths relative (even if they were originally absolute)</p>
+<p><em>-d</em>, <em>--dry-run</em></p>
+<p>Just print output as if the paths are being run</p>
+<p><em>-j</em>, <em>--json</em></p>
+<p>Generate JSON output</p>
+<h6 id="remap-reset">remap reset</h6>
+<p>Cancel path remapping</p>
+<p>usage: bam remap reset <code>[-h]</code> <code>[-j]</code></p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fstyle-warnings-quick/collection/docs/edit/docs2%2Fcontent%2Fadvanced%2Fadvanced-scripting-extending-bforartists.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/advanced/advanced-scripting-extending-bforartists.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#scripting-extending-bforartists">Scripting &amp; Extending Bforartists</a><a class="h3" href="#python">Python</a><a class="h3" href="#extending-bforartists">Extending Bforartists</a><a class="h2" href="#scripting-security">Scripting &amp; Security</a><a class="h3" href="#scripts-in-blend-files">Scripts in Blend Files</a><a class="h3" href="#controlling-script-execution">Controlling Script Execution</a></aside></div></body></html>

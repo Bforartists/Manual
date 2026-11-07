@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modifiers · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/style-warnings-quick · <code>docs2/style-warnings-quick</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<span>Using the Documentation</span>
+<a href="../../getting-started/installation.html">Installation</a>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a class="is-current" style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<a href="../python-console.html">Python Console</a>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<a href="../outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<a href="../../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Modifiers tab</div><h1 class="pv-title">Modifiers</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 11 min read</span></div><article class="ui-doc-body"><figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/modifiers-tab.png" alt="Modifiers tab" loading="lazy"></figure>
+<p>Modifers are automatic operations that affects the geometry of objects in a non destructive way. You can, for example ,subdivide a mesh object dynamically where the base geometry stays intact when in edit mode.</p>
+<p>Modifiers can also be applied to the object and “frozen”. In this case the change is destructive.</p>
+<p>Modifiers gets added in a modifier stack. Choose a modifier from the list, and re-arrange the modifiers per your needs. Modifiers can build on top of each other and can be reordered. Sometimes the order of operations is important.</p>
+<h2 id="object-types-with-modifiers">Object types with modifiers</h2>
+<p>There are two general types of objects where you can use modifiers. Mesh objects and Curve objects. The Grease Pencil object is a special object in this regards and has some exclusive modifiers that the other object types does not have. The Grease Pencil object is under the hood also a curve object.</p>
+<p>Each object types shows a different set of modifiers. Some modifiers have the same name, but shows different settings for different object types.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>Mesh object</p>
+<p>These show modifiers divided into four categories: Edit, Generate, Deform and Physics.</p>
+<p>You can also use Geometry Nodes Asset Modifiers.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers-2.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>Curve + Text Object</p>
+<p>These show modifiers divided into four categories: Edit, Generate, Deform and Physics.</p>
+<p>You can also use Geometry Nodes Asset Modifiers.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers-3.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>Point Cloud object</p>
+<p>Just one entry.</p>
+<p>Volume Object</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers-4.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>These show modifiers divided into two categories: Generate and Deform.</p>
+<p>You can also use Geometry Nodes Asset Modifiers.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers-5.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>Grease Pencil Object</p>
+<p>These show modifiers divided into four categories: Edit, Generate, Deform and Color.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/object-types-with-modifiers-6.png" alt="Object types with modifiers" loading="lazy"><figcaption>Object types with modifiers</figcaption></figure>
+<p>Lattice Object</p>
+<p>These show modifiers divided into three categories: Edit, Deform and Physics.</p>
+<h2 id="modifier-types">Modifier types</h2>
+<p>There are several types of modifiers:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry Nodes</td>
+<td>This allows you to insert a Geometry Nodes modifier.</td>
+</tr>
+<tr>
+<td>Normals</td>
+<td>Normal nodes</td>
+</tr>
+<tr>
+<td>Edit</td>
+<td>Miscellaneous modifiers like the mesh cache</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>Change the shape of an object, without altering its topology. But not directly, but by some other data like vertex groups.</td>
+</tr>
+<tr>
+<td>Generate</td>
+<td>Constructive/destructive tools that will affect the whole Topology of the mesh. They can change the general appearance of the object, or add new geometry to it.</td>
+</tr>
+<tr>
+<td>Deform</td>
+<td>Change the shape of an object, without altering its topology.</td>
+</tr>
+<tr>
+<td>Phyiscs</td>
+<td>Those represent physics simulations. In most cases, they are automatically added to the modifiers stack whenever a Particle System or Physics simulation is enabled. Their only role is to define the position in the modifier stack from which is taken the base data for the simulation they represent. As such, they typically have no attributes, and are controlled by settings exposed in separate sections of the Properties.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Just for the grease pencil object. Adds some modifiers to adjust the color.</td>
+</tr>
+<tr>
+<td>Hair</td>
+<td>Mesh Object. Add Hair Curve Modifiers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="general-functionality">General functionality</h2>
+<h3 id="add-modifier">Add Modifier</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-modifier.png" alt="Add Modifier" loading="lazy"></figure>
+<p>To add a modifier to a selection of objects, simply open the add menu, and choose the type of modifier that you want to add.</p>
+<p>This will add the modifier to the list on your selection.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-modifier-2.png" alt="Add Modifier" loading="lazy"></figure>
+<p>For some modifiers you will also find menu items in the 3D view. The Quick effect Fluid will for example add a fluid and liquid particle system modifier.</p>
+<p>This menu entries exists to simplify the workflow. This menu entries are described in other chapters.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To add modifiers will generally apply to all selected objects, unless you press and hold Alt and click on the operators. When removing and applying modifiers, they will generally apply to all selected objects, unless you press and hold Alt and click on the operators.</p></div>
+<h3 id="header-elements">Header elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/header-elements.png" alt="Header elements" loading="lazy"></figure>
+<p>You might want to disable a modifier temporarily. Or just see the effect in the final rendering. This can be adjusted in the header. The header is what you see when you collapse the modifier panel.</p>
+<p>Note that not all modifiers have the same header content. Fluid modifiers for example doesn't even have a remove button. They get removed by removing the fluid simulation in the physics tab.</p>
+<p>Elements are explained from left to right.</p>
+<h4 id="collapse-panel">Collapse panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/collapse-panel.png" alt="Collapse panel" loading="lazy"></figure>
+<p>The whole modifier panel can be collapsed. Click at the arrow button up left in the header.</p>
+<h4 id="modifier-icon">Modifier Icon</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/modifier-icon.png" alt="Modifier Icon" loading="lazy"></figure>
+<p>This icon shows the type of the modifier. And has no further functionality.</p>
+<h4 id="modifier-name">Modifier Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/modifier-name.png" alt="Modifier Name" loading="lazy"></figure>
+<p>The name of the modifier. You can rename modifiers by clicking into the edit field and change the text.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On Cage</td>
+<td>Adjust edit cage to modifier result. With this option the geometry will be viewed at the position they will be after the modifier is calculated. Important for the mirror modifier for example.</td>
+</tr>
+<tr>
+<td>Edit Mode</td>
+<td>Display the modifier result in edit mode.</td>
+</tr>
+<tr>
+<td>Realtime</td>
+<td>Display the modifier in the viewport.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Display the modifier in the rendered result.</td>
+</tr>
+<tr>
+<td>Apply</td>
+<td>This will apply the modifier, and it destructively change the mesh. <strong>Note:</strong> <em>If multiple objects have the same modifier with the same name, they will be applied to the selection. If you want to apply to only the Active object, press and hold Alt then click on the operator.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="header-menu">Header menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/header-menu.png" alt="Header menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/header-menu-2.png" alt="Header menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/header-menu-3.png" alt="Header menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply as Shapekey</td>
+<td>Armature modifier. Applies the current pose as a shape key, and removes the modifier.</td>
+</tr>
+<tr>
+<td>Apply (All Keyframes)</td>
+<td>Grease pencil object. Applies the modifier to all keyframes, and removes it then.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="save-as-shapekey">Save as Shapekey</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/save-as-shapekey.png" alt="Save as Shapekey" loading="lazy"></figure>
+<p>Armature modifier. Applies the current pose as a shape key, and keeps the modifier.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate</td>
+<td>Duplicates the modifier, and places the duplicate below the current modifier.</td>
+</tr>
+<tr>
+<td>Copy to Selected</td>
+<td>Copies the modifier to the selected object. First select the object where you want to paste the modifier to. Then select the object with the modifier with holding down shift so that both objects are selected. Now use Copy to Selected. And the modifier will copy over to the first object. Works also with multiple objects.</td>
+</tr>
+<tr>
+<td>Move to first</td>
+<td>Move the modifier to the first position in the stack.</td>
+</tr>
+<tr>
+<td>Move to last</td>
+<td>Move the modifier to the last position in the stack.</td>
+</tr>
+<tr>
+<td>Move to Nodes</td>
+<td>Hair modifier. Moves the modifier to nodes instead.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="show-node-groups">Show Node Groups</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/show-node-groups.png" alt="Show Node Groups" loading="lazy"></figure>
+<p>Hair modifier. Shows the node groups prop in the modifier</p>
+<h4 id="remove">Remove</h4>
+<p>Removes the modifier from the stack on all selected objects.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If multiple objects have the same modifier with the same name, they will be removed from the selection. If you want to remove from only the Active object, press and hold Alt then click on the operator.</p></div>
+<h4 id="pin-to-last">Pin to Last</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/pin-to-last.png" alt="Pin to Last" loading="lazy"></figure>
+<p>Keep the modifier at the end of the list. You can pin multiple modifiers at the end of the stack. The order of the pinned modifiers is set by the order that you pin the modifiers.</p>
+<h4 id="change-context">Change Context</h4>
+<p>Some modifiers cannot be removed from the modifiers stack directly. Like fluid modifiers. You need to remove the fluid simulation instead, in the physics tab. With the change context button you jump to the required tab where you can now remove the simulation.</p>
+<h4 id="reorder">Reorder</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/reorder.png" alt="Reorder" loading="lazy"></figure>
+<p>You can have more than one modifier in the list. And sometimes the order of the modifiers is very important.</p>
+<p>Grab the handler at the right and drag the modifier to the position where you want it to have.</p>
+<h3 id="animate-property">Animate Property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/animate-property.png" alt="Animate Property" loading="lazy"></figure>
+<p>Some of the properties can be animated. Click at the animate property button at the right to add a keyframe.</p>
+<h3 id="add-asset-modifier">Add Asset Modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-asset-modifier.png" alt="Add Asset Modifier" loading="lazy"></figure>
+<p>Add a modifier nodegroup into the modifier stack. This will list and create all Geometry Node group assets assigned to the Modifier property. If they are not assigned to a category in the Asset Browser, they will list as “unassigned”.</p>
+<p>For more information, please check out the chapter</p>
+<h4 id="editors-properties-editor-modifiers-properties-tab-add-modifier-menus">Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus</h4>
+<h2 id="add-modifier-menu-buttons">Add Modifier menu buttons</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-modifier-menu-buttons.png" alt="Add Modifier menu buttons" loading="lazy"><figcaption>Add Modifier menu buttons</figcaption></figure>
+<p>There are two types of modifiers, builtin modifiers and geometry nodes modifiers that were marked as assets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Menu entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Modifier Button</td>
+<td>The button to the left adds built in modifiers to all selected objects. <em><strong>Note:</strong> When adding modifier assets will apply to all selected object.</em></td>
+</tr>
+<tr>
+<td>Add Asset Modifier</td>
+<td>The button to the right adds geometry nodes assets as modifiers to all selected objects. <strong>Note:</strong> <em>When adding modifier assets will apply to all selected object.</em></td>
+</tr>
+<tr>
+<td>Modifier Special menu</td>
+<td>Contains some general modifier operators.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-modifier-menu">Add Modifier menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-modifier-menu.png" alt="Add Modifier menu" loading="lazy"></figure>
+<p>This menu with a list of modifier items adds built in modifiers to all selected objects. This shows with all objects.</p>
+<p>These are divided into several categories.</p>
+<h3 id="type-to-search">Type to Search…</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/type-to-search.png" alt="Type to Search…" loading="lazy"></figure>
+<p>When the menu is open, you can press any key to start typing to search, this will filter the modifiers by name.</p>
+<h2 id="add-asset-modifier-menu">Add Asset Modifier menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/add-asset-modifier-menu.png" alt="Add Asset Modifier menu" loading="lazy"><figcaption>Add Asset Modifier menu</figcaption></figure>
+<p>There is also an add asset modifier menu items that shows all Geometry Node groups marked as assets that you can add as a modifier to all selected objects.</p>
+<h3 id="search">Search…</h3>
+<p>Search for a specific modifier.</p>
+<h3 id="type-to-search-2">Type to Search…</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/type-to-search-2.png" alt="Type to Search…" loading="lazy"></figure>
+<p>When the menu is open, you can press any key to start typing to search, this will filter the asset modifiers by name.</p>
+<h3 id="geometry-nodes">Geometry Nodes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/geometry-nodes.png" alt="Geometry Nodes" loading="lazy"></figure>
+<p>Add a geometry nodes modifier.</p>
+<p>This is usually done in the Geometry Nodes Editor.</p>
+<p>The geometry Nodes modifier adds a geometry node tree, which can be modified in the geometry node editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/geometry-nodes-2.png" alt="Geometry Nodes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/geometry-nodes-3.png" alt="Geometry Nodes" loading="lazy"></figure>
+<p>Manage the nodes. If there is no geometry node tree for the current object, then you will see the New button.</p>
+<h3 id="geometry-nodes-assets">Geometry Nodes Assets</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/geometry-nodes-assets.png" alt="Geometry Nodes Assets" loading="lazy"></figure>
+<p>These are Geometry Node groups that have been marked as assets, set as a “Modifier” in the node group properties, and organized into an</p>
+<p>Asset Browser category.</p>
+<p>1 . Mark Node Group as asset and set the Node Group properties to “Modifier”, so this will show in the Modifier stack. Do this from the Geometry Nodes editor.</p>
+<ol start="2">
+<li>Assign the Nodegroup to a category in the File Browser Editor.</li>
+</ol>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/geometry-nodes-assets-2.png" alt="Geometry Nodes Assets" loading="lazy"></figure>
+<ol start="3">
+<li>Now you can use the Add Asset Modifier menu to quickly assign a new Geometry Nodes Asset Modifer preset to any object.</li>
+</ol>
+<h4 id="data-browser">Data Browser</h4>
+<p>The list of available geometry node trees in the scene.</p>
+<h5 id="edit-box">Edit box</h5>
+<p>The name of the current active geometry node tree. Here you can also rename the node tree.</p>
+<h5 id="add-fake-user">Add Fake User</h5>
+<p>Wit this button you assign a fake user to this selected geometry node tree.</p>
+<p>Data, like node trees, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Menu entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+<td>The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Adds a duplicate geometry nodes nodegroup.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the geometry node tree. To delete it completely you need to purge it. See Fake user.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-inputs-and-outputs">Custom Inputs and Outputs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/custom-inputs-and-outputs.png" alt="Custom Inputs and Outputs" loading="lazy"><figcaption>Custom Inputs and Outputs</figcaption></figure>
+<p>In case you define custom inputs and outputs in the geometry nodes editor, then these inputs and outputs also shows in the modifier.</p>
+<h3 id="unassigned-catalogue">Unassigned (Catalogue)</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/unassigned-catalogue.png" alt="Unassigned (Catalogue)" loading="lazy"></figure>
+<p>Custom modifier assets. This menu item shows when you for example add a geometry node, and apply it. Then this applied node tree goes into this menu which allows you to reuse it. The term non-assets is a label, and no custom asset.</p>
+<h2 id="modifier-special-menu">Modifier Special menu</h2>
+<h3 id="copy-modifiers-to-selected-objects">Copy Modifiers to selected Objects</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/0d48230c0577ee3b8d8accfb6f3820c4929e1f75/docs2/images/ui/properties/modifiers/copy-modifiers-to-selected-objects.png" alt="Copy Modifiers to selected Objects" loading="lazy"><figcaption>Copy Modifiers to selected Objects</figcaption></figure>
+<p>Pastes the existing modifers at the active object to the selected objects.</p>
+<p>Select the objects that you want to copy the modifiers to . Hold down shift, select the active object with the Modifier. Perform the operator. The modifiers will be pasted to them.</p>
+<h3 id="clear-object-modifiers">Clear Object Modifiers</h3>
+<p>Removes all modifiers at the selected objects.</p>
+<h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/mesh/normals.md">Normals modifiers (Mesh)</a> — The Normal Edit modifier affects (or generates) custom normals.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/mesh/edit.md">Edit modifiers (Mesh)</a> — Edit modifiers exists for the mesh object, the curve and text object, the point cloud and the lattice object.</li><li><a href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a> — Generate modifiers are available for mesh objects, curve + text objects and volume objects.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/mesh/deform.md">Deform modifiers (Mesh)</a> — An armature system allows to deform objects accurately by posing bones.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/mesh/physics.md">Physics modifiers (Mesh)</a> — Physics modifiers are available for Mesh object, Curve + Text object and Lattice Object</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/grease-pencil/edit.md">Edit modifiers (Grease Pencil)</a> — The Texture Mapping Modifier changes the strokes texture UV position.</li><li><a href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a> — Some of the modifiers are just available for specific object types.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/grease-pencil/deform.md">Deform modifiers (Grease Pencil)</a> — An armature system allows to deform objects accurately by posing bones.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/grease-pencil/color.md">Color modifiers (Grease Pencil)</a> — Color modifiers just exists for the Grease Pencil object.</li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fstyle-warnings-quick/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/style-warnings-quick/docs2/content/editors/properties/modifiers/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#object-types-with-modifiers">Object types with modifiers</a><a class="h2" href="#modifier-types">Modifier types</a><a class="h2" href="#general-functionality">General functionality</a><a class="h3" href="#add-modifier">Add Modifier</a><a class="h3" href="#header-elements">Header elements</a><a class="h3" href="#animate-property">Animate Property</a><a class="h3" href="#add-asset-modifier">Add Asset Modifier</a><a class="h2" href="#add-modifier-menu-buttons">Add Modifier menu buttons</a><a class="h2" href="#add-modifier-menu">Add Modifier menu</a><a class="h3" href="#type-to-search">Type to Search…</a><a class="h2" href="#add-asset-modifier-menu">Add Asset Modifier menu</a><a class="h3" href="#search">Search…</a><a class="h3" href="#type-to-search-2">Type to Search…</a><a class="h3" href="#geometry-nodes">Geometry Nodes</a><a class="h3" href="#geometry-nodes-assets">Geometry Nodes Assets</a><a class="h3" href="#unassigned-catalogue">Unassigned (Catalogue)</a><a class="h2" href="#modifier-special-menu">Modifier Special menu</a><a class="h3" href="#copy-modifiers-to-selected-objects">Copy Modifiers to selected Objects</a><a class="h3" href="#clear-object-modifiers">Clear Object Modifiers</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>
