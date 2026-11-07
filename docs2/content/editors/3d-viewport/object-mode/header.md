@@ -66,9 +66,11 @@ Mesh objects are geometrical objects made of vertices, edges and faces. The geom
 
 Plane creates a simple quad face mesh.
 
-#### Adjust Last Operation - Add Plane Panel
+#### Adjust Last Operation - Add Plane
 
 Change the settings of **Add Plane** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Plane](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-plane.png)
 
 
 | Entry | What it does |
@@ -99,9 +101,11 @@ defines the rotation of the primitive.
 
 Cube creates a Cube mesh.
 
-#### Adjust Last Operation - Add Cube Panel
+#### Adjust Last Operation - Add Cube
 
 Change the settings of **Add Cube** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Cube](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-cube.png)
 
 ##### Size
 
@@ -131,9 +135,11 @@ defines the rotation of the primitive.
 
 Circle creates a Circle mesh.
 
-#### Adjust Last Operation - Add Circle Panel
+#### Adjust Last Operation - Add Circle
 
 Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Circle](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-circle.png)
 
 
 | Entry | What it does |
@@ -184,9 +190,11 @@ defines the rotation of the primitive.
 
 UV Sphere creates a sphere mesh.
 
-#### Adjust Last Operation - Add UV Sphere Panel
+#### Adjust Last Operation - Add UV Sphere
 
 Change the settings of **Add UV Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add UV Sphere](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-uv-sphere.png)
 
 
 | Entry | What it does |
@@ -220,9 +228,11 @@ defines the rotation of the primitive.
 
 Ico Sphere creates a sphere mesh.
 
-#### Adjust Last Operation - Add Ico Sphere Panel
+#### Adjust Last Operation - Add Ico Sphere
 
 Change the settings of **Add Ico Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Ico Sphere](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-ico-sphere.png)
 
 
 | Entry | What it does |
@@ -255,9 +265,11 @@ defines the rotation of the primitive.
 
 Cylinder creates a Cylinder mesh.
 
-#### Adjust Last Operation - Add Circle Panel
+#### Adjust Last Operation - Add Cylinder
 
-Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Add Cylinder** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Cylinder](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-cylinder.png)
 
 
 | Entry | What it does |
@@ -309,9 +321,11 @@ defines the rotation of the primitive.
 
 Cone creates a Cone mesh
 
-#### Adjust Last Operation - Add Cone Panel
+#### Adjust Last Operation - Add Cone
 
 Change the settings of **Add Cone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Cone](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-cone.png)
 
 
 | Entry | What it does |
@@ -467,9 +481,11 @@ Defines the rotation of the primitive.
 
 Monkey creates a monkey head mesh.
 
-#### Adjust Last Operation - Add Monkey Panel
+#### Adjust Last Operation - Add Monkey
 
 Change the settings of **Add Monkey** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Add Monkey](/docs2/images/editors/3d-viewport/header/add-menu/adjust-last-operation-add-monkey.png)
 
 
 | Entry | What it does |
