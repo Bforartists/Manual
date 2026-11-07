@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Material Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.15 Editors - Properties Editor - Material Properties Tab.odt
@@ -166,6 +166,10 @@ Creates a new default material, and assigns it to the active material slot.
 Specifies whether the material is to be linked to the Object or to the Object Data.
 
 Different objects may share the same mesh data. And if the material is linked to the mesh, every object will share it. If the material is linked directly to the object data, the objects can have different materials and still share the same mesh. Default is Data.
+
+#### Open Shader Editor
+
+Opens a Shader Editor window with the node tree of the active material. Use it to edit the material nodes without switching to the Shading workspace. It works with EEVEE and Cycles.
 
 #### Right Click menus
 

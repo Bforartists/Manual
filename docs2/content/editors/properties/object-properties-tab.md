@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Object Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.8 Editors - Properties Editor - Object Properties Tab.odt
@@ -672,6 +672,8 @@ Disable surface influence during selection, snapping and depth-picking operators
 **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.
 
 ## Visibility Panel - Eevee
+
+![Visibility Panel - Eevee](/docs2/images/editors/properties/object-properties-tab/visibility-panel-eevee.png)
 
 Show or hide options for the selected object.
 

@@ -8,7 +8,7 @@ path:
   - Mesh
   - Modifiers tab
   - Generate modifiers
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
