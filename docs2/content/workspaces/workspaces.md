@@ -82,14 +82,29 @@ So when you work at a layout be sure that you don't accidentally do changes at o
 Creates a copy of the current workspace, including its editor layout and active tools.  
 Useful for experimenting with variations without losing the original setup.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete | Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely. |
-| Reorder to Front | Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts. |
-| Reorder to Back | Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts. |
-| Previous Workspace | Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching. |
-| Next Workspace | Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling. |
-| Delete Other Workspaces | Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing. |
+#### Delete
+
+Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely.
+
+#### Reorder to Front
+
+Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.
+
+#### Reorder to Back
+
+Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts.
+
+#### Previous Workspace
+
+Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching.
+
+#### Next Workspace
+
+Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling.
+
+#### Delete Other Workspaces
+
+Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing.
 
 ## Load Workspace layout from Blend Files
 

@@ -125,11 +125,17 @@ This is a group of header operators for animation channel visibility. This is pr
 
 Display the Summary label above the list of elements.
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Only Show Selected | Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene. |
-| Show Hidden | Include channels from objects / bones that are not visible. This feature just works with Only Selected off. |
-| Only Show Errors | Only display F-Curves and Drivers that have errors or are disabled. |
+#### Only Show Selected
+
+Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene.
+
+#### Show Hidden
+
+Include channels from objects / bones that are not visible. This feature just works with Only Selected off.
+
+#### Only Show Errors
+
+Only display F-Curves and Drivers that have errors or are disabled.
 
 ## Filters - Dope Sheet Mode
 
@@ -151,10 +157,13 @@ In this section you can choose what type of animation data should be displayed. 
 
 ### Options
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------ |
-| Sort Data Blocks | Alphabetically sort the data in the list of elements. |
-| Multi Word Match Search | Enable Multi Word matching for the search in the list of elements. |
+#### Sort Data Blocks
+
+Alphabetically sort the data in the list of elements.
+
+#### Multi Word Match Search
+
+Enable Multi Word matching for the search in the list of elements.
 
 ## Snapping Panel – Most modes
 
@@ -164,13 +173,25 @@ Snapping in animation editors helps align the **playhead** and **keyframes** to 
 
 > **Note:** This sub-subpanel is not available for Grease Pencil Dopesheet Mode
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Snapping On/Off | Toggles the snapping on or off with a visual indicator. |
-| Frame | Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame timeline cursor placement. |
-| Second | Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing. |
-| Nearest Market | Snaps to the closest timeline marker. Great for aligning actions to scene events or beats. |
-| Absolute Time Snap | When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position. |
+### Toggle Snapping On/Off
+
+Toggles the snapping on or off with a visual indicator.
+
+### Frame
+
+Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame timeline cursor placement.
+
+### Second
+
+Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing.
+
+### Nearest Market
+
+Snaps to the closest timeline marker. Great for aligning actions to scene events or beats.
+
+### Absolute Time Snap
+
+When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position.
 
 ## Proportional Editing - All Modes
 
@@ -230,13 +251,25 @@ Recolor the currently selected keyframes. Or create the next keyframe with this 
 
 When there is more than one animated object in the scene then you have most probably more than one action in the scene too. The Action Data Browser allows you to display, select and rename the available actions in the scene.
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Action Data Browser | The list of available actions in the scene. |
-| Number of Fake Users | Displays the current number of fake users for the active action. |
-| Fake User | Assign a fake user to this action. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| New Action | Add a new blank action. |
-| Unlink Action | Delete the current active action. |
+#### Action Data Browser
+
+The list of available actions in the scene.
+
+#### Number of Fake Users
+
+Displays the current number of fake users for the active action.
+
+#### Fake User
+
+Assign a fake user to this action. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+#### New Action
+
+Add a new blank action.
+
+#### Unlink Action
+
+Delete the current active action.
 
 ### Included data property
 
@@ -244,11 +277,17 @@ When there is more than one animated object in the scene then you have most prob
 
 This slot identifies which data is included in the action clip. This is useful to animate multiple elements together. You can assign the objects in the Animation Panel or Dopesheet in Action Clip mode. Its identifier natge is used to find the right slot wehn assigning an Action.
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------- |
-| Data Browser | The list of available objects in the action. |
-| New Slot | Add a new object to the animation slot. |
-| Unassign Slot | Delete the current active object from the animation slot |
+#### Data Browser
+
+The list of available objects in the action.
+
+#### New Slot
+
+Add a new object to the animation slot.
+
+#### Unassign Slot
+
+Delete the current active object from the animation slot
 
 ### Push Down
 
@@ -284,28 +323,73 @@ Removes the currently selected grease pencil layer.
 
 A menu with grease pencil functionality.
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------ |
-| Move to Top | Move the layer to Top |
-| Move to Bottom | Move the layer to Bottom. |
-| Duplicate layer | Duplicates the currently selected grease pencil layer. |
-| Duplicate Empty layer | Add an empty copy of the selected grease pencil layer. |
-| Show All | Shows all hidden grease pencil layers. |
-| Hide Others | Hides all grease pencil layers but the selected. |
-| Lock All | Locks all grease pencil layers. |
-| Unlock All | Unlocks all grease pencil layers. |
-| Merge Down | Merge the current layer with the layer below. |
-| Merge Group | Combine layers based on the mode into one layer. |
-| Merge All | Merge all layers together |
-| Copy Layer to selected | Copies the grease pencil layer to the selected object. |
-| Copy All Layers to selected | Copies all grease pencil layer to the selected object. |
+#### Move to Top
 
-| Entry | What it does |
-| ---------------------------------- | --------------------------------------------------------- |
-| Move Grease Pencil Layer upwards | Moves the grease pencil layer upwards in the hierarchy. |
-| Move Grease Pencil Layer downwards | Moves the grease pencil layer downwards in the hierarchy. |
-| Isolate Layer with visibility | Locks and hides the currently active grease pencil layer. |
-| Isolate Layer without visibility | Locks the currently active grease pencil layer. |
+Move the layer to Top
+
+#### Move to Bottom
+
+Move the layer to Bottom.
+
+#### Duplicate layer
+
+Duplicates the currently selected grease pencil layer.
+
+#### Duplicate Empty layer
+
+Add an empty copy of the selected grease pencil layer.
+
+#### Show All
+
+Shows all hidden grease pencil layers.
+
+#### Hide Others
+
+Hides all grease pencil layers but the selected.
+
+#### Lock All
+
+Locks all grease pencil layers.
+
+#### Unlock All
+
+Unlocks all grease pencil layers.
+
+#### Merge Down
+
+Merge the current layer with the layer below.
+
+#### Merge Group
+
+Combine layers based on the mode into one layer.
+
+#### Merge All
+
+Merge all layers together
+
+#### Copy Layer to selected
+
+Copies the grease pencil layer to the selected object.
+
+#### Copy All Layers to selected
+
+Copies all grease pencil layer to the selected object.
+
+#### Move Grease Pencil Layer upwards
+
+Moves the grease pencil layer upwards in the hierarchy.
+
+#### Move Grease Pencil Layer downwards
+
+Moves the grease pencil layer downwards in the hierarchy.
+
+#### Isolate Layer with visibility
+
+Locks and hides the currently active grease pencil layer.
+
+#### Isolate Layer without visibility
+
+Locks the currently active grease pencil layer.
 
 ## Options
 
@@ -349,13 +433,25 @@ With this option off all keyframes shows as diamond shape.
 
 Shows the curve extremes at the keyframe icons.
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AutoMerge Keyframes | Automatically merge nearby keyframes. |
-| Show Markers | Display the markers row at the bottom of the view. |
-| Lock Markers | Make the markers uneditable. |
-| Sync Markers | Sync markers with keyframe edits. When you move the keyframes, then the markers will move too. |
-| Show Cache | Show the status of cached frames in the timeline. · **Softbody**: Show the status for softbody objects. · **Particles**: Show the status for Particles objects. · **Cloth**: Show the status for Cloth objects. · **Simulation Nodes**: Show the status for Simulation Nodes objects. · **Smoke**: Show the status for Smoke objects. · **Dynamic Paint**: Show the status for Dynamic Paint objects. · **Rigid Body**: Show the status for Rigid Body objects. |
+#### AutoMerge Keyframes
+
+Automatically merge nearby keyframes.
+
+#### Show Markers
+
+Display the markers row at the bottom of the view.
+
+#### Lock Markers
+
+Make the markers uneditable.
+
+#### Sync Markers
+
+Sync markers with keyframe edits. When you move the keyframes, then the markers will move too.
+
+#### Show Cache
+
+Show the status of cached frames in the timeline. · **Softbody**: Show the status for softbody objects. · **Particles**: Show the status for Particles objects. · **Cloth**: Show the status for Cloth objects. · **Simulation Nodes**: Show the status for Simulation Nodes objects. · **Smoke**: Show the status for Smoke objects. · **Dynamic Paint**: Show the status for Dynamic Paint objects. · **Rigid Body**: Show the status for Rigid Body objects.
 
 ## Show Overlays
 
@@ -467,18 +563,45 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 
 ![Set Preview Range](/docs2/images/editors/dope-sheet/header/view-menu/set-preview-range-2.png)
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Preview Range | Clears an existing preview range. |
-| Set Preview Range to selected | Sets the preview range to fit the first and last selected keyframe. |
-| Frame Scene Range | With Use Preview Range off , reset the horizontal view to the current scene frame range. |
-| Frame Preview Range | With Use Preview Range on , reset the horizontal view to the current preview frame range. |
-| Zoom In | Zooms into the viewport. |
-| Zoom Out | Zooms out of the viewport. |
-| Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Frame All | Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
-| Frame Selected | Centers the view at the currently selected keyframe(s). |
-| Go to current Frame | Centers the view at the frame slider. |
+#### Clear Preview Range
+
+Clears an existing preview range.
+
+#### Set Preview Range to selected
+
+Sets the preview range to fit the first and last selected keyframe.
+
+#### Frame Scene Range
+
+With Use Preview Range off , reset the horizontal view to the current scene frame range.
+
+#### Frame Preview Range
+
+With Use Preview Range on , reset the horizontal view to the current preview frame range.
+
+#### Zoom In
+
+Zooms into the viewport.
+
+#### Zoom Out
+
+Zooms out of the viewport.
+
+#### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+#### Frame All
+
+Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.
+
+#### Frame Selected
+
+Centers the view at the currently selected keyframe(s).
+
+#### Go to current Frame
+
+Centers the view at the frame slider.
 
 ### Pie menus
 
@@ -492,10 +615,13 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+#### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+#### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 #### Duplicate Area into New Window
 
@@ -503,11 +629,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the area window. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the area window.
 
 ### Toggle Graph Editor
 
@@ -620,10 +752,13 @@ Markers can be pulled around by clicking at them and dragging them left or right
 
 By holding down shift you can select more than one marker.
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Add Marker | Adds a marker at the current frame position |
-| Duplicate Marker | Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination. |
+### Add Marker
+
+Adds a marker at the current frame position
+
+### Duplicate Marker
+
+Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination.
 
 ### Duplicate Marker to Scene
 
@@ -655,12 +790,21 @@ The marker with a bind camera attached will show a camera icon.
 
 A menu will open up where you can rename the active marker.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Grab/Move Marker | Hotkey only functionality! This menu item exists to show the hotkey to move the marker. |
-| Select submenu | **All**: Select all markers. · **None**: Select nothing. · **Invert**: Invert the selection. · **Before Current Frame**: Select all markers before Current Frame. · **After Current Frame**: Select all markers after Current Frame. |
-| Jump to Next Marker | Sets the frame position to the next marker. |
-| Jump to Previous Marker | Sets the frame position to the previous marker. |
+#### Grab/Move Marker
+
+Hotkey only functionality! This menu item exists to show the hotkey to move the marker.
+
+#### Select submenu
+
+**All**: Select all markers. · **None**: Select nothing. · **Invert**: Invert the selection. · **Before Current Frame**: Select all markers before Current Frame. · **After Current Frame**: Select all markers after Current Frame.
+
+#### Jump to Next Marker
+
+Sets the frame position to the next marker.
+
+#### Jump to Previous Marker
+
+Sets the frame position to the previous marker.
 
 # Channel Menu
 
@@ -708,17 +852,29 @@ Toggles the locks in the channel list from their previous state to locked and ba
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
+#### Constant Extrapolation
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------- |
-| Expand Channels | Expands all channels in the channel list. |
-| Collapse Channels | Collapses all channels in the channels list. |
+The animation curve continues straight at the end.
+
+#### Linear Extrapolation
+
+The animation curve continues the last direction.
+
+#### Make Cyclic
+
+Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.
+
+#### Clear Cyclic
+
+Removes the cyclic extrapolation.
+
+#### Expand Channels
+
+Expands all channels in the channel list.
+
+#### Collapse Channels
+
+Collapses all channels in the channels list.
 
 ### Move
 
@@ -738,11 +894,17 @@ Bakes the animation by adding a keyframe at every single frame.
 
 ![Adjust last operator Bake Channels](/docs2/images/editors/dope-sheet/header/channel-menu/adjust-last-operator-bake-channels.png)
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------ |
-| Frame Range | The frame range of the animation to bake. |
-| Frame Step | Create a keyframe every nth frame. |
-| Remove Outside Range | Removes keyframes that are outside of the frame range. |
+##### Frame Range
+
+The frame range of the animation to bake.
+
+##### Frame Step
+
+Create a keyframe every nth frame.
+
+##### Remove Outside Range
+
+Removes keyframes that are outside of the frame range.
 
 ##### Interpolation Type
 
@@ -754,10 +916,13 @@ Interpolation type for the animation curves.
 
 Bake modifiers into keyframes, and delete them.
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Frame Selected Channels | Resets the viewable area to show the selected channel keyframes. This will change the zoom to fit all in the selected chanel. |
-| Discontinuity (Euler Filter) | Fix large jumps and flips in the selected Euler Rotacion F-Curves arising from the rotation values being clipped when baking physics. This operator only affects Euler rotation animation. |
+###### Frame Selected Channels
+
+Resets the viewable area to show the selected channel keyframes. This will change the zoom to fit all in the selected chanel.
+
+###### Discontinuity (Euler Filter)
+
+Fix large jumps and flips in the selected Euler Rotacion F-Curves arising from the rotation values being clipped when baking physics. This operator only affects Euler rotation animation.
 
 ## Channel Menu - Grease Pencil mode
 
@@ -805,12 +970,21 @@ The grease pencil object is a special object in this regards. It can have keyfra
 
 ![Transform](/docs2/images/editors/dope-sheet/header/key-menu/transform.png)
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------------------- |
-| Grab/Move | Moves the selected keyframe(s). |
-| Extend | Moves the last keyframes of the selection. |
-| Slide | Slides a selected keyframe between two other keyframes. |
-| Scale | Scales the selected keyframes. You need to have more than one keyframe selected. |
+#### Grab/Move
+
+Moves the selected keyframe(s).
+
+#### Extend
+
+Moves the last keyframes of the selection.
+
+#### Slide
+
+Slides a selected keyframe between two other keyframes.
+
+#### Scale
+
+Scales the selected keyframes. You need to have more than one keyframe selected.
 
 #### Adjust Last Operation - Transform
 
@@ -844,12 +1018,21 @@ Just with Grab/Move. Allow mirror edit the transform.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Snap
 
@@ -869,21 +1052,39 @@ Flips the selected keyframes over the current frame position.
 
 Inserts a keyframe at the current frame. The submenu sets which channels get it.
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------- |
-| All Channels | Inserts a keyframe in every channel. |
-| Only Selected Channels | Inserts a keyframe in the selected channels only. |
-| In Active Group | Inserts a keyframe in the channels of the active group. |
+#### All Channels
+
+Inserts a keyframe in every channel.
+
+#### Only Selected Channels
+
+Inserts a keyframe in the selected channels only.
+
+#### In Active Group
+
+Inserts a keyframe in the channels of the active group.
 
 ### Jump, Copy and Paste
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------- |
-| Jump to Selected | Sets the frame marker at the average position of the currently selected keyframes. |
-| Copy Keyframes | Copy selected keyframes. |
-| Paste Keyframes / Flipped | Pastes copied keyframes. |
-| Paste Flipped | Pastes copied keyframes, but flipped. |
-| Duplicate | Duplicate selected keyframes. |
+#### Jump to Selected
+
+Sets the frame marker at the average position of the currently selected keyframes.
+
+#### Copy Keyframes
+
+Copy selected keyframes.
+
+#### Paste Keyframes / Flipped
+
+Pastes copied keyframes.
+
+#### Paste Flipped
+
+Pastes copied keyframes, but flipped.
+
+#### Duplicate
+
+Duplicate selected keyframes.
 
 To delete the selected keyframes, press `Delete`.
 
@@ -901,10 +1102,13 @@ Grease Pencil in Draw mode. Generate two keyframes. Go to the Draw menu. Choose 
 
 Delete Breakdown Frames now becomes active, and you can delete the interpolated keyframes if you need.
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------- |
-| Clean Keyframes | Simplify FCurces by deleting keyframes that are close to each other in all channels |
-| Clean Channels | Simplify FCurces by deleting keyframes that are close to each other in selected channels. |
+##### Clean Keyframes
+
+Simplify FCurces by deleting keyframes that are close to each other in all channels
+
+##### Clean Channels
+
+Simplify FCurces by deleting keyframes that are close to each other in selected channels.
 
 ### Bake Keyframes
 
@@ -920,10 +1124,13 @@ Adds keyframes at every unit between the selected keyframes.
 
 Just in Action Editor mode.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Merge Animation | Merge the animation of the selected objects into the action of the active object. Actions are not deleted by this. But might end up with zero users. |
-| Separate Slots | Move all sorts of the action on the active object into newly created, separate actions. All users of those slots will be reassigned to the new actions. The current action won't be deleted. But will be empty. And might end up with zero users. |
+### Merge Animation
+
+Merge the animation of the selected objects into the action of the active object. Actions are not deleted by this. But might end up with zero users.
+
+### Separate Slots
+
+Move all sorts of the action on the active object into newly created, separate actions. All users of those slots will be reassigned to the new actions. The current action won't be deleted. But will be empty. And might end up with zero users.
 
 ### Replace Action
 

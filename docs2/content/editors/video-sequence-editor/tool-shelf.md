@@ -42,13 +42,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Lasso
 
@@ -62,13 +58,9 @@ Draws a lasso to select several elements at once. Click at the start point, then
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
@@ -78,12 +70,13 @@ Circle select several elements at once. Click at the start point, then drag.
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-3.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The circle radius |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The circle radius
 
 ### Move
 
@@ -135,14 +128,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Rotate
 
@@ -188,14 +188,21 @@ When you rotate the object, and hold down the mouse and type in a value, like 20
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Scale
 
@@ -247,14 +254,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Transform
 
@@ -306,14 +320,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Sample
 
@@ -355,12 +376,8 @@ Clicking at the color field reveals a color picker. Define the color for the ann
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
-
+- **Radius**: The radius for the stroke stabilization.
+- **Factor**: Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 #### Annotate Line
 
@@ -446,13 +463,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Lasso
 
@@ -466,13 +479,9 @@ Draws a lasso to select several elements at once. Click at the start point, then
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
@@ -482,12 +491,13 @@ Circle select several elements at once. Click at the start point, then drag.
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-3.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The circle radius |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The circle radius
 
 #### Blade
 
@@ -509,12 +519,8 @@ Create a soft split or a hard split.
 
 Close gaps between cut strips.
 
-
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------- |
-| Ignore Selection | Make cuts to all strips. Even if they are not connected. |
-| Ignore Connections | Don’t propagate split to connected strips. |
-
+- **Ignore Selection**: Make cuts to all strips. Even if they are not connected.
+- **Ignore Connections**: Don’t propagate split to connected strips.
 
 #### Retime
 

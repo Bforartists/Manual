@@ -70,18 +70,37 @@ To rename a tab double click at it. The name turns into an edit box. And you can
 Creates a copy of the current workspace, including its editor layout and active tools.  
 Useful for experimenting with variations without losing the original setup.
 
+##### Delete
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete | Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely. |
-| Reorder to Front | Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts. |
-| Reorder to Back | Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts. |
-| Previous Workspace | Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching. |
-| Next Workspace | Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling. |
-| Delete Other Workspaces | Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing |
-| Online Python Reference | This button opens the Blender python API in your browser. |
-| Edit Source | Open the Python script that contains this button in the text editor. Note that you need to have a text editor open. |
+Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely.
 
+##### Reorder to Front
+
+Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.
+
+##### Reorder to Back
+
+Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts.
+
+##### Previous Workspace
+
+Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching.
+
+##### Next Workspace
+
+Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling.
+
+##### Delete Other Workspaces
+
+Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing
+
+##### Online Python Reference
+
+This button opens the Blender python API in your browser.
+
+##### Edit Source
+
+Open the Python script that contains this button in the text editor. Note that you need to have a text editor open.
 
 #### Header
 
@@ -209,14 +228,21 @@ When you right click at the status bar then you will reveal a context menu where
 
 ![Status Bar Context Menu](/docs2/images/editors/topbar-and-statusbar/status-bar-context-menu.png)
 
+#### Scene Statistics
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Scene Statistics | This shows scene statistics like the active collection, object, faces, tris and total objects in the scene. |
-| Scene Duration | This shows the scene frame information including total duration and current frame of total frames. |
-| System Memory | This shows system memory usage. |
-| Video Memory | This shows GPU memory usage. |
+This shows scene statistics like the active collection, object, faces, tris and total objects in the scene.
 
+#### Scene Duration
+
+This shows the scene frame information including total duration and current frame of total frames.
+
+#### System Memory
+
+This shows system memory usage.
+
+#### Video Memory
+
+This shows GPU memory usage.
 
 #### Extension Updates
 
@@ -238,10 +264,10 @@ First you will see a warning icon. You have to allow the online access.
 
 You will see the online status once the online access is granted and the extensions.blender.org webpage is activated. And the icon will now show the number of available updates.
 
+##### Base Blender Version
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------- |
-| Base Blender Version | This displays the version number of the relevant Blender version with subversion. |
-| Bforartists Version | This displays the version number of Bforartists. |
+This displays the version number of the relevant Blender version with subversion.
 
+##### Bforartists Version
 
+This displays the version number of Bforartists.

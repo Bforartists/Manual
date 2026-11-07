@@ -56,12 +56,13 @@ The triangle icon at the left allows you to expand or collapse the hierarchy.
 
 This icon shows what kind of object this channel belongs to. These icons have no functionality.
 
+#### Pin
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pin | Normally just the channels for selected objects are visible. With Pin the channels remains visible in Drivers Editor, even when you select another object. |
-| Visibility | Hide the channel. |
+Normally just the channels for selected objects are visible. With Pin the channels remains visible in Drivers Editor, even when you select another object.
 
+#### Visibility
+
+Hide the channel.
 
 ### Channel name
 

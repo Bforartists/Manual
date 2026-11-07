@@ -53,10 +53,13 @@ The clip editor contains the footage related tools and settings. Here you deal w
 
 In the upper right corner you will find two navigation elements.
 
-| Entry | What it does |
-| -------------------- | ---------------- |
-| Pan the View | Pans the view |
-| Zoom In/Out the View | Zooms in or out. |
+#### Pan the View
+
+Pans the view
+
+#### Zoom In/Out the View
+
+Zooms in or out.
 
 ### Timeline
 
@@ -100,10 +103,13 @@ Masks are defined by splines. Means you work with splines, and you have a bunch 
 
 In the upper right corner you will find two navigation elements.
 
-| Entry | What it does |
-| -------------------- | ---------------- |
-| Pan the View | Pans the view |
-| Zoom In/Out the View | Zooms in or out. |
+#### Pan the View
+
+Pans the view
+
+#### Zoom In/Out the View
+
+Zooms in or out.
 
 ### 2D Cursor
 
@@ -153,14 +159,29 @@ When you double right click into the viewport, then you will open a menu. The Co
 
 Graph and Dope sheet sub modes does not have a context menu.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Track Settings | Copies track settings from active to selected track. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings. |
-| Copy from Active Track | Copies track settings from active to default settings. |
-| Copy Color | Copies color to all selected tracks. What color? Ask the Blender developers ... |
-| Copy Tracks | Copies the selected tracks. |
-| Paste Tracks | Pastes the selected tracks. |
-| Disable Markers | Disables the currently selected marker(s) |
+### Copy Track Settings
+
+Copies track settings from active to selected track. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings.
+
+### Copy from Active Track
+
+Copies track settings from active to default settings.
+
+### Copy Color
+
+Copies color to all selected tracks. What color? Ask the Blender developers ...
+
+### Copy Tracks
+
+Copies the selected tracks.
+
+### Paste Tracks
+
+Pastes the selected tracks.
+
+### Disable Markers
+
+Disables the currently selected marker(s)
 
 ### Enable Markers
 
@@ -212,10 +233,13 @@ Change the settings of **Lock Tracks** right after you use it, in the Adjust Las
 
 Lock or unlock the selected tracks.
 
-| Entry | What it does |
-| ------------ | ---------------------------- |
-| Join Tracks | Joins the selected tracks. |
-| Delete Track | Deletes the selected tracks. |
+###### Join Tracks
+
+Joins the selected tracks.
+
+###### Delete Track
+
+Deletes the selected tracks.
 
 ## Mask mode - Context menu
 
@@ -247,12 +271,21 @@ Change the settings of **Set Handle Type** right after you use it, in the Adjust
 
 Choose the handle type again.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Switch Direction | Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point. |
-| Toggle Cyclic | Make the spline closed or open. |
-| Copy Splines | Copies the currently selected spline. |
-| Paste Splines | Pastes a copied spline. |
+###### Switch Direction
+
+Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point.
+
+###### Toggle Cyclic
+
+Make the spline closed or open.
+
+###### Copy Splines
+
+Copies the currently selected spline.
+
+###### Paste Splines
+
+Pastes a copied spline.
 
 ### Re-key Shape Points
 
@@ -270,10 +303,13 @@ Besides the handles, every control point also has points that define the feather
 
 Resets the feather offset across all animated frames.
 
-| Entry | What it does |
-| ------------ | ---------------------------- |
-| Make Parent | Set the mask's parenting. |
-| Clear Parent | Clears the mask's parenting. |
+#### Make Parent
+
+Set the mask's parenting.
+
+#### Clear Parent
+
+Clears the mask's parenting.
 
 ### Delete
 

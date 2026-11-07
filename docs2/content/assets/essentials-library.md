@@ -107,19 +107,41 @@ You can also drag and drop the assets onto data slots.
 
 ### Brushes
 
+#### Curve Sculpt
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Curve Sculpt | — |
-| Grease Pencil Draw | — |
-| Grease Pencil Draw | — |
-| Grease Pencil Draw | — |
-| Grease Pencil Draw | — |
-| Mesh Sculpt | **General** · **Add & Subtract** · **Contrast** · **Transform** · **Utilities** · **Paint** · **Simulation** |
-| Mesh Texture Paint | — |
-| Mesh Vertex Paint | — |
-| Mesh Weight Paint | — |
+—
 
+#### Grease Pencil Draw
+
+—
+
+#### Grease Pencil Draw
+
+—
+
+#### Grease Pencil Draw
+
+—
+
+#### Grease Pencil Draw
+
+—
+
+#### Mesh Sculpt
+
+**General** · **Add & Subtract** · **Contrast** · **Transform** · **Utilities** · **Paint** · **Simulation**
+
+#### Mesh Texture Paint
+
+—
+
+#### Mesh Vertex Paint
+
+—
+
+#### Mesh Weight Paint
+
+—
 
 ### Hair
 
@@ -129,17 +151,33 @@ You can also drag and drop the assets onto data slots.
 
 This group of hair node groups are useful for deforming the curves object hair strands. They can also be used on curve objects or curve data in other geometry nodes.
 
+##### Blend Hair Curves
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------ |
-| Blend Hair Curves | Blends the shape between multiple hair curves in a certain radius together. |
-| Frizz Hair Curves | Deforms hair curves using a random vector per point to frizz them. |
-| Hair Curves Noise | Deforms hair curves using noise texture. |
-| Roll Hair Curves | Rolls up hair curves, starting from their tips. |
-| Rotate Hair Curves | Rotates each hair curve around an axis. |
-| Shrinkwrap Hair Curves | Shrinkwrap hair curves to a mesh surface from below and optionally from above. |
-| Smooth Hair Curves | Smooths the shape of hair curves. |
+Blends the shape between multiple hair curves in a certain radius together.
 
+##### Frizz Hair Curves
+
+Deforms hair curves using a random vector per point to frizz them.
+
+##### Hair Curves Noise
+
+Deforms hair curves using noise texture.
+
+##### Roll Hair Curves
+
+Rolls up hair curves, starting from their tips.
+
+##### Rotate Hair Curves
+
+Rotates each hair curve around an axis.
+
+##### Shrinkwrap Hair Curves
+
+Shrinkwrap hair curves to a mesh surface from below and optionally from above.
+
+##### Smooth Hair Curves
+
+Smooths the shape of hair curves.
 
 #### Generation
 
@@ -147,20 +185,29 @@ This group of hair node groups are useful for deforming the curves object hair s
 
 The curves object node groups contain methods to generate new hair strands.
 
+##### Duplicate Hair Curves
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------- |
-| Duplicate Hair Curves | Duplicates hair curves a certain amount of times in the given radius. |
-| Generate Hair Curves | Generates new hair curves on a surface mesh. |
-| Interpolate Hair Curves | Interpolates existing guide curves on a surface. |
+Duplicates hair curves a certain amount of times in the given radius.
 
+##### Generate Hair Curves
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Guide | **Braid Hair Curves**: Deforms existing hair curves into braids using guide curves. · **Clump Hair Curves**: Clumps together existing hair curves using guide curves. · **Create Guide Index Map**: This creates a new index map as an attribute that maps each curve to its nearest guide via index to assist in using an index field per hair cluster. · **Curl Hair Curves**: Deform existing hair curves into curls. |
-| Read | **Curve Info**: Reads and gets the individual curve data as a field, including the index, curve ID, length, direction, random and surface UV. · **Curve Root**: Reads information and gets data from every curve’s root point. · **Curve Segment**: Reads information from each point in from every curve’s previous curve segment. · **Curve Tip**: Reads information and gets data from every curve’s tip point. · **Curve Attachment Info**: Reads information and gets data from the attach point regarding a surface mesh. |
-| Utility | **Attach Hair Curves to Surface**: Attaches hair curves to a surface mesh. **Note:***Bare in mind you will need to parent the hair curves to a mesh before you can attach the curves to a surface mesh.* · **Redistribute Curve Points**: Redistributes existing control points evenly along each curve. · **Restore Curve Segment Length**: Restore the length of each curve segment using a previous state after deformation. Consider this like a bypass node. |
+Generates new hair curves on a surface mesh.
 
+##### Interpolate Hair Curves
+
+Interpolates existing guide curves on a surface.
+
+##### Guide
+
+**Braid Hair Curves**: Deforms existing hair curves into braids using guide curves. · **Clump Hair Curves**: Clumps together existing hair curves using guide curves. · **Create Guide Index Map**: This creates a new index map as an attribute that maps each curve to its nearest guide via index to assist in using an index field per hair cluster. · **Curl Hair Curves**: Deform existing hair curves into curls.
+
+##### Read
+
+**Curve Info**: Reads and gets the individual curve data as a field, including the index, curve ID, length, direction, random and surface UV. · **Curve Root**: Reads information and gets data from every curve’s root point. · **Curve Segment**: Reads information from each point in from every curve’s previous curve segment. · **Curve Tip**: Reads information and gets data from every curve’s tip point. · **Curve Attachment Info**: Reads information and gets data from the attach point regarding a surface mesh.
+
+##### Utility
+
+**Attach Hair Curves to Surface**: Attaches hair curves to a surface mesh. **Note:***Bare in mind you will need to parent the hair curves to a mesh before you can attach the curves to a surface mesh.* · **Redistribute Curve Points**: Redistributes existing control points evenly along each curve. · **Restore Curve Segment Length**: Restore the length of each curve segment using a previous state after deformation. Consider this like a bypass node.
 
 #### Write
 

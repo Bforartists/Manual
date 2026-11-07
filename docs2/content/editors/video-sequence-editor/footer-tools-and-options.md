@@ -40,18 +40,37 @@ The amount to step forward or backward.
 
 The frame jump unit. Seconds or Frames.
 
+##### Jump to Endpoint - start
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Jump to Endpoint - start | Jumps to the first frame. |
-| Jump to Keyframe - previous | Jumps to the keyframe before the current position. |
-| Play Animation - backward | Plays the animation in reverse direction. |
-| Play Animation - forward | Plays the animation. |
-| Jump to Keyframe - next | Jumps to the keyframe after the current position. |
-| Jump to Endpoint - end | Jumps to the last frame. |
-| Cancel animation | Cancels the animation and returns to the original frame. |
-| Current Frame | The edit box with the position of the current frame. Click at the value and type in another value to jump to another frame. |
+Jumps to the first frame.
 
+##### Jump to Keyframe - previous
+
+Jumps to the keyframe before the current position.
+
+##### Play Animation - backward
+
+Plays the animation in reverse direction.
+
+##### Play Animation - forward
+
+Plays the animation.
+
+##### Jump to Keyframe - next
+
+Jumps to the keyframe after the current position.
+
+##### Jump to Endpoint - end
+
+Jumps to the last frame.
+
+##### Cancel animation
+
+Cancels the animation and returns to the original frame.
+
+##### Current Frame
+
+The edit box with the position of the current frame. Click at the value and type in another value to jump to another frame.
 
 ### Use Preview Range
 
@@ -67,15 +86,25 @@ The preview range is displayed in orange color. The original playback range that
 
 Sets the current frame position as the start frame.
 
+#### Start
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Start | The start frame for the animation in current mode. |
-| End | The end frame for the animation in current mode. |
-| Set End Frame | Sets the current frame position as the end frame. |
-| Insert Keyframe | Inserts a keyframe. If you do not have a keying set assigned, this will default to the default keying set defined in the Preferences. |
-| Delete Keyframe | Removes the keyframe at the current position in the current active keying set. |
+The start frame for the animation in current mode.
 
+#### End
+
+The end frame for the animation in current mode.
+
+#### Set End Frame
+
+Sets the current frame position as the end frame.
+
+#### Insert Keyframe
+
+Inserts a keyframe. If you do not have a keying set assigned, this will default to the default keying set defined in the Preferences.
+
+#### Delete Keyframe
+
+Removes the keyframe at the current position in the current active keying set.
 
 ## Playhead Snapping
 
@@ -83,12 +112,21 @@ Sets the current frame position as the start frame.
 
 Turn on the magnet next to the arrow in the footer, then click the arrow to open these options. When you drag the playhead, it jumps to the things you pick here. The same options are shared by the Timeline, Dope Sheet, Graph Editor, NLA and Video Sequencer.
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------- |
-| Distance | How close, in pixels, the playhead has to get before it jumps to a target. |
-| Snap to | Pick one or more targets. Shift+click to pick several. |
-| Frame | Only shows when **Frames** is on. Snap every this many frames, for example every 2nd frame. |
-| Second | Only shows when **Seconds** is on. Snap every this many seconds. |
+### Distance
+
+How close, in pixels, the playhead has to get before it jumps to a target.
+
+### Snap to
+
+Pick one or more targets. Shift+click to pick several.
+
+### Frame
+
+Only shows when **Frames** is on. Snap every this many frames, for example every 2nd frame.
+
+### Second
+
+Only shows when **Seconds** is on. Snap every this many seconds.
 
 **Snap to** targets:
 
@@ -120,14 +158,21 @@ Note that Auto Keying just works with transform properties ( Objects and Bones) 
 
 Auto keying settings. These settings shows when you have auto keying activated.
 
+#### Auto keying mode
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto keying mode | **Add & Replace**: Replace existing keyframes and add new ones where no keyframes exists. · **Replace**: Just replace existing keyframes. |
-| Only Active Keying Set | Automatic keyframe insertion using active keying set only. |
-| Layered Recording | Add a new nla track and strip for every loop or pass made over the animation. This allows non destructive tweaking. |
-| Cycle aware keying | For channels with cyclic extrapolation, the keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
+**Add & Replace**: Replace existing keyframes and add new ones where no keyframes exists. · **Replace**: Just replace existing keyframes.
 
+#### Only Active Keying Set
+
+Automatic keyframe insertion using active keying set only.
+
+#### Layered Recording
+
+Add a new nla track and strip for every loop or pass made over the animation. This allows non destructive tweaking.
+
+#### Cycle aware keying
+
+For channels with cyclic extrapolation, the keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync.
 
 ### Active Keying Set
 
@@ -149,28 +194,35 @@ Here you can find various options for playback.
 
 How to synchronize playback.
 
+##### No Sync
 
-| Entry | What it does |
-| -------------- | --------------------------------------------- |
-| No Sync | Don't synchronize. Play every frame. |
-| Frame Dropping | Drop frames if playback is too slow. |
-| AV Sync | Drop frames to synchronize to Audio Playback. |
+Don't synchronize. Play every frame.
 
+##### Frame Dropping
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Scrubbing | Play existing audio from sequence editor when scrubbing. |
-| Play Audio | Play back existing audio from sequence editor, otherwise mute the audio when deactivated. Use the Sequence Editor to add audio. |
+Drop frames if playback is too slow.
 
+##### AV Sync
+
+Drop frames to synchronize to Audio Playback.
+
+##### Scrubbing
+
+Play existing audio from sequence editor when scrubbing.
+
+##### Play Audio
+
+Play back existing audio from sequence editor, otherwise mute the audio when deactivated. Use the Sequence Editor to add audio.
 
 ### Playback
 
+#### Limit Playback to Frame Range
 
-| Entry | What it does |
-| ----------------------------- | --------------------------------------------------------------------- |
-| Limit Playback to Frame Range | Don't allow frame selection with the mouse outside of the play range. |
-| Follow Current Frame | Follow current frame in editors. |
+Don't allow frame selection with the mouse outside of the play range.
 
+#### Follow Current Frame
+
+Follow current frame in editors.
 
 ### Play in
 
@@ -208,16 +260,18 @@ Recolor the currently selected keyframes. Or create the next keyframe with this 
 
 ![Auto Keyframing](/docs2/images/editors/video-sequence-editor/footer-tools-and-options/auto-keyframing.png)
 
+#### Auto Keying Mode
 
-| Entry | What it does |
-| ------------------------------- | -------------------------------------------------------------- |
-| Auto Keying Mode | Just replace existing keyframes, or add keyframes too. |
-| Auto Keyframe Insert Keying Set | Automatic Keyframe Insertion using the active keying set only. |
+Just replace existing keyframes, or add keyframes too.
 
+#### Auto Keyframe Insert Keying Set
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layered Recording | Add a new NLA Track and Strip for every loop/ pass made over the animation to allow non destructive tweaking. |
-| Cycle Aware Keying | For channels with cyclic extrapolation, keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
+Automatic Keyframe Insertion using the active keying set only.
 
+#### Layered Recording
 
+Add a new NLA Track and Strip for every loop/ pass made over the animation to allow non destructive tweaking.
+
+#### Cycle Aware Keying
+
+For channels with cyclic extrapolation, keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync.

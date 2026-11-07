@@ -70,14 +70,21 @@ Generated images does not have a path.
 
 ![Path edit box](/docs2/images/editors/uv-editor/sidebar/image-tab/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
 
 ##### Color Space
 
@@ -115,25 +122,49 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 
 ![Path edit box](/docs2/images/editors/uv-editor/sidebar/image-tab/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-| Deinterlace | Deinterlace the movie file on load. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
+
+###### Deinterlace
+
+Deinterlace the movie file on load.
 
 ##### Color Space
 
@@ -261,13 +292,17 @@ Manage UDIM tiles. This panel shows with source mode UDIM.
 
 List all UDIM tiles associated with the main index (1000 tile). Double clicking on the tile name allows renaming.
 
+#### Number
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number | The starting tile index number. UDIMs must start with the 1001 tile and typically increase in incremental order. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The starting tile index number. UDIMs must start with the 1001 tile and typically increase in incremental order.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
 ### Add Tile
 
@@ -277,17 +312,33 @@ Adds new UDIM tiles to the group.
 
 ![Add Tile dialog](/docs2/images/editors/uv-editor/sidebar/image-tab/add-tile-dialog.png)
 
+##### Number
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------- |
-| Number | The UDIM tiles are identified by the number. It is four digits, and with increasing number. |
-| Count | How many tiles to add. |
-| Label | Leave blank to use the Number as the name in the list. |
-| Fill | Fill the new tile with a generated image. |
-| Color | The fill color for generated type Blank. |
-| Width / Height | The dimensions of the image. |
-| Alpha | Does the image have an alpha channel. |
+The UDIM tiles are identified by the number. It is four digits, and with increasing number.
 
+##### Count
+
+How many tiles to add.
+
+##### Label
+
+Leave blank to use the Number as the name in the list.
+
+##### Fill
+
+Fill the new tile with a generated image.
+
+##### Color
+
+The fill color for generated type Blank.
+
+##### Width / Height
+
+The dimensions of the image.
+
+##### Alpha
+
+Does the image have an alpha channel.
 
 ##### Generated Type
 
@@ -313,13 +364,17 @@ Occupy the UDIM tile with a Generated Image. You can change the fill type and te
 
 ![Fill tile dialog](/docs2/images/editors/uv-editor/sidebar/image-tab/fill-tile-dialog.png)
 
+##### Color
 
-| Entry | What it does |
-| -------------- | ---------------------------------------- |
-| Color | The fill color for generated type Blank. |
-| Width / Height | The dimensions of the image. |
-| Alpha | Does the image have an alpha channel. |
+The fill color for generated type Blank.
 
+##### Width / Height
+
+The dimensions of the image.
+
+##### Alpha
+
+Does the image have an alpha channel.
 
 ##### Generated Type
 
@@ -451,14 +506,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -472,12 +534,13 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin
 
