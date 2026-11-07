@@ -81,14 +81,10 @@ The factor to transform the selection into a shape form.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -125,14 +121,10 @@ Choose the orientation for the shear action.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -166,14 +158,10 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -234,12 +222,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Mirror submenu
 
@@ -326,12 +310,8 @@ Change the settings of **Duplicate** right after you use it, in the Adjust Last 
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Spline Type
 
@@ -391,11 +371,8 @@ Change the settings of **Toggle Cyclic** right after you use it, in the Adjust L
 
 Direction is a drop-down box . Choose the direction in which the curve gets closed.
 
-
-| Entry | What it does |
-| -------- | ------------------------------------------ |
-| Separate | Separates the selection into a new object. |
-| Delete | Deletes the selected hair geomety. |
+- **Separate**: Separates the selection into a new object.
+- **Delete**: Deletes the selected hair geomety.
 
 ## Segments menu
 
@@ -471,12 +448,13 @@ With type Bezier you will get more options.
 
 The curve fitting method for a Bezier curve.
 
+###### Refit
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| Refit | Incrementally refit the curve. |
-| Split | Split the curve until it fits. |
+Incrementally refit the curve.
 
+###### Split
+
+Split the curve until it fits.
 
 ##### Tolerance
 
@@ -494,13 +472,9 @@ Detect corners and use non aligned angles.
 
 Corners above this angle are considered as corners.
 
-
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------- |
-| Taper Start / End | Taper factor for the radius of each curve point. |
-| Radius Min/Max | Minimum or maximum radius when the pressure is applied. |
-| Use Pressure | Use tablet pressure to draw the curve. |
-
+- **Taper Start / End**: Taper factor for the radius of each curve point.
+- **Radius Min/Max**: Minimum or maximum radius when the pressure is applied.
+- **Use Pressure**: Use tablet pressure to draw the curve.
 
 ##### Depth
 
@@ -534,19 +508,12 @@ Use the start of the stroke for the depth.
 
 The plane for the projected strokes.
 
+- **Normal to Surface**: Draw in a plane perpendicular to the surface.
+- **Tangent to Surface**: Draw in the surface plane.
+- **View**: Draw in a plane that is aligned to the viewport.
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------ |
-| Normal to Surface | Draw in a plane perpendicular to the surface. |
-| Tangent to Surface | Draw in the surface plane. |
-| View | Draw in a plane that is aligned to the viewport. |
-
-
-| Entry | What it does |
-| -------- | ------------------------ |
-| Curve 2D | Draw the curve as 2d. |
-| As Nurbs | Draw the curve as nurbs. |
-
+- **Curve 2D**: Draw the curve as 2d.
+- **As Nurbs**: Draw the curve as nurbs.
 
 ##### Adjust Last Operation - Draw Curve
 
@@ -603,12 +570,8 @@ When you resize the curve radius then you will see a value in the header. It tel
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ##### Adjust Last Operation - Transform
 
@@ -629,12 +592,8 @@ Change the settings of **Transform** right after you use it, in the Adjust Last 
 
 Adjust the orientation of the extrusion. It usually starts with Normal.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Tilt
 
@@ -658,12 +617,8 @@ When you rotate the curve with the tilt tool, then you will see a value in the h
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ##### Adjust Last Operation - Transform
 
@@ -736,12 +691,8 @@ The position of the extruded point(s).
 
 Adjust the orientation of the extrusion. It usually starts with Normal.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Mirror sub menu
 
@@ -757,12 +708,8 @@ Mirrors the selection.
 
 Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.
 
-
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| X Y Z Global | Mirrors along the global axis. |
-| X Y Z Local | Mirrors along the object axis. |
-
+- **X Y Z Global**: Mirrors along the global axis.
+- **X Y Z Local**: Mirrors along the object axis.
 
 ##### Adjust Last Operation - Mirror
 
@@ -782,14 +729,10 @@ Choose the orientation in which the transform should happen.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Snap sub menu
 
@@ -817,16 +760,12 @@ Keep the offset of the selected objects to each other.
 
 Rotate to match the cursor.
 
-
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------- |
-| Selection to Active | Snaps the currently selected object(s) to the active object. |
-| Selection to Grid | Snaps the currently selected object(s) to the nearest grid point. |
-| Cursor to Selected | Moves the cursor to the center of the selected object(s). |
-| Cursor to World Origin | Moves the cursor to the world origin. |
-| Cursor to Active | Moves the cursor to the center of the active object. |
-| Cursor to Grid | Moves the cursor to the nearest grid point. |
-
+- **Selection to Active**: Snaps the currently selected object(s) to the active object.
+- **Selection to Grid**: Snaps the currently selected object(s) to the nearest grid point.
+- **Cursor to Selected**: Moves the cursor to the center of the selected object(s).
+- **Cursor to World Origin**: Moves the cursor to the world origin.
+- **Cursor to Active**: Moves the cursor to the center of the active object.
+- **Cursor to Grid**: Moves the cursor to the nearest grid point.
 
 #### Set Spline Type
 
@@ -861,13 +800,17 @@ Change the settings of **Set Spline Type** right after you use it, in the Adjust
 
 Handles defines the type of handle for the knots of the curve. You have the choice between Auto, Vector, Align and Free. And the Last Operator gives you a fifth possibility to toggle between Free and Align.
 
+##### Auto
 
-| Entry | What it does |
-| ------ | -------------------------------------- |
-| Auto | Auto aligns the handles automatically. |
-| Vector | Set Handle type to Vector. |
-| Align | Set Handle type to Align. |
+Auto aligns the handles automatically.
 
+##### Vector
+
+Set Handle type to Vector.
+
+##### Align
+
+Set Handle type to Align.
 
 ##### Free
 
@@ -909,9 +852,14 @@ Direction is a drop-down box choose the direction in which the curve gets closed
 
 Just for Bezier Curve object type. Surface Nurbs curves doesn't have a direction. Switches the direction in which the curve is pointing.
 
+##### Separate
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Separate | Separates the selected control points, and creates a new curve object out of it. You need to select two control points to select the segment between it. |
-| Delete | Removes the selected control points or curves. |
-| Split | Split selected points into a new object. |
+Separates the selected control points, and creates a new curve object out of it. You need to select two control points to select the segment between it.
+
+##### Delete
+
+Removes the selected control points or curves.
+
+##### Split
+
+Split selected points into a new object.

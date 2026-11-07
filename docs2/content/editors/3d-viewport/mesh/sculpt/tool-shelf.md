@@ -63,13 +63,17 @@ Note that the sculpting mode starts with Symmetry in X axis on. You can turn thi
 
 ![Tool Shelf - Mesh - Sculpt Mode - Tools](/docs2/images/editors/3d-viewport/tool-shelf/mesh-sculpt-mode/tool-shelf-mesh-sculpt-mode.png)
 
+### Brush
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Brush | The Brush Tool in Sculpt Mode lets you change the shape of a mesh by painting directly on its surface. You can use different brush types to add detail, smooth areas, or make edits. Settings like strength, size, and falloff control how the brush affects the geometry. |
-| Paint | Paint over vertex colors. Note that this feature is not supported when you work in Dynatopo. |
-| Mask | Allows you to mask out specific parts of the mesh by painting it black. Black means no sculpt stroke possible in this area. In the Brush panel you can negate the effect. And remove the mask by repainting over it with Direction set to Subtract. The mask menu in the header provides you with further functionality like clear and invert the mask. |
+The Brush Tool in Sculpt Mode lets you change the shape of a mesh by painting directly on its surface. You can use different brush types to add detail, smooth areas, or make edits. Settings like strength, size, and falloff control how the brush affects the geometry.
 
+### Paint
+
+Paint over vertex colors. Note that this feature is not supported when you work in Dynatopo.
+
+### Mask
+
+Allows you to mask out specific parts of the mesh by painting it black. Black means no sculpt stroke possible in this area. In the Brush panel you can negate the effect. And remove the mask by repainting over it with Direction set to Subtract. The mask menu in the header provides you with further functionality like clear and invert the mask.
 
 ### Draw Face Sets
 
@@ -117,23 +121,25 @@ Affect only the faces that points to the front.
 
 ![Active Tool setting](/docs2/images/editors/3d-viewport/tool-shelf/mesh-sculpt-mode/active-tool-setting-2.png)
 
+###### Front Faces only
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Front Faces only | Affect only the faces that points to the front. |
-| Stabilize Stroke | The selection lags behind the mouse, which makes the stroke smoother. · **Radius**: Minimum distance from last point before the selection continues. · **Factor**: Higher values gives a smoother stroke. |
+Affect only the faces that points to the front.
 
+###### Stabilize Stroke
+
+The selection lags behind the mouse, which makes the stroke smoother. · **Radius**: Minimum distance from last point before the selection continues. · **Factor**: Higher values gives a smoother stroke.
 
 #### Line Mask
 
 ![Line Mask](/docs2/images/editors/3d-viewport/tool-shelf/mesh-sculpt-mode/line-mask.png)
 
+##### Front Faces only
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------ |
-| Front Faces only | Affect only the faces that points to the front. |
-| Limit to Segment | Line mask only. Affect only the current segment. |
+Affect only the faces that points to the front.
 
+##### Limit to Segment
+
+Line mask only. Affect only the current segment.
 
 #### Polyline Mask
 
@@ -179,12 +185,13 @@ Hide inside the selection or outside the selection.
 
 The selection lags behind the mouse, which makes the stroke smoother.
 
+###### Radius
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | Minimum distance from last point before the selection continues. |
-| Factor | Higher values gives a smoother stroke. |
+Minimum distance from last point before the selection continues.
 
+###### Factor
+
+Higher values gives a smoother stroke.
 
 #### Line Hide
 
@@ -234,12 +241,13 @@ Lasso select an area of the mesh to apply a face set.
 
 The selection lags behind the mouse, which makes the stroke smoother.
 
+###### Radius
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | Minimum distance from last point before the selection continues. |
-| Factor | Higher values gives a smoother stroke. |
+Minimum distance from last point before the selection continues.
 
+###### Factor
+
+Higher values gives a smoother stroke.
 
 ##### Line Face Set
 
@@ -343,12 +351,13 @@ Use cursor location and radius for the dimensions and position of the trimming s
 
 The selection lags behind the mouse, which makes the stroke smoother.
 
+###### Radius
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | Minimum distance from last point before the selection continues. |
-| Factor | Higher values gives a smoother stroke. |
+Minimum distance from last point before the selection continues.
 
+###### Factor
+
+Higher values gives a smoother stroke.
 
 #### Line Trim
 
@@ -448,12 +457,13 @@ You have to adjust everything beforehand. This tool has no last operator.
 
 ![Adjust Last Operator Filter Mesh](/docs2/images/editors/3d-viewport/tool-shelf/mesh-sculpt-mode/adjust-last-operator-filter-mesh.png)
 
+##### Strength
 
-| Entry | What it does |
-| -------- | ----------------------------------- |
-| Strength | Filter Strength. |
-| Repeat | How many times to repeat the filter |
+Filter Strength.
 
+##### Repeat
+
+How many times to repeat the filter
 
 ##### Orientation
 
@@ -473,17 +483,33 @@ Which axis to affect by the deformation.
 
 ![Filter Type](/docs2/images/editors/3d-viewport/tool-shelf/mesh-sculpt-mode/filter-type.png)
 
+###### Smooth
 
-| Entry | What it does |
-| --------------- | ---------------------------------- |
-| Smooth | Smoothens the surface. |
-| Scale | Scales the surface. |
-| Inflate | Inflates the surface. |
-| Sphere | Forms the surface to a sphere. |
-| Random | Randomizes the vertices positions. |
-| Relax | Relaxes the mesh. |
-| Relax Face Sets | Smooth the edges of all face sets. |
+Smoothens the surface.
 
+###### Scale
+
+Scales the surface.
+
+###### Inflate
+
+Inflates the surface.
+
+###### Sphere
+
+Forms the surface to a sphere.
+
+###### Random
+
+Randomizes the vertices positions.
+
+###### Relax
+
+Relaxes the mesh.
+
+###### Relax Face Sets
+
+Smooth the edges of all face sets.
 
 ##### Surface Smooth
 
@@ -491,12 +517,13 @@ Which axis to affect by the deformation.
 
 Smooth the surface of the mesh, preserving the volume.
 
+###### Shape preservation
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------- |
-| Shape preservation | How much of the original mesh is preserved when smoothing. |
-| Per Vertex Displacement | How much the position of each individual vertex influences the final result. |
+How much of the original mesh is preserved when smoothing.
 
+###### Per Vertex Displacement
+
+How much the position of each individual vertex influences the final result.
 
 ##### Sharpen
 
@@ -504,19 +531,25 @@ Smooth the surface of the mesh, preserving the volume.
 
 Sharpen the cavities of the mesh.
 
+###### Smooth Ratio
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------- |
-| Smooth Ratio | How much smoothing is applied to polished surface. |
-| Intensity Details | How much creases and valleys are intensified. |
-| Curvature Smooth Iterations | How smooth the resulting shape is. This feature ignores high frequency details. |
+How much smoothing is applied to polished surface.
 
+###### Intensity Details
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Strength | The strength of the effect. |
-| Deform Axis | Limit the effect to single world axis. |
+How much creases and valleys are intensified.
 
+###### Curvature Smooth Iterations
+
+How smooth the resulting shape is. This feature ignores high frequency details.
+
+###### Strength
+
+The strength of the effect.
+
+###### Deform Axis
+
+Limit the effect to single world axis.
 
 ### Cloth Filter
 
@@ -536,12 +569,13 @@ You have to adjust everything beforehand. This tool has no last operator.
 
 The cloth filter type.
 
+###### Strength
 
-| Entry | What it does |
-| ---------- | ------------------------------------- |
-| Strength | The filter strength. |
-| Force Axis | Apply the force in the selected axis. |
+The filter strength.
 
+###### Force Axis
+
+Apply the force in the selected axis.
 
 ##### Orientation
 
@@ -549,14 +583,21 @@ The cloth filter type.
 
 Orientation of the axis to limit the filter force. Local, World or View.
 
+###### Cloth Mass
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------- |
-| Cloth Mass | Mass of each simulation particle |
-| Cloth Damping | How much the applied forces are propagated through the cloth. |
-| Use Face Sets | Use an existing face set under the mouse for the cloth filter brush. |
-| Use Collisions | Collide with other collider objects in the scene. |
+Mass of each simulation particle
 
+###### Cloth Damping
+
+How much the applied forces are propagated through the cloth.
+
+###### Use Face Sets
+
+Use an existing face set under the mouse for the cloth filter brush.
+
+###### Use Collisions
+
+Collide with other collider objects in the scene.
 
 ### Color Filter
 
@@ -572,12 +613,13 @@ Applies a filter to modify the current sculpt vertex colors.
 
 What kind of filter to apply to the vertex colors.
 
+###### Fill Color
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------- |
-| Fill Color | Just Filter Type Fill. Defines the fill color. |
-| Strength | The strength of the filter. |
+Just Filter Type Fill. Defines the fill color.
 
+###### Strength
+
+The strength of the filter.
 
 ### Edit Face Set
 
@@ -608,14 +650,21 @@ Creates a mask from the sculpt vertex colors under the mouse.
 
 #### Tool Settings
 
+##### Threshold
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Threshold | How much changes in color affect the mask generation. Or in other words, the threshold after which the color gets count as an equal color to the current vertex color under the mouse to mask this color out. |
-| Contiguous | Only mask out color parts that are connected. |
-| Invert | Invert the generated mask. |
-| Preserve Previous Mask | Add to or subtract from the current color mask. |
+How much changes in color affect the mask generation. Or in other words, the threshold after which the color gets count as an equal color to the current vertex color under the mouse to mask this color out.
 
+##### Contiguous
+
+Only mask out color parts that are connected.
+
+##### Invert
+
+Invert the generated mask.
+
+##### Preserve Previous Mask
+
+Add to or subtract from the current color mask.
 
 ### Transform tools & Annotate tools
 

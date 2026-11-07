@@ -30,12 +30,13 @@ The select menu in Object mode is for all object types equal. It provides you wi
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -43,13 +44,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Grouped
 
@@ -80,16 +85,29 @@ Linked is a menu select different types.
 
 Select all objects that shares a common data-block with the active object. *Select Linked* uses the active object as a basis to select all others.
 
+### Object Data
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------- |
-| Object Data | Selects every object that is linked to the same Object Data. |
-| Material | Selects every object that is linked to the same material data-block. |
-| Instanced Collection | Selects every object that is linked to the instanced collection. |
-| Particle System | Selects all objects that use the same **Particle System**. |
-| Library | Selects all objects that are in the same Library. |
-| Library (Object Data) | Selects all objects that are in the same Library and limited to **object data**. |
+Selects every object that is linked to the same Object Data.
 
+### Material
+
+Selects every object that is linked to the same material data-block.
+
+### Instanced Collection
+
+Selects every object that is linked to the instanced collection.
+
+### Particle System
+
+Selects all objects that use the same **Particle System**.
+
+### Library
+
+Selects all objects that are in the same Library.
+
+### Library (Object Data)
+
+Selects all objects that are in the same Library and limited to **object data**.
 
 ## All by Type
 
@@ -161,12 +179,13 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
+Type in your string.
 
+### Case Sensitive
+
+When ticked then the string comparison happens by taking upper and lower letters into account.
 
 ### Extend
 
@@ -186,16 +205,29 @@ Selects the active camera.
 
 ![More/ Less](/docs2/images/editors/3d-viewport/header/select-menu/more-less.png)
 
+### More
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| More | More requires to have a parent or child relationship. It expands the selection. |
-| Less | Less requires to have a parent or child relationship. It reduces the selection. |
-| Parent | Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). |
-| Child | Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). |
-| Parent extended | Parent extended requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Child Extended | Child Extended requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
+More requires to have a parent or child relationship. It expands the selection.
 
+### Less
+
+Less requires to have a parent or child relationship. It reduces the selection.
+
+### Parent
+
+Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s).
+
+### Child
+
+Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s).
+
+### Parent extended
+
+Parent extended requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+### Child Extended
+
+Child Extended requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
 
 # Mesh - Edit Mode
 
@@ -215,12 +247,13 @@ So you might want to check the mesh select mode when something does not work in 
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -228,13 +261,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
 
 ## Linked
 
@@ -307,12 +344,13 @@ The last operator changes, dependant of the method.
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
@@ -435,12 +473,13 @@ Select the region faces too.
 
 Don't select the whole path, but just every nth element of it.
 
+##### Skip
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------- |
-| Skip | This is connected to nth element. Number of elements to skip at once. |
-| Offset | This is connected to nth element. Start with an offset. |
+This is connected to nth element. Number of elements to skip at once.
 
+##### Offset
+
+This is connected to nth element. Start with an offset.
 
 ## Sharp Edges
 
@@ -538,13 +577,17 @@ Change the settings of **Select Loop** right after you use it, in the Adjust Las
 
 Controls how face loops are detected and selected based on edge properties. Useful for refining loop selection behavior when working with complex or stylized geometry.
 
+##### Seam
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Seam | When enabled, loop selection stops at UV seams.   Useful for selecting loops that respect texture boundaries or unwrap logic. |
-| Sharp | When enabled, loop selection stops at sharp edges.   Ideal for isolating loops along hard surface transitions or shading splits. |
-| Material | When enabled, loop selection stops at material boundaries.   Useful for selecting loops within a single material zone or across multi-material meshes. |
+When enabled, loop selection stops at UV seams.   Useful for selecting loops that respect texture boundaries or unwrap logic.
 
+##### Sharp
+
+When enabled, loop selection stops at sharp edges.   Ideal for isolating loops along hard surface transitions or shading splits.
+
+##### Material
+
+When enabled, loop selection stops at material boundaries.   Useful for selecting loops within a single material zone or across multi-material meshes.
 
 ## All by Trait sub menu
 
@@ -604,12 +647,13 @@ Extend the current selection.
 
 How many numbers of vertices the face should have. 4 is a quad.
 
+##### Type
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| Type | Selection type. |
-| Extend | Extend the current selection. |
+Selection type.
 
+##### Extend
+
+Extend the current selection.
 
 ### Poles by count
 
@@ -631,12 +675,13 @@ What value to compare the vertice and its edges to. The number four here is the 
 
 How to compare to the pole count value.
 
+##### Extend
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------- |
-| Extend | Extend the current selection. |
-| Exclude Non Manifold | Exclude non manifold geometry from the calculation. |
+Extend the current selection.
 
+##### Exclude Non Manifold
+
+Exclude non manifold geometry from the calculation.
 
 ### Ungrouped Vertices
 
@@ -668,12 +713,13 @@ To use, make sure you have a boolean attribute assigned and selected in the Prop
 
 ![More / Less](/docs2/images/editors/3d-viewport/header/select-menu/more-less-2.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 ### Next Active
 
@@ -703,12 +749,13 @@ This select menu shows with the sub modes Paint Mask and Vertex Selection in ver
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -716,14 +763,21 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
-| Ungrouped Vertices | Vertex Selection Mode. Select vertices that does not belong to a group. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
+
+### Ungrouped Vertices
+
+Vertex Selection Mode. Select vertices that does not belong to a group.
 
 ## Select Linked
 
@@ -760,12 +814,13 @@ Paint Mask mode. Deselect linked faces. Mouse only tool.
 
 ![More/Less Sub-menu](/docs2/images/editors/3d-viewport/header/select-menu/more-less-sub-menu.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ----------------------- |
-| More | Icrease the selection. |
-| Less | Decrease the selection. |
+Icrease the selection.
 
+### Less
+
+Decrease the selection.
 
 # Mesh - Texture Paint Mode
 
@@ -781,12 +836,13 @@ This select menu shows with the sub mode Paint Mask.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -794,14 +850,21 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
-| Ungrouped Vertices | Vertex Selection Mode. Select vertices that does not belong to a group. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
+
+### Ungrouped Vertices
+
+Vertex Selection Mode. Select vertices that does not belong to a group.
 
 ## Select Linked
 
@@ -852,12 +915,13 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 ![More/Less submenu](/docs2/images/editors/3d-viewport/header/select-menu/more-less-sub-menu.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ----------------------- |
-| More | Icrease the selection. |
-| Less | Decrease the selection. |
+Icrease the selection.
 
+### Less
+
+Decrease the selection.
 
 # Curve Object - Edit Mode
 
@@ -869,12 +933,13 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -882,13 +947,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
 
 ## Linked
 
@@ -943,12 +1012,13 @@ Change the settings of **Select Similar** right after you use it, in the Adjust 
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
@@ -1005,12 +1075,13 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1018,13 +1089,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Linked
 
@@ -1058,12 +1133,13 @@ Change the settings of **Select Similar** right after you use it, in the Adjust 
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
@@ -1117,12 +1193,13 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1130,13 +1207,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Similar
 
@@ -1154,12 +1235,13 @@ Change the settings of **Select Similar** right after you use it, in the Adjust 
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
@@ -1199,12 +1281,13 @@ Select corresponding element.
 
 Select everything.
 
+### None
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select nothing.
 
+### Invert
+
+Invert the current selection.
 
 ## Random
 
@@ -1238,12 +1321,13 @@ This is the select menu for the grease pencil object. The content changes depend
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select – Sub Menu
 
@@ -1251,13 +1335,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## By Stroke Type – Sub Menu
 
@@ -1301,15 +1389,25 @@ Change the settings of **Select by Stroke Type** right after you use it, in the 
 
 Select equal elements by the chosen method.
 
+### Layer
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Selects all vertices that belong to the same Grease Pencil layer as the active vertex. Useful for layer-based editing and organization. |
-| Material | Selects vertices assigned to the same material. Ideal for isolating strokes by color or shading style. |
-| Vertex Color | Selects vertices with matching vertex color attributes. Useful for color-based editing in complex drawings. |
-| Radius | Selects vertices with a similar point radius (thickness). Helps isolate strokes with consistent line weight. |
-| Opacity | Selects vertices with similar opacity values. Useful for editing transparency effects or semi-opaque strokes. |
+Selects all vertices that belong to the same Grease Pencil layer as the active vertex. Useful for layer-based editing and organization.
 
+### Material
+
+Selects vertices assigned to the same material. Ideal for isolating strokes by color or shading style.
+
+### Vertex Color
+
+Selects vertices with matching vertex color attributes. Useful for color-based editing in complex drawings.
+
+### Radius
+
+Selects vertices with a similar point radius (thickness). Helps isolate strokes with consistent line weight.
+
+### Opacity
+
+Selects vertices with similar opacity values. Useful for editing transparency effects or semi-opaque strokes.
 
 ### Adjust Last Operation - Select Similar
 
@@ -1404,12 +1502,13 @@ The last operator Select Ends is valid for both, the first and last operator.
 
 ## More / Less – Sub Menu
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Armature Object - Edit Mode
 
@@ -1421,12 +1520,13 @@ The last operator Select Ends is valid for both, the first and last operator.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1434,13 +1534,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Similar
 
@@ -1460,12 +1564,13 @@ Change the settings of **Select Similar** right after you use it, in the Adjust 
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Mirror Selection
 
@@ -1501,13 +1606,17 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
-| Extend | Extends existing selection instead of deselecting everything first. |
+Type in your string.
 
+### Case Sensitive
+
+When ticked then the string comparison happens by taking upper and lower letters into account.
+
+### Extend
+
+Extends existing selection instead of deselecting everything first.
 
 ### Adjust Last Operation - Select Pattern
 
@@ -1529,15 +1638,25 @@ Change the settings of **Select Linked All** right after you use it, in the Adju
 
 Follow forks in the parents chain. Means select upwards too.
 
+#### Parent
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parent | Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). |
-| Child | Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). |
-| Extend Parent | Extend Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Extend Child | Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Sub menu More / Less | **More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection. |
+Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s).
 
+#### Child
+
+Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s).
+
+#### Extend Parent
+
+Extend Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+#### Extend Child
+
+Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+#### Sub menu More / Less
+
+**More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection.
 
 # Armature Object - Pose Mode
 
@@ -1549,12 +1668,13 @@ Follow forks in the parents chain. Means select upwards too.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1562,13 +1682,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Grouped
 
@@ -1576,12 +1700,13 @@ A sub menu with the available lasso select modes.
 
 Select grouped bones by type. Items should be self explaining.
 
+### Linked
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------- |
-| Linked | Select all bones that are either parent or child of the selected bone. |
-| Constraint Targets | Select the bones used as targets for the currently selected bone. |
+Select all bones that are either parent or child of the selected bone.
 
+### Constraint Targets
+
+Select the bones used as targets for the currently selected bone.
 
 ## By Pattern
 
@@ -1600,13 +1725,17 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
-| Extend | Extends existing selection instead of deselecting everything first. |
+Type in your string.
 
+### Case Sensitive
+
+When ticked then the string comparison happens by taking upper and lower letters into account.
+
+### Extend
+
+Extends existing selection instead of deselecting everything first.
 
 ### Adjust Last Operation - Select Pattern
 
@@ -1649,12 +1778,13 @@ Change the settings of **Flip Active/Selected Bone** right after you use it, in 
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1662,13 +1792,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Mirror
 
@@ -1705,12 +1839,13 @@ Extends the current selection instead of deselecting everything first.
 
 ## Sub menu More / Less
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Particles - Particle Mode
 
@@ -1722,12 +1857,13 @@ Extends the current selection instead of deselecting everything first.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1735,14 +1871,21 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Linked | Selects the linked particles. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
+
+### Linked
+
+Selects the linked particles.
 
 ## Random
 
@@ -1765,12 +1908,13 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 
 ## More / Less sub menu
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Hair Curve – Edit Mode
 
@@ -1786,16 +1930,29 @@ Selects all the control points of the hair strands.
 
 If you want a want a symmetrical haircut, tick X Mirror in the Symmetry panel or in the Header to the top right.
 
+### None
 
-| Entry | What it does |
-| ------------------------ | ----------------------------------------------------------------------------------------------------- |
-| None | Deselects all the control points of the hair curves. |
-| Invert | Deselects all the control points of the hair curves. |
-| Random | Randomizes existing selection or creates a new random selection of control points of the hair curves. |
-| Endpoints | Selects the end points of the control points of the hair curves. |
-| Linked | Select linked control points. |
-| Select More/Less submenu | **More**: Extends the current selection. · **Less**: Reduces the current selection. |
+Deselects all the control points of the hair curves.
 
+### Invert
+
+Deselects all the control points of the hair curves.
+
+### Random
+
+Randomizes existing selection or creates a new random selection of control points of the hair curves.
+
+### Endpoints
+
+Selects the end points of the control points of the hair curves.
+
+### Linked
+
+Select linked control points.
+
+### Select More/Less submenu
+
+**More**: Extends the current selection. · **Less**: Reduces the current selection.
 
 # Hair Curve – Sculpt Mode
 
@@ -1811,11 +1968,22 @@ Selects all the control points of the hair strands.
 
 If you want a want a symmetrical haircut, tick X Mirror in the Symmetry panel or in the Header to the top right.
 
+### None
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| None | Deselects all the control points of the hair curves. |
-| Invert | Deselects all the control points of the hair curves. |
-| Random | Randomizes existing selection or creates a new random selection of control points of the hair curves. |
-| Endpoints | Selects the end points of the control points of the hair curves. |
-| Grow | Select curves which are close to curves that are selected already. |
+Deselects all the control points of the hair curves.
+
+### Invert
+
+Deselects all the control points of the hair curves.
+
+### Random
+
+Randomizes existing selection or creates a new random selection of control points of the hair curves.
+
+### Endpoints
+
+Selects the end points of the control points of the hair curves.
+
+### Grow
+
+Select curves which are close to curves that are selected already.

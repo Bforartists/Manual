@@ -86,14 +86,29 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-| Entry | What it does |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Draw Annotation | Starts the annotation free hand draw tool in the editor. |
-| Draw Line Annotation | Starts the annotation line draw tool to draw straight lines in the editor. |
-| Draw Polyline Annotation | Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor. |
-| Erase Annotation | Starts the annotation erase tool in the editor which erases any strokes in the editor. |
-| Add Annotation Layer | Starts a new annotation layer. |
-| Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
+### Draw Annotation
+
+Starts the annotation free hand draw tool in the editor.
+
+### Draw Line Annotation
+
+Starts the annotation line draw tool to draw straight lines in the editor.
+
+### Draw Polyline Annotation
+
+Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.
+
+### Erase Annotation
+
+Starts the annotation erase tool in the editor which erases any strokes in the editor.
+
+### Add Annotation Layer
+
+Starts a new annotation layer.
+
+### Erase Annotation Active Keyframe
+
+Erases the active keyframe of the annotation.
 
 ## Render Image
 
@@ -137,11 +152,17 @@ Removes the Render Region rectangle from the viewport.
 
 ![Cameras sub menu](/docs2/images/editors/3d-viewport/header/view-menu/cameras-sub-menu.png)
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------ |
-| Set Active Object as Camera | With this tool you can set any object to be the active camera where you render from. |
-| Set Active Camera | Set the current camera as the active camera. |
-| Active Camera | Switches to Camera view and back to Viewport Camera. |
+### Set Active Object as Camera
+
+With this tool you can set any object to be the active camera where you render from.
+
+### Set Active Camera
+
+Set the current camera as the active camera.
+
+### Active Camera
+
+Switches to Camera view and back to Viewport Camera.
 
 ### Frame camera bounds
 
@@ -165,16 +186,37 @@ The other way is Frame camera bounds. It fits the camera view into the viewport.
 
 Align View is a menu where you can choose between different view align methods. The view gets aligned at the world coordinates. Here we also find a few more align methods.
 
-| Entry | What it does |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Align Active Camera to View | Aligns the active camera to the current view. This means you can navigate with the viewport camera, select the render camera, and align it with this tool, so that the render camera has the same position and angle than the viewport camera. |
-| Align Active Camera to Selected | Aligns the active camera to the current selected object. This means you can navigate with the viewport camera, select the render camera, and align it with this tool, so that the render camera has the same position and angle than the selected object. |
-| Center View to Cursor | Centers the view at the 3D cursor position. |
-| View Lock to Active | Locks the view to the currently active object. |
-| View Lock Center | Centers the view to the currently active and locked object. This tool is just active when you have performed a View Lock to Active before. |
-| View Lock Clear | Removes the View Lock to Active from the object. |
-| Perspective/Orthographic | Toggles between perspectivic and orthographic view in the 3D viewport. Perspectivic view acts like a real camera with the perspectivic distortions. Orthographic view acts like a mathematical display of an object, without distortions. |
-| Top, Bottom, etc. | Switches to Top view, Bottom View, etc. |
+### Align Active Camera to View
+
+Aligns the active camera to the current view. This means you can navigate with the viewport camera, select the render camera, and align it with this tool, so that the render camera has the same position and angle than the viewport camera.
+
+### Align Active Camera to Selected
+
+Aligns the active camera to the current selected object. This means you can navigate with the viewport camera, select the render camera, and align it with this tool, so that the render camera has the same position and angle than the selected object.
+
+### Center View to Cursor
+
+Centers the view at the 3D cursor position.
+
+### View Lock to Active
+
+Locks the view to the currently active object.
+
+### View Lock Center
+
+Centers the view to the currently active and locked object. This tool is just active when you have performed a View Lock to Active before.
+
+### View Lock Clear
+
+Removes the View Lock to Active from the object.
+
+### Perspective/Orthographic
+
+Toggles between perspectivic and orthographic view in the 3D viewport. Perspectivic view acts like a real camera with the perspectivic distortions. Orthographic view acts like a mathematical display of an object, without distortions.
+
+### Top, Bottom, etc.
+
+Switches to Top view, Bottom View, etc.
 
 ## Align View to Active
 
@@ -200,10 +242,13 @@ Zooms in or out in the 3d viewport until the Selection is displayed fitting in t
 
 When in Sulpt, Vertex Paint, Weight Paint, and Texture Paint mode, this will Frame Last Stroke of the brush.
 
-| Entry | What it does |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Frame Selected (Quad View) | Just with Quad view. Zooms in or out in the 3d viewport until the Selection is displayed fitting in the viewport of all four views. |
-| Frame All | Zooms in or out in the 3d viewport until all objects in the scene are displayed fitting in the viewport. |
+### Frame Selected (Quad View)
+
+Just with Quad view. Zooms in or out in the 3d viewport until the Selection is displayed fitting in the viewport of all four views.
+
+### Frame All
+
+Zooms in or out in the 3d viewport until all objects in the scene are displayed fitting in the viewport.
 
 ## Frame All (Quad View)
 
@@ -229,10 +274,13 @@ To return to single view reuse the menu item in the View menu.
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 ### Duplicate Area into New Window
 
@@ -240,11 +288,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar. |
-| Close Area | Closes the area window. |
+#### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu.
+
+#### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar.
+
+#### Close Area
+
+Closes the area window.
 
 ## Pie menus
 

@@ -68,14 +68,10 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -125,14 +121,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -163,14 +155,10 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Clear Transform - Submenu
 
@@ -180,15 +168,25 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Clear transform is a menu with some Clear functionality. You need to have the bones selected where you want to perform the operation. Unselected bones will not be calculated.
 
+##### All
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------- |
-| All | Resets location, rotation and scale back to the Rest pose. |
-| Clear User Transforms | Resets Pose of selected bones back to keyframe state. |
-| Location | Resets location back to the Rest pose. |
-| Rotation | Resets rotation back to the Rest pose. |
-| Scale | Resets scale back to the Rest pose. |
+Resets location, rotation and scale back to the Rest pose.
 
+##### Clear User Transforms
+
+Resets Pose of selected bones back to keyframe state.
+
+##### Location
+
+Resets location back to the Rest pose.
+
+##### Rotation
+
+Resets rotation back to the Rest pose.
+
+##### Scale
+
+Resets scale back to the Rest pose.
 
 ##### Reset Unkeyed
 
@@ -281,15 +279,25 @@ Inserts a keyframe with the default keying set. The settings of the default keyi
 
 Opens a menu where you can insert a keyframe with a defined keying set.
 
+##### Delete Keyframes
 
-| Entry | What it does |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Delete Keyframes | Deletes keyframes at the current frame. |
-| Clear Keyframes | Deletes all keyframes. |
-| Change Keying Set | Opens a menu where you can change the keying set. It is basically the same than the insert keyframe menu. |
-| Bake Action | Bake all selected objects location/scale/rotation animation to an action. |
-| Bake Object Transform to Grease Pencil | Only works on Mesh objects. |
+Deletes keyframes at the current frame.
 
+##### Clear Keyframes
+
+Deletes all keyframes.
+
+##### Change Keying Set
+
+Opens a menu where you can change the keying set. It is basically the same than the insert keyframe menu.
+
+##### Bake Action
+
+Bake all selected objects location/scale/rotation animation to an action.
+
+##### Bake Object Transform to Grease Pencil
+
+Only works on Mesh objects.
 
 ### In-Between - Submenu
 
@@ -565,12 +573,13 @@ Calculate Motion path calls a setup dialog.
 
 How to display the motion path.
 
+###### Around Frame
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------- |
-| Around Frame | Display paths of poses within a fixed number of frames around the current frame. |
-| In Range | Display paths of poses within specified frames. |
+Display paths of poses within a fixed number of frames around the current frame.
 
+###### In Range
+
+Display paths of poses within specified frames.
 
 ##### Computation Range
 
@@ -578,14 +587,21 @@ How to display the motion path.
 
 How much frames to compute.
 
+###### All Keys
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------- |
-| All Keys | From the first keyframe to the last. |
-| Selected Keys | From the first selected keyframe to the last. |
-| Scene Frame Range | The entire scene / preview range. |
-| Manual Range | Manually determined frame range. |
+From the first keyframe to the last.
 
+###### Selected Keys
+
+From the first selected keyframe to the last.
+
+###### Scene Frame Range
+
+The entire scene / preview range.
+
+###### Manual Range
+
+Manually determined frame range.
 
 ##### Bake Location
 
@@ -593,12 +609,13 @@ How much frames to compute.
 
 To bake from where.
 
+###### Heads
 
-| Entry | What it does |
-| ----- | -------------------------------- |
-| Heads | Calculate bone paths from heads. |
-| Tails | Calculate bone paths from tails. |
+Calculate bone paths from heads.
 
+###### Tails
+
+Calculate bone paths from tails.
 
 ###### Adjust Last Operation - Calculate Bone Paths
 
@@ -624,12 +641,13 @@ Armature and bones have their own collection system. This menu item opens a popu
 
 Bone Collections is a menu to handle bone collection functionality from within a menu in the 3D View editor. The bone collections themselves can be found in the Properties editor then in the Armature tab.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Bone Collections – Sub Menu
 
@@ -643,12 +661,13 @@ Armature and bones has its own collection system.
 
 Add or remove the bone from the listed bone collections. The green + icon and red – icon show if you can remove or add a bone to the listed collection. A bone can be in multiple collections at the same time.
 
+###### New
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+###### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 ##### Show All
 
@@ -734,12 +753,13 @@ But you can add more than just the IK constraint. It is the same menu that you c
 
 You can define an own target object too. The armature needs to be in pose mode. Let's create a cube or another primitive. Select it. Now hold down Shift, and click at the bone where you want to add the constraint too. Then choose Add (with Targets), and choose your constraint method. The cube will now be chosen as the target object.
 
+###### Copy Constraints to selected Bones
 
-| Entry | What it does |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Constraints to selected Bones | Copies the constraints with all its settings to the selected bone. Usage: Select the bone where you want to copy the constraints to. Hold down shift, then select the bone that contains the constraints. Then perform the tool. The constraints will be copied. |
-| Clear Pose Constraints | Removes all bone constraints modifiers from the bone. |
+Copies the constraints with all its settings to the selected bone. Usage: Select the bone where you want to copy the constraints to. Hold down shift, then select the bone that contains the constraints. Then perform the tool. The constraints will be copied.
 
+###### Clear Pose Constraints
+
+Removes all bone constraints modifiers from the bone.
 
 #### Names - Submenu
 
@@ -749,12 +769,13 @@ You can define an own target object too. The armature needs to be in pose mode. 
 
 Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependant at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.
 
+##### Autoname Left/Right
 
-| Entry | What it does |
-| ------------------- | ------------------------------------- |
-| Autoname Left/Right | Renames the bones from left to right. |
-| Autoname Front/Back | Renames the bones from front to back. |
+Renames the bones from left to right.
 
+##### Autoname Front/Back
+
+Renames the bones from front to back.
 
 ##### Autoname Top/Bottom
 
@@ -796,13 +817,17 @@ This feature flips the quaternion rotation values of the currently selected bone
 
 Show or hide the selected geometry
 
+##### Show Hidden
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------- |
-| Show Hidden | Makes all hidden geometry visible again. |
-| Hide Selected | Hides the selected geometry. |
-| Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
+Makes all hidden geometry visible again.
 
+##### Hide Selected
+
+Hides the selected geometry.
+
+##### Hide Unselected
+
+Hides the not selected geometry. The selected geometry stays visible.
 
 ##### Adjust Last Operation - Hide Selected
 
@@ -1225,12 +1250,13 @@ Calculate Motion path calls a setup dialog.
 
 How to display the motion path.
 
+###### Around Frame
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------- |
-| Around Frame | Display paths of poses within a fixed number of frames around the current frame. |
-| In Range | Display paths of poses within specified frames. |
+Display paths of poses within a fixed number of frames around the current frame.
 
+###### In Range
+
+Display paths of poses within specified frames.
 
 ##### Computation Range
 
@@ -1238,14 +1264,21 @@ How to display the motion path.
 
 How much frames to compute.
 
+###### All Keys
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------- |
-| All Keys | From the first keyframe to the last. |
-| Selected Keys | From the first selected keyframe to the last. |
-| Scene Frame Range | The entire scene / preview range. |
-| Manual Range | Manually determined frame range. |
+From the first keyframe to the last.
 
+###### Selected Keys
+
+From the first selected keyframe to the last.
+
+###### Scene Frame Range
+
+The entire scene / preview range.
+
+###### Manual Range
+
+Manually determined frame range.
 
 ##### Bake Location
 
@@ -1253,12 +1286,13 @@ How much frames to compute.
 
 To bake from where.
 
+###### Heads
 
-| Entry | What it does |
-| ----- | -------------------------------- |
-| Heads | Calculate bone paths from heads. |
-| Tails | Calculate bone paths from tails. |
+Calculate bone paths from heads.
 
+###### Tails
+
+Calculate bone paths from tails.
 
 ##### Adjust Last Operation - Calculate Bone Paths
 
@@ -1290,12 +1324,13 @@ Updates the motion paths for the armature object.
 
 Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Show/Hide submenu
 

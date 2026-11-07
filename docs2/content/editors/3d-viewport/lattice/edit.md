@@ -72,14 +72,10 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Shear
 
@@ -113,12 +109,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -126,14 +118,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -164,14 +152,10 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -261,14 +245,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale Texture Space
 
@@ -314,14 +294,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Dimensions
 
@@ -450,16 +426,12 @@ Change the settings of **Hook to Selected Object** right after you use it, in th
 
 Hook to the object(s) of the active bone.
 
-
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hook to Selected Object Bone | Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target. |
-| Assign to Hook | Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook. |
-| Remove Hook | Removes the chosen Hook Modifier from the object. |
-| Select Hook | Selects all vertices assigned to the chosen Hook Modifier. |
-| Reset Hook | Resets the chosen Hook Modifier. |
-| Recenter Hook | **Recenter** the Hook Modifier. |
-
+- **Hook to Selected Object Bone**: Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target.
+- **Assign to Hook**: Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook.
+- **Remove Hook**: Removes the chosen Hook Modifier from the object.
+- **Select Hook**: Selects all vertices assigned to the chosen Hook Modifier.
+- **Reset Hook**: Resets the chosen Hook Modifier.
+- **Recenter Hook**: **Recenter** the Hook Modifier.
 
 #### Make Vertex Parent
 
@@ -501,12 +473,8 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Shear
 
@@ -527,12 +495,8 @@ Change the settings of **Shear** right after you use it, in the Adjust Last Oper
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable Mirror Editing |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable Mirror Editing
 
 ###### Proportional editing
 
@@ -540,13 +504,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 # Context Menus
 
@@ -564,15 +525,25 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+##### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+##### Origin to Geometry
+
+Sets the origin to geometry.
+
+##### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+##### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+##### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
 
 ##### Adjust Last Operation - Set Origin
 
@@ -646,14 +617,10 @@ Orientation is a drop-down box choose the type of orientation for the duplicate 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rename active Item / Object
 
@@ -677,12 +644,8 @@ Mirrors the selection.
 
 Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.
 
-
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| X Y Z Global | Mirrors along the global axis. |
-| X Y Z Local | Mirrors along the object axis. |
-
+- **X Y Z Global**: Mirrors along the global axis.
+- **X Y Z Local**: Mirrors along the object axis.
 
 ##### Adjust Last Operation - Mirror
 
@@ -702,14 +665,10 @@ Choose the orientation in which the transform should happen.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Snap sub menu
 
@@ -737,16 +696,12 @@ Keep the offset of the selected objects to each other.
 
 Rotate to match the cursor.
 
-
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------- |
-| Selection to Active | Snaps the currently selected object(s) to the active object. |
-| Selection to Grid | Snaps the currently selected object(s) to the nearest grid point. |
-| Cursor to Selected | Moves the cursor to the center of the selected object(s). |
-| Cursor to World Origin | Moves the cursor to the world origin. |
-| Cursor to Active | Moves the cursor to the center of the active object. |
-| Cursor to Grid | Moves the cursor to the nearest grid point. |
-
+- **Selection to Active**: Snaps the currently selected object(s) to the active object.
+- **Selection to Grid**: Snaps the currently selected object(s) to the nearest grid point.
+- **Cursor to Selected**: Moves the cursor to the center of the selected object(s).
+- **Cursor to World Origin**: Moves the cursor to the world origin.
+- **Cursor to Active**: Moves the cursor to the center of the active object.
+- **Cursor to Grid**: Moves the cursor to the nearest grid point.
 
 #### Parent sub menu
 
@@ -772,16 +727,29 @@ Sets the parent to selected object, but applies all transform before the operati
 
 Armature parenting creates an armature modifier at the mesh.
 
+###### Armature Deform
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------- |
-| Armature Deform | Sets the parent to selected Armature. |
-| With empty Groups | Sets the parent to selected Armature, using empty groups. |
-| With Envelope Weights | Sets the parent to selected Armature, using envelope weights |
-| With automatic Weights | Sets the parent to selected Armature, with automatic weights. |
-| Bone | Sets the parent absolute to selected Bone. |
-| Bone Relative | Sets the parent relative to selected Bone. |
+Sets the parent to selected Armature.
 
+###### With empty Groups
+
+Sets the parent to selected Armature, using empty groups.
+
+###### With Envelope Weights
+
+Sets the parent to selected Armature, using envelope weights
+
+###### With automatic Weights
+
+Sets the parent to selected Armature, with automatic weights.
+
+###### Bone
+
+Sets the parent absolute to selected Bone.
+
+###### Bone Relative
+
+Sets the parent relative to selected Bone.
 
 ##### Curve Deform
 
@@ -869,13 +837,17 @@ Do the vertex parenting in Edit mode. You need to have an object type that has v
 
 Create a mesh or curve object, create an object, hold down shift and select the mesh object, make parent ...
 
+###### Make Parent without Inverse
 
-| Entry | What it does |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Parent without Inverse | With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting. |
-| Make Parent without Inverse (Keep Transform ) | Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position. |
-| Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
+With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting.
 
+###### Make Parent without Inverse (Keep Transform )
+
+Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position.
+
+###### Object (Attach Curves to Surface)
+
+Parent a Hair Curve to the surface of a new object.
 
 ##### Adjust Last Operation - Make Parent
 
@@ -896,12 +868,13 @@ Change the settings of **Make Parent** right after you use it, in the Adjust Las
 
 Clear Parent clears the parent relation completely, including involved modifiers.
 
+###### Clear and Keep Transformation
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Clear and Keep Transformation | Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation. |
-| Clear Parent Inverse | Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself. |
+Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation.
 
+###### Clear Parent Inverse
+
+Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself.
 
 ###### Adjust Last Operation - Clear Parent
 
@@ -937,12 +910,13 @@ Set a name for your new collection. When you haven't created a new collection, t
 
 Toggles local view isolating the selection in the viewport. You can find this operator in the Header View menu.
 
+##### Remove from Local
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Remove from Local | Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.* |
-| Insert Key frame | Inserts a key frame. It uses the default keying set that is defined in the Preferences. |
+Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.*
 
+##### Insert Key frame
+
+Inserts a key frame. It uses the default keying set that is defined in the Preferences.
 
 #### Insert Key frame with keying sets
 
