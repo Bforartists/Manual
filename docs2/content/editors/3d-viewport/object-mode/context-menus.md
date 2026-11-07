@@ -8,7 +8,7 @@ path:
   - "Object Mode"
   - "Context Menus"
 version: "5.3"
-status: draft
+status: needs-review
 icon: menu
 summary: "The right-click menus of Object Mode."
 order: 40

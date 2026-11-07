@@ -8,7 +8,7 @@ path:
   - Editors
   - Graph Editor
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 18 Editors - Graph Editor.odt
