@@ -584,33 +584,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-—
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
@@ -731,33 +719,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-—
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
@@ -858,33 +834,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-—
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
@@ -973,33 +937,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-Link strokes with zero radius sections of curves.
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
@@ -1110,33 +1062,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-Link strokes with zero radius sections of curves.
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
@@ -1231,33 +1171,21 @@ Merge UV coordinates that shares a vertex.
 
 #### Adjust Last Operation - Convert Grease Pencil
 
-Change the settings of **Convert Grease Pencil** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Converting a Grease Pencil object shows the same **Convert To** panel as other objects. Change its settings right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Type
+![Adjust Last Operation - Convert Grease Pencil](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-grease-pencil.png)
 
-![Type](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/type.png)
+##### Target
 
-Type is a drop-down box that allows you to choose the convert method again.
+The object type to convert to, for example Mesh. Change it here to convert to another type without starting again.
 
-###### Bevel Depth
+##### Keep Original
 
-A curve can have a extruded geometry with bevel. Adjust the bevel depth.
+Keeps the Grease Pencil object and creates the converted object as a new one.
 
-###### Bevel Resolution
+##### Merge UVs
 
-A curve can have a extruded geometry with bevel. Adjust the bevel resolution.
-
-###### Normalize Weight
-
-Normalize the weight, set from stroke width.
-
-###### Radius Factor
-
-Multiplier for the points radii, set from stroke width.
-
-###### Link Stroke
-
-Link strokes with zero radius sections of curves.
+Merges UV coordinates that share a vertex, so the converted mesh has fewer UV seams.
 
 ### Set Origin
 
