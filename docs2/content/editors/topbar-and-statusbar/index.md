@@ -8,7 +8,7 @@ path:
   - Editors
   - Topbar and Statusbar
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 5 Topbar and Statusbar.odt
