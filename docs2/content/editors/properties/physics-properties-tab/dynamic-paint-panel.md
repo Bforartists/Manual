@@ -170,18 +170,21 @@ The two vertical lines at the end is a handler with which you can expand the lis
 
 You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.
 
+##### Invert
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------- |
-| Invert | Exclude the search term instead of searching for it. |
-| Sort by Name | Sort the List by name. |
+Exclude the search term instead of searching for it.
 
+##### Sort by Name
 
-| Entry | What it does |
-| ------------------- | ---------------------------------- |
-| Add Surface Slot | Adds a surface slot |
-| Remove Surface Slot | Removes the selected surface slot. |
+Sort the List by name.
 
+##### Add Surface Slot
+
+Adds a surface slot
+
+##### Remove Surface Slot
+
+Removes the selected surface slot.
 
 ### Format
 
@@ -209,13 +212,17 @@ Image Sequence format. The output resolution of the single images.
 
 Use Anti-Aliasing to smooth paint edges. The anitaliasing is using a 5× multi sampling method.
 
+#### Frame Start
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------ |
-| Frame Start | The start frame of the surface processing. |
-| End | The end frame of the surface processing. |
-| Sub-steps | Sub-steps are extra samples between frames. They are usually required when there is a very fast brush. |
+The start frame of the surface processing.
 
+#### End
+
+The end frame of the surface processing.
+
+#### Sub-steps
+
+Sub-steps are extra samples between frames. They are usually required when there is a very fast brush.
 
 ## Canvas - Surface subpanel
 
@@ -237,12 +244,13 @@ A wetmap is a black-and-white output that visualizes paint wetness. White being 
 
 Define a specific collection to pick brush objects from.
 
+###### Scale Influence
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------- |
-| Scale Influence | The influence the brush objects have on this surface. |
-| Radius | Adjust radius of proximity brushes or particles for this surface. |
+The influence the brush objects have on this surface.
 
+###### Radius
+
+Adjust radius of proximity brushes or particles for this surface.
 
 ##### Dissolve
 
@@ -250,12 +258,13 @@ Define a specific collection to pick brush objects from.
 
 Make surface changes disappear over time.
 
+###### Time
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------- |
-| Time | Approximately in how many frames the dissolve should happen. |
-| Slow | Use logarithmic dissolve. This makes high values to fade faster than low values. |
+Approximately in how many frames the dissolve should happen.
 
+###### Slow
+
+Use logarithmic dissolve. This makes high values to fade faster than low values.
 
 ##### Dry
 
@@ -263,13 +272,17 @@ Make surface changes disappear over time.
 
 Make surface wetness dry over time. Completely disable drying can be used for indefinitely spreading paint.
 
+###### Time
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time | Approximately in how many frames the dry should happen. |
-| Color | Define the wetness level when paint colors start to shift to surface “background”. Lower values can be useful to prevent spreading paint from becoming transparent as it dries, while higher values give better results in general. |
-| Slow | Use logarithmic dissolve. This makes high values to fade faster than low values. |
+Approximately in how many frames the dry should happen.
 
+###### Color
+
+Define the wetness level when paint colors start to shift to surface “background”. Lower values can be useful to prevent spreading paint from becoming transparent as it dries, while higher values give better results in general.
+
+###### Slow
+
+Use logarithmic dissolve. This makes high values to fade faster than low values.
 
 #### Displace
 
@@ -285,14 +298,21 @@ Outputs intersection depth from brush objects. It deforms the mesh.
 
 The maximum level of intersection depth, larger values will be clamped to this value.
 
+###### Brush Collection
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Brush Collection | Define a specific collection to pick brush objects from. |
-| Scale Influence | The influence the brush objects have on this surface. |
-| Radius | Adjust radius of proximity brushes or particles for this surface. |
-| Dissolve | Make surface changes disappear over time. · **Time**: Approximately in how many frames the dissolve should happen. · **Slow**: Use logarithmic dissolve. This makes high values to fade faster than low values. |
+Define a specific collection to pick brush objects from.
 
+###### Scale Influence
+
+The influence the brush objects have on this surface.
+
+###### Radius
+
+Adjust radius of proximity brushes or particles for this surface.
+
+###### Dissolve
+
+Make surface changes disappear over time. · **Time**: Approximately in how many frames the dissolve should happen. · **Slow**: Use logarithmic dissolve. This makes high values to fade faster than low values.
 
 #### Weight
 
@@ -312,13 +332,17 @@ It requires a material to display the result.
 
 Define a specific collection to pick brush objects from.
 
+###### Scale Influence
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scale Influence | The influence the brush objects have on this surface. |
-| Radius | Adjust radius of proximity brushes or particles for this surface. |
-| Dissolve | Make surface changes disappear over time. · **Time**: Approximately in how many frames the dissolve should happen. · **Slow**: Use logarithmic dissolve. This makes high values to fade faster than low values. |
+The influence the brush objects have on this surface.
 
+###### Radius
+
+Adjust radius of proximity brushes or particles for this surface.
+
+###### Dissolve
+
+Make surface changes disappear over time. · **Time**: Approximately in how many frames the dissolve should happen. · **Slow**: Use logarithmic dissolve. This makes high values to fade faster than low values.
 
 #### Waves
 
@@ -334,18 +358,37 @@ This surface type produces simulated wave motion. Like displace, wave surface al
 
 Allows waves to pass through mesh “edges” instead of reflecting from them.
 
+###### Timescale
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Timescale | Directly adjusts simulation speed without affecting simulation outcome. Lower values make simulation go slower and otherwise. |
-| Speed | Affects how fast waves travel on the surface. This setting is also corresponds to the size of the simulation. Half the speed equals surface double as large. |
-| Damping | Reduces the wave strength over time. Basically adjusts how fast wave disappears. |
-| Spring | Adjusts the force that pulls water back to “zero level”. |
-| Smoothness | Limit maximum steepness of wave slope between simulation points. Higher values results in smoother waves and higher calculation time. |
-| Brush Collection | Define a specific collection to pick brush objects from. |
-| Scale Influence | The influence the brush objects have on this surface. |
-| Radius | Adjust radius of proximity brushes or particles for this surface. |
+Directly adjusts simulation speed without affecting simulation outcome. Lower values make simulation go slower and otherwise.
 
+###### Speed
+
+Affects how fast waves travel on the surface. This setting is also corresponds to the size of the simulation. Half the speed equals surface double as large.
+
+###### Damping
+
+Reduces the wave strength over time. Basically adjusts how fast wave disappears.
+
+###### Spring
+
+Adjusts the force that pulls water back to “zero level”.
+
+###### Smoothness
+
+Limit maximum steepness of wave slope between simulation points. Higher values results in smoother waves and higher calculation time.
+
+###### Brush Collection
+
+Define a specific collection to pick brush objects from.
+
+###### Scale Influence
+
+The influence the brush objects have on this surface.
+
+###### Radius
+
+Adjust radius of proximity brushes or particles for this surface.
 
 ## Canvas - Cache subpanel
 
@@ -386,19 +429,25 @@ The list of available caches. The caches have no name by default. Double click t
 
 You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.
 
+#### Drag Handler
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The two vertical lines at the end is a handler with which you can expand the list.
 
+#### Search Field
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Add New Cache | Add a new cache. |
-| Delete current Cache | Deletes the selected cache. |
-| Info string | An info string. Gives different messages, dependent of the status. |
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
+#### Add New Cache
+
+Add a new cache.
+
+#### Delete current Cache
+
+Deletes the selected cache.
+
+#### Info string
+
+An info string. Gives different messages, dependent of the status.
 
 ### Bake / Delete Bake
 
@@ -412,15 +461,25 @@ The baking progress can be seen in the footer. You need to be in Object Mode to 
 
 ![Bake / Delete Bake](/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png)
 
+#### Calculate To Frame
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Calculate To Frame | Bake only up to the current frame. Limited by End frame set in the cache settings. |
-| Current Cache to Bake | Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it. |
-| Bake All Dynamics | Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types. |
-| Delete All Bakes | Free bakes of all physics systems in the scene, even those of different types. |
-| Update All To Frame | Bake all physics systems in the scene to the current frame. |
+Bake only up to the current frame. Limited by End frame set in the cache settings.
 
+#### Current Cache to Bake
+
+Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it.
+
+#### Bake All Dynamics
+
+Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.
+
+#### Delete All Bakes
+
+Free bakes of all physics systems in the scene, even those of different types.
+
+#### Update All To Frame
+
+Bake all physics systems in the scene to the current frame.
 
 ## Canvas - Effects subpanel
 
@@ -436,23 +495,25 @@ For spread and drip effects, only “wet paint” is affected, so as the paint d
 
 Paint slowly spreads to surrounding points eventually filling all connected areas.
 
+#### Speed
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------- |
-| Speed | How fast the spread effect moves on the canvas surface. |
-| Color | How fast the colors get mixed within wet paint. |
+How fast the spread effect moves on the canvas surface.
 
+#### Color
+
+How fast the colors get mixed within wet paint.
 
 ### Drip subpanel
 
 Paint moves in specific direction specified by Blender force fields, gravity and velocity with user-defined influences.
 
+#### Velocity
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------- |
-| Velocity | How much surface velocity affect dripping. |
-| Acceleration | How much surface acceleration affects dripping. |
+How much surface velocity affect dripping.
 
+#### Acceleration
+
+How much surface acceleration affects dripping.
 
 #### Weights subpanel
 
@@ -502,12 +563,13 @@ Clicking at the color field opens a color picker where you can choose a color.
 
 Use a UV texture as an initial color.
 
+##### Texture
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Texture | The texture to use. The texture that is meant here is not an image texture. But a created one. This can be done in the Texture tab. |
-| UV Map | The UV map of the mesh. Usually you will just have one UV map available. But a mesh can have several ones. |
+The texture to use. The texture that is meant here is not an image texture. But a created one. This can be done in the Texture tab.
 
+##### UV Map
+
+The UV map of the mesh. Usually you will just have one UV map available. But a mesh can have several ones.
 
 #### Vertex Color
 
@@ -553,13 +615,17 @@ Once activated it can be found in the Vertex Group panel in the Object Data tab.
 
 ![With surface type Paint](/docs2/images/editors/properties/physics-properties-tab/dynamic-paint-panel/with-surface-type-paint-3.png)
 
+##### Bake Image Sequence
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Bake Image Sequence | Bake the image sequence to file. |
-| Cache Path | The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory. |
-| Premultiply Alpha | Multiply color by alpha. |
+Bake the image sequence to file.
 
+##### Cache Path
+
+The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory.
+
+##### Premultiply Alpha
+
+Multiply color by alpha.
 
 ##### Paintmaps
 
@@ -583,14 +649,21 @@ The name of the wetmap to use.
 
 ![With surface type Displace](/docs2/images/editors/properties/physics-properties-tab/dynamic-paint-panel/with-surface-type-displace.png)
 
+##### Bake Image Sequence
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Bake Image Sequence | Bake the image sequence to file. |
-| Cache Path | The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory. |
-| Premultiply Alpha | Multiply color by alpha. |
-| Filename | The name that is used to save the output from this surface. |
+Bake the image sequence to file.
 
+##### Cache Path
+
+The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory.
+
+##### Premultiply Alpha
+
+Multiply color by alpha.
+
+##### Filename
+
+The name that is used to save the output from this surface.
 
 ##### Displace Type
 
@@ -606,13 +679,17 @@ Maximum level of depth intersection in object space. Use 0.0 to disable it.
 
 ![With surface type Waves](/docs2/images/editors/properties/physics-properties-tab/dynamic-paint-panel/with-surface-type-waves.png)
 
+##### Bake Image Sequence
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Bake Image Sequence | Bake the image sequence to file. |
-| Cache Path | The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory. |
-| UV Map | UU map name to use. Leave empty when you don't work with UV maps. |
+Bake the image sequence to file.
 
+##### Cache Path
+
+The path where the cache images are stored. · **Accept**: Open a file browser to choose another cache directory.
+
+##### UV Map
+
+UU map name to use. Leave empty when you don't work with UV maps.
 
 ##### File Format
 
@@ -620,13 +697,17 @@ Maximum level of depth intersection in object space. Use 0.0 to disable it.
 
 Save the images either with Open EXR or with PNG file format.
 
+###### Premultiply Alpha
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------- |
-| Premultiply Alpha | Multiply color by alpha. |
-| Filename | The name that is used to save the output from this surface. |
-| Wave Clamp | Maximum level of depth intersection in object space. Use 0.0 to disable it. |
+Multiply color by alpha.
 
+###### Filename
+
+The name that is used to save the output from this surface.
+
+###### Wave Clamp
+
+Maximum level of depth intersection in object space. Use 0.0 to disable it.
 
 ## Brush - Settings subpanel
 
@@ -636,16 +717,29 @@ The Brush type makes object apply paint from Dynamic Paint brushes.
 
 The settings subpanel allows you to define how brush affects canvas color surfaces.
 
+### Add / Remove Brush
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| Add / Remove Brush | Adds or removes the brush. |
-| Paint Color | The paint color |
-| Alpha | The brush alpha channel value. Final wetness is also affected by alpha. |
-| Wetness | The strength of the wetness. |
-| Absolute Alpha | Limiting the brush alpha influence. The alpha channels does not accumulate each other. |
-| Erase Paint | Erases existing paint instead of adding it. |
+Adds or removes the brush.
 
+### Paint Color
+
+The paint color
+
+### Alpha
+
+The brush alpha channel value. Final wetness is also affected by alpha.
+
+### Wetness
+
+The strength of the wetness.
+
+### Absolute Alpha
+
+Limiting the brush alpha influence. The alpha channels does not accumulate each other.
+
+### Erase Paint
+
+Erases existing paint instead of adding it.
 
 ## Brush - Source subpanel
 
@@ -661,14 +755,21 @@ What to affect with the brush.
 
 The brush influence is defined by particles from a selected particle system. You need to generate a particle system first, and then load it.
 
+#### Particle Systems
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------- |
-| Particle Systems | Load the particle system. |
-| Effect Solid Radius | The color is solid inside this radius. |
-| Use Particle Radius | Use radius from particle settings. |
-| Smooth Radius | Add a smooth radius after the solid radius. |
+Load the particle system.
 
+#### Effect Solid Radius
+
+The color is solid inside this radius.
+
+#### Use Particle Radius
+
+Use radius from particle settings.
+
+#### Smooth Radius
+
+Add a smooth radius after the solid radius.
 
 ### Paint source Object Center
 
@@ -686,12 +787,13 @@ The maximum distance from brush to mesh surface to affect paint.
 
 The fallof type for the paint.
 
+##### Smooth
 
-| Entry | What it does |
-| -------- | -------------- |
-| Smooth | Smooth falloff |
-| Constant | No falloff. |
+Smooth falloff
 
+##### Constant
+
+No falloff.
 
 ##### Color ramp
 
@@ -715,12 +817,13 @@ The maximum distance from brush to mesh surface to affect paint.
 
 The fallof type for the paint.
 
+##### Smooth
 
-| Entry | What it does |
-| -------- | --------------- |
-| Smooth | Smooth falloff. |
-| Constant | No falloff. |
+Smooth falloff.
 
+##### Constant
+
+No falloff.
 
 ##### Color ramp
 
@@ -754,12 +857,13 @@ The maximum distance from brush to mesh surface to affect paint.
 
 The fallof type for the paint.
 
+##### Smooth
 
-| Entry | What it does |
-| -------- | --------------- |
-| Smooth | Smooth falloff. |
-| Constant | No falloff. |
+Smooth falloff.
 
+##### Constant
+
+No falloff.
 
 ##### Color ramp
 
@@ -767,12 +871,13 @@ The fallof type for the paint.
 
 Falloff defined by a color ramp.
 
+###### Inner Proximity
 
-| Entry | What it does |
-| --------------- | --------------------------------------- |
-| Inner Proximity | Apply the fallof inside the volume. |
-| Negate Volume | Negate the influence inside the volume. |
+Apply the fallof inside the volume.
 
+###### Negate Volume
+
+Negate the influence inside the volume.
 
 #### Project
 
@@ -796,14 +901,21 @@ The Brush affects all surface points inside of a mesh volume.
 
 Object velocity options.
 
+### Multiply Alpha
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------- |
-| Multiply Alpha | Multiply the bush influence by the alpha of the velocity color ramp. |
-| Replace Color | Replaces the brush color with the values of the velocity color ramp. |
-| Multiply Depth | Multiply the depth influence by the alpha of the velocity ramp alpha. |
-| Max Velocity | The maximum allowed velocity. |
+Multiply the bush influence by the alpha of the velocity color ramp.
 
+### Replace Color
+
+Replaces the brush color with the values of the velocity color ramp.
+
+### Multiply Depth
+
+Multiply the depth influence by the alpha of the velocity ramp alpha.
+
+### Max Velocity
+
+The maximum allowed velocity.
 
 ### Ramp subpanel
 
@@ -829,18 +941,26 @@ Adjust brush influence to “Wave” surfaces.
 
 ### Type
 
+#### Depth Change
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Depth Change | If you move the brusn then the brush create waves when the intersection depth with the surface is changed on that point. If the brush is not moved, it will have no effect. Using a negative “Factor” with this type can create a nice looking “wake” for moving objects like ships. |
-| Obstacle | Constantly affects the water surface whenever intersecting. Waves are also reflected off this brush type. |
-| Force | Directly affects the velocity of wave motion. |
-| Reflect Only | This type has no visible effect on the surface alone. But reflects waves that are already on the surface. |
+If you move the brusn then the brush create waves when the intersection depth with the surface is changed on that point. If the brush is not moved, it will have no effect. Using a negative “Factor” with this type can create a nice looking “wake” for moving objects like ships.
 
+#### Obstacle
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Factor | Adjusts how strongly the brush “depth” affects the simulation. You can also use negative values to make the brush pull water up instead of down. |
-| Clamp Waves | Limit the influence to a certain depth to avoid messing up the simulation. |
+Constantly affects the water surface whenever intersecting. Waves are also reflected off this brush type.
 
+#### Force
 
+Directly affects the velocity of wave motion.
+
+#### Reflect Only
+
+This type has no visible effect on the surface alone. But reflects waves that are already on the surface.
+
+#### Factor
+
+Adjusts how strongly the brush “depth” affects the simulation. You can also use negative values to make the brush pull water up instead of down.
+
+#### Clamp Waves
+
+Limit the influence to a certain depth to avoid messing up the simulation.

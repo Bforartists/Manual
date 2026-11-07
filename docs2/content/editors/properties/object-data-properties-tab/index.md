@@ -61,12 +61,13 @@ This panel exists for all object types in the Object Data Properties. Allows you
 
 In this panel you might also find custom properties from addons or scripts.
 
+### Add
 
-| Entry | What it does |
-| -------------- | -------------------------- |
-| Add | Adds a new property. |
-| Property Value | The value of the property. |
+Adds a new property.
 
+### Property Value
+
+The value of the property.
 
 ### Edit
 

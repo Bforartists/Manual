@@ -27,13 +27,17 @@ The collection tab provides you with collection related settings.
 
 Set restrictions for the selected collection(s).
 
+### Selectable
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selectable | Make this collection and its content selectable. |
-| Show in Renders | Render the content of the collection. |
-| View Layer sub panel | **Include**: Include the collection in the scene. · **Holdout**: Mask out objects in collection from view layer. · **Indirect Only**: Make the objects in the collection just contribute indirectly. By light or shadow or reflections. |
+Make this collection and its content selectable.
 
+### Show in Renders
+
+Render the content of the collection.
+
+### View Layer sub panel
+
+**Include**: Include the collection in the scene. · **Holdout**: Mask out objects in collection from view layer. · **Indirect Only**: Make the objects in the collection just contribute indirectly. By light or shadow or reflections.
 
 ## Instancing panel
 
@@ -47,13 +51,17 @@ Adjust an offset from the origin when instancing the collection.
 
 ![Instance offset menu](/docs2/images/editors/properties/collection-properties-tab/instance-offset-menu.png)
 
+#### Set Offset from cursor
 
-| Entry | What it does |
-| ---------------------- | -------------------------------------------------------------------------------- |
-| Set Offset from cursor | Set the offset used for collection instance based on cursor position. |
-| Set Offset from Object | Set the offset used for collection instance based on the active object position. |
-| Set Cursor to Offset | Set cursor position to the offset used for collection instances. |
+Set the offset used for collection instance based on cursor position.
 
+#### Set Offset from Object
+
+Set the offset used for collection instance based on the active object position.
+
+#### Set Cursor to Offset
+
+Set cursor position to the offset used for collection instances.
 
 ## Exporters panel
 
@@ -106,15 +114,25 @@ These settings comes from the chosen exporter. See chapter export in the File me
 
 The method to display the line art in this collection.
 
+#### Include
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------- |
-| Include | Generate feature lines for this collection. |
-| Occlusion Only | Only use the collection to produce occlusion. |
-| Exclude | Don't use this collection in line art. |
-| Intersection only | Only generate intersection lines for this collection |
-| No Intersection | Include this collection but do not generate intersection lines. |
+Generate feature lines for this collection.
 
+#### Occlusion Only
+
+Only use the collection to produce occlusion.
+
+#### Exclude
+
+Don't use this collection in line art.
+
+#### Intersection only
+
+Only generate intersection lines for this collection
+
+#### No Intersection
+
+Include this collection but do not generate intersection lines.
 
 ### Collection Mask
 

@@ -70,13 +70,17 @@ In the header you will find a Presets menu to choose between presets and define 
 
 Automatically redcue the number of samples per pixel, based on estimated noise level.
 
+##### Adaptive sampling threshold
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adaptive sampling threshold | The noise level step to stop sampling at. Lower values reduces noise at the cost of render time. A value of zero means to use the automatic setting based on number of AA samples. |
-| Max Samples | Maximum samples for adaptive sampling. |
-| Min Samples | Minimum samples for adaptive sampling. A value of zero means to use the automatic setting based on number of AA samples. |
+The noise level step to stop sampling at. Lower values reduces noise at the cost of render time. A value of zero means to use the automatic setting based on number of AA samples.
 
+##### Max Samples
+
+Maximum samples for adaptive sampling.
+
+##### Min Samples
+
+Minimum samples for adaptive sampling. A value of zero means to use the automatic setting based on number of AA samples.
 
 #### Samples
 
@@ -96,13 +100,17 @@ Activate Denoising.
 
 ![Denoiser](/docs2/images/editors/properties/render-properties-tab/cycles/denoiser.png)
 
+###### Automatic
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| Automatic | Use the fastest denoiser that is available. If OptiX is available then OptiX. Otherwise OpenImageDenoiser. |
-| OptiX | Use the OptiX Denoiser. |
-| OpenImageDenoiser | Use the OpenImageDenoiser. |
+Use the fastest denoiser that is available. If OptiX is available then OptiX. Otherwise OpenImageDenoiser.
 
+###### OptiX
+
+Use the OptiX Denoiser.
+
+###### OpenImageDenoiser
+
+Use the OpenImageDenoiser.
 
 ##### Passes
 
@@ -132,13 +140,17 @@ Adaptive Sampling
 
 Automatically redcue the number of samples per pixel, based on estimated noise level.
 
+##### Adaptive sampling threshold
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adaptive sampling threshold | The noise level step to stop sampling at. Lower values reduces noise at the cost of render time. A value of zero means to use the automatic setting based on number of AA samples. |
-| Max Samples | Maximum samples for adaptive sampling. |
-| Min Samples | Minimum samples for adaptive sampling. A value of zero means to use the automatic setting based on number of AA samples. |
+The noise level step to stop sampling at. Lower values reduces noise at the cost of render time. A value of zero means to use the automatic setting based on number of AA samples.
 
+##### Max Samples
+
+Maximum samples for adaptive sampling.
+
+##### Min Samples
+
+Minimum samples for adaptive sampling. A value of zero means to use the automatic setting based on number of AA samples.
 
 #### Samples
 
@@ -210,24 +222,29 @@ This property is just active when Cylces device uses GPU and the denoiser is Ope
 
 Use path guiding for sampling paths. Path guiding incrementally learns the light distribution of the scene. And guides path into directions with high direct and indirect light contributions.
 
+#### Training Samples
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Training Samples | The maximum number of samples used for training path guiding. Higher values results in more accurate guiding at the cost of speed. A value of 0 will continue the training until the last sample. |
-| Surface | Use guiding at surfaces. |
-| Volume | Use guiding inside volumes. |
+The maximum number of samples used for training path guiding. Higher values results in more accurate guiding at the cost of speed. A value of 0 will continue the training until the last sample.
 
+#### Surface
+
+Use guiding at surfaces.
+
+#### Volume
+
+Use guiding inside volumes.
 
 ### Lights subpanel
 
 ![Lights subpanel](/docs2/images/editors/properties/render-properties-tab/cycles/lights-subpanel.png)
 
+#### Light Tree
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Light Tree | When ticked use existing light tree. This will sample multiple lights more efficiently. |
-| Light Threshold | When Light Tree is unticked Light Threshold becomes available. Terminate light samples below this value. This speeds up the rendering at the cost of noise. A value of zero will disable the test. Then all light value will be calculated. |
+When ticked use existing light tree. This will sample multiple lights more efficiently.
 
+#### Light Threshold
+
+When Light Tree is unticked Light Threshold becomes available. Terminate light samples below this value. This speeds up the rendering at the cost of noise. A value of zero will disable the test. Then all light value will be calculated.
 
 ### Advanced subpanel
 
@@ -251,12 +268,13 @@ Uses a Sobol pattern to decide the random sapling pattern used by the integrator
 
 This is a type of noise that is high-frequency. In the context of rendering, it means the noise (or grain) you see in the image appears more like tiny dots scattered around, rather than clumps. This can make the image appear smoother and more pleasing to the eye.
 
+###### Seed
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Seed | Seed value for integrator to get different noise patterns. · **Animate Seed**: The clock icon besides the Seed value. Enable it to get different seed values for animation. Without animated seed you will get visible patterns in animations. |
-| Sample Offset | Number of samples to skip when starting the render. |
+Seed value for integrator to get different noise patterns. · **Animate Seed**: The clock icon besides the Seed value. Enable it to get different seed values for animation. Without animated seed you will get visible patterns in animations.
 
+###### Sample Offset
+
+Number of samples to skip when starting the render.
 
 #### Scrambling Distance
 
@@ -266,19 +284,25 @@ Speeds up the rendering times at the gpu at cost of possible artifacts. You need
 
 > **Note:** This is only available with Classic Sampling.
 
+##### Adaptive
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adaptive | Instead of a fixed scrambling distance you can use this adaptive method. It is based on the sample count. |
-| Viewport | Also use the scrambling distance in the viewport. |
-| Multiplier | Speeds up the rendering at the GPU by scrambling pixels that are farer away. Lower values renders faster, with less noise – but too low values can lead to artifacts. |
+Instead of a fixed scrambling distance you can use this adaptive method. It is based on the sample count.
 
+##### Viewport
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------ |
-| Min Light Bounces | The minimum bounces of light rays. |
-| Min Transparent Bounces | The minimum number of transparent bounces. |
+Also use the scrambling distance in the viewport.
 
+##### Multiplier
+
+Speeds up the rendering at the GPU by scrambling pixels that are farer away. Lower values renders faster, with less noise – but too low values can lead to artifacts.
+
+##### Min Light Bounces
+
+The minimum bounces of light rays.
+
+##### Min Transparent Bounces
+
+The minimum number of transparent bounces.
 
 ## Light Paths panel
 
@@ -296,16 +320,29 @@ In the header you will find a Presets menu to choose between presets and define 
 
 A sub menu with the Maximum Bounces settings.
 
+#### Total
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------- |
-| Total | Total maximum number of bounces. |
-| Diffuse | Maximum number of diffuse bounces. |
-| Glossy | Maximum number of glossy bounces. |
-| Transmission Bounces | Maximum number of transmission bounces. |
-| Volume | Maximum number of volume scattering bounces. |
-| Transparent | Maximum number of transparency bounces. |
+Total maximum number of bounces.
 
+#### Diffuse
+
+Maximum number of diffuse bounces.
+
+#### Glossy
+
+Maximum number of glossy bounces.
+
+#### Transmission Bounces
+
+Maximum number of transmission bounces.
+
+#### Volume
+
+Maximum number of volume scattering bounces.
+
+#### Transparent
+
+Maximum number of transparency bounces.
 
 ### Clamping
 
@@ -313,12 +350,13 @@ A sub menu with the Maximum Bounces settings.
 
 A sub menu with the Clamping settings. Clamping will reduce noise at the cost of accuracy.
 
+#### Direct Light
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------- |
-| Direct Light | The maxium value for a direct sample. Zero means disabled. |
-| Indirect Light | The maximum value for a indirect sample. Zero means disabled. |
+The maxium value for a direct sample. Zero means disabled.
 
+#### Indirect Light
+
+The maximum value for a indirect sample. Zero means disabled.
 
 ### Caustics
 
@@ -334,12 +372,13 @@ Some light paths have a low probability of being found while contributing much l
 
 With path tracing it is difficult to find the specular highlight, but if we increase the roughness on the material, the highlight gets bigger and softer, and so easier to find. Often this blurring will hardly be noticeable, because we are seeing it through a blurry material anyway, but there are also cases where this will lead to a loss of detail in lighting.
 
+##### Reflective Caustics
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reflective Caustics | Disable reflective caustics. Path tracing supports rendering of caustics with a sufficient number of samples. But in practice it may be inefficient to the point that there is just too much noise. |
-| Refractive Caustics | Disable refractive caustics. Path tracing supports rendering of caustics with a sufficient number of samples. But in practice it may be inefficient to the point that there is just too much noise. |
+Disable reflective caustics. Path tracing supports rendering of caustics with a sufficient number of samples. But in practice it may be inefficient to the point that there is just too much noise.
 
+##### Refractive Caustics
+
+Disable refractive caustics. Path tracing supports rendering of caustics with a sufficient number of samples. But in practice it may be inefficient to the point that there is just too much noise.
 
 ### Fast GI approximation subpanel
 
@@ -365,14 +404,21 @@ The fast gi method.
 
 Replace global illumination with ambient occlusion after a specified number of bounces.
 
+###### AO Factor
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| AO Factor | Factor of ambient occlusion blending. |
-| AO Distance | The length of the rays that are used for Ambient Occlusion. Defines how far any other faces gives the occlusion effect. |
-| Viewport Bounces | Use approximate global illumination after this number of light bounces in the viewport. A value of 0 deactivates the feature. |
-| Render Bounces | Use approximate global illumination after this number of light bounces in the rendering. A value of 0 deactivates the feature. |
+Factor of ambient occlusion blending.
 
+###### AO Distance
+
+The length of the rays that are used for Ambient Occlusion. Defines how far any other faces gives the occlusion effect.
+
+###### Viewport Bounces
+
+Use approximate global illumination after this number of light bounces in the viewport. A value of 0 deactivates the feature.
+
+###### Render Bounces
+
+Use approximate global illumination after this number of light bounces in the rendering. A value of 0 deactivates the feature.
 
 ##### Add
 
@@ -380,12 +426,13 @@ Replace global illumination with ambient occlusion after a specified number of b
 
 Add ambient occlusion to diffuse surfaces
 
+###### AO Factor
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------- |
-| AO Factor | Factor of ambient occlusion blending. |
-| AO Distance | The length of the rays that are used for Ambient Occlusion. Defines how far any other faces gives the occlusion effect. |
+Factor of ambient occlusion blending.
 
+###### AO Distance
+
+The length of the rays that are used for Ambient Occlusion. Defines how far any other faces gives the occlusion effect.
 
 ## Volumes panel
 
@@ -417,12 +464,13 @@ Rounded Ribbons, the number of subdivisions at the curves.
 
 How to display the hairs in the viewport.
 
+#### Shape
 
-| Entry | What it does |
-| ----------------- | -------------------------------------- |
-| Shape | The hair shape type. Stand or Strip. |
-| Additional Subdiv | Additional subdivision along the hair. |
+The hair shape type. Stand or Strip.
 
+#### Additional Subdiv
+
+Additional subdivision along the hair.
 
 ## Simplify panel
 
@@ -440,15 +488,25 @@ In the header is a checkbox to enable Simplify.
 
 This section affects the rendering with cycles in the Viewport.
 
+#### Max Subdivisions
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------ |
-| Max Subdivisions | Limit the number of maximum subdivisions. |
-| Child Particles | Limit the number of child particles. |
-| Texture Limit | Automatically scales down textures to the chosen value. |
-| AO Bounces | Limit the number of Ambient Occlusion Bounces. |
-| Volume Resolution | Simplify volumes by adjusting volume percentage of volume objects in viewport. |
+Limit the number of maximum subdivisions.
 
+#### Child Particles
+
+Limit the number of child particles.
+
+#### Texture Limit
+
+Automatically scales down textures to the chosen value.
+
+#### AO Bounces
+
+Limit the number of Ambient Occlusion Bounces.
+
+#### Volume Resolution
+
+Simplify volumes by adjusting volume percentage of volume objects in viewport.
 
 ### Render
 
@@ -456,13 +514,17 @@ This section affects the rendering with cycles in the Viewport.
 
 This section affects the final rendering.
 
+#### Max Subdivisions
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------- |
-| Max Subdivisions | Limit the number of maximum subdivisions. |
-| Child Particles | Limit the number of child particles |
-| Texture Limit | Automatically scales down textures to the chosen value. |
+Limit the number of maximum subdivisions.
 
+#### Child Particles
+
+Limit the number of child particles
+
+#### Texture Limit
+
+Automatically scales down textures to the chosen value.
 
 ### Culling
 
@@ -470,27 +532,41 @@ This section affects the final rendering.
 
 Contains Culling settings. Culling means that the affected geometry is excluded from calculation.
 
+#### Use Camera Cull
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Camera Cull | Allow objects to be culled based on the Camera Frustum. Frustum is the region of the 3D space that gets displayed by the camera, the field of view. · **Camera cull margin**: The margin for the camera space culling. |
-| Use Distance Cull | Allow objects to be culled based on the distance to the camera. · **Distance**: The distance after which the objects gets culled away. |
+Allow objects to be culled based on the Camera Frustum. Frustum is the region of the 3D space that gets displayed by the camera, the field of view. · **Camera cull margin**: The margin for the camera space culling.
 
+#### Use Distance Cull
+
+Allow objects to be culled based on the distance to the camera. · **Distance**: The distance after which the objects gets culled away.
 
 ### Grease Pencil
 
 ![Grease Pencil](/docs2/images/editors/properties/render-properties-tab/cycles/grease-pencil.png)
 
+#### Playback Only
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------- |
-| Playback Only | Simplify the grease pencil strokes only during playback. |
-| Fill | Display Fill strokes in viewport. |
-| Modifiers | Display Modifiers. |
-| Shader Effects | Display Shader effects. |
-| Layers Tinting | Display layer tint. |
-| Antialiasing | Use antialiasing to smooth stroke edges. |
+Simplify the grease pencil strokes only during playback.
 
+#### Fill
+
+Display Fill strokes in viewport.
+
+#### Modifiers
+
+Display Modifiers.
+
+#### Shader Effects
+
+Display Shader effects.
+
+#### Layers Tinting
+
+Display layer tint.
+
+#### Antialiasing
+
+Use antialiasing to smooth stroke edges.
 
 ## Motion Blur panel
 
@@ -546,17 +622,33 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 Tools is a menu that contains some curve related tools.
 
+###### Reset View
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| Extend Horizontal | Causes the curve to stay horizontal before the first point and after the last point. |
-| Extend Extrapolated | Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve. |
-| Reset Curve | Resets the curve to the initial shape. |
+Resets the curve windows zoom.
 
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### Extend Horizontal
+
+Causes the curve to stay horizontal before the first point and after the last point.
+
+###### Extend Extrapolated
+
+Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.
+
+###### Reset Curve
+
+Resets the curve to the initial shape.
 
 ##### Use Clipping
 
@@ -616,12 +708,13 @@ Performance presets can be applied to quickly configure Cycles.
 
 This preset are the default cycles settings.
 
+##### Faster Rendering
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| Faster Rendering | This preset is dedicated to speed with higher memory usage. This may be more unstable due to hardware limits. |
-| Lower Memory | This preset is dedicated to lower memory. This may cause longer renders. |
+This preset is dedicated to speed with higher memory usage. This may be more unstable due to hardware limits.
 
+##### Lower Memory
+
+This preset is dedicated to lower memory. This may cause longer renders.
 
 ### Threads
 
@@ -633,45 +726,49 @@ With threads, you are able to to assign as many cores as you need from your CPU 
 
 ![Mode](/docs2/images/editors/properties/render-properties-tab/cycles/mode.png)
 
+##### Auto-detect
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto-detect | Automatically chooses the amount threads to match the number of logical processors on your computer. |
-| Fixed | Manually choose the amount threads to use for rendering. · **Threads**: Just active when you choose Fixed. Number of threads that you want to use. |
+Automatically chooses the amount threads to match the number of logical processors on your computer.
 
+##### Fixed
+
+Manually choose the amount threads to use for rendering. · **Threads**: Just active when you choose Fixed. Number of threads that you want to use.
 
 ### Memory
 
 ![Memory](/docs2/images/editors/properties/render-properties-tab/cycles/memory.png)
 
+#### Auto Tiles
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Tiles | Automatically render high resolution images in tiles to reduce memory usage. Tiles are cached to disk while rendering, to save memory. |
-| Tile Size | The tile size for the tiles. |
+Automatically render high resolution images in tiles to reduce memory usage. Tiles are cached to disk while rendering, to save memory.
 
+#### Tile Size
+
+The tile size for the tiles.
 
 ### Acceleration Structure
 
 ![Acceleration Structure](/docs2/images/editors/properties/render-properties-tab/cycles/acceleration-structure.png)
 
+#### Use Spatial Splits
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Spatial Splits | Spatial splits improve rendering performance in scenes with a mix of large and small polygons. The downsides are longer BVH build times and slightly increased memory usage. |
-| With CPU rendering: | **Use compact BVH**: Use a compact BVH code structure that uses less ram. This option renders slower. |
+Spatial splits improve rendering performance in scenes with a mix of large and small polygons. The downsides are longer BVH build times and slightly increased memory usage.
 
+#### With CPU rendering:
+
+**Use compact BVH**: Use a compact BVH code structure that uses less ram. This option renders slower.
 
 #### With GPU rendering:
 
 ![With GPU rendering:](/docs2/images/editors/properties/render-properties-tab/cycles/with-gpu-rendering.png)
 
+##### BVH Time Steps
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BVH Time Steps | Is just active when Spatial Splits is off. Split BVH Primitives by this number of time steps. This speeds up rendering, but requires more memory. |
-| Use Hair BVH | Use a special type of BVH for rendering hair. The bounding boxes are not axis aligned allowing a spatially closer fit to the hair geometry. Disabling this option will reduce memory, at the cost of increasing hair render time. |
+Is just active when Spatial Splits is off. Split BVH Primitives by this number of time steps. This speeds up rendering, but requires more memory.
 
+##### Use Hair BVH
+
+Use a special type of BVH for rendering hair. The bounding boxes are not axis aligned allowing a spatially closer fit to the hair geometry. Disabling this option will reduce memory, at the cost of increasing hair render time.
 
 ### Final Render
 
@@ -709,12 +806,13 @@ How to use: Select the source object where you want to bake from, hold down Shif
 
 Most settings in the Bake panel are available for all texture types.
 
+#### Bake Button
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------- |
-| Bake Button | Start the bake process. |
-| Bake from Multires | Bake directly from multi resolution object. |
+Start the bake process.
 
+#### Bake from Multires
+
+Bake directly from multi resolution object.
 
 #### Bake Type
 
@@ -724,22 +822,53 @@ Bake Mode is a drop-down box to choose what type of information you want to bake
 
 You can bake Subsurface, Transmission, Glossy, Diffuse, Environment, Emit, UV, Normal, Shadow, Ambient Occlusion and Combined.
 
+##### Combined
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Combined | Bakes the full rendering, means materials, textures, lightning, into the texture of the target object. Except Specularity. |
-| Ambient Occlusion | Bakes ambient occlusion as specified in the World panels. Ignores all lights in the scene. |
-| Shadow | Bakes the Shadow into the texture of the target object. |
-| Position | Bake out a position map. Position maps stores the distance from the floor. Which allows to add a dirtmap above some ground for example. |
-| Normal | Creates a Normal map by using the normals of the source object, and baking them as colors into the texture of the target object. |
-| UV | Bakes colors of materials and textures only, without shading. |
-| Roughness | Bakes the Roughness of a material into the texture of the target object. |
-| Emit | Bakes the Emission or the glow color of a material into the texture of the target object. |
-| Environment | Bakes the Environment texture into the texture of the target object. As seen from the center of the object. |
-| Diffuse | Bake the diffuse texture of the source object into the texture of the target object. |
-| Glossy | Bakes the Glossy Passes of a material into the texture of the target object. |
-| Transmission | Bakes the transmission Passes of a material into the texture of the target object. |
+Bakes the full rendering, means materials, textures, lightning, into the texture of the target object. Except Specularity.
 
+##### Ambient Occlusion
+
+Bakes ambient occlusion as specified in the World panels. Ignores all lights in the scene.
+
+##### Shadow
+
+Bakes the Shadow into the texture of the target object.
+
+##### Position
+
+Bake out a position map. Position maps stores the distance from the floor. Which allows to add a dirtmap above some ground for example.
+
+##### Normal
+
+Creates a Normal map by using the normals of the source object, and baking them as colors into the texture of the target object.
+
+##### UV
+
+Bakes colors of materials and textures only, without shading.
+
+##### Roughness
+
+Bakes the Roughness of a material into the texture of the target object.
+
+##### Emit
+
+Bakes the Emission or the glow color of a material into the texture of the target object.
+
+##### Environment
+
+Bakes the Environment texture into the texture of the target object. As seen from the center of the object.
+
+##### Diffuse
+
+Bake the diffuse texture of the source object into the texture of the target object.
+
+##### Glossy
+
+Bakes the Glossy Passes of a material into the texture of the target object.
+
+##### Transmission
+
+Bakes the transmission Passes of a material into the texture of the target object.
 
 #### Influence Sub panel
 
@@ -753,41 +882,65 @@ The content changes, dependent of what type you want to bake.
 
 ![Glossy, Diffuse](/docs2/images/editors/properties/render-properties-tab/cycles/glossy-diffuse.png)
 
+###### Direct
 
-| Entry | What it does |
-| -------- | ------------------- |
-| Direct | Add direct Light. |
-| Indirect | Add indirect Light. |
-| Color | Add Color. |
+Add direct Light.
 
+###### Indirect
+
+Add indirect Light.
+
+###### Color
+
+Add Color.
 
 ##### Normal
 
 ![Normal](/docs2/images/editors/properties/render-properties-tab/cycles/normal.png)
 
+###### Space
 
-| Entry | What it does |
-| ------- | --------------------------------------------------- |
-| Space | A drop-down box to chooses the Normal Space to use. |
-| Swizzle | Axis to bake in red, green and blue channels. |
+A drop-down box to chooses the Normal Space to use.
 
+###### Swizzle
+
+Axis to bake in red, green and blue channels.
 
 ##### Combined
 
 ![Combined](/docs2/images/editors/properties/render-properties-tab/cycles/influence-sub-panel.png)
 
+###### Direct
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Direct | Bake directly from Multires mesh. |
-| Indirect | Normalizes without using material settings. |
-| Diffuse | Bake with Diffuse. |
-| Glossy | Bake with Glossy. |
-| Transmission | Bake with Transmission. |
-| Subsurface | Bake with Subsurface. |
-| AO | Bake with Ambient Occlusion. |
-| Emit | Bake with Emit. |
+Bake directly from Multires mesh.
 
+###### Indirect
+
+Normalizes without using material settings.
+
+###### Diffuse
+
+Bake with Diffuse.
+
+###### Glossy
+
+Bake with Glossy.
+
+###### Transmission
+
+Bake with Transmission.
+
+###### Subsurface
+
+Bake with Subsurface.
+
+###### AO
+
+Bake with Ambient Occlusion.
+
+###### Emit
+
+Bake with Emit.
 
 #### Selected to Active
 
@@ -833,10 +986,10 @@ Clear clears the target image before baking.
 
 Adjust the margin width.
 
+###### Type
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type | The margin type. · **Adjacent Faces**: Use pixels from adjacent faces across UV seams to create the margin. · **Extend**: Use the pixels at the inside of the border UV seams, and extend from there to create the margin. |
-| Size | The size of the margin around the UV patches. |
+The margin type. · **Adjacent Faces**: Use pixels from adjacent faces across UV seams to create the margin. · **Extend**: Use the pixels at the inside of the border UV seams, and extend from there to create the margin.
 
+###### Size
 
+The size of the margin around the UV patches.

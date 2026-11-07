@@ -44,12 +44,13 @@ The subdivision resolution of the Lattice object. A resolution of 1 makes the la
 
 The interpolation selector for each axis. How the Lattice cage influences the child geometry. Each method gives a slightly different result.
 
+#### Outside
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------- |
-| Outside | Takes only the vertices on the surface of the lattice into account. |
-| Vertex Group | Apply the influence of the lattice to a vertex group instead of a whole mesh |
+Takes only the vertices on the surface of the lattice into account.
 
+#### Vertex Group
+
+Apply the influence of the lattice to a vertex group instead of a whole mesh
 
 ## Vertex groups panel
 
@@ -67,31 +68,41 @@ Vertex groups exists for mesh and lattice objects.
 
 A List of the vertex groups for this mesh.
 
+#### Group name
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group name | The name of the group. It can be renamed by double clicking at it. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the group. It can be renamed by double clicking at it.
 
+#### Lock
 
-| Entry | What it does |
-| -------- | -------------------------------- |
-| Add + | Create an empty vertex group. |
-| Remove - | Deletes the active vertex group. |
+The lock icon at the end of a group name locks the group from being editable.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create an empty vertex group.
+
+#### Remove -
+
+Deletes the active vertex group.
 
 ### Specials menu
 
 ![Specials menu](/docs2/images/editors/properties/object-data-properties-tab/lattice-object/specials-menu.png)
 
+#### Sort by Name
 
-| Entry | What it does |
-| ---------------------- | --------------------------------------------------------------- |
-| Sort by Name | Sorts the vertex groups alphabetically by name. |
-| Sort by Bone Hierarchy | Sorts the vertex groups by the hierarchy of the assigned bones. |
+Sorts the vertex groups alphabetically by name.
 
+#### Sort by Bone Hierarchy
+
+Sorts the vertex groups by the hierarchy of the assigned bones.
 
 #### Duplicate Vertex Group
 
@@ -99,20 +110,45 @@ A List of the vertex groups for this mesh.
 
 Add a copy of the active vertex group as a new group. The new group will be named like the original group with `“_copy”` appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.
 
+##### Copy Vertex Group to Selected
 
-| Entry | What it does |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Vertex Group to Selected | Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited). |
-| Mirror Vertex Group | Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group. |
-| Mirror Vertex Group (Topology) | Performs the Mirror Vertex Group with the Topology Mirror option enabled. |
-| Remove from All Groups | Unassigns the selected vertices from all groups. Even locked. |
-| Clear Active Group | Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups. |
-| Delete All Unlocked Groups | Remove all vertex groups from the object that are not locked. |
-| Delete All Groups | Remove all vertex groups from the object. |
-| Lock All | Lock all groups. |
-| Unlock All | Unlock all groups. |
-| Lock Invert All | Invert group locks. |
+Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited).
 
+##### Mirror Vertex Group
+
+Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group.
+
+##### Mirror Vertex Group (Topology)
+
+Performs the Mirror Vertex Group with the Topology Mirror option enabled.
+
+##### Remove from All Groups
+
+Unassigns the selected vertices from all groups. Even locked.
+
+##### Clear Active Group
+
+Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups.
+
+##### Delete All Unlocked Groups
+
+Remove all vertex groups from the object that are not locked.
+
+##### Delete All Groups
+
+Remove all vertex groups from the object.
+
+##### Lock All
+
+Lock all groups.
+
+##### Unlock All
+
+Unlock all groups.
+
+##### Lock Invert All
+
+Invert group locks.
 
 #### Move Vertex Group Up / Down
 
@@ -126,15 +162,25 @@ Moves the selected vertex group up or down in the list.
 
 Assign the selected vertices to the active vertex group.
 
+##### Remove
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------- |
-| Remove | Remove the selected vertices from the active group. |
-| Select | Select all vertices in the group. |
-| Deselect | Deselect all vertices in the group. |
-| Weight | The weight value that gets assigned to the selected vertices. |
-| Auto Normalize | Make sure that all bone-deforming vertex groups adds up to 1.0 while weight painting or assigning to vertices. |
+Remove the selected vertices from the active group.
 
+##### Select
+
+Select all vertices in the group.
+
+##### Deselect
+
+Deselect all vertices in the group.
+
+##### Weight
+
+The weight value that gets assigned to the selected vertices.
+
+##### Auto Normalize
+
+Make sure that all bone-deforming vertex groups adds up to 1.0 while weight painting or assigning to vertices.
 
 ## Shape Keys panel
 
@@ -190,46 +236,101 @@ A List of the shape keys for this mesh.
 
 It contains two types of shape keys. Basis is the base shape. The other type relies at this shape as the base.
 
+#### Shape Key name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key name | The name of the shape key. It can be renamed by double clicking at it. |
-| Slider value | The blend value of this shape key. The Basis shape key does not have such a slider. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the shape key. It can be renamed by double clicking at it.
 
+#### Slider value
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a shape key. |
-| Remove - | Delete the selected shape key. |
+The blend value of this shape key. The Basis shape key does not have such a slider.
 
+#### Lock
+
+The lock icon at the end of a group name locks the group from being editable.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a shape key.
+
+#### Remove -
+
+Delete the selected shape key.
 
 ### Specials Menu
 
 ![Specials Menu](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/specials-menu-2.png)
 
+#### New Combined
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Combined | Add a new shape key with the current deformed shape of the object. |
-| Duplicate | Makes a duplicate of the current selected shape key. |
-| Copy from Objects | Copy the active shape key of another selected object to this one. |
-| Mirror Shape Key | Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical. |
-| Mirror Shape Key (Topology) | Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work. |
-| New from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys. |
-| New from Objects Flipped | Add the vertex positions of selected objects as shape keys or update existing shape keys. But flipped. |
-| Update from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. |
-| Update from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. But flipped. |
-| Transfer Shape Key | Copy the active shape key of another selected object to this one. |
-| Apply all Shape Keys | Apply all shape keys to the mesh, also removes shape keys. |
-| Delete all Shape Keys | Delete all shape keys at this mesh. |
-| Lock All | Lock all shape keys of the active object. They cannot be edited anymore then. |
-| Unlock All | Unlock all shape keys of the active object. |
-| Make Basis | Make this shape key the new basis key, effectively applying it to the mesh. Note that this applies the shape key at its 100% value. |
-| Move to Bottom | Move the shape key to the bottom of the list. |
+Add a new shape key with the current deformed shape of the object.
 
+#### Duplicate
+
+Makes a duplicate of the current selected shape key.
+
+#### Copy from Objects
+
+Copy the active shape key of another selected object to this one.
+
+#### Mirror Shape Key
+
+Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical.
+
+#### Mirror Shape Key (Topology)
+
+Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work.
+
+#### New from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys.
+
+#### New from Objects Flipped
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys. But flipped.
+
+#### Update from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names.
+
+#### Update from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. But flipped.
+
+#### Transfer Shape Key
+
+Copy the active shape key of another selected object to this one.
+
+#### Apply all Shape Keys
+
+Apply all shape keys to the mesh, also removes shape keys.
+
+#### Delete all Shape Keys
+
+Delete all shape keys at this mesh.
+
+#### Lock All
+
+Lock all shape keys of the active object. They cannot be edited anymore then.
+
+#### Unlock All
+
+Unlock all shape keys of the active object.
+
+#### Make Basis
+
+Make this shape key the new basis key, effectively applying it to the mesh. Note that this applies the shape key at its 100% value.
+
+#### Move to Bottom
+
+Move the shape key to the bottom of the list.
 
 #### Move Shape Key Up / Down
 
@@ -247,16 +348,29 @@ Set the shape keys to Relative or Absolute.
 
 The shape is defined relative to the Basis or another specified shape key. And can be adjusted in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Value | The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence. |
-| Range | Minimum and maximum range for the influence value of the active shape key. |
-| Vertex Group | Limit the active shape key deformation to a vertex group. |
-| Relative To | Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Value
+
+The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence.
+
+##### Range
+
+Minimum and maximum range for the influence value of the active shape key.
+
+##### Vertex Group
+
+Limit the active shape key deformation to a vertex group.
+
+##### Relative To
+
+Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key.
 
 #### Absolute
 
@@ -264,13 +378,17 @@ The shape is defined relative to the Basis or another specified shape key. And c
 
 The shape changes over time, as defined in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Re-Time Shape Keys (clock icon) | Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Re-Time Shape Keys (clock icon)
+
+Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered.
 
 ##### Interpolation
 
