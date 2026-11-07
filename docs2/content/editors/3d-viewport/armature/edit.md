@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Armature"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the armature itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -164,6 +164,8 @@ Warps a mesh selection between two defined points.
 ##### Adjust Last Operation - Warp
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
