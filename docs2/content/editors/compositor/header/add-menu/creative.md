@@ -31,12 +31,13 @@ Kuwahara is a filter that converts a realistic image into a stylized image.
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ------------------------------------------ |
-| Image | Standard image input. |
-| Size | The size of the kuwahara filter in pixels. |
+Standard image input.
 
+##### Size
+
+The size of the kuwahara filter in pixels.
 
 #### Properties
 
@@ -56,12 +57,8 @@ There are two Kuwahara variations available. Classic and Anisotropic.
 
 Use high precision. Slower but more accurate.
 
-
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Anisotopic | **Uniformity**: Controls the uniformity of the direction of the filter. · **Sharpness**: Controls the sharpness of the filter. 0 is completely smooth, while 1 is completely sharp. |
-| Eccentricity | Controls how directional the filter is. |
-
+- **Anisotopic**: **Uniformity**: Controls the uniformity of the direction of the filter. · **Sharpness**: Controls the sharpness of the filter. 0 is completely smooth, while 1 is completely sharp.
+- **Eccentricity**: Controls how directional the filter is.
 
 #### Outputs
 
@@ -75,12 +72,13 @@ Standard image output.
 
 Add this node in front of a Scale node to get a pixelated (non-smoothed) image from the resultant upscaled image.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Color**: Standard image input. · **Size**: The number of pixels that corresponds to the same output pixel. |
-| Outputs | **Color**: Image output. |
+**Color**: Standard image input. · **Size**: The number of pixels that corresponds to the same output pixel.
 
+#### Outputs
+
+**Color**: Image output.
 
 ### Posterize
 
@@ -88,8 +86,10 @@ Add this node in front of a Scale node to get a pixelated (non-smoothed) image f
 
 The Posterize node reduces the number of colors in the image to a palette. The exact number of output colors is not to set. Just a number of steps to reduce the existing colors.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Image**: The image to reduce the colors at. · **Steps**: The number of steps to perform a color reduction. |
-| Outputs | **Image**: Standard image output. |
+**Image**: The image to reduce the colors at. · **Steps**: The number of steps to perform a color reduction.
+
+#### Outputs
+
+**Image**: Standard image output.

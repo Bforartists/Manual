@@ -77,12 +77,13 @@ Calculate the simulations in Geometry Nodes modifiers from the start to current 
 
 Bake simulations in all geometry node modifiers to disk. You can define the path where these will bake per Geometry Nodes modifier. If not defined, it will default to the `*.blend` file location. To bake, you must save the file first.
 
+###### Delete Cached Bake
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Cached Bake | The trashcan icon will erase the baked collection from disk. |
-| Cache | This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk. **Note:** *Baking the simulation will bake all the simulations in all modifiers in the scene.* |
+The trashcan icon will erase the baked collection from disk.
 
+###### Cache
+
+This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk. **Note:** *Baking the simulation will bake all the simulations in all modifiers in the scene.*
 
 #### Simulation Bake Directory
 
@@ -106,12 +107,13 @@ Standard geometry input.
 
 ##### Output
 
+###### Delta Time
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Delta Time | Returns a float value with the amount of elapsed time that has passed in a linear way. This is used to ensure that the simulation runs smoothly and consistently based on elapsed time, regardless of the playback frame rate or starting frame. |
-| Geometry | Standard geometry output. |
+Returns a float value with the amount of elapsed time that has passed in a linear way. This is used to ensure that the simulation runs smoothly and consistently based on elapsed time, regardless of the playback frame rate or starting frame.
 
+###### Geometry
+
+Standard geometry output.
 
 #### Simulation Zone Output
 
@@ -125,11 +127,8 @@ This node is the end of the Simulation Zone. Custom input and output sockets can
 
 A boolean. This forwards the output of the simulation input node directly to the output node and ignore the nodes in the simulation zone – like a bypass. This will essentially “skip” the evaluation like an overall switch boolean of all evaluated nodes in the simulation zone.
 
-
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Geometry**: Standard geometry output. |
+- **Inputs**: **Geometry**: Standard geometry input.
+- **Output**: **Geometry**: Standard geometry output.
 
 ### XPBD Solver (Experimental)
 

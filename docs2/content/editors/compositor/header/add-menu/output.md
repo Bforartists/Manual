@@ -51,12 +51,13 @@ When used inside a **Node Group**, this node helps to **automatically filter or 
 
 Defines the type of the Value input and output. Options include Float, Vector, Color, Boolean, Geometry, etc. This ensures compatibility with the group output socket.
 
+###### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Enable**: When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**. |
-| Outputs | When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group output interface. |
+**Enable**: When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**.
 
+###### Outputs
+
+When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group output interface.
 
 ### Viewer
 
@@ -100,12 +101,13 @@ The image(s) will be saved on rendering, writing to the current frame. An entire
 
 #### Properties
 
+##### Directory
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------- |
-| Directory | The directory to store the images in. |
-| Browse | Open a directory browser to choose a directory to store the images in. |
+The directory to store the images in.
 
+##### Browse
+
+Open a directory browser to choose a directory to store the images in.
 
 ##### File Name
 
