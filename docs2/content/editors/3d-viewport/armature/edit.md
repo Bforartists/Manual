@@ -184,15 +184,15 @@ The start point.
 
 The end point.
 
-#### Randomize Transform
+#### Randomize
 
-This tool allows randomizes the positions of the selected vertices.
+Moves the selected bone joints by a random amount. Use it to break up a too regular setup, for example the bones of a tail or of hair strands.
 
-##### Adjust Last Operation - Randomize Transform
+##### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
-Change the settings of **Randomize Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -203,9 +203,9 @@ Change the settings of **Randomize Transform** right after you use it, in the Ad
 | Random Seed | The seed value for randomization. |
 
 
-#### Align Bones
+#### Align to Active Bone or Parent
 
-Aligns the selected bones to the orientation of the active bone.
+Aligns the selected bones to the active bone, or to their parent bone. Use it to line up a chain of bones quickly.
 
 ### Mirror
 
@@ -439,6 +439,22 @@ Enables proportional editing. Activating proportional editing reveals further se
 - **Proportional Size**: See and adjust the falloff radius.
 - **Connected**: The proportional falloff gets calculated for connected parts only.
 - **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+#### Duplicate and Rename
+
+Makes copies of the selected bones in the same armature and changes a part of their names. Use it to build the other side of a rig: duplicate the bones of the left arm and replace `.L` with `.R` in one step. Afterwards you move the copies into place.
+
+##### Adjust Last Operation - Duplicate and Rename
+
+Change the settings of **Duplicate and Rename** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Duplicate and Rename](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-duplicate-and-rename.png)
+
+| Entry | What it does |
+| --- | --- |
+| Flip Names | Tries to flip the names of the bones (for example `.L` to `.R`) instead of adding a number at the end. |
+| Search | The part of the bone names to replace. |
+| Replace | The text that goes in its place. Leave it empty to remove the search text. |
 
 #### Fill between Joints
 

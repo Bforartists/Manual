@@ -3514,6 +3514,14 @@ Swap all users of one action to another one. The normal action slot assignment r
 
 Swap all users of one action to a new action. This ignores the NLA and Action Constraints
 
+### Replace with Duplicate Action
+
+Makes a copy of the active object's action and swaps all users of that action to the copy. Use it to try a variation of an animation while the original action stays as it is.
+
+### Convert Rotation Mode
+
+Changes the rotation mode of the selected objects and converts their existing animation to the new mode, so the motion stays the same. The settings are the same as in Pose Mode: see [Convert Rotation Mode](../armature/pose.md#convert-rotation-mode).
+
 ## Rigid Body
 
 ![Rigid Body](/docs2/images/editors/3d-viewport/header/object-menu/rigid-body.png)
