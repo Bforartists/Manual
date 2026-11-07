@@ -6726,6 +6726,10 @@ Amount of black.
 
 Connect a color to Color. The four outputs C, M, Y and K are the cyan, magenta, yellow and black parts of it, as used in printing.
 
+The K (black) output of the room image.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: the k (black) output of the room image](/docs2/images/assets/compositor-library/utilities/separate-cmyk-after.png)
 
 # Utilities / Vector
 
@@ -6833,6 +6837,11 @@ White inside tiles, black outside.
 
 Repeats coordinates as tiles. Tile Dimensions and Tile Center set the tile, Repeat X and Repeat Y how often, Quincunx Flip flips every second tile. Vector is the new coordinate and Position, Random and Mask describe each tile.
 
+Default values: the image repeats as 5 x 5 tiles. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the image repeats as 5 x 5 tiles](/docs2/images/assets/compositor-library/vector/advanced-tiling-after.png)
+
 ## Axis Symmetry
 
 ![Axis Symmetry asset thumbnail](/docs2/images/assets/compositor-library/thumbs/axis-symmetry.png)
@@ -6898,6 +6907,11 @@ The changed coordinates.
 ### How to use
 
 The coordinates are mirrored across the X, Y or Z axis: Origin sets the center, X, Y and Z choose the axes and Invert swaps the sides. Vector Coordinates uses your own Vector.
+
+Default values: mirrored across X and Y around the center. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: mirrored across x and y around the center](/docs2/images/assets/compositor-library/vector/axis-symmetry-after.png)
 
 ## Brick Mapping
 
@@ -7013,6 +7027,11 @@ Random color for each item.
 
 A brick layout. Frequency and Brick Width set the rows, Offset shifts every second row, Mortar Size and Mortar Smooth set the joints. Value, Mask, UVs, Position and Random give shading, a sharp mask, a coordinate for each brick and random values.
 
+Default values: the UVs output places the image on every brick. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the uvs output places the image on every brick](/docs2/images/assets/compositor-library/vector/brick-mapping-after.png)
+
 ## Distortion Blur
 
 ![Distortion Blur asset thumbnail](/docs2/images/assets/compositor-library/thumbs/distortion-blur.png)
@@ -7046,6 +7065,11 @@ The changed coordinates.
 ### How to use
 
 Connect a vector to Vector. The coordinates are shaken with random noise, Factor sets how much. Use the result as the vector of a texture for a grainy blur.
+
+Default values: random noise shakes the coordinates for a grainy blur. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: random noise shakes the coordinates for a grainy blur](/docs2/images/assets/compositor-library/vector/distortion-blur-after.png)
 
 ## Equirectangular
 
@@ -7147,6 +7171,11 @@ Mask of the selected frame.
 
 Connect an image sheet with frames in a grid. Columns and Rows set the grid and Index picks the frame, connect Scene Time to Index to animate it. Vector is the coordinate inside the frame and Alpha masks it.
 
+Columns 2 and Rows 2, Index 0: the first frame of a 2 x 2 image grid fills the picture. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: columns 2 and rows 2, index 0: the first frame of a 2 x 2 image grid fills the picture](/docs2/images/assets/compositor-library/vector/flipbook-after.png)
+
 ## Inherit Image Coordinates
 
 ![Inherit Image Coordinates asset thumbnail](/docs2/images/assets/compositor-library/thumbs/inherit-image-coordinates.png)
@@ -7227,6 +7256,11 @@ White on the original side of the mirror, black on the mirrored side.
 
 Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. Is Original is white on the side that was not mirrored.
 
+Default values: the image is mirrored across a vertical line. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the image is mirrored across a vertical line](/docs2/images/assets/compositor-library/vector/mirror-after.png)
+
 ## Polar-Cylindrical
 
 ![Polar-Cylindrical asset thumbnail](/docs2/images/assets/compositor-library/thumbs/polar-cylindrical.png)
@@ -7301,6 +7335,11 @@ The changed coordinates.
 
 Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of Repetitions sets how often and Scale the size. UV is the result.
 
+Default values: three copies around the center. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: three copies around the center](/docs2/images/assets/compositor-library/vector/radial-symmetry-1-after.png)
+
 ## Radial Symmetry 2
 
 ![Radial Symmetry 2 asset thumbnail](/docs2/images/assets/compositor-library/thumbs/radial-symmetry-2.png)
@@ -7358,6 +7397,11 @@ The changed coordinates.
 ### How to use
 
 Connect a vector to Vector. Space is repeated around Center Axis, Number of Repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
+
+Center Axis at the center (0.5, 0.5): five copies around the middle of the image. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: center axis at the center (0.5, 0.5): five copies around the middle of the image](/docs2/images/assets/compositor-library/vector/radial-symmetry-2-after.png)
 
 ## Separate Coordinates
 
@@ -7467,6 +7511,11 @@ The transformed coordinates.
 
 Connect a vector to Vector. Location, Rotation and Scale move, turn and size it, like the Mapping node does for textures.
 
+Rotation Z at 0.26 (15°): the coordinates turn around the corner of the image (0, 0). The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: rotation z at 0.26 (15°): the coordinates turn around the corner of the image (0, 0)](/docs2/images/assets/compositor-library/vector/vector-mapping-after.png)
+
 ## Vector Pan
 
 ![Vector Pan asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-pan.png)
@@ -7525,6 +7574,11 @@ The changed coordinates.
 
 Connect a vector to Vector. The coordinates scroll over time: Speed and Direction set the movement, FPS and Current Frame the timing, Offset a start position.
 
+Default values: the coordinates move along X at frame 0.5, so the image scrolls. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the coordinates move along x at frame 0.5, so the image scrolls](/docs2/images/assets/compositor-library/vector/vector-pan-after.png)
+
 ## Vector Pixelate
 
 ![Vector Pixelate asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-pixelate.png)
@@ -7558,6 +7612,11 @@ The changed coordinates.
 ### How to use
 
 Connect a vector to Vector. The coordinates snap to a grid, Dimensions sets the number of cells, so what is drawn with this vector looks pixelated.
+
+Default values: the coordinates snap to a 32 x 32 grid. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the coordinates snap to a 32 x 32 grid](/docs2/images/assets/compositor-library/vector/vector-pixelate-after.png)
 
 ## Vector Skew
 
@@ -7605,6 +7664,11 @@ The changed coordinates.
 
 Connect a vector to Vector. The coordinates are slanted around Origin, X and Y set how far along each axis.
 
+X at 0.3: the image slants sideways around the center. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: x at 0.3: the image slants sideways around the center](/docs2/images/assets/compositor-library/vector/vector-skew-after.png)
+
 ## Vector Whirl
 
 ![Vector Whirl asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-whirl.png)
@@ -7651,6 +7715,11 @@ The changed coordinates.
 
 Connect a vector to Vector. The coordinates are twisted around Origin inside Radius, and Factor sets how strong the twist is. Use the result as the vector of a texture or pattern.
 
+Default values: the image coordinates twist around the center. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: the image coordinates twist around the center](/docs2/images/assets/compositor-library/vector/vector-whirl-after.png)
+
 ## Vector Zoom
 
 ![Vector Zoom asset thumbnail](/docs2/images/assets/compositor-library/thumbs/vector-zoom.png)
@@ -7690,6 +7759,11 @@ The changed coordinates.
 ### How to use
 
 Connect a vector to Vector. Location is the point the zoom comes from and Factor is how far it zooms in or out. Use the result as the vector of a texture or pattern.
+
+Factor 0.5 and Location at the center (0.5, 0.5): the image is zoomed in on the middle. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: factor 0.5 and location at the center (0.5, 0.5): the image is zoomed in on the middle](/docs2/images/assets/compositor-library/vector/vector-zoom-after.png)
 
 ## Voronoi Distribute
 
@@ -7775,3 +7849,7 @@ Random color for each item.
 
 Connect your own Vector, or leave Vector Coordinates off for the whole image. Space is cut into random cells and each cell gets its own coordinate, so a texture or image placed with this vector is repeated in different places. Spawn Threshold (Mask) leaves some cells empty, Rotation Limit and Scale Distribution vary the copies, Seed changes the layout.
 
+Default values: copies of the image are scattered at random cell points. The vector goes from an Image Coordinates node (Normalized) into the asset, and a Map UV node samples the room image with the result.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: default values: copies of the image are scattered at random cell points](/docs2/images/assets/compositor-library/vector/voronoi-distribute-after.png)

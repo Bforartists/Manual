@@ -7,6 +7,7 @@ One `.blend` per chapter, with the same folder structure as `docs2/content/`. Op
 | `assets/geometry-nodes-library/primitives.blend` | Smart Primitives: all 25 assets laid out in a grid, in the `Smart Primitives` collection, plus a camera |
 | `assets/geometry-nodes-library/uv.blend` | UV nodes: source objects, applied copies, per-asset gizmo scenes |
 | `assets/compositor-library/lenses.blend`, `patterns.blend` | Compositor Library: one scene per asset (example image > asset > output), render 480x300. lenses.blend also has "Example Bokeh" and "Example Fast Defocus": two rows of columns in perspective with glowing lamps and a back wall, Render Layers Image + Depth into the asset (EEVEE, Z pass) |
+| `assets/compositor-library/room.blend` (+ `room.png`) | The example room for Compositor pictures: red and green side walls, a back wall with an open door and warm light outside, a gold Suzanne on a pedestal under a spot light, RGB spheres and CMY cubes (scene "Example Room", Cycles 96 samples, AgX, 480x300, Depth and Normal passes). Plus one scene per Utilities / Vector example: room image > Image Coordinates (Normalized) > asset > Map UV (Z set to 1) > output |
 | `assets/shader-library/patterns-shapes.blend` | Shader Library: 51 scenes "Example <Name>" (plane with UV > Mapping > asset > Emission), Cycles 16 samples, 480x300, Standard. Each scene has its capture notes in the custom property `capture` |
 
 The Smart Primitives scene links the assets from `G_Primitives.blend` in the Geometry Nodes Library, so the asset library must be set up.
