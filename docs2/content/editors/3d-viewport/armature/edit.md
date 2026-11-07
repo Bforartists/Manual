@@ -165,6 +165,8 @@ Warps a mesh selection between two defined points.
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
+
 
 | Entry | What it does |
 | ------------ | ---------------------------------- |

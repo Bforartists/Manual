@@ -69,6 +69,8 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - To Sphere](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-to-sphere.png)
+
 ###### Factor
 
 ![Factor](/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/factor.png)
@@ -97,6 +99,8 @@ In Object mode this tools requires to have more than one object selected.
 ##### Adjust Last Operation - Shear
 
 Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Shear](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-shear.png)
 
 
 | Entry | What it does |
@@ -142,6 +146,8 @@ In Object mode this tool requires to have more than one object selected.
 
 Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Push/Pull](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-push-pull.png)
+
 ###### Distance
 
 ![Distance](/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/distance.png)
@@ -172,6 +178,8 @@ Warps a mesh selection between two defined points. This also works with curves.
 ##### Adjust Last Operation - Warp
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |

@@ -163,6 +163,8 @@ Warps a selection between two defined points. This also works with curves.
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
+
 
 | Entry | What it does |
 | ------------ | ----------------------------------- |
@@ -343,6 +345,8 @@ Set dimensions is an add-on. You can turn it off in the add-ons section of the u
 ##### Adjust Last Operation - Set Dimensions
 
 Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
 
 ###### New Dimensions
 
