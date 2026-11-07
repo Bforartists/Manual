@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Render Properties Tab
   - EEVEE
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -45,6 +45,10 @@ Enables jittered soft shadows in the viewport, improving shadow realism by intro
 #### Samples
 
 The number of samples when rendering to file.
+
+#### Time Limit
+
+Stops the render after the given time, even when not all samples are done. Use it to keep render times predictable, for example for previews or animations on a deadline. A value of zero turns the limit off. This works like the Time Limit of Cycles.
 
 ### Shadows subtab
 

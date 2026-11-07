@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties Editor
   - World Properties Tab
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -55,6 +55,10 @@ When enabled then this world file will be stored internally. And will remain in 
 
 Create a new world file. · **Remove**: Note that this just sets the World file inactive. It is still in the list. You can delete the world file when it has no user anymore by saving the scene, closing and reopening Bforartists.
 
+
+#### Open Shader Editor
+
+Opens a Shader Editor window with the node tree of the active world. Use it to edit the world nodes without switching to the Shading workspace.
 ## Viewport Display - Cycles, Workbench
 
 ### Color
@@ -210,6 +214,10 @@ Maximum number of bounces the background light will contribute to the render.
 ##### Shadow Caustics
 
 Generate caustics in the shadows of refractive surfaces.
+
+##### Cast Shadow
+
+Lets the world light cast shadows. Turn it off for a soft, shadowless fill light from the world, for example in product shots where only the lamps should cast shadows.
 
 ### Volume subpanel
 
