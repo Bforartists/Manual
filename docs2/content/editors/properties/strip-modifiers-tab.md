@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Strip Modifiers Tab
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.20 Editors - Properties Editor - Strip Modifiers Tab.odt

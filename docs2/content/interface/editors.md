@@ -6,7 +6,7 @@ path:
   - "Interface"
   - "Editors"
 version: "5.3"
-status: draft
+status: needs-review
 icon: new_window_main
 summary: "Every area shows an editor: change its type and show or hide the editor type menu."
 source:
