@@ -1,6 +1,8 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html"
+  "docs2/content/editors/3d-viewport/all-modes/header/header-tools-and-options.md": "editors/3d-viewport/all-modes/header/header-tools-and-options.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/navigation-menu.md": "editors/3d-viewport/all-modes/header/navigation-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/sidebar.md": "editors/3d-viewport/all-modes/sidebar.html"
  },
- "images": 351
+ "images": 352
 }
