@@ -229,6 +229,32 @@ Data type: Float.
 
 The radius output.
 
+### Get Geometry Bundle
+
+![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
+
+Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.
+
+#### Inputs
+
+##### Geometry
+
+The geometry to get the bundle from.
+
+##### Remove
+
+Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
+
+#### Outputs
+
+##### Geometry
+
+The input geometry. It no longer holds the bundle when Remove is on.
+
+##### Bundle
+
+The bundle that was stored on the geometry.
+
 # Sample
 
 ## Add menu - Geometry - Sample
@@ -506,6 +532,30 @@ The index output.
 ![Add menu - Geometry - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/add-menu-geometry-write.png)
 
 Here you find nodes to modify the geometry.
+
+### Set Geometry Bundle
+
+![Set Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/set-geometry-bundle.png)
+
+Attaches a bundle to a geometry. Use it to send extra values along with a geometry, for example settings that a later group should read with Get Geometry Bundle.
+
+#### Inputs
+
+##### Geometry
+
+The geometry to attach the bundle to.
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle to attach.
+
+#### Outputs
+
+##### Geometry
+
+The geometry with the bundle attached.
 
 ### Set Geometry Name
 
