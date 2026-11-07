@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>View Layer · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1653 · <code>docs2/land-stacked</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a class="is-current" style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Armature</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<span>Text Editor</span>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › View Layer Properties Tab</div><h1 class="pv-title">View Layer</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 30 min read</span></div><article class="ui-doc-body"><h2 id="view-layer">View Layer</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/view-layer.png" alt="View Layer" loading="lazy"></figure>
+<p>View Layers reference to Scene collections. They allow to set their visibility, selectability and other options. Each View Layer can use any collection you wish, and multiple View Layers can use the same collections or different collections.</p>
+<p>Usually you have just one View layer for the whole scene. But you can create more View layers in the header, and rename them there.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/view-layer-2.png" alt="View Layer" loading="lazy"></figure>
+<p>View layers are by default active for all collections. You can exclude them for specific layers in the Outliner. Select the view layer, and turn off the collections that you don't want to have active in this view layer.</p>
+<p>Note. The different render engines uses different view layer functionality. And so the panels and available options differs.</p>
+<h3 id="render-engine">Render Engine</h3>
+<p>Shows the active render engine. Specific renderer does have other settings. And you can also switch to another renderer. But note that this is more a visual guide. It misses the Cycles render settings.</p>
+<h2 id="view-layer-panel-all-renderers">View Layer Panel - All Renderers</h2>
+<h3 id="view-layer-prop">View Layer Prop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/view-layer-prop.png" alt="View Layer Prop" loading="lazy"></figure>
+<h4 id="view-layer-list">View Layer list</h4>
+<p>The list of available view layers</p>
+<h4 id="view-layer-edit-box">View Layer edit box</h4>
+<p>Set the active view layer, and view and edit the name of the current active view layer. Click into the edit box to edit the name.</p>
+<h4 id="add-view-layer">Add View Layer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/add-view-layer.png" alt="Add View Layer" loading="lazy"></figure>
+<p>Adds a new view layer.</p>
+<h5 id="new">New</h5>
+<p>Adds a new view layer with the default content.</p>
+<h5 id="copy-settings">Copy Settings</h5>
+<p>Adds a new view layer with the content of the current active layer.</p>
+<h5 id="blank">Blank</h5>
+<p>Adds a new view layer and deactivates all collections.</p>
+<h5 id="remove-view-layer">Remove View Layer</h5>
+<p>Removes the selected view layer.</p>
+<h5 id="use-for-rendering">Use for Rendering</h5>
+<p>Disable or enable the render layer. · <strong>Animate Property</strong>: This property can be animated. Activating this button sets a keyframe at the current frame.</p>
+<h5 id="render-single-layer">Render Single Layer</h5>
+<p>Only render the active layer. This just works for rendering from the interface. Rendering from command line ignores this setting.</p>
+<h2 id="override-panel-eevee-cycles">Override panel - EEVEE + Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/override-panel-eevee-cycles.png" alt="Override panel - EEVEE + Cycles" loading="lazy"><figcaption>Override panel - EEVEE + Cycles</figcaption></figure>
+<p>The override panel allows you to define a material that is used on all objects in the current view layer. Think of it as a clay rendering.</p>
+<h3 id="material-override">Material Override</h3>
+<p>Material to override all materials in this view layers.</p>
+<h3 id="world-override">World Override</h3>
+<p>Override the world material in this view layer.</p>
+<h3 id="samples">Samples</h3>
+<p>Override number of render samples for this view layer. A value of 0 will use the Scene settings.</p>
+<h2 id="passes-panel-eevee">Passes panel - EEVEE</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/passes-panel-eevee.png" alt="Passes panel - EEVEE" loading="lazy"><figcaption>Passes panel - EEVEE</figcaption></figure>
+<p>Here you enable or disable passes for single features.</p>
+<h3 id="data-subpanel">Data subpanel</h3>
+<h4 id="combined">Combined</h4>
+<p>Deliver full combined RGBA Buffer.</p>
+<h4 id="depth">Depth</h4>
+<p>Deliver Z Value pass.</p>
+<h4 id="mist">Mist</h4>
+<p>Deliver Mist factor pass. 0.0 to 1.0</p>
+<h4 id="normal">Normal</h4>
+<p>Deliver Normal pass.</p>
+<h4 id="position">Position</h4>
+<p>Deliver Position pass.</p>
+<h4 id="vector">Vector</h4>
+<p>Deliver Vector pass.</p>
+<h4 id="grease-pencil">Grease Pencil</h4>
+<p>Deliver Grease Pencil pass.</p>
+<h3 id="light-subpanel">Light subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/light-subpanel.png" alt="Light subpanel" loading="lazy"></figure>
+<h4 id="diffuse">Diffuse</h4>
+<p><strong>Light</strong>: Deliver diffuse direct pass. · <strong>Color</strong>: Deliver diffuse color pass.</p>
+<h4 id="specular">Specular</h4>
+<p><strong>Light</strong>: Deliver specular direct pass. · <strong>Color</strong>: Deliver specular color pass.</p>
+<h4 id="volume">Volume</h4>
+<p><strong>Light</strong>: Deliver volume direct light pass.</p>
+<h4 id="other">Other</h4>
+<h5 id="emission">Emission</h5>
+<p>Deliver emission pass.</p>
+<h5 id="environment">Environment</h5>
+<p>Deliver environment lighting pass.</p>
+<h5 id="shadow">Shadow</h5>
+<p>Deliver shadow pass.</p>
+<h5 id="ambient-occlusion">Ambient Occlusion</h5>
+<p>Deliver Ambient Occlusion pass. Ambient Occlusion needs to be enabled in the Render Properties. · <strong>Occlusion Distance</strong>: Distance of object that contribute to the ambient occlusion effct.</p>
+<h5 id="transparent">Transparent</h5>
+<p>Deliver alpha blended surfaces in a separate pass.</p>
+<h3 id="cryptomatte-subpanel">Cryptomatte subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/cryptomatte-subpanel.png" alt="Cryptomatte subpanel" loading="lazy"></figure>
+<p>Cryptomatte passes can be used to isolate objects or materials or assets in compositing.</p>
+<h4 id="include">Include</h4>
+<p><strong>Object</strong>: Render Cryptomatte Object Pass. · <strong>Materials</strong>: Render Cryptomatte Materials Pass. · <strong>Asset</strong>: Render Cryptomatte Asset Pass.</p>
+<h4 id="include-settings">Include Settings</h4>
+<p>These settings appears when you tick one of the above includes. · <strong>Levels</strong>: How many unique objects can be distinguished per pixel. <strong>Note:</strong> <em>Only active when you have something to include activated.</em> · <strong>Accurate Mode</strong>: Generate a more accurate cryptomatte pass.</p>
+<h3 id="shader-aov-subpanel">Shader AOV subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/shader-aov-subpanel.png" alt="Shader AOV subpanel" loading="lazy"></figure>
+<p>AOV stands for Arbitrary Output Variables. Here you can add custom render passes for arbitrary shader node components. These values can then be used in the post processing in the node editor.</p>
+<p>To use Shader AOVs create the pass in the Shader AOV panel then reference this pass with the AOV Output shading node. Each AOV in the list consists of a Name and Data Type.</p>
+<h4 id="list-of-aov">List of AOV</h4>
+<h5 id="name">Name</h5>
+<p>The name of the render pass. This is the Name that is referenced in the AOV Output node. You can name it as you like as long as the name does not conflict with enabled built-in passes.</p>
+<h5 id="data-type">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Right clicking at the black triangle at the end will refveal the type menu.</p>
+<p>Shader AOVs can either express a Color or a Value variable. The Color variable as the name suggest can be used for a color but also a normal value. A Value variable can be used for any single numerical value.</p>
+<h6 id="add-aov">Add AOV</h6>
+<p>Adds an AOV to the list.</p>
+<h6 id="remove-aov">Remove AOV</h6>
+<p>Removes the selected AOV from the list.</p>
+<h2 id="passes-panel-cycles">Passes Panel - Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/passes-panel-cycles.png" alt="Passes Panel - Cycles" loading="lazy"><figcaption>Passes Panel - Cycles</figcaption></figure>
+<p>Here you enable or disable render passes for single features.</p>
+<h3 id="data-subpanel-2">Data subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/data-subpanel.png" alt="Data subpanel" loading="lazy"></figure>
+<h4 id="include-2">Include</h4>
+<p><strong>Combined</strong>: Deliver full combined RGBA Buffer. · <strong>Depth</strong>: Deliver Z Value pass. · <strong>Mist</strong>: Deliver Mist factor pass. 0.0 - 1.0. · <strong>Normal</strong>: Deliver Normal pass. · <strong>Vector</strong>: Deliver Speed Vector pass. · <strong>UV</strong>: Deliver UV pass. · <strong>Denoising Data</strong>: Store the denoising feature passes and the noisy image.</p>
+<h4 id="indexes">Indexes</h4>
+<p><strong>Object Index</strong>: Deliver Object Index pass. · <strong>Material Index</strong>: Deliver Material Index pass.</p>
+<h4 id="debug">Debug</h4>
+<p><strong>Sample Count</strong>: Number of samples/camera rays per pixel.</p>
+<h4 id="render-time">Render Time</h4>
+<p>Reports time in pixel per miliseconds.</p>
+<h4 id="alpha-threshold">Alpha Threshold</h4>
+<p>Z, Index, Normal, UV and Vector passes are just affected by surfaces with alpha transparency equal or higher this threshold.</p>
+<h3 id="mist-subpanel">Mist subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mist-subpanel.png" alt="Mist subpanel" loading="lazy"></figure>
+<p>When you activate Mist pass, then the Mist Pass subpanel shows.</p>
+<h4 id="start">Start</h4>
+<p>The starting distance of the mist, measured from the camera.</p>
+<h4 id="depth-2">Depth</h4>
+<p>The distance over which the mist effect fades in.</p>
+<h3 id="falloff">Falloff</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/falloff.png" alt="Falloff" loading="lazy"></figure>
+<p>The falloff progression of the mist.</p>
+<h3 id="light-subpanel-2">Light subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/light-subpanel-2.png" alt="Light subpanel" loading="lazy"></figure>
+<h4 id="diffuse-2">Diffuse</h4>
+<p><strong>Direct</strong>: Deliver direct pass. · <strong>Indirect</strong>: Deliver indirect pass. · <strong>Color</strong>: Deliver color pass.</p>
+<h4 id="glossy">Glossy</h4>
+<p><strong>Direct</strong>: Deliver direct pass. · <strong>Indirect</strong>: Deliver indirect pass. · <strong>Color</strong>: Deliver color pass.</p>
+<h4 id="transmission">Transmission</h4>
+<p><strong>Direct</strong>: Deliver direct pass. · <strong>Indirect</strong>: Deliver indirect pass. · <strong>Color</strong>: Deliver color pass.</p>
+<h4 id="volume-2">Volume</h4>
+<p><strong>Direct</strong>: Deliver direct pass. · <strong>Indirect</strong>: Deliver indirect pass. · <strong>Color</strong>: Deliver color pass.</p>
+<h4 id="other-2">Other</h4>
+<p><strong>Emission</strong>: Deliver Emission pass. · <strong>Environment</strong>: Deliver Environment pass. · <strong>Ambient Occlusion</strong>: Deliver Ambient Occlusion pass. · <strong>Shadow Catcher</strong>: Pass containing light and shadows that you want to multiply into the background image.</p>
+<h3 id="cryptomatte-subpanel-2">Cryptomatte subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/cryptomatte-subpanel-2.png" alt="Cryptomatte subpanel" loading="lazy"></figure>
+<p>Cryptomatte passes can be used to isolate objects or materials or assets in compositing.</p>
+<h4 id="include-3">Include</h4>
+<p><strong>Object</strong>: Render Cryptomatte Object Pass. · <strong>Materials</strong>: Render Cryptomatte Materials Pass. · <strong>Asset</strong>: Render Cryptomatte Asset Pass.</p>
+<h4 id="include-settings-2">Include Settings</h4>
+<p>These settings appears when you tick one of the above includes. · <strong>Levels</strong>: How many unique objects can be distinguished per pixel.</p>
+<h3 id="shader-aov-subpanel-2">Shader AOV subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/shader-aov-subpanel.png" alt="Shader AOV subpanel" loading="lazy"></figure>
+<p>AOV stands for Arbitrary Output Variables. Here you can add custom render passes for arbitrary shader node components. These values can then be used in the post processing in the node editor.</p>
+<p>To use Shader AOVs create the pass in the Shader AOV panel then reference this pass with the AOV Output shading node. Each AOV in the list consists of a Name and Data Type.</p>
+<h4 id="list-of-aov-2">List of AOV</h4>
+<h5 id="name-2">Name</h5>
+<p>The name of the render pass. This is the Name that is referenced in the AOV Output node. You can name it as you like as long as the name does not conflict with enabled built-in passes.</p>
+<h5 id="data-type-2">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Right clicking at the black triangle at the end will refveal the type menu.</p>
+<p>Shader AOVs can either express a Color or a Value variable. The Color variable as the name suggest can be used for a color but also a normal value. A Value variable can be used for any single numerical value.</p>
+<h6 id="add-aov-2">Add AOV</h6>
+<p>Adds an AOV to the list.</p>
+<h6 id="remove-aov-2">Remove AOV</h6>
+<p>Removes the selected AOV from the list.</p>
+<h3 id="light-groups-sub-panel">Light Groups sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/light-groups-sub-panel.png" alt="Light Groups sub panel" loading="lazy"><figcaption>Light Groups sub panel</figcaption></figure>
+<p>Light groups are a type of pass that only contains light render data from a subset of light sources and their influences. This is useful to set light sources to affect only specific objects in a scene.</p>
+<p>Light Groups passes are created in the View Layer tab then light sources and influences are assigned to individual passes in the Object tab in the Light Option panel of the light source and objects.</p>
+<p>Any light source (lamps, objects with emission materials and/or the environment) can be assigned to light groups.</p>
+<p>To assign a light source to a Light Pass, use the Light Options panel in the Object tab of the light source.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Light groups are identified by name - therefore the name of the Light Group in the View Layer and the name that in set in and Light Source Light Options must match for them to to be included in the Light Group pass.</p></div>
+<h4 id="add-light-group">Add Light Group</h4>
+<p>Adds a new light group to the list.</p>
+<h4 id="remove-light-group">Remove Light Group</h4>
+<p>Removes the selected lightgroup from the list.</p>
+<h4 id="lightgroup-sync-menu">Lightgroup Sync menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/lightgroup-sync-menu.jpg" alt="Lightgroup Sync menu" loading="lazy"></figure>
+<h5 id="add-used-light-groups">Add used Light groups</h5>
+<p>Add all assigned light sources with light groups to the list. Sometimes there are objects that are assigned to a light group which are not in the list yet – typical when appended objects from another file, as an example.</p>
+<h5 id="remove-unused-light-groups">Remove unused light groups</h5>
+<p>Removes all light groups from the list that has no user.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/remove-unused-light-groups.png" alt="Remove unused light groups" loading="lazy"><figcaption>Remove unused light groups</figcaption></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> </p></div>
+<p>With light linking and Light Group passes, light sources can be set to affect only specific objects in the scene in the Object tab &gt; Light Options panel.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Objects must be have an emission material to have an influence in the Light Group.</p></div>
+<h2 id="passes-panel-workbench">Passes Panel - Workbench</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/passes-panel-workbench.png" alt="Passes Panel - Workbench" loading="lazy"><figcaption>Passes Panel - Workbench</figcaption></figure>
+<p>Here you enable or disable render passes for single features.</p>
+<h3 id="data-subpanel-3">Data subpanel</h3>
+<h4 id="combined-2">Combined</h4>
+<p>Deliver full combined RGBA Buffer.</p>
+<h4 id="depth-3">Depth</h4>
+<p>Deliver Z Value pass.</p>
+<h4 id="grease-pencil-2">Grease Pencil</h4>
+<p>Deliver Grease Pencil in a separated pass.</p>
+<h2 id="filter-panel-eevee">Filter Panel - EEVEE</h2>
+<h3 id="include-4">Include</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/include.png" alt="Include" loading="lazy"></figure>
+<h4 id="environment-2">Environment</h4>
+<p>Render Sky in this layer.</p>
+<h4 id="surfaces">Surfaces</h4>
+<p>Render solid surfaces in this layer.</p>
+<h4 id="curves">Curves</h4>
+<p>Render Hair in this layer.</p>
+<h4 id="volume-3">Volume</h4>
+<p>Render volumes in this layer.</p>
+<h3 id="use">Use</h3>
+<h4 id="motion-blur">Motion Blur</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/motion-blur.png" alt="Motion Blur" loading="lazy"></figure>
+<p>Render Motion Blur, if enabled in the scene.</p>
+<h2 id="filter-panel-cycles">Filter Panel - Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/filter-panel-cycles.jpg" alt="Filter Panel - Cycles" loading="lazy"><figcaption>Filter Panel - Cycles</figcaption></figure>
+<h3 id="include-5">Include</h3>
+<h4 id="environment-3">Environment</h4>
+<p>Render Sky in this layer.</p>
+<h4 id="ambient-occlusion-2">Ambient Occlusion</h4>
+<p>Render Ambient Occlusion in this layer.</p>
+<h4 id="surfaces-2">Surfaces</h4>
+<p>Render solid surfaces in this layer.</p>
+<h4 id="curves-2">Curves</h4>
+<p>Render Hair in this layer.</p>
+<h4 id="volume-4">Volume</h4>
+<p>Render volumes in this layer.</p>
+<h3 id="use-2">Use</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/motion-blur.png" alt="Use" loading="lazy"></figure>
+<h4 id="motion-blur-2">Motion Blur</h4>
+<p>Render Motion Blur, if enabled in the scene.</p>
+<h4 id="denoising">Denoising</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/denoising.png" alt="Denoising" loading="lazy"></figure>
+<p>Use Denoising, if enabled in the scene.</p>
+<h2 id="freestyle-panel">Freestyle Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-panel.png" alt="Freestyle Panel" loading="lazy"></figure>
+<p>This panel and all further freestyle panels just shows when you have Freestyle activated in the Render Properties!</p>
+<h3 id="enable">Enable</h3>
+<p>Enables or disables the freestyle layer in the current view layer.</p>
+<h3 id="control-mode">Control Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/control-mode.png" alt="Control Mode" loading="lazy"></figure>
+<p>You can either control the freestyle shapes by the settings in the panels. Or you can use a python script to define all the shapes. In this case the panels vanishes, and you can add your style script below.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/control-mode-2.png" alt="Control Mode" loading="lazy"></figure>
+<h3 id="view-map-cache">View Map Cache</h3>
+<p>Keep the computed Key Map. And avoid recalculation if mesh geometry is unchanged.</p>
+<h3 id="as-render-pass">As Render Pass</h3>
+<p>Renders the freestyle pass as a separate pass instead of adding it as an overlay to the Combined pass.</p>
+<h4 id="edge-detection-subpanel">Edge detection subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/edge-detection-subpanel.png" alt="Edge detection subpanel" loading="lazy"></figure>
+<p>How the edge detection happens.</p>
+<h5 id="crease-angle">Crease Angle</h5>
+<p>Angular Threshold for detecting crease angles.</p>
+<h5 id="culling">Culling</h5>
+<p>Ignore edges that are out of view.</p>
+<h5 id="face-smoothness">Face Smoothness</h5>
+<p>Take the face smoothness into account for the view map calculation.</p>
+<h5 id="sphere-radius">Sphere Radius</h5>
+<p>The sphere radius for calculating curvatures</p>
+<h5 id="kr-derivate-epsilon">Kr Derivate Epsilon</h5>
+<p>The Ki Derivate Epsilon radius for calculating suggestive contours.</p>
+<h4 id="style-module-subpanel">Style Module subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/style-module-subpanel.png" alt="Style Module subpanel" loading="lazy"></figure>
+<p>This panel appears with Control Mode Python Scripting. Add a python script that defines the style.</p>
+<p>The structure of such a style is not defined nor described. It is not documented upstream.</p>
+<h2 id="freestyle-line-set-panel">Freestyle Line Set Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-line-set-panel.png" alt="Freestyle Line Set Panel" loading="lazy"><figcaption>Freestyle Line Set Panel</figcaption></figure>
+<p>The line set settings.</p>
+<h3 id="list-of-line-sets">List of Line Sets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/list-of-line-sets.png" alt="List of Line Sets" loading="lazy"><figcaption>List of Line Sets</figcaption></figure>
+<p>A line set holds the line style. You can have more than one line set. But just one LineStyle per set.</p>
+<p>The line sets can be activated or deactivated with the checkbox at the end.</p>
+<h4 id="drag-handler">Drag Handler</h4>
+<p>Allows to resize the list.</p>
+<h4 id="search-field">Search field</h4>
+<p>When you click at the triangle button then you can reveal a search field. · <strong>Edit Box</strong>: Tpye in the search term and hit enter. · <strong>Invert</strong>: Inverts the search. · <strong>Sort by Name</strong>: Sorts the list by name · <strong>Reverse</strong>: Reverts the list content.</p>
+<h4 id="add-line-set">Add Line Set</h4>
+<p>Adds a new line set. Adding a new line set also adds a new LineStyle.</p>
+<h4 id="remove-line-set">Remove Line Set</h4>
+<p>Removes the selected line set.</p>
+<h4 id="lineset-specials-menu">Lineset Specials menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/lineset-specials-menu.png" alt="Lineset Specials menu" loading="lazy"></figure>
+<h5 id="copy-line-set">Copy Line Set</h5>
+<p>Copies the currently selected line set and all its settings.</p>
+<h5 id="paste-line-set">Paste Line Set</h5>
+<p>Pastes the copied line set and all its settings into the currently selected line set.</p>
+<h4 id="move-line-set-up-or-down">Move Line Set up or down</h4>
+<p>Moves the selected up or down in the list.</p>
+<h3 id="line-style-data-property">Line style data property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/line-style-data-property.png" alt="Line style data property" loading="lazy"><figcaption>Line style data property</figcaption></figure>
+<h4 id="data-browser">Data Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<p>A list of available LineStyles.</p>
+<h5 id="edit-box">Edit Box</h5>
+<p>Displays the name of the currently active LineStyle. It also allows you to rename the LineStyle. Click into the edit box, change the name, hit enter.</p>
+<h5 id="fake-user">Fake User</h5>
+<p>Save this LineStyle with the scene even when it has no user. Fake User is an old Blender concept to keep data in the scene that has no user. Data without an user gets usually deleted with saving the scene.</p>
+<h5 id="add-new-linestyle">Add new LineStyle</h5>
+<p>Adds a new LineStyle.</p>
+<h5 id="remove-linestyle">Remove LineStyle</h5>
+<p>This button is dysfunctional and permanently greyed out. Once added LineStyles are permanent by Blender design since every line set needs at least one linestyle. You can only remove unused linestyles by purging unused Data in the outliner.</p>
+<h3 id="select-by-image-border">Select by Image Border</h3>
+<p>Select feature edges by image border.</p>
+<h3 id="visibility-subpanel">Visibility Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/visibility-subpanel.png" alt="Visibility Subpanel" loading="lazy"></figure>
+<p>Determine how to use visibility for feature edge detection.</p>
+<h4 id="type">Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/type.png" alt="Type" loading="lazy"></figure>
+<h5 id="visible">Visible</h5>
+<p>Select visible feature edges.</p>
+<h5 id="hidden">Hidden</h5>
+<p>Select hidden feature edges.</p>
+<h5 id="quantitative-invisibility">Quantitative invisibility</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/quantitative-invisibility.png" alt="Quantitative invisibility" loading="lazy"></figure>
+<p>Select feature edges within a range of quantitative invisibility values. The value is called QI.</p>
+<h6 id="start-2">Start</h6>
+<p>The first value.</p>
+<h6 id="end">End</h6>
+<p>The last value.</p>
+<h3 id="edge-type-subpanel">Edge Type subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/edge-type-subpanel.png" alt="Edge Type subpanel" loading="lazy"></figure>
+<h4 id="selection-by-edge-types">Selection by Edge Types</h4>
+<p>The checkbox in the header activates or deactivates the feature. Select feature edges based on Edge Types.</p>
+<h4 id="negation">Negation</h4>
+<p><strong>Inclusive</strong>: Select edges by satisfying the selected options. · <strong>Exclusive</strong>: Select edges by satisfying the exact opposite of the selected options.</p>
+<h4 id="combination">Combination</h4>
+<p><strong>Logical Or</strong>: Select edges by satisfying at least of the selected options. · <strong>Logical And</strong>: Select edges by satisfying all of the selected options. · <strong>Type</strong>: What type to use. The names should be self explaining. The X Button at the end is to exclude this type instead of including it.</p>
+<h4 id="face-masks-subpanel">Face Masks Subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/face-masks-subpanel.png" alt="Face Masks Subpanel" loading="lazy"></figure>
+<h4 id="selection-by-face-marks">Selection by Face Marks</h4>
+<p>Select Feature Edges by Face Marks.</p>
+<h5 id="negation-2">Negation</h5>
+<p>Include or exclude the edges selected by face marks.</p>
+<h5 id="condition">Condition</h5>
+<p>Select a feature edge if one face is marked. Or select a feature edge if the two adjacent faces are marked.</p>
+<h3 id="collection-subpanel">Collection Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/collection-subpanel.png" alt="Collection Subpanel" loading="lazy"></figure>
+<h4 id="selection-by-collection">Selection by Collection</h4>
+<p>Select feature edges based on a collection of objects.</p>
+<h4 id="line-set-collection">Line Set Collection</h4>
+<p>Pick the collection that you want to use.</p>
+<h4 id="negation-3">Negation</h4>
+<p>Select feature edges by including or excluding the selected collection.</p>
+<h2 id="freestyle-strokes-panel">Freestyle Strokes Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-strokes-panel.png" alt="Freestyle Strokes Panel" loading="lazy"></figure>
+<h3 id="caps">Caps</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/caps.png" alt="Caps" loading="lazy"></figure>
+<p>Select the shape of both ends of the stroke. Butt, Round or Square.</p>
+<h3 id="chaining-subpanel">Chaining Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/chaining-subpanel.png" alt="Chaining Subpanel" loading="lazy"></figure>
+<h4 id="chaining">Chaining</h4>
+<p>Enable chaining of feature edges.</p>
+<h4 id="method">Method</h4>
+<p>How feature edges are jointed to form chains.</p>
+<h5 id="plain">Plain</h5>
+<p>Feature edges are jointed plain.</p>
+<h5 id="sketchy">Sketchy</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/sketchy.png" alt="Sketchy" loading="lazy"></figure>
+<p>Feature edges are jointed sketchy.</p>
+<h6 id="rounds">Rounds</h6>
+<p>Number of rounds in a sketchy multiple touch.</p>
+<h3 id="splitting-subpanel">Splitting subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/splitting-subpanel.png" alt="Splitting subpanel" loading="lazy"></figure>
+<h4 id="min-2d-angle">Min 2D Angle</h4>
+<p>Minimum 2d angle for splitting chains.</p>
+<h4 id="max-2d-angle">Max 2D Angle</h4>
+<p>Maximum 2d angle for splitting chains.</p>
+<h4 id="2d-length">2D Length</h4>
+<p>Curvilinear length for 2d splitting</p>
+<h4 id="material-boundary">Material Boundary</h4>
+<p>Split chains of feature edges at material boundaries.</p>
+<h4 id="split-pattern-sub-subpanel">Split Pattern sub subpanel</h4>
+<h5 id="use-split-pattern">Use Split Pattern</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/use-split-pattern.png" alt="Use Split Pattern" loading="lazy"></figure>
+<p>Enable chain splitting by dashed line patterns.</p>
+<h6 id="dash-1-2-3">Dash 1, 2, 3</h6>
+<p>Length of the dashes for splitting.</p>
+<h6 id="gap-1-2-3">Gap 1, 2, 3</h6>
+<p>Length of the gaps for splitting.</p>
+<h3 id="sorting-subpanel">Sorting subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/sorting-subpanel.png" alt="Sorting subpanel" loading="lazy"></figure>
+<h4 id="sort-key">Sort Key</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/sort-key.png" alt="Sort Key" loading="lazy"></figure>
+<p>How to determine the stacking order of chains.</p>
+<h4 id="integration-type">Integration Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/integration-type.png" alt="Integration Type" loading="lazy"></figure>
+<p>How the sort key is computed for each chain.</p>
+<h4 id="sort-order">Sort order</h4>
+<p>Sort by default or inverse.</p>
+<h3 id="selection-subpanel">Selection Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/selection-subpanel.png" alt="Selection Subpanel" loading="lazy"></figure>
+<h4 id="min-2d-length">Min 2D Length</h4>
+<p>The selection of chains by a minimum 2D length.</p>
+<h4 id="max-2d-length">Max 2D Length</h4>
+<p>The selection of chains by a maximum 2D length.</p>
+<h4 id="chain-count">Chain Count</h4>
+<p>Select first N chains. N stands for a variable, and is defined in the edit box.</p>
+<h3 id="dashed-line-subpanel">Dashed Line subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/dashed-line-subpanel.png" alt="Dashed Line subpanel" loading="lazy"></figure>
+<h4 id="dashed-line">Dashed Line</h4>
+<p>Enable dashed line. A line is then displayed as dashes.</p>
+<h5 id="dash-1-2-3-2">Dash 1, 2, 3</h5>
+<p>Length of the dash for the dashed lines.</p>
+<h5 id="gap-1-2-3-2">Gap 1, 2, 3</h5>
+<p>Length of the gap for the dashed lines.</p>
+<h2 id="freestyle-modifiers">Freestyle Modifiers</h2>
+<p>The Freestyle panels Freestyle Color, Freestyle Alpha, Freestyle Thickness and Freestyle Geometry allows you to use so called modifiers. Modifiers allows you to modify these settings in several aspects.</p>
+<p>Some modifier, like the along stroke modifier, does have the same name. But has here and there different functionality.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-modifiers.png" alt="Freestyle Modifiers" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-modifiers-2.png" alt="Freestyle Modifiers" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-modifiers-3.png" alt="Freestyle Modifiers" loading="lazy"></figure>
+<p>Color, Alpha and Thickness Modifier</p>
+<h3 id="header">Header</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/header.png" alt="Header" loading="lazy"></figure>
+<p>From left to right.</p>
+<h4 id="triangle-button">Triangle button</h4>
+<p>Open or close the modifier panel.</p>
+<h4 id="edit-box-2">Edit Box</h4>
+<p>Displays the name of the modifier. You can also rename it. Click into the edit box, change name and hit enter.</p>
+<h4 id="use-3">Use</h4>
+<p>Enable the modifier.</p>
+<h4 id="copy-modifier">Copy Modifier</h4>
+<p>Copies the Modifier.</p>
+<h4 id="move-modifier">Move Modifier</h4>
+<p>Moves the modifier up or down the list.</p>
+<h4 id="remove-modifier">Remove Modifier</h4>
+<p>Removes the modifier from the list.</p>
+<h3 id="color-ramp">Color Ramp</h3>
+<p>The color, alpha and thickness modifiers all have a color ramp.</p>
+<h4 id="controls">Controls</h4>
+<h5 id="section">+</h5>
+<p>Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.</p>
+<h5 id="section-2">-</h5>
+<p>Deletes the selected color stop from the list.</p>
+<h5 id="tools-menu">Tools menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<h6 id="flip-color-ramp">Flip Color Ramp</h6>
+<p>Flips the gradient, inverting the values of the color ramp.</p>
+<h6 id="distribute-stops-from-left">Distribute Stops from Left</h6>
+<p>Rearrange the stops so that every step has the same space to the right.</p>
+<h6 id="distribute-stops-evenly">Distribute Stops Evenly</h6>
+<p>Space between all neighboring stops becomes equal.</p>
+<h6 id="eyedropper-pipette-icon-e">Eyedropper (pipette icon) E</h6>
+<p>An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.</p>
+<h6 id="reset-color-ramp">Reset Color Ramp</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png" alt="Reset Color Ramp" loading="lazy"></figure>
+<p>Resets the color ramp to its default state.</p>
+<h5 id="color-mode">Color Mode</h5>
+<h6 id="rgb">RGB</h6>
+<p>Blends color by mixing each color channel and combining.</p>
+<h6 id="hsv-hsl">HSV/HSL</h6>
+<p>Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.</p>
+<h5 id="interpolation">Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<h6 id="ease">Ease</h6>
+<p>Uses an Ease Interpolation for the color stops.</p>
+<h6 id="cardinal">Cardinal</h6>
+<p>Uses a Cardinal Interpolation for the color stops.</p>
+<h6 id="linear">Linear</h6>
+<p>Uses a Linear Interpolation for the color stops.</p>
+<h6 id="b-spline">B-Spline</h6>
+<p>Uses a B-Spline Interpolation for the color stops.</p>
+<h6 id="constant">Constant</h6>
+<p>Uses a Constant Interpolation for the color stops.</p>
+<h5 id="color-ramp-2">Color Ramp</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png" alt="Color Ramp" loading="lazy"></figure>
+<p>The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.</p>
+<h5 id="active-color-stop-elements">Active Color Stop elements</h5>
+<p>Adjust the active color stop.</p>
+<h6 id="choose-active-color-stop">Choose active color stop</h6>
+<p>Choose the color stop by index.</p>
+<h6 id="number-of-stop">Number of Stop</h6>
+<p>The active color stop.</p>
+<h6 id="pos">Pos</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/pos.png" alt="Pos" loading="lazy"></figure>
+<p>The position and color of the active color stop. The range goes from 0.000 to 1.000.</p>
+<h2 id="freestyle-color-panel">Freestyle Color panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-color-panel.png" alt="Freestyle Color panel" loading="lazy"></figure>
+<p>Modify the color of the stroke.</p>
+<h3 id="base-color">Base Color</h3>
+<p>Here you can choose the base color that needs to be modified.</p>
+<h2 id="freestyle-color-modifiers">Freestyle Color modifiers</h2>
+<h3 id="along-stroke">Along Stroke</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/along-stroke.png" alt="Along Stroke" loading="lazy"></figure>
+<p>Add a colorband along the stroke.</p>
+<h4 id="blend-mode">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence">Influence</h4>
+<p>The influence of the modifier.</p>
+<h3 id="crease-angle-2">Crease Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/crease-angle.png" alt="Crease Angle" loading="lazy"></figure>
+<p>Add a color band along a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.</p>
+<h4 id="blend-mode-2">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-2">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="angle-min-max">Angle Min / Max</h4>
+<p>The minimum and maximum crease angle to modify thickness.</p>
+<h3 id="curvature-3d">Curvature 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/curvature-3d.png" alt="Curvature 3D" loading="lazy"></figure>
+<p>This modifier is based on the radial curvatures of the underlying 3D surface. The curvature of a 2D curve at a point is a measure of how quickly the curve turns at the point. The quicker the turn is, the larger the curvature is at the point. The curvature is zero if the curve is a straight line. Radial curvatures are those computed for a 2D curve that appears at the cross section between the 3D surface and a plane defined by the view point (camera location) and the normal direction of the surface at the point.</p>
+<p>This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.</p>
+<h4 id="blend-mode-3">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-3">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="curvature-min-and-max">Curvature Min and Max</h4>
+<p>The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.</p>
+<h3 id="distance-from-camera">Distance from Camera</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-camera.png" alt="Distance from Camera" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to the camera.</p>
+<h4 id="blend-mode-4">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-4">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="range-min-and-range-max">Range Min and Range Max</h4>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h4 id="fill-range-by-selection">Fill Range by Selection</h4>
+<p>Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.</p>
+<h3 id="distance-from-object">Distance from Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-object.png" alt="Distance from Object" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to a chosen object.</p>
+<h4 id="blend-mode-5">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-5">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="target">Target</h4>
+<p>Pick the target object.</p>
+<h4 id="range-min-and-range-max-2">Range Min and Range Max</h4>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h4 id="fill-range-by-selection-2">Fill Range by Selection</h4>
+<p>Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.</p>
+<h3 id="material">Material</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material.png" alt="Material" loading="lazy"></figure>
+<p>Alters the base property on the current material under the stroke.</p>
+<h4 id="blend-mode-6">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-6">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="material-attribute">Material Attribute</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material-attribute.png" alt="Material Attribute" loading="lazy"></figure>
+<p>What attribute of the material under the stroke to alter.</p>
+<h4 id="ramp">Ramp</h4>
+<p>Shows and activates the color ramp.</p>
+<h3 id="noise">Noise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/noise.png" alt="Noise" loading="lazy"></figure>
+<p>Uses a noise based pseudo random number generator to add some variation along the stroke.</p>
+<h4 id="blend-mode-7">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-7">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="amplitude">Amplitude</h4>
+<p>The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.</p>
+<h4 id="period">Period</h4>
+<p>The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.</p>
+<h4 id="seed">Seed</h4>
+<p>Seed used by the pseudo-random number generator.</p>
+<h4 id="asymmetric">Asymmetric</h4>
+<p>Thickness only – Allows the thickness to be distributed unevenly at every point.</p>
+<h3 id="tangent">Tangent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/tangent.png" alt="Tangent" loading="lazy"></figure>
+<p>Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.</p>
+<h4 id="blend-mode-8">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-8">Influence</h4>
+<p>The influence of the modifier.</p>
+<h2 id="freestyle-alpha-panel">Freestyle Alpha panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-alpha-panel.png" alt="Freestyle Alpha panel" loading="lazy"></figure>
+<p>Modify the transparency of the stroke.</p>
+<h3 id="base-transparency">Base Transparency</h3>
+<p>The base transparency that you want to modify.</p>
+<h2 id="freestyle-alpha-modifiers">Freestyle Alpha modifiers</h2>
+<h3 id="along-stroke-2">Along Stroke</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/along-stroke-2.png" alt="Along Stroke" loading="lazy"></figure>
+<p>Add a gradient along the stroke.</p>
+<h4 id="blend-mode-9">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-9">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="crease-angle-3">Crease Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/crease-angle-2.png" alt="Crease Angle" loading="lazy"></figure>
+<p>Add a gradientalong a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.</p>
+<h4 id="blend-mode-10">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-10">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="angle-min-max-2">Angle Min / Max</h4>
+<p>The minimum and maximum crease angle to modify thickness.</p>
+<h4 id="mapping-2">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-2">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="curvature-3d-2">Curvature 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/curvature-3d-2.png" alt="Curvature 3D" loading="lazy"></figure>
+<p>This modifier is based on the radial curvatures of the underlying 3D surface. The curvature of a 2D curve at a point is a measure of how quickly the curve turns at the point. The quicker the turn is, the larger the curvature is at the point. The curvature is zero if the curve is a straight line. Radial curvatures are those computed for a 2D curve that appears at the cross section between the 3D surface and a plane defined by the view point (camera location) and the normal direction of the surface at the point.</p>
+<p>This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.</p>
+<h4 id="blend-mode-11">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-11">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping-3">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-3">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="curvature-min-and-max-2">Curvature Min and Max</h5>
+<p>The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.</p>
+<h3 id="distance-from-camera-2">Distance from Camera</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-camera-2.png" alt="Distance from Camera" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to the camera.</p>
+<h4 id="blend-mode-12">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-12">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping-4">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-4">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="range-min-and-range-max-3">Range Min and Range Max</h5>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h5 id="fill-range-by-selection-3">Fill Range by Selection</h5>
+<p>Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.</p>
+<h3 id="distance-from-object-2">Distance from Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-object-2.png" alt="Distance from Object" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to a chosen object.</p>
+<h4 id="blend-mode-13">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-13">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="target-2">Target</h4>
+<p>Pick the target object.</p>
+<h4 id="mapping-5">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-5">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="range-min-and-range-max-4">Range Min and Range Max</h5>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h5 id="fill-range-by-selection-4">Fill Range by Selection</h5>
+<p>Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.</p>
+<h3 id="material-2">Material</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material-2.png" alt="Material" loading="lazy"></figure>
+<p>Alters the base property on the current material under the stroke.</p>
+<h4 id="blend-mode-14">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-14">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="material-attribute-2">Material Attribute</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material-attribute.png" alt="Material Attribute" loading="lazy"></figure>
+<p>What attribute of the material under the stroke to alter.</p>
+<h4 id="mapping-6">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-6">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="noise-2">Noise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/noise-2.png" alt="Noise" loading="lazy"></figure>
+<p>Uses a noise based pseudo random number generator to add some variation along the stroke.</p>
+<h4 id="blend-mode-15">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-15">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="amplitude-2">Amplitude</h4>
+<p>The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.</p>
+<h4 id="period-2">Period</h4>
+<p>The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.</p>
+<h4 id="seed-2">Seed</h4>
+<p>Seed used by the pseudo-random number generator.</p>
+<h4 id="mapping-7">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-7">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="tangent-2">Tangent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/tangent-2.png" alt="Tangent" loading="lazy"></figure>
+<p>Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.</p>
+<h4 id="blend-mode-16">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-16">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping-8">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-8">Invert</h4>
+<p>Inverts the values.</p>
+<h2 id="freestyle-thickness-panel">Freestyle Thickness panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-thickness-panel.png" alt="Freestyle Thickness panel" loading="lazy"></figure>
+<p>Modify the thickness of the stroke.</p>
+<h3 id="base-thickness">Base Thickness</h3>
+<p>The base thickness that you want to modify.</p>
+<h3 id="thickness-position">Thickness Position</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/thickness-position.png" alt="Thickness Position" loading="lazy"></figure>
+<p>The thickness position of silhouettes and border edges.</p>
+<h4 id="center">Center</h4>
+<p>Silhouettes and border edges are centered along the stroke.</p>
+<h4 id="inside">Inside</h4>
+<p>Silhouettes and border edges are drawn inside of the stroke.</p>
+<h4 id="outside">Outside</h4>
+<p>Silhouettes and border edges are drawn outside of the stroke.</p>
+<h4 id="relative">Relative</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/relative.png" alt="Relative" loading="lazy"></figure>
+<p>Silhouettes and border edges are shifted by a user defined thickness ratio.</p>
+<h5 id="thickness-ratio">Thickness Ratio</h5>
+<p>The thickness ratio to shift the silhouettes and border edges.</p>
+<h2 id="freestyle-thickness-modifiers">Freestyle Thickness modifiers</h2>
+<h3 id="along-stroke-3">Along Stroke</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/along-stroke-3.png" alt="Along Stroke" loading="lazy"></figure>
+<p>Add a gradient along the stroke.</p>
+<h4 id="blend-mode-17">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-17">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping-9">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-9">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="value-min-max">Value Min / Max</h5>
+<p>Minimum and maximum output value.</p>
+<h3 id="calligraphy">Calligraphy</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/calligraphy.png" alt="Calligraphy" loading="lazy"></figure>
+<p>Generates different thickness, based on the orientation of the stroke. The result is a stroke thickness that orients at calligraphy.</p>
+<h4 id="blend-mode-18">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-18">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="orientation">Orientation</h4>
+<p>The angle of the virtual drawing tool, based at the vertical axis of the image. The thickest strokes will align with this angle.</p>
+<h4 id="thickness-min-max">Thickness Min / Max</h4>
+<p>Minimum and maximum output value.</p>
+<h3 id="crease-angle-4">Crease Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/crease-angle-3.png" alt="Crease Angle" loading="lazy"></figure>
+<p>Add a gradientalong a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.</p>
+<h4 id="blend-mode-19">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-19">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="thickness-min-max-2">Thickness Min / Max</h4>
+<p>The minimum and maximum thickness.</p>
+<h4 id="angle-min-max-3">Angle Min / Max</h4>
+<p>The minimum and maximum crease angle to modify thickness.</p>
+<h4 id="mapping-10">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-10">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="curvature-3d-3">Curvature 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/curvature-3d-3.png" alt="Curvature 3D" loading="lazy"></figure>
+<p>This modifier is based on the radial curvatures of the underlying 3D surface. The curvature of a 2D curve at a point is a measure of how quickly the curve turns at the point. The quicker the turn is, the larger the curvature is at the point. The curvature is zero if the curve is a straight line. Radial curvatures are those computed for a 2D curve that appears at the cross section between the 3D surface and a plane defined by the view point (camera location) and the normal direction of the surface at the point.</p>
+<p>This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.</p>
+<h4 id="blend-mode-20">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-20">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="thickness-min-max-3">Thickness Min / Max</h4>
+<p>The minimum and maximum thickness.</p>
+<h4 id="curvature-min-and-max-3">Curvature Min and Max</h4>
+<p>The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.</p>
+<h4 id="mapping-11">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-11">Invert</h4>
+<p>Inverts the values.</p>
+<h3 id="distance-from-camera-3">Distance from Camera</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-camera-3.png" alt="Distance from Camera" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to the camera.</p>
+<h4 id="blend-mode-21">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-21">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="mapping-12">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-12">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="range-min-and-range-max-5">Range Min and Range Max</h5>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h5 id="value-min-and-value-max">Value Min and Value Max</h5>
+<p>The minimum and maximum output value of the mapping. These values are in scene units.</p>
+<h3 id="distance-from-object-3">Distance from Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/distance-from-object-3.png" alt="Distance from Object" loading="lazy"></figure>
+<p>Recalculates the base property by the distance to a chosen object.</p>
+<h4 id="blend-mode-22">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-22">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="target-3">Target</h4>
+<p>Pick the target object.</p>
+<h4 id="mapping-13">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-13">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="range-min-and-range-max-6">Range Min and Range Max</h5>
+<p>The minimum and maximum range. These values are in scene units.</p>
+<h5 id="value-min-and-value-max-2">Value Min and Value Max</h5>
+<p>The minimum and maximum output value of the mapping. These values are in scene units.</p>
+<h3 id="material-3">Material</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material-3.png" alt="Material" loading="lazy"></figure>
+<p>Alters the thickness of the stroke based on the current material under the stroke.</p>
+<h4 id="blend-mode-23">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-23">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="material-attribute-3">Material Attribute</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/material-attribute.png" alt="Material Attribute" loading="lazy"></figure>
+<p>What attribute of the material under the stroke to alter.</p>
+<h4 id="mapping-14">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h5 id="invert-14">Invert</h5>
+<p>Inverts the values.</p>
+<h5 id="value-min-and-value-max-3">Value Min and Value Max</h5>
+<p>The minimum and maximum output value of the mapping. These values are in scene units.</p>
+<h3 id="noise-3">Noise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/noise-3.png" alt="Noise" loading="lazy"></figure>
+<p>Uses a noise based pseudo random number generator to add some variation along the stroke.</p>
+<h4 id="blend-mode-24">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-24">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="amplitude-3">Amplitude</h4>
+<p>The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.</p>
+<h4 id="period-3">Period</h4>
+<p>The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.</p>
+<h4 id="seed-3">Seed</h4>
+<p>Seed used by the pseudo-random number generator.</p>
+<h4 id="asymetric">Asymetric</h4>
+<p>Assign the thickness asymetrical at both sides of the stroke.</p>
+<h3 id="tangent-3">Tangent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/tangent-3.png" alt="Tangent" loading="lazy"></figure>
+<p>Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.</p>
+<h4 id="blend-mode-25">Blend Mode</h4>
+<p>The color blend mode.</p>
+<h4 id="influence-25">Influence</h4>
+<p>The influence of the modifier.</p>
+<h4 id="thickness-min-max-4">Thickness Min / Max</h4>
+<p>The minimum and maximum thickness.</p>
+<h4 id="mapping-15">Mapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/mapping.png" alt="Mapping" loading="lazy"></figure>
+<p>The mapping type. Linear or Curve.</p>
+<h4 id="invert-15">Invert</h4>
+<p>Inverts the values.</p>
+<h2 id="freestyle-geometry">Freestyle Geometry</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-geometry.png" alt="Freestyle Geometry" loading="lazy"></figure>
+<p>Modify the geometry of the freestyle strokes.</p>
+<p>The modifier Sampling is on by default.</p>
+<h2 id="freestyle-geometry-modifiers">Freestyle Geometry Modifiers</h2>
+<h3 id="2d-offset">2D Offset</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/2d-offset.png" alt="2D Offset" loading="lazy"></figure>
+<p>Offset the stroke vertices from its original position.</p>
+<h4 id="start-end">Start / End</h4>
+<p>The start and end of the offset relative to the stroke.</p>
+<h4 id="x-y">X / Y</h4>
+<p>The offset amount along X and Y axis of the stroke vertices.</p>
+<h3 id="2d-transform">2D Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/2d-transform.png" alt="2D Transform" loading="lazy"></figure>
+<p>Scale the stroke.</p>
+<h4 id="pivot">Pivot</h4>
+<p>What center point to use for the scaling.</p>
+<h4 id="scale-x-y">Scale X / Y</h4>
+<p>The scale amount along X and Y.</p>
+<h4 id="rotation-angle">Rotation Angle</h4>
+<p>Rotate the stroke</p>
+<h3 id="backbone-stretcher">Backbone Stretcher</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/backbone-stretcher.png" alt="Backbone Stretcher" loading="lazy"></figure>
+<p>Stretch the stroke.</p>
+<h4 id="backbone-length">Backbone Length</h4>
+<p>Amount of backbone stretching.</p>
+<h3 id="bezier-curve">Bezier Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/bezier-curve.png" alt="Bezier Curve" loading="lazy"></figure>
+<p>Turn the stroke into a bezier curve.</p>
+<h4 id="error">Error</h4>
+<p>The maximal allowed distance between the new bezier curve and the original backbone geometry.</p>
+<h3 id="blueprint">Blueprint</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/blueprint.png" alt="Blueprint" loading="lazy"></figure>
+<p>Turn the strokes into a blueprint/cad like style stroke.</p>
+<h4 id="shape">Shape</h4>
+<p>The shape of the blueprint contour strokes.</p>
+<h4 id="rounds-2">Rounds</h4>
+<p>Number of rounds in contour strokes.</p>
+<h4 id="random-radius">Random Radius</h4>
+<p>Randomness of the radius.</p>
+<h4 id="center-2">Center</h4>
+<p>Randomness of the center.</p>
+<h3 id="guiding-lines">Guiding Lines</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/guiding-lines.png" alt="Guiding Lines" loading="lazy"></figure>
+<p>Replaces a stroke by straight lines that connects both of its ends.</p>
+<h4 id="offset">Offset</h4>
+<p>Add an offset to the the start and end points along the original stroke, before generating the new straight one.</p>
+<h3 id="perlin-noise-1d">Perlin Noise 1D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/perlin-noise-1d.png" alt="Perlin Noise 1D" loading="lazy"></figure>
+<p>Adds one-dimensional Perlin noise to the stroke. This modifier will give an identical result for two strokes with the same length and sampling interval.</p>
+<h4 id="frequency">Frequency</h4>
+<p>How dense the noise is (kind of a scale factor along the stroke).</p>
+<h4 id="amplitude-4">Amplitude</h4>
+<p>How much the noise distorts the stroke in the Angle direction.</p>
+<h4 id="seed-4">Seed</h4>
+<p>The seed of the random generator (the same seed over a stroke will always give the same result).</p>
+<h4 id="octaves">Octaves</h4>
+<p>The “level of detail” of the noise.</p>
+<h4 id="angle">Angle</h4>
+<p>In which direction the noise is applied (0.0 is fully horizontal).</p>
+<h3 id="perlin-noise-2d">Perlin Noise 2D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/perlin-noise-1d.png" alt="Perlin Noise 2D" loading="lazy"></figure>
+<p>Adds one-dimensional Perlin noise to the stroke. Different to the Perlin Noise 1D modifier the modifier generates noisy displacements using 2D coordinates of stroke vertices as the input of the noise generator.</p>
+<h4 id="frequency-2">Frequency</h4>
+<p>How dense the noise is (kind of a scale factor along the stroke).</p>
+<h4 id="amplitude-5">Amplitude</h4>
+<p>How much the noise distorts the stroke in the Angle direction.</p>
+<h4 id="seed-5">Seed</h4>
+<p>The seed of the random generator (the same seed over a stroke will always give the same result).</p>
+<h4 id="octaves-2">Octaves</h4>
+<p>The “level of detail” of the noise.</p>
+<h4 id="angle-2">Angle</h4>
+<p>In which direction the noise is applied (0.0 is fully horizontal).</p>
+<h3 id="polygonization">Polygonization</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/polygonization.png" alt="Polygonization" loading="lazy"></figure>
+<p>Simplify the stroke.</p>
+<h4 id="error-2">Error</h4>
+<p>The maximum distance allowed between the new simplified stroke and the orginal stroke.</p>
+<h3 id="sampling">Sampling</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/sampling.png" alt="Sampling" loading="lazy"></figure>
+<p>Changes the definition and precision of the stroke for hte following modifiers.</p>
+<h4 id="sampling-2">Sampling</h4>
+<p>The smaller this value, the more precise are the strokes. The computation of smaller values needs more memory and time.</p>
+<h3 id="simplification">Simplification</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/simplification.png" alt="Simplification" loading="lazy"></figure>
+<p>Simplify the stroke by merging stroke vertices that are close to each other.</p>
+<h4 id="tolerance">Tolerance</h4>
+<p>How close the vertices nees to be to each other to be merged.</p>
+<h3 id="sinus-displacement">Sinus Displacement</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/sinus-displacement.png" alt="Sinus Displacement" loading="lazy"></figure>
+<p>Adds a sinusoidal displacement to the stroke.</p>
+<h4 id="wavelength">Wavelength</h4>
+<p>How wide the undulations are along the stroke.</p>
+<h4 id="amplitude-6">Amplitude</h4>
+<p>How high the undulations are across the stroke.</p>
+<h4 id="phase">Phase</h4>
+<p>Allows “offsetting” (“moving”) the undulations along the stroke. Tip! With a phase of 0 the undulations this modifier produces look exactly the same at a Phase of 0. Same goes for any positive or negative multiple of the Wavelength set on the modifier. This allows you to render short video sequences with wavy lines that can then be seamlessly looped without any visual jumps in the undulations along the line.</p>
+<h3 id="spatial-noise">Spatial Noise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/spatial-noise.png" alt="Spatial Noise" loading="lazy"></figure>
+<p>Adds some spatial noise to the stroke. Spatial noise displacements are added in the normal direction of each stroke vertex.</p>
+<h4 id="amplitude-7">Amplitude</h4>
+<p>How much the noise distorts the stroke.</p>
+<h4 id="scale">Scale</h4>
+<p>How wide the noise is along the stroke.</p>
+<h4 id="octaves-3">Octaves</h4>
+<p>The level of detail of the noise.</p>
+<h4 id="smooth">Smooth</h4>
+<p>When enabled, apply some smoothing over the generated noise.</p>
+<h4 id="pure-random">Pure Random</h4>
+<p>The usual noise is not really random. Each value depends of the value before. So as a result is more a series of values. Which can lead to patterns. Pure random adds much more randomness to the strokes.</p>
+<h3 id="tip-remover">Tip remover</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/tip-remover.png" alt="Tip remover" loading="lazy"></figure>
+<p>Removes a part of the stroke at the start and the end of a stroke</p>
+<h4 id="tip-length">Tip Length</h4>
+<p>The length of the stroke that you want to remove.</p>
+<h2 id="freestyle-texture">Freestyle Texture</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-texture.png" alt="Freestyle Texture" loading="lazy"></figure>
+<p>You can use a texture for the freestyle lines. The texture is created and managed in the texture tab. The material is created and managed in the Shader editor.</p>
+<p>In this panel you just manage some settings for it</p>
+<h3 id="use-nodes">Use Nodes</h3>
+<p>Use shader nodes for the line style.</p>
+<h3 id="spacing-along-stroke">Spacing along Stroke</h3>
+<p>The spacing for textures along stroke length</p>
+<h3 id="go-to-linestyle-texture-properties">Go to Linestyle Texture Properties</h3>
+<p>Switch to the Texture Properties tab to create and manage the texture.</p>
+<h2 id="freestyle-animation">Freestyle Animation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/freestyle-animation.png" alt="Freestyle Animation" loading="lazy"></figure>
+<p>Allows you to add an animation.</p>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/a0741c77d8a2c35335485c308d094032544b6b24/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fland-stacked/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fview-layer-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/land-stacked/docs2/content/editors/properties/view-layer-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#view-layer">View Layer</a><a class="h3" href="#render-engine">Render Engine</a><a class="h2" href="#view-layer-panel-all-renderers">View Layer Panel - All Renderers</a><a class="h3" href="#view-layer-prop">View Layer Prop</a><a class="h2" href="#override-panel-eevee-cycles">Override panel - EEVEE + Cycles</a><a class="h3" href="#material-override">Material Override</a><a class="h3" href="#world-override">World Override</a><a class="h3" href="#samples">Samples</a><a class="h2" href="#passes-panel-eevee">Passes panel - EEVEE</a><a class="h3" href="#data-subpanel">Data subpanel</a><a class="h3" href="#light-subpanel">Light subpanel</a><a class="h3" href="#cryptomatte-subpanel">Cryptomatte subpanel</a><a class="h3" href="#shader-aov-subpanel">Shader AOV subpanel</a><a class="h2" href="#passes-panel-cycles">Passes Panel - Cycles</a><a class="h3" href="#data-subpanel-2">Data subpanel</a><a class="h3" href="#mist-subpanel">Mist subpanel</a><a class="h3" href="#falloff">Falloff</a><a class="h3" href="#light-subpanel-2">Light subpanel</a><a class="h3" href="#cryptomatte-subpanel-2">Cryptomatte subpanel</a><a class="h3" href="#shader-aov-subpanel-2">Shader AOV subpanel</a><a class="h3" href="#light-groups-sub-panel">Light Groups sub panel</a><a class="h2" href="#passes-panel-workbench">Passes Panel - Workbench</a><a class="h3" href="#data-subpanel-3">Data subpanel</a><a class="h2" href="#filter-panel-eevee">Filter Panel - EEVEE</a><a class="h3" href="#include-4">Include</a><a class="h3" href="#use">Use</a><a class="h2" href="#filter-panel-cycles">Filter Panel - Cycles</a><a class="h3" href="#include-5">Include</a><a class="h3" href="#use-2">Use</a><a class="h2" href="#freestyle-panel">Freestyle Panel</a><a class="h3" href="#enable">Enable</a><a class="h3" href="#control-mode">Control Mode</a><a class="h3" href="#view-map-cache">View Map Cache</a><a class="h3" href="#as-render-pass">As Render Pass</a><a class="h2" href="#freestyle-line-set-panel">Freestyle Line Set Panel</a><a class="h3" href="#list-of-line-sets">List of Line Sets</a><a class="h3" href="#line-style-data-property">Line style data property</a><a class="h3" href="#select-by-image-border">Select by Image Border</a><a class="h3" href="#visibility-subpanel">Visibility Subpanel</a><a class="h3" href="#edge-type-subpanel">Edge Type subpanel</a><a class="h3" href="#collection-subpanel">Collection Subpanel</a><a class="h2" href="#freestyle-strokes-panel">Freestyle Strokes Panel</a><a class="h3" href="#caps">Caps</a><a class="h3" href="#chaining-subpanel">Chaining Subpanel</a><a class="h3" href="#splitting-subpanel">Splitting subpanel</a><a class="h3" href="#sorting-subpanel">Sorting subpanel</a><a class="h3" href="#selection-subpanel">Selection Subpanel</a><a class="h3" href="#dashed-line-subpanel">Dashed Line subpanel</a><a class="h2" href="#freestyle-modifiers">Freestyle Modifiers</a><a class="h3" href="#header">Header</a><a class="h3" href="#color-ramp">Color Ramp</a><a class="h2" href="#freestyle-color-panel">Freestyle Color panel</a><a class="h3" href="#base-color">Base Color</a><a class="h2" href="#freestyle-color-modifiers">Freestyle Color modifiers</a><a class="h3" href="#along-stroke">Along Stroke</a><a class="h3" href="#crease-angle-2">Crease Angle</a><a class="h3" href="#curvature-3d">Curvature 3D</a><a class="h3" href="#distance-from-camera">Distance from Camera</a><a class="h3" href="#distance-from-object">Distance from Object</a><a class="h3" href="#material">Material</a><a class="h3" href="#noise">Noise</a><a class="h3" href="#tangent">Tangent</a><a class="h2" href="#freestyle-alpha-panel">Freestyle Alpha panel</a><a class="h3" href="#base-transparency">Base Transparency</a><a class="h2" href="#freestyle-alpha-modifiers">Freestyle Alpha modifiers</a><a class="h3" href="#along-stroke-2">Along Stroke</a><a class="h3" href="#crease-angle-3">Crease Angle</a><a class="h3" href="#curvature-3d-2">Curvature 3D</a><a class="h3" href="#distance-from-camera-2">Distance from Camera</a><a class="h3" href="#distance-from-object-2">Distance from Object</a><a class="h3" href="#material-2">Material</a><a class="h3" href="#noise-2">Noise</a><a class="h3" href="#tangent-2">Tangent</a><a class="h2" href="#freestyle-thickness-panel">Freestyle Thickness panel</a><a class="h3" href="#base-thickness">Base Thickness</a><a class="h3" href="#thickness-position">Thickness Position</a><a class="h2" href="#freestyle-thickness-modifiers">Freestyle Thickness modifiers</a><a class="h3" href="#along-stroke-3">Along Stroke</a><a class="h3" href="#calligraphy">Calligraphy</a><a class="h3" href="#crease-angle-4">Crease Angle</a><a class="h3" href="#curvature-3d-3">Curvature 3D</a><a class="h3" href="#distance-from-camera-3">Distance from Camera</a><a class="h3" href="#distance-from-object-3">Distance from Object</a><a class="h3" href="#material-3">Material</a><a class="h3" href="#noise-3">Noise</a><a class="h3" href="#tangent-3">Tangent</a><a class="h2" href="#freestyle-geometry">Freestyle Geometry</a><a class="h2" href="#freestyle-geometry-modifiers">Freestyle Geometry Modifiers</a><a class="h3" href="#2d-offset">2D Offset</a><a class="h3" href="#2d-transform">2D Transform</a><a class="h3" href="#backbone-stretcher">Backbone Stretcher</a><a class="h3" href="#bezier-curve">Bezier Curve</a><a class="h3" href="#blueprint">Blueprint</a><a class="h3" href="#guiding-lines">Guiding Lines</a><a class="h3" href="#perlin-noise-1d">Perlin Noise 1D</a><a class="h3" href="#perlin-noise-2d">Perlin Noise 2D</a><a class="h3" href="#polygonization">Polygonization</a><a class="h3" href="#sampling">Sampling</a><a class="h3" href="#simplification">Simplification</a><a class="h3" href="#sinus-displacement">Sinus Displacement</a><a class="h3" href="#spatial-noise">Spatial Noise</a><a class="h3" href="#tip-remover">Tip remover</a><a class="h2" href="#freestyle-texture">Freestyle Texture</a><a class="h3" href="#use-nodes">Use Nodes</a><a class="h3" href="#spacing-along-stroke">Spacing along Stroke</a><a class="h3" href="#go-to-linestyle-texture-properties">Go to Linestyle Texture Properties</a><a class="h2" href="#freestyle-animation">Freestyle Animation</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>
