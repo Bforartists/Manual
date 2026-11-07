@@ -7,7 +7,7 @@ path:
   - Movie Clip Editor
   - Header
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 15.1 Editors - Movie Clip Editor - Header.odt
