@@ -276,9 +276,13 @@ And it can also be read and edited at the Proportional Size slider in the Propor
 
 Display the viewport gizmos.
 
-Navigate
+#### Navigate
 
-Display the navigation gizmos in the Image Editor
+Display the navigation gizmos in the Image Editor.
+
+#### Active Node
+
+Shows the gizmo of the active node, for example the box of a Box Mask or the corners of a Corner Pin, right in the Image Editor. Only when the editor shows the compositor result (the Viewer Node or the Render Result).
 
 ### Overlays
 

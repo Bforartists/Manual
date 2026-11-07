@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Filter"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Filter nodes: Blur."
@@ -650,7 +650,7 @@ Gives the best looking results but tends to be the slowest.
 
 ###### Fast Gaussian
 
-An approximation of the Gaussian.
+An approximation of the Gaussian that is much faster and looks almost the same. This is the default type.
 
 ###### Catmull-Rom
 

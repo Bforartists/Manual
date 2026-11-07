@@ -6,7 +6,7 @@ path:
   - Editors
   - Compositor
   - Header
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -181,6 +181,10 @@ Shows each nodes preview thumbnails if the node has previews toggled on.
 ##### Timings
 
 Shows a timing box above each node to indicate the evaluation time of it.. This option is only available for compositing and geometry nodes.
+
+##### Render Region
+
+Shows the region of the final render in the backdrop. · **Passepartout**: How dark the area outside the render region is drawn.
 
 ##### Canvas Center
 
