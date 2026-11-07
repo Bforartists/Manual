@@ -26,12 +26,17 @@ cta: "Open"
 
 Restrict the elements that moves when you move rotate or scale the object.
 
+##### Origins
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Origins | Move or rotate the origin instead of the object geometry. Scale has no effect. And it will not work on geometry like lamps. |
-| Location | This is for having more than one object selected. Scales or rotates the selection instead of scaling or rotating the single objects. The single objects keeps their scale and their rotation. |
-| Parents | Don't transform the child objects. Just the parent objects. |
+Move or rotate the origin instead of the object geometry. Scale has no effect. And it will not work on geometry like lamps.
+
+##### Location
+
+This is for having more than one object selected. Scales or rotates the selection instead of scaling or rotating the single objects. The single objects keeps their scale and their rotation.
+
+##### Parents
+
+Don't transform the child objects. Just the parent objects.
 
 # Tool Tab
 
@@ -59,14 +64,21 @@ Workspaces can be configured to start in specific modes, and with a specific set
 
 You have to save the startup file to make these changes permanent.
 
+### Pin Scene
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------- |
-| Pin Scene | Remember the last used scene for the workspace. And switch to it whenever the workspace is activated again. |
-| Mode | The mode in which the 3D view should start when you switch to this workspace layout. |
-| Sequencer Scene | The scene to work with. Usually the default scene. |
-| Sync Active Scene | Set the active scene and time based on the current scene strip. |
+Remember the last used scene for the workspace. And switch to it whenever the workspace is activated again.
 
+### Mode
+
+The mode in which the 3D view should start when you switch to this workspace layout.
+
+### Sequencer Scene
+
+The scene to work with. Usually the default scene.
+
+### Sync Active Scene
+
+Set the active scene and time based on the current scene strip.
 
 ### Filter Addons
 

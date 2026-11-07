@@ -39,18 +39,37 @@ Some Physics types will add a modifier to the modifier stack. Cloth for example.
 
 You can add up to eight different types of physics. There can be more than one physics type at the object.
 
+### Force Field
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Force Field | As the name says, this physics type adds forces. Wind for example. And the forces can influence other physic types like particles, soft bodies, cloth and rigid bodies. |
-| Collision | Collision physics is meant for collisions. Particles, Soft Bodies and Cloth objects may collide with mesh objects. Boids try to avoid Collision objects. |
-| Cloth | Cloth is a physics effect that tries to simulate the motion and behavior of fabrics. |
-| Dynamic Paint | Dynamic paint is a modifier and physics system that can turn objects into paint canvases and brushes. With Dynamic Paint you can create vertex colors, image sequences or displacement. This makes many effects possible like, for example footsteps in the snow, raindrops that make the ground wet, paint that sticks to walls, or objects that gradually freeze. |
-| Soft Body | Soft body simulation is used for simulating soft deformable objects. |
-| Fluid | Fluid physics is used to simulate liquids. |
-| Rigid Body | Rigid bodies simulates the motion of solid objects. They can receive forces, gravity or acceleration for example. And allows collision without to deform them. Just mesh objects can have rigid bodies. |
-| Rigid Body Constraint | Rigid body constraint is used to connect two rigid bodies. This can be the position, or the rotation or scale. |
+As the name says, this physics type adds forces. Wind for example. And the forces can influence other physic types like particles, soft bodies, cloth and rigid bodies.
 
+### Collision
+
+Collision physics is meant for collisions. Particles, Soft Bodies and Cloth objects may collide with mesh objects. Boids try to avoid Collision objects.
+
+### Cloth
+
+Cloth is a physics effect that tries to simulate the motion and behavior of fabrics.
+
+### Dynamic Paint
+
+Dynamic paint is a modifier and physics system that can turn objects into paint canvases and brushes. With Dynamic Paint you can create vertex colors, image sequences or displacement. This makes many effects possible like, for example footsteps in the snow, raindrops that make the ground wet, paint that sticks to walls, or objects that gradually freeze.
+
+### Soft Body
+
+Soft body simulation is used for simulating soft deformable objects.
+
+### Fluid
+
+Fluid physics is used to simulate liquids.
+
+### Rigid Body
+
+Rigid bodies simulates the motion of solid objects. They can receive forces, gravity or acceleration for example. And allows collision without to deform them. Just mesh objects can have rigid bodies.
+
+### Rigid Body Constraint
+
+Rigid body constraint is used to connect two rigid bodies. This can be the position, or the rotation or scale.
 
 ## Simulation Nodes
 
@@ -68,10 +87,10 @@ Calculate the simulations in Geometry Nodes modifiers from the start to current 
 
 Bake simulations in all geometry node modifiers to disk.
 
+#### Delete Cached Bake
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Cached Bake | The trashcan icon will erase the baked collection from disk. |
-| Cache | This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk. |
+The trashcan icon will erase the baked collection from disk.
 
+#### Cache
 
+This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk.

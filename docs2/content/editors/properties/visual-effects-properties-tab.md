@@ -75,30 +75,37 @@ This icon shows the type of the effect. And has no further functionality.
 
 The name of the modifier. You can rename effects by clicking into the edit field and change the text.
 
+##### Realtime
 
-| Entry | What it does |
-| -------- | -------------------------------------------- |
-| Realtime | Display the modifier in the viewport. |
-| Render | Display the modifier in the rendered result. |
+Display the modifier in the viewport.
 
+##### Render
+
+Display the modifier in the rendered result.
 
 #### Header menu
 
 ![Header menu](/docs2/images/editors/properties/visual-effects-properties-tab/header-menu.png)
 
+##### Duplicate
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------- |
-| Duplicate | Duplicates the modifier, and places the duplicate below the current modifier. |
-| Move to first | Move the modifier to the first position in the stack. |
-| Move to last | Move the modifier to the last position in the stack. |
+Duplicates the modifier, and places the duplicate below the current modifier.
 
+##### Move to first
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remove | Removes the modifier from the stack. |
-| Change Context | Some modifiers cannot be removed from the modifiers stack directly. Like fluid modifiers. You need to remove the fluid simulation instead, in the physics tab. With the change context button you jump to the required tab where you can now remove the simulation. |
+Move the modifier to the first position in the stack.
 
+##### Move to last
+
+Move the modifier to the last position in the stack.
+
+##### Remove
+
+Removes the modifier from the stack.
+
+##### Change Context
+
+Some modifiers cannot be removed from the modifiers stack directly. Like fluid modifiers. You need to remove the fluid simulation instead, in the physics tab. With the change context button you jump to the required tab where you can now remove the simulation.
 
 #### Reorder
 
@@ -118,14 +125,21 @@ Some of the properties can be animated. Click at the animate property button at 
 
 Applies a Gaussian blur to the object.
 
+### Samples
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Samples | Number of Blur samples (0 disabled the blur effect). |
-| Use Depth of Field | When enabled, the blur effect uses the focal plane distance of the actual camera to simulate a depth of field effect. Only available in camera view. |
-| Size X / Y | The blur factor in x and y direction |
-| Rotation | Rotation of the effect. |
+Number of Blur samples (0 disabled the blur effect).
 
+### Use Depth of Field
+
+When enabled, the blur effect uses the focal plane distance of the actual camera to simulate a depth of field effect. Only available in camera view.
+
+### Size X / Y
+
+The blur factor in x and y direction
+
+### Rotation
+
+Rotation of the effect.
 
 ## Colorize
 
@@ -141,16 +155,29 @@ Applies colorizing effects to the object.
 
 Converts to a grayscale image.
 
+##### Sepia
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------- |
-| Sepia | Converts to a sepia tone image. |
-| Duotone | Converts to a black and white posterize image with high contrast and brightness. |
-| Transparent | Add color transparency. |
-| Factor | Controls the mix value (0 fully transparent, 1 fully opaque). |
-| Custom | Allows to define a tint custom color. |
-| Color | Sets the tint color. |
+Converts to a sepia tone image.
 
+##### Duotone
+
+Converts to a black and white posterize image with high contrast and brightness.
+
+##### Transparent
+
+Add color transparency.
+
+##### Factor
+
+Controls the mix value (0 fully transparent, 1 fully opaque).
+
+##### Custom
+
+Allows to define a tint custom color.
+
+##### Color
+
+Sets the tint color.
 
 ### Factor
 
@@ -178,12 +205,13 @@ Adds a glowing rim around the object.
 
 The mode of the glow effect.
 
+#### Luminance
 
-| Entry | What it does |
-| --------- | --------------------------------------------- |
-| Luminance | The glow light illuminates the entire object. |
-| Color | The glow light only affect a single color. |
+The glow light illuminates the entire object.
 
+#### Color
+
+The glow light only affect a single color.
 
 ### Glow Color
 
@@ -195,15 +223,25 @@ Defines the glow color.
 
 How to blend the glow with the image.
 
+#### Opacity
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------- |
-| Opacity | — |
-| Size X / Y | The size of the effect. |
-| Rotation | Rotation of the effect. |
-| Samples | Number of blur samples. |
-| Glow Under | Glow only affects alpha areas. Does not work with the blend mode Regular. |
+—
 
+#### Size X / Y
+
+The size of the effect.
+
+#### Rotation
+
+Rotation of the effect.
+
+#### Samples
+
+Number of blur samples.
+
+#### Glow Under
+
+Glow only affects alpha areas. Does not work with the blend mode Regular.
 
 ## Pixelate
 
@@ -211,12 +249,13 @@ How to blend the glow with the image.
 
 Pixelates the grease pencil stroke.
 
+### Size X / Y
 
-| Entry | What it does |
-| ------------ | ----------------------- |
-| Size X / Y | The size of the pixels. |
-| Antialiasing | Use antialiasing. |
+The size of the pixels.
 
+### Antialiasing
+
+Use antialiasing.
 
 ## Rim
 
@@ -226,12 +265,13 @@ Shows a simulated rim light on the object contour.
 
 For simulating the rim light, a masked color silhouette of the object is displaced in horizontal and/or vertical direction.
 
+### Rim Color
 
-| Entry | What it does |
-| ---------- | ---------------------------------- |
-| Rim Color | The color of the rim light. |
-| Mask Color | Defines a color to keep unaltered. |
+The color of the rim light.
 
+### Mask Color
+
+Defines a color to keep unaltered.
 
 ### Blend Mode
 
@@ -247,12 +287,13 @@ Color mask displacement in pixels along the X and Y axis.
 
 ![Blur subpanel](/docs2/images/editors/properties/visual-effects-properties-tab/blur-subpanel.png)
 
+#### Blur X / Y
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------- |
-| Blur X / Y | The blur scale in pixels on the X and Y axis. |
-| Samples | Number of blur samples. A value of 0 disables the blur effect. |
+The blur scale in pixels on the X and Y axis.
 
+#### Samples
+
+Number of blur samples. A value of 0 disables the blur effect.
 
 ## Shadow
 
@@ -260,26 +301,37 @@ Color mask displacement in pixels along the X and Y axis.
 
 Shows a simulated shadow casted by the object.
 
+### Shadow Color
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shadow Color | Defines the shadow color. |
-| Offset X / Y | The shadow displacement in pixels along the X and Z axis. |
-| Scale X / Y | Scales the size of the shadow along the X and y axis. |
-| Rotation | The shadow rotation around the Grease Pencil object. You can use the center of the grease pencil object. With Object Pivot enabled you can also choose the pivot of another object. |
-| Object Pivot | Use the pivot of another object for rotation. You need to pick another object from the scene. |
+Defines the shadow color.
 
+### Offset X / Y
+
+The shadow displacement in pixels along the X and Z axis.
+
+### Scale X / Y
+
+Scales the size of the shadow along the X and y axis.
+
+### Rotation
+
+The shadow rotation around the Grease Pencil object. You can use the center of the grease pencil object. With Object Pivot enabled you can also choose the pivot of another object.
+
+### Object Pivot
+
+Use the pivot of another object for rotation. You need to pick another object from the scene.
 
 ### Blur subpanel
 
 ![Blur subpanel](/docs2/images/editors/properties/visual-effects-properties-tab/blur-subpanel.png)
 
+#### Blur X / Y
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------- |
-| Blur X / Y | The blur scale in pixels on the X and Y axis. |
-| Samples | Number of blur samples. A value of 0 disables the blur effect. |
+The blur scale in pixels on the X and Y axis.
 
+#### Samples
+
+Number of blur samples. A value of 0 disables the blur effect.
 
 ### Wave Effect subpanel
 
@@ -287,14 +339,21 @@ Shows a simulated shadow casted by the object.
 
 Apply a wave distortion to the shadow.
 
+#### Orientation
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------ |
-| Orientation | Sets a horizontal or vertical direction for the waves. |
-| Amplitude | Controls the strength and the depth of the wave. |
-| Period | Controls the wave period. The time it takes to complete one cycle. |
-| Phase | Shifts the wave pattern over the shadow. |
+Sets a horizontal or vertical direction for the waves.
 
+#### Amplitude
+
+Controls the strength and the depth of the wave.
+
+#### Period
+
+Controls the wave period. The time it takes to complete one cycle.
+
+#### Phase
+
+Shifts the wave pattern over the shadow.
 
 ## Swirl
 
@@ -304,13 +363,17 @@ Apply a wave distortion to the shadow.
 
 Applies a swirling pattern to the grease pencil object. The effect uses another object as the center of the swirl. An empty for example.
 
+### Object
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------------------- |
-| Object | Pick the object that you want to use as the center of the swirl. |
-| Radius | External radius size of the swirl. The needed radius depends of camera zoom. |
-| Angle | Rotation angle of the swirl. A value of 0 shows no swirl. |
+Pick the object that you want to use as the center of the swirl.
 
+### Radius
+
+External radius size of the swirl. The needed radius depends of camera zoom.
+
+### Angle
+
+Rotation angle of the swirl. A value of 0 shows no swirl.
 
 ## Wave Distortion
 
@@ -318,12 +381,18 @@ Applies a swirling pattern to the grease pencil object. The effect uses another 
 
 Adds a wave distortion to the grease pencil object.
 
+### Orientation
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------ |
-| Orientation | Sets a horizontal or vertical direction for the waves. |
-| Amplitude | Controls the strength and the depth of the wave. |
-| Period | Controls the wave period. The time it takes to complete one cycle. |
-| Phase | Shifts the wave pattern over the grease pencil object. |
+Sets a horizontal or vertical direction for the waves.
 
+### Amplitude
 
+Controls the strength and the depth of the wave.
+
+### Period
+
+Controls the wave period. The time it takes to complete one cycle.
+
+### Phase
+
+Shifts the wave pattern over the grease pencil object.

@@ -31,12 +31,13 @@ In Sculpt mode you will call a context menu with the sliders from the Brush sett
 
 The Radius edit box allows you to adjust the radius of the brush.
 
+#### Size Pressure
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size Pressure | The first button behind the edit box enables tablet pressure sensitivity for radius. |
-| Use Unified Radius | The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
+The first button behind the edit box enables tablet pressure sensitivity for radius.
 
+#### Use Unified Radius
+
+The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
 
 ### Strength
 
@@ -44,12 +45,13 @@ The Radius edit box allows you to adjust the radius of the brush.
 
 The Strength edit box allows you to adjust the strength of the brush.
 
+#### Size Pressure
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size Pressure | The first button behind the edit box enables tablet pressure sensitivity for radius. |
-| Use Unified Radius | The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
+The first button behind the edit box enables tablet pressure sensitivity for radius.
 
+#### Use Unified Radius
+
+The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
 
 ### Auto smooth
 

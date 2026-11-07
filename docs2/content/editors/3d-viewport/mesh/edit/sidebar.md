@@ -33,13 +33,17 @@ This panel contains some mesh specific settings. It can also be found in the hea
 
 ### Transform sub panel
 
+#### Correct Face Attributes
 
-| Entry | What it does |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Correct Face Attributes | Correct data such as UV's and vertex colors when transforming. · **Keep Connected**: During the face attributes correction merge attributes connected to the same vertex. |
-| Mirror | Mirror Editing. The same mirror buttons can also be found in the tool settings bar as icon buttons. This allows quicker access and better visual control which mirror axis is currently active. · **Topology Mirror**: Use Topology based mirroring. This checkbox shows when you have selected a mirror axis. |
-| Auto Merge | Automatically merge vertices that are close to each other. The same checkbox can also be found in the tool settings bar as an icon button. This allows quicker access and better visual control which mirror axis is currently active. · **Split Edges and Faces**: When mirror editing then split edges and faces automatically. · **Threshold**: Limit for removing duplicates and 'Auto Merge'. |
+Correct data such as UV's and vertex colors when transforming. · **Keep Connected**: During the face attributes correction merge attributes connected to the same vertex.
 
+#### Mirror
+
+Mirror Editing. The same mirror buttons can also be found in the tool settings bar as icon buttons. This allows quicker access and better visual control which mirror axis is currently active. · **Topology Mirror**: Use Topology based mirroring. This checkbox shows when you have selected a mirror axis.
+
+#### Auto Merge
+
+Automatically merge vertices that are close to each other. The same checkbox can also be found in the tool settings bar as an icon button. This allows quicker access and better visual control which mirror axis is currently active. · **Split Edges and Faces**: When mirror editing then split edges and faces automatically. · **Threshold**: Limit for removing duplicates and 'Auto Merge'.
 
 ### UV subpanel
 

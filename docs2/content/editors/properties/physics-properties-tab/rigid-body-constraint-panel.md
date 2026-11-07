@@ -82,12 +82,13 @@ It is best to avoid small objects, as they are currently unstable. Ideally, obje
 
 When objects are small and/or move very fast, they can pass through each other. Besides what is mentioned above it’s also good to avoid using mesh shapes in this case. Mesh shapes consist of individual triangles and therefore do not really have any thickness, so objects can pass through more easily. You can give them some thickness by increasing the collision margin.
 
+#### Combining Rigid Bodies with Other Simulations
 
-| Entry | What it does |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Combining Rigid Bodies with Other Simulations | Since the rigid body simulation is part of the animation system, it can influence other simulations just like the animation system can. In order for this to work, the rigid body object needs to have a Collision Modifier. Simply click on Collision in the Physics tab. |
-| Scaling Rigid Bodies | Rigid body objects can be scaled, also during the simulation. This work well in most cases, but can sometimes cause problems. If dynamic scaling is not needed, rigid body objects should have the scale applied. |
+Since the rigid body simulation is part of the animation system, it can influence other simulations just like the animation system can. In order for this to work, the rigid body object needs to have a Collision Modifier. Simply click on Collision in the Physics tab.
 
+#### Scaling Rigid Bodies
+
+Rigid body objects can be scaled, also during the simulation. This work well in most cases, but can sometimes cause problems. If dynamic scaling is not needed, rigid body objects should have the scale applied.
 
 ## Rigid Body Constraint panel
 
@@ -99,12 +100,13 @@ When objects are small and/or move very fast, they can pass through each other. 
 
 The type of the constraint. Each type has some different settings.
 
+#### Fixed
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fixed | This constraint cause the two involved objects to move as one. Since the physics system does have a tiny bit of slop in it, the objects do not move as rigidly as they would if they were part of the same mesh. |
-| Point | The objects are linked by a point bearing allowing any kind of rotation around the location of the constraint object, but no relative translation is permitted. The physics engine will do its best to make sure that the two points designated by the constraint object on the two constrained objects are coincident. |
+This constraint cause the two involved objects to move as one. Since the physics system does have a tiny bit of slop in it, the objects do not move as rigidly as they would if they were part of the same mesh.
 
+#### Point
+
+The objects are linked by a point bearing allowing any kind of rotation around the location of the constraint object, but no relative translation is permitted. The physics engine will do its best to make sure that the two points designated by the constraint object on the two constrained objects are coincident.
 
 #### Hinge
 
@@ -112,12 +114,13 @@ The hinge permits one degree of freedom between two objects. Translation is comp
 
 The Hinge is the only single-axis rotational constraint that uses the Z axis instead of the X axis. If something is wrong with your hinge, check your other constraints to see if this might be the problem.
 
+##### Slider
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Slider | The Slider constraint allows relative translation along the X axis of the constraint object, but permits no relative rotation, or relative translation along other axes. |
-| Piston | A piston constraint permits translation along the X axis of the constraint object. It also allows rotation around the X axis of the constraint object. It is like a combination of the freedoms of a slider with the freedoms of a hinge. |
+The Slider constraint allows relative translation along the X axis of the constraint object, but permits no relative rotation, or relative translation along other axes.
 
+##### Piston
+
+A piston constraint permits translation along the X axis of the constraint object. It also allows rotation around the X axis of the constraint object. It is like a combination of the freedoms of a slider with the freedoms of a hinge.
 
 #### Generic
 
@@ -147,12 +150,13 @@ The rotation axis is the X axis of the object hosting the constraint. This is in
 
 Specifies whether the constraint is active during the simulation.
 
+#### Disable Collisions
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Disable Collisions | Allows constrained objects to pass through one another. |
-| Breakable | Allows constraint to break during simulation. Disabled for the Motor constraint. This can be used to simulate destruction. · **Threshold**: Impulse strength that needs to be reached before constraint breaks. |
+Allows constrained objects to pass through one another.
 
+#### Breakable
+
+Allows constraint to break during simulation. Disabled for the Motor constraint. This can be used to simulate destruction. · **Threshold**: Impulse strength that needs to be reached before constraint breaks.
 
 ## Rigid Body Constraint panel - Limits subpanel
 
@@ -172,35 +176,41 @@ Limit rotation around Z axis.
 
 #### Linear
 
+##### X Axis
 
-| Entry | What it does |
-| ------- | ------------------------------------------------- |
-| X Axis | Enables/disables limit translation around X axis. |
-| X Lower | Lower limit of X axis translation. |
-| Upper | Upper limit of X axis translation. |
+Enables/disables limit translation around X axis.
 
+##### X Lower
+
+Lower limit of X axis translation.
+
+##### Upper
+
+Upper limit of X axis translation.
 
 ### With Type Piston
 
 ![With Type Piston](/docs2/images/editors/properties/physics-properties-tab/rigid-body-constraint-panel/with-type-piston.png)
 
+#### Angular
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angular | **X Angle**: Enables/disables limit rotation around X axis. · **X Lower**: Lower limit of X axis rotation. · **Upper**: Upper limit of X axis rotation. |
-| Linear | **X Axis**: Enables/disables limit translation around X axis. · **X Lower**: Lower limit of X axis translation. · **Upper**: Upper limit of X axis translation. |
+**X Angle**: Enables/disables limit rotation around X axis. · **X Lower**: Lower limit of X axis rotation. · **Upper**: Upper limit of X axis rotation.
 
+#### Linear
+
+**X Axis**: Enables/disables limit translation around X axis. · **X Lower**: Lower limit of X axis translation. · **Upper**: Upper limit of X axis translation.
 
 ### With Type Generic + Generic Spring
 
 ![With Type Generic + Generic Spring](/docs2/images/editors/properties/physics-properties-tab/rigid-body-constraint-panel/with-type-generic-generic-spring.png)
 
+#### Angular
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angular | **X Axis/Y Axis/Z axis**: Enables/disables limit translation on X, Y or Z axis respectively. · **Lower**: Lower limit of translation for X, Y or Z axis respectively. · **Upper**: Upper limit of translation for X, Y or Z axis respectively. |
-| Linear | **X Angle/Y Angle/Z Angle**: Enables/disables limit rotation around X, Y or Z axis respectively. · **Lower**: Lower limit of rotation for X, Y or Z axis respectively. · **Upper**: Upper limit of rotation for X, Y or Z axis respectively. |
+**X Axis/Y Axis/Z axis**: Enables/disables limit translation on X, Y or Z axis respectively. · **Lower**: Lower limit of translation for X, Y or Z axis respectively. · **Upper**: Upper limit of translation for X, Y or Z axis respectively.
 
+#### Linear
+
+**X Angle/Y Angle/Z Angle**: Enables/disables limit rotation around X, Y or Z axis respectively. · **Lower**: Lower limit of rotation for X, Y or Z axis respectively. · **Upper**: Upper limit of rotation for X, Y or Z axis respectively.
 
 ## Rigid Body Constraint panel - Motor subpanel
 
@@ -208,12 +218,13 @@ Limit rotation around Z axis.
 
 ![With Type Angular](/docs2/images/editors/properties/physics-properties-tab/rigid-body-constraint-panel/with-type-angular.png)
 
+#### Target Velocity
 
-| Entry | What it does |
-| --------------- | ------------------------------ |
-| Target Velocity | Target angular motor velocity. |
-| Max Impulse | Maximum angular motor impulse. |
+Target angular motor velocity.
 
+#### Max Impulse
+
+Maximum angular motor impulse.
 
 ### Linear
 
@@ -255,11 +266,14 @@ The type generic spring allows you to limit the springs.
 
 Which type of implementation to use.
 
+##### Angular
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angular | **X/Y/Z Axis**: Enables/disables springs translation on X, Y or Z axis respectively. · **Stiffness**: Spring Stiffness of the translation on X, Y or Z axis respectively. Specifies how “bendy” the spring is. · **Damping**: Spring Damping of the translation on X, Y or Z axis respectively. Amount of damping the spring has. |
-| Linear | — |
-| X/Y/Z Angle | Enables/disables springs rotation around the X, Y or Z axis respectively. · **Stiffness**: Spring Stiffness of the rotation around the X, Y or Z axis respectively. Specifies how “bendy” the spring is. · **Damping**: Spring Damping of the rotation around the X, Y or Z axis respectively. Amount of damping the spring has. |
+**X/Y/Z Axis**: Enables/disables springs translation on X, Y or Z axis respectively. · **Stiffness**: Spring Stiffness of the translation on X, Y or Z axis respectively. Specifies how “bendy” the spring is. · **Damping**: Spring Damping of the translation on X, Y or Z axis respectively. Amount of damping the spring has.
 
+##### Linear
 
+—
+
+##### X/Y/Z Angle
+
+Enables/disables springs rotation around the X, Y or Z axis respectively. · **Stiffness**: Spring Stiffness of the rotation around the X, Y or Z axis respectively. Specifies how “bendy” the spring is. · **Damping**: Spring Damping of the rotation around the X, Y or Z axis respectively. Amount of damping the spring has.

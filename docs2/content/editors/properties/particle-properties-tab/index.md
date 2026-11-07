@@ -61,31 +61,41 @@ To see the effect for emitted particles press play.
 
 A list of the particle systems for this object. Double clicking allows to rename it.
 
+#### Realtime
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Realtime | Display the particle system in the viewport. |
-| Render | Display the particle system in the rendered result. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+Display the particle system in the viewport.
 
+#### Render
 
-| Entry | What it does |
-| --------------------------- | --------------------------- |
-| Add Particle System Slot | Adds a new particle system. |
-| Remove Particle System Slot | Remove the particle system. |
+Display the particle system in the rendered result.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add Particle System Slot
+
+Adds a new particle system.
+
+#### Remove Particle System Slot
+
+Remove the particle system.
 
 ### Particle Specials
 
 ![Particle Specials](/docs2/images/editors/properties/particle-properties-tab/particle-specials.png)
 
+#### Copy Active to Selected Objects
 
-| Entry | What it does |
-| ------------------------------- | --------------------------------------------------------------------------- |
-| Copy Active to Selected Objects | Copies the active particle system to all selected objects. |
-| Copy All to Selected Objects | Copies all particle systems from the active object to all selected objects. |
+Copies the active particle system to all selected objects.
 
+#### Copy All to Selected Objects
+
+Copies all particle systems from the active object to all selected objects.
 
 #### Convert to Curves
 
@@ -93,12 +103,13 @@ A list of the particle systems for this object. Double clicking allows to rename
 
 Hair mode only. Add a new curve object based of the current state of the particle system.
 
+##### Duplicate Particle Systems
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Duplicate Particle Systems | Duplicates the particle system within the active object. The Duplicate Settings option (in the Adjust Last Operation panel) will duplicate settings as well, so the new particle system uses its own settings. |
-| Remove all Particle Systems | Removes all particle systems. |
+Duplicates the particle system within the active object. The Duplicate Settings option (in the Adjust Last Operation panel) will duplicate settings as well, so the new particle system uses its own settings.
 
+##### Remove all Particle Systems
+
+Removes all particle systems.
 
 ### Particle property
 
@@ -108,18 +119,21 @@ Hair mode only. Add a new curve object based of the current state of the particl
 
 A particle settings browser with the available particle systems in the scene.
 
+##### Edit Box
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Edit Box | The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Fake User | Fake User sets the element to have a fake user. Data without a user is normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
+The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
 
+##### Fake User
 
-| Entry | What it does |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| New Particle Settings | Add a new particle system. |
-| Remove Particle Settings | Removes the particle system as the active particle system. Note that the particle system is still in the list. |
+Fake User sets the element to have a fake user. Data without a user is normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
 
+##### New Particle Settings
+
+Add a new particle system.
+
+##### Remove Particle Settings
+
+Removes the particle system as the active particle system. Note that the particle system is still in the list.
 
 ### Type
 
@@ -137,12 +151,13 @@ Emitter type. Particles are emitted from the object.
 
 Hair type, rendered as strands.
 
+##### Regrow
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Regrow | Type Hair. Regrows the hair for each frame. This is useful when you are animating properties. |
-| Advanced | Type Hair. Enables advanced settings, and reveals some more functionality. Which reflect the same ones as working in Emitter mode. |
+Type Hair. Regrows the hair for each frame. This is useful when you are animating properties.
 
+##### Advanced
+
+Type Hair. Enables advanced settings, and reveals some more functionality. Which reflect the same ones as working in Emitter mode.
 
 ##### Delete Edit
 
@@ -150,10 +165,10 @@ Hair type, rendered as strands.
 
 Appears when you modify the particles in particle edit mode. Resets the particle system to the default state before combing.
 
+###### Disconnect Hair
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Disconnect Hair | Appears when you modify the particles in particle edit mode. Disconnect the selected hair from the emitter object. |
-| Disconnect All | Appears when you modify the particles in particle edit mode. Disconnect the whole hair from the emitter object. |
+Appears when you modify the particles in particle edit mode. Disconnect the selected hair from the emitter object.
 
+###### Disconnect All
 
+Appears when you modify the particles in particle edit mode. Disconnect the whole hair from the emitter object.

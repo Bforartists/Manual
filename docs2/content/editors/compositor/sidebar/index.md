@@ -96,16 +96,29 @@ From left to right ...
 
 ![Image Property](/docs2/images/editors/compositor/sidebar/node-tab/image-property-2.png)
 
+#### Image Browser
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Browser | This is a list of the images in the scene. Allows you to switch to other images. |
-| New / Open | When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one. |
-| Image Edit Box | The name of the currently selected image. And you can rename the image here too. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open Image | Load an image |
-| Remove | Delete the image. |
+This is a list of the images in the scene. Allows you to switch to other images.
 
+#### New / Open
+
+When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one.
+
+#### Image Edit Box
+
+The name of the currently selected image. And you can rename the image here too.
+
+#### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+#### Open Image
+
+Load an image
+
+#### Remove
+
+Delete the image.
 
 ### Source
 
@@ -123,14 +136,21 @@ Generated images does not have a path.
 
 ![Path edit box](/docs2/images/editors/compositor/sidebar/node-tab/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
 
 ##### Color Space
 
@@ -168,25 +188,49 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 
 ![Path edit box](/docs2/images/editors/compositor/sidebar/node-tab/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-| Deinterlace | Deinterlace the movie file on load. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
+
+###### Deinterlace
+
+Deinterlace the movie file on load.
 
 ##### Color Space
 
@@ -312,12 +356,13 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 
 The directory to save to.
 
+#### File Name
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------ |
-| File Name | The file name to save with. |
-| Type of media to save | **Image**: Save as image. · **Multi-layer EXR**: Save as multi-layer EXR file. |
+The file name to save with.
 
+#### Type of media to save
+
+**Image**: Save as image. · **Multi-layer EXR**: Save as multi-layer EXR file.
 
 ### Node Format subpanel
 
@@ -361,21 +406,33 @@ Shows the path to the saved file.
 
 ![File property](/docs2/images/editors/compositor/sidebar/node-tab/file-property.png)
 
+#### File browser
 
-| Entry | What it does |
-| ------------ | ------------------------------------------ |
-| File browser | Browse the available movie clips. |
-| File name | The name of the current active movie clip. |
-| Fake User | How many users this clip has. |
-| Remove | Remove the current active clip. |
+Browse the available movie clips.
 
+#### File name
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------- |
-| File Path | The file path to the active movie clip. · **Browse**: Browse for another file. · **Refresh**: Refresh the file. |
-| Start Frame | The start frame at which the movie starts playing. |
-| Frame Offset | Offset of footage first frame relative to its file name. |
+The name of the current active movie clip.
 
+#### Fake User
+
+How many users this clip has.
+
+#### Remove
+
+Remove the current active clip.
+
+#### File Path
+
+The file path to the active movie clip. · **Browse**: Browse for another file. · **Refresh**: Refresh the file.
+
+#### Start Frame
+
+The start frame at which the movie starts playing.
+
+#### Frame Offset
+
+Offset of footage first frame relative to its file name.
 
 ### Color Space
 
@@ -401,13 +458,17 @@ In the node editor we don't have something special here. The tool related settin
 
 When you add and connect a Viewer node, then you can display the result as a backdrop in the node editor viewport. Here you can find some further Backdrop settings.
 
+### Backdrop checkbox
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------- |
-| Backdrop checkbox | Turn on or off the display of the backdrop image. |
-| Zoom | The zoom factor of the image. A value of 1 displays the image in original size. |
-| Offset | The position of the image in the viewport. |
+Turn on or off the display of the backdrop image.
 
+### Zoom
+
+The zoom factor of the image. A value of 1 displays the image in original size.
+
+### Offset
+
+The position of the image in the viewport.
 
 ## View Tab - Annotation Panel
 
@@ -431,14 +492,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -452,12 +520,13 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin
 
@@ -607,12 +676,13 @@ Adds a group output node.
 
 > **Note:** When at a top level, this node is unavailable. These are only available when inside a node group.
 
+#### Toggle Edit Group
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------- |
-| Toggle Edit Group | Enter or exit the edit group mode. |
-| Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
+Enter or exit the edit group mode.
 
+#### Ungroup
+
+Ungroups an existing group. You need to be outside of the group edit mode.
 
 ## Relations tab - Node Group Panel
 
@@ -724,13 +794,17 @@ List of available input and output sockets.
 
 The list of input and output sockets.
 
+##### Socket Name
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Socket Name | Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter. |
-| Searchbar | Clicking at the white arrow button down left of the list will reveal a search input box. |
-| Resize Handle | The list can be resized by pulling at the resize handle in the center of the list at the bottom. |
+Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.
 
+##### Searchbar
+
+Clicking at the white arrow button down left of the list will reveal a search input box.
+
+##### Resize Handle
+
+The list can be resized by pulling at the resize handle in the center of the list at the bottom.
 
 #### New Item
 
@@ -738,13 +812,17 @@ The list of input and output sockets.
 
 Adds a new input sockets to the list.
 
+##### Input
 
-| Entry | What it does |
-| ------ | ------------------------------------- |
-| Input | Adds a new input sockets to the list. |
-| Output | Adds a new output socket to the list. |
-| Panel | Adds a new panel socket to the list. |
+Adds a new input sockets to the list.
 
+##### Output
+
+Adds a new output socket to the list.
+
+##### Panel
+
+Adds a new panel socket to the list.
 
 ##### Panel Toggle
 
@@ -754,19 +832,25 @@ When you create a panel, then the panel toggle button becomes active. By default
 
 ![Panel toggle subpanel](/docs2/images/editors/compositor/sidebar/group-tab/panel-toggle-subpanel.png)
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------- |
-| Default | Input value for unconnected socket. |
-| Hide in Modifier | Don’t show the modifier in the geometry nodes modifier interface. |
-| Single Value | Only allow single value input rather than field. |
+Input value for unconnected socket.
 
+###### Hide in Modifier
 
-| Entry | What it does |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![](/docs2/images/editors/compositor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item | Duplicates the active socket. |
-| ![](/docs2/images/editors/compositor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. |
+Don’t show the modifier in the geometry nodes modifier interface.
 
+###### Single Value
+
+Only allow single value input rather than field.
+
+###### ![](/docs2/images/editors/compositor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item
+
+Duplicates the active socket.
+
+###### ![](/docs2/images/editors/compositor/sidebar/group-tab/remove-item-icon.png) Remove Item
+
+Removes the selected input socket from the list.
 
 #### Move Item Up/Down
 
@@ -810,16 +894,29 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional Label
+
+This label is not necessary to understand its meaning.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type Integer
 
@@ -837,16 +934,29 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional Label
+
+This label is not necessary to understand its meaning.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type Boolean
 
@@ -854,15 +964,25 @@ What special math operation is required. The subtype menu allows you to define t
 
 ![Type Boolean](/docs2/images/editors/compositor/sidebar/group-tab/type-boolean-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default value for the socket. |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default value for the socket.
+
+##### Optional Label
+
+This label is not necessary to understand its meaning.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type Vector
 
@@ -880,16 +1000,29 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Dimensions
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------- |
-| Dimensions | How much dimensions to calculate. |
-| Default | The default vector. It changes, dependant of what dimensions you use. |
-| Min / Max | Minimum value and maximum value. |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+How much dimensions to calculate.
 
+###### Default
+
+The default vector. It changes, dependant of what dimensions you use.
+
+###### Min / Max
+
+Minimum value and maximum value.
+
+###### Optional Label
+
+This label is not necessary to understand its meaning.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type Color
 
@@ -897,15 +1030,25 @@ What special math operation is required. The subtype menu allows you to define t
 
 ![Type Color](/docs2/images/editors/compositor/sidebar/group-tab/type-color-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default color for the socket. |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default color for the socket.
+
+##### Optional Label
+
+This label is not necessary to understand its meaning.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type String
 
@@ -923,14 +1066,21 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------- |
-| Default | The default string. |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+The default string.
 
+###### Optional Label
+
+This label is not necessary to understand its meaning.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 #### Type Menu
 
@@ -938,16 +1088,29 @@ What special math operation is required. The subtype menu allows you to define t
 
 ![Type Menu](/docs2/images/editors/compositor/sidebar/group-tab/type-menu-2.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default menu. |
-| Expanded | Draw the menu socket as an expanded drop down menu. |
-| Optional Label | This label is not necessary to understand its meaning. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the input value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default menu.
+
+##### Expanded
+
+Draw the menu socket as an expanded drop down menu.
+
+##### Optional Label
+
+This label is not necessary to understand its meaning.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the input value in the geometry nodes modifier interface.
 
 ## Group Sockets Panel - Type Panel
 
@@ -965,13 +1128,17 @@ Panel is closed by default on new nodes.
 
 > **Note:** The Panel Toggle properties are only for the Panel Boolean type of panels.
 
+#### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------- |
-| Default | The default value for the boolean toggles. |
-| Hide in Modifier | Hides the panel boolean toggle from the modifier stack. |
-| Single Value | The default value for the panel boolean toggle. |
+The default value for the boolean toggles.
 
+#### Hide in Modifier
+
+Hides the panel boolean toggle from the modifier stack.
+
+#### Single Value
+
+The default value for the panel boolean toggle.
 
 ## Animation Panel
 
@@ -979,8 +1146,10 @@ Panel is closed by default on new nodes.
 
 Animation panels are about the Animation Slots for scene wide animation clips.
 
+### New
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode. |
-| Action Selector | This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source. |
+Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode.
+
+### Action Selector
+
+This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · **Fake User**: Assigns a "fake user" to the action, preventing it from being automatically deleted when it is no longer in use. · **Add**: Make a copy of the current action, including all animation data. · **Remove**: Delete the selected action, removing it from the light source.

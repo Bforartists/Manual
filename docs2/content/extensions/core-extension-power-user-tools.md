@@ -93,12 +93,13 @@ Timeline Editor – Header Buttons on the right
 
 Toggle to add the animation operators from the header to the toolshelf. Useful for general animation keyframe use from the 3D View.
 
+##### Operators
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Operators | For more information of these operators, please visit the chapter **Editors - 3D Viewport - Header - Object menu** You can alternatively view these operators in the 3D View Header – Object/Pose Header menu – Animation sub-menu. |
-| Location of operators | 3D View Editor – Toolshelf – Animation Tab – Animation Panel 3D View Header – Object/Pose Header menu – Animation sub-menu. 3D View Header – Object/Pose Header menu – Animation sub-menu. |
+For more information of these operators, please visit the chapter **Editors - 3D Viewport - Header - Object menu** You can alternatively view these operators in the 3D View Header – Object/Pose Header menu – Animation sub-menu.
 
+##### Location of operators
+
+3D View Editor – Toolshelf – Animation Tab – Animation Panel 3D View Header – Object/Pose Header menu – Animation sub-menu. 3D View Header – Object/Pose Header menu – Animation sub-menu.
 
 ### Custom
 
@@ -134,13 +135,17 @@ Toggles a new overlay button in the header of the 3D view
 
 Inserts an empty frame and nudges all frames to the left of the time cursor. Useful for grease pencil and stop motion animation.
 
+##### Remove Frame Left
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remove Frame Left | Removes a frame on the right of the timeline cursor and nudges all frames towards the timeline cursor. **Note:** C*urrent frame on timeline cursor will be removed.* |
-| Insert Frame Right | Inserts an empty frame and nudges all frames to the right of the time cursor Useful for grease pencil and stop motion animation. |
-| Remove Frame Right | Removes a frame on the right of the timeline cursor and nudges all frames towards the timeline cursor. ***Note:** Current frame on timeline cursor will be removed.* |
+Removes a frame on the right of the timeline cursor and nudges all frames towards the timeline cursor. **Note:** C*urrent frame on timeline cursor will be removed.*
 
+##### Insert Frame Right
+
+Inserts an empty frame and nudges all frames to the right of the time cursor Useful for grease pencil and stop motion animation.
+
+##### Remove Frame Right
+
+Removes a frame on the right of the timeline cursor and nudges all frames towards the timeline cursor. ***Note:** Current frame on timeline cursor will be removed.*
 
 #### Jump Frame Left
 

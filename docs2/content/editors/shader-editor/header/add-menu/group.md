@@ -33,13 +33,17 @@ If you include an input/output node in the group, there will not be an input/out
 
 > **Note:** The icons will show what state the nodegroup is in, either in a Nodegroup state (used in file), Forced User state (saved in file even if not used), Asset state (stored to the Asset Browser) or Overridden/Linked state (referenced from another file).
 
+### Add Empty Group
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------- |
-| Add Empty Group | Add an empty node group, with no other nodes in the node group. |
-| Group Input | Adds a Group Input node. This node is usually already part of a new created group. |
-| Group Output | Adds a Group Output node. This node is usually already part of a new created group. |
+Add an empty node group, with no other nodes in the node group.
 
+### Group Input
+
+Adds a Group Input node. This node is usually already part of a new created group.
+
+### Group Output
+
+Adds a Group Output node. This node is usually already part of a new created group.
 
 ### List of Node Groups
 

@@ -43,12 +43,13 @@ A list of the available scenes.
 
 A list of the available scenes.
 
+##### Edit Box
 
-| Entry | What it does |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the currently active scene. |
-| Pin Scene to Workspace | Allows you to pin this particular scene to a workspace. So that this scene gets loaded when you enter this workspace. |
+The name of the currently active scene.
 
+##### Pin Scene to Workspace
+
+Allows you to pin this particular scene to a workspace. So that this scene gets loaded when you enter this workspace.
 
 #### New Scene
 
@@ -56,13 +57,17 @@ A list of the available scenes.
 
 Creates a new scene. It will call a sub menu where you can choose with what settings you want to initialize the new scene.
 
+##### New
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Creates an empty scene with default values. |
-| Copy Settings | Creates an empty scene but also copies the settings from the active scene into the new one. |
-| Linked Copy | This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true. |
+Creates an empty scene with default values.
 
+##### Copy Settings
+
+Creates an empty scene but also copies the settings from the active scene into the new one.
+
+##### Linked Copy
+
+This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true.
 
 ##### Full Copy
 
@@ -86,12 +91,13 @@ Deletes the currently selected scene.
 
 Here you can define the active camera for rendering.
 
+#### 4Background Scene
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------ |
-| 4Background Scene | Here you can choose a background scene. |
-| Active Movie Clip | Here you can choose an active movie clip for constraints and viewport drawing. |
+Here you can choose a background scene.
 
+#### Active Movie Clip
+
+Here you can choose an active movie clip for constraints and viewport drawing.
 
 ## Units Panel
 
@@ -101,13 +107,17 @@ Here you define the units for the scene.
 
 ![Units Panel](/docs2/images/editors/properties/scene-properties-tab/units-panel-2.png)
 
+### Unit System
 
-| Entry | What it does |
-| -------------- | --------------------------------------- |
-| Unit System | The overall unit system that gets used. |
-| Unit Scale | The standard unit scale. |
-| Separate Units | Display Units in pairs. |
+The overall unit system that gets used.
 
+### Unit Scale
+
+The standard unit scale.
+
+### Separate Units
+
+Display Units in pairs.
 
 ### Rotation
 
@@ -147,13 +157,17 @@ Here you can adjust the gravity settings. The default values are the standard gr
 
 Gravity is used for physics simulations like rigid body.
 
+### Enable
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Enable | In the header is a checkbox to enable the gravity. |
-| Gravity X, Y Z | The gravity values. |
-| Animate Property | These properties can be animated. Activating this button sets a keyframe. |
+In the header is a checkbox to enable the gravity.
 
+### Gravity X, Y Z
+
+The gravity values.
+
+### Animate Property
+
+These properties can be animated. Activating this button sets a keyframe.
 
 ## Simulation Panel
 
@@ -163,12 +177,13 @@ Gravity is used for physics simulations like rigid body.
 
 Allows you to use a simulation range that is different from the scene range for simulation nodes that don't override the frame range themselves.
 
+#### Start
 
-| Entry | What it does |
-| ----- | ----------------------------------- |
-| Start | The start frame for the simulation. |
-| End | The end frame for the simulation. |
+The start frame for the simulation.
 
+#### End
+
+The end frame for the simulation.
 
 ## Keying Sets Panel
 
@@ -254,12 +269,13 @@ Or choose your mesh object from the list of scene objects.
 
 ![Target ID Block](/docs2/images/editors/properties/scene-properties-tab/target-id-block-4.png)
 
+#### Data Path
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data Path | Here you can assign a data path variable. This variable points to a python animation property that can be used for the mesh object. Location or rotation euler are valid terms for a mesh object. meow not. It will simply not work. For the available properties for the different object types please have a look in the python API. |
-| Array all Items | For an Array / Vector type, use **All Items** from the **Data Path** or select the array index for a specific property. |
+Here you can assign a data path variable. This variable points to a python animation property that can be used for the mesh object. Location or rotation euler are valid terms for a mesh object. meow not. It will simply not work. For the available properties for the different object types please have a look in the python API.
 
+#### Array all Items
+
+For an Array / Vector type, use **All Items** from the **Data Path** or select the array index for a specific property.
 
 #### FCurve Grouping
 
@@ -275,12 +291,13 @@ General Override and Active Set Override have the same items each. General overr
 
 The check boxes activates the item to make it available. The buttons behind sets the item on or off.
 
+#### Only Needed
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------- |
-| Only Needed | Only insert keyframes where they’re needed in the relevant F-Curves. |
-| Visual Keying | Insert keyframes based on the visual transformation. |
+Only insert keyframes where they’re needed in the relevant F-Curves.
 
+#### Visual Keying
+
+Insert keyframes based on the visual transformation.
 
 ## Audio Panel
 
@@ -302,13 +319,17 @@ This property can be animated. Clicking at the button will set a keyframe at the
 
 The algorithm for attenuation calculation.
 
+#### Doppler Speed
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------- |
-| Doppler Speed | Speed of sound for Doppler effect calculation. |
-| Doppler Factor | Pitch factor for Doppler effect calculation. |
-| Update Animation Cache | Update the audio animation cache. Something that you might want to do after changes at the settings. |
+Speed of sound for Doppler effect calculation.
 
+#### Doppler Factor
+
+Pitch factor for Doppler effect calculation.
+
+#### Update Animation Cache
+
+Update the audio animation cache. Something that you might want to do after changes at the settings.
 
 ## Rigid Body World Panel
 
@@ -322,12 +343,13 @@ You can create several Rigid Body World groups, and allocate the Rigid Body obje
 
 Rigid body objects and constraints are only taken into account by the simulation if they are in the groups specified in **Group** field of the **Rigid Body World** panel in the **Scene** context.
 
+### Activate
 
-| Entry | What it does |
-| ---------------------------------- | --------------------------------------------------------------------------------- |
-| Activate | In the header is a checkbox where you can enable or disable the Rigid Body World. |
-| Activate / Remove Rigid Body World | Activate or Remove Rigid Body simulation from the current scene. |
+In the header is a checkbox where you can enable or disable the Rigid Body World.
 
+### Activate / Remove Rigid Body World
+
+Activate or Remove Rigid Body simulation from the current scene.
 
 ### Settings
 
@@ -335,17 +357,33 @@ Rigid body objects and constraints are only taken into account by the simulation
 
 A sub menu with further settings.
 
+#### Animate Property
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Animate Property | The properties with an animate property at the right can be animated. Clicking at the button will set a keyframe at the current frame position. |
-| Collection | Containing rigid body objects participating in this simulation. |
-| Constraints | Containing rigid body object constraints participating in the simulation. |
-| Speed | Can be used to speed up/slow down the simulation. |
-| Split Impulse | Enable/disable reducing extra velocity that can build up when objects collide (lowers simulation stability a little so use only when necessary). Limits the force with which objects are separated on collision, generally produces nicer results, but makes the simulation less stable (especially when stacking many objects). |
-| Substeps Per Frame | Number of simulation steps made per frame (higher values are more accurate but slower). This only influences the accuracy and not the speed of the simulation. |
-| Solver Iterations | Amount of constraint solver iterations made per simulation step (higher values are more accurate but slower). Increasing this makes constraints and object stacking more stable. |
+The properties with an animate property at the right can be animated. Clicking at the button will set a keyframe at the current frame position.
 
+#### Collection
+
+Containing rigid body objects participating in this simulation.
+
+#### Constraints
+
+Containing rigid body object constraints participating in the simulation.
+
+#### Speed
+
+Can be used to speed up/slow down the simulation.
+
+#### Split Impulse
+
+Enable/disable reducing extra velocity that can build up when objects collide (lowers simulation stability a little so use only when necessary). Limits the force with which objects are separated on collision, generally produces nicer results, but makes the simulation less stable (especially when stacking many objects).
+
+#### Substeps Per Frame
+
+Number of simulation steps made per frame (higher values are more accurate but slower). This only influences the accuracy and not the speed of the simulation.
+
+#### Solver Iterations
+
+Amount of constraint solver iterations made per simulation step (higher values are more accurate but slower). Increasing this makes constraints and object stacking more stable.
 
 ### Cache
 
@@ -353,17 +391,33 @@ A sub menu with further settings.
 
 A sub menu with cache settings. The cache is getting used for animation.
 
+#### Simulation Start / End
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Simulation Start / End | First and last frame of the simulation. |
-| Bake | Calculates the simulation and protects the cache. You need to be in **Object** mode to bake. |
-| Calculate to Frame | Bake physics to current frame. |
-| Current Cache to Bake | Bake from Cache. |
-| Bake All Dynamics | Bake all physics. |
-| Delete All Bakes | Free all baked caches of all objects in the current scene. |
-| Update All To Frame | Update cache to current frame. If you haven’t saved the blend file, the cache is created in memory, so save your file first or the cache may be lost. |
+First and last frame of the simulation.
 
+#### Bake
+
+Calculates the simulation and protects the cache. You need to be in **Object** mode to bake.
+
+#### Calculate to Frame
+
+Bake physics to current frame.
+
+#### Current Cache to Bake
+
+Bake from Cache.
+
+#### Bake All Dynamics
+
+Bake all physics.
+
+#### Delete All Bakes
+
+Free all baked caches of all objects in the current scene.
+
+#### Update All To Frame
+
+Update cache to current frame. If you haven’t saved the blend file, the cache is created in memory, so save your file first or the cache may be lost.
 
 ### Field Weights
 

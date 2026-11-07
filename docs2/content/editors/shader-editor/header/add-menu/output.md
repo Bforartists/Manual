@@ -55,12 +55,13 @@ Shader AOVs (Arbitrary Output Variables) provide custom render passes for arbitr
 
 > **Tip:** The AOV Output node can be used in Material and World shader nodes.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Color**: Output a color variable; as the name suggest can be used for a color but also a normal value. · **Value**: Output a single numerical value. |
-| Properties | **Name**: The name of the render pass to assign the input value to. This property is the same Name that is specified in the Shader AOV panel. |
+**Color**: Output a color variable; as the name suggest can be used for a color but also a normal value. · **Value**: Output a single numerical value.
 
+#### Properties
+
+**Name**: The name of the render pass to assign the input value to. This property is the same Name that is specified in the Shader AOV panel.
 
 ### Material Output
 
@@ -70,14 +71,21 @@ The Material Output node is used to output surface material information to a sur
 
 #### Inputs
 
+##### Surface
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Surface | Shading for the surface of the object. |
-| Volume | Shading for the volume inside the object. The types of volume shaders are: Emission shader. Volume Absorption shader. Volume Scatter shader. |
-| Displacement | Used to create bump mapping or actual subdivided displacement. |
-| Thickness | Used to give a geometry a thickness by shader. |
+Shading for the surface of the object.
 
+##### Volume
+
+Shading for the volume inside the object. The types of volume shaders are: Emission shader. Volume Absorption shader. Volume Scatter shader.
+
+##### Displacement
+
+Used to create bump mapping or actual subdivided displacement.
+
+##### Thickness
+
+Used to give a geometry a thickness by shader.
 
 #### Properties
 
@@ -117,13 +125,17 @@ Shader type World. The World Output node is used to output light and color infor
 
 #### Inputs
 
+##### Surface
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Surface | The appearance of the environment, usually preceded by a Background shader. |
-| Volume | Used to add volumetric effects to the world. See the shaders Volume Absorption and Volume Scatter for more information. |
-| Note | It is not possible to have an HDR and volumetric due to the fact that HDR’s are assumed to be an infinite distance from the camera. |
+The appearance of the environment, usually preceded by a Background shader.
 
+##### Volume
+
+Used to add volumetric effects to the world. See the shaders Volume Absorption and Volume Scatter for more information.
+
+##### Note
+
+It is not possible to have an HDR and volumetric due to the fact that HDR’s are assumed to be an infinite distance from the camera.
 
 #### Properties
 
@@ -139,12 +151,13 @@ What render engine to use. By default shaders are shared between Cycles and Eeve
 
 Shader Type Line Style
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Color**: The input color. · **Color factor**: The factor for the color. · **Alpha**: Alpha channel information. · **Alpha Factor**: The factor for the alpha channel. |
-| Properties | **Blending Mode**: Choose the Blending mode. · **Clamp**: Clamp the result to the range between 0 and 1. |
+**Color**: The input color. · **Color factor**: The factor for the color. · **Alpha**: Alpha channel information. · **Alpha Factor**: The factor for the alpha channel.
 
+#### Properties
+
+**Blending Mode**: Choose the Blending mode. · **Clamp**: Clamp the result to the range between 0 and 1.
 
 #### Properties
 

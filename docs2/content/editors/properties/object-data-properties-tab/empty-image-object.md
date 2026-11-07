@@ -36,14 +36,21 @@ The size of the graphical element.
 
 Empties can display images. This images can be used to create reference images to model along. The image is always displayed, independent of the 3D display mode.
 
+##### Offset X, Y
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Offset X, Y | Offset the image origin. 1.0 represents the width/height of the image. |
-| Depth | **Default**: Use normal depth behavior. · **Front**: Always display on top of other objects. · **Back**: Always display behind of other objects. |
-| Side | **Both**: Display both the front and back of the empty. · **Front**: Only display the front of the image. · **Back**: Only display the back of the image. |
-| Show in | **Orthographic**: Show in orthographic view. · **Perspective**: Show in perspective view. · **Only Axis Aligned**: Only displays the image contents when the view is aligned with the object’s local axis. · **Opacity**: The opacity. Use alpha blending instead of alpha test. |
+Offset the image origin. 1.0 represents the width/height of the image.
 
+##### Depth
+
+**Default**: Use normal depth behavior. · **Front**: Always display on top of other objects. · **Back**: Always display behind of other objects.
+
+##### Side
+
+**Both**: Display both the front and back of the empty. · **Front**: Only display the front of the image. · **Back**: Only display the back of the image.
+
+##### Show in
+
+**Orthographic**: Show in orthographic view. · **Perspective**: Show in perspective view. · **Only Axis Aligned**: Only displays the image contents when the view is aligned with the object’s local axis. · **Opacity**: The opacity. Use alpha blending instead of alpha test.
 
 ## Image panel
 
@@ -71,12 +78,13 @@ When no image is loaded the open button is displayed. Open an image opens the fi
 
 The name of the currently active image.
 
+##### Fake User
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------- |
-| Fake User | Keep this image in the scene even if it has no user. |
-| Open Image | Open image opens the file browser to load an image. |
+Keep this image in the scene even if it has no user.
 
+##### Open Image
+
+Open image opens the file browser to load an image.
 
 ### Source
 
@@ -92,14 +100,21 @@ What image type to choose.
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
 
 ##### Color Space
 
@@ -117,24 +132,45 @@ Choose the color space type for the movie or image sequence files.
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
 
 ##### Color Space
 

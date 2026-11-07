@@ -70,14 +70,10 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Shear
 
@@ -111,12 +107,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -124,14 +116,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -162,14 +150,10 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -342,14 +326,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Clear Roll
 
@@ -395,12 +375,8 @@ The transform values for the new created joint(s)
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude to Cursor
 
@@ -455,14 +431,10 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Fill between Joints
 
@@ -472,12 +444,13 @@ Fill between joints fills a bone between two selected joints.
 
 When there is just one joint selected, then the bone is created between this selected joint and the 3D cursor.
 
+##### Split
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Split | Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. The Last operator for Split has no content. |
-| Separate Bones | Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. The Last operator for Separate has no content. |
+Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. The Last operator for Split has no content.
 
+##### Separate Bones
+
+Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. The Last operator for Separate has no content.
 
 #### Symmetrize
 
@@ -525,12 +498,13 @@ Switches the direction in which the selected bones are pointing.
 
 Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependant at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.
 
+##### Autoname Left/Right
 
-| Entry | What it does |
-| ------------------- | ------------------------------------- |
-| Autoname Left/Right | Renames the bones from left to right. |
-| Autoname Front/Back | Renames the bones from front to back. |
+Renames the bones from left to right.
 
+##### Autoname Front/Back
+
+Renames the bones from front to back.
 
 ##### Autoname Top/Bottom
 
@@ -574,12 +548,13 @@ Bone Collections is a menu to handle bone collection functionality from within a
 
 Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Bone Collections – Sub Menu
 
@@ -593,12 +568,13 @@ Armature and bones has its own collection system.
 
 Add or remove the bone from the listed bone collections. The green + icon and red – icon show if you can remove or add a bone to the listed collection. A bone can be in multiple collections at the same time.
 
+###### New
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+###### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 ##### Show All
 
@@ -654,12 +630,13 @@ Choose between Connected and Keep Offset method again.
 
 Clears the parent relationship of the selected bone(s). It calls a pop-up menu. Choose between two methods.
 
+##### Clear Parent
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Parent | Clears the parent relationship of the selected bone(s). |
-| Disconnect Bone | The parent ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it. |
+Clears the parent relationship of the selected bone(s).
 
+##### Disconnect Bone
+
+The parent ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it.
 
 ##### Adjust Last Operation - Clear Parent
 
@@ -689,13 +666,17 @@ Each of the menu items uses the same Last Operator. With different strings for t
 
 Show or hide the selected bones in the viewport.
 
+##### Show Hidden
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------- |
-| Show Hidden | Makes all bones visible again. |
-| Hide Selected | Hides the selected bones. |
-| Hide Unselected | Hides the not selected bones. The selected bones stays visible. |
+Makes all bones visible again.
 
+##### Hide Selected
+
+Hides the selected bones.
+
+##### Hide Unselected
+
+Hides the not selected bones. The selected bones stays visible.
 
 #### Delete Selected Bone(s)
 
@@ -731,12 +712,13 @@ The tweak, select, 3D cursor and transform tools and the annotation and measure 
 
 Adjust the bone roll of the selected bone(s).
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Rotate and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Rotate and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ##### Header Values
 
@@ -754,12 +736,8 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Transform
 
@@ -792,14 +770,10 @@ Enable Mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bone Size / Envelope Tools group
 
@@ -817,12 +791,13 @@ This tool just works with bone display type Bbone. With other bone display types
 
 The bone display can be changed in the properties editor in the Object Data tab in the Viewport Display panel.
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ###### Header Values
 
@@ -840,12 +815,8 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Transform
 
@@ -878,13 +849,9 @@ Enable Mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
 
 ###### Projected(2D)
 
@@ -902,12 +869,13 @@ This tool just works with bone display type Bbone. With other bone display types
 
 The bone display can be changed in the properties editor in the Object Data tab in the Viewport Display panel.
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ###### Header Values
 
@@ -925,12 +893,8 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Transform
 
@@ -963,14 +927,10 @@ Enable Mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Tools group
 
@@ -980,12 +940,13 @@ This group contains some extrude tools.
 
 There are some general settings, since they all have some move settings We will cover them all here for all of the tools.
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ##### Header Values
 
@@ -1041,12 +1002,8 @@ Or you can use the XYZ axis type. That's a handler with three axis. This widget 
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Extrude
 
@@ -1108,12 +1065,8 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ###### Adjust Last Operation - Shear
 
@@ -1134,12 +1087,8 @@ Change the settings of **Shear** right after you use it, in the Adjust Last Oper
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable Mirror Editing |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable Mirror Editing
 
 ###### Proportional editing
 
@@ -1147,13 +1096,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 # Context Menus
 
@@ -1210,12 +1156,8 @@ Change the settings of **Duplicate** right after you use it, in the Adjust Last 
 
 Orientation is a drop-down box choose the type of orientation for the duplicate action.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude
 
@@ -1245,12 +1187,8 @@ The transform values for the new created joint(s)
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ###### Fill between Joints
 
@@ -1266,12 +1204,13 @@ When there is just one joint selected, then the bone is created between this sel
 
 Mirror mirrors the selected geometry along the defined axis.
 
+##### Interactive Mirror
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Interactive Mirror | Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored. |
-| X Global, Y Global etc. | Mirrors the selection around the chosen axis. |
+Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.
 
+##### X Global, Y Global etc.
+
+Mirrors the selection around the chosen axis.
 
 ##### Adjust Last Operation - Mirror
 
@@ -1337,12 +1276,13 @@ Define the calculation direction. From -X to + X or from +X to -X
 
 Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependent at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.
 
+##### Autoname Left/Right
 
-| Entry | What it does |
-| ------------------- | ------------------------------------- |
-| Autoname Left/Right | Renames the bones from left to right. |
-| Autoname Front/Back | Renames the bones from front to back. |
+Renames the bones from left to right.
 
+##### Autoname Front/Back
+
+Renames the bones from front to back.
 
 ##### Autoname Top/Bottom
 
@@ -1410,12 +1350,13 @@ Choose between Connected and Keep Offset method again.
 
 Clears the parent relationship of the selected bone(s). It calls a popup menu choose between two methods.
 
+##### Clear Parent
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Parent | Clears the parent relationship of the selected bone(s). |
-| Disconnect Bone | The parent-ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it. |
+Clears the parent relationship of the selected bone(s).
 
+##### Disconnect Bone
+
+The parent-ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it.
 
 ##### Adjust Last Operation - Clear Parent
 
@@ -1427,12 +1368,8 @@ Change the settings of **Clear Parent** right after you use it, in the Adjust La
 
 Choose between Clear Parent and Disconnect Bone method again.
 
-
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Split | Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. |
-| Separate Bones | Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. |
-
+- **Split**: Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around.
+- **Separate Bones**: Separate separates the selected bone(s) from the armature. And creates a new, independent, armature.
 
 #### Move to Bone Collection
 
@@ -1440,12 +1377,13 @@ Choose between Clear Parent and Disconnect Bone method again.
 
 Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Show/Hide sub menu
 

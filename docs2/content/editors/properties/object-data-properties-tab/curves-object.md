@@ -26,13 +26,17 @@ The Curves Object Data Properties tab provides access to the attributes, surface
 
 The header of the Curves Object Data Properties tab provides the identity and management controls for the active curve data. It is the entry point for working with curves objects, allowing you to pin, rename, and set curves data before diving into attributes, surface bindings, and animation.
 
+#### Data Name/Selector
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Data Name/Selector | Displays the name of the active curve data. Can be renamed directly in the field to organize curve objects in the project. Acts as the identifier for linking and referencing curves across Blender. |
-| Pin Icon | Locks the panel to the current curve data. Prevents the panel from switching when another object is selected. Useful for editing curve data while navigating between different objects in the scene. |
-| Shield Icon (Fake User) | Ensures the curve data is saved even if no object is using it. Prevents accidental loss of curve data when closing Blender. Commonly used for reusable curve assets like hair systems or procedural strands. |
+Displays the name of the active curve data. Can be renamed directly in the field to organize curve objects in the project. Acts as the identifier for linking and referencing curves across Blender.
 
+#### Pin Icon
+
+Locks the panel to the current curve data. Prevents the panel from switching when another object is selected. Useful for editing curve data while navigating between different objects in the scene.
+
+#### Shield Icon (Fake User)
+
+Ensures the curve data is saved even if no object is using it. Prevents accidental loss of curve data when closing Blender. Commonly used for reusable curve assets like hair systems or procedural strands.
 
 ## Attributes Panel
 
@@ -62,16 +66,29 @@ The panel includes operators such as **Convert Attribute**, which allows changin
 
 The Attributes panel lists and manages the data fields associated with a curve object. These attributes define how curves behave, store information, and interact with surfaces, shaders, and procedural systems. Each attribute has a domain (Point or Spline) and a data type (Vector, Integer, 2D Vector), which determine how the data is applied and interpreted.
 
+#### position
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| position | Point domain, Vector type. Represents the spatial coordinates of each curve point. |
-| UVMap | Spline domain, 2D Vector type. Stores UV coordinates for mapping textures along curves. |
-| rest_position | Spline domain, Vector type. Captures the original undeformed position of curve points, useful for simulations. |
-| surface_uv_coordinate | Spline domain, Vector type. Provides UV coordinates relative to the bound surface. |
-| id | Point domain, Integer type. Unique identifier for each curve point, ensuring stable references in procedural workflows. |
-| surface_normal | Spline domain, Vector type. Stores the normal direction of the surface at curve attachment points. Operators such as **Convert Attribute** allow changing the data type or domain of attributes for compatibility with other nodes or modifiers. |
+Point domain, Vector type. Represents the spatial coordinates of each curve point.
 
+#### UVMap
+
+Spline domain, 2D Vector type. Stores UV coordinates for mapping textures along curves.
+
+#### rest_position
+
+Spline domain, Vector type. Captures the original undeformed position of curve points, useful for simulations.
+
+#### surface_uv_coordinate
+
+Spline domain, Vector type. Provides UV coordinates relative to the bound surface.
+
+#### id
+
+Point domain, Integer type. Unique identifier for each curve point, ensuring stable references in procedural workflows.
+
+#### surface_normal
+
+Spline domain, Vector type. Stores the normal direction of the surface at curve attachment points. Operators such as **Convert Attribute** allow changing the data type or domain of attributes for compatibility with other nodes or modifiers.
 
 ## Surface
 
@@ -79,12 +96,13 @@ The Attributes panel lists and manages the data fields associated with a curve o
 
 Defines the relationship between the curves object and its parent mesh surface.
 
+### Surface
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Surface | Specifies the mesh object to which the curves are bound. This ensures curves follow the topology of the parent surface. |
-| UV Map | Determines which UV map from the parent mesh is used for curve placement and texture alignment. This section is critical for hair and fiber systems, as it ensures curves are distributed, deforms and shades consistently across the surface. |
+Specifies the mesh object to which the curves are bound. This ensures curves follow the topology of the parent surface.
 
+### UV Map
+
+Determines which UV map from the parent mesh is used for curve placement and texture alignment. This section is critical for hair and fiber systems, as it ensures curves are distributed, deforms and shades consistently across the surface.
 
 ## Animation
 
@@ -94,12 +112,13 @@ The Animation panel manages animation data linked to Curves objects. It provides
 
 ### Properties / Input
 
+#### Action
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Action | Represents an animation clip data containing keyframes for the Curves attributes. Can be selected, created, renamed, or deleted directly from the panel. Includes controls for protecting the data (Fake User shield icon), adding new actions (plus button), or removing them (X button). |
-| Slots | Lists the animation slot associated with the action clip. You can use a selection, display and change the name of the slot, duplicate the slot and remove the Curves object from the slot. |
+Represents an animation clip data containing keyframes for the Curves attributes. Can be selected, created, renamed, or deleted directly from the panel. Includes controls for protecting the data (Fake User shield icon), adding new actions (plus button), or removing them (X button).
 
+#### Slots
+
+Lists the animation slot associated with the action clip. You can use a selection, display and change the name of the slot, duplicate the slot and remove the Curves object from the slot.
 
 ## Custom Properties
 
@@ -115,10 +134,10 @@ Here you might also find custom properties from addons or scripts.
 
 Adds a new property.
 
+#### Edit
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------ |
-| Edit | Opens a panel where you can adjust the settings for the custom property. |
-| Remove | Removes the property. |
+Opens a panel where you can adjust the settings for the custom property.
 
+#### Remove
 
+Removes the property.
