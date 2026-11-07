@@ -2,7 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Drivers Editor · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
@@ -31,7 +32,8 @@ a{color:var(--dk-link)}
 .pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
 @media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
-</style><script>
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
 </script></head>
@@ -39,9 +41,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
 <div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
 <span>Getting Started</span>
-<span>Introduction</span>
-<a href="../getting-started/about-documentation.html">Using the Documentation</a>
-<span>Installation</span>
+<a href="../getting-started/introduction.html">Introduction</a>
+<span>Using the Documentation</span>
+<a href="../getting-started/installation.html">Installation</a>
 <span>Quick Start</span>
 <span>Data Structure</span>
 <span>Comparison with Blender</span>
@@ -57,10 +59,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Tool Shelves</span>
 <span>Side Bars</span>
 <span>Tabs &amp; Panels</span>
-<span>Properties</span>
+<a href="../interface/properties.html">Properties</a>
 <span>Asset Shelves</span>
 <span>Context Menus</span>
-<a href="../interface/floating-menus.html">Floating Menus</a>
+<span>Floating Menus</span>
 <span>Pie Menus</span>
 <span>Last Operator Panel</span>
 <span>Floating Dialogues</span>
@@ -106,23 +108,23 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a style="padding-left:2.5rem" href="3d-viewport/object-mode/header.html">Header</a>
 <a style="padding-left:2.5rem" href="3d-viewport/point-cloud/edit.html">Edit Mode</a>
 <a style="padding-left:2.5rem" href="3d-viewport/text/edit.html">Edit Mode</a>
-<a style="padding-left:3.5rem" href="compositor/header/add-menu/input.html">Input</a>
-<a style="padding-left:1.5rem" href="compositor/header.html">Header</a>
-<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="drivers-editor/header.html">Header</a>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/input.html">Input</a>
-<a style="padding-left:1.5rem" href="geometry-node-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="graph-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="image-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="movie-clip-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
 <span style="padding-left:1.5rem">Render</span>
 <span style="padding-left:3.5rem">Input</span>
-<a style="padding-left:1.5rem" href="shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="timeline/header.html">Header</a>
 <span>Topbar and Statusbar</span>
 <a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
-<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
 <span style="padding-left:2.5rem">Tool Shelf</span>
 <a style="padding-left:2.5rem" href="3d-viewport/armature/pose.html">Pose Mode</a>
@@ -140,35 +142,35 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a style="padding-left:1.5rem" href="image-editor/tool-shelf.html">Tool Shelf</a>
 <span>Editors introduction</span>
 <a style="padding-left:1.5rem" href="movie-clip-editor/tool-shelf.html">Tool Shelf</a>
-<span style="padding-left:1.5rem">Output</span>
+<a style="padding-left:1.5rem" href="properties/output-properties-tab.html">Output</a>
 <span style="padding-left:3.5rem">Output</span>
 <span style="padding-left:1.5rem">Tool Shelf</span>
 <a style="padding-left:1.5rem" href="uv-editor/tool-shelf.html">Tool Shelf</a>
 <span style="padding-left:1.5rem">Tool Shelf</span>
 <span style="padding-left:3.5rem">Quick Menu</span>
-<span style="padding-left:2.5rem">Sidebar</span>
-<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
 <a href="3d-viewport.html">3D Viewport</a>
 <span style="padding-left:3.5rem">Sidebar</span>
 <span style="padding-left:1.5rem">Mesh</span>
-<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
 <a style="padding-left:2.5rem" href="3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
 <span style="padding-left:2.5rem">Sidebar</span>
 <a style="padding-left:3.5rem" href="compositor/header/add-menu/color.html">Color</a>
-<a style="padding-left:1.5rem" href="compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
 <span style="padding-left:1.5rem">Sidebar</span>
 <a style="padding-left:1.5rem" href="drivers-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:3.5rem">Attribute</span>
 <a style="padding-left:1.5rem" href="geometry-node-editor/sidebar.html">Sidebar</a>
 <a style="padding-left:1.5rem" href="graph-editor/sidebar.html">Sidebar</a>
 <a style="padding-left:1.5rem" href="image-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="movie-clip-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
 <a style="padding-left:1.5rem" href="nonlinear-animation-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:1.5rem">View Layer</span>
-<span style="padding-left:3.5rem">Shader</span>
-<a style="padding-left:1.5rem" href="shader-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="uv-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
 <span style="padding-left:2.5rem">Context Menus</span>
 <a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
 <span style="padding-left:1.5rem">Curve and Surface</span>
@@ -177,24 +179,24 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Context Menus</span>
 <a style="padding-left:2.5rem" href="3d-viewport/mesh/weight-paint.html">Weight Paint</a>
 <a style="padding-left:2.5rem" href="3d-viewport/object-mode/context-menus.html">Context Menus</a>
-<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/creative.html">Creative</a>
 <span style="padding-left:1.5rem">Channel List</span>
 <span style="padding-left:1.5rem">Channel List</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:3.5rem">Geometry</span>
 <span style="padding-left:1.5rem">Channel List</span>
 <a href="image-editor.html">Image Editor</a>
 <span style="padding-left:1.5rem">Channel List</span>
 <span style="padding-left:1.5rem">Scene</span>
-<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/color.html">Color</a>
 <span style="padding-left:1.5rem">Channel List</span>
-<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:3.5rem">View Menu</span>
 <span style="padding-left:2.5rem">More</span>
 <a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
-<span style="padding-left:2.5rem">Texture Paint</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/texture-paint.html">Texture Paint</a>
 <span style="padding-left:1.5rem">Metaball</span>
-<a style="padding-left:3.5rem" href="compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:3.5rem">Filter</span>
 <span style="padding-left:1.5rem">Footer</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:3.5rem">Curve</span>
 <span style="padding-left:1.5rem">Footer</span>
 <span style="padding-left:1.5rem">Footer</span>
 <span style="padding-left:1.5rem">World</span>
@@ -202,19 +204,19 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:1.5rem">Footer</span>
 <a style="padding-left:2.5rem" href="3d-viewport/mesh/particle-edit.html">Particle Edit</a>
 <span style="padding-left:1.5rem">Text</span>
-<span style="padding-left:3.5rem">Keying</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
 <span style="padding-left:1.5rem">Collection</span>
-<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:1.5rem">Lattice</span>
-<span style="padding-left:3.5rem">Mask</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/mask.html">Mask</a>
 <span style="padding-left:3.5rem">Instances</span>
-<span style="padding-left:1.5rem">Object</span>
+<a style="padding-left:1.5rem" href="properties/object-properties-tab.html">Object</a>
 <span style="padding-left:3.5rem">Group</span>
 <span style="padding-left:1.5rem">Armature</span>
 <span style="padding-left:3.5rem">Tracking</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
-<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="properties/modifiers.html">Modifiers</a>
 <span style="padding-left:3.5rem">Layout</span>
 <a href="uv-editor.html">UV Editor</a>
 <span style="padding-left:1.5rem">Grease Pencil</span>
@@ -222,25 +224,25 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Point</span>
 <span style="padding-left:1.5rem">Visual Effects</span>
 <span style="padding-left:1.5rem">Hair Curves</span>
-<span style="padding-left:3.5rem">Transform</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
 <span style="padding-left:1.5rem">Particles</span>
 <span style="padding-left:1.5rem">Point Cloud</span>
-<a style="padding-left:3.5rem" href="compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:3.5rem">Simulation</span>
 <span style="padding-left:1.5rem">Physics</span>
 <span style="padding-left:3.5rem">Layout</span>
 <span>Compositor</span>
-<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/color.html">Color</a>
 <span style="padding-left:1.5rem">Object Data</span>
 <span style="padding-left:3.5rem">Texture</span>
-<span style="padding-left:1.5rem">Object Constraints</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="properties/object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:1.5rem">Bone</span>
 <span style="padding-left:3.5rem">Generate</span>
 <span style="padding-left:1.5rem">Bone Constraints</span>
-<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
-<span style="padding-left:1.5rem">Material</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="properties/material-properties-tab.html">Material</a>
 <span>Texture Node Editor</span>
 <span style="padding-left:3.5rem">Normals</span>
 <span>Geometry Node Editor</span>
@@ -250,7 +252,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Layout</span>
 <span style="padding-left:1.5rem">Strip Modifiers</span>
 <span>Shader Editor</span>
-<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<span>Video Sequence Editor</span>
 <a href="movie-clip-editor.html">Movie Clip Editor</a>
 <span>Dope Sheet</span>
 <span>Timeline</span>
@@ -258,30 +260,30 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a class="is-current" href="drivers-editor.html">Drivers Editor</a>
 <span>Nonlinear Animation Editor</span>
 <span>Text Editor</span>
-<span>Python Console</span>
+<a href="python-console.html">Python Console</a>
 <span>Info Editor</span>
-<a href="toolbar.html">Toolbar</a>
+<span>Toolbar</span>
 <a href="outliner.html">Outliner</a>
 <span>Properties Editor</span>
-<span style="padding-left:2.5rem">Cycles</span>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/cycles.html">Cycles</a>
 <span style="padding-left:2.5rem">EEVEE</span>
 <span style="padding-left:2.5rem">Workbench</span>
 <span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
-<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
 <span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
-<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<a style="padding-left:2.5rem" href="properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
 <span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Emitter</span>
-<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
 <span style="padding-left:2.5rem">Emitter - Cache Panel</span>
 <span style="padding-left:2.5rem">Emitter - Velocity panel</span>
 <span style="padding-left:2.5rem">Emitter - Rotation panel</span>
-<span style="padding-left:2.5rem">Emitter - Physics panel</span>
-<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
 <span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
 <span style="padding-left:2.5rem">Emitter - Children panel</span>
 <span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
@@ -292,12 +294,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Emitter - Animation panel</span>
 <span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
 <span style="padding-left:2.5rem">Hair</span>
-<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
 <span style="padding-left:2.5rem">Hair - Cache Panel</span>
 <span style="padding-left:2.5rem">Hair - Velocity panel</span>
 <span style="padding-left:2.5rem">Hair - Rotation panel</span>
-<span style="padding-left:2.5rem">Hair - Physics panel</span>
-<span style="padding-left:2.5rem">Hair - Render panel</span>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
 <span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
 <span style="padding-left:2.5rem">Hair - Children panel</span>
 <span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
@@ -312,7 +314,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Cloth panel</span>
 <span style="padding-left:2.5rem">Dynamic Paint panel</span>
 <span style="padding-left:2.5rem">Soft Body panel</span>
-<span style="padding-left:2.5rem">Fluid panel</span>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
 <span style="padding-left:2.5rem">Rigid Body panel</span>
 <span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
 <span style="padding-left:2.5rem">Mesh Object</span>
@@ -323,7 +325,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Point Cloud Object</span>
 <span style="padding-left:2.5rem">Text Object</span>
 <span style="padding-left:2.5rem">Grease Pencil Object</span>
-<span style="padding-left:2.5rem">Armature Object</span>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/armature-object.html">Armature Object</a>
 <span style="padding-left:2.5rem">Lattice Object</span>
 <span style="padding-left:2.5rem">Empty&amp;Image Object</span>
 <span style="padding-left:2.5rem">Speaker Object</span>
@@ -344,7 +346,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4>Assets</h4>
 <span>Assets</span>
 <span>Essentials Library</span>
-<span>Default Library</span>
+<a href="../assets/default-library.html">Default Library</a>
 <span>Compositor Library</span>
 <span>Geometry Nodes Library</span>
 <span>Shader Library</span>
@@ -364,7 +366,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4>Advanced</h4>
 <span>Advanced</span>
 <span>Command Line</span>
-<span>Scripting</span>
+<a href="../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
 <span>Working Limits</span>
 <span>Troubleshooting</span>
 <span>Reporting a Bug</span>
@@ -376,32 +378,32 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Documentation History</span>
 <span>About the GPL License</span>
 <span>The Community Influences</span>
-<span>Glossary</span>
+<a href="../appendix/glossary.html">Glossary</a>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Drivers Editor</div><h1 class="pv-title">Drivers Editor</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="drivers-editor">Drivers Editor</h2>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Drivers Editor</div><h1 class="pv-title">Drivers Editor</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="drivers-editor">Drivers Editor</h2>
 <p>Drivers are a way to control values or properties by other values or properties. This is done by expressions. As an example, you can use the Y rotation of a sphere to control the X movement of a cube. The rotation of the sphere drives the cube then.</p>
 <p>The Drivers Editor is the place to adjust the settings for drivers.</p>
 <p>The Drivers editor has several areas.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/drivers-editor.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/drivers-editor.png" alt="Drivers Editor" loading="lazy"></figure>
 <ul>
 <li><strong>Header</strong> (yellow)</li>
 </ul>
 <p>Channel list ( Green ).</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/drivers-editor-2.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/drivers-editor-2.png" alt="Drivers Editor" loading="lazy"></figure>
 <p>Sidebar ( Blue ). The sidebar needs to be revealed, which can be done by clicking at the small triangle button up right.</p>
 <p><strong>Viewport</strong> (no color)</p>
 <p>The header is divided into two parts. Left tools and menus. Right Options.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/drivers-editor-3.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/drivers-editor-3.png" alt="Drivers Editor" loading="lazy"></figure>
 <ul>
 <li><strong>Menus</strong> (green)</li>
 <li><strong>Options</strong> (yellow)</li>
 </ul>
 <h3 id="time-cursor">Time cursor</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/time-cursor.png" alt="Time cursor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/time-cursor.png" alt="Time cursor" loading="lazy"></figure>
 <p>The Time Cursor is the green slider at the top. It is used to set and display the current time frame.</p>
 <h3 id="f-curves">F-Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/f-curves.png" alt="F-Curves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/f-curves.png" alt="F-Curves" loading="lazy"></figure>
 <p>The timeline displays the function curves for the driver. This curve is controlled by the expression. But this curve can also be manipulated in various ways like any other F-Curve. Note that manipulating the curve does not manipulate the expression. It adds on top of it. And there is no way to reset it but create the driver from scratch. So be careful with manipulations.</p>
 <h3 id="handles">Handles</h3>
 <p>Every curve point has handles assigned. The curve can be manipulated by dragging these handlers. You can also change the handle type in the Keyframe Handle Type menu in the header. To make the curve sharp at this keyframe for example.</p>
@@ -414,7 +416,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Scroll Wheel zooms the view.</p>
 <p>To manipulate a curve point, grab one of its handlers and drag.</p>
 <h2 id="channel-context-menu">Channel Context Menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/channel-context-menu.png" alt="Channel Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/channel-context-menu.png" alt="Channel Context Menu" loading="lazy"></figure>
 <p>When you right click into the channel area, then you will call the Dope Sheet Channel context menu.</p>
 <table class="ui-doc-table">
 <thead>
@@ -467,7 +469,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="extrapolation-mode">Extrapolation Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
 <p>Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.</p>
 <table class="ui-doc-table">
 <thead>
@@ -526,7 +528,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="move-submenu">Move submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/move-submenu.png" alt="Move submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/move-submenu.png" alt="Move submenu" loading="lazy"></figure>
 <p>Sort the order of the channels. The menu items should be self explaining.</p>
 <table class="ui-doc-table">
 <thead>
@@ -547,7 +549,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="f-curve-context-menu">F-Curve Context Menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/f-curve-context-menu.png" alt="F-Curve Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/f-curve-context-menu.png" alt="F-Curve Context Menu" loading="lazy"></figure>
 <p>When you double right click into the viewport then you will call the F-Curve context menu.</p>
 <table class="ui-doc-table">
 <thead>
@@ -570,39 +572,43 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="paste-flipped">Paste Flipped</h3>
 <p>Pastes copied curve point(s), but flipped.</p>
 <h4 id="adjust-last-operation-paste-keyframes-flipped">Adjust Last Operation - Paste Keyframes / Flipped</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png" alt="Last operator Paste Keyframes / Flipped" loading="lazy"><figcaption>Last operator Paste Keyframes / Flipped</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png" alt="Last operator Paste Keyframes / Flipped" loading="lazy"><figcaption>Last operator Paste Keyframes / Flipped</figcaption></figure>
+<p>Change the settings of <strong>Paste Keyframes / Flipped</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="frame-offset">Frame Offset</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/frame-offset.png" alt="Frame Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/frame-offset.png" alt="Frame Offset" loading="lazy"></figure>
 <p>Define a time offset to paste the keys.</p>
 <h5 id="value-offset">Value Offset</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/value-offset.png" alt="Value Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/value-offset.png" alt="Value Offset" loading="lazy"></figure>
 <p>Define a value offset to paste the keys.</p>
 <h5 id="type">Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/type.png" alt="Type" loading="lazy"></figure>
 <p>The paste method.</p>
 <h5 id="flipped">Flipped</h5>
 <p>Paste copied curve point(s) flipped.</p>
 <h3 id="handle-type">Handle Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/handle-type.png" alt="Handle Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/handle-type.png" alt="Handle Type" loading="lazy"></figure>
 <p>Set the handle type for the currently selected curve point.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/handle-type-2.png" alt="Handle Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/handle-type-2.png" alt="Handle Type" loading="lazy"></figure>
 <h4 id="adjust-last-operation-set-keyframe-handle-type">Adjust Last Operation - Set Keyframe Handle Type</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png" alt="Last Operator Set Keyframe Handle Type" loading="lazy"><figcaption>Last Operator Set Keyframe Handle Type</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png" alt="Last Operator Set Keyframe Handle Type" loading="lazy"><figcaption>Last Operator Set Keyframe Handle Type</figcaption></figure>
+<p>Change the settings of <strong>Set Keyframe Handle Type</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="type-2">Type</h5>
 <p>Set the handle type for the currently selected curve point.</p>
 <h3 id="interpolation-mode">Interpolation Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/interpolation-mode.png" alt="Interpolation Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/interpolation-mode.png" alt="Interpolation Mode" loading="lazy"></figure>
 <p>The Interpolation mode defines how the curve acts from keyframe to keyframe. You can have a linear curve between two keyframes instead of a bent one for example.</p>
 <p>The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.</p>
 <h4 id="adjust-last-operation-set-keyframe-interpolation">Adjust Last Operation - Set Keyframe Interpolation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
+<p>Change the settings of <strong>Set Keyframe Interpolation</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="type-3">Type</h5>
 <p>Set the interpolation mode.</p>
 <h3 id="easing-mode">Easing Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
 <p>The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.</p>
 <h4 id="adjust-last-operation-set-keyframe-easing-type">Adjust Last Operation - Set Keyframe Easing Type</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png" alt="Last Operator Set Keyframe Easing Type" loading="lazy"><figcaption>Last Operator Set Keyframe Easing Type</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png" alt="Last Operator Set Keyframe Easing Type" loading="lazy"><figcaption>Last Operator Set Keyframe Easing Type</figcaption></figure>
+<p>Change the settings of <strong>Set Keyframe Easing Type</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="type-4">Type</h5>
 <p>Set the easing type.</p>
 <h3 id="insert-keyframes">Insert Keyframes</h3>
@@ -610,7 +616,8 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="duplicate">Duplicate</h3>
 <p>Duplicate the selected curve point(s).</p>
 <h4 id="adjust-last-operation-duplicate">Adjust Last Operation - Duplicate</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<p>Change the settings of <strong>Duplicate</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -634,12 +641,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="orientation">Orientation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/orientation.png" alt="Orientation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/orientation.png" alt="Orientation" loading="lazy"></figure>
 <p>These values have no effect.</p>
 <h5 id="mirror-editing">Mirror Editing</h5>
 <p>Enable Mirror Editing.</p>
 <h5 id="proportional-editing">Proportional editing</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
 <p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
 <table class="ui-doc-table">
 <thead>
@@ -670,34 +677,36 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="delete-keyframes">Delete Keyframes</h3>
 <p>Delete the selected curve point(s).</p>
 <h3 id="mirror-submenu">Mirror submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/mirror-submenu.png" alt="Mirror submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/mirror-submenu.png" alt="Mirror submenu" loading="lazy"></figure>
 <p>Mirrors the animation by the given method.</p>
 <h4 id="adjust-last-operation-mirror-keys">Adjust Last Operation - Mirror Keys</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png" alt="Last Operator Mirror Keys" loading="lazy"><figcaption>Last Operator Mirror Keys</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png" alt="Last Operator Mirror Keys" loading="lazy"><figcaption>Last Operator Mirror Keys</figcaption></figure>
+<p>Change the settings of <strong>Mirror Keys</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="type-5">Type</h5>
 <p>Flips the selected keyframes over the current frame position by the chosen method.</p>
 <h3 id="snap-submenu">Snap submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/snap-submenu.png" alt="Snap submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/snap-submenu.png" alt="Snap submenu" loading="lazy"></figure>
 <p>Snaps the selected keyframes by the given method.</p>
 <h4 id="adjust-last-operation-snap-keys">Adjust Last Operation - Snap Keys</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/last-operator-snap-keys.png" alt="Last Operator Snap Keys" loading="lazy"><figcaption>Last Operator Snap Keys</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/last-operator-snap-keys.png" alt="Last Operator Snap Keys" loading="lazy"><figcaption>Last Operator Snap Keys</figcaption></figure>
+<p>Change the settings of <strong>Snap Keys</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h5 id="type-6">Type</h5>
 <p>Snaps the selected keyframes by the chosen method.</p>
 <h2 id="slider-snapping">Slider snapping</h2>
 <blockquote>
-<p>Hold <strong>Ctrl</strong> while dragging a slider to snap it. See <strong><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/interface/properties.md#snapping">Snapping</a></strong> in the Interface chapter.</p>
+<p>Hold <strong>Ctrl</strong> while dragging a slider to snap it. See <strong><a href="../interface/properties.html#snapping">Snapping</a></strong> in the Interface chapter.</p>
 </blockquote>
 <h2 id="quick-favorites-menu">Quick Favorites menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/quick-favorites-menu.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/quick-favorites-menu.png" alt="Quick Favorites menu" loading="lazy"></figure>
 <blockquote>
-<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="../interface/floating-menus.html#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/interface/floating-menus.md#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
 </blockquote>
 <p>The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/quick-favorites-menu-2.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/quick-favorites-menu-2.png" alt="Quick Favorites menu" loading="lazy"></figure>
 <p>In the 3D view we have a menu called Quick in the header, which shows this content then. In the Dope Sheet Editor you can just call it with its hotkey. Q. It has no regular menu entry here.</p>
 <h2 id="editing-the-expression-from-the-property">Editing the expression from the property</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property-2.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property-2.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
 <p>A property with a driver attached will turn pink.</p>
 <p>When you click into the edit box, then the expression for the driver will appear. And you can edit this expression now without to edit the driver again.</p>
 <h2 id="simple-expressions">Simple Expressions</h2>
@@ -738,39 +747,39 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h2 id="drivers-setup-example">Drivers setup example</h2>
 <h3 id="control-movement-of-a-cube-by-rotation-of-a-sphere">Control movement of a cube by rotation of a sphere</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Create a cube and a sphere, and place the sphere a bit off. We want to be able to select and modify it.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-2.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-2.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Select the cube.</p>
 <p>In the Transform panel in the sidebar right click at the Z value and choose Add Driver. We will add the driver to the Z axis property of the cube.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-3.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-3.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>When you add a driver a panel will pop up where you can do the drivers setup.</p>
 <p>In case you miss this panel by too fast clicking, it can be called again by right clicking at the property again and choose Edit Drivers from the menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-4.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-4.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Don't worry about the ERROR: invalid Python expression at this point. we are going to change this now.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-5.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-5.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>In the red field with the Object label choose the sphere.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-6.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-6.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>By default the X value influences now the Z position of the cube. So when you move the sphere in X direction, the cube will move in Z direction.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-7.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-7.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Let's change this to rotation around Z axis. Now the cube moves in Z axis when we rotate our sphere in Z axis.</p>
 <p>Let's have a look into our Drivers editor.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-8.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-8.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>We have now content available- The channels list has an entry. And when you click at the Z Location channel in the channel list then the content and the driver settings panel in the sidebar will appear. It is the same than the one from the right click menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-9.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-9.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Let's have a closer look at how this all works. The Expression field is the place where the magic happens. When you change this expression then you can change the behavior of the driver. For example instead of var + 0.0 you could add a multiplicator here to our variable called var. Let's say var <code>*2</code>. Then the cube moves in double speed of the rotation of our sphere.</p>
 <h3 id="add-input-variable">Add input variable</h3>
 <p>You could also add a second input value, and connect it with another object. Let's say a cone.</p>
 <p>Add a cone object.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/add-input-variable.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/add-input-variable.png" alt="Add input variable" loading="lazy"></figure>
 <p>In the Driver add a new input variable.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/add-input-variable-2.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/add-input-variable-2.png" alt="Add input variable" loading="lazy"></figure>
 <p>Change this input variable to type Transform Channel.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/add-input-variable-3.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/add-input-variable-3.png" alt="Add input variable" loading="lazy"></figure>
 <p>Now in the object field choose our cone object. And rename the input variable to something meaningful. Again set the type to your needs.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/add-input-variable-4.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/add-input-variable-4.png" alt="Add input variable" loading="lazy"></figure>
 <p>Now let's change the Expression to this: var + mysecondvar.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/drivers-editor/add-input-variable-5.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/drivers-editor/add-input-variable-5.png" alt="Add input variable" loading="lazy"></figure>
 <p>As a last step update the dependencies by clicking at the Update Dependencies button at the end, which will remove the Invalid Python Expression error.</p>
 <p>And now the driver is controlled by the Z rotation of our sphere, which is defined in the variable var. PLUS the x location of the cone object, which is defined in the variable mysecondvar.</p>
 <h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li><a href="drivers-editor/header.html">Header</a> — The header contains various menus and tools.</li><li><a href="drivers-editor/sidebar.html">Sidebar</a> — This panel displays the properties for the active F-Curve.</li><li><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/drivers-editor/channel-list.md">Channel List</a> — The channel list contains your objects and their animation channels.</li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fdrivers-editor%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/drivers-editor/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#drivers-editor">Drivers Editor</a><a class="h3" href="#time-cursor">Time cursor</a><a class="h3" href="#f-curves">F-Curves</a><a class="h3" href="#handles">Handles</a><a class="h2" href="#viewport-navigation">Viewport Navigation</a><a class="h3" href="#viewport-navigation-2">Viewport navigation</a><a class="h2" href="#channel-context-menu">Channel Context Menu</a><a class="h3" href="#extrapolation-mode">Extrapolation Mode</a><a class="h3" href="#move-submenu">Move submenu</a><a class="h2" href="#f-curve-context-menu">F-Curve Context Menu</a><a class="h3" href="#paste-flipped">Paste Flipped</a><a class="h3" href="#handle-type">Handle Type</a><a class="h3" href="#interpolation-mode">Interpolation Mode</a><a class="h3" href="#easing-mode">Easing Mode</a><a class="h3" href="#insert-keyframes">Insert Keyframes</a><a class="h3" href="#duplicate">Duplicate</a><a class="h3" href="#delete-keyframes">Delete Keyframes</a><a class="h3" href="#mirror-submenu">Mirror submenu</a><a class="h3" href="#snap-submenu">Snap submenu</a><a class="h2" href="#slider-snapping">Slider snapping</a><a class="h2" href="#quick-favorites-menu">Quick Favorites menu</a><a class="h2" href="#editing-the-expression-from-the-property">Editing the expression from the property</a><a class="h2" href="#simple-expressions">Simple Expressions</a><a class="h2" href="#drivers-setup-example">Drivers setup example</a><a class="h3" href="#control-movement-of-a-cube-by-rotation-of-a-sphere">Control movement of a cube by rotation of a sphere</a><a class="h3" href="#add-input-variable">Add input variable</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>

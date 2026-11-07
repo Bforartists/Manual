@@ -2,7 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Particle Edit · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
@@ -31,7 +32,8 @@ a{color:var(--dk-link)}
 .pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
 @media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
-</style><script>
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
 </script></head>
@@ -39,9 +41,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
 <div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
 <span>Getting Started</span>
-<span>Introduction</span>
-<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
-<span>Installation</span>
+<a href="../../../getting-started/introduction.html">Introduction</a>
+<span>Using the Documentation</span>
+<a href="../../../getting-started/installation.html">Installation</a>
 <span>Quick Start</span>
 <span>Data Structure</span>
 <span>Comparison with Blender</span>
@@ -57,10 +59,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Tool Shelves</span>
 <span>Side Bars</span>
 <span>Tabs &amp; Panels</span>
-<span>Properties</span>
+<a href="../../../interface/properties.html">Properties</a>
 <span>Asset Shelves</span>
 <span>Context Menus</span>
-<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Floating Menus</span>
 <span>Pie Menus</span>
 <span>Last Operator Panel</span>
 <span>Floating Dialogues</span>
@@ -106,23 +108,23 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
 <a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
 <a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
-<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
-<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
-<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
-<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
 <span style="padding-left:1.5rem">Render</span>
 <span style="padding-left:3.5rem">Input</span>
-<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
 <span>Topbar and Statusbar</span>
 <a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
-<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
 <span style="padding-left:2.5rem">Tool Shelf</span>
 <a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
@@ -140,35 +142,35 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
 <span>Editors introduction</span>
 <a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
-<span style="padding-left:1.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../properties/output-properties-tab.html">Output</a>
 <span style="padding-left:3.5rem">Output</span>
 <span style="padding-left:1.5rem">Tool Shelf</span>
 <a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
 <span style="padding-left:1.5rem">Tool Shelf</span>
 <span style="padding-left:3.5rem">Quick Menu</span>
-<span style="padding-left:2.5rem">Sidebar</span>
-<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:2.5rem" href="../all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/sculpt.html">Sculpt Mode</a>
 <a href="../../3d-viewport.html">3D Viewport</a>
 <span style="padding-left:3.5rem">Sidebar</span>
 <span style="padding-left:1.5rem">Mesh</span>
-<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="sculpt/sidebar.html">Sidebar</a>
 <a style="padding-left:2.5rem" href="vertex-paint.html">Vertex Paint</a>
 <span style="padding-left:2.5rem">Sidebar</span>
 <a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
-<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
 <span style="padding-left:1.5rem">Sidebar</span>
 <a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:3.5rem">Attribute</span>
 <a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
 <a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
 <a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
 <a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:1.5rem">View Layer</span>
-<span style="padding-left:3.5rem">Shader</span>
-<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
-<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
 <span style="padding-left:2.5rem">Context Menus</span>
 <a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
 <span style="padding-left:1.5rem">Curve and Surface</span>
@@ -177,24 +179,24 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Context Menus</span>
 <a style="padding-left:2.5rem" href="weight-paint.html">Weight Paint</a>
 <a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
-<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/creative.html">Creative</a>
 <span style="padding-left:1.5rem">Channel List</span>
 <span style="padding-left:1.5rem">Channel List</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:3.5rem">Geometry</span>
 <span style="padding-left:1.5rem">Channel List</span>
 <a href="../../image-editor.html">Image Editor</a>
 <span style="padding-left:1.5rem">Channel List</span>
 <span style="padding-left:1.5rem">Scene</span>
-<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
 <span style="padding-left:1.5rem">Channel List</span>
-<a style="padding-left:3.5rem" href="../all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:3.5rem">View Menu</span>
 <span style="padding-left:2.5rem">More</span>
 <a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
-<span style="padding-left:2.5rem">Texture Paint</span>
+<a style="padding-left:2.5rem" href="texture-paint.html">Texture Paint</a>
 <span style="padding-left:1.5rem">Metaball</span>
-<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:3.5rem">Filter</span>
 <span style="padding-left:1.5rem">Footer</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:3.5rem">Curve</span>
 <span style="padding-left:1.5rem">Footer</span>
 <span style="padding-left:1.5rem">Footer</span>
 <span style="padding-left:1.5rem">World</span>
@@ -202,19 +204,19 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:1.5rem">Footer</span>
 <a class="is-current" style="padding-left:2.5rem" href="particle-edit.html">Particle Edit</a>
 <span style="padding-left:1.5rem">Text</span>
-<span style="padding-left:3.5rem">Keying</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
 <span style="padding-left:1.5rem">Collection</span>
-<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:1.5rem">Lattice</span>
-<span style="padding-left:3.5rem">Mask</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/mask.html">Mask</a>
 <span style="padding-left:3.5rem">Instances</span>
-<span style="padding-left:1.5rem">Object</span>
+<a style="padding-left:1.5rem" href="../../properties/object-properties-tab.html">Object</a>
 <span style="padding-left:3.5rem">Group</span>
 <span style="padding-left:1.5rem">Armature</span>
 <span style="padding-left:3.5rem">Tracking</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
-<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../../properties/modifiers.html">Modifiers</a>
 <span style="padding-left:3.5rem">Layout</span>
 <a href="../../uv-editor.html">UV Editor</a>
 <span style="padding-left:1.5rem">Grease Pencil</span>
@@ -222,25 +224,25 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Point</span>
 <span style="padding-left:1.5rem">Visual Effects</span>
 <span style="padding-left:1.5rem">Hair Curves</span>
-<span style="padding-left:3.5rem">Transform</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
 <span style="padding-left:1.5rem">Particles</span>
 <span style="padding-left:1.5rem">Point Cloud</span>
-<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:3.5rem">Simulation</span>
 <span style="padding-left:1.5rem">Physics</span>
 <span style="padding-left:3.5rem">Layout</span>
 <span>Compositor</span>
-<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
 <span style="padding-left:1.5rem">Object Data</span>
 <span style="padding-left:3.5rem">Texture</span>
-<span style="padding-left:1.5rem">Object Constraints</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:1.5rem">Bone</span>
 <span style="padding-left:3.5rem">Generate</span>
 <span style="padding-left:1.5rem">Bone Constraints</span>
-<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
-<span style="padding-left:1.5rem">Material</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../../properties/material-properties-tab.html">Material</a>
 <span>Texture Node Editor</span>
 <span style="padding-left:3.5rem">Normals</span>
 <span>Geometry Node Editor</span>
@@ -250,7 +252,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:3.5rem">Layout</span>
 <span style="padding-left:1.5rem">Strip Modifiers</span>
 <span>Shader Editor</span>
-<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<span>Video Sequence Editor</span>
 <a href="../../movie-clip-editor.html">Movie Clip Editor</a>
 <span>Dope Sheet</span>
 <span>Timeline</span>
@@ -258,30 +260,30 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a href="../../drivers-editor.html">Drivers Editor</a>
 <span>Nonlinear Animation Editor</span>
 <span>Text Editor</span>
-<span>Python Console</span>
+<a href="../../python-console.html">Python Console</a>
 <span>Info Editor</span>
-<a href="../../toolbar.html">Toolbar</a>
+<span>Toolbar</span>
 <a href="../../outliner.html">Outliner</a>
 <span>Properties Editor</span>
-<span style="padding-left:2.5rem">Cycles</span>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/cycles.html">Cycles</a>
 <span style="padding-left:2.5rem">EEVEE</span>
 <span style="padding-left:2.5rem">Workbench</span>
 <span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
-<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
 <span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
-<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
 <span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Emitter</span>
-<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
 <span style="padding-left:2.5rem">Emitter - Cache Panel</span>
 <span style="padding-left:2.5rem">Emitter - Velocity panel</span>
 <span style="padding-left:2.5rem">Emitter - Rotation panel</span>
-<span style="padding-left:2.5rem">Emitter - Physics panel</span>
-<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
 <span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
 <span style="padding-left:2.5rem">Emitter - Children panel</span>
 <span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
@@ -292,12 +294,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Emitter - Animation panel</span>
 <span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
 <span style="padding-left:2.5rem">Hair</span>
-<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
 <span style="padding-left:2.5rem">Hair - Cache Panel</span>
 <span style="padding-left:2.5rem">Hair - Velocity panel</span>
 <span style="padding-left:2.5rem">Hair - Rotation panel</span>
-<span style="padding-left:2.5rem">Hair - Physics panel</span>
-<span style="padding-left:2.5rem">Hair - Render panel</span>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
 <span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
 <span style="padding-left:2.5rem">Hair - Children panel</span>
 <span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
@@ -312,7 +314,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Cloth panel</span>
 <span style="padding-left:2.5rem">Dynamic Paint panel</span>
 <span style="padding-left:2.5rem">Soft Body panel</span>
-<span style="padding-left:2.5rem">Fluid panel</span>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
 <span style="padding-left:2.5rem">Rigid Body panel</span>
 <span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
 <span style="padding-left:2.5rem">Mesh Object</span>
@@ -323,7 +325,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Point Cloud Object</span>
 <span style="padding-left:2.5rem">Text Object</span>
 <span style="padding-left:2.5rem">Grease Pencil Object</span>
-<span style="padding-left:2.5rem">Armature Object</span>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
 <span style="padding-left:2.5rem">Lattice Object</span>
 <span style="padding-left:2.5rem">Empty&amp;Image Object</span>
 <span style="padding-left:2.5rem">Speaker Object</span>
@@ -344,7 +346,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4>Assets</h4>
 <span>Assets</span>
 <span>Essentials Library</span>
-<span>Default Library</span>
+<a href="../../../assets/default-library.html">Default Library</a>
 <span>Compositor Library</span>
 <span>Geometry Nodes Library</span>
 <span>Shader Library</span>
@@ -364,7 +366,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4>Advanced</h4>
 <span>Advanced</span>
 <span>Command Line</span>
-<span>Scripting</span>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
 <span>Working Limits</span>
 <span>Troubleshooting</span>
 <span>Reporting a Bug</span>
@@ -376,16 +378,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Documentation History</span>
 <span>About the GPL License</span>
 <span>The Community Influences</span>
-<span>Glossary</span>
+<a href="../../../appendix/glossary.html">Glossary</a>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
 <span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Mesh › Particle Edit</div><h1 class="pv-title">Particle Edit</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 8 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Mesh › Particle Edit</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
 <h1 id="header">Header</h1>
 <h2 id="particle-menu">Particle menu</h2>
 <h3 id="particle-mode-particle-menu">Particle Mode - Particle Menu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/particle-mode-particle-menu.png" alt="Particle Mode - Particle Menu" loading="lazy"><figcaption>Particle Mode - Particle Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/particle-mode-particle-menu.png" alt="Particle Mode - Particle Menu" loading="lazy"><figcaption>Particle Mode - Particle Menu</figcaption></figure>
 <h4 id="mirror">Mirror</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/mirror.png" alt="Mirror" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/mirror.png" alt="Mirror" loading="lazy"></figure>
 <p>Mirrors the selected particles.</p>
 <p>If you want a symmetrical haircut, first select all particles, then mirror the particles, then tick X Mirror in the Particle panel.</p>
 <table class="ui-doc-table">
@@ -408,16 +410,17 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h4 id="rekey">Rekey</h4>
 <p>You need to have some hair particles selected.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/rekey.png" alt="Rekey" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/rekey.png" alt="Rekey" loading="lazy"></figure>
 <p>Rekey changes the number of keys for the selected particles, including root and tip keys. This tool brings up a popup where you can adjust the number of keys. Two means you have only a root and a tip key. Everything more subdivides the selected hair particle with more keys.</p>
 <h4 id="weight-set">Weight Set</h4>
 <p>Manually set a weight for the selected keys to interpolate between the current key weight and the brushes weight.</p>
 <h5 id="adjust-last-operation-weight-set">Adjust Last Operation - Weight Set</h5>
+<p>Change the settings of <strong>Weight Set</strong> right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.</p>
 <h6 id="factor">Factor</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/factor.png" alt="Factor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/factor.png" alt="Factor" loading="lazy"></figure>
 <p>The strength of the keys weighting.</p>
 <h4 id="delete">Delete</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/delete.png" alt="Delete" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/delete.png" alt="Delete" loading="lazy"></figure>
 <p>Delete either the whole particle, or just the selected key of the particle.</p>
 <h4 id="show-hide-submenu">Show/Hide - Submenu</h4>
 <p>Show or hide the selected geometry</p>
@@ -444,27 +447,27 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="adjust-last-operation-hide-selected">Adjust Last Operation - Hide Selected</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
 <p>Each of the menu items uses the same Last Operator. With different strings for the booleans.</p>
 <h6 id="unselected">Unselected</h6>
 <p>Hide the unselected geometry instead the seleced.</p>
 <h1 id="tool-shelf">Tool Shelf</h1>
 <h2 id="tools">Tools</h2>
 <h3 id="tool-shelf-mesh-particle-edit-mode">Tool Shelf - Mesh - Particle Edit Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-shelf-mesh-particle-edit-mode.png" alt="Tool Shelf - Mesh - Particle Edit Mode" loading="lazy"><figcaption>Tool Shelf - Mesh - Particle Edit Mode</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-shelf-mesh-particle-edit-mode.png" alt="Tool Shelf - Mesh - Particle Edit Mode" loading="lazy"><figcaption>Tool Shelf - Mesh - Particle Edit Mode</figcaption></figure>
 <p>You can attach a particle system to a mesh object. And then you can switch to a Particle Edit Mode.</p>
 <p>This mode allows you to edit the particles. In the tool shelf you will find several brushes. These brushes are of use for particles of type hair. They can be combed, cut etc. .</p>
 <h4 id="select-and-3d-cursor-tools">Select and 3D Cursor tools</h4>
 <p>Select tools group and 3D Cursor are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.</p>
 <h4 id="hotkeys">Hotkeys</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/hotkeys.png" alt="Hotkeys" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/hotkeys.png" alt="Hotkeys" loading="lazy"></figure>
 <p>Pressing F allows you to change the brush size onscreen. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/hotkeys-2.png" alt="Hotkeys" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/hotkeys-2.png" alt="Hotkeys" loading="lazy"></figure>
 <p>Pressing Shift F allows you to change the strength of the brush. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
 <h5 id="comb">Comb</h5>
 <p>Allows you to comb the strands of the particle system.</p>
 <h6 id="tool-settings">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -494,7 +497,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="smooth">Smooth</h5>
 <p>Allows you to smooth the strands of the particle system.</p>
 <h6 id="tool-settings-2">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-2.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-2.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -516,7 +519,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="add">Add</h5>
 <p>Allows you to add strands to the particle system.</p>
 <h6 id="tool-settings-3">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-3.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-3.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -550,7 +553,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="length">Length</h5>
 <p>Manipulate the length of the strands.</p>
 <h6 id="tool-settings-4">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -576,7 +579,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="puff">Puff</h5>
 <p>Manipulate the volume of the strands.</p>
 <h6 id="tool-settings-5">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-5.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-5.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -606,7 +609,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="cut">Cut</h5>
 <p>Cut away particles.</p>
 <h6 id="tool-settings-6">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -628,7 +631,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="weight">Weight</h5>
 <p>Manipulate the weight of the strands.</p>
 <h6 id="tool-settings-7">Tool Settings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -650,14 +653,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h1 id="sidebar">Sidebar</h1>
 <h2 id="particle-edit-mode">Particle Edit Mode</h2>
 <h3 id="tools-tab-in-particle-edit-mode">Tools Tab in Particle Edit Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/tools-tab-in-particle-edit-mode.png" alt="Tools Tab in Particle Edit Mode" loading="lazy"><figcaption>Tools Tab in Particle Edit Mode</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/tools-tab-in-particle-edit-mode.png" alt="Tools Tab in Particle Edit Mode" loading="lazy"><figcaption>Tools Tab in Particle Edit Mode</figcaption></figure>
 <p>The Particle Edit mode enables to edit particle settings. For example, Hair Particles can be manipulated with some brushes. They can be combed, cut etc.</p>
 <p>The Tools tab contains the settings for the hair editing brushes.</p>
 <p>Different from the other paint modes, there is no brush panel. The brushes are here part of the tool settings of the single brushes.</p>
 <p>The brush settings can be found in the Particle Tool panel instead.</p>
 <h3 id="particle-edit-mode-particle-tool-panel">Particle Edit Mode - Particle Tool panel</h3>
 <h4 id="comb-brush">Comb brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/comb-brush.png" alt="Comb brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/comb-brush.png" alt="Comb brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -685,7 +688,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="smooth-brush">Smooth brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/smooth-brush.png" alt="Smooth brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/smooth-brush.png" alt="Smooth brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -705,7 +708,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="add-brush">Add brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/add-brush.png" alt="Add brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/add-brush.png" alt="Add brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -737,7 +740,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="length-brush">Length brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/length-brush.png" alt="Length brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/length-brush.png" alt="Length brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -761,7 +764,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="puff-brush">Puff brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/puff-brush.png" alt="Puff brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/puff-brush.png" alt="Puff brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -785,7 +788,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="cut-brush">Cut brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png" alt="Cut brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png" alt="Cut brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -805,7 +808,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="weight-brush">Weight brush</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png" alt="Weight brush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png" alt="Weight brush" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -825,13 +828,13 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="particle-edit-mode-options-panel">Particle Edit Mode - Options panel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
 <p>This panel contains some further options for the particles.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-2.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-3.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-2.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-3.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
 <p>Note that you need to bake some particle types to be able modify them. Emitter for example. You will get a warning then, and the Options panel content is greyed out.</p>
 <p>The particles can be baked in the Particles tab in the Cache panel.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-4.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-4.png" alt="Particle Edit Mode - Options panel" loading="lazy"><figcaption>Particle Edit Mode - Options panel</figcaption></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -855,11 +858,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="cut-particles-to-shape">Cut particles to Shape</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-particles-to-shape.png" alt="Cut particles to Shape" loading="lazy"><figcaption>Cut particles to Shape</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-particles-to-shape.png" alt="Cut particles to Shape" loading="lazy"><figcaption>Cut particles to Shape</figcaption></figure>
 <p>Define an object to cut the hair particles into the shape of the object.</p>
 <p>The Cut button with which you perform the option becomes active when you choose a shape object from the list, or pick it in the scene.</p>
 <h4 id="viewport-display">Viewport Display</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/viewport-display.png" alt="Viewport Display" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/viewport-display.png" alt="Viewport Display" loading="lazy"></figure>
 <h5 id="with-hair">With Hair</h5>
 <table class="ui-doc-table">
 <thead>
@@ -880,7 +883,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="with-emitter">With Emitter</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/e5656d940f35a93d7c0795c4feb8b069cb019d85/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/with-emitter.png" alt="With Emitter" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ed69443b3f2526cfb177681f6b47113b987eafa1/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/with-emitter.png" alt="With Emitter" loading="lazy"></figure>
 <p>The emitter particle system must be editable, or the settings remains greyed out. Bake ...</p>
 <table class="ui-doc-table">
 <thead>
