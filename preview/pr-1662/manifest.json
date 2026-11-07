@@ -1,0 +1,18 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
+  "docs2/content/editors/3d-viewport/armature/pose.md": "editors/3d-viewport/armature/pose.html",
+  "docs2/content/editors/3d-viewport/curve/edit.md": "editors/3d-viewport/curve/edit.html",
+  "docs2/content/editors/3d-viewport/grease-pencil/edit.md": "editors/3d-viewport/grease-pencil/edit.html",
+  "docs2/content/editors/3d-viewport/hair-curves/edit.md": "editors/3d-viewport/hair-curves/edit.html",
+  "docs2/content/editors/3d-viewport/lattice/edit.md": "editors/3d-viewport/lattice/edit.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/context-menus.md": "editors/3d-viewport/mesh/edit/context-menus.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/tool-shelf.md": "editors/3d-viewport/mesh/edit/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/mesh/particle-edit.md": "editors/3d-viewport/mesh/particle-edit.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/header.md": "editors/3d-viewport/mesh/sculpt/header.html",
+  "docs2/content/editors/3d-viewport/mesh/vertex-paint.md": "editors/3d-viewport/mesh/vertex-paint.html",
+  "docs2/content/editors/3d-viewport/object-mode/context-menus.md": "editors/3d-viewport/object-mode/context-menus.html"
+ },
+ "images": 1129
+}
