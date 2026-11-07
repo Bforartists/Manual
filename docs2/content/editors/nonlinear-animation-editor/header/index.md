@@ -7,7 +7,7 @@ path:
   - Nonlinear Animation Editor
   - Header
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.nonlinear-animation-editor.header.nla-editor-header-tools-and-options

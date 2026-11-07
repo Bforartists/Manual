@@ -7,7 +7,7 @@ path:
   - Getting Started
   - About Documentation
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 1.1 How to use the Manual.odt
