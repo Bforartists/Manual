@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Texture · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/tables-viewport · <code>docs2/tables-viewport</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<a class="is-current" style="padding-left:3.5rem" href="texture.html">Texture</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<span style="padding-left:1.5rem">Object</span>
+<a style="padding-left:3.5rem" href="group.html">Group</a>
+<span style="padding-left:1.5rem">Armature</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Object Data</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Shader Editor › Header › Add Menu › Texture</div><h1 class="pv-title">Texture</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-texture">Add menu - Texture</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/add-menu-texture.png" alt="Add menu - Texture" loading="lazy"><figcaption>Add menu - Texture</figcaption></figure>
+<p>Here are the texture nodes. They allow you to add different texture types to the scene. The content is the same for the sub modes and the different renderers. However, a environment texture just makes sense for the world sub mode.</p>
+<h3 id="brick-texture">Brick Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/brick-texture.png" alt="Brick Texture" loading="lazy"></figure>
+<p>The Brick Texture node is used to add a procedural brick texture.</p>
+<h4 id="inputs">Inputs</h4>
+<p><strong>Color 1, Color 2 and Mortar</strong>: Color of the bricks and mortar. · <strong>Scale</strong>: Overall texture scale. · <strong>Mortar Size</strong>: The size of the filling between the bricks known as “mortar”; 0 means no mortar. · <strong>Mortar Smooth</strong>: Blurs/softens the edge between the mortar and the bricks. This can be useful with a texture and displacement textures. · <strong>Bias</strong>: The color variation between Color 1/2. Values of -1 and 1 only use one of the two colors; values in between mix the colors. · <strong>Brick Width</strong>: The width of the bricks. · <strong>Row Height</strong>: The height of the brick rows.</p>
+<h4 id="properties">Properties</h4>
+<p><strong>Offset</strong>: Determines the brick offset of the various rows. · <strong>Frequency</strong>: Determines the offset frequency. A value of 2 gives an even/uneven pattern of rows. · <strong>Squash</strong>: Amount of brick squashing. · <strong>Frequency</strong>: Brick squashing frequency.</p>
+<h4 id="outputs">Outputs</h4>
+<p><strong>Color</strong>: Texture color output. · <strong>Factor</strong>: Mortar mask (1 = mortar).</p>
+<h3 id="checker-texture">Checker Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/checker-texture.png" alt="Checker Texture" loading="lazy"></figure>
+<p>The Checker Texture node adds a procedural checkerboard texture.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="vector">Vector</h5>
+<p>Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h5 id="color1-color-2">Color1, Color 2</h5>
+<p>Color of the checkers.</p>
+<h5 id="scale">Scale</h5>
+<p>Overall texture scale. The scale is a factor of the bounding box of the face divided by the scale. For example, a scale of 15 will result in 15 alternate patterns over the overall UV bounding box. Different patterns could be achieved using other nodes to give different input patterns to this socket. For example, using the Math Node.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="color">Color</h5>
+<p>Texture color output.</p>
+<h5 id="factor">Factor</h5>
+<p>Checker 1 mask (1 = Checker 1).</p>
+<h3 id="environment-texture">Environment Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/environment-texture.png" alt="Environment Texture" loading="lazy"></figure>
+<p>Load an environment texture to light your scene.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="vector-2">Vector</h5>
+<p>Texture coordinate for texture look-up. If this socket is left unconnected, the image is mapped as environment with the Z axis as up.</p>
+<h4 id="properties-2">Properties</h4>
+<h5 id="image">Image</h5>
+<p>Image data-block used as the image source. Additional settings can be found in Sidebar &gt; Item &gt; Properties: These include options to control the alpha channel along with addition options for the color space. These addition options are documented with the rest of Common Image Settings.</p>
+<h5 id="color-space">Color Space</h5>
+<p>Type of data that the image contains, either Color or Non-Color Data. For most color textures the default of Color should be used, but in case of e.g. a bump or alpha map, the pixel values should be interpreted as Non-Color Data, to avoid doing any unwanted color space conversions.</p>
+<h5 id="texture-interpolation">Texture Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/texture-interpolation.png" alt="Texture Interpolation" loading="lazy"></figure>
+<p>Interpolation method used for the environment texture.</p>
+<h6 id="linear">Linear</h6>
+<p>Regular quality interpolation.</p>
+<h6 id="closest">Closest</h6>
+<p>No interpolation, use closest pixel.</p>
+<h6 id="cubic">Cubic</h6>
+<p>Smoother, better quality interpolation.</p>
+<h6 id="smart">Smart</h6>
+<p>Bicubic when magnifying, otherwise Bilinear is used. This is only available for OSL.</p>
+<h5 id="projection-method">Projection Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/projection-method.png" alt="Projection Method" loading="lazy"></figure>
+<p>Allows you to use different types of environmental maps.</p>
+<h6 id="equirectangular">Equirectangular</h6>
+<p>Projection from an Equirectangular photo.</p>
+<h6 id="mirror-ball">Mirror Ball</h6>
+<p>Projection from an orthographic photo or mirror ball.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="color-2">Color</h5>
+<p>RGB color from the image.</p>
+<h3 id="gabor-texture">Gabor Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/gabor-texture.png" alt="Gabor Texture" loading="lazy"></figure>
+<p>The Gabor Texture is a special directional noise texture from the OSL Shading language.</p>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="vector-3">Vector</h5>
+<p>Texture coordinate to sample texture at defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h5 id="scale-2">Scale</h5>
+<p>The scale of the Gabor noise.</p>
+<h5 id="frequency">Frequency</h5>
+<p>The rate at which the Gabor noise changes across space. It differs from the input scale in that it only scales perpendicular to the gabor noise direction.</p>
+<h5 id="anisotropic">Anisotropic</h5>
+<p>The directionality of the Gabor noise. 1 means the noise is completely directional. With a value of 0 the noise goes in all directions.</p>
+<h5 id="orientation">Orientation</h5>
+<p>The direction of the anisotropic Gabor noise. With the 2ds method you have a orientation value. With the 3d method you will have a trackball to adjust the orientation.</p>
+<h4 id="properties-3">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/properties-2.png" alt="Properties" loading="lazy"></figure>
+<h5 id="type">Type</h5>
+<p>2D ignores the Z input. 3D goes in all 3 directions.</p>
+<h5 id="outputs-4">Outputs</h5>
+<p><strong>Value</strong>: The Gabor noise value with both, random phase and random intensity. · <strong>Phase</strong>: The phase of the Gabor noise, without random intensity. · <strong>Intensity</strong>: The intensity of the Gabor noise, withbout random phase.</p>
+<h3 id="gradient-texture">Gradient Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/gradient-texture.png" alt="Gradient Texture" loading="lazy"></figure>
+<p>The Gradient Texture node generates interpolated color and intensity values based on the input vector.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="vector-4">Vector</h5>
+<p>Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h4 id="properties-4">Properties</h4>
+<h5 id="gradient-type">Gradient Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/gradient-type.png" alt="Gradient Type" loading="lazy"></figure>
+<p>Controls the type of gradient generated.</p>
+<h6 id="linear-2">Linear</h6>
+<p>Directly returns the input X coordinate.</p>
+<h6 id="quadratic">Quadratic</h6>
+<p>Interpolates the input X coordinate quadratically.</p>
+<h6 id="easing">Easing</h6>
+<p>Uses a combination of quadratic and linear interpolation to return a smooth gradient from the input X coordinate.</p>
+<h6 id="diagonal">Diagonal</h6>
+<p>Averages the input X and Y coordinates.</p>
+<h6 id="spherical">Spherical</h6>
+<p>Creates an inverse gradient using the length of the input vector; the maximum value is at (0, 0, 0).</p>
+<h6 id="quadratic-sphere">Quadratic Sphere</h6>
+<p>The same as Spherical, except interpolated quadratically.</p>
+<h6 id="radial">Radial</h6>
+<p>Returns a value based on the angle of the input around the Z axis.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="color-3">Color</h5>
+<p>Texture color output.</p>
+<h5 id="factor-2">Factor</h5>
+<p>Texture intensity output.</p>
+<h3 id="ies-texture">IES Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/ies-texture.png" alt="IES Texture" loading="lazy"></figure>
+<p>The IES Texture is used to match real world lights based on IES files. IES files store the directional intensity distribution of light sources.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="vector-5">Vector</h5>
+<p>Texture coordinate for lookup in the light distribution. Defaults to the normal.</p>
+<h5 id="strength">Strength</h5>
+<p>Light strength multiplier.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="mode">Mode</h5>
+<h6 id="internal">Internal</h6>
+<p>Use IES profile from a file embedded in a text data-block in the blend-file, for easy distribution.</p>
+<h6 id="external">External</h6>
+<p>Load IES profile from a file on the drive.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="factor-3">Factor</h5>
+<p>Light intensity, typically plugged into the Strength input of an Emission node.</p>
+<h3 id="image-texture">Image Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/image-texture.png" alt="Image Texture" loading="lazy"></figure>
+<p>The Image Texture is used to add an image file as a texture.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="vector-6">Vector</h5>
+<p>Texture coordinate for texture look-up. If this socket is left unconnected, UV coordinates from the active UV render layer are used.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="image-2">Image</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/image.png" alt="Image" loading="lazy"></figure>
+<p>Open an image, choose an existing image, or generate a new image.</p>
+<p>When you click at Open then a file browser opens up. When you click at New then a popup dialog opens. up where you can create a new image.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/image-2.png" alt="Image" loading="lazy"></figure>
+<p>The image browser at the left allows you to pick an already existing texture from the scene.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/image-3.png" alt="Image" loading="lazy"></figure>
+<p>More image settings can be found in the Sidebar in the Items tab. Usually you find in the Item tab the very same settings like in the selected node. But the Image texture node is an exception. It shows here the usual image related settings too. This will be explained in the sidebar chapter.</p>
+<h5 id="interpolation">Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>Method to scale images up or down for rendering.</p>
+<h6 id="linear-3">Linear</h6>
+<p>Regular quality interpolation.</p>
+<h6 id="cubic-2">Cubic</h6>
+<p>Smoother, better quality interpolation. For bump maps this should be used to get best results.</p>
+<h6 id="closest-2">Closest</h6>
+<p>No interpolation, use only closest pixel for rendering pixel art.</p>
+<h6 id="smart-2">Smart</h6>
+<p>Cycles Only Only for Open Shading Language. Use cubic interpolation when scaling up and linear when scaling down, for a better performance and sharpness.</p>
+<h5 id="projection">Projection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/projection.png" alt="Projection" loading="lazy"></figure>
+<p>Projection to use for mapping the textures.</p>
+<h6 id="flat">Flat</h6>
+<p>Uses the XY coordinates for mapping.</p>
+<h6 id="box">Box</h6>
+<p>Maps the image to the six sides of a virtual box, based on the normal, using XY, YZ and XYZ coordinates depending on the side.</p>
+<h6 id="blend">Blend</h6>
+<p>For Box mapping, the amount to blend between sides of the box, to get rid of sharp transitions between the different sides. Blending is useful to map a procedural-like image texture pattern seamlessly on a model. 0.0 gives no blending; higher values give a smoother transition.</p>
+<h6 id="sphere">Sphere</h6>
+<p>Sphere mapping is the best type for mapping a sphere, and it is perfect for making planets and similar objects. It is often very useful for creating organic objects.</p>
+<h6 id="tube">Tube</h6>
+<p>Maps the texture around an object like a label on a bottle. The texture is therefore more stretched on the cylinder. This mapping is of course very good for making the label on a bottle, or assigning stickers to rounded objects. However, this is not a cylindrical mapping so the ends of the cylinder are undefined.</p>
+<h5 id="extension">Extension</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/extension.png" alt="Extension" loading="lazy"></figure>
+<p>Extension defines how the image is extrapolated past the original bounds:</p>
+<h6 id="repeat">Repeat</h6>
+<p>Will repeat the image horizontally and vertically giving tiled-looking result.</p>
+<h6 id="extend">Extend</h6>
+<p>Will extend the image by repeating pixels on its edges.</p>
+<h6 id="clip">Clip</h6>
+<p>Clip to the original image size and set all the exterior pixels values to transparent black.</p>
+<h5 id="source">Source</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/source.png" alt="Source" loading="lazy"></figure>
+<p>What kind of image it is. The terms should be self explaining.</p>
+<h5 id="color-space-2">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>What color space is used for the image.</p>
+<h5 id="alpha">Alpha</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/alpha.png" alt="Alpha" loading="lazy"></figure>
+<p>What alpha mode is used for the image.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="color-4">Color</h5>
+<p>RGB color from image. If the image has alpha, the color is premultiplied with alpha if the Alpha output is used, and unpremultiplied or straight if the Alpha output is not used.</p>
+<h5 id="alpha-2">Alpha</h5>
+<p>Alpha channel from image.</p>
+<h3 id="magic-texture">Magic Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/magic-texture.png" alt="Magic Texture" loading="lazy"></figure>
+<p>The Magic Texture node is used to add a procedural psychedelic color texture.</p>
+<h4 id="inputs-8">Inputs</h4>
+<p><strong>Vector</strong>: Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected. · <strong>Scale</strong>: Scale of the texture. · <strong>Distortion</strong>: Amount of distortion.</p>
+<h4 id="properties-7">Properties</h4>
+<p><strong>Depth</strong>: Number of iterations.</p>
+<h4 id="outputs-8">Outputs</h4>
+<p><strong>Color</strong>: Texture color output. · <strong>Factor</strong>: Texture intensity output.</p>
+<h3 id="noise-texture">Noise Texture</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/noise-texture.png" alt="Noise Texture" loading="lazy"></figure>
+<p>The Noise Texture node evaluates a fractal Perlin noise at the input texture coordinates. This nodes allows great control over how noise octaves are combined.</p>
+<h4 id="inputs-9">Inputs</h4>
+<p>The inputs are dynamic, they become available if needed depending on the node properties.</p>
+<h5 id="vector-7">Vector</h5>
+<p>Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h5 id="normalize">Normalize</h5>
+<p>Normalize the output to the 0 - 1 range. · <strong>W</strong>: Texture coordinate to evaluate the noise at. Appears with 4 dimensions. · <strong>Scale</strong>: Scale of the base noise octave. · <strong>Detail</strong>: Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher render time. · <strong>Roughness</strong>: Adds a roughness noise. · <strong>Lacunarity</strong>: The scale of a perlin noise octave relative to the perlin noise octave from the previous octave. · <strong>Offset</strong>: An added offset to each octave, determines the level where the highest octave will appear. · <strong>Gain</strong>: An extra multiplier to tune the magnitude of octaves. · <strong>Distortion</strong>: Amount of distortion.</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="dimensions">Dimensions</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/dimensions.png" alt="Dimensions" loading="lazy"></figure>
+<p>The dimensions of the space to evaluate the noise in.</p>
+<h6 id="1d">1D</h6>
+<p>Evaluate the noise in 1D space at the input W.</p>
+<h6 id="2d">2D</h6>
+<p>Evaluate the noise in 2D space at the input Vector. The Z component is ignored.</p>
+<h6 id="3d">3D</h6>
+<p>Evaluate the noise in 3D space at the input Vector.</p>
+<h6 id="4d">4D</h6>
+<p>Evaluate the noise in 4D space at the input Vector and the input W as the fourth dimension.</p>
+<h5 id="type-2">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/type.png" alt="Type" loading="lazy"></figure>
+<p>Type of the perlin noise texture.</p>
+<h6 id="multifractal">Multifractal</h6>
+<p>The result is more uneven (varies with location), more similar to a real terrain. Uses a multiplicative cascade.</p>
+<h6 id="ridged-multifractal">Ridged Multifractal</h6>
+<p>Creates sharp peaks. Calculates the absolute value of the noise, creating “canyons”, and then flips the surface upside down.</p>
+<h6 id="hybrid-multifractal">Hybrid Multifractal</h6>
+<p>Creates peaks and valleys with different roughness values, like real mountains rise out of flat plains. Combines the additive cascade with a multiplicative cascade.</p>
+<h6 id="fbm-fractal-brownian-motion">fBM (fractal Brownian Motion)</h6>
+<p>Produces an unnatural homogeneous and isotropic result. Uses an additive cascade, the values are simply added together.</p>
+<h6 id="hetero-terrain-heterogeneous-terrain">Hetero Terrain (Heterogeneous Terrain)</h6>
+<p>Similar to Hybrid Multifractal creates a heterogeneous terrain, but with the likeness of river channels.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="factor-4">Factor</h5>
+<p>Value of fractal noise.</p>
+<h5 id="color-5">Color</h5>
+<p>Color with different fractal noise in each component.</p>
+<h3 id="sky-texture">Sky Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/sky-texture.png" alt="Sky Texture" loading="lazy"></figure>
+<p>The Sky Texture node adds a procedural Sky texture.</p>
+<h4 id="inputs-10">Inputs</h4>
+<p>—</p>
+<h4 id="vector-8">Vector</h4>
+<p>Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h4 id="properties-9">Properties</h4>
+<h5 id="sky-type">Sky Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/sky-type.png" alt="Sky Type" loading="lazy"></figure>
+<p>Sky model to use. There is currently just Nishita left as a choice.</p>
+<h6 id="sun-disc">Sun disc</h6>
+<p>Include the sun disc itself into the outpup. Note that the sun disc is just available with the Cycles renderer. Not with the workbench or Eevee.</p>
+<h6 id="sun-size">Sun Size</h6>
+<p>The sun size.</p>
+<h6 id="sun-intensity">Sun Intensity</h6>
+<p>The sun intensity.</p>
+<h6 id="sun-elevation">Sun Elevation</h6>
+<p>The sun elevation.</p>
+<h6 id="sun-rotation">Sun Rotation</h6>
+<p>The sun rotation.</p>
+<h6 id="sun-altitude">Sun Altitude</h6>
+<p>The sun altitude.</p>
+<h6 id="air">Air</h6>
+<p>Air influence.</p>
+<h6 id="dust">Dust</h6>
+<p>Dust strength.</p>
+<h6 id="ozone">Ozone</h6>
+<p>Ozone influence.</p>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="color-6">Color</h5>
+<p>Texture output.</p>
+<h3 id="voronoi-texture">Voronoi Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/voronoi-texture.png" alt="Voronoi Texture" loading="lazy"></figure>
+<p>The Voronoi Texture node evaluates a Worley Noise at the input texture coordinates.</p>
+<h4 id="inputs-11">Inputs</h4>
+<p>The inputs are dynamic, they become available if needed depending on the node properties.</p>
+<h5 id="vector-9">Vector</h5>
+<p>Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h5 id="w">W</h5>
+<p>The W Texture coordinate to evaluate the noise at (4D)</p>
+<h5 id="scale-3">Scale</h5>
+<p>Scale of the noise.</p>
+<h5 id="detail">Detail</h5>
+<p>The number of voronoi layers.</p>
+<h5 id="roughness">Roughness</h5>
+<p>The influence of a voronoi layer relative to the previous layer.</p>
+<h5 id="lacunarity">Lacunarity</h5>
+<p>The scale of a voronoi layer relative to the previous layer.</p>
+<h5 id="randomness">Randomness</h5>
+<p>The randomness of the noise.</p>
+<h4 id="properties-10">Properties</h4>
+<h5 id="dimensions-2">Dimensions</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/dimensions-2.png" alt="Dimensions" loading="lazy"></figure>
+<p>The dimensions of the space to evaluate the noise in.</p>
+<h6 id="1d-2">1D</h6>
+<p>Evaluate the noise in 1D space at the input W.</p>
+<h6 id="2d-2">2D</h6>
+<p>Evaluate the noise in 2D space at the input Vector. The Z component is ignored.</p>
+<h6 id="3d-2">3D</h6>
+<p>Evaluate the noise in 3D space at the input Vector.</p>
+<h6 id="4d-2">4D</h6>
+<p>Evaluate the noise in 4D space at the input Vector and the input W as the fourth dimension.</p>
+<h5 id="feature">Feature</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/feature.png" alt="Feature" loading="lazy"></figure>
+<p>The Voronoi feature that the node will compute and return.</p>
+<h6 id="f1">F1</h6>
+<p>Compute and return the distance to the closest feature point as well as its position and color.</p>
+<h6 id="smooth-f1">Smooth F1</h6>
+<p>Compute and return a smooth version of F1.</p>
+<h6 id="distance-to-edge">Distance To Edge</h6>
+<p>Compute and return the distance to the edges of the Voronoi cells.</p>
+<h6 id="n-sphere-radius">N-Sphere Radius</h6>
+<p>Compute and return the radius of the n-sphere inscribed in the Voronoi cells. In other words, it is half the distance between the closest feature point and the feature point closest to it.</p>
+<h5 id="distance-metric">Distance Metric</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/distance-metric.png" alt="Distance Metric" loading="lazy"></figure>
+<p>The distance metric used to compute the texture.</p>
+<h6 id="euclidean">Euclidean</h6>
+<p>Use the Euclidean distance metric.</p>
+<h6 id="manhattan">Manhattan</h6>
+<p>Use the Manhattan distance metric.</p>
+<h6 id="chebychev">Chebychev</h6>
+<p>Use the Chebychev distance metric.</p>
+<h6 id="minkowski">Minkowski</h6>
+<p>Use the Minkowski distance metric. The Minkowski distance is a generalization of the aforementioned metrics with an Exponent as a parameter. Minkowski with an exponent of one is equivalent to the Manhattan distance metric. Minkowski with an exponent of two is equivalent to the Euclidean distance metric. Minkowski with an infinite exponent is equivalent to the Chebychev distance metric.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="distance">Distance</h5>
+<p>The Distance.</p>
+<h5 id="color-7">Color</h5>
+<p>Cell color. The color is arbitrary.</p>
+<h5 id="position">Position</h5>
+<p>Position of feature point.</p>
+<h5 id="w-2">W</h5>
+<p>Position of feature point. Note. In some configurations of the node, especially for low values of Randomness, rendering artifacts may occur. This happens due to the same reasons described in the Notes section in the White Noise Texture page and can be fixed in a similar manner as described there.</p>
+<h3 id="wave-texture">Wave Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/wave-texture.png" alt="Wave Texture" loading="lazy"></figure>
+<p>The Wave Texture node adds procedural bands or rings with noise distortion.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="vector-10">Vector</h5>
+<p>Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.</p>
+<h5 id="scale-4">Scale</h5>
+<p>Overall texture scale.</p>
+<h5 id="distortion">Distortion</h5>
+<p>Amount of distortion of the wave (similar to the Marble texture in Blender Internal).</p>
+<h5 id="detail-2">Detail</h5>
+<p>Amount of distortion noise detail.</p>
+<h5 id="detail-scale">Detail Scale</h5>
+<p>Scale of distortion noise.</p>
+<h5 id="detail-roughness">Detail Roughness</h5>
+<p>Adds a roughness noise.</p>
+<h5 id="phase-offset">Phase Offset</h5>
+<p>Set an offset for the phase.</p>
+<h4 id="properties-11">Properties</h4>
+<h5 id="wave-type">Wave Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/wave-type.png" alt="Wave Type" loading="lazy"></figure>
+<p>Bands or Rings shaped waves.</p>
+<h5 id="bands-direction">Bands direction</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/bands-direction.png" alt="Bands direction" loading="lazy"></figure>
+<p>In which direction the bands should point.</p>
+<h4 id="wave-profile">Wave Profile</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/wave-profile.png" alt="Wave Profile" loading="lazy"></figure>
+<p>Controls the shape and look of the wave type.</p>
+<h5 id="saw">Saw</h5>
+<p>Uses a saw tooth profile.</p>
+<h5 id="sine">Sine</h5>
+<p>Uses the standard sine profile.</p>
+<h5 id="triangle">Triangle</h5>
+<p>Uses a triangle shape.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="color-8">Color</h5>
+<p>Texture color output.</p>
+<h5 id="factor-5">Factor</h5>
+<p>Texture intensity output.</p>
+<h3 id="white-noise-texture">White Noise Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/white-noise-texture.png" alt="White Noise Texture" loading="lazy"></figure>
+<p>This node adds noise.</p>
+<h4 id="inputs-13">Inputs</h4>
+<p>The inputs are dynamic, they become available if needed depending on the node properties.</p>
+<h5 id="vector-11">Vector</h5>
+<p>Vector used as seed in 2D, 3D, and 4D dimensions.</p>
+<h5 id="w-3">W</h5>
+<p>Value used as seed in 1D and 4D dimensions.</p>
+<h4 id="properties-12">Properties</h4>
+<h5 id="dimensions-3">Dimensions</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/372b4a3b747e044bfe74a0f113a057056cf62fdc/docs2/images/editors/shader-editor/header/add-menu-texture/dimensions-3.png" alt="Dimensions" loading="lazy"></figure>
+<p>The dimensions of the space to evaluate the noise in.</p>
+<h6 id="1d-3">1D</h6>
+<p>The W input is used as seed.</p>
+<h6 id="2d-3">2D</h6>
+<p>The X and Y components of the Vector input are used as seed.</p>
+<h6 id="3d-3">3D</h6>
+<p>The Vector input is used as seed.</p>
+<h6 id="4d-3">4D</h6>
+<p>Both the Vector input and the W input are used as seed.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="value">Value</h5>
+<p>Output random value.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The slightest difference in seed values would result in completely different outputs. Consequently, bad precision may have significant impact on the output. Usually, we can mitigate this issue by:</p></div>
+<p>Eliminating the problematic seed value. If the problematic seed value is constant, it should be eliminated by choosing a lower dimension or multiplying it by zero.</p>
+<p>Adding an arbitrary value to the seed. The issue might only happen at certain boundaries, like unit boundaries, so simply adding an arbitrary value might solve the issue.</p>
+<p>Taking the absolute value of the seed. In computing, zero may be positive or negative, so taking the absolute values unifies the zero into a single value.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ftables-viewport/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fshader-editor%2Fheader%2Fadd-menu%2Ftexture.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/tables-viewport/docs2/content/editors/shader-editor/header/add-menu/texture.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-texture">Add menu - Texture</a><a class="h3" href="#brick-texture">Brick Texture</a><a class="h3" href="#checker-texture">Checker Texture</a><a class="h3" href="#environment-texture">Environment Texture</a><a class="h3" href="#gabor-texture">Gabor Texture</a><a class="h3" href="#gradient-texture">Gradient Texture</a><a class="h3" href="#ies-texture">IES Texture</a><a class="h3" href="#image-texture">Image Texture</a><a class="h3" href="#magic-texture">Magic Texture</a><a class="h3" href="#noise-texture">Noise Texture</a><a class="h3" href="#sky-texture">Sky Texture</a><a class="h3" href="#voronoi-texture">Voronoi Texture</a><a class="h3" href="#wave-texture">Wave Texture</a><a class="h3" href="#white-noise-texture">White Noise Texture</a></aside></div></body></html>
