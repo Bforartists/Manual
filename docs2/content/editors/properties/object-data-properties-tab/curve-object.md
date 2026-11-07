@@ -20,12 +20,13 @@ summary: "A 3D curve has control points that are not located on the curve’s lo
 
 Curve shape related settings.
 
+### Dimensions
 
-| Entry | What it does |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dimensions | By default, new curves are set to be 3D, which means that control points can be placed anywhere in 3D space. Curves can also be set to 2D which constrain the control points to the curve’s local XY axis. |
-| Resolution Preview U / Render U | Defines the number of points between control points. Control points are the points with the handles. The Preview U setting defines the resolution in the 3D Viewport while the Render U setting defines the render resolution of the curve. If Render U is set to zero (0), then the Preview U setting is used for both the 3D Viewport and render resolution. |
+By default, new curves are set to be 3D, which means that control points can be placed anywhere in 3D space. Curves can also be set to 2D which constrain the control points to the curve’s local XY axis.
 
+### Resolution Preview U / Render U
+
+Defines the number of points between control points. Control points are the points with the handles. The Preview U setting defines the resolution in the 3D Viewport while the Render U setting defines the render resolution of the curve. If Render U is set to zero (0), then the Preview U setting is used for both the 3D Viewport and render resolution.
 
 ### Twist Method
 
@@ -45,13 +46,17 @@ Fill mode defines the way a curve is displayed when it is beveled.
 
 ### Curve Deform
 
+#### Radius
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | Causes the deformed object to be scaled by the set curve radius. Utilized when using a curve as a path or when using the Curve Modifier. |
-| Stretch | The Stretch curve option allows you to let the mesh object stretch, or squeeze, over the entire curve. To get the expected result, use this together with the Bounds Clamp option. Utilized when using the Curve Modifier. |
-| Bounds Clamp | When this option is enabled, the object and mesh offset along the deformation axis is ignored. This can be useful with the Stretch option or when using a negative axis. Utilized when using the Curve Modifier. |
+Causes the deformed object to be scaled by the set curve radius. Utilized when using a curve as a path or when using the Curve Modifier.
 
+#### Stretch
+
+The Stretch curve option allows you to let the mesh object stretch, or squeeze, over the entire curve. To get the expected result, use this together with the Bounds Clamp option. Utilized when using the Curve Modifier.
+
+#### Bounds Clamp
+
+When this option is enabled, the object and mesh offset along the deformation axis is ignored. This can be useful with the Stretch option or when using a negative axis. Utilized when using the Curve Modifier.
 
 ## Texture Space panel
 
@@ -71,12 +76,13 @@ In this panel you can adjust settings of the texture space used by generated tex
 
 The display of the texture space cage can be activated in the Viewport Display in the Object properties.
 
+### Texture Mesh
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture Mesh | Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects. |
-| Auto Texture Space | Adjusts the active object’s texture space automatically when transforming the object. |
+Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
 
+### Auto Texture Space
+
+Adjusts the active object’s texture space automatically when transforming the object.
 
 ### Location, Size
 
@@ -157,13 +163,17 @@ The curve settings becomes active when you have a depth value higher than 0.
 
 ![Bevel subpanel](/docs2/images/editors/properties/object-data-properties-tab/curve-object/bevel-subpanel-4.png)
 
+#### Depth
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Depth | The size of the bevel. |
-| Resolution | The subdivision of the bevel. |
-| Object | Use another curve object to define the shape of the bevel. This curve can be closed, a Bezier circle for example. Or open. Which creates an open bevel shape then. · **Fill Caps**: Fills the ends of a beveled curve created by another curve object. And creates a solid object. |
+The size of the bevel.
 
+#### Resolution
+
+The subdivision of the bevel.
+
+#### Object
+
+Use another curve object to define the shape of the bevel. This curve can be closed, a Bezier circle for example. Or open. Which creates an open bevel shape then. · **Fill Caps**: Fills the ends of a beveled curve created by another curve object. And creates a solid object.
 
 #### Preset
 
@@ -175,24 +185,29 @@ Type Profile. Curve presets.
 
 ![Navigation elements](/docs2/images/editors/properties/object-data-properties-tab/curve-object/navigation-elements.png)
 
+##### Zoom in / out
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------- |
-| Zoom in / out | Zooms in or out in the curve view. |
-| Reverse path | Reverses the path. |
-| Toggle Profile Clipping | Clamp the values for a curve point between 0 and 1. |
+Zooms in or out in the curve view.
 
+##### Reverse path
+
+Reverses the path.
+
+##### Toggle Profile Clipping
+
+Clamp the values for a curve point between 0 and 1.
 
 ##### Tools menu
 
 ![Tools menu](/docs2/images/editors/properties/object-data-properties-tab/curve-object/tools-menu.png)
 
+###### Reset View
 
-| Entry | What it does |
-| ----------- | ----------------- |
-| Reset View | Zooms to 100%. |
-| Reset Curve | Resets the curve. |
+Zooms to 100%.
 
+###### Reset Curve
+
+Resets the curve.
 
 #### Curve Window
 
@@ -202,19 +217,25 @@ Allows you to modify the curve by dragging the existing curve points and adding 
 
 ![Curve point menu elements](/docs2/images/editors/properties/object-data-properties-tab/curve-object/curve-point-menu-elements.jpg)
 
+###### Handle types
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------- |
-| Handle types | Adjust the handle type of the current active curve point. |
-| X / Y | The current position of the active curve point. |
-| Delete points | Delete this curve point. |
+Adjust the handle type of the current active curve point.
 
+###### X / Y
 
-| Entry | What it does |
-| --------------------- | --------------------------------- |
-| Sample straight edges | Sample edges with vector handles. |
-| Sample even lengths | Sample edges with even lengths. |
+The current position of the active curve point.
 
+###### Delete points
+
+Delete this curve point.
+
+###### Sample straight edges
+
+Sample edges with vector handles.
+
+###### Sample even lengths
+
+Sample edges with even lengths.
 
 #### Start & End Mapping subpanel
 
@@ -240,13 +261,17 @@ Increasing the Start Bevel Factor to 0.5 will start beveling the curve 50% of th
 
 Allows to control the relation between bevel factors (number between 0 and 1) and the rendered start and end point of a beveled spline. Map the bevel factor to:
 
+##### Resolution
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Resolution | To the number of subdivisions of a spline (U resolution). |
-| Segments | To the length of its segments. Mapping to segments treats the subdivisions in each segment of a curve as if they would have all the same length. |
-| Spline | The length of a spline. |
+To the number of subdivisions of a spline (U resolution).
 
+##### Segments
+
+To the length of its segments. Mapping to segments treats the subdivisions in each segment of a curve as if they would have all the same length.
+
+##### Spline
+
+The length of a spline.
 
 ## Path Animation panel
 
@@ -272,14 +297,21 @@ Next select the object, and clear the origin. This will set the object to the st
 
 ![Workflow](/docs2/images/editors/properties/object-data-properties-tab/curve-object/workflow-4.png)
 
+#### Frames
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------ |
-| Frames | The number of frames that are needed to move along the path. |
-| Evaluation Time | The current frame position. The position is calculated by dividing the frames through the path length. |
-| Clamp | Clamp the curve path children so that they can't travel past the start and end point of the curve. |
-| Follow | Make the child object rotate along the curvature of the path. |
+The number of frames that are needed to move along the path.
 
+#### Evaluation Time
+
+The current frame position. The position is calculated by dividing the frames through the path length.
+
+#### Clamp
+
+Clamp the curve path children so that they can't travel past the start and end point of the curve.
+
+#### Follow
+
+Make the child object rotate along the curvature of the path.
 
 ## Shape Keys panel
 
@@ -334,38 +366,69 @@ A List of the shape keys for this mesh.
 
 It contains two types of shape keys. Basis is the base shape. The other type relies at this shape as the base.
 
+#### Shape Key name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key name | The name of the shape key. It can be renamed by double clicking at it. |
-| Slider value | The blend value of this shape key. The Basis shape key does not have such a slider. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the shape key. It can be renamed by double clicking at it.
 
+#### Slider value
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a shape key. |
-| Remove - | Delete the selected shape key. |
+The blend value of this shape key. The Basis shape key does not have such a slider.
 
+#### Lock
+
+The lock icon at the end of a group name locks the group from being editable.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a shape key.
+
+#### Remove -
+
+Delete the selected shape key.
 
 ### Specials menu
 
 ![Specials menu](/docs2/images/editors/properties/object-data-properties-tab/curve-object/specials-menu.png)
 
+#### New Shape From Mix
 
-| Entry | What it does |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Shape From Mix | Add a new shape key with the current deformed shape of the object. |
-| Mirror Shape Key | Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical. |
-| Mirror Shape Key (Topology) | Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work. |
-| Join as Shapes (Transfer Mix) | Transfer the current resulting shape from a different object. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the current mix of the first object. |
-| Transfer Shape Key | Transfer the active shape key from a different object regardless of its current influence. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the active shape of the first object. |
-| Delete all Shape Keys | Delete all shape keys at this mesh. |
-| Move to Top | Move the shape key to the top of the list. But not above the Basis shape key. |
-| Move to Bottom | Move the shape key to the bottom of the list. |
+Add a new shape key with the current deformed shape of the object.
 
+#### Mirror Shape Key
+
+Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical.
+
+#### Mirror Shape Key (Topology)
+
+Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work.
+
+#### Join as Shapes (Transfer Mix)
+
+Transfer the current resulting shape from a different object. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the current mix of the first object.
+
+#### Transfer Shape Key
+
+Transfer the active shape key from a different object regardless of its current influence. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the active shape of the first object.
+
+#### Delete all Shape Keys
+
+Delete all shape keys at this mesh.
+
+#### Move to Top
+
+Move the shape key to the top of the list. But not above the Basis shape key.
+
+#### Move to Bottom
+
+Move the shape key to the bottom of the list.
 
 #### Move Shape Key Up / Down
 
@@ -383,16 +446,29 @@ Set the shape keys to Relative or Absolute.
 
 The shape is defined relative to the Basis or another specified shape key. And can be adjusted in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Value | The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence. |
-| Range | Minimum and maximum range for the influence value of the active shape key. |
-| Vertex Group | Limit the active shape key deformation to a vertex group. |
-| Relative To | Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Value
+
+The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence.
+
+##### Range
+
+Minimum and maximum range for the influence value of the active shape key.
+
+##### Vertex Group
+
+Limit the active shape key deformation to a vertex group.
+
+##### Relative To
+
+Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key.
 
 #### Absolute
 
@@ -400,13 +476,17 @@ The shape is defined relative to the Basis or another specified shape key. And c
 
 The shape changes over time, as defined in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Re-Time Shape Keys (clock icon) | Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Re-Time Shape Keys (clock icon)
+
+Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered.
 
 ##### Interpolation
 
@@ -426,12 +506,13 @@ The empty hair object is a special curves object. You control it by geometry nod
 
 Define the object that is used as the parent object for the hairs.
 
+### Surface
 
-| Entry | What it does |
-| ------- | ---------------------------------- |
-| Surface | Which object to use. |
-| UV Map | Which UV map of the object to use. |
+Which object to use.
 
+### UV Map
+
+Which UV map of the object to use.
 
 ## Custom Properties Panel
 

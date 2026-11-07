@@ -26,13 +26,17 @@ There are three different render engines available. Workbench, EEVEE, and Cycles
 
 ### Viewport subtab
 
+#### Samples
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Samples | The number of samples when rendering in the viewport. |
-| Temporal Projection | Denoise image using a method called temporal reprojection. This method can leave some ghosting. |
-| Jittered Shadows | Enables jittered soft shadows in the viewport, improving shadow realism by introducing subtle randomness to shadow sampling. This helps reduce banding and aliasing artifacts in dynamic lighting setups. **Note:** *Jittered shadows are always enabled for final renders. This is an viewport override for performance.* |
+The number of samples when rendering in the viewport.
 
+#### Temporal Projection
+
+Denoise image using a method called temporal reprojection. This method can leave some ghosting.
+
+#### Jittered Shadows
+
+Enables jittered soft shadows in the viewport, improving shadow realism by introducing subtle randomness to shadow sampling. This helps reduce banding and aliasing artifacts in dynamic lighting setups. **Note:** *Jittered shadows are always enabled for final renders. This is an viewport override for performance.*
 
 ### Render subtab
 
@@ -46,14 +50,21 @@ The number of samples when rendering to file.
 
 ![Shadows subtab](/docs2/images/editors/properties/render-properties-tab/eevee/shadows-subtab.png)
 
+#### Rays
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Rays | The number of samples when rendering to file. |
-| Steps | Amount of shadow ray sample per shadow ray. |
-| Volume Shadows | Generate shadows from volumetric material. This is very resources hungry. · **Steps**: Number of samples to compute volumetric shadowing. |
-| Resolution | The resolution scale of the shadow map. |
+The number of samples when rendering to file.
 
+#### Steps
+
+Amount of shadow ray sample per shadow ray.
+
+#### Volume Shadows
+
+Generate shadows from volumetric material. This is very resources hungry. · **Steps**: Number of samples to compute volumetric shadowing.
+
+#### Resolution
+
+The resolution scale of the shadow map.
 
 ### Advanced subtab
 
@@ -69,12 +80,13 @@ Minimum light intensity for a light to contribute to the lighting.
 
 In this panel you can clamp the light values to minimum and maximum values.
 
+### Surface subtab
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Surface subtab | **Direct Light**: The maximum value for lights contribution on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · **Indirect Light**: The maximum value for indirect lighting on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by ray-tracing and light-probes. |
-| Volume subtab | **Direct Light**: The maximum value for lights contribution in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · **Indirect Light**: The maximum value for indirect lighting in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light-probes. |
+**Direct Light**: The maximum value for lights contribution on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · **Indirect Light**: The maximum value for indirect lighting on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by ray-tracing and light-probes.
 
+### Volume subtab
+
+**Direct Light**: The maximum value for lights contribution in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · **Indirect Light**: The maximum value for indirect lighting in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light-probes.
 
 ## Raytracing panel
 
@@ -98,12 +110,13 @@ To remove a preset click at the - sign behind the name.
 
 Select the tracing method to find scene-ray intersections.
 
+##### Light Probe
 
-| Entry | What it does |
-| ------------ | ------------------------------------ |
-| Light Probe | Raytracing using light probes. |
-| Screen-Trace | Raytracing against the depth buffer. |
+Raytracing using light probes.
 
+##### Screen-Trace
+
+Raytracing against the depth buffer.
 
 #### Resolution
 
@@ -117,25 +130,33 @@ The ray-tracing resolution. 1 Ray per pixel, 1 ray per 4 pixel, 1 ray per 16 pix
 
 Just visible with the method Screen-Trace
 
+##### Precision
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------ |
-| Precision | Precision of screen space ray-tracing. |
-| Thickness | Surface Thickness used to detect intersection when using screen-tracing. |
+Precision of screen space ray-tracing.
 
+##### Thickness
+
+Surface Thickness used to detect intersection when using screen-tracing.
 
 #### Denoising Subpanel
 
 ![Denoising Subpanel](/docs2/images/editors/properties/render-properties-tab/eevee/denoising-subpanel.png)
 
+##### Denoising
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------------------- |
-| Denoising | Enable Denoising for raytraced effects. |
-| Spatial Reuse | Reuse the rays of neighbour pixe. |
-| Temporal Accumulation | Accumulate samples by reprojecting last tracing results |
-| Bilateral Filter | Blur the resolved radiance by reprojecting last tracing result of the temporal accumulation. |
+Enable Denoising for raytraced effects.
 
+##### Spatial Reuse
+
+Reuse the rays of neighbour pixe.
+
+##### Temporal Accumulation
+
+Accumulate samples by reprojecting last tracing results
+
+##### Bilateral Filter
+
+Blur the resolved radiance by reprojecting last tracing result of the temporal accumulation.
 
 #### Fast GI Approximation subpanel
 
@@ -149,12 +170,13 @@ Maximum roughness to use the tracing pipeline for. Higher roughness surfaces wil
 
 ![Method](/docs2/images/editors/properties/render-properties-tab/eevee/method-2.png)
 
+###### Ambient occlusion
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Ambient occlusion | Uses Ambient occlusion instead of Global Illumination. Ambient Occlusion is self shadowing, and doesn't calculate colors. |
-| Global Illumination | Computes global illumination. It takes light bounces off surrounding objects into account. |
+Uses Ambient occlusion instead of Global Illumination. Ambient Occlusion is self shadowing, and doesn't calculate colors.
 
+###### Global Illumination
+
+Computes global illumination. It takes light bounces off surrounding objects into account.
 
 ##### Resolution
 
@@ -162,16 +184,29 @@ Maximum roughness to use the tracing pipeline for. Higher roughness surfaces wil
 
 The resolution of the AO or GI map. It is relative to the render resolution. 1 is the size of the full render resolution, 1/2 is half the size of render resolution, and so on.
 
+###### Rays
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Rays | Amount of GI or AO rays to trace for each pixel. |
-| Steps | Amount of screen sample per GI or AO ray. |
-| Precision | Precision of the Fast GI ray matching. |
-| Distance | If non zero, the maximum distance at which other surfaces will contribute to the Fast GI approximation. |
-| Thickness near / far | Geometric thickness of the surfaces when computing GI or AO. This feature reduces light leaking and missing contact occlusion. |
-| Bias | Bias the shading normal to reduce self intersection artifacts. |
+Amount of GI or AO rays to trace for each pixel.
 
+###### Steps
+
+Amount of screen sample per GI or AO ray.
+
+###### Precision
+
+Precision of the Fast GI ray matching.
+
+###### Distance
+
+If non zero, the maximum distance at which other surfaces will contribute to the Fast GI approximation.
+
+###### Thickness near / far
+
+Geometric thickness of the surfaces when computing GI or AO. This feature reduces light leaking and missing contact occlusion.
+
+###### Bias
+
+Bias the shading normal to reduce self intersection artifacts.
 
 ## Volumes panel
 
@@ -179,14 +214,21 @@ The resolution of the AO or GI map. It is relative to the render resolution. 1 i
 
 Contains volumetrics settings.
 
+### Resolution
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Resolution | The resolution of the Volumes map. It is relative to the render resolution. 1 is the size of the full render resolution, 1/2 is half the size of render resolution, and so on. |
-| Steps | Number of samples to compute for the volumetrics effect. |
-| Distribution | Distribute more samples closer to the camera. |
-| Max Depth | Maximum surface intersection count used by the accurate volume intersection method. Thise feature will create artifacts if it is exceeded. |
+The resolution of the Volumes map. It is relative to the render resolution. 1 is the size of the full render resolution, 1/2 is half the size of render resolution, and so on.
 
+### Steps
+
+Number of samples to compute for the volumetrics effect.
+
+### Distribution
+
+Distribute more samples closer to the camera.
+
+### Max Depth
+
+Maximum surface intersection count used by the accurate volume intersection method. Thise feature will create artifacts if it is exceeded.
 
 ### Custom Range subpanel
 
@@ -216,12 +258,13 @@ Additional subdivision along the hair.
 
 Sometimes you want to simplify the rendering without to loose the already tweaked settings and adjustments. For test renderings for example. Simplify allows you to simplify the rendering.
 
+### Enable
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable | In the header is a checkbox to enable Simplify. |
-| Viewport subpanel | This section affects the rendering with Eevee in the Viewport. · **Max Subdivisions**: Limit the number of maximum subdivisions. · **Max Child Particles**: Limit the number of child particles. · **Volume Resolution**: Simplify volumes by setting the resolution percentage of volume objects in viewport. · **Normals**: Skip computing custom normals and face corner normals for displaying meshes in the viewport. |
+In the header is a checkbox to enable Simplify.
 
+### Viewport subpanel
+
+This section affects the rendering with Eevee in the Viewport. · **Max Subdivisions**: Limit the number of maximum subdivisions. · **Max Child Particles**: Limit the number of child particles. · **Volume Resolution**: Simplify volumes by setting the resolution percentage of volume objects in viewport. · **Normals**: Skip computing custom normals and face corner normals for displaying meshes in the viewport.
 
 ### Render
 
@@ -229,12 +272,13 @@ Sometimes you want to simplify the rendering without to loose the already tweake
 
 This section affects the rendering with Eevee to file.
 
+#### Max Subdivisions
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------- |
-| Max Subdivisions | Limit the number of maximum subdivisions. |
-| Max Child Particles | Limit the number of child particles. |
+Limit the number of maximum subdivisions.
 
+#### Max Child Particles
+
+Limit the number of child particles.
 
 ### Grease Pencil
 
@@ -242,29 +286,49 @@ This section affects the rendering with Eevee to file.
 
 This section affects Grease Pencil drawings.
 
+#### Enable
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------ |
-| Enable | Enables the Grease Pencil features. |
-| Playback Only | Simplify Grease Pencil only during animation playback. |
-| Fill | Display Fill strokes in the Viewport. |
-| Modifiers | Apply modifiers in the viewport. |
-| Shader Effects | display shader effects. |
-| Layers Tinting | Display layers tint. |
-| Antialiasing | Use antialiasing to smooth stroke edges. |
+Enables the Grease Pencil features.
 
+#### Playback Only
+
+Simplify Grease Pencil only during animation playback.
+
+#### Fill
+
+Display Fill strokes in the Viewport.
+
+#### Modifiers
+
+Apply modifiers in the viewport.
+
+#### Shader Effects
+
+display shader effects.
+
+#### Layers Tinting
+
+Display layers tint.
+
+#### Antialiasing
+
+Use antialiasing to smooth stroke edges.
 
 ## Depth of Field panel
 
 ![Depth of Field panel](/docs2/images/editors/properties/render-properties-tab/eevee/depth-of-field-panel.png)
 
+### Max Size
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------- |
-| Max Size | The maximum size of the bokeh shape for Depth of Field. Lower is faster. |
-| Sprite Threshold | Brightness threshold for using sprite base depth of field. |
-| Neighbor Rejection | The maximum brightness to consider when rejecting bokeh sprites based on neighborhood. Lower is faster. |
+The maximum size of the bokeh shape for Depth of Field. Lower is faster.
 
+### Sprite Threshold
+
+Brightness threshold for using sprite base depth of field.
+
+### Neighbor Rejection
+
+The maximum brightness to consider when rejecting bokeh sprites based on neighborhood. Lower is faster.
 
 ### Jitter Camera
 
@@ -294,14 +358,21 @@ In the header is a checkbox to enable Simplify.
 
 Controls at what point the shutter opens in relation to the frame.
 
+#### Shutter
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------------- |
-| Shutter | Time taken in frames between shutter open and close. |
-| Bleeding Bias | Reduce background bleeding onto foreground elements. Lower values = less bleeding. |
-| Max Blur | The maximum blur distance that a pixel can spread over. |
-| Steps | Controls the accuracy of motion blur. More steps means longer render time. |
+Time taken in frames between shutter open and close.
 
+#### Bleeding Bias
+
+Reduce background bleeding onto foreground elements. Lower values = less bleeding.
+
+#### Max Blur
+
+The maximum blur distance that a pixel can spread over.
+
+#### Steps
+
+Controls the accuracy of motion blur. More steps means longer render time.
 
 ### Shutter Curve
 
@@ -331,27 +402,41 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu that contains some curve related tools.
 
+###### Reset View
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Extend Horizontal | Causes the curve to stay horizontal before the first point and after the last point. |
-| Extend Extrapolated | Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve. |
-| Reset Curve | Resets the curve to the initial shape. |
+Resets the curve windows zoom.
 
+###### Extend Horizontal
+
+Causes the curve to stay horizontal before the first point and after the last point.
+
+###### Extend Extrapolated
+
+Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.
+
+###### Reset Curve
+
+Resets the curve to the initial shape.
 
 ### Handles
 
 ![Handles](/docs2/images/editors/properties/render-properties-tab/eevee/handles.png)
 
+#### Vector Handle
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------ |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X and Y values | The coordinates of the currently selected curve point. |
+Set handle type to Vector.
 
+#### Auto Handle
+
+Set handle type to Auto.
+
+#### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+#### X and Y values
+
+The coordinates of the currently selected curve point.
 
 #### Presets
 
@@ -437,12 +522,13 @@ Which device to use for realtime compositing.
 
 Precision menu just appears with GPU device selected.
 
+##### Auto
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------ |
-| Auto | Full precision at rendering, half precision otherwise. |
-| Full | Full precision in all cases. |
+Full precision at rendering, half precision otherwise.
 
+##### Full
+
+Full precision in all cases.
 
 ##### Denoise nodes subpanel
 

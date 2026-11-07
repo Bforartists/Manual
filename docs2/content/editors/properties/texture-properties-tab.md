@@ -41,19 +41,25 @@ Brush textures appears in the texture panel of the brush settings. Brush mask te
 
 A texture browser with the available textures.
 
+##### Edit Box
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Edit Box | The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Number of users | See how many users the palette currently has. |
-| Fake User | Fake User sets the element to have a fake user. Data without a user is normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
+The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
 
+##### Number of users
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------- |
-| New Texture | Add a new texture |
-| Remove Texture | Removes the texture as the active texture. Note that the texture is still in the list. |
+See how many users the palette currently has.
 
+##### Fake User
+
+Fake User sets the element to have a fake user. Data without a user is normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
+
+##### New Texture
+
+Add a new texture
+
+##### Remove Texture
+
+Removes the texture as the active texture. Note that the texture is still in the list.
 
 ### Type
 
@@ -121,13 +127,17 @@ Grayscale based noise. The value returned is greyscale 8 bit.
 
 The noise gives an RGB value. The value returned is rgb 24 bit.
 
+##### Size
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Size | The dimension of the Noise table. |
-| Depth | The depth of the Clouds calculation. A higher number results in a long calculation time, but also in finer details. |
-| Nabla | Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are. |
+The dimension of the Noise table.
 
+##### Depth
+
+The depth of the Clouds calculation. A higher number results in a long calculation time, but also in finer details.
+
+##### Nabla
+
+Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are.
 
 ## Distorted Noise panel
 
@@ -149,13 +159,17 @@ What noise method to use.
 
 What noise method to use for the distortion.
 
+#### Amount
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Amount | The amount of distortion. |
-| Size | The dimension of the Noise table. |
-| Nabla | Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are. |
+The amount of distortion.
 
+#### Size
+
+The dimension of the Noise table.
+
+#### Nabla
+
+Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are.
 
 ## Image panel - Settings Subpanel
 
@@ -179,12 +193,13 @@ Load an image and / or switch to other images.
 
 A texture browser with the available textures.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Unlink Data-Block | Remove the texture. |
+The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
 
+##### Unlink Data-Block
+
+Remove the texture.
 
 #### File selector menu
 
@@ -198,13 +213,17 @@ Create a new image.
 
 Creates a new image. You will get a dialog where you can define settings for the new image.
 
+###### Name
 
-| Entry | What it does |
-| ------ | ---------------------------- |
-| Name | The name of the new image |
-| Width | The width of the new image. |
-| Height | The height of the new image. |
+The name of the new image
 
+###### Width
+
+The width of the new image.
+
+###### Height
+
+The height of the new image.
 
 ###### Color
 
@@ -242,14 +261,21 @@ This deletes the selected image. Unfortunately not immediately. You need to save
 
 And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.
 
+###### Fake User
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open Image | Opens the file browser to load an image. |
-| Unpack | Unpack packed files to a directory. |
-| User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
+###### Open Image
+
+Opens the file browser to load an image.
+
+###### Unpack
+
+Unpack packed files to a directory.
+
+###### User
+
+The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists.
 
 ### Source
 
@@ -315,25 +341,49 @@ Displays the image with the color management settings from the render tab.
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-| Deinterlace | Movie only. Deinterlace the movie file on load. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
+
+###### Deinterlace
+
+Movie only. Deinterlace the movie file on load.
 
 ##### Color Space
 
@@ -355,14 +405,21 @@ Display the image with using the color management settings.
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
 
 ##### Info string
 
@@ -402,12 +459,13 @@ UDIM is an enhancement to the UV mapping and texturing workflow. And does not be
 
 Use the Alpha channel that is stored in the image.
 
+### Calculate
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Calculate | Calculate an alpha based on the RGB values of the Image. Black (0, 0, 0) is transparent, white (1, 1, 1) opaque. Enable this option if the image texture is a mask. Note that mask images can use shades of gray that result in semi-transparency, like ghosts, flames, and smoke/fog. |
-| Invert | Reverses the alpha value. Use this option if the mask image has white where you want it transparent and vice versa. |
+Calculate an alpha based on the RGB values of the Image. Black (0, 0, 0) is transparent, white (1, 1, 1) opaque. Enable this option if the image texture is a mask. Note that mask images can use shades of gray that result in semi-transparency, like ghosts, flames, and smoke/fog.
 
+### Invert
+
+Reverses the alpha value. Use this option if the mask image has white where you want it transparent and vice versa.
 
 ## Image panel - Mapping Subpanel
 
@@ -447,12 +505,13 @@ Clips to cubic-shaped area around the images and sets exterior pixels as transpa
 
 The image is repeated horizontally and vertically.
 
+##### Repeat X / Y
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repeat X / Y | X/Y repetition multiplier. |
-| Mirror X / Y | Mirror on X/Y axes. These buttons allow you to map the texture as a mirror, or automatic flip of the image, in the corresponding X and/or Y direction. They become active when the Repeat value is higher than 1. |
+X/Y repetition multiplier.
 
+##### Mirror X / Y
+
+Mirror on X/Y axes. These buttons allow you to map the texture as a mirror, or automatic flip of the image, in the corresponding X and/or Y direction. They become active when the Repeat value is higher than 1.
 
 #### Checker
 
@@ -460,12 +519,13 @@ The image is repeated horizontally and vertically.
 
 Checkerboards quickly made. You can use the option size on the Mapping panel as well to create the desired number of checkers.
 
+##### Distance
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------- |
-| Distance | Governs the distance between the checkers in parts of the texture size. |
-| Tiles Even / Odd | Set even/odd tiles. |
+Governs the distance between the checkers in parts of the texture size.
 
+##### Tiles Even / Odd
+
+Set even/odd tiles.
 
 ### Crop subpanel
 
@@ -495,12 +555,13 @@ Multiply the filter size used by interpolation.
 
 Image type Magic.
 
+### Depth
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------ |
-| Depth | The depth of the calculation. A higher number results in a long calculation time, but also in finer details. |
-| Turbulence | The strength of the pattern. |
+The depth of the calculation. A higher number results in a long calculation time, but also in finer details.
 
+### Turbulence
+
+The strength of the pattern.
 
 ## Marble panel
 
@@ -534,14 +595,21 @@ Shape of wave to produce bands.
 
 The noise function works with two methods. Soft or hard.
 
+#### Size
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Size | The dimensions of the noise table. |
-| Depth | The depth of the Marble calculation. A higher value results in greater calculation time, but also in finer details. |
-| Turbulence | The turbulence of the sine bands. |
-| Nabla | Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are. |
+The dimensions of the noise table.
 
+#### Depth
+
+The depth of the Marble calculation. A higher value results in greater calculation time, but also in finer details.
+
+#### Turbulence
+
+The turbulence of the sine bands.
+
+#### Nabla
+
+Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are.
 
 ## Musgrave panel
 
@@ -563,16 +631,29 @@ What noise method to use.
 
 What noise type to use.
 
+#### Size
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Size | The input noise scale. |
-| Nabla | Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are. |
-| Dimension | Fractal dimension controls the contrast of a layer relative to the previous layer in the texture. The higher the fractal dimension, the higher the contrast between each layer, and thus the more detail shows in the texture. |
-| Lacunarity | Lacunarity controls the scaling of each layer of the Musgrave texture, meaning that each additional layer will have a scale that is the inverse of the value which shows on the button. i.e. Lacunarity = 2 –&gt; Scale = 1/2 original. |
-| Octaves | Octave controls the number of times the original noise pattern is overlayed on itself and scaled/contrasted with the fractal dimension and lacunarity settings. |
-| Intensity | Light intensity. Called Offset for Hetero Terrain. |
+The input noise scale.
 
+#### Nabla
+
+Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are.
+
+#### Dimension
+
+Fractal dimension controls the contrast of a layer relative to the previous layer in the texture. The higher the fractal dimension, the higher the contrast between each layer, and thus the more detail shows in the texture.
+
+#### Lacunarity
+
+Lacunarity controls the scaling of each layer of the Musgrave texture, meaning that each additional layer will have a scale that is the inverse of the value which shows on the button. i.e. Lacunarity = 2 –&gt; Scale = 1/2 original.
+
+#### Octaves
+
+Octave controls the number of times the original noise pattern is overlayed on itself and scaled/contrasted with the fractal dimension and lacunarity settings.
+
+#### Intensity
+
+Light intensity. Called Offset for Hetero Terrain.
 
 ### Offset
 
@@ -610,12 +691,13 @@ Plastic is the standard Stucci, while the “walls” is where Stucci gets it na
 
 There are two methods available for working with Noise. Soft or Hard.
 
+#### Size
 
-| Entry | What it does |
-| ---------- | --------------------------------- |
-| Size | Dimension of the Noise table. |
-| Turbulence | Depth of the Stucci calculations. |
+Dimension of the Noise table.
 
+#### Turbulence
+
+Depth of the Stucci calculations.
 
 ## Voronoi panel
 
@@ -685,26 +767,37 @@ Shape of wave to produce bands.
 
 Smooth transitions or sharp transitions. Changes contrast and sharpness.
 
+#### Turbulence
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Turbulence | The turbulence of band noise and ring noise. |
-| Nabla | Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are. |
+The turbulence of band noise and ring noise.
 
+#### Nabla
+
+Size of derivate offset used for calculating normal. In order to calculate a normal, you usually use three samples in texture space. Typically that's the current sample location, and two other positions in texture U and V directions. This "nabla" value defines how far away these positions are.
 
 ## Colors Panel
 
 ![Colors Panel](/docs2/images/editors/properties/texture-properties-tab/colors-panel.png)
 
+### Clamp
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------- |
-| Clamp | Clamps the range by setting the negative rgb and intensity values to zero. |
-| Multiply R G B | Multiply factor for the r g and b channel. |
-| Brightness | The brightness of the texture. |
-| Contrast | The contrast of the texture. |
-| Saturation | The saturation of the texture. |
+Clamps the range by setting the negative rgb and intensity values to zero.
 
+### Multiply R G B
+
+Multiply factor for the r g and b channel.
+
+### Brightness
+
+The brightness of the texture.
+
+### Contrast
+
+The contrast of the texture.
+
+### Saturation
+
+The saturation of the texture.
 
 ### Color ramp subpanel
 
@@ -712,51 +805,73 @@ Smooth transitions or sharp transitions. Changes contrast and sharpness.
 
 Specify a range of colors based on color stops. The color between the color stops gets interpolated.
 
+#### +
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
-| - | Deletes the selected color stop from the list. |
+Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.
 
+#### -
+
+Deletes the selected color stop from the list.
 
 #### Tools menu
 
 ![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
+##### Flip Color Ramp
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------- |
-| Flip Color Ramp | Flips the gradient, inverting the values of the color ramp. |
-| Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
-| Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
-| Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
-| Reset Color Ramp | Resets the color ramp to its default state. |
+Flips the gradient, inverting the values of the color ramp.
 
+##### Distribute Stops from Left
+
+Rearrange the stops so that every step has the same space to the right.
+
+##### Distribute Stops Evenly
+
+Space between all neighboring stops becomes equal.
+
+##### Eyedropper (pipette icon) E
+
+An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.
+
+##### Reset Color Ramp
+
+Resets the color ramp to its default state.
 
 #### Color Mode
 
 ![Color Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png)
 
+##### RGB
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RGB | Blends color by mixing each color channel and combining. |
-| HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
+Blends color by mixing each color channel and combining.
 
+##### HSV/HSL
+
+Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.
 
 #### Interpolation
 
 ![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
+##### Ease
 
-| Entry | What it does |
-| -------- | -------------------------------------------------- |
-| Ease | Uses an Ease Interpolation for the color stops. |
-| Cardinal | Uses a Cardinal Interpolation for the color stops. |
-| Linear | Uses a Linear Interpolation for the color stops. |
-| B-Spline | Uses a B-Spline Interpolation for the color stops. |
-| Constant | Uses a Constant Interpolation for the color stops. |
+Uses an Ease Interpolation for the color stops.
 
+##### Cardinal
+
+Uses a Cardinal Interpolation for the color stops.
+
+##### Linear
+
+Uses a Linear Interpolation for the color stops.
+
+##### B-Spline
+
+Uses a B-Spline Interpolation for the color stops.
+
+##### Constant
+
+Uses a Constant Interpolation for the color stops.
 
 #### Color Ramp
 
@@ -774,12 +889,13 @@ Adjust the active color stop.
 
 Choose the color stop by index.
 
+##### Pos
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------- |
-| Pos | The position of the active color stop. The range goes from 0.000 to 1.000 |
-| Color | The color of the active color stop. Clicking at it opens a color picker. |
+The position of the active color stop. The range goes from 0.000 to 1.000
 
+##### Color
+
+The color of the active color stop. Clicking at it opens a color picker.
 
 ## Custom Properties Panel
 

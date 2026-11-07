@@ -54,12 +54,13 @@ It’s best to avoid small objects, as they’re currently unstable. Ideally, ob
 
 When objects are small and/or move very fast, they can pass through each other. Besides what’s mentioned above it’s also good to avoid using mesh shapes in this case. Mesh shapes consist of individual triangles and therefore don’t really have any thickness, so objects can pass through more easily. You can give them some thickness by increasing the collision margin.
 
+#### Combining Rigid Bodies with Other Simulations
 
-| Entry | What it does |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Combining Rigid Bodies with Other Simulations | Since the rigid body simulation is part of the animation system, it can influence other simulations just like the animation system can. In order for this to work, the rigid body object needs to have a collision modifier. Simply click on **Collision** in the **Physics** context. |
-| Scaling Rigid Bodies | Rigid body objects can be scaled, also during the simulation. This work well in most cases, but can sometimes cause problems. If dynamic scaling is not needed, rigid body objects should have the scale applied by using the **Apply Scale** command |
+Since the rigid body simulation is part of the animation system, it can influence other simulations just like the animation system can. In order for this to work, the rigid body object needs to have a collision modifier. Simply click on **Collision** in the **Physics** context.
 
+#### Scaling Rigid Bodies
+
+Rigid body objects can be scaled, also during the simulation. This work well in most cases, but can sometimes cause problems. If dynamic scaling is not needed, rigid body objects should have the scale applied by using the **Apply Scale** command
 
 ## Rigid Body Panel
 
@@ -69,12 +70,13 @@ When objects are small and/or move very fast, they can pass through each other. 
 
 Role of the rigid body in the simulation. Active objects can be simulated dynamically, passive object remain static.
 
+#### Active
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active | Object is directly controlled by simulation results. The possibility to select this type also available with Add Active button in the Physics tab of the Tool Shelf. |
-| Passive | Object is directly controlled by animation system. Thus, this type is not available for Rigid Body Dynamics. The possibility to select this type also available with Add Passive button in the Physics tab of the Tool Shelf. |
+Object is directly controlled by simulation results. The possibility to select this type also available with Add Active button in the Physics tab of the Tool Shelf.
 
+#### Passive
+
+Object is directly controlled by animation system. Thus, this type is not available for Rigid Body Dynamics. The possibility to select this type also available with Add Passive button in the Physics tab of the Tool Shelf.
 
 ## Settings subpanel
 
@@ -88,13 +90,17 @@ Role of the rigid body in the simulation. Active objects can be simulated dynami
 
 The passive type does not have a mass or dynamic checkbox.
 
+#### Mass
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mass | Specifies how heavy the object is and “weights” irrespective of gravity. There are predefined mass preset available with the Calculate Mass button in the Physics tab of the Toolbar. |
-| Dynamic | Enables/disables rigid body simulation for object. |
-| Animated | Allows the rigid body additionally to be controlled by the animation system. |
+Specifies how heavy the object is and “weights” irrespective of gravity. There are predefined mass preset available with the Calculate Mass button in the Physics tab of the Toolbar.
 
+#### Dynamic
+
+Enables/disables rigid body simulation for object.
+
+#### Animated
+
+Allows the rigid body additionally to be controlled by the animation system.
 
 ## Collisions subpanel
 
@@ -124,13 +130,17 @@ Creates a convex hull around the rigid body mesh. Concave gaps gets closed.
 
 What shape to use for the calculation of the convex hull.
 
+###### Base
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------------------------------------------------- |
-| Base | The base mesh of the object. |
-| Deform | Includes any deformations added to the mesh (shape keys, deform modifiers). Mesh shapes can deform during simulation. |
-| Final | Includes all deformations and modifiers. |
+The base mesh of the object.
 
+###### Deform
+
+Includes any deformations added to the mesh (shape keys, deform modifiers). Mesh shapes can deform during simulation.
+
+###### Final
+
+Includes all deformations and modifiers.
 
 #### Mesh
 
@@ -144,13 +154,17 @@ Uses the mesh of the rigid body for collision calculation.
 
 What shape to use for the calculation of the convex hull.
 
+###### Base
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------------------------------------------------- |
-| Base | The base mesh of the object. |
-| Deform | Includes any deformations added to the mesh (shape keys, deform modifiers). Mesh shapes can deform during simulation. |
-| Final | Includes all deformations and modifiers. |
+The base mesh of the object.
 
+###### Deform
+
+Includes any deformations added to the mesh (shape keys, deform modifiers). Mesh shapes can deform during simulation.
+
+###### Final
+
+Includes all deformations and modifiers.
 
 ##### Deforming
 
@@ -168,12 +182,13 @@ You need to have at least one child object with a rigid body attached.
 
 ![Surface Response subpanel](/docs2/images/editors/properties/physics-properties-tab/rigid-body-panel/surface-response-subpanel.png)
 
+#### Friction
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Friction | Resistance of object to movement. Specifies how much velocity is lost when objects collide with each other. |
-| Bounciness | Tendency of object to bounce after colliding with another (0 to 1) (rigid to perfectly elastic). Specifies how much objects can bounce after collisions. |
+Resistance of object to movement. Specifies how much velocity is lost when objects collide with each other.
 
+#### Bounciness
+
+Tendency of object to bounce after colliding with another (0 to 1) (rigid to perfectly elastic). Specifies how much objects can bounce after collisions.
 
 ### Sensitivity subpanel
 
@@ -209,12 +224,13 @@ Holding down shift allows to add the rigid body to more than one group.
 
 Rigid body type Active only. Dynamics is used to control the physics of the rigid body simulation.
 
+### Damping Translation
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------- |
-| Damping Translation | Amount of linear velocity that is lost over time. |
-| Rotation | Amount of angular velocity that is lost over time. |
+Amount of linear velocity that is lost over time.
 
+### Rotation
+
+Amount of angular velocity that is lost over time.
 
 ### Deactivation subpanel
 
@@ -222,11 +238,14 @@ Rigid body type Active only. Dynamics is used to control the physics of the rigi
 
 Allows resting rigid bodies to become deactivated.
 
+#### Start Deactivated
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Start Deactivated | Starts objects deactivated. They are activated on collision with other objects. |
-| Velocity Linear | Specifies the linear deactivation velocity below which the rigid body is deactivated and simulation stops simulating object. |
-| Angular | Specifies the angular deactivation velocity below which the rigid body is deactivated and simulation stops simulating object. |
+Starts objects deactivated. They are activated on collision with other objects.
 
+#### Velocity Linear
 
+Specifies the linear deactivation velocity below which the rigid body is deactivated and simulation stops simulating object.
+
+#### Angular
+
+Specifies the angular deactivation velocity below which the rigid body is deactivated and simulation stops simulating object.

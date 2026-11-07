@@ -30,31 +30,41 @@ Vertex groups exists for mesh and lattice objects.
 
 A List of the vertex groups for this mesh.
 
+#### Group name
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group name | The name of the group. It can be renamed by double clicking at it. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the group. It can be renamed by double clicking at it.
 
+#### Lock
 
-| Entry | What it does |
-| -------- | -------------------------------- |
-| Add + | Create an empty vertex group. |
-| Remove - | Deletes the active vertex group. |
+The lock icon at the end of a group name locks the group from being editable.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create an empty vertex group.
+
+#### Remove -
+
+Deletes the active vertex group.
 
 ### Specials menu
 
 ![Specials menu](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/specials-menu.png)
 
+#### Sort by Name
 
-| Entry | What it does |
-| ---------------------- | --------------------------------------------------------------- |
-| Sort by Name | Sorts the vertex groups alphabetically by name. |
-| Sort by Bone Hierarchy | Sorts the vertex groups by the hierarchy of the assigned bones. |
+Sorts the vertex groups alphabetically by name.
 
+#### Sort by Bone Hierarchy
+
+Sorts the vertex groups by the hierarchy of the assigned bones.
 
 #### Copy Vertex Group
 
@@ -62,21 +72,49 @@ A List of the vertex groups for this mesh.
 
 Add a copy of the active vertex group as a new group. The new group will be named like the original group with `“_copy”` appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.
 
+##### Copy Vertex Groups to Linked
 
-| Entry | What it does |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Vertex Groups to Linked | Copy vertex groups of this mesh to all linked objects which use the same mesh data (all users of the data). |
-| Copy Vertex Group to Selected | Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited). |
-| Mirror Vertex Group | Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group. |
-| Mirror Vertex Group (Topology) | Performs the Mirror Vertex Group with the Topology Mirror option enabled. |
-| Remove from All Groups | Unassigns the selected vertices from all groups. Even locked. |
-| Clear Active Group | Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups. |
-| Delete All Unlocked Groups | Remove all vertex groups from the object that are not locked. |
-| Delete All Groups | Remove all vertex groups from the object. |
-| Lock All | Lock all groups. |
-| Unlock All | Unlock all groups. |
-| Lock Invert All | Invert group locks. |
+Copy vertex groups of this mesh to all linked objects which use the same mesh data (all users of the data).
 
+##### Copy Vertex Group to Selected
+
+Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited).
+
+##### Mirror Vertex Group
+
+Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group.
+
+##### Mirror Vertex Group (Topology)
+
+Performs the Mirror Vertex Group with the Topology Mirror option enabled.
+
+##### Remove from All Groups
+
+Unassigns the selected vertices from all groups. Even locked.
+
+##### Clear Active Group
+
+Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups.
+
+##### Delete All Unlocked Groups
+
+Remove all vertex groups from the object that are not locked.
+
+##### Delete All Groups
+
+Remove all vertex groups from the object.
+
+##### Lock All
+
+Lock all groups.
+
+##### Unlock All
+
+Unlock all groups.
+
+##### Lock Invert All
+
+Invert group locks.
 
 #### Move Vertex Group Up / Down
 
@@ -90,15 +128,25 @@ Moves the selected vertex group up or down in the list.
 
 Assign the selected vertices to the active vertex group.
 
+##### Remove
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------- |
-| Remove | Remove the selected vertices from the active group. |
-| Select | Select all vertices in the group. |
-| Deselect | Deselect all vertices in the group. |
-| Weight | The weight value that gets assigned to the selected vertices. |
-| Auto Normalize | Ensure all bone-deforming vertex groups add up to 1.0 while weight painting or assigning to vertices. |
+Remove the selected vertices from the active group.
 
+##### Select
+
+Select all vertices in the group.
+
+##### Deselect
+
+Deselect all vertices in the group.
+
+##### Weight
+
+The weight value that gets assigned to the selected vertices.
+
+##### Auto Normalize
+
+Ensure all bone-deforming vertex groups add up to 1.0 while weight painting or assigning to vertices.
 
 ## Shape Keys panel
 
@@ -154,47 +202,105 @@ A List of the shape keys for this mesh.
 
 It contains two types of shape keys. Basis is the base shape. The other type relies at this shape as the base.
 
+#### Shape Key name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key name | The name of the shape key. It can be renamed by double clicking at it. |
-| Slider value | The blend value of this shape key. The Basis shape key does not have such a slider. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the shape key. It can be renamed by double clicking at it.
 
+#### Slider value
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a shape key. |
-| Remove - | Delete the selected shape key. |
+The blend value of this shape key. The Basis shape key does not have such a slider.
 
+#### Lock
+
+The lock icon at the end of a group name locks the group from being editable.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a shape key.
+
+#### Remove -
+
+Delete the selected shape key.
 
 ### Specials Menu
 
 ![Specials Menu](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/specials-menu-2.png)
 
+#### New Combined
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Combined | Add a new shape key with the current deformed shape of the object. |
-| Duplicate | Makes a duplicate of the current selected shape key. |
-| Copy from Objects | Copy the active shape key of another selected object to this one. |
-| Mirror Shape Key | Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical. |
-| Mirror Shape Key (Topology) | Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work. |
-| New from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys. |
-| New from Objects Flipped | Add the vertex positions of selected objects as shape keys or update existing shape keys. But flipped. |
-| Update from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. |
-| Update from Objects | Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. But flipped. |
-| Transfer Shape Key | Copy the active shape key of another selected object to this one. |
-| Apply all Shape Keys | Apply all shape keys to the mesh, also removes shape keys. |
-| Delete all Shape Keys | Delete all shape keys at this mesh. |
-| Lock All | Lock all shape keys of the active object. They cannot be edited anymore then. |
-| Unlock All | Unlock all shape keys of the active object. |
-| Make Basis | Make this shape key the new basis key, effectively applying it to the mesh. Note that this applies the shape key at its 100% value. |
-| Move to Top | Move the shape key to the top of the list. But not above the Basis shape key. |
-| Move to Bottom | Move the shape key to the bottom of the list. |
+Add a new shape key with the current deformed shape of the object.
 
+#### Duplicate
+
+Makes a duplicate of the current selected shape key.
+
+#### Copy from Objects
+
+Copy the active shape key of another selected object to this one.
+
+#### Mirror Shape Key
+
+Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical.
+
+#### Mirror Shape Key (Topology)
+
+Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work.
+
+#### New from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys.
+
+#### New from Objects Flipped
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys. But flipped.
+
+#### Update from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names.
+
+#### Update from Objects
+
+Add the vertex positions of selected objects as shape keys or update existing shape keys with matching names. But flipped.
+
+#### Transfer Shape Key
+
+Copy the active shape key of another selected object to this one.
+
+#### Apply all Shape Keys
+
+Apply all shape keys to the mesh, also removes shape keys.
+
+#### Delete all Shape Keys
+
+Delete all shape keys at this mesh.
+
+#### Lock All
+
+Lock all shape keys of the active object. They cannot be edited anymore then.
+
+#### Unlock All
+
+Unlock all shape keys of the active object.
+
+#### Make Basis
+
+Make this shape key the new basis key, effectively applying it to the mesh. Note that this applies the shape key at its 100% value.
+
+#### Move to Top
+
+Move the shape key to the top of the list. But not above the Basis shape key.
+
+#### Move to Bottom
+
+Move the shape key to the bottom of the list.
 
 #### Move Shape Key Up / Down
 
@@ -206,12 +312,13 @@ Moves the selected shape key up or down in the list.
 
 Set the shape keys to Relative or Absolute.
 
+#### Shape Key Lock (star icon)
 
-| Entry | What it does |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (star icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. · **Re-Time Shape Keys (clock icon)**: Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+#### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. · **Re-Time Shape Keys (clock icon)**: Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered.
 
 #### Relative Unticked Options
 
@@ -235,14 +342,21 @@ Evaluate the shape key influence over the defined time. The evaluation starts at
 
 The shape is defined relative to the Basis or another specified shape key. And can be adjusted in its settings.
 
+##### Value
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Value | The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence. |
-| Range | Minimum and maximum range for the influence value of the active shape key. |
-| Vertex Group | Limit the active shape key deformation to a vertex group. |
-| Relative To | Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key. |
+The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence.
 
+##### Range
+
+Minimum and maximum range for the influence value of the active shape key.
+
+##### Vertex Group
+
+Limit the active shape key deformation to a vertex group.
+
+##### Relative To
+
+Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key.
 
 #### Add Rest Position
 
@@ -270,20 +384,29 @@ A List of the UV maps for this mesh.
 
 It contains two types of shape keys. Basis is the base shape. The other type relies at this shape as the base.
 
+#### UV Map name
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UV Map name | The name of the shape key. It can be renamed by double clicking at it. |
-| Active Render | Set this UV map as the one to render. Just one UV map can be active at a time. But you can use secondary UV maps in a material. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the shape key. It can be renamed by double clicking at it.
 
+#### Active Render
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a shape key. |
-| Remove - | Delete the selected shape key. |
+Set this UV map as the one to render. Just one UV map can be active at a time. But you can use secondary UV maps in a material.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a shape key.
+
+#### Remove -
+
+Delete the selected shape key.
 
 ## Color Attributes panel
 
@@ -299,14 +422,21 @@ A mesh can have more than one vertex color index and type. But just one index ca
 
 A List of the vertex color indexes for this mesh.
 
+#### Color index name
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color index name | The name of the vertex color index. It can be renamed by double clicking at it. |
-| Active Render | Set this vertex color index as the one to render. Just one vertex color index can be active at a time. But you can use another vertex color index in a material. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the vertex color index. It can be renamed by double clicking at it.
 
+#### Active Render
+
+Set this vertex color index as the one to render. Just one vertex color index can be active at a time. But you can use another vertex color index in a material.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
 ### Add +
 
@@ -334,12 +464,13 @@ The the color attribute type.
 - Color stores RGBA color 32-bit floating point values
 - Byte Color stores RGBA color 32-bit positive integer values
 
+###### Color
 
-| Entry | What it does |
-| ----- | ----------------------- |
-| Color | The Default fill colour |
-| Ok | Confirm to apply |
+The Default fill colour
 
+###### Ok
+
+Confirm to apply
 
 ### Remove -
 
@@ -369,19 +500,25 @@ A list of the attributes at this object. Attributes can be used to identify an o
 
 A List of the attributes for this mesh.
 
+#### Attribute name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Attribute name | The name of the attributes. It can be renamed by double clicking at it. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the attributes. It can be renamed by double clicking at it.
 
+#### Drag Handler
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a new attribute. |
-| Remove - | Delete the selected attribute. |
+The two vertical lines at the end is a handler with which you can expand the list.
 
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a new attribute.
+
+#### Remove -
+
+Delete the selected attribute.
 
 ### Attribute Specials menu
 
@@ -431,12 +568,13 @@ In this panel you can adjust settings of the texture space used by generated tex
 
 The display of the texture space cage can be activated in the Viewport Display in the Object properties.
 
+### Texture Mesh
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture Mesh | Use another mesh for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects. |
-| Auto Texture Space | Adjusts the active object’s texture space automatically when transforming the object. |
+Use another mesh for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
 
+### Auto Texture Space
+
+Adjusts the active object’s texture space automatically when transforming the object.
 
 ### Location, Size
 
@@ -460,16 +598,29 @@ You need to turn off Dyntopo to activate the feature.
 
 Use Voxel or Quad Remesher. The Quad remesher has no settings. The following settings are all for the voxel remesher.
 
+#### Voxel Size
 
-| Entry | What it does |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Voxel Size | Adjust the density of the new created geometry. |
-| Adaptivity | Reduces the final face count by simplifying geometry where detail is not needed. This method uses tris. A value greater than 0 disables the Fix Poles feature. |
-| Fix Poles | Produce less poles and a better topology flow. |
-| Smooth Normals | Smooths the normals of the result. |
-| Preserve | **Volume**: Tries to preserves the volume of the original mesh. · **Attribute**: Keep existing paint masks, face sets, vertex color and other generic mesh attributes on the new mesh. |
-| Voxel Remesh / QuadriFlow Remesh | Starts the remesher in the chosen method. |
+Adjust the density of the new created geometry.
 
+#### Adaptivity
+
+Reduces the final face count by simplifying geometry where detail is not needed. This method uses tris. A value greater than 0 disables the Fix Poles feature.
+
+#### Fix Poles
+
+Produce less poles and a better topology flow.
+
+#### Smooth Normals
+
+Smooths the normals of the result.
+
+#### Preserve
+
+**Volume**: Tries to preserves the volume of the original mesh. · **Attribute**: Keep existing paint masks, face sets, vertex color and other generic mesh attributes on the new mesh.
+
+#### Voxel Remesh / QuadriFlow Remesh
+
+Starts the remesher in the chosen method.
 
 ## Geometry Data panel
 
@@ -477,14 +628,21 @@ Use Voxel or Quad Remesher. The Quad remesher has no settings. The following set
 
 Mesh objects can have different types of custom data attached to them. This data is mostly used internally and can be exported by some exporters like Collada or Alembic.
 
+### Clear Sculpt-Mask Data
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Clear Sculpt-Mask Data | Removes the sculpting mask data layer. It has no big impact, but this can speed up sculpting if the mask is not longer used. |
-| Clear Skin Data | Used to manage the skin data layer which is used by the Skin Modifier. This operator can be needed in case a Skin modifier is created but no skin data exist. |
-| Reorder Mesh Spatially | Reorder mesh faces and vertices based on their spatial position for better BVH building and sculpting performance. |
-| Add Custom Normals Data | Add a custom normals layer if none exists yet. |
+Removes the sculpting mask data layer. It has no big impact, but this can speed up sculpting if the mask is not longer used.
 
+### Clear Skin Data
+
+Used to manage the skin data layer which is used by the Skin Modifier. This operator can be needed in case a Skin modifier is created but no skin data exist.
+
+### Reorder Mesh Spatially
+
+Reorder mesh faces and vertices based on their spatial position for better BVH building and sculpting performance.
+
+### Add Custom Normals Data
+
+Add a custom normals layer if none exists yet.
 
 ## Custom Properties Panel
 

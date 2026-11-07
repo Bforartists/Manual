@@ -148,11 +148,11 @@ def check_style(pages, rep):
     for p in pages:
         heads, skips, bold, tables = [], [], [], []
         lines = list(p.lines())
-        prev = 0
+        prev = 0; in_alo = False
         for idx, (n, line) in enumerate(lines):
             m = re.match(r"^(#{1,6})\s+(.*?)\s*$", line)
             if m:
-                lv = len(m.group(1))
+                lv = len(m.group(1)); in_alo = bool(last_op.match(m.group(2)))
                 heads.append((idx, n, lv, m.group(2)))
                 if prev and lv > prev + 1:
                     skips.append(n)
@@ -160,7 +160,8 @@ def check_style(pages, rep):
                 continue
             if re.match(r"^\*\*[^*]+\*\*\s*:?\s*$", line):
                 bold.append(n)
-            if re.match(r"^\|\s*(Entry|Option|Item)\s*\|\s*What it does\s*\|", line, re.I):
+            # a property table is fine inside an Adjust Last Operation section (writing rules)
+            if not in_alo and re.match(r"^\|\s*(Entry|Option|Item)\s*\|\s*What it does\s*\|", line, re.I):
                 tables.append(n)
         bad = False
         if skips:
