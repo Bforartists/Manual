@@ -130,14 +130,21 @@ Choose a tab to filter the assets by Catalog.
 
 ![Import Method](/docs2/images/editors/3d-viewport/asset-shelf/import-method-2.png)
 
+#### Instance Collections on Linking
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Instance Collections on Linking | When linking or appending collections, this will instance the collection to the scene at the mouse cursor. |
-| Drop Instances to Origin | When linking or appending collections as instances, this will position the new instance to the world center origin. |
-| Link | Import the assets as linked data. This will link data from the asset library to the current scene and file. |
-| Append | Import the assets as copied data, with no link to the original asset data This will append data to the current scene and file. |
+When linking or appending collections, this will instance the collection to the scene at the mouse cursor.
 
+#### Drop Instances to Origin
+
+When linking or appending collections as instances, this will position the new instance to the world center origin.
+
+#### Link
+
+Import the assets as linked data. This will link data from the asset library to the current scene and file.
+
+#### Append
+
+Import the assets as copied data, with no link to the original asset data This will append data to the current scene and file.
 
 #### Append (Reuse Data)
 
@@ -166,14 +173,21 @@ To override all selected contents, use the Outliner Editor by right clicking on 
 
 To the right you can find the display settings.
 
+#### Quick Sizes
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Quick Sizes | Some quick presets between Tiny 48, small 96, Medium 128 and Large 256px thumbnails |
-| Size | Changes the size of the asset thumbnails with a slider. |
-| Names | Toggles the asset names. |
-| By Active Tool | **Note:** *Only available in the Brush Asset Shelf in draw and paint modes.* This toggles a filter that will show only brushes set by the active brush mode set in the Toolshelf to the left. For example, it will only show Paint draw mode brushes but not Erasers at the same time. **Note:** *If you want to see all types of brushes regardless of the mode, turn this off.* |
+Some quick presets between Tiny 48, small 96, Medium 128 and Large 256px thumbnails
 
+#### Size
+
+Changes the size of the asset thumbnails with a slider.
+
+#### Names
+
+Toggles the asset names.
+
+#### By Active Tool
+
+**Note:** *Only available in the Brush Asset Shelf in draw and paint modes.* This toggles a filter that will show only brushes set by the active brush mode set in the Toolshelf to the left. For example, it will only show Paint draw mode brushes but not Erasers at the same time. **Note:** *If you want to see all types of brushes regardless of the mode, turn this off.*
 
 ### Search Filter
 

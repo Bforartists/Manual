@@ -83,20 +83,45 @@ Change the settings of **Bevel** right after you use it, in the Adjust Last Oper
 
 Width Type is a drop-down box choose the Amount type for the bevel action.
 
+###### Offset
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------- |
-| Offset | Amount is offset of new edges from original. |
-| Width | Amount is width of new face. |
-| Depth | Amount is perpendicular distance from original edge to bevel face |
-| Percent | Controls the Profile shape. 0.5 means round. |
-| Absolute | Amount is absolute distance along adjacent edge. |
-| Harden Normals | Match normals to new faces of adjacent faces. |
-| Clamp Overlap | Do not allow beveled geometry to overlap each other. |
-| Loop Slide | Prefer slide along edge to even widths. |
-| Mark Seams | Mark seams along the beveled edges. |
-| Mark Sharp | Mark the beveled edges sharp. |
+Amount is offset of new edges from original.
 
+###### Width
+
+Amount is width of new face.
+
+###### Depth
+
+Amount is perpendicular distance from original edge to bevel face
+
+###### Percent
+
+Controls the Profile shape. 0.5 means round.
+
+###### Absolute
+
+Amount is absolute distance along adjacent edge.
+
+###### Harden Normals
+
+Match normals to new faces of adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled geometry to overlap each other.
+
+###### Loop Slide
+
+Prefer slide along edge to even widths.
+
+###### Mark Seams
+
+Mark seams along the beveled edges.
+
+###### Mark Sharp
+
+Mark the beveled edges sharp.
 
 ##### Miter Outer
 
@@ -180,24 +205,16 @@ Curve presets.
 
 ###### Navigation elements
 
-
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Reverse Path | Reverses the curve path. |
-| Toggle Profile Clipping | Turns the profile clipping on or off. |
-
+- **Zoom in and out**: The two buttons with the magnifying glass at it zooms in and out in the curve window.
+- **Reverse Path**: Reverses the curve path.
+- **Toggle Profile Clipping**: Turns the profile clipping on or off.
 
 ###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
-
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
-
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ##### Curve view
 
@@ -219,21 +236,14 @@ When a point is selected then the curve view reveals a sub menu at the bottom.
 
 When you select a node, then the handler and node position tools shows below the curve window.
 
+- **Handle Type Auto Handle**: Sets the handle type of this curve point to smooth.
+- **Handle Type Vector Handle**: Sets the handle type of this curve point to sharp.
+- **Handle Type Free Handle**: Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.
+- **Handle Type Aligned Free Handle**: Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.
+- **X Y Values**: The position of the currently selected curve point
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Handle Type Auto Handle | Sets the handle type of this curve point to smooth. |
-| Handle Type Vector Handle | Sets the handle type of this curve point to sharp. |
-| Handle Type Free Handle | Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each. |
-| Handle Type Aligned Free Handle | Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve. |
-| X Y Values | The position of the currently selected curve point |
-
-
-| Entry | What it does |
-| -------------------- | --------------------------------- |
-| Sample straigt edges | Sample edges with vector handles. |
-| Sample even length | Sample edges with even lengths. |
-
+- **Sample straigt edges**: Sample edges with vector handles.
+- **Sample even length**: Sample edges with even lengths.
 
 #### Edge Slide
 
@@ -304,16 +314,29 @@ This value defines how smooth the loop cut gets added. From flat to bent.
 
 Adjust the Falloff type for smoothness.
 
+###### Factor
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------- |
-| Factor | Change the center of the added loop. |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
-| Mirror Editing | Enable mirror editing. |
-| Correct UV's | Corrects the UV's when modifying the geometry. |
+Change the center of the added loop.
 
+###### Even
+
+Make the edge loop match the shape of the adjacent edge loop
+
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
+
+###### Mirror Editing
+
+Enable mirror editing.
+
+###### Correct UV's
+
+Corrects the UV's when modifying the geometry.
 
 #### Offset Edge Slide
 
@@ -337,14 +360,21 @@ Change the settings of **Offset Edge Slide** right after you use it, in the Adju
 
 Cap Endpoint caps the loose edges.
 
+###### Edge Slide Factor
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------- |
-| Edge Slide Factor | Adjust the slide amount. |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
+Adjust the slide amount.
 
+###### Even
+
+Make the edge loop match the shape of the adjacent edge loop
+
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
 
 ##### Mirror Editing
 
@@ -372,13 +402,17 @@ Change the settings of **Bridge Edge loops** right after you use it, in the Adju
 
 Choose the method how to deal with bridging multiple loops.
 
+###### Merge
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Merge | With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges. |
-| Twist | The twist offset for closed loops. |
-| Number of Cuts | Adds cuts to the bridge face. |
+With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.
 
+###### Twist
+
+The twist offset for closed loops.
+
+###### Number of Cuts
+
+Adds cuts to the bridge face.
 
 ##### Interpolation
 
@@ -386,12 +420,13 @@ Choose the method how to deal with bridging multiple loops.
 
 Choose the interpolation mode for the cuts.
 
+###### Smoothness
 
-| Entry | What it does |
-| -------------- | --------------------------------------- |
-| Smoothness | Adjust the smoothness for the cuts. |
-| Profile Factor | Adjust the profile factor for the cuts. |
+Adjust the smoothness for the cuts.
 
+###### Profile Factor
+
+Adjust the profile factor for the cuts.
 
 ##### Profile shape
 
@@ -435,13 +470,17 @@ Create N-Gons if required. Else subdividing N-Gons creates Tris.
 
 Adjust the corner type.
 
+###### Fractal
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------- |
-| Fractal | Randomize the selected vertices. |
-| Along Normal | When randomized, this value defines how strong the subdivision follows the normals of the initial vertices. |
-| Random Seed | Randomizing value for fractal randomizing. |
+Randomize the selected vertices.
 
+###### Along Normal
+
+When randomized, this value defines how strong the subdivision follows the normals of the initial vertices.
+
+###### Random Seed
+
+Randomizing value for fractal randomizing.
 
 #### Subdivide Edge ring
 
@@ -596,12 +635,13 @@ Change the settings of **Mark Sharp** right after you use it, in the Adjust Last
 
 Calculate by the selected vertices instead of edges to mark the edges.
 
+###### Mark Sharp from Vertices
 
-| Entry | What it does |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mark Sharp from Vertices | Same as Mark Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. |
-| Clear Sharp from Vertice | Same as Clear Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. the selected edges as Freestyle feature edges. |
+Same as Mark Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges.
 
+###### Clear Sharp from Vertice
+
+Same as Clear Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. the selected edges as Freestyle feature edges.
 
 ### Set Sharpness by Angle
 
@@ -668,19 +708,41 @@ With Boundary ticked you will get the connect edges in the corners. Without the 
 
 ![Boundary](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/boundary.png)
 
+###### Offset Even
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------- |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
-| Edge Rail | Inset the region along existing edges. |
-| Thickness | Thickness adjusts the thickness of the inset geometry. |
-| Depth | With depth you can bevel the inset geometry. It is then not longer co planar to the initial face. |
-| Outset | With outset ticked the Inset will not extrude inwards but outwards. |
-| Select Outer | With Select Outer the outer ring will be selected after the Inset. |
-| Individual | Inset every face individually. |
-| Interpolate | Blend Face Data across the inset. |
+Scales the offset to give more even thickness.
 
+###### Offset Relative
+
+Scales the offset by surrounding geometry.
+
+###### Edge Rail
+
+Inset the region along existing edges.
+
+###### Thickness
+
+Thickness adjusts the thickness of the inset geometry.
+
+###### Depth
+
+With depth you can bevel the inset geometry. It is then not longer co planar to the initial face.
+
+###### Outset
+
+With outset ticked the Inset will not extrude inwards but outwards.
+
+###### Select Outer
+
+With Select Outer the outer ring will be selected after the Inset.
+
+###### Individual
+
+Inset every face individually.
+
+###### Interpolate
+
+Blend Face Data across the inset.
 
 #### Bridge Faces
 
@@ -702,13 +764,17 @@ Change the settings of **Bridge Edge loops** right after you use it, in the Adju
 
 Choose the method how to deal with bridging multiple loops.
 
+###### Merge
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Merge | With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges. |
-| Twist | The twist offset for closed loops. |
-| Number of Cuts | Adds cuts to the bridge face. |
+With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.
 
+###### Twist
+
+The twist offset for closed loops.
+
+###### Number of Cuts
+
+Adds cuts to the bridge face.
 
 ##### Interpolation
 
@@ -716,12 +782,13 @@ Choose the method how to deal with bridging multiple loops.
 
 Choose the interpolation mode for the cuts.
 
+###### Smoothness
 
-| Entry | What it does |
-| -------------- | --------------------------------------- |
-| Smoothness | Adjust the smoothness for the cuts. |
-| Profile Factor | Adjust the profile factor for the cuts. |
+Adjust the smoothness for the cuts.
 
+###### Profile Factor
+
+Adjust the profile factor for the cuts.
 
 ##### Profile shape
 
@@ -783,12 +850,13 @@ Splits the quads based on their distance between vertices.
 
 Splits the quads on the second and fourth vertice.
 
+###### Fixed
 
-| Entry | What it does |
-| ------ | ------------------------------------------------ |
-| Fixed | Splits the quads on the first and third vertice. |
-| Beauty | Tries to optimize the triangulation. |
+Splits the quads on the first and third vertice.
 
+###### Beauty
+
+Tries to optimize the triangulation.
 
 ##### Polygon Method
 
@@ -796,12 +864,13 @@ Splits the quads on the second and fourth vertice.
 
 Choose how N-Gons should be triangulated.
 
+###### Clip
 
-| Entry | What it does |
-| ------ | --------------------------------------------------- |
-| Clip | Splits the polygons with an ear clipping algorithm. |
-| Beauty | Tries to optimize the triangulation. |
+Splits the polygons with an ear clipping algorithm.
 
+###### Beauty
+
+Tries to optimize the triangulation.
 
 ### Triangles to Quads
 
@@ -819,18 +888,37 @@ Change the settings of **Tris to Quads** right after you use it, in the Adjust L
 
 Adjust the threshold to adjacent triangles.
 
+###### Max Shape Angle
 
-| Entry | What it does |
-| ------------------------ | --------------------------------------------------------------------------------------------------------- |
-| Max Shape Angle | Adjust the shape angle limit. |
-| Topology influence | How much to priorize regular grids of qads as well as quads that touch existing quads. |
-| Compare UV's | Takes the UV patches for the calculation into account. Border geometry will not be calculated. |
-| Compare Color attributes | Takes the Vertex colors for the calculation into account. Border geometry will not be calculated. |
-| Compare Seam | Takes the Vertex colors for the calculation into account. Border geometry will not be calculated. |
-| Compare Sharp | Takes the as sharp marked edges for the calculation into account. Border geometry will not be calculated. |
-| Compare Materials | Takes the Materials colors for the calculation into account. Border geometry will not be calculated. |
-| Deselect Joined | Only select remaining triangles that were not merged. |
+Adjust the shape angle limit.
 
+###### Topology influence
+
+How much to priorize regular grids of qads as well as quads that touch existing quads.
+
+###### Compare UV's
+
+Takes the UV patches for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Color attributes
+
+Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Seam
+
+Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Sharp
+
+Takes the as sharp marked edges for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Materials
+
+Takes the Materials colors for the calculation into account. Border geometry will not be calculated.
+
+###### Deselect Joined
+
+Only select remaining triangles that were not merged.
 
 ### Solidify Faces
 
@@ -866,17 +954,33 @@ Change the settings of **Wire Frame** right after you use it, in the Adjust Last
 
 Inset Face Boundaries.
 
+##### Offset Even
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
-| Replace | Removes the source geometry. |
-| Thickness | Adjust he thickness of the tubes. |
-| Offset | Adjust the offset of the tubes. |
-| Crease | Crease adds close edges so that you have sharp corners when you use Subdivision Surface. |
-| Crease Weight | Adjust the crease weight. |
+Scales the offset to give more even thickness.
 
+##### Offset Relative
+
+Scales the offset by surrounding geometry.
+
+##### Replace
+
+Removes the source geometry.
+
+##### Thickness
+
+Adjust he thickness of the tubes.
+
+##### Offset
+
+Adjust the offset of the tubes.
+
+##### Crease
+
+Crease adds close edges so that you have sharp corners when you use Subdivision Surface.
+
+##### Crease Weight
+
+Adjust the crease weight.
 
 ### Fill
 
@@ -912,12 +1016,13 @@ Change the settings of **Grid Fill** right after you use it, in the Adjust Last 
 
 Number of sides.
 
+###### Offset
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------ |
-| Offset | Define an offset |
-| Simple Blending | Uses a simple interpolation. Faster but less accurate. |
+Define an offset
 
+###### Simple Blending
+
+Uses a simple interpolation. Faster but less accurate.
 
 ### Beautify Faces
 
@@ -951,22 +1056,27 @@ Change the settings of **Intersect** right after you use it, in the Adjust Last 
 
 ![Source](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/source.png)
 
+###### Selected/Unselected
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------- |
-| Selected/Unselected | works between the selected and unselected geometry. |
-| Self Intersect | works on the overlapping geometry of the mesh. |
+works between the selected and unselected geometry.
 
+###### Self Intersect
+
+works on the overlapping geometry of the mesh.
 
 ##### Separate Mode
 
+###### All
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------- |
-| All | Splits the geometry at the new edge. |
-| Cut | keeps each side of the intersection separate without splitting the faces in half. |
-| Merge | Merge all geometry from the intersection. **Merge** merges all the geometry from the intersection. |
+Splits the geometry at the new edge.
 
+###### Cut
+
+keeps each side of the intersection separate without splitting the faces in half.
+
+###### Merge
+
+Merge all geometry from the intersection. **Merge** merges all the geometry from the intersection.
 
 ##### Solver
 
@@ -1022,12 +1132,13 @@ Removes all geometry but the overlapping geometry.
 
 ##### Solver
 
+###### Float
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Float | **Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. · **Merge Threshold**: Adjust the tolerance for the Boolean operation. Increase it when some geometry is not calculated. But keep it small for fast calculation. |
-| Exact | **Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. |
+**Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. · **Merge Threshold**: Adjust the tolerance for the Boolean operation. Increase it when some geometry is not calculated. But keep it small for fast calculation.
 
+###### Exact
+
+**Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection.
 
 ### Weld Edges into Faces
 
@@ -1205,14 +1316,21 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### To Circle
 
@@ -1291,14 +1409,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Bend
 
@@ -1329,14 +1454,21 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Warp
 
@@ -1410,14 +1542,21 @@ The Last Operator Shrink/Fatten panel gives you tools to adjust the Shrink/Fatte
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Skin Resize
 
@@ -1459,14 +1598,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Move Texture Space
 
@@ -1510,14 +1656,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Scale Texture Space
 
@@ -1563,14 +1716,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Set Dimensions
 
@@ -1702,14 +1862,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Extrude
 
@@ -1755,14 +1922,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Edges
 
@@ -1797,14 +1971,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Faces (Legacy)
 
@@ -1840,14 +2021,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Faces along Normals (Legacy)
 
@@ -1877,14 +2065,21 @@ Change the settings of **Extrude Region and Shrink/Fatten** right after you use 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Individual Faces ( Legacy)
 
@@ -1911,14 +2106,21 @@ Change the settings of **Extrude Individual Faces and Move** right after you use
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Manifold (Legacy)
 
@@ -1956,14 +2158,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Repeat
 
@@ -2086,13 +2295,17 @@ Choose the method again.
 
 Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.
 
+#### Selection
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| Selection | Selection separates the current selection. |
-| By Material | By Material separates all geometry that has the same material than the current selection. |
-| By Loose Parts | By Loose parts separates all geometry that is connected by edges to the current selection. |
+Selection separates the current selection.
 
+#### By Material
+
+By Material separates all geometry that has the same material than the current selection.
+
+#### By Loose Parts
+
+By Loose parts separates all geometry that is connected by edges to the current selection.
 
 ### Knife Project
 
@@ -2139,21 +2352,49 @@ Removes vertices that are not part of the convex geometry.
 
 Use existing input faces that lies on the hull where possible. This option allows to have N-Gons in the convex hull.
 
+###### Make Holes
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Holes | Deletes edges and faces in the hull that were part of the input. This allows to delete faces between the existing mesh and the convex hull. |
-| Join Triangles | Joins adjacent triangles into quads. |
-| Max Face Angle | Max Face Angle belongs to the Join Triangles setting. Set the maximum face angle. |
-| Max Shape Angle | Max Face Angle belongs to the Join Triangles setting. Set the maximum shape angle. |
-| Topology influence | How much to priorize regular grids of quads as well as quads that touch existing quads. |
-| Compare UV's | Takes existing UV patches for the calculation into account. |
-| Compare Color Attributes | Takes existing color attributes for the calculation into account. |
-| Compare Seam | Takes existing seams for the calculation into account. |
-| Compare Sharp | Takes existing sharp edges for the calculation into account. |
-| Compare Materials | Takes existing materials for the calculation into account. |
-| Deselect joined | Only select remaining triangles that were not merged. |
+Deletes edges and faces in the hull that were part of the input. This allows to delete faces between the existing mesh and the convex hull.
 
+###### Join Triangles
+
+Joins adjacent triangles into quads.
+
+###### Max Face Angle
+
+Max Face Angle belongs to the Join Triangles setting. Set the maximum face angle.
+
+###### Max Shape Angle
+
+Max Face Angle belongs to the Join Triangles setting. Set the maximum shape angle.
+
+###### Topology influence
+
+How much to priorize regular grids of quads as well as quads that touch existing quads.
+
+###### Compare UV's
+
+Takes existing UV patches for the calculation into account.
+
+###### Compare Color Attributes
+
+Takes existing color attributes for the calculation into account.
+
+###### Compare Seam
+
+Takes existing seams for the calculation into account.
+
+###### Compare Sharp
+
+Takes existing sharp edges for the calculation into account.
+
+###### Compare Materials
+
+Takes existing materials for the calculation into account.
+
+###### Deselect joined
+
+Only select remaining triangles that were not merged.
 
 ### Symmetrize
 
@@ -2314,12 +2555,13 @@ Change the settings of **Point Normals to Target** right after you use it, in th
 
 Average all of the normals in each fan of faces between sharp edges at a vertex.
 
+#### Custom Normal
 
-| Entry | What it does |
-| ------------- | -------------------------------------- |
-| Custom Normal | Take the average of vertices normals. |
-| Face Area | Set all vertices normals by face area. |
+Take the average of vertices normals.
 
+#### Face Area
+
+Set all vertices normals by face area.
 
 #### Corner Angle
 
@@ -2335,12 +2577,13 @@ Change the settings of **Average Normals** right after you use it, in the Adjust
 
 Choose the average type again.
 
+###### Weigh
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------ |
-| Weigh | Just for custom normals method. Weight applied by face. |
-| Threshold | Just for custom normals method. Threshold value for different weights to be considered as equal. |
+Just for custom normals method. Weight applied by face.
 
+###### Threshold
+
+Just for custom normals method. Threshold value for different weights to be considered as equal.
 
 ### Copy Vectors
 
@@ -2374,12 +2617,13 @@ Change the settings of **Smooth Normals Vectors** right after you use it, in the
 
 Adjust how strong the smoothen should be.
 
+###### Reset Vectors
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reset Vectors | Resets the normal of the selected element(s). |
-| Select by Face Strength | Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox. Select faces with either weak or medium or strong face strength. |
+Resets the normal of the selected element(s).
 
+###### Select by Face Strength
+
+Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox. Select faces with either weak or medium or strong face strength.
 
 ### Set Face Strength
 
@@ -2409,12 +2653,13 @@ Sets the shading of the selected elements to either smooth or flat.
 
 Shading is under the hood a normals operation.
 
+### Shade smooth
 
-| Entry | What it does |
-| ------------ | ----------------------- |
-| Shade smooth | Display shading smooth. |
-| Shade Flat | Display shading flat. |
+Display shading smooth.
 
+### Shade Flat
+
+Display shading flat.
 
 ### Smooth Edges
 
@@ -2577,12 +2822,13 @@ Change the settings of **Clean Vertex Group** right after you use it, in the Adj
 
 Subset is a drop-down menu choose the Subset method.
 
+###### Limit
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------ |
-| Limit | Remove weights that are below or equal to the limit value. |
-| Keep Single | Keep Vertices assigned to at least one vertex group when cleaning. |
+Remove weights that are below or equal to the limit value.
 
+###### Keep Single
+
+Keep Vertices assigned to at least one vertex group when cleaning.
 
 ### Quantize
 
@@ -2643,13 +2889,17 @@ Change the settings of **Smooth Vertex Weights** right after you use it, in the 
 
 Subset is a drop-down menu choose the Subset method.
 
+###### Factor
 
-| Entry | What it does |
-| --------------- | -------------------------------------------- |
-| Factor | Here you adjust the factor. |
-| Iterations | Here you adjust how many iterations you use. |
-| Expand/Contract | Expand or contract the weights. |
+Here you adjust the factor.
 
+###### Iterations
+
+Here you adjust how many iterations you use.
+
+###### Expand/Contract
+
+Expand or contract the weights.
 
 ### Limit Total
 
@@ -2721,12 +2971,13 @@ Faces only! Sorts faces by their lowest material index up to highest material in
 
 Note that the **Reverse** option only reverses the order of the materials**.* *And** the order of the faces inside them.
 
+#### Selected
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selected | Moves all selected elements to the beginning without affecting their relative orders. Attention, this option will also affect unselected element indices! |
-| Randomize | Randomizes the indices of selected elements. This option does not affect the unselected elements. |
+Moves all selected elements to the beginning without affecting their relative orders. Attention, this option will also affect unselected element indices!
 
+#### Randomize
+
+Randomizes the indices of selected elements. This option does not affect the unselected elements.
 
 ### Reverse
 
@@ -2744,12 +2995,13 @@ Sort Elements always brings up the same last operator. But with a small differen
 
 This is a drop-down box choose the sort method again.
 
+###### Vertices, Edges or Faces
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------ |
-| Vertices, Edges or Faces | Adjust if the sort will affect the vertices, edges or faces. |
-| Reverse | Reverses the sorting. |
+Adjust if the sort will affect the vertices, edges or faces.
 
+###### Reverse
+
+Reverses the sorting.
 
 ##### Seed Edit box (Randomize only)
 
@@ -2784,12 +3036,13 @@ Change the settings of **Subdivision Set** right after you use it, in the Adjust
 
 The Show/Hide menu is available for all object types and in all modes. It is usually in the object related menu to find. In Object mode it's the Object menu, for a curve object in edit mode it is the Curve menu. It always contains three menu items. Show Hidden, Hide Selected and Hide Unselected.
 
+### Show Hidden
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------- |
-| Show Hidden | Makes all hidden elements in the scene visible again. |
-| Hide Selected | Hides the selected elements. |
+Makes all hidden elements in the scene visible again.
 
+### Hide Selected
+
+Hides the selected elements.
 
 ### Hide Unselected
 
@@ -2827,12 +3080,13 @@ Change the settings of **Delete Loose** right after you use it, in the Adjust La
 
 Delete Vertices.
 
+###### Edges
 
-| Entry | What it does |
-| ----- | ------------- |
-| Edges | Delete Edges. |
-| Faces | Delete Faces. |
+Delete Edges.
 
+###### Faces
+
+Delete Faces.
 
 ### Decimate Geometry
 
@@ -2850,14 +3104,21 @@ Change the settings of **Decimate Geometry** right after you use it, in the Adju
 
 Adjust the strength of decimation.
 
+###### Vertex Group
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------- |
-| Vertex Group | Use active Vertex Group as an influence. You need to have a Vertex Group. |
-| Weight | Adjust the Vertex Group Strength. |
-| Invert | Invert Vertex Group Influence. |
-| Symmetry | Make the decimation geometry symmetric along a chosen world axis. |
+Use active Vertex Group as an influence. You need to have a Vertex Group.
 
+###### Weight
+
+Adjust the Vertex Group Strength.
+
+###### Invert
+
+Invert Vertex Group Influence.
+
+###### Symmetry
+
+Make the decimation geometry symmetric along a chosen world axis.
 
 ### Degenerate Dissolve
 
@@ -2959,12 +3220,13 @@ Deletes the selected edges and the connected faces.
 
 This one works similar to the smart delete. It deletes the selected faces.
 
+#### Only Edges and Faces
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Only Edges and Faces | This mode is of interest when you have more than one selection mode activated. It deletes then just the selected edges and faces. And not single vertices. |
-| Only Faces | This mode is of interest when you have more than one selection mode activated. Just selected faces gets deleted. Not single edges or vertices. |
+This mode is of interest when you have more than one selection mode activated. It deletes then just the selected edges and faces. And not single vertices.
 
+#### Only Faces
+
+This mode is of interest when you have more than one selection mode activated. Just selected faces gets deleted. Not single edges or vertices.
 
 ### Edge Loops
 
@@ -3027,12 +3289,13 @@ Change the settings of **Dissolve Edges** right after you use it, in the Adjust 
 
 When the dissolve operation leaves vertices behind, then this vertices will be dissolved too.
 
+###### Angle Threshold
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Angle Threshold | Remaining vertices which eseparate edge pairs are preseved if their edge angle exceeds this threshold |
-| Face Split | Split off Face corners to maintain surrounding geometry. |
+Remaining vertices which eseparate edge pairs are preseved if their edge angle exceeds this threshold
 
+###### Face Split
+
+Split off Face corners to maintain surrounding geometry.
 
 ### Dissolve Faces
 
@@ -3062,12 +3325,13 @@ Change the settings of **Limited Dissolve** right after you use it, in the Adjus
 
 The angle limit up to which the dissolve happens.
 
+###### All Boundaries
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------- |
-| All Boundaries | Dissolve all vertices in between face boundaries. |
-| Delimit | By which element to delimit. |
+Dissolve all vertices in between face boundaries.
 
+###### Delimit
+
+By which element to delimit.
 
 ### Dissolve Selection
 
@@ -3123,12 +3387,13 @@ Here you find the uv mapping methods and some further functionality. You use it 
 
 The UV menu is just available for Mesh objects.
 
+### Angle Based
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle Based | Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes. |
-| Conformal | Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes. |
+Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes.
 
+### Conformal
+
+Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes.
 
 ### Minimum Stretch
 
@@ -3158,24 +3423,16 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
-
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
-
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
-
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 
@@ -3189,26 +3446,29 @@ The distance between the single UV patches.
 
 Number of iterations.
 
+###### No Flip
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| No Flip | Prevent flipping UV's |
-| Importance Weight | Take per vertex importance weights into account. |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+Prevent flipping UV's
 
+###### Importance Weight
+
+Take per vertex importance weights into account.
+
+###### Use Subdivision Surface
+
+Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+
+###### Correct Aspect
+
+Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
-
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
-
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 
@@ -3230,13 +3490,17 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
+###### Scaled
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+Use the scale of existing UV to multiply margin.
 
+###### Add
+
+Just add the margin and ignore any existing UV.
+
+###### Fraction
+
+Specify a precise fraction of specific UV.
 
 ##### Rotation Method
 
@@ -3244,13 +3508,17 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 How to rotate islands.
 
+###### Island Margin
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------- |
-| Island Margin | Island Margin defines the distance between the UV patches. |
-| Area Weight | Weight Projection Vector by faces with larger areas. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+Island Margin defines the distance between the UV patches.
 
+###### Area Weight
+
+Weight Projection Vector by faces with larger areas.
+
+###### Correct Aspect
+
+Take the Image Aspect Ratio into account.
 
 #### Adjust Last Operation - Smart UV Project
 
@@ -3268,15 +3536,25 @@ Lightmap Pack has no Last Operator.
 
 #### Settings
 
+##### Selection
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------------------- |
-| Selection | Selection is a drop-down box where you can choose what will be packed, either Selected Faces or All Faces. |
-| Share Tex Space | Map all objects into one lightmap. |
-| New UV Map | Create a new UV map for every new mesh. |
-| Pack Quality | The pack quality. |
-| Margin | The distance between the single UV patches. |
+Selection is a drop-down box where you can choose what will be packed, either Selected Faces or All Faces.
 
+##### Share Tex Space
+
+Map all objects into one lightmap.
+
+##### New UV Map
+
+Create a new UV map for every new mesh.
+
+##### Pack Quality
+
+The pack quality.
+
+##### Margin
+
+The distance between the single UV patches.
 
 ### Follow Active Quads
 
@@ -3343,15 +3621,25 @@ Align is a drop-down box where you can choose the Align method.
 
 How to handle the faces at the poles.
 
+###### Preserve Seams
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------- |
-| Preserve Seams | Keep existing seams intact. |
-| Radius | Radius defines the Polar size of the UV mesh in the UV space. |
-| Correct Aspect | Take Image Aspect ratio into account. |
-| Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
-| Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
+Keep existing seams intact.
 
+###### Radius
+
+Radius defines the Polar size of the UV mesh in the UV space.
+
+###### Correct Aspect
+
+Take Image Aspect ratio into account.
+
+###### Clip to Bounds
+
+Clip UV Coordinates to bounds after unwrapping.
+
+###### Scale to Bounds
+
+Scale UV Coordinates to bounds after unwrapping.
 
 #### Sphere Projection
 
@@ -3381,14 +3669,21 @@ Align is a drop-down box where you can choose the Align method.
 
 How to handle the faces at the poles.
 
+###### Preserve Seams
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------ |
-| Preserve Seams | Keep existing seams intact. |
-| Correct Aspect | Take Image Aspect ratio into account. |
-| Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
-| Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
+Keep existing seams intact.
 
+###### Correct Aspect
+
+Take Image Aspect ratio into account.
+
+###### Clip to Bounds
+
+Clip UV Coordinates to bounds after unwrapping.
+
+###### Scale to Bounds
+
+Scale UV Coordinates to bounds after unwrapping.
 
 ### Project from View
 
@@ -3426,11 +3721,13 @@ Same goes for the UV patches when you use Angle based or conformal unwrapping. Y
 
 Mark seam marks the currently selected edge(s) as a seam. Seam edges will be displayed as red in the 3D viewport.
 
+#### Clear Seam
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------- |
-| Clear Seam | Clear seam removes the seam from the currently selected edge(s). |
-| Reset | Resets the UV Projection. |
+Clear seam removes the seam from the currently selected edge(s).
+
+#### Reset
+
+Resets the UV Projection.
 
 # Vertex Menu
 
@@ -3482,16 +3779,29 @@ How many segments gets created.
 
 Controls the profile shape strength. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.
 
+###### Material Index
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------- |
-| Material Index | The material for bevel faces. -1 means to use the material from the adjacent faces. |
-| Harden Normals | Match normals of new faces to adjacent faces. |
-| Clamp Overlap | Do not allow beveled geometry to overlap each other. |
-| Loop Slide | Prefer slide along edge to even widths. |
-| Mark Seams | Mark the edges of the new created geometry as seams. |
-| Mark Sharp | Mark the edges of the new created geometry sharp. |
+The material for bevel faces. -1 means to use the material from the adjacent faces.
 
+###### Harden Normals
+
+Match normals of new faces to adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled geometry to overlap each other.
+
+###### Loop Slide
+
+Prefer slide along edge to even widths.
+
+###### Mark Seams
+
+Mark the edges of the new created geometry as seams.
+
+###### Mark Sharp
+
+Mark the edges of the new created geometry sharp.
 
 ##### Miter Outer
 
@@ -3547,14 +3857,21 @@ The method to use to create meshes at intersections. Bevel can create self inter
 
 Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).
 
+###### None
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| None | Do not set face strength. |
-| New | Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak. |
-| Affected | In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong. |
-| All | In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong. |
+Do not set face strength.
 
+###### New
+
+Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.
+
+###### Affected
+
+In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.
+
+###### All
+
+In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.
 
 ##### Profile Type
 
@@ -3578,24 +3895,16 @@ Curve presets.
 
 ###### Navigation elements
 
-
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Reverse Path | Reverses the curve path. |
-| Toggle Profile Clipping | Turns the profile clipping on or off. |
-
+- **Zoom in and out**: The two buttons with the magnifying glass at it zooms in and out in the curve window.
+- **Reverse Path**: Reverses the curve path.
+- **Toggle Profile Clipping**: Turns the profile clipping on or off.
 
 ###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
-
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
-
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handler and node position
 
@@ -3603,12 +3912,8 @@ Curve presets.
 
 When you select a node, then the handler and node position tools shows below the curve window.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------- |
-| Sample straigt edges | Sample edges with vector handles. |
-| Sample even length | Sample edges with even lengths. |
-
+- **Sample straigt edges**: Sample edges with vector handles.
+- **Sample even length**: Sample edges with even lengths.
 
 #### Rip Vertices
 
@@ -3648,13 +3953,17 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Adjust the falloff methods.
 
+###### Proportional Size
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+See and adjust the falloff radius.
 
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rip Vertices and Fill
 
@@ -3688,13 +3997,17 @@ Adjust the position.
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
+###### Mirror Editing
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Enable mirror editing.
 
+###### Proportional editing
+
+Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Slide Vertices
 
@@ -3861,14 +4174,21 @@ When there is no vertex group assigned yet then you can only see one menu item. 
 
 Once you have a vertex group assigned you will see the full functionality.
 
+#### Assign to New Group
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------ |
-| Assign to New Group | Assigns the mesh selection to a new vertex group. |
-| Assign to active Group | Assigns the mesh selection to the currently active vertex group. |
-| Remove from Active Group | Removes the mesh selection from the currently active vertex group. |
-| Remove from All | Removes the mesh selection from all vertex groups. |
+Assigns the mesh selection to a new vertex group.
 
+#### Assign to active Group
+
+Assigns the mesh selection to the currently active vertex group.
+
+#### Remove from Active Group
+
+Removes the mesh selection from the currently active vertex group.
+
+#### Remove from All
+
+Removes the mesh selection from all vertex groups.
 
 #### Set Active Group
 
@@ -3876,12 +4196,13 @@ Once you have a vertex group assigned you will see the full functionality.
 
 Select a vertex group to be the active one.
 
+##### Remove Active Group
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------ |
-| Remove Active Group | Removes the currently active vertex group. |
-| Remove All Groups | Removes all vertex groups from the mesh. |
+Removes the currently active vertex group.
 
+##### Remove All Groups
+
+Removes all vertex groups from the mesh.
 
 ### Hooks
 
@@ -3913,16 +4234,29 @@ Change the settings of **Hook to Selected Object** right after you use it, in th
 
 Hook to the object(s) of the active bone.
 
+###### Hook to Selected Object Bone
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hook to Selected Object Bone | Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target. |
-| Assign to Hook | Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook. |
-| Remove Hook | Removes the chosen Hook Modifier from the object. |
-| Select Hook | Selects all vertices assigned to the chosen Hook Modifier. |
-| Reset Hook | Resets the chosen Hook Modifier. |
-| Recenter Hook | **Recenter** the Hook Modifier. |
+Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target.
 
+###### Assign to Hook
+
+Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook.
+
+###### Remove Hook
+
+Removes the chosen Hook Modifier from the object.
+
+###### Select Hook
+
+Selects all vertices assigned to the chosen Hook Modifier.
+
+###### Reset Hook
+
+Resets the chosen Hook Modifier.
+
+###### Recenter Hook
+
+**Recenter** the Hook Modifier.
 
 ### Make Vertex Parent
 

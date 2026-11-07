@@ -105,18 +105,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The asset catalog in which the brush is stored.
+
+###### Author
+
+The brush author.
+
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -170,10 +185,8 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -187,10 +200,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -198,10 +209,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -209,10 +218,8 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 A curve preset to start with.
 
-| Entry | What it does |
-| ------------ | ----------------------------------------- |
-| Strength | The strength of the brush. |
-| Active Layer | Only edit the active layer of the object. |
+- **Strength**: The strength of the brush.
+- **Active Layer**: Only edit the active layer of the object.
 
 ### Brush Settings Panel - Advanced Sub panel
 
@@ -222,12 +229,21 @@ A curve preset to start with.
 
 ##### Affect
 
-| Entry | What it does |
-| --------- | -------------------------------------------------- |
-| Position | The brush affects the position of the point. |
-| Strength | The brush affects the color strength of the point. |
-| Thickness | The brush affects the thickness of the point. |
-| UV | The brush affects the UV rotation of the point. |
+###### Position
+
+The brush affects the position of the point.
+
+###### Strength
+
+The brush affects the color strength of the point.
+
+###### Thickness
+
+The brush affects the thickness of the point.
+
+###### UV
+
+The brush affects the UV rotation of the point.
 
 ##### Modes – Subpanel
 
@@ -295,10 +311,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -312,10 +326,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -323,10 +335,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -350,10 +360,13 @@ Average multiple input samples together to smooth the brush stroke.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. Smooth stroke has two settings.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------- |
-| Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Adjust the factor of the smoothing. |
+###### Smooth Stroke Radius Edit Box
+
+Adjust the radius of the smoothing.
+
+###### Smooth Stroke Factor Edit Box
+
+Adjust the factor of the smoothing.
 
 #### Stroke Panel with Stroke method Space
 
@@ -375,10 +388,8 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Dash Ratio | Ratio of samples in a cycle that the brush is enabled. |
-| Dash Length | Length of a dash cycle measured in stroke samples. |
+- **Dash Ratio**: Ratio of samples in a cycle that the brush is enabled.
+- **Dash Length**: Length of a dash cycle measured in stroke samples.
 
 ##### Jitter Edit Box
 
@@ -420,10 +431,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -437,10 +446,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -448,10 +455,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -459,10 +464,8 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 A curve preset to start with.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------- |
-| Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
+- **Jitter Unit**: If the jitter happens in screen space in pixels, or relative to the brush size.
+- **Input Samples Edit Box**: Average multiple input samples together to smooth the brush stroke.
 
 ###### StabilizeStroke subpanel
 
@@ -470,10 +473,8 @@ A curve preset to start with.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. It is a sub panel with two settings.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------- |
-| Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Adjust the factor of the smoothing. |
+- **Smooth Stroke Radius Edit Box**: Adjust the radius of the smoothing.
+- **Smooth Stroke Factor Edit Box**: Adjust the factor of the smoothing.
 
 #### Stroke Panel with Stroke method Curve
 
@@ -513,10 +514,8 @@ Here you set the active curve.
 
 A click at it to turns the curve into a sculpt stroke.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Dash Ratio | Ratio of samples in a cycle that the brush is enabled. |
-| Dash Length | Length of a dash cycle measured in stroke samples. |
+- **Dash Ratio**: Ratio of samples in a cycle that the brush is enabled.
+- **Dash Length**: Length of a dash cycle measured in stroke samples.
 
 ##### Jitter Edit Box
 
@@ -558,10 +557,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -575,10 +572,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -586,10 +581,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -621,10 +614,13 @@ With Stroke method line you draw a line between a starting point and an endpoint
 
 The sculpt drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Dash Ratio | Ratio of samples in a cycle that the brush is enabled. |
-| Dash Length | Length of a dash cycle measured in stroke samples. |
+###### Dash Ratio
+
+Ratio of samples in a cycle that the brush is enabled.
+
+###### Dash Length
+
+Length of a dash cycle measured in stroke samples.
 
 ##### Jitter Edit Box
 
@@ -666,10 +662,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -683,10 +677,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -694,10 +686,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -767,10 +757,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -784,10 +772,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -795,10 +781,8 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -822,10 +806,13 @@ Average multiple input samples together to smooth the brush stroke.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. Smooth stroke has two settings.
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------------------------------------------------------- |
-| Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+###### Smooth Stroke Radius Edit Box
+
+Adjust the radius of the smoothing.
+
+###### Smooth Stroke Factor Edit Box
+
+Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 ### Brush Settings Panel - Falloff subpanel
 
@@ -855,10 +842,13 @@ Choose another color for the brush cursor. Double clicking at the color field wi
 
 You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | -------------------------------------- |
-| Override Overlay | Hide the Cursor Overlay when painting. |
-| Use Cursor Overlay | Turn on Cursor Overlay. |
+##### Override Overlay
+
+Hide the Cursor Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Cursor Overlay.
 
 # Context Menus
 
@@ -872,17 +862,26 @@ In Sculpt mode you will call a context menu with the sliders from the Brush sett
 
 ![Edit Mode - Brushes Context Menu](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu/edit-mode-brushes-context-menu.png)
 
-| Entry | What it does |
-| -------- | --------------------------------- |
-| Radius | The radius of the sculpt brush. |
-| Strength | The strength of the sculpt brush. |
+#### Radius
+
+The radius of the sculpt brush.
+
+#### Strength
+
+The strength of the sculpt brush.
 
 #### Active Layer
 
 The active grease pencil layer. You can choose another layer, and add new layers here too. It is the same content than in the Properties editor.
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Layer drop down box | The list of available layers. · **New Layer**: Add a new grease pencil layer. |
-| Layer Edit Box | The currently active grease pencil layer. Rename it by clicking into the field. |
-| Remove Layer | Remove the grease pencil layer. |
+##### Layer drop down box
+
+The list of available layers. · **New Layer**: Add a new grease pencil layer.
+
+##### Layer Edit Box
+
+The currently active grease pencil layer. Rename it by clicking into the field.
+
+##### Remove Layer
+
+Remove the grease pencil layer.

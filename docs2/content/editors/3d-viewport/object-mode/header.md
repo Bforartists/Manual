@@ -85,12 +85,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Adjust the location of the primitive.
 
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### Cube
 
@@ -112,13 +113,17 @@ The size of the primitive.
 
 creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### Circle
 
@@ -143,13 +148,17 @@ Change the settings of **Add Circle** right after you use it, in the Adjust Last
 
 Defines how the primitive mesh is filled.
 
+###### Nothing
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Nothing | means you have pure edge geometry. |
-| N-Gon | means that the circle face is a N-Gon face. |
-| Triangle Fan | means that the circle face is triangulated. |
+means you have pure edge geometry.
 
+###### N-Gon
+
+means that the circle face is a N-Gon face.
+
+###### Triangle Fan
+
+means that the circle face is triangulated.
 
 ##### Generate UV's
 
@@ -157,13 +166,17 @@ Defines how the primitive mesh is filled.
 
 creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### UV Sphere
 
@@ -189,13 +202,17 @@ Change the settings of **Add UV Sphere** right after you use it, in the Adjust L
 
 creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### Ico Sphere
 
@@ -220,13 +237,17 @@ Change the settings of **Add Ico Sphere** right after you use it, in the Adjust 
 
 creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### Cylinder
 
@@ -252,12 +273,13 @@ Change the settings of **Add Circle** right after you use it, in the Adjust Last
 
 Defines how the cap of the Cylinder mesh is filled.
 
+###### Nothing
 
-| Entry | What it does |
-| ------- | ------------------------------------------- |
-| Nothing | means you have pure edge geometry. |
-| N-Gon | means that the circle face is a N-Gon face. |
+means you have pure edge geometry.
 
+###### N-Gon
+
+means that the circle face is a N-Gon face.
 
 ##### Triangle Fan
 
@@ -269,13 +291,17 @@ means that the circle face is triangulated.
 
 creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+defines the rotation of the primitive.
 
 ### Cone
 
@@ -302,13 +328,17 @@ Change the settings of **Add Cone** right after you use it, in the Adjust Last O
 
 Defines how the primitive mesh is filled.
 
+###### Nothing
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Nothing | means you have pure edge geometry. |
-| N-Gon | means that the circle face is a N-Gon face. |
-| Triangle Fan | means that the circle face is triangulated. |
+means you have pure edge geometry.
 
+###### N-Gon
+
+means that the circle face is a N-Gon face.
+
+###### Triangle Fan
+
+means that the circle face is triangulated.
 
 ##### Generate UV's
 
@@ -316,13 +346,17 @@ Defines how the primitive mesh is filled.
 
 Creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ### Torus
 
@@ -351,12 +385,13 @@ Change the settings of **Add Torus** right after you use it, in the Adjust Last 
 
 Use the major minor radii for the dimensions.
 
+###### Major Radius
 
-| Entry | What it does |
-| ------------ | ----------------- |
-| Major Radius | The major radius |
-| Minor Radius | The minor radius. |
+The major radius
 
+###### Minor Radius
+
+The minor radius.
 
 ##### Exterior / Interior
 
@@ -364,12 +399,13 @@ Use the major minor radii for the dimensions.
 
 Use the major minor radii for the dimensions.
 
+###### Exterior Radius
 
-| Entry | What it does |
-| --------------- | -------------------- |
-| Exterior Radius | The exterior radius. |
-| Interior Radius | The interior radius. |
+The exterior radius.
 
+###### Interior Radius
+
+The interior radius.
 
 ##### Generate UV's
 
@@ -377,13 +413,17 @@ Use the major minor radii for the dimensions.
 
 Creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ### Grid
 
@@ -409,13 +449,17 @@ Change the settings of **Add Grid** right after you use it, in the Adjust Last O
 
 Creates UV's for this primitive.
 
+###### Align
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Align | Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor. |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Aligns the geometry to the chosen view. World, View or 3D cursor. Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
+
+Adjust the location of the primitive.
+
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ### Monkey
 
@@ -442,12 +486,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Adjust the location of the primitive.
 
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ## Curve
 
@@ -461,14 +506,21 @@ The curve types are very similar. But do have some small differences. The differ
 
 Note that Curves is no mesh data. You have to convert the Curves data to Mesh data when you want to work with it like with a mesh. Note also that you cannot convert it back to curve then.
 
+### Bezier
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------- |
-| Bezier | Creates a Bezier type curve. |
-| Circle | **Circle** creates a Bezier circle type curve. |
-| Nurbs Curve | **Nurbs Curve** creates a Nurbs type curve. |
-| Nurbs Circle | **Nurbs Circle** creates a Nurbs type circle curve. |
+Creates a Bezier type curve.
 
+### Circle
+
+**Circle** creates a Bezier circle type curve.
+
+### Nurbs Curve
+
+**Nurbs Curve** creates a Nurbs type curve.
+
+### Nurbs Circle
+
+**Nurbs Circle** creates a Nurbs type circle curve.
 
 ### Path
 
@@ -492,12 +544,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Adjust the location of the primitive.
 
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ### Empty Hair
 
@@ -537,16 +590,29 @@ Change the settings of **Quick Fur** right after you use it, in the Adjust Last 
 
 The fur density.
 
+###### Length
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------- |
-| Length | The fur length. |
-| Hair Radius | The hair radius. |
-| View Percentage | How much percent of the fur to show in the viewport. Does not affect rendering. |
-| Apply hair guides | Apply hair guides if they exist. |
-| Noise | Add some noise to the hair straints. |
-| Frizz | Add some curl to the hair straints. |
+The fur length.
 
+###### Hair Radius
+
+The hair radius.
+
+###### View Percentage
+
+How much percent of the fur to show in the viewport. Does not affect rendering.
+
+###### Apply hair guides
+
+Apply hair guides if they exist.
+
+###### Noise
+
+Add some noise to the hair straints.
+
+###### Frizz
+
+Add some curl to the hair straints.
 
 ## Surface
 
@@ -556,15 +622,25 @@ Surfaces are some kind of curves. But curves with which you can construct surfac
 
 Note that Surfaces similar to Curves is no mesh data. You have to convert the Surfaces data to Mesh data when you want to work with it like with a mesh. Note also that you cannot convert it back to Surface then.
 
+### Surface Curve
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------- |
-| Surface Curve | Surface Curve creates a Nurbs type curve. |
-| Surface Circle | Surface Circle creates a Nurbs type circle. |
-| Surface Surface | Surface Surface creates a Nurbs type Surface. |
-| Surface Cylinder | Surface Cylinder creates a Nurbs type cylinder. |
-| Surface Sphere | Surface Sphere creates a Nurbs type sphere. |
+Surface Curve creates a Nurbs type curve.
 
+### Surface Circle
+
+Surface Circle creates a Nurbs type circle.
+
+### Surface Surface
+
+Surface Surface creates a Nurbs type Surface.
+
+### Surface Cylinder
+
+Surface Cylinder creates a Nurbs type cylinder.
+
+### Surface Sphere
+
+Surface Sphere creates a Nurbs type sphere.
 
 ### Surface Torus
 
@@ -588,12 +664,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Adjust the location of the primitive.
 
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ## Metaball
 
@@ -601,14 +678,21 @@ Note that this option is dysfunctional when you call the Adjust Last Operator pa
 
 Meta-balls are procedural primitives. They are not defined by vertices or curves. The interesting behavior of meta-balls is that you can stick them into each other. And they have one surface then. Like merging two water drops. And this works in Object mode already.
 
+### Ball
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------- |
-| Ball | Ball creates a meta-ball in Sphere shape. |
-| Capsule | **Capsule** creates a meta-ball in Capsule shape. |
-| Plane | **Plane** creates a meta-ball in Plane shape. |
-| Ellipsoid | **Ellipsoid** creates a meta-ball in Ellipsoid shape. |
+Ball creates a meta-ball in Sphere shape.
 
+### Capsule
+
+**Capsule** creates a meta-ball in Capsule shape.
+
+### Plane
+
+**Plane** creates a meta-ball in Plane shape.
+
+### Ellipsoid
+
+**Ellipsoid** creates a meta-ball in Ellipsoid shape.
 
 ### Cube
 
@@ -638,12 +722,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. |
+Adjust the location of the primitive.
 
+###### Rotation
+
+Defines the rotation of the primitive.
 
 ## Text
 
@@ -665,12 +750,13 @@ Now, each time a char in your text matches the *suffix part* of a “font” obj
 
 > **Note:** You can enter the Edit mode with the standard hotkey. But you cannot switch back to Object mode with the standard hotkey. Since this hotkey gets count as input for the text object in Edit mode. You have to use the mode drop-down box to leave the Edit mode.
 
+#### Editing Text
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Editing Text | Editing text is different from other object types in Bforartists. You edit on the one hand a curve type object, but also a text. And so the text editing standards applies. Like hitting backspace to delete parts of the text. |
-| Inserting Text | You can type in new text. You can also copy text from a text editor and paste it. Or you can load a text file. To load text from a text file, use the Edit / Paste File tool. This will bring up a *File Browser* window for navigating to a valid UTF-8 file. |
+Editing text is different from other object types in Bforartists. You edit on the one hand a curve type object, but also a text. And so the text editing standards applies. Like hitting backspace to delete parts of the text.
 
+#### Inserting Text
+
+You can type in new text. You can also copy text from a text editor and paste it. Or you can load a text file. To load text from a text file, use the Edit / Paste File tool. This will bring up a *File Browser* window for navigating to a valid UTF-8 file.
 
 ### Accent Characters
 
@@ -745,12 +831,13 @@ Aligns the geometry to the chosen view. World, View or 3D cursor.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Location | Adjust the location of the primitive. |
-| Rotation | Defines the rotation of the primitive. In Edit mode you can navigate the cursor with the arrow buttons. Enter adds a new paragraph. When you use the navigator you will see a last operator Move Cursor with further options. |
+Adjust the location of the primitive.
 
+##### Rotation
+
+Defines the rotation of the primitive. In Edit mode you can navigate the cursor with the arrow buttons. Enter adds a new paragraph. When you use the navigator you will see a last operator Move Cursor with further options.
 
 ### Adjust Last Operation - Move Cursor
 
@@ -786,12 +873,13 @@ How to orient the point cloud at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Volume
 
@@ -821,12 +909,13 @@ How to orient the point cloud at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+###### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Grease Pencil
 
@@ -866,12 +955,13 @@ Adds the drawing of a monkey as an example with some predefined colors.
 
 Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for the whole scene.
 
+#### Collection Line Art
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Collection Line Art | Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for a collection. |
-| Object Line Art | This menu item just shows when you have a mesh object selected. Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for the selected mesh object. |
+Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for a collection.
 
+#### Object Line Art
+
+This menu item just shows when you have a mesh object selected. Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for the selected mesh object.
 
 ### Adjust Last Operation - Add Grease Pencil
 
@@ -889,12 +979,13 @@ Choose the grease pencil type.
 
 Show the grease pencil line art in front of everything.
 
+##### Stroke Offset
 
-| Entry | What it does |
-| ------------- | ----------------------------------------- |
-| Stroke Offset | Stroke offset for the line art modifier. |
-| Use Lights | Use lights for this grease pencil object. |
+Stroke offset for the line art modifier.
 
+##### Use Lights
+
+Use lights for this grease pencil object.
 
 #### Stroke Depth Order
 
@@ -914,12 +1005,13 @@ How to orient the point cloud at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+###### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Armature
 
@@ -953,12 +1045,13 @@ How to orient the point cloud at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Lattice
 
@@ -997,12 +1090,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Empty
 
@@ -1053,12 +1147,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Image
 
@@ -1098,12 +1193,13 @@ A reference image is double sided. A background image not. When you look from th
 
 ![Background](/docs2/images/editors/3d-viewport/header/add-menu/background-2.png)
 
+#### Mesh Plane
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mesh Plane | Generates a textured mesh plane object with the correct aspect ratio and the file name of the loaded image. Mesh planes renders with the image. |
-| Empty Image | Basically the same has Reference or Background, difference is user needs to pick settings manually. |
+Generates a textured mesh plane object with the correct aspect ratio and the file name of the loaded image. Mesh planes renders with the image.
 
+#### Empty Image
+
+Basically the same has Reference or Background, difference is user needs to pick settings manually.
 
 ## Speaker
 
@@ -1123,12 +1219,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Camera
 
@@ -1159,13 +1256,17 @@ The lights that you add here lights the rendered scene. Not the scene in the vie
 
 Lights can be further adjusted in the properties editor.
 
+### Point
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------- |
-| Point | **Point** creates a Point Light. A point light shines into all directions. |
-| Sun | **Sun** creates a light that behaves like a sun. It's a directional light. |
-| Spot | **Spot** creates a Spot light. It's a directional light. |
+**Point** creates a Point Light. A point light shines into all directions.
 
+### Sun
+
+**Sun** creates a light that behaves like a sun. It's a directional light.
+
+### Spot
+
+**Spot** creates a Spot light. It's a directional light.
 
 ### Area
 
@@ -1195,12 +1296,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+###### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Light Probe
 
@@ -1220,12 +1322,13 @@ The light probes can be further adjusted in the Properties Editor.
 
 To work with the light probes you need to bake them. Baking lightpropbes happens in the render properties tab in the indirect lighting panel.
 
+### Sphere
 
-| Entry | What it does |
-| ------ | ---------------------------------------------- |
-| Sphere | Adds a reflective light probe in sphere shape. |
-| Plane | Adds a reflective light probe in plane shape. |
+Adds a reflective light probe in sphere shape.
 
+### Plane
+
+Adds a reflective light probe in plane shape.
 
 ### Volume
 
@@ -1255,12 +1358,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+###### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+###### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Force Field
 
@@ -1296,12 +1400,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Collection Instance
 
@@ -1323,12 +1428,13 @@ How to orient the object at creation.
 
 Note that this option is dysfunctional when you call the Adjust Last Operator panel from the Toolbar editor.
 
+##### Location X Y Z
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Location X Y Z | The position of the point cloud at creation. |
-| Rotation X Y Z | The rotation of the point cloud at creation. |
+The position of the point cloud at creation.
 
+##### Rotation X Y Z
+
+The rotation of the point cloud at creation.
 
 ## Smart Primitives
 
@@ -1433,14 +1539,21 @@ Change the settings of **To Sphere** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Shear
 
@@ -1474,12 +1587,13 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
+###### Orientation
 
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
+Choose the orientation for the shear action.
 
+###### Mirror Editing
+
+Enable mirror editing.
 
 ##### Proportional editing
 
@@ -1487,14 +1601,21 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Bend
 
@@ -1527,14 +1648,21 @@ Change the settings of **Push/Pull** right after you use it, in the Adjust Last 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Move Texture Space
 
@@ -1570,14 +1698,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Scale Texture Space
 
@@ -1609,14 +1744,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Align to Transform Orientation
 
@@ -1655,14 +1797,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Randomize Transform
 
@@ -1728,14 +1877,21 @@ Turn on or off the single axis for the align operation.
 
 Set origin sets the origin of the selected objects to a chosen location.
 
+### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ------------------------------------------------------------------------------------------ |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
+Sets the geometry to origin.
 
+### Origin to Geometry
+
+Sets the origin to geometry.
+
+### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
 
 ### Origin to Center of Mass(Volume)
 
@@ -2054,14 +2210,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff.
 
 ### Duplicate Linked
 
@@ -2112,22 +2275,37 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | — |
+Adjust the falloff methods.
 
+###### Proportional Size
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Join | Joins two independent objects together and makes them one object. This works with mesh objects and with curve objects. What does not work is to try to join mesh objects with curve objects. They are of different type. |
-| Delete | Delete deletes the selected object(s). |
-| Delete Global | It can be that you have more than one scene open. Delete deletes the selected object(s) in all scenes. |
-| Copy | Copies the selected object(s). |
+See and adjust the falloff radius.
 
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+—
+
+###### Join
+
+Joins two independent objects together and makes them one object. This works with mesh objects and with curve objects. What does not work is to try to join mesh objects with curve objects. They are of different type.
+
+###### Delete
+
+Delete deletes the selected object(s).
+
+###### Delete Global
+
+It can be that you have more than one scene open. Delete deletes the selected object(s) in all scenes.
+
+###### Copy
+
+Copies the selected object(s).
 
 ### Paste
 
@@ -2152,13 +2330,17 @@ Change the settings of **Paste Objects** right after you use it, in the Adjust L
 
 Asset related menu.
 
+### Mark as asset
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Mark as asset | Marks the selected object as an asset. It will be inserted in the asset library. |
-| Clear Asset | Removes the selected object from the asset library. |
-| Clear Asset( Set Fake User) | Removes the selected object from the asset library. But adds a fake user to it, so that it remains in the scene. |
+Marks the selected object as an asset. It will be inserted in the asset library.
 
+### Clear Asset
+
+Removes the selected object from the asset library.
+
+### Clear Asset( Set Fake User)
+
+Removes the selected object from the asset library. But adds a fake user to it, so that it remains in the scene.
 
 ## Library Override
 
@@ -2190,12 +2372,13 @@ Assets with a library override have the override icon in the outliner.
 
 ![Make](/docs2/images/editors/3d-viewport/header/object-menu/make-7.png)
 
+#### Reset
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Reset | Resets the active library override to their initial state. |
-| Clear | Delete the selected local overrides and relink their usages to the linked data if possible. Else reset them and mark them as not editable. |
+Resets the active library override to their initial state.
 
+#### Clear
+
+Delete the selected local overrides and relink their usages to the linked data if possible. Else reset them and mark them as not editable.
 
 ## Relations
 
@@ -2247,13 +2430,17 @@ To use parenting you first have to select the source object, hold down shift, th
 
 The methods are object type dependent. The armature methods requires to have a mesh and an armature. The path methods a curve. The available methods for the current selection can also be found out by pressing the hotkey ctrl P. This calls the parenting menu with just the available methods.
 
+### Object
 
-| Entry | What it does |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| Object | Sets the parent to selected object. |
-| Object ( Keep Transform) | Sets the parent to selected object, but applies all transform before the operation. |
-| Object (Without Inverse) | Set the object’s parenting without setting the inverse parent correction. This preserves all transforms before the operation. |
+Sets the parent to selected object.
 
+### Object ( Keep Transform)
+
+Sets the parent to selected object, but applies all transform before the operation.
+
+### Object (Without Inverse)
+
+Set the object’s parenting without setting the inverse parent correction. This preserves all transforms before the operation.
 
 ### Object (Keep Transform Without Inverse)
 
@@ -2263,16 +2450,29 @@ Set the object’s parenting without setting the inverse parent connections and 
 
 Armature parenting creates an armature modifier at the mesh object.
 
+#### Armature Deform
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------- |
-| Armature Deform | Sets the parent to selected Armature. |
-| With empty Groups | Sets the parent to selected Armature, using empty groups. |
-| With Envelope Weights | Sets the parent to selected Armature, using envelope weights |
-| With automatic Weights | Sets the parent to selected Armature, with automatic weights. |
-| Bone | Sets the parent absolute to selected Bone. |
-| Bone Relative | Sets the parent relative to selected Bone. |
+Sets the parent to selected Armature.
 
+#### With empty Groups
+
+Sets the parent to selected Armature, using empty groups.
+
+#### With Envelope Weights
+
+Sets the parent to selected Armature, using envelope weights
+
+#### With automatic Weights
+
+Sets the parent to selected Armature, with automatic weights.
+
+#### Bone
+
+Sets the parent absolute to selected Bone.
+
+#### Bone Relative
+
+Sets the parent relative to selected Bone.
 
 ### Curve Deform
 
@@ -2374,13 +2574,17 @@ Keep Transform
 
 Apply transform before parenting.
 
+##### Object (Without Inverse)
 
-| Entry | What it does |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object (Without Inverse) | With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting. |
-| Object (Keep Transform Without Inverse) | Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position. |
-| Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
+With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting.
 
+##### Object (Keep Transform Without Inverse)
+
+Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position.
+
+##### Object (Attach Curves to Surface)
+
+Parent a Hair Curve to the surface of a new object.
 
 ### Clear Parent
 
@@ -2448,12 +2652,13 @@ Change the settings of **Add Constraints (with Target)** right after you use it,
 
 Type is a drop-down box choose the constraints type again.
 
+###### Copy Constraints to Selected Objects
 
-| Entry | What it does |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Copy Constraints to Selected Objects | Copy Constraints to Selected Objects copies a constraint from one object to another. Useage: Select the object where you want to copy the constraint to. Hold down Shift and select the object with the constraint. Both should be selected. Then click at Copy Constraints to Selected Objects. This copies the constraint to the object. |
-| Clear Object Constraints | Removes all constraints from the object. |
+Copy Constraints to Selected Objects copies a constraint from one object to another. Useage: Select the object where you want to copy the constraint to. Hold down Shift and select the object with the constraint. Both should be selected. Then click at Copy Constraints to Selected Objects. This copies the constraint to the object.
 
+###### Clear Object Constraints
+
+Removes all constraints from the object.
 
 ## Track
 
@@ -2595,14 +2800,10 @@ Add data layers on destination meshes if needed.
 
 Edge mapping determines how edge data gets transferred.
 
-
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-| Only Neighbour Geometry | Source elements must be closer than the max distance. · **Max distance**: Maximum allowed distance between source element and target element. |
-| Ray Radius | Width of rays. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
+- **Only Neighbour Geometry**: Source elements must be closer than the max distance. · **Max distance**: Maximum allowed distance between source element and target element.
+- **Ray Radius**: Width of rays.
 
 ###### Source Layer
 
@@ -2640,14 +2841,10 @@ Add data layers on destination meshes if needed.
 
 Edge mapping determines how edge data gets transferred.
 
-
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-| Only Neighbour Geometry | Source elements must be closer than the max distance. · **Max distance**: Maximum allowed distance between source element and target element. |
-| Ray Radius | Width of rays. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
+- **Only Neighbour Geometry**: Source elements must be closer than the max distance. · **Max distance**: Maximum allowed distance between source element and target element.
+- **Ray Radius**: Width of rays.
 
 ###### Mix Mode
 
@@ -2663,13 +2860,17 @@ Mix factor to apply data to destination mesh.
 
 ![Data type Vertex Data, Colors](/docs2/images/editors/3d-viewport/header/object-menu/data-type-bevel-weight.png)
 
+###### Create Data
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Create Data | Add data layers on destination meshes if needed. |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
+Add data layers on destination meshes if needed.
 
+###### Auto Transform
+
+Automatically compute transformation to geht the best possible match between source and destination meshes.
+
+###### Object Transform
+
+Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2717,12 +2918,8 @@ Add data layers on destination meshes if needed.
 
 The method used to map source edges to destination edges.
 
-
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2758,12 +2955,8 @@ Add data layers on destination meshes if needed.
 
 The method used to map source face’s corners to destination corners.
 
-
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2771,12 +2964,8 @@ The method used to map source face’s corners to destination corners.
 
 Source elements must be closer than the max distance.
 
-
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------- |
-| Ray Radius | Width of rays. |
-| Island Precision | Factor to control the island handling. Higher values gives better results. |
-
+- **Ray Radius**: Width of rays.
+- **Island Precision**: Factor to control the island handling. Higher values gives better results.
 
 ###### Mix Mode
 
@@ -2792,13 +2981,17 @@ Mix factor to apply data to destination mesh.
 
 ![Data type Face Corner Data, Colors](/docs2/images/editors/3d-viewport/header/object-menu/data-type-face-corner-data-colors.png)
 
+###### Create Data
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Create Data | Add data layers on destination meshes if needed. |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
+Add data layers on destination meshes if needed.
 
+###### Auto Transform
+
+Automatically compute transformation to geht the best possible match between source and destination meshes.
+
+###### Object Transform
+
+Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2806,12 +2999,8 @@ Mix factor to apply data to destination mesh.
 
 Source elements must be closer than the max distance.
 
-
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------- |
-| Ray Radius | Width of rays. |
-| Island Precision | Factor to control the island handling. Higher values gives better results. |
-
+- **Ray Radius**: Width of rays.
+- **Island Precision**: Factor to control the island handling. Higher values gives better results.
 
 ###### Source Layer
 
@@ -2855,12 +3044,8 @@ The method used to map source face’s corners to destination corners.
 
 Method used to map source faces to destination faces.
 
-
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2868,12 +3053,8 @@ Method used to map source faces to destination faces.
 
 Source elements must be closer than the max distance.
 
-
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------- |
-| Ray Radius | Width of rays. |
-| Island Precision | Factor to control the island handling. Higher values gives better results. |
-
+- **Ray Radius**: Width of rays.
+- **Island Precision**: Factor to control the island handling. Higher values gives better results.
 
 ###### Source Layer
 
@@ -2911,12 +3092,8 @@ Add data layers on destination meshes if needed.
 
 Method used to map source faces to destination faces.
 
-
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Auto Transform | Automatically compute transformation to geht the best possible match between source and destination meshes. |
-| Object Transform | Evaluate the transform in global space. |
-
+- **Auto Transform**: Automatically compute transformation to geht the best possible match between source and destination meshes.
+- **Object Transform**: Evaluate the transform in global space.
 
 ###### Only Neighbour Geometry
 
@@ -2967,13 +3144,17 @@ Change the settings of **Transfer Mesh Data Layout** right after you use it, in 
 
 Which layers to transfer, in case of multi-layer types.
 
+###### Mygroup
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------- |
-| Mygroup | Mygroup is in this case a vertex group i have created for demonstration purposes. |
-| Active Layer | Only transfer the active data layer. |
-| All Layers | Transfer all data layers. |
+Mygroup is in this case a vertex group i have created for demonstration purposes.
 
+###### Active Layer
+
+Only transfer the active data layer.
+
+###### All Layers
+
+Transfer all data layers.
 
 ##### Destination Layers Matching
 
@@ -2981,13 +3162,17 @@ Which layers to transfer, in case of multi-layer types.
 
 How to match source and destination layers.
 
+###### By Name
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------ |
-| By Name | Match target data layers to affect by name. |
-| By Order | Match target data layers to affect by order (indices). |
-| Active Layer | Only transfer the active data layer. |
+Match target data layers to affect by name.
 
+###### By Order
+
+Match target data layers to affect by order (indices).
+
+###### Active Layer
+
+Only transfer the active data layer.
 
 ### Link Receivers to Emitter sub menu
 
@@ -3013,12 +3198,13 @@ These objects are now the receivers. Select one.
 
 The toggles behind the objects in the group is what you can control with include and exlcude from the object menu. Include is on, exclude is off.
 
+#### Include
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------- |
-| Include | Include selected receivers to receive light from the active emitter. |
-| Exclude | Include selected receivers to receive light from the active emitter. |
+Include selected receivers to receive light from the active emitter.
 
+#### Exclude
+
+Include selected receivers to receive light from the active emitter.
 
 ### Link Blockers to Emitter sub menu
 
@@ -3034,12 +3220,13 @@ Then from the outliner, drag in the objects that you want to link to the light.
 
 These objects are now the Blockers.
 
+#### Include
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------ |
-| Include | Include selected blockers to cast shadows from the active emitter. |
-| Exclude | Exclude selected blockers to cast shadows from the active emitter. |
+Include selected blockers to cast shadows from the active emitter.
 
+#### Exclude
+
+Exclude selected blockers to cast shadows from the active emitter.
 
 ## Collection
 
@@ -3085,14 +3272,21 @@ Change the settings of **Link to Collection** right after you use it, in the Adj
 
 Set a name for your new collection. When you haven't created a new collection, then this name stays blank.
 
+###### Remove From Collection
 
-| Entry | What it does |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remove From Collection | Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed. |
-| Remove From all Unlinked Collections | Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed. |
-| Add selected To Active Collection | Objects can be in more than one collection. Adds the selected object to the active collection. |
-| Remove Selected From Active Collection | Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed. |
+Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed.
 
+###### Remove From all Unlinked Collections
+
+Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed.
+
+###### Add selected To Active Collection
+
+Objects can be in more than one collection. Adds the selected object to the active collection.
+
+###### Remove Selected From Active Collection
+
+Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed.
 
 ## Shade Smooth, Shade Smooth and Shade Flat
 
@@ -3206,23 +3400,57 @@ Bakes mesh animation to grease pencil strokes.
 
 When you use the Bake Mesh to Grease Pencil tool then a menu pops up with further settings.
 
+#### Target Object
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------- |
-| Target Object | Target grease pencil object. Leave emtpy to create a new stroke. |
-| Start Frame | The start frame of the animation. |
-| End Frame | The end frame of the animation. |
-| Step | Step between generated frames. |
-| Thickness | The thickness of the grease pencil stroke. |
-| Threshold Angle | Threshold to determine the end of the strokes. |
-| Stroke Offset | Stroke offset from fill. |
-| Only Seam Edges | Convert only seam edges. |
-| Export Faces | Export faces as filled strokes. |
-| Only Selected Keyframes | Convert only selected keyframes. |
-| Target Frame | The destination frame. |
-| Projection Type | How to project the grease pencil stroke. |
-| OK | Accept the settings. |
+Target grease pencil object. Leave emtpy to create a new stroke.
 
+#### Start Frame
+
+The start frame of the animation.
+
+#### End Frame
+
+The end frame of the animation.
+
+#### Step
+
+Step between generated frames.
+
+#### Thickness
+
+The thickness of the grease pencil stroke.
+
+#### Threshold Angle
+
+Threshold to determine the end of the strokes.
+
+#### Stroke Offset
+
+Stroke offset from fill.
+
+#### Only Seam Edges
+
+Convert only seam edges.
+
+#### Export Faces
+
+Export faces as filled strokes.
+
+#### Only Selected Keyframes
+
+Convert only selected keyframes.
+
+#### Target Frame
+
+The destination frame.
+
+#### Projection Type
+
+How to project the grease pencil stroke.
+
+#### OK
+
+Accept the settings.
 
 #### Adjust Last Operation - Bake Mesh Animation to Grease Pencil
 
@@ -3236,15 +3464,25 @@ When you perform this tool then an option panel will open up.
 
 #### Bake Transform to Grease Pencil panel
 
+##### Start Frame
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------ |
-| Start Frame | The start frame to calculate. |
-| End Frame | The end frame to calculate. Step The steps between generated frames |
-| Only selected Keyframes | Convert only selected keyframes. |
-| Target Frame | The destination frame. |
-| Projection Type | If the grease pencil object should be reprojected, and with what method. |
+The start frame to calculate.
 
+##### End Frame
+
+The end frame to calculate. Step The steps between generated frames
+
+##### Only selected Keyframes
+
+Convert only selected keyframes.
+
+##### Target Frame
+
+The destination frame.
+
+##### Projection Type
+
+If the grease pencil object should be reprojected, and with what method.
 
 ##### Adjust Last Operation - Bake Transform to Grease Pencil panel
 
@@ -3345,16 +3583,29 @@ Adds a particle system with Fur settings.
 
 You can choose between low, medium and high.
 
+###### Length
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------- |
-| Length | The length of the fur. |
-| Hair Radius | the diameter of the hair. |
-| View Percentage | Adjust the density in the viewport. |
-| Apply Hair Guides | Apply the hair guides. |
-| Noise | Add noise to make the result more irregular. |
-| Frizz | Add frizz to make the result more irregular. |
+The length of the fur.
 
+###### Hair Radius
+
+the diameter of the hair.
+
+###### View Percentage
+
+Adjust the density in the viewport.
+
+###### Apply Hair Guides
+
+Apply the hair guides.
+
+###### Noise
+
+Add noise to make the result more irregular.
+
+###### Frizz
+
+Add frizz to make the result more irregular.
 
 ### Quick Explode
 
@@ -3380,16 +3631,29 @@ Explodes the current object.
 
 Blends into another object. You need to have two objects selected.
 
+###### Number of Pieces
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------- |
-| Number of Pieces | How much fragments the explosion should generate. |
-| Duration | The duration of the animation. |
-| Start Frame | The start frame of the animation. |
-| End Frame | The end frame of the animation. |
-| Outwards Velocity | The strength of the force that pushes the fragments around. |
-| Fade | Fade the pieces over time. |
+How much fragments the explosion should generate.
 
+###### Duration
+
+The duration of the animation.
+
+###### Start Frame
+
+The start frame of the animation.
+
+###### End Frame
+
+The end frame of the animation.
+
+###### Outwards Velocity
+
+The strength of the force that pushes the fragments around.
+
+###### Fade
+
+Fade the pieces over time.
 
 ### Quick Smoke
 
@@ -3466,25 +3730,33 @@ Note that different objects shows different content.
 
 Converts a selected object to a Mesh Object.
 
+##### Curve
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------- |
-| Curve | Converts a selected object to a Curve Object. |
-| Curves | Converts a selected curve to a Hair curves object. |
-| Point Cloud | Converts a selected object to a Point Cloud Object. |
-| Grease Pencil | Converts a selected curve to a grease pencil stroke. |
+Converts a selected object to a Curve Object.
 
+##### Curves
+
+Converts a selected curve to a Hair curves object.
+
+##### Point Cloud
+
+Converts a selected object to a Point Cloud Object.
+
+##### Grease Pencil
+
+Converts a selected curve to a grease pencil stroke.
 
 ### Image object
 
 ![Image object](/docs2/images/editors/3d-viewport/header/object-menu/image-object.png)
 
+#### Convert to Mesh Plane
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------- |
-| Convert to Mesh Plane | Converts a selected image object to a mesh plane. |
-| Trace Image to Grease Pencil | Extract Grease Pencil strokes from an image. |
+Converts a selected image object to a mesh plane.
 
+#### Trace Image to Grease Pencil
+
+Extract Grease Pencil strokes from an image.
 
 ### Hair curve
 
@@ -3548,9 +3820,14 @@ Sub-Menu with clean up operators to help do some house keeping when it comes to 
 
 Remove vertex assignments that are not required. This will delete any zero influence vertex groups.
 
+#### Limit Total Vertex Groups
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Limit Total Vertex Groups | Limit deform weights associated with a vertex to a specified number by removing lowest weights. This will set a total amount of vertex group influences per vertice. |
-| Remove Unused Material Slots | Removed unused material slots on the selected object. |
-| Remove All Materials | Removes all materials on the selected object. |
+Limit deform weights associated with a vertex to a specified number by removing lowest weights. This will set a total amount of vertex group influences per vertice.
+
+#### Remove Unused Material Slots
+
+Removed unused material slots on the selected object.
+
+#### Remove All Materials
+
+Removes all materials on the selected object.

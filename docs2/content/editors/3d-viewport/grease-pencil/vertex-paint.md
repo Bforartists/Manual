@@ -101,12 +101,8 @@ Change the settings of **Vertex Paint Levels** right after you use it, in the Ad
 
 What vertex colors to affect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------- |
-| Offset | Value to add to the colors. |
-| Gain | Value to multiply colors by. |
-
+- **Offset**: Value to add to the colors.
+- **Gain**: Value to multiply colors by.
 
 #### Hue Saturation Value
 
@@ -124,13 +120,9 @@ Change the settings of **Vertex Paint Hue Saturation Value** right after you use
 
 What vertex colors to affect.
 
-
-| Entry | What it does |
-| ---------- | --------------------- |
-| Hue | The hue value |
-| Saturation | The saturation value. |
-| Value | The value value. |
-
+- **Hue**: The hue value
+- **Saturation**: The saturation value.
+- **Value**: The value value.
 
 #### Bright Contrast
 
@@ -148,11 +140,8 @@ Change the settings of **Vertex Paint Bright/Contrast** right after you use it, 
 
 What vertex colors to affect.
 
-
-| Entry | What it does |
-| ---------- | -------------------- |
-| Brightness | The brightness value |
-| Contrast | The contrast value. |
+- **Brightness**: The brightness value
+- **Contrast**: The contrast value.
 
 # Tool Shelf
 
@@ -170,15 +159,25 @@ In this Mode you will mainly find brushes in the tool shelf.
 
 Paint vertices.
 
+##### Blur
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blur | Blur the color. |
-| Average | Blends the color under the brush. |
-| Smear | Smear the colors. |
-| Replace | Replaces the vertex color under the mouse with the current color. |
-| Annotate tools | The annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here. |
+Blur the color.
 
+##### Average
+
+Blends the color under the brush.
+
+##### Smear
+
+Smear the colors.
+
+##### Replace
+
+Replaces the vertex color under the mouse with the current color.
+
+##### Annotate tools
+
+The annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.
 
 #### Select Tools
 
@@ -220,21 +219,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+The asset catalog in which the brush is stored.
 
+###### Author
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The brush author.
 
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -258,12 +269,13 @@ Smoothens the color an average value.
 
 The size of the brush.
 
+##### Use unified Size
 
-| Entry | What it does |
-| ---------------- | -------------------------------------- |
-| Use unified Size | The size is shared across the brushes. |
-| Size Pressure | Enable tablet pressure sensity. |
+The size is shared across the brushes.
 
+##### Size Pressure
+
+Enable tablet pressure sensity.
 
 ### Brush Settings Panel - Blur brush
 
@@ -271,12 +283,13 @@ The size of the brush.
 
 Blurs the color.
 
+#### Size
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the brush. |
-| Strength | The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity. |
+The size of the brush.
 
+#### Strength
+
+The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity.
 
 ### Brush Settings Panel - Paint brush
 
@@ -284,24 +297,29 @@ Blurs the color.
 
 Paints the color with the current color.
 
+#### Size
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the brush. |
-| Strength | The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity. |
+The size of the brush.
 
+#### Strength
+
+The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity.
 
 #### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode/mode.png)
 
+##### Stroke
 
-| Entry | What it does |
-| ------------- | ---------------------------------------- |
-| Stroke | Vertex Color affects to stroke only. |
-| Fill | Vertex Color affects to fill only. |
-| Stroke & Fill | Vertex Color affects to stroke and fill. |
+Vertex Color affects to stroke only.
 
+##### Fill
+
+Vertex Color affects to fill only.
+
+##### Stroke & Fill
+
+Vertex Color affects to stroke and fill.
 
 ### Brush Settings Panel - Replace brush
 
@@ -313,24 +331,29 @@ Replaces the color with the current color.
 
 The size of the brush.
 
+##### Use unified Size
 
-| Entry | What it does |
-| ---------------- | -------------------------------------- |
-| Use unified Size | The size is shared across the brushes. |
-| Size Pressure | Enable tablet pressure sensity. |
+The size is shared across the brushes.
 
+##### Size Pressure
+
+Enable tablet pressure sensity.
 
 #### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode/mode.png)
 
+##### Stroke
 
-| Entry | What it does |
-| ------------- | ---------------------------------------- |
-| Stroke | Vertex Color affects to stroke only. |
-| Fill | Vertex Color affects to fill only. |
-| Stroke & Fill | Vertex Color affects to stroke and fill. |
+Vertex Color affects to stroke only.
 
+##### Fill
+
+Vertex Color affects to fill only.
+
+##### Stroke & Fill
+
+Vertex Color affects to stroke and fill.
 
 ### Brush Settings Panel - Smear brush
 
@@ -338,12 +361,13 @@ The size of the brush.
 
 A smear brush.
 
+#### Size
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Size | The size of the brush. |
-| Strength | The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity. |
+The size of the brush.
 
+#### Strength
+
+The strength of the brush. · **Use unified Size**: The size is shared across the brushes. · **Size Pressure**: Enable tablet pressure sensity.
 
 ### Brush Settings Panel - Cursor Sub panel
 
@@ -409,18 +433,37 @@ The elements are explained from left to right and from top to bottom.
 
 The button at the left opens a drop down list to choose between your palettes.
 
+##### Edit Box
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Number of users | The number of users the palette currently has. |
-| Fake User | Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
-| Add palette | Add a new palette. |
-| Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
-| New Palette color | Adjust a color in the color picker. Then click at the add button to add this color to the palette. |
-| Delete Palette color | Select the color in the palette, then click at the minus button to remove it. |
-| Move Palette Color up and down | With these two buttons you can move the active color up or down in the palette. |
+Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
 
+##### Number of users
+
+The number of users the palette currently has.
+
+##### Fake User
+
+Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
+
+##### Add palette
+
+Add a new palette.
+
+##### Remove Palette
+
+Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.
+
+##### New Palette color
+
+Adjust a color in the color picker. Then click at the add button to add this color to the palette.
+
+##### Delete Palette color
+
+Select the color in the palette, then click at the minus button to remove it.
+
+##### Move Palette Color up and down
+
+With these two buttons you can move the active color up or down in the palette.
 
 #### Sort By
 
@@ -464,24 +507,29 @@ Up left is the active color. Change the color in the color dialog.
 
 The stroke mode. What the vertex color affects. Stroke, Fill, or both.
 
+##### Radius
 
-| Entry | What it does |
-| -------- | --------------------------------- |
-| Radius | The radius of the sculpt brush. |
-| Strength | The strength of the sculpt brush. |
+The radius of the sculpt brush.
 
+##### Strength
+
+The strength of the sculpt brush.
 
 #### Active Layer
 
 The active grease pencil layer. You can choose another layer, and add new layers here too. It is the same content than in the Properties editor.
 
+##### Layer drop down box
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Layer drop down box | The list of available layers. · **New Layer**: Add a new grease pencil layer. |
-| Layer Edit Box | The currently active grease pencil layer. Rename it by clicking into the field. |
-| Remove Layer | Remove the grease pencil layer. |
+The list of available layers. · **New Layer**: Add a new grease pencil layer.
 
+##### Layer Edit Box
+
+The currently active grease pencil layer. Rename it by clicking into the field.
+
+##### Remove Layer
+
+Remove the grease pencil layer.
 
 #### Show/Hide Dropdown
 
