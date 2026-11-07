@@ -8,7 +8,7 @@ path:
   - "Object Mode"
   - "Header"
 version: "5.1"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The header menus of Object Mode."
 order: 10
