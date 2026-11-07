@@ -8,8 +8,8 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Tool Shelf"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: tool_settings
 summary: "The tools of Mesh › Edit Mode in the tool shelf."
 order: 20
@@ -1373,6 +1373,8 @@ When you choose this options then you will set the off click to the different se
 ##### Adjust Last Operation - Spin
 
 Change the settings of **Spin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Spin](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-spin.png)
 
 ##### Steps
 

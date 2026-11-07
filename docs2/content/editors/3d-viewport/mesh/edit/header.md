@@ -1600,21 +1600,15 @@ While the operation you will see in the header the strength value for the skin.
 
 Change the settings of **Skin Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Vector
-
-![Vector](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vector.png)
-
-Adjust the position values for the three values.
+![Adjust Last Operation - Skin Resize](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-skin-resize.png)
 
 ##### Scale X, Y, Z
 
-Limit the position relative to the source object.
+The scale of the skin radius on each axis.
 
 ##### Orientation
 
-![Orientation](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png)
-
-Orientation is a drop-down box choose the type of orientation for the mirroring action.
+Orientation is a drop-down box. Choose the orientation of the scale axes.
 
 ##### Mirror Editing
 
@@ -1868,11 +1862,7 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Mode
-
-![Mode](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-duplicate.png)
 
 ##### Move X, Y, Z
 
@@ -2633,6 +2623,8 @@ Pastes the normals from a formerly copied selected vertice to the currently sele
 
 Change the settings of **Normals Vector Tools** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Normals Vector Tools](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-normals-vector-tools.png)
+
 ##### Absolute Coordinates
 
 When you paste normals then they get pasted relative to the current orientation of the selected vertice. With absolute coordinates the normals gets pasted in world coordinates.
@@ -3291,6 +3283,8 @@ This method works similar to the smart delete tool. It deletes the edge loop. Bu
 #### Adjust Last Operation - Delete Edge Loop
 
 Change the settings of **Delete Edge Loop** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Delete Edge Loop](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-delete-edge-loop.png)
 
 ##### Face Split
 

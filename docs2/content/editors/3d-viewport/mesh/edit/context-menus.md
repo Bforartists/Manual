@@ -1034,6 +1034,8 @@ Note that this tool just shows when you are in Face Select Mode.
 
 Change the settings of **Bridge Edge loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Bridge Edge Loops](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-bridge-edge-loops.png)
+
 ##### Connect Loops
 
 Choose the method how to deal with bridging multiple loops.

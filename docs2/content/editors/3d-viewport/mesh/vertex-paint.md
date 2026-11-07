@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Vertex Paint"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: vpaint_hlt
 summary: "Paint colours onto the vertices of the mesh: menus, brushes and settings."
 order: 30
@@ -116,6 +116,8 @@ This tool allows you to adjust the hue, saturation and value values of the verte
 ##### Adjust Last Operation - Vertex Paint Hue Saturation Value
 
 Change the settings of **Vertex Paint Hue Saturation Value** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Vertex Paint Hue Saturation Value](/docs2/images/editors/3d-viewport/mesh/vertex-paint/adjust-last-operation-hue-saturation-value.png)
 
 | Entry | What it does |
 | ---------- | ------------------------------------------- |

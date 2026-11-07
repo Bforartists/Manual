@@ -343,6 +343,8 @@ Set the bone roll value directly.
 
 Change the settings of **Clear Roll** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Clear Roll](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-clear-roll.png)
+
 ###### Roll
 
 Set the bone roll.

@@ -40,9 +40,11 @@ Copies the selected object(s).
 
 Pastes copied object(s).
 
-#### Adjust Last Operation - Paste Selection from Buffer
+#### Adjust Last Operation - Paste Objects
 
-Change the settings of **Paste Selection from Buffer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Paste Objects** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Paste Objects](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-paste-objects.png)
 
 ##### Select
 

@@ -1451,9 +1451,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Extrudes the control points to where you click.
 
-###### Adjust Last Operation - Add Vertex
+###### Adjust Last Operation - Extrude to Cursor or Add
 
-Change the settings of **Add Vertex** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Extrude to Cursor or Add** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Extrude to Cursor or Add](/docs2/images/editors/3d-viewport/curve/adjust-last-operation-extrude-to-cursor-or-add.png)
 
 ###### Location X Y Z
 
