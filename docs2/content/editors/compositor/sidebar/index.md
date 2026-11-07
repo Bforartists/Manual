@@ -7,7 +7,7 @@ path:
   - Compositor
   - Sidebar
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 10.3 Editors - Compositor Editor - Sidebar.odt
