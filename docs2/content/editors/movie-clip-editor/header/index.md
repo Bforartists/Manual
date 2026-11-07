@@ -6,8 +6,8 @@ path:
   - Editors
   - Movie Clip Editor
   - Header
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 15.1 Editors - Movie Clip Editor - Header.odt
@@ -1710,17 +1710,11 @@ Move the selected curve spline or points.
 
 Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-##### Values
+![Adjust Last Operation - Move](/docs2/images/editors/movie-clip-editor/adjust-last-operation-mask-move.png)
 
-![Values](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/values.png)
+##### Move X, Y, Z
 
-Adjust the move amount.
-
-X, Y and Z defines the position.
-
-##### Axis Ortho
-
-Along which axis to move.
+Adjust the move amount on each axis.
 
 ##### Orientation
 
@@ -1745,7 +1739,7 @@ Proportional Editing is a drop-down box where you can choose to use proportional
 Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.
 
 - **Proportional size**: Proportional size is an edit box to Adjust the strength of the Proportional falloff.
-- **Connected**: Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu
+- **Connected**: Just edit geometry that is directly connected with the current selection.
 - **Projected ( 2D)**: Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.
 
 #### Rotate
@@ -1755,6 +1749,8 @@ Rotate the selected curve spline or points.
 ##### Adjust Last Operation - Rotate
 
 Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Rotate](/docs2/images/editors/movie-clip-editor/adjust-last-operation-mask-rotate.png)
 
 ##### Angle
 
@@ -1789,7 +1785,7 @@ Proportional Editing is a drop-down box where you can choose to use proportional
 Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.
 
 - **Proportional size**: Proportional size is an edit box to adjust the strength of the Proportional falloff.
-- **Connected**: Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu
+- **Connected**: Just edit geometry that is directly connected with the current selection.
 - **Projected ( 2D)**: Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.
 
 #### Scale
@@ -1799,6 +1795,8 @@ Scale the selected curve spline or points.
 ##### Adjust Last Operation - Resize
 
 Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Resize](/docs2/images/editors/movie-clip-editor/adjust-last-operation-mask-resize.png)
 
 ##### Scale X Y Z
 
@@ -1829,7 +1827,7 @@ Proportional Editing is a drop-down box where you can choose to use proportional
 Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.
 
 - **Proportional size**: Proportional size is an edit box to adjust the strength of the Proportional falloff.
-- **Connected**: Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu
+- **Connected**: Just edit geometry that is directly connected with the current selection.
 - **Projected ( 2D)**: Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.
 
 #### To Sphere
@@ -2003,7 +2001,7 @@ Proportional Editing is a drop-down box where you can choose to use proportional
 Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.
 
 - **Proportional size**: Proportional size is an edit box to adjust the strength of the Proportional falloff.
-- **Connected**: Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu
+- **Connected**: Just edit geometry that is directly connected with the current selection.
 - **Projected ( 2D)**: Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.
 
 #### Clear Feather Weight

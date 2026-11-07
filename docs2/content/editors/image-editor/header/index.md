@@ -6,8 +6,8 @@ path:
   - Editors
   - Image Editor
   - Header
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 8.1 Editors - Image Editor - Header.odt
@@ -1325,6 +1325,8 @@ Besides the handles, every control point also has points that define the feather
 ##### Adjust Last Operation - Transform
 
 Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Scale Feather](/docs2/images/editors/image-editor/adjust-last-operation-scale-feather.png)
 
 ##### Values
 
