@@ -322,13 +322,13 @@ There are three ways to control how rules are evaluated:
 | Random | A random rule is selected for each boid. |
 
 
-**Fuzzy**
+###### Fuzzy
 
 Uses fuzzy logic to evaluate rules. Rules are gone through top to bottom. Only the first rule that affect above the Rule Fuzziness threshold is evaluated. The value should be considered how hard the boid will try to respect a given rule (a value of 1 means the Boid will always stick to it, a value of 0 means it will never). If the boid meets more than one conflicting condition at the same time, it will try to fulfill all the rules according to the respective weight of each.
 
 > **Note:** A given boid will try as much as it can to comply to each of the rules it is given, but it is more than likely that some rule will take precedence on other in some cases. For example, in order to avoid a predator, a boid could probably “forget” about Collision, Separate and Flock rules, meaning that “while panicked” it could well run into obstacles, e.g. even if instructed not to, most of the time.
 
-**Rule Fuzziness**
+###### Rule Fuzziness
 
 The fuzziness for the rule evaluation method Fuzzy.
 

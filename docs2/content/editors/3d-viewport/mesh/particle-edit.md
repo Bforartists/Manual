@@ -60,6 +60,8 @@ Manually set a weight for the selected keys to interpolate between the current k
 
 ##### Adjust Last Operation - Weight Set
 
+Change the settings of **Weight Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Factor
 
 ![Factor](/docs2/images/editors/3d-viewport/header/particle-particle-mode-particle-menu/factor.png)

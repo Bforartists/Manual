@@ -615,9 +615,11 @@ The legacy lasso select tool. You can choose between three modes. Lasso select i
 
 Selects everything linked to what you already have selected, so you get whole UV islands. The previous selection gets cleared.
 
-##### Last Operator Select Linked
+#### Last Operator Select Linked
 
 ![Select Linked, Adjust Last Operation](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-linked.png)
+
+Change the settings of **Select Linked** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------- | ------------ |
@@ -632,6 +634,8 @@ Select all UV vertices linked to the active UV map. The previous selection gets 
 #### Adjust Last Operation - Select Linked Pick
 
 ![Last Operator Select Linked Pick](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-linked-pick.png)
+
+Change the settings of **Select Linked Pick** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------- |
@@ -650,6 +654,8 @@ Selects a continuous path of UV elements (vertices, edges, or faces) between two
 
 ![Last Operator Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/last-operator-shortest-path.png)
 
+Change the settings of **Shortest Path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Face Stepping | When enabled, selection prefers paths that follow face adjacency. Useful for maintaining logical flow across quads or structured meshes. |
@@ -665,6 +671,8 @@ Selects a continuous path of UV elements (vertices, edges, or faces) between two
 Like the Shortest Path operator, this will select the shortest path under the mouse location between two selected elements.
 
 #### Adjust Last Operation - Shortest Path
+
+Change the settings of **Shortest Path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -684,6 +692,8 @@ Useful for isolating texture regions, organizing UV layouts, or applying operati
 #### Adjust Last Operation - Select Tile
 
 ![Last Operator Select Tile](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-tile.png)
+
+Change the settings of **Select Tile** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Extend
 
@@ -711,6 +721,8 @@ Two numeric fields representing the UDIM tile coordinates:
 Select all UV faces that overlaps each other.
 
 #### Adjust Last Operation - Select Overlap
+
+Change the settings of **Select Overlap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Extend
 
@@ -766,6 +778,8 @@ With UV Select Mode Islands. Selects all UV Islands with the same amount of face
 
 ![Last Operator Select Similar](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-similar.png)
 
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------- | ------------------------------------------------------------------------------------------------- |
 | Type | The select similar method. |
@@ -781,6 +795,8 @@ Note that shortest path is a hotkey tool. Select the first element, hold down ct
 #### Adjust Last Operation - Pick Shortest Path
 
 ![Last Operator Pick Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/last-operator-pick-shortest-path.png)
+
+Change the settings of **Pick Shortest Path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Face Stepping
 
@@ -969,6 +985,8 @@ Rotates the selection by 90 degree counter clockwise.
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ----- | --------------------------------------------------- |
 | Angle | The rotation angle. |
@@ -992,6 +1010,8 @@ Shear shears the selection.
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
@@ -1022,6 +1042,8 @@ Slide a vertex along the parent edge of the mesh UV.
 
 ![Last Operator Vertex Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-vertex-slide.png)
 
+Change the settings of **Vertex Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | Factor | The factor of the slide, moving the selection in a positive or negative direction from starting position. |
@@ -1042,6 +1064,8 @@ Slide an edge along the adjacent edges of the mesh UV.
 
 ![Last Operator Edge Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-edge-slide.png)
 
+Change the settings of **Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | Factor | The factor of the slide, moving the selection in a positive or negative direction from starting position. |
@@ -1055,6 +1079,8 @@ Slide an edge along the adjacent edges of the mesh UV.
 ##### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------- |
@@ -1082,6 +1108,8 @@ Use UV Select Sync must be off. The tool does not work with Use UV Select Sync o
 ##### Adjust Last Operation - Copy Mirrored UV Coords
 
 ![Last Operator Copy Mirrored UV Coords](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-copy-mirrored-uv-coords.png)
+
+Change the settings of **Copy Mirrored UV Coords** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Axis Direction
 
@@ -1126,6 +1154,8 @@ Snap is a sub menu with some snapping tools. The menu items should be pretty sel
 #### Adjust Last Operation - Snap Selection and Snap Cursor
 
 ![Last Operator Snap Selection and Snap Cursor](/docs2/images/editors/uv-editor/last-operator-snap-selection-and-snap-cursor.png)
+
+Change the settings of **Snap Selection and Snap Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Target
 
@@ -1174,6 +1204,8 @@ This last operator appears in the 3D view to the bottom left of the editor. Pin,
 
 #### Adjust Last Operation - Unwrap
 
+Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Method
 
 Method is a drop down box where you can choose the unwrap method.
@@ -1184,11 +1216,11 @@ Method is a drop down box where you can choose the unwrap method.
 
 Unwrap ABF and Unwrap LSCM shares the same Last Operator.
 
-**Method**
+###### Method
 
 Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.
 
-**Fill Holes**
+###### Fill Holes
 
 ![Fill Holes](/docs2/images/editors/uv-editor/fill-holes.png)
 
@@ -1199,7 +1231,7 @@ Fill holes in the mesh before unwrapping.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -1209,7 +1241,7 @@ Fill holes in the mesh before unwrapping.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -1228,7 +1260,7 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
@@ -1238,7 +1270,7 @@ Number of iterations.
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
 
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -1326,6 +1358,8 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 ![Last Operator Cube Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cube-projection.png)
 
+Change the settings of **Cube Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------- |
 | Cube Size | Cube Size defines the size of the UV mesh in the UV space. |
@@ -1340,6 +1374,8 @@ Cylinder Projection tries to map the geometry cylindric.
 ##### Adjust Last Operation - Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cylinder-projection.png)
+
+Change the settings of **Cylinder Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -1359,6 +1395,8 @@ Sphere Projection tries to map the geometry spherical.
 ##### Adjust Last Operation - Sphere Projection
 
 ![Last Operator Sphere Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-sphere-projection.png)
+
+Change the settings of **Sphere Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -1402,6 +1440,8 @@ Merges the selected vertices not only at the cursor. The last operator provides 
 
 ![Last Operator Snap Selection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-snap-selection.png)
 
+Change the settings of **Snap Selection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Target
 
 ![Target](/docs2/images/editors/uv-editor/header/uv-menu/target.png)
@@ -1423,6 +1463,8 @@ Merge UV vertices when they are below a merge distance.
 ##### Adjust Last Operation - Merge UV's by Distance
 
 ![Last Operator Merge UV's by Distance](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-merge-uv-s-by-distance.png)
+
+Change the settings of **Merge UV's by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------- |
@@ -1492,7 +1534,7 @@ Adjust the margin amound.
 
 What method to use for the margin. UV patches needs a margin between the single patches. So that the pixels of the texture doesn't bleed into other areas.
 
-**Scaled**
+###### Scaled
 
 Use scale of existing UV's to multiply margin.
 
@@ -1500,7 +1542,7 @@ Use scale of existing UV's to multiply margin.
 
 Just add the margin. And don't use the UV scale for calculation too.
 
-**Fraction**
+###### Fraction
 
 Specify a precise fraction of final UV output.
 
@@ -1568,6 +1610,8 @@ The header shows a help text while the algorithm works. The Blend factor is the 
 
 #### Adjust Last Operation - Minimize Stretch
 
+Change the settings of **Minimize Stretch** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------- |
 | Fill Holes | Fill holes virtually fills holes before unwrapping to avoid overlapping and to preserve the geometry. |
@@ -1619,6 +1663,8 @@ You need to unwrap the mesh again when you want to apply changes by the new mark
 
 ![Last Operator Mark Seam](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-mark-seam.png)
 
+Change the settings of **Mark Seam** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Clear
 
 Clears the seam instead of marking it.
@@ -1644,6 +1690,8 @@ Aligns selected UV islands along a chosen axis.
 #### Adjust Last Operation - Arrange/Align Islands
 
 ![Last Operator Arrange/Align Islands](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-arrange-align-islands.png)
+
+Change the settings of **Arrange/Align Islands** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Initial Position
 
@@ -1745,21 +1793,23 @@ Aligns the selected geometry horizontally or vertically. It aligns to the closes
 
 ![Last operator Align Rotation](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-align-rotation.png)
 
+Change the settings of **Align Rotation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Method
 
-**Geometry**
+###### Geometry
 
 ![Geometry](/docs2/images/editors/uv-editor/header/uv-menu/geometry.png)
 
 Aligns the whole geometry.
 
-**Edge**
+###### Edge
 
 ![Edge](/docs2/images/editors/uv-editor/header/uv-menu/edge.png)
 
 Aligns the geometry along the selected edge.
 
-**Auto**
+###### Auto
 
 Checks for selection, and aligns then either the whole geometry or by the selected edge.
 
@@ -1793,6 +1843,8 @@ Show or hide faces. This happens in both, the 3D View and the UV editor.
 #### Adjust Last Operation - Reveal Hidden / Hide Selected
 
 ![Last Operator Reveal Hidden / Hide Selected](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-reveal-hidden-hide-selected.png)
+
+Change the settings of **Reveal Hidden / Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Select
 

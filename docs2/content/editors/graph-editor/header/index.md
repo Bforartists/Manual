@@ -124,6 +124,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/graph-editor/type-4.png)
 
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the easing type.
@@ -142,6 +144,8 @@ This is a feature for the Graph editor, where each curve point has its own handl
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/graph-editor/type-2.png)
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Type
 
 Set the handle type for the currently selected curve point.
@@ -157,6 +161,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 ### Adjust Last Operation - Set Keyframe Interpolation
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/graph-editor/type-3.png)
+
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Type
 
@@ -402,6 +408,8 @@ Select the keyframes after the current frame.
 
 ![Last Operator Select Left/Right](/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-left-right.png)
 
+Change the settings of **Select Left/Right** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Mode
 
 ![Mode](/docs2/images/editors/graph-editor/header/select-menu/mode.png)
@@ -422,6 +430,8 @@ Selects the handles of the selected keyframes.
 
 ![Last Operator Select Key / Handles](/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-key-handles.png)
 
+Change the settings of **Select Key / Handles** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | -------------------------------------------------------------------------------------- |
 | Left Handle | What to do with the left handle, either select, deselect or keep selection status. |
@@ -435,6 +445,8 @@ Deselects the handles of the selected keyframes, only selecting the keyframe.
 #### Adjust Last Operation - Select Key / Handles
 
 ![Last Operator Select Key / Handles](/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-key-handles.png)
+
+Change the settings of **Select Key / Handles** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | -------------------------------------------------------------------------------------- |
@@ -475,6 +487,8 @@ Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until yo
 
 ![Last Operator Duplicate Time Marker](/docs2/images/editors/graph-editor/header/marker-menu/last-operator-duplicate-time-marker.png)
 
+Change the settings of **Duplicate Time Marker** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Frames
 
 The target frame to position the duplicated marker.
@@ -490,6 +504,8 @@ Duplicate markers to other scenes. A blend file can contain more than one scene.
 #### Adjust Last Operation - Make Links to Scene
 
 ![Last Operator Make Links to Scene](/docs2/images/editors/graph-editor/header/marker-menu/last-operator-make-links-to-scene.png)
+
+Change the settings of **Make Links to Scene** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scene
 
@@ -520,6 +536,8 @@ A menu will open up where you can rename the active marker.
 #### Adjust Last Operation - Rename Marker
 
 ![Last Operator Rename Marker](/docs2/images/editors/graph-editor/header/marker-menu/last-operator-rename-marker.png)
+
+Change the settings of **Rename Marker** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Name
 
@@ -574,6 +592,8 @@ Toggles the locks in the channel list from their previous state to locked and ba
 
 ![Last Operator Toggle Channel Settings](/docs2/images/editors/graph-editor/header/channel-menu/last-operator-toggle-channel-settings.png)
 
+Change the settings of **Toggle Channel Settings** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 The type to toggle.
@@ -619,6 +639,8 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/graph-editor/header/channel-menu/last-operator-set-keyframe-interpolation.png)
 
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the extrapolation mode for the selected F-Curves.
@@ -630,6 +652,8 @@ Reveals all hidden curves.
 #### Adjust Last Operation - Reveal Curves
 
 ![Last Operator Reveal Curves](/docs2/images/editors/graph-editor/last-operator-reveal-curves.png)
+
+Change the settings of **Reveal Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Select
 
@@ -647,6 +671,8 @@ Hides the unselected curves.
 
 ![Last Operator Hide Curves](/docs2/images/editors/graph-editor/last-operator-hide-curves.png)
 
+Change the settings of **Hide Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hide the unselected or selected curves.
@@ -659,6 +685,8 @@ Expands all channels in the channel list.
 
 ![Last Operator Expand Channels](/docs2/images/editors/graph-editor/header/channel-menu/last-operator-expand-channels.png)
 
+Change the settings of **Expand Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### All
 
 Expand all Channels, or just the selected channels.
@@ -670,6 +698,8 @@ Collapses all channels in the channels list.
 #### Adjust Last Operation - Collapse Channels
 
 ![Last Operator Collapse Channels](/docs2/images/editors/graph-editor/header/channel-menu/last-operator-collapse-channels.png)
+
+Change the settings of **Collapse Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### All
 
@@ -684,6 +714,8 @@ Sort the items in the channels list.
 #### Adjust Last Operation - Move Channels
 
 ![Last Operator Move Channels](/docs2/images/editors/graph-editor/header/channel-menu/last-operator-move-channels.png)
+
+Change the settings of **Move Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -722,6 +754,8 @@ Moves the selected keyframe(s).
 
 ![Last Operator Move](/docs2/images/editors/graph-editor/header/key-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -756,6 +790,8 @@ Moves the last keyframes of the selection.
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/graph-editor/header/key-menu/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------------- | ------------------------ |
@@ -793,6 +829,8 @@ Rotates the selection.
 
 ![Last Operator Rotate](/docs2/images/editors/graph-editor/header/key-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
@@ -828,6 +866,8 @@ Scales the selected keyframes. You need to have more than one keyframe selected.
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/graph-editor/header/key-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -867,6 +907,8 @@ Snaps the selected keyframes by the chosen method.
 
 ![Last Operator Snap Keys](/docs2/images/editors/graph-editor/last-operator-snap-keys.png)
 
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Snaps the selected keyframes by the chosen method.
@@ -881,6 +923,8 @@ Flips the selected keyframes over the current frame position.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/graph-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -894,6 +938,8 @@ Choose a method how to insert a new keyframe at the current frame position.
 #### Adjust Last Operation - Insert Keyframes
 
 ![Last Operator Insert Keyframes](/docs2/images/editors/graph-editor/header/key-menu/last-operator-insert-keyframes.png)
+
+Change the settings of **Insert Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -912,6 +958,8 @@ Pastes copied keyframes, but flipped.
 #### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last Operator Paste Keyframes / Flipped](/docs2/images/editors/graph-editor/header/key-menu/last-operator-paste-keyframes-flipped.png)
+
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -936,6 +984,8 @@ Duplicate selected keyframes.
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/graph-editor/header/key-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1010,6 +1060,8 @@ Decimate F-Curves by specifying how much it can derivate from the original curve
 ##### Adjust Last Operation - Decimate Keyframes
 
 ![Last Operator Decimate Keyframes](/docs2/images/editors/graph-editor/header/key-menu/last-operator-decimate-keyframes.png)
+
+Change the settings of **Decimate Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------- |

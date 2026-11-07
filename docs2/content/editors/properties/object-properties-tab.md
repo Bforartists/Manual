@@ -353,37 +353,37 @@ Displays the full motion path.
 
 The type of path range to calculate the motion paths.
 
-**All Keys**
+###### All Keys
 
 ![All Keys](/docs2/images/editors/properties/object-properties-tab/all-keys.png)
 
 Calculate all keys. Even when they are out of the range.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Selected Keys**
+###### Selected Keys
 
 ![Selected Keys](/docs2/images/editors/properties/object-properties-tab/selected-keys.png)
 
 Calculate just selected keys.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Scene Frame Range**
+###### Scene Frame Range
 
 ![Scene Frame Range](/docs2/images/editors/properties/object-properties-tab/scene-frame-range.png)
 
 Calculate the entire scene / preview range.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Manual Range**
+###### Manual Range
 
 ![Manual Range](/docs2/images/editors/properties/object-properties-tab/manual-range.png)
 

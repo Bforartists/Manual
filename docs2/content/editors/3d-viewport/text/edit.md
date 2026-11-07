@@ -120,6 +120,8 @@ Kerning is the distance between letters. Increase, decrease and reset the kernin
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
 
+Change the settings of **Change Spacing** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Delta
 
 Adjust the spacing. The range goes from -20 to 20.
@@ -227,6 +229,8 @@ Kerning is the distance between letters. Increase, decrease and reset the kernin
 ###### Adjust Last Operation - Change Spacing
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
+
+Change the settings of **Change Spacing** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Delta
 

@@ -346,7 +346,7 @@ Show the navigate viewport gizmos.
 
 ##### Spline
 
-**Edge Display type**
+###### Edge Display type
 
 ![Edge Display type](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/edge-display-type.png)
 
@@ -805,6 +805,8 @@ Move the selected track(s).
 
 ![Last Operator Move](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -839,6 +841,8 @@ Rotate the selected tracks.
 ##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -877,6 +881,8 @@ Resize the selected track(s).
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -946,6 +952,8 @@ When enough marcant areas are available then it adds up to eight markers that wa
 #### Adjust Last Operation - Detect Features
 
 ![Last Operator Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-detect-features.png)
+
+Change the settings of **Detect Features** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Placement
 
@@ -1035,6 +1043,8 @@ Show or hide tracks.
 
 ![Last operator Hide Tracks](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-hide-tracks.png)
 
+Change the settings of **Hide Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hide selected or unselected tracks.
@@ -1070,6 +1080,8 @@ Set plane in the 3D space as a Wall plane, based at three selected markers.
 
 ![Last Operator Set Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png)
 
+Change the settings of **Set Plane** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Plane
 
 ![Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/plane.png)
@@ -1088,6 +1100,8 @@ Set X axis rotation in 3D space, based at the selected marker. You need to have 
 
 ![Last Operator Set Axis](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png)
 
+Change the settings of **Set Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Axis
 
 A drop down box to choose if you want to use the axis to X or to Y
@@ -1100,6 +1114,8 @@ Set scale of scene by scaling camera, based at two selected markers. You need to
 
 ![Last Operator Set Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png)
 
+Change the settings of **Set Scale** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Distance
 
 The distance between two bundles used for scene scaling.
@@ -1111,6 +1127,8 @@ Apply scale to solution.
 ##### Adjust Last Operation - Apply Solution Scale
 
 ![Last operator Apply Solution Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png)
+
+Change the settings of **Apply Solution Scale** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Distance
 
@@ -1197,6 +1215,8 @@ This circle element can be modified by right clicking at the handlers and pullin
 
 ![Last Operator Add Circle](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-circle.png)
 
+Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | --------------------------- |
 | Size | The size of the circle. |
@@ -1216,6 +1236,8 @@ This circle element can be modified by right clicking at the handlers and pullin
 
 ![Last Operator Add Square](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
 
+Change the settings of **Add Square** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | --------------------------- |
 | Size | The size of the circle. |
@@ -1233,6 +1255,8 @@ You can create a spline from scratch with this method too. Simply hold down Ctrl
 
 ![Last operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-vertex-and-slide.png)
 
+Change the settings of **Add Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Location X Y
 
 The location of the created spline point.
@@ -1246,6 +1270,8 @@ Add new vertex to feather and slide it. Hotkey only tool !
 #### Adjust Last Operation - Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
+
+Change the settings of **Add Feather Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Location X Y
 
@@ -1289,6 +1315,8 @@ Move the selected curve spline or points.
 
 ##### Adjust Last Operation - Move
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Values
 
 ![Values](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/values.png)
@@ -1317,7 +1345,7 @@ Enables mirror editing.
 
 Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.
 
-**Proportional Editing Falloff**
+###### Proportional Editing Falloff
 
 ![Proportional Editing Falloff](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png)
 
@@ -1334,6 +1362,8 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 Rotate the selected curve spline or points.
 
 ##### Adjust Last Operation - Rotate
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Angle
 
@@ -1358,7 +1388,7 @@ Along which axis to rotate
 
 Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.
 
-**Proportional Editing Falloff**
+###### Proportional Editing Falloff
 
 ![Proportional Editing Falloff](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png)
 
@@ -1375,6 +1405,8 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 Scale the selected curve spline or points.
 
 ##### Adjust Last Operation - Resize
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scale X Y Z
 
@@ -1398,7 +1430,7 @@ Enables mirror editing.
 
 Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.
 
-**Proportional Editing Falloff**
+###### Proportional Editing Falloff
 
 ![Proportional Editing Falloff](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png)
 
@@ -1426,6 +1458,8 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ![Last Operator To Sphere](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Factor
 
 The factor to transform the selection into a shape form.
@@ -1452,6 +1486,8 @@ In Object mode this tools requires to have more than one object selected.
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -1489,6 +1525,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
 | Distance | Adjust the strength of influence of the tool. |
@@ -1521,6 +1559,8 @@ Besides the handles, every control point also has points that define the feather
 
 ![Last Operator Transform](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------------------- |
 | Values | Adjust the scale amount. X, Y and Z defines the position. W defines the rotation. |
@@ -1542,7 +1582,7 @@ Enables mirror editing.
 
 Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.
 
-**Proportional Editing Falloff**
+###### Proportional Editing Falloff
 
 ![Proportional Editing Falloff](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png)
 
@@ -1616,6 +1656,8 @@ Hides the unselected curves.
 ##### Adjust Last Operation - Hide Layer
 
 ![Last operator Hide Layer](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-hide-layer.png)
+
+Change the settings of **Hide Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 

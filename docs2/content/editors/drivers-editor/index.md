@@ -142,6 +142,8 @@ Pastes copied curve point(s), but flipped.
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png)
 
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Frame Offset
 
 ![Frame Offset](/docs2/images/editors/drivers-editor/frame-offset.png)
@@ -176,6 +178,8 @@ Set the handle type for the currently selected curve point.
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png)
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the handle type for the currently selected curve point.
@@ -192,6 +196,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png)
 
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the interpolation mode.
@@ -205,6 +211,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 #### Adjust Last Operation - Set Keyframe Easing Type
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png)
+
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -221,6 +229,8 @@ Duplicate the selected curve point(s).
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -265,6 +275,8 @@ Mirrors the animation by the given method.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -278,6 +290,8 @@ Snaps the selected keyframes by the given method.
 #### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/drivers-editor/last-operator-snap-keys.png)
+
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 

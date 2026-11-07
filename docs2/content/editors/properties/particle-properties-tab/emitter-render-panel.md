@@ -175,7 +175,7 @@ Set the number of subdivisions of the rendered paths (the value is a power of 2)
 
 Use objects multiple times in the same groups. Specify the order and number of times to repeat each object with the list view that appears.
 
-**Dupli Object Index list**
+###### Dupli Object Index list
 
 The list with the objects of the chosen instance collection.
 

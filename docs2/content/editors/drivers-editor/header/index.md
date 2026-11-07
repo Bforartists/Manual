@@ -113,6 +113,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png)
 
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the easing type.
@@ -131,6 +133,8 @@ This is a feature for the Graph editor, where each curve point has its own handl
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png)
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Type
 
 Set the handle type for the currently selected curve point.
@@ -146,6 +150,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 ### Adjust Last Operation - Set Keyframe Interpolation
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png)
+
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Type
 
@@ -369,6 +375,8 @@ Select the keyframes after the current frame.
 
 ![Last Operator Select Left/Right](/docs2/images/editors/drivers-editor/header/select-menu/last-operator-select-left-right.png)
 
+Change the settings of **Select Left/Right** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Mode
 
 ![Mode](/docs2/images/editors/drivers-editor/header/select-menu/mode.png)
@@ -390,6 +398,8 @@ For selected keyframes, only select the keyframe, and deselect the handles.
 #### Adjust Last Operation - Select Key / Handles
 
 ![Last Operator Select Key / Handles](/docs2/images/editors/drivers-editor/header/select-menu/last-operator-select-key-handles.png)
+
+Change the settings of **Select Key / Handles** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | --------------------------------- |
@@ -441,6 +451,8 @@ The menu items should be self explaining.
 
 ![Last Operator Toggle Channel Settings](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-toggle-channel-settings.png)
 
+Change the settings of **Toggle Channel Settings** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Type
 
 The type to toggle.
@@ -462,6 +474,8 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 
 ![Last Operator Set F-Curve Extrapolation](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-set-f-curve-extrapolation.png)
 
+Change the settings of **Set F-Curve Extrapolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the extrapolation mode for the selected F-Curves.
@@ -480,6 +494,8 @@ Reveals all hidden curves.
 
 ![Last Operator Reveal Curves](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-reveal-curves.png)
 
+Change the settings of **Reveal Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Select
 
 Select all revealed curves.
@@ -496,6 +512,8 @@ Hides the unselected curves.
 
 ![Last Operator Hide Curves](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-hide-curves.png)
 
+Change the settings of **Hide Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hide the unselected or selected curves.
@@ -508,6 +526,8 @@ Expands all channels in the channel list.
 
 ![Last Operator Expand Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-expand-channels.png)
 
+Change the settings of **Expand Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### All
 
 Expand all Channels, or just the selected channels.
@@ -519,6 +539,8 @@ Collapses all channels in the channels list.
 #### Adjust Last Operation - Collapse Channels
 
 ![Last Operator Collapse Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-collapse-channels.png)
+
+Change the settings of **Collapse Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### All
 
@@ -537,6 +559,8 @@ Zooms in or out to fit the selected channels into the view.
 #### Adjust Last Operation - Move Channels
 
 ![Last Operator Move Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-move-channels.png)
+
+Change the settings of **Move Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -568,6 +592,8 @@ Moves the selected keyframe(s).
 ##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X, Y Z
 
@@ -603,6 +629,8 @@ Moves the last keyframes of the selection.
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------------- | ------------------------ |
@@ -640,6 +668,8 @@ Rotates the selection.
 
 ![Last Operator Rotate](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
@@ -675,6 +705,8 @@ Scales the selected keyframes. You need to have more than one keyframe selected.
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -714,6 +746,8 @@ Snaps the selected keyframes by the chosen method.
 
 ![Last Operator Snap Keys](/docs2/images/editors/drivers-editor/last-operator-snap-keys.png)
 
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Snaps the selected keyframes by the chosen method.
@@ -728,6 +762,8 @@ Flips the selected keyframes over the current frame position.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -741,6 +777,8 @@ Choose a method how to insert a new keyframe at the current frame position.
 #### Adjust Last Operation - Insert Keyframes
 
 ![Last Operator Insert Keyframes](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-insert-keyframes.png)
+
+Change the settings of **Insert Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -759,6 +797,8 @@ Pastes copied keyframes, but flipped.
 #### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last Operator Paste Keyframes / Flipped](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-paste-keyframes-flipped.png)
+
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -783,6 +823,8 @@ Duplicate selected keyframes.
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -857,6 +899,8 @@ Decimate F-Curves by specifying how much it can derivate from the original curve
 ##### Adjust Last Operation - Decimate Keyframes
 
 ![Last Operator Decimate Keyframes](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-decimate-keyframes.png)
+
+Change the settings of **Decimate Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------- |

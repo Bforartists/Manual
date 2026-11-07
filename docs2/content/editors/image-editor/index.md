@@ -85,6 +85,8 @@ Opens a sub menu where you can choose different handle types.
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
 
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Choose the handle type again.

@@ -50,7 +50,7 @@ There are two Kuwahara variations available. Classic and Anisotropic.
 
 ![Classic](/docs2/images/editors/compositor/header/add-menu-creative/classic.png)
 
-**High Precision**
+###### High Precision
 
 ![High Precision](/docs2/images/editors/compositor/header/add-menu-creative/high-precision.png)
 

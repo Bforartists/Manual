@@ -1,6 +1,6 @@
 # 🎛️ Site scripts
 
-> **The docs pages on the website are a Webflow template plus a few scripts kept in `docs2/webflow/`. Change the file in GitHub, bump its version, and register the new version in Webflow.**
+> **The website's custom code (site-wide, Doc Pages and News templates) and the docs scripts are kept in `docs2/webflow/`. Change the file in GitHub, bump its version, and point Webflow at the new version.**
 
 ---
 
@@ -13,9 +13,22 @@
 | `keymap-explorer.js` | `bfa_keymap_explorer` | Doc Pages template, footer | The interactive keymap ([Keymap](Keymap.md)) |
 | `quicksearch.js` | `bfa_quicksearch` | Whole site, footer | The instant search popup (Ctrl K) |
 | `docs-loading.js` | `bfa_docs_loading` (inline) | Doc Pages template, header | Hides the sidebar until it is ready (no flicker), with a spinner in the middle of the page |
-| `template-footer.html` | (pasted) | Doc Pages template, page footer code | The base docs script `bfa-docs-v6` and its CSS |
+| `docs-head.css` · `docs-head.js` | loaded by `template-head.html` | Doc Pages template, head | The docs kit styles (`bfa-doc-kit`), panel heads, section icons |
+| `docs-foot.css` · `docs-foot.js` | loaded by `template-footer.html` | Doc Pages template, footer | The base docs script `bfa-docs-v6` and its CSS |
+| `site-head.css` · `site-head.js` | loaded by `site-head.html` | Whole site, head | World, Paper, Cover, Layers, Heroes, Sectors, Wall, Lite, Media, Gallery, Shared |
+| `site-foot.css` · `site-foot.js` | loaded by `site-footer.html` | Whole site, footer | IX Idle, Fallbacks, Fork Light, Hero Rows, Light, Shade, Round 8–10, Thumb Sizes, Site Path, Paths, Perf Note |
+| `news-head.css` · `news-foot.js` | loaded by `news-head.html` / `news-footer.html` | News template | Post styles, "On this page", interview video, reading UX |
+| `*.html` (loaders) | (pasted into Webflow) | Site settings or template custom code | A few `<link>` / `<script>` tags with the version and hash. Nothing else is inline. |
 
-Each `.js` file starts with `@version x.y.z` on its first line.
+Each `.js` and `.css` file starts with `@version x.y.z` on its first line.
+
+## 📉 Why the code lives here, not inline in Webflow
+
+Inline custom code is sent again with **every page view** (85 KB site-wide, plus 70 KB more on docs pages). As files, browsers download them once and reuse them on every page, and GitHub Pages serves them, not Webflow, so they don't count toward Webflow's bandwidth (Nov 2026: about 4 GB a day against a 50 GB month).
+
+- **Order is kept:** each loader sits where the inline code was. The footer files are preloaded from the head, so they are ready when the page reaches them.
+- **Each original `<script>` block is wrapped on its own** (`try … catch`), so one failing block cannot stop the next.
+- **Edit the `.css` / `.js` file, never the loader.** Bump `@version`, merge, then paste the new loader lines (URL + hash from the job summary) into the matching Webflow custom code box.
 
 ## 🔁 Change a script
 

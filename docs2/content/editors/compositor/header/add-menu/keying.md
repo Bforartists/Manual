@@ -239,11 +239,11 @@ This value does not impact areas detected as edges to ensure edge detail is pres
 
 ![Edges subpanel](/docs2/images/editors/compositor/header/add-menu-keying/edges-subpanel.png)
 
-**Size**
+###### Size
 
 Size of the search window to find edges.
 
-**Tolerance**
+###### Tolerance
 
 ![Tolerance](/docs2/images/editors/compositor/header/add-menu-keying/tolerance.png)
 

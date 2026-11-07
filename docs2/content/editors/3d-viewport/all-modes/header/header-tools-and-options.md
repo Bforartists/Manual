@@ -1119,7 +1119,7 @@ Cavity Mask paints according to the shape of the mesh: more or less paint goes i
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Reset Curve**: Resets the curve to the initial shape. |
 
-#### Use Clipping
+### Use Clipping
 
 ![Use Clipping](/docs2/images/editors/3d-viewport/header/header-tools-and-options/use-clipping.png)
 
@@ -1165,6 +1165,8 @@ Toggle Free/Aligned.
 #### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
+
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Type
 
@@ -1426,13 +1428,13 @@ Extrusion 3D printers have a physical limit to the overhang that can be printed.
 
 3D Printers have a limited wall-thickness. Too thin areas cannot be printed. This mode displays thin areas as red.
 
-**Minimum/Maximum**
+##### Minimum/Maximum
 
 ![Minimum/Maximum](/docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum.png)
 
 Minimum/Maximum thickness to display.
 
-**Samples**
+##### Samples
 
 The number of samples to use to calculate the thickness.
 
@@ -1454,7 +1456,7 @@ Marks distorted faces.
 
 Distorted geometry, means uneven quads or N-gons, can cause problems with printing. Since the triangulation of a distorted quad or N-gon is undefined. And printing works with tris. With a quad there are already two solutions in which direction the edge to triangulate the face can point.
 
-**Minimum/Maximum**
+##### Minimum/Maximum
 
 ![Minimum/Maximum](/docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum-2.png)
 
@@ -1466,7 +1468,7 @@ Adjust the minimum and maximum values after which a face gets displayed as disto
 
 Similar to wall-thickness, sharp edges can be too thin to be able to print.
 
-**Minimum/Maximum**
+##### Minimum/Maximum
 
 ![Minimum/Maximum](/docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum-3.png)
 
@@ -1948,7 +1950,7 @@ Uses a studio setup lighting. You can choose between several studio light setups
 | World Space Lighting | Make the lighting fixed to the world. And not follow the camera when you rotate around the scene. |
 | Rotation | The rotation of the light setup. This edit box is just active when you use World Space Lighting. |
 
-**Show Light Preferences**
+##### Show Light Preferences
 
 ![Show Light Preferences](/docs2/images/editors/3d-viewport/header/header-tools-and-options/show-light-preferences.png)
 
@@ -2033,7 +2035,7 @@ Use back face culling to hide backsides of faces.
 This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just see and edit the geometry that points forwards.  
 Note that you can either have Show X Ray active. Or Shadow and Cavity.
 
-**X Ray Alpha**
+##### X Ray Alpha
 
 Adjust the strength of the transparency effect.
 
@@ -2045,11 +2047,11 @@ Adjust the strength of the transparency effect.
 
 Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.
 
-**Shadow Intensity**
+##### Shadow Intensity
 
 Here you adjust the strength of the shadow. Higher value means darker shadow.
 
-**Light Settings**
+##### Light Settings
 
 ![Light Settings](/docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png)
 
@@ -2067,39 +2069,39 @@ Adjust some settings of the light.
 
 Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.
 
-**Type**
+##### Type
 
 ![Type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png)
 
 The method how to calculate the cavity. In worlds pace, in screen space. Or in both.
 
-**World**
+##### World
 
 ![World](/docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png)
 
 Draw the cavity shading in world space.
 
-**World Space / Ridge Valley**
+##### World Space / Ridge Valley
 
 Factor for the cavity ridges and valleys.
 
-**Shading Options**
+##### Shading Options
 
 ![Shading Options](/docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options.png)
 
 Adjust samples, distance and attenuation for the cavity ridges and valleys.
 
-**Screen**
+##### Screen
 
 ![Screen](/docs2/images/editors/3d-viewport/header/header-tools-and-options/screen.png)
 
 Draw the cavity shading in Screen space.
 
-**Screen Space / Ridge Valley**
+##### Screen Space / Ridge Valley
 
 Factor for the curvature ridges and valleys.
 
-**Both**
+##### Both
 
 ![Both](/docs2/images/editors/3d-viewport/header/header-tools-and-options/both.png)
 
@@ -2193,7 +2195,7 @@ This viewport setting is connected with the viewport shading. It allows you to s
 
 Note that you can either have Show X Ray active. Or Shadow and Cavity. When activating Show X Ray, the other two options will be hidden.
 
-**X Ray Alpha**
+##### X Ray Alpha
 
 Adjust the strength of the transparency effect.
 
@@ -2205,11 +2207,11 @@ Adjust the strength of the transparency effect.
 
 Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.
 
-**Shadow Intensity**
+##### Shadow Intensity
 
 Here you adjust the strength of the shadow. Higher value means darker shadow.
 
-**Light Settings**
+##### Light Settings
 
 ![Light Settings](/docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png)
 
@@ -2227,39 +2229,39 @@ Adjust some settings of the light.
 
 Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.
 
-**Type**
+##### Type
 
 ![Type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png)
 
 The method how to calculate the cavity. In worlds pace, in screen space. Or in both.
 
-**World**
+##### World
 
 ![World](/docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png)
 
 Draw the cavity shading in world space.
 
-**World Space / Ridge Valley**
+##### World Space / Ridge Valley
 
 Factor for the cavity ridges and valleys.
 
-**Shading Options**
+##### Shading Options
 
 ![Shading Options](/docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options.png)
 
 Adjust samples, distance and attenuation for the cavity ridges and valleys.
 
-**Screen**
+##### Screen
 
 ![Screen](/docs2/images/editors/3d-viewport/header/header-tools-and-options/screen.png)
 
 Draw the cavity shading in Screen space.
 
-**Screen Space / Ridge Valley**
+##### Screen Space / Ridge Valley
 
 Factor for the curvature ridges and valleys.
 
-**Both**
+##### Both
 
 ![Both](/docs2/images/editors/3d-viewport/header/header-tools-and-options/both.png)
 
@@ -2292,7 +2294,7 @@ Influence how the objects in the scene are colored. Just one setting can be acti
 | Object | Uses the Object color. |
 | Vertex | Shows the vertex colors in case vertex colors exists. |
 
-**Single**
+##### Single
 
 ![Single](/docs2/images/editors/3d-viewport/header/header-tools-and-options/single-2.png)
 
@@ -2314,7 +2316,7 @@ Define the look of the viewport background.
 | Theme | Uses the background as defined in the theme. |
 | World | Uses the background as defined in the world settings of the scene. |
 
-**Viewport**
+##### Viewport
 
 ![Viewport](/docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-2.png)
 
@@ -2340,7 +2342,7 @@ This viewport setting is connected with the viewport shading. It allows you to s
 
 Note that you can either have Show X Ray active. Or Shadow and Cavity. When activating Show X Ray, the other two options will be hidden.
 
-**X Ray Alpha**
+##### X Ray Alpha
 
 Adjust the strength of the transparency effect.
 
@@ -2352,11 +2354,11 @@ Adjust the strength of the transparency effect.
 
 Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.
 
-**Shadow Intensity**
+##### Shadow Intensity
 
 Here you adjust the strength of the shadow. Higher value means darker shadow.
 
-**Light Settings**
+##### Light Settings
 
 ![Light Settings](/docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png)
 
@@ -2374,39 +2376,39 @@ Adjust some settings of the light.
 
 Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.
 
-**Type**
+##### Type
 
 ![Type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png)
 
 The method how to calculate the cavity. In worlds pace, in screen space. Or in both.
 
-**World**
+##### World
 
 ![World](/docs2/images/editors/3d-viewport/header/header-tools-and-options/world.png)
 
 Draw the cavity shading in world space.
 
-**World Space / Ridge Valley**
+##### World Space / Ridge Valley
 
 Factor for the cavity ridges and valleys.
 
-**Shading Options**
+##### Shading Options
 
 ![Shading Options](/docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options-2.png)
 
 Adjust samples, distance and attenuation for the cavity ridges and valleys.
 
-**Screen**
+##### Screen
 
 ![Screen](/docs2/images/editors/3d-viewport/header/header-tools-and-options/screen-2.png)
 
 Draw the cavity shading in Screen space.
 
-**Screen Space / Ridge Valley**
+##### Screen Space / Ridge Valley
 
 Factor for the curvature ridges and valleys.
 
-**Both**
+##### Both
 
 ![Both](/docs2/images/editors/3d-viewport/header/header-tools-and-options/both-2.png)
 

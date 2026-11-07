@@ -429,11 +429,11 @@ This utility transfers the first material slot from an assigned material from th
 
 Introduces procedural noise into line generation for organic or sketchy effects.
 
-**Factor**
+###### Factor
 
 Intensity of variation.
 
-**Scale / Detail / Lacunarity / Distortion / Roughness**
+###### Scale / Detail / Lacunarity / Distortion / Roughness
 
 Fine-tunes the procedural noise characteristics.
 
@@ -474,7 +474,7 @@ Highlights mesh contours by drawing a backdrop mesh that has been flattened behi
 
 Applies custom width influence from a vertex groups. To use, select an existing vertex group to use, then use the Weight Paint mode to paint. Weight of 1.0 is maximum influence that displaces the width of the inverse hull lines or silhouette, and weight of 0.0 is minimum influence.
 
-**Factor**
+###### Factor
 
 Strength of the effect of the weight map.
 

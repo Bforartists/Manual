@@ -35,7 +35,7 @@ There is also the source code available at GitHub. [https://github.com/Bforartis
 
 Windows
 
-**Minimum**:
+### Minimum
 
 - OS: Windows 8.1 (64-bit)
 - CPU: 4 cores with SSE4.2 support
@@ -45,7 +45,7 @@ Windows
 - AMD: GCN 1st generation or newer
 - Intel: Broadwell architecture or newer (latest drivers recommended)
 
-**Recommended**:
+### Recommended
 
 - OS: Windows 10 or Windows 11
 - CPU: 8 cores
@@ -54,14 +54,14 @@ Windows
 
 macOS
 
-**Minimum**:
+### Minimum
 
 - OS: macOS 11.2 (Big Sur)
 - CPU: Apple Silicon or Intel
 - RAM: 8 GB
 - GPU: GPU with Metal 2.2 support (AMD, Apple Silicon, or Intel Skylake and newer)
 
-**Recommended**:
+### Recommended
 
 - OS: macOS 15 (Sequoia)
 - CPU: Apple Silicon
@@ -74,7 +74,7 @@ Blender 5.0 and later require Apple Silicon with macOS 13 or later.
 
 Linux
 
-**Minimum**:
+### Minimum
 
 - OS: Distribution with glibc 2.28 or newer (64-bit)
 - CPU: 4 cores with SSE4.2 support
@@ -84,13 +84,13 @@ Linux
 - AMD: GCN 1st generation or newer
 - Intel: Broadwell architecture or newer (latest drivers recommended)
 
-**Recommended**:
+### Recommended
 
 - CPU: 8 cores or more
 - RAM: 32 GB or more
 - GPU: 8 GB VRAM or more with OpenGL 4.3 support or better
 
-**AdditionalNotes**:
+### AdditionalNotes
 
 - Always ensure you have the latest GPU drivers installed from your hardware manufacturer.
 - Integrated GPUs may work but can have performance or compatibility limitations.

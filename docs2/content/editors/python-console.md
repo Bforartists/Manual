@@ -187,11 +187,11 @@ To check what is loaded into the interpreter environment, type dir() at the prom
 
 Following is a quick overview of the output
 
-**C**
+#### C
 
 Quick access to *bpy.context*
 
-**D**
+#### D
 
 Quick access to *bpy.data*
 

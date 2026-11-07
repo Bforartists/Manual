@@ -68,6 +68,8 @@ The tessellation of the mesh should not be too high for this operation. Since it
 
 ![Last Operator Dirty Vertex Colors](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-dirty-vertex-colors.png)
 
+Change the settings of **Dirty Vertex Colors** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------------------------------------- |
 | Blur strength | How strong the result should be blurred |
@@ -95,6 +97,8 @@ This tool allows you to level the values of the vertex painting. You adjust the 
 
 ![Last Operator Vertex Paint Levels](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-vertex-paint-levels.png)
 
+Change the settings of **Vertex Paint Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | Adjust the Offset of the vertex colors. |
@@ -107,6 +111,8 @@ This tool allows you to level the values of the vertex painting. You adjust the 
 This tool allows you to adjust the hue, saturation and value values of the vertex painting. You adjust the settings in the last operator.
 
 ##### Adjust Last Operation - Vertex Paint Hue Saturation Value
+
+Change the settings of **Vertex Paint Hue Saturation Value** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------- | ------------------------------------------- |
@@ -121,6 +127,8 @@ This tool allows you to adjust the brightness and the contrast of the vertex pai
 ##### Adjust Last Operation - Vertex Paint Brightness/Contrast
 
 ![Last Operator Vertex Paint Brightness/Contrast](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-vertex-paint-brightness-contrast.png)
+
+Change the settings of **Vertex Paint Brightness/Contrast** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------- | ------------------------------------------- |
