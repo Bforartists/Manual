@@ -1,8 +1,8 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/object-mode/context-menus.md": "editors/3d-viewport/object-mode/context-menus.html",
-  "docs2/content/editors/graph-editor/index.md": "editors/graph-editor.html",
-  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
+  "docs2/content/editors/dope-sheet/header/index.md": "editors/dope-sheet/header.html",
+  "docs2/content/editors/nonlinear-animation-editor/header/index.md": "editors/nonlinear-animation-editor/header.html",
+  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html"
  },
- "images": 168
+ "images": 148
 }
