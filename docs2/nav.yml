@@ -211,6 +211,7 @@
     - { id: "editors.asset-browser", title: "Asset Browser", file: "content/editors/asset-browser/index.md", icon: null }
     - { id: "editors.spreadsheet", title: "Spreadsheet", file: "content/editors/spreadsheet.md", icon: null }
     - { id: "editors.preferences", title: "Preferences", file: "content/editors/preferences.md", icon: null }
+    - { id: "editors.project-settings", title: "Project Settings", file: "content/editors/project-settings.md", icon: null }
     - { id: "editors.topbar-and-statusbar.topbar-menus", title: "Topbar menus", file: "content/editors/topbar-and-statusbar/topbar-menus/index.md", icon: null }
     - { id: "editors.geometry-node-editor.header", title: "Header", file: "content/editors/geometry-node-editor/header/index.md", icon: null }
     - { id: "editors.dope-sheet.header", title: "Header", file: "content/editors/dope-sheet/header/index.md", icon: null }

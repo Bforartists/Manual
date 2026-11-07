@@ -2204,6 +2204,10 @@ For text files, automatically convert tabs into spaces when loading a blend file
 
 
 
+#### Remember Last Project
+
+When Bforartists starts, it opens the project that was open when you closed it. See [Project Settings](project-settings.md).
+
 #### Save Versions
 
 Number of versions created for the same file (for backup).
