@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Graph Editor
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 18 Editors - Graph Editor.odt
@@ -297,6 +297,8 @@ This is a feature for the Graph editor, where each curve point has its own handl
 
 Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Set Keyframe Handle Type](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-handle-type.png)
+
 ##### Type
 
 ![Type](/docs2/images/editors/graph-editor/type-2.png)
@@ -315,6 +317,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Set Keyframe Interpolation](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-interpolation.png)
+
 ##### Type
 
 ![Type](/docs2/images/editors/graph-editor/type-3.png)
@@ -330,6 +334,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 #### Adjust Last Operation - Set Keyframe Easing Type
 
 Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Keyframe Easing Type](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-easing-type.png)
 
 ##### Type
 

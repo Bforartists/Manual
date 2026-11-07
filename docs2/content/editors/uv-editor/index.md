@@ -137,6 +137,8 @@ Follow Active quads maps UV coordinates starting from an active face, and maps a
 
 #### Adjust Last Operation - Follow Active Quads
 
+![Adjust Last Operation - Follow Active Quads](/docs2/images/editors/uv-editor/adjust-last-operation-follow-active-quads.png)
+
 The Last Operator contains the same settings than the Settings dialogue.
 
 ##### Edge Length Mode
