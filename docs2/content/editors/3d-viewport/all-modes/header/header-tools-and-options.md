@@ -535,11 +535,11 @@ Snap median onto the target.
 
 Snap active onto the target.
 
-### Snap to
+### Snap Base
 
-![Snap to](/docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-to.png)
+![Snap Base](/docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-to.png)
 
-To which part of the target to snap.
+To which part of the target to snap. Hold **Shift** and click to snap to more than one kind of element.
 
 #### Increment
 
@@ -548,6 +548,10 @@ Incremental grid snapping. In Orthographic view the snapping increment changes d
 #### Grid
 
 Snap to a grid.
+
+#### Origin
+
+Snaps to the origins of the objects in the scene. Use it to place an object exactly on the origin of another object, for example to stack props or line up a light with a lamp model.
 
 #### Vertex
 
@@ -572,6 +576,10 @@ Snaps to the center of an edge.
 #### Edge Perpendicular
 
 Snap to the nearest point of an edge.
+
+#### Face Center
+
+Snaps to the center of a face.
 
 ### Snap Target for Individual Elements
 
