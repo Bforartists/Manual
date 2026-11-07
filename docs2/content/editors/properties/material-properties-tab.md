@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Material Properties Tab
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.15 Editors - Properties Editor - Material Properties Tab.odt

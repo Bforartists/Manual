@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - World Properties Tab
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.6 Editors - Properties Editor - World Properties Tab.odt

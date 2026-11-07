@@ -8,7 +8,7 @@ path:
   - Render Properties Tab
   - EEVEE
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.2.2 Editors - Properties Editor - Render Properties Tab - EEVEE.odt
