@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties Editor
   - Strip Modifiers Tab
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -178,6 +178,10 @@ Adjusts the color and luminance of highlights. Includes a color wheel and bright
 
 Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
+##### Show Node Group
+
+Shows or hides the **Node Tree** selector of the modifier. Hide it once the modifier is set up, to keep the panel short. It works like Show Node Group of the Geometry Nodes modifier.
+
 ### Compositor
 
 ![Compositor](/docs2/images/editors/properties/strip-modifiers-tab/compositor.png)
@@ -204,6 +208,10 @@ Dropdown to select or create a node group. Selecting a tree activates it for the
 ##### Mask Input
 
 Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
+
+##### Show Node Group
+
+Shows or hides the **Node Tree** selector of the modifier. Hide it once the modifier is set up, to keep the panel short. It works like Show Node Group of the Geometry Nodes modifier.
 
 ### Curves
 
@@ -414,6 +422,10 @@ Applies additional color balancing after tone mapping. Useful for compensating s
 ##### Mask Input
 
 Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
+
+##### Show Node Group
+
+Shows or hides the **Node Tree** selector of the modifier. Hide it once the modifier is set up, to keep the panel short. It works like Show Node Group of the Geometry Nodes modifier.
 
 ### White Balance
 

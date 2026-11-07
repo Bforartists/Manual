@@ -6,7 +6,7 @@ path:
   - Editors
   - Geometry Node Editor
   - Header
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 replaces:
@@ -185,6 +185,14 @@ The pin button will keep the current node tree selection fixed. When a node tree
 ### Snap
 
 Activates snapping. The snapping happens relative to the groundgrid.
+
+### Viewport Gizmos
+
+Shows or hides the gizmos of the editor. The dropdown arrow next to it opens the Viewport Gizmos popover.
+
+#### Minimap
+
+Shows a small map of the node tree to move around big trees. See [Node Editor Minimap](../../../interface/editors.md#node-editor-minimap) for how it works and its settings.
 
 ### Geometry node Overlays
 

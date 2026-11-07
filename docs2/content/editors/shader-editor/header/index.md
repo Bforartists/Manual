@@ -6,7 +6,7 @@ path:
   - Editors
   - Shader Editor
   - Header
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -242,6 +242,14 @@ The pin button will keep the current material selection fixed. When a material i
 #### Snap
 
 Activates snapping.
+
+### Viewport Gizmos
+
+Shows or hides the gizmos of the editor. The dropdown arrow next to it opens the Viewport Gizmos popover.
+
+#### Minimap
+
+Shows a small map of the node tree to move around big trees. See [Node Editor Minimap](../../../interface/editors.md#node-editor-minimap) for how it works and its settings.
 
 ### Node Editor Overlays
 
