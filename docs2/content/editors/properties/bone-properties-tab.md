@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties Editor
   - Bone Properties Tab
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -63,6 +63,10 @@ The rotation of the current bone. With Mode Quaternion you will have the W axis 
 ![Mode](/docs2/images/editors/properties/bone-properties-tab/mode.png)
 
 The rotation mode to use. Euler angles can run into a gimbal lock problem. This means the bone is not longer rotatable. Quaternion rotation avoids gimbal lock.
+
+##### Convert Rotation Mode
+
+The button next to the rotation mode opens the **Convert Rotation Mode** menu. Pick a mode to change the rotation mode and convert the existing animation to it, so the motion stays the same. This is the same operator as in the 3D View [Animation menu](../3d-viewport/armature/pose.md#convert-rotation-mode).
 
 #### Scale X Y Z
 

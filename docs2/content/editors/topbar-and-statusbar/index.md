@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - Topbar and Statusbar
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -77,6 +77,14 @@ Workspace can also be deleted. To do so right click at the tab that you want to 
 ##### Reorder to Front
 
 Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.
+
+##### Reorder to Left
+
+Moves the selected workspace tab one place to the left.
+
+##### Reorder to Right
+
+Moves the selected workspace tab one place to the right.
 
 ##### Reorder to Back
 
