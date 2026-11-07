@@ -1,6 +1,13 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/all-modes/header/header-tools-and-options.md": "editors/3d-viewport/all-modes/header/header-tools-and-options.html"
+  "docs2/content/editors/3d-viewport/all-modes/sidebar.md": "editors/3d-viewport/all-modes/sidebar.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/context-menus.md": "editors/3d-viewport/mesh/edit/context-menus.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html",
+  "docs2/content/editors/3d-viewport/mesh/texture-paint.md": "editors/3d-viewport/mesh/texture-paint.html",
+  "docs2/content/editors/3d-viewport/mesh/vertex-paint.md": "editors/3d-viewport/mesh/vertex-paint.html",
+  "docs2/content/editors/3d-viewport/mesh/weight-paint.md": "editors/3d-viewport/mesh/weight-paint.html",
+  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
+  "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html"
  },
- "images": 266
+ "images": 921
 }
