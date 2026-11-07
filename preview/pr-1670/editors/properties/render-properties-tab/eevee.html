@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EEVEE · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1670 · <code>docs2/properties-updates</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<a class="is-current" style="padding-left:2.5rem" href="eevee.html">EEVEE</a>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Render Properties Tab › EEVEE</div><h1 class="pv-title">EEVEE</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.3</span><span>🕒 8 min read</span></div><article class="ui-doc-body"><h2 id="render-tab">Render Tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/cycles/render-tab.png" alt="Render Tab" loading="lazy"></figure>
+<p>There are three different render engines available. Workbench, EEVEE, and Cycles. This chapter has a focus on the EEVEE render engine.</p>
+<h2 id="sampling-panel">Sampling panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/sampling-panel.png" alt="Sampling panel" loading="lazy"></figure>
+<h3 id="viewport-subtab">Viewport subtab</h3>
+<h4 id="samples">Samples</h4>
+<p>The number of samples when rendering in the viewport.</p>
+<h4 id="temporal-projection">Temporal Projection</h4>
+<p>Denoise image using a method called temporal reprojection. This method can leave some ghosting.</p>
+<h4 id="jittered-shadows">Jittered Shadows</h4>
+<p>Enables jittered soft shadows in the viewport, improving shadow realism by introducing subtle randomness to shadow sampling. This helps reduce banding and aliasing artifacts in dynamic lighting setups. <strong>Note:</strong> <em>Jittered shadows are always enabled for final renders. This is an viewport override for performance.</em></p>
+<h3 id="render-subtab">Render subtab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/render-subtab.png" alt="Render subtab" loading="lazy"></figure>
+<h4 id="samples-2">Samples</h4>
+<p>The number of samples when rendering to file.</p>
+<h4 id="time-limit">Time Limit</h4>
+<p>Stops the render after the given time, even when not all samples are done. Use it to keep render times predictable, for example for previews or animations on a deadline. A value of zero turns the limit off. This works like the Time Limit of Cycles.</p>
+<h3 id="shadows-subtab">Shadows subtab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/shadows-subtab.png" alt="Shadows subtab" loading="lazy"></figure>
+<h4 id="rays">Rays</h4>
+<p>The number of samples when rendering to file.</p>
+<h4 id="steps">Steps</h4>
+<p>Amount of shadow ray sample per shadow ray.</p>
+<h4 id="volume-shadows">Volume Shadows</h4>
+<p>Generate shadows from volumetric material. This is very resources hungry. · <strong>Steps</strong>: Number of samples to compute volumetric shadowing.</p>
+<h4 id="resolution">Resolution</h4>
+<p>The resolution scale of the shadow map.</p>
+<h3 id="advanced-subtab">Advanced subtab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/advanced-subtab.png" alt="Advanced subtab" loading="lazy"></figure>
+<h4 id="light-threshold">Light Threshold</h4>
+<p>Minimum light intensity for a light to contribute to the lighting.</p>
+<h2 id="clamping-panel">Clamping panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/clamping-panel.png" alt="Clamping panel" loading="lazy"></figure>
+<p>In this panel you can clamp the light values to minimum and maximum values.</p>
+<h3 id="surface-subtab">Surface subtab</h3>
+<p><strong>Direct Light</strong>: The maximum value for lights contribution on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · <strong>Indirect Light</strong>: The maximum value for indirect lighting on a surface. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by ray-tracing and light-probes.</p>
+<h3 id="volume-subtab">Volume subtab</h3>
+<p><strong>Direct Light</strong>: The maximum value for lights contribution in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light objects. · <strong>Indirect Light</strong>: The maximum value for indirect lighting in volumes. A value of zero disables this feature. Higher values will be scaled down to avoid too much noise and slow convergence at the cost of accuracy. Used by light-probes.</p>
+<h2 id="raytracing-panel">Raytracing panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/raytracing-panel.png" alt="Raytracing panel" loading="lazy"></figure>
+<h3 id="use-ray-tracing">Use Ray-Tracing</h3>
+<p>Use ray-tracing.</p>
+<h3 id="presets">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Allows you to store raytracing presets. To add a new preset type in a new preset name into the edit box at the end of the list, and click at the + sign.</p>
+<p>To remove a preset click at the - sign behind the name.</p>
+<h4 id="method">Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/method.png" alt="Method" loading="lazy"></figure>
+<p>Select the tracing method to find scene-ray intersections.</p>
+<h5 id="light-probe">Light Probe</h5>
+<p>Raytracing using light probes.</p>
+<h5 id="screen-trace">Screen-Trace</h5>
+<p>Raytracing against the depth buffer.</p>
+<h4 id="resolution-2">Resolution</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/resolution.png" alt="Resolution" loading="lazy"></figure>
+<p>The ray-tracing resolution. 1 Ray per pixel, 1 ray per 4 pixel, 1 ray per 16 pixel.</p>
+<h4 id="screen-tracing-subpanel">Screen tracing subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/screen-tracing-subpanel.png" alt="Screen tracing subpanel" loading="lazy"></figure>
+<p>Just visible with the method Screen-Trace</p>
+<h5 id="precision">Precision</h5>
+<p>Precision of screen space ray-tracing.</p>
+<h5 id="thickness">Thickness</h5>
+<p>Surface Thickness used to detect intersection when using screen-tracing.</p>
+<h4 id="denoising-subpanel">Denoising Subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/denoising-subpanel.png" alt="Denoising Subpanel" loading="lazy"></figure>
+<h5 id="denoising">Denoising</h5>
+<p>Enable Denoising for raytraced effects.</p>
+<h5 id="spatial-reuse">Spatial Reuse</h5>
+<p>Reuse the rays of neighbour pixe.</p>
+<h5 id="temporal-accumulation">Temporal Accumulation</h5>
+<p>Accumulate samples by reprojecting last tracing results</p>
+<h5 id="bilateral-filter">Bilateral Filter</h5>
+<p>Blur the resolved radiance by reprojecting last tracing result of the temporal accumulation.</p>
+<h4 id="fast-gi-approximation-subpanel">Fast GI Approximation subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/fast-gi-approximation-subpanel.png" alt="Fast GI Approximation subpanel" loading="lazy"><figcaption>Fast GI Approximation subpanel</figcaption></figure>
+<h5 id="threshold">Threshold</h5>
+<p>Maximum roughness to use the tracing pipeline for. Higher roughness surfaces will use Fast GI Approximation. A value of 1 will disable Fast GI Approximation.</p>
+<h5 id="method-2">Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/method-2.png" alt="Method" loading="lazy"></figure>
+<h6 id="ambient-occlusion">Ambient occlusion</h6>
+<p>Uses Ambient occlusion instead of Global Illumination. Ambient Occlusion is self shadowing, and doesn't calculate colors.</p>
+<h6 id="global-illumination">Global Illumination</h6>
+<p>Computes global illumination. It takes light bounces off surrounding objects into account.</p>
+<h5 id="resolution-3">Resolution</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/resolution-2.png" alt="Resolution" loading="lazy"></figure>
+<p>The resolution of the AO or GI map. It is relative to the render resolution. 1 is the size of the full render resolution, 1/2 is half the size of render resolution, and so on.</p>
+<h6 id="rays-2">Rays</h6>
+<p>Amount of GI or AO rays to trace for each pixel.</p>
+<h6 id="steps-2">Steps</h6>
+<p>Amount of screen sample per GI or AO ray.</p>
+<h6 id="precision-2">Precision</h6>
+<p>Precision of the Fast GI ray matching.</p>
+<h6 id="distance">Distance</h6>
+<p>If non zero, the maximum distance at which other surfaces will contribute to the Fast GI approximation.</p>
+<h6 id="thickness-near-far">Thickness near / far</h6>
+<p>Geometric thickness of the surfaces when computing GI or AO. This feature reduces light leaking and missing contact occlusion.</p>
+<h6 id="bias">Bias</h6>
+<p>Bias the shading normal to reduce self intersection artifacts.</p>
+<h2 id="volumes-panel">Volumes panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/volumes-panel.png" alt="Volumes panel" loading="lazy"></figure>
+<p>Contains volumetrics settings.</p>
+<h3 id="resolution-4">Resolution</h3>
+<p>The resolution of the Volumes map. It is relative to the render resolution. 1 is the size of the full render resolution, 1/2 is half the size of render resolution, and so on.</p>
+<h3 id="steps-3">Steps</h3>
+<p>Number of samples to compute for the volumetrics effect.</p>
+<h3 id="distribution">Distribution</h3>
+<p>Distribute more samples closer to the camera.</p>
+<h3 id="max-depth">Max Depth</h3>
+<p>Maximum surface intersection count used by the accurate volume intersection method. Thise feature will create artifacts if it is exceeded.</p>
+<h3 id="custom-range-subpanel">Custom Range subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/custom-range-subpanel.png" alt="Custom Range subpanel" loading="lazy"></figure>
+<p>Enable custom start and end distances for volume computation.</p>
+<h4 id="start-end">Start / End</h4>
+<p>The start and end values for computation.</p>
+<h2 id="curves-panel">Curves panel</h2>
+<h3 id="shape">Shape</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/shape.png" alt="Shape" loading="lazy"></figure>
+<p>Choose if the hair is displayed as strand or as strip.</p>
+<h3 id="additional-subdiv">Additional Subdiv</h3>
+<p>Additional subdivision along the hair.</p>
+<h2 id="simplify-panel">Simplify panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/simplify-panel.png" alt="Simplify panel" loading="lazy"></figure>
+<p>Sometimes you want to simplify the rendering without to loose the already tweaked settings and adjustments. For test renderings for example. Simplify allows you to simplify the rendering.</p>
+<h3 id="enable">Enable</h3>
+<p>In the header is a checkbox to enable Simplify.</p>
+<h3 id="viewport-subpanel">Viewport subpanel</h3>
+<p>This section affects the rendering with Eevee in the Viewport. · <strong>Max Subdivisions</strong>: Limit the number of maximum subdivisions. · <strong>Max Child Particles</strong>: Limit the number of child particles. · <strong>Volume Resolution</strong>: Simplify volumes by setting the resolution percentage of volume objects in viewport. · <strong>Normals</strong>: Skip computing custom normals and face corner normals for displaying meshes in the viewport.</p>
+<h3 id="render">Render</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/render.png" alt="Render" loading="lazy"></figure>
+<p>This section affects the rendering with Eevee to file.</p>
+<h4 id="max-subdivisions">Max Subdivisions</h4>
+<p>Limit the number of maximum subdivisions.</p>
+<h4 id="max-child-particles">Max Child Particles</h4>
+<p>Limit the number of child particles.</p>
+<h3 id="grease-pencil">Grease Pencil</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
+<p>This section affects Grease Pencil drawings.</p>
+<h4 id="enable-2">Enable</h4>
+<p>Enables the Grease Pencil features.</p>
+<h4 id="playback-only">Playback Only</h4>
+<p>Simplify Grease Pencil only during animation playback.</p>
+<h4 id="fill">Fill</h4>
+<p>Display Fill strokes in the Viewport.</p>
+<h4 id="modifiers">Modifiers</h4>
+<p>Apply modifiers in the viewport.</p>
+<h4 id="shader-effects">Shader Effects</h4>
+<p>display shader effects.</p>
+<h4 id="layers-tinting">Layers Tinting</h4>
+<p>Display layers tint.</p>
+<h4 id="antialiasing">Antialiasing</h4>
+<p>Use antialiasing to smooth stroke edges.</p>
+<h2 id="depth-of-field-panel">Depth of Field panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/depth-of-field-panel.png" alt="Depth of Field panel" loading="lazy"><figcaption>Depth of Field panel</figcaption></figure>
+<h3 id="max-size">Max Size</h3>
+<p>The maximum size of the bokeh shape for Depth of Field. Lower is faster.</p>
+<h3 id="sprite-threshold">Sprite Threshold</h3>
+<p>Brightness threshold for using sprite base depth of field.</p>
+<h3 id="neighbor-rejection">Neighbor Rejection</h3>
+<p>The maximum brightness to consider when rejecting bokeh sprites based on neighborhood. Lower is faster.</p>
+<h3 id="jitter-camera">Jitter Camera</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/jitter-camera.png" alt="Jitter Camera" loading="lazy"></figure>
+<p>Jitter the camera to create accurate blurring by using render samples.</p>
+<h4 id="overblur">Overblur</h4>
+<p>Apply blur to each jittered sample to reduce undersampling artifacts.</p>
+<h2 id="motion-blur-panel">Motion Blur panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/motion-blur-panel.png" alt="Motion Blur panel" loading="lazy"></figure>
+<p>Enable Motion Blur and adjust the settings.</p>
+<p>Each object has also its own settings to control motion blur. These options can be found in the corresponding Object tab of the Properties editor.</p>
+<h3 id="enable-3">Enable</h3>
+<p>In the header is a checkbox to enable Simplify.</p>
+<h3 id="position">Position</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/position.png" alt="Position" loading="lazy"></figure>
+<p>Controls at what point the shutter opens in relation to the frame.</p>
+<h4 id="shutter">Shutter</h4>
+<p>Time taken in frames between shutter open and close.</p>
+<h4 id="bleeding-bias">Bleeding Bias</h4>
+<p>Reduce background bleeding onto foreground elements. Lower values = less bleeding.</p>
+<h4 id="max-blur">Max Blur</h4>
+<p>The maximum blur distance that a pixel can spread over.</p>
+<h4 id="steps-4">Steps</h4>
+<p>Controls the accuracy of motion blur. More steps means longer render time.</p>
+<h3 id="shutter-curve">Shutter Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/shutter-curve.png" alt="Shutter Curve" loading="lazy"></figure>
+<p>Sutter curve is a sub menu wAdjust a curve for the shutter effect.</p>
+<h4 id="navigation-elements">Navigation elements</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/cycles/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<h5 id="zoom-in-and-out">Zoom in and out</h5>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="clipping">Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu that contains some curve related tools.</p>
+<h6 id="reset-view">Reset View</h6>
+<p>Resets the curve windows zoom.</p>
+<h6 id="extend-horizontal">Extend Horizontal</h6>
+<p>Causes the curve to stay horizontal before the first point and after the last point.</p>
+<h6 id="extend-extrapolated">Extend Extrapolated</h6>
+<p>Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.</p>
+<h6 id="reset-curve">Reset Curve</h6>
+<p>Resets the curve to the initial shape.</p>
+<h3 id="handles">Handles</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/handles.png" alt="Handles" loading="lazy"></figure>
+<h4 id="vector-handle">Vector Handle</h4>
+<p>Set handle type to Vector.</p>
+<h4 id="auto-handle">Auto Handle</h4>
+<p>Set handle type to Auto.</p>
+<h4 id="auto-clamped-handle">Auto Clamped Handle</h4>
+<p>Set handle type to Auto Clamped.</p>
+<h4 id="x-and-y-values">X and Y values</h4>
+<p>The coordinates of the currently selected curve point.</p>
+<h4 id="presets-2">Presets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/cycles/presets-4.png" alt="Presets" loading="lazy"></figure>
+<p>Curve presets.</p>
+<h5 id="delete-points">Delete Points</h5>
+<p>Deletes selected curve points.</p>
+<h2 id="film-panel">Film panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/film-panel.png" alt="Film panel" loading="lazy"></figure>
+<h3 id="filter-size">Filter Size</h3>
+<p>The width over which the reconstruction filter combines samples.</p>
+<h4 id="animate-property">Animate Property</h4>
+<p>This property can be animated. Activating this button sets a keyframe.</p>
+<h3 id="overscan">Overscan</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/overscan.png" alt="Overscan" loading="lazy"></figure>
+<p>Internally render past the image borders to avoid screen space effects disappearing.</p>
+<h4 id="overscan-size">Overscan Size</h4>
+<p>How much bigger the image should be internally rendered.</p>
+<h2 id="performance-panel">Performance panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/performance-panel.png" alt="Performance panel" loading="lazy"></figure>
+<h3 id="high-quality-normals">High Quality Normals</h3>
+<p>Use high quality tangent space. Slower but more accurate.</p>
+<h3 id="memory-subpanel">Memory Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/memory-subpanel.png" alt="Memory Subpanel" loading="lazy"></figure>
+<h4 id="shadow-pool">Shadow Pool</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/shadow-pool.png" alt="Shadow Pool" loading="lazy"></figure>
+<p>How much shadow data can be allocated for the scene. More ram usage means more possible shadows. This affects the GPU ram usage.</p>
+<h4 id="light-probes-volume-pool">Light Probes Volume Pool</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/light-probes-volume-pool.png" alt="Light Probes Volume Pool" loading="lazy"><figcaption>Light Probes Volume Pool</figcaption></figure>
+<p>How much Light probes Volume data can be allocated for the scene. More ram usage means more possible light probes volumes. This affects the GPU ram usage.</p>
+<h3 id="viewport-subpanel-2">Viewport Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/viewport-subpanel.png" alt="Viewport Subpanel" loading="lazy"></figure>
+<h4 id="pixel-size">Pixel Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/pixel-size.png" alt="Pixel Size" loading="lazy"></figure>
+<p>The pixel size for viewport rendering.</p>
+<p>Automatic depends of the user interface scale. 1 renders at full resolution. 8 renders just in 12.5% of the size.</p>
+<h3 id="compositor-subpanel">Compositor Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/compositor-subpanel.png" alt="Compositor Subpanel" loading="lazy"></figure>
+<p>Realtime compositor settings.</p>
+<h4 id="device">Device</h4>
+<p>Which device to use for realtime compositing.</p>
+<h4 id="precision-3">Precision</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/precision.png" alt="Precision" loading="lazy"></figure>
+<p>Precision menu just appears with GPU device selected.</p>
+<h5 id="auto">Auto</h5>
+<p>Full precision at rendering, half precision otherwise.</p>
+<h5 id="full">Full</h5>
+<p>Full precision in all cases.</p>
+<h5 id="denoise-nodes-subpanel">Denoise nodes subpanel</h5>
+<h6 id="denoising-device">Denoising device</h6>
+<p>The device for the denoise nodes in the compositor.</p>
+<h6 id="preview-quality">Preview quality</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/preview-quality.png" alt="Preview quality" loading="lazy"></figure>
+<p>The quality for preview.</p>
+<h6 id="final-quality">Final quality</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/64fb90f0dc8b82d4d8bc9379c5c3fdb6c39c5ac5/docs2/images/editors/properties/render-properties-tab/eevee/preview-quality.png" alt="Final quality" loading="lazy"></figure>
+<p>The quality for the final.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fproperties-updates/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Frender-properties-tab%2Feevee.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/properties-updates/docs2/content/editors/properties/render-properties-tab/eevee.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#render-tab">Render Tab</a><a class="h2" href="#sampling-panel">Sampling panel</a><a class="h3" href="#viewport-subtab">Viewport subtab</a><a class="h3" href="#render-subtab">Render subtab</a><a class="h3" href="#shadows-subtab">Shadows subtab</a><a class="h3" href="#advanced-subtab">Advanced subtab</a><a class="h2" href="#clamping-panel">Clamping panel</a><a class="h3" href="#surface-subtab">Surface subtab</a><a class="h3" href="#volume-subtab">Volume subtab</a><a class="h2" href="#raytracing-panel">Raytracing panel</a><a class="h3" href="#use-ray-tracing">Use Ray-Tracing</a><a class="h3" href="#presets">Presets</a><a class="h2" href="#volumes-panel">Volumes panel</a><a class="h3" href="#resolution-4">Resolution</a><a class="h3" href="#steps-3">Steps</a><a class="h3" href="#distribution">Distribution</a><a class="h3" href="#max-depth">Max Depth</a><a class="h3" href="#custom-range-subpanel">Custom Range subpanel</a><a class="h2" href="#curves-panel">Curves panel</a><a class="h3" href="#shape">Shape</a><a class="h3" href="#additional-subdiv">Additional Subdiv</a><a class="h2" href="#simplify-panel">Simplify panel</a><a class="h3" href="#enable">Enable</a><a class="h3" href="#viewport-subpanel">Viewport subpanel</a><a class="h3" href="#render">Render</a><a class="h3" href="#grease-pencil">Grease Pencil</a><a class="h2" href="#depth-of-field-panel">Depth of Field panel</a><a class="h3" href="#max-size">Max Size</a><a class="h3" href="#sprite-threshold">Sprite Threshold</a><a class="h3" href="#neighbor-rejection">Neighbor Rejection</a><a class="h3" href="#jitter-camera">Jitter Camera</a><a class="h2" href="#motion-blur-panel">Motion Blur panel</a><a class="h3" href="#enable-3">Enable</a><a class="h3" href="#position">Position</a><a class="h3" href="#shutter-curve">Shutter Curve</a><a class="h3" href="#handles">Handles</a><a class="h2" href="#film-panel">Film panel</a><a class="h3" href="#filter-size">Filter Size</a><a class="h3" href="#overscan">Overscan</a><a class="h2" href="#performance-panel">Performance panel</a><a class="h3" href="#high-quality-normals">High Quality Normals</a><a class="h3" href="#memory-subpanel">Memory Subpanel</a><a class="h3" href="#viewport-subpanel-2">Viewport Subpanel</a><a class="h3" href="#compositor-subpanel">Compositor Subpanel</a></aside></div></body></html>
