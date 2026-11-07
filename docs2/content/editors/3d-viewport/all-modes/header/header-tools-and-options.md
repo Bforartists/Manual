@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "Header tools and Options"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The header in the 3D view contains various menus and tools."
 order: 10
@@ -3003,6 +3003,10 @@ This addon can be turned off in the Preferences.
 The lock button at the end of the row turns **Lock Object Modes** on and off. While it's on, you can only select objects that are in the same mode as the active one. That stops you from jumping out of Edit Mode or Sculpt Mode by clicking another object by accident.
 
 The button is hidden by default. To show it, click the small arrow at the end of the Align View Buttons row and tick **Lock Object Mode** under **Navigation**. The same setting is also in the sidebar, under **View › Edit**.
+
+## Reset Roll and Flip View buttons
+
+Two optional buttons from **View > Navigation**: **Reset Roll** levels the view again, and **Flip View** flips the camera view. Both are off by default. To show them, click the small arrow at the end of the Align View Buttons row and tick them under **Navigation**. Flip View only shows while you look through the camera.
 
 # Grease Pencil - all modes - Layer Panel
 

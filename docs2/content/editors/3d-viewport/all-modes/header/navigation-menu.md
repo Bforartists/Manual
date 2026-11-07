@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "Navigation Menu"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The Navigation menu provides you with all tools around viewport navigation."
 order: 20
@@ -322,6 +322,16 @@ Rolls the viewport counter clockwise.
 
 Rolls the viewport clockwise.
 
+Roll Left and Roll Right also work in the camera view.
+
+##### Reset Roll
+
+Sets the roll of the view back to 0°, so the view is level again. In a camera view that is locked to the view (**Lock Camera to View**) it is greyed out, because it can't change anything there; unlock the camera first.
+
+##### Flip View
+
+Flips the camera view to look along the other side. Only available while you look through the camera.
+
 ##### Pan Down
 
 Pans the viewpoint downwards. The scene moves up.
@@ -338,7 +348,7 @@ Pans the viewpoint to the right. The scene moves to the left.
 
 Pans the viewpoint to the left. The scene moves to the right.
 
-##### Zoom Region
+##### Zoom Border
 
 Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
 
