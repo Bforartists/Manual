@@ -1,0 +1,8 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
+  "docs2/content/editors/3d-viewport/armature/pose.md": "editors/3d-viewport/armature/pose.html",
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html"
+ },
+ "images": 432
+}
