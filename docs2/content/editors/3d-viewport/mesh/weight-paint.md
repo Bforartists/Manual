@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Weight Paint"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: wpaint_hlt
 summary: "Paint vertex group weights on the mesh: menus, brushes and settings."
@@ -60,6 +60,8 @@ Normalize all normalizes the weight of all Vertex groups so that the values for 
 ##### Adjust Last Operation - Normalize all
 
 Change the settings of **Normalize all** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Normalize all](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-normalize-all.png)
 
 | Entry | What it does |
 | ----------- | ------------------------------------------------------ |
@@ -157,6 +159,8 @@ Adds some offset to the Weight paint, and multiplys it with some gain.
 
 Change the settings of **Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Levels](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-vertex-group-levels.png)
+
 ###### Subset
 
 Subset is a drop-down menu choose the Subset method.
@@ -180,6 +184,8 @@ Smooths the weight for selected vertices.
 ##### Adjust Last Operation - Smooth Vertex Weights
 
 Change the settings of **Smooth Vertex Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Smooth Vertex Weights](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-smooth-vertex-weights.png)
 
 ###### Subset
 

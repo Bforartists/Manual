@@ -6,7 +6,7 @@ path:
   - Editors
   - UV Editor
   - Header
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -1400,6 +1400,8 @@ Unwraps the selected geometry with the method SLIM, which is a “state-of-the-a
 #### Adjust Last Operation - Unwrap
 
 Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 
