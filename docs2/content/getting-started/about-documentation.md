@@ -6,8 +6,8 @@ section: getting-started
 path:
   - Getting Started
   - About Documentation
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 1.1 How to use the Manual.odt
@@ -117,9 +117,9 @@ Certain actions open **floating menus**, temporary overlays that give you fast a
 
 **Pie menus** are radial menus that let you select options quickly with directional input. They are designed for speed and efficiency.
 
-### Adjust Last Operation - Panel
+### Adjust Last Operation Panel
 
-After performing an action, the **Last Operator panel** appears to the bottom left of the Editor. It lets you **adjust the values** of the most recent operation, such as moving, scaling, or extruding.
+After performing an action, the **Adjust Last Operation** panel appears to the bottom left of the Editor. It lets you **adjust the values** of the most recent operation, such as moving, scaling, or extruding.
 
 ### Floating Dialogues
 

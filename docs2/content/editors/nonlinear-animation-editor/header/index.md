@@ -6,8 +6,8 @@ path:
   - Editors
   - Nonlinear Animation Editor
   - Header
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.nonlinear-animation-editor.header.nla-editor-header-tools-and-options
@@ -223,9 +223,9 @@ Shows or hides the Channels list at the left in the viewport.
 
 Shows or hides the sidebar at the right in the viewport.
 
-### Adjust Last Operation - NLA Editor - View Menu
+### Adjust Last Operation
 
-Shows the adjust last operator panel down left.
+Shows or hides the **Adjust Last Operation** panel at the bottom left of the editor, where you change the settings of the tool you just used.
 
 ### Playback Controls
 
