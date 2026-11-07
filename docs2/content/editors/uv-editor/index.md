@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - UV Editor
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -134,6 +134,8 @@ The distance between the single UV patches.
 Follow Active quads maps UV coordinates starting from an active face, and maps all adjacent faces in quad shape then. This way you can for example unwrap a pipe or a road. You first need to have a face selected. Then select everything. And then click at Follow Active Quads.
 
 #### Adjust Last Operation - Follow Active Quads
+
+![Adjust Last Operation - Follow Active Quads](/docs2/images/editors/uv-editor/adjust-last-operation-follow-active-quads.png)
 
 The Last Operator contains the same settings than the Settings dialogue.
 

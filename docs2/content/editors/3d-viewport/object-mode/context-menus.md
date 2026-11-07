@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Object Mode"
   - "Context Menus"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: menu
 summary: "The right-click menus of Object Mode."
@@ -566,6 +566,8 @@ Converts a selected object to a point cloud object.
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -711,6 +713,8 @@ Converts a selected object to a point cloud object.
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -836,6 +840,8 @@ Converts a selected object to a point cloud object.
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -948,6 +954,8 @@ Converts a selected object to a point cloud object.
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
 
 ##### Target
 
@@ -1084,6 +1092,8 @@ Converts a selected object to a point cloud object.
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
+
 ##### Target
 
 ![Target](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/target.png)
@@ -1202,6 +1212,8 @@ Converts a selected object to a point cloud object.
 #### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 Change the settings of **Convert to Mesh, Curve, Curves & Point Cloud** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-convert-to.png)
 
 ##### Target
 
