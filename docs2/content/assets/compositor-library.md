@@ -6179,7 +6179,7 @@ Small helper assets for colors, masks and normal maps.
 
 ![Channel Invert](/docs2/images/assets/compositor-library/utilities/channel-invert.png)
 
-Inverts the red, green, blue and alpha channels separately
+Inverts the red, green, blue and alpha channels, each with its own amount. Use it for a negative look, or to flip just one channel, for example to turn a mask around or fix the green channel of a normal map. Each channel is mixed between itself and its inverse by its slider.
 
 ### Inputs
 
@@ -6237,7 +6237,7 @@ The resulting alpha.
 
 Connect a color to Color and an alpha to Alpha. Invert Red, Invert Green, Invert Blue and Invert Alpha (0 to 1) set how much of each channel is inverted, so you can invert only one of them. In the slider every value is at its default of 1, so all color channels are inverted.
 
-![Before: the example image](/docs2/images/assets/compositor-library/example-before.png)
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
 ![After: all color channels inverted](/docs2/images/assets/compositor-library/utilities/channel-invert-after.png)
 
 ## Color Boolean
@@ -6246,7 +6246,7 @@ Connect a color to Color and an alpha to Alpha. Invert Red, Invert Green, Invert
 
 ![Color Boolean](/docs2/images/assets/compositor-library/utilities/color-boolean.png)
 
-Combines two colors per channel with union, intersection, subtract and difference
+Combines two colors or images channel by channel, like boolean operations on masks. Use it to merge two color passes, keep only what they share, or show where two images differ. Each output is a simple per-channel operation: the brighter value, the darker value, A minus B, and the difference.
 
 ### Inputs
 
@@ -6292,13 +6292,18 @@ Where the two colors differ.
 
 Connect two colors to Color A and Color B. The four outputs combine them per channel like boolean operations: Union (OR), Intersection (AND), Subtract and Difference.
 
+The example connects the room to Color A and a mirrored copy of the room (Flip X) to Color B, and shows Difference: the red and green walls swap sides, so they light up.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: Difference of the room and its mirror image](/docs2/images/assets/compositor-library/utilities/color-boolean-after.png)
+
 ## Combine CMYK
 
 ![Combine CMYK asset thumbnail](/docs2/images/assets/compositor-library/thumbs/combine-cmyk.png)
 
 ![Combine CMYK](/docs2/images/assets/compositor-library/utilities/combine-cmyk.png)
 
-Builds a color from cyan, magenta, yellow and black
+Builds a color from the four print inks: cyan, magenta, yellow and black. Use it with Separate CMYK to edit an image the way a printer sees it, for example to remove or boost one ink. It converts the four ink amounts back to RGB.
 
 ### Inputs
 
@@ -6338,13 +6343,18 @@ The combined color.
 
 Connect values to C, M, Y and K. Color is the color that these four print inks make. It is the opposite of Separate CMYK.
 
+The example splits the room with Separate CMYK and connects only C, M and Y back. With no black ink the room prints lighter and softer.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: the room without black ink](/docs2/images/assets/compositor-library/utilities/combine-cmyk-after.png)
+
 ## Compare Color
 
 ![Compare Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/compare-color.png)
 
 ![Compare Color](/docs2/images/assets/compositor-library/utilities/compare-color.png)
 
-Creates a mask from how closely two colors match
+Creates a mask that is white where an image is close to a chosen color. Use it to pick one object or surface out of a render by its color, for example to recolor a wall. It measures the distance between the two colors and turns it into a soft or hard mask with Threshold and Contrast.
 
 ### Inputs
 
@@ -6384,13 +6394,18 @@ White where the colors match.
 
 Connect two colors to Base Color and Comparison Color. The output is white where they match closely and black where they differ. Threshold sets how close counts as a match and Contrast sharpens the mask. Use it to pick a color out of an image.
 
+The example compares the room with the color of the red wall, with Threshold set to 0.15. The default Threshold of 0.5 is loose and lets most of a bright image match.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: the mask of the red wall](/docs2/images/assets/compositor-library/utilities/compare-color-after.png)
+
 ## Float Boolean
 
 ![Float Boolean asset thumbnail](/docs2/images/assets/compositor-library/thumbs/float-boolean.png)
 
 ![Float Boolean](/docs2/images/assets/compositor-library/utilities/float-boolean.png)
 
-Combines two masks with union, intersection, subtract and difference
+Combines two black and white masks like boolean operations on shapes. Use it to join masks, keep only their overlap, cut one out of the other, or keep only the parts that do not overlap. Each output is a simple per-pixel operation on the two values.
 
 ### Inputs
 
@@ -6436,13 +6451,18 @@ White where only one mask is white.
 
 Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union (OR) adds them, Intersection (AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
 
+The example connects two overlapping Ellipse Masks to Value A and Value B and shows Difference: only the parts where the ellipses do not overlap stay white.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: Difference of two overlapping ellipse masks](/docs2/images/assets/compositor-library/utilities/float-boolean-after.png)
+
 ## Layer Color
 
 ![Layer Color asset thumbnail](/docs2/images/assets/compositor-library/thumbs/layer-color.png)
 
 ![Layer Color](/docs2/images/assets/compositor-library/utilities/layer-color.png)
 
-Stacks two color layers over a background, with a mask for each
+Stacks up to two color layers over a background, each with its own mask, like layers in a paint program. Use it to tint or recolor parts of an image, for example to paint a selected wall a new color. Each layer is mixed over what is below it by its mask.
 
 ### Inputs
 
@@ -6488,13 +6508,18 @@ The layered result.
 
 Connect a color to Background and up to two layers to Layer 1 and Layer 2. Alpha 1 and Alpha 2 are the masks of the layers: where the mask is white the layer shows. Color is the stack of all three.
 
+The example puts the room in Background, a blue Layer 1, and the red wall mask from Compare Color in Alpha 1, so the wall turns blue.
+
+![Before: the example room](/docs2/images/assets/compositor-library/room-before.png)
+![After: the red wall painted blue](/docs2/images/assets/compositor-library/utilities/layer-color-after.png)
+
 ## Normal Blend Angle
 
 ![Normal Blend Angle asset thumbnail](/docs2/images/assets/compositor-library/thumbs/normal-blend-angle.png)
 
 ![Normal Blend Angle](/docs2/images/assets/compositor-library/utilities/normal-blend-angle.png)
 
-Blends two normal maps by angle
+Blends a detail normal map into a base normal map by rotating the normals. Use it to add small surface detail, such as scratches or fabric, on top of a larger normal map. Blending by angle keeps strong details correct where a simple mix would flatten them.
 
 ### Inputs
 
@@ -6552,7 +6577,7 @@ Connect two normal maps to Base and Details. Blend mixes the details into the ba
 
 ![Normal Blend Channels](/docs2/images/assets/compositor-library/utilities/normal-blend-channels.png)
 
-Blends two normal maps by channel
+Blends a detail normal map into a base normal map channel by channel. Use it for a quick and light way to add surface detail on top of a larger normal map. It overlays the red and green channels and multiplies the blue channel, which works well for soft details.
 
 ### Inputs
 
@@ -6610,7 +6635,7 @@ Connect two normal maps to Base and Details. Blend mixes the details into the ba
 
 ![Select Color](/docs2/images/assets/compositor-library/utilities/select-color.png)
 
-Picks one of four colors by index
+Picks one of four colors by a number. Use it to build a palette that you switch with one value, or chain several nodes for more than four colors. Each slot is compared with Index, and the matching color is the output.
 
 ### Inputs
 
@@ -6686,7 +6711,7 @@ Connect an integer to Index. The color with that number (1 to 4) is the output, 
 
 ![Separate CMYK](/docs2/images/assets/compositor-library/utilities/separate-cmyk.png)
 
-Splits a color into cyan, magenta, yellow and black
+Splits a color into the four print inks: cyan, magenta, yellow and black. Use it to look at or change one ink, for example to check how much black a print needs. Combine CMYK puts the four parts back together.
 
 ### Inputs
 
