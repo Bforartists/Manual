@@ -7,7 +7,7 @@ path:
   - Video Sequence Editor
   - Tool Shelf
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.2 Editors - Video Sequence Editor - Tool Shelf.odt
