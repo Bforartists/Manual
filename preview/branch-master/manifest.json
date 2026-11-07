@@ -1,10 +1,7 @@
 {
  "pages": {
-  "docs2/content/editors/properties/material-properties-tab.md": "editors/properties/material-properties-tab.html",
-  "docs2/content/editors/properties/modifiers/mesh/generate.md": "editors/properties/modifiers/mesh/generate.html",
-  "docs2/content/editors/properties/object-properties-tab.md": "editors/properties/object-properties-tab.html",
-  "docs2/content/editors/properties/render-properties-tab/eevee.md": "editors/properties/render-properties-tab/eevee.html",
-  "docs2/content/editors/properties/world-properties-tab.md": "editors/properties/world-properties-tab.html"
+  "docs2/content/editors/asset-browser/index.md": "editors/asset-browser.html",
+  "docs2/content/editors/preferences.md": "editors/preferences.html"
  },
- "images": 355
+ "images": 240
 }
