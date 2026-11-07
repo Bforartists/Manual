@@ -153,6 +153,10 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 
 Creates cube projected UV coordinates, with each side of the box mapped flat. Mode switches between all islands and a single island chosen by Island Index. Axis and Angle turn the projection.
 
+### Gizmos
+
+The **Angle** input has a **dial gizmo** in the viewport on the selected island. Drag the dial to rotate the projection, instead of typing a number. Island Index decides which island shows the gizmo.
+
 ### Inputs
 
 #### Geometry
@@ -481,6 +485,13 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ![Cylinder UV](/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png)
 
 Creates cylinder projected UV coordinates, with the side and the caps scaled separately. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the cylinder.
+
+### Gizmos
+
+The projection can be tuned in the viewport with gizmos on the selected island:
+
+- **Linear gizmos** move the **Top** and **Bottom** limits and scale the **Cylinder Scale** and **Cap Scale**.
+- **Dial gizmos** (red, green, blue) rotate the projection around X, Y and Z. This is the same as the **Tilt** input.
 
 ### Inputs
 
@@ -904,6 +915,13 @@ The mesh with the UV coordinates written to the UV map named by the UV Name or U
 ![Sphere UV](/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png)
 
 Creates sphere projected UV coordinates, with longitude and latitude. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the poles.
+
+### Gizmos
+
+The projection sphere is drawn in the viewport and has gizmos on the selected island:
+
+- **Linear gizmos** change **Scale Longitude** and **Scale Latitude**.
+- **Dial gizmos** (red, green, blue) rotate the projection around X, Y and Z. This is the same as the **Tilt** input.
 
 ### Inputs
 
