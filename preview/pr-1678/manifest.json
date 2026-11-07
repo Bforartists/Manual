@@ -1,0 +1,10 @@
+{
+ "pages": {
+  "docs2/content/editors/properties/bone-properties-tab.md": "editors/properties/bone-properties-tab.html",
+  "docs2/content/editors/properties/object-properties-tab.md": "editors/properties/object-properties-tab.html",
+  "docs2/content/editors/topbar-and-statusbar/index.md": "editors/topbar-and-statusbar.html",
+  "docs2/content/interface/tool-shelves.md": "interface/tool-shelves.html",
+  "docs2/content/workspaces/workspaces.md": "workspaces/workspaces.html"
+ },
+ "images": 154
+}
