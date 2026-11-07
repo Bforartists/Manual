@@ -2,7 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Point · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
@@ -31,7 +32,8 @@ a{color:var(--dk-link)}
 .pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
 @media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
 @media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
-</style><script>
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
 (function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
 window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
 </script></head>
@@ -57,7 +59,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Tool Shelves</span>
 <span>Side Bars</span>
 <span>Tabs &amp; Panels</span>
-<span>Properties</span>
+<a href="../../../../interface/properties.html">Properties</a>
 <span>Asset Shelves</span>
 <span>Context Menus</span>
 <span>Floating Menus</span>
@@ -67,7 +69,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Input Devices</span>
 <h4>Workspaces</h4>
 <span>Workspaces</span>
-<span>Managing Workspaces</span>
+<a href="../../../../workspaces/workspaces.html">Managing Workspaces</a>
 <span>Main</span>
 <span>UV Editing</span>
 <span>Modeling</span>
@@ -91,181 +93,181 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Color Balance</span>
 <h4>Editors</h4>
 <span>Editors</span>
-<span style="padding-left:3.5rem">Header tools and Options</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
 <span style="padding-left:2.5rem">Header</span>
 <span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/header.html">Header</a>
 <span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:2.5rem">Draw Mode</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:3.5rem">Header</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:3.5rem">Header</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:2.5rem">Header</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/text/edit.html">Edit Mode</a>
 <span style="padding-left:3.5rem">Input</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
 <span style="padding-left:3.5rem">Input</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:1.5rem" href="../../header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../properties/render-properties-tab.html">Render</a>
 <span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
 <span style="padding-left:1.5rem">Header</span>
+<a href="../../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
 <span style="padding-left:1.5rem">Header</span>
-<span>Topbar and Statusbar</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:3.5rem">Navigation Menu</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
 <span style="padding-left:2.5rem">Tool Shelf</span>
-<span style="padding-left:2.5rem">Pose Mode</span>
-<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
 <span style="padding-left:2.5rem">Sculpt Mode</span>
-<span style="padding-left:3.5rem">Tool Shelf</span>
-<span style="padding-left:2.5rem">Sculpt Mode</span>
-<span style="padding-left:3.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
 <span style="padding-left:1.5rem">Object Mode</span>
-<span style="padding-left:2.5rem">Tool Shelf</span>
-<span style="padding-left:3.5rem">Output</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span style="padding-left:3.5rem">Output</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span>Editors introduction</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span style="padding-left:1.5rem">Output</span>
-<span style="padding-left:3.5rem">Output</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
-<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
 <span style="padding-left:3.5rem">Quick Menu</span>
-<span style="padding-left:2.5rem">Sidebar</span>
-<span style="padding-left:2.5rem">Sculpt Mode</span>
-<span>3D Viewport</span>
-<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
 <span style="padding-left:1.5rem">Mesh</span>
-<span style="padding-left:3.5rem">Sidebar</span>
-<span style="padding-left:2.5rem">Vertex Paint</span>
-<span style="padding-left:2.5rem">Sidebar</span>
-<span style="padding-left:3.5rem">Color</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:3.5rem">Attribute</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">View Layer</span>
-<span style="padding-left:3.5rem">Shader</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
-<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
 <span style="padding-left:2.5rem">Context Menus</span>
-<span style="padding-left:3.5rem">Select Menu</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
 <span style="padding-left:1.5rem">Curve and Surface</span>
-<span style="padding-left:2.5rem">Vertex Paint</span>
-<span style="padding-left:3.5rem">Context Menus</span>
-<span style="padding-left:3.5rem">Context Menus</span>
-<span style="padding-left:2.5rem">Weight Paint</span>
-<span style="padding-left:2.5rem">Context Menus</span>
-<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
 <span style="padding-left:1.5rem">Channel List</span>
-<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/channel-list.html">Channel List</a>
 <span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../../image-editor.html">Image Editor</a>
 <span style="padding-left:1.5rem">Channel List</span>
-<span>Image Editor</span>
+<a style="padding-left:1.5rem" href="../../../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
 <span style="padding-left:1.5rem">Channel List</span>
-<span style="padding-left:1.5rem">Scene</span>
-<span style="padding-left:3.5rem">Color</span>
-<span style="padding-left:1.5rem">Channel List</span>
-<span style="padding-left:3.5rem">View Menu</span>
-<span style="padding-left:2.5rem">More</span>
-<span style="padding-left:2.5rem">Weight Paint</span>
-<span style="padding-left:2.5rem">Texture Paint</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
 <span style="padding-left:1.5rem">Metaball</span>
 <span style="padding-left:3.5rem">Filter</span>
-<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/footer-tools-and-options.html">Footer</a>
 <span style="padding-left:3.5rem">Curve</span>
-<span style="padding-left:1.5rem">Footer</span>
-<span style="padding-left:1.5rem">Footer</span>
-<span style="padding-left:1.5rem">World</span>
-<span style="padding-left:3.5rem">Texture</span>
-<span style="padding-left:1.5rem">Footer</span>
-<span style="padding-left:2.5rem">Particle Edit</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
 <span style="padding-left:1.5rem">Text</span>
-<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
 <span style="padding-left:3.5rem">Grease Pencil</span>
-<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:1.5rem" href="../../../properties/collection-properties-tab.html">Collection</a>
 <span style="padding-left:3.5rem">Utilities</span>
 <span style="padding-left:1.5rem">Lattice</span>
-<span style="padding-left:3.5rem">Mask</span>
-<span style="padding-left:3.5rem">Instances</span>
-<span style="padding-left:1.5rem">Object</span>
-<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/group.html">Group</a>
 <span style="padding-left:1.5rem">Armature</span>
-<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
 <span style="padding-left:3.5rem">Mesh</span>
 <span style="padding-left:1.5rem">Modifiers</span>
 <span style="padding-left:3.5rem">Layout</span>
-<span>UV Editor</span>
+<a href="../../../uv-editor.html">UV Editor</a>
 <span style="padding-left:1.5rem">Grease Pencil</span>
-<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
 <a class="is-current" style="padding-left:3.5rem" href="point.html">Point</a>
-<span style="padding-left:1.5rem">Visual Effects</span>
+<a style="padding-left:1.5rem" href="../../../properties/visual-effects-properties-tab.html">Visual Effects</a>
 <span style="padding-left:1.5rem">Hair Curves</span>
-<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
 <span style="padding-left:3.5rem">Volume</span>
-<span style="padding-left:1.5rem">Particles</span>
+<a style="padding-left:1.5rem" href="../../../properties/particle-properties-tab.html">Particles</a>
 <span style="padding-left:1.5rem">Point Cloud</span>
 <span style="padding-left:3.5rem">Utilities</span>
-<span style="padding-left:3.5rem">Simulation</span>
-<span style="padding-left:1.5rem">Physics</span>
+<a style="padding-left:3.5rem" href="simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../../../properties/physics-properties-tab.html">Physics</a>
 <span style="padding-left:3.5rem">Layout</span>
-<span>Compositor</span>
-<span style="padding-left:3.5rem">Color</span>
-<span style="padding-left:1.5rem">Object Data</span>
-<span style="padding-left:3.5rem">Texture</span>
-<span style="padding-left:1.5rem">Object Constraints</span>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-constraints-properties-tab.html">Object Constraints</a>
 <span style="padding-left:3.5rem">Utilities</span>
-<span style="padding-left:1.5rem">Bone</span>
+<a style="padding-left:1.5rem" href="../../../properties/bone-properties-tab.html">Bone</a>
 <span style="padding-left:3.5rem">Generate</span>
-<span style="padding-left:1.5rem">Bone Constraints</span>
-<span style="padding-left:3.5rem">Node Groups</span>
-<span style="padding-left:1.5rem">Material</span>
+<a style="padding-left:1.5rem" href="../../../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../../../properties/material-properties-tab.html">Material</a>
 <span>Texture Node Editor</span>
-<span style="padding-left:3.5rem">Normals</span>
-<span>Geometry Node Editor</span>
-<span style="padding-left:1.5rem">Texture</span>
-<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:3.5rem" href="normals.html">Normals</a>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="group.html">Group</a>
 <span style="padding-left:1.5rem">Strip</span>
 <span style="padding-left:3.5rem">Layout</span>
-<span style="padding-left:1.5rem">Strip Modifiers</span>
-<span>Shader Editor</span>
-<span>Video Sequence Editor</span>
-<span>Movie Clip Editor</span>
-<span>Dope Sheet</span>
+<a style="padding-left:1.5rem" href="../../../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<a href="../../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../../dope-sheet.html">Dope Sheet</a>
 <span>Timeline</span>
-<span>Graph Editor</span>
-<span>Drivers Editor</span>
-<span>Nonlinear Animation Editor</span>
+<a href="../../../graph-editor.html">Graph Editor</a>
+<a href="../../../drivers-editor.html">Drivers Editor</a>
+<a href="../../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
 <span>Text Editor</span>
-<span>Python Console</span>
-<span>Info Editor</span>
-<span>Toolbar</span>
-<span>Outliner</span>
-<span>Properties Editor</span>
-<span style="padding-left:2.5rem">Cycles</span>
-<span style="padding-left:2.5rem">EEVEE</span>
-<span style="padding-left:2.5rem">Workbench</span>
+<a href="../../../python-console.html">Python Console</a>
+<a href="../../../info-editor.html">Info Editor</a>
+<a href="../../../toolbar.html">Toolbar</a>
+<a href="../../../outliner.html">Outliner</a>
+<a href="../../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/workbench.html">Workbench</a>
 <span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
 <span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
@@ -276,86 +278,86 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
 <span style="padding-left:2.5rem">Emitter</span>
-<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
-<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
-<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
-<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
-<span style="padding-left:2.5rem">Emitter - Physics panel</span>
-<span style="padding-left:2.5rem">Emitter - Render panel</span>
-<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
-<span style="padding-left:2.5rem">Emitter - Children panel</span>
-<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
-<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
-<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
-<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
-<span style="padding-left:2.5rem">Emitter - Textures panel</span>
-<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
 <span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
 <span style="padding-left:2.5rem">Hair</span>
-<span style="padding-left:2.5rem">Hair - Emission Panel</span>
-<span style="padding-left:2.5rem">Hair - Cache Panel</span>
-<span style="padding-left:2.5rem">Hair - Velocity panel</span>
-<span style="padding-left:2.5rem">Hair - Rotation panel</span>
-<span style="padding-left:2.5rem">Hair - Physics panel</span>
-<span style="padding-left:2.5rem">Hair - Render panel</span>
-<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
-<span style="padding-left:2.5rem">Hair - Children panel</span>
-<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
-<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
-<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
-<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
-<span style="padding-left:2.5rem">Hair - Textures panel</span>
-<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
 <span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
-<span style="padding-left:2.5rem">Force Field panel</span>
-<span style="padding-left:2.5rem">Collision panel</span>
-<span style="padding-left:2.5rem">Cloth panel</span>
-<span style="padding-left:2.5rem">Dynamic Paint panel</span>
-<span style="padding-left:2.5rem">Soft Body panel</span>
-<span style="padding-left:2.5rem">Fluid panel</span>
-<span style="padding-left:2.5rem">Rigid Body panel</span>
-<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
-<span style="padding-left:2.5rem">Mesh Object</span>
-<span style="padding-left:2.5rem">Curve Object</span>
-<span style="padding-left:2.5rem">Curves Object</span>
-<span style="padding-left:2.5rem">Metaball Object</span>
-<span style="padding-left:2.5rem">Surface Object</span>
-<span style="padding-left:2.5rem">Point Cloud Object</span>
-<span style="padding-left:2.5rem">Text Object</span>
-<span style="padding-left:2.5rem">Grease Pencil Object</span>
-<span style="padding-left:2.5rem">Armature Object</span>
-<span style="padding-left:2.5rem">Lattice Object</span>
-<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
-<span style="padding-left:2.5rem">Speaker Object</span>
-<span style="padding-left:2.5rem">Camera Object</span>
-<span style="padding-left:2.5rem">Light Object</span>
-<span style="padding-left:2.5rem">Light Probe Object</span>
-<span style="padding-left:2.5rem">Force Field Object</span>
-<span style="padding-left:2.5rem">Volume Object</span>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
 <span>File browser</span>
-<span>Asset Browser</span>
-<span>Spreadsheet</span>
+<a href="../../../asset-browser.html">Asset Browser</a>
+<a href="../../../spreadsheet.html">Spreadsheet</a>
 <span>Preferences</span>
-<span style="padding-left:1.5rem">Topbar menus</span>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
 <span style="padding-left:1.5rem">Viewport</span>
 <span style="padding-left:2.5rem">Add Menu</span>
 <span style="padding-left:2.5rem">Add Menu</span>
 <span style="padding-left:2.5rem">Add Menu</span>
 <h4>Assets</h4>
 <span>Assets</span>
-<span>Essentials Library</span>
-<span>Default Library</span>
+<a href="../../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../../assets/default-library.html">Default Library</a>
 <span>Compositor Library</span>
 <span>Geometry Nodes Library</span>
-<span>Shader Library</span>
+<a href="../../../../assets/shader-library.html">Shader Library</a>
 <h4>Extensions and Addons</h4>
 <span>Extensions and Addons</span>
-<span>3D Sequencer</span>
-<span>Power User Tools</span>
-<span>Presentation Slides</span>
+<a href="../../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
 <span>Coworker</span>
-<span>Brush Panels</span>
-<span>Built-in Addons and Extensions</span>
+<a href="../../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
 <h4>Keymap</h4>
 <span>Keymap</span>
 <span>Important Hotkeys</span>
@@ -379,275 +381,115 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Point</div><h1 class="pv-title">Point</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 8 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-point">Add menu - Point</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/add-menu-point.png" alt="Add menu - Point" loading="lazy"><figcaption>Add menu - Point</figcaption></figure>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Point</div><h1 class="pv-title">Point</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-point">Add menu - Point</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/add-menu-point.png" alt="Add menu - Point" loading="lazy"><figcaption>Add menu - Point</figcaption></figure>
 <h3 id="distribute-points-in-grid">Distribute Points In Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-grid.png" alt="Distribute Points In Grid" loading="lazy"><figcaption>Distribute Points In Grid</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-grid.png" alt="Distribute Points In Grid" loading="lazy"><figcaption>Distribute Points In Grid</figcaption></figure>
 <p>Distributes points randomly in a grid.</p>
 <p>Point, corner and polygon attributes of the input geometry are transferred to the generated points. That includes vertex weights and UV maps. Additionally, the node has Normal and Rotation outputs.</p>
 <p>The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the geoemetry is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.</p>
 <h4 id="inputs-random-mode">Inputs Random mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode.png" alt="Inputs Random mode" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Grid</td>
-<td>The grid to import the points to.</td>
-</tr>
-<tr>
-<td>Density</td>
-<td>Density of the points.</td>
-</tr>
-<tr>
-<td>Seed</td>
-<td>The random seed for the point distribution.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode.png" alt="Inputs Random mode" loading="lazy"></figure>
+<h5 id="grid">Grid</h5>
+<p>The grid to import the points to.</p>
+<h5 id="density">Density</h5>
+<p>Density of the points.</p>
+<h5 id="seed">Seed</h5>
+<p>The random seed for the point distribution.</p>
 <h4 id="inputs-grid-mode">Inputs Grid mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode.png" alt="Inputs Grid mode" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Grid</td>
-<td>The grid to import the points to.</td>
-</tr>
-<tr>
-<td>Spacing</td>
-<td>The spacing between the grid points.</td>
-</tr>
-<tr>
-<td>Threshold</td>
-<td>Minimum density of a volume cell to contain a grid point.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode.png" alt="Inputs Grid mode" loading="lazy"></figure>
+<h5 id="grid-2">Grid</h5>
+<p>The grid to import the points to.</p>
+<h5 id="spacing">Spacing</h5>
+<p>The spacing between the grid points.</p>
+<h5 id="threshold">Threshold</h5>
+<p>Minimum density of a volume cell to contain a grid point.</p>
 <h4 id="properties">Properties</h4>
 <h5 id="distribution-method">Distribution method</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png" alt="Distribution method" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Random</td>
-<td>Distributes the points randomly. This allows overlappings.</td>
-</tr>
-<tr>
-<td>Grid</td>
-<td>Distributes the points along a grid with given width.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png" alt="Distribution method" loading="lazy"></figure>
+<h6 id="random">Random</h6>
+<p>Distributes the points randomly. This allows overlappings.</p>
+<h6 id="grid-3">Grid</h6>
+<p>Distributes the points along a grid with given width.</p>
 <h4 id="output">Output</h4>
 <h5 id="points">Points</h5>
 <p>Points output.</p>
 <h3 id="distribute-points-in-volume">Distribute Points In Volume</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-volume.png" alt="Distribute Points In Volume" loading="lazy"><figcaption>Distribute Points In Volume</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-volume.png" alt="Distribute Points In Volume" loading="lazy"><figcaption>Distribute Points In Volume</figcaption></figure>
 <p>Distributes points randomly in a volume.</p>
 <p>Point, corner and polygon attributes of the input geometry are transferred to the generated points. That includes vertex weights and UV maps. Additionally, the node has Normal and Rotation outputs.</p>
 <p>The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the geoemetry is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.</p>
 <h4 id="inputs-random-mode-2">Inputs Random mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-2.png" alt="Inputs Random mode" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Volume</td>
-<td>The volume to import the points to.</td>
-</tr>
-<tr>
-<td>Density</td>
-<td>Density of the points.</td>
-</tr>
-<tr>
-<td>Seed</td>
-<td>The random seed for the point distribution.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-2.png" alt="Inputs Random mode" loading="lazy"></figure>
+<h5 id="volume">Volume</h5>
+<p>The volume to import the points to.</p>
+<h5 id="density-2">Density</h5>
+<p>Density of the points.</p>
+<h5 id="seed-2">Seed</h5>
+<p>The random seed for the point distribution.</p>
 <h4 id="inputs-grid-mode-2">Inputs Grid mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode-2.png" alt="Inputs Grid mode" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Volume</td>
-<td>The volume to import the points to.</td>
-</tr>
-<tr>
-<td>Spacing</td>
-<td>The spacing between the grid points.</td>
-</tr>
-<tr>
-<td>Threshold</td>
-<td>Minimum density of a volume cell to contain a grid point.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode-2.png" alt="Inputs Grid mode" loading="lazy"></figure>
+<h5 id="volume-2">Volume</h5>
+<p>The volume to import the points to.</p>
+<h5 id="spacing-2">Spacing</h5>
+<p>The spacing between the grid points.</p>
+<h5 id="threshold-2">Threshold</h5>
+<p>Minimum density of a volume cell to contain a grid point.</p>
 <h4 id="properties-2">Properties</h4>
 <h5 id="distribution-method-2">Distribution method</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png" alt="Distribution method" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Random</td>
-<td>Distributes the points randomly. This allows overlappings.</td>
-</tr>
-<tr>
-<td>Grid</td>
-<td>Distributes the points along a grid with given width.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png" alt="Distribution method" loading="lazy"></figure>
+<h6 id="random-2">Random</h6>
+<p>Distributes the points randomly. This allows overlappings.</p>
+<h6 id="grid-4">Grid</h6>
+<p>Distributes the points along a grid with given width.</p>
 <h4 id="output-2">Output</h4>
 <h5 id="points-2">Points</h5>
 <p>Points output.</p>
 <h3 id="distribute-points-on-faces">Distribute Points on Faces</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-on-faces.png" alt="Distribute Points on Faces" loading="lazy"><figcaption>Distribute Points on Faces</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-on-faces.png" alt="Distribute Points on Faces" loading="lazy"><figcaption>Distribute Points on Faces</figcaption></figure>
 <p>Distributes points randomly on the faces of a mesh geometry.</p>
 <p>Point, corner and polygon attributes of the input geometry are transferred to the generated points. That includes vertex weights and UV maps. Additionally, the node has Normal and Rotation outputs.</p>
 <p>The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the mesh is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.</p>
 <h4 id="inputs-random-mode-3">Inputs Random mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-3.png" alt="Inputs Random mode" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mesh</td>
-<td>Standard geometry input.</td>
-</tr>
-<tr>
-<td>Selection</td>
-<td>The selection of which face corners should be considered for point distribution.</td>
-</tr>
-<tr>
-<td>Density</td>
-<td>Density of the points.</td>
-</tr>
-<tr>
-<td>Seed</td>
-<td>The random seed for the point distribution.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-3.png" alt="Inputs Random mode" loading="lazy"></figure>
+<h5 id="mesh">Mesh</h5>
+<p>Standard geometry input.</p>
+<h5 id="selection">Selection</h5>
+<p>The selection of which face corners should be considered for point distribution.</p>
+<h5 id="density-3">Density</h5>
+<p>Density of the points.</p>
+<h5 id="seed-3">Seed</h5>
+<p>The random seed for the point distribution.</p>
 <h4 id="inputs-poisson-disk-mode">Inputs Poisson Disk mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-poisson-disk-mode.png" alt="Inputs Poisson Disk mode" loading="lazy"><figcaption>Inputs Poisson Disk mode</figcaption></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mesh</td>
-<td>Standard geometry input.</td>
-</tr>
-<tr>
-<td>Selection</td>
-<td>The selection of which face corners should be considered for point distribution.</td>
-</tr>
-<tr>
-<td>Distance Min</td>
-<td>The minimum distance that two points can have.</td>
-</tr>
-<tr>
-<td>Distance Max</td>
-<td>The naximum distance that two points can have.</td>
-</tr>
-<tr>
-<td>Density Factor</td>
-<td>Density of the points.</td>
-</tr>
-<tr>
-<td>Seed</td>
-<td>The random seed for the point distribution.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-poisson-disk-mode.png" alt="Inputs Poisson Disk mode" loading="lazy"><figcaption>Inputs Poisson Disk mode</figcaption></figure>
+<h5 id="mesh-2">Mesh</h5>
+<p>Standard geometry input.</p>
+<h5 id="selection-2">Selection</h5>
+<p>The selection of which face corners should be considered for point distribution.</p>
+<h5 id="distance-min">Distance Min</h5>
+<p>The minimum distance that two points can have.</p>
+<h5 id="distance-max">Distance Max</h5>
+<p>The naximum distance that two points can have.</p>
+<h5 id="density-factor">Density Factor</h5>
+<p>Density of the points.</p>
+<h5 id="seed-4">Seed</h5>
+<p>The random seed for the point distribution.</p>
 <h4 id="properties-3">Properties</h4>
 <h5 id="distribution-method-3">Distribution method</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method-2.png" alt="Distribution method" loading="lazy"></figure>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Random</td>
-<td>Distributes the points randomly. This allows overlappings.</td>
-</tr>
-<tr>
-<td>Poisson Disk</td>
-<td>Distributes the points randomly, but prevents overlappings by defining a minimum and maximum distance.</td>
-</tr>
-</tbody>
-</table>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method-2.png" alt="Distribution method" loading="lazy"></figure>
+<h6 id="random-3">Random</h6>
+<p>Distributes the points randomly. This allows overlappings.</p>
+<h6 id="poisson-disk">Poisson Disk</h6>
+<p>Distributes the points randomly, but prevents overlappings by defining a minimum and maximum distance.</p>
 <h4 id="output-3">Output</h4>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Points</td>
-<td>Points output.</td>
-</tr>
-<tr>
-<td>Normal</td>
-<td>Normal output.</td>
-</tr>
-</tbody>
-</table>
+<h5 id="points-3">Points</h5>
+<p>Points output.</p>
+<h5 id="normal">Normal</h5>
+<p>Normal output.</p>
 <h5 id="rotation">Rotation</h5>
 <p>Euler Rotation output. Please note that the Z axis of the result rotation will be arbitrary. The mesh normal used to create the rotation does not have enough information to set all three rotation axes.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/rotation.png" alt="Rotation" loading="lazy"></figure>
-<h3 id="points-3">Points</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/rotation.png" alt="Rotation" loading="lazy"></figure>
+<h3 id="points-4">Points</h3>
 <p>Generates a single point or points with position, count and radius.</p>
 <h4 id="inputs">Inputs</h4>
 <h5 id="count">Count</h5>
@@ -657,123 +499,53 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Radius</p>
 <p>The radius of the points as a float. This is a field meaning you can set the scale per index or ID of the point.</p>
 <h4 id="outputs">Outputs</h4>
-<h5 id="mesh">Mesh</h5>
+<h5 id="mesh-3">Mesh</h5>
 <p>Standard mesh output.</p>
 <h3 id="points-to-cuves">Points to Cuves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-cuves.png" alt="Points to Cuves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-cuves.png" alt="Points to Cuves" loading="lazy"></figure>
 <p>Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.</p>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inputs</td>
-<td><strong>Points</strong>: Points input. · <strong>Curve Group ID</strong>: A curve is created from every distinct group ID. All points with the same ID are put into the same curve. · <strong>Selection</strong>: Selection input.</td>
-</tr>
-<tr>
-<td>Outputs</td>
-<td><strong>Mesh</strong>: Standard mesh output.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="points-to-sdf-grid">Points to SDF Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-sdf-grid.png" alt="Points to SDF Grid" loading="lazy"><figcaption>Points to SDF Grid</figcaption></figure>
-<p>Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.</p>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inputs</td>
-<td><strong>Points</strong>: Points input. · <strong>Radius</strong>: The radius of the grid. · <strong>Voxel size</strong>: The voxel size of the grid.</td>
-</tr>
-<tr>
-<td>Outputs</td>
-<td><strong>SDF Grid</strong>: Standard mesh output.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="points-to-vertices">Points to Vertices</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-vertices.png" alt="Points to Vertices" loading="lazy"></figure>
-<p>Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.</p>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inputs</td>
-<td><strong>Points</strong>: Points input. · <strong>Selection</strong>: Selection input.</td>
-</tr>
-<tr>
-<td>Outputs</td>
-<td><strong>Mesh</strong>: Standard mesh output.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="points-to-volume">Points to Volume</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-volume.png" alt="Points to Volume" loading="lazy"></figure>
-<p>Creates a fog volume sphere around every point in the input geometry. The new volume grid is then called density.</p>
 <h4 id="inputs-2">Inputs</h4>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Points</td>
-<td>Points input.</td>
-</tr>
-<tr>
-<td>Density</td>
-<td>The density of the volume.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="resolution-mode">Resolution Mode</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/resolution-mode.png" alt="Resolution Mode" loading="lazy"></figure>
-<p>Base the voxel resolution at the amount or the size of the point cloud.</p>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Voxel Amount</td>
-<td>Voxel amount of the volume.</td>
-</tr>
-<tr>
-<td>Radius</td>
-<td>The radius of the generated volume around each point.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Points</strong>: Points input. · <strong>Curve Group ID</strong>: A curve is created from every distinct group ID. All points with the same ID are put into the same curve. · <strong>Selection</strong>: Selection input.</p>
 <h4 id="outputs-2">Outputs</h4>
-<h5 id="volume">Volume</h5>
+<p><strong>Mesh</strong>: Standard mesh output.</p>
+<h3 id="points-to-sdf-grid">Points to SDF Grid</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-sdf-grid.png" alt="Points to SDF Grid" loading="lazy"><figcaption>Points to SDF Grid</figcaption></figure>
+<p>Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.</p>
+<h4 id="inputs-3">Inputs</h4>
+<p><strong>Points</strong>: Points input. · <strong>Radius</strong>: The radius of the grid. · <strong>Voxel size</strong>: The voxel size of the grid.</p>
+<h4 id="outputs-3">Outputs</h4>
+<p><strong>SDF Grid</strong>: Standard mesh output.</p>
+<h3 id="points-to-vertices">Points to Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-vertices.png" alt="Points to Vertices" loading="lazy"></figure>
+<p>Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.</p>
+<h4 id="inputs-4">Inputs</h4>
+<p><strong>Points</strong>: Points input. · <strong>Selection</strong>: Selection input.</p>
+<h4 id="outputs-4">Outputs</h4>
+<p><strong>Mesh</strong>: Standard mesh output.</p>
+<h3 id="points-to-volume">Points to Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-volume.png" alt="Points to Volume" loading="lazy"></figure>
+<p>Creates a fog volume sphere around every point in the input geometry. The new volume grid is then called density.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="points-5">Points</h5>
+<p>Points input.</p>
+<h5 id="density-4">Density</h5>
+<p>The density of the volume.</p>
+<h5 id="resolution-mode">Resolution Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/resolution-mode.png" alt="Resolution Mode" loading="lazy"></figure>
+<p>Base the voxel resolution at the amount or the size of the point cloud.</p>
+<h6 id="voxel-amount">Voxel Amount</h6>
+<p>Voxel amount of the volume.</p>
+<h6 id="radius">Radius</h6>
+<p>The radius of the generated volume around each point.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="volume-3">Volume</h5>
 <p>Standard geometry output.</p>
 <h3 id="rasterize-points">Rasterize Points</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/rasterize-points.png" alt="Rasterize Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/rasterize-points.png" alt="Rasterize Points" loading="lazy"></figure>
 <p>Turns points into volume grids. Each point adds its values to the voxels around it with a weighted sum. The Kernel Type decides how far a point reaches and how the weight falls off.</p>
 <p>You choose what to rasterize by adding items. Each item has a name and a type. It gives the node one input for the value of each point, and one grid output with the same name. To add an item, connect a link to the empty socket at the bottom of the node, or use the Items panel in the Node tab of the sidebar.</p>
-<h4 id="inputs-3">Inputs</h4>
-<h5 id="points-4">Points</h5>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="points-6">Points</h5>
 <p>The geometry to rasterize. The points of meshes, point clouds and curves are used.</p>
 <h5 id="grid-transform-mode">Grid Transform Mode</h5>
 <p>How the transform of the new grids is set.</p>
@@ -802,35 +574,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The Items panel in the Node tab of the sidebar lists the items. You can add, remove and move items there.</p>
 <h5 id="type">Type</h5>
 <p>The type of the active item. Scalar rasterizes a single number for each point. Vector rasterizes a vector for each point.</p>
-<h4 id="outputs-3">Outputs</h4>
+<h4 id="outputs-6">Outputs</h4>
 <h5 id="items-3">Items</h5>
 <p>For each item there is a grid output with the same name as the item. A scalar item gives a scalar grid, a vector item gives a vector grid. If a grid cannot be made, the node shows a warning with the name of the item.</p>
 <h3 id="set-point-radius">Set Point Radius</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-radius.png" alt="Set Point Radius" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-radius.png" alt="Set Point Radius" loading="lazy"></figure>
 <p>The Set Point Radius node controls the size each selected point cloud point should display with in the viewport.</p>
-<table class="ui-doc-table">
-<thead>
-<tr>
-<th>Entry</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inputs</td>
-<td><strong>Points</strong>: Geometry input. · <strong>Selection</strong>: Selection input. · <strong>Radius</strong>: The radius of the points.</td>
-</tr>
-<tr>
-<td>Outputs</td>
-<td><strong>Points</strong>: Standard geometry output.</td>
-</tr>
-</tbody>
-</table>
+<h4 id="inputs-7">Inputs</h4>
+<p><strong>Points</strong>: Geometry input. · <strong>Selection</strong>: Selection input. · <strong>Radius</strong>: The radius of the points.</p>
+<h4 id="outputs-7">Outputs</h4>
+<p><strong>Points</strong>: Standard geometry output.</p>
 <h3 id="set-point-cloud-type">Set Point Cloud Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/58c98b81778be68b97ccebfcf1107282c4cb7e10/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-cloud-type.png" alt="Set Point Cloud Type" loading="lazy"><figcaption>Set Point Cloud Type</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/121c87e5f11963b24b134272f5d46fc51e1cb747/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-cloud-type.png" alt="Set Point Cloud Type" loading="lazy"><figcaption>Set Point Cloud Type</figcaption></figure>
 <p>Changes how a point cloud is represented. Use it to show the points of a point cloud as 3D Gaussian Splats, or to turn them back into simple points. The points themselves are not changed.</p>
-<h4 id="inputs-4">Inputs</h4>
-<h5 id="points-5">Points</h5>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="points-7">Points</h5>
 <p>The point cloud to change the type of. Point clouds inside instances are changed too.</p>
 <h5 id="type-2">Type</h5>
 <p>The new type of the point cloud.</p>
@@ -838,7 +596,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <li>Points: a simple point cloud with a position and a radius for each point. This is the default.</li>
 <li>3D Gaussian Splat: a point cloud that works as the original 3D Gaussian Splats technique.</li>
 </ul>
-<h4 id="outputs-4">Outputs</h4>
-<h5 id="points-6">Points</h5>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="points-8">Points</h5>
 <p>The geometry with the new point cloud type.</p>
-</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fpoint.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/geometry-node-editor/header/add-menu/point.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-point">Add menu - Point</a><a class="h3" href="#distribute-points-in-grid">Distribute Points In Grid</a><a class="h3" href="#distribute-points-in-volume">Distribute Points In Volume</a><a class="h3" href="#distribute-points-on-faces">Distribute Points on Faces</a><a class="h3" href="#points-3">Points</a><a class="h3" href="#points-to-cuves">Points to Cuves</a><a class="h3" href="#points-to-sdf-grid">Points to SDF Grid</a><a class="h3" href="#points-to-vertices">Points to Vertices</a><a class="h3" href="#points-to-volume">Points to Volume</a><a class="h3" href="#rasterize-points">Rasterize Points</a><a class="h3" href="#set-point-radius">Set Point Radius</a><a class="h3" href="#set-point-cloud-type">Set Point Cloud Type</a></aside></div></body></html>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fpoint.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/geometry-node-editor/header/add-menu/point.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-point">Add menu - Point</a><a class="h3" href="#distribute-points-in-grid">Distribute Points In Grid</a><a class="h3" href="#distribute-points-in-volume">Distribute Points In Volume</a><a class="h3" href="#distribute-points-on-faces">Distribute Points on Faces</a><a class="h3" href="#points-4">Points</a><a class="h3" href="#points-to-cuves">Points to Cuves</a><a class="h3" href="#points-to-sdf-grid">Points to SDF Grid</a><a class="h3" href="#points-to-vertices">Points to Vertices</a><a class="h3" href="#points-to-volume">Points to Volume</a><a class="h3" href="#rasterize-points">Rasterize Points</a><a class="h3" href="#set-point-radius">Set Point Radius</a><a class="h3" href="#set-point-cloud-type">Set Point Cloud Type</a></aside></div></body></html>
