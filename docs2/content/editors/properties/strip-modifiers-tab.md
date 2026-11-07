@@ -21,11 +21,17 @@ order: 190
 
 The Strip Modifiers tab allows non-destructive adjustments to video, image, and effect strips in the Video Sequence Editor (VSE). These modifiers enhance visual output without altering the original media.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Breadcrumb | This shows what scene and what strip the active selected strip tab modifiers are showing. |
-| Pin | This pins the active selected strip modifier stack so that when you select another strip, the modifiers won’t change and remembers the pinned strip modifiers. |
-| Copy to Selected Strips | Copies the whole modifier stack of the active strip to the other selected strips in the Sequencer timeline. |
+### Breadcrumb
+
+This shows what scene and what strip the active selected strip tab modifiers are showing.
+
+### Pin
+
+This pins the active selected strip modifier stack so that when you select another strip, the modifiers won’t change and remembers the pinned strip modifiers.
+
+### Copy to Selected Strips
+
+Copies the whole modifier stack of the active strip to the other selected strips in the Sequencer timeline.
 
 ### Adding modifiers
 
@@ -33,10 +39,13 @@ The Strip Modifiers tab allows non-destructive adjustments to video, image, and 
 
 Two buttons sit at the top of the tab. Built-in modifiers and ready-made asset modifiers each have their own menu, just like in the Geometry Nodes editor.
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add Modifier | Opens the list of built-in modifiers, like Color Balance, Curves or Brightness/Contrast. Pick one to add it to the bottom of the stack. |
-| Add Asset Modifier | Opens your asset libraries, sorted by catalog. Pick a ready-made modifier to add it to the strip. Use **Search...** at the top to find one by name. |
+#### Add Modifier
+
+Opens the list of built-in modifiers, like Color Balance, Curves or Brightness/Contrast. Pick one to add it to the bottom of the stack.
+
+#### Add Asset Modifier
+
+Opens your asset libraries, sorted by catalog. Pick a ready-made modifier to add it to the strip. Use **Search...** at the top to find one by name.
 
 ![Add Asset Modifier menu](/docs2/images/editors/properties/strip-modifiers-tab/asset-modifier-menu.png)
 
@@ -54,14 +63,29 @@ Every modifier has a header with the same buttons, from left to right.
 
 Expands or collapses the modifier panel. Used to show or hide parameter controls.
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Icon | The modifier icon that indicates what kind of modifier is placed in the stack. |
-| Label | Displays the name of the modifier. Helps identify the effect applied to the strip. Double clicking this will rename the modifier. |
-| Preview (screen icon) | Shows the modifier in the Sequencer preview. Turn it off to compare with and without the effect while you work. |
-| Render (camera icon) | Uses the modifier when you render. Turn it off to leave the effect out of the final video. |
-| Arrow menu | More options for this modifier. |
-| Close Button (X) | Removes the modifier from the strip. |
+#### Icon
+
+The modifier icon that indicates what kind of modifier is placed in the stack.
+
+#### Label
+
+Displays the name of the modifier. Helps identify the effect applied to the strip. Double clicking this will rename the modifier.
+
+#### Preview (screen icon)
+
+Shows the modifier in the Sequencer preview. Turn it off to compare with and without the effect while you work.
+
+#### Render (camera icon)
+
+Uses the modifier when you render. Turn it off to leave the effect out of the final video.
+
+#### Arrow menu
+
+More options for this modifier.
+
+#### Close Button (X)
+
+Removes the modifier from the strip.
 
 ## Strip Modifier Masks
 
@@ -88,10 +112,13 @@ Displays the active mask name or source. Allows linking to any existing mask in 
 
 Controls how the mask timing aligns with the strip, only available when using the Mask mode.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Relative | Synchronizes the mask’s timeline to the strip’s start frame. Useful when the mask should follow the strip’s position in the sequence. |
-| Absolute | Keeps the mask’s original timeline position. Useful when the mask is designed to align with global frame numbers. |
+#### Relative
+
+Synchronizes the mask’s timeline to the strip’s start frame. Useful when the mask should follow the strip’s position in the sequence.
+
+#### Absolute
+
+Keeps the mask’s original timeline position. Useful when the mask is designed to align with global frame numbers.
 
 ## Strip Modifiers
 
@@ -103,11 +130,17 @@ Each modifier includes its own set of parameters and can be toggled, reordered, 
 
 Applies basic luminance and contrast adjustments to video or image strips. Useful for correcting exposure, enhancing tonal separation, or preparing footage for grading.
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Brightness | Adjusts the overall lightness of the strip. Positive values brighten the image; negative values darken it. Default value is 0.000 (no change). |
-| Contrast | Controls the difference between light and dark areas. Positive values increase separation, making shadows darker and highlights brighter. Negative values reduce contrast, flattening the image. Default value is 0.000 (no change). |
-| Mask Input | Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options. |
+#### Brightness
+
+Adjusts the overall lightness of the strip. Positive values brighten the image; negative values darken it. Default value is 0.000 (no change).
+
+#### Contrast
+
+Controls the difference between light and dark areas. Positive values increase separation, making shadows darker and highlights brighter. Negative values reduce contrast, flattening the image. Default value is 0.000 (no change).
+
+#### Mask Input
+
+Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
 ### Color Balance
 
@@ -129,12 +162,21 @@ Options include:
 - **Lift/Gamma/Gain:** standard three-band model affecting shadows, midtones, and highlights.
 - **Offset/Power/Slope (ASC-CDL):** alternative standard grading model used in some professional workflows.
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lift | Adjusts the color and luminance of shadows. Includes a color wheel for chromatic shift and a vertical slider for brightness. Invert button reverses the effect. |
-| Gamma | Adjusts the color and luminance of midtones. Includes a color wheel and brightness slider. Invert button reverses the effect. |
-| Gain | Adjusts the color and luminance of highlights. Includes a color wheel and brightness slider. Invert button reverses the effect. |
-| Mask Input | Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options. |
+##### Lift
+
+Adjusts the color and luminance of shadows. Includes a color wheel for chromatic shift and a vertical slider for brightness. Invert button reverses the effect.
+
+##### Gamma
+
+Adjusts the color and luminance of midtones. Includes a color wheel and brightness slider. Invert button reverses the effect.
+
+##### Gain
+
+Adjusts the color and luminance of highlights. Includes a color wheel and brightness slider. Invert button reverses the effect.
+
+##### Mask Input
+
+Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
 ### Compositor
 
@@ -155,10 +197,13 @@ The selected tree becomes active for the strip and is used to process its image 
 
 ![Use](/docs2/images/editors/properties/strip-modifiers-tab/use-2.png)
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Node Tree | Dropdown to select or create a node group. Selecting a tree activates it for the current strip. You can also force save, add and duplicate a new tree or remove current tree from the modifier. |
-| Mask Input | Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options. |
+##### Node Tree
+
+Dropdown to select or create a node group. Selecting a tree activates it for the current strip. You can also force save, add and duplicate a new tree or remove current tree from the modifier.
+
+##### Mask Input
+
+Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
 ### Curves
 
@@ -173,10 +218,13 @@ Tabs to select the curve behavior model:
 - **Standard:** applies direct curve mapping to input values.
 - **Filmlike**: simulates film-style response curves for smoother tonal transitions.
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel | Buttons to select which channel is being edited:   – **C** (Combined): affects all RGB channels together.   – **R** (Red), **G** (Green), **B** (Blue): affect individual color channels. |
-| Curve Graph | Displays the input-output mapping for the selected channel.   The horizontal axis represents input brightness; the vertical axis represents output brightness.   Points can be added and moved to shape the tonal response.   A straight diagonal line means no change. |
+##### Channel
+
+Buttons to select which channel is being edited:   – **C** (Combined): affects all RGB channels together.   – **R** (Red), **G** (Green), **B** (Blue): affect individual color channels.
+
+##### Curve Graph
+
+Displays the input-output mapping for the selected channel.   The horizontal axis represents input brightness; the vertical axis represents output brightness.   Points can be added and moved to shape the tonal response.   A straight diagonal line means no change.
 
 ### Properties
 
@@ -212,12 +260,10 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Extend horizontal | Extends the curve before the first curve point and behind the last curve point horizontally. |
-| Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Extend horizontal**: Extends the curve before the first curve point and behind the last curve point horizontally.
+- **Extend extrapolated**: Extends the curve before the first curve point and behind the last curve point extrapolated.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ##### Curve edit field
 
@@ -241,11 +287,9 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 When you have a point selected then you will reveal further settings at the bottom.
 
-| Entry | What it does |
-| ------------------- | -------------------------------- |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
+- **Vector Handle**: Set handle type to Vector.
+- **Auto Handle**: Set handle type to Auto.
+- **Auto Clamped Handle**: Set handle type to Auto Clamped.
 
 #### Mask Input
 
@@ -266,15 +310,33 @@ Applies hue-based adjustments to color properties across the spectrum. Useful fo
 
 ![Tools menu](/docs2/images/editors/properties/strip-modifiers-tab/tools-menu.png)
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------- |
-| Reset View | Resets the view. This menu item is here dysfunctional, you cannot view in or out. |
-| Reset Curve | Resets the curve to defaults. |
-| Auto Handle | Sets the handle for the curve points to Auto Handle. |
-| Vector Handle | Sets the handle for the curve points to Vector Handle. |
-| Auto Clamped | Sets the handle for the curve points to Auto Clamped. |
-| X / Y | The x and y position of the currently selected curve point. |
-| Delete Points | Deletes the currently selected curve point. |
+##### Reset View
+
+Resets the view. This menu item is here dysfunctional, you cannot view in or out.
+
+##### Reset Curve
+
+Resets the curve to defaults.
+
+##### Auto Handle
+
+Sets the handle for the curve points to Auto Handle.
+
+##### Vector Handle
+
+Sets the handle for the curve points to Vector Handle.
+
+##### Auto Clamped
+
+Sets the handle for the curve points to Auto Clamped.
+
+##### X / Y
+
+The x and y position of the currently selected curve point.
+
+##### Delete Points
+
+Deletes the currently selected curve point.
 
 #### Mask Input
 
@@ -307,10 +369,13 @@ Displays the active mask name or source. Allows linking to any existing mask in 
 
 Controls how the mask timing aligns with the strip, only available when using the Mask mode.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Relative | Synchronizes the mask’s timeline to the strip’s start frame. Useful when the mask should follow the strip’s position in the sequence. |
-| Absolute | Keeps the mask’s original timeline position. Useful when the mask is designed to align with global frame numbers. |
+##### Relative
+
+Synchronizes the mask’s timeline to the strip’s start frame. Useful when the mask should follow the strip’s position in the sequence.
+
+##### Absolute
+
+Keeps the mask’s original timeline position. Useful when the mask is designed to align with global frame numbers.
 
 ### Tone Map
 
@@ -330,13 +395,25 @@ Options include:
     Best suited for footage with high dynamic range or strong lighting variation.
 - **Rh_Simple** Applies a simplified tone mapping curve. Less biologically accurate but faster and more predictable. Useful for stylized looks or when performance is prioritized over realism.
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Intensity | Controls the overall strength of the tone mapping effect. Higher values produce more pronounced compression of highlights and shadows. |
-| Contrast | Adjusts the perceived contrast after tone mapping. Useful for restoring separation between tones. |
-| Adaptation | Controls how quickly the simulated photoreceptor adapts to changes in brightness. Higher values simulate faster adaptation, affecting highlight roll-off and shadow recovery. |
-| Color Correction | Applies additional color balancing after tone mapping. Useful for compensating shifts introduced by dynamic range compression. |
-| Mask Input | Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options. |
+##### Intensity
+
+Controls the overall strength of the tone mapping effect. Higher values produce more pronounced compression of highlights and shadows.
+
+##### Contrast
+
+Adjusts the perceived contrast after tone mapping. Useful for restoring separation between tones.
+
+##### Adaptation
+
+Controls how quickly the simulated photoreceptor adapts to changes in brightness. Higher values simulate faster adaptation, affecting highlight roll-off and shadow recovery.
+
+##### Color Correction
+
+Applies additional color balancing after tone mapping. Useful for compensating shifts introduced by dynamic range compression.
+
+##### Mask Input
+
+Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
 ### White Balance
 
@@ -344,10 +421,13 @@ Options include:
 
 Adjusts the overall color temperature of an image by remapping what is considered “white.” Useful for correcting color casts caused by lighting conditions—such as overly warm indoor footage or cool daylight scenes.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| White Value | Defines the target color that should be treated as neutral white. Typically selected from the image using a color picker by mousing over and pressing E. Once set, the node shifts all colors accordingly to balance the image. |
-| Mask Input | Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options. |
+#### White Value
+
+Defines the target color that should be treated as neutral white. Typically selected from the image using a color picker by mousing over and pressing E. Once set, the node shifts all colors accordingly to balance the image.
+
+#### Mask Input
+
+Optional section for applying the node tree selectively.   Supports both Strip and Mask modes, with time alignment options.
 
 ## Audio Strip Modifiers
 
@@ -357,11 +437,17 @@ Adjusts the overall color temperature of an image by remapping what is considere
 
 Applies a delay-based echo effect to sound strips in the Video Sequence Editor. Useful for creating spatial depth, rhythmic repetition, or stylized audio trails.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Delay | Controls the time between the original sound and its repeated echo. Value is measured in seconds.   Higher values produce longer gaps between repetitions. |
-| Feedback | Determines how much of the echoed signal is fed back into the effect. A value of 0 means no repetition beyond the first echo. Higher values create multiple trailing echoes with diminishing volume. |
-| Mix | Blends the original signal with the echoed signal. A value of 0 outputs only the dry (original) sound.   A value of 1 outputs only the wet (echoed) signal. Intermediate values create a balanced mix. |
+#### Delay
+
+Controls the time between the original sound and its repeated echo. Value is measured in seconds.   Higher values produce longer gaps between repetitions.
+
+#### Feedback
+
+Determines how much of the echoed signal is fed back into the effect. A value of 0 means no repetition beyond the first echo. Higher values create multiple trailing echoes with diminishing volume.
+
+#### Mix
+
+Blends the original signal with the echoed signal. A value of 0 outputs only the dry (original) sound.   A value of 1 outputs only the wet (echoed) signal. Intermediate values create a balanced mix.
 
 ### Equalizer
 
@@ -373,20 +459,29 @@ The panel displays a frequency graph ranging from approximately 30 Hz to 20,000 
 
 The **vertical axis** represents gain in decibels (dB), allowing boosts or cuts to specific frequency bands.
 
-| Entry | What it does |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Frequency Curve | Editable graph that defines gain adjustments across the spectrum. You can draw or manipulate points to boost or reduce specific frequencies. |
-| Magnifying Glass Zoom in/Out Buttons | Zooms into the frequency graph for precise editing. |
-| Clipping Button | This toggle enables or disables **clipping visualization** in the frequency graph.   When active, it highlights areas where gain adjustments may cause distortion or exceed safe audio levels. |
+#### Frequency Curve
+
+Editable graph that defines gain adjustments across the spectrum. You can draw or manipulate points to boost or reduce specific frequencies.
+
+#### Magnifying Glass Zoom in/Out Buttons
+
+Zooms into the frequency graph for precise editing.
+
+#### Clipping Button
+
+This toggle enables or disables **clipping visualization** in the frequency graph.   When active, it highlights areas where gain adjustments may cause distortion or exceed safe audio levels.
 
 #### Tools Dropdown
 
 ![Tools Dropdown](/docs2/images/editors/properties/strip-modifiers-tab/tools-dropdown.png)
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reset View | Resets the zoom and pan settings of the frequency graph.   Does not affect the actual EQ curve—purely a visual reset.   Useful when the graph becomes cluttered or zoomed too far. |
-| Reset Curve | Clears all gain adjustments and returns the EQ curve to a flat line.   Effectively disables the modifier’s influence until new edits are made.   Recommended when starting fresh or undoing experimental changes. |
+##### Reset View
+
+Resets the zoom and pan settings of the frequency graph.   Does not affect the actual EQ curve—purely a visual reset.   Useful when the graph becomes cluttered or zoomed too far.
+
+##### Reset Curve
+
+Clears all gain adjustments and returns the EQ curve to a flat line.   Effectively disables the modifier’s influence until new edits are made.   Recommended when starting fresh or undoing experimental changes.
 
 ### Pitch
 
@@ -403,11 +498,17 @@ Options include:
 - **Semitones:** adjusts pitch in musical half-steps.
 - **Ratio:** adjusts pitch by using a direct ratio.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Semitones | Sets the pitch shift in semitone steps.   Positive values raise the pitch; negative values lower it. |
-| Cents | Adds fine-tuning to the pitch shift. Useful for microtonal adjustments or precise retuning. |
-| Preserve Vocal Formants | Checkbox that maintains natural vocal characteristics during pitch shifting. Prevents unnatural artifacts when modifying speech or singing. |
+##### Semitones
+
+Sets the pitch shift in semitone steps.   Positive values raise the pitch; negative values lower it.
+
+##### Cents
+
+Adds fine-tuning to the pitch shift. Useful for microtonal adjustments or precise retuning.
+
+##### Preserve Vocal Formants
+
+Checkbox that maintains natural vocal characteristics during pitch shifting. Prevents unnatural artifacts when modifying speech or singing.
 
 #### Quality
 

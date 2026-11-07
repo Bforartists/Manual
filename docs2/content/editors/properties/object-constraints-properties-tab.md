@@ -74,15 +74,25 @@ Applies the constraint. The current state becomes real. The constraint gets dele
 
 ![Dropdown menu](/docs2/images/editors/properties/object-constraints-properties-tab/dropdown-menu.png)
 
+#### Apply
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apply | Applies the constraint. |
-| Duplicate | Duplicates the constraint. |
-| Copy to Selected | Copies the constraint from the source to the target object. First select the source object, hold down shift and select the target object so that both are selected. Then perform Copy to Selected. The constraint will now also be at the target object. |
-| Move to First | Moves the constraint to the first place in the constraint list. |
-| Move to Last | Moves the constraint to the last place in the constraint list. |
+Applies the constraint.
 
+#### Duplicate
+
+Duplicates the constraint.
+
+#### Copy to Selected
+
+Copies the constraint from the source to the target object. First select the source object, hold down shift and select the target object so that both are selected. Then perform Copy to Selected. The constraint will now also be at the target object.
+
+#### Move to First
+
+Moves the constraint to the first place in the constraint list.
+
+#### Move to Last
+
+Moves the constraint to the last place in the constraint list.
 
 ### Remove
 
@@ -140,12 +150,13 @@ The «solved camera motion» is where Blender reconstructs the position of the p
 
 Receive tracking data from the active clip in the Movie Clip editor. If unchecked, an option appears to choose from the other clips.
 
+##### Constraint to F-Curve
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------- |
-| Constraint to F-Curve | Applies the constraint, and creates Keyframes for the transforms. |
-| Influence | The influence level of this constraint. |
+Applies the constraint, and creates Keyframes for the transforms.
 
+##### Influence
+
+The influence level of this constraint.
 
 ### Follow Track
 
@@ -153,13 +164,17 @@ Receive tracking data from the active clip in the Movie Clip editor. If unchecke
 
 This constraint makes objects have the same position at a frame as the track has. The motion of this object happens on a single plane defined by the camera and the original position of the object.
 
+#### Active Clip
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Clip | Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips. |
-| 3D Position | Use the 3D position of the track to parent to. |
-| Undistorted | Parent to the undistorted position of the 2D track. |
+Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips.
 
+#### 3D Position
+
+Use the 3D position of the track to parent to.
+
+#### Undistorted
+
+Parent to the undistorted position of the 2D track.
 
 #### Frame Method
 
@@ -167,14 +182,21 @@ This constraint makes objects have the same position at a frame as the track has
 
 Defines how the footage is fitted in the camera frame.
 
+##### Camera
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Camera | Select the camera to which the motion is parented to (if active an empty scene camera is used). |
-| Depth Object | If this object is set, constrained objects will be projected onto the surface of this depth object which can be used to create facial makeup visual effects. |
-| Constraint to F-Curve | Creates F-Curves for the object that copies the movement caused by the constraint. |
-| Influence | The influence level of this constraints. |
+Select the camera to which the motion is parented to (if active an empty scene camera is used).
 
+##### Depth Object
+
+If this object is set, constrained objects will be projected onto the surface of this depth object which can be used to create facial makeup visual effects.
+
+##### Constraint to F-Curve
+
+Creates F-Curves for the object that copies the movement caused by the constraint.
+
+##### Influence
+
+The influence level of this constraints.
 
 ### Object Solver
 
@@ -188,15 +210,25 @@ This can be used to add a mesh to video for example.
 
 If it says Solve Camera Motion instead of Solve Object Motion then go into the Movie Clip Editor &gt; Properties region &gt; Objects and switch it from the camera, to an object.
 
+#### Active Clip
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Clip | Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips. |
-| Camera | Here you can choose the camera. |
-| Set Inverse / Clear Inverse | Set the connection for the object solver constraint inverse. Clear the inversion. |
-| Constraint to F-Curve | Creates F-Curves for the object that copies the movement caused by the constraint. |
-| Influence | The influence level of this constraint. |
+Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips.
 
+#### Camera
+
+Here you can choose the camera.
+
+#### Set Inverse / Clear Inverse
+
+Set the connection for the object solver constraint inverse. Clear the inversion.
+
+#### Constraint to F-Curve
+
+Creates F-Curves for the object that copies the movement caused by the constraint.
+
+#### Influence
+
+The influence level of this constraint.
 
 ## Transform Constraints
 
@@ -222,15 +254,25 @@ Here you can choose the target object to copy the location from.
 
 If the *Target* is an *Armature*, then you have the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| Vertex Group | If the *Target* is a *Mesh*, then you have the optional choice to set a *Vertex Group* as target. |
-| Axis X, Y, Z | Here you can choose which axes to constraint. |
-| Invert X, Y, Z | Inverts the coordinate input. Positive becomes negative, and vice versa. |
-| Offset | Add an offset from the original position to the target position. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### Vertex Group
+
+If the *Target* is a *Mesh*, then you have the optional choice to set a *Vertex Group* as target.
+
+##### Axis X, Y, Z
+
+Here you can choose which axes to constraint.
+
+##### Invert X, Y, Z
+
+Inverts the coordinate input. Positive becomes negative, and vice versa.
+
+##### Offset
+
+Add an offset from the original position to the target position.
 
 #### Target Space for Target and Owner
 
@@ -266,14 +308,21 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Axis X, Y, Z
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------- |
-| Axis X, Y, Z | These buttons control which axes are constrained - by default, all three are on. |
-| Invert X, Y, Z | Inverts the coordinate input. Positive becomes negative, and vice versa. |
-| Invert Rotation | Inverts the final combined rotation. Positive becomes negative, and vice versa. |
-| Offset | Add an offset from the original position to the target position. |
+These buttons control which axes are constrained - by default, all three are on.
 
+##### Invert X, Y, Z
+
+Inverts the coordinate input. Positive becomes negative, and vice versa.
+
+##### Invert Rotation
+
+Inverts the final combined rotation. Positive becomes negative, and vice versa.
+
+##### Offset
+
+Add an offset from the original position to the target position.
 
 #### Target Space for Target and Owner
 
@@ -309,15 +358,25 @@ If *Target* is a *Mesh*, a new field is displayed offering the optional choice t
 
 If *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Axis X, Y, Z
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------ |
-| Axis X, Y, Z | These buttons control which axes are constrained - by default, all three are on. |
-| Power | Raise the target scale to the specified power. |
-| Make Uniform | Redistribute the copied change in volume equaly between the three axes of the owner. |
-| Offset | Add an offset from the original scale to the target scale. |
-| Additive | Use Addition instead of Multiplication to combine scale. Activates with Offset on. |
+These buttons control which axes are constrained - by default, all three are on.
 
+##### Power
+
+Raise the target scale to the specified power.
+
+##### Make Uniform
+
+Redistribute the copied change in volume equaly between the three axes of the owner.
+
+##### Offset
+
+Add an offset from the original scale to the target scale.
+
+##### Additive
+
+Use Addition instead of Multiplication to combine scale. Activates with Offset on.
 
 #### Target Space for Target and Owner
 
@@ -353,12 +412,13 @@ If *Target* is a *Mesh*, a new field is displayed offering the optional choice t
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| Remove Target Shear | Remove shear from the target transformation before combining. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### Remove Target Shear
+
+Remove shear from the target transformation before combining.
 
 #### Mix
 
@@ -400,14 +460,21 @@ If *Target* is a *Mesh*, a new field is displayed offering the optional choice t
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| Distance | This numeric field sets the limit distance, i.e. the radius of the constraining sphere. |
-| Reset Distance | When clicked, this small button will reset the *Distance* value, so that it corresponds to the actual distance between the owner and its target (i.e. the distance before this constraint is applied). |
-| Clamp Region | The *Limit Mode* drop-down menu allows you to choose how to use the sphere defined by the *Distance* setting and target’s center: · **Inside**: The owner is constrained *inside* the sphere. · **Outside**: The owner is constrained *outside* the sphere. · **Surface**: The owner is constrained *on the surface* of the sphere. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### Distance
+
+This numeric field sets the limit distance, i.e. the radius of the constraining sphere.
+
+##### Reset Distance
+
+When clicked, this small button will reset the *Distance* value, so that it corresponds to the actual distance between the owner and its target (i.e. the distance before this constraint is applied).
+
+##### Clamp Region
+
+The *Limit Mode* drop-down menu allows you to choose how to use the sphere defined by the *Distance* setting and target’s center: · **Inside**: The owner is constrained *inside* the sphere. · **Outside**: The owner is constrained *outside* the sphere. · **Surface**: The owner is constrained *on the surface* of the sphere.
 
 #### Target Space for Target and Owner
 
@@ -429,15 +496,25 @@ This constraint restricts the amount of allowed translations along each axis, th
 
 The limits for an object are calculated from its center. Te limits of a bone are calculated from its root.
 
+#### Minimum X Y Z
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Minimum X Y Z | Restrict the minimum location. You can adjust the value in the edit box below. |
-| Maximum X Y Z | Restrict the maximum location. You can adjust the value in the edit box below. |
-| For Transform | The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped. |
-| Convert | Calculate the constraint in local space or world space. |
-| Influence | The influence level of this constraint. |
+Restrict the minimum location. You can adjust the value in the edit box below.
 
+#### Maximum X Y Z
+
+Restrict the maximum location. You can adjust the value in the edit box below.
+
+#### For Transform
+
+The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.
+
+#### Convert
+
+Calculate the constraint in local space or world space.
+
+#### Influence
+
+The influence level of this constraint.
 
 ### Limit Rotation
 
@@ -479,15 +556,25 @@ This constraint restricts the amount of allowed scale along each axis, through l
 
 The limits for an object are calculated from its center. Te limits of a bone are calculated from its root.
 
+#### Minimum X Y Z
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Minimum X Y Z | The minimum size. You can adjust the value in the edit boxes below. |
-| Maximum X Y Z | The maximum size. You can adjust the value in the edit boxes below. |
-| For Transform | The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped. |
-| Convert | Calculate the constraint in local space or world space. |
-| Influence | The influence level of this constraint. |
+The minimum size. You can adjust the value in the edit boxes below.
 
+#### Maximum X Y Z
+
+The maximum size. You can adjust the value in the edit boxes below.
+
+#### For Transform
+
+The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.
+
+#### Convert
+
+Calculate the constraint in local space or world space.
+
+#### Influence
+
+The influence level of this constraint.
 
 ### Maintain Volume
 
@@ -501,19 +588,25 @@ The *Maintain Volume* constraint limits the volume of a mesh or a bone to a give
 
 The way constrant treats original non free axis scaling.
 
+##### Strict
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Strict | Volume is strictly preservedm overriding the scaling of non-free axes. |
-| Uniform | Volume is preserved when the object is scaled uniformly. Devitations from uniform scale on non free-axes are passed through. |
-| Single Axis | Volume is preserved when the object is scaled only on the free axis. Non-free axis scaling is passed through. |
+Volume is strictly preservedm overriding the scaling of non-free axes.
 
+##### Uniform
 
-| Entry | What it does |
-| ------------------- | ------------------------------------ |
-| Free Axis X / Y / Z | The free-scaling axis of the object. |
-| Volume | The bone’s rest volume. |
+Volume is preserved when the object is scaled uniformly. Devitations from uniform scale on non free-axes are passed through.
 
+##### Single Axis
+
+Volume is preserved when the object is scaled only on the free axis. Non-free axis scaling is passed through.
+
+##### Free Axis X / Y / Z
+
+The free-scaling axis of the object.
+
+##### Volume
+
+The bone’s rest volume.
 
 #### Owner Space
 
@@ -555,12 +648,13 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Extrapolate
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Extrapolate | With this option enabled the **min** and **max** values are no longer strict limits, but rather “markers” defining a proportional (linear) mapping between input and corresponding output values. |
-| Target | The target space that the target is evaluated in. |
+With this option enabled the **min** and **max** values are no longer strict limits, but rather “markers” defining a proportional (linear) mapping between input and corresponding output values.
 
+##### Target
+
+The target space that the target is evaluated in.
 
 #### Owner
 
@@ -598,7 +692,7 @@ A tab to switch between the available location, rotation and scale values.
 
 What axis to use for the X Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 
@@ -608,7 +702,7 @@ Edit the minimum and maximum values for the source object.
 
 What axis to use for the Y Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 
@@ -618,7 +712,7 @@ Edit the minimum and maximum values for the source object.
 
 What axis to use for the Z Source constraint.
 
-**Min Max**
+###### Min Max
 
 Edit the minimum and maximum values for the source object.
 
@@ -648,20 +742,29 @@ Load the Alembic file.
 
 A list of available alembic files that are already loaded.
 
+###### Edit Box
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Edit Box | The name of the alembic file. |
-| Fake User | Keep the file in the scene even when it is not used. |
-| Open Cache File | Load an alembic file. |
-| Remove | Remove the alembic file as the active file. The file will remain in the scene until you purge it, close and reload the scene. Given that it has no fake user assigned to keep it in the scene anyways. |
+The name of the alembic file.
 
+###### Fake User
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------- |
-| File Path | The path to the Alembic file. |
-| Sequence | Whether or not the cache is separated in a series of files. · **Refresh Active**: Update the files and paths. |
+Keep the file in the scene even when it is not used.
 
+###### Open Cache File
+
+Load an alembic file.
+
+###### Remove
+
+Remove the alembic file as the active file. The file will remain in the scene until you purge it, close and reload the scene. Given that it has no fake user assigned to keep it in the scene anyways.
+
+###### File Path
+
+The path to the Alembic file.
+
+###### Sequence
+
+Whether or not the cache is separated in a series of files. · **Refresh Active**: Update the files and paths.
 
 #### Object Path
 
@@ -677,13 +780,17 @@ Controls the percentage of affect the constraint has on the object. See common c
 
 ![Time Subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/time-subpanel.png)
 
+##### Sequence
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sequence | Whether or not the cache is separated in a series of files. |
-| Override Frame | Whether to use a custom frame for looking up data in the cache file, instead of using the current scene frame. · **Frame**: The time to use for looking up the data in the cache file, or to determine which to use in a file sequence. |
-| Frame Offset | Define a frame offset to the current frame. |
+Whether or not the cache is separated in a series of files.
 
+##### Override Frame
+
+Whether to use a custom frame for looking up data in the cache file, instead of using the current scene frame. · **Frame**: The time to use for looking up the data in the cache file, or to determine which to use in a file sequence.
+
+##### Frame Offset
+
+Define a frame offset to the current frame.
 
 #### Render Procedural subpanel
 
@@ -697,12 +804,13 @@ This feature is just available for Cycles, and just in an experimental state.
 
 Display boxes as placeholders in the viewport.
 
+###### Use Prefetch
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Prefetch | This feature is just available for Cycles, and just in an experimental state. When enabled, the Cycles procedural will preload animation data for faster update. |
-| Prefetch Cache Size | This feature is just available for Cycles, and just in an experimental state. Memory usage limit for the cache. If the data size does not fit the renderer is aborted. 0 disables the feature. |
+This feature is just available for Cycles, and just in an experimental state. When enabled, the Cycles procedural will preload animation data for faster update.
 
+###### Prefetch Cache Size
+
+This feature is just available for Cycles, and just in an experimental state. Memory usage limit for the cache. If the data size does not fit the renderer is aborted. 0 disables the feature.
 
 #### Velocity subpanel
 
@@ -726,14 +834,21 @@ Defines how the velocity vectors are interpreted with regard to time.
 
 The *Clamp To* constraint clamps an object to a curve. So you need a curve object as the target.
 
+#### Target
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------- |
-| Target | Here you can choose the target object. |
-| Main Axis | Auto clamps to all three axis. X , Y, Z maps just to one axis,. |
-| Cyclic | With cyclic enabled the object will jump from end point to start point once it has reached the end. |
-| Influence | The influence level of this constraint. |
+Here you can choose the target object.
 
+#### Main Axis
+
+Auto clamps to all three axis. X , Y, Z maps just to one axis,.
+
+#### Cyclic
+
+With cyclic enabled the object will jump from end point to start point once it has reached the end.
+
+#### Influence
+
+The influence level of this constraint.
 
 ### Damped Track
 
@@ -757,13 +872,17 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| To | The axis to use to point towards the target object. For a camera you might want to use -Z |
-| Influence | The influence level of this constraint. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### To
+
+The axis to use to point towards the target object. For a camera you might want to use -Z
+
+##### Influence
+
+The influence level of this constraint.
 
 ### Locked Track
 
@@ -789,14 +908,21 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| To | The axis to use to point towards the target object. For a camera you might want to use -Z |
-| Lock | The axis that you want to lock. |
-| Influence | The influence level of this constraint. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### To
+
+The axis to use to point towards the target object. For a camera you might want to use -Z
+
+##### Lock
+
+The axis that you want to lock.
+
+##### Influence
+
+The influence level of this constraint.
 
 ### Stretch To
 
@@ -822,13 +948,17 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| Rest Length | Here you can define the rest distance between the owner and its target. The rest length is the distance at which there is no deformation (stretching) of the owner. |
-| Reset | Resets the Rest Length. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### Rest Length
+
+Here you can define the rest distance between the owner and its target. The rest length is the distance at which there is no deformation (stretching) of the owner.
+
+##### Reset
+
+Resets the Rest Length.
 
 #### Volume Min / Volume Max
 
@@ -840,13 +970,17 @@ Here you can control the amount of “volume” variation proportionally to the 
 
 Shows when either the volume min or volume max is ticked. Strength of volume stretching clamping.
 
+###### Volume
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Volume | Here you can adjust which of the X and/or Z axes should be affected to preserve the virtual volume while stretching along the Y axis. The NONE button disables the volumetric features. |
-| Plane | Here you can control which of the X or Z axes should be as much as possible aligned with the global Z axis, while tracking the target with the Y axis. |
-| Influence | The influence level of this constraint. |
+Here you can adjust which of the X and/or Z axes should be affected to preserve the virtual volume while stretching along the Y axis. The NONE button disables the volumetric features.
 
+###### Plane
+
+Here you can control which of the X or Z axes should be as much as possible aligned with the global Z axis, while tracking the target with the Y axis.
+
+###### Influence
+
+The influence level of this constraint.
 
 ### Track To
 
@@ -870,14 +1004,21 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| To | The axis to use to point towards the target object. |
-| Up | The axis that points upwards |
-| Target Z | Constrain the UP direction to the target's Z axis instead of the World Z Axis. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### To
+
+The axis to use to point towards the target object.
+
+##### Up
+
+The axis that points upwards
+
+##### Target Z
+
+Constrain the UP direction to the target's Z axis instead of the World Z Axis.
 
 #### Target Space for Target and Owner
 
@@ -1011,15 +1152,25 @@ The starting and ending frames of the action to be mapped.
 
 Armature is the constraint version of the Armature Modifier. It reproduces the weight-blended bone transformations and applies it to its owner orientation. It can be used like a variant of the Child Of constraint that can handle multiple parents at once, but requires all of them to be bones.
 
+#### Preserve Volume
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Preserve Volume | Tries to preserve the volume when deforming the mesh. |
-| Use Envelopes | Multiply the weights by envelope for all bones instead of vertex group based blending. The specified weights are still used, and only the listed bones are considered. |
-| Add Target Bone | Add a target bone. By clicking two edit boxes becomes available. You can add multiple armatures and bones here. |
-| Normalize Weights | Normalize the weights of all target bones. |
-| Influence | The influence level of this constraint. |
+Tries to preserve the volume when deforming the mesh.
 
+#### Use Envelopes
+
+Multiply the weights by envelope for all bones instead of vertex group based blending. The specified weights are still used, and only the listed bones are considered.
+
+#### Add Target Bone
+
+Add a target bone. By clicking two edit boxes becomes available. You can add multiple armatures and bones here.
+
+#### Normalize Weights
+
+Normalize the weights of all target bones.
+
+#### Influence
+
+The influence level of this constraint.
 
 #### Bones subpanel
 
@@ -1027,14 +1178,21 @@ Armature is the constraint version of the Armature Modifier. It reproduces the w
 
 When you ad a bone with the Add Target Bone, then you create a property in this panel.
 
+##### First Edit Box
 
-| Entry | What it does |
-| --------------- | ------------------------------------------ |
-| First Edit Box | Here you select the armature. |
-| Second Edit Box | Here you select the bone. |
-| Remove Target | Remove the target. Resets Add Target Bone. |
-| Blend Weight | Blending Weight of this bone. |
+Here you select the armature.
 
+##### Second Edit Box
+
+Here you select the bone.
+
+##### Remove Target
+
+Remove the target. Resets Add Target Bone.
+
+##### Blend Weight
+
+Blending Weight of this bone.
 
 ### Child Of
 
@@ -1058,13 +1216,17 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Location, Rotation, Scale
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------- |
-| Location, Rotation, Scale | Activate the parenting for the corresponding axis. |
-| Set Inverse / Clear Inverse | Set the connection for the object solver constraint inverse. Clear the inversion. |
-| Influence | The influence level of this constraint. |
+Activate the parenting for the corresponding axis.
 
+##### Set Inverse / Clear Inverse
+
+Set the connection for the object solver constraint inverse. Clear the inversion.
+
+##### Influence
+
+The influence level of this constraint.
 
 ### Floor
 
@@ -1092,14 +1254,21 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Sticky
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sticky | The object sticks at its position at contact. For example, it cannot slide around on the surface of a plane any more. |
-| Use Rotation | Take the target’s rotation into account. This allows you to have a “floor” plane of any orientation you like, not just the global XY, XZ and YZ ones... |
-| Offset | Here you can define an offset from the pivot to the ground plane object. |
-| Min / Max | Here you define which side of the target object will be the floor. By default, these normals are aligned with the global axes. If you enable Use Rotation (see above), they will be aligned with the local target’s axes. |
+The object sticks at its position at contact. For example, it cannot slide around on the surface of a plane any more.
 
+##### Use Rotation
+
+Take the target’s rotation into account. This allows you to have a “floor” plane of any orientation you like, not just the global XY, XZ and YZ ones...
+
+##### Offset
+
+Here you can define an offset from the pivot to the ground plane object.
+
+##### Min / Max
+
+Here you define which side of the target object will be the floor. By default, these normals are aligned with the global axes. If you enable Use Rotation (see above), they will be aligned with the local target’s axes.
 
 #### Target Space for Target and Owner
 
@@ -1125,27 +1294,41 @@ The movement happens in the global world.
 
 Click at Animate Path to create the animation. When you play the animation, then the object will move along the path now. The path length can be adjusted in the Path Animation panel of the curve. Here you can see that the value behind evaluation time is now green. And there is a keyframe symbol behind the edit box. Adjust the number of frames to your needs.
 
+#### Target
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------- |
-| Target | Choose the target path. |
-| Offset | The number of frames to offset from the “animation” defined by the path. It starts by default from frame 1. |
-| Forward Axis | The axis that points forward at the path. |
-| Up Axis | The axis that points upwards. |
-| Fixed position | Object will stay locked to a single point somewhere along the length of the curve regardless of time. |
-| Curve Radius | Objects scaled by the curve radius. See Curve Editing. |
+Choose the target path.
 
+#### Offset
+
+The number of frames to offset from the “animation” defined by the path. It starts by default from frame 1.
+
+#### Forward Axis
+
+The axis that points forward at the path.
+
+#### Up Axis
+
+The axis that points upwards.
+
+#### Fixed position
+
+Object will stay locked to a single point somewhere along the length of the curve regardless of time.
+
+#### Curve Radius
+
+Objects scaled by the curve radius. See Curve Editing.
 
 #### Follow Curve
 
 When this option is activated, the owner’s rotation is modified by:
 
+##### Forward
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Forward | The axis of the object that has to be aligned with the forward direction of the path (i.e. tangent to the curve at the owner’s position). |
-| Up | The axis of the object that has to be aligned (as much as possible) with the world Z axis. In fact, with this option activated, the behavior of the owner shares some properties with the one caused by a Locked Track constraint, with the path as “axle”, and the world Z axis as “magnet”. |
+The axis of the object that has to be aligned with the forward direction of the path (i.e. tangent to the curve at the owner’s position).
 
+##### Up
+
+The axis of the object that has to be aligned (as much as possible) with the world Z axis. In fact, with this option activated, the behavior of the owner shares some properties with the one caused by a Locked Track constraint, with the path as “axle”, and the world Z axis as “magnet”.
 
 #### Animate Path
 
@@ -1157,12 +1340,13 @@ Add a default animation for the path constraint if it is not animated already.
 
 Retreive transform from target geometry attribute data.
 
+#### Target
 
-| Entry | What it does |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| Target | Here you can choose the target object. |
-| Offset with Target Transform | Apply the world transform of the target object on top of the transform of the attribute. |
+Here you can choose the target object.
 
+#### Offset with Target Transform
+
+Apply the world transform of the target object on top of the transform of the attribute.
 
 #### Data Type
 
@@ -1212,13 +1396,17 @@ If the *Target* is a *Mesh*, a new field is displayed offering the optional choi
 
 If the *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
+##### Head/Tail
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------- |
-| Head/Tail | If the target is a bone, then here you can adjust where along this bone the target point lies. |
-| Use Relative Offset | Offset will be an absolute point in space instead of relative to the target. |
-| Pivot Offset X / Y / Z | Here you can adjust an offset. |
+If the target is a bone, then here you can adjust where along this bone the target point lies.
 
+##### Use Relative Offset
+
+Offset will be an absolute point in space instead of relative to the target.
+
+##### Pivot Offset X / Y / Z
+
+Here you can adjust an offset.
 
 #### Rotation Range
 
@@ -1266,16 +1454,29 @@ Target the nearest vertex at the target.
 
 Target the nearest surface point along a given axis.
 
+###### Project Axis
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Project Axis | Here you can define the axis |
-| Space | Here you can define the space that gets used for this axis. |
-| Distance | Limit the distance used for projection. Zero disables the Project Distance. |
-| Project Opposite | Project in both specified and opposite directions. |
-| Face Cull | Stop vertices from projecting to a face on the target when facing towards or away. |
-| Invert Cull | Invert the face cull mode. |
+Here you can define the axis
 
+###### Space
+
+Here you can define the space that gets used for this axis.
+
+###### Distance
+
+Limit the distance used for projection. Zero disables the Project Distance.
+
+###### Project Opposite
+
+Project in both specified and opposite directions.
+
+###### Face Cull
+
+Stop vertices from projecting to a face on the target when facing towards or away.
+
+###### Invert Cull
+
+Invert the face cull mode.
 
 ##### Nearest Surface Point
 

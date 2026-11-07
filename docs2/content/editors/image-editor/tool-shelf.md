@@ -68,12 +68,8 @@ Clicking at the left color field reveals a color picker. Define the color for th
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
-
+- **Radius**: The radius for the stroke stabilization.
+- **Factor**: Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 #### Annotate Line
 
@@ -139,13 +135,17 @@ The radius of the eraser pencil.
 
 The settings for these tools are in the tools tab in the sidebar. This content is explained in the chapter Image Editor - Sidebar. Here we just explain what the tool does and how to use it.
 
+### Brush
 
-| Entry | What it does |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Brush | The draw brush allows you to draw at the canvas. The color can be adjusted in the brush panel in the sidebar. The Tools Tab provides you with further options and settings. |
-| Blur | Softens the image under the brush. |
-| Smear | Smears the image under the brush. |
+The draw brush allows you to draw at the canvas. The color can be adjusted in the brush panel in the sidebar. The Tools Tab provides you with further options and settings.
 
+### Blur
+
+Softens the image under the brush.
+
+### Smear
+
+Smears the image under the brush.
 
 ### Clone
 
@@ -161,14 +161,16 @@ You can move the stencil image around with the right mouse button.
 
 ![Last Operator Grab Clone](/docs2/images/editors/image-editor/tool-shelf/last-operator-grab-clone.png)
 
+Change the settings of **Grab Clone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Delta X Y
 
 The position of the stencil image. The position gets calculated from the lower left corner. It is not calculated in pixels, but relative to the source image. The width and height of it is the range between 0 and 1
 
+###### Fill
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------------------- |
-| Fill | Fills areas with the same color with another color of your choice. The color can be set in the Brush panel in the sidebar. |
-| Mask | This tool allows you to mask out image parts. |
+Fills areas with the same color with another color of your choice. The color can be set in the Brush panel in the sidebar.
 
+###### Mask
 
+This tool allows you to mask out image parts.

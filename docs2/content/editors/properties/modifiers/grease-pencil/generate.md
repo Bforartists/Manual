@@ -156,7 +156,7 @@ Set a fixed number of frames for all build animations.
 
 Set a manual percentage to build.
 
-**Factor**
+###### Factor
 
 How much the stroke is visible.
 
@@ -194,7 +194,7 @@ What method to use to build animations. Number of frames, or percentage.
 
 ![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png)
 
-**Time Alignment**
+###### Time Alignment
 
 ![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
@@ -207,7 +207,7 @@ When strokes should start to appear or disappear.
 | Align End | All strokes disappears at the same time. |
 
 
-**Frames**
+###### Frames
 
 Maximum number of frames that the build effect can run.
 
@@ -219,7 +219,7 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 ![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png)
 
-**Time Alignment**
+###### Time Alignment
 
 ![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
@@ -232,7 +232,7 @@ When strokes should start to appear or disappear.
 | Align End | All strokes disappears at the same time. |
 
 
-**Factor**
+###### Factor
 
 How much the stroke is visible.
 
@@ -267,7 +267,7 @@ What method to use to build animations.
 
 ![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png)
 
-**Time Alignment**
+###### Time Alignment
 
 ![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
@@ -280,7 +280,7 @@ When strokes should start to appear or disappear.
 | Align End | All strokes disappears at the same time. |
 
 
-**Frames**
+###### Frames
 
 Maximum number of frames that the build effect can run.
 
@@ -292,7 +292,7 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 ![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png)
 
-**Time Alignment**
+###### Time Alignment
 
 ![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
@@ -305,7 +305,7 @@ When strokes should start to appear or disappear.
 | Align End | All strokes disappears at the same time. |
 
 
-**Factor**
+###### Factor
 
 How much the stroke is visible.
 

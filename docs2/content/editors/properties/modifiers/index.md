@@ -220,7 +220,7 @@ Some of the properties can be animated. Click at the animate property button at 
 Add a modifier nodegroup into the modifier stack. This will list and create all Geometry Node group assets assigned to the Modifier property. If they are not assigned to a category in the Asset Browser, they will list as “unassigned”.
 
 For more information, please check out the chapter  
-**Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus**
+#### Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus
 
 ## Add Modifier menu buttons
 

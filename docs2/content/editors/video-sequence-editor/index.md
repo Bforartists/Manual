@@ -154,12 +154,21 @@ When you double right click into the Sequencer view, then you will open a menu. 
 
 The menu content differs, dependant of which sort of strip is selected.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Split | Splits the selected strips at the chosen playhead position. |
-| Copy | Copies the selected strips. |
-| Paste | Pastes the copied strips. The strip will be pasted to the next free channel. |
-| Duplicate Strips | Duplicates the selected strips. The duplicate will stick to the mouse. Move the duplicate with the mouse, then click to release. In case of overlapping strips the duplicate will snap behind the strip under the mouse. |
+### Split
+
+Splits the selected strips at the chosen playhead position.
+
+### Copy
+
+Copies the selected strips.
+
+### Paste
+
+Pastes the copied strips. The strip will be pasted to the next free channel.
+
+### Duplicate Strips
+
+Duplicates the selected strips. The duplicate will stick to the mouse. Move the duplicate with the mouse, then click to release. In case of overlapping strips the duplicate will snap behind the strip under the mouse.
 
 ### Rename
 
@@ -167,14 +176,29 @@ The menu content differs, dependant of which sort of strip is selected.
 
 Allows you to rename the current active strip. A popup opens up where you can type in another name.
 
-| Entry | What it does |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Delete | Deletes the selected nodes. All Connections gets removed. |
-| Slip Strip Contents | The Slip tool allows you to change the position of the contents of a strip without moving the strip itself. |
-| Snap Strips to the current frame | Snaps the selected strips to the current frame. |
-| Set Preview Range to Strips | Sets the preview range to the selected strips. The playback will then happen in this range. |
-| Remove Gaps | Snaps the selected strip to the end of the strip before the selected one. |
-| Insert Gaps | Insert a gap of frames before the selected strip. |
+#### Delete
+
+Deletes the selected nodes. All Connections gets removed.
+
+#### Slip Strip Contents
+
+The Slip tool allows you to change the position of the contents of a strip without moving the strip itself.
+
+#### Snap Strips to the current frame
+
+Snaps the selected strips to the current frame.
+
+#### Set Preview Range to Strips
+
+Sets the preview range to the selected strips. The playback will then happen in this range.
+
+#### Remove Gaps
+
+Snaps the selected strip to the end of the strip before the selected one.
+
+#### Insert Gaps
+
+Insert a gap of frames before the selected strip.
 
 ### Cross fade Sounds
 
@@ -202,10 +226,13 @@ Clears the fade effects at the selected strips.
 
 ![Movie Strip](/docs2/images/editors/video-sequence-editor/movie-strip.png)
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------- |
-| Set Render Size | Sets the render resolution and aspect to match the strip’s resolution. |
-| Deinterlace Movies | Converts interlaced video into progressive video. |
+#### Set Render Size
+
+Sets the render resolution and aspect to match the strip’s resolution.
+
+#### Deinterlace Movies
+
+Converts interlaced video into progressive video.
 
 ### Effect Strip
 
@@ -213,10 +240,13 @@ Clears the fade effects at the selected strips.
 
 Strip type Effects.
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------- |
-| Reassign Inputs | Reassigns the input of the strips. Unfortunately not to find out how this works. |
-| Swap Inputs | Swaps the inputs of the selected strips. Unfortunately not to find out how this works. |
+#### Reassign Inputs
+
+Reassigns the input of the strips. Unfortunately not to find out how this works.
+
+#### Swap Inputs
+
+Swaps the inputs of the selected strips. Unfortunately not to find out how this works.
 
 ### Change Effect Type
 
@@ -270,13 +300,25 @@ Unlock locked strips.
 
 Mutes the selected strips. They do not play anymore, and they appear greyed out.
 
-| Entry | What it does |
-| ------------------------ | ------------------------------ |
-| Unmute Strips | Unmutes selected muted strip. |
-| Mute unselected strips | Mute the unselected strips. |
-| Unmute deselected Strips | Unmute all deselected strips. |
-| Connect Strips | Link selected strips together. |
-| Disconnect Strips | Unlink linked strips. |
+##### Unmute Strips
+
+Unmutes selected muted strip.
+
+##### Mute unselected strips
+
+Mute the unselected strips.
+
+##### Unmute deselected Strips
+
+Unmute all deselected strips.
+
+##### Connect Strips
+
+Link selected strips together.
+
+##### Disconnect Strips
+
+Unlink linked strips.
 
 ## Quick Favorites menu
 

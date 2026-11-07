@@ -24,13 +24,17 @@ A list of the attributes at this object. Attributes can be used to identify an o
 
 A List of the attributes for this mesh.
 
+#### Attribute name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Attribute name | The name of the attributes. It can be renamed by double clicking at it. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the attributes. It can be renamed by double clicking at it.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
 ### Add +
 

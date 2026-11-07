@@ -38,12 +38,13 @@ This group of buttons controls the slides operations.
 
 > **Note:** These buttons switch to the Scene defined by alphabetical order of the Scene names.
 
+#### Previous / Next
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Previous / Next | Switch to the previous / next scene, then playback the animation timeline then stop on the last frame. When at the first scene, it will then go to the last scene. This will playback the next or previous scene then stops at the end of the animation timeline frame range. **Note:** *This will add a playback hook that will stop the animation when you change the slide.* |
-| Play Current Slide | This will playback the current scene then stops at the end of the animation timeline frame range. |
+Switch to the previous / next scene, then playback the animation timeline then stop on the last frame. When at the first scene, it will then go to the last scene. This will playback the next or previous scene then stops at the end of the animation timeline frame range. **Note:** *This will add a playback hook that will stop the animation when you change the slide.*
 
+#### Play Current Slide
+
+This will playback the current scene then stops at the end of the animation timeline frame range.
 
 ### Insert New Slide Scene
 
@@ -56,12 +57,13 @@ A slide scene has the following setup:
 - **Collection “S000”**: This orange collection contains a camera. This is meant to be a unique collection per slide scene.
 - **Camera “S000”**: This camera is a unique camera for the slide, set to world center.
 
+#### Duration
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Duration | This will adjust what happens when you create a new slide – creating a scene with this frame duration. Default is 30 frames. |
-| Hide Interface | This adds an additional operator to hide all toolshelves if the header is showing. This will also maximize the 3D View and hide all overlays. Ideal for having a fullscreen without overriding the operating system desktop nor going full screen and allowing a quick switch to show/hide the interface for tutorial presentations. |
+This will adjust what happens when you create a new slide – creating a scene with this frame duration. Default is 30 frames.
 
+#### Hide Interface
+
+This adds an additional operator to hide all toolshelves if the header is showing. This will also maximize the 3D View and hide all overlays. Ideal for having a fullscreen without overriding the operating system desktop nor going full screen and allowing a quick switch to show/hide the interface for tutorial presentations.
 
 ## Use
 

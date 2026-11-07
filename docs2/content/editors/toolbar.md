@@ -197,25 +197,33 @@ Load a Blend file.
 
 The recent files menu.
 
+###### Save Blend File
 
-| Entry | What it does |
-| ------------------ | ------------------------------- |
-| Save Blend File | Save a Blend file. |
-| Save As Blend File | Save a Blend file as. |
-| Save Copy | Saves a copy of the Blend file. |
+Save a Blend file.
 
+###### Save As Blend File
+
+Save a Blend file as.
+
+###### Save Copy
+
+Saves a copy of the Blend file.
 
 #### Recover
 
 ![Recover](/docs2/images/editors/toolbar/recover.png)
 
+##### Revert
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Revert | Reload the saved file. |
-| Recover Last Session | Open the last closed file, which is stored in the quit.blend. |
-| Recover Autosave | Open an automatically saved file to recover it. Like after a crash. See Preferences , Save & Load , Autosave |
+Reload the saved file.
 
+##### Recover Last Session
+
+Open the last closed file, which is stored in the quit.blend.
+
+##### Recover Autosave
+
+Open an automatically saved file to recover it. Like after a crash. See Preferences , Save & Load , Autosave
 
 #### Link Append
 
@@ -223,12 +231,13 @@ The recent files menu.
 
 The original menu items are in the File menu of the Info editor.
 
+##### Link from Library
 
-| Entry | What it does |
-| ------------------- | ------------------------------- |
-| Link from Library | Link contend from a Blend file. |
-| Append from Library | Append content. |
+Link contend from a Blend file.
 
+##### Append from Library
+
+Append content.
 
 #### Import Menu
 
@@ -254,13 +263,17 @@ Note that im- and exporters are partially addons that can be disabled. So some c
 
 The original menu items are in the File menu of the Info editor.
 
+##### Import FBX
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------- |
-| Import FBX | Import FBX files. If your build has no built-in FBX importer, the button uses the legacy FBX add-on instead. |
-| Import Obj | Import Object files. |
-| Import ABC | Import Alembic files. |
+Import FBX files. If your build has no built-in FBX importer, the button uses the legacy FBX add-on instead.
 
+##### Import Obj
+
+Import Object files.
+
+##### Import ABC
+
+Import Alembic files.
 
 #### Import Common 2
 
@@ -268,13 +281,17 @@ The original menu items are in the File menu of the Info editor.
 
 The original menu items are in the File menu of the Info editor.
 
+##### Import BVH
 
-| Entry | What it does |
-| ------------ | -------------------------------------- |
-| Import BVH | Import Biovision Motion Capture files. |
-| Import USD | Import a USD file. |
-| Import glTF2 | Import glTF2 files. |
+Import Biovision Motion Capture files.
 
+##### Import USD
+
+Import a USD file.
+
+##### Import glTF2
+
+Import glTF2 files.
 
 #### Import Uncommon
 
@@ -282,12 +299,13 @@ The original menu items are in the File menu of the Info editor.
 
 The original menu items are in the File menu of the Info editor.
 
+##### Import PLY
 
-| Entry | What it does |
-| ---------- | ----------------- |
-| Import PLY | Import PLY files. |
-| Import SVG | Import SVG Files. |
+Import PLY files.
 
+##### Import SVG
+
+Import SVG Files.
 
 #### Export Common
 
@@ -295,13 +313,17 @@ The original menu items are in the File menu of the Info editor.
 
 The original menu items are in the File menu of the Info editor.
 
+##### Export FBX
 
-| Entry | What it does |
-| ---------- | ----------------------- |
-| Export FBX | Export as FBX file. |
-| Export Obj | Export as Obj file. |
-| Export ABC | Export as Alembic file. |
+Export as FBX file.
 
+##### Export Obj
+
+Export as Obj file.
+
+##### Export ABC
+
+Export as Alembic file.
 
 #### Export Common 2
 
@@ -309,13 +331,17 @@ The original menu items are in the File menu of the Info editor.
 
 The original menu items are in the File menu of the Info editor.
 
+##### Export BVH
 
-| Entry | What it does |
-| ------------ | ---------------------------------- |
-| Export BVH | Export as BVH Motion Capture file. |
-| Export USD | Export as USD file. |
-| Export gITF2 | Export as gITF2 file. |
+Export as BVH Motion Capture file.
 
+##### Export USD
+
+Export as USD file.
+
+##### Export gITF2
+
+Export as gITF2 file.
 
 #### Export Uncommon
 
@@ -333,23 +359,25 @@ Export as PLY file.
 
 The original menu items are in the Render menu of the Info editor.
 
+##### Render Image
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------- |
-| Render Image | Renders the current scene as an image by using the current offline renderer. Either Blender Internal or Cycles. |
-| Render Animation | Renders the current scene as an animation. Either Blender Internal or Cycles. |
+Renders the current scene as an image by using the current offline renderer. Either Blender Internal or Cycles.
 
+##### Render Animation
+
+Renders the current scene as an animation. Either Blender Internal or Cycles.
 
 #### Viewport Render
 
 ![Viewport Render](/docs2/images/editors/toolbar/viewport-render.png)
 
+##### Viewport Render Image
 
-| Entry | What it does |
-| ------------------------- | ---------------------------------------------------------------------------- |
-| Viewport Render Image | Renders the current scene as an image by using the Viewport and Open GL. |
-| Viewport Render Animation | Renders the current scene as an animation by using the Viewport and Open GL. |
+Renders the current scene as an image by using the Viewport and Open GL.
 
+##### Viewport Render Animation
+
+Renders the current scene as an animation by using the Viewport and Open GL.
 
 #### Render Misc
 
@@ -357,13 +385,17 @@ The original menu items are in the Render menu of the Info editor.
 
 The original menu items are in the Render menu of the Info editor.
 
+##### Mixdown Audio
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------ |
-| Mixdown Audio | Mixdown and export the scene's audio to an audio file. The Render menu calls it Render Audio. |
-| Show/Hide Render View | Toggles display of Render view. |
-| Play Rendered Animation | Play rendered Animation sequence. |
+Mixdown and export the scene's audio to an audio file. The Render menu calls it Render Audio.
 
+##### Show/Hide Render View
+
+Toggles display of Render view.
+
+##### Play Rendered Animation
+
+Play rendered Animation sequence.
 
 ## Toolbars Mesh Edit
 
@@ -383,60 +415,77 @@ The description of the single buttons goes from left to right.
 
 ![Vertices Split connect](/docs2/images/editors/toolbar/vertices-split-connect.png)
 
+##### Split
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------- |
-| Split | Splits two connected Vertices. |
-| Vertex Connect Path | Connect Vertices by their selection order, creating edges, splitting faces |
-| Vertex Connect | Connect selected vertices of faces, splitting the face. |
+Splits two connected Vertices.
 
+##### Vertex Connect Path
+
+Connect Vertices by their selection order, creating edges, splitting faces
+
+##### Vertex Connect
+
+Connect selected vertices of faces, splitting the face.
 
 #### Vertices Misc
 
 ![Vertices Misc](/docs2/images/editors/toolbar/vertices-misc.png)
 
+##### Convex Hull
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------- |
-| Convex Hull | Enclose selected vertices in a convex polyhedron. |
-| Blend from Shape | Blend in shape from a shape key. |
-| Shape Propagate | Apply selected vertex locations to all other shape keys. |
+Enclose selected vertices in a convex polyhedron.
 
+##### Blend from Shape
+
+Blend in shape from a shape key.
+
+##### Shape Propagate
+
+Apply selected vertex locations to all other shape keys.
 
 #### Edges Subdiv
 
 ![Edges Subdiv](/docs2/images/editors/toolbar/edges-subdiv.png)
 
+##### Subdivide
 
-| Entry | What it does |
-| ------------------- | -------------------------------------- |
-| Subdivide | Subdivides selected edges. |
-| Subdivide Edge Ring | Subdivides an Edge Ring. |
-| Un-Subdivide | Unsubdivides selected edges and faces. |
+Subdivides selected edges.
 
+##### Subdivide Edge Ring
+
+Subdivides an Edge Ring.
+
+##### Un-Subdivide
+
+Unsubdivides selected edges and faces.
 
 #### Edges Sharp
 
 ![Edges Sharp](/docs2/images/editors/toolbar/edges-sharp.png)
 
+##### Mark Sharp
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------ |
-| Mark Sharp | Mark selected edges as sharp. |
-| Unmark Sharp | Unmark selected edges as sharp. |
-| Set Sharpness by Angle | Set edge sharpness based on the angle between neighbouring angles. |
+Mark selected edges as sharp.
 
+##### Unmark Sharp
+
+Unmark selected edges as sharp.
+
+##### Set Sharpness by Angle
+
+Set edge sharpness based on the angle between neighbouring angles.
 
 #### Edges Freestyle
 
 ![Edges Freestyle](/docs2/images/editors/toolbar/edges-freestyle.png)
 
+##### Mark Freestyle Edge
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------- |
-| Mark Freestyle Edge | Mark selected edges as Freestyle feature edges. |
-| Unmark Freestyle Edge | Unmark selected edges as Freestyle feature edges. |
+Mark selected edges as Freestyle feature edges.
 
+##### Unmark Freestyle Edge
+
+Unmark selected edges as Freestyle feature edges.
 
 #### Edges Rotate
 
@@ -450,81 +499,129 @@ Rotate selected edges or adjoining faces.
 
 ![Edges Misc](/docs2/images/editors/toolbar/edges-misc.png)
 
+##### Edge Split
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------ |
-| Edge Split | Split selected edges so that each neighbor face gets its own copy. |
-| Bridge Edge loops | Create faces between selected edge loops. |
+Split selected edges so that each neighbor face gets its own copy.
 
+##### Bridge Edge loops
+
+Create faces between selected edge loops.
 
 #### Faces general
 
 ![Faces general](/docs2/images/editors/toolbar/faces-general.png)
 
+##### Fill
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------- |
-| Fill | Fill a selected edge loop with faces. |
-| Grid Fill | Fill grid from two loops. |
-| Beautify Faces | Rearrange some faces to minimize degeneration. |
-| Solidify | Create a solid skin by extruding. Compensating for sharp angles. |
-| Intersect | Cut an intersection into faces. |
-| Boolean Intersect | Cut solid geometry from selected to unselected. |
-| Wire Frame | Create a solid wire frame from faces. |
+Fill a selected edge loop with faces.
 
+##### Grid Fill
+
+Fill grid from two loops.
+
+##### Beautify Faces
+
+Rearrange some faces to minimize degeneration.
+
+##### Solidify
+
+Create a solid skin by extruding. Compensating for sharp angles.
+
+##### Intersect
+
+Cut an intersection into faces.
+
+##### Boolean Intersect
+
+Cut solid geometry from selected to unselected.
+
+##### Wire Frame
+
+Create a solid wire frame from faces.
 
 #### Faces Freestyle
 
 ![Faces Freestyle](/docs2/images/editors/toolbar/faces-freestyle.png)
 
+##### Mark Freestyle Face
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------- |
-| Mark Freestyle Face | Mark selected faces for exclusion from freestyle feature edge detection. |
-| Unmark Freestyle Face | Unmark selected faces for exclusion from freestyle feature edge detection. |
+Mark selected faces for exclusion from freestyle feature edge detection.
 
+##### Unmark Freestyle Face
+
+Unmark selected faces for exclusion from freestyle feature edge detection.
 
 #### Faces Tris
 
 ![Faces Tris](/docs2/images/editors/toolbar/faces-tris.png)
 
+##### Poke Faces
 
-| Entry | What it does |
-| ----------------- | ------------------------------- |
-| Poke Faces | Split a face into a fan. |
-| Triangulate Faces | Triangulates selected faces. |
-| Tris to Quads | Join triangle faces into quads. |
-| Split by Edges | Split faces by loose edges. |
+Split a face into a fan.
 
+##### Triangulate Faces
+
+Triangulates selected faces.
+
+##### Tris to Quads
+
+Join triangle faces into quads.
+
+##### Split by Edges
+
+Split faces by loose edges.
 
 #### Faces Rotate Misc
 
 ![Faces Rotate Misc](/docs2/images/editors/toolbar/faces-rotate-misc.png)
 
+##### Rotate UV's
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------- |
-| Rotate UV's | Rotate UV coordinates inside faces. |
-| Reverse UV's | Flip direction of UV coordinates inside faces. |
-| Rotate Colors | Rotate Vertex Colors inside faces. |
-| Reverse Colors | Flip direction of Vertex Colors inside faces. |
+Rotate UV coordinates inside faces.
 
+##### Reverse UV's
+
+Flip direction of UV coordinates inside faces.
+
+##### Rotate Colors
+
+Rotate Vertex Colors inside faces.
+
+##### Reverse Colors
+
+Flip direction of Vertex Colors inside faces.
 
 #### Cleanup
 
 ![Cleanup](/docs2/images/editors/toolbar/cleanup.png)
 
+##### Delete Loose
 
-| Entry | What it does |
-| ---------------------- | -------------------------------------------------------- |
-| Delete Loose | Delete loose vertices, edges or faces. |
-| Decimate Geometry | Simplify geometry by collapsing edges. |
-| Degenerate Dissolve | Dissolve zero area faces and zero length edges. |
-| Make Planar Faces | Flatten selected faces. |
-| Split Non Planar Faces | Split non planar faces that exceeds the angle threshold. |
-| Split Concave Faces | Make all faces convex. |
-| Fill Holes | Fill in holes (boundary edge loops). |
+Delete loose vertices, edges or faces.
 
+##### Decimate Geometry
+
+Simplify geometry by collapsing edges.
+
+##### Degenerate Dissolve
+
+Dissolve zero area faces and zero length edges.
+
+##### Make Planar Faces
+
+Flatten selected faces.
+
+##### Split Non Planar Faces
+
+Split non planar faces that exceeds the angle threshold.
+
+##### Split Concave Faces
+
+Make all faces convex.
+
+##### Fill Holes
+
+Fill in holes (boundary edge loops).
 
 ## Toolbars Primitives
 
@@ -546,18 +643,37 @@ The description of the single buttons goes from left to right.
 
 The Mesh toolbar contains the Mesh primitives.
 
+##### Add Plane
 
-| Entry | What it does |
-| ------------- | -------------------------- |
-| Add Plane | Add a Plane primitive. |
-| Add Cube | Add a Cube primitive. |
-| Add Circle | Add a Circle primitive. |
-| Add UV Sphere | Add a UV Sphere primitive. |
-| Add Cylinder | Add a Cylinder primitive. |
-| Add Cone | Add a Cone primitive. |
-| Add Torus | Add a Torus primitive. |
-| Add Grid | Add a Grid primitive. |
+Add a Plane primitive.
 
+##### Add Cube
+
+Add a Cube primitive.
+
+##### Add Circle
+
+Add a Circle primitive.
+
+##### Add UV Sphere
+
+Add a UV Sphere primitive.
+
+##### Add Cylinder
+
+Add a Cylinder primitive.
+
+##### Add Cone
+
+Add a Cone primitive.
+
+##### Add Torus
+
+Add a Torus primitive.
+
+##### Add Grid
+
+Add a Grid primitive.
 
 #### Curve
 
@@ -565,15 +681,25 @@ The Mesh toolbar contains the Mesh primitives.
 
 The Curve toolbar contains the Curve primitives.
 
+##### Add Bezier
 
-| Entry | What it does |
-| ---------------- | ----------------------------------- |
-| Add Bezier | Add a Bezier curve primitive. |
-| Add Circle | Add a Circle curve primitive. |
-| Add Nurbs Curve | Add a Nurbs Curve primitive. |
-| Add Nurbs Circle | Add a Nurbs Circle curve primitive. |
-| Add Nurbs Path | Add a Nurbs Path curve primitive. |
+Add a Bezier curve primitive.
 
+##### Add Circle
+
+Add a Circle curve primitive.
+
+##### Add Nurbs Curve
+
+Add a Nurbs Curve primitive.
+
+##### Add Nurbs Circle
+
+Add a Nurbs Circle curve primitive.
+
+##### Add Nurbs Path
+
+Add a Nurbs Path curve primitive.
 
 #### Surface
 
@@ -581,16 +707,29 @@ The Curve toolbar contains the Curve primitives.
 
 The Surface toolbar contains the Surface primitives.
 
+##### Add Surface Curve
 
-| Entry | What it does |
-| -------------------- | --------------------------------------- |
-| Add Surface Curve | Add a Nurbs Surface curve primitive. |
-| Add Surface Circle | Add a Nurbs Surface Circle primitive. |
-| Add Surface Patch | Add a Nurbs Surface Patch primitive. |
-| Add Surface Cylinder | Add a Nurbs Surface Cylinder primitive. |
-| Add Surface Sphere | Add a Nurbs Surface Sphere primitive. |
-| Add Surface Torus | Add a Nurbs Surface Torus primitive. |
+Add a Nurbs Surface curve primitive.
 
+##### Add Surface Circle
+
+Add a Nurbs Surface Circle primitive.
+
+##### Add Surface Patch
+
+Add a Nurbs Surface Patch primitive.
+
+##### Add Surface Cylinder
+
+Add a Nurbs Surface Cylinder primitive.
+
+##### Add Surface Sphere
+
+Add a Nurbs Surface Sphere primitive.
+
+##### Add Surface Torus
+
+Add a Nurbs Surface Torus primitive.
 
 #### Metaball
 
@@ -598,15 +737,25 @@ The Surface toolbar contains the Surface primitives.
 
 The metaball toolbar contains the Metaball primitives.
 
+##### Add Metaball of type Ball
 
-| Entry | What it does |
-| ------------------------------ | ----------------------------------------- |
-| Add Metaball of type Ball | Add Metaball of type Ball primitive. |
-| Add Metaball of type Capsule | Add Metaball of type Capsule primitive. |
-| Add Metaball of type Plane | Add Metaball of type Plane primitive. |
-| Add Metaball of type Ellipsoid | Add Metaball of type Ellipsoid primitive. |
-| Add Metaball of type Cube | Add Metaball of type Cube primitive. |
+Add Metaball of type Ball primitive.
 
+##### Add Metaball of type Capsule
+
+Add Metaball of type Capsule primitive.
+
+##### Add Metaball of type Plane
+
+Add Metaball of type Plane primitive.
+
+##### Add Metaball of type Ellipsoid
+
+Add Metaball of type Ellipsoid primitive.
+
+##### Add Metaball of type Cube
+
+Add Metaball of type Cube primitive.
 
 #### Point Cloud
 
@@ -624,24 +773,29 @@ Add a point cloud primitive.
 
 The Volume toolbar contains the Volume primitives.
 
+##### Import OpenVDB Volume
 
-| Entry | What it does |
-| --------------------- | -------------------------------- |
-| Import OpenVDB Volume | Imports a OpenVDP volume object. |
-| Add Volume | Adds a volume object. |
+Imports a OpenVDP volume object.
 
+##### Add Volume
+
+Adds a volume object.
 
 #### Grease Pencil
 
 ![Grease Pencil](/docs2/images/editors/toolbar/grease-pencil.png)
 
+##### Blank
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blank | Inserts a blank Grease Pencil Object. A blank Grease Pencil Object has just one color |
-| Stroke | Inserts a Stroke Grease Pencil Object. A Stroke Grease Pencil Object has a few standard colors already. |
-| Monkey | Inserts a Monkey Grease Pencil Object. This is a grease pencil object which contains the shape of a monkey already. This monkey is an example object. |
+Inserts a blank Grease Pencil Object. A blank Grease Pencil Object has just one color
 
+##### Stroke
+
+Inserts a Stroke Grease Pencil Object. A Stroke Grease Pencil Object has a few standard colors already.
+
+##### Monkey
+
+Inserts a Monkey Grease Pencil Object. This is a grease pencil object which contains the shape of a monkey already. This monkey is an example object.
 
 ##### Scene Line Art
 
@@ -653,13 +807,17 @@ Line Art is a modifier for the grease pencil object. Scene Line Art adds a greas
 
 Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for a collection.
 
+###### Lamp
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lamp | The Lamp toolbar contains the different lamp types. · **Add Lamp of type Point**: Add Lamp of type Point. · **Add Lamp of type Sun**: Add Lamp of type Sun. · **Add Lamp of type Spot**: Add Lamp of type Spot. · **Add Lamp of type Area**: Add Lamp of type Area. |
-| Other | The Other toolbar contains some other ground types like bones and text. · **Add Text**: Add a Text object. · **Add Armature**: Add an Armature object. · **Add Lattice Deformer**: Add a Lattice deformer object. · **Add Lattice**: Add a Lattice object. · **Add Camera**: Add a Camera object. · **Add Speaker**: Add a Speaker object. |
-| Empties | The Empties toolbar contains the available empty types. · **Add Empty of type Plain Axes**: Add Empty of type Plain Axes. · **Add Empty of type Sphere**: Add Empty of type Sphere. · **Add Empty of type Circle**: Add Empty of type Circle. · **Add Empty of type Cone**: Add Empty of type Cone. · **Add Empty of type Cube**: Add Empty of type Cube. · **Add Empty of type Single Arrow**: Add Empty of type Single Arrow. · **Add Empty of type Arrows**: Add Empty of type Arrows. · **Add Empty of type Image**: Add Empty of type Image. |
+The Lamp toolbar contains the different lamp types. · **Add Lamp of type Point**: Add Lamp of type Point. · **Add Lamp of type Sun**: Add Lamp of type Sun. · **Add Lamp of type Spot**: Add Lamp of type Spot. · **Add Lamp of type Area**: Add Lamp of type Area.
 
+###### Other
+
+The Other toolbar contains some other ground types like bones and text. · **Add Text**: Add a Text object. · **Add Armature**: Add an Armature object. · **Add Lattice Deformer**: Add a Lattice deformer object. · **Add Lattice**: Add a Lattice object. · **Add Camera**: Add a Camera object. · **Add Speaker**: Add a Speaker object.
+
+###### Empties
+
+The Empties toolbar contains the available empty types. · **Add Empty of type Plain Axes**: Add Empty of type Plain Axes. · **Add Empty of type Sphere**: Add Empty of type Sphere. · **Add Empty of type Circle**: Add Empty of type Circle. · **Add Empty of type Cone**: Add Empty of type Cone. · **Add Empty of type Cube**: Add Empty of type Cube. · **Add Empty of type Single Arrow**: Add Empty of type Single Arrow. · **Add Empty of type Arrows**: Add Empty of type Arrows. · **Add Empty of type Image**: Add Empty of type Image.
 
 #### Image
 
@@ -673,13 +831,17 @@ Creates a mesh plane with an image.
 
 ![Light Probe](/docs2/images/editors/toolbar/light-probe.png)
 
+##### Sphere
 
-| Entry | What it does |
-| ------ | ---------------------------------------------- |
-| Sphere | Adds a reflective light probe in sphere shape. |
-| Plane | Adds a reflective light probe in plane shape. |
-| Volume | Adds a volumetric array light probe. |
+Adds a reflective light probe in sphere shape.
 
+##### Plane
+
+Adds a reflective light probe in plane shape.
+
+##### Volume
+
+Adds a volumetric array light probe.
 
 #### Force Field
 
@@ -687,23 +849,57 @@ Creates a mesh plane with an image.
 
 The Force Field toolbar contains the available Force field types.
 
+##### Add Physics Effector of Type Boid
 
-| Entry | What it does |
-| ----------------------------------------- | ------------------------------------------ |
-| Add Physics Effector of Type Boid | Add Physics Effector of Type Boid. |
-| Add Physics Effector of Type Charge | Add Physics Effector of Type Charge. |
-| Add Physics Effector of Type Curve Guide | Add Physics Effector of Type Curve Guide. |
-| Add Physics Effector of Type Drag | Add Physics Effector of Type Drag. |
-| Add Physics Effector of Type Force | Add Physics Effector of Type Force. |
-| Add Physics Effector of Type Harmonic | Add Physics Effector of Type Harmonic. |
-| Add Physics Effector of Type Lenard-Jones | Add Physics Effector of Type Lenard-Jones. |
-| Add Physics Effector of Type Magnetic | Add Physics Effector of Type Magnetic. |
-| Add Physics Effector of Type Fluid Flow | Add Physics Effector of Type Fluid Flow. |
-| Add Physics Effector of Type Texture | Add Physics Effector of Type Texture. |
-| Add Physics Effector of Type Turbulence | Add Physics Effector of Type Turbulence. |
-| Add Physics Effector of Type Vortex | Add Physics Effector of Type Vortex. |
-| Add Physics Effector of Type Wind | Add Physics Effector of Type Wind. |
+Add Physics Effector of Type Boid.
 
+##### Add Physics Effector of Type Charge
+
+Add Physics Effector of Type Charge.
+
+##### Add Physics Effector of Type Curve Guide
+
+Add Physics Effector of Type Curve Guide.
+
+##### Add Physics Effector of Type Drag
+
+Add Physics Effector of Type Drag.
+
+##### Add Physics Effector of Type Force
+
+Add Physics Effector of Type Force.
+
+##### Add Physics Effector of Type Harmonic
+
+Add Physics Effector of Type Harmonic.
+
+##### Add Physics Effector of Type Lenard-Jones
+
+Add Physics Effector of Type Lenard-Jones.
+
+##### Add Physics Effector of Type Magnetic
+
+Add Physics Effector of Type Magnetic.
+
+##### Add Physics Effector of Type Fluid Flow
+
+Add Physics Effector of Type Fluid Flow.
+
+##### Add Physics Effector of Type Texture
+
+Add Physics Effector of Type Texture.
+
+##### Add Physics Effector of Type Turbulence
+
+Add Physics Effector of Type Turbulence.
+
+##### Add Physics Effector of Type Vortex
+
+Add Physics Effector of Type Vortex.
+
+##### Add Physics Effector of Type Wind
+
+Add Physics Effector of Type Wind.
 
 #### Collection
 
@@ -741,12 +937,13 @@ Mirror along X or Y axis.
 
 Rotate by 90 degrees clockwise or counter clockwise.
 
+##### UV Align
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UV Align | The UV Align toolbar contains tools to clean up and align the selected UV geometry. · **Align Straighten**: Align UV's along the line defined by the end points of the selection. · **Align Straighten X**: Align UV's along the line defined by the end points along the X axis. · **Align Straighten Y**: Align UV's along the line defined by the end points along the Y axis. · **Align Auto**: Automatically choose the axis on which there is most alignment already. · **Align X**: Align UV's at X axis. · **Align Y**: Align UV's at Y axis. |
-| Align Rotation | Aligns the rotation of the selected geometry. |
+The UV Align toolbar contains tools to clean up and align the selected UV geometry. · **Align Straighten**: Align UV's along the line defined by the end points of the selection. · **Align Straighten X**: Align UV's along the line defined by the end points along the X axis. · **Align Straighten Y**: Align UV's along the line defined by the end points along the Y axis. · **Align Auto**: Automatically choose the axis on which there is most alignment already. · **Align X**: Align UV's at X axis. · **Align Y**: Align UV's at Y axis.
 
+##### Align Rotation
+
+Aligns the rotation of the selected geometry.
 
 #### UV Unwrap
 
@@ -754,19 +951,41 @@ Rotate by 90 degrees clockwise or counter clockwise.
 
 The UV Common toolbar contains tools for unwrapping.
 
+##### Mark Seam
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------ |
-| Mark Seam | Mark selected UV Edges as Seam. |
-| Clear Seam | Remove Seam from selected UV Edges. |
-| Seams from Islands | Marks the border edges of the UV patches as Seam. |
-| Unwrap Angle Based | Unwraps the selected geometry with the Angle based ( ABF ) method. |
-| Unwrap Conformal | Unwraps the selected geometry with the Conformal ( LSCM ) method. |
-| Unwrap Minimize Stretch | Unwraps the selected geometry with the SLIM method. |
-| Cube Projection | Maps the selected geometry with a cube projection. |
-| Cylinder Projection | Maps the selected geometry with a cylinder projection. |
-| Sphere Projection | Maps the selected geometry with a sphere projection. |
+Mark selected UV Edges as Seam.
 
+##### Clear Seam
+
+Remove Seam from selected UV Edges.
+
+##### Seams from Islands
+
+Marks the border edges of the UV patches as Seam.
+
+##### Unwrap Angle Based
+
+Unwraps the selected geometry with the Angle based ( ABF ) method.
+
+##### Unwrap Conformal
+
+Unwraps the selected geometry with the Conformal ( LSCM ) method.
+
+##### Unwrap Minimize Stretch
+
+Unwraps the selected geometry with the SLIM method.
+
+##### Cube Projection
+
+Maps the selected geometry with a cube projection.
+
+##### Cylinder Projection
+
+Maps the selected geometry with a cylinder projection.
+
+##### Sphere Projection
+
+Maps the selected geometry with a sphere projection.
 
 #### UV Modify UV
 
@@ -774,17 +993,33 @@ The UV Common toolbar contains tools for unwrapping.
 
 The UV Modify toolbar contains tools to clean up the UV mapping.
 
+##### Pin
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Pin | Pins the selected vertices. |
-| Unpin | Unpins the selected vertices. |
-| Weld | Weld the selected UV vertices together. |
-| Remove Doubles UV | Removes double vertices |
-| Average Island Scale | Average the size of separated UV patches, based at their size in 3D space. |
-| Pack Island | Packs the UV patches so that they fit best into the UV space, and as few texture space as possible is wasted. |
-| Copy mirrored UV Coordinates | Copy mirrored UV Coordinates at X axis based on a mirrored mesh. |
+Pins the selected vertices.
 
+##### Unpin
+
+Unpins the selected vertices.
+
+##### Weld
+
+Weld the selected UV vertices together.
+
+##### Remove Doubles UV
+
+Removes double vertices
+
+##### Average Island Scale
+
+Average the size of separated UV patches, based at their size in 3D space.
+
+##### Pack Island
+
+Packs the UV patches so that they fit best into the UV space, and as few texture space as possible is wasted.
+
+##### Copy mirrored UV Coordinates
+
+Copy mirrored UV Coordinates at X axis based on a mirrored mesh.
 
 ## Toolbars Tools
 
@@ -804,12 +1039,13 @@ The description of the single buttons goes from left to right.
 
 ![Parent](/docs2/images/editors/toolbar/parent.png)
 
+##### Make Parent
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------- |
-| Make Parent | Parents the selected object to the active object. |
-| Clear Parent | Removes the parenting. |
+Parents the selected object to the active object.
 
+##### Clear Parent
+
+Removes the parenting.
 
 #### Object to Data
 
@@ -833,12 +1069,13 @@ This button is a menu to choose the link method. Its first entry, **Link Objects
 
 ![Linked Objects](/docs2/images/editors/toolbar/linked-objects.png)
 
+##### Make Local
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------- |
-| Make Local | Make library linked data blocks local to this file. |
-| Make Library Override | Add empty object to become local replacement data of a library linked object. |
+Make library linked data blocks local to this file.
 
+##### Make Library Override
+
+Add empty object to become local replacement data of a library linked object.
 
 #### Join
 
@@ -852,15 +1089,25 @@ Join selected objects into active objects.
 
 ![Origin](/docs2/images/editors/toolbar/origin.png)
 
+##### Set Geometry to Origin
 
-| Entry | What it does |
-| ------------------------------ | ---------------------------------------- |
-| Set Geometry to Origin | Sets the geometry to origin. |
-| Set Origin to Geometry | Sets the origin to geometry. |
-| Set Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Set Origin to Center of Mass | Sets the origin to the center of mass. |
-| Set Origin to Center of Volume | Sets the origin to the center of volume. |
+Sets the geometry to origin.
 
+##### Set Origin to Geometry
+
+Sets the origin to geometry.
+
+##### Set Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+##### Set Origin to Center of Mass
+
+Sets the origin to the center of mass.
+
+##### Set Origin to Center of Volume
+
+Sets the origin to the center of volume.
 
 #### Shading
 
@@ -884,19 +1131,25 @@ Shades the geometry flat.
 
 ![Data Transfer](/docs2/images/editors/toolbar/data-transfer.png)
 
+##### Transfer Mesh Data
 
-| Entry | What it does |
-| ------------------------- | ------------------------------- |
-| Transfer Mesh Data | Transfers mesh data. |
-| Transfer Mesh Data Layout | Transfers the mesh data layout. |
-| Join UV's | Transfer UV Maps. |
+Transfers mesh data.
 
+##### Transfer Mesh Data Layout
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Relations | ![](/docs2/images/editors/toolbar/relations-icon.png)The Relations toolbar contains one tool in Edit mode. Make Vertex Parent. |
-| Make Vertex Parent | Parents an object to the selected vertice(s). |
+Transfers the mesh data layout.
 
+##### Join UV's
+
+Transfer UV Maps.
+
+##### Relations
+
+![](/docs2/images/editors/toolbar/relations-icon.png)The Relations toolbar contains one tool in Edit mode. Make Vertex Parent.
+
+##### Make Vertex Parent
+
+Parents an object to the selected vertice(s).
 
 ## Toolbars Animation
 
@@ -918,45 +1171,81 @@ The Keyframes toolbar contains some keyframe tools. The original menu items can 
 
 The original menu items are in the Tool Shelf in the 3D View, in the Animation tab in the Animation panel.
 
+##### Insert Keyframe Menu
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Insert Keyframe Menu | When there is no keying set assigned to the currently selected object, then this button is a menu to choose a keying set. When there is already a keying set assigned, then you can record a keyframe with this button |
-| Delete Keyframe | Deletes the current Keyframe |
-| Bake Action | Bakes the animation to a new action |
-| Remove Animation | Remove all keyframe animation for selected objects |
-| Calculate Object Paths | Calculate motion paths for the selected objects. |
-| Clear Object Paths | Clears motion paths for the selected objects. |
+When there is no keying set assigned to the currently selected object, then this button is a menu to choose a keying set. When there is already a keying set assigned, then you can record a keyframe with this button
 
+##### Delete Keyframe
+
+Deletes the current Keyframe
+
+##### Bake Action
+
+Bakes the animation to a new action
+
+##### Remove Animation
+
+Remove all keyframe animation for selected objects
+
+##### Calculate Object Paths
+
+Calculate motion paths for the selected objects.
+
+##### Clear Object Paths
+
+Clears motion paths for the selected objects.
 
 #### Play
 
 ![Play](/docs2/images/editors/toolbar/play.png)
 
+##### Jump to Endpoint
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------- |
-| Jump to Endpoint | Jumps to beginning of animation. |
-| Jump to Keyframe | Jumps to the previous keyframe Play Animation. |
-| Play Animation | Plays animation reversed. |
-| Play Animation | Plays animation forward. |
-| Jump to Keyframe | Jumps to next keyframe. |
-| Jump to Endpoint | Jumps to end of animation. |
-| Current Frame | The current frame number. |
+Jumps to beginning of animation.
 
+##### Jump to Keyframe
+
+Jumps to the previous keyframe Play Animation.
+
+##### Play Animation
+
+Plays animation reversed.
+
+##### Play Animation
+
+Plays animation forward.
+
+##### Jump to Keyframe
+
+Jumps to next keyframe.
+
+##### Jump to Endpoint
+
+Jumps to end of animation.
+
+##### Current Frame
+
+The current frame number.
 
 #### Range
 
 ![Range](/docs2/images/editors/toolbar/range.png)
 
+##### Use Preview Range
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Preview Range | Use an alternative start/end frame grange for animation playback and OpenGL renders instead of the Render Properties start/end frame range. |
-| Lock Frame Selection to Range | Don't allow frame to be selected with mouse outside of frame range. |
-| Frame Start | The frame start point. |
-| Frame End | The frame end point. |
+Use an alternative start/end frame grange for animation playback and OpenGL renders instead of the Render Properties start/end frame range.
 
+##### Lock Frame Selection to Range
+
+Don't allow frame to be selected with mouse outside of frame range.
+
+##### Frame Start
+
+The frame start point.
+
+##### Frame End
+
+The frame end point.
 
 #### Keying set
 
@@ -968,13 +1257,17 @@ The original menu items are in the Tool Shelf in the 3D View, in the Animation t
 
 Insert a keyframe.
 
+###### Delete Keying set Keyframe
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------- |
-| Delete Keying set Keyframe | Delete Keyframe. |
-| Use Keyframe Insert Auto | Auto insert keyframes at manipulation. |
-| Keying set Drop down box | This is a drop down box to choose the keying set method. |
+Delete Keyframe.
 
+###### Use Keyframe Insert Auto
+
+Auto insert keyframes at manipulation.
+
+###### Keying set Drop down box
+
+This is a drop down box to choose the keying set method.
 
 #### Sync
 
@@ -1008,17 +1301,33 @@ The description of the single buttons goes from left to right.
 
 The Edit toolbar is just visible in Edit Mode. The original menu items are in the Tool Shelf in the 3D View in the Tools tab in the Mesh Tools panel.
 
+##### Dissolve Vertices
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------- |
-| Dissolve Vertices | Dissolve Vertices. |
-| Dissolve Edges | Dissolve Edges. |
-| Dissolve Faces | Dissolve Faces. |
-| Remove Doubles | Removes double vertices. |
-| Limited Dissolve | Dissolve Edges and Vertices limited by the surrounding angle. |
-| Dissolve Selection | Dissolve Geometry dependent of selection mode. |
-| Edge Collapse | Collapse selected edges. |
+Dissolve Vertices.
 
+##### Dissolve Edges
+
+Dissolve Edges.
+
+##### Dissolve Faces
+
+Dissolve Faces.
+
+##### Remove Doubles
+
+Removes double vertices.
+
+##### Limited Dissolve
+
+Dissolve Edges and Vertices limited by the surrounding angle.
+
+##### Dissolve Selection
+
+Dissolve Geometry dependent of selection mode.
+
+##### Edge Collapse
+
+Collapse selected edges.
 
 ##### Merge
 
@@ -1038,19 +1347,41 @@ Separate the selection, and create a new object from it. This is a drop down box
 
 The Weight in Edit toolbar is just visible in Edit Mode for normal meshes, and Pose mode when you have a rigged character selected. The original menu items are in the Tool Shelf in the 3D View in the Tools tab in the Weight Tools panel. You need to have a Vertex Group applied.
 
+###### Normalize all
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------- |
-| Normalize all | Normalizes the whole mesh. |
-| Normalize | Normalizes the selection |
-| Mirror | Mirrors the selection. |
-| Invert | Inverts the weighting. |
-| Clean | Remove Vertex Assignments that are not required. |
-| Quantize | Set Weights to a fixed number of steps. |
-| Levels | Add some offset and multiply with some gain the weights of the active vertex group. |
-| Smooth | Smooth weights for selected vertices. |
-| Limit Total | Limit deform weights. |
+Normalizes the whole mesh.
 
+###### Normalize
+
+Normalizes the selection
+
+###### Mirror
+
+Mirrors the selection.
+
+###### Invert
+
+Inverts the weighting.
+
+###### Clean
+
+Remove Vertex Assignments that are not required.
+
+###### Quantize
+
+Set Weights to a fixed number of steps.
+
+###### Levels
+
+Add some offset and multiply with some gain the weights of the active vertex group.
+
+###### Smooth
+
+Smooth weights for selected vertices.
+
+###### Limit Total
+
+Limit deform weights.
 
 #### Object Apply
 
@@ -1058,19 +1389,41 @@ The Weight in Edit toolbar is just visible in Edit Mode for normal meshes, and P
 
 The Object Apply toolbar is just visible in Object Mode. The original menu items are in the Object menu in the 3D View. The Apply menu.
 
+##### Apply Location
 
-| Entry | What it does |
-| -------------------------- | --------------------------------------------------------------------- |
-| Apply Location | Apply location. |
-| Apply Rotation | Apply Rotation. |
-| Apply Scale | Apply Scale. |
-| Apply All | Apply Location, Rotation, Scale. |
-| Apply Rotation & Scale | Apply Rotation, Scale. |
-| Apply Visual Transform | Apply Visual Transform. |
-| Make Instances real | Make Duplicates attached to this object real. |
-| Apply Parent Inverse | Apply the object’s parent inverse to its data |
-| Visual Geometry to Objects | Convert geometry and instances into editable objects and collections. |
+Apply location.
 
+##### Apply Rotation
+
+Apply Rotation.
+
+##### Apply Scale
+
+Apply Scale.
+
+##### Apply All
+
+Apply Location, Rotation, Scale.
+
+##### Apply Rotation & Scale
+
+Apply Rotation, Scale.
+
+##### Apply Visual Transform
+
+Apply Visual Transform.
+
+##### Make Instances real
+
+Make Duplicates attached to this object real.
+
+##### Apply Parent Inverse
+
+Apply the object’s parent inverse to its data
+
+##### Visual Geometry to Objects
+
+Convert geometry and instances into editable objects and collections.
 
 #### Object Apply Deltas
 
@@ -1078,15 +1431,25 @@ The Object Apply toolbar is just visible in Object Mode. The original menu items
 
 Object Apply deltas converts normal object transforms to delta transforms. Any existing delta transform will also be included.
 
+##### Location
 
-| Entry | What it does |
-| ------------------------- | ------------------------------------------------------------------- |
-| Location | Apply location. |
-| Rotation | Apply Rotation. |
-| Scale | Apply Scale. |
-| All | Apply Location, Rotation, Scale. |
-| Transforms to Delta Anims | Convert object animation for normal transforms to delta transforms. |
+Apply location.
 
+##### Rotation
+
+Apply Rotation.
+
+##### Scale
+
+Apply Scale.
+
+##### All
+
+Apply Location, Rotation, Scale.
+
+##### Transforms to Delta Anims
+
+Convert object animation for normal transforms to delta transforms.
 
 #### Object Clear
 
@@ -1094,14 +1457,21 @@ Object Apply deltas converts normal object transforms to delta transforms. Any e
 
 The Object Clear toolbar is just visible in Object Mode. The original menu items are in the Object menu in the 3D View. The Clear menu.
 
+##### Location
 
-| Entry | What it does |
-| -------- | ------------------------------------------ |
-| Location | Resets the position of the object to zero. |
-| Rotation | Resets the object's rotation to zero. |
-| Scale | Resets the object's scale to 1. |
-| Origin | Resets the Origin Position. |
+Resets the position of the object to zero.
 
+##### Rotation
+
+Resets the object's rotation to zero.
+
+##### Scale
+
+Resets the object's scale to 1.
+
+##### Origin
+
+Resets the Origin Position.
 
 ## Toolbars Misc
 
@@ -1129,12 +1499,13 @@ Note that you need to have an object selected to show this dropdown panel.
 
 ![Undo / Redo](/docs2/images/editors/toolbar/undo-redo.png)
 
+##### Undo
 
-| Entry | What it does |
-| ----- | ------------------------- |
-| Undo | Undo the last step |
-| Redo | Redo the last undone step |
+Undo the last step
 
+##### Redo
+
+Redo the last undone step
 
 #### Undo History
 

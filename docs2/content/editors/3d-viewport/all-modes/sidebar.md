@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "All Modes"
   - "Sidebar"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: sidebar
 summary: "The sidebar tabs and panels of All Modes."
 order: 30
@@ -34,13 +34,17 @@ The Tools tab is also a special chapter. It contains the settings for the tools 
 
 Tools that can be useful for animation. Paste a mirrored armature part for example.
 
+### Copy
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy | Copies the matrix of the current active object or bone to the clipboard. It uses world space matrices. |
-| Paste | Pastes the copied matrix to the current active object or bone from the clipboard. It uses world space matrices. |
-| Mirrored | Pastes the copied matrix to the current active object or bone from the clipboard. But mirrored along the global X axis. It uses world space matrices. |
+Copies the matrix of the current active object or bone to the clipboard. It uses world space matrices.
 
+### Paste
+
+Pastes the copied matrix to the current active object or bone from the clipboard. It uses world space matrices.
+
+### Mirrored
+
+Pastes the copied matrix to the current active object or bone from the clipboard. But mirrored along the global X axis. It uses world space matrices.
 
 ### Paste to selected keys
 
@@ -62,12 +66,13 @@ Pastes the matrix from the clipboard to thecurrent active object or bone. And ba
 
 ![Mirror Subpanel](/docs2/images/editors/3d-viewport/sidebar/animation-tab/mirror-subpanel.png)
 
+#### Object
 
-| Entry | What it does |
-| ------ | -------------------------------------------------------------------------------------------------------------- |
-| Object | The object to mirror over. Leave empty and name a bone to always mirror over that bone of the active armature. |
-| Bone | Bone to use for the mirroring. |
+The object to mirror over. Leave empty and name a bone to always mirror over that bone of the active armature.
 
+#### Bone
+
+Bone to use for the mirroring.
 
 ### Relative Subpanel
 
@@ -75,13 +80,17 @@ Pastes the matrix from the clipboard to thecurrent active object or bone. And ba
 
 The upper global transform copy and paste actions works global. These buttons works relative to a chosen object.
 
+#### Object
 
-| Entry | What it does |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Object | The object to paste relative to its matrix. |
-| Copy | Copies the matrix of the current active object or bone to the clipboard. It uses the relative matrix from the defined object. |
-| Paste | Pastes the copied matrix to the current active object or bone from the clipboard. It uses the relative matrix from the defined object. |
+The object to paste relative to its matrix.
 
+#### Copy
+
+Copies the matrix of the current active object or bone to the clipboard. It uses the relative matrix from the defined object.
+
+#### Paste
+
+Pastes the copied matrix to the current active object or bone from the clipboard. It uses the relative matrix from the defined object.
 
 ### Fix to Camera subpanel
 
@@ -179,12 +188,13 @@ When there is already a keyframe available then the right click menu looks a bit
 
 ![Right Click menu](/docs2/images/editors/3d-viewport/sidebar/item-tab/right-click-menu-3.png)
 
+#### Insert Keyframe
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Insert Keyframe | Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Keyframe adds a keyframe for all axis. |
-| Insert Single Keyframe | Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Single Keyframe adds a keyframe for just the current axis. |
+Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Keyframe adds a keyframe for all axis.
 
+#### Insert Single Keyframe
+
+Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Single Keyframe adds a keyframe for just the current axis.
 
 #### Add Driver
 
@@ -196,21 +206,23 @@ When you click the button the Driven Property panel will appear where you can ch
 
 ##### Driver Settings
 
+###### Type
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Type | The Driver type. There are two categories of drivers. Built-in and Custom · **Built-in functions (Average, Sum, Min and Max)**: The driven property will have the value of the average, sum, lowest or highest (respectively) of the values of the referenced Driver Variables. If there is only one driver variable, these functions will yield the same result. · **Custom (Scripted Expression)**: An arbitrary Python expression that can refer to the Driver Variables by name. |
-| Driver Value | The current result of the driver setup. |
+The Driver type. There are two categories of drivers. Built-in and Custom · **Built-in functions (Average, Sum, Min and Max)**: The driven property will have the value of the average, sum, lowest or highest (respectively) of the values of the referenced Driver Variables. If there is only one driver variable, these functions will yield the same result. · **Custom (Scripted Expression)**: An arbitrary Python expression that can refer to the Driver Variables by name.
 
+###### Driver Value
+
+The current result of the driver setup.
 
 ##### Expression
 
+###### Expression edit box
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Expression edit box | Add a custom expression. An Expression to use for scripted expression. The expression has access to a set of standard constants and math functions provided in the Driver Name space. For an example of adding a custom function to the name space. When the expression is invalid then you get an error message. This error message appears also with the default values. Just ignore. |
-| Use Self | The variable self can be used for drivers to reference their own data. This is useful for objects and bones to avoid having creating a Driver Variable pointing to itself. Example: self.location.x applied to the Y rotation property of the same object will make the object tumble when moving. Note that dependencies for properties accessed via self may not be fully tracked. |
+Add a custom expression. An Expression to use for scripted expression. The expression has access to a set of standard constants and math functions provided in the Driver Name space. For an example of adding a custom function to the name space. When the expression is invalid then you get an error message. This error message appears also with the default values. Just ignore.
 
+###### Use Self
+
+The variable self can be used for drivers to reference their own data. This is useful for objects and bones to avoid having creating a Driver Variable pointing to itself. Example: self.location.x applied to the Y rotation property of the same object will make the object tumble when moving. Note that dependencies for properties accessed via self may not be fully tracked.
 
 ##### Driver Variables
 
@@ -228,26 +240,19 @@ Copy and Paste buttons allows you to copy and paste Driver variable panels.
 
 ##### Driver Variable panel
 
-**Variable type**
+###### Variable type
 
 ![Variable type](/docs2/images/editors/3d-viewport/sidebar/item-tab/variable-type.png)
 
 The content of the Driver variable panel changes, dependent of the variable type that you choose here. We came from the transform panel, so our default type here is transform channel. That's what we will explain here.
 
+- **Object**: Our object type.
+- **Type**: The type of the driver.
+- **Space**: The transform space in which the transform should happen.
+- **Value**: The resulting value of the driver.
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------- |
-| Object | Our object type. |
-| Type | The type of the driver. |
-| Space | The transform space in which the transform should happen. |
-| Value | The resulting value of the driver. |
-
-
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Update Dependencies | Update all dependencies. |
-| Show in Drivers Editor | Opens the Drivers editor in a floating window. The drivers editor is explained in the chapter 18 Editors - Drivers. |
-
+- **Update Dependencies**: Update all dependencies.
+- **Show in Drivers Editor**: Opens the Drivers editor in a floating window. The drivers editor is explained in the chapter 18 Editors - Drivers.
 
 ##### Open Drivers Editor
 
@@ -255,32 +260,93 @@ The content of the Driver variable panel changes, dependent of the variable type
 
 Opens the Drivers editor in a floating window. The drivers editor is explained in the chapter 18 Editors - Drivers.
 
+###### Add All to Keying Set
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Add All to Keying Set | Add All to Keying Set adds the information of the element to the current keyframe. |
-| Add single to Keying Set | Add to Keying Set adds the information of the element to the current keyframe. |
-| Remove from Keying Set | Remove from Keying Set removes the information of the element from the current keyframe. · **Reset All to Default Value**: Resets the X Y and Z values to the default value. · **Reset Single to Default Value**: Resets the value for the single edit box under the mouse to the default value. |
-| Copy All to Selected | Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected. |
-| Copy Single to Selected | Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected. |
-| Copy Data Path | Copy Data Path copies the RNA data path for this property. |
-| Copy Full Data Path | Copy Data Path copies the RNA data path for this property. |
-| Copy as new Driver | Copies the current value as a new driver. |
-| Assign Shortcut | This is just for the locks. Here you could assign a shortcut. |
-| Online Python Reference | Developer feature. Open the Blender Python Reference. |
-| Edit Source | Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item. |
-| Replace Keyframes | Replaces the keyframes in all axis at the current position. |
-| Replace single Keyframe | Replaces the keyframe in the currently selected axis at the current position. |
-| Delete Keyframes | Deletes the keyframes in all axis at the current position. |
-| Delete Single Keyframe | Deletes the keyframe in the currently selected axis at the current position. |
-| Clear Keyframes | Deletes all keyframes for all axis. |
-| Clear single Keyframe | Deletes all keyframes for the currently selected axis. |
-| Delete Drivers | Deletes the drivers for all axis. |
-| Delete Single Driver | Deletes the drivers for just the current axis. |
-| Copy Driver | Copies the driver. |
-| Edit Driver | Opens the Driven Property panel where you can change the settings for this driver. |
-| Reset Panel Zoom | Resets the panel to 100% zoom factor. |
+Add All to Keying Set adds the information of the element to the current keyframe.
 
+###### Add single to Keying Set
+
+Add to Keying Set adds the information of the element to the current keyframe.
+
+###### Remove from Keying Set
+
+Remove from Keying Set removes the information of the element from the current keyframe. · **Reset All to Default Value**: Resets the X Y and Z values to the default value. · **Reset Single to Default Value**: Resets the value for the single edit box under the mouse to the default value.
+
+###### Copy All to Selected
+
+Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.
+
+###### Copy Single to Selected
+
+Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.
+
+###### Copy Data Path
+
+Copy Data Path copies the RNA data path for this property.
+
+###### Copy Full Data Path
+
+Copy Data Path copies the RNA data path for this property.
+
+###### Copy as new Driver
+
+Copies the current value as a new driver.
+
+###### Assign Shortcut
+
+This is just for the locks. Here you could assign a shortcut.
+
+###### Online Python Reference
+
+Developer feature. Open the Blender Python Reference.
+
+###### Edit Source
+
+Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item.
+
+###### Replace Keyframes
+
+Replaces the keyframes in all axis at the current position.
+
+###### Replace single Keyframe
+
+Replaces the keyframe in the currently selected axis at the current position.
+
+###### Delete Keyframes
+
+Deletes the keyframes in all axis at the current position.
+
+###### Delete Single Keyframe
+
+Deletes the keyframe in the currently selected axis at the current position.
+
+###### Clear Keyframes
+
+Deletes all keyframes for all axis.
+
+###### Clear single Keyframe
+
+Deletes all keyframes for the currently selected axis.
+
+###### Delete Drivers
+
+Deletes the drivers for all axis.
+
+###### Delete Single Driver
+
+Deletes the drivers for just the current axis.
+
+###### Copy Driver
+
+Copies the driver.
+
+###### Edit Driver
+
+Opens the Driven Property panel where you can change the settings for this driver.
+
+###### Reset Panel Zoom
+
+Resets the panel to 100% zoom factor.
 
 ## Item tab - Transform Panel in Edit Mode
 
@@ -300,30 +366,53 @@ Below the Median you now also see **Dimensions X / Y / Z**: how big your selecti
 
 ### Mesh Objects
 
+#### Median
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Median | Median is the position of the selected mesh part. |
-| Dimensions | The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point. |
-| Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
-| Vertices Data | **Mean Bevel Weight**: Adjust the bevel weight for the selected vertices when you have a bevel modifier at the mesh. |
-| Edges Data | **Mean Bevel Weight**: Adjust the bevel weight for the selected edges when you have a bevel modifier at the mesh. · **Mean Crease**: Adjust the weight of the selected vertices when you have a subdivision surface modifier at the mesh. |
+Median is the position of the selected mesh part.
 
+#### Dimensions
+
+The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point.
+
+#### Global / Local
+
+Define if the orientation of the selection is local to the selected object, or global to the world coordinates.
+
+#### Vertices Data
+
+**Mean Bevel Weight**: Adjust the bevel weight for the selected vertices when you have a bevel modifier at the mesh.
+
+#### Edges Data
+
+**Mean Bevel Weight**: Adjust the bevel weight for the selected edges when you have a bevel modifier at the mesh. · **Mean Crease**: Adjust the weight of the selected vertices when you have a subdivision surface modifier at the mesh.
 
 ### Curve Objects / Surface Objects
 
 ![Curve Objects / Surface Objects](/docs2/images/editors/3d-viewport/sidebar/item-tab/curve-objects-surface-objects.png)
 
+#### Median
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| Median | Median is the position of the selected mesh part |
-| Dimensions | The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point. |
-| Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
-| Mean Weight | Adjust the weight used by softbody. Needs softbody. |
-| Mean Radius | Adjust the radius of the curve control points |
-| Mean Tilt | Adjust the tilt of the curve control points. |
+Median is the position of the selected mesh part
 
+#### Dimensions
+
+The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point.
+
+#### Global / Local
+
+Define if the orientation of the selection is local to the selected object, or global to the world coordinates.
+
+#### Mean Weight
+
+Adjust the weight used by softbody. Needs softbody.
+
+#### Mean Radius
+
+Adjust the radius of the curve control points
+
+#### Mean Tilt
+
+Adjust the tilt of the curve control points.
 
 #### Metaball Objects
 
@@ -333,12 +422,13 @@ Below the Median you now also see **Dimensions X / Y / Z**: how big your selecti
 
 Median is the position of the selected mesh part
 
+###### Global / Local
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
-| Radius | Adjust the radius of the selected meta element. |
+Define if the orientation of the selection is local to the selected object, or global to the world coordinates.
 
+###### Radius
+
+Adjust the radius of the selected meta element.
 
 ##### Stiffness
 
@@ -349,6 +439,12 @@ Adjust the stiffness of the selected meta element.
 ##### Type
 
 Type is a drop down box. Adjust the meta element type.
+
+##### Size
+
+![Metaball Transform panel with an Ellipsoid](/docs2/images/editors/3d-viewport/sidebar/item-tab/metaball-transform.png)
+
+The size of the meta element along each axis, shown for the types that have one. Ellipsoid and Cube have X, Y and Z, Plane has X and Y, and Capsule has X.
 
 ### Text Objects
 
@@ -362,13 +458,17 @@ Text objects do have an edit mode, but they don't show content in the Transform 
 
 Bones do have a head and a tail. You cannot position the whole bone by numeric values, but the head and tail joints.
 
+#### Head
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Head | Adjust the world position of the head joint in x, y and z coordinates. · **Radius**: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the head joint. |
-| Tail | Adjust the world position of the tail joint in x, y and z coordinates. · **Radius**: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the tail joint. |
-| Roll | Adjust the bone roll. · **Length**: Adjust the length of the bone. · **Envelope**: This is just useful when you use Envelopes type bones. Adjust the overall Envelope size. · **Lock**: Lock the transform of the bones in edit mode. The bones cannot be moved, rotated or scaled. |
+Adjust the world position of the head joint in x, y and z coordinates. · **Radius**: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the head joint.
 
+#### Tail
+
+Adjust the world position of the tail joint in x, y and z coordinates. · **Radius**: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the tail joint.
+
+#### Roll
+
+Adjust the bone roll. · **Length**: Adjust the length of the bone. · **Envelope**: This is just useful when you use Envelopes type bones. Adjust the overall Envelope size. · **Lock**: Lock the transform of the bones in edit mode. The bones cannot be moved, rotated or scaled.
 
 ### Lattice Objects
 
@@ -376,13 +476,17 @@ Bones do have a head and a tail. You cannot position the whole bone by numeric v
 
 You need to have some vertices of the Lattice object selected to see the content.
 
+#### Vertex
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| Vertex | See and set the vertex positions of the lattice objects. |
-| Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
-| Mean Weight | Lattice object is a deform cage. Adjust the mean weight of the selected vertice(s). |
+See and set the vertex positions of the lattice objects.
 
+#### Global / Local
+
+Define if the orientation of the selection is local to the selected object, or global to the world coordinates.
+
+#### Mean Weight
+
+Lattice object is a deform cage. Adjust the mean weight of the selected vertice(s).
 
 ## Item tab - Transform Panel in Pose Mode
 
@@ -406,25 +510,33 @@ In Weight paint mode you need to be in vertex selection mode and have a vertice 
 
 In Edit Mode you can select more than one vertices. In Weight Paint Mode just one vertice at a time.
 
+### Filter Vertex Groups
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Filter Vertex Groups | The first row is a setting. You can filter by all, only vertex groups that are assinged to deform bones. Or vertex groups that are assigned to non deform bones. |
-| Group | Set as active Vertex Group. · **Weight**: The weight of the selected vertice(s). The range goes from 0 to 1. · **Paste Weight to Selected**: Copy this group's weight to other selected vertices. · **Delete Weight**: Deletes the weight for this selected vertice(s). |
-| Normalize | Normalizes the weight of the selected vertice(s). |
-| Copy | Copy active vertex to other selected vertices. |
+The first row is a setting. You can filter by all, only vertex groups that are assinged to deform bones. Or vertex groups that are assigned to non deform bones.
 
+### Group
+
+Set as active Vertex Group. · **Weight**: The weight of the selected vertice(s). The range goes from 0 to 1. · **Paste Weight to Selected**: Copy this group's weight to other selected vertices. · **Delete Weight**: Deletes the weight for this selected vertice(s).
+
+### Normalize
+
+Normalizes the weight of the selected vertice(s).
+
+### Copy
+
+Copy active vertex to other selected vertices.
 
 ## Item tab - Curve Object - Active Spline Panel
 
 ![Item tab - Curve Object - Active Spline Panel](/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-curve-object-active-spline-panel.png)
 
+### Cyclic
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------ |
-| Cyclic | Make this curve or surface a closed loop in the U direction. |
-| Resolution U | Subdivisions per segments. |
+Make this curve or surface a closed loop in the U direction.
 
+### Resolution U
+
+Subdivisions per segments.
 
 ### Interpolation Tilt
 
@@ -446,16 +558,29 @@ Smooth the normals of the surface or a beveled curve.
 
 ![Item tab - Surface Object - Active Spline Panel](/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-surface-object-active-spline-panel.png)
 
+### Cyclic U / V
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------- |
-| Cyclic U / V | Make this curve or surface a closed loop in the U or V direction. |
-| Bezier U / V | Make this curve or surface act like a Bezier curve in the U or V direction. |
-| Endpoint U / V | Make this nurbs or surface meet the endpoints in the U or V direction. |
-| Order U / V | Nurbs Order in the U or V direction. |
-| Resolution U / V | The subdivision per segment. |
-| Smooth | Smooth the normals of the surface or a beveled curve. |
+Make this curve or surface a closed loop in the U or V direction.
 
+### Bezier U / V
+
+Make this curve or surface act like a Bezier curve in the U or V direction.
+
+### Endpoint U / V
+
+Make this nurbs or surface meet the endpoints in the U or V direction.
+
+### Order U / V
+
+Nurbs Order in the U or V direction.
+
+### Resolution U / V
+
+The subdivision per segment.
+
+### Smooth
+
+Smooth the normals of the surface or a beveled curve.
 
 ## Item tab - Grease Pencil Object - Active Spline Panel
 
@@ -481,12 +606,13 @@ The content is in all modes and for all object types the same.
 
 The View panel contains some camera settings for the world camera and the render camera.
 
+### Focal Length
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Focal Length | Set up the focal length for the world camera. You need to be in perspectivic view. In Orthographic view the lens values doesn't have an effect. |
-| Clip Near / Clip Far | Set up the clipping values for the world camera. Geometry behind the end value and before the start value will not be drawn. |
+Set up the focal length for the world camera. You need to be in perspectivic view. In Orthographic view the lens values doesn't have an effect.
 
+### Clip Near / Clip Far
+
+Set up the clipping values for the world camera. Geometry behind the end value and before the start value will not be drawn.
 
 ### Use Local Camera
 
@@ -500,6 +626,18 @@ Normally when you render an image it gets rendered from the currently active cam
 
 Toggles and shows all camera passepartout overlays.
 
+### View Roll
+
+![View Roll](/docs2/images/editors/3d-viewport/sidebar/view-tab/view-roll.png)
+
+Shows and sets how much the view is rolled, tilted sideways against the horizon. 0° is level. Drag or type a value to roll the view; hover it and press **Backspace**, or right-click > **Reset to Default Value**, to level the view again. The value follows along while you roll with the roll ring of the navigation gizmo or the hotkey. View Roll shows outside the camera view and does nothing when view rotation is locked.
+
+### Camera Roll
+
+Shown instead of View Roll while you look through the camera. It rolls the camera view without moving the camera object, which is handy when you draw on the camera with Grease Pencil and want to turn the canvas. Press **Backspace** or right-click > **Reset to Default Value** to set it back to 0°.
+
+> **Tip:** **Ctrl + Alt + middle mouse drag** rolls the view in every view, including the camera view (Cmd + Alt + middle mouse on macOS).
+
 ### Use Render Region
 
 ![Use Render Region](/docs2/images/editors/3d-viewport/sidebar/view-tab/use-render-region.png)
@@ -512,12 +650,13 @@ When you have defined a render region rectangle, then you can toggle it on and o
 
 Camera Lock is a sub tab with camera related settings.
 
+#### Lock to Object
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lock to Object | Locks the view of the world camera to an object. Choose an object for it. |
-| Lock to 3D Cursor | Locks the view of the world camera to the 3D cursor. You can either lock to an object or to the 3d cursor. When you choose an object then the checkbox for the 3d cursor vanishes. |
+Locks the view of the world camera to an object. Choose an object for it.
 
+#### Lock to 3D Cursor
+
+Locks the view of the world camera to the 3D cursor. You can either lock to an object or to the 3d cursor. When you choose an object then the checkbox for the 3d cursor vanishes.
 
 #### Lock Camera to view
 
@@ -559,23 +698,41 @@ The rotation of the 3D cursor in world coordinates.
 
 When you right click at the edit boxes then a menu with further functionality appears.
 
+##### Reset All to Default Value
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------ |
-| Reset All to Default Value | Resets the X Y and Z values to the default value. |
-| Reset Single to Default Value | Resets the value for the single edit box under the mouse to the default value. |
+Resets the X Y and Z values to the default value.
 
+##### Reset Single to Default Value
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy All to Selected | Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected. |
-| Copy Single to Selected | Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected. |
-| Copy Data Path | Copy Data Path copies the RNA data path for this property. |
-| Copy as new Driver | Copies the current value as a new driver. |
-| Online Python Reference | Developer feature. Open the Blender Python Reference. |
-| Edit Source | Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item. |
-| Reset Panel Zoom | Resets the zoom level of the sidebar. You can zoom it with holding Ctrl and dragging MMB. |
+Resets the value for the single edit box under the mouse to the default value.
 
+##### Copy All to Selected
+
+Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.
+
+##### Copy Single to Selected
+
+Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.
+
+##### Copy Data Path
+
+Copy Data Path copies the RNA data path for this property.
+
+##### Copy as new Driver
+
+Copies the current value as a new driver.
+
+##### Online Python Reference
+
+Developer feature. Open the Blender Python Reference.
+
+##### Edit Source
+
+Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item.
+
+##### Reset Panel Zoom
+
+Resets the zoom level of the sidebar. You can zoom it with holding Ctrl and dragging MMB.
 
 ## View tab - Collections Panel
 
@@ -615,12 +772,13 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
 
 ### List of Annotation Strokes
 
@@ -632,22 +790,37 @@ At the right side you find buttons to sort them and to add and remove new Annota
 
 You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.
 
+#### In Front
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------- |
-| In Front | Toggle if the stroke is displayed in front of geometry or behind. |
-| Eye icon | The eye icon allows you to make it invisible And it has a search field. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
-| Move up / Down | Move the selected annotation up or down in the list |
+Toggle if the stroke is displayed in front of geometry or behind.
 
+#### Eye icon
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Opacity | The opacity of the stroke. |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The eye icon allows you to make it invisible And it has a search field.
 
+#### Add Annotation
+
+Add a new annotation.
+
+#### Delete Annotation
+
+Delete the annotation.
+
+#### Move up / Down
+
+Move the selected annotation up or down in the list
+
+#### Opacity
+
+The opacity of the stroke.
+
+#### Thickness
+
+The thickness of the annotation stroke.
+
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin
 
@@ -683,13 +856,17 @@ With Stereoscopy setting Multi-View.
 
 Show the image in the 3d view from the single cameras, or from both.
 
+#### Cameras
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------- |
-| Cameras | With Stereoscopy setting Stereo 3D. Show the left and right cameras. |
-| Plane | Show the convergence plane. · **Alpha**: The transparency of the convergence plane. |
-| Volume | Show the stereoscopy volume. · **Alpha**: The transparency of the stereoscopy volume. |
+With Stereoscopy setting Stereo 3D. Show the left and right cameras.
 
+#### Plane
+
+Show the convergence plane. · **Alpha**: The transparency of the convergence plane.
+
+#### Volume
+
+Show the stereoscopy volume. · **Alpha**: The transparency of the stereoscopy volume.
 
 ### Set Stereo 3D
 
@@ -789,12 +966,13 @@ Quad view has four windows. Three of them can be locked to the orthographic view
 
 Turning off Lock Rotation reveals the quick navigation buttons Switch to Camera View and Switch between Perspectivic and Orthographic display.
 
+#### Sync Zoom Pan
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Sync Zoom Pan | In the three orthographic views you can either zoom and pan individually. Or you zoom and pan them in sync. |
-| Clip Contents | Clip objects based on what is visible in the other orthographic side views. The perspectivic view is not affected. |
+In the three orthographic views you can either zoom and pan individually. Or you zoom and pan them in sync.
 
+#### Clip Contents
+
+Clip objects based on what is visible in the other orthographic side views. The perspectivic view is not affected.
 
 ## View tab - Important Hotkeys
 

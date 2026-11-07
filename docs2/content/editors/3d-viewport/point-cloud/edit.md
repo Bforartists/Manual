@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Point Cloud"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the point cloud itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -53,6 +53,8 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
@@ -66,14 +68,10 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -88,6 +86,8 @@ To make things even more complicated, the orientation of this imaginary plane is
 ##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -105,12 +105,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -118,14 +114,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -141,6 +133,8 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
@@ -154,14 +148,10 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -170,6 +160,10 @@ Enables proportional editing. Activating proportional editing reveals further se
 Warps a selection between two defined points. This also works with curves.
 
 ##### Adjust Last Operation - Warp
+
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
@@ -196,6 +190,8 @@ This tool allows randomizes the positions of the selected vertices.
 
 ![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----------- | ------------------------------------------ |
@@ -217,6 +213,8 @@ The curve needs to have geometry !
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Values
 
 The transform values.
@@ -233,12 +231,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Move Texture Space
 
@@ -260,6 +254,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move
 
 Adjust in which directions you want to transform.
@@ -280,14 +276,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale Texture Space
 
@@ -311,6 +303,8 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Scale
 
 Adjust in which directions you want to transform.
@@ -331,14 +325,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Dimensions
 
@@ -353,6 +343,10 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
 ##### Adjust Last Operation - Set Dimensions
+
+Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
 
 ###### New Dimensions
 
@@ -374,6 +368,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move X , Y , Z
 
 ###### Orientation
@@ -382,12 +378,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Attribute
 
@@ -397,10 +389,9 @@ Set values of the active attribute for selected elements.
 
 ![Last Operator Set Attribute](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/last-operator-set-attribute.png)
 
+Change the settings of **Set Attribute** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### position X , Y , Z
 
-
-| Entry | What it does |
-| -------- | --------------------------------------------------------- |
-| Delete | Deletes the selected element. |
-| Separate | Separates the selection and makes a new object out of it. |
+- **Delete**: Deletes the selected element.
+- **Separate**: Separates the selection and makes a new object out of it.

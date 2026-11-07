@@ -6,8 +6,8 @@ path:
   - Editors
   - Topbar and Statusbar
   - Topbar menus
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.topbar-and-statusbar.topbar-menus.file-menu
@@ -107,12 +107,13 @@ This clears the recent files list. When you clear, you will be prompted with whi
 
 ![Remove](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/remove.png)
 
+##### All Items
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| All Items | Removes all the items in the list. |
-| Items Not Found | Removes only the missing files from the list. If a file exists in the list, it won’t clear it. |
+Removes all the items in the list.
 
+##### Items Not Found
+
+Removes only the missing files from the list. If a file exists in the list, it won’t clear it.
 
 ### Recent Context Menu - Open File Location
 
@@ -172,14 +173,21 @@ This filter allows you to filter the content of the blend file for specific obje
 
 At the right you can reveal the import settings.
 
+#### Relative Path
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relative Path | Available only when linking, see *relative paths*. |
-| Select | Makes the object *Active* after it is loaded. |
-| Active Layer | Enabled by default, the object is assigned to the visible layers in your scene. Otherwise, it is assigned to the same layers it resides on in the source file. |
-| Instance Collections | This option links the collection to an object, adding it to the active scene. |
+Available only when linking, see *relative paths*.
 
+#### Select
+
+Makes the object *Active* after it is loaded.
+
+#### Active Layer
+
+Enabled by default, the object is assigned to the visible layers in your scene. Otherwise, it is assigned to the same layers it resides on in the source file.
+
+#### Instance Collections
+
+This option links the collection to an object, adding it to the active scene.
 
 ### Please Note:
 
@@ -215,15 +223,25 @@ This filter allows you to filter the content of the blend file for specific obje
 
 At the right you can reveal the import settings.
 
+#### Select
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Select | Makes the object *Active* after it is loaded. |
-| Active Collection | Put the new objects into the active collection. |
-| Instance Collection | Create instances for collections rather than adding them directly to the scene. |
-| Fake User | Set Fake User for appended objects, except Objects and Groups |
-| Localize All | Localize all appended data, including indirectly linked from other libraries. |
+Makes the object *Active* after it is loaded.
 
+#### Active Collection
+
+Put the new objects into the active collection.
+
+#### Instance Collection
+
+Create instances for collections rather than adding them directly to the scene.
+
+#### Fake User
+
+Set Fake User for appended objects, except Objects and Groups
+
+#### Localize All
+
+Localize all appended data, including indirectly linked from other libraries.
 
 ## Data Previews
 
@@ -259,14 +277,21 @@ This process takes a while. Now let's try to append from the same file again. Yo
 
 ![Data Previews](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/data-previews-9.png)
 
+### Refresh Data Set Previews
 
-| Entry | What it does |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Refresh Data Set Previews | Refreshes the existing data set previews. |
-| Batch Generate Previews | Generates the previews for the data objects in the selected blend file(s). The scene that you want to work at should not be loaded. |
-| Clear Data Set Previews | Removes existing previews for some types in the target blend file. |
-| Batch Clear Previews | Removes all existing previews in the target blend file. |
+Refreshes the existing data set previews.
 
+### Batch Generate Previews
+
+Generates the previews for the data objects in the selected blend file(s). The scene that you want to work at should not be loaded.
+
+### Clear Data Set Previews
+
+Removes existing previews for some types in the target blend file.
+
+### Batch Clear Previews
+
+Removes all existing previews in the target blend file.
 
 ## Import
 
@@ -286,12 +311,13 @@ The operator presets exists on nearly all importers and exporters. Exceptions ar
 
 #### Operator Presets dropdown
 
+##### Restore Operator Defaults
 
-| Entry | What it does |
-| ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Restore Operator Defaults | Restores the importer or exporter settings to their default values |
-| List of available presets | The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet. |
+Restores the importer or exporter settings to their default values
 
+##### List of available presets
+
+The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet.
 
 #### Add Operator Preset
 
@@ -317,12 +343,13 @@ You can optionally drag and drop multiple files into the 3D Viewport to directly
 
 The alembic file format is for static geometry. It does not support armatures, hair or particles.
 
+#### General
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| General | **Scale**: Set the import scale factor. |
-| Options | **Relative Path**: Select the file relative to the blend file. · **Set Frame Range**: Sets the Frame range start and end point in Bforartists to match the one in the alembic file. · **Is Sequence**: Import sequenced files that are split in cache parts. · **Validate Meshes**: Check for invalid mesh data in the file. Note that this operation may take some time. · **Always add Cache Reader**: Add cache modifiers and constraints to imported objects even when they are not animated. This allows updating the alembic archive when reloading. |
+**Scale**: Set the import scale factor.
 
+#### Options
+
+**Relative Path**: Select the file relative to the blend file. · **Set Frame Range**: Sets the Frame range start and end point in Bforartists to match the one in the alembic file. · **Is Sequence**: Import sequenced files that are split in cache parts. · **Validate Meshes**: Check for invalid mesh data in the file. Note that this operation may take some time. · **Always add Cache Reader**: Add cache modifiers and constraints to imported objects even when they are not animated. This allows updating the alembic archive when reloading.
 
 ### USD
 
@@ -332,83 +359,137 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 
 #### General
 
+##### Path Mask
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Path Mask | Import only the subset of the USD scene rooted at the given primitive. |
-| Include | What to include · **Visible Primitives Only**: Do not import invisible USD primitives. Only applies to primitives with a non-animated visibility attribute. Primitives with animated visibility will always be imported. · **Defined Primitives Only**: Import only defined USD primities. When this is disabled, this allows importing USD primitives which are not defined, such as those with an override specifier. · **Set Frame Range**: Update the scene’s start and end frame to match those of the USD stage. · **Create Collection**: Add all imported objects to a new collection. · **Relative Path**: Select the file relative to the blend file. |
-| Scale | The scale size at import. |
-| Light Intensity Scale | Scale for the intensity of imported lights. |
-| Custom Properties | Behaviour when importing USD attributes as custom properties. · **All Custom**: Import all USD custom attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import all USD user defined attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import not custom attributes as custom properties. |
+Import only the subset of the USD scene rooted at the given primitive.
 
+##### Include
+
+What to include · **Visible Primitives Only**: Do not import invisible USD primitives. Only applies to primitives with a non-animated visibility attribute. Primitives with animated visibility will always be imported. · **Defined Primitives Only**: Import only defined USD primities. When this is disabled, this allows importing USD primitives which are not defined, such as those with an override specifier. · **Set Frame Range**: Update the scene’s start and end frame to match those of the USD stage. · **Create Collection**: Add all imported objects to a new collection. · **Relative Path**: Select the file relative to the blend file.
+
+##### Scale
+
+The scale size at import.
+
+##### Light Intensity Scale
+
+Scale for the intensity of imported lights.
+
+##### Custom Properties
+
+Behaviour when importing USD attributes as custom properties. · **All Custom**: Import all USD custom attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import all USD user defined attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import not custom attributes as custom properties.
 
 #### Object Types
 
 ![Object Types](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object-types.png)
 
+##### Cameras
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cameras | Import cameras (perspective and orthographic). |
-| Curves | Import curve primitives, including USD basis and NURBS curves. (Note that support for Bézier basis is not yet fully implemented.) |
-| Lights | Import lights. Does not currently include USD dome, cylinder or geometry lights. |
-| Materials | Import materials. See also the experimental Import USD Preview option. |
-| Meshes | Import meshes. |
-| Volumes | Import USD OpenVDB field assets. |
-| Point Clouds | Import pointcloud data. |
-| USD Shapes | Import USD Shapes. |
-| Display Purpose | **Proxy**: Include primitives with purpose proxy. · **Render**: Include primitives with purpose render. · **Guide**: Include primitives with purpose guide. |
+Import cameras (perspective and orthographic).
 
+##### Curves
+
+Import curve primitives, including USD basis and NURBS curves. (Note that support for Bézier basis is not yet fully implemented.)
+
+##### Lights
+
+Import lights. Does not currently include USD dome, cylinder or geometry lights.
+
+##### Materials
+
+Import materials. See also the experimental Import USD Preview option.
+
+##### Meshes
+
+Import meshes.
+
+##### Volumes
+
+Import USD OpenVDB field assets.
+
+##### Point Clouds
+
+Import pointcloud data.
+
+##### USD Shapes
+
+Import USD Shapes.
+
+##### Display Purpose
+
+**Proxy**: Include primitives with purpose proxy. · **Render**: Include primitives with purpose render. · **Guide**: Include primitives with purpose guide.
 
 #### Material Purpose
 
 ![Material Purpose](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/material-purpose.png)
 
+##### All Purpose
 
-| Entry | What it does |
-| ----------- | -------------------------------------------- |
-| All Purpose | Attempt to import all purpose materials. |
-| Preview | Attempt to import preview purpose materials. |
-| Full | Attempt to import full materials. |
+Attempt to import all purpose materials.
 
+##### Preview
+
+Attempt to import preview purpose materials.
+
+##### Full
+
+Attempt to import full materials.
 
 #### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry.png)
 
+##### UV Coordinates
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| UV Coordinates | Load mesh UV coordinates. |
-| Color Attributes | Import the USD mesh display Color values as Blender mesh vertex colors. |
-| Mesh Attributes | Read USD PrimVars as mesh attributes. |
-| Subdivision | Import Subdivision. |
-| Validate Meshes | Ensure the data is valid on import (when disabled, data may be imported which causes crashes displaying or editing) |
-| Merge parent XForm | Allow USD primitives to merge with t heir XForm parent if they are the only child in the hierarchy. |
+Load mesh UV coordinates.
 
+##### Color Attributes
+
+Import the USD mesh display Color values as Blender mesh vertex colors.
+
+##### Mesh Attributes
+
+Read USD PrimVars as mesh attributes.
+
+##### Subdivision
+
+Import Subdivision.
+
+##### Validate Meshes
+
+Ensure the data is valid on import (when disabled, data may be imported which causes crashes displaying or editing)
+
+##### Merge parent XForm
+
+Allow USD primitives to merge with t heir XForm parent if they are the only child in the hierarchy.
 
 #### Rigging
 
 ![Rigging](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rigging.png)
 
+##### Shape Keys
 
-| Entry | What it does |
-| ---------- | ------------------------------- |
-| Shape Keys | Import all shape keys. |
-| Animation | Import all animation keyframes. |
+Import all shape keys.
 
+##### Animation
+
+Import all animation keyframes.
 
 #### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials.png)
 
+##### Import all Materials
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Import all Materials | Import all materials. Also materials that are not used by the geometry. |
-| Import USD Preview | Convert USD Preview Surface shaders to Principled BSDF shader networks. |
-| Set Material Blend | If the Import USD Preview is enabled , the material blend method will atomatically be set based on the shader's opacit and poacity threshold inputs. |
+Import all materials. Also materials that are not used by the geometry.
 
+##### Import USD Preview
+
+Convert USD Preview Surface shaders to Principled BSDF shader networks.
+
+##### Set Material Blend
+
+If the Import USD Preview is enabled , the material blend method will atomatically be set based on the shader's opacit and poacity threshold inputs.
 
 ##### Material Name Collision
 
@@ -416,12 +497,13 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 
 How to import the material name when it conflicts with an existing material in the scene.
 
+###### Make Unique
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Make Unique | Import each USD material as a unique material. |
-| Reference Existing | If the material with the same name exists, replace the USD material with existing material. |
+Import each USD material as a unique material.
 
+###### Reference Existing
+
+If the material with the same name exists, replace the USD material with existing material.
 
 ##### Set Material Blend
 
@@ -437,22 +519,23 @@ If the Import USD Preview option is enabled, the material blend method will auto
 
 How to import textures.
 
+###### None
 
-| Entry | What it does |
-| ------ | ------------------------------ |
-| None | Don't import textures. |
-| Packed | Import Texture as packed data. |
+Don't import textures.
 
+###### Packed
+
+Import Texture as packed data.
 
 ##### Copy
 
 Copy files to texture directory.
 
-**Textures Directory**
+###### Textures Directory
 
 The textures directory.
 
-**File Name Collision**
+###### File Name Collision
 
 ![File Name Collision](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/file-name-collision.png)
 
@@ -472,12 +555,13 @@ Import USD scene graph instances as collection instances.
 
 Imports a svg file as a grease pencil object.
 
+#### Resolution
 
-| Entry | What it does |
-| ---------- | --------------------------------- |
-| Resolution | The resolution of the svg import. |
-| Scale | The scale of the svg import. |
+The resolution of the svg import.
 
+#### Scale
+
+The scale of the svg import.
 
 ### FBX
 
@@ -489,24 +573,29 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-2.png)
 
+##### Scale
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------- |
-| Scale | Scale factor at import. |
-| Custom Properties | Import User properties as Custom properties |
-| Enums as Strings | Store enumeration values as strings. |
+Scale factor at import.
 
+##### Custom Properties
+
+Import User properties as Custom properties
+
+##### Enums as Strings
+
+Store enumeration values as strings.
 
 #### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-2.png)
 
+##### Custom Normals
 
-| Entry | What it does |
-| ---------------- | ---------------------- |
-| Custom Normals | Import custom normals. |
-| Subdivision Data | Import Subdivision. |
+Import custom normals.
 
+##### Subdivision Data
+
+Import Subdivision.
 
 ##### Vertex Colors
 
@@ -514,12 +603,13 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 
 Import vertex colors if they exist. These are Color attributes.
 
+###### sRGB
 
-| Entry | What it does |
-| ------ | ------------------ |
-| sRGB | 8bit colors |
-| Linear | 32bit float colors |
+8bit colors
 
+###### Linear
+
+32bit float colors
 
 ##### Validate Meshes
 
@@ -577,16 +667,29 @@ The Up orientation at import.
 
 ![Options](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/options.png)
 
+##### Split by Object
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Split by Object | Import loose mesh parts as single objects. |
-| Split by Group | Import Obj Groups as meshes. |
-| Vertex Groups | Import Obj groups as vertex groups. |
-| Validate Meshes | Check at import for invalid data. |
-| Detect Cyclic Curves | Join Curve Endpoints if overlapping control points are detected. |
-| Path Separator | Import option to create collection hierarchy by splitting names with a separator. Names found in the OBJ file are split by that, and a Collection hierarchy is made, so you can have e.g. "o House/Roof/Tile" in the OBJ file. |
+Import loose mesh parts as single objects.
 
+##### Split by Group
+
+Import Obj Groups as meshes.
+
+##### Vertex Groups
+
+Import Obj groups as vertex groups.
+
+##### Validate Meshes
+
+Check at import for invalid data.
+
+##### Detect Cyclic Curves
+
+Join Curve Endpoints if overlapping control points are detected.
+
+##### Path Separator
+
+Import option to create collection hierarchy by splitting names with a separator. Names found in the OBJ file are split by that, and a Collection hierarchy is made, so you can have e.g. "o House/Roof/Tile" in the OBJ file.
 
 #### Materials
 
@@ -608,14 +711,21 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-4.png)
 
+##### Scale
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------- |
-| Scale | The scale factor for the imported geometry. |
-| Scene Unit | Apply current scene units at importing the geometry. |
-| Forward Axis | The forward axis for the imported geometry. |
-| Up Axis | The up axis for the imported geometry. |
+The scale factor for the imported geometry.
 
+##### Scene Unit
+
+Apply current scene units at importing the geometry.
+
+##### Forward Axis
+
+The forward axis for the imported geometry.
+
+##### Up Axis
+
+The up axis for the imported geometry.
 
 #### Options
 
@@ -631,12 +741,13 @@ Merges vertices by distance.
 
 Import vertex colors if they exist. These are Color attributes.
 
+###### sRGB
 
-| Entry | What it does |
-| ------ | ------------------ |
-| sRGB | 8bit colors |
-| Linear | 32bit float colors |
+8bit colors
 
+###### Linear
+
+32bit float colors
 
 ### STL
 
@@ -646,12 +757,13 @@ STL (Standard Triangulation/Tessellation Language ) is a standard format for man
 
 #### General
 
+##### Scale
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------- |
-| Scale | The import scale. |
-| Scene Unit | Apply the scene unit at the geometry at import. |
+The import scale.
 
+##### Scene Unit
+
+Apply the scene unit at the geometry at import.
 
 ##### Forward
 
@@ -667,12 +779,13 @@ The Up orientation at import.
 
 #### Options
 
+##### Facet Normals
 
-| Entry | What it does |
-| --------------- | --------------------------------------- |
-| Facet Normals | Import the geometry with faceted faces. |
-| Validate Meshes | Check at import for invalid data. |
+Import the geometry with faceted faces.
 
+##### Validate Meshes
+
+Check at import for invalid data.
 
 ### Motion Capture (BVH)
 
@@ -680,13 +793,17 @@ The Up orientation at import.
 
 The Biovision Hierarchy (BVH) character animation file format is a file format to carry motion capture data.
 
+#### Target
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Target | You can either target an armature or an object. |
-| Transform | **Scale**: The import scale. · **Rotation**: The rotation type. · **Forward**: The forward orientation. · **Up**: The Up orientation. |
-| Animation | **Start Frame**: The start frame for the animation. · **Scale FPS**: Scale the frame rate of the BVH file to the current scenes. With off every frame of the BVH is one frame in Bforartists. · **Loop**: Loop the animation playback. · **Update Scene FPS**: Sets the scene frame rate to that of the BVH file. Note that this nullifies the Scale FPS feature since the scale will be 1:1. · **Update Scene Duration**: Extend the scene duration to be the one of the BVH file duration. |
+You can either target an armature or an object.
 
+#### Transform
+
+**Scale**: The import scale. · **Rotation**: The rotation type. · **Forward**: The forward orientation. · **Up**: The Up orientation.
+
+#### Animation
+
+**Start Frame**: The start frame for the animation. · **Scale FPS**: Scale the frame rate of the BVH file to the current scenes. With off every frame of the BVH is one frame in Bforartists. · **Loop**: Loop the animation playback. · **Update Scene FPS**: Sets the scene frame rate to that of the BVH file. Note that this nullifies the Scale FPS feature since the scale will be 1:1. · **Update Scene Duration**: Extend the scene duration to be the one of the BVH file duration.
 
 ### Scalable Vector Graphics (SVG)
 
@@ -706,15 +823,25 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 
 What data to import.
 
+##### Custom Normals
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------ |
-| Custom Normals | Import custom normals. |
-| Subdivision Data | Import Subdivision. |
-| Custom Properties | Import User properties as Custom properties |
-| Import Enums as Strings | Store enumeration values as strings. |
-| Image Search | Search the sub directions for associated images. |
+Import custom normals.
 
+##### Subdivision Data
+
+Import Subdivision.
+
+##### Custom Properties
+
+Import User properties as Custom properties
+
+##### Import Enums as Strings
+
+Store enumeration values as strings.
+
+##### Image Search
+
+Search the sub directions for associated images.
 
 ##### Vertex Colors
 
@@ -722,25 +849,33 @@ What data to import.
 
 Import vertex colors if they exist. These are Color attributes.
 
+###### sRGB
 
-| Entry | What it does |
-| ------ | ------------------ |
-| sRGB | 8bit colors |
-| Linear | 32bit float colors |
+8bit colors
 
+###### Linear
+
+32bit float colors
 
 #### Transform
 
 ![Transform](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/transform.png)
 
+##### Scale
 
-| Entry | What it does |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scale | Adjust the scale factor at import. |
-| Decal Offset | Displace geometry of alpha meshes. |
-| !Experimental! Apply Transform | Bake space transform into object data. This avoids unwanted rotations when the target space is not aligned with the Bforartists space. Warning! This feature is experimental. Use at own risk. |
-| Use Pre/ Post Rotation | Use Pre or Post Rotation from FBX transform. This feature may not work in all cases. |
+Adjust the scale factor at import.
 
+##### Decal Offset
+
+Displace geometry of alpha meshes.
+
+##### !Experimental! Apply Transform
+
+Bake space transform into object data. This avoids unwanted rotations when the target space is not aligned with the Bforartists space. Warning! This feature is experimental. Use at own risk.
+
+##### Use Pre/ Post Rotation
+
+Use Pre or Post Rotation from FBX transform. This feature may not work in all cases.
 
 #### Manual Orientation
 
@@ -770,13 +905,17 @@ Adjust an offset in frames for the imported animation.
 
 ![Armature](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-2.png)
 
+##### Ignore Leaf Bones
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------- |
-| Ignore Leaf Bones | Ignore the last bone at the end of the chain. |
-| Force Connect Children | Force connection of the children bones to their parent. |
-| Automatic Bone Orientation | Try to align the mayor bone axis with the bone children. |
+Ignore the last bone at the end of the chain.
 
+##### Force Connect Children
+
+Force connection of the children bones to their parent.
+
+##### Automatic Bone Orientation
+
+Try to align the mayor bone axis with the bone children.
 
 ##### Primary and secondary Bone Axis
 
@@ -798,48 +937,61 @@ The GL Transmission Format from the Khronos Group is a file format for 3D scenes
 
 Define the shading of the imported geometry.
 
+##### Use Normal Data
 
-| Entry | What it does |
-| --------------- | --------------------------------------- |
-| Use Normal Data | Use the existing Normals. |
-| Flat shading | Shades the whole mesh flat and faceted. |
-| Smooth shading | Shades the whole mesh smooth. |
+Use the existing Normals.
 
+##### Flat shading
+
+Shades the whole mesh flat and faceted.
+
+##### Smooth shading
+
+Shades the whole mesh smooth.
 
 #### Lighting Mode
 
 ![Lighting Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/lighting-mode.png)
 
+##### Standard
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------- |
-| Standard | Physically based glTF units (cd, lx, nt) |
-| Unitless | Non physical unitless lighting. Useful when exposure controls are not available |
-| Raw (Deprecated) | Blender lighting strength without conversion. |
+Physically based glTF units (cd, lx, nt)
 
+##### Unitless
+
+Non physical unitless lighting. Useful when exposure controls are not available
+
+##### Raw (Deprecated)
+
+Blender lighting strength without conversion.
 
 #### Mesh
 
 ![Mesh](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/mesh.png)
 
+##### Merge Vertices
 
-| Entry | What it does |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Merge Vertices | glTF stores every vertice of faces as an extra vertice. There is no shared vertice between two faces. Merge vertices merges the vertices of neighbor faces together. Attiention! It currently cannot combine vertices with different normals. |
-| Merge Material slot when possible | As title says. Merge Material slot when possible. |
+glTF stores every vertice of faces as an extra vertice. There is no shared vertice between two faces. Merge vertices merges the vertices of neighbor faces together. Attiention! It currently cannot combine vertices with different normals.
 
+##### Merge Material slot when possible
+
+As title says. Merge Material slot when possible.
 
 #### Texture
 
 ![Texture](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/texture.png)
 
+##### Pack Images
 
-| Entry | What it does |
-| -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Pack Images | Pack all images into the Blend file at loading the glTF file. |
-| Import WebP textures | If a texture exists in WebP format, loads the WebP texture instead of the fallback PNG/JPEG one. |
-| Import Unused Materials & Images | As the title says. Import Unused Materials and Images. |
+Pack all images into the Blend file at loading the glTF file.
 
+##### Import WebP textures
+
+If a texture exists in WebP format, loads the WebP texture instead of the fallback PNG/JPEG one.
+
+##### Import Unused Materials & Images
+
+As the title says. Import Unused Materials and Images.
 
 #### Bones & Skin
 
@@ -851,27 +1003,49 @@ Define the shading of the imported geometry.
 
 Heuristic method for placing bones.
 
+###### Disable Bone Shapes
 
-| Entry | What it does |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Disable Bone Shapes | Do not create bone shapes. |
-| Bone Shape Scale | The scale factor of the bone shapes for viewport display. |
-| Guess original bind pose | Tries to guess the original bind pose for skinned meshes. Off means the rest pose is used as the bind pose. |
-| Disable Bone Shape | Do not create bone shapes. |
-| Bone Shape Scale | Scale factor for bone shapes. |
+Do not create bone shapes.
 
+###### Bone Shape Scale
+
+The scale factor of the bone shapes for viewport display.
+
+###### Guess original bind pose
+
+Tries to guess the original bind pose for skinned meshes. Off means the rest pose is used as the bind pose.
+
+###### Disable Bone Shape
+
+Do not create bone shapes.
+
+###### Bone Shape Scale
+
+Scale factor for bone shapes.
 
 #### Pipeline
 
 ![Pipeline](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/pipeline.png)
 
+##### Import Scene as collection
 
-| Entry | What it does |
-| -------------------------- | ----------------------------------------------------------------------------------------- |
-| Import Scene as collection | Import the Scene as a collection. |
-| Select imported Objects | Select the imported objects once the import has finished. |
-| Import Scene Extras | Import Scene Extras as custom properties. Existing custom properties will be overwritten. |
+Import the Scene as a collection.
 
+##### Select imported Objects
+
+Select the imported objects once the import has finished.
+
+##### Import Scene Extras
+
+Import Scene Extras as custom properties. Existing custom properties will be overwritten.
+
+### OpenTimelineIO (.otio)
+
+Imports an OpenTimelineIO file into the sequencer scene. Use it to bring an edit from other editing software, for example DaVinci Resolve, into the Video Sequencer: the strips, their timing and their channels come in as sequencer strips. Media that the file points to must be found on your disk.
+
+#### Relative Path
+
+Select the file relative to the blend file.
 
 ## Export
 
@@ -891,12 +1065,13 @@ The operator presets exists on nearly all im- and exporters. Exceptions are for 
 
 #### Operator Presets dropdown
 
+##### Restore Operator Defaults
 
-| Entry | What it does |
-| ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Restore Operator Defaults | Restores the im or exporter settings to their default values |
-| List of available presets | The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet. |
+Restores the im or exporter settings to their default values
 
+##### List of available presets
+
+The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet.
 
 #### Add Operator Preset
 
@@ -920,32 +1095,61 @@ The alembic export options are divided into four sections.
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-5.png)
 
+##### Scale
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------ |
-| Scale | The export scale factor. |
-| Include | — |
-| Selection Only | Export just the selected object(s), and not the whole scene. |
-| Visible Only | Export visible geometry only. |
+The export scale factor.
 
+##### Include
+
+—
+
+##### Selection Only
+
+Export just the selected object(s), and not the whole scene.
+
+##### Visible Only
+
+Export visible geometry only.
 
 #### Scene
 
 ![Scene](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/scene.png)
 
+##### Frame Start
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Frame Start | The start frame of the export. |
-| End | The end frame of the export. |
-| Samples Transform | Number of times per frame at which animated transformations are sampled. |
-| Geometry Samples | Number of times per frame at which geometry transformations are sampled. |
-| Shutter Open | The start frame to sample transform and geometry samples. Valid range is -1 to 1. -1 indicates the previous frame, 0 indicates the current frame, and 1 indicates the next frame. |
-| Close | The end frame to sample transform and geometry samples. Valid range is -1 to 1. -1 indicates the previous frame, 0 indicates the current frame, and 1 indicates the next frame. |
-| Use Instancing | Export data duplicated objects as alembic instances. |
-| Custom Properties | Export custom properties to Alembic . userProperties |
-| Flatten Hierarchy | Remove parent / children relationship. |
+The start frame of the export.
 
+##### End
+
+The end frame of the export.
+
+##### Samples Transform
+
+Number of times per frame at which animated transformations are sampled.
+
+##### Geometry Samples
+
+Number of times per frame at which geometry transformations are sampled.
+
+##### Shutter Open
+
+The start frame to sample transform and geometry samples. Valid range is -1 to 1. -1 indicates the previous frame, 0 indicates the current frame, and 1 indicates the next frame.
+
+##### Close
+
+The end frame to sample transform and geometry samples. Valid range is -1 to 1. -1 indicates the previous frame, 0 indicates the current frame, and 1 indicates the next frame.
+
+##### Use Instancing
+
+Export data duplicated objects as alembic instances.
+
+##### Custom Properties
+
+Export custom properties to Alembic . userProperties
+
+##### Flatten Hierarchy
+
+Remove parent / children relationship.
 
 ##### Settings
 
@@ -953,29 +1157,49 @@ The alembic export options are divided into four sections.
 
 Determines visibility of objects, modifier settings, and other areas where there are different settings for viewport and rendering.
 
+###### Render
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------- |
-| Render | User render settings for object visibility, modifier settings, etc |
-| Viewport | User visibility settings for object visibility, modifier settings, etc |
+User render settings for object visibility, modifier settings, etc
 
+###### Viewport
+
+User visibility settings for object visibility, modifier settings, etc
 
 #### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-3.png)
 
+##### UV's
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UV's | Export UV's. Note that Alembic just supports a single UV map. |
-| Pack UV Islands | Export UV's with packed islands. |
-| Normals | Export Normals. |
-| Vertex Colors | Export Vertex Colors. These are Color attributes. |
-| Generate Coordinates | Export undeformed mesh vertex coordinates. |
-| Face Sets | Export per Face shading group assignments. |
-| Curves as Mesh | Export Curves and Nurbs surfaces as meshes. |
-| Subdivisions | **Apply**: Export subdivision surfaces as meshes. Means apply subdivision modifier before export. · **Use Schema**: Export meshes using Alembic's subdivision schema. |
+Export UV's. Note that Alembic just supports a single UV map.
 
+##### Pack UV Islands
+
+Export UV's with packed islands.
+
+##### Normals
+
+Export Normals.
+
+##### Vertex Colors
+
+Export Vertex Colors. These are Color attributes.
+
+##### Generate Coordinates
+
+Export undeformed mesh vertex coordinates.
+
+##### Face Sets
+
+Export per Face shading group assignments.
+
+##### Curves as Mesh
+
+Export Curves and Nurbs surfaces as meshes.
+
+##### Subdivisions
+
+**Apply**: Export subdivision surfaces as meshes. Means apply subdivision modifier before export. · **Use Schema**: Export meshes using Alembic's subdivision schema.
 
 ##### Triangulate
 
@@ -999,12 +1223,13 @@ The polygon method that gets used to triangulate the meshes. You need to activat
 
 Alembic does not support hair or particles. However, here you can find some options to export at least some data of it.
 
+##### Export Hair
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------ |
-| Export Hair | Export hair particle systems as animated curves. |
-| Export Particles | Export non-hair particles. |
+Export hair particle systems as animated curves.
 
+##### Export Particles
+
+Export non-hair particles.
 
 ### Universal Scene Description ( USD )
 
@@ -1016,22 +1241,27 @@ USD is a system for authoring, composing and reading hierarchically organized sc
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-6.png)
 
+##### Root Prim
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Root Prim | If set, add a transform primitive as the parent of exported rig with the given path name for all exported data. Default is “/root” |
-| Include | **Selection Only**: Export just the selected object(s), and not the whole scene. · **Visible Only**: Export visible geometry only. · **Animation**: Export animation. |
-| Blender Data | **Custom Properties**: Export custom properties if available. · **Namespace**: Add the given name as a prefix to exported custom property names. · **Blender Names**: Author USD custom attributes containing the original Blender object and object data names. Uses the Bforartists standard of naming conventions and nomeclature. · **Allow Unicode**: Preserve UF-8 characters. |
+If set, add a transform primitive as the parent of exported rig with the given path name for all exported data. Default is “/root”
 
+##### Include
+
+**Selection Only**: Export just the selected object(s), and not the whole scene. · **Visible Only**: Export visible geometry only. · **Animation**: Export animation.
+
+##### Blender Data
+
+**Custom Properties**: Export custom properties if available. · **Namespace**: Add the given name as a prefix to exported custom property names. · **Blender Names**: Author USD custom attributes containing the original Blender object and object data names. Uses the Bforartists standard of naming conventions and nomeclature. · **Allow Unicode**: Preserve UF-8 characters.
 
 ##### File References
 
+###### Relative Paths
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relative Paths | `The path will be shortened to just the file name. For example, C:\myfolder\mysubfolder\mytexture.jpg turns into texture.jpg . Relative paths allows you to move the whole project folder to another location. The file paths will still be valid.` |
-| Convert Orientation | Convert orientation axis to different conventions to match other applications. |
+`The path will be shortened to just the file name. For example, C:\myfolder\mysubfolder\mytexture.jpg turns into texture.jpg . Relative paths allows you to move the whole project folder to another location. The file paths will still be valid.`
 
+###### Convert Orientation
+
+Convert orientation axis to different conventions to match other applications.
 
 ##### Units
 
@@ -1055,32 +1285,61 @@ Use Render settings for object visibility, modifier settings, etc
 
 ![Object Types](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object-types-2.png)
 
+##### Meshes
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------- |
-| Meshes | Import meshes. |
-| Lights | Export lights. |
-| World Dome Light | Export World Dome Light. |
-| Cameras | Export cameras (perspective and orthographic). |
-| Curves | Export curve primitives, including USD basis and NURBS curves. |
-| Volumes | Export USD OpenVDB field assets. |
-| Point Clouds | Export Point Clouds. |
-| Hair | Export hair/fur curves. |
+Import meshes.
 
+##### Lights
+
+Export lights.
+
+##### World Dome Light
+
+Export World Dome Light.
+
+##### Cameras
+
+Export cameras (perspective and orthographic).
+
+##### Curves
+
+Export curve primitives, including USD basis and NURBS curves.
+
+##### Volumes
+
+Export USD OpenVDB field assets.
+
+##### Point Clouds
+
+Export Point Clouds.
+
+##### Hair
+
+Export hair/fur curves.
 
 #### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-4.png)
 
+##### UV Maps
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------- |
-| UV Maps | Export UV Maps. |
-| Rename UV Maps | Rename UV Maps. |
-| Normals | Export Normals. |
-| Merge Parent XForm | Merge USD primitives with their Xform parents if possible. |
-| Triangulated Mesh | Export the geometry triangulated. |
+Export UV Maps.
 
+##### Rename UV Maps
+
+Rename UV Maps.
+
+##### Normals
+
+Export Normals.
+
+##### Merge Parent XForm
+
+Merge USD primitives with their Xform parents if possible.
+
+##### Triangulated Mesh
+
+Export the geometry triangulated.
 
 ##### Subdivision
 
@@ -1092,24 +1351,29 @@ How Subdivision will be mapped to USD.
 
 ![Rigging](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rigging-2.png)
 
+##### Shape Keys
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------- |
-| Shape Keys | Export Shape Keys. |
-| Armatures | Export Armatures |
-| Only Deform Bones | Only export deform bones and their parents. |
+Export Shape Keys.
 
+##### Armatures
+
+Export Armatures
+
+##### Only Deform Bones
+
+Only export deform bones and their parents.
 
 #### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials-3.png)
 
+##### USD Preview Surface Network
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------- |
-| USD Preview Surface Network | Generate an approxcimate USD Preview Surface shader representation of a Principled BSDF. |
-| MaterialX Network | Generate a MaterailX network representation of the material. |
+Generate an approxcimate USD Preview Surface shader representation of a Principled BSDF.
 
+##### MaterialX Network
+
+Generate a MaterailX network representation of the material.
 
 ##### Export Textures
 
@@ -1157,14 +1421,21 @@ What kind of objects to export from the scene.
 
 Which frame to include to export.
 
+##### Sampling
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------- |
-| Sampling | Precision of Stroke sampling. Low values gives high precision. Zero disables the feature. |
-| Fill | Export strokes with fill enabled. |
-| Uniform Width | Export strokes with Uniform Width. |
-| Clip Camera | Clip drawings to camera size when exporting. |
+Precision of Stroke sampling. Low values gives high precision. Zero disables the feature.
 
+##### Fill
+
+Export strokes with fill enabled.
+
+##### Uniform Width
+
+Export strokes with Uniform Width.
+
+##### Clip Camera
+
+Clip drawings to camera size when exporting.
 
 ### Grease Pencil as PDF
 
@@ -1188,13 +1459,17 @@ What kind of objects to export from the scene.
 
 Which frames to include in the export. The active frame or the selected frames. The active frame must not be the selected frames since you can select more than one.
 
+##### Sampling
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------- |
-| Sampling | Precision of Stroke sampling. Low values gives high precision. Zero disables the feature. |
-| Fill | Export strokes with fill enabled. |
-| Uniform Width | Export strokes with Uniform Width. |
+Precision of Stroke sampling. Low values gives high precision. Zero disables the feature.
 
+##### Fill
+
+Export strokes with fill enabled.
+
+##### Uniform Width
+
+Export strokes with Uniform Width.
 
 ### Wavefront(OBJ)
 
@@ -1204,12 +1479,13 @@ Wavefront Obj is a file format for static geometry. And while you can still crea
 
 #### General
 
+##### Include
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------ |
-| Include | **Selection Only**: Just export the selected geometry. |
-| Scale | The export scale factor. |
+**Selection Only**: Just export the selected geometry.
 
+##### Scale
+
+The export scale factor.
 
 ##### Forward Axis
 
@@ -1231,16 +1507,29 @@ What kind of data to export. The labels should be self explaining.
 
 Note that the OBJ file format cannot carry the Blender material settings. The Obj file format uses a primitive Phong shader.
 
+##### UV Coordinates
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------- |
-| UV Coordinates | Export UV's. |
-| Normals | Export Normals. |
-| Vertex Colors | Export Vertex Colors. These are Color attributes. |
-| Curves as NURBS | Export Curves and Nurbs surfaces as meshes. |
-| Triangulated Mesh | Triangulate meshes before export. |
-| Apply Modifiers | Apply modifiers before exporting the geometry. |
+Export UV's.
 
+##### Normals
+
+Export Normals.
+
+##### Vertex Colors
+
+Export Vertex Colors. These are Color attributes.
+
+##### Curves as NURBS
+
+Export Curves and Nurbs surfaces as meshes.
+
+##### Triangulated Mesh
+
+Triangulate meshes before export.
+
+##### Apply Modifiers
+
+Apply modifiers before exporting the geometry.
 
 ##### Properties
 
@@ -1256,15 +1545,25 @@ What kind of relationship data to export. The labels should be self explaining.
 
 Note that the OBJ file format cannot carry the Blender material settings. The Obj file format uses a primitive Phong shader.
 
+##### Object Groups
 
-| Entry | What it does |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object Groups | Append mesh name to object name by a `‘_’` |
-| Material Groups | Generate an OBJ group for each part of a geometry user a different material. |
-| Vertex Groups | Export the name of the vertex group of a face. It is approximated by choosing the vertex group with the most members among the vertices of a face. |
-| Smooth Groups | Every smooth-shaded face is assigned group “1” and every flat-shaded face “off” |
-| Smooth Groups Bitflags | Only available when Smooth Groups is enabled. Generate bitflag values for the imported groups. |
+Append mesh name to object name by a `‘_’`
 
+##### Material Groups
+
+Generate an OBJ group for each part of a geometry user a different material.
+
+##### Vertex Groups
+
+Export the name of the vertex group of a face. It is approximated by choosing the vertex group with the most members among the vertices of a face.
+
+##### Smooth Groups
+
+Every smooth-shaded face is assigned group “1” and every flat-shaded face “off”
+
+##### Smooth Groups Bitflags
+
+Only available when Smooth Groups is enabled. Generate bitflag values for the imported groups.
 
 #### Materials
 
@@ -1288,12 +1587,13 @@ The method to use reference paths.
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-3.png)
 
+##### Export Animation Checkbox
 
-| Entry | What it does |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Export Animation Checkbox | Export the animation. Note that Obj is no file format that can store animations. What gets exported is a sequence of single meshes. |
-| Frame Start / End | The frame start and frame end of the animation. |
+Export the animation. Note that Obj is no file format that can store animations. What gets exported is a sequence of single meshes.
 
+##### Frame Start / End
+
+The frame start and frame end of the animation.
 
 ### Stanford (PLY)
 
@@ -1305,27 +1605,41 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-7.png)
 
+##### Format
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------- |
-| Format | **Ascii**: Ascii format when ticked, else binary format. |
-| Include | **Selected only**: Limit the export to the selected geometry only. Else it exports the whole scene. |
-| Scale | The scale factor for the export. |
-| Forward Axis | The forward orientation of the geometry. |
-| Up Axis | The up orientation of the geometry. |
+**Ascii**: Ascii format when ticked, else binary format.
 
+##### Include
+
+**Selected only**: Limit the export to the selected geometry only. Else it exports the whole scene.
+
+##### Scale
+
+The scale factor for the export.
+
+##### Forward Axis
+
+The forward orientation of the geometry.
+
+##### Up Axis
+
+The up orientation of the geometry.
 
 #### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-6.png)
 
+##### UV Coordinates
 
-| Entry | What it does |
-| ----------------- | ------------------------- |
-| UV Coordinates | Export UV Coordinates |
-| Vertex Normals | Export Normals. |
-| Vertex Attributes | Export vertex attributes. |
+Export UV Coordinates
 
+##### Vertex Normals
+
+Export Normals.
+
+##### Vertex Attributes
+
+Export vertex attributes.
 
 ##### Vertex Colors
 
@@ -1333,12 +1647,13 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 
 Vertex Color settings if available. These are Color attributes.
 
+###### Triangulated Meshes
 
-| Entry | What it does |
-| ------------------- | --------------------------------- |
-| Triangulated Meshes | Export the geometry triangulated. |
-| Apply Modifiers | Apply modifiers before exporting. |
+Export the geometry triangulated.
 
+###### Apply Modifiers
+
+Apply modifiers before exporting.
 
 ### STL
 
@@ -1360,13 +1675,17 @@ You can either export the file as binary format or as ASCII format.
 
 Export all geometry to one file or create a file for every object.
 
+###### Include
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------- |
-| Include | **Selection Only**: Export only the selected object(s). |
-| Scale | The import scale. |
-| Scene Unit | Apply the scene unit at the geometry at export. |
+**Selection Only**: Export only the selected object(s).
 
+###### Scale
+
+The import scale.
+
+###### Scene Unit
+
+Apply the scene unit at the geometry at export.
 
 ##### Forward
 
@@ -1414,12 +1733,13 @@ Only write out translation values for the root bone.
 
 #### Animation
 
+##### Start Frame
 
-| Entry | What it does |
-| ----------- | --------------------------------- |
-| Start Frame | The start frame of the animation. |
-| End Frame | The end frame of the animation. |
+The start frame of the animation.
 
+##### End Frame
+
+The end frame of the animation.
 
 ### FBX
 
@@ -1455,14 +1775,21 @@ Setup the export directory for batch export.
 
 ##### Limit to
 
+###### Selected Objects
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------ |
-| Selected Objects | Export just selected objects. |
-| Visible Objects | Export just visible objects. |
-| Active Collection | Export just the active collection. |
-| Object Types | What object types in the scene to export. Holding shift key adds to the current selection. |
+Export just selected objects.
 
+###### Visible Objects
+
+Export just visible objects.
+
+###### Active Collection
+
+Export just the active collection.
+
+###### Object Types
+
+What object types in the scene to export. Holding shift key adds to the current selection.
 
 ##### Custom Properties
 
@@ -1494,13 +1821,17 @@ The forward orientation.
 
 The up orientation.
 
+###### Apply Unit
 
-| Entry | What it does |
-| ------------------------------ | ------------------------------------------------------ |
-| Apply Unit | Take the current Blender Units into account. |
-| Use Space Transform | Apply global space transforms to the object rotations. |
-| !Experimental! Apply Transform | Bake space transform into object data. |
+Take the current Blender Units into account.
 
+###### Use Space Transform
+
+Apply global space transforms to the object rotations.
+
+###### !Experimental! Apply Transform
+
+Bake space transform into object data.
 
 #### Geometry
 
@@ -1512,15 +1843,25 @@ The up orientation.
 
 Define what smoothing information gets exported.
 
+###### Export Subdivision Surface
 
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Export Subdivision Surface | Export the last catmull rom subdivision modifier as FBX subdivision. This does not apply the modifier, even if apply modifiers is enabled. |
-| Apply Modifiers | Apply existing modifiers before exporting. |
-| Loose Edges | Export loose edges. Loose edges are polygons with just two vertices. |
-| Triangulated Meshes | Export the geometry triangulated. |
-| Tangent Space | Add binormal and tangent vectors together with the tangent space information. This feature just works with tris or quads. |
+Export the last catmull rom subdivision modifier as FBX subdivision. This does not apply the modifier, even if apply modifiers is enabled.
 
+###### Apply Modifiers
+
+Apply existing modifiers before exporting.
+
+###### Loose Edges
+
+Export loose edges. Loose edges are polygons with just two vertices.
+
+###### Triangulated Meshes
+
+Export the geometry triangulated.
+
+###### Tangent Space
+
+Add binormal and tangent vectors together with the tangent space information. This feature just works with tris or quads.
 
 ##### Vertex Color
 
@@ -1554,12 +1895,13 @@ The secondary bone axis orientation.
 
 FBX type of node used to represent a Blender Bone.
 
+###### Only Deform Bones
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------- |
-| Only Deform Bones | Only export deforming bones, and none deforming ones when they have children. |
-| Add Leaf Bones | Add a final bone at the end of every bone chain. |
+Only export deforming bones, and none deforming ones when they have children.
 
+###### Add Leaf Bones
+
+Add a final bone at the end of every bone chain.
 
 #### Animation
 
@@ -1567,16 +1909,29 @@ FBX type of node used to represent a Blender Bone.
 
 Export baked keyframe animation.
 
+##### Key all Bones
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Key all Bones | Force export at least one key of animation for all bones. |
-| NLA Strips | Export each non muted NLA strip. |
-| All Actions | Export each action as a separated FBX anim stack. |
-| Force Start/ End Keying | Always add a key frame at start and end of actions for animation channels. |
-| Sampling Rate | How often to evaluate animated values, in frames. |
-| Simplify | Simplify the animation. 0.0 to disable. 1.0 does not simplify at all. Higher values simplifies the animation then. |
+Force export at least one key of animation for all bones.
 
+##### NLA Strips
+
+Export each non muted NLA strip.
+
+##### All Actions
+
+Export each action as a separated FBX anim stack.
+
+##### Force Start/ End Keying
+
+Always add a key frame at start and end of actions for animation channels.
+
+##### Sampling Rate
+
+How often to evaluate animated values, in frames.
+
+##### Simplify
+
+Simplify the animation. 0.0 to disable. 1.0 does not simplify at all. Higher values simplifies the animation then.
 
 ### glTF 2.0 (glb, gltf )
 
@@ -1586,24 +1941,29 @@ The GL Transmission Format from the Khronos Group is a file format for 3D scenes
 
 ![glTF 2.0 (glb, gltf )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-2-0-glb-gltf-3.png)
 
+#### Format
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------ |
-| Format | Choose between three export formats. Binary, Embedded and Separate. |
-| Copyright | Enter a custom copyright string. |
-| Remember Export Settings | Store glTF settings in the .blend file. You need to save the project then. |
+Choose between three export formats. Binary, Embedded and Separate.
 
+#### Copyright
+
+Enter a custom copyright string.
+
+#### Remember Export Settings
+
+Store glTF settings in the .blend file. You need to save the project then.
 
 #### Include
 
 ![Include](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/include-3.png)
 
+##### Limit to
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Limit to | Limit the export to the chosen selection. · **Selected Objects**: Export just selected objects. · **Visible Objects**: Export just visible objects. · **Renderable Objects**: Export just renderable objects. · **Active Collection**: Export just selected objects from the active collection. · **Active Scene**: Export everything in the active scene |
-| Data | **Custom Properties**: Include custom properties in the export. · **Cameras**: Include cameras in the export. · **Punctual Lights**: Include punctual lights in the export. |
+Limit the export to the chosen selection. · **Selected Objects**: Export just selected objects. · **Visible Objects**: Export just visible objects. · **Renderable Objects**: Export just renderable objects. · **Active Collection**: Export just selected objects from the active collection. · **Active Scene**: Export everything in the active scene
 
+##### Data
+
+**Custom Properties**: Include custom properties in the export. · **Cameras**: Include cameras in the export. · **Punctual Lights**: Include punctual lights in the export.
 
 #### Transform
 
@@ -1623,30 +1983,53 @@ What data to export. The menu items should be self explaining.
 
 ![Scene Graph sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/scene-graph-sub-panel.png)
 
+###### Geometry Node Instances !experimental!
 
-| Entry | What it does |
-| -------------------------------------- | ------------ |
-| Geometry Node Instances !experimental! | — |
-| GPU Instances | — |
-| Flatten Object Hierarchy | — |
-| Full Collection Hierarchy | — |
+—
 
+###### GPU Instances
+
+—
+
+###### Flatten Object Hierarchy
+
+—
+
+###### Full Collection Hierarchy
+
+—
 
 ##### Mesh sub panel
 
 ![Mesh sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/mesh-sub-panel.png)
 
+###### Apply Modifiers
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------- |
-| Apply Modifiers | Apply all modifiers before export. |
-| UV's | Export UV's |
-| Normals | Export Normals. |
-| Tangents | Export Tangents. |
-| Attributes | Export attributes when the names start with an underscore `‘_’` |
-| Loose Edges | Export loose edges. |
-| Loose Points | Export loose points. |
+Apply all modifiers before export.
 
+###### UV's
+
+Export UV's
+
+###### Normals
+
+Export Normals.
+
+###### Tangents
+
+Export Tangents.
+
+###### Attributes
+
+Export attributes when the names start with an underscore `‘_’`
+
+###### Loose Edges
+
+Export loose edges.
+
+###### Loose Points
+
+Export loose points.
 
 ##### Vertex Colors
 
@@ -1658,12 +2041,13 @@ These are Color attributes.
 
 How to export the vertex colors. You can export them from the Material, Active vertex color selected in the mesh data or None.
 
+###### Export all vertex colors
 
-| Entry | What it does |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export all vertex colors | Export all vertex colors, even if not used by any material. If not vertex color is used in the mesh materials, a face COLOR_0 will be created, in order to keep material unchanged. |
-| Export active vertex color when no materials | When there is no material on an object, export the active vertex color (color attribute) |
+Export all vertex colors, even if not used by any material. If not vertex color is used in the mesh materials, a face COLOR_0 will be created, in order to keep material unchanged.
 
+###### Export active vertex color when no materials
+
+When there is no material on an object, export the active vertex color (color attribute)
 
 ##### Material sub panel
 
@@ -1681,20 +2065,29 @@ How to deal with materials at export. Export them, export with placeholders, or 
 
 How to deal with images at export.
 
+###### Automatic
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------- |
-| Automatic | exports PNG images as Png Images, and Jpg Images as Jpg images. |
-| Jpeg Format (jpg) | Exports all images as jpg. |
-| None | Exports no images. |
+exports PNG images as Png Images, and Jpg Images as Jpg images.
 
+###### Jpeg Format (jpg)
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Image Quality | Quality of the image compression. |
-| Create WebP | Creates a WebP texture image for every texture image. For images that are already a WebP texture, nothing happens. |
-| WebP Fallback | For all WebP textures, create a PNG fallback texture. |
+Exports all images as jpg.
 
+###### None
+
+Exports no images.
+
+###### Image Quality
+
+Quality of the image compression.
+
+###### Create WebP
+
+Creates a WebP texture image for every texture image. For images that are already a WebP texture, nothing happens.
+
+###### WebP Fallback
+
+For all WebP textures, create a PNG fallback texture.
 
 ##### Shape Keys sub panel
 
@@ -1702,38 +2095,53 @@ How to deal with images at export.
 
 Export Shape Keys. Also called Morph Targets.
 
+###### Export Shape Keys
 
-| Entry | What it does |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export Shape Keys | Toggle to export the shape keys. |
-| Shape Key Normals | Export vertex normals with shape keys (morph targets) |
-| Shape Key Tangents | Export vertex tangents with shape keys (morph targets) |
-| Optimize Shape Keys sub panel | **Use Sparse Accessor if better**: Try use Sparse Accessor if it saves file size space on disk. · **Omitting Sparse Accessor if data is empty**: Omits Sparse Accessor if data is empty. |
+Toggle to export the shape keys.
 
+###### Shape Key Normals
+
+Export vertex normals with shape keys (morph targets)
+
+###### Shape Key Tangents
+
+Export vertex tangents with shape keys (morph targets)
+
+###### Optimize Shape Keys sub panel
+
+**Use Sparse Accessor if better**: Try use Sparse Accessor if it saves file size space on disk. · **Omitting Sparse Accessor if data is empty**: Omits Sparse Accessor if data is empty.
 
 ##### Armature sub panel
 
 ![Armature sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-sub-panel.png)
 
+###### Use Rest Position Armatures
 
-| Entry | What it does |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Use Rest Position Armatures | Export armatures using the default rest position as joints’ rest pose. When off, current frame pose is used as the rest pose. |
-| Export Deformation Bones Only | Export only the bones that have deform influence assigned. |
-| Remove Armature Object | Remove Armature object if possible. If Armature has multiple root bones, object will not be removed. |
-| Flatten Bone Hierarchy | Flattens bone hierarchy. Useful in cases of non-decomposable transformation matrices. |
+Export armatures using the default rest position as joints’ rest pose. When off, current frame pose is used as the rest pose.
 
+###### Export Deformation Bones Only
+
+Export only the bones that have deform influence assigned.
+
+###### Remove Armature Object
+
+Remove Armature object if possible. If Armature has multiple root bones, object will not be removed.
+
+###### Flatten Bone Hierarchy
+
+Flattens bone hierarchy. Useful in cases of non-decomposable transformation matrices.
 
 ##### Skinning sub panel
 
 ![Skinning sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/skinning-sub-panel.png)
 
+###### Bone Influences
 
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Bone Influences | Choose how many Bone influences to export. |
-| Include All one Influences | Allow export of all joint vertex influences. Models may appear incorrectly in many viewers. Allow vertex influences greater 4. |
+Choose how many Bone influences to export.
 
+###### Include All one Influences
+
+Allow export of all joint vertex influences. Models may appear incorrectly in many viewers. Allow vertex influences greater 4.
 
 ##### Lighting sub panel
 
@@ -1785,13 +2193,17 @@ How to merge animations. Not at all, by actions or by NLA track name.
 
 General timeline rules for the animation export.
 
+###### Use Current Frame as Object Rest Transformations
 
-| Entry | What it does |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| Use Current Frame as Object Rest Transformations | Export the scene in the current animation frame. When off, frame 0 is used as rest transformations for objects. |
-| Limit to Playback Range | Clips animations to selected playback range. |
-| Set all glTG Animation starting at 0 | Set all glTF animation starting at 0.0s. Can be useful for looping animations. |
+Export the scene in the current animation frame. When off, frame 0 is used as rest transformations for objects.
 
+###### Limit to Playback Range
+
+Clips animations to selected playback range.
+
+###### Set all glTG Animation starting at 0
+
+Set all glTF animation starting at 0.0s. Can be useful for looping animations.
 
 ##### Negative Frames
 
@@ -1805,12 +2217,13 @@ Negative frames are slid or cropped to frame 0.
 
 Armature animation export settings.
 
+###### Export all armature Actions
 
-| Entry | What it does |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Export all armature Actions | Export all actions bound to a single armature. **Note:** Option does not support exporting multiple armatures and their actions. |
-| Reset pose bones between actions | Reset pose bones between each exported action. This is needed when some bones are not keyed on some animations. |
+Export all actions bound to a single armature. **Note:** Option does not support exporting multiple armatures and their actions.
 
+###### Reset pose bones between actions
+
+Reset pose bones between each exported action. This is needed when some bones are not keyed on some animations.
 
 ##### Shape Keys Animation sub panel
 
@@ -1818,23 +2231,25 @@ Armature animation export settings.
 
 Shape Key animation export settings.
 
+###### Shape Keys Animations Toggle
 
-| Entry | What it does |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Shape Keys Animations Toggle | Toggle to export Shape Key animations. |
-| Reset Shape Keys Between Actions | Reset shape keys between each exported action. This is needed when some shape key channels are not keyed on some animations. |
+Toggle to export Shape Key animations.
 
+###### Reset Shape Keys Between Actions
+
+Reset shape keys between each exported action. This is needed when some shape key channels are not keyed on some animations.
 
 ##### Sampling Animations
 
 ![Sampling Animations](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/sampling-animations.png)
 
+###### Sampling Animations Toggle
 
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------ |
-| Sampling Animations Toggle | Toggle to re-sample animations. |
-| Sampling Rate | How often to evaluate animated values in frames. |
+Toggle to re-sample animations.
 
+###### Sampling Rate
+
+How often to evaluate animated values in frames.
 
 ##### Sampling Interpolation Fallback
 
@@ -1842,12 +2257,13 @@ Shape Key animation export settings.
 
 The fallback method for Sampling Interpolation.
 
+###### Linear
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Linear | Linear interpolation between keyframes. |
-| Step | No interpolation between keyframes. |
+Linear interpolation between keyframes.
 
+###### Step
+
+No interpolation between keyframes.
 
 ##### Animation Pointer !experimental! sub panel
 
@@ -1855,12 +2271,13 @@ The fallback method for Sampling Interpolation.
 
 Export material, Light & Camera animation as Animation Pointer.
 
+###### Animation Pointer Toggle
 
-| Entry | What it does |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Animation Pointer Toggle | Toggle to set Animation Pointers. |
-| Convert TRS/weights to Animation Pointer | Export translations, rotations and scale and weights as Animation Pointers. Uses the KHR_animation_pointer extension. |
+Toggle to set Animation Pointers.
 
+###### Convert TRS/weights to Animation Pointer
+
+Export translations, rotations and scale and weights as Animation Pointers. Uses the KHR_animation_pointer extension.
 
 ##### Optimize Animations sub panel
 
@@ -1868,14 +2285,21 @@ Export material, Light & Camera animation as Animation Pointer.
 
 These options help to optimize the file size.
 
+###### Optimize Animation Size
 
-| Entry | What it does |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Optimize Animation Size | Reduce exported file size by removing duplicate keyframes. |
-| Force keeping channels for bones | If all keyframes are identical in a rig, force keeping the minimal animation. When off, all possible channels for the bones will be exported, even if empty (minimum animation: 2 keyframes) |
-| Force keeping channel for objects | If all keyframes are identical for object transformations, force keeping the minimal animation. |
-| Disable viewport for other objects | When exporting animations, disable viewport for other objects, for performance. |
+Reduce exported file size by removing duplicate keyframes.
 
+###### Force keeping channels for bones
+
+If all keyframes are identical in a rig, force keeping the minimal animation. When off, all possible channels for the bones will be exported, even if empty (minimum animation: 2 keyframes)
+
+###### Force keeping channel for objects
+
+If all keyframes are identical for object transformations, force keeping the minimal animation.
+
+###### Disable viewport for other objects
+
+When exporting animations, disable viewport for other objects, for performance.
 
 ##### Extra Animations sub panel
 
@@ -1895,13 +2319,25 @@ Export additional animations. This feature is not standard and needs and externa
 
 This is a filter that will detect and list all the action clips of a scene. Here you can select one specific action clip.
 
+###### Action Filter Toggle
 
-| Entry | What it does |
-| --------------------- | --------------------------------------- |
-| Action Filter Toggle | Turn on the action filter. |
-| Action Filter List | Shows all the action clips of the file. |
-| Action Filter Refresh | Refreshes the action clip list. |
+Turn on the action filter.
 
+###### Action Filter List
+
+Shows all the action clips of the file.
+
+###### Action Filter Refresh
+
+Refreshes the action clip list.
+
+### OpenTimelineIO (.otio)
+
+Exports the sequencer scene as an OpenTimelineIO file, to move your edit into other editing software. The strips, their timing and their channels go out; effects that the other software doesn't know may get lost.
+
+#### Export DaVinci Resolve Metadata
+
+Writes extra data so that DaVinci Resolve can recreate generated strips, transforms and blending.
 
 ## Export All Collections
 
@@ -1945,12 +2381,13 @@ Packs all external data into the blend file. Note that the paths must fit, and t
 
 You will get a warning when something is missing.
 
+#### Pack linked libraries
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------- |
-| Pack linked libraries | Pack all linked library files into the current .blend file |
-| Unpack linked libraries | Unpack all linked library files from the current .blend file to their original locations. |
+Pack all linked library files into the current .blend file
 
+#### Unpack linked libraries
+
+Unpack all linked library files from the current .blend file to their original locations.
 
 ### Unpack Resources
 
@@ -1974,20 +2411,29 @@ Extracts all files to the current directory of the blend file, and writes it to 
 
 Extracts all files into their original directories where they were before packing them into the blend file. If the files in the original directory exists, reuse it. Else extract the ones from the blend file. This feature uses absolute paths.
 
+##### Write files to original location(overwrite existing files)
 
-| Entry | What it does |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Write files to original location(overwrite existing files) | Extracts all files into their original directories where they were before packing them into the blend file. If the files in the original directory exists, reuse it. Else extract the ones from the blend file. This feature uses absolute paths. |
-| Remove Pack | Removes the internal data. And uses the file in the original directory from where the data was once packed. It does not export anything. It assumes the old folder still exists. |
+Extracts all files into their original directories where they were before packing them into the blend file. If the files in the original directory exists, reuse it. Else extract the ones from the blend file. This feature uses absolute paths.
 
+##### Remove Pack
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Paths Relative | `The path will be shortened to just the file name. For example, C:\myfolder\mysubfolder\mytexture.jpg turns into texture.jpg . Relative paths allows you to move the whole project folder to another location. The file paths will still be valid.` |
-| Make Paths Absolute | `Makes all paths absolute. For example, texture.jpg turns into C:\myfolder\mysubfolder\mytexture.jpg. Absolute paths requires the full valid path for all files.` |
-| Report Missing Files | Scans through the blend file and tries to find missing files. You will get a warning when a missing file is found. |
-| Find Missing Files | Browse for the new location of moved files. |
+Removes the internal data. And uses the file in the original directory from where the data was once packed. It does not export anything. It assumes the old folder still exists.
 
+##### Make Paths Relative
+
+`The path will be shortened to just the file name. For example, C:\myfolder\mysubfolder\mytexture.jpg turns into texture.jpg . Relative paths allows you to move the whole project folder to another location. The file paths will still be valid.`
+
+##### Make Paths Absolute
+
+`Makes all paths absolute. For example, texture.jpg turns into C:\myfolder\mysubfolder\mytexture.jpg. Absolute paths requires the full valid path for all files.`
+
+##### Report Missing Files
+
+Scans through the blend file and tries to find missing files. You will get a warning when a missing file is found.
+
+##### Find Missing Files
+
+Browse for the new location of moved files.
 
 ## Clean Up
 
@@ -1999,16 +2445,29 @@ Here you can remove unused data. It removes all data from the scene that is not 
 
 It is similar functionality to the Clean Up feature in the outliner. But more granular. Unused Data does the same than the Clean Up button in the outliner.
 
+### Unused Data
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Unused Data | Removes unused data blocks. |
-| Recursive Unused Data | Recursively removes unused data blocks. Means the child objects gets removed too. |
-| Unused Linked Data | Removes unused data that is linked to this file. |
-| Recursive Unused Linked Data | Recursively removes unused data that is linked to this file. Means the child objects gets removed too. |
-| Unused Local Data | Removes unused local data. |
-| Recursive Unused Local Data | Recursively removes unused local data. Means the child objects gets removed too. |
+Removes unused data blocks.
 
+### Recursive Unused Data
+
+Recursively removes unused data blocks. Means the child objects gets removed too.
+
+### Unused Linked Data
+
+Removes unused data that is linked to this file.
+
+### Recursive Unused Linked Data
+
+Recursively removes unused data that is linked to this file. Means the child objects gets removed too.
+
+### Unused Local Data
+
+Removes unused local data.
+
+### Recursive Unused Local Data
+
+Recursively removes unused local data. Means the child objects gets removed too.
 
 ### Manage Unused Data
 
@@ -2124,20 +2583,29 @@ Choose the operation method. The content of the panel will change with the diffe
 
 Find and replace names in the chosen objects.
 
+##### Find
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------- |
-| Find | The string that you want to modify. |
-| Replace | The replacement. |
-| Case Sensitive | Operate case sensitive, or handle small and big letters as equal. |
+The string that you want to modify.
 
+##### Replace
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Set Name | Set name of the chosen objects. · **Method**: Set the method. Sets the name new. Sets a number as a prefix Or Sets a number as a suffix. · **Name**: The name to set. |
-| Strip Characters | Strip characters in the names of the chosen objects. · **Characters**: What type of characters to change. · **Strip From**: To strip from the start or to strip from the end. |
-| Change Case | **Convert to**: Change the string to upper case, lower case or title case. |
+The replacement.
 
+##### Case Sensitive
+
+Operate case sensitive, or handle small and big letters as equal.
+
+##### Set Name
+
+Set name of the chosen objects. · **Method**: Set the method. Sets the name new. Sets a number as a prefix Or Sets a number as a suffix. · **Name**: The name to set.
+
+##### Strip Characters
+
+Strip characters in the names of the chosen objects. · **Characters**: What type of characters to change. · **Strip From**: To strip from the start or to strip from the end.
+
+##### Change Case
+
+**Convert to**: Change the string to upper case, lower case or title case.
 
 ### OK
 
@@ -2229,14 +2697,21 @@ Most of the render settings can be found in the Properties editor in the Render 
 
 Rendered images can be saved in the Image menu like any other image.
 
+### Render Image
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------- |
-| Render Image | Renders the current scene as an image by using the current chosen renderer. |
-| Render Animation | Renders the current scene as an animation by using the current chosen renderer. |
-| Render Sequencer Image | Only shown when the Video Sequencer uses a different scene with strips: renders the sequencer's current frame. |
-| Render Sequencer Animation | Only shown when the Video Sequencer uses a different scene with strips: renders the whole sequencer. |
+Renders the current scene as an image by using the current chosen renderer.
 
+### Render Animation
+
+Renders the current scene as an animation by using the current chosen renderer.
+
+### Render Sequencer Image
+
+Only shown when the Video Sequencer uses a different scene with strips: renders the sequencer's current frame.
+
+### Render Sequencer Animation
+
+Only shown when the Video Sequencer uses a different scene with strips: renders the whole sequencer.
 
 ### Render Audio
 
@@ -2248,12 +2723,13 @@ Mixdown and export the scene's audio to an audio file. You will open an export d
 
 The options can be found down left in the Save dialog.
 
+##### Relative Path
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------- |
-| Relative Path | Select the file relative to the blend-file. |
-| Accuracy | Sample accuracy, important for animation data (the lower the value, the more accurate). |
+Select the file relative to the blend-file.
 
+##### Accuracy
+
+Sample accuracy, important for animation data (the lower the value, the more accurate).
 
 ##### Containers
 
@@ -2261,20 +2737,33 @@ The options can be found down left in the Save dialog.
 
 Choose between different audio export formats.
 
+###### Format
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| Format | Some *Audio Containers* also have option to choose a codec. For more information see here. |
-| Split Channels | Each audio channel will be rendered into a separate file. |
+Some *Audio Containers* also have option to choose a codec. For more information see here.
 
+###### Split Channels
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------- |
-| Render Viewport | Renders an image of the 3D Viewport as you see it, without the render engine. Fast for previews. |
-| Render Viewport Animation | Renders an animation of the 3D Viewport as you see it, without the render engine. |
-| Show/Hide Render | Toggles the display of the render view. |
-| Play Rendered Animation | Plays back the rendered animation sequence. |
-| Lock Interface | Lock the interface while rendering to free the memory for the UI to the renderer. |
+Each audio channel will be rendered into a separate file.
+
+###### Render Viewport
+
+Renders an image of the 3D Viewport as you see it, without the render engine. Fast for previews.
+
+###### Render Viewport Animation
+
+Renders an animation of the 3D Viewport as you see it, without the render engine.
+
+###### Show/Hide Render
+
+Toggles the display of the render view.
+
+###### Play Rendered Animation
+
+Plays back the rendered animation sequence.
+
+###### Lock Interface
+
+Lock the interface while rendering to free the memory for the UI to the renderer.
 
 # Window Menu
 
@@ -2332,17 +2821,33 @@ Toggles the System console. This is a Windows feature. Under Linux and Mac you c
 
 The Help menu contains some external links to useful resources. In this menu you can also find a utility to save the system information and to show the splash screen.
 
+### Manual
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Manual | Opens the Bforartists Manual page in a web browser. |
-| Release Note | Opens the Bforartists Release note page in a web browser. |
-| Bforartists Website | Opens the Bforartists page in a web browser. |
-| Quickstart Learning Videos | Opens the Bforartists Quickstart Youtube channel where you can find the Quickstart tutorial learning videos. |
-| Report a Bug | Report a bug. The link leads you to GitHub. You need to create a GitHub. account to be able to report a bug. |
-| Blender Python API reference | Opens the Blender Python API reference page in a web browser. |
-| Save System Info | Save your system informations to a text file. |
+Opens the Bforartists Manual page in a web browser.
 
+### Release Note
+
+Opens the Bforartists Release note page in a web browser.
+
+### Bforartists Website
+
+Opens the Bforartists page in a web browser.
+
+### Quickstart Learning Videos
+
+Opens the Bforartists Quickstart Youtube channel where you can find the Quickstart tutorial learning videos.
+
+### Report a Bug
+
+Report a bug. The link leads you to GitHub. You need to create a GitHub. account to be able to report a bug.
+
+### Blender Python API reference
+
+Opens the Blender Python API reference page in a web browser.
+
+### Save System Info
+
+Save your system informations to a text file.
 
 ### Splash Screen
 

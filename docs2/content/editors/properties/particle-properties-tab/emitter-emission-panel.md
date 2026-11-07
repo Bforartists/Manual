@@ -20,15 +20,25 @@ summary: "The buttons in the Emission panel control the way particles are emitte
 
 The buttons in the Emission panel control the way particles are emitted over time.
 
+### Number
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Number | The maximum amount of parent particles used in the simulation. |
-| Seed | Bforartists uses this as starting point to produce random numbers during the simulation. |
-| Frame Start | The start frame of particle emission. You may set negative values, which enables you to start the simulation before the actual rendering. |
-| End | The end frame of particle emission. |
-| Lifetime | The lifespan (in frames) of the particles. |
+The maximum amount of parent particles used in the simulation.
 
+### Seed
+
+Bforartists uses this as starting point to produce random numbers during the simulation.
+
+### Frame Start
+
+The start frame of particle emission. You may set negative values, which enables you to start the simulation before the actual rendering.
+
+### End
+
+The end frame of particle emission.
+
+### Lifetime
+
+The lifespan (in frames) of the particles.
 
 ### Lifetime Randomness
 
@@ -52,12 +62,13 @@ Defines how and where the particles are emitted, giving precise control over the
 
 Emits particles from the vertices of a mesh.
 
+###### Use Modifier Stack
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Modifier Stack | Take any Modifiers above the Particle Modifier in the modifier stack into account when emitting particles, else it uses the original mesh geometry. |
-| Random Order | The emitter element indices are gone through in a random order instead of linearly (one after the other). |
+Take any Modifiers above the Particle Modifier in the modifier stack into account when emitting particles, else it uses the original mesh geometry.
 
+###### Random Order
+
+The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
 ##### Faces & Volume
 
@@ -77,41 +88,32 @@ Take any Modifiers above the Particle Modifier in the modifier stack into accoun
 
 These settings control how the emissions of particles are distributed throughout the emission locations when emitting from either Faces or Volume.
 
-**JitteredRandom Order**
+###### JitteredRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order.png)
 
 The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
+- **Even Distribution**: Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
+- **Particles/Face**: Number of emissions per face (0 = automatic).
+- **Jittering Amount**: Amount of jitter applied to the sampling.
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Even Distribution | Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even. |
-| Particles/Face | Number of emissions per face (0 = automatic). |
-| Jittering Amount | Amount of jitter applied to the sampling. |
-
-
-**RandomRandom Order**
+###### RandomRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order-2.png)
 
 The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
-**Even Distribution**
+###### Even Distribution
 
 Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
 
-**GridInvert Grid**
+###### GridInvert Grid
 
 ![Invert Grid](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/invert-grid.png)
 
 Invert what is considered the object and what is not.
 
-
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------- |
-| Hexagonal Grid | Uses a hexagonal-shaped grid instead of a rectangular one. |
-| Resolution | Resolution of the grid. |
-| Random | Add a random offset to grid locations. |
-
-
+- **Hexagonal Grid**: Uses a hexagonal-shaped grid instead of a rectangular one.
+- **Resolution**: Resolution of the grid.
+- **Random**: Add a random offset to grid locations.

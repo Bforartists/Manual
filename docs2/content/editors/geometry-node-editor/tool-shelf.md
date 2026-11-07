@@ -42,13 +42,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Lasso
 
@@ -64,13 +60,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
@@ -82,12 +74,13 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 ![Tool Settings](/docs2/images/editors/geometry-node-editor/tool-shelf/tool-settings-3.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The brush radius. |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The brush radius.
 
 ### Annotate Tools group
 
@@ -123,12 +116,8 @@ Clicking at the left color field reveals a color picker. Define the color for th
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
-
+- **Radius**: The radius for the stroke stabilization.
+- **Factor**: Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 #### Annotate Line
 

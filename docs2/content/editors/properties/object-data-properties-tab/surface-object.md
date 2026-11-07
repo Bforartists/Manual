@@ -42,12 +42,13 @@ In this panel you can adjust settings of the texture space used by generated tex
 
 The display of the texture space cage can be activated in the Viewport Display in the Object properties.
 
+### Texture Mesh
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture Mesh | Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects. |
-| Auto Texture Space | Adjusts the active object’s texture space automatically when transforming the object. |
+Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
 
+### Auto Texture Space
+
+Adjusts the active object’s texture space automatically when transforming the object.
 
 ### Location and Size X / Y / Z
 
@@ -118,38 +119,69 @@ A List of the shape keys for this mesh.
 
 It contains two types of shape keys. Basis is the base shape. The other type relies at this shape as the base.
 
+#### Shape Key name
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key name | The name of the shape key. It can be renamed by double clicking at it. |
-| Slider value | The blend value of this shape key. The Basis shape key does not have such a slider. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the shape key. It can be renamed by double clicking at it.
 
+#### Slider value
 
-| Entry | What it does |
-| -------- | ------------------------------ |
-| Add + | Create a shape key. |
-| Remove - | Delete the selected shape key. |
+The blend value of this shape key. The Basis shape key does not have such a slider.
 
+#### Lock
+
+The lock icon at the end of a group name locks the group from being editable.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create a shape key.
+
+#### Remove -
+
+Delete the selected shape key.
 
 ### Specials menu
 
 ![Specials menu](/docs2/images/editors/properties/object-data-properties-tab/curve-object/specials-menu.png)
 
+#### New Shape From Mix
 
-| Entry | What it does |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Shape From Mix | Add a new shape key with the current deformed shape of the object. |
-| Mirror Shape Key | Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical. |
-| Mirror Shape Key (Topology) | Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work. |
-| Join as Shapes (Transfer Mix) | Transfer the current resulting shape from a different object. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the current mix of the first object. |
-| Transfer Shape Key | Transfer the active shape key from a different object regardless of its current influence. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the active shape of the first object. |
-| Delete all Shape Keys | Delete all shape keys at this mesh. |
-| Move to Top | Move the shape key to the top of the list. But not above the Basis shape key. |
-| Move to Bottom | Move the shape key to the bottom of the list. |
+Add a new shape key with the current deformed shape of the object.
 
+#### Mirror Shape Key
+
+Mirror the shape keys on the X axis. This will not work if the mesh vertices is not fully symmetrical.
+
+#### Mirror Shape Key (Topology)
+
+Mirror the shape keys on the X axis. But detects the mirrored vertices based on the topology of the mesh. The mesh vertices do not have to be perfectly symmetrical for this action to work.
+
+#### Join as Shapes (Transfer Mix)
+
+Transfer the current resulting shape from a different object. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the current mix of the first object.
+
+#### Transfer Shape Key
+
+Transfer the active shape key from a different object regardless of its current influence. Select the object to copy, hold down Shift, then the object to copy into. Use this action and a new shape key will be added to the active object with the active shape of the first object.
+
+#### Delete all Shape Keys
+
+Delete all shape keys at this mesh.
+
+#### Move to Top
+
+Move the shape key to the top of the list. But not above the Basis shape key.
+
+#### Move to Bottom
+
+Move the shape key to the bottom of the list.
 
 #### Move Shape Key Up / Down
 
@@ -167,16 +199,29 @@ Set the shape keys to Relative or Absolute.
 
 The shape is defined relative to the Basis or another specified shape key. And can be adjusted in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Value | The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence. |
-| Range | Minimum and maximum range for the influence value of the active shape key. |
-| Vertex Group | Limit the active shape key deformation to a vertex group. |
-| Relative To | Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Value
+
+The weight of the blend between the shape key and its basis key. 0 means no influence, 1 full influence.
+
+##### Range
+
+Minimum and maximum range for the influence value of the active shape key.
+
+##### Vertex Group
+
+Limit the active shape key deformation to a vertex group.
+
+##### Relative To
+
+Select the shape key to deform from. It does not need to be the Basis shape key, but can also be another shape key.
 
 #### Absolute
 
@@ -184,13 +229,17 @@ The shape is defined relative to the Basis or another specified shape key. And c
 
 The shape changes over time, as defined in its settings.
 
+##### Shape Key Lock (pin icon)
 
-| Entry | What it does |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shape Key Lock (pin icon) | Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode. |
-| Shape Key Edit Mode (edit mode icon) | If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state. |
-| Re-Time Shape Keys (clock icon) | Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered. |
+Show the active shape in the 3D Viewport without blending. Shape Key Lock gets automatically enabled while the object is in Edit Mode.
 
+##### Shape Key Edit Mode (edit mode icon)
+
+If enabled, when entering Edit Mode the active shape key will not take maximum influence as is default. Instead, the current blend of shape keys will be visible and can be edited from that state.
+
+##### Re-Time Shape Keys (clock icon)
+
+Absolute shape keys are timed, by order in the list, at a constant interval. This button resets the timing for the keys. Useful if keys were removed or re-ordered.
 
 ##### Interpolation
 

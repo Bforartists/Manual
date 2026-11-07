@@ -80,14 +80,21 @@ You may also want to add some environment content like a hdri to have something 
 
 Fluid simulation is made of three object types. Two are needed to get the simulation going. Domain and Flow. Effectors are additional collider objects.
 
+#### None
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| None | No fluid type defined. |
-| Domain | The domain object contains the entire simulation. Fluid simulations cannot leave the domain, it will either collide with the edge or disappear, depending on the domain’s settings. |
-| Flow | Fluid Flow types are used to add or remove fluid to a domain object. Flow objects should be contained within the domain’s bounding box in order to work. |
-| Effector | Effector objects are used as colliders and to influence the fluid flow. |
+No fluid type defined.
 
+#### Domain
+
+The domain object contains the entire simulation. Fluid simulations cannot leave the domain, it will either collide with the edge or disappear, depending on the domain’s settings.
+
+#### Flow
+
+Fluid Flow types are used to add or remove fluid to a domain object. Flow objects should be contained within the domain’s bounding box in order to work.
+
+#### Effector
+
+Effector objects are used as colliders and to influence the fluid flow.
 
 ## Type Domain - Settings subpanel
 
@@ -117,12 +124,13 @@ In general, greater CFL (Courant–Friedrichs–Lewy) numbers will minimize the 
 
 > **Note:** When lowering the CFL number it is recommended to increase the maximum number of time steps. Similarly, when increasing the CFL number the minimum number of time steps should be adjusted.
 
+#### Use Adaptive Time Steps
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Adaptive Time Steps | Lets the solver automatically decide when to perform multiple simulation steps per frame. It takes into account the maximum and minimum number of time steps, the current Frame Rate, and the Time Scale. |
-| Timesteps Maximum | Maximum number of allowed time steps per frame. If needed, the solver will divide a simulation step up to this number of sub-steps. · **Minimum**: Minimum number of allowed time steps per frame. The solver will always perform at least this number of simulation steps per frame. |
+Lets the solver automatically decide when to perform multiple simulation steps per frame. It takes into account the maximum and minimum number of time steps, the current Frame Rate, and the Time Scale.
 
+#### Timesteps Maximum
+
+Maximum number of allowed time steps per frame. If needed, the solver will divide a simulation step up to this number of sub-steps. · **Minimum**: Minimum number of allowed time steps per frame. The solver will always perform at least this number of simulation steps per frame.
 
 ### Using Scene Gravity X, Y , Z
 
@@ -132,12 +140,13 @@ By default the fluid solver will use the global scene gravity. This behavior can
 
 ![Using Scene Gravity X, Y , Z](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/using-scene-gravity-x-y-z-2.png)
 
+#### Empty Space
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| Empty Space | Gas Only! Value under which voxels are considered empty space to optimize rendering. |
-| Delete In Obstacle | Remover any volume of fluid that intersects with an obstacle inside the domain. |
+Gas Only! Value under which voxels are considered empty space to optimize rendering.
 
+#### Delete In Obstacle
+
+Remover any volume of fluid that intersects with an obstacle inside the domain.
 
 ### Border Collisions subpanel
 
@@ -151,13 +160,17 @@ Enable collisions with the following domain sides.
 
 Gas only! The domain will adaptively shrink to best fit the gas, saving computation time by leaving voxels without gas out of the simulation. Unless the Add Resolution is used, the adaptive domain will not exceed the bounds of the original domain.
 
+#### Add Resolution
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add Resolution | Number of voxels to add around the outside of the domain. |
-| Margin | Amount of extra space to leave around gas, measured in voxels. With very fast-moving gas larger margins may be required to prevent the gas from being cut off by the adaptive boundary, but note this will increase the number of voxels which need to be computed. |
-| Threshold | Smallest amount of gas a voxel can contain before it is considered empty and the adaptive domain is allowed to cut it out of the simulation. |
+Number of voxels to add around the outside of the domain.
 
+#### Margin
+
+Amount of extra space to leave around gas, measured in voxels. With very fast-moving gas larger margins may be required to prevent the gas from being cut off by the adaptive boundary, but note this will increase the number of voxels which need to be computed.
+
+#### Threshold
+
+Smallest amount of gas a voxel can contain before it is considered empty and the adaptive domain is allowed to cut it out of the simulation.
 
 ## Type Domain - Gas subpanel
 
@@ -191,13 +204,17 @@ Controls the amount of turbulence in the smoke. Higher values will make lots of 
 
 ![Dissolve subpanel](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/dissolve-subpanel.png)
 
+#### Dissolve smoke
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| Dissolve smoke | Lets smoke disappear over time. |
-| Time | Determine how quickly the smoke dissolves. Lower values gives faster disappearing. |
-| Slow | Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer. |
+Lets smoke disappear over time.
 
+#### Time
+
+Determine how quickly the smoke dissolves. Lower values gives faster disappearing.
+
+#### Slow
+
+Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.
 
 ### Noise subpanel
 
@@ -211,16 +228,29 @@ Lets smoke disappear over time.
 
 ![Fire subpanel](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/fire-subpanel.png)
 
+#### Reaction Speed
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------------------- |
-| Reaction Speed | Speed of the burning reaction. Higher values means smaller flames. |
-| Flame Smoke | Amount of smoke created by burning fuel. |
-| Vorticity | Additional vorticity for the flames. |
-| Temperature Maximum | Maxiumum temperature of the flames. Higher values results in faster rising flames. |
-| Minimum | Minimum temperature of the flames. Higher values results in faster rising flames. |
-| Smoke Color | The color of the smoke. |
+Speed of the burning reaction. Higher values means smaller flames.
 
+#### Flame Smoke
+
+Amount of smoke created by burning fuel.
+
+#### Vorticity
+
+Additional vorticity for the flames.
+
+#### Temperature Maximum
+
+Maxiumum temperature of the flames. Higher values results in faster rising flames.
+
+#### Minimum
+
+Minimum temperature of the flames. Higher values results in faster rising flames.
+
+#### Smoke Color
+
+The color of the smoke.
 
 ## Type Domain - Liquid subpanel
 
@@ -242,12 +272,13 @@ The radius of one liquid particle in grid cells units. This value describes how 
 
 Whenever the simulation appears to leak or gain volume in an undesired, non physically accurate way it is a good idea to adjust this value. That is, when liquid seems to disappear this value needs to be increased. The inverse applies when too much liquid is being produced.
 
+#### Sampling
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sampling | Factor that is used when sampling particles. A higher value will sample more particles. Note that particle resampling occurs at every single simulation step. |
-| Randomness | New particles are sampled with some randomness attached to their position which can be controlled by this field. Higher values will sample the liquid particles more randomly in inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside their corresponding grid cells. When trying to create a laminar inflow (with little randomness) or more turbulent flows (with greater randomness) this value can be useful. |
+Factor that is used when sampling particles. A higher value will sample more particles. Note that particle resampling occurs at every single simulation step.
 
+#### Randomness
+
+New particles are sampled with some randomness attached to their position which can be controlled by this field. Higher values will sample the liquid particles more randomly in inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside their corresponding grid cells. When trying to create a laminar inflow (with little randomness) or more turbulent flows (with greater randomness) this value can be useful.
 
 ### Particles Maximum
 
@@ -271,12 +302,13 @@ In some situations increasing this value can help create volume when the simulat
 
 Enables finer resolution in fluid / obstacle regions (second order obstacles). This option reduces the “stepping effect” that results when an obstacles lies inclined inside the domain. It also makes liquid flow more smoothly over an obstacle.
 
+#### Obstacle Distance
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------- |
-| Obstacle Distance | How far apart fluid and obstacle are. |
-| Threshold | How much fluid is allowed in an obstacle cell |
+How far apart fluid and obstacle are.
 
+#### Threshold
+
+How much fluid is allowed in an obstacle cell
 
 ### Diffusion subpanel
 
@@ -292,36 +324,45 @@ Liquid diffusion defines the physical properties of a liquid and in turn define 
 
 Diffusion presets. To add a preset type in a name and click at the plus button. To remove a preset click at the minus button
 
+##### Base
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Base | The base of the viscosity value. |
-| Exponent | The exponent of the viscosity value. |
-| Surface Tension | Surface tension in grid units. Higher value will produce liquids with greater surface tension. |
+The base of the viscosity value.
 
+##### Exponent
+
+The exponent of the viscosity value.
+
+##### Surface Tension
+
+Surface tension in grid units. Higher value will produce liquids with greater surface tension.
 
 ### High viscosity Solver subpanel
 
 ![High viscosity Solver subpanel](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/high-viscosity-solver-subpanel.png)
 
+#### High viscosity Solver
 
-| Entry | What it does |
-| --------------------- | --------------------------------------------------------------------- |
-| High viscosity Solver | Simulate fluids with high viscosity using a special viscosity solver. |
-| Strength | The viscosity of the fluid. |
+Simulate fluids with high viscosity using a special viscosity solver.
 
+#### Strength
+
+The viscosity of the fluid.
 
 ### Particles subpanel
 
 ![Particles subpanel](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/particles-subpanel.png)
 
+#### Spray
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Spray | Create spray particles during the secondary particle simulation. Spray particles are those that appear to fly through the air above the liquid surface when there is a bigger splash. |
-| Foam | Create foam particles during the secondary particle simulation. Foam particles are those that solely move on the liquid surface. |
-| Bubbles | Create bubble particles during the secondary particle simulation. Bubble particles are those that move below the liquid surface. Note! Enabling a secondary particle type will also create a particle system for that type of particles. Disabling a particle type will delete this particle system including its settings. |
+Create spray particles during the secondary particle simulation. Spray particles are those that appear to fly through the air above the liquid surface when there is a bigger splash.
 
+#### Foam
+
+Create foam particles during the secondary particle simulation. Foam particles are those that solely move on the liquid surface.
+
+#### Bubbles
+
+Create bubble particles during the secondary particle simulation. Bubble particles are those that move below the liquid surface. Note! Enabling a secondary particle type will also create a particle system for that type of particles. Disabling a particle type will delete this particle system including its settings.
 
 #### Combined Export
 
@@ -329,36 +370,77 @@ Diffusion presets. To add a preset type in a name and click at the plus button. 
 
 Select particle types that should go into the same particle system. This option has no effect on the outcome of the simulation. It only changes the way particle systems are allocated in the particle settings.
 
+##### Upres Factor
 
-| Entry | What it does |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Upres Factor | Factor by which to enhance the resolution of the particle simulation. The scaling factor is coupled to the Resolution Divisions (i.e. the particle simulation is this times bigger than the base simulation). |
-| Wave Crest Potential Maximum | Upper clamping threshold for marking fluid cells as wave crests. A higher value results in less marked cells. |
-| Wave Crest Potential Minimum | Lower clamping threshold for marking fluid cells as wave crests. A lower value results in more marked cells. |
-| Trapped Air Potential Maximum | Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells. |
-| Trapped Air Potential Minimum | Lower clamping threshold for marking fluid cells where air is trapped. A lower value results in more marked cells. |
-| Kinetic Energy Potential Maximum | Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells. |
-| Kinetic Energy Potential Minimum | Lower clamping threshold that indicates the fluid speed where cells start to emit particles. A lower values result in generally more particles. |
-| Potential Radius | Radius to compute potential for each cell. Higher values are slower but create smoother potential grids. |
-| Particle Update Radius | Radius to compute position update for each particle. Higher values are slower but particles move less chaotic. |
-| Wave Crest Particle Sampling | Maximum number of particles generated per wave crest cell per frame. |
-| Trapper Air Particle Sampling | Maximum number of particles generated per trapped air cell per frame. |
-| Particle Life Maximum | Highest possible particle lifetime. |
-| Particle Life Minimum | Lowest possible particle lifetime. |
-| Bubble Buoyancy | Amount of buoyancy force that rises bubbles. A high value results in bubble movement mainly upwards. |
-| Bubble Drag | Amount of drag force that moves bubbles along with the fluid. A high value results in bubble movement mainly along with the fluid. |
+Factor by which to enhance the resolution of the particle simulation. The scaling factor is coupled to the Resolution Divisions (i.e. the particle simulation is this times bigger than the base simulation).
 
+##### Wave Crest Potential Maximum
+
+Upper clamping threshold for marking fluid cells as wave crests. A higher value results in less marked cells.
+
+##### Wave Crest Potential Minimum
+
+Lower clamping threshold for marking fluid cells as wave crests. A lower value results in more marked cells.
+
+##### Trapped Air Potential Maximum
+
+Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells.
+
+##### Trapped Air Potential Minimum
+
+Lower clamping threshold for marking fluid cells where air is trapped. A lower value results in more marked cells.
+
+##### Kinetic Energy Potential Maximum
+
+Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less marked cells.
+
+##### Kinetic Energy Potential Minimum
+
+Lower clamping threshold that indicates the fluid speed where cells start to emit particles. A lower values result in generally more particles.
+
+##### Potential Radius
+
+Radius to compute potential for each cell. Higher values are slower but create smoother potential grids.
+
+##### Particle Update Radius
+
+Radius to compute position update for each particle. Higher values are slower but particles move less chaotic.
+
+##### Wave Crest Particle Sampling
+
+Maximum number of particles generated per wave crest cell per frame.
+
+##### Trapper Air Particle Sampling
+
+Maximum number of particles generated per trapped air cell per frame.
+
+##### Particle Life Maximum
+
+Highest possible particle lifetime.
+
+##### Particle Life Minimum
+
+Lowest possible particle lifetime.
+
+##### Bubble Buoyancy
+
+Amount of buoyancy force that rises bubbles. A high value results in bubble movement mainly upwards.
+
+##### Bubble Drag
+
+Amount of drag force that moves bubbles along with the fluid. A high value results in bubble movement mainly along with the fluid.
 
 #### Particles in Boundary
 
 ![Particles in Boundary](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/particles-in-boundary.png)
 
+##### Delete
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------ |
-| Delete | Delete secondary particles that are inside obstacles or left the domain. |
-| Push Out | Push secondary particles that left the domain back into the domain. |
+Delete secondary particles that are inside obstacles or left the domain.
 
+##### Push Out
+
+Push secondary particles that left the domain back into the domain.
 
 ### Mesh Sub tab
 
@@ -366,13 +448,17 @@ Select particle types that should go into the same particle system. This option 
 
 Enables the display for the fluid as a mesh. When you want to render a liquid simulation then you need to convert it to a mesh object.
 
+#### Upres Factor
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Upres Factor | Factor by which to enhance the resolution of the mesh. The scaling factor is coupled to the Resolution Divisions (i.e. the mesh is this times bigger than the base simulation). |
-| Particle Radius | The radius of one liquid particle in grid cells units. This value describes how much area is covered by a particle and thus determines how much area around it can be considered as liquid. A greater radius will let particles cover more area. This will result in meshes covering more volume around liquid particles. |
-| Use Speed Vectors | Store speed vectors on drive. |
+Factor by which to enhance the resolution of the mesh. The scaling factor is coupled to the Resolution Divisions (i.e. the mesh is this times bigger than the base simulation).
 
+#### Particle Radius
+
+The radius of one liquid particle in grid cells units. This value describes how much area is covered by a particle and thus determines how much area around it can be considered as liquid. A greater radius will let particles cover more area. This will result in meshes covering more volume around liquid particles.
+
+#### Use Speed Vectors
+
+Store speed vectors on drive.
 
 #### Mesh Generator
 
@@ -386,14 +472,21 @@ The Final option produces a higher quality mesh and provides more configuration 
 
 The Preview option is faster. But not as smooth. And has no settings.
 
+##### Smoothing Positive
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Smoothing Positive | Positive mesh smoothing iterations. Higher values will make the mesh outline increasingly smooth. Yet higher values can prevent small details (e.g. smaller liquid drops) from getting meshed. |
-| Negative | Negative mesh smoothing iterations. Higher values will make the mesh outline sharper. High values will preserve details, however, the mesh outline will become more ragged. A single mesh particle will become less rounded and have more flat sides. |
-| Concavity Upper | Upper mesh concavity bound. High values tend to smoothen and fill out concave regions. |
-| Concavity Lower | Lower mesh concavity bound. High values tend to smoothen and fill out concave regions. Using a lower concavity which is greater the upper concavity can result in distorted, non-manifold meshes. |
+Positive mesh smoothing iterations. Higher values will make the mesh outline increasingly smooth. Yet higher values can prevent small details (e.g. smaller liquid drops) from getting meshed.
 
+##### Negative
+
+Negative mesh smoothing iterations. Higher values will make the mesh outline sharper. High values will preserve details, however, the mesh outline will become more ragged. A single mesh particle will become less rounded and have more flat sides.
+
+##### Concavity Upper
+
+Upper mesh concavity bound. High values tend to smoothen and fill out concave regions.
+
+##### Concavity Lower
+
+Lower mesh concavity bound. High values tend to smoothen and fill out concave regions. Using a lower concavity which is greater the upper concavity can result in distorted, non-manifold meshes.
 
 ## Domain - Guides subpanel
 
@@ -403,13 +496,17 @@ Fluid guides are used to apply forces onto the simulation. They are like simple 
 
 Even when there are no guiding objects baked or there is no guiding domain attached, the fluid solver will still perform the more expensive pressure guiding algorithm if guiding is enabled. It is therefore recommended to only enable Guides when there is a clear intention to use guiding in the simulation.
 
+### Weight
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Weight | The guiding weight. |
-| Size | This setting determines the size of the vertices that the guiding produces. A greater guiding size (also known as the blur radius or “beta” guiding value) results in larger vertices. |
-| Velocity Factor | All guiding velocities are multiplied by this factor. That is, every cell of the guiding grid, which has the same size as the domain object, is multiplied by this factor. |
+The guiding weight.
 
+### Size
+
+This setting determines the size of the vertices that the guiding produces. A greater guiding size (also known as the blur radius or “beta” guiding value) results in larger vertices.
+
+### Velocity Factor
+
+All guiding velocities are multiplied by this factor. That is, every cell of the guiding grid, which has the same size as the domain object, is multiplied by this factor.
 
 ### Velocity Source
 
@@ -463,14 +560,21 @@ If the mesh has modifiers, the rendering settings are used for exporting the mes
 
 > **Note:** Fluid simulations use their own cache. All other physics simulations make use of the General Baking operators.
 
+### Cache Directory
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Cache Directory | Directory to store baked simulation files in. Inside this directory each simulation type (i.e. mesh, particles, noise) will have its own directory containing the simulation data. · **Accept**: Open a file browser to set a directory. |
-| Frame Start | Frame on which to start the simulation. This is the first frame that will be baked. |
-| End | Frame on which to stop the simulation. This is the last frame that will be baked. Note! The simulation is only calculated for positive frames between the Start and End frames of the Cache panel. So if you want a simulation that is longer than the default frame range you have to change the End frame. |
-| Offset | Type Modular and All. Frame offset that is used when loading the simulation from the cache. It is not considered when baking the simulation, only when loading it. |
+Directory to store baked simulation files in. Inside this directory each simulation type (i.e. mesh, particles, noise) will have its own directory containing the simulation data. · **Accept**: Open a file browser to set a directory.
 
+### Frame Start
+
+Frame on which to start the simulation. This is the first frame that will be baked.
+
+### End
+
+Frame on which to stop the simulation. This is the last frame that will be baked. Note! The simulation is only calculated for positive frames between the Start and End frames of the Cache panel. So if you want a simulation that is longer than the default frame range you have to change the End frame.
+
+### Offset
+
+Type Modular and All. Frame offset that is used when loading the simulation from the cache. It is not considered when baking the simulation, only when loading it.
 
 ### Type
 
@@ -478,13 +582,17 @@ If the mesh has modifiers, the rendering settings are used for exporting the mes
 
 The type of the cache determines how the cache can be baked.
 
+#### Replay
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Replay | The cache will be baked as the simulation is being played in the viewport. |
-| Modular | The cache will be baked step by step: The bake operators for this type are spread across various panels within the domain settings (e.g. the bake tool for the mesh can be found in the Mesh panel). |
-| All | The cache will be baked with a single tool. All selected settings will be considered during this bake. The bake tool for this type can be found in the Cache panel. |
+The cache will be baked as the simulation is being played in the viewport.
 
+#### Modular
+
+The cache will be baked step by step: The bake operators for this type are spread across various panels within the domain settings (e.g. the bake tool for the mesh can be found in the Mesh panel).
+
+#### All
+
+The cache will be baked with a single tool. All selected settings will be considered during this bake. The bake tool for this type can be found in the Cache panel.
 
 ### Is Resumable
 
@@ -500,12 +608,13 @@ Extra data will be saved so that you can resumed baking after pausing. Since mor
 
 File format for volume based simulation data (i.e. grids and particles).
 
+##### Uni Cache
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Uni Cache | Blender’s own caching format with some compression. Each simulation object is stored in its own .uni cache file. |
-| OpenVDB | Advanced and efficient storage format. All simulation objects (i.e. grids and particles) are stored in a single .vdb file per frame. |
+Blender’s own caching format with some compression. Each simulation object is stored in its own .uni cache file.
 
+##### OpenVDB
+
+Advanced and efficient storage format. All simulation objects (i.e. grids and particles) are stored in a single .vdb file per frame.
 
 #### Compression
 
@@ -513,12 +622,13 @@ File format for volume based simulation data (i.e. grids and particles).
 
 The compression method for the cache.
 
+##### Precision
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Precision | Precision level that is used when writing OpenVDB cache files. · **Float (Full)**: Volumetric data (e.g. grid values, particle positions) will be written with full precision (32 bit). · **Float (Half)**: Volumetric data (e.g. grid values, particle positions) will be written with half precision (16 bit). |
-| Mini | 8 Bit floating values. |
+Precision level that is used when writing OpenVDB cache files. · **Float (Full)**: Volumetric data (e.g. grid values, particle positions) will be written with full precision (32 bit). · **Float (Half)**: Volumetric data (e.g. grid values, particle positions) will be written with half precision (16 bit).
 
+##### Mini
+
+8 Bit floating values.
 
 ### Meshes
 
@@ -530,12 +640,13 @@ With Mesh activated.
 
 File format for the mesh cache files.
 
+#### Binary Object
 
-| Entry | What it does |
-| ------------- | ------------------------------------------- |
-| Binary Object | Mesh data files with some compression. |
-| Object | Simple, standard data format for mesh data. |
+Mesh data files with some compression.
 
+#### Object
+
+Simple, standard data format for mesh data.
 
 ### Bake All, Free All
 
@@ -627,13 +738,17 @@ The simulation field to color map onto grid lines.
 
 None and Flags have no further settings. The following settings belongs to Highlight Range. You need to have Grid Display ticked to get the settings for Highlight Range.
 
+###### Lower Bound
 
-| Entry | What it does |
-| ----------- | --------------------------------------- |
-| Lower Bound | The lower bound of the highlight range. |
-| Upper Bound | The upper bound of the highlight range. |
-| Color | The color to highlight the range |
+The lower bound of the highlight range.
 
+###### Upper Bound
+
+The upper bound of the highlight range.
+
+###### Color
+
+The color to highlight the range
 
 ###### Cell Type
 
@@ -681,73 +796,53 @@ Define the colors of the color ramp.
 
 ###### Controls
 
+- **+**: Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.
+- **-**: Deletes the selected color stop from the list.
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
-| - | Deletes the selected color stop from the list. |
-
-
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
+- **Flip Color Ramp**: Flips the gradient, inverting the values of the color ramp.
+- **Distribute Stops from Left**: Rearrange the stops so that every step has the same space to the right.
+- **Distribute Stops Evenly**: Space between all neighboring stops becomes equal.
+- **Eyedropper (pipette icon) E**: An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------- |
-| Flip Color Ramp | Flips the gradient, inverting the values of the color ramp. |
-| Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
-| Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
-| Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
-
-
-**Reset Color Ramp**
+###### Reset Color Ramp
 
 ![Reset Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png)
 
 Resets the color ramp to its default state.
 
-**Color Mode**
+###### Color Mode
 
+- **RGB**: Blends color by mixing each color channel and combining.
+- **HSV/HSL**: Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RGB | Blends color by mixing each color channel and combining. |
-| HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
-
-
-**Interpolation**
+###### Interpolation
 
 ![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
+- **Ease**: Uses an Ease Interpolation for the color stops.
+- **Cardinal**: Uses a Cardinal Interpolation for the color stops.
+- **Linear**: Uses a Linear Interpolation for the color stops.
+- **B-Spline**: Uses a B-Spline Interpolation for the color stops.
+- **Constant**: Uses a Constant Interpolation for the color stops.
 
-| Entry | What it does |
-| -------- | -------------------------------------------------- |
-| Ease | Uses an Ease Interpolation for the color stops. |
-| Cardinal | Uses a Cardinal Interpolation for the color stops. |
-| Linear | Uses a Linear Interpolation for the color stops. |
-| B-Spline | Uses a B-Spline Interpolation for the color stops. |
-| Constant | Uses a Constant Interpolation for the color stops. |
-
-
-**Color Ramp**
+###### Color Ramp
 
 ![Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png)
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
-**Active Color Stop elements**
+###### Active Color Stop elements
 
 ![Active Color Stop elements](/docs2/images/editors/properties/physics-properties-tab/fluid-panel/active-color-stop-elements.png)
 
 Adjust the active color stop.
 
-
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------- |
-| Choose active color stop | Choose the color stop by index. |
-| Pos | The position of the active color stop. The range goes from 0.000 to 1.000 |
-
+- **Choose active color stop**: Choose the color stop by index.
+- **Pos**: The position of the active color stop. The range goes from 0.000 to 1.000
 
 ### Vector display subpanel
 
@@ -759,12 +854,13 @@ Adjust the active color stop.
 
 Display the vectors as Needles, Streamlines or MAC Grid.
 
+##### Magnitude
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------- |
-| Magnitude | Needles and Streamlines. Scale the vectors with their magnitudes. |
-| MAC Grid X Y Z | Show the x y or z component of the grid. |
+Needles and Streamlines. Scale the vectors with their magnitudes.
 
+##### MAC Grid X Y Z
+
+Show the x y or z component of the grid.
 
 #### Field
 
@@ -792,13 +888,17 @@ The simulation field to color map onto grid lines.
 
 None and Flags have no further settings. The following settings belongs to Highlight Range.
 
+##### Lower Bound
 
-| Entry | What it does |
-| ----------- | --------------------------------------- |
-| Lower Bound | The lower bound of the highlight range. |
-| Upper Bound | The upper bound of the highlight range. |
-| Color | The color to highlight the range |
+The lower bound of the highlight range.
 
+##### Upper Bound
+
+The upper bound of the highlight range.
+
+##### Color
+
+The color to highlight the range
 
 ##### Cell Type
 
@@ -834,17 +934,33 @@ Controls if the Flow object either adds (Inflow), removes (Outflow), or turns th
 
 This object will emit fluid into the simulation, like a water tap or base of a fire.
 
+##### Use Flow
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
+
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 #### Outflow
 
@@ -852,12 +968,13 @@ This object will emit fluid into the simulation, like a water tap or base of a f
 
 Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.
 
+##### Use Flow
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
 #### Geometry
 
@@ -865,16 +982,29 @@ Any fluid that enters the bounding box of this object will be removed from the d
 
 All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
+##### Sampling Substeps
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 ## Flow - Settings subpanel - Flow Type Fire and Smoke
 
@@ -894,18 +1024,37 @@ Controls if the Flow object either adds (Inflow), removes (Outflow), or turns th
 
 This object will emit fluid into the simulation, like a water tap or base of a fire.
 
+##### Use Flow
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Fuel | Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
+
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Fuel
+
+Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 #### Outflow
 
@@ -913,12 +1062,13 @@ This object will emit fluid into the simulation, like a water tap or base of a f
 
 Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.
 
+##### Use Flow
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
 #### Geometry
 
@@ -926,17 +1076,33 @@ Any fluid that enters the bounding box of this object will be removed from the d
 
 All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
+##### Sampling Substeps
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Fuel | Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Fuel
+
+Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 ## Flow - Settings subpanel - Flow Type Fire
 
@@ -956,18 +1122,37 @@ Controls if the Flow object either adds (Inflow), removes (Outflow), or turns th
 
 This object will emit fluid into the simulation, like a water tap or base of a fire.
 
+##### Use Flow
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Fuel | Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
+
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Fuel
+
+Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 #### Outflow
 
@@ -975,12 +1160,13 @@ This object will emit fluid into the simulation, like a water tap or base of a f
 
 Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.
 
+##### Use Flow
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
 #### Geometry
 
@@ -988,17 +1174,33 @@ Any fluid that enters the bounding box of this object will be removed from the d
 
 All regions of this object that are inside the domain bounding box will be used as actual fluid in the simulation. You can place more than one fluid object inside the domain. Also make sure that the surface normals are pointing outwards or else they will not simulate properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
+##### Sampling Substeps
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
-| Smoke Color | The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color. |
-| Absolute Density | If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up. |
-| Initial Temperature | Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy. |
-| Density | Amount of smoke to emit at once. Larger values result in more density being produced. |
-| Fuel | Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames. |
-| Vertex Group | When set, use the specified Vertex Group to control where smoke is emitted. |
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
+##### Smoke Color
+
+The color of emitted smoke. When smoke of different colors are mixed they will blend together, eventually settling into a new combined color.
+
+##### Absolute Density
+
+If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for it in the emitter region. Otherwise smoke or fire will always be produced and add up.
+
+##### Initial Temperature
+
+Difference between the temperature of emitted smoke and the domain’s ambient temperature. This setting’s effect on smoke depends on the domain’s Heat Buoyancy.
+
+##### Density
+
+Amount of smoke to emit at once. Larger values result in more density being produced.
+
+##### Fuel
+
+Amount of “fuel” being burned per second. Larger values result in larger flames, smaller values result in smaller flames.
+
+##### Vertex Group
+
+When set, use the specified Vertex Group to control where smoke is emitted.
 
 ## Flow - Settings subpanel - Flow Type Liquid
 
@@ -1018,12 +1220,13 @@ Controls if the Flow object either adds (Inflow), removes (Outflow), or turns th
 
 This object will emit fluid into the simulation, like a water tap or base of a fire.
 
+##### Use Flow
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+##### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
 ##### Outflow
 
@@ -1031,12 +1234,13 @@ This object will emit fluid into the simulation, like a water tap or base of a f
 
 Any fluid that enters the bounding box of this object will be removed from the domain (think of a drain or a black hole). This can be useful in combination with an inflow to prevent the whole domain from filling up. Outflow objects can be animated and the area where the fluid disappears will follow the object as it moves around.
 
+###### Use Flow
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Flow | Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain. |
-| Sampling Substeps | Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources. |
+Enables or disables the flow of fluid, this property is useful for animations to selectively enable and disable when fluid is being added to or removed from the domain.
 
+###### Sampling Substeps
+
+Number of sub-steps used to reduce gaps in emission of fluid from fast-moving sources.
 
 #### Geometry
 
@@ -1066,13 +1270,17 @@ How fluid is emitted. By a mesh or a particle system. Flow Type Fluid does just 
 
 Emit fluid directly from the object’s mesh.
 
+##### Is Planar
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Is Planar | Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes. |
-| Surface Emission | Maximum distance in voxels from the surface of the mesh in which fluid is emitted. Since this setting uses voxels to determine the distance, results will vary depending on the domain’s resolution. |
-| Volume Emission | Fire or Smoke Only. Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount. Note that emitting fluid based on volume can have unpredictable results if your mesh is non-manifold. |
+Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes.
 
+##### Surface Emission
+
+Maximum distance in voxels from the surface of the mesh in which fluid is emitted. Since this setting uses voxels to determine the distance, results will vary depending on the domain’s resolution.
+
+##### Volume Emission
+
+Fire or Smoke Only. Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount. Note that emitting fluid based on volume can have unpredictable results if your mesh is non-manifold.
 
 #### Particle System
 
@@ -1082,12 +1290,13 @@ Not for Flow Type Fluid. Create smoke or fire from a particle system on the flow
 
 Note that only Emitter type particle systems can add smoke. See Particles for information on how to create a particle system.
 
+##### Particle System
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Particle System | Pick the particle system to use. It must be at the same mesh. |
-| Set Size | Define the maximum distance in voxels at which particles can emit smoke, similar to the Surface Emission setting for mesh sources. When disabled, particles will fill the nearest voxel with smoke. · **Size**: Particle size in simulation cells. |
+Pick the particle system to use. It must be at the same mesh.
 
+##### Set Size
+
+Define the maximum distance in voxels at which particles can emit smoke, similar to the Surface Emission setting for mesh sources. When disabled, particles will fill the nearest voxel with smoke. · **Size**: Particle size in simulation cells.
 
 ## Flow - Settings subpanel - Initial Velocity
 
@@ -1167,15 +1376,25 @@ Objects of this type will collide with fluid.
 
 The velocity of objects of this type will be used when baking the guiding. So fluid guiding objects should move and have some velocity.
 
+##### Sampling Substeps
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sampling Substeps | Number of substeps used to reduce gaps in collision of fluid from fast-moving effectors. |
-| Surface Thickness | Additional area around the effector that will be considered as an effector. |
-| Use Effector | Enables or disables the effector object effect on the fluid, this property is useful for animations to selectively enable and disable when the effector affects the fluid. |
-| Is Planar | Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes. A manifold mesh can also be declared as planar. The fluid solver will then ignore the volume inside the mesh and just emit fluid from the mesh sides. |
-| Velocity Factor | Effector type Guide only. Multiply the guiding object velocities by this factor. This is useful when working with multiple guiding objects and some of them should have higher or smaller velocities. |
+Number of substeps used to reduce gaps in collision of fluid from fast-moving effectors.
 
+##### Surface Thickness
+
+Additional area around the effector that will be considered as an effector.
+
+##### Use Effector
+
+Enables or disables the effector object effect on the fluid, this property is useful for animations to selectively enable and disable when the effector affects the fluid.
+
+##### Is Planar
+
+Defines the effector as either a single dimension object i.e. a plane or the mesh is non-manifold. This ensures that the fluid simulator will give the most accurate results for these types of meshes. A manifold mesh can also be declared as planar. The fluid solver will then ignore the volume inside the mesh and just emit fluid from the mesh sides.
+
+##### Velocity Factor
+
+Effector type Guide only. Multiply the guiding object velocities by this factor. This is useful when working with multiple guiding objects and some of them should have higher or smaller velocities.
 
 #### Guide Mode
 
@@ -1183,12 +1402,18 @@ The velocity of objects of this type will be used when baking the guiding. So fl
 
 Effector type Guide only. The mode describes how guiding velocities should be written into the global guiding velocity field of the domain.
 
+##### Maximize
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Maximize | The guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is greater than the absolute value in the velocity field the guiding velocity will be kept. |
-| Minimize | A guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is smaller than the absolute value in the velocity field the guiding velocity will be kept. |
-| Override | The most intuitive option. A guiding object will always write its own current velocity into the global guiding velocity field. Values in the velocity field from a previous frame or guiding object will be overridden. |
-| Averaged | A guiding object will write the average of its own current velocity and the existing guiding velocity at that cell into the global guiding velocity field. |
+The guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is greater than the absolute value in the velocity field the guiding velocity will be kept.
 
+##### Minimize
 
+A guiding object will compare the existing velocity in the global velocity field with its own velocity. If its absolute value is smaller than the absolute value in the velocity field the guiding velocity will be kept.
+
+##### Override
+
+The most intuitive option. A guiding object will always write its own current velocity into the global guiding velocity field. Values in the velocity field from a previous frame or guiding object will be overridden.
+
+##### Averaged
+
+A guiding object will write the average of its own current velocity and the existing guiding velocity at that cell into the global guiding velocity field.

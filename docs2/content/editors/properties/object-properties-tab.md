@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Object Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.8 Editors - Properties Editor - Object Properties Tab.odt
@@ -49,12 +49,13 @@ Transform is position, rotation and scale of the object. It is partially the sam
 
 However, when you switch to Edit mode, with a Bone for example, then you will still have the overall world transform values for the object here, while the Transform panel in the Properties sidebar now displays the edit transform values for the bone.
 
+### Location
 
-| Entry | What it does |
-| -------- | --------------------------- |
-| Location | The location of the object. |
-| Rotation | The rotation of the object. |
+The location of the object.
 
+### Rotation
+
+The rotation of the object.
 
 ### Rotation Mode
 
@@ -72,13 +73,17 @@ With euler angles you will have three values available. But with a quaternion yo
 
 Locking the W axis will lock all axis.
 
+##### Scale
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------- |
-| Scale | The scale of the object. |
-| Lock | This properties can be locked. |
-| Animate Properties | This properties can be animated. Activating the Animate Property button sets a keyframe. |
+The scale of the object.
 
+##### Lock
+
+This properties can be locked.
+
+##### Animate Properties
+
+This properties can be animated. Activating the Animate Property button sets a keyframe.
 
 ### Delta Transform
 
@@ -88,15 +93,25 @@ Transforms are absolute to the world coordinates. Delta Transforms are relative 
 
 Adjust the delta transforms.
 
+#### Delta Location
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------- |
-| Delta Location | The delta location of the object. |
-| Delta Rotation | The delta rotation of the object. |
-| Delta Scale | The delta scale of the object. |
-| Lock | This properties can be locked. |
-| Animate Properties | This properties can be animated. Activating the Animate Property button sets a keyframe. |
+The delta location of the object.
 
+#### Delta Rotation
+
+The delta rotation of the object.
+
+#### Delta Scale
+
+The delta scale of the object.
+
+#### Lock
+
+This properties can be locked.
+
+#### Animate Properties
+
+This properties can be animated. Activating the Animate Property button sets a keyframe.
 
 ## Relations Panel
 
@@ -120,12 +135,13 @@ Set a parent object. One way is by the object picker at the right. Or choose the
 
 See and set the parent type.
 
+##### Parent Bone
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parent Bone | When you parent an object to an armature then you can choose to which bone you want to parent this object. |
-| Camera Parent Lock | When the camera is locked to the view and in fly mode, transform the parent rather than the camera. |
+When you parent an object to an armature then you can choose to which bone you want to parent this object.
 
+##### Camera Parent Lock
+
+When the camera is locked to the view and in fly mode, transform the parent rather than the camera.
 
 ### Tracking Axis
 
@@ -183,24 +199,29 @@ Collections at the Blend file level gets created with Collection + dot + three d
 
 This is the collection where the object is currently assigned at. As told, an object can be assigned to more than one collection.
 
+#### Collection Name
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------- |
-| Collection Name | Read and edit the collection name. |
-| Remove | This deletes the collection from the object. Note that the collection still exists. |
+Read and edit the collection name.
 
+#### Remove
+
+This deletes the collection from the object. Note that the collection still exists.
 
 #### Collections Menu
 
 ![Collections Menu](/docs2/images/editors/properties/object-properties-tab/collections-menu.png)
 
+##### Delete
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete | This deletes the collection from the object. Note that the collection still exists. |
-| Select Objects in Collection | Selects all objects in the collection. |
-| Set Offset From Cursor | Set offset used for collection instance based on cursor position. Normally the offset is based at the center of the world when instancing, at 0/0/0. When you choose Set Offset From Cursor then this offset is set form the cursor position instead of the world center. |
+This deletes the collection from the object. Note that the collection still exists.
 
+##### Select Objects in Collection
+
+Selects all objects in the collection.
+
+##### Set Offset From Cursor
+
+Set offset used for collection instance based on cursor position. Normally the offset is based at the center of the world when instancing, at 0/0/0. When you choose Set Offset From Cursor then this offset is set form the cursor position instead of the world center.
 
 #### Offset
 
@@ -248,13 +269,17 @@ As a result you will now have eight spheres around the child sphere, since the c
 
 ![Instanceverts Tools](/docs2/images/editors/properties/object-properties-tab/workflow.png)
 
+#### Animate Property
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Animate Property | The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it. |
-| Align to Vertex Normal | Orients the child objects along the normals of the parent vertices. |
-| Show Instancer | **Viewport**: Show the instance object in the viewport. · **Render**: Show the instance object in the final rendering. |
+The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it.
 
+#### Align to Vertex Normal
+
+Orients the child objects along the normals of the parent vertices.
+
+#### Show Instancer
+
+**Viewport**: Show the instance object in the viewport. · **Render**: Show the instance object in the final rendering.
 
 ### Dupliface
 
@@ -280,12 +305,13 @@ As a result you will now have six spheres at the child sphere, since the cube ha
 
 ![Instance Face Tools](/docs2/images/editors/properties/object-properties-tab/workflow-3.png)
 
+#### Animate Property
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Animate Property | The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it. |
-| Show Instancer | **Viewport**: Show the instance object in the viewport. · **Render**: Show the instance object in the final rendering. |
+The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it.
 
+#### Show Instancer
+
+**Viewport**: Show the instance object in the viewport. · **Render**: Show the instance object in the final rendering.
 
 #### Scale by Face Size
 
@@ -333,13 +359,17 @@ There are two path types available. In Range and Around Frame.
 
 Displays just the motion path around the current frame. Not the whole path.
 
+###### Frame Range before
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Frame Range before | The frames to display before the current frame. |
-| After | The frames to display after the current frame. |
-| Step | Number of frames between paths shown. |
+The frames to display before the current frame.
 
+###### After
+
+The frames to display after the current frame.
+
+###### Step
+
+Number of frames between paths shown.
 
 ##### In Range
 
@@ -353,58 +383,51 @@ Displays the full motion path.
 
 The type of path range to calculate the motion paths.
 
-**All Keys**
+###### All Keys
 
 ![All Keys](/docs2/images/editors/properties/object-properties-tab/all-keys.png)
 
 Calculate all keys. Even when they are out of the range.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Selected Keys**
+###### Selected Keys
 
 ![Selected Keys](/docs2/images/editors/properties/object-properties-tab/selected-keys.png)
 
 Calculate just selected keys.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Scene Frame Range**
+###### Scene Frame Range
 
 ![Scene Frame Range](/docs2/images/editors/properties/object-properties-tab/scene-frame-range.png)
 
 Calculate the entire scene / preview range.
 
-**Step**
+###### Step
 
 Number of frames between paths shown.
 
-**Manual Range**
+###### Manual Range
 
 ![Manual Range](/docs2/images/editors/properties/object-properties-tab/manual-range.png)
 
 Manually determine frame range.
 
+- **Frame Range Start**: The start frame.
+- **End**: The end frame.
+- **Step**: Number of frames between paths shown.
 
-| Entry | What it does |
-| ----------------- | ------------------------------------- |
-| Frame Range Start | The start frame. |
-| End | The end frame. |
-| Step | Number of frames between paths shown. |
-
-
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bake to active camera | Motion path points will be baked into the camera space of the active camera. This means that they will only look right when looking through this specific camera then. Switching cameras using markesrs is not supported. |
-| Cached range | Not editable. Internal cache information. |
-| Update Paths | Update the paths after any changes at the animation. You have to update the paths too if you change settings like the paths type. |
-| Update All Paths | Update all paths after any changes at the animation. You have to update the paths too if you change settings like the paths type. |
-| Delete Paths | Deletes ALL motion paths caches in the scene. Hold down shift to delete just the path for the current object. |
-
+- **Bake to active camera**: Motion path points will be baked into the camera space of the active camera. This means that they will only look right when looking through this specific camera then. Switching cameras using markesrs is not supported.
+- **Cached range**: Not editable. Internal cache information.
+- **Update Paths**: Update the paths after any changes at the animation. You have to update the paths too if you change settings like the paths type.
+- **Update All Paths**: Update all paths after any changes at the animation. You have to update the paths too if you change settings like the paths type.
+- **Delete Paths**: Deletes ALL motion paths caches in the scene. Hold down shift to delete just the path for the current object.
 
 #### Display subpanel
 
@@ -412,15 +435,25 @@ Manually determine frame range.
 
 Here you find some display options for the path.
 
+##### Frame Numbers
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------ |
-| Frame Numbers | Display the frame number above every knot of the motion path |
-| Keyframes | Display the keyframes in the path as orange dots. |
-| Keyframe Numbers | Display the keyframe number above every keyframe. |
-| Lines | Display a line between the points. |
-| Thickness | The line thickness. |
+Display the frame number above every knot of the motion path
 
+##### Keyframes
+
+Display the keyframes in the path as orange dots.
+
+##### Keyframe Numbers
+
+Display the keyframe number above every keyframe.
+
+##### Lines
+
+Display a line between the points.
+
+##### Thickness
+
+The line thickness.
 
 ##### Custom Color
 
@@ -440,12 +473,13 @@ Note that not all objects have all subpanels. Lights does for example just conta
 
 ![Shadow Terminator subpanel](/docs2/images/editors/properties/object-properties-tab/shadow-terminator-subpanel.png)
 
+#### Geometry Offset
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry Offset | Offset rays from the surface to minimize shadow artifacts at low poly geometry. Only affects triangles at grazing angles to light. |
-| Shading Offset | Push the shadow terminator towards the light to minimize shadow artifacts at low poly geometry. |
+Offset rays from the surface to minimize shadow artifacts at low poly geometry. Only affects triangles at grazing angles to light.
 
+#### Shading Offset
+
+Push the shadow terminator towards the light to minimize shadow artifacts at low poly geometry.
 
 ### Fast GI Approximation subpanel
 
@@ -515,21 +549,33 @@ Here you create and assign a Light Linking group to objects and collections. Thi
 
 Shows the available light linking collections that you can choose. This can be single objects, or whole collections.
 
+###### Name
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Name | The current active group name. The name can be renamed. |
-| Display number | How much users this data has. A click at it makes it a single user object. |
-| New Light linking collection | Add a new light linking collection. |
-| Remove | Removes the light linking collection as the active collection. Note that the collection will still be in the data browser. |
+The current active group name. The name can be renamed.
 
+###### Display number
 
-| Entry | What it does |
-| ------------------------------------ | ---------------------------------------------------------------------------- |
-| Collection List | The list of objects in the light linking collection. |
-| Link Receivers to Emitter | Light link selected receivers to the active emitter object. |
-| Remove from light linking collection | Removes the object not only from the light linking, but also from the scene. |
+How much users this data has. A click at it makes it a single user object.
 
+###### New Light linking collection
+
+Add a new light linking collection.
+
+###### Remove
+
+Removes the light linking collection as the active collection. Note that the collection will still be in the data browser.
+
+###### Collection List
+
+The list of objects in the light linking collection.
+
+###### Link Receivers to Emitter
+
+Light link selected receivers to the active emitter object.
+
+###### Remove from light linking collection
+
+Removes the object not only from the light linking, but also from the scene.
 
 #### Select Light Linking Receivers
 
@@ -551,21 +597,33 @@ Here you create and assign a Shadow Linking group with objects and collections. 
 
 Shows the available light linking collections that you can choose. This can be single objects, or whole collections.
 
+###### Name
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Name | The current active group name. The name can be renamed. |
-| Display number | How much users this data has. A click at it makes it a single user object. |
-| New Light linking collection | Add a new light linking collection. |
-| Remove | Removes the light linking collection as the active collection. Note that the collection will still be in the data browser. |
+The current active group name. The name can be renamed.
 
+###### Display number
 
-| Entry | What it does |
-| ------------------------------------ | ---------------------------------------------------------------------------- |
-| Collection List | The list of objects in the light linking collection. |
-| Link Receivers to Emitter | Light link selected receivers to the active emitter object. |
-| Remove from light linking collection | Removes the object not only from the light linking, but also from the scene. |
+How much users this data has. A click at it makes it a single user object.
 
+###### New Light linking collection
+
+Add a new light linking collection.
+
+###### Remove
+
+Removes the light linking collection as the active collection. Note that the collection will still be in the data browser.
+
+###### Collection List
+
+The list of objects in the light linking collection.
+
+###### Link Receivers to Emitter
+
+Light link selected receivers to the active emitter object.
+
+###### Remove from light linking collection
+
+Removes the object not only from the light linking, but also from the scene.
 
 #### Select Light Linking Blockers
 
@@ -597,16 +655,25 @@ Show or hide options for the selected object.
 
 These property can be animated. Clicking at the decorator at the right sets a keyframe.
 
+#### Surface Picking
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Surface Picking | Disable surface influence during selection, snapping and depth-picking operators. |
-| Show In | **Viewports**: Show the object in the viewport. This can also be done in the outliner. · **Renders**: Show the object in the rendering. This can also be done in the outliner. |
-| Grease Pencil | **Use Lights**: Grease Pencil object only. Light affects grease pencil object. |
-| Mask | **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process. |
+Disable surface influence during selection, snapping and depth-picking operators.
 
+#### Show In
+
+**Viewports**: Show the object in the viewport. This can also be done in the outliner. · **Renders**: Show the object in the rendering. This can also be done in the outliner.
+
+#### Grease Pencil
+
+**Use Lights**: Grease Pencil object only. Light affects grease pencil object.
+
+#### Mask
+
+**Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.
 
 ## Visibility Panel - Eevee
+
+![Visibility Panel - Eevee](/docs2/images/editors/properties/object-properties-tab/visibility-panel-eevee.png)
 
 Show or hide options for the selected object.
 
@@ -618,16 +685,29 @@ Show or hide options for the selected object.
 
 These property can be animated. Clicking at the decorator at the right sets a keyframe.
 
+#### Surface Picking
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Surface Picking | Disable surface influence during selection, snapping and depth-picking operators. |
-| Show In | **Viewports**: Show the object in the viewport. This can also be done in the outliner. · **Renders**: Show the object in the rendering. This can also be done in the outliner. |
-| Grease Pencil | **Use Lights**: Grease Pencil object only. Light affects grease pencil object. |
-| Ray Visibility | **Camera**: Object visibility to camera rays. · **Shadow**: Object visibility to shadow rays. A light object shows only the Camera toggle here. |
-| Light Probes | **Volume**: Globally disable in volume probes. · **Sphere**: Globally disable in spherical light probes. · **Plane**: Globally disable in planar light probes. |
-| Mask | **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process. |
+Disable surface influence during selection, snapping and depth-picking operators.
 
+#### Show In
+
+**Viewports**: Show the object in the viewport. This can also be done in the outliner. · **Renders**: Show the object in the rendering. This can also be done in the outliner.
+
+#### Grease Pencil
+
+**Use Lights**: Grease Pencil object only. Light affects grease pencil object.
+
+#### Ray Visibility
+
+**Camera**: Object visibility to camera rays. · **Shadow**: Object visibility to shadow rays. A light object shows only the Camera toggle here.
+
+#### Light Probes
+
+**Volume**: Globally disable in volume probes. · **Sphere**: Globally disable in spherical light probes. · **Plane**: Globally disable in planar light probes.
+
+#### Mask
+
+**Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.
 
 ## Visibility Panel - Cycles
 
@@ -639,14 +719,21 @@ Note that the ccntent does not show with all object types. The content shown her
 
 Show or hide options for the selected object.
 
+### Animate property
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Animate property | These property can be animated. Clicking at the decorator at the right sets a keyframe. |
-| Surface Picking | Disable surface influence during selection, snapping and depth-picking operators. |
-| Show in | **Viewports**: Show the object in viewports. · **Renders**: Show the object in renderers. |
-| Mask | **Shadow Catcher**: Only render shadows and reflections of this object. · **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process. |
+These property can be animated. Clicking at the decorator at the right sets a keyframe.
 
+### Surface Picking
+
+Disable surface influence during selection, snapping and depth-picking operators.
+
+### Show in
+
+**Viewports**: Show the object in viewports. · **Renders**: Show the object in renderers.
+
+### Mask
+
+**Shadow Catcher**: Only render shadows and reflections of this object. · **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.
 
 ### Ray Visibility Subpanel
 

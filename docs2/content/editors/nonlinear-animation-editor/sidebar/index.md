@@ -20,7 +20,7 @@ The pages of this part are listed in the sidebar under *Sidebar*.
 
 # Animation Data Panel
 
-**Animation Data panel**
+## Animation Data panel
 
 ![NLA Editor - Sidebar - Animation Data panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/nla-editor-sidebar-animation-data-panel.png)
 
@@ -38,15 +38,25 @@ With selecting an action channel, with a not pushed down action, it shows the cu
 
 The list of available actions in the scene.
 
+#### Action Edit Box
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------------------------------------------------- |
-| Action Edit Box | The name of the current active action. You can rename the action here too. |
-| Number of users | The number of users for this data. |
-| Fake User | Has this data a fake user assigned. Fake user is a concept to keep data in the scene even when it has no users. |
-| Add | Adds a new blank Action. |
-| Remove Action | Removes the action from the current channel. |
+The name of the current active action. You can rename the action here too.
 
+#### Number of users
+
+The number of users for this data.
+
+#### Fake User
+
+Has this data a fake user assigned. Fake user is a concept to keep data in the scene even when it has no users.
+
+#### Add
+
+Adds a new blank Action.
+
+#### Remove Action
+
+Removes the action from the current channel.
 
 ## Extrapolation
 
@@ -54,13 +64,17 @@ The list of available actions in the scene.
 
 Action to take for gaps past the strip extents.
 
+### Hold
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------- |
-| Hold | Affects both sides of the strip. This should only be set on the very first strip. |
-| Hold Forward | Affects the region after the clip, only. This can be set on any strip. |
-| Nothing | Affects only the region of the strip itself. This can be set on any strip. |
+Affects both sides of the strip. This should only be set on the very first strip.
 
+### Hold Forward
+
+Affects the region after the clip, only. This can be set on any strip.
+
+### Nothing
+
+Affects only the region of the strip itself. This can be set on any strip.
 
 ## Blending
 
@@ -116,12 +130,13 @@ Amount the active Action contributes to the result of the NLA stack.
 
 The settings for the currently selected action strip. You need to have a action strip selected to show this tab.
 
+### Name
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Name | The name of the currently selected action strip. To rename the strip click into the edit field, change the name and press enter. |
-| Mute | Disable the action strip. |
+The name of the currently selected action strip. To rename the strip click into the edit field, change the name and press enter.
 
+### Mute
+
+Disable the action strip.
 
 ## Active Strip panel
 
@@ -137,13 +152,17 @@ The start and end position of the strip.
 
 Action to take for gaps past the strip extents.
 
+#### Hold
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------- |
-| Hold | Affects both sides of the strip. This should only be set on the very first strip. |
-| Hold Forward | Affects the region after the clip, only. This can be set on any strip. |
-| Nothing | Affects only the region of the strip itself. This can be set on any strip. |
+Affects both sides of the strip. This should only be set on the very first strip.
 
+#### Hold Forward
+
+Affects the region after the clip, only. This can be set on any strip.
+
+#### Nothing
+
+Affects only the region of the strip itself. This can be set on any strip.
 
 ### Blending
 
@@ -187,13 +206,17 @@ The result of the strip is multiplied, subtracted, or added to the accumulated r
 
 `result=mix(previous,previous(+-*)value,influence`)
 
+##### Blend In + Out
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend In + Out | Number of frames to fade in or out the action strip. |
-| Auto Blend In/Out | Number of frames for blending in and out is automatically calculated from overlapping strips. |
-| Playback | **Reversed**: The action strip is played in reversed order. This just works when timing is determined automatic. · **Cyclic Strip Time**: Cycle the action strip. |
+Number of frames to fade in or out the action strip.
 
+##### Auto Blend In/Out
+
+Number of frames for blending in and out is automatically calculated from overlapping strips.
+
+##### Playback
+
+**Reversed**: The action strip is played in reversed order. This just works when timing is determined automatic. · **Cyclic Strip Time**: Cycle the action strip.
 
 ### Animated Influence subpanel
 
@@ -201,12 +224,13 @@ The result of the strip is multiplied, subtracted, or added to the accumulated r
 
 Control the influence settings by an F-Curve instead of automatically determined. The F-Curve can be edited in the Graph Editor.
 
+#### Influence
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------- |
-| Influence | The influence value. |
-| Animate Property | Set or remove a keyframe at current position. |
+The influence value.
 
+#### Animate Property
+
+Set or remove a keyframe at current position.
 
 ### Animated Strip Time subpanel
 
@@ -214,12 +238,13 @@ Control the influence settings by an F-Curve instead of automatically determined
 
 Control the Strip time settings by an F-Curve instead of automatically determined. The F-Curve can be edited in the Graph Editor.
 
+#### Influence
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------- |
-| Influence | The influence value. |
-| Animate Property | Set or remove a keyframe at current position. |
+The influence value.
 
+#### Animate Property
+
+Set or remove a keyframe at current position.
 
 ## Action Clip panel
 
@@ -227,27 +252,45 @@ Control the Strip time settings by an F-Curve instead of automatically determine
 
 This represents the ‘object data’ of the strip. Much like the transform values of an object.
 
+### Action
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Action | The action that is referenced in the strip. This can be changed to replace the current strip’s value with another Action in the scene. |
-| Slot | Define which subset is meant for this strip. |
-| Frame Start / End | The start and end frame values of the strip. Note. To loop the animation you might need to reduce the End Frame by one frame to have a loopable animation. Note. If you select values that are above or below the actual keyframe count of the Action, then the F-curve Extrapolation will be applied. |
-| Sync Length | Set the Start and End Frames to the first and last keyframed frames of the Action. |
-| Now | Causes the Start and End Frames, above, to be reset to the first and last keyframed frames of the Action. |
-| Playback Scale | Stretches the strip. |
-| Repeat | Repeats the strip by the chosen value. With a value of 1 the strip plays once. |
+The action that is referenced in the strip. This can be changed to replace the current strip’s value with another Action in the scene.
 
+### Slot
+
+Define which subset is meant for this strip.
+
+### Frame Start / End
+
+The start and end frame values of the strip. Note. To loop the animation you might need to reduce the End Frame by one frame to have a loopable animation. Note. If you select values that are above or below the actual keyframe count of the Action, then the F-curve Extrapolation will be applied.
+
+### Sync Length
+
+Set the Start and End Frames to the first and last keyframed frames of the Action.
+
+### Now
+
+Causes the Start and End Frames, above, to be reset to the first and last keyframed frames of the Action.
+
+### Playback Scale
+
+Stretches the strip.
+
+### Repeat
+
+Repeats the strip by the chosen value. With a value of 1 the strip plays once.
 
 ## Action panel
 
 ![Action panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/action-panel.png)
 
+### Manual Frame Range
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------- |
-| Manual Frame Range | Set the playback frame range manually. · **Start**: The start frame. · **End**: The end frame. |
-| Cyclic Animation | Make the animation loop. |
+Set the playback frame range manually. · **Start**: The start frame. · **End**: The end frame.
+
+### Cyclic Animation
+
+Make the animation loop.
 
 # Modifiers Tab
 
@@ -267,16 +310,19 @@ Different to the Object modifiers you can't reorder this modifiers. You have to 
 
 The list of modifiers. Choose by clicking.
 
+#### Copy F-Curve Modifiers
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------- |
-| Copy F-Curve Modifiers | Copy the F-Curve Modifiers of the active F-Curve. |
-| Paste F-Curve Modifiers | Paste copied F-Curve modifiers to the active F-Curve. |
+Copy the F-Curve Modifiers of the active F-Curve.
 
+#### Paste F-Curve Modifiers
+
+Paste copied F-Curve modifiers to the active F-Curve.
 
 ### Adjust Last Operation - Add F-Curve Modifier
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/last-operator-add-f-curve-modifier.png)
+
+Change the settings of **Add F-Curve Modifier** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -291,15 +337,25 @@ The list of modifiers. Choose by clicking.
 
 Every modifier is a panel. And every panel has a header area with some general UI elements.
 
+### Triangle button
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Triangle button | Every modifier panel can be expanded or collapsed by clicking at this triangle button. |
-| Active | This is the panel that you currently edit. When you edit a panel while it is not set to the active one, then the changes will not be applied. |
-| Modifier name | The name of the modifier. Read only. |
-| Muted | Enable or disable this modifier. |
-| Delete F-Curve Modifier | Delete this modifier. |
+Every modifier panel can be expanded or collapsed by clicking at this triangle button.
 
+### Active
+
+This is the panel that you currently edit. When you edit a panel while it is not set to the active one, then the changes will not be applied.
+
+### Modifier name
+
+The name of the modifier. Read only.
+
+### Muted
+
+Enable or disable this modifier.
+
+### Delete F-Curve Modifier
+
+Delete this modifier.
 
 ## Generator modifier
 
@@ -313,15 +369,25 @@ Every modifier is a panel. And every panel has a header area with some general U
 
 Use Expanded Polynominal or Factorized Polynominal algorithm. With these mathematical formulas you can create lines, parabolas, and other more complex curves by changing the values in the poly order field.
 
+#### Additive
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Additive | Add on top of the existing curve instead of replacing the existing curve. |
-| Order | The hightes value of X for this polynominal. |
-| Coefficient | Coefficient for X. |
-| x^1 | Coefficient for X. |
-| Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
+Add on top of the existing curve instead of replacing the existing curve.
 
+#### Order
+
+The hightes value of X for this polynominal.
+
+#### Coefficient
+
+Coefficient for X.
+
+#### x^1
+
+Coefficient for X.
+
+#### Use Influence
+
+Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor.
 
 ### Restrict Frame Range
 
@@ -329,12 +395,13 @@ Use Expanded Polynominal or Factorized Polynominal algorithm. With these mathema
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| Blend In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### Blend In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Built- in Function modifier
 
@@ -350,16 +417,29 @@ Generate a curve by built in functions.
 
 The available wave forms for the curve.
 
+#### Additive
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Additive | Add on top of the existing curve instead of replacing the existing curve. |
-| Amplitude | The amplitude of the curve wave. Adjusts the Y scaling. |
-| Phase Multiplier | A phase multiplier for the curve wave. Adjusts the X scaling. |
-| Phase Offset | A phase offset for the curve wave. Adjusts the Y scaling. |
-| Value Offset | A constant value offset for the whole curve. Adjusts the X scaling. |
-| Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
+Add on top of the existing curve instead of replacing the existing curve.
 
+#### Amplitude
+
+The amplitude of the curve wave. Adjusts the Y scaling.
+
+#### Phase Multiplier
+
+A phase multiplier for the curve wave. Adjusts the X scaling.
+
+#### Phase Offset
+
+A phase offset for the curve wave. Adjusts the Y scaling.
+
+#### Value Offset
+
+A constant value offset for the whole curve. Adjusts the X scaling.
+
+#### Use Influence
+
+Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor.
 
 ### Restrict Frame Range
 
@@ -367,12 +447,13 @@ The available wave forms for the curve.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Envelope modifier
 
@@ -384,12 +465,13 @@ The Envelope modifier allows you to modify the overall shape of the curve by con
 
 ![Envelope modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/envelope-modifier-3.png)
 
+### Envelope
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Envelope | **Reference Value**: Set the Y value to center the envelope around. · **Min**: The lower distance from reference value for 1:1 default influence. · **Max**: The higher distance from reference value for 1:1 default influence. |
-| Add Control Point | Add a control point. A control point has two sub points, a lower control point and a higher control point. |
+**Reference Value**: Set the Y value to center the envelope around. · **Min**: The lower distance from reference value for 1:1 default influence. · **Max**: The higher distance from reference value for 1:1 default influence.
 
+### Add Control Point
+
+Add a control point. A control point has two sub points, a lower control point and a higher control point.
 
 ### Use Influence
 
@@ -409,12 +491,13 @@ The influence factor.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Cycles modifier
 
@@ -474,12 +557,13 @@ The influence factor.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Noise modifier
 
@@ -495,19 +579,41 @@ Adds noise to the curve.
 
 How to blend the noise with the curve.
 
+#### Scale
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scale | The overall size of the noise. The bigger the value the less frequent the noise. |
-| Strength | Adjust the Y value of the noise. |
-| Offset | Time offset of the noise. |
-| Phase | The random seed for the noise. |
-| Depth | How detailed the noise function is. |
-| Legacy Noise | Use the legacy way of generating noise. |
-| Lacunarity | Gap between successive frequencies. A value of 0 disables the feature. |
-| Roughness | Amount of high frequency details. |
-| Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
+The overall size of the noise. The bigger the value the less frequent the noise.
 
+#### Strength
+
+Adjust the Y value of the noise.
+
+#### Offset
+
+Time offset of the noise.
+
+#### Phase
+
+The random seed for the noise.
+
+#### Depth
+
+How detailed the noise function is.
+
+#### Legacy Noise
+
+Use the legacy way of generating noise.
+
+#### Lacunarity
+
+Gap between successive frequencies. A value of 0 disables the feature.
+
+#### Roughness
+
+Amount of high frequency details.
+
+#### Use Influence
+
+Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor.
 
 ### Restrict Frame Range
 
@@ -515,12 +621,13 @@ How to blend the noise with the curve.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Limits modifier
 
@@ -530,13 +637,17 @@ Sets limits to the curve in specified x and y range values.
 
 ![Limits modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/limits-modifier-2.png)
 
+### Minimum / Maximum X
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Minimum / Maximum X | Cuts the curve at these minimum and maximum frame values. |
-| Minimum / Maximum Y | Clamps the curve at these minimum and maximum values. |
-| Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
+Cuts the curve at these minimum and maximum frame values.
 
+### Minimum / Maximum Y
+
+Clamps the curve at these minimum and maximum values.
+
+### Use Influence
+
+Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor.
 
 ### Restrict Frame Range
 
@@ -544,12 +655,13 @@ Sets limits to the curve in specified x and y range values.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
 
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.
 
 ## Stepped Interpolation modifier
 
@@ -559,15 +671,25 @@ Adds steps to the curve by rounding the values.
 
 ![Stepped Interpolation modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/stepped-interpolation-modifier-2.png)
 
+### Step Size
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Step Size | The number of frames to hold each frame |
-| Offset | A number of offset frames before frames get held. |
-| Start Frame | Restrict the modifier so that it just acts before its end frame. |
-| End Frame | Restrict the modifier so that it just acts after its start frame. |
-| Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
+The number of frames to hold each frame
 
+### Offset
+
+A number of offset frames before frames get held.
+
+### Start Frame
+
+Restrict the modifier so that it just acts before its end frame.
+
+### End Frame
+
+Restrict the modifier so that it just acts after its start frame.
+
+### Use Influence
+
+Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor.
 
 ### Restrict Frame Range
 
@@ -575,8 +697,10 @@ Adds steps to the curve by rounding the values.
 
 Expanding the Restrict Frame range sets it to active. It reveals some value slider then.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------- |
-| Start / End | The start and end frame of the generated curve. |
-| In / Out | Fade the curve in or out for chosen frame numbers. |
+The start and end frame of the generated curve.
+
+#### In / Out
+
+Fade the curve in or out for chosen frame numbers.

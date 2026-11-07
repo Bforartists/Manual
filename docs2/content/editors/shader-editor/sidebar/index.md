@@ -60,10 +60,13 @@ The label name of the node.
 
 Type exact numbers to size and place the selected node. Handy for keeping big node trees tidy and lined up.
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------- |
-| Width | How wide the node is. Same as dragging its side edge. |
-| Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
+#### Width
+
+How wide the node is. Same as dragging its side edge.
+
+#### Location
+
+Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor.
 
 ### Color
 
@@ -107,16 +110,29 @@ From left to right ...
 
 ![Image Property](/docs2/images/editors/shader-editor/sidebar/node-tab/image-property-2.png)
 
+#### Image Browser
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Browser | This is a list of the images in the scene. Allows you to switch to other images. |
-| New / Open | When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one. |
-| Image Edit Box | The name of the currently selected image. And you can rename the image here too. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open Image | Load an image |
-| Remove | Delete the image. |
+This is a list of the images in the scene. Allows you to switch to other images.
 
+#### New / Open
+
+When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one.
+
+#### Image Edit Box
+
+The name of the currently selected image. And you can rename the image here too.
+
+#### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+#### Open Image
+
+Load an image
+
+#### Remove
+
+Delete the image.
 
 ### Source
 
@@ -136,14 +152,21 @@ Generated images does not have a path.
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
 
 ##### Color Space
 
@@ -181,25 +204,49 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-| Deinterlace | Deinterlace the movie file on load. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
+
+###### Deinterlace
+
+Deinterlace the movie file on load.
 
 ##### Color Space
 
@@ -351,14 +398,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -372,12 +426,13 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin
 
@@ -411,12 +466,13 @@ The Settings panel appears with a mesh object selected.
 
 ##### Backface Culling
 
+###### Camera
 
-| Entry | What it does |
-| ------ | ------------------------------------------ |
-| Camera | Use backface culling. |
-| Shadow | Use backface culling when casting shadows. |
+Use backface culling.
 
+###### Shadow
+
+Use backface culling when casting shadows.
 
 ##### Displacement
 
@@ -438,12 +494,13 @@ Use transparent shadows for this material if it contains a transparent bsdf node
 
 The rendering method. Forward rendering or Deferred rendering.
 
+###### Raytraced Transmissions
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- |
-| Raytraced Transmissions | Use raytracing instead light probes. |
-| From Shadow | Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree. |
+Use raytracing instead light probes.
 
+###### From Shadow
+
+Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree.
 
 ##### Render
 
@@ -489,12 +546,13 @@ Adjust the displacement method. Bump mapping is an old image based shader techni
 
 Sampling strategy for emissive surfaces.
 
+###### Transparent Shadows
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Transparent Shadows | Use transparent shadows for this material if it contains a Transparent BSDF. |
-| Bump Map Correction | Apply corrections to solve shadow terminator artifacts caused by bump mapping. |
+Use transparent shadows for this material if it contains a Transparent BSDF.
 
+###### Bump Map Correction
+
+Apply corrections to solve shadow terminator artifacts caused by bump mapping.
 
 ##### Volume Sub panel
 
@@ -532,62 +590,117 @@ This property can be animated.
 
 ![Point light](/docs2/images/editors/shader-editor/sidebar/options-tab/point-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Soft Falloff | Apply falloff to avoid artefacts when light intersects with other objects. |
-| Radius | The size of the point light. |
+The light color.
 
+##### Temperature
+
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Soft Falloff
+
+Apply falloff to avoid artefacts when light intersects with other objects.
+
+##### Radius
+
+The size of the point light.
 
 #### Sun light
 
 ![Sun light](/docs2/images/editors/shader-editor/sidebar/options-tab/sun-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Strength | The strength of the light. This value is not in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Angle | The angular diameter for the sun as seen from the earth. |
+The light color.
 
+##### Temperature
+
+Use Blackbody Temperature to define a natural light color.
+
+##### Strength
+
+The strength of the light. This value is not in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Angle
+
+The angular diameter for the sun as seen from the earth.
 
 #### Spot light
 
 ![Spot light](/docs2/images/editors/shader-editor/sidebar/options-tab/spot-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Soft Falloff | Apply falloff to avoid artefacts when light intersects with other objects. |
-| Radius | The size of the point light. |
+The light color.
 
+##### Temperature
+
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Soft Falloff
+
+Apply falloff to avoid artefacts when light intersects with other objects.
+
+##### Radius
+
+The size of the point light.
 
 #### Area light
 
 ![Area light](/docs2/images/editors/shader-editor/sidebar/options-tab/area-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
+The light color.
 
+##### Temperature
+
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
 
 ##### Shape
 
@@ -617,12 +730,17 @@ Adjust how the mesh object is displayed in the viewport when the viewport shadin
 
 The content is the same for all three render engines.
 
+### Color
 
-| Entry | What it does |
-| --------- | -------------- |
-| Color | The color. |
-| Metallic | Metallic look. |
-| Roughness | The roughness. |
+The color.
+
+### Metallic
+
+Metallic look.
+
+### Roughness
+
+The roughness.
 
 # Add Tab
 
@@ -730,12 +848,13 @@ Adds a group output node.
 
 > **Note:** When at a top level, this node is unavailable. These are only available when inside a node group.
 
+#### Toggle Edit Group
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------- |
-| Toggle Edit Group | Enter or exit the edit group mode. |
-| Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
+Enter or exit the edit group mode.
 
+#### Ungroup
+
+Ungroups an existing group. You need to be outside of the group edit mode.
 
 ## Relations tab - Node Group Panel
 
@@ -857,19 +976,25 @@ Change the name of the current selected input socket by double clicking on the s
 
 Adds a new input sockets to the list.
 
+##### Input
 
-| Entry | What it does |
-| ------ | ------------------------------------- |
-| Input | Adds a new input sockets to the list. |
-| Output | Adds a new output socket to the list. |
-| Panel | Adds a new panel socket to the list. |
+Adds a new input sockets to the list.
 
+##### Output
 
-| Entry | What it does |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![](/docs2/images/editors/shader-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item | Duplicates the active socket. |
-| ![](/docs2/images/editors/shader-editor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. |
+Adds a new output socket to the list.
 
+##### Panel
+
+Adds a new panel socket to the list.
+
+##### ![](/docs2/images/editors/shader-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item
+
+Duplicates the active socket.
+
+##### ![](/docs2/images/editors/shader-editor/sidebar/group-tab/remove-item-icon.png) Remove Item
+
+Removes the selected input socket from the list.
 
 #### Move Item Up/Down
 
@@ -899,16 +1024,29 @@ Add a tooltip to the socket description.
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional label
+
+Hide the label if not needed.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Integer
 
@@ -924,30 +1062,53 @@ Add a tooltip to the socket description.
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
+
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional label
+
+Hide the label if not needed.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Boolean
 
 ![Type Boolean](/docs2/images/editors/shader-editor/sidebar/group-tab/type-boolean.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default value for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default value for the socket.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Vector
 
@@ -963,84 +1124,141 @@ Add a tooltip to the socket description.
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Dimensions
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Dimensions | How much dimensions to calculate. |
-| Default | The default vector. It changes, dependant of what dimensions you use. |
-| Min / Max | Minimum value and maximum value. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+How much dimensions to calculate.
 
+###### Default
+
+The default vector. It changes, dependant of what dimensions you use.
+
+###### Min / Max
+
+Minimum value and maximum value.
+
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Color
 
 ![Type Color](/docs2/images/editors/shader-editor/sidebar/group-tab/type-color.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default color for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default color for the socket.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Menu
 
 ![Type Menu](/docs2/images/editors/shader-editor/sidebar/group-tab/type-menu.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default menu. |
-| Expanded | Draw the menu socket as an expanded drop down menu. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
+
+The default menu.
+
+##### Expanded
+
+Draw the menu socket as an expanded drop down menu.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Shader
 
 ![Type Shader](/docs2/images/editors/shader-editor/sidebar/group-tab/type-shader.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Bundle
 
 ![Type Bundle](/docs2/images/editors/shader-editor/sidebar/group-tab/type-bundle.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 #### Type Closure
 
 ![Type Closure](/docs2/images/editors/shader-editor/sidebar/group-tab/type-closure.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
 
 ## Animation Panel
 

@@ -50,15 +50,25 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
+###### Set a new selection
 
-| Entry | What it does |
-| ---------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-| Inverts existing selection | — |
-| Intersect existing selection | — |
+—
 
+###### Extend existing selection
+
+—
+
+###### Subtract existing selection
+
+—
+
+###### Inverts existing selection
+
+—
+
+###### Intersect existing selection
+
+—
 
 ### Select Circle
 
@@ -70,12 +80,13 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-2.png)
 
+##### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The brush radius. |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+##### Radius
+
+The brush radius.
 
 ### Select Lasso
 
@@ -91,15 +102,25 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
+###### Set a new selection
 
-| Entry | What it does |
-| ---------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-| Inverts existing selection | — |
-| Intersect existing selection | — |
+—
 
+###### Extend existing selection
+
+—
+
+###### Subtract existing selection
+
+—
+
+###### Inverts existing selection
+
+—
+
+###### Intersect existing selection
+
+—
 
 ## Cursor
 
@@ -197,6 +218,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move
 
 Adjust in which directions you want to transform.
@@ -217,14 +240,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Rotate
 
@@ -294,6 +324,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -317,14 +349,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Scale Tools Group
 
@@ -340,12 +379,13 @@ Activates the Scale tool. Activating the scale tool also reveals a traditional s
 
 The rectangle buttons between the arrows allows you to scale in direction of the adjacent arrows. This can also be done by clicking at the tip of the arrow and holding down shift. Then you can scale the cube along the two other axis.
 
+##### Snapping
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision Scale | When you hold down shift, then you will have a much slower but also much preciser scale. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision Scale
+
+When you hold down shift, then you will have a much slower but also much preciser scale.
 
 #### Header Values
 
@@ -397,6 +437,8 @@ Define what kind of transform should happen when you click not at the widget but
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Scale
 
 Adjust in which directions you want to transform.
@@ -417,14 +459,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale Cage
 
@@ -480,6 +529,8 @@ What to do at dragging with the mouse with an active tool. Active Tool means the
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Scale
 
 Adjust in which directions you want to transform.
@@ -500,14 +551,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Transform
 
@@ -553,17 +611,33 @@ To use these tools you must start the transform operation by moving and holding 
 
 Left Mouse button confirms the tool.
 
+###### Cancel
 
-| Entry | What it does |
-| ------- | --------------------------------------------------------------------------------- |
-| Cancel | Right mouse button cancels the operation |
-| X Axis | Constraint the transformation to the X axis. |
-| Y Axis | Constraint the transformation to the Y axis. |
-| Z Axis | Constraint the transformation to the Z axis. |
-| X Plane | Constraint the transformation to the X plane. You can transform in Y Z direction. |
-| Y Plane | Constraint the transformation to the Y plane. You can transform in X Z direction. |
-| Z Plane | Constraint the transformation to the Z plane. You can transform in Y Z direction. |
+Right mouse button cancels the operation
 
+###### X Axis
+
+Constraint the transformation to the X axis.
+
+###### Y Axis
+
+Constraint the transformation to the Y axis.
+
+###### Z Axis
+
+Constraint the transformation to the Z axis.
+
+###### X Plane
+
+Constraint the transformation to the X plane. You can transform in Y Z direction.
+
+###### Y Plane
+
+Constraint the transformation to the Y plane. You can transform in X Z direction.
+
+###### Z Plane
+
+Constraint the transformation to the Z plane. You can transform in Y Z direction.
 
 ##### Sert Snap Base
 
@@ -577,21 +651,33 @@ Pressing b again while in transformation will now snap the object to this new sn
 
 Note that you cannot place this tool freely, it needs geometry to snap to.
 
+###### Snap Invert
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Snap Invert | Snap in incremental steps. |
-| Snap Toggle | Ctrl + Tab toggles to snap in incremental steps. |
-| Automatic Constraints | Displays all the three axis and allows you to snap to one of it to constraint the operation to this axis then. |
-| Automatic Constraints Plane | Same as with Automatic Constraints, but this time you can snap to a plane to constraint the operation to this plane then. |
-| Precision Mode | Activates the precision mode to allow much more accurate transform operations. |
+Snap in incremental steps.
 
+###### Snap Toggle
 
-| Entry | What it does |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Move tool in Object mode | **Rotate**: Rotate around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse. · **Resize**: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. |
-| Move Tool in Edit mode | — |
+Ctrl + Tab toggles to snap in incremental steps.
 
+###### Automatic Constraints
+
+Displays all the three axis and allows you to snap to one of it to constraint the operation to this axis then.
+
+###### Automatic Constraints Plane
+
+Same as with Automatic Constraints, but this time you can snap to a plane to constraint the operation to this plane then.
+
+###### Precision Mode
+
+Activates the precision mode to allow much more accurate transform operations.
+
+###### Move tool in Object mode
+
+**Rotate**: Rotate around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse. · **Resize**: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.
+
+###### Move Tool in Edit mode
+
+—
 
 #### Vert/Edge Slide
 
@@ -599,19 +685,25 @@ Note that you cannot place this tool freely, it needs geometry to snap to.
 
 Edit Mode with the move tool. Slide the selected edges or vertices along their corner or face.
 
+##### Rotate
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Rotate | Rotate the selection around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse. |
-| Resize | Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. |
+Rotate the selection around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse.
 
+##### Resize
 
-| Entry | What it does |
-| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rotate Tool in Object mode | **Move**: Move around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Trackball**: Use trackball rotation. · **Resize**: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. |
-| Rotate Tool in Edit mode | **Move**: Move the selection around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Trackball**: Use trackball rotation. · **Resize**: Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. · **Rotate Normals**: Rotates the normals instead of the selection. Note that it might be a good idea to turn on display normals in the overlays. |
-| Scale Tool in Object mode and Edit Mode | **Move**: Move around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Rotate**: Rotate around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it rotates towards the mouse. |
+Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.
 
+##### Rotate Tool in Object mode
+
+**Move**: Move around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Trackball**: Use trackball rotation. · **Resize**: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.
+
+##### Rotate Tool in Edit mode
+
+**Move**: Move the selection around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Trackball**: Use trackball rotation. · **Resize**: Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. · **Rotate Normals**: Rotates the normals instead of the selection. Note that it might be a good idea to turn on display normals in the overlays.
+
+##### Scale Tool in Object mode and Edit Mode
+
+**Move**: Move around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · **Rotate**: Rotate around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it rotates towards the mouse.
 
 ## Annotate Tools group
 
@@ -653,14 +745,21 @@ Clicking at the Note drop down box reveals a panel with further settings. It's t
 
 Add, remove and rename new annotations.
 
+###### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Remove Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+###### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+###### Add Annotation
+
+Add a new annotation.
+
+###### Remove Annotation
+
+Delete the annotation.
 
 ##### Active Layer Index
 
@@ -668,12 +767,13 @@ Add, remove and rename new annotations.
 
 The list of annotation layers.
 
+###### Add Annotation Layer
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------- |
-| Add Annotation Layer | Add a new annotation layer. |
-| Remove Annotation Layer | Remove the selected annotation layer. |
+Add a new annotation layer.
 
+###### Remove Annotation Layer
+
+Remove the selected annotation layer.
 
 ##### Opacity
 
@@ -681,13 +781,17 @@ The list of annotation layers.
 
 The opacity of the stroke.
 
+###### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
-| Delete Active Frame | Deletes the active frame from the active grease pencil layer. |
+The thickness of the annotation stroke.
 
+###### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
+
+###### Delete Active Frame
+
+Deletes the active frame from the active grease pencil layer.
 
 ##### Placement
 
@@ -701,12 +805,13 @@ Define how annotation strokes are aligned in the 3d space.
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
+###### Radius
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
+The radius for the stroke stabilization.
 
+###### Factor
+
+Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 ##### Drag
 
@@ -742,14 +847,21 @@ Clicking at the Note drop down box reveals a panel with further settings. It's t
 
 Add, remove and rename new annotations.
 
+###### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Remove Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+###### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+###### Add Annotation
+
+Add a new annotation.
+
+###### Remove Annotation
+
+Delete the annotation.
 
 ##### Active Layer Index
 
@@ -757,13 +869,17 @@ Add, remove and rename new annotations.
 
 The list of annotation layers.
 
+###### Add Annotation Layer
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------- |
-| Add Annotation Layer | Add a new annotation layer. |
-| Remove Annotation Layer | Remove the selected annotation layer. |
-| Opacity | The opacity of the stroke. |
+Add a new annotation layer.
 
+###### Remove Annotation Layer
+
+Remove the selected annotation layer.
+
+###### Opacity
+
+The opacity of the stroke.
 
 ##### Thickness
 
@@ -771,12 +887,13 @@ The list of annotation layers.
 
 The thickness of the annotation stroke.
 
+###### Frame Locked/Unlocked
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
-| Delete Active Frame | Deletes the active frame from the active grease pencil layer. |
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
+###### Delete Active Frame
+
+Deletes the active frame from the active grease pencil layer.
 
 ##### Placement
 
@@ -830,14 +947,21 @@ Clicking at the Note drop down box reveals a panel with further settings. It's t
 
 Add, remove and rename new annotations.
 
+###### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Remove Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+###### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+###### Add Annotation
+
+Add a new annotation.
+
+###### Remove Annotation
+
+Delete the annotation.
 
 ##### Active Layer Index
 
@@ -845,13 +969,17 @@ Add, remove and rename new annotations.
 
 The list of annotation layers.
 
+###### Add Annotation Layer
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------- |
-| Add Annotation Layer | Add a new annotation layer. |
-| Remove Annotation Layer | Remove the selected annotation layer. |
-| Opacity | The opacity of the stroke. |
+Add a new annotation layer.
 
+###### Remove Annotation Layer
+
+Remove the selected annotation layer.
+
+###### Opacity
+
+The opacity of the stroke.
 
 ##### Thickness
 
@@ -867,7 +995,7 @@ Lock frame displayed by current layer. This toggles whether the active layer is 
 
 Deletes the active frame from the active grease pencil layer.
 
-**Placement**
+###### Placement
 
 ![Placement](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/placement.jpg)
 
@@ -927,12 +1055,13 @@ To escape this constraint, press the axis key twice again.
 
 When you want to measure an angle, first create a straight measure line. Then grab it in the middle to drag out a new point at the line. Then align everything proper.
 
+#### Snapping
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Delete measure lines | Select them and press delete. When you have selected an angle point then first this angle point gets deleted. You need to have to select an endpoint to make the whole stroke active. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Delete measure lines
+
+Select them and press delete. When you have selected an angle point then first this angle point gets deleted. You need to have to select an endpoint to make the whole stroke active.
 
 ## Primitive Add tools
 
@@ -974,13 +1103,17 @@ Adds a cube primitive.
 
 How to position the primitive.
 
+###### Surface
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Surface | Start placing on the surface. The 3d cursor acts as a fallback. |
-| 3D Cursor Plane | Start placement using a point that is projected at the selected axis at the 3d cursor position |
-| 3D Cursor View | Start placement using the mouse cursor projected onto the view plane. |
+Start placing on the surface. The 3d cursor acts as a fallback.
 
+###### 3D Cursor Plane
+
+Start placement using a point that is projected at the selected axis at the 3d cursor position
+
+###### 3D Cursor View
+
+Start placement using the mouse cursor projected onto the view plane.
 
 ##### Orientation
 
@@ -1006,25 +1139,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1059,13 +1192,17 @@ Adds a cone primitive.
 
 How to position the primitive.
 
+###### Surface
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Surface | Start placing on the surface. The 3d cursor acts as a fallback. |
-| 3D Cursor Plane | Start placement using a point that is projected at the selected axis at the 3d cursor position |
-| 3D Cursor View | Start placement using the mouse cursor projected onto the view plane. |
+Start placing on the surface. The 3d cursor acts as a fallback.
 
+###### 3D Cursor Plane
+
+Start placement using a point that is projected at the selected axis at the 3d cursor position
+
+###### 3D Cursor View
+
+Start placement using the mouse cursor projected onto the view plane.
 
 ##### Orientation
 
@@ -1091,25 +1228,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1130,6 +1267,8 @@ Triangle Fan means that the base face is triangulated.
 
 ![Last Operator Add Cone Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cone-panel.png)
 
+Change the settings of **Add Cone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Vertices
 
 Defines of how much vertices the circle is made.
@@ -1148,15 +1287,25 @@ Defines the top radius of the Cone.
 
 Defines the length of the Cone.
 
+###### Base Fill Type
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Base Fill Type | Defines how the Base face is filled. Nothing means you have no base face. N-Gon means that the base face is an N-Gon face. Triangle Fan means that the base face is triangulated. |
-| Generate UV's | creates UV's for this primitive. |
-| Align to view | Aligns the geometry to the chosen view. World, View or 3D cursor. |
-| Location | Defines the location of the Cone. |
-| Rotation | Defines the rotation of the Cone. |
+Defines how the Base face is filled. Nothing means you have no base face. N-Gon means that the base face is an N-Gon face. Triangle Fan means that the base face is triangulated.
 
+###### Generate UV's
+
+creates UV's for this primitive.
+
+###### Align to view
+
+Aligns the geometry to the chosen view. World, View or 3D cursor.
+
+###### Location
+
+Defines the location of the Cone.
+
+###### Rotation
+
+Defines the rotation of the Cone.
 
 ### Add Cylinder
 
@@ -1174,13 +1323,17 @@ Adds a cylinder primitive.
 
 How to position the primitive.
 
+###### Surface
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Surface | Start placing on the surface. The 3d cursor acts as a fallback. |
-| 3D Cursor Plane | Start placement using a point that is projected at the selected axis at the 3d cursor position |
-| 3D Cursor View | Start placement using the mouse cursor projected onto the view plane. |
+Start placing on the surface. The 3d cursor acts as a fallback.
 
+###### 3D Cursor Plane
+
+Start placement using a point that is projected at the selected axis at the 3d cursor position
+
+###### 3D Cursor View
+
+Start placement using the mouse cursor projected onto the view plane.
 
 ##### Orientation
 
@@ -1206,25 +1359,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1243,6 +1396,8 @@ The number of vertices.
 
 ![Last Operator Add Circle Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-circle-panel.png)
 
+Change the settings of **Add Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
@@ -1256,7 +1411,7 @@ Defines the length of the Cylinder.
 
 ![Depth](/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png)
 
-**Cap Fill Type**
+###### Cap Fill Type
 
 defines how the cap face is filled.
 
@@ -1265,17 +1420,13 @@ Nothing means you have no face at the top and the bottom of the Cylinder.
 N-Gon means that the cap face is an N-Gon face.  
 Triangle Fan means that the cap face is triangulated.
 
-**Generate UV's**
+###### Generate UV's
 
 Creates UV's for this primitive.
 
-
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------- |
-| Align to view | Aligns the geometry to the chosen view. World, View or 3D cursor. |
-| Location | Defines the location of the Cylinder. |
-| Rotation | Defines the rotation of the Cylinder. |
-
+- **Align to view**: Aligns the geometry to the chosen view. World, View or 3D cursor.
+- **Location**: Defines the location of the Cylinder.
+- **Rotation**: Defines the rotation of the Cylinder.
 
 ### Add Quad Sphere
 
@@ -1297,13 +1448,17 @@ Adds a UV sphere primitive.
 
 How to position the primitive.
 
+###### Surface
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Surface | Start placing on the surface. The 3d cursor acts as a fallback. |
-| 3D Cursor Plane | Start placement using a point that is projected at the selected axis at the 3d cursor position |
-| 3D Cursor View | Start placement using the mouse cursor projected onto the view plane. |
+Start placing on the surface. The 3d cursor acts as a fallback.
 
+###### 3D Cursor Plane
+
+Start placement using a point that is projected at the selected axis at the 3d cursor position
+
+###### 3D Cursor View
+
+Start placement using the mouse cursor projected onto the view plane.
 
 ##### Orientation
 
@@ -1329,34 +1484,30 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
-
-| Entry | What it does |
-| -------- | ------------------------------------------------------- |
-| Segments | Defines of how much segments the sphere has vertically. |
-| Rings | Defines how much rings the sphere has horizontally. |
-
+- **Segments**: Defines of how much segments the sphere has vertically.
+- **Rings**: Defines how much rings the sphere has horizontally.
 
 #### Adjust Last Operation - Add UV Sphere Panel
 
@@ -1391,13 +1542,17 @@ Adds an icosphere primitive.
 
 How to position the primitive.
 
+###### Surface
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------- |
-| Surface | Start placing on the surface. The 3d cursor acts as a fallback. |
-| 3D Cursor Plane | Start placement using a point that is projected at the selected axis at the 3d cursor position |
-| 3D Cursor View | Start placement using the mouse cursor projected onto the view plane. |
+Start placing on the surface. The 3d cursor acts as a fallback.
 
+###### 3D Cursor Plane
+
+Start placement using a point that is projected at the selected axis at the 3d cursor position
+
+###### 3D Cursor View
+
+Start placement using the mouse cursor projected onto the view plane.
 
 ##### Orientation
 
@@ -1423,25 +1578,25 @@ Select the closest axis when placing objects. Surface overrides.
 
 ##### Base
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
 ##### Height
 
-**Origin**
+###### Origin
 
 ![Origin](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png)
 
 From where to scale the primitive. From one of its corners or from the center.
 
-**Aspect**
+###### Aspect
 
 Scale uniformly or in drag direction.
 
@@ -1453,26 +1608,28 @@ The subdivision level of the Ico Sphere.
 
 ![Last Operator Add Ico Sphere Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-ico-sphere-panel.png)
 
-**Subdivisions**
+Change the settings of **Add Ico Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+##### Subdivisions
 
 Defines the subdivision level of the Ico Sphere.
 
-**Size**
+##### Size
 
 Defines the radius of the Ico Sphere.
 
-**Generate UV's**
+##### Generate UV's
 
 Creates UV's for this primitive.
 
-**Align to view**
+##### Align to view
 
 Aligns the geometry to the chosen view. World, View or 3D cursor.
 
-**Location**
+##### Location
 
 Defines the location of the Sphere.
 
-**Rotation**
+##### Rotation
 
 Defines the rotation of the Sphere.

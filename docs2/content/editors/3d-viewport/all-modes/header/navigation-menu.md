@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "Navigation Menu"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The Navigation menu provides you with all tools around viewport navigation."
 order: 20
@@ -32,12 +32,13 @@ Activates the old move tool. The old move tool does not show a widget!
 
 Note that the hotkey for this tool is not displayed correctly. But can't be fixed by us. The hotkey is ctrl W
 
+#### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 #### Header Values
 
@@ -79,6 +80,8 @@ The widget can have different orientations. The menu items should be self explai
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -99,14 +102,21 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+##### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+##### Proportional Size
+
+See and adjust the falloff radius.
+
+##### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+##### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Rotate
 
@@ -156,6 +166,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-rotate.png)
 
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -179,25 +191,33 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+##### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+##### Proportional Size
+
+See and adjust the falloff radius.
+
+##### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+##### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Scale
 
 Activates the old Scale tool. This tool has no widget!
 
+#### Snapping
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision Scale | When you hold down shift, then you will have a much slower but also much preciser scale. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision Scale
+
+When you hold down shift, then you will have a much slower but also much preciser scale.
 
 #### Header Values
 
@@ -233,6 +253,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-resize.png)
 
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -256,35 +278,112 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+##### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+##### Proportional Size
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Orbit Down | Orbits downwards. |
-| Orbit Up | Orbits upwards. |
-| Orbit Right | Orbits to the right. |
-| Orbit Left | Orbits to the left. |
-| Orbit Opposite | Rotates the view by 180 degree. |
-| Roll Left | Rolls the viewport counter clockwise. |
-| Roll Right | Rolls the viewport clockwise. |
-| Pan Down | Pans the viewpoint downwards. The scene moves up. |
-| Pan Up | Pans the viewpoint upwards. The scene moves down. |
-| Pan Right | Pans the viewpoint to the right. The scene moves to the left. |
-| Pan Left | Pans the viewpoint to the left. The scene moves to the right. |
-| Zoom Region | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Zoom In | Zooms into the viewport. Works also in camera view. |
-| Zoom Out | Zooms out of the viewport. Works also in camera view. |
-| Zoom Camera 1:1 | Zooms the camera fitting to match the render output size by factor 1:1 |
-| Dolly View | Dolly View is a special zoom mode. Be careful with this navigation method, you can easily trap yourself to not zoom able anymore! |
-| Center View to Mouse | Centers the view to the current mouse position. |
-| Fly Navigation | Switches to Fly navigation. In this view mode the camera acts like an air plane. Right click leaves the fly mode. |
-| Walk Navigation | Switches to Walk Navigation. In this view mode the camera acts like a player in a first person shooter. Gravity will pull you down, The ground grid is the ground. And you can move around with WASD keys. Right click leaves the walk mode. |
-| View Navigation | Switches to View Navigation Mode. In this view mode the view gets rotated moved and scaled from the Camera view point. Right Click leaves the view mode. |
-| Playback Animation | Plays back an existing animation. |
+See and adjust the falloff radius.
+
+##### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+##### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+##### Orbit Down
+
+Orbits downwards.
+
+##### Orbit Up
+
+Orbits upwards.
+
+##### Orbit Right
+
+Orbits to the right.
+
+##### Orbit Left
+
+Orbits to the left.
+
+##### Orbit Opposite
+
+Rotates the view by 180 degree.
+
+##### Roll Left
+
+Rolls the viewport counter clockwise.
+
+##### Roll Right
+
+Rolls the viewport clockwise.
+
+Roll Left and Roll Right also work in the camera view.
+
+##### Reset Roll
+
+Sets the roll of the view back to 0°, so the view is level again. In a camera view that is locked to the view (**Lock Camera to View**) it is greyed out, because it can't change anything there; unlock the camera first.
+
+##### Flip View
+
+Flips the camera view to look along the other side. Only available while you look through the camera.
+
+##### Pan Down
+
+Pans the viewpoint downwards. The scene moves up.
+
+##### Pan Up
+
+Pans the viewpoint upwards. The scene moves down.
+
+##### Pan Right
+
+Pans the viewpoint to the right. The scene moves to the left.
+
+##### Pan Left
+
+Pans the viewpoint to the left. The scene moves to the right.
+
+##### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+##### Zoom In
+
+Zooms into the viewport. Works also in camera view.
+
+##### Zoom Out
+
+Zooms out of the viewport. Works also in camera view.
+
+##### Zoom Camera 1:1
+
+Zooms the camera fitting to match the render output size by factor 1:1
+
+##### Dolly View
+
+Dolly View is a special zoom mode. Be careful with this navigation method, you can easily trap yourself to not zoom able anymore!
+
+##### Center View to Mouse
+
+Centers the view to the current mouse position.
+
+##### Fly Navigation
+
+Switches to Fly navigation. In this view mode the camera acts like an air plane. Right click leaves the fly mode.
+
+##### Walk Navigation
+
+Switches to Walk Navigation. In this view mode the camera acts like a player in a first person shooter. Gravity will pull you down, The ground grid is the ground. And you can move around with WASD keys. Right click leaves the walk mode.
+
+##### View Navigation
+
+Switches to View Navigation Mode. In this view mode the view gets rotated moved and scaled from the Camera view point. Right Click leaves the view mode.
+
+##### Playback Animation
+
+Plays back an existing animation.

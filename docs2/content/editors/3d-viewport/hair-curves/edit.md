@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Hair Curves"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the hair curves itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -67,6 +67,10 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ##### Adjust Last Operation - To Sphere
 
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - To Sphere](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-to-sphere.png)
+
 ###### Factor
 
 ![Factor](/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/factor.png)
@@ -79,14 +83,10 @@ The factor to transform the selection into a shape form.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -98,12 +98,14 @@ In Object mode this tools requires to have more than one object selected.
 
 ##### Adjust Last Operation - Shear
 
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Shear](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-shear.png)
 
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
 | Offset | Adjust an offset. |
 | Axis | Defines one axis of the imaginary shear axis plane. |
-
 
 ###### Axis Ortho
 
@@ -121,14 +123,10 @@ Choose the orientation for the shear action.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -143,6 +141,10 @@ It pushes or pulls the object positions relative to the center of the selection.
 In Object mode this tool requires to have more than one object selected.
 
 ##### Adjust Last Operation - Push/Pull
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Push/Pull](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-push-pull.png)
 
 ###### Distance
 
@@ -160,14 +162,10 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -177,12 +175,14 @@ Warps a mesh selection between two defined points. This also works with curves.
 
 ##### Adjust Last Operation - Warp
 
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 | Entry | What it does |
 | ------------ | ----------------------------------- |
 | Warp Angle | The strength of the warp effect. |
 | Offset Angle | An offset angle to bend side wards. |
-
 
 ###### Min
 
@@ -208,6 +208,8 @@ The curve needs to have geometry !
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Values
 
 The transform values.
@@ -224,12 +226,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Mirror submenu
 
@@ -275,12 +273,10 @@ Choose several methods to snap one element to another. The menu items should be 
 
 Some snap operations shows a last operation panel, some not.
 
-
 | Entry | What it does |
 | -------- | ---------------------------------------------------------------------------------------------------- |
 | Offset | If the selection should snap as a whole, or if each individual element of the selection should snap. |
 | Rotation | If the selection should be rotated to match the cursor. |
-
 
 #### Set Attribute
 
@@ -306,6 +302,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Move X , Y , Z
 
 ###### Orientation
@@ -314,12 +312,8 @@ When you drag the duplicate around you will see the position values in the heade
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Spline Type
 
@@ -342,12 +336,12 @@ With set Spline Type, you can set the type of the curve.
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
+Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
 | Type | Type is a drop-down box . Choose the spline type |
 | Handles | Use Handles when converting Bezier curves into polygons. |
-
 
 #### Set Attribute
 
@@ -356,6 +350,8 @@ Set values of the attibute for selected elements. The selected geometry will be 
 ##### Adjust Last Operation - Set Attribute
 
 ![Last Operator Set Attribute](/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/last-operator-set-attribute.png)
+
+Change the settings of **Set Attribute** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Position
 
@@ -366,18 +362,6 @@ The vector 3 values.
 ![Toggle Cyclic](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/toggle-cyclic.png)
 
 Toggle Cyclic closes or opens the curve.
-
-##### Adjust Last Operation - Toggle Cyclic
-
-###### Direction
-
-Direction is a drop-down box . Choose the direction in which the curve gets closed.
-
-
-| Entry | What it does |
-| -------- | ------------------------------------------ |
-| Separate | Separates the selection into a new object. |
-| Delete | Deletes the selected hair geomety. |
 
 ## Segments menu
 
@@ -400,6 +384,8 @@ Subdivides the selected curve geometry, and adds more control points.
 ##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Number of Cuts
 
@@ -451,12 +437,13 @@ With type Bezier you will get more options.
 
 The curve fitting method for a Bezier curve.
 
+###### Refit
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| Refit | Incrementally refit the curve. |
-| Split | Split the curve until it fits. |
+Incrementally refit the curve.
 
+###### Split
+
+Split the curve until it fits.
 
 ##### Tolerance
 
@@ -474,13 +461,9 @@ Detect corners and use non aligned angles.
 
 Corners above this angle are considered as corners.
 
-
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------- |
-| Taper Start / End | Taper factor for the radius of each curve point. |
-| Radius Min/Max | Minimum or maximum radius when the pressure is applied. |
-| Use Pressure | Use tablet pressure to draw the curve. |
-
+- **Taper Start / End**: Taper factor for the radius of each curve point.
+- **Radius Min/Max**: Minimum or maximum radius when the pressure is applied.
+- **Use Pressure**: Use tablet pressure to draw the curve.
 
 ##### Depth
 
@@ -508,30 +491,24 @@ Apply a fixed offset, and don't scale by the radius.
 
 Use the start of the stroke for the depth.
 
-**Plane**
+###### Plane
 
 ![Plane](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/plane.png)
 
 The plane for the projected strokes.
 
+- **Normal to Surface**: Draw in a plane perpendicular to the surface.
+- **Tangent to Surface**: Draw in the surface plane.
+- **View**: Draw in a plane that is aligned to the viewport.
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------ |
-| Normal to Surface | Draw in a plane perpendicular to the surface. |
-| Tangent to Surface | Draw in the surface plane. |
-| View | Draw in a plane that is aligned to the viewport. |
-
-
-| Entry | What it does |
-| -------- | ------------------------ |
-| Curve 2D | Draw the curve as 2d. |
-| As Nurbs | Draw the curve as nurbs. |
-
+- **Curve 2D**: Draw the curve as 2d.
+- **As Nurbs**: Draw the curve as nurbs.
 
 ##### Adjust Last Operation - Draw Curve
 
 ![Last Operator Draw Curve](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-draw-curve.png)
 
+Change the settings of **Draw Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------- |
@@ -539,7 +516,6 @@ The plane for the projected strokes.
 | Fit Method | The curve fitting method. Choose between Refit and Split. |
 | Corner Angle | Corners above this angle are considered as corners. |
 | Cyclic | With curve type Bezier the curve gets closed. Has no effect at curve type Poly. |
-
 
 #### Curve Pen
 
@@ -581,23 +557,19 @@ When you resize the curve radius then you will see a value in the header. It tel
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------- | ---------------------------------------------------------------------------- |
 | Values X Y Z W | The axis to increase the radius. Just X has an effect with the curve radius. |
 | Axis | The axis to use. This has no effect with a curve object. |
-
 
 ###### Orientation
 
@@ -605,12 +577,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Adjust the orientation of the extrusion. It usually starts with Normal.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Tilt
 
@@ -634,17 +602,14 @@ When you rotate the curve with the tilt tool, then you will see a value in the h
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
-
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png)
 
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -676,6 +641,8 @@ Subdivides the selected curve geometry, and adds more control points.
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
 
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Number of Cuts
 
 Number of subdivision cuts.
@@ -687,6 +654,8 @@ Extrudes the selected curve point(s).
 ##### Adjust Last Operation - Extrude Curve and Move
 
 ![Last operator Extrude Curve and Move](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-extrude-curve-and-move.png)
+
+Change the settings of **Extrude Curve and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -706,12 +675,8 @@ The position of the extruded point(s).
 
 Adjust the orientation of the extrusion. It usually starts with Normal.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Mirror sub menu
 
@@ -727,16 +692,14 @@ Mirrors the selection.
 
 Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.
 
-
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| X Y Z Global | Mirrors along the global axis. |
-| X Y Z Local | Mirrors along the object axis. |
-
+- **X Y Z Global**: Mirrors along the global axis.
+- **X Y Z Local**: Mirrors along the object axis.
 
 ##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
+
+Change the settings of **Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Orientation
 
@@ -750,14 +713,10 @@ Choose the orientation in which the transform should happen.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Snap sub menu
 
@@ -775,6 +734,8 @@ Snaps the currently selected object(s) to the cursor location, but keeps the off
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
 
+Change the settings of **Snap Selection to Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Offset
 
 Keep the offset of the selected objects to each other.
@@ -783,16 +744,12 @@ Keep the offset of the selected objects to each other.
 
 Rotate to match the cursor.
 
-
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------- |
-| Selection to Active | Snaps the currently selected object(s) to the active object. |
-| Selection to Grid | Snaps the currently selected object(s) to the nearest grid point. |
-| Cursor to Selected | Moves the cursor to the center of the selected object(s). |
-| Cursor to World Origin | Moves the cursor to the world origin. |
-| Cursor to Active | Moves the cursor to the center of the active object. |
-| Cursor to Grid | Moves the cursor to the nearest grid point. |
-
+- **Selection to Active**: Snaps the currently selected object(s) to the active object.
+- **Selection to Grid**: Snaps the currently selected object(s) to the nearest grid point.
+- **Cursor to Selected**: Moves the cursor to the center of the selected object(s).
+- **Cursor to World Origin**: Moves the cursor to the world origin.
+- **Cursor to Active**: Moves the cursor to the center of the active object.
+- **Cursor to Grid**: Moves the cursor to the nearest grid point.
 
 #### Set Spline Type
 
@@ -812,12 +769,12 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
+Change the settings of **Set Spline Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------- | -------------------------------------------------------- |
 | Type | Type is a drop-down box choose the spline type |
 | Handles | Use Handles when converting Bezier curves into polygons. |
-
 
 #### Set Handle Type
 
@@ -825,13 +782,17 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 Handles defines the type of handle for the knots of the curve. You have the choice between Auto, Vector, Align and Free. And the Last Operator gives you a fifth possibility to toggle between Free and Align.
 
+##### Auto
 
-| Entry | What it does |
-| ------ | -------------------------------------- |
-| Auto | Auto aligns the handles automatically. |
-| Vector | Set Handle type to Vector. |
-| Align | Set Handle type to Align. |
+Auto aligns the handles automatically.
 
+##### Vector
+
+Set Handle type to Vector.
+
+##### Align
+
+Set Handle type to Align.
 
 ##### Free
 
@@ -847,6 +808,8 @@ Toggle Free/Aligned.
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
 
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Type
 
 Type is a drop-down box where you can set the handle type. You have the choice between Auto, Vector, Align, Free. And the fifth possibility toggles between Free and Align.
@@ -857,21 +820,20 @@ Type is a drop-down box where you can set the handle type. You have the choice b
 
 Toggle Cyclic closes or opens the curve.
 
-##### Adjust Last Operation - Toggle Cyclic
-
-###### Direction
-
-Direction is a drop-down box choose the direction in which the curve gets closed.
-
 #### Switch Direction
 
 ![Switch Direction](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/switch-direction.png)
 
 Just for Bezier Curve object type. Surface Nurbs curves doesn't have a direction. Switches the direction in which the curve is pointing.
 
+##### Separate
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Separate | Separates the selected control points, and creates a new curve object out of it. You need to select two control points to select the segment between it. |
-| Delete | Removes the selected control points or curves. |
-| Split | Split selected points into a new object. |
+Separates the selected control points, and creates a new curve object out of it. You need to select two control points to select the segment between it.
+
+##### Delete
+
+Removes the selected control points or curves.
+
+##### Split
+
+Split selected points into a new object.

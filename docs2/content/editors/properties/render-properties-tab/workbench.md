@@ -48,14 +48,21 @@ In the header is a checkbox to enable Simplify.
 
 This section affects the rendering with cycles in the Viewport.
 
+#### Max Subdivisions
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------- |
-| Max Subdivisions | Limit the number of maximum subdivisions. |
-| Max Child Particles | Limit the number of child particles |
-| Volume Resolution | Simplify volumes by adjusting volume percentage of volume objects in viewport. |
-| Normals | Skip computing custom normals and face corner normals for displaying meshes in the viewport. |
+Limit the number of maximum subdivisions.
 
+#### Max Child Particles
+
+Limit the number of child particles
+
+#### Volume Resolution
+
+Simplify volumes by adjusting volume percentage of volume objects in viewport.
+
+#### Normals
+
+Skip computing custom normals and face corner normals for displaying meshes in the viewport.
 
 ### Render
 
@@ -63,27 +70,41 @@ This section affects the rendering with cycles in the Viewport.
 
 This section affects the final rendering.
 
+#### Max Subdivisions
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------- |
-| Max Subdivisions | Limit the number of maximum subdivisions. |
-| Max Child Particles | Limit the number of child particles. |
+Limit the number of maximum subdivisions.
 
+#### Max Child Particles
+
+Limit the number of child particles.
 
 ### Grease Pencil
 
 ![Grease Pencil](/docs2/images/editors/properties/render-properties-tab/cycles/grease-pencil.png)
 
+#### Playback Only
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------- |
-| Playback Only | Simplify the grease pencil strokes only during playback. |
-| Fill | Display Fill strokes in viewport. |
-| Modifiers | Display Modifiers. |
-| Shader Effects | Display Shader effects. |
-| Layers Tinting | Display layer tint. |
-| Antialiasing | Use antialiasing to smooth stroke edges. |
+Simplify the grease pencil strokes only during playback.
 
+#### Fill
+
+Display Fill strokes in viewport.
+
+#### Modifiers
+
+Display Modifiers.
+
+#### Shader Effects
+
+Display Shader effects.
+
+#### Layers Tinting
+
+Display layer tint.
+
+#### Antialiasing
+
+Use antialiasing to smooth stroke edges.
 
 ## Performance panel
 
@@ -109,12 +130,13 @@ Which device to use for realtime compositing.
 
 Precision menu just appears with GPU device selected.
 
+##### Auto
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------ |
-| Auto | Full precision at rendering, half precision otherwise. |
-| Full | Full precision in all cases. |
+Full precision at rendering, half precision otherwise.
 
+##### Full
+
+Full precision in all cases.
 
 ##### Denoise nodes subpanel
 
@@ -208,13 +230,17 @@ Workbench renderer is meant for fast preview display. It does not use materials 
 
 This panel allows you to define the color of the surface of the object. This settings are also dependent of the chosen lighting.
 
+### Material
 
-| Entry | What it does |
-| -------- | -------------------------------------------------- |
-| Material | Uses the material including textures for the mesh. |
-| Object | Uses the Object color. |
-| Vertex | Uses the Vertex color. |
+Uses the material including textures for the mesh.
 
+### Object
+
+Uses the Object color.
+
+### Vertex
+
+Uses the Vertex color.
 
 ### Single
 
@@ -222,12 +248,13 @@ This panel allows you to define the color of the surface of the object. This set
 
 Uses a single color for the selected mesh.
 
+#### Random
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------- |
-| Random | Uses a random color for the mesh. |
-| Texture | Renders the texture, and ignores the material settings. |
+Uses a random color for the mesh.
 
+#### Texture
+
+Renders the texture, and ignores the material settings.
 
 ## Options panel
 
@@ -235,13 +262,17 @@ Uses a single color for the selected mesh.
 
 The options changes, dependant of what you have ticked.
 
+### Backface Culling
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Backface Culling | Don't calculate back faces. |
-| Show X Ray | Render the faces transparent. |
-| Show X-Ray | Set X-Ray active, and adjust the amount of alpha that is used for the x-ray effect. Note that you can have either X-Ray or Shadow and Cavity active. Not both at the same time. · **X-Ray Alpha**: This slider shows up when you tick Show X Ray. Adjust the intensity. |
+Don't calculate back faces.
 
+### Show X Ray
+
+Render the faces transparent.
+
+### Show X-Ray
+
+Set X-Ray active, and adjust the amount of alpha that is used for the x-ray effect. Note that you can have either X-Ray or Shadow and Cavity active. Not both at the same time. · **X-Ray Alpha**: This slider shows up when you tick Show X Ray. Adjust the intensity.
 
 ### Shadow
 
@@ -249,12 +280,13 @@ The options changes, dependant of what you have ticked.
 
 Render Shadow.
 
+#### Shadow Intensity
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------- |
-| Shadow Intensity | This slider shows up when you tick Shadow. Adjust the intensity. |
-| Shading Shadow Options | Adjust a shadow shift relative to the light source. |
+This slider shows up when you tick Shadow. Adjust the intensity.
 
+#### Shading Shadow Options
+
+Adjust a shadow shift relative to the light source.
 
 ### Cavity
 
@@ -294,11 +326,14 @@ Draw the cavity shading in both, World Space and Screen space.
 
 Settings see above.
 
+##### Depth of Field
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Depth of Field | Use depth of field on viewport using the values from the active camera. |
-| Outline | Show the not selected objects with an outline. · **Outline Color**: Define the color of the outline for not selected objects. |
-| Specular Lighting | Render specular highlights. |
+Use depth of field on viewport using the values from the active camera.
 
+##### Outline
 
+Show the not selected objects with an outline. · **Outline Color**: Define the color of the outline for not selected objects.
+
+##### Specular Lighting
+
+Render specular highlights.

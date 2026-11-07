@@ -6,7 +6,7 @@ path:
   - Editors
   - Video Sequence Editor
   - Sidebar
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:
@@ -74,14 +74,21 @@ Size to display proxies at in the preview region. Using a smaller preview size w
 
 Proxies is a simplified data set to speed up workflow.
 
+#### Use Proxies
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Use Proxies | Use proxy images instead of the real material to speed up workflow. |
-| Channel | Which channel number to show in the image preview. The value 0 is the result of all strips combined. |
-| Show Overexposed | Shows overexposed (bright white) areas using a zebra pattern. The threshold can be adjust with the slider. |
-| Show Missing Media | Render missing images or movies with a solit magenta color. |
+Use proxy images instead of the real material to speed up workflow.
 
+#### Channel
+
+Which channel number to show in the image preview. The value 0 is the result of all strips combined.
+
+#### Show Overexposed
+
+Shows overexposed (bright white) areas using a zebra pattern. The threshold can be adjust with the slider.
+
+#### Show Missing Media
+
+Render missing images or movies with a solit magenta color.
 
 ## Location X / Y
 
@@ -99,12 +106,13 @@ Display an overlay on top of the sequencer with a frame offset of the content.
 
 When the feature is active then you will see a green dashed line in the sequencer timeline.
 
+### Set Overlay Region
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------- |
-| Set Overlay Region | Box select a portion of the viewport to display the overlay content. |
-| Frame offset | What offset frame to use, relative to the current frame position. |
+Box select a portion of the viewport to display the overlay content.
 
+### Frame offset
+
+What offset frame to use, relative to the current frame position.
 
 ### Overlay Type
 
@@ -130,12 +138,13 @@ Safe areas can be set from the Camera and Sequencer views.
 
 > **Tip:** Each country sets a legal standard for broadcasting. These include also specific values for safe areas. Bforartists defaults for safe areas follow the EBU (European Union) standard. Make sure you are using the correct values when working for broadcast to avoid any trouble.
 
+### Title Safe Margins X/Y
 
-| Entry | What it does |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Title Safe Margins X/Y | Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers. |
-| Action Safe Margins X/Y | An extra “margin” for the screen, which can be used to keep elements from piling up against the edges. |
+Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers.
 
+### Action Safe Margins X/Y
+
+An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.
 
 ### Center-Cut Safe Areas
 
@@ -143,12 +152,13 @@ Safe areas can be set from the Camera and Sequencer views.
 
 Center-cuts are a second set of safe areas to ensure content is seen correctly on screens with a different aspect ratio. Old TV sets receiving 16:9 or 21:9 video will cut off the sides. Position content inside the center-cut areas to make sure the most important elements of your composition can still be visible in these screens.
 
+#### Center Title Safe Margins X/Y
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------- |
-| Center Title Safe Margins X/Y | Information (graphics or text) inside this area can be seen by the majority of viewers. |
-| Center Action Safe Margins X/Y | Safe area for general elements in a different aspect ratio. |
+Information (graphics or text) inside this area can be seen by the majority of viewers.
 
+#### Center Action Safe Margins X/Y
+
+Safe area for general elements in a different aspect ratio.
 
 ## Scene Strip Display panel
 
@@ -188,14 +198,21 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
+
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
 
 ### List of Annotation Strokes
 
@@ -209,12 +226,13 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
+
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
 
 ### Onion Skin subpanel
 
@@ -234,14 +252,21 @@ The sync method.
 
 #### Advanced Settings
 
+##### Keep Grease Pencil Settings
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------- |
-| Keep Grease Pencil Settings | Keep active Grease Pencil tool settings while navigating scene strips. |
-| Use Preview Range | Update the current scene strip to match the range. |
-| Synchronize all Windows | If the 3d View sync impacts all main windows. |
-| Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
+Keep active Grease Pencil tool settings while navigating scene strips.
 
+##### Use Preview Range
+
+Update the current scene strip to match the range.
+
+##### Synchronize all Windows
+
+If the 3d View sync impacts all main windows.
+
+##### Active follows Playhead
+
+Update the active scene strip while scrubbing the playhead.
 
 ### Legacy
 
@@ -259,14 +284,25 @@ Mak the pinned scene the active scene. The button and the “Set the Timeline”
 
 #### Advanced Settings
 
+##### Bidirectional
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------- |
-| Bidirectional | Changing the active scene should also update the timeline scene’s current frame in the sequencer. |
-| Keep Grease Pencil Settings | Keep active Grease Pencil tool settings while navigating scene strips. |
-| Use Preview Range | Update the current scene strip to match the range. |
-| Synchronize all Windows | If the 3d View sync impacts all main windows. |
-| Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
+Changing the active scene should also update the timeline scene’s current frame in the sequencer.
+
+##### Keep Grease Pencil Settings
+
+Keep active Grease Pencil tool settings while navigating scene strips.
+
+##### Use Preview Range
+
+Update the current scene strip to match the range.
+
+##### Synchronize all Windows
+
+If the 3d View sync impacts all main windows.
+
+##### Active follows Playhead
+
+Update the active scene strip while scrubbing the playhead.
 
 # Sequencer › Strip Tab
 
@@ -286,14 +322,21 @@ In the strip tab header you will see an icon for the current strip type. The nam
 
 The strip can be renamed by double clicking left into the edit box.
 
+#### Type Icon
 
-| Entry | What it does |
-| --------- | ------------------------------------------------- |
-| Type Icon | This indicates what kind of strip is selected |
-| Name | The name of the strip. |
-| Color | The color of the strip in the sequencer timeline. |
-| Mute | Enables/Disables the strip. |
+This indicates what kind of strip is selected
 
+#### Name
+
+The name of the strip.
+
+#### Color
+
+The color of the strip in the sequencer timeline.
+
+#### Mute
+
+Enables/Disables the strip.
 
 ## Compositing Panel
 
@@ -315,33 +358,75 @@ How much the strip color affects other strips.
 
 ![Transform Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel.png)
 
+A Color strip also shows Width and Height here:
+
+![Transform panel of a Color strip](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel-color-strip.png)
+
 ### Filter
 
 ![Filter](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/filter.png)
 
 Filter type to use for transformations.
 
+#### Auto
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------- |
-| Auto | Automatically choose filter based on scaling factor. |
-| Nearest | Use nearest sample. |
-| Bilinear | Interpolate between 2x2 Samples |
-| Cubic Mitchell | Cubic Mitchell filter on 4x4 Samples. |
-| Cubic B-Spline | Cubic B-Spline Filter on 4x4 Samples. Blurry, but not ringing. |
-| Box | Averages source image samples that fall under destination pixel. |
+Automatically choose filter based on scaling factor.
 
+#### Nearest
 
-| Entry | What it does |
-| ---------- | ------------------------------------- |
-| Position X | The X offset. |
-| Y | The Y offset. |
-| Scale X | The X scale. |
-| Y | The Y scale. |
-| Rotation | The rotation around the image center. |
-| Origin | Origin of image for transformation. |
-| Mirror | Flip on the X and/or Y axis. |
+Use nearest sample.
 
+#### Bilinear
+
+Interpolate between 2x2 Samples
+
+#### Cubic Mitchell
+
+Cubic Mitchell filter on 4x4 Samples.
+
+#### Cubic B-Spline
+
+Cubic B-Spline Filter on 4x4 Samples. Blurry, but not ringing.
+
+#### Box
+
+Averages source image samples that fall under destination pixel.
+
+#### Position X
+
+The X offset.
+
+#### Y
+
+The Y offset.
+
+#### Width
+
+For a Color strip: the width of the strip in pixels. The smallest value is 1.
+
+#### Height
+
+For a Color strip: the height of the strip in pixels. The smallest value is 1.
+
+#### Scale X
+
+The X scale.
+
+#### Y
+
+The Y scale.
+
+#### Rotation
+
+The rotation around the image center.
+
+#### Origin
+
+Origin of image for transformation.
+
+#### Mirror
+
+Flip on the X and/or Y axis.
 
 ## Crop Panel
 
@@ -371,13 +456,17 @@ Reverse the frame order.
 
 The intensity of the input color.
 
+#### Multiply
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------- |
-| Multiply | Multiply colors by this factor. |
-| Multiply Alpha | Multiply Alpha along with color channels. |
-| Convert to Float | Convert input to float data. |
+Multiply colors by this factor.
 
+#### Multiply Alpha
+
+Multiply Alpha along with color channels.
+
+#### Convert to Float
+
+Convert input to float data.
 
 ## Sound Panel
 
@@ -385,12 +474,13 @@ The intensity of the input color.
 
 This panel shows with an audio clip selected.
 
+### Volume
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------------------- |
-| Volume | The volume of the audio clip. |
-| Mono | Set the audio clip to mono. · **Pan**: When mono, the pan of the audio clip. |
+The volume of the audio clip.
 
+### Mono
+
+Set the audio clip to mono. · **Pan**: When mono, the pan of the audio clip.
 
 ## Time Panel
 
@@ -398,16 +488,29 @@ This panel shows with an audio clip selected.
 
 Time related settings.
 
+### Lock
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lock | Lock strip so that it cannot be transformed. |
-| Show Retiming Keys | This toggles the overlay and retiming state of a Movie or Image Sequence strip. For more information, refer to chapter **Editors - Video Sequence Editor - Header - Strip Menu** retiming section. **Note:** To retime a strip, select a Movie or Image Sequence strip. |
-| Channel | The channel of the strip. |
-| Start | The start frame of the strip. |
-| Duration | The duration of the strip. |
-| End | The end frame of the strip. · **Strip Offset Start**: The strip offset start. This offsets the beginning of the strip in the timeline. · **End**: The strip offset end. This offsets the end of the strip in the timeline. · **Hold Offset Start**: Animation start offset (trim start) · **End**: Animation end offset (trim end) · **Current Frame**: Info box that displays the position of the frame cursor at the current frame. |
+Lock strip so that it cannot be transformed.
 
+### Show Retiming Keys
+
+This toggles the overlay and retiming state of a Movie or Image Sequence strip. For more information, refer to chapter **Editors - Video Sequence Editor - Header - Strip Menu** retiming section. **Note:** To retime a strip, select a Movie or Image Sequence strip.
+
+### Channel
+
+The channel of the strip.
+
+### Start
+
+The start frame of the strip.
+
+### Duration
+
+The duration of the strip.
+
+### End
+
+The end frame of the strip. · **Strip Offset Start**: The strip offset start. This offsets the beginning of the strip in the timeline. · **End**: The strip offset end. This offsets the end of the strip in the timeline. · **Hold Offset Start**: Animation start offset (trim start) · **End**: Animation end offset (trim end) · **Current Frame**: Info box that displays the position of the frame cursor at the current frame.
 
 ## Scene Panel
 
@@ -433,14 +536,21 @@ The name of the scene. It can be renamed by double clicking into the edit box.
 
 Add a new scene. This button calls a menu where you can choose with what method you want to create the new scene.
 
+###### New
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------- |
-| New | Adds a new empty scene. |
-| Copy Settings | Adds a new empty scene. And copies the settings from the current scene. |
-| Linked Copy | Link in the collections from the current scene. (Shadow Copy) |
-| Full Copy | Make a full copy of the current scene. |
+Adds a new empty scene.
 
+###### Copy Settings
+
+Adds a new empty scene. And copies the settings from the current scene.
+
+###### Linked Copy
+
+Link in the collections from the current scene. (Shadow Copy)
+
+###### Full Copy
+
+Make a full copy of the current scene.
 
 ##### Remove
 
@@ -466,12 +576,13 @@ The audio volume.
 
 Which camera of the scene to use.
 
+###### Show Annotation
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------- |
-| Show Annotation | Show grease pencil strokes in workbench previews. |
-| Transparent | Use a transparent background. |
+Show grease pencil strokes in workbench previews.
 
+###### Transparent
+
+Use a transparent background.
 
 #### Input type Sequencer
 
@@ -535,23 +646,25 @@ The second strip.
 
 Swap the strips.
 
+###### Blend Mode
 
-| Entry | What it does |
-| ------------ | ----------------------------------- |
-| Blend Mode | The color blend mode to use. |
-| Blend Factor | The blend factor. 1.000 means 100%. |
+The color blend mode to use.
 
+###### Blend Factor
+
+The blend factor. 1.000 means 100%.
 
 ### Effect strip type Text
 
 ![Effect strip type Text](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-text.png)
 
+#### Text
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------- |
-| Text | The text to displayed. |
-| Wrap Width | World wrap width as factor. Zero disables the wrap. |
+The text to displayed.
 
+#### Wrap Width
+
+World wrap width as factor. Zero disables the wrap.
 
 #### Style sub panel
 
@@ -571,24 +684,45 @@ When no font is loaded then the internal font is used.
 
 The list of loaded fonts. This list is empty by default. It displays the fonts that you load.
 
+###### Open
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Open | Load a font. |
-| Font Edit Box | Display the current active font. You can rename the font by double clicking in the edit box. |
-| Fake User | Assign a fake user to this font. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Open Font | Load a font. |
-| Remove | Remove the selected font as the active one. Note that the font is still in the list then. |
-| Bold | Display the font bold. |
-| Italic | Display the font italic. |
+Load a font.
 
+###### Font Edit Box
 
-| Entry | What it does |
-| ----- | ----------------- |
-| Size | Size of the text. |
-| Line Spacing | The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels. |
-| Color | The text color. |
+Display the current active font. You can rename the font by double clicking in the edit box.
 
+###### Fake User
+
+Assign a fake user to this font. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+###### Open Font
+
+Load a font.
+
+###### Remove
+
+Remove the selected font as the active one. Note that the font is still in the list then.
+
+###### Bold
+
+Display the font bold.
+
+###### Italic
+
+Display the font italic.
+
+###### Size
+
+Size of the text.
+
+##### Line Spacing
+
+The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels.
+
+###### Color
+
+The text color.
 
 ##### Shadow
 
@@ -596,14 +730,21 @@ The list of loaded fonts. This list is empty by default. It displays the fonts t
 
 Creates a shadow of the specified color under the text.
 
+###### Shadow color
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Shadow color | The color of the shadow. Clicking at the color field opens a color dialog. |
-| Angle | The shadow angle. In which direction the shadow shall point. |
-| Offset | Add an offset to the shadow in pixels |
-| Blur | Blur the shadow by a pixel amount. |
+The color of the shadow. Clicking at the color field opens a color dialog.
 
+###### Angle
+
+The shadow angle. In which direction the shadow shall point.
+
+###### Offset
+
+Add an offset to the shadow in pixels
+
+###### Blur
+
+Blur the shadow by a pixel amount.
 
 ##### Outline
 
@@ -623,12 +764,13 @@ The outline width.
 
 Display colored box behind text.
 
+###### Box Color
 
-| Entry | What it does |
-| --------- | ------------------------------------------------ |
-| Box Color | The color of the box. |
-| Margin | The margin of the box. Based at the image width. |
+The color of the box.
 
+###### Margin
+
+The margin of the box. Based at the image width.
 
 #### Layout sub panel
 
@@ -660,23 +802,25 @@ Horizontal (X) or vertical (Y) anchor point of the text relative to the location
 
 The strip to blur. This strip cannot be changed. You need to apply the effect with the correct strip selected.
 
+##### Size X
 
-| Entry | What it does |
-| ------ | ---------------------------------- |
-| Size X | The size of the blur along X axis. |
-| Y | The size of the blur along Y axis. |
+The size of the blur along X axis.
 
+##### Y
+
+The size of the blur along Y axis.
 
 ### Effect strip type Multicam
 
 ![Effect strip type Multicam](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multicam.png)
 
+#### Source Channel
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Source Channel | The channel which the Multicam Selector gets its input from. |
-| Cut to | Cuts the Multicam strip at the current frame and changes the Source Channel automatically to the selected channels. |
+The channel which the Multicam Selector gets its input from.
 
+#### Cut to
+
+Cuts the Multicam strip at the current frame and changes the Source Channel automatically to the selected channels.
 
 ### Effect strip type Speed Control
 
@@ -748,44 +892,77 @@ The interpolation type for the transform.
 
 The measure unit to use for the transform.
 
+##### Position X
 
-| Entry | What it does |
-| ------------- | ------------------------------------------- |
-| Position X | Amount to move the input in the X axis. |
-| Y | Amount to move the input in the Y axis. |
-| Uniform scale | Scale uniformly, preserve the aspect ratio. |
-| Scale X | Amount to scale the input in the X axis. |
-| Y | Amount to scale the input in the Y axis. |
-| Rotation | Degrees to rotate the input. |
+Amount to move the input in the X axis.
 
+##### Y
+
+Amount to move the input in the Y axis.
+
+##### Uniform scale
+
+Scale uniformly, preserve the aspect ratio.
+
+##### Scale X
+
+Amount to scale the input in the X axis.
+
+##### Y
+
+Amount to scale the input in the Y axis.
+
+##### Rotation
+
+Degrees to rotate the input.
 
 ### Effect strip type Glow
 
 ![Effect strip type Glow](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-glow.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------- |
-| Input 1 | The strip to use. This strip cannot be changed. You need to apply the effect with the correct strip selected. |
-| Threshold | Minimum intensity to trigger a glow. |
-| Clamp | The brightness limit of intensity. |
-| Boost Factor | Brightness multiplier. |
-| Blur Distance | The radius of the glow effect. |
-| Quality | The accuracy of the blur effect. |
-| Only Boost | Show the glow buffer only. |
+The strip to use. This strip cannot be changed. You need to apply the effect with the correct strip selected.
 
+#### Threshold
+
+Minimum intensity to trigger a glow.
+
+#### Clamp
+
+The brightness limit of intensity.
+
+#### Boost Factor
+
+Brightness multiplier.
+
+#### Blur Distance
+
+The radius of the glow effect.
+
+#### Quality
+
+The accuracy of the blur effect.
+
+#### Only Boost
+
+Show the glow buffer only.
 
 ### Effect strip type Wipe
 
 ![Effect strip type Wipe](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-wipe.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Transition type
 
@@ -793,13 +970,17 @@ The measure unit to use for the transform.
 
 The wipe effect type.
 
+##### Direction
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------- |
-| Direction | The direction of the wipe. |
-| Blur width | The width of the blur edge, relative to the image size. |
-| Angle | The edge angle. |
+The direction of the wipe.
 
+##### Blur width
+
+The width of the blur edge, relative to the image size.
+
+##### Angle
+
+The edge angle.
 
 #### Default Fade
 
@@ -811,13 +992,17 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 
 ![Effect strip type Alpha over Drop](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Default Fade
 
@@ -829,25 +1014,33 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 
 ![Effect strip type Multiply](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 ### Effect strip type Gamma Cross
 
 ![Effect strip type Gamma Cross](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Default Fade
 
@@ -859,13 +1052,17 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 
 ![Effect strip type Alpha Under](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Default Fade
 
@@ -877,13 +1074,17 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 
 ![Effect strip type Alpha Over](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Default Fade
 
@@ -895,37 +1096,49 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 
 ![Effect strip type Subtract](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 ### Effect strip type Add
 
 ![Effect strip type Add](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 ### Effect strip type Crossfade
 
 ![Effect strip type Crossfade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
+#### Input 1
 
-| Entry | What it does |
-| ----------- | -------------------- |
-| Input 1 | The first strip. |
-| Input 2 | The second strip. |
-| Swap Inputs | Swap the two strips. |
+The first strip.
 
+#### Input 2
+
+The second strip.
+
+#### Swap Inputs
+
+Swap the two strips.
 
 #### Default Fade
 
@@ -953,13 +1166,17 @@ Browse for another file.
 
 Which color space to use for the loaded video clip.
 
+#### Stream Index
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------- |
-| Stream Index | For files with several movie streams, use the streamn with the given index. |
-| Deinterlace | Remove fields from video movies. |
-| Info Box | The resolution and frames per seconds of the video. |
+For files with several movie streams, use the streamn with the given index.
 
+#### Deinterlace
+
+Remove fields from video movies.
+
+#### Info Box
+
+The resolution and frames per seconds of the video.
 
 ## Custom Properties Panel
 
@@ -1035,13 +1252,17 @@ Defines whether the proxies are for individual strips or the entire sequence.
 
 Proxies are stored in the directory of the input.
 
+##### Project
 
-| Entry | What it does |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Project | All proxies are stored in one directory. · **Proxy Directory**: The location to store the proxies for the project. |
-| Set Selected Strip Proxies | Set proxy size and overwrite flag for all selected strips. |
-| Rebuild Proxy and Time code Indices | Generates Proxies and Time codes for all selected strips, same as doing Strip ? Rebuild Proxy and Time code indices. |
+All proxies are stored in one directory. · **Proxy Directory**: The location to store the proxies for the project.
 
+##### Set Selected Strip Proxies
+
+Set proxy size and overwrite flag for all selected strips.
+
+##### Rebuild Proxy and Time code Indices
+
+Generates Proxies and Time codes for all selected strips, same as doing Strip ? Rebuild Proxy and Time code indices.
 
 ## Strip Proxy & Time code panel
 
@@ -1069,13 +1290,17 @@ Use a custom file to read proxy data from. Activating the tool reveals a directo
 
 You can either show the directory or the custom file path directory picker.
 
+##### Resolutions
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Resolutions | Buttons to control how big the proxies are. The available options are 25%, 50%, 75%, 100 percent of original strip size. |
-| Overwrite | Saves over any existing proxies in the proxy storage directory. |
-| Build Jpeg Quality | Defines the quality of the JPEG images used for proxies. |
+Buttons to control how big the proxies are. The available options are 25%, 50%, 75%, 100 percent of original strip size.
 
+##### Overwrite
+
+Saves over any existing proxies in the proxy storage directory.
+
+##### Build Jpeg Quality
+
+Defines the quality of the JPEG images used for proxies.
 
 ### Time code Index
 
@@ -1115,14 +1340,21 @@ The sync method.
 
 #### Advanced Settings
 
+##### Keep Grease Pencil Settings
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------- |
-| Keep Grease Pencil Settings | Keep active Grease Pencil tool settings while navigating scene strips. |
-| Use Preview Range | Update the current scene strip to match the range. |
-| Synchronize all Windows | If the 3d View sync impacts all main windows. |
-| Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
+Keep active Grease Pencil tool settings while navigating scene strips.
 
+##### Use Preview Range
+
+Update the current scene strip to match the range.
+
+##### Synchronize all Windows
+
+If the 3d View sync impacts all main windows.
+
+##### Active follows Playhead
+
+Update the active scene strip while scrubbing the playhead.
 
 ### Legacy
 
@@ -1140,11 +1372,22 @@ Mak the pinned scene the active scene. The button and the “Set the Timeline”
 
 #### Advanced Settings
 
+##### Bidirectional
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------- |
-| Bidirectional | Changing the active scene should also update the timeline scene’s current frame in the sequencer. |
-| Keep Grease Pencil Settings | Keep active Grease Pencil tool settings while navigating scene strips. |
-| Use Preview Range | Update the current scene strip to match the range. |
-| Synchronize all Windows | If the 3d View sync impacts all main windows. |
-| Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
+Changing the active scene should also update the timeline scene’s current frame in the sequencer.
+
+##### Keep Grease Pencil Settings
+
+Keep active Grease Pencil tool settings while navigating scene strips.
+
+##### Use Preview Range
+
+Update the current scene strip to match the range.
+
+##### Synchronize all Windows
+
+If the 3d View sync impacts all main windows.
+
+##### Active follows Playhead
+
+Update the active scene strip while scrubbing the playhead.

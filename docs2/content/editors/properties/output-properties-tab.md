@@ -45,12 +45,13 @@ To remove a preset click at the - sign behind the name.
 
 ![Presets](/docs2/images/editors/properties/output-properties-tab/presets-2.png)
 
+#### Resolution X / Y
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Resolution X / Y | The dimensions of the image in pixels. % Render the image in per cent of the original image. You can for example render in 200% of the resolution values. Or in 50%. |
-| Aspect X / Y | The image aspect ratio. For anamorphic or non square pixel output. |
+The dimensions of the image in pixels. % Render the image in per cent of the original image. You can for example render in 200% of the resolution values. Or in 50%.
 
+#### Aspect X / Y
+
+The image aspect ratio. For anamorphic or non square pixel output.
 
 ### Render Region
 
@@ -74,12 +75,13 @@ The output frame rate. When you choose custom then two more properties appears.
 
 ![Frame Range Panel](/docs2/images/editors/properties/output-properties-tab/frame-range-panel.png)
 
+### Frame Start / End
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Frame Start / End | The start and end frame for an animation. |
-| Frame Step | Number of frames to skip forward while playing the animation. With a value of 2 every second frame gets skipped. · **FPS**: The custom frame per seconds value. · **Base**: Frame rate base. A multiplier that makes it for example possible to set up 29,97 Frames instead of 30 for NTSC. |
+The start and end frame for an animation.
 
+### Frame Step
+
+Number of frames to skip forward while playing the animation. With a value of 2 every second frame gets skipped. · **FPS**: The custom frame per seconds value. · **Base**: Frame rate base. A multiplier that makes it for example possible to set up 29,97 Frames instead of 30 for NTSC.
 
 ### Time Stretching
 
@@ -87,12 +89,13 @@ The output frame rate. When you choose custom then two more properties appears.
 
 Remap the length of an animation.
 
+#### Old
 
-| Entry | What it does |
-| ----- | --------------- |
-| Old | The old length. |
-| New | The new length. |
+The old length.
 
+#### New
+
+The new length.
 
 ## Stereoscopy Panel
 
@@ -318,23 +321,25 @@ Each file format has some own settings.
 
 ![JPEG](/docs2/images/editors/properties/output-properties-tab/jpeg.png)
 
+###### Color
 
-| Entry | What it does |
-| ------- | ------------------------------------------------- |
-| Color | The output color format. Black and white, or rgb. |
-| Quality | The jpeg quality. |
+The output color format. Black and white, or rgb.
 
+###### Quality
+
+The jpeg quality.
 
 ##### Open EXR
 
 ![Open EXR](/docs2/images/editors/properties/output-properties-tab/open-exr.png)
 
+###### Color
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------- |
-| Color | The output color format. Black and white, rgb, or RGBA. |
-| Color Depth | Float half values or Float full values per channel. |
+The output color format. Black and white, rgb, or RGBA.
 
+###### Color Depth
+
+Float half values or Float full values per channel.
 
 ###### Codec
 
@@ -350,13 +355,17 @@ When rendering animations, save Jpeg preview images into the same directory.
 
 ![PNG](/docs2/images/editors/properties/output-properties-tab/png.png)
 
+###### Color
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Color | The output color format. Black and white, rgb or rgba. |
-| Color Depth | 8 or 16 colors per channel. |
-| Compression | The compression level. |
+The output color format. Black and white, rgb or rgba.
 
+###### Color Depth
+
+8 or 16 colors per channel.
+
+###### Compression
+
+The compression level.
 
 ##### WebP
 
@@ -386,13 +395,17 @@ The output color format. Black and white, rgb, or RGBA.
 
 ![DPX](/docs2/images/editors/properties/output-properties-tab/dpx.png)
 
+###### Color
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------- |
-| Color | The output color format. Black and white, rgb, or RGBA. |
-| Color Depth | 8, 10, 12 or 16 colors per channel. |
-| Log | Convert to logarithmic color space. |
+The output color format. Black and white, rgb, or RGBA.
 
+###### Color Depth
+
+8, 10, 12 or 16 colors per channel.
+
+###### Log
+
+Convert to logarithmic color space.
 
 ##### Iris
 
@@ -406,13 +419,17 @@ The output color format. Black and white, rgb or rgba.
 
 ![JPEG 2000](/docs2/images/editors/properties/output-properties-tab/jpeg-2000.png)
 
+###### Color
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------ |
-| Color | The output color format. Black and white, rgb or rgba. |
-| Color Depth | 8, 12 or 16 colors per channel. |
-| Quality | The jpeg quality. |
+The output color format. Black and white, rgb or rgba.
 
+###### Color Depth
+
+8, 12 or 16 colors per channel.
+
+###### Quality
+
+The jpeg quality.
 
 ###### Codec
 
@@ -420,13 +437,9 @@ The output color format. Black and white, rgb or rgba.
 
 Which jpeg 2000 codec to use.
 
-
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------- |
-| Cinema | Use OpenJpeg Cinema preset. |
-| Cinema (48) | Use OpenJpeg Cinema (48) preset. |
-| YCC | Save luminance / chrominance / chrominance channels instead of rgb channels. |
-
+- **Cinema**: Use OpenJpeg Cinema preset.
+- **Cinema (48)**: Use OpenJpeg Cinema (48) preset.
+- **YCC**: Save luminance / chrominance / chrominance channels instead of rgb channels.
 
 ##### Radiance HDR
 
@@ -440,12 +453,13 @@ The output color format. Black and white, or rgb.
 
 ![TIFF](/docs2/images/editors/properties/output-properties-tab/tiff.png)
 
+###### Color
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------- |
-| Color | The output color format. Black and white, rgb, or RGBA. |
-| Color Depth | 8 or 16 bit per channel. |
+The output color format. Black and white, rgb, or RGBA.
 
+###### Color Depth
+
+8 or 16 bit per channel.
 
 ###### Compression
 
@@ -483,12 +497,13 @@ Float half values or Float full values per channel.
 
 What codec to use.
 
+###### Interleave
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------- |
-| Interleave | Use legacy interleaved storage of views, layers and passes. |
-| Preview | When rendering animations, save Jpeg preview images into the same directory. |
+Use legacy interleaved storage of views, layers and passes.
 
+###### Preview
+
+When rendering animations, save Jpeg preview images into the same directory.
 
 #### Media Type Video
 
@@ -510,12 +525,13 @@ Eevee and Workbench renderer. Render and export the result with transparent back
 
 Only available with video format. These options are unavailable for other file formats.
 
+##### Container
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------- |
-| Container | Video container or file type, including MPEG-4, Matroska, etc |
-| Autosplit Output | Autosplit the exported video file at 2GB boundaries. **Note:** *Useful for longer videos renders* |
+Video container or file type, including MPEG-4, Matroska, etc
 
+##### Autosplit Output
+
+Autosplit the exported video file at 2GB boundaries. **Note:** *Useful for longer videos renders*
 
 ##### Video
 
@@ -557,7 +573,7 @@ For H.264, H.265, and AV1, a 10-bit option is available. Additionally, for H.265
 
 ###### Custom quality
 
-**CRF**
+###### CRF
 
 ![CRF](/docs2/images/editors/properties/output-properties-tab/crf.png)
 
@@ -593,14 +609,10 @@ These settings control how sound is exported when rendering.
 
 Choose the format for audio output. For a complete list, refer to video formats. You can also export with No Audio.
 
-
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Audio Channels | The number of audio outputs: · **Mono:**: One audio channel. · **Stereo:**: Two audio channels (left and right). · **4 Channels:**: Four audio channels. · **5.1 Surround:**: Six audio channels, including one low-frequency effect (LFE) channel. · **7.1 Surround:**: Eight audio channels, including one LFE channel. |
-| Sample Rate | Sets how frequently the audio is sampled, affecting quality. |
-| Bitrate | Controls the sound quality. Higher bit rates give better sound but result in larger files. |
-| Volume | Adjusts the audio output volume. |
-
+- **Audio Channels**: The number of audio outputs: · **Mono:**: One audio channel. · **Stereo:**: Two audio channels (left and right). · **4 Channels:**: Four audio channels. · **5.1 Surround:**: Six audio channels, including one low-frequency effect (LFE) channel. · **7.1 Surround:**: Eight audio channels, including one LFE channel.
+- **Sample Rate**: Sets how frequently the audio is sampled, affecting quality.
+- **Bitrate**: Controls the sound quality. Higher bit rates give better sound but result in larger files.
+- **Volume**: Adjusts the audio output volume.
 
 #### Options subpanel
 
@@ -608,12 +620,13 @@ Choose the format for audio output. For a complete list, refer to video formats.
 
 Not all options are available for all file formats.
 
+##### Saving
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Saving | **File Extensions**: Adds the correct file extensions per file type to the output files. |
-| Cache Result | Saves the rendered image and passes to a Multilayer EXR-file in temporary location on your hard drive. This allows the compositor to read these to improve performance, especially for heavy compositing. |
+**File Extensions**: Adds the correct file extensions per file type to the output files.
 
+##### Cache Result
+
+Saves the rendered image and passes to a Multilayer EXR-file in temporary location on your hard drive. This allows the compositor to read these to improve performance, especially for heavy compositing.
 
 ##### Image Sequence
 
@@ -631,12 +644,13 @@ Create empty placeholder frames while rendering.
 
 ##### Color management settings
 
+###### Follow scene
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Follow scene | Uses the color management from the scene. |
-| Override | Uses the color management settings that is defined below instead of the color management from the scene. This settings is in most parts equal to the color management settings in the render properties. But has no settings for the Sequencer. |
+Uses the color management from the scene.
 
+###### Override
+
+Uses the color management settings that is defined below instead of the color management from the scene. This settings is in most parts equal to the color management settings in the render properties. But has no settings for the Sequencer.
 
 ###### Display
 
@@ -654,18 +668,37 @@ Color management can also be disabled by setting the device to None.
 
 Choose between different ways to view the image on the same monitor.
 
+###### Standard
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard | Does no extra conversion besides the conversion for the display device. |
-| ACES 1,3 - 2.0 | Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping. |
-| Khronos PBR Nuetral | A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization. |
-| AGX | A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation. |
-| Filmic | For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the *Look*option for the Filmic view transform. |
-| Filmic Log | Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas. |
-| Raw | Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion. |
-| False Color | Shows a heat map of image intensities, to visualize the dynamic range. |
+Does no extra conversion besides the conversion for the display device.
 
+###### ACES 1,3 - 2.0
+
+Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.
+
+###### Khronos PBR Nuetral
+
+A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization.
+
+###### AGX
+
+A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation.
+
+###### Filmic
+
+For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the *Look*option for the Filmic view transform.
+
+###### Filmic Log
+
+Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas.
+
+###### Raw
+
+Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion.
+
+###### False Color
+
+Shows a heat map of image intensities, to visualize the dynamic range.
 
 ##### Look
 
@@ -673,12 +706,13 @@ Choose between different ways to view the image on the same monitor.
 
 Adjust the contrast.
 
+###### Exposure
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Exposure | Used to control the image brightness (in stops) applied before color space conversion. The calculation is: output value = render value X 2 exposure |
-| Gamma | Extra gamma correction applied after color space conversion. Note that the default sRGB or Rec709 color space conversions already include a gamma correction of approximately 2.2 (except the *Raw* and *Log* views), so this would be applied in addition to that. |
+Used to control the image brightness (in stops) applied before color space conversion. The calculation is: output value = render value X 2 exposure
 
+###### Gamma
+
+Extra gamma correction applied after color space conversion. Note that the default sRGB or Rec709 color space conversions already include a gamma correction of approximately 2.2 (except the *Raw* and *Log* views), so this would be applied in addition to that.
 
 ##### Use Curves
 
@@ -694,39 +728,35 @@ The single color channels.
 
 The navigation elements at the top are described from left to right.
 
-**Zoom in and out**
+###### Zoom in and out
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-**Clipping**
+###### Clipping
 
 ![Clipping](/docs2/images/editors/properties/output-properties-tab/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-**Delete Points**
+###### Delete Points
 
 Deletes selected curve points.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/properties/output-properties-tab/tools.png)
 
 Tools is a menu that contains some cuve related tools.
 
-
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Extend Horizontal | Causes the curve to stay horizontal before the first point and after the last point. |
-| Extend Extrapolated | Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve. |
-| Reset Curve | Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y | The x and y position of the currently selected curve point. |
-| Delete | Delete the currently selected curve point. |
-
+- **Reset View**: Resets the curve windows zoom.
+- **Extend Horizontal**: Causes the curve to stay horizontal before the first point and after the last point.
+- **Extend Extrapolated**: Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.
+- **Reset Curve**: Resets the curve to the initial shape.
+- **Vector Handle**: Set handle type to Vector.
+- **Auto Handle**: Set handle type to Auto.
+- **Auto Clamped Handle**: Set handle type to Auto Clamped.
+- **X / Y**: The x and y position of the currently selected curve point.
+- **Delete**: Delete the currently selected curve point.
 
 ###### Black Level
 
@@ -738,7 +768,7 @@ The color that Black is mapped to.
 
 The color that White is mapped to.
 
-**Hotkeys for Black and White Level**
+###### Hotkeys for Black and White Level
 
 You may want to sample the black and white level colors directly in the image by clicking at an area. There are hotkeys for that.
 
@@ -782,12 +812,13 @@ Shifts the green–magenta balance:
 
 Cycles only. Enable the rendering of transparent background.
 
+###### Transparent Glass
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| Transparent Glass | Render glass with transparent background. |
-| Roughness Threshold | For transparent transmission. Keep surfaces with roughness above the threshold opaque. |
+Render glass with transparent background.
 
+###### Roughness Threshold
+
+For transparent transmission. Keep surfaces with roughness above the threshold opaque.
 
 ##### Pixel density subpanel
 
@@ -839,14 +870,21 @@ Render the stamp info text into the image. The information is cluttered across t
 
 The props have decorators. This means this information can be keyframed. The font itself is the system font, and cannot be changed.
 
+#### Font Size
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------- |
-| Font Size | The font size. |
-| Text Color | The text color. |
-| Background | The background color of the text. |
-| Include Labels | Display stamp labels like "Camera" in front of camera name, etc. |
+The font size.
 
+#### Text Color
+
+The text color.
+
+#### Background
+
+The background color of the text.
+
+#### Include Labels
+
+Display stamp labels like "Camera" in front of camera name, etc.
 
 ## Post Processing Panel
 
@@ -854,10 +892,10 @@ The props have decorators. This means this information can be keyframed. The fon
 
 Enable Post Processing.
 
+### Pipeline
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pipeline | **Compositing**: Process the pipeline through the compositing in case compositing nodes are enabled. · **Sequencer**: Process the pipeline (and composited result) through the video sequence pipeline in case Sequencer strips exists. |
-| Dither | Amount of dithering noise added to the rendered image to break up banding. This prop has a decorator, and can be keyframe animated. |
+**Compositing**: Process the pipeline through the compositing in case compositing nodes are enabled. · **Sequencer**: Process the pipeline (and composited result) through the video sequence pipeline in case Sequencer strips exists.
 
+### Dither
 
+Amount of dithering noise added to the rendered image to break up banding. This prop has a decorator, and can be keyframe animated.

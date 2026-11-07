@@ -20,12 +20,18 @@ summary: "The Field Weight panel allows you to control how much influence each t
 
 The Field Weight panel allows you to control how much influence each type of external force field, or effector, has on the particle system. Force fields are external forces that give dynamic system’s motion.
 
+### Effector Collection
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Effector Collection | Limit effectors to a specified group. Only effectors in this group will have an effect on the current system. |
-| Gravity | Control how much the Global Gravity has an effect on the system. |
-| All | Scale all of the effector weights. |
-| Force, Vortex, etc. | The influence for the single corresponding effector weights. |
+Limit effectors to a specified group. Only effectors in this group will have an effect on the current system.
 
+### Gravity
 
+Control how much the Global Gravity has an effect on the system.
+
+### All
+
+Scale all of the effector weights.
+
+### Force, Vortex, etc.
+
+The influence for the single corresponding effector weights.

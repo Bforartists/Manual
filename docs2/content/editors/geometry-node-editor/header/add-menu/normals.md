@@ -37,8 +37,10 @@ You can enter the node tree by clicking at the icon up right. Tab to leave the n
 
 Smoothens or sharpens the mesh edges based on the angle between faces.
 
+#### Input
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Input | **Mesh**: The input geometry. · **Angle**: Maximum face angle for smooth edges. · **Ignore Sharpness**: Ignore the sharpness at edges that are set to sharp. |
-| Output | **Geometry**: The output geometry. |
+**Mesh**: The input geometry. · **Angle**: Maximum face angle for smooth edges. · **Ignore Sharpness**: Ignore the sharpness at edges that are set to sharp.
+
+#### Output
+
+**Geometry**: The output geometry.

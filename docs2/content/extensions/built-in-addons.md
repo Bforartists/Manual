@@ -92,12 +92,13 @@ This addon is optional and deactivated by default. This adds a Brush Tab to most
 
 This addon is thanks to Iyad Ahmed and Draise.
 
+#### Create Isocam
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Create Isocam | This addon is activated by default. Add the option to create orthographic iso cameras from the 3D View Add menu. |
-| Default Asset Library | This addon is activated by default. This includes a default asset library shipped with Bforartists. To know more about what this library includes and how to access it, refer to chapter Asset Browser – Default Asset library |
+This addon is activated by default. Add the option to create orthographic iso cameras from the 3D View Add menu.
 
+#### Default Asset Library
+
+This addon is activated by default. This includes a default asset library shipped with Bforartists. To know more about what this library includes and how to access it, refer to chapter Asset Browser – Default Asset library
 
 ### Find and Replace
 
@@ -113,12 +114,13 @@ This addon is thanks to Reiner.
 
 ![Important Hotkeys](/docs2/images/extensions/bforartists-extensions/important-hotkeys.png)
 
+#### Mesh: Mesh Tools – Bforartists version
 
-| Entry | What it does |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mesh: Mesh Tools – Bforartists version | This addon is activated by default. This addon is a default Blender addon that has been modified to work with Bforartists in a better integrated way. |
-| Power User Tools | This addon is optional and deactivated by default. This is an additional set of user experience tools and operators to assist every day use for the power user. |
+This addon is activated by default. This addon is a default Blender addon that has been modified to work with Bforartists in a better integrated way.
 
+#### Power User Tools
+
+This addon is optional and deactivated by default. This is an additional set of user experience tools and operators to assist every day use for the power user.
 
 ### Presentation Slider
 
@@ -134,12 +136,13 @@ This addon is thanks to Draise.
 
 This addon is activated by default. This adds an operator to the interface to reset the view – both accessible in the 3D View – View header menu entry and the optional header buttons to the top right. You can alternatively use the `***` key on the Numpad.
 
+#### Smart Delete
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Smart Delete | This addon is activated by default. This addon improves the user experience of deleting geometry, so that you can save a few clicks every time you want to remove geometry. Now it detects what you have selected and removes it in a predictable way. To use it, press Del on selected geometry. This addon is thanks to Reiner. |
-| User Settings | This addon is activated by default. This stores the toolbar settings. It is **important** that you **do not turn this addon off**, it will break Bforartists functionality. |
+This addon is activated by default. This addon improves the user experience of deleting geometry, so that you can save a few clicks every time you want to remove geometry. Now it detects what you have selected and removes it in a predictable way. To use it, press Del on selected geometry. This addon is thanks to Reiner.
 
+#### User Settings
+
+This addon is activated by default. This stores the toolbar settings. It is **important** that you **do not turn this addon off**, it will break Bforartists functionality.
 
 ### X Ray Weight Paint
 

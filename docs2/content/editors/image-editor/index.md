@@ -65,11 +65,17 @@ There are two different menus. One in Paint mode. And one in Mask mode. The View
 
 A right click in paint mode opens a color picker with some further settings.
 
-| Entry | What it does |
-| ---------- | ---------------------------------- |
-| Blend Mode | Choose the blend mode for drawing. |
-| Radius | The Brush radius. |
-| Strength | The Brush strength. |
+#### Blend Mode
+
+Choose the blend mode for drawing.
+
+#### Radius
+
+The Brush radius.
+
+#### Strength
+
+The Brush strength.
 
 ### Mask context menu
 
@@ -84,6 +90,8 @@ Opens a sub menu where you can choose different handle types.
 ##### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
+
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -105,14 +113,29 @@ A curve has a start point and a end point. Here you can switch them. The end poi
 
 Closes or opens the spline.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Re-Key Shape Points | Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet. |
-| Clear Feather Weight | Resets the scale to its original dimensions. |
-| Reset Feather Animation | Resets the feather weight on all selected curve points at the current frame. |
-| Make Parent | Parents the selected spline points. Mask splines can be parented to motion tracker markers. |
-| Clear Parent | Clears the parent relationship. |
-| Delete | Deletes the selected spline(s) or spline points. |
+##### Re-Key Shape Points
+
+Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet.
+
+##### Clear Feather Weight
+
+Resets the scale to its original dimensions.
+
+##### Reset Feather Animation
+
+Resets the feather weight on all selected curve points at the current frame.
+
+##### Make Parent
+
+Parents the selected spline points. Mask splines can be parented to motion tracker markers.
+
+##### Clear Parent
+
+Clears the parent relationship.
+
+##### Delete
+
+Deletes the selected spline(s) or spline points.
 
 ## Quick Favorites menu
 

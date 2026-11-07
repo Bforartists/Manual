@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - Preferences
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:
@@ -975,7 +975,7 @@ Display the curves in highest quality.
 
 ![Extensions](/docs2/images/editors/preferences/extensions.png)
 
-In this section you can manage the availability of online add-ons and themes. Blender has an online repository with it. And you can download the ones that you need.
+In this section you can manage the availability of online add-ons, asset libraries and themes. Blender has an online repository with it. And you can download the ones that you need.
 
 A theme allows you to customize the colors of the user interface. An extension add-on is external software written by other developers. Add-ons are a way to extend the core functionality of Bforartists. Bforartists already comes with lots of extensions add-ons. Some already activated. Here you can manage them, and add even more extension add-ons if required.
 
@@ -990,6 +990,12 @@ Some addons and themes are included. Some addons and themes can now be downloade
 ### Search Extensions
 
 You need to have online access granted so that you can see and search the available themes and/or addons.
+
+### Type tabs
+
+![Type tabs](/docs2/images/editors/preferences/extensions-type-tabs.png)
+
+The tabs show all extensions, or only **Add-ons**, **Asset Libraries** or **Themes**. Asset Libraries lists the extensions that bring asset libraries.
 
 ### Filter Extensions
 
@@ -1355,6 +1361,70 @@ Refresh the local add-ons. Any probems will be reported.
 The actual list with the addons.
 
 The addons with the warning sign is no error. It marks the bforartists legacy addons that are built in. But may have a conflict with the online version then.
+
+## Asset Libraries
+
+![Asset Libraries](/docs2/images/editors/preferences/asset-libraries.png)
+
+The asset libraries that the Asset Browser and the asset shelves use. In Bforartists 5.3 this section sits in the Extensions group, after Add-ons, because extensions can also provide asset libraries. Before, it was part of File Paths.
+
+To change the path simply type in a path, or use the path picker at the end.
+
+To add a new path to an asset library click at the + button below the list.
+
+To remove a path click at the X button at the end.
+
+### Asset List
+
+The list of available asset libraries. You can deactivate and activate single libraries.
+
+#### Add
+
+Add a new asset library to the asset list.
+
+#### Remove
+
+Remove the selected library from the asset list.
+
+#### Move Up/Down
+
+Move the selected library up or down the list. This is available for remote libraries. The order of the list sets the order in which the libraries appear in the Asset Browser.
+
+#### Path
+
+The path to the current selected asset library.
+
+
+
+### Import Method
+
+![Import Method](/docs2/images/editors/preferences/import-method.png)
+
+How to import the assets from the asset library into the scene.
+
+#### Append (Reuse Data)
+
+Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes.
+
+#### Append
+
+Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data.
+
+#### Link
+
+Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed.
+
+
+### Relative Path
+
+Use relative paths when linking from this library.
+
+### Libraries from extensions
+
+Extensions can bring their own asset libraries, often online ones. They are listed under the extension repository they come from. Their name and URL show **Defined by the extension repository** and can't be edited here, and they use the access token of that repository, so you sign in only once.
+
+You can install an extension that has asset libraries by dropping its ZIP file into Bforartists, like any other extension.
+
 
 ## Themes
 
@@ -2334,63 +2404,6 @@ Enter at least a filepath argument so that the code can be opened by the externa
 #### I18n Branches
 
 The path to the */branches* directory in your local repository translation copy. This allows translating the UI. See interface tab, the translation panel.
-
-### Asset Libraries
-
-![Asset Libraries](/docs2/images/editors/preferences/asset-libraries.png)
-
-The default paths for custom asset libraries. The functionality should be self explaining.
-
-To change the path simply type in a path, or use the path picker at the end.
-
-To add a new path to an asset library click at the + button below the list.
-
-To remove a path click at the X button at the end.
-
-#### Asset List
-
-The list of available asset libraries. You can deactivate and activate single libraries.
-
-##### Add
-
-Add a new asset library to the asset list.
-
-##### Remove
-
-Remove the selected library from the asset list.
-
-##### Move Up/Down
-
-Move the selected library up or down the list. This is available for remote libraries. The order of the list sets the order in which the libraries appear in the Asset Browser.
-
-##### Path
-
-The path to the current selected asset library.
-
-
-
-#### Import Method
-
-![Import Method](/docs2/images/editors/preferences/import-method.png)
-
-How to import the assets from the asset library into the scene.
-
-##### Append (Reuse Data)
-
-Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes.
-
-##### Append
-
-Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data.
-
-##### Link
-
-Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed.
-
-
-#### Relative Path
-
-Use relative paths when linking from this library.
 
 ## Developer Tools
 

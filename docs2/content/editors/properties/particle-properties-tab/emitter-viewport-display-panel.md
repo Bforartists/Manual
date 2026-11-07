@@ -76,12 +76,13 @@ What draw color to use for the particles.
 
 With color mode Velocity and Acceleration. Maximum length of the particle color vector.
 
+##### Amount
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Amount | Percentage of particles to display in the 3d viewport. Choosing a display percentage lower 100 makes dynamics inaccurate without baking. |
-| Show Emitter | Render the particle emitting mesh. |
+Percentage of particles to display in the 3d viewport. Choosing a display percentage lower 100 makes dynamics inaccurate without baking.
 
+##### Show Emitter
+
+Render the particle emitting mesh.
 
 ### Size
 

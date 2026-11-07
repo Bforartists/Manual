@@ -46,17 +46,33 @@ A deflector can also deflect effectors. You can specify some collision/deflector
 
 ### Particle subpanel
 
+#### Permeability
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------- |
-| Permeability | Fraction of particles passing through the mesh. |
-| Stickiness | How much particles stick to the object. |
-| Kill Particles | Deletes Particles upon impact. |
-| Damping | Damping during a collision (independent of the velocity of the particles). |
-| Randomize | Random variation of damping. |
-| Friction | Friction during movements along the surface. |
-| Randomize | Random variation of friction. |
+Fraction of particles passing through the mesh.
 
+#### Stickiness
+
+How much particles stick to the object.
+
+#### Kill Particles
+
+Deletes Particles upon impact.
+
+#### Damping
+
+Damping during a collision (independent of the velocity of the particles).
+
+#### Randomize
+
+Random variation of damping.
+
+#### Friction
+
+Friction during movements along the surface.
+
+#### Randomize
+
+Random variation of friction.
 
 ### Soft Body and Cloth subpanel
 
@@ -64,14 +80,26 @@ It is important to note that this collision panel is used to tell all simulation
 
 > **Note:** The object’s shape deforms the cloth, so the cloth simulation must be inputted the “true” shape of that mesh object at that frame. This true shape is the basis shape as modified by shape keys or armatures. Therefore, the Collision Modifier must be after any of those. The image to the right shows the Modifiers panel for the Character mesh object (not the cloth object).
 
+#### Damping
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Damping | Damping during a collision. The amount of bounce that the surfaces will have. 0.0 - No damping, soft bodies will have a maximum bounciness. 1.0 - Maximum damping, soft bodies will not bounce at all. |
-| Thickness Outer | Size of the outer collision zone. Adds a padding distance to the outside of each face, to help to prevent intersections. The soft body will come to rest at this distance away from the face of the colliding object. Outside and inside is defined by the face normal. |
-| Inner | Size of the inner collision zone (padding distance). Adds a padding distance to the inside of each face, to help to prevent intersections. The soft body will come to rest at this distance away from the face of the colliding object. Outside and inside is defined by the face normal. |
-| Friction | A coefficient for how slippery the cloth is when it collides with itself. For example, silk has a lower coefficient of friction than cotton. |
-| Single Sided | When enabled, cloth collisions are only performed on the normal side of the collider plane. |
-| Override Normals | When enabled, cloth collision impulses act in the direction of the collider normals. |
+Damping during a collision. The amount of bounce that the surfaces will have. 0.0 - No damping, soft bodies will have a maximum bounciness. 1.0 - Maximum damping, soft bodies will not bounce at all.
 
+#### Thickness Outer
 
+Size of the outer collision zone. Adds a padding distance to the outside of each face, to help to prevent intersections. The soft body will come to rest at this distance away from the face of the colliding object. Outside and inside is defined by the face normal.
+
+#### Inner
+
+Size of the inner collision zone (padding distance). Adds a padding distance to the inside of each face, to help to prevent intersections. The soft body will come to rest at this distance away from the face of the colliding object. Outside and inside is defined by the face normal.
+
+#### Friction
+
+A coefficient for how slippery the cloth is when it collides with itself. For example, silk has a lower coefficient of friction than cotton.
+
+#### Single Sided
+
+When enabled, cloth collisions are only performed on the normal side of the collider plane.
+
+#### Override Normals
+
+When enabled, cloth collision impulses act in the direction of the collider normals.

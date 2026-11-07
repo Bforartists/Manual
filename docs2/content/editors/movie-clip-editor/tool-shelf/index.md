@@ -40,11 +40,13 @@ The solve tab contains the tools around the scene side of things. Scene setup, c
 
 The Annotation tab contains the usual Annotation tools to draw and erase strokes. The tools should be self explaining
 
+#### Draw
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Draw | **Draw**: Draw freehand strokes. · **Erase**: Erase strokes. · **Line**: Draw a line by clicking at a starting point and then at the end point. · **Poly**: Draw a polygon by clicking at the places where a corner should be. |
-| Stroke Placement | **View**: Place the strokes relative to the view. · **Cursor**: Place the strokes relative to the cursor. |
+**Draw**: Draw freehand strokes. · **Erase**: Erase strokes. · **Line**: Draw a line by clicking at a starting point and then at the end point. · **Poly**: Draw a polygon by clicking at the places where a corner should be.
+
+#### Stroke Placement
+
+**View**: Place the strokes relative to the view. · **Cursor**: Place the strokes relative to the cursor.
 
 # Tracking Mode
 
@@ -68,12 +70,13 @@ You can see the length of the active movie in the Properties sidebar in the Foot
 
 The default range for tracking is from 1 to 250. But our movie is 295 frames long. Pressing the Set Scene Frames button makes the range going from 1 to 295 here.
 
+#### Prefetch
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------- |
-| Prefetch | Prefetch Frames from disk for faster playback / tracking. |
-| Reload | Reload Clip. |
+Prefetch Frames from disk for faster playback / tracking.
 
+#### Reload
+
+Reload Clip.
 
 ## Track tab - Marker Panel
 
@@ -95,6 +98,8 @@ When enough marcant areas are available then it adds up to eight markers that wa
 
 ![Last Operator Detect Features](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-detect-features.png)
 
+Change the settings of **Detect Features** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Placement
 
 Placement is a drop down box where you can limit the placement of the markers.
@@ -105,25 +110,33 @@ Placement is a drop down box where you can limit the placement of the markers.
 
 The markers can be at every position of the current frame image.
 
+###### Inside Grease Pencil
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------ |
-| Inside Grease Pencil | The markers have to be inside the Grease Pencil. |
-| Outside Grease Pencil | The markers have to be outside Grease Pencil. |
+The markers have to be inside the Grease Pencil.
 
+###### Outside Grease Pencil
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| Margin | Gives a margin to the border of the frame image. Markers have to stay away from the border by the given amount. |
-| Threshold | The threshold level to consider the current position of the marker as good enough for tracking. |
-| Distance | The minimum distance between two markers. |
+The markers have to be outside Grease Pencil.
 
+###### Margin
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add Marker | Adds a marker by hand. First click the tool, then click at the location where you want to place it. You can reposition this marker afterwards by simply clicking at it and move it to a new position. |
-| Enable Markers | Enables the currently selected marker(s). |
+Gives a margin to the border of the frame image. Markers have to stay away from the border by the given amount.
 
+###### Threshold
+
+The threshold level to consider the current position of the marker as good enough for tracking.
+
+###### Distance
+
+The minimum distance between two markers.
+
+###### Add Marker
+
+Adds a marker by hand. First click the tool, then click at the location where you want to place it. You can reposition this marker afterwards by simply clicking at it and move it to a new position.
+
+###### Enable Markers
+
+Enables the currently selected marker(s).
 
 ### Disable Markers
 
@@ -133,16 +146,19 @@ Disables the currently selected marker(s)
 
 ![Last operator Disable Markers](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-disable-markers.png)
 
+Change the settings of **Disable Markers** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Action
 
 Edit box to choose if you want to enable or disable the selected marker(s).
 
+###### Delete Marker
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Delete Marker | Deletes the currently selected marker(s) data. The track stays available. And the marker is still there too. But cleared. |
-| Delete Track | Deletes marker, marker data and track data. |
+Deletes the currently selected marker(s) data. The track stays available. And the marker is still there too. But cleared.
 
+###### Delete Track
+
+Deletes marker, marker data and track data.
 
 ## Track tab - Tracking Settings Panel
 
@@ -186,15 +202,25 @@ Keyframe matches the tracking from the keyframe.
 
 Previous frame matches the tracking from the previous frame. Regardless if there is a keyframe recorded or not.
 
+#### Prepass
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Prepass | Use a Brute Force translation - only initialization when tracking. |
-| Normalize | Normalize light intensities when tracking. |
-| R G B | By default all three colors gets used for calculation. But you can enable or disable specific color range. |
-| Copy from Active Track | Copy tracking settings from active track to default settings |
-| Tracking Settings Extra | Extra settings is a sub menu that contains some not so often used settings. · **Weight**: Influence of newly created track on a final solution. · **Correlation**: Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking. · **Frames Limit**: In every tracking cycle the numbers of given frames are tracked. · **Margin**: Default distance from image boundary at which markers stops tracking. · **Use Mask**: Use a Grease Pencil data block as a mask. |
+Use a Brute Force translation - only initialization when tracking.
 
+#### Normalize
+
+Normalize light intensities when tracking.
+
+#### R G B
+
+By default all three colors gets used for calculation. But you can enable or disable specific color range.
+
+#### Copy from Active Track
+
+Copy tracking settings from active track to default settings
+
+#### Tracking Settings Extra
+
+Extra settings is a sub menu that contains some not so often used settings. · **Weight**: Influence of newly created track on a final solution. · **Correlation**: Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking. · **Frames Limit**: In every tracking cycle the numbers of given frames are tracked. · **Margin**: Default distance from image boundary at which markers stops tracking. · **Use Mask**: Use a Grease Pencil data block as a mask.
 
 ## Track tab - Track Tools Panel
 
@@ -219,6 +245,8 @@ The left button clears the track before the chosen position. The right button cl
 #### Adjust Last Operation - Clear Track Path
 
 ![Last Operator Clear Track Path](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clear-track-path.png)
+
+Change the settings of **Clear Track Path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Action
 
@@ -262,6 +290,8 @@ Averages selected tracks into active.
 
 ![Last Operator Average Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-average-tracks.png)
 
+Change the settings of **Average Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Keep Original
 
 Keep the original track.
@@ -298,14 +328,21 @@ In the sidebar, open the Track tab and the Plane Track panel. Here you can now l
 
 The Solve Panel contains functionality around solving the camera motion.
 
+### Tripod
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tripod | Tripod tracking is a special method to track a stable camera position, and uses special solver. Tripod Motion can be used for footage where the camera does not move and only rotates. Here you can enable Tripod camera tracking. Keyframe A and B are greyed out then. Note that Tripod behaves different from regular solver. More tracks doesn't imply to have more accuracy. 5-10 solver is recommended. |
-| Keyframe | Automatically select Keyframes when solving camera / object motion |
-| Keyframe A | The first keyframe for camera tracking. |
-| Keyframe B | The last keyframe for camera tracking. |
+Tripod tracking is a special method to track a stable camera position, and uses special solver. Tripod Motion can be used for footage where the camera does not move and only rotates. Here you can enable Tripod camera tracking. Keyframe A and B are greyed out then. Note that Tripod behaves different from regular solver. More tracks doesn't imply to have more accuracy. 5-10 solver is recommended.
 
+### Keyframe
+
+Automatically select Keyframes when solving camera / object motion
+
+### Keyframe A
+
+The first keyframe for camera tracking.
+
+### Keyframe B
+
+The last keyframe for camera tracking.
 
 ### Refine
 
@@ -337,6 +374,8 @@ Cleans tracks with high error values or few frames. The tracks or segments in qu
 
 ![Last Operator Clean Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clean-tracks.png)
 
+Change the settings of **Clean Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------ |
@@ -357,6 +396,8 @@ Removes tracks with too high spikes in their motion curve.
 #### Adjust Last Operation - Filter Tracks
 
 ![Last Operator Filter Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-filter-tracks.png)
+
+Change the settings of **Filter Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Track Threshold
 
@@ -392,6 +433,8 @@ Set plane in the 3D space as a Wall plane, based at three selected markers.
 
 ![Last Operator Set Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png)
 
+Change the settings of **Set Plane** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Plane
 
 ![Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/plane.png)
@@ -405,6 +448,8 @@ A drop down box to choose if you want to set the selected markers as plane or as
 Set active marker as origin in 3D space.
 
 #### Adjust Last Operation - Set Origin
+
+Change the settings of **Set Origin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Use Median
 
@@ -422,6 +467,8 @@ Set X axis rotation in 3D space, based at the selected marker. You need to have 
 
 ![Last Operator Set Axis](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png)
 
+Change the settings of **Set Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Axis
 
 A drop down box to choose if you want to use the axis to X or to Y
@@ -433,6 +480,8 @@ Set scale of scene by scaling camera, based at two selected markers. You need to
 #### Adjust Last Operation - Set Scale
 
 ![Last Operator Set Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png)
+
+Change the settings of **Set Scale** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Distance
 
@@ -446,6 +495,8 @@ Apply scale to solution.
 
 ![Last operator Apply Solution Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png)
 
+Change the settings of **Apply Solution Scale** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Distance
 
 The distance between two bundles used for scene scaling.
@@ -458,12 +509,13 @@ The distance between two bundles used for scene scaling. This setting is a pre v
 
 ![Solve tab - Scene Setup Panel](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-scene-setup-panel.png)
 
+### Set as Background
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Set as Background | Sets the current movie as background in the 3D view. You need to be in camera view to see the movie in the background. |
-| Setup Tracking Scene | Prepare Scene for composing 3D objects into this footage. This feature will create a ground plane, which is used for shadow catching in the rendering. |
+Sets the current movie as background in the 3D view. You need to be in camera view to see the movie in the background.
 
+### Setup Tracking Scene
+
+Prepare Scene for composing 3D objects into this footage. This feature will create a ground plane, which is used for shadow catching in the rendering.
 
 ## Annotation tab
 
@@ -477,11 +529,22 @@ Further settings for annotations can be found in the sidebar. Here you can also 
 
 ### Draw:
 
+#### Draw
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Draw | Draw free-hand strokes in the main window. |
-| Erase | Activate the eraser brush. |
-| Line | Click and drag to create a line. |
-| Poly | Click multiple times to create multiple connected lines. The current polygon is finished when Esc or RMB is pressed. When you hold down the right mouse button then you can activate and use the eraser tool to remove parts of the polygon again. |
-| Stroke Placement | If the stroke should stick to the View or the Image. |
+Draw free-hand strokes in the main window.
+
+#### Erase
+
+Activate the eraser brush.
+
+#### Line
+
+Click and drag to create a line.
+
+#### Poly
+
+Click multiple times to create multiple connected lines. The current polygon is finished when Esc or RMB is pressed. When you hold down the right mouse button then you can activate and use the eraser tool to remove parts of the polygon again.
+
+#### Stroke Placement
+
+If the stroke should stick to the View or the Image.

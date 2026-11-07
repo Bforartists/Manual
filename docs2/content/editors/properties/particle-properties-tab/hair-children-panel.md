@@ -42,19 +42,41 @@ No children are generated. No settings.
 
 Children are emitted from the parent position.
 
+#### Display Amount
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Display Amount | The number of children in the 3D Viewport. |
-| Render Amount | The number of children to be rendered. |
-| Length | Length of child paths. |
-| Threshold | Amount of particles left untouched by child path length. |
-| Seed | Offset in the random number table for child particles, to get a different randomized result. |
-| Size | A multiplier for children size. |
-| Random Size | Random variation to the size of child particles |
-| Radius | The radius in which the children are distributed around their parents. This is 3D, so children may be emitted higher or lower than their parents. |
-| Roundness | The roundness of the children around their parents. Either in a sphere (1.0) or in-plane (0.0). |
+The number of children in the 3D Viewport.
 
+#### Render Amount
+
+The number of children to be rendered.
+
+#### Length
+
+Length of child paths.
+
+#### Threshold
+
+Amount of particles left untouched by child path length.
+
+#### Seed
+
+Offset in the random number table for child particles, to get a different randomized result.
+
+#### Size
+
+A multiplier for children size.
+
+#### Random Size
+
+Random variation to the size of child particles
+
+#### Radius
+
+The radius in which the children are distributed around their parents. This is 3D, so children may be emitted higher or lower than their parents.
+
+#### Roundness
+
+The roundness of the children around their parents. Either in a sphere (1.0) or in-plane (0.0).
 
 ## Children panel - Type Simple - Clumping subpanel
 
@@ -68,12 +90,13 @@ Clumping allows as the name says to break the even look, and clump particles tog
 
 Use a Curve instead of parameters to adjust the clumping.
 
+#### Adding Points
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding Points | You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it. |
-| Selecting Points | You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location. |
+You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
+#### Selecting Points
+
+You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
 #### Navigation elements
 
@@ -89,25 +112,49 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 Clipping options. Set up clipping for the stroke.
 
+###### Delete Points
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Points | Deletes selected curve points. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y values | The x and y position of the current selected curve point. |
-| Delete Points | Delete the current selected curve point. |
-| Twist | Number of turns around parent along the strand. |
+Deletes selected curve points.
 
+###### Tools
 
-| Entry | What it does |
-| ----- | --------------------------------------------------------------------------------------------------------------------- |
-| Clump | Clumping amount along child strands. The children may meet at their tip (1.0) or start together at their root (-1.0). |
-| Shape | Form of Clump. Either inverse parabolic (0.99) or exponentially (-0.99). |
-| Twist | Number of turn around parent along the strand. |
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape.
 
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y values
+
+The x and y position of the current selected curve point.
+
+###### Delete Points
+
+Delete the current selected curve point.
+
+###### Twist
+
+Number of turns around parent along the strand.
+
+###### Clump
+
+Clumping amount along child strands. The children may meet at their tip (1.0) or start together at their root (-1.0).
+
+###### Shape
+
+Form of Clump. Either inverse parabolic (0.99) or exponentially (-0.99).
+
+###### Twist
+
+Number of turn around parent along the strand.
 
 ### Use Clump Curve
 
@@ -115,12 +162,13 @@ Clipping options. Set up clipping for the stroke.
 
 Use a Curve instead of parameters to adjust the clumping.
 
+#### Adding Points
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding Points | You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it. |
-| Selecting Points | You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location. |
+You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
+#### Selecting Points
+
+You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
 #### Navigation elements
 
@@ -136,17 +184,33 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 Clipping options. Set up clipping for the stroke.
 
+###### Delete Points
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Points | Deletes selected curve points. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y values | The x and y position of the current selected curve point. |
-| Delete Points | Delete the current selected curve point. |
+Deletes selected curve points.
 
+###### Tools
+
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape.
+
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y values
+
+The x and y position of the current selected curve point.
+
+###### Delete Points
+
+Delete the current selected curve point.
 
 ## Children panel - Type Simple - Clump Noise subpanel
 
@@ -170,12 +234,13 @@ Give the particles a roughness.
 
 Use Curve Widget instead of parameters.
 
+#### Adding Points
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding Points | You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it. |
-| Selecting Points | You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location. |
+You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
+#### Selecting Points
+
+You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
 #### Navigation elements
 
@@ -191,17 +256,33 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 Clipping options. Set up clipping for the stroke.
 
+###### Delete Points
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Points | Deletes selected curve points. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y values | The x and y position of the current selected curve point. |
-| Delete Points | Delete the current selected curve point. |
+Deletes selected curve points.
 
+###### Tools
+
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape.
+
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y values
+
+The x and y position of the current selected curve point.
+
+###### Delete Points
+
+Delete the current selected curve point.
 
 ### Roughness
 
@@ -209,18 +290,37 @@ Clipping options. Set up clipping for the stroke.
 
 Amount of location dependent roughness.
 
+#### Size
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Size | Size of location dependent roughness. |
-| Uniform | “Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic). |
-| Size | It is based on children location so it varies the paths in a similar way when the children are near. |
-| Endpoint | “Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic). |
-| Shape | “Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic). |
-| Random | It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do. |
-| Size | It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do. |
-| Threshold | It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do. |
+Size of location dependent roughness.
 
+#### Uniform
+
+“Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic).
+
+#### Size
+
+It is based on children location so it varies the paths in a similar way when the children are near.
+
+#### Endpoint
+
+“Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic).
+
+#### Shape
+
+“Rough End” randomizes path ends (a bit like random negative clumping). Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic).
+
+#### Random
+
+It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do.
+
+#### Size
+
+It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do.
+
+#### Threshold
+
+It is based on a random vector so it is not the same for nearby children. The threshold can be specified to apply this to only a part of children. This is useful for creating a few stray children that will not do what others do.
 
 ## Children panel - Type Simple + Interpolated - Kink subpanel
 
@@ -248,15 +348,25 @@ Wave - Children form a wave, all in the same direction.
 
 Braid - Children braid themselves around the parent hair.
 
+##### Amplitude
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------- |
-| Amplitude | The amplitude of the offset. |
-| Clump | How much clump effects kink amplitude. |
-| Flatness | How flat the hairs are. |
-| Frequency | The frequency of the offset (1/total length). The higher the frequency the more rotations are done. |
-| Shape | Where the rotation starts (offset of rotation). |
+The amplitude of the offset.
 
+##### Clump
+
+How much clump effects kink amplitude.
+
+##### Flatness
+
+How flat the hairs are.
+
+##### Frequency
+
+The frequency of the offset (1/total length). The higher the frequency the more rotations are done.
+
+##### Shape
+
+Where the rotation starts (offset of rotation).
 
 #### Spiral
 
@@ -264,12 +374,13 @@ Braid - Children braid themselves around the parent hair.
 
 Generates a spiral at the end of each hair.
 
+##### Amplitude
 
-| Entry | What it does |
-| ------------------- | -------------------------------------- |
-| Amplitude | The amplitude of the offset. |
-| Randomize Amplitude | Give the amplitude a random variation. |
+The amplitude of the offset.
 
+##### Randomize Amplitude
+
+Give the amplitude a random variation.
 
 ##### Axis
 
@@ -277,14 +388,21 @@ Generates a spiral at the end of each hair.
 
 Which axis to use for offset.
 
+###### Randomize Axis
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------- |
-| Randomize Axis | Randomize the orientation. |
-| Frequency | The frequency of the offset (1/total length). The higher the frequency the more rotations are done. |
-| Shape | Where the rotation starts (offset of rotation). |
-| Steps | Extra steps for resolution of special kink features. |
+Randomize the orientation.
 
+###### Frequency
+
+The frequency of the offset (1/total length). The higher the frequency the more rotations are done.
+
+###### Shape
+
+Where the rotation starts (offset of rotation).
+
+###### Steps
+
+Extra steps for resolution of special kink features.
 
 ## Children panel - Type Interpolated
 
@@ -292,17 +410,33 @@ Which axis to use for offset.
 
 Children are emitted between the Parent particles on the faces of a mesh. They interpolate between adjacent parents. This is especially useful for fur, because you can achieve an even distribution. Some of the children can become virtual parents, which are influencing other particles nearby.
 
+### Display Amount
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------- |
-| Display Amount | The number of children in the 3D Viewport. |
-| Render Amount | The number of children to be rendered. |
-| Length | Length of child paths. |
-| Threshold | Amount of particles left untouched by child path length. |
-| Seed | Offset in the random number table for child particles, to get a different randomized result. |
-| Virtual Parents | Relative Amount of virtual parents. |
-| Long Hair | Belongs to Hair particles. Calculate children that suit long hair well. |
+The number of children in the 3D Viewport.
 
+### Render Amount
+
+The number of children to be rendered.
+
+### Length
+
+Length of child paths.
+
+### Threshold
+
+Amount of particles left untouched by child path length.
+
+### Seed
+
+Offset in the random number table for child particles, to get a different randomized result.
+
+### Virtual Parents
+
+Relative Amount of virtual parents.
+
+### Long Hair
+
+Belongs to Hair particles. Calculate children that suit long hair well.
 
 ## Children panel - Type Interpolated - Parting subpanel
 
@@ -310,13 +444,17 @@ Children are emitted between the Parent particles on the faces of a mesh. They i
 
 This panel belongs to Hair particles.
 
+### Parting
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------- |
-| Parting | Creates parting in the children based on parent strands. |
-| Min | Minimum root to tip angle. Tip distance / root distance for long hair. |
-| Max | Maximum root to tip angle. Tip distance / root distance for long hair. |
+Creates parting in the children based on parent strands.
 
+### Min
+
+Minimum root to tip angle. Tip distance / root distance for long hair.
+
+### Max
+
+Maximum root to tip angle. Tip distance / root distance for long hair.
 
 ## Children panel - Type Interpolated - Clumping subpanel
 
@@ -330,12 +468,13 @@ Clumping allows as the name says to break the even look, and clump particles tog
 
 Use a Curve instead of parameters to adjust the clumping.
 
+#### Adding Points
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding Points | You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it. |
-| Selecting Points | You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location. |
+You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
+#### Selecting Points
+
+You can select curve points by clicking at them. Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
 #### Navigation elements
 
@@ -351,23 +490,41 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 Clipping options. Set up clipping for the stroke.
 
+###### Delete Points
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Points | Deletes selected curve points. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y values | The x and y position of the current selected curve point. |
-| Delete Points | Delete the current selected curve point. |
+Deletes selected curve points.
 
+###### Tools
 
-| Entry | What it does |
-| ----- | --------------------------------------------------------------------------------------------------------------------- |
-| Clump | Clumping amount along child strands. The children may meet at their tip (1.0) or start together at their root (-1.0). |
-| Shape | Form of Clump. Either inverse parabolic (0.99) or exponentially (-0.99). |
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extend the curve horizontally before the first and after the last curve point. · **Extend vertical**: Extend the curve vertically before the first and after the last curve point. · **Reset Curve**: Resets the curve to the initial shape.
 
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y values
+
+The x and y position of the current selected curve point.
+
+###### Delete Points
+
+Delete the current selected curve point.
+
+###### Clump
+
+Clumping amount along child strands. The children may meet at their tip (1.0) or start together at their root (-1.0).
+
+###### Shape
+
+Form of Clump. Either inverse parabolic (0.99) or exponentially (-0.99).
 
 ### Clump Noise subpanel
 

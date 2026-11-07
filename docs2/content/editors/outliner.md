@@ -93,13 +93,17 @@ Centers the view of the list to the active object.
 
 Expands the list hierarchy level by one.
 
+##### Hide One Level
 
-| Entry | What it does |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hide One Level | Collapses the list hierarchy level by one. |
-| Expand / Collapse All | Expands or collapses all collapsed hierarchy. It's a toggle |
-| Show Hierarchy | Open all object entries and close all others. For example, when you are in Scene view, and have the objects expanded, then the Show Hierarchy closes the objects hierarchy. |
+Collapses the list hierarchy level by one.
 
+##### Expand / Collapse All
+
+Expands or collapses all collapsed hierarchy. It's a toggle
+
+##### Show Hierarchy
+
+Open all object entries and close all others. For example, when you are in Scene view, and have the objects expanded, then the Show Hierarchy closes the objects hierarchy.
 
 #### Box Select
 
@@ -107,13 +111,17 @@ Expands the list hierarchy level by one.
 
 Box select items in the list.
 
+##### Select All
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------ |
-| Select All | Select all items in the list. |
-| Deselect All | Deselect all items in the list. |
-| Invert Selection | Inverts the selection. Unselected list items becomes selected, selected list items becomes unselected. |
+Select all items in the list.
 
+##### Deselect All
+
+Deselect all items in the list.
+
+##### Invert Selection
+
+Inverts the selection. Unselected list items becomes selected, selected list items becomes unselected.
 
 #### Manage Unused Data
 
@@ -133,15 +141,25 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 Area is a menu with window related settings.
 
+##### Horizontal Split
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal Split | Splits the editor horizontally into two editors. |
-| Vertical Split | Splits the editor vertically into two editors. |
-| Duplicate Area into new Window | Creates a floating window out of the current editor |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu. |
-| Toggle Fullscreen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner. |
+Splits the editor horizontally into two editors.
 
+##### Vertical Split
+
+Splits the editor vertically into two editors.
+
+##### Duplicate Area into new Window
+
+Creates a floating window out of the current editor
+
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.
+
+##### Toggle Fullscreen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.
 
 #### Close Area
 
@@ -165,14 +183,21 @@ The Outliner comes with various right click functionality, dependent at what dat
 
 This menu appears when you right click at a scene in Scene mode.
 
+#### Delete
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete | Deletes the currently selected scene. |
-| Copy Settings | Creates an empty scene but also copies the settings from the active scene into the new one. |
-| Linked Copy | This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true. |
-| Full Copy | Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well. |
+Deletes the currently selected scene.
 
+#### Copy Settings
+
+Creates an empty scene but also copies the settings from the active scene into the new one.
+
+#### Linked Copy
+
+This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true.
+
+#### Full Copy
+
+Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.
 
 #### Mark as Asset, Clear Asset, Clear Asset (Set Fake User)
 
@@ -192,14 +217,21 @@ This menu appears at various object types and when you for example right click a
 
 Select the current element.
 
+##### Deselect
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------- |
-| Deselect | Deselect the current element. |
-| Hide | Hides the current element. |
-| Unhide | Unhides the current element. |
-| Select Linked | Does not show on all objects and tree elements. Selects the linked elements. |
+Deselect the current element.
 
+##### Hide
+
+Hides the current element.
+
+##### Unhide
+
+Unhides the current element.
+
+##### Select Linked
+
+Does not show on all objects and tree elements. Selects the linked elements.
 
 #### Mark as Asset, Clear Asset, Clear Asset (Set Fake User)
 
@@ -213,22 +245,53 @@ Scenes, Collections, Objects, Brushes, Materials, Nodegroups and Worlds can be m
 
 This menu appears when you right click at a collection. Clicking at a Scene collection will have not this much entries than licking at the Collection item lower in the hierarchy.
 
+#### New Nested
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| New Nested | Create a new nested collection. There is no difference. Both gets added in the selected collection as a child, and the functionality is the same. Ask the Blender developers what they did here. |
-| New | Create a new scene collection. |
-| Duplicate Collection | Duplicates the currently selected collection, all its children, objects and the object data. |
-| Duplicate Linked | Recursively duplicate the selected collection, all its children and objects, including linked object data. |
-| Copy | Copies the collection. |
-| Paste | Pastes a copied collection. |
-| Delete | Delete the collection. Objects in the hierarchy will remain. |
-| Delete Hierarchy | Delete the collection. Objects in the hierarchy will be deleted too. |
-| Select Objects | Select the objects in the collection. |
-| Deselect Objects | Deselect the objects in the collection. |
-| Instance to Scene | Instance selected collections to the active scene. |
-| Unlink | Unlink selected collections from the active scene. |
+Create a new nested collection. There is no difference. Both gets added in the selected collection as a child, and the functionality is the same. Ask the Blender developers what they did here.
 
+#### New
+
+Create a new scene collection.
+
+#### Duplicate Collection
+
+Duplicates the currently selected collection, all its children, objects and the object data.
+
+#### Duplicate Linked
+
+Recursively duplicate the selected collection, all its children and objects, including linked object data.
+
+#### Copy
+
+Copies the collection.
+
+#### Paste
+
+Pastes a copied collection.
+
+#### Delete
+
+Delete the collection. Objects in the hierarchy will remain.
+
+#### Delete Hierarchy
+
+Delete the collection. Objects in the hierarchy will be deleted too.
+
+#### Select Objects
+
+Select the objects in the collection.
+
+#### Deselect Objects
+
+Deselect the objects in the collection.
+
+#### Instance to Scene
+
+Instance selected collections to the active scene.
+
+#### Unlink
+
+Unlink selected collections from the active scene.
 
 #### Visibility
 
@@ -236,13 +299,17 @@ This menu appears when you right click at a collection. Clicking at a Scene coll
 
 Visibility is a sub menu with some visibility functionality. The greyed out menu items will become available when the functionality becomes available. For example, Show becomes available when something is hidden.
 
+##### Isolate
 
-| Entry | What it does |
-| --------------- | --------------------------------------------- |
-| Isolate | Hide all but this collection and its parents. |
-| Show All Inside | Reveals the collection and all its content. |
-| Hide | Hides the collection. |
+Hide all but this collection and its parents.
 
+##### Show All Inside
+
+Reveals the collection and all its content.
+
+##### Hide
+
+Hides the collection.
 
 #### Set Color Tag
 
@@ -280,19 +347,12 @@ This tool works different from Make Override in the outliner. It does not iterat
 
 Library Overrides is the new system designed to replace and supersede Proxies. Most types of linked data-blocks can be overridden, and the properties of those overrides can then be edited. When the library data change, unmodified properties of the override one will be updated accordingly.
 
+- **Make Single User**: For duplicated content. Makes the data block of the selected object a single user.
+- **Delete**: Not functional in all situations. In the Unused Data mode you can remove objects with this.
+- **Remap Users**: Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Single User | For duplicated content. Makes the data block of the selected object a single user. |
-| Delete | Not functional in all situations. In the Unused Data mode you can remove objects with this. |
-| Remap Users | Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one. |
-
-
-| Entry | What it does |
-| ----- | -------------------------------- |
-| Copy | Copies the user data block. |
-| Paste | Pastes a copied user data block. |
-
+- **Copy**: Copies the user data block.
+- **Paste**: Pastes a copied user data block.
 
 #### Make Library Override
 
@@ -300,13 +360,17 @@ Library Overrides is the new system designed to replace and supersede Proxies. M
 
 Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.
 
+##### Selected
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------- |
-| Selected | Add a library override to the selected collection. |
-| Content | Add a library override to the content of the selected collection. |
-| Selected & Content | Add a library override to both, the content of the selected collection, and the selected collection. |
+Add a library override to the selected collection.
 
+##### Content
+
+Add a library override to the content of the selected collection.
+
+##### Selected & Content
+
+Add a library override to both, the content of the selected collection, and the selected collection.
 
 #### Reset Library Override
 
@@ -314,13 +378,17 @@ Library Overrides is a system designed to allow editing linked data, while keepi
 
 Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.
 
+##### Selected
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------ |
-| Selected | Reset a library override to the selected collection. |
-| Content | Reset a library override to the content of the selected collection. |
-| Selected & Content | Reset a library override to both, the content of the selected collection, and the selected collection. |
+Reset a library override to the selected collection.
 
+##### Content
+
+Reset a library override to the content of the selected collection.
+
+##### Selected & Content
+
+Reset a library override to both, the content of the selected collection, and the selected collection.
 
 #### Clear Library Override
 
@@ -328,13 +396,17 @@ Library Overrides is a system designed to allow editing linked data, while keepi
 
 Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.
 
+##### Selected
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------- |
-| Selected | Clear the library override to the selected collection. |
-| Content | Clear the library override to the content of the selected collection. |
-| Selected & Content | Clear the library override to both, the content of the selected collection, and the selected collection. |
+Clear the library override to the selected collection.
 
+##### Content
+
+Clear the library override to the content of the selected collection.
+
+##### Selected & Content
+
+Clear the library override to both, the content of the selected collection, and the selected collection.
 
 #### Troubleshoot Library Override
 
@@ -342,20 +414,29 @@ Library Overrides is a system designed to allow editing linked data, while keepi
 
 Troubleshoot library Override operators are useful to help syncronize or remove overrides without needing to reload scene or the linked file.
 
+##### Resync
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------- |
-| Resync | Rebuild the selected library overrides. |
-| Resync Enforce | Rebuild the selected library overrides, enforcing libraries to match the linked data. |
-| Delete | Delete the selected local library overrides. And relink the usage to the selected data. |
+Rebuild the selected library overrides.
 
+##### Resync Enforce
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Mark as Asset | Adds the collection to the asset library. |
-| Clear Asset | Removes the collection from the asset library. |
-| Clear Asset (Set Fake User) | Removes the collection from the asset library. But marks it with a fake user so that it remains in the scene. |
+Rebuild the selected library overrides, enforcing libraries to match the linked data.
 
+##### Delete
+
+Delete the selected local library overrides. And relink the usage to the selected data.
+
+##### Mark as Asset
+
+Adds the collection to the asset library.
+
+##### Clear Asset
+
+Removes the collection from the asset library.
+
+##### Clear Asset (Set Fake User)
+
+Removes the collection from the asset library. But marks it with a fake user so that it remains in the scene.
 
 ### Object Menu
 
@@ -363,22 +444,53 @@ Troubleshoot library Override operators are useful to help syncronize or remove 
 
 This menu appears when you click at an object type. A mesh, a lamp, a camera ...
 
+#### Select
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Select | Selects the object. |
-| Select Hierarchy | Selects the object and its hierarchy. |
-| Deselect | Deselects the object. |
-| Duplicate | Duplicates the currently selected object and the object data. |
-| Duplicate Linked | Duplicates the selected objec, including linked object data. |
-| Copy | Copies object. |
-| Paste | Pastes copied object. |
-| Delete | Deletes the selected object. Child objects gets unparented. |
-| Delete Hierarchy | Deletes the selected object and all its child objects. |
-| Unlink | Deletes the selected object. |
-| Make Library Override | Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · **Selected**: Add a library override to the selected collection. · **Content**: Add a library override to the content of the selected collection. · **Selected & Content**: Add a library override to both, the content of the selected collection, and the selected collection. |
-| Reset Library Override | Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · **Selected**: Reset a library override to the selected collection. · **Content**: Reset a library override to the content of the selected collection. · **Selected & Content**: Reset a library override to both, the content of the selected collection, and the selected collection. |
+Selects the object.
 
+#### Select Hierarchy
+
+Selects the object and its hierarchy.
+
+#### Deselect
+
+Deselects the object.
+
+#### Duplicate
+
+Duplicates the currently selected object and the object data.
+
+#### Duplicate Linked
+
+Duplicates the selected objec, including linked object data.
+
+#### Copy
+
+Copies object.
+
+#### Paste
+
+Pastes copied object.
+
+#### Delete
+
+Deletes the selected object. Child objects gets unparented.
+
+#### Delete Hierarchy
+
+Deletes the selected object and all its child objects.
+
+#### Unlink
+
+Deletes the selected object.
+
+#### Make Library Override
+
+Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · **Selected**: Add a library override to the selected collection. · **Content**: Add a library override to the content of the selected collection. · **Selected & Content**: Add a library override to both, the content of the selected collection, and the selected collection.
+
+#### Reset Library Override
+
+Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · **Selected**: Reset a library override to the selected collection. · **Content**: Reset a library override to the content of the selected collection. · **Selected & Content**: Reset a library override to both, the content of the selected collection, and the selected collection.
 
 #### Clear Library Override
 
@@ -386,13 +498,17 @@ This menu appears when you click at an object type. A mesh, a lamp, a camera ...
 
 Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.
 
+##### Selected
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------- |
-| Selected | Clear the library override to the selected collection. |
-| Content | Clear the library override to the content of the selected collection. |
-| Selected & Content | Clear the library override to both, the content of the selected collection, and the selected collection. |
+Clear the library override to the selected collection.
 
+##### Content
+
+Clear the library override to the content of the selected collection.
+
+##### Selected & Content
+
+Clear the library override to both, the content of the selected collection, and the selected collection.
 
 #### Troubleshoot Library Override
 
@@ -400,20 +516,29 @@ Library Overrides is a system designed to allow editing linked data, while keepi
 
 Troubleshoot library Override operators are useful to help syncronize or remove overrides without needing to reload scene or the linked file.
 
+##### Resync
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------- |
-| Resync | Rebuild the selected library overrides. |
-| Resync Enforce | Rebuild the selected library overrides, enforcing libraries to match the linked data. |
-| Delete | Delete the selected local library overrides. And relink the usage to the selected data. |
+Rebuild the selected library overrides.
 
+##### Resync Enforce
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Mark as Asset | Adds the collection to the asset library. |
-| Clear Asset | Removes the collection from the asset library. |
-| Clear Asset (Set Fake User) | Removes the collection from the asset library. But marks it as fake user so that it remains in the scene. |
+Rebuild the selected library overrides, enforcing libraries to match the linked data.
 
+##### Delete
+
+Delete the selected local library overrides. And relink the usage to the selected data.
+
+##### Mark as Asset
+
+Adds the collection to the asset library.
+
+##### Clear Asset
+
+Removes the collection from the asset library.
+
+##### Clear Asset (Set Fake User)
+
+Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.
 
 #### ID Data
 
@@ -421,15 +546,25 @@ Troubleshoot library Override operators are useful to help syncronize or remove 
 
 Data related operations. Note that the tool tips are currently missing here.
 
+##### Unlink
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unlink | Does basically the same than delete. It unlinks all data, and removes the object from the scene. |
-| Make Local | For appended or linked data. Makes the selected object a local copy in the current blend file. |
-| Make Single User | For duplicated content. Makes the data block of the selected object a single user. |
-| Delete | Not functional in all situations. In the Unused Data mode you can remove objects with this. |
-| Remap Users | Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one. |
+Does basically the same than delete. It unlinks all data, and removes the object from the scene.
 
+##### Make Local
+
+For appended or linked data. Makes the selected object a local copy in the current blend file.
+
+##### Make Single User
+
+For duplicated content. Makes the data block of the selected object a single user.
+
+##### Delete
+
+Not functional in all situations. In the Unused Data mode you can remove objects with this.
+
+##### Remap Users
+
+Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.
 
 #### Copy
 
@@ -439,14 +574,21 @@ Copies ID data.
 
 Pastes copied ID data.
 
+##### Add Fake User
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add Fake User | Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Clear Fake User | Removes the fake user from the selected object. |
-| Rename | Rename the object in the outliner. |
-| Select Linked | Selects all objects that are linked to the currently selected one. |
+Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
 
+##### Clear Fake User
+
+Removes the fake user from the selected object.
+
+##### Rename
+
+Rename the object in the outliner.
+
+##### Select Linked
+
+Selects all objects that are linked to the currently selected one.
 
 ### Outliner ID Data Operation
 
@@ -454,21 +596,49 @@ Pastes copied ID data.
 
 This menu appears when you for example click at the mesh component of a mesh object. It is the same content than the ID Data menu from the Object menu.
 
+#### Unlink
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unlink | Does basically the same than delete. It unlinks all data, and removes the object from the scene. |
-| Make Local | For appended or linked data. Makes the selected object a local copy in the current blend file. |
-| Delete | Not functional in all situations. In the Unused Data mode you can remove objects with this. |
-| Remap Users | Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one. |
-| Copy | Copies ID data. |
-| Paste | Pastes copied ID data. |
-| Add Fake User | Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Clear Fake User | Removes the fake user from the selected object. |
-| Rename | Rename the object in the outliner. |
-| Select Linked | Selects all objects that are linked to the currently selected one. |
-| Relocate | Allows you to replace a **linked data-block** (such as an object, material, or collection) with another one—either from the same library or a different external file. This is especially useful when updating asset paths, switching to newer versions, or resolving broken links. **Note:** *This is only available for linked data from external files.* |
+Does basically the same than delete. It unlinks all data, and removes the object from the scene.
 
+#### Make Local
+
+For appended or linked data. Makes the selected object a local copy in the current blend file.
+
+#### Delete
+
+Not functional in all situations. In the Unused Data mode you can remove objects with this.
+
+#### Remap Users
+
+Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.
+
+#### Copy
+
+Copies ID data.
+
+#### Paste
+
+Pastes copied ID data.
+
+#### Add Fake User
+
+Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+#### Clear Fake User
+
+Removes the fake user from the selected object.
+
+#### Rename
+
+Rename the object in the outliner.
+
+#### Select Linked
+
+Selects all objects that are linked to the currently selected one.
+
+#### Relocate
+
+Allows you to replace a **linked data-block** (such as an object, material, or collection) with another one—either from the same library or a different external file. This is especially useful when updating asset paths, switching to newer versions, or resolving broken links. **Note:** *This is only available for linked data from external files.*
 
 ### Outliner Animation Data Property
 
@@ -488,13 +658,17 @@ Removes the whole animation.
 
 Opens a popup menu where you can choose the action for this object.
 
+##### Unlink Action
 
-| Entry | What it does |
-| --------------- | --------------------------- |
-| Unlink Action | Removes the action. |
-| Refresh Drivers | Refreshes existing drivers. |
-| Clear Drivers | Removes existing drivers. |
+Removes the action.
 
+##### Refresh Drivers
+
+Refreshes existing drivers.
+
+##### Clear Drivers
+
+Removes existing drivers.
 
 ### Outliner Modifier Operation
 
@@ -502,17 +676,33 @@ Opens a popup menu where you can choose the action for this object.
 
 This menu appears with a right click on modifiers.
 
+#### Apply
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Apply | Applies the modifier. |
-| Delete | Removes the modifier. |
-| Toggle Viewport Use | Toggles the visibility of the modifier in viewport. |
-| Toggle Render Use | Toggles the visibility of the modifier on render time. |
-| Mark as Asset | Adds the collection to the asset library. |
-| Clear Asset | Removes the collection from the asset library. |
-| Clear Asset (Set Fake User) | Removes the collection from the asset library. But marks it as fake user so that it remains in the scene. |
+Applies the modifier.
 
+#### Delete
+
+Removes the modifier.
+
+#### Toggle Viewport Use
+
+Toggles the visibility of the modifier in viewport.
+
+#### Toggle Render Use
+
+Toggles the visibility of the modifier on render time.
+
+#### Mark as Asset
+
+Adds the collection to the asset library.
+
+#### Clear Asset
+
+Removes the collection from the asset library.
+
+#### Clear Asset (Set Fake User)
+
+Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.
 
 ## Level Restrictions
 
@@ -520,13 +710,17 @@ This menu appears with a right click on modifiers.
 
 Some list items have so called level restrictions. You can click at them, and so exclude the object from specific things. You can make more level restrictions available in the filter settings, which will be covered below. The by default activated are:
 
+### Selectability
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------- |
-| Selectability | Makes the object unselectable in the viewport. Or disables it, in case of a collection for example. |
-| Hide from Viewport | Hides the object from the Viewport. |
-| Hide from Render | Excludes the object from rendering. |
+Makes the object unselectable in the viewport. Or disables it, in case of a collection for example.
 
+### Hide from Viewport
+
+Hides the object from the Viewport.
+
+### Hide from Render
+
+Excludes the object from rendering.
 
 ## Scenes Mode
 
@@ -554,6 +748,8 @@ By clicking at this menu item a popup will appear to choose the new collection. 
 
 ![Last Operator Move to Collection](/docs2/images/editors/outliner/last-operator-move-to-collection.png)
 
+Change the settings of **Move to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Name
 
 Set a name for your new collection. When you haven't created a new collection, then this name stays blank.
@@ -572,18 +768,16 @@ By clicking at this menu item a popup will appear to choose the collection. Here
 
 ![Last Operator Link to Collection](/docs2/images/editors/outliner/last-operator-link-to-collection.png)
 
+Change the settings of **Link to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Name
 
 Set a name for your new collection. When you haven't created a new collection, then this name stays blank.
 
-
-| Entry | What it does |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remove From Collection | Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed. |
-| Remove From all Unlinked Collections | Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed. |
-| Add selected To Active Collection | Objects can be in more than one collection. Adds the selected object to the active collection. |
-| Remove Selected From Active Collection | Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed. |
-
+- **Remove From Collection**: Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed.
+- **Remove From all Unlinked Collections**: Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed.
+- **Add selected To Active Collection**: Objects can be in more than one collection. Adds the selected object to the active collection.
+- **Remove Selected From Active Collection**: Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed.
 
 ### Add Collection
 
@@ -595,14 +789,21 @@ Add a collection inside of the current selected collection.
 
 ![New Scene](/docs2/images/editors/outliner/new-scene.png)
 
+#### New
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Creates an empty scene with default values. |
-| Copy Settings | Creates an empty scene but also copies the settings from the active scene into the new one. |
-| Linked Copy | This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true. |
-| Full Copy | Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well. |
+Creates an empty scene with default values.
 
+#### Copy Settings
+
+Creates an empty scene but also copies the settings from the active scene into the new one.
+
+#### Linked Copy
+
+This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true.
+
+#### Full Copy
+
+Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.
 
 ### Filter
 
@@ -614,12 +815,13 @@ Options and filter settings.
 
 Enable or disable further level restrictions. Note that these toggles shows when you expand a scene hierarchy. Scenes itself have no such toggles.
 
+##### Sort Alphabetically
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------- |
-| Sort Alphabetically | Sorts the content of the outliner in alphabetically order. |
-| Sync Selection | Synchronize the selection between outliner and 3d view. |
+Sorts the content of the outliner in alphabetically order.
 
+##### Sync Selection
+
+Synchronize the selection between outliner and 3d view.
 
 #### Show Mode Column
 
@@ -629,12 +831,13 @@ Display the Mode column at the left. When you are not in object mode, but in edi
 
 #### Search
 
+##### Exact Match Search
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Exact Match Search | The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result. |
-| Case Sensitive Search | Search case sensitive. |
+The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result.
 
+##### Case Sensitive Search
+
+Search case sensitive.
 
 ## View Layer Mode
 
@@ -668,14 +871,21 @@ By clicking at this menu item a popup will appear to choose the collection. Here
 
 Note that there is a tool called Add to collection in the Object Properties in the Collections panel that does a similar job. It links an object to other collections. But this Link to Collection tool here just lists the collections in the current view layer.
 
+##### Remove From Collection
 
-| Entry | What it does |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remove From Collection | Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed. |
-| Remove From all Unlinked Collections | Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed. |
-| Add selected To Active Collection | Objects can be in more than one collection. Adds the selected object to the active collection. |
-| Remove Selected From Active Collection | Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed. |
+Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed.
 
+##### Remove From all Unlinked Collections
+
+Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed.
+
+##### Add selected To Active Collection
+
+Objects can be in more than one collection. Adds the selected object to the active collection.
+
+##### Remove Selected From Active Collection
+
+Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed.
 
 ### Add Collection
 
@@ -689,13 +899,17 @@ Add a collection inside of the current selected collection.
 
 Options and filter settings.
 
+#### Restriction Toggles
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Restriction Toggles | Enable or disable further level restrictions. To make the changes permanent you would have to save the startup file. This settings is part of the layout. · **Exclude from View Layer**: include / Exclude the collection from the view layer. · **Selectable**: Make the object selectable / unselectable. · **Hide in Viewport**: Show or hide the object in the viewport. · **Disable in Viewport**: Enable or disable the object in the viewport. · **Disable in Renders**: Enable or disable the object in the rendered result. · **Holdout**: Mask out objects in the collection from view layer. · **Indirect only**: Make the objects in the collection just distribute indirect lighting to the layer. |
-| Sort Alphabetically | Sorts the content of the outliner in alphabetically order. |
-| Sync Selection | Synchronize the selection between outliner and 3d view. |
+Enable or disable further level restrictions. To make the changes permanent you would have to save the startup file. This settings is part of the layout. · **Exclude from View Layer**: include / Exclude the collection from the view layer. · **Selectable**: Make the object selectable / unselectable. · **Hide in Viewport**: Show or hide the object in the viewport. · **Disable in Viewport**: Enable or disable the object in the viewport. · **Disable in Renders**: Enable or disable the object in the rendered result. · **Holdout**: Mask out objects in the collection from view layer. · **Indirect only**: Make the objects in the collection just distribute indirect lighting to the layer.
 
+#### Sort Alphabetically
+
+Sorts the content of the outliner in alphabetically order.
+
+#### Sync Selection
+
+Synchronize the selection between outliner and 3d view.
 
 #### Show Mode Column
 
@@ -705,12 +919,13 @@ Display the Mode column at the left. When you are not in object mode, but in edi
 
 #### Search
 
+##### Exact Match Search
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Exact Match Search | The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result. |
-| Case Sensitive Search | Search case sensitive. |
+The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result.
 
+##### Case Sensitive Search
+
+Search case sensitive.
 
 #### Filter
 
@@ -786,12 +1001,13 @@ Green arrows means the data is indirectly referenced into another linked `**.ble
 
 Deletes linked libraries.
 
+##### Relocate
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------- |
-| Relocate | Relocated the path of a linked library. |
-| Reload | Reloads and refreshes the linked library in the current file. |
+Relocated the path of a linked library.
 
+##### Reload
+
+Reloads and refreshes the linked library in the current file.
 
 ## Data API Mode
 
@@ -811,21 +1027,33 @@ When no keying set is defined then you will get a No Keying set Active message i
 
 ![Edit Menu](/docs2/images/editors/outliner/edit-menu.png)
 
+##### Keying Set Add Selected
 
-| Entry | What it does |
-| --------------------------- | ----------------------------------------------- |
-| Keying Set Add Selected | Add a keying set to the selected object. |
-| Keying Set Remove Selected | Remove the keying set from the selected object. |
-| Add Drivers to Selected | Add a driver to the selected object. |
-| Delete Drivers for Selected | Delete a driver from the selected object. |
+Add a keying set to the selected object.
 
+##### Keying Set Remove Selected
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Set Keying set | Choose a keying set. |
-| Add keyframe | Adds a keyframe for the selected element. |
-| Remove keyframe | Removes the current keyframe from the selected element. · **Keying Set Add Selected**: Add selected item to active keying set. · **Keying Set Add Selected**: Remove selected item from active keying set. |
+Remove the keying set from the selected object.
 
+##### Add Drivers to Selected
+
+Add a driver to the selected object.
+
+##### Delete Drivers for Selected
+
+Delete a driver from the selected object.
+
+##### Set Keying set
+
+Choose a keying set.
+
+##### Add keyframe
+
+Adds a keyframe for the selected element.
+
+##### Remove keyframe
+
+Removes the current keyframe from the selected element. · **Keying Set Add Selected**: Add selected item to active keying set. · **Keying Set Add Selected**: Remove selected item from active keying set.
 
 ## Library Override Mode
 
@@ -857,12 +1085,13 @@ Show the objects with library overrides in a hierarchical way.
 
 ![Filter options](/docs2/images/editors/outliner/filter-options.png)
 
+#### Sort alphabetically
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Sort alphabetically | Sorts the library overrides in alphabetical order in the outliner list. |
-| Search | Search options. · **Exact match**: Search with exact match. · **Case sensitive**: Take upper and lower case status into account. |
+Sorts the library overrides in alphabetical order in the outliner list.
 
+#### Search
+
+Search options. · **Exact match**: Search with exact match. · **Case sensitive**: Take upper and lower case status into account.
 
 ## Unused Data Mode
 
@@ -882,16 +1111,29 @@ Normally you would need to save the blend file and reload it to get rid of the u
 
 The clean up button cleans up what is in the list. This is good enough for most cases. But sometimes you might want to have a bit more fine control.
 
+##### Unused Data
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Unused Data | Removes unused data blocks. |
-| Recursive Unused Data | Recursively removes unused data blocks. Means the child objects gets removed too. |
-| Unused Linked Data | Removes unused data that is linked to this file. |
-| Recursive Unused Linked Data | Recursively removes unused data that is linked to this file. Means the child objects gets removed too. |
-| Unused Local Data | Removes unused local data. |
-| Recursive Unused Local Data | Recursively removes unused local data. Means the child objects gets removed too. |
+Removes unused data blocks.
 
+##### Recursive Unused Data
+
+Recursively removes unused data blocks. Means the child objects gets removed too.
+
+##### Unused Linked Data
+
+Removes unused data that is linked to this file.
+
+##### Recursive Unused Linked Data
+
+Recursively removes unused data that is linked to this file. Means the child objects gets removed too.
+
+##### Unused Local Data
+
+Removes unused local data.
+
+##### Recursive Unused Local Data
+
+Recursively removes unused local data. Means the child objects gets removed too.
 
 ### Filter
 
@@ -919,12 +1161,18 @@ Most of the tools can be found in the graphical UI. But there are still some too
 
 The navigation hotkeys and the context menus are excluded here since they are already covered.
 
+### Insert Keyframe - I
 
-| Entry | What it does |
-| ---------------------------------- | ----------------------------------------------------------------------------------------- |
-| Insert Keyframe - I | Insert a keyframe at current position. You need to have a keying set added to the object. |
-| Delete Keying Set Keyframe - Alt I | Remove existing keyframes. |
-| Hide - H | Hides the object in the 3d view. |
-| Unhide - Alt H | Unhides all hidden objects in the 3d view. |
+Insert a keyframe at current position. You need to have a keying set added to the object.
 
+### Delete Keying Set Keyframe - Alt I
 
+Remove existing keyframes.
+
+### Hide - H
+
+Hides the object in the 3d view.
+
+### Unhide - Alt H
+
+Unhides all hidden objects in the 3d view.

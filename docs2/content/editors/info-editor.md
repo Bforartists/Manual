@@ -77,17 +77,33 @@ Closes the area window.
 
 The Info menu provides some console editor window specific functionality.
 
+### All
 
-| Entry | What it does |
-| ---------------- | ------------------------- |
-| All | Select all. |
-| None | Select nothing. |
-| Inverse | Inverts the selection. |
-| Toggle Selection | Toggles the selection. |
-| Box Select | Box select text. |
-| Delete | Deletes selected content. |
-| Copy | Copies selected content. |
+Select all.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Inverts the selection.
+
+### Toggle Selection
+
+Toggles the selection.
+
+### Box Select
+
+Box select text.
+
+### Delete
+
+Deletes selected content.
+
+### Copy
+
+Copies selected content.
 
 ## Hotkey only functionality
 

@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Asset Browser
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 28 Editors - Asset Browser.odt
@@ -120,16 +120,29 @@ The display size for the assets.
 
 Area is a menu with window related settings.
 
+#### Horizontal Split
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal Split | Splits the editor horizontally into two editors. |
-| Vertical Split | Splits the editor vertically into two editors. |
-| Duplicate Area into new Window | Creates a floating window out of the current editor. |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu. |
-| Toggle Fullscreen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner. |
-| Close Area | Closes the editor. |
+Splits the editor horizontally into two editors.
 
+#### Vertical Split
+
+Splits the editor vertically into two editors.
+
+#### Duplicate Area into new Window
+
+Creates a floating window out of the current editor.
+
+#### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.
+
+#### Toggle Fullscreen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.
+
+#### Close Area
+
+Closes the editor.
 
 ## Header - Select menu
 
@@ -141,13 +154,17 @@ Select functionality.
 
 Allows you to box select files. Note that this is an old obsolete operator. You don't need to press the hotkey anymore for box select.
 
+#### Inverse
 
-| Entry | What it does |
-| ------- | ---------------------- |
-| Inverse | Inverts the selection. |
-| None | Select none. |
-| All | Select all. |
+Inverts the selection.
 
+#### None
+
+Select none.
+
+#### All
+
+Select all.
 
 ## Header - Library menu
 
@@ -179,18 +196,21 @@ Deletes the downloaded online assets to free up disk space. They download again 
 
 ![Header - Catalog menu](/docs2/images/editors/asset-browser/header-catalog-menu.png)
 
+### Undo
 
-| Entry | What it does |
-| ----- | -------------------------------- |
-| Undo | Undo of the last edit operation. |
-| Redo | Redo of the last edit operation. |
+Undo of the last edit operation.
 
+### Redo
 
-| Entry | What it does |
-| ------------------- | -------------------------------- |
-| Save Asset Catalogs | Save all changed asset catalogs. |
-| New Asset Catalog | Add a new asset catalog. |
+Redo of the last edit operation.
 
+### Save Asset Catalogs
+
+Save all changed asset catalogs.
+
+### New Asset Catalog
+
+Add a new asset catalog.
 
 ## Header - Asset menu
 
@@ -277,13 +297,17 @@ Drop the asset as instances of another object. This toggles both append and link
 
 Allows you to define how to import the assets.
 
+#### Follow Preferences
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------- |
-| Follow Preferences | Use the import method as defined in the preferences. |
-| Link | Link the asset at import. |
-| Append | append the asset at import. |
+Use the import method as defined in the preferences.
 
+#### Link
+
+Link the asset at import.
+
+#### Append
+
+append the asset at import.
 
 #### Append (Reuse Data)
 
@@ -312,12 +336,13 @@ To override all selected contents, use the Outliner Editor by right clicking on 
 
 Allows you to switch between list view and thumbnail preview view.
 
+#### Horizontal List
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal List | Displays the content of the file browser as a horizontal list. |
-| Thumbnails | Displays the content of the file browser as thumbnails. This is especially of use for images or blend files with thumbnail preview. |
+Displays the content of the file browser as a horizontal list.
 
+#### Thumbnails
+
+Displays the content of the file browser as thumbnails. This is especially of use for images or blend files with thumbnail preview.
 
 #### Sort by Name
 
@@ -339,12 +364,13 @@ Sort the assets list so that assets in the catalog are kept together in groups, 
 
 Shows the assets in a vertical list or in a column based horizontal list.
 
+###### Size
 
-| Entry | What it does |
-| ----- | ----------------------------------------- |
-| Size | Toggles the column with size information. |
-| Date | Toggles the column with date information. |
+Toggles the column with size information.
 
+###### Date
+
+Toggles the column with date information.
 
 ##### Thumbnails
 
@@ -392,14 +418,21 @@ When it's on, you link or append collections or collection as instances to world
 
 ![Import Method](/docs2/images/editors/asset-browser/drop-collection-as-instances.png)
 
+#### Follow Preferences
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Follow Preferences | Use the import method set in the Preferences for this asset library, don't override it. |
-| Link | Import the assets as linked data |
-| Append | Import the assets as copied data, with no link to the original asset data |
-| Append (Reuse Data) | Import the assets as copied data-block while avoiding multiple copies of nested, typically heavy data. For example the textures of a material asset, or the mesh of an object asset, don't have to be copied every time this asset is imported. The instances of the asset share the data instead. |
+Use the import method set in the Preferences for this asset library, don't override it.
 
+#### Link
+
+Import the assets as linked data
+
+#### Append
+
+Import the assets as copied data, with no link to the original asset data
+
+#### Append (Reuse Data)
+
+Import the assets as copied data-block while avoiding multiple copies of nested, typically heavy data. For example the textures of a material asset, or the mesh of an object asset, don't have to be copied every time this asset is imported. The instances of the asset share the data instead.
 
 ## Tool shelf
 
@@ -414,6 +447,8 @@ These catalogs are currently disfunctional. You can just add or remove the categ
 ![Asset Library chooser](/docs2/images/editors/asset-browser/asset-library-chooser.png)
 
 Here you can choose what asset library to use.
+
+The list is grouped by where the libraries come from: **your libraries** (set in the Preferences), **project libraries** (set in the Project Setup) and **extension libraries** (installed with an extension). Each group has its own icon.
 
 #### Current File
 
@@ -453,12 +488,13 @@ Then select one of your assets. And drag it onto the catalog that you want to ad
 
 Finally, save the asset.
 
+#### Save Asset Catalogs
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------- |
-| Save Asset Catalogs | Saves the current asset catalog to file and make the changes permanent. |
-| New Asset Catalog | Creates a new asset catalog. Asset catalogs can be nested too. |
+Saves the current asset catalog to file and make the changes permanent.
 
+#### New Asset Catalog
+
+Creates a new asset catalog. Asset catalogs can be nested too.
 
 ### Unassigned
 
@@ -488,13 +524,17 @@ Removes all assets.
 
 Content depends if you have an asset selected or not.
 
+##### New Catalog
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------- |
-| New Catalog | Creates a new nested catalog inside of the current catalog. |
-| Delete catalog | Deletes the catalog and all of its childs. |
-| Rename | Rename the current catalog. |
+Creates a new nested catalog inside of the current catalog.
 
+##### Delete catalog
+
+Deletes the catalog and all of its childs.
+
+##### Rename
+
+Rename the current catalog.
 
 ##### Mark as asset
 
@@ -522,13 +562,17 @@ The name of the asset. Here you can also rename the asset. Note that the name of
 
 Some additional infos about the asset.
 
+#### Source
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------- |
-| Source | A source that can't be edited for the Blender developers. |
-| Description | Add a description for the asset. |
-| Author | Add the name of the author of the asset. |
+A source that can't be edited for the Blender developers.
 
+#### Description
+
+Add a description for the asset.
+
+#### Author
+
+Add the name of the author of the asset.
 
 ### Preview Panel
 
@@ -536,12 +580,13 @@ Some additional infos about the asset.
 
 A preview of the asset. By default the same image that you see in the view when you create the asset.
 
+#### Load Custom Preview
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Load Custom Preview | Opens a file browser where you can choose a custom icon for this asset. |
-| Generate Preview | Generates a preview icon from the content. Note that this will reset the custom icon. |
+Opens a file browser where you can choose a custom icon for this asset.
 
+#### Generate Preview
+
+Generates a preview icon from the content. Note that this will reset the custom icon.
 
 ### Preview Menu
 
@@ -582,12 +627,13 @@ Allows you to resize the list.
 
 Search the list. This search can be expanded by clicking at the little triangle button down left.
 
+###### Add Asset Tag
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------- |
-| Add Asset Tag | Adds a tag to the tag list. This tag can be renamed in the list. |
-| Remove Asset Tag | Removes the selected tag from the tag list. |
+Adds a tag to the tag list. This tag can be renamed in the list.
 
+###### Remove Asset Tag
+
+Removes the selected tag from the tag list.
 
 #### Asset Shelf Buttons Row
 
@@ -623,15 +669,37 @@ Assigns the “Shader” tag to show the Node Group in the Shader Asset Shelf in
 
 When you right click into the view then an Asset context menu opens.
 
+### Download Assets
 
-| Entry | What it does |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Refresh Asset Library | Refresh the file list. |
-| Clear Asset | Removes the asset from the asset library. |
-| Clear Asset ( Set Fake User) | Removes the asset from the asset library. But sets it to fake user, so that it remains in the scene. |
-| Open Blend File | Opens the path for the blend file that contains the active asset. Just active with User Library. |
-| Display Size | Set the display size of the file browser to four predefined sizes. |
+Downloads the selected assets of an online library, so you can use them offline.
 
+### Refresh Asset Library
+
+Refresh the file list.
+
+### Refresh Remote Listing
+
+Downloads the list of assets of a remote library again, for example to see new assets. Only available for remote libraries and the Essentials library.
+
+### Clear Asset
+
+Removes the asset from the asset library.
+
+### Clear Asset (Set Fake User)
+
+Removes the asset from the asset library. But sets it to fake user, so that it remains in the scene.
+
+### Open Blend File
+
+Opens the blend file that contains the active asset. Just active with User Library.
+
+### Open File Location
+
+Opens the file browser of your system at the blend file that contains the active asset.
+
+### View Extension
+
+Opens the extension that provides the active asset in Preferences > Extensions. Only available for assets that come from an extension library.
 
 ## Pose Assets context menu
 
@@ -641,12 +709,13 @@ When you right click on a pose asset in the Asset Browser or 3D View Asset shelf
 
 > **Note:** Pose action assets are single keyframe action clips marked as assets preview either from the NLA or the Dopesheet editors. Animation keyframe sequences cannot be marked as assets.
 
+### Apply Pose
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apply Pose | Apply the given pose action to the active rig. When you select this, this will apply the pose to selected bones. |
-| Apply Pose Flipped | Apply the given pose action to the active rig with a flipped axis. When you select this, this will apply the flipped pose to selected bones. Flipping happens usually from bones labeled .L and .R |
+Apply the given pose action to the active rig. When you select this, this will apply the pose to selected bones.
 
+### Apply Pose Flipped
+
+Apply the given pose action to the active rig with a flipped axis. When you select this, this will apply the flipped pose to selected bones. Flipping happens usually from bones labeled .L and .R
 
 ### Blend Pose
 
@@ -654,12 +723,18 @@ When you right click on a pose asset in the Asset Browser or 3D View Asset shelf
 
 Blend the given pose action to the active rig. This is useful to interpolate from the original pose to the new pose. When using, you will see a slider in the asset browser header giving you a degree of blend.
 
+#### Blend Pose Flipped
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Pose Flipped | Blends the selected bones with the flipped Pose asset. |
-| Select Pose Bones | Select those bones used in this pose action. This will select all the necessary bones you need to apply the pose effectively. If you have no bones selected, the pose will not apply. Poses only apply to bones that are selected. |
-| Deselect Pose Bones | Deselect those bones used in this pose action. This will ultimately clear the selection based on the pose action bones defined in the marked action clip. |
-| Assign Action | Set the pose action as the active action on the active object. This will ultimately load the pose action animation clip to the Action Editor of the Dopesheet, allowing you to edit the pose. This only works in the source file with the marked poses. |
+Blends the selected bones with the flipped Pose asset.
 
+#### Select Pose Bones
 
+Select those bones used in this pose action. This will select all the necessary bones you need to apply the pose effectively. If you have no bones selected, the pose will not apply. Poses only apply to bones that are selected.
+
+#### Deselect Pose Bones
+
+Deselect those bones used in this pose action. This will ultimately clear the selection based on the pose action bones defined in the marked action clip.
+
+#### Assign Action
+
+Set the pose action as the active action on the active object. This will ultimately load the pose action animation clip to the Action Editor of the Dopesheet, allowing you to edit the pose. This only works in the source file with the marked poses.

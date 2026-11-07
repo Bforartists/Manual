@@ -20,14 +20,21 @@ summary: "The buttons in the Emission panel control the way particles are emitte
 
 The buttons in the Emission panel control the way particles are emitted over time.
 
+### Number
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------ |
-| Number | The amount of hair strands. |
-| Seed | Bforartists uses this as starting point to produce random numbers during the simulation. |
-| Hair Length | Controls the length of the hair. |
-| Segments | How much segments each hair should have. |
+The amount of hair strands.
 
+### Seed
+
+Bforartists uses this as starting point to produce random numbers during the simulation.
+
+### Hair Length
+
+Controls the length of the hair.
+
+### Segments
+
+How much segments each hair should have.
 
 ### Source
 
@@ -47,12 +54,13 @@ Defines how and where the particles are emitted, giving precise control over the
 
 Emits particles from the vertices of a mesh.
 
+###### Use Modifier Stack
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Modifier Stack | Take any Modifiers above the Particle Modifier in the modifier stack into account when emitting particles, else it uses the original mesh geometry. |
-| Random Order | The emitter element indices are gone through in a random order instead of linearly (one after the other). |
+Take any Modifiers above the Particle Modifier in the modifier stack into account when emitting particles, else it uses the original mesh geometry.
 
+###### Random Order
+
+The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
 ##### Faces & Volume
 
@@ -72,41 +80,32 @@ Take any Modifiers above the Particle Modifier in the modifier stack into accoun
 
 These settings control how the emissions of particles are distributed throughout the emission locations when emitting from either Faces or Volume.
 
-**JitteredRandom Order**
+###### JitteredRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order.png)
 
 The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
+- **Even Distribution**: Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
+- **Particles/Face**: Number of emissions per face (0 = automatic).
+- **Jittering Amount**: Amount of jitter applied to the sampling.
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Even Distribution | Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even. |
-| Particles/Face | Number of emissions per face (0 = automatic). |
-| Jittering Amount | Amount of jitter applied to the sampling. |
-
-
-**RandomRandom Order**
+###### RandomRandom Order
 
 ![Random Order](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/random-order-2.png)
 
 The emitter element indices are gone through in a random order instead of linearly (one after the other).
 
-**Even Distribution**
+###### Even Distribution
 
 Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
 
-**GridInvert Grid**
+###### GridInvert Grid
 
 ![Invert Grid](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/invert-grid.png)
 
 Invert what is considered the object and what is not.
 
-
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------- |
-| Hexagonal Grid | Uses a hexagonal-shaped grid instead of a rectangular one. |
-| Resolution | Resolution of the grid. |
-| Random | Add a random offset to grid locations. |
-
-
+- **Hexagonal Grid**: Uses a hexagonal-shaped grid instead of a rectangular one.
+- **Resolution**: Resolution of the grid.
+- **Random**: Add a random offset to grid locations.

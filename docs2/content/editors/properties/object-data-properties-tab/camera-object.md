@@ -36,12 +36,13 @@ Displays the content with perspectivic distortions.
 
 What lens unit to use. Millimeters or Field of View as an angle.
 
+###### Focal Length
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Focal Length | With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera. |
-| Field of View | With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom. |
+With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera.
 
+###### Field of View
+
+With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom.
 
 #### Orthographic
 
@@ -65,12 +66,13 @@ Panoramic cameras just works with Cycles. Panoramic allows you to render equirec
 
 What lens unit to use. Millimeters or Field of View as an angle.
 
+###### Focal Length
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Focal Length | With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera. |
-| Field of View | With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom. |
+With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera.
 
+###### Field of View
+
+With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom.
 
 #### Shift X / Y
 
@@ -119,14 +121,21 @@ You can call a Depth picker by hovering with the mouse over the Focus Distance p
 
 ![Aperture](/docs2/images/editors/properties/object-data-properties-tab/camera-object/aperture.png)
 
+#### F-Stop
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| F-Stop | Defines the amount of blurring. Lower values give a strong depth of field effect. |
-| Blades | Total number of polygonal blades used to alter the shape of the blurred objects in the render, and render preview. As with the viewport, the minimum amount of blades to enable the bokeh effect is 3, resulting in a triangular-shaped blur. |
-| Rotation | Rotate the polygonal blades along the facing axis, and will rotate in a clockwise, and counter-clockwise fashion. |
-| Ratio | Change the amount of distortion to simulate the anamorphic bokeh effect. A setting of 1.0 shows no distortion, where a number below 1.0 will cause a horizontal distortion, and a higher number will cause a vertical distortion. |
+Defines the amount of blurring. Lower values give a strong depth of field effect.
 
+#### Blades
+
+Total number of polygonal blades used to alter the shape of the blurred objects in the render, and render preview. As with the viewport, the minimum amount of blades to enable the bokeh effect is 3, resulting in a triangular-shaped blur.
+
+#### Rotation
+
+Rotate the polygonal blades along the facing axis, and will rotate in a clockwise, and counter-clockwise fashion.
+
+#### Ratio
+
+Change the amount of distortion to simulate the anamorphic bokeh effect. A setting of 1.0 shows no distortion, where a number below 1.0 will cause a horizontal distortion, and a higher number will cause a vertical distortion.
 
 ## Camera panel
 
@@ -146,13 +155,17 @@ Camera presets. To add a new preset enter a name and click the + button. To remo
 
 A method to fit the image aspect ratio and resolution with relative field of view angle inside the sensor dimensions.
 
+#### Auto
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto | Adjust the relative focal length to the sensor width or height and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. · **Size**: The sensor size according to the image resolution and pixel aspect ratio. This contains the automatic horizontal size of the image sensor area in millimeters. |
-| Horizontal | Adjust the relative focal length to the sensor width and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Height cannot be modified. · **Width**: The sensor width. This contains the horizontal size of the image sensor area. |
-| Vertical | Adjust the relative focal length to the sensor hieght and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Width cannot be modified. · **Height**: The sensor height. This contains the horizontal size of the image sensor area in millimeters. |
+Adjust the relative focal length to the sensor width or height and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. · **Size**: The sensor size according to the image resolution and pixel aspect ratio. This contains the automatic horizontal size of the image sensor area in millimeters.
 
+#### Horizontal
+
+Adjust the relative focal length to the sensor width and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Height cannot be modified. · **Width**: The sensor width. This contains the horizontal size of the image sensor area.
+
+#### Vertical
+
+Adjust the relative focal length to the sensor hieght and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Width cannot be modified. · **Height**: The sensor height. This contains the horizontal size of the image sensor area in millimeters.
 
 ## Safe Areas panel
 
@@ -174,12 +187,13 @@ Safe areas can be set from the Camera and Sequencer views.
 
 Safe areas presets. To add a preset enter a name and click at the plus button. To remove a preset click at the minus button besides the preset name.
 
+#### Title Safe Margins X/Y
 
-| Entry | What it does |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Title Safe Margins X/Y | Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers. |
-| Action Safe Margins X/Y | An extra “margin” for the screen, which can be used to keep elements from piling up against the edges. |
+Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers.
 
+#### Action Safe Margins X/Y
+
+An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.
 
 ### Center-Cut Safe Areas
 
@@ -187,12 +201,13 @@ Safe areas presets. To add a preset enter a name and click at the plus button. T
 
 Center-cuts are a second set of safe areas to ensure content is seen correctly on screens with a different aspect ratio. Old TV sets receiving 16:9 or 21:9 video will cut off the sides. Position content inside the center-cut areas to make sure the most important elements of your composition can still be visible in these screens.
 
+#### Center Title Safe Margins X/Y
 
-| Entry | What it does |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| Center Title Safe Margins X/Y | Information (graphics or text) inside this area can be seen by the majority of viewers. |
-| Center Action Safe Margins X/Y | An extra “margin” for the screen, which can be used to keep elements from piling up against the edges. |
+Information (graphics or text) inside this area can be seen by the majority of viewers.
 
+#### Center Action Safe Margins X/Y
+
+An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.
 
 ## Background Images panel
 
@@ -216,12 +231,13 @@ To render the background image too you need to add it in a compositing step. Or 
 
 ![Header](/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-images-panel.png)
 
+##### Background Images checkbox
 
-| Entry | What it does |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Background Images checkbox | Activate or deactivate the background images. |
-| Add Image | Adds a new Image box. As told above, you can work with more than one image or movie clip. The image box can be removed by the X button at the left. |
+Activate or deactivate the background images.
 
+##### Add Image
+
+Adds a new Image box. As told above, you can work with more than one image or movie clip. The image box can be removed by the X button at the left.
 
 #### Background Image box
 
@@ -231,13 +247,17 @@ To render the background image too you need to add it in a compositing step. Or 
 
 You can collapse the background images box with the triangle button at the left.
 
+###### Image / Movie name
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------------------------- |
-| Image / Movie name | The name of the loaded movie or image. When there is no image loaded then the text is Not Set. |
-| Show Background Image | Display the image in the viewport when you are in camera view. |
-| Remove Background Image | Remove the background image. |
+The name of the loaded movie or image. When there is no image loaded then the text is Not Set.
 
+###### Show Background Image
+
+Display the image in the viewport when you are in camera view.
+
+###### Remove Background Image
+
+Remove the background image.
 
 #### Background Source
 
@@ -255,15 +275,11 @@ What type to display. Image or Movie.
 
 Browse the available images or movie clips.
 
-
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------------- |
-| Image name | The name of the image or movie clips. |
-| Number of Users | The number of users for this image. |
-| Fake User | Keep this image in the scene even if it has no users. |
-| Open Image | Opens a file browser where you can load an image. |
-| Remove | Removes this image as the active image. Note that the image is still available in the image browser. |
-
+- **Image name**: The name of the image or movie clips.
+- **Number of Users**: The number of users for this image.
+- **Fake User**: Keep this image in the scene even if it has no users.
+- **Open Image**: Opens a file browser where you can load an image.
+- **Remove**: Removes this image as the active image. Note that the image is still available in the image browser.
 
 ##### Source Type Single Image (Background source type image)
 
@@ -271,14 +287,10 @@ Browse the available images or movie clips.
 
 ###### Path edit box
 
-
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
-
+- **Pack**: With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
+- **Path edit box**: See and edit the path to your movie or image sequence files.
+- **Open**: Open a new movie or image sequence files. A file dialog will appear.
+- **Refresh**: Reread the movie or image sequence files.
 
 ##### Source Type Movie + Image Sequence (Background source type image)
 
@@ -292,34 +304,28 @@ Attention. This is with Image as the background source. Background Source Movie 
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box-2.png)
 
+- **Pack**: With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
+- **Path edit box**: See and edit the path to your movie or image sequence files.
+- **Open**: Open a new movie or image sequence files. A file dialog will appear.
+- **Refresh**: Reread the movie or image sequence files.
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
-
-
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------- |
-| Frames | The number of frames of the movie or image sequence. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-
+- **Frames**: The number of frames of the movie or image sequence.
+- **Start**: The start frame of the movie or image sequence
+- **Offset**: Offset the number of the frame to use in the animation. -1 means off.
+- **Cyclic**: Cycle the images in the movie.
+- **Auto Refresh**: Always refresh image on frame changes.
 
 ##### Source Type Generated
 
 ![Source Type Generated](/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-generated.png)
 
+###### X / Y
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------- |
-| X / Y | The image width and height. |
-| Float Buffer | Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats. |
+The image width and height.
 
+###### Float Buffer
+
+Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.
 
 ###### Generated Type Blank
 
@@ -355,14 +361,21 @@ Note that you need to have a fitting numbers of UDIM tiles in the UDIM tiles pan
 
 ![Path edit box](/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the file. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
+
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the file.
 
 ##### Color Space
 
@@ -376,18 +389,37 @@ Choose the color space type for the movie or image sequence files.
 
 The transparency of the background image or movie.
 
+###### Depth
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Depth | Choose whether the image is shown behind all objects, or in front of everything. |
-| Frame Method | Controls how the image is placed in the camera view. |
-| Stretch | Forces the image dimensions to match the camera bounds (may alter the aspect ratio). |
-| Offset X/Y | Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height). |
-| Rotation | Rotates the image around its center. |
-| Scale | Scales the image up or down from its center. |
-| Flip X | Swaps the image around, such that the left side is now on the right, and the right now on the left. |
-| Y | Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top. |
+Choose whether the image is shown behind all objects, or in front of everything.
 
+###### Frame Method
+
+Controls how the image is placed in the camera view.
+
+###### Stretch
+
+Forces the image dimensions to match the camera bounds (may alter the aspect ratio).
+
+###### Offset X/Y
+
+Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height).
+
+###### Rotation
+
+Rotates the image around its center.
+
+###### Scale
+
+Scales the image up or down from its center.
+
+###### Flip X
+
+Swaps the image around, such that the left side is now on the right, and the right now on the left.
+
+###### Y
+
+Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.
 
 #### Background Source Movie Clip
 
@@ -399,15 +431,25 @@ The transparency of the background image or movie.
 
 Use the movie clip from the active camera instead of a loaded one.
 
+###### File Path
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| File Path | **Path edit box**: See and edit the path to your movie or image sequence files. · **Open**: Open a new movie or image sequence files. A file dialog will appear. · **Refresh**: Reread the movie or image sequence files. |
-| Start Frame | The frame at which the movie starts playing. |
-| Frame Offset | Offset of the first frame of the footage relative to its file name. This affects only how the footage is loading. And does not change the data associated with a clip |
-| Render Undistorted | Render Preview using undistorted proxy material. |
-| Proxy Size | This setting defines which proxy image resolution is used for display in the viewport. If there is no generated proxies, then the render size is set to “No proxy, full render" |
+**Path edit box**: See and edit the path to your movie or image sequence files. · **Open**: Open a new movie or image sequence files. A file dialog will appear. · **Refresh**: Reread the movie or image sequence files.
 
+###### Start Frame
+
+The frame at which the movie starts playing.
+
+###### Frame Offset
+
+Offset of the first frame of the footage relative to its file name. This affects only how the footage is loading. And does not change the data associated with a clip
+
+###### Render Undistorted
+
+Render Preview using undistorted proxy material.
+
+###### Proxy Size
+
+This setting defines which proxy image resolution is used for display in the viewport. If there is no generated proxies, then the render size is set to “No proxy, full render"
 
 ##### Color Space
 
@@ -425,19 +467,41 @@ Render Preview using Undistorted Proxy.
 
 Display the preview in full size, or with proxies in reduced size.
 
+###### View as Render
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| View as Render | Apply render part of display transformation when displaying this image on the screen. |
-| Opacity | The transparency of the background image or movie. |
-| Depth | Choose whether the image is shown behind all objects, or in front of everything. |
-| Frame Method | Controls how the image is placed in the camera view. |
-| Offset X/Y | Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height). |
-| Rotation | Rotates the image around its center. |
-| Scale | Scales the image up or down from its center. |
-| Flip X | Swaps the image around, such that the left side is now on the right, and the right now on the left. |
-| Y | Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top. |
+Apply render part of display transformation when displaying this image on the screen.
 
+###### Opacity
+
+The transparency of the background image or movie.
+
+###### Depth
+
+Choose whether the image is shown behind all objects, or in front of everything.
+
+###### Frame Method
+
+Controls how the image is placed in the camera view.
+
+###### Offset X/Y
+
+Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height).
+
+###### Rotation
+
+Rotates the image around its center.
+
+###### Scale
+
+Scales the image up or down from its center.
+
+###### Flip X
+
+Swaps the image around, such that the left side is now on the right, and the right now on the left.
+
+###### Y
+
+Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.
 
 ## Viewport Display panel
 

@@ -39,10 +39,13 @@ The tabs at the very left allows you to switch between the four most important e
 
 ## Use Normalization, Create Ghost Curves
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Normalization | Normalizes the curves so that the maximum does not exceed 1 and the minimum does not go lower than -1 |
-| Create Ghost Curves | Creates a snapshot of the current curves, and displays it as a background image in the viewport. This background image is not permanent, and will be deleted when you close Bforartists. When a ghost background image is created then the button turns into a delete button with which you can remove the ghost image. |
+### Use Normalization
+
+Normalizes the curves so that the maximum does not exceed 1 and the minimum does not go lower than -1
+
+### Create Ghost Curves
+
+Creates a snapshot of the current curves, and displays it as a background image in the viewport. This background image is not permanent, and will be deleted when you close Bforartists. When a ghost background image is created then the button turns into a delete button with which you can remove the ghost image.
 
 ## Snapping
 
@@ -60,11 +63,17 @@ When enabled, snapping uses absolute time rather than relative pixel proximity. 
 
 ![Show Hide elements](/docs2/images/editors/drivers-editor/header/header-tools-and-options/show-hide-elements.png)
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Only Show Selected | Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene. |
-| Show Hidden | Include channels from objects / bones that are not visible. This feature just works with Only Selected off. |
-| Only Show Errors | Only display F-Curves and Drivers that have errors or are disabled. |
+### Only Show Selected
+
+Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene.
+
+### Show Hidden
+
+Include channels from objects / bones that are not visible. This feature just works with Only Selected off.
+
+### Only Show Errors
+
+Only display F-Curves and Drivers that have errors or are disabled.
 
 ## Filters
 
@@ -72,12 +81,21 @@ When enabled, snapping uses absolute time rather than relative pixel proximity. 
 
 The show hide elements allows you to filter out the general elements. The Filters panel allows you to filter out further elements.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Filter by Collection | Just display the content from the chosen collection in the list of elements. |
-| Filter by Type | In this section you can choose what type of animation data should be displayed. The names should be self explaining. |
-| Options | **Sort Data Blocks**: Alphabetically sort the data in the list of elements. |
-| Drivers | **Variable Fallback as Error**: Include drivers thar relied on any fallback values for their evaluation in the Only Show Errors Filter. Even if the driver evaluation succeded. |
+### Filter by Collection
+
+Just display the content from the chosen collection in the list of elements.
+
+### Filter by Type
+
+In this section you can choose what type of animation data should be displayed. The names should be self explaining.
+
+### Options
+
+**Sort Data Blocks**: Alphabetically sort the data in the list of elements.
+
+### Drivers
+
+**Variable Fallback as Error**: Include drivers thar relied on any fallback values for their evaluation in the Only Show Errors Filter. Even if the driver evaluation succeded.
 
 ## Proportional Editing
 
@@ -95,11 +113,17 @@ The drop down menu to choose the proportional editing falloff method is just ava
 
 The pivot point defines the center of manipulations.
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Bounding Box Center | Transformation happens around the bounding box center. |
-| 2D Cursor | Transformation happens around the timeline cursor. |
-| Individual Centers | Transformation happens around the individual centers of the selected elements. |
+### Bounding Box Center
+
+Transformation happens around the bounding box center.
+
+### 2D Cursor
+
+Transformation happens around the timeline cursor.
+
+### Individual Centers
+
+Transformation happens around the individual centers of the selected elements.
 
 ## Easing Mode
 
@@ -112,6 +136,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 #### Adjust Last Operation - Set Keyframe Easing Type
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png)
+
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -131,6 +157,8 @@ This is a feature for the Graph editor, where each curve point has its own handl
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png)
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Type
 
 Set the handle type for the currently selected curve point.
@@ -146,6 +174,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 ### Adjust Last Operation - Set Keyframe Interpolation
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png)
+
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Type
 
@@ -177,14 +207,29 @@ Synchronize the visible timeline range with other visible time based editors. Wh
 
 Shows the value sliders for f-curve channels in the channel list.
 
-| Entry | What it does |
-| ------------------------------- | ---------------------------------------------------------------- |
-| AutoMerge Keyframes | Automatically merge nearby keyframes. |
-| Use High Quality Display | Display the curves in highest quality. |
-| Show Extrapolation | Shows the curves after the last keyframe. |
-| Show Handles | Show the handles at the keyframes. |
-| Only selected Curve Keyframes | Just show the keyframes from the selected curves. |
-| Only Selected Keyframes Handles | Just show the handles of the keyframes from the selected curves. |
+#### AutoMerge Keyframes
+
+Automatically merge nearby keyframes.
+
+#### Use High Quality Display
+
+Display the curves in highest quality.
+
+#### Show Extrapolation
+
+Shows the curves after the last keyframe.
+
+#### Show Handles
+
+Show the handles at the keyframes.
+
+#### Only selected Curve Keyframes
+
+Just show the keyframes from the selected curves.
+
+#### Only Selected Keyframes Handles
+
+Just show the handles of the keyframes from the selected curves.
 
 # Quick Menu
 
@@ -278,18 +323,45 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 
 Note that you can set the range in the Drivers editor, but the preview range is currently not visible in the Drivers editor. You need to check it in the Dope Sheet editor for example.
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Preview Range | Clears an existing preview range. |
-| Set Preview Range to selected | Sets the preview range to fit the first and last selected keyframe. |
-| Frame Scene Range | With Use Preview Range off , reset the horizontal view to the current scene frame range. |
-| Frame Preview Range | With Use Preview Range on , reset the horizontal view to the current preview frame range. |
-| Zoom In | Zooms into the viewport. |
-| Zoom Out | Zooms out of the viewport. |
-| Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
-| Frame All | Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
-| Frame Selected | Centers the view at the currently selected keyframe(s). |
-| Go to current Frame | Centers the view at the frame slider. |
+#### Clear Preview Range
+
+Clears an existing preview range.
+
+#### Set Preview Range to selected
+
+Sets the preview range to fit the first and last selected keyframe.
+
+#### Frame Scene Range
+
+With Use Preview Range off , reset the horizontal view to the current scene frame range.
+
+#### Frame Preview Range
+
+With Use Preview Range on , reset the horizontal view to the current preview frame range.
+
+#### Zoom In
+
+Zooms into the viewport.
+
+#### Zoom Out
+
+Zooms out of the viewport.
+
+#### Zoom Border
+
+Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.
+
+#### Frame All
+
+Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.
+
+#### Frame Selected
+
+Centers the view at the currently selected keyframe(s).
+
+#### Go to current Frame
+
+Centers the view at the frame slider.
 
 ### Area submenu
 
@@ -297,10 +369,13 @@ Note that you can set the range in the Drivers editor, but the preview range is 
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+#### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+#### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 #### Duplicate Area into New Window
 
@@ -308,11 +383,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the editor. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the editor.
 
 ### Pie Menus
 
@@ -338,15 +419,33 @@ The Select menu contains various tools to select elements.
 
 The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.
 
-| Entry | What it does |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Box Select | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
-| Box Select(Axis Range) | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
-| Box Select(Include Handles) | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. And it selects all involved handlers too. |
-| Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
+### All
+
+Select everything.
+
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
+
+### Box Select
+
+Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.
+
+### Box Select(Axis Range)
+
+Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.
+
+### Box Select(Include Handles)
+
+Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. And it selects all involved handlers too.
+
+### Circle Select
+
+Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.
 
 ### Lasso Select
 
@@ -354,12 +453,21 @@ The content is the same in all modes. With one exception. Grease Pencil mode is 
 
 A sub menu with the available lasso select modes.
 
-| Entry | What it does |
-| ------------------------ | ---------------------------------------------------------------------------------------- |
-| Columns on Selected Keys | Select the keyframes in the columns of the currently selected keyframe. |
-| Columns on Current Frame | Select the keyframes in the columns of the current frame. |
-| Linked | Select all UV vertices linked to the active UV map. The previous selection gets cleared. |
-| Before current Frame | Select the keyframes before the current frame. |
+#### Columns on Selected Keys
+
+Select the keyframes in the columns of the currently selected keyframe.
+
+#### Columns on Current Frame
+
+Select the keyframes in the columns of the current frame.
+
+#### Linked
+
+Select all UV vertices linked to the active UV map. The previous selection gets cleared.
+
+#### Before current Frame
+
+Select the keyframes before the current frame.
 
 ### After current Frame
 
@@ -368,6 +476,8 @@ Select the keyframes after the current frame.
 #### Adjust Last Operation - Select Left/Right
 
 ![Last Operator Select Left/Right](/docs2/images/editors/drivers-editor/header/select-menu/last-operator-select-left-right.png)
+
+Change the settings of **Select Left/Right** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -391,6 +501,8 @@ For selected keyframes, only select the keyframe, and deselect the handles.
 
 ![Last Operator Select Key / Handles](/docs2/images/editors/drivers-editor/header/select-menu/last-operator-select-key-handles.png)
 
+Change the settings of **Select Key / Handles** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | --------------------------------- |
 | Left Handle | What to do with the left handle. |
@@ -399,10 +511,13 @@ For selected keyframes, only select the keyframe, and deselect the handles.
 
 ### More / Less submenu
 
-| Entry | What it does |
-| ----- | --------------------- |
-| More | Grow the selection. |
-| Less | Shrink the selection. |
+#### More
+
+Grow the selection.
+
+#### Less
+
+Shrink the selection.
 
 # Channel Menu
 
@@ -414,10 +529,13 @@ This menu contains functionality to manage the channels in the channels list at 
 
 The menu doesn't exist in all modes. It exists in Dopesheet, Action Editor and Grease Pencil mode. And has different content.
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------- |
-| Delete Channels | Deletes the selected channels and all its keyframes. |
-| Delete Invalid Drivers | Deletes invalid drivers. |
+### Delete Channels
+
+Deletes the selected channels and all its keyframes.
+
+### Delete Invalid Drivers
+
+Deletes invalid drivers.
 
 ### Group Channels
 
@@ -441,6 +559,8 @@ The menu items should be self explaining.
 
 ![Last Operator Toggle Channel Settings](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-toggle-channel-settings.png)
 
+Change the settings of **Toggle Channel Settings** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 #### Type
 
 The type to toggle.
@@ -451,16 +571,27 @@ The type to toggle.
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
+#### Constant Extrapolation
+
+The animation curve continues straight at the end.
+
+#### Linear Extrapolation
+
+The animation curve continues the last direction.
+
+#### Make Cyclic
+
+Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.
+
+#### Clear Cyclic
+
+Removes the cyclic extrapolation.
 
 #### Adjust Last Operation - Set F-Curve Extrapolation
 
 ![Last Operator Set F-Curve Extrapolation](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-set-f-curve-extrapolation.png)
+
+Change the settings of **Set F-Curve Extrapolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -480,6 +611,8 @@ Reveals all hidden curves.
 
 ![Last Operator Reveal Curves](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-reveal-curves.png)
 
+Change the settings of **Reveal Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Select
 
 Select all revealed curves.
@@ -496,6 +629,8 @@ Hides the unselected curves.
 
 ![Last Operator Hide Curves](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-hide-curves.png)
 
+Change the settings of **Hide Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Unselected
 
 Hide the unselected or selected curves.
@@ -508,6 +643,8 @@ Expands all channels in the channel list.
 
 ![Last Operator Expand Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-expand-channels.png)
 
+Change the settings of **Expand Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### All
 
 Expand all Channels, or just the selected channels.
@@ -519,6 +656,8 @@ Collapses all channels in the channels list.
 #### Adjust Last Operation - Collapse Channels
 
 ![Last Operator Collapse Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-collapse-channels.png)
+
+Change the settings of **Collapse Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### All
 
@@ -538,16 +677,21 @@ Zooms in or out to fit the selected channels into the view.
 
 ![Last Operator Move Channels](/docs2/images/editors/drivers-editor/header/channel-menu/last-operator-move-channels.png)
 
+Change the settings of **Move Channels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Direction
 
 ![Direction](/docs2/images/editors/drivers-editor/header/channel-menu/direction.png)
 
 Sort the items in the channels list.
 
-| Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Revive Disabled F-Curves | Clears the disabled tag from all f-curves to get broken F-Curves working again. |
-| Discontinuity (Euler) Filter | Fix large jumps and flips in the selected Euler Rotation F-Curves. These can arise from rotation values being clipped when baking physics. |
+###### Revive Disabled F-Curves
+
+Clears the disabled tag from all f-curves to get broken F-Curves working again.
+
+###### Discontinuity (Euler) Filter
+
+Fix large jumps and flips in the selected Euler Rotation F-Curves. These can arise from rotation values being clipped when baking physics.
 
 # Key Menu
 
@@ -569,6 +713,8 @@ Moves the selected keyframe(s).
 
 ![Last Operator Move](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-move.png)
 
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
@@ -589,12 +735,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extend
 
@@ -603,6 +758,8 @@ Moves the last keyframes of the selection.
 ##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ---------------- | ------------------------ |
@@ -625,12 +782,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rotate
 
@@ -639,6 +805,8 @@ Rotates the selection.
 ##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -661,12 +829,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale
 
@@ -675,6 +852,8 @@ Scales the selected keyframes. You need to have more than one keyframe selected.
 ##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -697,12 +876,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Snap
 
@@ -713,6 +901,8 @@ Snaps the selected keyframes by the chosen method.
 #### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/drivers-editor/last-operator-snap-keys.png)
+
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -728,6 +918,8 @@ Flips the selected keyframes over the current frame position.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -742,15 +934,23 @@ Choose a method how to insert a new keyframe at the current frame position.
 
 ![Last Operator Insert Keyframes](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-insert-keyframes.png)
 
+Change the settings of **Insert Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Choose a method how to insert a new keyframe at the current frame position.
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Jump to Selected | Sets the frame marker at the average position of the currently selected keyframes. |
-| Copy Keyframes | Copy selected keyframes. |
-| Paste Keyframes | Pastes copied keyframes. |
+###### Jump to Selected
+
+Sets the frame marker at the average position of the currently selected keyframes.
+
+###### Copy Keyframes
+
+Copy selected keyframes.
+
+###### Paste Keyframes
+
+Pastes copied keyframes.
 
 ### Paste Flipped
 
@@ -759,6 +959,8 @@ Pastes copied keyframes, but flipped.
 #### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last Operator Paste Keyframes / Flipped](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-paste-keyframes-flipped.png)
+
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -784,6 +986,8 @@ Duplicate selected keyframes.
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-duplicate.png)
 
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Mode | — |
@@ -806,17 +1010,29 @@ Enables Mirror Editing. These values have no effect.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------- |
-| Delete Keyframes | Deletes selected keyframes. |
-| Smooth Keys | Smoothens the curve for the selected keys |
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+###### Delete Keyframes
+
+Deletes selected keyframes.
+
+###### Smooth Keys
+
+Smoothens the curve for the selected keys
 
 ### Keys to Samples
 
@@ -857,6 +1073,8 @@ Decimate F-Curves by specifying how much it can derivate from the original curve
 ##### Adjust Last Operation - Decimate Keyframes
 
 ![Last Operator Decimate Keyframes](/docs2/images/editors/drivers-editor/header/key-menu/last-operator-decimate-keyframes.png)
+
+Change the settings of **Decimate Keyframes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------- |
@@ -918,10 +1136,13 @@ Align keyframes on an ease in or ease out curve.
 
 ![Adjust Last operator Ease Keyframes](/docs2/images/editors/drivers-editor/header/key-menu/adjust-last-operator-ease-keyframes.png)
 
-| Entry | What it does |
-| ----------- | ------------------------------------------- |
-| Curve Blend | Blend factor. |
-| Sharpness | Higher values makes the change more abrupt. |
+###### Curve Blend
+
+Blend factor.
+
+###### Sharpness
+
+Higher values makes the change more abrupt.
 
 #### Blend to Ease
 
@@ -1045,11 +1266,17 @@ Smoothens the curve with the method Gaussian.
 
 ![Adjust Last operator Frame Offset](/docs2/images/editors/drivers-editor/header/key-menu/adjust-last-operator-frame-offset-2.png)
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Factor | Blend factor. |
-| Sigma | The strength of the gaussian distribution. Higher value makes it smoother. |
-| Filter Width | How much keyframes at the left or right are influenced. |
+###### Factor
+
+Blend factor.
+
+###### Sigma
+
+The strength of the gaussian distribution. Higher value makes it smoother.
+
+###### Filter Width
+
+How much keyframes at the left or right are influenced.
 
 #### Smooth Legacy
 
@@ -1063,10 +1290,22 @@ Smooth the f-curve while maintaining the general shape of the curve.
 
 ![Adjust Last operator Butterworth Smooth](/docs2/images/editors/drivers-editor/header/key-menu/adjust-last-operator-butterworth-smooth.png)
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------- |
-| Frequency Cutoff | The frequency cutoff in Hz. Lower values gives a smoother curve. |
-| Filter Order | Higher values gives a harder frequency cutoff. |
-| Samples per Frequency | How many samples to calculate per frame. |
-| Blend | Blend factor. |
-| Blend In/Out | How much keyframes at the left or right are influenced. |
+###### Frequency Cutoff
+
+The frequency cutoff in Hz. Lower values gives a smoother curve.
+
+###### Filter Order
+
+Higher values gives a harder frequency cutoff.
+
+###### Samples per Frequency
+
+How many samples to calculate per frame.
+
+###### Blend
+
+Blend factor.
+
+###### Blend In/Out
+
+How much keyframes at the left or right are influenced.

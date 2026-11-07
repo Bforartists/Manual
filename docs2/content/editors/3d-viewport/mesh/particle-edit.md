@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Particle Edit"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: particlemode
 summary: "Comb, cut and style particle hair: menus, tools and settings."
 order: 60
@@ -39,12 +39,13 @@ Mirrors the selected particles.
 
 If you want a symmetrical haircut, first select all particles, then mirror the particles, then tick X Mirror in the Particle panel.
 
+##### Remove Doubles
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Remove Doubles | Remove double vertices that are very close to each other. This can for example happen when you mirror the particles. |
-| Unify Length | Unifies the length of the selected hair particles. The length is calculated by the average length of the selection. |
+Remove double vertices that are very close to each other. This can for example happen when you mirror the particles.
 
+##### Unify Length
+
+Unifies the length of the selected hair particles. The length is calculated by the average length of the selection.
 
 #### Rekey
 
@@ -59,6 +60,10 @@ Rekey changes the number of keys for the selected particles, including root and 
 Manually set a weight for the selected keys to interpolate between the current key weight and the brushes weight.
 
 ##### Adjust Last Operation - Weight Set
+
+Change the settings of **Weight Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Weight Set](/docs2/images/editors/3d-viewport/mesh/particle-edit/adjust-last-operation-weight-set.png)
 
 ###### Factor
 
@@ -76,13 +81,17 @@ Delete either the whole particle, or just the selected key of the particle.
 
 Show or hide the selected geometry
 
+##### Show Hidden
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------- |
-| Show Hidden | Makes all hidden geometry visible again. |
-| Hide Selected | Hides the selected geometry. |
-| Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
+Makes all hidden geometry visible again.
 
+##### Hide Selected
+
+Hides the selected geometry.
+
+##### Hide Unselected
+
+Hides the not selected geometry. The selected geometry stays visible.
 
 ##### Adjust Last Operation - Hide Selected
 
@@ -128,14 +137,10 @@ Allows you to comb the strands of the particle system.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings.png)
 
-
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Deflect Emitter | Prevent paths to intersect the emitter mesh geometry. |
-| Distance | The distance to keep particles away from the emitter mesh geometry. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Deflect Emitter**: Prevent paths to intersect the emitter mesh geometry.
+- **Distance**: The distance to keep particles away from the emitter mesh geometry.
 
 ##### Smooth
 
@@ -145,12 +150,8 @@ Allows you to smooth the strands of the particle system.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-2.png)
 
-
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
 
 ##### Add
 
@@ -160,15 +161,11 @@ Allows you to add strands to the particle system.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-3.png)
 
-
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Count | The amount of strands. |
-| Interpolate | Interpolate new particles from the existing ones. |
-| Steps | Brush steps. Steps is connected with Interpolate. |
-| Keys | How many keys to make new particles with. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Count**: The amount of strands.
+- **Interpolate**: Interpolate new particles from the existing ones.
+- **Steps**: Brush steps. Steps is connected with Interpolate.
+- **Keys**: How many keys to make new particles with.
 
 ##### Length
 
@@ -178,13 +175,9 @@ Manipulate the length of the strands.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-4.png)
 
-
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Length Mode | Grow or shrink the particles. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Length Mode**: Grow or shrink the particles.
 
 ##### Puff
 
@@ -194,14 +187,10 @@ Manipulate the volume of the strands.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-5.png)
 
-
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Add / Sub | Add or subtract to the current volume. |
-| Puff Volume | Apply Puff to unselected end points. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Add / Sub**: Add or subtract to the current volume.
+- **Puff Volume**: Apply Puff to unselected end points.
 
 ##### Cut
 
@@ -211,12 +200,8 @@ Cut away particles.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png)
 
-
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
 
 ##### Weight
 
@@ -226,11 +211,8 @@ Manipulate the weight of the strands.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode/tool-settings-6.png)
 
-
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
-| Strength | The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport. |
+- **Radius**: The brush radius. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
+- **Strength**: The brush strength. The button behind the edit box allows you to set the radius by mouse move. This is a hotkey tool, and should be performed in the viewport.
 
 # Sidebar
 
@@ -254,85 +236,113 @@ The brush settings can be found in the Particle Tool panel instead.
 
 ![Comb brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/comb-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| --------------- | --------------------------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
-| Deflect Emitter | Keep paths from intersecting the emitter. |
-| Distance | Distance to keep particles away from emitter. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
+
+##### Deflect Emitter
+
+Keep paths from intersecting the emitter.
+
+##### Distance
+
+Distance to keep particles away from emitter.
 
 #### Smooth brush
 
 ![Smooth brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/smooth-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| -------- | -------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
 
 #### Add brush
 
 ![Add brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/add-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| ----------- | --------------------------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
-| Interpolate | Interpolate new particles from existing ones. |
-| Steps | Brush steps. |
-| Keys | How many keys to make new particles with. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
+
+##### Interpolate
+
+Interpolate new particles from existing ones.
+
+##### Steps
+
+Brush steps.
+
+##### Keys
+
+How many keys to make new particles with.
 
 #### Length brush
 
 ![Length brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/length-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
-| Length | Make hairs longer with Grow, or shorter with Shrink. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
+
+##### Length
+
+Make hairs longer with Grow, or shorter with Shrink.
 
 #### Puff brush
 
 ![Puff brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/puff-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
-| Puff Mode | Add makes hairs more puffy. Sub (tract) makes hairs less puffy. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
+
+##### Puff Mode
+
+Add makes hairs more puffy. Sub (tract) makes hairs less puffy.
 
 #### Cut brush
 
 ![Cut brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| -------- | -------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush.
 
 #### Weight brush
 
 ![Weight brush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/cut-brush.png)
 
+##### Radius
 
-| Entry | What it does |
-| -------- | -------------------------------------- |
-| Radius | The size of the brush. |
-| Strength | The strength of the brush. hier weiter |
+The size of the brush.
 
+##### Strength
+
+The strength of the brush. hier weiter
 
 ### Particle Edit Mode - Options panel
 
@@ -350,13 +360,17 @@ The particles can be baked in the Particles tab in the Cache panel.
 
 ![Particle Edit Mode - Options panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode/particle-edit-mode-options-panel-4.png)
 
+#### Editing Type
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Editing Type | The Particle Edit Type. This edit box just shows you what particle type you currently have. It does not allow you to change the particle type. |
-| X Mirror | Mirrors the selected particles. If you want a symmetrical haircut, first select all particles, then mirror the particles, then tick X Mirror. |
-| Preserve | **Strand Lengths**: Keep the path lengths constant. · **Root Positions**: Keep root keys unmodified. |
+The Particle Edit Type. This edit box just shows you what particle type you currently have. It does not allow you to change the particle type.
 
+#### X Mirror
+
+Mirrors the selected particles. If you want a symmetrical haircut, first select all particles, then mirror the particles, then tick X Mirror.
+
+#### Preserve
+
+**Strand Lengths**: Keep the path lengths constant. · **Root Positions**: Keep root keys unmodified.
 
 #### Cut particles to Shape
 
@@ -372,12 +386,13 @@ The Cut button with which you perform the option becomes active when you choose 
 
 ##### With Hair
 
+###### Path Steps
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Path Steps | How many steps to display the path with. Meant is the resolution for the hair strains. |
-| Children | Display all particles, including children. For performance reasons child particles are usually not displayed in the viewport. |
+How many steps to display the path with. Meant is the resolution for the hair strains.
 
+###### Children
+
+Display all particles, including children. For performance reasons child particles are usually not displayed in the viewport.
 
 ##### With Emitter
 
@@ -385,10 +400,18 @@ The Cut button with which you perform the option becomes active when you choose 
 
 The emitter particle system must be editable, or the settings remains greyed out. Bake ...
 
+###### Path Steps
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------- |
-| Path Steps | How many steps to display the emitter path with. |
-| Particles | Display the actual particles. |
-| Fade Time | Fade paths and keys further away from the current frame |
-| Frames | How many frames to fade. |
+How many steps to display the emitter path with.
+
+###### Particles
+
+Display the actual particles.
+
+###### Fade Time
+
+Fade paths and keys further away from the current frame
+
+###### Frames
+
+How many frames to fade.

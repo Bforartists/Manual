@@ -78,18 +78,45 @@ To manipulate a curve point, grab one of its handlers and drag.
 
 When you right click into the channel area, then you will call the Dope Sheet Channel context menu.
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------------------------------------- |
-| Frame selected channels | Centers the selected channels in view. |
-| Mute Channel | This channel is not calculated. |
-| Unmute Channel | This channel is calculated. |
-| Toggle Protect | Toggle the Protect channels from editing. |
-| Protect Channels | Protect channels from editing. |
-| Unprotect Channels | Enables editing of channels again. |
-| Group Channels | Groups channels together. |
-| Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
-| Toggle Channel Editability | Protects or unprotects the selected channels. |
-| Extrapolation Mode submenu | — |
+### Frame selected channels
+
+Centers the selected channels in view.
+
+### Mute Channel
+
+This channel is not calculated.
+
+### Unmute Channel
+
+This channel is calculated.
+
+### Toggle Protect
+
+Toggle the Protect channels from editing.
+
+### Protect Channels
+
+Protect channels from editing.
+
+### Unprotect Channels
+
+Enables editing of channels again.
+
+### Group Channels
+
+Groups channels together.
+
+### Ungroup Channels
+
+Ungroup grouped channels. Beware, the channels will not return to their initial group.
+
+### Toggle Channel Editability
+
+Protects or unprotects the selected channels.
+
+### Extrapolation Mode submenu
+
+—
 
 ### Extrapolation Mode
 
@@ -97,20 +124,41 @@ When you right click into the channel area, then you will call the Dope Sheet Ch
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
+#### Constant Extrapolation
 
-| Entry | What it does |
-| ---------------------- | ---------------------------- |
-| Reveal Curves | Reveal all curves. |
-| Hide selected Curves | Hides the selected curves. |
-| Hide unselected Curves | Hides the unselected curves. |
-| Expand Channels | Expands the channels. |
-| Collapse Channels | Collapses the channels. |
+The animation curve continues straight at the end.
+
+#### Linear Extrapolation
+
+The animation curve continues the last direction.
+
+#### Make Cyclic
+
+Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.
+
+#### Clear Cyclic
+
+Removes the cyclic extrapolation.
+
+#### Reveal Curves
+
+Reveal all curves.
+
+#### Hide selected Curves
+
+Hides the selected curves.
+
+#### Hide unselected Curves
+
+Hides the unselected curves.
+
+#### Expand Channels
+
+Expands the channels.
+
+#### Collapse Channels
+
+Collapses the channels.
 
 ### Move submenu
 
@@ -118,10 +166,13 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 
 Sort the order of the channels. The menu items should be self explaining.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------ |
-| Delete Channels | Removes the selected channels. |
-| Delete Invalid Drivers | Deletes Invalid Drivers. |
+#### Delete Channels
+
+Removes the selected channels.
+
+#### Delete Invalid Drivers
+
+Deletes Invalid Drivers.
 
 ## F-Curve Context Menu
 
@@ -129,10 +180,13 @@ Sort the order of the channels. The menu items should be self explaining.
 
 When you double right click into the viewport then you will call the F-Curve context menu.
 
-| Entry | What it does |
-| ----- | --------------------------------------------- |
-| Copy | Copies the currently selected curve point(s). |
-| Paste | Pastes copied curve point(s) |
+### Copy
+
+Copies the currently selected curve point(s).
+
+### Paste
+
+Pastes copied curve point(s)
 
 ### Paste Flipped
 
@@ -141,6 +195,8 @@ Pastes copied curve point(s), but flipped.
 #### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png)
+
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Frame Offset
 
@@ -176,6 +232,8 @@ Set the handle type for the currently selected curve point.
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png)
 
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the handle type for the currently selected curve point.
@@ -192,6 +250,8 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png)
 
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Set the interpolation mode.
@@ -205,6 +265,8 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 #### Adjust Last Operation - Set Keyframe Easing Type
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png)
+
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -221,6 +283,8 @@ Duplicate the selected curve point(s).
 #### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -244,12 +308,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Delete Keyframes
 
@@ -265,6 +338,8 @@ Mirrors the animation by the given method.
 
 ![Last Operator Mirror Keys](/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png)
 
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ##### Type
 
 Flips the selected keyframes over the current frame position by the chosen method.
@@ -278,6 +353,8 @@ Snaps the selected keyframes by the given method.
 #### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/drivers-editor/last-operator-snap-keys.png)
+
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -313,14 +390,29 @@ When you click into the edit box, then the expression for the driver will appear
 
 There are some advanced expression methods, called Simple Expressions.
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Variable Names | Use only ASCII characters. |
-| Literals | Floating point and decimal integer. |
-| Globals | frame |
-| Constants | pi, True, False |
-| Operators | +, -, `*`, /, ==, !=, &lt;, &lt;=, &gt;, &gt;=, and, or, not, conditional operator/ ternary if |
-| Functions | min, max, radians, degrees, abs, fabs, floor, ceil, trunc, int, sin, cos, tan, asin, acos, atan, atan2, exp, log, sqrt, pow, fmod Simple expressions are evaluated even when Python script execution is disabled. When an expression outside of this subset is used, Bforartists displays a “Slow Python expression” warning. However, as long as the majority of drivers use simple expressions, using a complex expression in select few is OK. |
+### Variable Names
+
+Use only ASCII characters.
+
+### Literals
+
+Floating point and decimal integer.
+
+### Globals
+
+frame
+
+### Constants
+
+pi, True, False
+
+### Operators
+
++, -, `*`, /, ==, !=, &lt;, &lt;=, &gt;, &gt;=, and, or, not, conditional operator/ ternary if
+
+### Functions
+
+min, max, radians, degrees, abs, fabs, floor, ceil, trunc, int, sin, cos, tan, asin, acos, atan, atan2, exp, log, sqrt, pow, fmod Simple expressions are evaluated even when Python script execution is disabled. When an expression outside of this subset is used, Bforartists displays a “Slow Python expression” warning. However, as long as the majority of drivers use simple expressions, using a complex expression in select few is OK.
 
 ## Drivers setup example
 

@@ -51,18 +51,21 @@ The list of available caches. The caches have no name by default. Double click t
 
 You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.
 
+#### Drag Handler
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The two vertical lines at the end is a handler with which you can expand the list.
 
+#### Search Field
 
-| Entry | What it does |
-| -------------------- | --------------------------- |
-| Add New Cache | Add a new cache. |
-| Delete current Cache | Deletes the selected cache. |
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
+#### Add New Cache
+
+Add a new cache.
+
+#### Delete current Cache
+
+Deletes the selected cache.
 
 ### External
 
@@ -80,19 +83,25 @@ You can create such cache files when you tick Disk cache with External off, and 
 
 ![External](/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/external-4.png)
 
+#### Index Number
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------- |
-| Index Number | The index number of cache files. (The last two digits of the files name.) |
-| File Path | Select the directory path to the cache files. |
-| Info string | An info string. Gives different messages, dependent of the status. |
+The index number of cache files. (The last two digits of the files name.)
 
+#### File Path
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cache Step | The interval for storing simulation data. Note! Some physics systems (such as particles) allow for positions to be stored only on every nth frame, letting the positions for in-between frames be interpolated. Using a cache step greater than one will result in a smaller cache, but the result may differ from the original simulation. |
-| Info string | An info string. Gives different messages, dependent of the status. |
+Select the directory path to the cache files.
 
+#### Info string
+
+An info string. Gives different messages, dependent of the status.
+
+#### Cache Step
+
+The interval for storing simulation data. Note! Some physics systems (such as particles) allow for positions to be stored only on every nth frame, letting the positions for in-between frames be interpolated. Using a cache step greater than one will result in a smaller cache, but the result may differ from the original simulation.
+
+#### Info string
+
+An info string. Gives different messages, dependent of the status.
 
 ### Disk Cache
 
@@ -112,13 +121,22 @@ The baking progress can be seen in the footer. You need to be in Object Mode to 
 
 ![Bake / Delete Bake](/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png)
 
+#### Calculate To Frame
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Calculate To Frame | Bake only up to the current frame. Limited by End frame set in the cache settings. |
-| Current Cache to Bake | Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it. |
-| Bake All Dynamics | Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types. |
-| Delete All Bakes | Deletes all bakes of all physics systems in the scene, even those of different types. |
-| Update All To Frame | Bake all physics systems in the scene to the current frame. |
+Bake only up to the current frame. Limited by End frame set in the cache settings.
 
+#### Current Cache to Bake
 
+Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it.
+
+#### Bake All Dynamics
+
+Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.
+
+#### Delete All Bakes
+
+Deletes all bakes of all physics systems in the scene, even those of different types.
+
+#### Update All To Frame
+
+Bake all physics systems in the scene to the current frame.
