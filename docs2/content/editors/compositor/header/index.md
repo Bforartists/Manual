@@ -134,6 +134,10 @@ Toggles showing node editor gizmos.
 
 Shows the active node gizmo, specifically for the Split viewer node.
 
+#### Minimap
+
+Shows a small map of the node tree to move around big trees. See [Node Editor Minimap](../../../interface/editors.md#node-editor-minimap) for how it works and its settings.
+
 ### Snap
 
 Activates snapping.
