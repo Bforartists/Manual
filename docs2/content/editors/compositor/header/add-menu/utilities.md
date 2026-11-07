@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Utilities"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Utilities nodes: Math, Matrix, Rotation, Text, Vector, and the nodes for levels, random values and switches."
@@ -140,6 +140,12 @@ The type of the random value: Float, Integer, Boolean or Vector.
 ##### Value
 
 The random value, in the chosen data type.
+
+### Repeat
+
+Adds a repeat zone: a **Repeat Input** and a **Repeat Output** node with a zone between them. The nodes in the zone run again and again, as many times as **Iterations** says, and each round starts with the result of the round before. Use it to apply an effect several times, for example to blur or grow a mask step by step, without copying the same nodes.
+
+You add the sockets that pass through the zone yourself by connecting them to the empty socket. The **Iteration** output tells which round is running, starting at 0. The repeat zone works like the one in Geometry Nodes: see [Repeat](../../../geometry-node-editor/header/add-menu/utilities.md#repeat).
 
 ### Split
 
@@ -359,6 +365,20 @@ Determines how the relative value is interpreted.
 ##### Value
 
 The converted float value, based on the selected mode and input type.
+
+# Closure
+
+## Add menu - Utilities - Closure
+
+Closures let you pass a piece of node logic into a node group, like a small function. Build the logic in a **Closure** zone, then run it somewhere else with **Evaluate Closure**. They work like the closures in Geometry Nodes: see [Closure](../../../geometry-node-editor/header/add-menu/utilities.md#closure).
+
+### Closure
+
+Adds a closure zone: a **Closure Input** and a **Closure Output** node. The nodes in the zone are not run where they are; the **Closure** output carries them as one value that you can connect to a node group or to Evaluate Closure.
+
+### Evaluate Closure
+
+Runs the logic of a closure with the inputs you give it, and outputs its result. The input and output sockets must have the same names and types as the ones in the closure zone.
 
 # Math
 

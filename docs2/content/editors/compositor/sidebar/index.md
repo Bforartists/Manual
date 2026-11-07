@@ -6,8 +6,8 @@ path:
   - Editors
   - Compositor
   - Sidebar
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 10.3 Editors - Compositor Editor - Sidebar.odt
@@ -572,9 +572,21 @@ Automatically optimizes the precision dynamically.
 
 Final quality precision.
 
-### Viewer Region
+### Cache Frames
 
-Use boundaries for viewer nodes and composite backdrop.
+Keeps the result of each frame in memory, so playing back or scrubbing frames that are already done is faster. Only for the scene compositor.
+
+### Proxy
+
+Settings that make the compositor faster while you work. Only for the scene compositor.
+
+#### Preview Scale
+
+Tick it and set a percentage to work on smaller images while you preview the compositor interactively. Input media and values in pixels are scaled down by this amount. The final render always uses the full size.
+
+#### Adapt To Render Scale
+
+Scales input media and values in pixels with the render resolution scale or the viewport zoom, so the result looks the same at every scale and zoom level.
 
 # Add Tab
 
