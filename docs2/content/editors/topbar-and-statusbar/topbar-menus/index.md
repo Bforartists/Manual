@@ -7,7 +7,7 @@ path:
   - Topbar and Statusbar
   - Topbar menus
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.topbar-and-statusbar.topbar-menus.file-menu

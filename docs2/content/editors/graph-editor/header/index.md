@@ -7,7 +7,7 @@ path:
   - Graph Editor
   - Header
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.graph-editor.header.header-tools-and-options

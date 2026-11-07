@@ -7,7 +7,7 @@ path:
   - Graph Editor
   - Sidebar
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 18.3 Editors - Graph Editor - Sidebar.odt
