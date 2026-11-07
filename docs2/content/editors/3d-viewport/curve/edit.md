@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Curve and Surface"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the curve and surface itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -172,6 +172,8 @@ Warps a mesh selection between two defined points. This also works with curves.
 ##### Adjust Last Operation - Warp
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
@@ -356,6 +358,8 @@ Set dimensions is an add-on. You can turn it off in the add-ons section of the u
 
 Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
+
 ###### New Dimensions
 
 ![New Dimensions](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/new-dimensions.png)
@@ -453,6 +457,8 @@ Toggle Cyclic closes or opens the curve.
 
 Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Toggle Cyclic](/docs2/images/editors/3d-viewport/curve/adjust-last-operation-toggle-cyclic.png)
+
 ###### Direction
 
 Direction is a drop-down box . Choose the direction in which the curve gets closed.
@@ -464,6 +470,8 @@ Decimates the currently selected geometry. It starts with a Ratio of 1. Which me
 ##### Adjust Last Operation - Decimate Curve
 
 Change the settings of **Decimate Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Decimate Curve](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-decimate-curve.png)
 
 ###### Ratio
 
@@ -875,6 +883,8 @@ Warps a mesh selection between two defined points. This also works with curves.
 
 Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
+
 
 | Entry | What it does |
 | ------------ | ----------------------------------- |
@@ -1023,6 +1033,8 @@ Set dimensions is an add-on. You can turn it off in the add-ons section of the u
 
 Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
+
 ###### New Dimensions
 
 ![New Dimensions](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/new-dimensions.png)
@@ -1136,6 +1148,8 @@ Toggle Cyclic closes or opens the curve.
 ##### Adjust Last Operation - Toggle Cyclic
 
 Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Toggle Cyclic](/docs2/images/editors/3d-viewport/curve/adjust-last-operation-toggle-cyclic.png)
 
 ###### Direction
 
@@ -1999,6 +2013,8 @@ Toggle Cyclic closes or opens the curve.
 
 Change the settings of **Toggle Cyclic** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Toggle Cyclic](/docs2/images/editors/3d-viewport/curve/adjust-last-operation-toggle-cyclic.png)
+
 ###### Direction
 
 Direction is a drop-down box choose the direction in which the curve gets closed.
@@ -2046,6 +2062,8 @@ Decimates the currently selected geometry. It starts with a Ratio of 1. Which me
 ##### Adjust Last Operation - Decimate Curve
 
 Change the settings of **Decimate Curve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Decimate Curve](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-decimate-curve.png)
 
 ###### Ratio
 
