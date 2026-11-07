@@ -1,10 +1,7 @@
 {
  "pages": {
-  "docs2/content/editors/compositor/header/index.md": "editors/compositor/header.html",
-  "docs2/content/editors/geometry-node-editor/header/index.md": "editors/geometry-node-editor/header.html",
-  "docs2/content/editors/properties/strip-modifiers-tab.md": "editors/properties/strip-modifiers-tab.html",
-  "docs2/content/editors/shader-editor/header/index.md": "editors/shader-editor/header.html",
-  "docs2/content/interface/editors.md": "interface/editors.html"
+  "docs2/content/editors/geometry-node-editor/header/add-menu/geometry.md": "editors/geometry-node-editor/header/add-menu/geometry.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/utilities.md": "editors/geometry-node-editor/header/add-menu/utilities.html"
  },
- "images": 190
+ "images": 230
 }
