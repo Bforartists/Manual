@@ -50,7 +50,7 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
 
-Without the tool, hold **Ctrl** and drag with the right mouse button to lasso select, or **Shift Ctrl** and right drag to deselect (Cmd instead of Ctrl on macOS), the same as in the Dope Sheet and Graph Editor.
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -68,7 +68,7 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Circle select several elements at once. Click at the start point, then drag.
 
-Without the tool, press **G** to circle select.
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -475,7 +475,7 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
 
-Without the tool, hold **Ctrl** and drag with the right mouse button to lasso select, or **Shift Ctrl** and right drag to deselect (Cmd instead of Ctrl on macOS), the same as in the Dope Sheet and Graph Editor.
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -493,7 +493,7 @@ The available selection modes. The mode titles are pretty self explaining. So i 
 
 Circle select several elements at once. Click at the start point, then drag.
 
-Without the tool, press **G** to circle select.
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 

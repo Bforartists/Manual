@@ -306,7 +306,9 @@ Only works on Mesh objects.
 
 #### Convert Rotation Mode
 
-Changes the rotation mode of the selected bones and converts their existing animation to the new mode, so the motion stays the same. Use it when a bone was animated in Euler and you need Quaternion, for example to avoid gimbal lock. It is also in Object Mode for objects. The hotkey in Pose Mode is **Ctrl R**.
+Changes the rotation mode of the selected bones and converts their existing animation to the new mode, so the motion stays the same. Use it when a bone was animated in Euler and you need Quaternion, for example to avoid gimbal lock. It is also in Object Mode for objects.
+
+> **Tip:** Convert Rotation Mode also has a hotkey in Pose Mode. See the [Pose Mode keymap](../../../keymap/keymap-table.md#pose-mode).
 
 ##### Adjust Last Operation - Convert Rotation Mode
 
