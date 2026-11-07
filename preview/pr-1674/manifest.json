@@ -1,9 +1,10 @@
 {
  "pages": {
+  "docs2/content/editors/3d-viewport/armature/pose.md": "editors/3d-viewport/armature/pose.html",
   "docs2/content/editors/properties/strip-tab.md": "editors/properties/strip-tab.html",
   "docs2/content/editors/video-sequence-editor/header/index.md": "editors/video-sequence-editor/header.html",
   "docs2/content/editors/video-sequence-editor/sidebar/index.md": "editors/video-sequence-editor/sidebar.html",
   "docs2/content/editors/video-sequence-editor/tool-shelf.md": "editors/video-sequence-editor/tool-shelf.html"
  },
- "images": 318
+ "images": 409
 }
