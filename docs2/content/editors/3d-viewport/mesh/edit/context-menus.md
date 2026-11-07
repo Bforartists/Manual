@@ -8,8 +8,8 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Context Menus"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: menu
 summary: "The right-click menus of Mesh › Edit Mode."
 order: 40
@@ -533,6 +533,8 @@ Rotate Edge rotates the selected edge clockwise.
 
 Change the settings of **Rotate Selected Edge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Rotate Selected Edge](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-rotate-selected-edge.png)
+
 ##### Counter Clockwise
 
 ![Counter Clockwise](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/counter-clockwise.png)
@@ -596,6 +598,8 @@ A negative Edge Bevel Weight value will subtract from the current active crease 
 #### Adjust Last Operation - Edge Bevel Weight
 
 Change the settings of **Edge Bevel Weight** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Edge Bevel Weight](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-edge-bevel-weight.png)
 
 ##### Factor
 
@@ -667,6 +671,8 @@ Decimates the geometry by trying to make one quad out of four quads. But can als
 #### Adjust Last Operation - Un-Subdivide
 
 Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Un-Subdivide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-un-subdivide.png)
 
 ##### Iterations
 
@@ -1074,6 +1080,8 @@ Splits the selected faces to create a triangulated geometry.
 
 Change the settings of **Poke Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Poke Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-poke-faces.png)
+
 ##### Poke Offset
 
 ![Poke Offset](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/poke-offset.png)
@@ -1450,6 +1458,8 @@ Triangulate Faces triangulates the faces of the selected geometry.
 
 Change the settings of **Triangulate Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Triangulate Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-triangulate-faces.png)
+
 ##### Quad Method
 
 ![Quad Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/quad-method.png)
@@ -1497,6 +1507,8 @@ Tris to quads tries to convert triangulated geometry back to a quad geometry by 
 #### Adjust Last Operation - Tris to Quads
 
 Change the settings of **Tris to Quads** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Tris to Quads](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-tris-to-quads.png)
 
 ##### Max Face Angle
 
@@ -1561,6 +1573,8 @@ Decimates the geometry by trying to make one quad out of four quads. But can als
 #### Adjust Last Operation - Un-Subdivide
 
 Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Un-Subdivide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-un-subdivide.png)
 
 ##### Iterations
 
