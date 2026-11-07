@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties Editor
   - Strip Tab
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:

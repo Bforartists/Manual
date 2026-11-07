@@ -6,7 +6,7 @@ path:
   - Editors
   - Video Sequence Editor
   - Sidebar
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:

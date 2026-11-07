@@ -1556,11 +1556,11 @@ Resets the movie strip to original playback speed.
 
 ##### Split
 
-Split the selected strip into two parts at the current frame.
+Splits the selected strips into two parts at the current frame. This is a soft split: you can drag the ends of both parts back out to show the frames past the cut. Only selected strips are split.
 
-##### Hold Split
+##### Hard Split
 
-Like Split, it splits a strip in two strips. But you will not be able to drag the endpoints to show the frames past the split of each resulting strip. You can adjust the Hold Offset number fields in the Strip Info panel.
+Like Split, it splits the selected strips in two. But the content past the cut is removed, so you can't drag the ends back out. Before 5.3 this was called Hold Split.
 
 ##### Copy
 
@@ -1584,7 +1584,7 @@ Deletes the selected strip(s).
 
 ##### Ripple Delete
 
-Deletes the selected strip(s) and moves the following strips to close the gap.
+Deletes the selected strip(s) and moves the following strips to close the gap. The settings in the Adjust Last Operation panel choose whether strips on other channels and markers move too (**All Channels**, **Markers**), and whether parts of other strips inside the removed range are cut away so the whole gap closes (**Clear Ranges**).
 
 ### Delete Strip & Data
 
