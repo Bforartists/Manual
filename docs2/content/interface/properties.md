@@ -177,9 +177,14 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 When you have a point selected then you will reveal further settings at the bottom.
 
+#### Vector Handle
 
-| Entry | What it does |
-| ------------------- | -------------------------------- |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
+Set handle type to Vector.
+
+#### Auto Handle
+
+Set handle type to Auto.
+
+#### Auto Clamped Handle
+
+Set handle type to Auto Clamped.

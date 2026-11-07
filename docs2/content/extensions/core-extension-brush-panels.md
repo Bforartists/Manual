@@ -56,40 +56,125 @@ These brush panels are included with all mesh object painting modes.
 
 The Sculpt mode activated from the top left of the 3D View or by hotkey.
 
+##### Draw
 
-| Entry | What it does |
-| ------------------- | ------------------------------------ |
-| Draw | All Draw brush types. |
-| Draw Sharp | All Draw Sharp brush types. |
-| Clay | All Clay brush types. |
-| Clay Strips | All Clay Strips brush types. |
-| Layer | All Layer brush types. |
-| Inflate | All Inflate brush types. |
-| Blob | All Blob brush types. |
-| Crease | All Crease brush types. |
-| Smoothing | All Smoothing brush types. |
-| Flatten | All Flatten brush types. |
-| Fill | All Fill brush types. |
-| Scrape | All Scrape brush types. |
-| Multiplane Scrape | All Multiplane Scrape brush types. |
-| Pinch | All Pinch brush types. |
-| Grab | All Grab brush types. |
-| Elastic Deformation | All Elastic Deformation brush types. |
-| Snake Hook | All Snake Hook brush types. |
-| Thumb | All Thumb brush types. |
-| Pose | All Pose brush types. |
-| Nudge | All Nudge brush types. |
-| Rotate | All Rotate brush types. |
-| Topology | All Topology brush types. |
-| Boundary | All Boundary brush types. |
-| Cloth | All Cloth brush types. |
-| Simplify | All Simplify brush types. |
-| Mask | All Mask brush types. |
-| Draw Face Sets | All Draw Face Sets brush types. |
-| Displacement Erase | All Displacement Erasebrush types. |
-| Displacement Smear | All Displacement Smear brush types. |
-| Paint | All Paint brush types. |
+All Draw brush types.
 
+##### Draw Sharp
+
+All Draw Sharp brush types.
+
+##### Clay
+
+All Clay brush types.
+
+##### Clay Strips
+
+All Clay Strips brush types.
+
+##### Layer
+
+All Layer brush types.
+
+##### Inflate
+
+All Inflate brush types.
+
+##### Blob
+
+All Blob brush types.
+
+##### Crease
+
+All Crease brush types.
+
+##### Smoothing
+
+All Smoothing brush types.
+
+##### Flatten
+
+All Flatten brush types.
+
+##### Fill
+
+All Fill brush types.
+
+##### Scrape
+
+All Scrape brush types.
+
+##### Multiplane Scrape
+
+All Multiplane Scrape brush types.
+
+##### Pinch
+
+All Pinch brush types.
+
+##### Grab
+
+All Grab brush types.
+
+##### Elastic Deformation
+
+All Elastic Deformation brush types.
+
+##### Snake Hook
+
+All Snake Hook brush types.
+
+##### Thumb
+
+All Thumb brush types.
+
+##### Pose
+
+All Pose brush types.
+
+##### Nudge
+
+All Nudge brush types.
+
+##### Rotate
+
+All Rotate brush types.
+
+##### Topology
+
+All Topology brush types.
+
+##### Boundary
+
+All Boundary brush types.
+
+##### Cloth
+
+All Cloth brush types.
+
+##### Simplify
+
+All Simplify brush types.
+
+##### Mask
+
+All Mask brush types.
+
+##### Draw Face Sets
+
+All Draw Face Sets brush types.
+
+##### Displacement Erase
+
+All Displacement Erasebrush types.
+
+##### Displacement Smear
+
+All Displacement Smear brush types.
+
+##### Paint
+
+All Paint brush types.
 
 #### Vertex Paint
 
@@ -97,14 +182,21 @@ The Sculpt mode activated from the top left of the 3D View or by hotkey.
 
 The Vertex Paint mode activated from the top left of the 3D View or by hotkey.
 
+##### Draw
 
-| Entry | What it does |
-| ------- | ------------------------ |
-| Draw | All Draw brush types. |
-| Smear | All Smear brush types. |
-| Average | All Average brush types. |
-| Blur | All Blur brush types. |
+All Draw brush types.
 
+##### Smear
+
+All Smear brush types.
+
+##### Average
+
+All Average brush types.
+
+##### Blur
+
+All Blur brush types.
 
 #### Weight Paint
 
@@ -112,13 +204,17 @@ The Vertex Paint mode activated from the top left of the 3D View or by hotkey.
 
 The Weight Paint mode activated from the top left of the 3D View or by hotkey.
 
+##### Draw
 
-| Entry | What it does |
-| ------- | ------------------------ |
-| Draw | All Draw brush types. |
-| Smear | All Smear brush types. |
-| Average | All Average brush types. |
+All Draw brush types.
 
+##### Smear
+
+All Smear brush types.
+
+##### Average
+
+All Average brush types.
 
 ##### Blur
 
@@ -136,15 +232,25 @@ The Texture Paint mode activated from the top left of the 3D View or by hotkey.
 
 All Draw brush types.
 
+###### Soften
 
-| Entry | What it does |
-| ------ | ----------------------- |
-| Soften | All Soften brush types. |
-| Smear | All Smear brush types. |
-| Clone | All Clone brush types. |
-| Fill | All Fill brush types. |
-| Mask | All Mask brush types. |
+All Soften brush types.
 
+###### Smear
+
+All Smear brush types.
+
+###### Clone
+
+All Clone brush types.
+
+###### Fill
+
+All Fill brush types.
+
+###### Mask
+
+All Mask brush types.
 
 ### Grease Pencil
 
@@ -154,12 +260,18 @@ These brush panels are included with the Grease Pencil object Draw Mode.
 
 The draw mode activated from the top left of the 3D View or by hotkey.
 
+##### Draw
 
-| Entry | What it does |
-| ----- | ---------------------- |
-| Draw | All Draw brush types. |
-| Erase | All Erase brush types. |
-| Fill | All Fill brush types. |
-| Tint | All Tint brush types. |
+All Draw brush types.
 
+##### Erase
 
+All Erase brush types.
+
+##### Fill
+
+All Fill brush types.
+
+##### Tint
+
+All Tint brush types.

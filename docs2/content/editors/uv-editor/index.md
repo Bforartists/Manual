@@ -89,20 +89,16 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 
@@ -116,22 +112,18 @@ The distance between the single UV patches.
 
 Number of iterations.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| No Flip | Prevent flipping UV's |
-| Importance Weight | Take per vertex importance weights into account. |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+- **No Flip**: Prevent flipping UV's
+- **Importance Weight**: Take per vertex importance weights into account.
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 
@@ -218,13 +210,25 @@ Orientation is a drop-down box where you can choose the type of orientation for 
 
 Constraint Axis gives you the possibility to define the mirror axis. You can choose more than one axis here.
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Straighten | Straightens the selected geometry in both directions, X and Y axis. |
-| Straighten X | Straightens the selected geometry along the X axis. |
-| Straighten Y | Straightens the selected geometry along the Y axis. |
-| Align Auto | Aligns the selection. The align axis gets chosen from the selection itself. When it's higher than tall, then it aligns along the Y axis. When it's taller than high, then it aligns along the X axis. The align point is the pivot of the selection. |
-| Align Vertically | Aligns the selection along the X axis. The align point is the pivot of the selection. |
+###### Straighten
+
+Straightens the selected geometry in both directions, X and Y axis.
+
+###### Straighten X
+
+Straightens the selected geometry along the X axis.
+
+###### Straighten Y
+
+Straightens the selected geometry along the Y axis.
+
+###### Align Auto
+
+Aligns the selection. The align axis gets chosen from the selection itself. When it's higher than tall, then it aligns along the Y axis. When it's taller than high, then it aligns along the X axis. The align point is the pivot of the selection.
+
+###### Align Vertically
+
+Aligns the selection along the X axis. The align point is the pivot of the selection.
 
 ### Align Horizontally
 
@@ -246,10 +250,13 @@ Lists the straighten and align methods again.
 
 ![Merge](/docs2/images/editors/uv-editor/merge.png)
 
-| Entry | What it does |
-| --------- | --------------------------------------------- |
-| At Center | Merges the selected vertices at the center. |
-| At Cursor | Merges the selected vertices at the 2d cursor |
+#### At Center
+
+Merges the selected vertices at the center.
+
+#### At Cursor
+
+Merges the selected vertices at the 2d cursor
 
 #### By Distance
 
@@ -328,10 +335,13 @@ Most of the tools can be found in the graphical UI. But there are still some too
 
 The navigation hotkeys and the context menus are excluded here since they are already covered.
 
-| Entry | What it does |
-| ---------------------------------- | --------------------------------------- |
-| Loop Select - Alt Left Mouse | Select an edge loop. |
-| Loop Select - Shift Alt Left Mouse | Select an edge loop. Adds to selection. |
+### Loop Select - Alt Left Mouse
+
+Select an edge loop.
+
+### Loop Select - Shift Alt Left Mouse
+
+Select an edge loop. Adds to selection.
 
 ### Edge Ring Select - Ctrl Alt Left Mouse
 
@@ -369,20 +379,16 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 
@@ -396,22 +402,18 @@ The distance between the single UV patches.
 
 Number of iterations.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| No Flip | Prevent flipping UV's |
-| Importance Weight | Take per vertex importance weights into account. |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+- **No Flip**: Prevent flipping UV's
+- **Importance Weight**: Take per vertex importance weights into account.
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
 ###### Margin Method
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
 ###### Margin
 

@@ -144,7 +144,7 @@ def check_editor_safe(pages, rep):
 def check_style(pages, rep):
     """Formatting standard (docs2/dev-docs/Formatting-Standard.md). Warnings only, one line per page and kind."""
     C = "🎨 Style"
-    last_op = re.compile(r"^(repeat last|last operator|adjust last operation)", re.I)
+    last_op = re.compile(r"^(repeat last(?! *$)|last operator|adjust last operation)", re.I)   # "Repeat Last" alone is the Edit menu entry
     for p in pages:
         heads, skips, bold, tables = [], [], [], []
         lines = list(p.lines())

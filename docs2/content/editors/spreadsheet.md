@@ -43,10 +43,13 @@ This menu is hidden by default. It is meant to edit the layouts, and should not 
 
 This option is only available if the object is in Edit Mode. When checked, only data for the selected mesh elements is shown.
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Row Filter | Turn on or off the row filters defined in the sidebar. |
-| Internal Attributes | Display attributes with names starting with a period that are meant for internal use. |
+#### Row Filter
+
+Turn on or off the row filters defined in the sidebar.
+
+#### Internal Attributes
+
+Display attributes with names starting with a period that are meant for internal use.
 
 ## View menu
 
@@ -66,10 +69,13 @@ Shows or hides the sidebar at the right.
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
+#### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+#### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
 
 #### Duplicate Area into New Window
 
@@ -77,11 +83,17 @@ This menu contains general view functionality. And exists in most other editor t
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar. |
-| Close Area | Closes the area window. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space bar. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar.
+
+##### Close Area
+
+Closes the area window.
 
 ## Toolbar
 
@@ -109,10 +121,13 @@ Keep the data from the pinned object visible, even when another object becomes t
 
 Display the data of an object at different states of its evaluation.
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------- |
-| Evaluated | Display the data from object with all modifiers applied. |
-| Original | Display the data from original object without any modifiers applied. |
+#### Evaluated
+
+Display the data from object with all modifiers applied.
+
+#### Original
+
+Display the data from original object without any modifiers applied.
 
 #### Node
 
@@ -148,12 +163,21 @@ To create a filter, press the Add Row Filter button, then write the column type 
 
 The header allows you to close and open the filter panel by clicking at the triangle button at the front.
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Enabled | Enable or disable this filter |
-| Title string | Some rows provides you with further informations in the header. In this case the position of the original geometry. |
-| Remove Row Filter | Removes the filter. |
-| Drag handler | This handler allows you to reorder the panel above or below other panels. |
+##### Enabled
+
+Enable or disable this filter
+
+##### Title string
+
+Some rows provides you with further informations in the header. In this case the position of the original geometry.
+
+##### Remove Row Filter
+
+Removes the filter.
+
+##### Drag handler
+
+This handler allows you to reorder the panel above or below other panels.
 
 #### Panel content
 

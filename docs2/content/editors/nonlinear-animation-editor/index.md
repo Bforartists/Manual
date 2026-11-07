@@ -92,16 +92,37 @@ Scroll Wheel zooms the view.
 
 When you right click into the channel area, then you will call the Channel context menu.
 
-| Entry | What it does |
-| ----------------------- | -------------------------------------------------------------------------------------- |
-| Frame selected channels | Centers the selected channels in view. |
-| Mute Channel | This channel is not calculated. |
-| Toggle Protect | Toggle channel protection. |
-| Unmute Channel | This channel is calculated. |
-| Protect Channels | Protect channels from editing. |
-| Unprotect Channels | Enables editing of channels again. |
-| Group Channels | Groups channels together. |
-| Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
+### Frame selected channels
+
+Centers the selected channels in view.
+
+### Mute Channel
+
+This channel is not calculated.
+
+### Toggle Protect
+
+Toggle channel protection.
+
+### Unmute Channel
+
+This channel is calculated.
+
+### Protect Channels
+
+Protect channels from editing.
+
+### Unprotect Channels
+
+Enables editing of channels again.
+
+### Group Channels
+
+Groups channels together.
+
+### Ungroup Channels
+
+Ungroup grouped channels. Beware, the channels will not return to their initial group.
 
 ### Extrapolation Mode submenu
 
@@ -109,17 +130,29 @@ When you right click into the channel area, then you will call the Channel conte
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
+#### Constant Extrapolation
 
-| Entry | What it does |
-| ----------------- | ----------------------- |
-| Expand Channels | Expands the channels. |
-| Collapse Channels | Collapses the channels. |
+The animation curve continues straight at the end.
+
+#### Linear Extrapolation
+
+The animation curve continues the last direction.
+
+#### Make Cyclic
+
+Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.
+
+#### Clear Cyclic
+
+Removes the cyclic extrapolation.
+
+#### Expand Channels
+
+Expands the channels.
+
+#### Collapse Channels
+
+Collapses the channels.
 
 ### Move Channels submenu
 
@@ -189,10 +222,13 @@ Deletes the selected strips.
 
 Turns selected strips into a meta strip. A group of strips.
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------- |
-| Remove Meta Strips | Ungroups the meta strips into its original action strips. |
-| Swap Strips | Swaps the selected strips. |
+#### Remove Meta Strips
+
+Ungroups the meta strips into its original action strips.
+
+#### Swap Strips
+
+Swaps the selected strips.
 
 ### Snap
 
