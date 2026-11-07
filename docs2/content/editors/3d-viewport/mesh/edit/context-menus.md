@@ -383,6 +383,8 @@ Fill closes holes in the selected mesh geometry, and triangulates the faces.
 
 Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Fill](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fill.png)
+
 ##### Beauty
 
 ![Beauty](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/beauty.png)
@@ -1121,6 +1123,8 @@ Unwrap Conformal unwraps the selected geometry with the method LSCM, which is th
 #### Adjust Last Operation - Unwrap
 
 Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 

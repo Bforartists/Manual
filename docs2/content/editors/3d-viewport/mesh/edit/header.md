@@ -1010,6 +1010,8 @@ Fill closes holes in the selected mesh geometry, and triangulates the faces.
 
 Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Fill](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fill.png)
+
 ##### Beauty
 
 ![Beauty](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/beauty.png)
@@ -1027,6 +1029,8 @@ Usage: select two opposite edge loops. Then perform the tool.
 #### Adjust Last Operation - Grid Fill
 
 Change the settings of **Grid Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Grid Fill](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-grid-fill.png)
 
 ##### Span
 
@@ -1069,6 +1073,8 @@ This operation happens in Edit mode, and so all parts must be in the same mesh.
 #### Adjust Last Operation - Intersect
 
 Change the settings of **Intersect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Intersect](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-intersect-knife.png)
 
 ##### Source
 
@@ -1121,6 +1127,8 @@ This operation happens in Edit mode, and so all parts must be in the same mesh.
 #### Adjust Last Operation - Intersect (Boolean)
 
 Change the settings of **Intersect (Boolean)** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Intersect (Boolean)](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-intersect-boolean.png)
 
 ##### Boolean Operation
 
@@ -1793,6 +1801,8 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 Mirrors the selection around the chosen axis.
 
 #### Adjust Last Operation - Mirror
+
+![Adjust Last Operation - Mirror](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-mirror.png)
 
 The Last Operator Mirror panel gives you tools to adjust the mirror action.
 
@@ -2771,6 +2781,8 @@ While weight painting it can happen that a vertice gets several weightings assig
 
 Change the settings of **Normalize all** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Normalize all](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-normalize-all.png)
+
 ##### Subset
 
 ![Subset](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset.png)
@@ -2883,6 +2895,8 @@ Adds some offset to the Weight paint, and multiplys it with some gain.
 
 Change the settings of **Vertex Group Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Vertex Group Levels](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-vertex-group-levels.png)
+
 ##### Subset
 
 Subset is a drop-down menu choose the Subset method.
@@ -2906,6 +2920,8 @@ Smooths the weight for selected vertices.
 #### Adjust Last Operation - Smooth Vertex Weights
 
 Change the settings of **Smooth Vertex Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Smooth Vertex Weights](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-smooth-vertex-weights.png)
 
 ##### Subset
 
@@ -2936,6 +2952,8 @@ This is of interest when you have for example five bones associated with a verti
 #### Adjust Last Operation - Limit Number of Weights per Vertex
 
 Change the settings of **Limit Number of Weights per Vertex** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Limit Number of Weights per Vertex](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-limit-number-of-weights-per-vertex.png)
 
 ##### Subset
 
@@ -3442,6 +3460,8 @@ Unwraps the selected geometry with the method SLIM, which is a “state-of-the-a
 #### Adjust Last Operation - Unwrap
 
 Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 

@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - UV Editor
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 9 Editors - UV Editor.odt
@@ -68,6 +68,8 @@ Unwraps the selected geometry with the method Angle based. ABF stands for Angle 
 #### Adjust Last Operation - Unwrap
 
 Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 
@@ -358,6 +360,8 @@ Unwraps the selected geometry. This operator starts with the method Angle based.
 #### Adjust Last Operation - Unwrap
 
 Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 

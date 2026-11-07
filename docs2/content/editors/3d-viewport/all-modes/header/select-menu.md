@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "Select Menu"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The Select menu provides you with all functionality around selecting."
 order: 40
@@ -1006,6 +1006,8 @@ Select curve geometry based on how similar certain properties are to it.
 
 Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
+
 #### Type
 
 ![Type](/docs2/images/editors/3d-viewport/header/select-menu/type-2.png)
@@ -1127,6 +1129,8 @@ Select curve geometry based on how similar certain properties are to it.
 
 Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
+
 #### Type
 
 ![Type](/docs2/images/editors/3d-viewport/header/select-menu/type-2.png)
@@ -1228,6 +1232,8 @@ Select metaball geometry based on how similar certain properties are to it.
 ### Adjust Last Operation - Select Similar
 
 Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
@@ -1413,6 +1419,8 @@ Selects vertices with similar opacity values. Useful for editing transparency ef
 
 Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
+
 #### Mode
 
 ![Mode](/docs2/images/editors/3d-viewport/header/select-menu/mode.png)
@@ -1557,6 +1565,8 @@ Most methods are self explaining. Immediate children selects just the direct chi
 ### Adjust Last Operation - Select Similar
 
 Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
