@@ -1959,6 +1959,8 @@ Store glTF settings in the .blend file. You need to save the project then.
 
 #### Collection
 
+> 📸 **Screenshot needed:** the glTF exporter in Collection Properties > Exporters, with the Collection subpanel open.
+
 This panel shows only when glTF is used as an exporter in the [Exporters panel](../../properties/collection-properties-tab.md#exporters-panel) of the Collection Properties tab. It doesn't show in the File > Export dialog.
 
 ##### Collection Center
@@ -2103,6 +2105,8 @@ Exports no images.
 Quality of the image compression.
 
 ###### Create Compressed Images
+
+> 📸 **Screenshot needed:** glTF export > Data > Material, with Create Compressed Images on, Compressed Images Type set to KTX2 and Zstandard Compression on.
 
 Creates a compressed texture, WebP or KTX2, for every texture image. For images that are already compressed, nothing happens.
 

@@ -65,9 +65,13 @@ Set cursor position to the offset used for collection instances.
 
 ## Importer panel
 
+![Importer panel](/docs2/images/editors/properties/collection-properties-tab/importer-panel.png)
+
 This panel links a collection to a file on disk, for example a glTF or OBJ file. The collection imports the content of the file, and you can import it again when the file changes. Each collection has one importer.
 
 ### Add Importer
+
+![Add Importer](/docs2/images/editors/properties/collection-properties-tab/add-importer.png)
 
 Adds an importer to the collection. Pick the file format, then the file. **Relative Path** stores the file path relative to the blend file.
 
