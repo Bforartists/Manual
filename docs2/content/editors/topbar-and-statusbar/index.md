@@ -104,6 +104,8 @@ Deletes all workspaces **except** the currently selected one.   Great for cleani
 
 ##### Online Python Reference
 
+> **Note:** Online Python Reference and Edit Source show only when **Developer Extras** is on in Preferences > Interface.
+
 This button opens the Blender python API in your browser.
 
 ##### Edit Source
