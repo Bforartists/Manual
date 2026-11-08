@@ -8,7 +8,7 @@ path:
   - "Mesh"
   - "Sculpt Mode"
   - "Sidebar"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: sidebar
 summary: "The sidebar tabs and panels of Mesh › Sculpt Mode."
@@ -3613,13 +3613,17 @@ Produces a mesh that is tilable in the activated directions.
 
 Reduce the strength of the brush where it overlaps symmetrical daubs.
 
-### Radial
+### Radial Symmetry
 
-![Radial](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/radial.png)
+![Radial Symmetry](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/radial-symmetry.png)
 
-Adjust the repeating across some axis. For example, when you change Z to 32, then you can draw 32 segments simultaneously around the Z axis instead of
+Repeats each stroke around the X, Y or Z axis, like the spokes of a wheel. Use it for round objects such as flowers, wheels or ornaments: paint one part and the others follow.
 
-just one, distributed around the Z axis.
+Tick the checkbox in the subpanel header to turn radial symmetry on or off. Turning it off keeps the counts, so you can switch it back on without setting them again.
+
+#### Count
+
+How many times the stroke is repeated around each axis. For example, a Z count of 8 paints 8 copies of the stroke around the Z axis. A count of 1 means no repeat on that axis.
 
 ### Tile Offset
 

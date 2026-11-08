@@ -1072,9 +1072,17 @@ Mirror along given axis.
 
 The same buttons plus the whole Symmetry Lock Panel as a drop down menu can also be found in the tool settings bar as icon buttons. This allows quicker access and better
 
-#### Radial
+#### Radial Symmetry
 
-Tiling. The number of times to repeat the strokes across the surface.
+![Radial Symmetry](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/radial-symmetry.png)
+
+Repeats each stroke around the X, Y or Z axis, like the spokes of a wheel. Use it for round objects such as flowers, wheels or ornaments: paint one part and the others follow.
+
+Tick the checkbox in the subpanel header to turn radial symmetry on or off. Turning it off keeps the counts, so you can switch it back on without setting them again.
+
+##### Count
+
+How many times the stroke is repeated around each axis. For example, a Z count of 8 paints 8 copies of the stroke around the Z axis. A count of 1 means no repeat on that axis.
 
 # Context Menus
 
