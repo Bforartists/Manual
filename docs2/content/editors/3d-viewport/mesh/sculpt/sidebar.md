@@ -9,7 +9,7 @@ path:
   - "Sculpt Mode"
   - "Sidebar"
 version: "5.3"
-status: draft
+status: needs-review
 icon: sidebar
 summary: "The sidebar tabs and panels of Mesh › Sculpt Mode."
 order: 30
