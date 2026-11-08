@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Collection Properties Tab
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.7 Editors - Properties Editor - Collection Properties Tab.odt
