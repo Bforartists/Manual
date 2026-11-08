@@ -382,11 +382,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Project Settings</div><h1 class="pv-title">Project Settings</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.3</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><h2 id="projects">Projects</h2>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Project Settings</div><h1 class="pv-title">Project Settings</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.3</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><h2 id="projects">Projects</h2>
 <p>A <strong>project</strong> is a folder that holds a whole production, for example a short film with many blend files. The project stores the settings that all those files share: path variables, asset libraries, the color management configuration and a splash image. Every blend file you open from inside the project folder uses them, so the whole team works with the same setup.</p>
 <p>Bforartists keeps the project settings in a hidden <code>.blender_project</code> folder in the project's root folder.</p>
 <h2 id="file-project-menu">File &gt; Project menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c0c2be3d6b44524cf48d670f9f687f2634a46602/docs2/images/editors/project-settings/file-project-menu.png" alt="File &gt; Project menu" loading="lazy"><figcaption>File &gt; Project menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2b9ff48175ca4c82efd46e8d536bb85e0d65009/docs2/images/editors/project-settings/file-project-menu.png" alt="File &gt; Project menu" loading="lazy"><figcaption>File &gt; Project menu</figcaption></figure>
 <h3 id="new">New</h3>
 <p>Creates a new project. You choose a name and the root folder. Everything inside that folder belongs to the project.</p>
 <h3 id="open">Open</h3>
@@ -399,7 +399,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Removes all projects from the recent list. The projects themselves are not changed.</p>
 <div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> The splash screen has a Project dropdown with the same entries, and the recent files there are grouped by project.</p></div>
 <h2 id="project-menu">Project menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c0c2be3d6b44524cf48d670f9f687f2634a46602/docs2/images/editors/project-settings/topbar-project-menu.png" alt="Project menu in the top bar" loading="lazy"><figcaption>Project menu in the top bar</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2b9ff48175ca4c82efd46e8d536bb85e0d65009/docs2/images/editors/project-settings/topbar-project-menu.png" alt="Project menu in the top bar" loading="lazy"><figcaption>Project menu in the top bar</figcaption></figure>
 <p>While a project is open, the top bar shows a <strong>Project</strong> menu.</p>
 <h3 id="settings">Settings</h3>
 <p>Opens the Project Settings editor in its own window.</p>
@@ -411,7 +411,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="save-project">Save Project</h4>
 <p>Saves the project settings now.</p>
 <h2 id="general-tab">General tab</h2>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c0c2be3d6b44524cf48d670f9f687f2634a46602/docs2/images/editors/project-settings/general-tab.png" alt="General tab" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2b9ff48175ca4c82efd46e8d536bb85e0d65009/docs2/images/editors/project-settings/general-tab.png" alt="General tab" loading="lazy"></figure>
 <h3 id="project-panel">Project panel</h3>
 <h4 id="name">Name</h4>
 <p>The name of the project. It shows at the top right of the editor and in the menus.</p>
@@ -431,7 +431,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>When the configuration changes, a message offers <strong>Reload to Apply Changes</strong>, which reloads the file with the new colors. If the configuration can't be loaded, a message says so. When the <code>OCIO</code> environment variable of your system sets a configuration, it wins over the project setting, and the panel tells you.</p>
 <p>The active configuration and its path are also shown in <strong>Render Properties &gt; Color Management &gt; Advanced</strong>.</p>
 <h2 id="variables-tab">Variables tab</h2>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c0c2be3d6b44524cf48d670f9f687f2634a46602/docs2/images/editors/project-settings/variables-tab.png" alt="Variables tab" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2b9ff48175ca4c82efd46e8d536bb85e0d65009/docs2/images/editors/project-settings/variables-tab.png" alt="Variables tab" loading="lazy"></figure>
 <p>Variables are names for values that the files of the project share, mostly paths. Use them in path fields as <code>{name}</code>, for example <code>{renders}/shot_010</code>, so the whole team writes to the same folders and the files keep working when the project moves.</p>
 <h3 id="variable-list">Variable list</h3>
 <p>The variables of the project. <strong>+</strong> adds a variable of the chosen type (String, Filepath, Integer or Float), <strong>-</strong> removes the selected one, and the arrows change the order.</p>
@@ -446,7 +446,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="description">Description</h3>
 <p>A note that explains what the variable is for.</p>
 <h2 id="asset-libraries-tab">Asset Libraries tab</h2>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c0c2be3d6b44524cf48d670f9f687f2634a46602/docs2/images/editors/project-settings/asset-libraries-tab.png" alt="Asset Libraries tab" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2b9ff48175ca4c82efd46e8d536bb85e0d65009/docs2/images/editors/project-settings/asset-libraries-tab.png" alt="Asset Libraries tab" loading="lazy"></figure>
 <p>Asset libraries that belong to the project. They show in the Asset Browser under the <strong>project libraries</strong> group for every file of the project, so everyone uses the same assets. A project library can be a folder or a remote (online) library.</p>
 <p><strong>+</strong> adds a library and <strong>-</strong> removes the selected one.</p>
 <div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Libraries that you set in the Preferences are your own and work in every file; project libraries only work inside the project.</p></div>
