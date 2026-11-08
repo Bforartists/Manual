@@ -1,7 +1,9 @@
 {
  "pages": {
-  "docs2/content/editors/preferences.md": "editors/preferences.html",
-  "docs2/content/editors/project-settings.md": "editors/project-settings.html"
+  "docs2/content/editors/3d-viewport/mesh/sculpt/sidebar.md": "editors/3d-viewport/mesh/sculpt/sidebar.html",
+  "docs2/content/editors/3d-viewport/mesh/texture-paint.md": "editors/3d-viewport/mesh/texture-paint.html",
+  "docs2/content/editors/3d-viewport/mesh/vertex-paint.md": "editors/3d-viewport/mesh/vertex-paint.html",
+  "docs2/content/editors/3d-viewport/mesh/weight-paint.md": "editors/3d-viewport/mesh/weight-paint.html"
  },
- "images": 190
+ "images": 451
 }
