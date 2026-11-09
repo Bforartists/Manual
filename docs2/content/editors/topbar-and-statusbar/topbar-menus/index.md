@@ -337,6 +337,12 @@ You can optionally drag and drop multiple files into the 3D Viewport to directly
 
 > **Note:** You can only drag in a group of multiple files if they are the same file format. If you have multiple selected, it will prompt you if you should import one or the other file type.
 
+#### Choose an importer
+
+![Choose an importer](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import-drag-and-drop-choice.png)
+
+Some file types can be imported in more than one way. When you drop such a file, a small menu asks which importer to use, and each choice has its own icon. An SVG file, for example, can come in as **Grease Pencil** strokes or as **Curves**.
+
 ### Alembic
 
 ![Alembic](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/alembic.png)
