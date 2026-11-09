@@ -6,7 +6,7 @@ path:
   - Editors
   - Geometry Node Editor
   - Sidebar
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -153,7 +153,14 @@ Don’t show the input value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape.png)
 
-What kind of higher order types are expected to flow through this socket.
+What kind of data structure flows through this socket. Each choice has its own icon in the dropdown, and the socket on the node shows a matching shape.
+
+- **Auto**: Picks a fitting structure from how the socket is used inside the group. This is the default.
+- **Dynamic**: The socket works with different kinds of structures.
+- **Field**: The socket expects a field, a value that can change per element.
+- **Grid**: The socket expects a volume grid.
+- **List**: The socket expects a list.
+- **Single**: The socket expects one single value.
 
 - **![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item**: Duplicates the active socket.
 - **![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/remove-item-icon.png) Remove Item**: Removes the selected input socket from the list. Node tree interface specials
@@ -244,7 +251,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Integer
 
@@ -308,7 +315,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Boolean
 
@@ -356,7 +363,7 @@ Take grease pencil or layer group as selection field.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Vector
 
@@ -420,7 +427,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Color
 
@@ -464,7 +471,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Rotation
 
@@ -508,7 +515,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Matrix
 
@@ -554,7 +561,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type String
 
@@ -624,7 +631,7 @@ Don’t show the value in the geometry nodes modifier interface.
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png)
 
-The shape of the socket.
+The structure of the data that flows through the socket: Auto, Dynamic, Field, Grid, List or Single. See [Shape](#shape) above for what each one does.
 
 #### Type Geometry
 
