@@ -6,7 +6,7 @@ path:
   - Editors
   - Nonlinear Animation Editor
   - NLA Editor - Channel list
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -29,6 +29,12 @@ The list has several elements, to turn on or off different features, Or to expan
 An action channel is a channel with keyframe animation. Before converting the animation to an action.
 
 A track channel is a channel with an action strip. After converting the animation to an action.
+
+#### Track colors
+
+![Track colors](/docs2/images/editors/nonlinear-animation-editor/nla-editor-channel-list/track-colors.png)
+
+A track channel takes the same color as the strips in it, so you can tell at a glance which channel belongs to which strips. A selected track shows the selected strip color, here orange. Tracks with Meta, Transition or Sound strips use those strip colors. The colors come from the theme, so they change with the NLA strip colors in Preferences > Themes.
 
 ### Hotkeys
 
