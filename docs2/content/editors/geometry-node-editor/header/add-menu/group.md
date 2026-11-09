@@ -67,7 +67,7 @@ The shield button keeps the node group in the file even when no node uses it, so
 
 #### New Node Tree
 
-The plus button makes a new copy of the node group for this node, so you can change it without changing other nodes that use the same group.
+The plus button creates a new, empty node group and puts it on this node. The old group stays in the file.
 
 #### Unlink
 
