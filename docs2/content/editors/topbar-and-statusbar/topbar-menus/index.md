@@ -345,6 +345,8 @@ Some file types can be imported in more than one way. When you drop such a file,
 
 ### Alembic
 
+![Import Alembic menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-alembic.png)
+
 ![Alembic](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/alembic.png)
 
 The alembic file format is for static geometry. It does not support armatures, hair or particles.
@@ -358,6 +360,8 @@ The alembic file format is for static geometry. It does not support armatures, h
 **Relative Path**: Select the file relative to the blend file. · **Set Frame Range**: Sets the Frame range start and end point in Bforartists to match the one in the alembic file. · **Is Sequence**: Import sequenced files that are split in cache parts. · **Validate Meshes**: Check for invalid mesh data in the file. Note that this operation may take some time. · **Always add Cache Reader**: Add cache modifiers and constraints to imported objects even when they are not animated. This allows updating the alembic archive when reloading.
 
 ### USD
+
+![Import Universal Scene Description menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-usd.png)
 
 ![USD](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/usd.png)
 
@@ -557,6 +561,8 @@ Import USD scene graph instances as collection instances.
 
 ### SVG as Grease Pencil
 
+![Import SVG as Grease Pencil menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-svg-as-grease-pencil.png)
+
 ![SVG as Grease Pencil](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/svg-as-grease-pencil.png)
 
 Imports a svg file as a grease pencil object.
@@ -570,6 +576,8 @@ The resolution of the svg import.
 The scale of the svg import.
 
 ### FBX
+
+![Import FBX menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-fbx.png)
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx.png)
 
@@ -641,6 +649,8 @@ Ignore the last bone at the end of the chain.
 
 ### Wavefront(OBJ)
 
+![Import Wavefront OBJ menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-obj.png)
+
 ![Wavefront(OBJ)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/wavefront-obj.png)
 
 Imports a wavefront obj file.
@@ -709,6 +719,8 @@ How to import the material name when it conflicts with an existing material in t
 
 ### Stanford (PLY)
 
+![Import Stanford PLY menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-ply.png)
+
 ![Stanford (PLY)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stanford-ply.png)
 
 The Stanford Triangle Format was designed to store three-dimensional data from 3D scanners. It is a static file format for mesh data, and cannot carry animation data.
@@ -757,6 +769,8 @@ Import vertex colors if they exist. These are Color attributes.
 
 ### STL
 
+![Import STL menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-stl.png)
+
 ![STL](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stl.png)
 
 STL (Standard Triangulation/Tessellation Language ) is a standard format for many cad software. It is a format for static geometry, it cannot handle animation. The format is popular for 3d printing purposes.
@@ -795,6 +809,8 @@ Check at import for invalid data.
 
 ### Motion Capture (BVH)
 
+![Import Motion Capture menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-bvh.png)
+
 ![Motion Capture (BVH)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/motion-capture-bvh.png)
 
 The Biovision Hierarchy (BVH) character animation file format is a file format to carry motion capture data.
@@ -813,11 +829,15 @@ You can either target an armature or an object.
 
 ### Scalable Vector Graphics (SVG)
 
+![Import SVG as Curves menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-svg-as-curves.png)
+
 Scalable Vector Graphics is usually a 2D file format to describe vector graphics. But Vector graphics are also curves. Which can be used in a 3 dimensional space.
 
 SVG has no import properties.
 
 ### FBX
+
+![Import FBX (Legacy) menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-fbx-legacy.png)
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx-2.png)
 
@@ -932,6 +952,8 @@ Try to align the mayor bone axis with the bone children.
 Manually adjust the bone orientation per axis. Note that this features are greyed out when Automatic Bone Orientation is ticked.
 
 ### glTF 2.0 (glb, gltf )
+
+![Import glTF 2.0 menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-gltf.png)
 
 ![glTF 2.0 (glb, gltf )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-2-0-glb-gltf.png)
 
@@ -1051,6 +1073,8 @@ Import Scene Extras as custom properties. Existing custom properties will be ove
 
 ### OpenTimelineIO (.otio)
 
+![Import OpenTimelineIO menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-otio.png)
+
 Imports an OpenTimelineIO file into the sequencer scene. Use it to bring an edit from other editing software, for example DaVinci Resolve, into the Video Sequencer: the strips, their timing and their channels come in as sequencer strips. Media that the file points to must be found on your disk.
 
 #### Relative Path
@@ -1094,6 +1118,8 @@ Adds a new operator preset. A popup dialog will appear where you can give the ne
 Removes the active preset. Note that you cannot display the current active preset. So choose it from the list, and then click at the remove operator.
 
 ### Alembic
+
+![Export Alembic menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-alembic.png)
 
 ![Alembic](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/alembic-2.png)
 
@@ -1242,6 +1268,8 @@ Export hair particle systems as animated curves.
 Export non-hair particles.
 
 ### Universal Scene Description ( USD )
+
+![Export Universal Scene Description menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-usd.png)
 
 ![Universal Scene Description ( USD )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/universal-scene-description-usd.png)
 
@@ -1411,6 +1439,8 @@ Istanced objects are exported as references in USD. Else they are exported as re
 
 ### Grease Pencil as SVG
 
+![Export Grease Pencil as SVG menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-grease-pencil-as-svg.png)
+
 ![Grease Pencil as SVG](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/grease-pencil-as-svg.png)
 
 Exports the grease pencil object as a svg file.
@@ -1449,6 +1479,8 @@ Clip drawings to camera size when exporting.
 
 ### Grease Pencil as PDF
 
+![Export Grease Pencil as PDF menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-grease-pencil-as-pdf.png)
+
 ![Grease Pencil as PDF](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/grease-pencil-as-pdf.png)
 
 Exports the grease pencil object as a pdf file.
@@ -1482,6 +1514,8 @@ Export strokes with fill enabled.
 Export strokes with Uniform Width.
 
 ### Wavefront(OBJ)
+
+![Export Wavefront OBJ menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-obj.png)
 
 ![Wavefront(OBJ)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/wavefront-obj-2.png)
 
@@ -1607,6 +1641,8 @@ The frame start and frame end of the animation.
 
 ### Stanford (PLY)
 
+![Export Stanford PLY menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-ply.png)
+
 ![Stanford (PLY)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stanford-ply-2.png)
 
 The Stanford Triangle Format was designed to store three-dimensional data from 3D scanners. It is a static file format for mesh data, and cannot carry animation data.
@@ -1666,6 +1702,8 @@ Export the geometry triangulated.
 Apply modifiers before exporting.
 
 ### STL
+
+![Export STL menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-stl.png)
 
 ![STL](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stl-2.png)
 
@@ -1752,6 +1790,8 @@ The start frame of the animation.
 The end frame of the animation.
 
 ### FBX
+
+![Export FBX menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-fbx.png)
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx-3.png)
 
@@ -1944,6 +1984,8 @@ How often to evaluate animated values, in frames.
 Simplify the animation. 0.0 to disable. 1.0 does not simplify at all. Higher values simplifies the animation then.
 
 ### glTF 2.0 (glb, gltf )
+
+![Export glTF 2.0 menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-gltf.png)
 
 ![glTF 2.0 (glb, gltf )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-2-0-glb-gltf-2.png)
 
@@ -2382,6 +2424,8 @@ Exports the sequencer scene as an OpenTimelineIO file, to move your edit into ot
 Writes extra data so that DaVinci Resolve can recreate generated strips, transforms and blending.
 
 ## Export All Collections
+
+![Export Export All Collections menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/export-export-all-collections.png)
 
 ![Export All Collections](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export-all-collections.png)
 
