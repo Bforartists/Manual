@@ -5,7 +5,7 @@ section: interface
 path:
   - The Interface
   - Basics
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -56,6 +56,13 @@ At the very first start you can do a quick setup, and choose with what language 
 When you don't have any recent files, then the splash screen shows a Getting Started section with some links to useful resources.
 
 And when you have recent files, then the splash screen lists them instead of the Getting Started section.
+
+The splash screen is a bit larger than in older versions, so it has room for more entries:
+
+- **New File**: lists the General startup file and the app templates. Templates that don't fit move into a **More** menu at the bottom of the list.
+- **Recent Files**: lists your last six files.
+
+> 📸 The two splash screen pictures above still show the older, smaller splash screen.
 
 In the splash screen you can also read at what Blender version the current Bforartists version is based at.
 
