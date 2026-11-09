@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - Editors introduction
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -75,11 +75,11 @@ Displays the editor maximized without menus. To return from the full screen view
 
 Closes the editor.
 
-## Area Options
+## Area Edge Options
 
-![Area Options](/docs2/images/editors/introduction/area-options.png)
+![Area Edge Options](/docs2/images/editors/introduction/area-options.png)
 
-When you right click at a border of an editor, then you will call the Area options menu.
+When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins, swaps and merges editors.
 
 ### Horizontal Split
 
@@ -96,6 +96,10 @@ Joins the two editors that shares the border.
 ### Swap Areas
 
 Swaps the content of the editors that shares the border.
+
+### Merge Area Edge
+
+Merges aligned area edges into one straight edge. This entry has its own icon and only shows up when the border you clicked lines up with another border, for example where four editors meet at a cross. After the merge, the edge moves as one piece.
 
 ## Editor Type menu
 
