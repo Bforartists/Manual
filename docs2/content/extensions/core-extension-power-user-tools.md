@@ -6,7 +6,7 @@ path:
   - Extensions
   - Bforartists Extensions
   - Core Extension - Power User Tools
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -46,7 +46,17 @@ These are operators to assist and improve the animation user experience.
 
 Toggle to add operators to insert/remove a frame to the left or right of the timeline cursor. Useful for grease pencil and stop motion animation.
 
-##### Operators
+###### Grease Pencil
+
+#### Grease Pencil Layer Selection Toggle
+
+Shows two quick select operators that pick a layer by the strokes under the mouse, in the Select menu of all Grease Pencil modes. On by default. They work best on a hotkey.
+
+##### Location of operators
+
+3D View Editor – Select menu in the Grease Pencil modes
+
+## Operators
 
 - Insert Frame Left
 - Remove Frame Left
@@ -172,6 +182,22 @@ When applying modifier levels using hotkeys in the 3D View to adjust the Subdivi
 ![Viewport Silhuette Toggle](/docs2/images/extensions/bforartists-extensions/core-extension-power-user-tools/viewport-silhuette-toggle.png)
 
 Adds the viewport overlay silhuette toggle to the header of the 3D View editors. Located in the header overlays row to the top right.
+
+### Grease Pencil Operators
+
+![Grease Pencil Select menu](/docs2/images/extensions/bforartists-extensions/core-extension-power-user-tools/grease-pencil-select-menu.png)
+
+Two operators at the bottom of the Select menu in the Grease Pencil modes. They look at the strokes under the mouse, find their layer, and save you from hunting for the layer in the layer list.
+
+#### Layer Under Mouse
+
+Finds the strokes under the mouse and makes their layer the active one. In Edit Mode it selects all strokes on that layer.
+
+#### Layer and Isolate Under Mouse
+
+Does the same, then locks all other layers, so you can only work on that layer.
+
+> **Tip:** These operators read the mouse position, so they work best from a hotkey. Right-click an entry and choose Assign Shortcut. See also the [Grease Pencil keymap](../keymap/keymap-table.md).
 
 ### File Operators
 
