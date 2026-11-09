@@ -368,6 +368,38 @@ From left to right ...
 - **Open**: Open a new image.
 - **Remove**: Removes the image.
 
+###### Placement
+
+How the dots or squares are spread along the stroke.
+
+- **Count**: Places the same number of dots on every segment of the stroke, set with **Count**.
+- **Radius**: Spaces the dots by their size, set with **Spacing**, as a percentage of the dot diameter. Thick parts of the stroke get bigger gaps.
+- **Density**: Spreads the dots evenly along the whole length of the stroke, set with **Density**.
+
+###### Count
+
+How many dots are placed per stroke segment. Shows when Placement is Count.
+
+###### Spacing
+
+The gap between dots, as a percentage of the dot diameter. Shows when Placement is Radius.
+
+###### Density
+
+How many dots are placed along the stroke. Shows when Placement is Density.
+
+###### Alignment
+
+How the dots and squares are turned.
+
+- **Path**: They follow the drawing direction of the stroke and the object rotation.
+- **Object**: They follow the object rotation only.
+- **Fixed**: They stay aligned with the view and ignore the stroke direction and the object rotation.
+
+###### Rotation
+
+An extra rotation for the dots and the square textures.
+
 ###### Alignment
 
 ![Alignment](/docs2/images/editors/properties/material-properties-tab/alignment.png)
