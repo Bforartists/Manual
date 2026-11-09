@@ -8,7 +8,7 @@ path:
   - "Grease Pencil"
   - "Vertex Paint"
 version: "5.3"
-status: draft
+status: needs-review
 icon: vpaint_hlt
 summary: "Paint colours onto the vertices of the grease pencil: menus, brushes and settings."
 order: 40
