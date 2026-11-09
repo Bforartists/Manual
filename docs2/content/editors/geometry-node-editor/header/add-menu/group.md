@@ -55,21 +55,31 @@ A group node shows which node group it uses, with the same buttons as other data
 
 #### Browse Node Group
 
+![Browse Node Group button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-browse.png)
+
 The icon on the left opens a list of all node groups of this type in the file. Pick one to swap the group the node uses.
 
 #### Name
+
+![Name field](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-name.png)
 
 The name of the node group. Click to rename it.
 
 #### Fake User
 
+![Fake User button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-fake-user.png)
+
 The shield button keeps the node group in the file even when no node uses it, so it isn't removed when you save.
 
 #### New Node Tree
 
+![New Node Tree button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-new.png)
+
 The plus button creates a new, empty node group and puts it on this node. The old group stays in the file.
 
 #### Unlink
+
+![Unlink button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-unlink.png)
 
 The X button removes the node group from this node. The group itself stays in the file.
 
