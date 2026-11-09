@@ -191,9 +191,13 @@ Two operators at the bottom of the Select menu in the Grease Pencil modes. They 
 
 #### Layer Under Mouse
 
+![Layer Under Mouse menu entry](/docs2/images/extensions/bforartists-extensions/core-extension-power-user-tools/layer-under-mouse.png)
+
 Finds the strokes under the mouse and makes their layer the active one. In Edit Mode it selects all strokes on that layer.
 
 #### Layer and Isolate Under Mouse
+
+![Layer and Isolate Under Mouse menu entry](/docs2/images/extensions/bforartists-extensions/core-extension-power-user-tools/layer-and-isolate-under-mouse.png)
 
 Does the same, then locks all other layers, so you can only work on that layer.
 
