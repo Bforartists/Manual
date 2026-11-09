@@ -804,9 +804,9 @@ Change the settings of **Shortest Path** right after you use it, in the Adjust L
 | Deselected / Selected | Define how many elements are selected or deselected. An example is it will select 10 faces between face A and B, but it will deselect every second group of faces, and then select 2 faces as that group of faces. So it will select the first two, skip one, select another 2, skip one, and so forth. |
 | Offset | Pushes the selected and unselected faces that have been interpolated between element A and B. Useful for nudging the path toward a specific direction or avoiding overlaps. |
 
-Tile, Pinned, Split, Overlap and Similar used to sit in a Select All by Trait submenu. They're now right in the Select menu, each with its own icon.
-
 ### Tile
+
+Tile, Pinned, Split, Overlap and Similar used to sit in a Select All by Trait submenu. They're now right in the Select menu, each with its own icon.
 
 Selects all UV elements (vertices, edges, or faces) that belong to a specific UDIM tile.  
 Useful for isolating texture regions, organizing UV layouts, or applying operations to targeted tiles in multi-tile workflows
