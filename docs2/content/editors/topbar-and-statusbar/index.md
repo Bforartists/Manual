@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Topbar and Statusbar
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 5 Topbar and Statusbar.odt
@@ -78,6 +78,14 @@ Workspace can also be deleted. To do so right click at the tab that you want to 
 
 Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.
 
+##### Reorder to Left
+
+Moves the selected workspace tab one place to the left.
+
+##### Reorder to Right
+
+Moves the selected workspace tab one place to the right.
+
 ##### Reorder to Back
 
 Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts.
@@ -95,6 +103,8 @@ Switches to the workspace tab immediately to the right.   Complements the previo
 Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing
 
 ##### Online Python Reference
+
+> **Note:** Online Python Reference and Edit Source show only when **Developer Extras** is on in Preferences > Interface.
 
 This button opens the Blender python API in your browser.
 

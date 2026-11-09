@@ -63,6 +63,10 @@ The rotation of the object.
 
 The rotation mode. Euler angles are fine for most needs. But sometimes you want to use Quaternion to avoid gimbal lock. Gimbal lock is a mathematical problem where the rotation locks up in two instead of three degrees of freedom.
 
+#### Convert Rotation Mode
+
+The button next to the rotation mode opens the **Convert Rotation Mode** menu. Pick a mode to change the rotation mode and convert the existing animation to it, so the motion stays the same. This is the same operator as in the 3D View [Animation menu](../3d-viewport/armature/pose.md#convert-rotation-mode).
+
 #### Quaternion
 
 ![Quaternion](/docs2/images/editors/properties/object-properties-tab/quaternion.png)

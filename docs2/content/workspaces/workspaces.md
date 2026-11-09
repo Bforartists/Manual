@@ -5,8 +5,8 @@ section: workspaces
 path:
   - Workspaces
   - Workspaces
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 4 Workspaces.odt
@@ -89,6 +89,14 @@ Workspace can also be deleted. To do so right click at the tab that you want to 
 #### Reorder to Front
 
 Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.
+
+#### Reorder to Left
+
+Moves the selected workspace tab one place to the left.
+
+#### Reorder to Right
+
+Moves the selected workspace tab one place to the right.
 
 #### Reorder to Back
 
