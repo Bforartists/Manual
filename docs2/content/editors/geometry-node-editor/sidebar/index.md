@@ -7,7 +7,7 @@ path:
   - Geometry Node Editor
   - Sidebar
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 12.3 Editors - Geometry Nodes Editor - Sidebar.odt
