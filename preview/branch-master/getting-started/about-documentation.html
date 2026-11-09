@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Using the Documentation · Docs preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:999px;padding:.375rem .75rem;font:600 .8125rem/1.2 sans-serif;position:absolute;bottom:1rem}.ui-compare-tag.is-left{left:1rem}.ui-compare-tag.is-right{right:1rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;bottom:.75rem;padding:.3125rem .625rem}}
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:6px;padding:.3125rem .625rem;font:600 .8125rem/1.2 sans-serif;position:absolute;top:.75rem;bottom:auto;height:auto;width:auto}.ui-compare-tag.is-left{left:.75rem}.ui-compare-tag.is-right{right:.75rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;padding:.3125rem .625rem}}
 
 :root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
 html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
@@ -40,14 +40,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
 <span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
 <div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
-<span>Getting Started</span>
-<span>Introduction</span>
+<a href="../getting-started.html">Getting Started</a>
+<a href="introduction.html">Introduction</a>
 <a class="is-current" href="about-documentation.html">Using the Documentation</a>
-<span>Installation</span>
-<span>Quick Start</span>
-<span>Data Structure</span>
-<span>Comparison with Blender</span>
-<span>Migrating from Blender</span>
+<a href="installation.html">Installation</a>
+<a href="quick-start.html">Quick Start</a>
+<a href="data-structure.html">Data Structure</a>
+<a href="differences.html">Comparison with Blender</a>
+<a href="migrating-from-blender.html">Migrating from Blender</a>
 <h4>Interface</h4>
 <span>Interface</span>
 <span>Interface Basics</span>
@@ -110,14 +110,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:2.5rem">Edit Mode</span>
 <span style="padding-left:3.5rem">Input</span>
 <span style="padding-left:1.5rem">Header</span>
-<a style="padding-left:1.5rem" href="../editors/dope-sheet/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:3.5rem">Input</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Header</span>
-<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
 <span style="padding-left:1.5rem">Render</span>
 <span style="padding-left:3.5rem">Input</span>
 <span style="padding-left:1.5rem">Header</span>
@@ -338,6 +338,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Asset Browser</span>
 <span>Spreadsheet</span>
 <span>Preferences</span>
+<span>Project Settings</span>
 <span style="padding-left:1.5rem">Topbar menus</span>
 <span style="padding-left:1.5rem">Viewport</span>
 <span style="padding-left:2.5rem">Add Menu</span>
@@ -518,7 +519,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="general-manual-structure">General Manual structure</h4>
 <p>Chapter 1 to 6 contains some general information. Like the official key map. Or the general interface. The different single editor types starts with chapter 7. And at the end you will find some miscellaneous information.</p>
 <h4 id="editor-type">Editor Type</h4>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d6173d076183463a2b699b624b34f21778ba85cf/docs2/images/getting-started/about-documentation/editor-type.png" alt="Editor Type" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/bb0cb329761f86f869a79b7b86cb0c365ddf2e0d/docs2/images/getting-started/about-documentation/editor-type.png" alt="Editor Type" loading="lazy"></figure>
 <p>The different editor types is the first thing that brings structure into the manual. The different Editor types.</p>
 <p>In the shot at the right you see that Bforartists is made of several areas. These are the several editor types. They all have their purpose. You have one editor type for the 3d view. One for the file browser, one for the UV editing, one for the Node editor, and so on. In this shot we see the 3D view (green), Toolbar editor (red), Outliner (pink), the Properties Editor (yellow), at the bottom the Timeline editor (blue). And the header and footer.</p>
 <p>Each editor type has its own main chapter.</p>
@@ -529,7 +530,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> In short: The manual chapter for the editors starts with the number. Followed by the editor type. Example: 7 Editors - 3D View</p></div>
 <h4 id="editor-area">Editor Area</h4>
 <p>Each editor can have several areas. The header, a toolbar at the left, a sidebar at the right, A tools area, the viewport to display and modify the content, some navigation elements, a panel where you can adjust some operations, and maybe even a footer.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d6173d076183463a2b699b624b34f21778ba85cf/docs2/images/getting-started/about-documentation/editor-area.png" alt="Editor Area" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/bb0cb329761f86f869a79b7b86cb0c365ddf2e0d/docs2/images/getting-started/about-documentation/editor-area.png" alt="Editor Area" loading="lazy"></figure>
 <p>Here as an example the 3D view.</p>
 <p>At the top is the Tool Settings. Marked with blue. Here you can find settings for the currently active tool.</p>
 <p>Below the tool settings is the Header. Marked with pink. It contains menus, tools and settings.</p>
