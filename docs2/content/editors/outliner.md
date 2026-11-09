@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Outliner
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 25 Editors - Outliner.odt
@@ -104,6 +104,14 @@ Expands or collapses all collapsed hierarchy. It's a toggle
 ##### Show Hierarchy
 
 Open all object entries and close all others. For example, when you are in Scene view, and have the objects expanded, then the Show Hierarchy closes the objects hierarchy.
+
+#### View Pie Menu
+
+![View Pie Menu](/docs2/images/editors/outliner/view-pie-menu.png)
+
+A small pie menu with the two view tools you need most: **Show Hierarchy** on the left and **Show Active** on the right. Both work the same as in the View menu. It's handy when the list is long and you want to jump back to the active object or tidy up the tree without leaving the mouse.
+
+> **Tip:** The pie menu opens with a hotkey. See the [Outliner keymap](../keymap/keymap-table.md#outliner).
 
 #### Box Select
 
