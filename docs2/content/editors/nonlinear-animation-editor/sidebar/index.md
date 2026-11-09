@@ -7,7 +7,7 @@ path:
   - Nonlinear Animation Editor
   - Sidebar
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-animation-data-panel
