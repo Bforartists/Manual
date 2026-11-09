@@ -193,17 +193,21 @@ In Edit mode you can assign different materials at different mesh or curve parts
 
 Enter Edit Mode. Select the material that you want to assign. Select the mesh or curve part. Click at the assign button.
 
+![Edit Mode - Grease Pencil](/docs2/images/editors/properties/material-properties-tab/edit-mode-grease-pencil.png)
+
+Grease Pencil objects show the same three buttons in Edit Mode, with the same icons as for meshes.
+
 #### Assign
 
 Assign active material slot and material to the selected faces in the mesh, strokes in a Grease Pencil, and similar for other object types.
 
 #### Select
 
-Select faces assigned to the active material slot.
+Select faces or strokes assigned to the active material slot.
 
 #### Deselect
 
-Deselect faces assigned to the active material slot.
+Deselect faces or strokes assigned to the active material slot.
 
 ## Preview Panel
 
