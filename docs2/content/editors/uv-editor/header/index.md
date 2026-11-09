@@ -719,6 +719,8 @@ Invert the current selection.
 
 ### Box Select Pinned
 
+![Box Select Pinned menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-box-select-pinned.png)
+
 Box select enters the Border Select mode. This is a special select mode where you can select elements by dragging a rectangle. And what's inside of the rectangle gets selected then. It adds to selection by default. Box Select Pinned just selects pinned UV vertices. The other box select method can be found in the tool shelf.
 
 To subtract from selection hold down Shift key.
@@ -733,6 +735,8 @@ The legacy lasso select tool. You can choose between three modes. Lasso select i
 
 ### Linked
 
+![Linked menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-linked.png)
+
 Selects everything linked to what you already have selected, so you get whole UV islands. The previous selection gets cleared.
 
 #### Adjust Last Operation - Select Linked
@@ -746,6 +750,8 @@ Change the settings of **Select Linked** right after you use it, in the Adjust L
 | Delimit | Stop the selection at certain edges, so you only get part of an island. **Seam**: stop at UV seams. · **Sharp**: stop at edges marked sharp. · **Material**: stop where the material changes. Pick one or more, or none to select the whole island. |
 
 ### Linked Pick
+
+![Linked Pick menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-linked-pick.png)
 
 > **Note:** Hotkey Only Tool!
 
@@ -765,6 +771,8 @@ Change the settings of **Select Linked Pick** right after you use it, in the Adj
 | Delimit | Stop the selection at certain edges, so you only get part of an island. **Seam**: stop at UV seams. · **Sharp**: stop at edges marked sharp. · **Material**: stop where the material changes. Pick one or more, or none to select the whole island. |
 
 ### Shortest Path
+
+![Shortest Path menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-shortest-path.png)
 
 ![Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/shortest-path.png)
 
@@ -786,6 +794,8 @@ Change the settings of **Shortest Path** right after you use it, in the Adjust L
 
 ### Shortest Path Pick
 
+![Shortest Path Pick menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-shortest-path-pick.png)
+
 > **Note:** Best used as a Hotkey Only Tool!
 
 Like the Shortest Path operator, this will select the shortest path under the mouse location between two selected elements.
@@ -805,6 +815,8 @@ Change the settings of **Shortest Path** right after you use it, in the Adjust L
 | Offset | Pushes the selected and unselected faces that have been interpolated between element A and B. Useful for nudging the path toward a specific direction or avoiding overlaps. |
 
 ### Tile
+
+![Tile menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-tile.png)
 
 Tile, Pinned, Split, Overlap and Similar used to sit in a Select All by Trait submenu. They're now right in the Select menu, each with its own icon.
 
@@ -835,13 +847,19 @@ Two numeric fields representing the UDIM tile coordinates:
 
 ### Pinned
 
+![Pinned menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-pinned.png)
+
 Selects all pinned UV vertices. Handy to check which points hold an unwrap in place.
 
 ### Split
 
+![Split menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-split.png)
+
 Splits the selected UV parts off from the rest. Only faces that are entirely selected are split, so the island gets its own seam in UV space.
 
 ### Overlap
+
+![Overlap menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-overlap.png)
 
 ![Overlap](/docs2/images/editors/uv-editor/header/select-menu/overlap.png)
 
@@ -858,6 +876,8 @@ Change the settings of **Select Overlap** right after you use it, in the Adjust 
 Extend the current selection.
 
 ### Similar
+
+![Similar menu entry](/docs2/images/editors/uv-editor/header/select-menu/entry-similar.png)
 
 ![Similar](/docs2/images/editors/uv-editor/header/select-menu/similar.jpg)
 
