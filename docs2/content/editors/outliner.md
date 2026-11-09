@@ -983,6 +983,14 @@ You can drag items from Blend File mode straight into the Video Sequencer timeli
 
 Open the category, then drag the item to the frame and channel where you want the strip. This is quicker than going through the Add menu when you already see the item in the Outliner.
 
+### Pack images
+
+> 📸 Picture to add: Blend File mode with a few images selected, right-click menu open with **Pack** highlighted.
+
+Packs the selected images into the .blend file, so the file still has its textures when you move it to another computer or send it to someone. Open the Images category, select the images you want to pack, right-click one of them and choose **Pack**. Bforartists reports how many images it packed.
+
+Pack only shows when you right-click an image. The Render Result and Viewer images are skipped, since they aren't files.
+
 ### Filter
 
 ![Filter](/docs2/images/editors/outliner/filter-3.png)
