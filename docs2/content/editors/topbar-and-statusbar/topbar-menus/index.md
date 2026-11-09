@@ -1061,7 +1061,7 @@ Select the file relative to the blend file.
 
 ![Export](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export.png)
 
-Export is a sub menu with the available export formats.
+Export is a sub menu with the available export formats. Each format has its own icon. OpenTimelineIO is grayed out until the scene has a sequencer to export.
 
 Note that im- and exporters are partially addons that can be disabled. So some content might miss.
 
