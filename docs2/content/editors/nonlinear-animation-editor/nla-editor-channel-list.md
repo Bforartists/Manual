@@ -7,7 +7,7 @@ path:
   - Nonlinear Animation Editor
   - NLA Editor - Channel list
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 20.2 Editors - NLA Editor - Channel list.odt
