@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Group"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Group nodes."
 order: 180
