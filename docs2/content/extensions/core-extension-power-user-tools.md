@@ -7,7 +7,7 @@ path:
   - Bforartists Extensions
   - Core Extension - Power User Tools
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 35.4 Core Extension - Power User Tools.odt
