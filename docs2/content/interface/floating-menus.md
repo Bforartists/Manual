@@ -5,7 +5,7 @@ section: interface
 path:
   - "Interface"
   - "Floating Menus"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: search_menu
 summary: "Header menus, hotkey menus and the F3 search menu: open, search and navigate them."
@@ -50,7 +50,7 @@ It is located in the header. But it can be called by hotkey Q directly under the
 
 When the menu is empty, then you will see the message "No Menu Items found". This means that you first have to add some tools to the menu. It is a user configurable menu.
 
-Note that added operators in this menu does not have icons. Just text.
+Entries you add keep their icons, so the menu looks like the menus they came from.
 
 Note also that the Quick menu for the UV editor shares the content with the Quick menu from the Image editor.
 
@@ -80,9 +80,25 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ### Order
 
-You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
+New entries go in the order in which you add them, menus first, then operators. You can change the order afterwards in the Quick Favorites editor.
 
-Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
+### Edit Quick Favorites
+
+> 📸 Picture to add: the Edit Quick Favorites dialog with a few entries, opened from the bottom of the Quick Favorites menu.
+
+When the menu has entries, its last entry is **Edit Quick Favorites...**. It opens a small editor with all your entries, grouped by the editor they belong to and shown with their icons.
+
+#### Select an entry
+
+Click an entry in the list to select it. The buttons next to the list work on the selected entry.
+
+#### Move up and Move down
+
+Moves the selected entry one step up or down in the menu. This is how you sort the menu after you've added things.
+
+#### Remove
+
+Removes the selected entry from Quick Favorites.
 
 ### Removing an operator from the Quick menu
 
