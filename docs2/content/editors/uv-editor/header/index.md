@@ -2029,6 +2029,34 @@ Sets the spacing between islands after alignment. Adds consistent padding betwee
 
 Float input (e.g., *0.050*)
 
+### Move
+
+![Move](/docs2/images/editors/uv-editor/header/uv-menu-move.png)
+
+Moves the selected UVs one step along an axis. The menu has four groups, one per direction: **+X**, **-X**, **+Y** and **-Y**. Each group has three step sizes, so you can nudge UVs exactly without dragging.
+
+#### Dynamic Grid
+
+Moves the UVs by one step of the dynamic grid, the grid you see in the editor. The step changes with the zoom.
+
+#### Pixel
+
+Moves the UVs by one pixel of the image.
+
+#### UDIM
+
+Moves the UVs by one whole UDIM tile. Handy to send an island to the next tile.
+
+#### Adjust Last Operation - Move on Axis
+
+Change the step right after the move, in the Adjust Last Operation panel.
+
+| Property | What it does |
+|---|---|
+| Type | The step size: Dynamic, Pixel or UDIM. |
+| Axis | The axis to move along: X or Y. |
+| Distance | How many steps to move. Negative values move the other way. |
+
 ### Set User Region
 
 Defines a custom region within the UV Editor viewport, allowing you to isolate, focus, or constrain operations to a specific area of the UV space.
