@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - Video Sequence Editor
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -40,6 +40,12 @@ Pink - Sidebar
 ### Drag n Drop
 
 You can drag n drop several elements like movie and audio clips into the Sequencer timeline. In this case you get the import options from the file browser displayed in the adjust last operator panel. The settings are pretty similar.
+
+![Choose a strip type](/docs2/images/editors/video-sequence-editor/index/drop-strip-choice.png)
+
+Some files can become more than one kind of strip. An .ogg file, for example, can be a movie or a sound. When you drop such a file, a small menu asks which strip to add. Each choice has its icon: image, movie or sound.
+
+You can also drag files from the File Browser editor straight into the Sequencer timeline.
 
 ## Navigating in the viewport
 
