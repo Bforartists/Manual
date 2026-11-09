@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties
   - Modifiers tab
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -281,6 +281,12 @@ The geometry Nodes modifier adds a geometry node tree, which can be modified in 
 ![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes-3.png)
 
 Manage the nodes. If there is no geometry node tree for the current object, then you will see the New button.
+
+#### Open Geometry Nodes Editor
+
+![Open Geometry Nodes Editor](/docs2/images/ui/properties/modifiers/open-geometry-nodes-editor.png)
+
+Opens a new window with a Geometry Node Editor that shows this modifier's node group. Handy when your workspace has no node editor: you can edit the nodes right away and close the window when you're done.
 
 ### Geometry Nodes Assets
 

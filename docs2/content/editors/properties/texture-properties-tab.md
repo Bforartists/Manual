@@ -6,7 +6,7 @@ path:
   - Editors
   - Properties Editor
   - Texture Properties Tab
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -32,6 +32,10 @@ Note that with the Workbench renderer you have less options.
 What kind of brush texture you want to create. A brush texture, or a brush mask texture.
 
 Brush textures appears in the texture panel of the brush settings. Brush mask textures appears in the texture mask panel of the brush settings.
+
+### Open Texture Node Editor
+
+When the tab shows a texture, this button sits above the texture selector. It opens a new window with a Texture Node Editor for this texture, so you can edit its nodes without changing your workspace.
 
 ### Texture property
 
