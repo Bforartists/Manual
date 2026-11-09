@@ -2037,13 +2037,19 @@ Moves the selected UVs one step along an axis. The menu has four groups, one per
 
 #### Dynamic Grid
 
+![Dynamic Grid menu entry](/docs2/images/editors/uv-editor/header/uv-menu-move-dynamic-grid.png)
+
 Moves the UVs by one step of the dynamic grid, the grid you see in the editor. The step changes with the zoom.
 
 #### Pixel
 
+![Pixel menu entry](/docs2/images/editors/uv-editor/header/uv-menu-move-pixel.png)
+
 Moves the UVs by one pixel of the image.
 
 #### UDIM
+
+![UDIM menu entry](/docs2/images/editors/uv-editor/header/uv-menu-move-udim.png)
 
 Moves the UVs by one whole UDIM tile. Handy to send an island to the next tile.
 
