@@ -2051,6 +2051,8 @@ Moves the UVs by one whole UDIM tile. Handy to send an island to the next tile.
 
 Change the step right after the move, in the Adjust Last Operation panel.
 
+![Adjust Last Operation - Move on Axis](/docs2/images/editors/uv-editor/adjust-last-operation-move-on-axis.png)
+
 | Property | What it does |
 |---|---|
 | Type | The step size: Dynamic, Pixel or UDIM. |
