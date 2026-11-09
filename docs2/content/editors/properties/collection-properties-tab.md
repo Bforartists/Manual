@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Collection Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.7 Editors - Properties Editor - Collection Properties Tab.odt
@@ -62,6 +62,42 @@ Set the offset used for collection instance based on the active object position.
 #### Set Cursor to Offset
 
 Set cursor position to the offset used for collection instances.
+
+## Importer panel
+
+![Importer panel](/docs2/images/editors/properties/collection-properties-tab/importer-panel.png)
+
+This panel links a collection to a file on disk, for example a glTF or OBJ file. The collection imports the content of the file, and you can import it again when the file changes. Each collection has one importer.
+
+### Add Importer
+
+![Add Importer](/docs2/images/editors/properties/collection-properties-tab/add-importer.png)
+
+Adds an importer to the collection. Pick the file format, then the file. **Relative Path** stores the file path relative to the blend file.
+
+### File Path
+
+The file that the collection imports. Below the path you find the import settings of the chosen file format. These are the same settings as in the import dialog. See the import chapter in the File menu.
+
+### Import to Collection
+
+Imports the file into the collection with the current settings.
+
+### Reload Importer
+
+Clears the imported data, then imports the file again. Use it after the file changed on disk, or after you changed the import settings.
+
+### Clear Importer
+
+Deletes the imported data from the collection. The importer and its settings stay, so you can import again.
+
+### Make Importer Local
+
+Makes the imported data local to the blend file.
+
+### Remove Importer
+
+Removes the importer from the collection, and deletes the data it imported.
 
 ## Exporters panel
 

@@ -989,6 +989,10 @@ Pack all images into the Blend file at loading the glTF file.
 
 If a texture exists in WebP format, loads the WebP texture instead of the fallback PNG/JPEG one.
 
+##### Import KTX Textures
+
+If a texture exists in KTX2 format, loads the KTX2 texture instead of the fallback PNG/JPEG one.
+
 ##### Import Unused Materials & Images
 
 As the title says. Import Unused Materials and Images.
@@ -1953,6 +1957,21 @@ Enter a custom copyright string.
 
 Store glTF settings in the .blend file. You need to save the project then.
 
+#### Collection
+
+![Collection](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-export-collection.png)
+
+This panel shows only when glTF is used as an exporter in the [Exporters panel](../../properties/collection-properties-tab.md#exporters-panel) of the Collection Properties tab. It doesn't show in the File > Export dialog.
+
+##### Collection Center
+
+The point that becomes the scene origin in the exported file.
+
+- **World Origin**: Uses the world origin.
+- **Center of Mass**: Uses the center of mass of the root objects in the collection.
+- **Object Position**: Uses the position of an object. Pick the object in **Center Object**.
+- **Instance Offset**: Uses the Instance Offset of the collection. See the Instancing panel in the Collection Properties tab.
+
 #### Include
 
 ![Include](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/include-3.png)
@@ -2067,11 +2086,15 @@ How to deal with images at export.
 
 ###### Automatic
 
-exports PNG images as Png Images, and Jpg Images as Jpg images.
+Exports PNG images as PNG, JPEG images as JPEG and WebP images as WebP. Other image formats export as PNG.
 
-###### Jpeg Format (jpg)
+###### JPEG Format (.jpg)
 
-Exports all images as jpg.
+Exports all images as JPEG. Images that need alpha still export as PNG. JPEG can lose some quality.
+
+###### WebP Format
+
+Exports all images as WebP, with no fallback image.
 
 ###### None
 
@@ -2081,13 +2104,26 @@ Exports no images.
 
 Quality of the image compression.
 
-###### Create WebP
+###### Create Compressed Images
 
-Creates a WebP texture image for every texture image. For images that are already a WebP texture, nothing happens.
+![Create Compressed Images](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-export-material-compressed.png)
 
-###### WebP Fallback
+Creates a compressed texture, WebP or KTX2, for every texture image. For images that are already compressed, nothing happens.
 
-For all WebP textures, create a PNG fallback texture.
+###### Compressed Images Type
+
+The format for the compressed textures.
+
+- **WebP**: Uses the WebP format.
+- **KTX2**: Uses the KTX2 format with Basis Universal supercompression. Viewers read it through the `KHR_texture_basisu` extension.
+
+###### Zstandard Compression
+
+Shows when the type is KTX2. Adds Zstandard compression to the non-color KTX2 textures (UASTC). **Zstandard Compression Level** sets the level, from 1 (fastest, larger files) to 22 (slowest, smallest files).
+
+###### Compressed Images Fallback
+
+For all compressed textures, WebP or KTX2, creates a PNG fallback texture. Viewers that can't read the compressed format use the PNG instead.
 
 ##### Shape Keys sub panel
 
