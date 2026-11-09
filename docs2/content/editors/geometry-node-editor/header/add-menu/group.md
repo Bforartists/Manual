@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Group"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Group nodes."
@@ -46,6 +46,32 @@ Adds a Group Output node. This node is usually already part of a new created gro
 ### Smooth by Angle
 
 An example node group.
+
+### Group node buttons
+
+![Group node](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node.png)
+
+A group node shows which node group it uses, with the same buttons as other data-block selectors. You can manage the node group right on the node, without opening the sidebar. The buttons are the same in all node editors.
+
+#### Browse Node Group
+
+The icon on the left opens a list of all node groups of this type in the file. Pick one to swap the group the node uses.
+
+#### Name
+
+The name of the node group. Click to rename it.
+
+#### Fake User
+
+The shield button keeps the node group in the file even when no node uses it, so it isn't removed when you save.
+
+#### New Node Tree
+
+The plus button makes a new copy of the node group for this node, so you can change it without changing other nodes that use the same group.
+
+#### Unlink
+
+The X button removes the node group from this node. The group itself stays in the file.
 
 ### List of Node Groups
 
