@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Object Data Properties Tab
   - Mesh Object
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -626,11 +626,15 @@ Starts the remesher in the chosen method.
 
 ![Geometry Data panel](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-panel.png)
 
-Mesh objects can have different types of custom data attached to them. This data is mostly used internally and can be exported by some exporters like Collada or Alembic.
+Mesh objects can have different types of custom data attached to them. This data is mostly used internally and can be exported by some exporters like Collada or Alembic. The clear buttons have a clear icon, and Reorder Mesh Spatially has a sort icon. Buttons for data the mesh doesn't have are grayed out.
 
-### Clear Sculpt-Mask Data
+### Clear Sculpt Mask Data
 
 Removes the sculpting mask data layer. It has no big impact, but this can speed up sculpting if the mask is not longer used.
+
+### Clear Sculpt Face Sets
+
+Removes the face set data that sculpting uses to group faces. Use it when you're done with face sets and want a clean mesh.
 
 ### Clear Skin Data
 
