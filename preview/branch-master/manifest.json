@@ -1,6 +1,6 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/grease-pencil/draw.md": "editors/3d-viewport/grease-pencil/draw.html"
+  "docs2/content/editors/geometry-node-editor/sidebar/index.md": "editors/geometry-node-editor/sidebar.html"
  },
- "images": 107
+ "images": 97
 }
