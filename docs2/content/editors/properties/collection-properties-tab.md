@@ -55,13 +55,19 @@ The arrow button next to Instance Offset opens this menu. The three entries use 
 
 #### Set Offset from Cursor
 
+![Set Offset from Cursor menu entry](/docs2/images/editors/properties/collection-properties-tab/set-offset-from-cursor.png)
+
 Set the offset used for collection instance based on cursor position.
 
 #### Set Offset from Object
 
+![Set Offset from Object menu entry](/docs2/images/editors/properties/collection-properties-tab/set-offset-from-object.png)
+
 Set the offset used for collection instance based on the active object position.
 
 #### Set Cursor to Offset
+
+![Set Cursor to Offset menu entry](/docs2/images/editors/properties/collection-properties-tab/set-cursor-to-offset.png)
 
 Set cursor position to the offset used for collection instances.
 
