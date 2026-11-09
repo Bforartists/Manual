@@ -630,21 +630,31 @@ Mesh objects can have different types of custom data attached to them. This data
 
 ### Clear Sculpt Mask Data
 
+![Clear Sculpt Mask Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-sculpt-mask-data.png)
+
 Removes the sculpting mask data layer. It has no big impact, but this can speed up sculpting if the mask is not longer used.
 
 ### Clear Sculpt Face Sets
+
+![Clear Sculpt Face Sets button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-sculpt-face-sets.png)
 
 Removes the face set data that sculpting uses to group faces. Use it when you're done with face sets and want a clean mesh.
 
 ### Clear Skin Data
 
+![Clear Skin Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-skin-data.png)
+
 Used to manage the skin data layer which is used by the Skin Modifier. This operator can be needed in case a Skin modifier is created but no skin data exist.
 
 ### Reorder Mesh Spatially
 
+![Reorder Mesh Spatially button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-reorder-mesh-spatially.png)
+
 Reorder mesh faces and vertices based on their spatial position for better BVH building and sculpting performance.
 
 ### Add Custom Normals Data
+
+![Add Custom Normals Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-add-custom-normals-data.png)
 
 Add a custom normals layer if none exists yet.
 
