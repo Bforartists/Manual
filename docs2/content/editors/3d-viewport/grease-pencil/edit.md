@@ -1051,6 +1051,23 @@ The thickness of the generated stroke.
 
 Where to place the stroke, relative to what element.
 
+The same Stroke Placement popover is in the header of Draw Mode.
+
+- **Origin**: Draws the stroke at the object origin.
+- **3D Cursor**: Draws the stroke at the 3D cursor.
+- **Surface**: Sticks the stroke to the surfaces of other objects.
+- **Stroke**: Sticks the stroke to other strokes.
+
+![Stroke Placement set to Surface](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/stroke-placement-surface.png)
+
+With **Surface**, more settings show up:
+
+- **Offset**: How far the stroke floats above the surface, along the surface normal. A small offset keeps the stroke from sinking into the surface.
+- **Sync Radius with Surface** (the link button next to Offset): When on, the brush size controls the offset, so thick strokes float a bit higher than thin ones and don't cut into the surface. Pressure changes the offset during the stroke too. When off, offset and brush size are independent. The icon shows a closed link when it's on.
+- **Extra Offset**: Shows when Sync is on. An extra distance added on top of the synced offset.
+- **Project Onto Selected**: Projects the strokes only onto the selected objects.
+- **Target**: Which points of the stroke stick to the surface: **All Points**, **End Points** (the first and last point, with the points in between interpolated) or **First Point**.
+
 ###### Drawing Plane
 
 ![Drawing Plane](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/drawing-plane.png)
