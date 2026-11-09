@@ -8,7 +8,7 @@ path:
   - Editors
   - Video Sequence Editor
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 14 Editors - Video Sequence Editor.odt
