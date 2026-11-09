@@ -46,17 +46,7 @@ These are operators to assist and improve the animation user experience.
 
 Toggle to add operators to insert/remove a frame to the left or right of the timeline cursor. Useful for grease pencil and stop motion animation.
 
-###### Grease Pencil
-
-#### Grease Pencil Layer Selection Toggle
-
-Shows two quick select operators that pick a layer by the strokes under the mouse, in the Select menu of all Grease Pencil modes. On by default. They work best on a hotkey.
-
-##### Location of operators
-
-3D View Editor – Select menu in the Grease Pencil modes
-
-## Operators
+##### Operators
 
 - Insert Frame Left
 - Remove Frame Left
@@ -135,6 +125,16 @@ Toggles a new overlay button in the header of the 3D view
 
 3D View Editor – Header to the top right
 
+### Grease Pencil
+
+#### Grease Pencil Layer Selection Toggle
+
+Shows two quick select operators that pick a layer by the strokes under the mouse, in the Select menu of all Grease Pencil modes. On by default. They work best on a hotkey.
+
+##### Location of operators
+
+3D View Editor – Select menu in the Grease Pencil modes
+
 ## Operators
 
 ### Animation Operators
@@ -197,7 +197,7 @@ Finds the strokes under the mouse and makes their layer the active one. In Edit 
 
 Does the same, then locks all other layers, so you can only work on that layer.
 
-> **Tip:** These operators read the mouse position, so they work best from a hotkey. Right-click an entry and choose Assign Shortcut. See also the [Grease Pencil keymap](../keymap/keymap-table.md).
+> **Tip:** These operators read the mouse position, so they work best from a hotkey. Right-click an entry and choose Assign Shortcut. See also the [keymap pages](../keymap/keymap-table.md).
 
 ### File Operators
 
