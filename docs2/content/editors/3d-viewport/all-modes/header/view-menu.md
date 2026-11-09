@@ -9,7 +9,7 @@ path:
   - "Header"
   - "View Menu"
 version: "5.3"
-status: draft
+status: needs-review
 icon: topbar
 summary: "The View menu contains all View related tools."
 order: 50
