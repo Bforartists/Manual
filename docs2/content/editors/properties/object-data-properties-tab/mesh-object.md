@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Mesh Object
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.1 Editors - Properties Editor - Object Data Properties Tab - Mesh Object.odt
