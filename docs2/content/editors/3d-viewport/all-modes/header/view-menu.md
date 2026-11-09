@@ -8,7 +8,7 @@ path:
   - "All Modes"
   - "Header"
   - "View Menu"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: topbar
 summary: "The View menu contains all View related tools."
@@ -309,6 +309,14 @@ A pie menu is a radial array of operators that can be used with gestures to quic
 ![Pie menus](/docs2/images/editors/3d-viewport/header/view-menu/pie-menus.png)
 
 ![Pie menus](/docs2/images/editors/3d-viewport/header/view-menu/pie-menus-2.png)
+
+### View pie menu
+
+![View pie menu](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-menu.png)
+
+The View pie jumps the view to a standard direction. The directions sit where you'd expect them on the screen: **Top** at the top and **Bottom** at the bottom, **Left** and **Right** on the sides, **Front** at the upper left and **Back** at the upper right. **View Camera** and **View Selected** fill the lower corners.
+
+> **Tip:** Each entry shows its hotkey on the right. See the [3D View keymap](../../../keymap/keymap-table.md#3d-viewport) for all view hotkeys.
 
 ## Reset 3D View
 
