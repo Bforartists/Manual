@@ -829,7 +829,12 @@ Sorts the content of the outliner in alphabetically order.
 
 ##### Sync Selection
 
-Synchronize the selection between outliner and 3d view.
+![Sync Selection](/docs2/images/editors/outliner/sync-selection.png)
+
+Synchronize the selection between the outliner and the other editors, like the 3D View. When it's on, the arrow next to it opens two more settings:
+
+- **Scroll to Active**: When the active item changes outside of the outliner, the outliner scrolls it into view.
+- **Expand on Focus**: Opens the collapsed parents of the active item when the outliner scrolls to it. Only works when Scroll to Active is on.
 
 #### Show Mode Column
 
@@ -917,7 +922,12 @@ Sorts the content of the outliner in alphabetically order.
 
 #### Sync Selection
 
-Synchronize the selection between outliner and 3d view.
+![Sync Selection](/docs2/images/editors/outliner/sync-selection.png)
+
+Synchronize the selection between the outliner and the other editors, like the 3D View. When it's on, the arrow next to it opens two more settings:
+
+- **Scroll to Active**: When the active item changes outside of the outliner, the outliner scrolls it into view.
+- **Expand on Focus**: Opens the collapsed parents of the active item when the outliner scrolls to it. Only works when Scroll to Active is on.
 
 #### Show Mode Column
 
