@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Grease Pencil"
   - "Vertex Paint"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: vpaint_hlt
 summary: "Paint colours onto the vertices of the grease pencil: menus, brushes and settings."
 order: 40
@@ -309,17 +309,19 @@ The strength of the brush. · **Use unified Size**: The size is shared across th
 
 ![Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode/mode.png)
 
+Which part of the strokes the brush colors. In the sidebar, Mode is a dropdown. In the tool settings header, the same three choices are icon buttons.
+
 ##### Stroke
 
-Vertex Color affects to stroke only.
+Vertex Color affects the stroke only.
 
 ##### Fill
 
-Vertex Color affects to fill only.
+Vertex Color affects the fill only.
 
-##### Stroke & Fill
+##### Both
 
-Vertex Color affects to stroke and fill.
+Vertex Color affects the stroke and the fill.
 
 ### Brush Settings Panel - Replace brush
 
@@ -343,17 +345,19 @@ Enable tablet pressure sensity.
 
 ![Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode/mode.png)
 
+Which part of the strokes the brush colors. In the sidebar, Mode is a dropdown. In the tool settings header, the same three choices are icon buttons.
+
 ##### Stroke
 
-Vertex Color affects to stroke only.
+Vertex Color affects the stroke only.
 
 ##### Fill
 
-Vertex Color affects to fill only.
+Vertex Color affects the fill only.
 
-##### Stroke & Fill
+##### Both
 
-Vertex Color affects to stroke and fill.
+Vertex Color affects the stroke and the fill.
 
 ### Brush Settings Panel - Smear brush
 
