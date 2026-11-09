@@ -8,7 +8,7 @@ path:
   - "Grease Pencil"
   - "Draw Mode"
 version: "5.3"
-status: draft
+status: needs-review
 icon: greasepencil
 summary: "Draw strokes with the grease pencil: menus, brushes, layers and settings of Draw Mode."
 order: 10
