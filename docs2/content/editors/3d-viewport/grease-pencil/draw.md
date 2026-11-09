@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "Grease Pencil"
   - "Draw Mode"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: greasepencil
 summary: "Draw strokes with the grease pencil: menus, brushes, layers and settings of Draw Mode."
@@ -181,11 +181,15 @@ Samples the color under the mouse
 
 ![Tool Shelf - Grease Pencil - Draw Mode](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/tool-shelf-grease-pencil-draw-mode.png)
 
-In Sculpt Mode you will mainly find draw tools in the tool shelf.
+In Draw Mode you will mainly find draw tools in the tool shelf.
 
 The brushes settings are covered in the chapter 7.3.12 Editors - 3D View - Sidebar - Tool Tab - Grease Pencil - Draw Mode
 
 For the Annotate tools group see chapter 7.2.1 Editors - 3D View - Tool Shelf - Object Mode
+
+#### Select tools
+
+The first button holds the select tools: **Tweak**, **Select Box**, **Select Circle** and **Select Lasso**. Hold the button down to pick one. They select strokes and points without leaving Draw Mode, so you can select a part of the drawing and keep working on it. They work like the select tools in Edit Mode.
 
 #### 3D Cursor Tool
 
@@ -239,9 +243,9 @@ Erase stroke curve points under the mouse.
 
 ![Fill](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/fill.png)
 
-This tool does not fill, but extend strokes of closed strokes areas by click drag, coming from the border. For example, when you create a Bezier circle. When you then click in the inner area, drag the mouse and release it, then the outer line of this Bezier circle gets extended into the inner direction by the in the brush panel adjusted amount.
+The Fill tool fills a closed area with the active material. Click inside an area that strokes surround on all sides, and the area gets filled.
 
-When you use this tool outside of closed geometry, then it draws a frame around the current view.
+Small gaps in the outline are fine. The tool can close them for you. The Fill brush settings in the tool settings and the sidebar control what counts as a border, how gaps get closed, and whether the inner or the outer area gets filled (**Direction**: Normal or Inverted).
 
 #### Shapes
 
@@ -320,6 +324,34 @@ Adjust the smoothness by a factor. Higher values gives smoother strokes.
 ###### Smooth Stroke Radius
 
 Minimum distance from last point before selection continues.
+
+#### Carver
+
+The Carver tool cuts the stroke points inside a lasso. Draw a lasso around the part of the strokes you want to cut. It sits next to Trim and has the same settings.
+
+##### Tool settings
+
+###### Active Layer
+
+Only cuts strokes on the active layer.
+
+###### Keep Caps
+
+Keeps the caps of the cut stroke ends.
+
+##### Adjust last operator Grease Pencil Carver
+
+###### Stabilize Stroke
+
+The lasso lags behind the mouse and follows a smoother path.
+
+###### Smooth Stroke Factor
+
+Higher values give a smoother lasso.
+
+###### Smooth Stroke Radius
+
+The minimum distance from the last point before the lasso continues.
 
 #### Eye Dropper
 
