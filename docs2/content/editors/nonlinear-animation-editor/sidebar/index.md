@@ -6,8 +6,8 @@ path:
   - Editors
   - Nonlinear Animation Editor
   - Sidebar
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 replaces:
   - editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-animation-data-panel
@@ -216,7 +216,15 @@ Number of frames for blending in and out is automatically calculated from overla
 
 ##### Playback
 
-**Reversed**: The action strip is played in reversed order. This just works when timing is determined automatic. · **Cyclic Strip Time**: Cycle the action strip.
+How the strip plays. The two settings sit indented below the Playback label.
+
+###### Reversed
+
+Plays the strip backwards. This only works when the strip timing is set automatically, so not while Animated Strip Time is on.
+
+###### Cyclic Strip Time
+
+Loops the animated strip time between the start and the end of the action. Use it with Animated Strip Time to make the action repeat.
 
 ### Animated Influence subpanel
 
