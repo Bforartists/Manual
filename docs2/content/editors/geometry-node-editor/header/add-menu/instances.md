@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Instances"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Instances nodes."
 order: 70
