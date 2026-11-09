@@ -51,7 +51,9 @@ Adjust an offset from the origin when instancing the collection.
 
 ![Instance offset menu](/docs2/images/editors/properties/collection-properties-tab/instance-offset-menu.png)
 
-#### Set Offset from cursor
+The arrow button next to Instance Offset opens this menu. The three entries use the same icons as the matching origin and cursor operators in the 3D View, so you can recognize them at a glance.
+
+#### Set Offset from Cursor
 
 Set the offset used for collection instance based on cursor position.
 
