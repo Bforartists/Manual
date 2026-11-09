@@ -1288,7 +1288,7 @@ Smooth stroke factor. Higher values gives smoother stroke.
 
 ![Brush Settings Panel - Erase](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode/brush-settings-panel-erase.png)
 
-Eraser hard, Eraser Point, Eraser Soft, Eraser Stroke
+These settings are for the eraser brushes: Eraser Hard, Eraser Point, Eraser Soft and Eraser Stroke.
 
 ![Brush Settings Panel - Erase](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode/brush-settings-panel-erase-2.png)
 
@@ -1426,8 +1426,21 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 A curve preset to start with.
 
-- **Keep Caps**: Keep the caps as they are. Do not flatten them.
-- **Active Layer**: Only edit the active layer of the object.
+#### Mode
+
+How the eraser removes strokes. Each mode is a button with its own icon.
+
+- **Dissolve**: Fades the points out by lowering their strength and thickness. Good for soft, gradual erasing.
+- **Point**: Removes the stroke points under the brush.
+- **Stroke**: Removes whole strokes that the brush touches.
+
+#### Keep Caps
+
+Keeps the caps of the stroke ends as they are, and doesn't flatten them when erasing.
+
+#### Active Layer
+
+Only erases on the active layer of the object.
 
 ### Brush Settings Panel - Fill
 
