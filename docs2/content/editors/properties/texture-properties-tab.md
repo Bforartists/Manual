@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Texture Properties Tab
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.16 Editors - Properties Editor - Texture Properties Tab.odt
