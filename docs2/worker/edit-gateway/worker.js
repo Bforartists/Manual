@@ -15,7 +15,7 @@ const BASE = "master";
 const ROOTS = { docs: "docs2/content", snippets: "docs2/snippets" };
 // Pages where the "Edit this page" button lives. A click from anywhere else is refused.
 // (No Referer at all is allowed: some browsers hide it, and people paste the link by hand.)
-const ALLOWED_HOSTS = ["bforartists.com", "www.bforartists.com", "bforartists.webflow.io", "bforartists.github.io"];
+const ALLOWED_HOSTS = ["bforartists.co", "www.bforartists.co", "bforartists.com", "www.bforartists.com", "bforartists.webflow.io", "bforartists.github.io"];
 const CMS = "https://app.pagescms.org/" + REPO.toLowerCase(); // Pages CMS writes owner/repo in lowercase
 
 const page = (title, body, status = 200) =>
