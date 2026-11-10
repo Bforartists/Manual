@@ -378,25 +378,47 @@ From left to right ...
 - **Open**: Open a new image.
 - **Remove**: Removes the image.
 
+###### Placement
+
+How the dots or squares are spread along the stroke. Here is the same stroke three times, with Count 2, Spacing 150% and Density 2.2:
+
+![The same stroke with Placement set to Count, Radius and Density](/docs2/images/editors/properties/material-properties-tab/dots-placement.png)
+
+- **Count**: Places the same number of dots between every two points of the stroke, set with **Count**. Where you drew slowly the points sit close together, so the dots bunch up; where you drew fast they spread out. Good for a hand-made, uneven look.
+- **Radius**: Spaces the dots by their own size, set with **Spacing** as a percentage of the dot diameter. At 100% the dots just touch; thick parts of the stroke get bigger gaps, thin parts smaller ones. This is the default, and gives a tidy beaded line.
+- **Density**: Spreads the dots evenly along the whole length of the stroke, set with **Density**, no matter how fast you drew or how thick the stroke is. Good for dotted lines, stitches and perforations.
+
+###### Count
+
+How many dots are placed per stroke segment. Shows when Placement is Count.
+
+###### Spacing
+
+The gap between dots, as a percentage of the dot diameter. Shows when Placement is Radius.
+
+###### Density
+
+How many dots are placed along the stroke. Shows when Placement is Density.
+
 ###### Alignment
 
 ![Alignment](/docs2/images/editors/properties/material-properties-tab/alignment.png)
 
-Dots and Squares mode.
+How the dots and squares are turned.
 
-- **Path**: Alignment follows stroke drawing path and object rotation.
-- **Object**: Alignment follows object rotation only.
-- **Fixed**: Keeps aligned with viewport.
+- **Path**: They follow the drawing direction of the stroke and the object rotation.
+- **Object**: They follow the object rotation only.
+- **Fixed**: They stay aligned with the view and ignore the stroke direction and the object rotation.
+
+###### Rotation
+
+![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
+
+An extra rotation for the dots and the square textures.
 
 #### Self Overlap
 
 Disable stencil and allow self intersections with alpha materials.
-
-##### Rotation
-
-![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
-
-Additional rotation applied to dot and square strokes.
 
 #### Holdout
 
