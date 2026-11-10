@@ -8,7 +8,7 @@ path:
   - Header
   - Add Menu
   - Geometry
-version: 5.2.3
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Geometry nodes: Read, Sample, Write, Material, Operations."
@@ -239,9 +239,13 @@ Gets the bundle that is stored on a geometry. Use it to read data that was attac
 
 ##### Geometry
 
+Data type: Geometry.
+
 The geometry to get the bundle from.
 
 ##### Remove
+
+Data type: Boolean.
 
 Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
 
@@ -249,9 +253,13 @@ Off by default. When on, the bundle is taken off the geometry that comes out of 
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry. It no longer holds the bundle when Remove is on.
 
 ##### Bundle
+
+Data type: Bundle.
 
 The bundle that was stored on the geometry.
 
@@ -543,6 +551,8 @@ Attaches a bundle to a geometry. Use it to send extra values along with a geomet
 
 ##### Geometry
 
+Data type: Geometry.
+
 The geometry to attach the bundle to.
 
 ##### Bundle
@@ -554,6 +564,8 @@ The bundle to attach.
 #### Outputs
 
 ##### Geometry
+
+Data type: Geometry.
 
 The geometry with the bundle attached.
 
@@ -712,13 +724,19 @@ Sets the name of the target geometry.
 
 ##### Geometry
 
+Data type: Geometry.
+
 Geometry input.
 
 ##### Old
 
+Data type: Material.
+
 The material that you want to replace.
 
 ##### New
+
+Data type: Material.
 
 The new material that replaces the old material.
 

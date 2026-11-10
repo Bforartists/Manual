@@ -4,7 +4,7 @@
 # The first save pushes that branch; this workflow then opens the pull request into
 # master (once), so nobody has to go to GitHub and press "Compare & pull request".
 # The checks and the preview are made by the "Docs 2.0 checks and preview" workflow,
-# which already runs on every push to docs2/** branches.
+# which runs on every push to docs2/edit/** branches and on every pull request.
 #
 # One-time repository setting (maintainer):
 #   Settings → Actions → General → Workflow permissions →

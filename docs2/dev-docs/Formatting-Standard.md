@@ -74,6 +74,7 @@ Nodes already follow the pattern everyone should use. Keep it:
 ```
 
 - The order is always **Inputs, Properties, Outputs**. A section is left out when the node has none.
+- Every input and output starts with a `Data type: …` line. How to write it, per editor: [Callouts and data types](Callouts-and-Data-Types.md#-data-types-at-a-glance).
 
 ### 💡 The context paragraph
 

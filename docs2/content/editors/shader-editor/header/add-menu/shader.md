@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Shader"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Shader nodes."
 order: 30
@@ -95,15 +95,21 @@ The Emission node emits light.
 
 ##### Color
 
+Data type: Color.
+
 Color of the emitted light.
 
 ##### Strength
+
+Data type: Float.
 
 Strength of the emitted light. For point and area lights, the unit is Watts. For materials, a value of 1.0 will ensure that the object in the image has the exact same color as the Color input, i.e. make it ‘shadeless’.
 
 #### Outputs
 
 ##### Emission
+
+Data type: Shader.
 
 The Emission shader output can both be plugged into the Surface Input as well as the Volume Input of the Material Output node.
 
@@ -117,17 +123,25 @@ A glass shader.
 
 ##### Color
 
+Data type: Color.
+
 Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength.
 
 ##### Roughness
+
+Data type: Float (factor).
 
 Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.
 
 ##### IOR
 
+Data type: Float.
+
 Index of refraction (IOR) defining how much the ray changes direction. At 1. 0 rays pass straight through like transparent; higher values give more refraction.
 
 ##### Normal
+
+Data type: Vector.
 
 Normal used for shading.
 
@@ -147,6 +161,8 @@ The light scattering disribution model on rough surface.
 
 ##### BSDF
 
+Data type: Shader.
+
 Standard shader output.
 
 ### Glossy BSDF
@@ -159,25 +175,37 @@ The Glossy BSDF node is used to add reflection with micro facet distribution, us
 
 ##### Color
 
+Data type: Color.
+
 Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 
 ##### Roughness
+
+Data type: Float (factor).
 
 Input for the surface roughness resulting in sharp to blurry reflections.
 
 ##### Anisotropy
 
+Data type: Float.
+
 Anisotropy level
 
 ##### Rotation
+
+Data type: Float (factor).
 
 Rotation of the glossy map.
 
 ##### Normal
 
+Data type: Vector.
+
 Normal used for shading.
 
 ##### Tangent
+
+Data type: Vector.
 
 Tangent used for shading.
 
@@ -213,6 +241,8 @@ Multiscatter GGX micro facet distribution.
 
 ##### BSDF
 
+Data type: Shader.
+
 Standard shader output.
 
 ### Holdout
@@ -228,6 +258,8 @@ Note that the holdout shader can only create alpha when Transparent is enabled. 
 #### Outputs
 
 ##### Holdout
+
+Data type: Shader.
 
 Standard shader output.
 
@@ -247,31 +279,45 @@ Lighting nodes (Light Info, Light Evaluation, Shadow Raycast) must reach the Mat
 
 ##### Diffuse Light
 
+Data type: Color.
+
 The matte light that reaches the surface, from your lighting nodes (default black).
 
 ##### Diffuse Color
+
+Data type: Color.
 
 The color that tints the diffuse light (default white). Connect surface colors here, not lighting nodes.
 
 ##### Glossy Light
 
+Data type: Color.
+
 The shiny light that reaches the surface, from your lighting nodes (default black).
 
 ##### Glossy Color
+
+Data type: Color.
 
 The color that tints the glossy light (default white). Connect surface colors here, not lighting nodes.
 
 ##### Transmission Light
 
+Data type: Color.
+
 The light that passes through the surface, from your lighting nodes (default black).
 
 ##### Transmission Color
+
+Data type: Color.
 
 The color that tints the transmitted light (default white). Connect surface colors here, not lighting nodes.
 
 #### Outputs
 
 ##### Shader
+
+Data type: Shader.
 
 The lit result, to connect to the Material Output.
 
@@ -336,6 +382,8 @@ Index of Refraction of the Thin Film.
 
 ##### BSDF
 
+Data type: Shader.
+
 Shader output.
 
 ### Principled BSDF
@@ -352,25 +400,37 @@ This “Uber” shader includes multiple layers to create a wide variety of mate
 
 ##### Base Color
 
+Data type: Color.
+
 Diffuse or metal surface color.
 
 ##### Metallic
+
+Data type: Float (factor).
 
 Blends between a non-metallic and metallic material model. A value of 1.0 gives a fully specular reflection tinted with the base color, without diffuse reflection or transmission. At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.
 
 ##### Roughness
 
+Data type: Float (factor).
+
 Specifies micro facet roughness of the surface for diffuse and specular reflection. Hint. When converting from the older Glossy BSDF node, use the square root of the original value.
 
 ##### IOR
+
+Data type: Float.
 
 Index of refraction for transmission.
 
 ##### Alpha
 
+Data type: Float (factor).
+
 Controls the transparency of the surface, with 1.0 fully opaque. Usually linked to the Alpha output of an Image Texture node.
 
 ##### Normal
+
+Data type: Vector.
 
 Controls the normals of the base layers.
 
@@ -534,6 +594,8 @@ The index of refraction of the thin film layer. It affects the reflectivity and 
 
 ##### BSDF
 
+Data type: Shader.
+
 Standard shader output.
 
 ### Refraction BSDF
@@ -546,13 +608,19 @@ The Refraction BSDF is used to add glossy refraction with sharp or micro facet d
 
 ##### Color
 
+Data type: Color.
+
 Color of the surface, or physically speaking, the probability that light is refracted for each wavelength.
 
 ##### Roughness
 
+Data type: Float (factor).
+
 Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.
 
 ##### Normal
+
+Data type: Vector.
 
 Normal used for shading; if nothing is connected the default shading normal is used.
 
@@ -567,6 +635,8 @@ Micro facet distribution to use. Sharp results in perfectly sharp refraction, wh
 #### Outputs
 
 ##### BSDF
+
+Data type: Shader.
 
 Standard shader output.
 
@@ -586,6 +656,8 @@ The specular workflow functions by specifying the facing (along normal) reflecti
 
 ##### Base Color
 
+Data type: Color.
+
 Diffuse surface color. For conductor materials (metals) it should be black.
 
 ##### Specular Color
@@ -594,35 +666,51 @@ Amount of specular reflection. Specifies facing (along normal) reflectivity. Con
 
 ##### Roughness
 
+Data type: Float (factor).
+
 Specifies micro facet roughness of the surface for diffuse and specular reflection. Hint. When converting from the older Glossy BSDF node, use the square root of the original value.
 
 ##### Emissive Color
+
+Data type: Color.
 
 Color of the emitted light. This light is added to the BSDF result.
 
 ##### Transparency
 
+Data type: Float (factor).
+
 Transparency factor. This is the inverse of the alpha channel (1 - alpha) you find in an image. Use an Invert node to convert alpha to transparency. This will only have an effect if the material uses a blend mode other than opaque.
 
 ##### Normal
+
+Data type: Vector.
 
 Controls the normals of the base layers.
 
 ##### Clear coat
 
+Data type: Float (factor).
+
 Extra white specular layer on top of others. This is useful for materials like car paint and the like.
 
 ##### Clear coat Roughness
 
+Data type: Float (factor).
+
 Roughness of clear coat specular.
 
 ##### Clear coat Normal
+
+Data type: Vector.
 
 Controls the normals of the Clear coat layer.
 
 #### Outputs
 
 ##### BSDF
+
+Data type: Shader.
 
 Standard shader output.
 
@@ -701,6 +789,8 @@ Normal used for shading; if nothing is connected the default shading normal is u
 
 ##### BSSRDF
 
+Data type: Shader.
+
 BSSRDF shader output.
 
 ### Translucent BSDF
@@ -741,55 +831,81 @@ The Principled Volume shader combines all volume shading components into a singl
 
 ##### Color
 
+Data type: Color.
+
 Volume scattering color.
 
 ##### Color Attribute
+
+Data type: String.
 
 Volume grid for coloring the volume. Use “color” for smoke simulations.
 
 ##### Density
 
+Data type: Float.
+
 Density of the volume.
 
 ##### Density Attribute
+
+Data type: String.
 
 Volume grid to define the density, typically “density”.
 
 ##### Anisotropy
 
+Data type: Float (factor).
+
 Backward or forward scattering direction.
 
 ##### Absorption Color
+
+Data type: Color.
 
 Volume shadow color tint.
 
 ##### Emission Strength
 
+Data type: Float.
+
 Amount of light to emit.
 
 ##### Emission Color
+
+Data type: Color.
 
 Emission color tint.
 
 ##### Blackbody Intensity
 
+Data type: Float (factor).
+
 Blackbody emission for fire. Set to 1 for physically accurate intensity.
 
 ##### Blackbody Tint
+
+Data type: Color.
 
 Color tint for blackbody emission.
 
 ##### Temperature
 
+Data type: Float (color temperature).
+
 Temperature in kelvin for blackbody emission, higher values emit more.
 
 ##### Temperature Attribute
+
+Data type: String.
 
 Volume grid attribute to define the temperature.
 
 #### Outputs
 
 ##### Volume
+
+Data type: Shader.
 
 Standard shader output.
 
@@ -876,6 +992,8 @@ Mie: For large particles like clouds or mist.
 
 ##### Volume
 
+Data type: Shader.
+
 The Volume Shader output must be plugged into the Volume Input of the Material or World Output node.
 
 ### Volume Coefficients
@@ -960,6 +1078,8 @@ Controls the look of the scatter effect depending on the direction of the light 
 
 ##### Volume
 
+Data type: Shader.
+
 The Volume Shader output must be plugged into the Volume Input of the Material or World Output node.
 
 ### Cycles / Workbench
@@ -978,9 +1098,13 @@ The Hair BSDF node is used to add shading for Hair.
 
 ##### Color
 
+Data type: Color.
+
 Color of the hair.
 
 ##### Offset
+
+Data type: Float (angle).
 
 Controls the way the light is rotated (angular shift) for the reflection/transmission.
 
@@ -989,6 +1113,8 @@ Controls the way the light is rotated (angular shift) for the reflection/transmi
 Controls the roughness in the direction light is skewed, and perpendicular to it.
 
 ##### Tangent
+
+Data type: Vector.
 
 Input tangent.
 
@@ -1011,6 +1137,8 @@ The light that passes through the hair and comes out the other side.
 #### Outputs
 
 ##### BSDF
+
+Data type: Shader.
 
 Standard shader output.
 
@@ -1300,6 +1428,8 @@ For each strand, vary both Roughness values by RandomFactor. Range `[0,1]` equiv
 
 ##### BSDF
 
+Data type: Shader.
+
 Standard shader output.
 
 ### Sheen BSDF
@@ -1314,6 +1444,8 @@ The Sheen BSDF is used to add reflection to materials such as cloth. It is meant
 
 ##### Color
 
+Data type: Color.
+
 Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 
 ##### Sigma
@@ -1321,6 +1453,8 @@ Color of the surface, or physically speaking, the probability that light is refl
 Variance of the normal distribution, controlling the sharpness of the peak. It can be thought of as a kind of roughness.
 
 ##### Normal
+
+Data type: Vector.
 
 Normal used for shading; if nothing is connected the default shading normal is used.
 
@@ -1336,6 +1470,8 @@ The distribution algorithm. Akishikmin is the legacy model. Microfiber the moder
 
 ##### BSDF
 
+Data type: Shader.
+
 Standard shader output.
 
 ### Toon BSDF
@@ -1350,17 +1486,25 @@ The Toon BSDF is used to create Diffuse and Glossy materials with cartoon light 
 
 ##### Color
 
+Data type: Color.
+
 Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 
 ##### Size
+
+Data type: Float (factor).
 
 Parameter between 0.0 and 1.0 that gives an angle of reflection between 0° and 90°.
 
 ##### Smooth
 
+Data type: Float (factor).
+
 This value specifies an angle over which a smooth transition from full to no reflection happens.
 
 ##### Normal
+
+Data type: Vector.
 
 Normal used for shading; if nothing is connected the default shading normal is used.
 
@@ -1381,6 +1525,8 @@ Use shading based on the Glossy BSDF for specular reflection.
 #### Outputs
 
 ##### BSDF
+
+Data type: Shader.
 
 Standard shader output.
 

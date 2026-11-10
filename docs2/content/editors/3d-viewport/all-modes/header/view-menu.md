@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "View Menu"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The View menu contains all View related tools."
 order: 50
@@ -309,6 +309,62 @@ A pie menu is a radial array of operators that can be used with gestures to quic
 ![Pie menus](/docs2/images/editors/3d-viewport/header/view-menu/pie-menus.png)
 
 ![Pie menus](/docs2/images/editors/3d-viewport/header/view-menu/pie-menus-2.png)
+
+### View pie menu
+
+![View pie menu](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-menu.png)
+
+The View pie jumps the view to a standard direction. The directions sit where you'd expect them on the screen: **Top** at the top and **Bottom** at the bottom, **Left** and **Right** on the sides, **Front** at the upper left and **Back** at the upper right. **View Camera** and **View Selected** fill the lower corners.
+
+> **Tip:** Each entry shows its hotkey on the right. See the [3D View keymap](../../../../keymap/keymap-table.md#3d-viewport) for all view hotkeys.
+
+#### Top
+
+![Top pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-top.png)
+
+Looks straight down on the scene, from above.
+
+#### Bottom
+
+![Bottom pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-bottom.png)
+
+Looks straight up at the scene, from below.
+
+#### Front
+
+![Front pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-front.png)
+
+Looks at the scene from the front, along the Y axis.
+
+#### Back
+
+![Back pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-back.png)
+
+Looks at the scene from behind, the opposite of Front.
+
+#### Left
+
+![Left pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-left.png)
+
+Looks at the scene from the left side, along the X axis.
+
+#### Right
+
+![Right pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-right.png)
+
+Looks at the scene from the right side, the opposite of Left.
+
+#### View Camera
+
+![View Camera pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-camera.png)
+
+Looks through the active camera, so you see what the render will show.
+
+#### View Selected
+
+![View Selected pie entry](/docs2/images/editors/3d-viewport/header/view-menu/view-pie-selected.png)
+
+Zooms and centers the view on the selected objects or elements, so they fill the view.
 
 ## Reset 3D View
 

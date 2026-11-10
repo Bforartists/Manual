@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Texture"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Texture nodes."
 order: 130
@@ -113,13 +113,19 @@ The direction of the anisotropic gabor noise. It is oriented in the 3d space. An
 
 ##### Value
 
+Data type: Float.
+
 The sum of gabor phase and intensity.
 
 ##### Phase
 
+Data type: Float.
+
 The gabor phase.
 
 ##### Intensity
+
+Data type: Float.
 
 The gabor intensity.
 
@@ -132,6 +138,8 @@ Add a gradient texture.
 #### Inputs
 
 ##### Vector
+
+Data type: Vector.
 
 Vector input.
 
@@ -147,9 +155,13 @@ What gradient type to use.
 
 ##### Factor
 
+Data type: Float.
+
 Factor output.
 
 ##### Color
+
+Data type: Color.
 
 Color output.
 
@@ -162,6 +174,8 @@ The Image Texture is used to add an image file as a texture.
 #### Inputs
 
 ##### Image
+
+Data type: Image.
 
 The Image input. Open an image, choose an existing image, or generate a new image.
 
@@ -237,9 +251,13 @@ Flip the image horizontally and vertically repeatedly.
 
 ##### Color
 
+Data type: Color.
+
 RGB color from image. If the image has alpha, the color is premultiplied with alpha if the Alpha output is used, and unpremultiplied or straight if the Alpha output is not used.
 
 ##### Alpha
+
+Data type: Float.
 
 Alpha channel from image.
 
@@ -272,6 +290,8 @@ The Noise Texture node evaluates a fractal Perlin noise at the input texture coo
 The inputs are dynamic, they become available if needed depending on the node properties.
 
 ##### Vector
+
+Data type: Vector.
 
 Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.
 
@@ -333,9 +353,13 @@ Similar to Hybrid Multifractal creates a heterogeneous terrain, but with the lik
 
 ##### Factor
 
+Data type: Float.
+
 Value of fractal noise.
 
 ##### Color
+
+Data type: Color.
 
 Color with different fractal noise in each component.
 
@@ -349,21 +373,31 @@ Add a voronoi texture.
 
 ##### Vector
 
+Data type: Vector.
+
 Vector input.
 
 ##### W
+
+Data type: Float.
 
 The value w scale in 4 dimensions.
 
 ##### Scale
 
+Data type: Float.
+
 The scale of the voronoi texture.
 
 ##### Detail
 
+Data type: Float.
+
 The number ovf voronoi layers.
 
 ##### Roughness
+
+Data type: Float (factor).
 
 The influence of the voronoi layer relative to the previous layer.
 
@@ -373,9 +407,13 @@ The scale of the voronoi layer relative to the previous layer.
 
 ##### Smoothness
 
+Data type: Float (factor).
+
 Smoothness of Smooth F1
 
 ##### Randomness
+
+Data type: Float (factor).
 
 The detail of the voronoi texture.
 
@@ -431,6 +469,8 @@ Factor output.
 
 ##### Color
 
+Data type: Color.
+
 Color output.
 
 ### Wave Texture
@@ -443,29 +483,43 @@ The Wave Texture node adds procedural bands or rings with noise distortion.
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.
 
 ##### Scale
+
+Data type: Float.
 
 Overall texture scale.
 
 ##### Distortion
 
+Data type: Float.
+
 Amount of distortion of the wave (similar to the Marble texture in Blender Internal).
 
 ##### Detail
+
+Data type: Float.
 
 Amount of distortion noise detail.
 
 ##### Detail Scale
 
+Data type: Float.
+
 Scale of distortion noise.
 
 ##### Detail Roughness
 
+Data type: Float (factor).
+
 Adds a roughness noise.
 
 ##### Phase Offset
+
+Data type: Float.
 
 Set an offset for the phase.
 
@@ -505,9 +559,13 @@ Uses a triangle shape.
 
 ##### Color
 
+Data type: Color.
+
 Texture color output.
 
 ##### Factor
+
+Data type: Float.
 
 Texture intensity output.
 
@@ -520,6 +578,8 @@ Add a white noise texture.
 #### Inputs
 
 ##### Vector
+
+Data type: Vector.
 
 Vector input.
 
@@ -538,5 +598,7 @@ What gradient type to use.
 Factor output.
 
 ##### Color
+
+Data type: Color.
 
 Color output.
