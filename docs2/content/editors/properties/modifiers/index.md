@@ -1,6 +1,6 @@
 ---
 id: editors.properties.modifiers
-title: "Modifiers"
+title: Modifiers
 section: editors
 path:
   - Editors
@@ -11,8 +11,10 @@ status: needs-review
 screenshots: "5.1"
 source:
   - 26.9 Editors - Properties Editor - Modifiers Properties Tab.odt
-  - 26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus.odt
-summary: "Modifers are automatic operations that affects the geometry of objects in a non destructive way."
+  - 26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier
+    menus.odt
+summary: Modifers are automatic operations that affects the geometry of objects
+  in a non destructive way.
 icon: modifier_on
 order: 80
 ---
@@ -220,6 +222,7 @@ Some of the properties can be animated. Click at the animate property button at 
 Add a modifier nodegroup into the modifier stack. This will list and create all Geometry Node group assets assigned to the Modifier property. If they are not assigned to a category in the Asset Browser, they will list as “unassigned”.
 
 For more information, please check out the chapter  
+
 #### Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus
 
 ## Add Modifier menu buttons
@@ -286,7 +289,9 @@ Manage the nodes. If there is no geometry node tree for the current object, then
 
 ![Open Geometry Nodes Editor](/docs2/images/ui/properties/modifiers/open-geometry-nodes-editor.png)
 
-Opens a new window with a Geometry Node Editor that shows this modifier's node group. Handy when your workspace has no node editor: you can edit the nodes right away and close the window when you're done.
+Opens a new window with a Geometry Node Editor that shows this modifier's node group. Handy when your workspace has no node editor: you can edit the nodes right away and close the window when you're done. 
+
+> **Warning**: This will open the active geometry nodes modifier. If you have multiple geometry nodes modifiers, this button will open the active modifier outlined in blue. 
 
 ### Geometry Nodes Assets
 
