@@ -1,0 +1,9 @@
+{
+ "pages": {
+  "docs2/content/editors/shader-editor/header/add-menu/color.md": "editors/shader-editor/header/add-menu/color.html",
+  "docs2/content/editors/shader-editor/header/add-menu/output.md": "editors/shader-editor/header/add-menu/output.html",
+  "docs2/content/editors/shader-editor/header/add-menu/shader.md": "editors/shader-editor/header/add-menu/shader.html",
+  "docs2/content/editors/shader-editor/header/add-menu/texture.md": "editors/shader-editor/header/add-menu/texture.html"
+ },
+ "images": 160
+}
