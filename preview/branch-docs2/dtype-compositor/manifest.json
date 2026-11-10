@@ -1,0 +1,12 @@
+{
+ "pages": {
+  "docs2/content/editors/compositor/header/add-menu/color.md": "editors/compositor/header/add-menu/color.html",
+  "docs2/content/editors/compositor/header/add-menu/creative.md": "editors/compositor/header/add-menu/creative.html",
+  "docs2/content/editors/compositor/header/add-menu/keying.md": "editors/compositor/header/add-menu/keying.html",
+  "docs2/content/editors/compositor/header/add-menu/mask.md": "editors/compositor/header/add-menu/mask.html",
+  "docs2/content/editors/compositor/header/add-menu/texture.md": "editors/compositor/header/add-menu/texture.html",
+  "docs2/content/editors/compositor/header/add-menu/tracking.md": "editors/compositor/header/add-menu/tracking.html",
+  "docs2/content/editors/compositor/header/add-menu/transform.md": "editors/compositor/header/add-menu/transform.html"
+ },
+ "images": 162
+}
