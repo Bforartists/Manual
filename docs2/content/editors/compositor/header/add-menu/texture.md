@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Texture"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Texture nodes."
 order: 90
