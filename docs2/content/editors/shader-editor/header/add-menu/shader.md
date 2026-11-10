@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Shader"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Shader nodes."
 order: 30
