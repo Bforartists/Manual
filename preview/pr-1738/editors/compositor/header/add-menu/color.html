@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:6px;padding:.3125rem .625rem;font:600 .8125rem/1.2 sans-serif;position:absolute;top:.75rem;bottom:auto;height:auto;width:auto}.ui-compare-tag.is-left{left:.75rem}.ui-compare-tag.is-right{right:.75rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1738 · <code>docs2/dtype-compositor</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a class="is-current" style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="keying.html">Keying</a>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="mask.html">Mask</a>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<a style="padding-left:3.5rem" href="tracking.html">Tracking</a>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="transform.html">Transform</a>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span>Project Settings</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Compositor › Header › Add Menu › Color</div><h1 class="pv-title">Color</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.3</span><span>🕒 18 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-color">Add menu - Color</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/add-menu-color.png" alt="Add menu - Color" loading="lazy"><figcaption>Add menu - Color</figcaption></figure>
+<p>Here you find color related nodes.</p>
+<h3 id="alpha-convert">Alpha Convert</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/alpha-convert.png" alt="Alpha Convert" loading="lazy"></figure>
+<p>This node converts the alpha channel interpretation of an image from pre-multiplied to straight or vice versa. With a straight alpha channel you might run into artifacts at the borders when the pixels in the semi transparent areas.</p>
+<h4 id="input">Input</h4>
+<h5 id="image">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The input image.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="mapping-type">Mapping Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/mapping-type.png" alt="Mapping Type" loading="lazy"></figure>
+<p>Convert straight to premultiplied. Or convert premultiplied to straight.</p>
+<h4 id="output">Output</h4>
+<h5 id="image-2">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The image output.</p>
+<h3 id="alpha-over">Alpha Over</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/alpha-over.png" alt="Alpha Over" loading="lazy"></figure>
+<p>The Alpha Over node is used to layer images with an alpha channel on top of one another.</p>
+<p>Where the foreground image pixels have an alpha greater than 0, the background image will be overlaid.</p>
+<h4 id="inputs">Inputs</h4>
+<p><strong>Background</strong>: Input for the background image. · <strong>Foreground</strong>: Input for the foreground image. · <strong>Factor</strong>: Controls the amount of foreground image. A factor less than 1 will make the foreground more transparent.</p>
+<h4 id="straight-alpha">Straight Alpha</h4>
+<p>Defines wether teh foreground ins in straight alpha form, which is necessary to konw for proper alpha composing. Images in the compositor are in premultiplied alpha form by default. So it should be false in most cases. But if, and only if, the foreground was converted to straight alpha form for some reason, this should be set to true.</p>
+<h4 id="properties-2">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="over">Over</h5>
+<p>The foreground goes over the background according to the alpha of the foreground.</p>
+<h5 id="disjoint-over">Disjoint Over</h5>
+<p>The foreground goes over the background according to the alpha of the foreground while assuming the background is being held out by the foreground.</p>
+<h5 id="conjoint-over">Conjoint Over</h5>
+<p>The foreground goes over the background according to the alpha of the foreground. But the foreground completely covers the background if it is more opaque but not necessarily completely opaque.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="image-3">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image output.</p>
+<h3 id="set-alpha">Set Alpha</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/set-alpha.png" alt="Set Alpha" loading="lazy"></figure>
+<p>The Set Alpha Node adds an alpha channel to an image.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="image-4">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="alpha">Alpha</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The amount of Alpha can be set for the whole image by using the input field or per pixel by connecting to the socket.</p>
+<h5 id="type">Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/type.png" alt="Type" loading="lazy"></figure>
+<h6 id="apply-mask">Apply Mask</h6>
+<p>Multiply the alpha channel of the input image by the alpha input value.</p>
+<h6 id="replace-alpha">Replace Alpha</h6>
+<p>Replace the alpha channel of the input image by the alpha input value.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="image-5">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The image output.</p>
+<h3 id="combine-color">Combine Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/combine-color.png" alt="Combine Color" loading="lazy"></figure>
+<p>Combine single RGBA floating point channels into a single image.</p>
+<h4 id="input-2">Input</h4>
+<h5 id="mode">Mode</h5>
+<ul>
+<li><strong>RGB</strong> colour processing</li>
+<li><strong>HSV</strong> colour processing</li>
+<li><strong>HSL</strong> colour processing</li>
+<li><strong>YcbCr</strong> converts an YCbCrA image to RGBA color space and unions the channels.</li>
+<li>Y: Luminance, 0=black, 1=white</li>
+<li>Cb: Chrominance Blue, 0=Blue, 1=Yellow</li>
+<li>Cr: Chrominance Red, 0=Red, 1=Yellow</li>
+<li>YUV converts an YUVA image to RGBA color space. Note that U and V values range
+from -0.5 to +0.5.</li>
+</ul>
+<h6 id="input-rgb-mode">Input – RGB mode</h6>
+<p><strong>R, G, B and A</strong>: The red, green, blue and alpha channels of an image.</p>
+<h6 id="input-hsv-mode">Input – HSV mode</h6>
+<p><strong>H , S and V</strong>: The Hue, Saturation and Value channels of an image.</p>
+<h6 id="input-hsl-mode">Input – HSL mode</h6>
+<p><strong>H , S and L</strong>: The Hue, Saturation and Luminescence channels of an image.</p>
+<h4 id="input-ycbcra-mode">Input – YCbCRA mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png" alt="Input – YCbCRA mode" loading="lazy"><figcaption>Input – YCbCRA mode</figcaption></figure>
+<h5 id="y-cb-cr-and-a">Y, Cb, Cr and A</h5>
+<p>Luminance, Chrominance Blue, Chrominance Red and Alpha input.</p>
+<h6 id="properties-3">Properties</h6>
+<p><strong>Modes</strong>: ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space.</p>
+<h6 id="input-yuva-mode">Input – YUVA mode</h6>
+<p><strong>Y, U, V and A</strong>: Luminance, Chrominance U, Chrominance V and Alpha channel.</p>
+<h6 id="output-2">Output</h6>
+<p><strong>Image</strong>: The output image.</p>
+<h3 id="separate-color">Separate Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/separate-color.png" alt="Separate Color" loading="lazy"></figure>
+<p>Separates the single RGBA channels from a single image.</p>
+<h4 id="input-3">Input</h4>
+<h5 id="mode-2">Mode</h5>
+<ul>
+<li><strong>RGB</strong> colour processing</li>
+<li><strong>HSV</strong> colour processing</li>
+<li><strong>HSL</strong> colour processing</li>
+<li><strong>YcbCr</strong> converts an YCbCrA image to RGBA color space and unions the channels.</li>
+<li>Y: Luminance, 0=black, 1=white</li>
+<li>Cb: Chrominance Blue, 0=Blue, 1=Yellow</li>
+<li>Cr: Chrominance Red, 0=Red, 1=Yellow</li>
+<li>YUV converts an YUVA image to RGBA color space. Note that U and V values range
+from -0.5 to +0.5.</li>
+</ul>
+<h4 id="output-rgb-mode">Output – RGB mode</h4>
+<h5 id="r-g-b-and-a">R, G, B and A</h5>
+<p>The red, green, blue and alpha channels of an image.</p>
+<h5 id="output-hsv-mode">Output – HSV mode</h5>
+<p><strong>H , S and V</strong>: The Hue, Saturation and Value channels of an image.</p>
+<h5 id="output-hsl-mode">Output – HSL mode</h5>
+<p><strong>H , S and L</strong>: The Hue, Saturation and Luminescence channels of an image.</p>
+<h5 id="output-ycbcra-mode">Output – YCbCRA mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png" alt="Output – YCbCRA mode" loading="lazy"><figcaption>Output – YCbCRA mode</figcaption></figure>
+<h6 id="y-cb-cr-and-a-2">Y, Cb, Cr and A</h6>
+<p>Luminance, Chrominance Blue, Chrominance Red and Alpha input.</p>
+<h6 id="properties-4">Properties</h6>
+<p>—</p>
+<h6 id="modes">Modes</h6>
+<p>ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space.</p>
+<h4 id="output-yuva-mode">Output – YUVA mode</h4>
+<h5 id="y-u-v-and-a">Y, U, V and A</h5>
+<p>Luminance, Chrominance U, Chrominance V and Alpha channel.</p>
+<h3 id="depth-combine">Depth Combine</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/depth-combine.png" alt="Depth Combine" loading="lazy"></figure>
+<p>The Depth Combine node combines two images based on their Z-depth maps. It overlays the images using the provided Z values to detect which parts of one image are in front of the other.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="a">A</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The background image.</p>
+<h5 id="depth-a">Depth A</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Z depth of the background image.</p>
+<h5 id="b">B</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The foreground image.</p>
+<h5 id="depth-b">Depth B</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Z depth of the foreground image.</p>
+<h5 id="use-alpha">Use Alpha</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>The chosen Image pixel alpha channel is also carried over. If a pixel is partially or totally transparent, the result of the Z Combine will also be partially transparent; in which case the background image will show through the foreground (chosen) pixel.</p>
+<h5 id="anti-alias-z">Anti-Alias Z</h5>
+<p>Applies Anti-Aliasing to avoid artifacts at sharp edges or areas with a high contrast.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="result">Result</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>If both Z values are equal, it will use the foreground image. Whichever Z value is less decides which image pixel is used. See Z-buffer.</p>
+<h5 id="depth">Depth</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The combined Z depth, which allows to thread multiple Z-combines together.</p>
+<h3 id="mix-color">Mix Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/mix-color.png" alt="Mix Color" loading="lazy"></figure>
+<p>The Mix Node mixes images by working on the individual and corresponding pixels of the two input images. Called “MixRGB” in the shader and texture context.</p>
+<h4 id="inputs-4">Inputs</h4>
+<p><strong>Factor</strong>: Controls the amount of influence the node exerts on the output image. · <strong>Image 1</strong>: Usually the background image. The image size and resolution sets the dimensions of the output image. · <strong>Image 2</strong>: Usually he foreground image.</p>
+<h4 id="properties-5">Properties</h4>
+<p><strong>Mix</strong>: Choose the different blending modes. Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, Color Dodge, Color Burn, Hue, Saturation, Value, Color, Soft Light, Linear Light. · <strong>Clamp</strong>: Limit the highest color value to not exceed 1.</p>
+<h4 id="outputs-4">Outputs</h4>
+<p><strong>Image</strong>: Image output.</p>
+<h3 id="blackbody">Blackbody</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/blackbody.png" alt="Blackbody" loading="lazy"></figure>
+<p>Convert a blackbody temperature to a rgb value.</p>
+<h4 id="inputs-5">Inputs</h4>
+<p><strong>Temperature</strong>: The blackbody temperature.</p>
+<h4 id="outputs-5">Outputs</h4>
+<p><strong>Color</strong>: The output RGB color.</p>
+<h3 id="colorramp">ColorRamp</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/colorramp.png" alt="ColorRamp" loading="lazy"></figure>
+<p>The Color Ramp Node is used for mapping values to colors with the use of a gradient.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="factor">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The Factor input is used as an index for the color ramp.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="color-ramp">Color Ramp</h5>
+<p>Color Ramps enables the user to specify a range of colors based on color stops. The color between the color stops gets interpolated.</p>
+<h6 id="controls">Controls</h6>
+<ul>
+<li><strong>+</strong>: Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.</li>
+<li><strong>-</strong>: Deletes the selected color stop from the list.</li>
+</ul>
+<h6 id="tools-menu">Tools menu</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<ul>
+<li><strong>Flip Color Ramp</strong>: Flips the gradient, inverting the values of the color ramp.</li>
+<li><strong>Distribute Stops from Left</strong>: Rearrange the stops so that every step has the same space to the right.</li>
+<li><strong>Distribute Stops Evenly</strong>: Space between all neighboring stops becomes equal.</li>
+<li><strong>Eyedropper (pipette icon) E</strong>: An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.</li>
+</ul>
+<h6 id="reset-color-ramp">Reset Color Ramp</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/reset-color-ramp.png" alt="Reset Color Ramp" loading="lazy"></figure>
+<p>Resets the color ramp to its default state.</p>
+<h6 id="color-mode">Color Mode</h6>
+<ul>
+<li><strong>RGB</strong>: Blends color by mixing each color channel and combining.</li>
+<li><strong>HSV/HSL</strong>: Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.</li>
+</ul>
+<h6 id="interpolation">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<ul>
+<li><strong>Ease</strong>: Uses an Ease Interpolation for the color stops.</li>
+<li><strong>Cardinal</strong>: Uses a Cardinal Interpolation for the color stops.</li>
+<li><strong>Linear</strong>: Uses a Linear Interpolation for the color stops.</li>
+<li><strong>B-Spline</strong>: Uses a B-Spline Interpolation for the color stops.</li>
+<li><strong>Constant</strong>: Uses a Constant Interpolation for the color stops.</li>
+</ul>
+<h6 id="color-ramp-2">Color Ramp</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/color-ramp.png" alt="Color Ramp" loading="lazy"></figure>
+<p>The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.</p>
+<h6 id="active-color-stop-elements">Active Color Stop elements</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/active-color-stop-elements.png" alt="Active Color Stop elements" loading="lazy"><figcaption>Active Color Stop elements</figcaption></figure>
+<p>Adjust the active color stop.</p>
+<ul>
+<li><strong>Choose active color stop</strong>: Choose the color stop by index.</li>
+<li><strong>Pos</strong>: The position of the active color stop. The range goes from 0.000 to 1.000</li>
+</ul>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="color">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The color output.</p>
+<h5 id="alpha-2">Alpha</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Alpha channel output.</p>
+<h3 id="convert-colorspace">Convert Colorspace</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/convert-colorspace.png" alt="Convert Colorspace" loading="lazy"></figure>
+<p>Convert between color spaces.</p>
+<p>Note that the conversion is skipped when converting between the same color spaces or to or from data spaces.</p>
+<h4 id="input-4">Input</h4>
+<h5 id="image-6">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The input image.</p>
+<h4 id="properties-7">Properties</h4>
+<h5 id="from">From</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/from.png" alt="From" loading="lazy"></figure>
+<p>The current color space.</p>
+<h5 id="to">To</h5>
+<p>The destination color space.</p>
+<h4 id="output-3">Output</h4>
+<h5 id="image-7">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The image output.</p>
+<h3 id="convert-to-display">Convert to Display</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/convert-to-display.png" alt="Convert to Display" loading="lazy"></figure>
+<p>Transforms an image from <strong>scene-linear color space</strong> into a <strong>display-referred format</strong>, using Blender’s color management pipeline. This is essential when working with raw data, custom view transforms, or prepping visuals for final output.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="image-8">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The input image in scene-linear space—typically the result of render layers, raw file input, or procedural compositing.</p>
+<h5 id="invert">Invert</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Reverses the display transform—useful for decoding display-referred images back to linear.</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="display">Display</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/display.png" alt="Display" loading="lazy"></figure>
+<p>Selects the target display device (e.g. <strong>sRGB</strong>, <strong>Rec.709</strong>, <strong>Display P3</strong>).<br />
+Determines how the image is mapped for viewing on screens.</p>
+<h5 id="view">View</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/view.png" alt="View" loading="lazy"></figure>
+<p>Applies a tone mapping curve (e.g. <strong>Standard</strong>, <strong>Filmic</strong>, <strong>Raw</strong>).<br />
+Controls contrast, highlight rolloff, and perceptual brightness.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/view-2.png" alt="View" loading="lazy"></figure>
+<h5 id="look">Look</h5>
+<p>Optional artistic adjustment layer (e.g. <strong>Medium Contrast</strong>, <strong>High Contrast</strong>, <strong>None</strong>).<br />
+Adds stylized tweaks on top of the view transform.</p>
+<h4 id="output-4">Output</h4>
+<h5 id="image-9">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The display-referred result, ready for preview, export, or further compositing.</p>
+<h3 id="invert-color">Invert Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/invert-color.png" alt="Invert Color" loading="lazy"></figure>
+<p>The Invert Node inverts the colors in the input image, producing a negative.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="color-2">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard input.</p>
+<h5 id="factor-2">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h5 id="invert-color-2">Invert Color</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Invert the RGB values.</p>
+<h5 id="invert-alpha">Invert Alpha</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Invert the Alpha values.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="color-3">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color/color.png" alt="Color" loading="lazy"></figure>
+<h3 id="rgb-to-bw">RGB to BW</h3>
+<p>The RGB to BW Node converts an RGB color image to a gray-scale image based at its luminance.</p>
+<h4 id="inputs-9">Inputs</h4>
+<p><strong>Image</strong>: Color image input.</p>
+<h4 id="outputs-8">Outputs</h4>
+<p><strong>Val</strong>: Gray-scale value output.</p>
+<h1 id="adjust">Adjust</h1>
+<h2 id="add-menu-color-adjust">Add menu - Color - Adjust</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/add-menu-color-adjust.png" alt="Add menu - Color - Adjust" loading="lazy"><figcaption>Add menu - Color - Adjust</figcaption></figure>
+<p>Here you find color related nodes.</p>
+<h3 id="brightness-contrast">Brightness/Contrast</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/brightness-contrast.png" alt="Brightness/Contrast" loading="lazy"></figure>
+<p>Adjust the brightness and contrast.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="image-10">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The image input</p>
+<h5 id="brightness">Brightness</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>An additive-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image.</p>
+<h5 id="contrast">Contrast</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>A scaling type factor by which to make brighter pixels brighter, but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="color-4">Color</h5>
+<p>Standard output.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> It is possible that this node will put out a value set that has values beyond the normal range, i.e. values greater than one and less than zero. If you will be using the output to mix with other images in the normal range, you should clamp the values using the Map Value node (with the Min and Max enabled), or put through a Color Ramp node (with all normal defaults).</p></div>
+<h3 id="color-balance">Color Balance</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/color-balance.png" alt="Color Balance" loading="lazy"></figure>
+<p>The Color Balance node can adjust the color and values of an image.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="factor-3">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h5 id="image-11">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h4 id="properties-9">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="type-2">Type</h5>
+<p>You can choose between different formulas.</p>
+<h5 id="lift-gamma-gain">Lift/Gamma/Gain</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/lift-gamma-gain.png" alt="Lift/Gamma/Gain" loading="lazy"></figure>
+<h6 id="lift">Lift</h6>
+<p>Increases the value of dark colors.</p>
+<h6 id="gamma">Gamma</h6>
+<p>Will adjust mid tones.</p>
+<h6 id="gain">Gain</h6>
+<p>Adjusts highlights.</p>
+<h5 id="color-wheel">Color wheel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/color-wheel.png" alt="Color wheel" loading="lazy"></figure>
+<p>When you click at one of the colors then you will call a color wheel where you can adjust the colors.</p>
+<h5 id="offset-power-slope-asc-cdl">Offset/Power/Slope (ASC-CDL)</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/offset-power-slope-asc-cdl.png" alt="Offset/Power/Slope (ASC-CDL)" loading="lazy"></figure>
+<h6 id="offset">Offset</h6>
+<p>Summand. (Adjusts the overall brightness.)</p>
+<h6 id="basis">Basis</h6>
+<p>Additional offset, allows to specify a negative Offset value.</p>
+<h6 id="power">Power</h6>
+<p>Over-all exponent. (Adjusts the mid tones.</p>
+<h6 id="slope">Slope</h6>
+<p>Multiplier. (Adjusts the highlights.)</p>
+<h6 id="color-wheel-2">Color wheel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/color-wheel.png" alt="Color wheel" loading="lazy"></figure>
+<p>When you click at one of the colors then you will call a color wheel where you can adjust the colors.</p>
+<h5 id="white-point">White Point</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/white-point.png" alt="White Point" loading="lazy"></figure>
+<p>Chromatic adaption from a different white point.</p>
+<h6 id="input-5">Input</h6>
+<p>—</p>
+<h6 id="temperature">Temperature</h6>
+<p>Color temperature of the inputs white point.</p>
+<h6 id="tint">Tint</h6>
+<p>Color tint of the inputs white point.</p>
+<h6 id="picker">Picker</h6>
+<p>Pick an input whitepoint. The color that gets mapped to white.</p>
+<h6 id="output-5">Output</h6>
+<p>—</p>
+<h6 id="temperature-2">Temperature</h6>
+<p>Color temperature of the outputs white point. · <strong>Tint</strong>: Color tint of the outputs white point. · <strong>Picker</strong>: Pick an output whitepoint. The color which gets white gets mapped to.</p>
+<h5 id="outputs-10">Outputs</h5>
+<h5 id="image-12">Image</h5>
+<p>The output image.</p>
+<h5 id="advanced">Advanced</h5>
+<h5 id="the-offset-power-slope-formula">The Offset/Power/Slope Formula</h5>
+<p>out = (i × s + o)p</p>
+<p>where:</p>
+<p>out: The color graded pixel code value.</p>
+<p>i: The input pixel code value (0 to 1) (black to white).</p>
+<p>s: Slope (any number 0 or greater, nominal value is 1.0).</p>
+<p>o: Offset (any number, the nominal value is 0).</p>
+<p>p: Power (any number greater than 0, nominal value is 1.0).</p>
+<h3 id="color-correction">Color Correction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/color-correction.png" alt="Color Correction" loading="lazy"></figure>
+<p>With the Color Correction node you can adjust the color of an image. Separated in several tonal ranges (highlights, mid tones and shadows) and only affect the necessary RGB channels.</p>
+<h4 id="input-6">Input</h4>
+<h5 id="image-13">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image Input.</p>
+<h5 id="mask">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Input a mask to cover parts of the image so that they are affected.</p>
+<h4 id="properties-10">Properties</h4>
+<h5 id="master-panel">Master panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/master-panel.png" alt="Master panel" loading="lazy"></figure>
+<h6 id="saturation">Saturation</h6>
+<p>Adjusts the image’s saturation.</p>
+<h6 id="contrast-2">Contrast</h6>
+<p>Adjust image contrast.</p>
+<h6 id="gamma-2">Gamma</h6>
+<p>Exponential gamma correction, affecting the whole image. (Works like Power in the Color Balance node.)</p>
+<h6 id="gain-2">Gain</h6>
+<p>Multiplier, stronger influence on the whole image. (Works like Slope in the Color Balance node.)</p>
+<h6 id="offset-2">Offset</h6>
+<p>Controls the offset of the entire image.</p>
+<h5 id="highlights-panel">Highlights panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/highlights-panel.png" alt="Highlights panel" loading="lazy"></figure>
+<h6 id="saturation-2">Saturation</h6>
+<p>Adjusts the saturation of the highlights.</p>
+<h6 id="contrast-3">Contrast</h6>
+<p>Adjust image contrast of the highlights.</p>
+<h6 id="gamma-3">Gamma</h6>
+<p>Exponential gamma correction, affecting the highlights of the image. (Works like Power in the Color Balance node.)</p>
+<h6 id="gain-3">Gain</h6>
+<p>Multiplier, stronger influence on the highlights. (Works like Slope in the Color Balance node.)</p>
+<h6 id="offset-3">Offset</h6>
+<p>Controls the offset of the of the highlights.</p>
+<h5 id="midtones-panel">Midtones panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png" alt="Midtones panel" loading="lazy"></figure>
+<h6 id="saturation-3">Saturation</h6>
+<p>Adjusts the saturation of the midtones.</p>
+<h6 id="contrast-4">Contrast</h6>
+<p>Adjust image contrast of the midtones.</p>
+<h6 id="gamma-4">Gamma</h6>
+<p>Exponential gamma correction, affecting the midtones of the image. (Works like Power in the Color Balance node.)</p>
+<h6 id="gain-4">Gain</h6>
+<p>Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.)</p>
+<h6 id="offset-4">Offset</h6>
+<p>Controls the offset of the of the midtones.</p>
+<h5 id="midtones-panel-2">Midtones panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png" alt="Midtones panel" loading="lazy"></figure>
+<h6 id="saturation-4">Saturation</h6>
+<p>Adjusts the saturation of the midtones.</p>
+<h6 id="contrast-5">Contrast</h6>
+<p>Adjust image contrast of the midtones.</p>
+<h6 id="gamma-5">Gamma</h6>
+<p>Exponential gamma correction, affecting the midtones of the image. (Works like Power in the Color Balance node.)</p>
+<h6 id="gain-5">Gain</h6>
+<p>Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.) · <strong>Offset</strong>: Controls the offset of the of the midtones.</p>
+<h5 id="shadows-panel">Shadows panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/shadows-panel.png" alt="Shadows panel" loading="lazy"></figure>
+<h6 id="saturation-5">Saturation</h6>
+<p>Adjusts the saturation of the shadows.</p>
+<h6 id="contrast-6">Contrast</h6>
+<p>Adjust image contrast of the shadows.</p>
+<h6 id="gamma-6">Gamma</h6>
+<p>Exponential gamma correction, affecting the shadows of the image. (Works like Power in the Color Balance node.)</p>
+<h6 id="gain-6">Gain</h6>
+<p>Multiplier, stronger influence on the shadows. (Works like Slope in the Color Balance node.)</p>
+<h6 id="offset-5">Offset</h6>
+<p>Controls the offset of the of the shadows.</p>
+<h5 id="tonal-range-panel">Tonal range panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/tonal-range-panel.png" alt="Tonal range panel" loading="lazy"></figure>
+<h5 id="mid-tones-start-mid-tones-end">Mid tones Start, Mid tones End</h5>
+<p>Defines the start and the end of mid tones range, i.e. values where the whole tonal range is divided into the highlights, mid tones and shadows (there is also a smooth transition between the ranges of width 0.2 units).</p>
+<h5 id="channels">Channels</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/channels.png" alt="Channels" loading="lazy"></figure>
+<h6 id="red-green-blue">Red, Green, Blue</h6>
+<p>Specifies which RGB channels will be affected by correction.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="color-5">Color</h5>
+<p>The image output.</p>
+<h3 id="exposure">Exposure</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/exposure.png" alt="Exposure" loading="lazy"></figure>
+<p>The Exposure Node node allows you to make areas of an image brighter or dimmer.</p>
+<h4 id="inputs-12">Inputs</h4>
+<p><strong>Image</strong>: Standard image input. · <strong>Exposure</strong>: The scalar factor to adjust the exposure of the image.</p>
+<h4 id="outputs-12">Outputs</h4>
+<p><strong>Image</strong>: Standard image output.</p>
+<h3 id="gamma-7">Gamma</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/gamma.png" alt="Gamma" loading="lazy"></figure>
+<p>Use this node to apply a gamma correction.</p>
+<h4 id="inputs-13">Inputs</h4>
+<p><strong>Image</strong>: Image input. · <strong>Gamma</strong>: An exponential brightness factor.</p>
+<h4 id="outputs-13">Outputs</h4>
+<p><strong>Image</strong>: Image output.</p>
+<h3 id="hue-correct">Hue Correct</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/hue-correct.png" alt="Hue Correct" loading="lazy"></figure>
+<p>With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an image with an input curve.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="image-14">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="factor-4">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h4 id="properties-11">Properties</h4>
+<h5 id="level">Level</h5>
+<p><strong>H</strong> (Hue), <strong>S</strong> (Saturation), <strong>V</strong> (Value). Choose which curve you want to modify.</p>
+<h5 id="tools-menu-2">Tools menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<h6 id="reset-view">Reset View</h6>
+<p>Resets the view. This menu item is here dysfunctional, you cannot view in or out.</p>
+<h6 id="reset-curve">Reset Curve</h6>
+<p>Resets the curve to defaults.</p>
+<h6 id="auto-handle">Auto Handle</h6>
+<p>Sets the handle for the curve points to Auto Handle.</p>
+<h6 id="vector-handle">Vector Handle</h6>
+<p>Sets the handle for the curve points to Vector Handle.</p>
+<h6 id="auto-clamped">Auto Clamped</h6>
+<p>Sets the handle for the curve points to Auto Clamped.</p>
+<h6 id="x-y">X / Y</h6>
+<p>The x and y position of the currently selected curve point.</p>
+<h6 id="delete-points">Delete Points</h6>
+<p>Deletes the currently selected curve point.</p>
+<h4 id="output-6">Output</h4>
+<h5 id="image-15">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image Output</p>
+<h3 id="hue-saturation-value">Hue/Saturation/Value</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/hue-saturation-value.png" alt="Hue/Saturation/Value" loading="lazy"></figure>
+<p>The Hue Saturation Node applies a color transformation in the HSV color space. Called “Hue Saturation Value” in shader and texture context.</p>
+<h4 id="inputs-properties">Inputs / Properties</h4>
+<p>The inputs also works as properties when nothing is connected.</p>
+<h5 id="image-16">Image</h5>
+<p>Plug in an image.</p>
+<h5 id="hue">Hue</h5>
+<p>Specifies the hue rotation of the image. 360° are mapped to (0 to 1). The hue shifts of 0 (-180°) and 1 (+180°) have the same result.</p>
+<h5 id="saturation-6">Saturation</h5>
+<p>A saturation of 0 removes hues from the image, resulting in a gray scale image. A shift greater than 1.0 increases saturation.</p>
+<h5 id="value">Value</h5>
+<p>Value is the overall brightness of the image. De/Increasing values shift an image darker/lighter.</p>
+<h5 id="factor-5">Factor</h5>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h5 id="image-17">Image</h5>
+<p>Standard input.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="image-18">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard output.</p>
+<h5 id="hue-saturation-tips">Hue/Saturation Tips</h5>
+<p>Some things to keep in mind that might help you use this node better:</p>
+<p>Hues are vice versa</p>
+<p>A blue image, with a Hue setting at either end of the spectrum (0 or 1), is output as yellow (recall that white, minus blue, equals yellow). A yellow image, with a Hue setting at 0 or 1, is blue.</p>
+<p>Hue and Saturation work together.</p>
+<p>So, a Hue of 0.5 keeps the blues the same shade of blue, but Saturation can deepen or lighten the intensity of that color.</p>
+<p>Gray &amp; White are neutral hues</p>
+<p>A gray image, where the RGB values are equal, has no hue. Therefore, this node can only affect it with Value. This applies to all shades of gray, from black to white; wherever the values are equal.</p>
+<p>Changing the effect over time</p>
+<p>The Hue and Saturation values can be animated with a Time Node or by animating the property.</p>
+<h3 id="rgb-curves">RGB Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/rgb-curves.png" alt="RGB Curves" loading="lazy"></figure>
+<p>The RGB Curves Node allows color corrections for each color channel and levels adjustments in the compositing context.</p>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="image-19">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="factor-6">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h5 id="black-level">Black Level</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Defines the input color that is (linear) mapped to black.</p>
+<h5 id="white-level">White level</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Defines the input color that is (linear) mapped to white.</p>
+<h4 id="properties-12">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/properties-2.png" alt="Properties" loading="lazy"></figure>
+<h5 id="tone">Tone</h5>
+<p>What tone mapping to use. Standard or Film like.</p>
+<h5 id="curve-field">Curve Field</h5>
+<h5 id="channel-buttons">Channel buttons</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/channel-buttons.png" alt="Channel buttons" loading="lazy"></figure>
+<p>Clicking on one of the channels displays the curve for each.</p>
+<p>C (Combined RGB), R (Red), G (Green), B (Blue).</p>
+<h5 id="navigation-elements">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>They are described from left to right.</p>
+<h5 id="zoom-in-and-out">Zoom in and out</h5>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="clipping">Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<h6 id="reset-view-2">Reset View</h6>
+<p>Resets the curve windows zoom.</p>
+<h6 id="extend-horizontal">Extend horizontal</h6>
+<p>Extends the curve before the first curve point and behind the last curve point horizontally.</p>
+<h6 id="extend-extrapolated">Extend extrapolated</h6>
+<p>Extends the curve before the first curve point and behind the last curve point extrapolated.</p>
+<h6 id="reset-curve-2">Reset Curve</h6>
+<p>Resets the curve to the initial shape.</p>
+<h6 id="curve-edit-field">Curve edit field</h6>
+<p>Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).</p>
+<h6 id="selecting-points">Selecting Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/dtype-compositor/docs2/content/interface/properties.md#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h6 id="adding-points">Adding Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<h6 id="curve-point-settings">Curve point settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/curve-point-settings.png" alt="Curve point settings" loading="lazy"></figure>
+<p>When you have a point selected then you will reveal further settings at the bottom.</p>
+<ul>
+<li><strong>Vector Handle</strong>: Set handle type to Vector.</li>
+<li><strong>Auto Handle</strong>: Set handle type to Auto.</li>
+<li><strong>Auto Clamped Handle</strong>: Set handle type to Auto Clamped.</li>
+</ul>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="color-6">Color</h5>
+<p>Standard output.</p>
+<h3 id="tonemap">Tonemap</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/tonemap.png" alt="Tonemap" loading="lazy"></figure>
+<p>Tone mapping is a technique used in image processing and computer graphics to map one set of colors to another in order to approximate the appearance of high dynamic range images in a medium that has a more limited dynamic range.</p>
+<p>Tone mapping addresses the problem of strong contrast reduction from the scene values (radiance) to the displayable range, while preserving the image details and color appearance. This is important to appreciate the original scene content.</p>
+<h4 id="inputs-16">Inputs</h4>
+<h5 id="image-20">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Plug in the HDR image.</p>
+<h4 id="properties-13">Properties</h4>
+<h5 id="type-3">Type</h5>
+<p>There are two methods of tone mapping. Rh Simple and R/D Photo receptor.</p>
+<h5 id="rh-simple">Rh Simple</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/rh-simple.png" alt="Rh Simple" loading="lazy"></figure>
+<h6 id="key">Key</h6>
+<p>The value the average luminance is mapped to.</p>
+<h6 id="balance">Balance</h6>
+<p>Normally always 1, but can be used as an extra control to alter the brightness curve.</p>
+<h6 id="gamma-8">Gamma</h6>
+<p>If not used, set to 1.</p>
+<h5 id="r-d-photo-receptor">R/D Photo receptor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/29f9367b68dca9c2a06d89ae0d0dfaa5d5ed5df0/docs2/images/editors/compositor/header/add-menu-color-adjust/r-d-photo-receptor.png" alt="R/D Photo receptor" loading="lazy"></figure>
+<h6 id="intensity">Intensity</h6>
+<p>A value smaller than zero darkens image. A value greater than zero makes it brighter.</p>
+<h6 id="contrast-7">Contrast</h6>
+<p>Set to 0 to use estimate from input image.</p>
+<h6 id="adaptation">Adaptation</h6>
+<p>If 0, global; if 1, based on pixel intensity.</p>
+<h6 id="color-correction-2">Color Correction</h6>
+<p>If 0, same for all channels; if 1, each independent.</p>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="image-21">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The Image output.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fdtype-compositor/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fcompositor%2Fheader%2Fadd-menu%2Fcolor.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/dtype-compositor/docs2/content/editors/compositor/header/add-menu/color.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-color">Add menu - Color</a><a class="h3" href="#alpha-convert">Alpha Convert</a><a class="h3" href="#alpha-over">Alpha Over</a><a class="h3" href="#set-alpha">Set Alpha</a><a class="h3" href="#combine-color">Combine Color</a><a class="h3" href="#separate-color">Separate Color</a><a class="h3" href="#depth-combine">Depth Combine</a><a class="h3" href="#mix-color">Mix Color</a><a class="h3" href="#blackbody">Blackbody</a><a class="h3" href="#colorramp">ColorRamp</a><a class="h3" href="#convert-colorspace">Convert Colorspace</a><a class="h3" href="#convert-to-display">Convert to Display</a><a class="h3" href="#invert-color">Invert Color</a><a class="h3" href="#rgb-to-bw">RGB to BW</a><a class="h2" href="#add-menu-color-adjust">Add menu - Color - Adjust</a><a class="h3" href="#brightness-contrast">Brightness/Contrast</a><a class="h3" href="#color-balance">Color Balance</a><a class="h3" href="#color-correction">Color Correction</a><a class="h3" href="#exposure">Exposure</a><a class="h3" href="#gamma-7">Gamma</a><a class="h3" href="#hue-correct">Hue Correct</a><a class="h3" href="#hue-saturation-value">Hue/Saturation/Value</a><a class="h3" href="#rgb-curves">RGB Curves</a><a class="h3" href="#tonemap">Tonemap</a></aside></div></body></html>
