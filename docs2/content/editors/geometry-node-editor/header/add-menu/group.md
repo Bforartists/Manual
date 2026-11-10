@@ -1,21 +1,21 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.group
-title: "Group"
+title: Group
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Group"
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Group
 version: "5.3"
 status: needs-review
 icon: node
-summary: "Group nodes."
+summary: Group nodes.
 order: 180
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.76 Editors - Geometry Nodes Editor - Header - Add Menu - Group.odt"
+  - 12.1.76 Editors - Geometry Nodes Editor - Header - Add Menu - Group.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-group
 ---
@@ -93,10 +93,10 @@ Each nodegroup can have differing states and will show a relevant icon.
 
 These icons and labels represent the status and behavior of node groups in your asset browser or node editor. Each state reflects how the node group is stored, linked, or overridden in your project.
 
-- **Node Group: **A standard node group created and saved within the current file.
+- **Node Group:** A standard node group created and saved within the current file.
 - **Asse**t: This node group is marked as an Asset, meaning it's reusable across projects and stored in the Asset Browser.
-- **Force Saved: **The node group has been force-saved, ensuring it persists even if unused.
-- **Linked: **The node group is linked from an external file and used multiple times.
+- **Force Saved:** The node group has been force-saved, ensuring it persists even if unused.
+- **Linked:** The node group is linked from an external file and used multiple times.
 - **Overridden**: The node group is linked from another file but has been overridden locally.
 
 Groups can be inserted and referenced to other node trees too. They can also be duplicated or duplicated linked. When they are duplicate linked, this means the node references the same node group multiple times.
