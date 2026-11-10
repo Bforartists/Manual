@@ -5,6 +5,7 @@
 - [🚀 Writer quick start](Writer-Quick-Start.md)
 - [✏️ Editing the docs online](Editing-the-docs-online.md)
 - [✍️ Plain writing](Plain-writing.md)
+- [🏷️ Callouts and data types](Callouts-and-Data-Types.md)
 - [🖼️ Images and screenshots](Images-and-Screenshots.md)
 - [📐 Formatting standard](Formatting-Standard.md)
 - [♻️ Shared sections](Shared-Sections.md)

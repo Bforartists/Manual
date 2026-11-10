@@ -59,7 +59,8 @@ Drag the picture into the page. Save. The image bot names it after the page and 
 
 | You write | The website shows |
 |---|---|
-| `> **Tip:** text` (also Note, Warning, Important) | 💡 A callout |
+| `> **Tip:** text` (also Note, Warning, Important) | 💡 A callout ([which one?](Callouts-and-Data-Types.md)) |
+| `Data type: Float.` under a node socket | 🔌 A data type chip in the socket colour |
 | `Ctrl + Space` | ⌨️ Keycaps |
 | `Edit › Preferences › System` | 🧭 A menu path with icons |
 | A heading named like a tool (`#### Bevel`) | 🧰 A tool card |

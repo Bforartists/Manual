@@ -10,7 +10,8 @@ Pages read well on GitHub too, and the online editor saves them unchanged.
 
 | You write | The website shows | Notes |
 |---|---|---|
-| `> **Tip:** text` (also Note, Warning, Important) | 💡 Callout | In Pages CMS: `/` → Quote, start with Tip:. Bold is optional |
+| `> **Tip:** text` (also Note, Warning, Important) | 💡 Callout | In Pages CMS: `/` → Quote, start with Tip:. Bold is optional. Which one to pick: [Callouts and data types](Callouts-and-Data-Types.md) |
+| `Data type: Float.` right under a node socket heading | 🔌 A dot in the socket colour + the type | See [Callouts and data types](Callouts-and-Data-Types.md#-data-types-at-a-glance) |
 | `Ctrl + Space` | ⌨️ Keycaps | Ctrl, Shift, Alt, Cmd, LMB, MMB, RMB, Wheel, F1–F12 |
 | `Edit › Preferences › System` | 🧭 Menu path with icons | Use `›`; only real menu names become chips |
 | An image on its own line | 🖼️ Floated right when small, full width when wide | Size decides; no codes |
