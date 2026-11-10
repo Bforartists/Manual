@@ -370,7 +370,7 @@ From left to right ...
 
 ###### Placement
 
-How the dots or squares are spread along the stroke. The same stroke looks quite different in each mode:
+How the dots or squares are spread along the stroke. Here is the same stroke three times, with Count 2, Spacing 150% and Density 2.2:
 
 ![The same stroke with Placement set to Count, Radius and Density](/docs2/images/editors/properties/material-properties-tab/dots-placement.png)
 
