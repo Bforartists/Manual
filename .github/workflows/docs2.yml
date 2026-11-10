@@ -1,7 +1,12 @@
 # Docs 2.0: image bot, checks and preview for every change to docs2/.
 #
-# Runs on pull requests that touch docs2/ and on pushes to docs2/* branches
-# (Pages CMS saves straight to the branch). It:
+# Runs once per change:
+#   - pull requests that touch docs2/ (every docs branch with a pull request)
+#   - pushes to docs2/edit/** (Pages CMS saves; its first save has no pull request yet, and pull
+#     requests opened by the auto-PR bot do not start workflows)
+#   - pushes to master (after a merge)
+# Other docs2/* branches used to run twice per push (once for the push, once for the pull request).
+# It:
 #   1. 🤖 files new screenshots (image_bot.py) and commits that back to the branch
 #   2. ✅ checks front matter, links, images and editor-safe text (check.py)
 #   3. 👀 builds a preview with the website's styles (render.py) and publishes it to
@@ -12,7 +17,8 @@
 #   6. 🧭 on the publish branch: publishes nav.json (the whole sidebar tree) and the keymap files to GitHub Pages
 #   7. 🎛️ on the publish branch: publishes every docs2/webflow/*.js and *.css with an @version on its first line
 #      as webflow/<name>-<version>.<js|css> (the docs layer, the site code, the template code)
-#      at /nav/nav.json, where the website's docs script reads it.
+#   8. 🔎 on the publish branch: rebuilds the website search list (site.json, was its own workflow)
+#   Steps 6-8 go to GitHub Pages in ONE push, so a merge starts one Pages build instead of four.
 #
 # One-time repository setup (maintainer):
 #   Settings → Actions → General → Workflow permissions → "Read and write permissions"
@@ -25,7 +31,7 @@ on:
   pull_request:
     paths: ["docs2/**", ".pages.yml", ".github/workflows/docs2.yml"]
   push:
-    branches: ["master", "docs2/**"]
+    branches: ["master", "docs2/edit/**"]
     paths: ["docs2/**", ".pages.yml"]
   workflow_dispatch:
     inputs:
@@ -117,7 +123,7 @@ jobs:
             --check _check.md --bot _bot.md --only $only
 
       - name: Publish preview to GitHub Pages
-        if: env.SAME_REPO == 'true'
+        if: env.SAME_REPO == 'true' && env.BRANCH != env.PUBLISH_BRANCH
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -125,7 +131,7 @@ jobs:
           bash docs2/tools/publish_pages.sh _preview "preview/${PREVIEW_DIR}" "preview: ${PREVIEW_DIR} [docs-bot]"
 
       - name: ⏳ Wait until the preview is live
-        if: env.SAME_REPO == 'true'
+        if: env.SAME_REPO == 'true' && env.BRANCH != env.PUBLISH_BRANCH
         continue-on-error: true
         run: |
           owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
@@ -200,31 +206,36 @@ jobs:
           [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
           exit $status
 
-      - name: 🧭 Publish the sidebar (nav.json) to GitHub Pages
+      - name: 🧭 Stage the sidebar (nav.json)
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success' && hashFiles('_nav/nav.json') != ''
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          bash docs2/tools/publish_pages.sh _nav nav "nav: ${{ github.sha }} [docs-bot]"
+        run: mkdir -p _pub/nav && cp -a _nav/. _pub/nav/
 
       - name: 🎛️ Prepare the site scripts (one file per version)
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
         run: |
-          mkdir -p _layer
+          mkdir -p _pub/webflow
           for f in docs2/webflow/*.js docs2/webflow/*.css; do
             v=$(head -1 "$f" | sed -n 's/.*@version \([0-9.]*\).*/\1/p')
             [ -n "$v" ] || continue
             e="${f##*.}"; n=$(basename "$f" ".$e")
-            cp "$f" "_layer/$n-$v.$e"
+            cp "$f" "_pub/webflow/$n-$v.$e"
             echo "$n $v: https://bforartists.github.io/Manual/webflow/$n-$v.$e sha384-$(openssl dgst -sha384 -binary "$f" | openssl base64 -A)" >> "$GITHUB_STEP_SUMMARY"
           done
 
-      - name: 🎛️ Publish the docs layer to GitHub Pages
-        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*') != ''
+      - name: 🔎 Website search list (site.json)
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
+        continue-on-error: true   # reads the live sitemap; a slow website must not block the docs
+        run: |
+          mkdir -p _pub/nav
+          python docs2/tools/site_index.py --out _pub/nav/site.json
+          echo "site.json: $(python -c "import json;print(len(json.load(open('_pub/nav/site.json'))))") pages" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 🚀 Publish sidebar, site scripts and search list to GitHub Pages (one push)
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_pub/**') != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          bash docs2/tools/publish_pages.sh _layer webflow "docs layer: ${{ github.sha }} [docs-bot]"
+          bash docs2/tools/publish_pages.sh _pub . "docs: ${{ github.sha }} [docs-bot]"
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'
