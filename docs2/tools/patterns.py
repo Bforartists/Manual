@@ -171,10 +171,8 @@ BADGE = re.compile(r"\[(New|Changed|Removed) in ([\d.]+)\]")
 
 
 # Socket colours of the node editor (default theme); the dot is the socket, like in the editor.
-DTYPE_COLORS = {"float": "#a1a1a1", "integer": "#598c5c", "boolean": "#cca6d6", "vector": "#6363c7", "color": "#c7c729",
-                "string": "#70b2ff", "geometry": "#00d6a3", "object": "#ed9e5c", "collection": "#f5f5f5",
-                "material": "#eb7582", "image": "#8c5c8c", "rotation": "#a463c7", "matrix": "#db8f49",
-                "menu": "#8a8ad6", "bundle": "#d6c28a", "sound": "#6fd6a0", "shader": "#63c75f"}
+# Socket colours from std_node_socket_colors (source/blender/editors/space_node/drawnode.cc).
+DTYPE_COLORS = {"float": "#a1a1a1", "vector": "#6363c7", "color": "#c7c729", "shader": "#63c763", "boolean": "#cca6d6", "integer": "#598c5c", "string": "#70b2ff", "object": "#ed9e5c", "image": "#633863", "geometry": "#00d6a3", "collection": "#f5f5f5", "texture": "#9e4fa3", "material": "#eb7582", "rotation": "#a663c7", "menu": "#666666", "matrix": "#b83385", "bundle": "#4c8080", "closure": "#7d7d3b", "font": "#635742", "sound": "#635742"}
 DTYPE_DIAMOND = {"float", "integer", "boolean", "vector", "color", "string", "rotation", "matrix"}   # fields can be diamonds
 
 
@@ -184,7 +182,7 @@ def dtype_flag(m):
     text = m.group(1).rstrip(".").strip()
     key = re.match(r"[A-Za-z]+", text)
     key = key.group(0).lower() if key else ""
-    key = {"int": "integer", "bool": "boolean"}.get(key, key)
+    key = {"int": "integer", "bool": "boolean", "transform": "matrix", "rgba": "color"}.get(key, key)
     if key not in DTYPE_COLORS:
         key = "other"
     shape = " is-list" if "list" in text.lower() else ""
