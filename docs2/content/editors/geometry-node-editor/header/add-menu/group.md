@@ -1,21 +1,21 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.group
-title: "Group"
+title: Group
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Group"
-version: "5.1"
-status: draft
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Group
+version: "5.3"
+status: needs-review
 icon: node
-summary: "Group nodes."
+summary: Group nodes.
 order: 180
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.76 Editors - Geometry Nodes Editor - Header - Add Menu - Group.odt"
+  - 12.1.76 Editors - Geometry Nodes Editor - Header - Add Menu - Group.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-group
 ---
@@ -47,6 +47,42 @@ Adds a Group Output node. This node is usually already part of a new created gro
 
 An example node group.
 
+### Group node buttons
+
+![Group node](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node.png)
+
+A group node shows which node group it uses, with the same buttons as other data-block selectors. You can manage the node group right on the node, without opening the sidebar. The buttons are the same in all node editors.
+
+#### Browse Node Group
+
+![Browse Node Group button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-browse.png)
+
+The icon on the left opens a list of all node groups of this type in the file. Pick one to swap the group the node uses.
+
+#### Name
+
+![Name field](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-name.png)
+
+The name of the node group. Click to rename it.
+
+#### Fake User
+
+![Fake User button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-fake-user.png)
+
+The shield button keeps the node group in the file even when no node uses it, so it isn't removed when you save.
+
+#### New Node Tree
+
+![New Node Tree button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-new.png)
+
+The plus button creates a new, empty node group and puts it on this node. The old group stays in the file.
+
+#### Unlink
+
+![Unlink button](/docs2/images/editors/geometry-node-editor/header/add-menu-group/group-node-unlink.png)
+
+The X button removes the node group from this node. The group itself stays in the file.
+
 ### List of Node Groups
 
 ![List of Node Groups](/docs2/images/editors/geometry-node-editor/header/add-menu-group/list-of-node-groups.png)
@@ -57,10 +93,10 @@ Each nodegroup can have differing states and will show a relevant icon.
 
 These icons and labels represent the status and behavior of node groups in your asset browser or node editor. Each state reflects how the node group is stored, linked, or overridden in your project.
 
-- **Node Group: **A standard node group created and saved within the current file.
+- **Node Group:** A standard node group created and saved within the current file.
 - **Asse**t: This node group is marked as an Asset, meaning it's reusable across projects and stored in the Asset Browser.
-- **Force Saved: **The node group has been force-saved, ensuring it persists even if unused.
-- **Linked: **The node group is linked from an external file and used multiple times.
+- **Force Saved:** The node group has been force-saved, ensuring it persists even if unused.
+- **Linked:** The node group is linked from an external file and used multiple times.
 - **Overridden**: The node group is linked from another file but has been overridden locally.
 
 Groups can be inserted and referenced to other node trees too. They can also be duplicated or duplicated linked. When they are duplicate linked, this means the node references the same node group multiple times.
