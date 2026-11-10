@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Point"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Point nodes."
 order: 90
@@ -83,6 +83,8 @@ Distributes the points along a grid with given width.
 
 ##### Points
 
+Data type: Geometry.
+
 Points output.
 
 ### Distribute Points In Volume
@@ -144,6 +146,8 @@ Distributes the points along a grid with given width.
 #### Output
 
 ##### Points
+
+Data type: Geometry.
 
 Points output.
 
@@ -223,13 +227,19 @@ Distributes the points randomly, but prevents overlappings by defining a minimum
 
 ##### Points
 
+Data type: Geometry.
+
 Points output.
 
 ##### Normal
 
+Data type: Vector.
+
 Normal output.
 
 ##### Rotation
+
+Data type: Rotation.
 
 Euler Rotation output. Please note that the Z axis of the result rotation will be arbitrary. The mesh normal used to create the rotation does not have enough information to set all three rotation axes.
 
@@ -242,6 +252,8 @@ Generates a single point or points with position, count and radius.
 #### Inputs
 
 ##### Count
+
+Data type: Integer.
 
 The count of the generated points as an integer.
 
@@ -311,13 +323,19 @@ Creates a fog volume sphere around every point in the input geometry. The new vo
 
 ##### Points
 
+Data type: Geometry.
+
 Points input.
 
 ##### Density
 
+Data type: Float.
+
 The density of the volume.
 
 ##### Resolution Mode
+
+Data type: Menu.
 
 ![Resolution Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/resolution-mode.png)
 
@@ -335,6 +353,8 @@ The radius of the generated volume around each point.
 
 ##### Volume
 
+Data type: Geometry.
+
 Standard geometry output.
 
 ### Rasterize Points
@@ -349,9 +369,13 @@ You choose what to rasterize by adding items. Each item has a name and a type. I
 
 ##### Points
 
+Data type: Geometry.
+
 The geometry to rasterize. The points of meshes, point clouds and curves are used.
 
 ##### Grid Transform Mode
+
+Data type: Menu.
 
 How the transform of the new grids is set.
 
@@ -360,13 +384,19 @@ How the transform of the new grids is set.
 
 ##### Voxel Size
 
+Data type: Float (distance).
+
 The size of one voxel. The default is 0.3 m, the minimum is 0.01. It is only shown for Voxel Size.
 
 ##### Matrix
 
+Data type: Matrix.
+
 The transform of the grids. It is only shown for Matrix. If the matrix is not valid for a grid, no grids are created.
 
 ##### Kernel Type
+
+Data type: Menu.
 
 How the weight of a point is spread over the voxels.
 
@@ -376,6 +406,8 @@ How the weight of a point is spread over the voxels.
 - Cubic B-Spline: a cubic B-spline kernel over 2 voxels.
 
 ##### Position
+
+Data type: Vector.
 
 A field with the position of each point. By default it is the position of the point.
 
@@ -423,9 +455,13 @@ Changes how a point cloud is represented. Use it to show the points of a point c
 
 ##### Points
 
+Data type: Geometry.
+
 The point cloud to change the type of. Point clouds inside instances are changed too.
 
 ##### Type
+
+Data type: Menu.
 
 The new type of the point cloud.
 
@@ -435,5 +471,7 @@ The new type of the point cloud.
 #### Outputs
 
 ##### Points
+
+Data type: Geometry.
 
 The geometry with the new point cloud type.

@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Color"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Color nodes."
 order: 120
@@ -62,6 +62,8 @@ The Color Ramp Node is used for mapping values to colors with the use of a gradi
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 The Factor input is used as an index for the color ramp.
 
@@ -129,6 +131,8 @@ Standard image output.
 
 ##### Alpha
 
+Data type: Float.
+
 Standard Alpha Output.
 
 ### RGB Curves
@@ -141,9 +145,13 @@ Adjust the RGB channels by curves.
 
 ##### Factor
 
+Data type: Float (factor).
+
 The blend factor.
 
 ##### Color
+
+Data type: Color.
 
 The input color.
 
@@ -201,6 +209,8 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 #### Output
 
 ##### Color
+
+Data type: Color.
 
 The rgb output.
 
@@ -279,6 +289,8 @@ Combine the single RGBA channels into a single image.
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 The rgba output color.
 

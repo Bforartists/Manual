@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Mesh"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Mesh nodes: Read, Sample, Write, Operations, Primitives, Topology…."
@@ -1041,6 +1041,8 @@ The width of the gradient.
 #### Outputs
 
 ##### Density Grid.
+
+Data type: Float.
 
 Density Grid output.
 

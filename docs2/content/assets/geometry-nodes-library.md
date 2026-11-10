@@ -5,7 +5,7 @@ section: assets
 path:
   - "Assets"
   - "Geometry Nodes Library"
-version: "5.1"
+version: "5.3"
 status: needs-review
 source:
   - "webflow:assets/geometry-nodes/normals"
@@ -2575,6 +2575,8 @@ Data type: Float (angle).
 Changes the tilt of the profile loft which creates a twist. Default: 0°.
 
 ##### Resolution
+
+Data type: Integer (unsigned).
 
 ###### Horizontal
 

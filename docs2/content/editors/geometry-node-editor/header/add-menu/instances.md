@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Instances"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Instances nodes."
 order: 70
@@ -177,6 +177,8 @@ Retrieves the rotation of the instances.
 
 ##### Rotation
 
+Data type: Rotation.
+
 Vector Field output
 
 ### Instance Scale
@@ -188,5 +190,7 @@ Retrieves the scale of an instances.
 #### Output
 
 ##### Scale
+
+Data type: Vector.
 
 Vector Field output
