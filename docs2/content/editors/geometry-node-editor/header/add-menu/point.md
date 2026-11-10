@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Point"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Point nodes."
 order: 90

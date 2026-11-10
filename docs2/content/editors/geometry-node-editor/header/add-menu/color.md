@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Color"
 version: "5.3"
-status: draft
+status: needs-review
 icon: node
 summary: "Color nodes."
 order: 120
