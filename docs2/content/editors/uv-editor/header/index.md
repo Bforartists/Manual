@@ -313,15 +313,34 @@ When you select another object. for UV mapping for example, then usually the con
 
 ![Show Gizmo](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-gizmo.png)
 
-Show or hide the gizmos in the viewport
+**Gizmos** are the handles drawn on top of the editor that you drag with the mouse or pen: the navigation buttons in the corner, and the arrows, rings and boxes of the transform tools. The gizmo button shows or hides all of them at once. The arrow next to it opens a small list where you pick which gizmos show.
+
+Hide them when you want a clean look at the UV layout, for example to judge how the islands sit on the texture or to take a screenshot. Show them again when you'd rather work by dragging than by typing values.
+
+#### Navigate
+
+The magnifier and hand buttons at the top right of the editor. Drag on the magnifier to zoom in and out, and drag the hand to pan the view. They are handy with a pen tablet or a laptop touchpad, where there's no middle mouse button to move the view.
+
+#### Tool gizmos
+
+The [Move](../tool-shelf.md#move), [Rotate](../tool-shelf.md#rotate), [Scale](../tool-shelf.md#scale) and [Transform](../tool-shelf.md#transform) tools in the tool shelf draw handles around the selected UVs. Drag an arrow to move along one axis only, drag the ring to turn, and drag a scale handle to resize. The handles show while one of these tools is active and something is selected.
+
+Some ways artists use them:
+
+- **Line up an island with a strip of the texture.** Drag the side arrow of the Move gizmo, and the island slides left or right without drifting up or down. Good for trim sheets, where each row of the texture is a different trim.
+- **Straighten a tilted island.** Turn it with the Rotate ring until its edges follow the grid, so stripes and wood grain run straight on the model.
+- **Fit an island to a long texture.** Pull one Scale handle to stretch the island in one direction only, for example to fit a plank to the length of a wood texture.
+- **Give an important part more detail.** Scale up the island of a face or a logo, so it covers more pixels of the texture than the parts nobody looks at.
+
+#### Active Node
+
+Only in the Image editor, when it shows the result of the compositor. It shows the gizmo of the active compositor node, for example the frame of a Box Mask or the corners of a Crop, so you can adjust it right on the image.
 
 ### Show Overlays
 
 ![Show Overlays](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-overlays.png)
 
-![Show Overlays](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-overlays-2.png)
-
-![Show Overlays](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-overlays-3.png)
+**Overlays** are the helpers drawn over the UVs and the image: the grid, the stretch colours and the UV edges. The overlay button shows or hides them all at once. The arrow next to it opens the settings below.
 
 #### Guides
 
@@ -331,13 +350,17 @@ Display the ground grid.
 
 ##### Dynamic / Fixed / Pixel
 
-Display the ground grid in defined resolution.
+How the grid is spaced.
 
-Dynamic adapts to the image size.
+**Dynamic** adapts the grid to the zoom: zoom in and finer lines appear. This is the default, shown in the picture above.
 
-Fixed uses a fixed grid resolution. The method Fixed reveals x y edit boxes to set up the fixed resolution.
+![Grid set to Fixed](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-overlays-2.png)
 
-Pixel orients the grid size at the pixel resolution.
+**Fixed** keeps the same number of grid lines at every zoom. It shows the **Subdivisions** X and Y fields, where you set how many cells one UV unit has. Handy when you lay out a texture in equal parts, like a trim sheet or a sprite sheet.
+
+![Grid set to Pixel](/docs2/images/editors/uv-editor/header/header-tools-and-options/show-overlays-3.png)
+
+**Pixel** puts one grid cell on each pixel of the image. Use it for pixel art and small textures, where every UV corner should sit exactly on a pixel.
 
 ##### Grid over Image
 
@@ -857,13 +880,15 @@ Extend the current selection.
 
 ### Similar
 
-![Similar](/docs2/images/editors/uv-editor/header/select-menu/similar.jpg)
+Similar selects more elements that are like the ones already selected. What it compares depends on the select mode: in vertex mode it lists vertex traits, in edge mode edge traits, and in face mode face traits.
 
-![Similar](/docs2/images/editors/uv-editor/header/select-menu/similar.png)
+![Select modes with UV Sync Selection off](/docs2/images/editors/uv-editor/header/select-menu/similar.png)
 
-![Similar](/docs2/images/editors/uv-editor/header/select-menu/similar-2.png)
+With **UV Sync Selection** off, the menu follows the UV select mode in the header: vertex, edge, face or island.
 
-Similar selects similar elements to the already selected parts. It is mode dependant. When you are in Vertex mode, then it shows just a Vertex related menu. When you are in edge select mode, then a edge related menu. And when you are in face select mode, then a face related menu. And this for both, the UV sync selection off and on.
+![Select modes with UV Sync Selection on](/docs2/images/editors/uv-editor/header/select-menu/similar-2.png)
+
+With **UV Sync Selection** on, it follows the mesh select mode: vertex, edge or face.
 
 #### Pinned
 
@@ -987,13 +1012,21 @@ The Image menu contains the load and save functionality.
 
 Not all content shows with all image types. A Render Result shows a different menu content.
 
-![UV Editor - Image Menu](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu.png)
+![Image menu in the Image editor](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu.png)
 
-![UV Editor - Image Menu](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-2.png)
+In the **Image editor**, with an image open, the menu has everything, down to **Extract Palette** at the bottom.
 
-![UV Editor - Image Menu](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-3.png)
+![Image menu in the UV editor](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-2.png)
 
-![UV Editor - Image Menu](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-4.png)
+In the **UV editor** the list is the same, without Extract Palette.
+
+![Image menu with a Render Result](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-3.png)
+
+A **Render Result** can only be saved or copied, so the editing entries are gone.
+
+![Image menu with no image open](/docs2/images/editors/uv-editor/header/image-menu/uv-editor-image-menu-4.png)
+
+With **no image** open, you can only make a new image or open one.
 
 ### New
 
