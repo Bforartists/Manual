@@ -96,7 +96,7 @@ How far each point moves.
 | The line starts with `Data type:` and ends with a full stop | `Data type: Float.` |
 | Write the type as the socket tooltip names it | `Geometry`, `Integer`, `Rotation`, `Matrix` |
 | An optional unit goes in brackets, lower case | `Float (factor)`, `Float (angle)` |
-| A list socket: add `list`. It gets a diamond, not a dot | `Data type: Float list.` |
+| A list socket: add `list`. It gets the three-bar stack, like the list socket in Bforartists | `Data type: Float list.` |
 | A socket whose type is picked in the node | `Data type: follows the Data Type setting.` (grey) |
 
 ### 🔍 How to find the type
