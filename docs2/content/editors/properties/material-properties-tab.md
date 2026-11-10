@@ -370,11 +370,13 @@ From left to right ...
 
 ###### Placement
 
-How the dots or squares are spread along the stroke.
+How the dots or squares are spread along the stroke. The same stroke looks quite different in each mode:
 
-- **Count**: Places the same number of dots on every segment of the stroke, set with **Count**.
-- **Radius**: Spaces the dots by their size, set with **Spacing**, as a percentage of the dot diameter. Thick parts of the stroke get bigger gaps.
-- **Density**: Spreads the dots evenly along the whole length of the stroke, set with **Density**.
+![The same stroke with Placement set to Count, Radius and Density](/docs2/images/editors/properties/material-properties-tab/dots-placement.png)
+
+- **Count**: Places the same number of dots between every two points of the stroke, set with **Count**. Where you drew slowly the points sit close together, so the dots bunch up; where you drew fast they spread out. Good for a hand-made, uneven look.
+- **Radius**: Spaces the dots by their own size, set with **Spacing** as a percentage of the dot diameter. At 100% the dots just touch; thick parts of the stroke get bigger gaps, thin parts smaller ones. This is the default, and gives a tidy beaded line.
+- **Density**: Spreads the dots evenly along the whole length of the stroke, set with **Density**, no matter how fast you drew or how thick the stroke is. Good for dotted lines, stitches and perforations.
 
 ###### Count
 
@@ -390,6 +392,8 @@ How many dots are placed along the stroke. Shows when Placement is Density.
 
 ###### Alignment
 
+![Alignment](/docs2/images/editors/properties/material-properties-tab/alignment.png)
+
 How the dots and squares are turned.
 
 - **Path**: They follow the drawing direction of the stroke and the object rotation.
@@ -398,27 +402,13 @@ How the dots and squares are turned.
 
 ###### Rotation
 
+![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
+
 An extra rotation for the dots and the square textures.
-
-###### Alignment
-
-![Alignment](/docs2/images/editors/properties/material-properties-tab/alignment.png)
-
-Dots and Squares mode.
-
-- **Path**: Alignment follows stroke drawing path and object rotation.
-- **Object**: Alignment follows object rotation only.
-- **Fixed**: Keeps aligned with viewport.
 
 #### Self Overlap
 
 Disable stencil and allow self intersections with alpha materials.
-
-##### Rotation
-
-![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
-
-Additional rotation applied to dot and square strokes.
 
 #### Holdout
 
