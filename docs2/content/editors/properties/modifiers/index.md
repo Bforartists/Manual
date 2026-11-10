@@ -291,7 +291,7 @@ Manage the nodes. If there is no geometry node tree for the current object, then
 
 Opens a new window with a Geometry Node Editor that shows this modifier's node group. Handy when your workspace has no node editor: you can edit the nodes right away and close the window when you're done. 
 
-> **Warning**: This will open the active geometry nodes modifier. If you have multiple geometry nodes modifiers, this button will open the active modifier outlined in blue. 
+> **Important:** This will open the active geometry nodes modifier. If you have multiple geometry nodes modifiers, this button will open the active modifier outlined in blue. 
 
 ### Geometry Nodes Assets
 
