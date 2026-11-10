@@ -403,9 +403,9 @@ Display the name of the current view up left in the 3D view.
 
 Show the frames per second screen refresh rate while an animation is played back. It appears in the viewport corner, displaying red if the frame rate set cannot be reached. And replaces the View name while the animation is playing.
 
-###### Frame Rate Samples
+###### Samples
 
-The number of frames to use for calculating the fps average. A value of zero calculates the fps automatically, where the nunber of samples matches the target fps.
+Shows below Playback Frame Rate (FPS) when that is on, indented under it. The arrow next to the checkbox shows whether the setting is open. The number of frames to use for calculating the fps average. A value of zero calculates the fps automatically, where the number of samples matches the target fps.
 
 ##### Gizmo Size
 
