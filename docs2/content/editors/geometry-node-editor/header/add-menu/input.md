@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Input"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Input nodes: Constant, Gizmo, Import, Scene."
@@ -501,6 +501,8 @@ The **Import CSV** node is used to bring structured tabular data into Geometry N
 
 ##### Path
 
+Data type: String.
+
 Specifies the location of the CSV file to be imported. This can also be a string input.
 
 ###### Open
@@ -508,6 +510,8 @@ Specifies the location of the CSV file to be imported. This can also be a string
 Includes a folder icon button for browsing files.
 
 ##### Delimiter
+
+Data type: String.
 
 Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil
 
@@ -571,11 +575,15 @@ If your version of Bforartists was built without SPZ support, the node shows the
 
 ###### Path
 
+Data type: String.
+
 The path to the SPZ file. Use the folder button to browse for a file. Only files that end with .spz are offered.
 
 ##### Outputs
 
 ###### Points
+
+Data type: Geometry.
 
 The imported point cloud. Warnings from the import are shown on the node.
 
@@ -611,6 +619,8 @@ The Text Node is used to generate and manipulate text within Geometry Nodes. It 
 
 ##### Path
 
+Data type: String.
+
 Specifies the location of the TXT file to be imported. This can also be a string input.
 
 ##### Open
@@ -620,6 +630,8 @@ Includes a **folder icon button** for browsing files.
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 Outputs the imported text file as string value.
 

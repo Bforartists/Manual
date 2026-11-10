@@ -2229,9 +2229,13 @@ A nested bundle that has a Type item is handled as one item. The node does not l
 
 ##### Bundle
 
+Data type: Bundle.
+
 The bundle to search.
 
 ##### Mode
+
+Data type: Menu.
 
 Chooses which paths are listed.
 
@@ -2243,6 +2247,8 @@ Chooses which paths are listed.
 
 ##### Pattern Mode
 
+Data type: Menu.
+
 Only used in Bundle Type mode. Chooses how the Bundle Type input is compared with the Type of each nested bundle.
 
 **Exact** matches only the same text.
@@ -2251,15 +2257,21 @@ Only used in Bundle Type mode. Chooses how the Bundle Type input is compared wit
 
 ##### Bundle Type
 
+Data type: String.
+
 Only used in Bundle Type mode. The type to look for. If it is empty, no paths are listed.
 
 ##### Data Type
+
+Data type: Menu.
 
 Only used in Data Type mode. Items with this data type are listed.
 
 #### Outputs
 
 ##### Paths
+
+Data type: String.
 
 A list of strings, one path per item found, sorted alphabetically. If no bundle is connected, the list is empty.
 
@@ -3663,13 +3675,19 @@ Aligns a euler value to a vector.
 
 ##### Rotation
 
+Data type: Vector (euler).
+
 The input euler rotation vector.
 
 ##### Factor
 
+Data type: Float (factor).
+
 The factor to align the euler value to the vector.
 
 ##### Vector
+
+Data type: Vector.
 
 The vector to align to.
 
@@ -3689,6 +3707,8 @@ The pivot axis.
 
 ##### Rotation
 
+Data type: Vector (euler).
+
 The output rotation euler angle.
 
 ### Rotate Euler (Deprecated)
@@ -3701,9 +3721,13 @@ Rotates an euler rotation. This node will be removed in the near future. Alterna
 
 ##### Rotation
 
+Data type: Vector (euler).
+
 Use the rotation of an existing geometry.
 
 ##### Rotate By
+
+Data type: Vector (euler).
 
 The input rotation.
 
@@ -3732,5 +3756,7 @@ Rotate every point in its local space.
 #### Outputs
 
 ##### Rotation
+
+Data type: Vector.
 
 The euler angle output.

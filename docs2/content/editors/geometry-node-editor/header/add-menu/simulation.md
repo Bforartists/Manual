@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Simulation"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Simulation nodes."
@@ -142,17 +142,25 @@ Simulates physics with the XPBD method (Extended Position Based Dynamics). It ta
 
 ##### World
 
+Data type: Bundle.
+
 The bundle that holds the state of the simulation. The solver updates it.
 
 ##### Delta Time
+
+Data type: Float (time).
 
 The length of the time step in seconds. The default is 0.04 (one 25th of a second). Negative values are treated as 0.
 
 ##### Filter
 
+Data type: String.
+
 Only geometry whose tags match this filter is simulated. An empty filter simulates everything.
 
 ##### Simulation to World
+
+Data type: Matrix.
 
 A transform from the space the simulation runs in to world space.
 
@@ -162,13 +170,19 @@ A panel that is closed by default.
 
 ##### Substeps
 
+Data type: Integer.
+
 How many smaller steps the time step is split into. More substeps are more accurate but slower. The default is 10, the minimum is 1.
 
 ##### Constraint Iterations
 
+Data type: Integer.
+
 How many times the constraints are solved in each substep. The default is 1, the minimum is 1.
 
 ##### Solver Path
+
+Data type: String.
 
 An optional path inside the World bundle. If you fill it in, the solver stores a small bundle there with the value residual_error: the average remaining error of the constraints. Values below one are below the constraint threshold. If it is empty, nothing is stored.
 
@@ -178,14 +192,20 @@ A panel that is closed by default. It controls how colliders that change shape a
 
 ##### Begin
 
+Data type: Float.
+
 Where the blend starts, from 0 (the previous shape of the collider) to 1 (its current shape). The default is 0.
 
 ##### End
+
+Data type: Float.
 
 Where the blend ends, from 0 to 1. The default is 1. The substeps are spread evenly between Begin and End.
 
 #### Outputs
 
 ##### World
+
+Data type: Bundle.
 
 The updated World bundle.

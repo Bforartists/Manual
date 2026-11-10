@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Volume"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Volume nodes: Read, Sample, Write, Operations, Primitives."
@@ -419,17 +419,25 @@ The solver works on grids with the same voxel size in all directions. If the vox
 
 ###### Grid
 
+Data type: Float.
+
 The scalar grid on the right-hand side of the equation.
 
 ###### Max Iterations
+
+Data type: Integer.
 
 The most steps the solver may take. The default is 100. The value can be 1 to 10000.
 
 ###### Error Threshold
 
+Data type: Float.
+
 The solver stops when the error is below this value. The default is 0.001.
 
 ###### Threshold Mode
+
+Data type: Menu.
 
 How the error threshold is measured.
 
@@ -437,6 +445,8 @@ How the error threshold is measured.
 - Absolute: the error is measured as an absolute value in the units of the solution.
 
 ###### Boundary
+
+Data type: Menu.
 
 What happens at the boundary between active and inactive voxels.
 
@@ -446,13 +456,19 @@ What happens at the boundary between active and inactive voxels.
 
 ###### Boundary Value
 
+Data type: Float.
+
 The value of the solution at the boundary. It is a field, so it can change from voxel to voxel. It is only shown for Fixed and Mixed.
 
 ###### Boundary Gradient
 
+Data type: Vector.
+
 The gradient of the solution at the boundary. It is a field. It is only shown for Gradient and Mixed.
 
 ###### Boundary Factor
+
+Data type: Float (factor).
 
 How much of the gradient is used instead of the value, from 0 to 1. At 0 the value is used, at 1 the gradient. It is a field. It is only shown for Mixed.
 
@@ -460,33 +476,49 @@ How much of the gradient is used instead of the value, from 0 to 1. At 0 the val
 
 ###### Solution
 
+Data type: Float.
+
 The grid that solves the equation.
 
 ###### Success
+
+Data type: Boolean.
 
 True if the solver reached the error threshold.
 
 ###### Iterations
 
+Data type: Integer.
+
 How many steps the solver took.
 
 ###### Absolute Error
+
+Data type: Float.
 
 The absolute error of the solution at the end.
 
 ###### Relative Error
 
+Data type: Float.
+
 The relative error of the solution at the end.
 
 ###### Debug Boundary Value
+
+Data type: Float.
 
 A panel with three outputs that is closed by default. This one is the grid of boundary values the solver used. It is only shown for Fixed and Mixed.
 
 ###### Debug Boundary Gradient
 
+Data type: Vector.
+
 The grid of boundary gradients the solver used. It is only shown for Gradient and Mixed.
 
 ###### Debug Boundary Factor
+
+Data type: Float.
 
 The grid of boundary factors the solver used. It is only shown for Mixed.
 
@@ -1232,6 +1264,8 @@ Data type: Float.
 Value per voxel outside the cube domain.
 
 ##### Min:
+
+Data type: Vector.
 
 Minimum boundary of the volume cube. Max: Maximum boundary of the volume cube. Resolution X Number of volume voxules in the X axis. Resolution Y Number of volume voxules in the Y axis. Resolution Z Number of volume voxules in the Z axis.
 

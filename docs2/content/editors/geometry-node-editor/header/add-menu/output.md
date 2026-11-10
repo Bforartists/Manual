@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Output"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Output nodes."
@@ -79,6 +79,8 @@ Allows node groups to throw expectations.
 #### Inputs
 
 ##### Show
+
+Data type: Boolean.
 
 Is true or false.
 
