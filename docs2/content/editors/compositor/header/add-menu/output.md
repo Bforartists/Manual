@@ -8,7 +8,7 @@ path:
   - Header
   - Add Menu
   - Output
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: node
 summary: Output nodes.
@@ -78,6 +78,8 @@ Further settings can be adjusted in the header. In the Backdrop toolsgroup.
 #### Input
 
 ##### Image
+
+Data type: Color.
 
 RGB image. The default is black, so leaving this node unconnected will result in a blank image.
 

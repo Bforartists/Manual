@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Transform"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Transform nodes."
@@ -35,9 +35,13 @@ This node rotates an image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Angle
+
+Data type: Float (angle).
 
 Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise.
 
@@ -83,6 +87,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Scale
@@ -95,9 +101,13 @@ The Scale node scales the size of an image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Type
+
+Data type: Menu.
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-transform/type.png)
 
@@ -163,6 +173,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Transform
@@ -175,6 +187,8 @@ The Transform node combines the functionality of three other nodes: Scale, trans
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### X, Y
@@ -183,9 +197,13 @@ Used to move the input image horizontally and vertically.
 
 ##### Angle
 
+Data type: Float (angle).
+
 Used to rotate an image around its center. Positive values rotate counter-clockwise and negative ones clockwise.
 
 ##### Scale
+
+Data type: Float.
 
 Used to resize the image. The scaling is relative, meaning a value of 0.5 gives half the size and a value of 2.0 gives twice the size of the original image.
 
@@ -223,6 +241,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Translate
@@ -236,6 +256,8 @@ Could also be used to add a 2D camera shake.
 #### Inputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
@@ -277,6 +299,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Corner Pin
@@ -288,6 +312,8 @@ The Corner Pin node uses explicit corner values for a plane warp transformation.
 #### Inputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
@@ -329,9 +355,13 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output. (The image after distorting.)
 
 ##### Plane
+
+Data type: Float.
 
 A black-and-white alpha mask of the plane.
 
@@ -361,9 +391,13 @@ This node could be used to model phenomena, like hot air distortion, refraction'
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Displacement
+
+Data type: Vector.
 
 Input of the displacement map. If the a color output is implicitly converted in the vector input, the first channel (red) value determines displacement along X axis. The second channel (green) the displacement along Y axis. If the input is a greyscale image, where both the channel values are equal, the input image will be displaced equally in both X and Y directions.
 
@@ -405,6 +439,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Flip
@@ -439,9 +475,13 @@ To apply a texture to individual enumerated objects the ID Mask Node could be us
 
 ##### Image
 
+Data type: Color.
+
 The new 2D texture.
 
 ##### UV
+
+Data type: Vector.
 
 The input for UV render pass. See Cycles render passes. Hint. To store the UV pass a multi-layer OpenEXR format could be used.
 
@@ -479,6 +519,8 @@ The extension mode applied to the Y axis.
 
 ##### Image
 
+Data type: Color.
+
 The resulting image is the input image texture distorted to match the UV coordinates. That image can then be overlay mixed with the original image to paint the texture on top of the original. Adjust alpha and the mix factor to control how much the new texture overlays the old.
 
 Hint. When painting the new texture, it helps to have the UV maps for the original objects in the scene, it is recommended to keep those UV texture outlines around even, when shooting is done.
@@ -493,9 +535,13 @@ Use this node to simulate distortions that real camera lenses produce.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Type
+
+Data type: Menu.
 
 The lens distortion type.
 
@@ -519,6 +565,8 @@ This simulates chromatic aberrations, where different wavelengths of light refra
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -550,9 +598,13 @@ Before using this node, one has to calculate the lens distortion of the clip. Th
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Type
+
+Data type: Menu.
 
 ###### Undistort
 
@@ -571,5 +623,7 @@ Used to select the movie clip whose distortion is to be used. This can be useful
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.

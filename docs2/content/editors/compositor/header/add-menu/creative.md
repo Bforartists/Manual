@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Creative"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Creative nodes."
@@ -33,9 +33,13 @@ Kuwahara is a filter that converts a realistic image into a stylized image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Size
+
+Data type: Float.
 
 The size of the kuwahara filter in pixels.
 
@@ -63,6 +67,8 @@ Use high precision. Slower but more accurate.
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 

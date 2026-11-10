@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Color"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Color nodes: Adjust."
@@ -37,6 +37,8 @@ This node converts the alpha channel interpretation of an image from pre-multipl
 
 ##### Image
 
+Data type: Color.
+
 The input image.
 
 #### Properties
@@ -50,6 +52,8 @@ Convert straight to premultiplied. Or convert premultiplied to straight.
 #### Output
 
 ##### Image
+
+Data type: Color.
 
 The image output.
 
@@ -89,6 +93,8 @@ The foreground goes over the background according to the alpha of the foreground
 
 ##### Image
 
+Data type: Color.
+
 Image output.
 
 ### Set Alpha
@@ -101,13 +107,19 @@ The Set Alpha Node adds an alpha channel to an image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Alpha
 
+Data type: Float.
+
 The amount of Alpha can be set for the whole image by using the input field or per pixel by connecting to the socket.
 
 ##### Type
+
+Data type: Menu.
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-color/type.png)
 
@@ -122,6 +134,8 @@ Replace the alpha channel of the input image by the alpha input value.
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The image output.
 
@@ -243,21 +257,31 @@ The Depth Combine node combines two images based on their Z-depth maps. It overl
 
 ##### A
 
+Data type: Color.
+
 The background image.
 
 ##### Depth A
+
+Data type: Float.
 
 Z depth of the background image.
 
 ##### B
 
+Data type: Color.
+
 The foreground image.
 
 ##### Depth B
 
+Data type: Float.
+
 Z depth of the foreground image.
 
 ##### Use Alpha
+
+Data type: Boolean.
 
 The chosen Image pixel alpha channel is also carried over. If a pixel is partially or totally transparent, the result of the Z Combine will also be partially transparent; in which case the background image will show through the foreground (chosen) pixel.
 
@@ -269,9 +293,13 @@ Applies Anti-Aliasing to avoid artifacts at sharp edges or areas with a high con
 
 ##### Result
 
+Data type: Color.
+
 If both Z values are equal, it will use the foreground image. Whichever Z value is less decides which image pixel is used. See Z-buffer.
 
 ##### Depth
+
+Data type: Float.
 
 The combined Z depth, which allows to thread multiple Z-combines together.
 
@@ -316,6 +344,8 @@ The Color Ramp Node is used for mapping values to colors with the use of a gradi
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 The Factor input is used as an index for the color ramp.
 
@@ -379,9 +409,13 @@ Adjust the active color stop.
 
 ##### Color
 
+Data type: Color.
+
 The color output.
 
 ##### Alpha
+
+Data type: Float.
 
 Alpha channel output.
 
@@ -396,6 +430,8 @@ Note that the conversion is skipped when converting between the same color space
 #### Input
 
 ##### Image
+
+Data type: Color.
 
 The input image.
 
@@ -415,6 +451,8 @@ The destination color space.
 
 ##### Image
 
+Data type: Color.
+
 The image output.
 
 ### Convert to Display
@@ -427,9 +465,13 @@ Transforms an image from **scene-linear color space** into a **display-referred 
 
 ##### Image
 
+Data type: Color.
+
 The input image in scene-linear space—typically the result of render layers, raw file input, or procedural compositing.
 
 ##### Invert
+
+Data type: Boolean.
 
 Reverses the display transform—useful for decoding display-referred images back to linear.
 
@@ -460,6 +502,8 @@ Adds stylized tweaks on top of the view transform.
 
 ##### Image
 
+Data type: Color.
+
 The display-referred result, ready for preview, export, or further compositing.
 
 ### Invert Color
@@ -472,23 +516,33 @@ The Invert Node inverts the colors in the input image, producing a negative.
 
 ##### Color
 
+Data type: Color.
+
 Standard input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
 ##### Invert Color
 
+Data type: Boolean.
+
 Invert the RGB values.
 
 ##### Invert Alpha
+
+Data type: Boolean.
 
 Invert the Alpha values.
 
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 Standard image output.
 
@@ -524,13 +578,19 @@ Adjust the brightness and contrast.
 
 ##### Image
 
+Data type: Color.
+
 The image input
 
 ##### Brightness
 
+Data type: Float.
+
 An additive-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image.
 
 ##### Contrast
+
+Data type: Float.
 
 A scaling type factor by which to make brighter pixels brighter, but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.
 
@@ -552,9 +612,13 @@ The Color Balance node can adjust the color and values of an image.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output image.
 
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
@@ -678,9 +742,13 @@ With the Color Correction node you can adjust the color of an image. Separated i
 
 ##### Image
 
+Data type: Color.
+
 Image Input.
 
 ##### Mask
+
+Data type: Float.
 
 Input a mask to cover parts of the image so that they are affected.
 
@@ -862,9 +930,13 @@ With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an im
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
@@ -910,6 +982,8 @@ Deletes the currently selected curve point.
 
 ##### Image
 
+Data type: Color.
+
 Image Output
 
 ### Hue/Saturation/Value
@@ -950,6 +1024,8 @@ Standard input.
 
 ##### Image
 
+Data type: Color.
+
 Standard output.
 
 ##### Hue/Saturation Tips
@@ -982,17 +1058,25 @@ The RGB Curves Node allows color corrections for each color channel and levels a
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
 ##### Black Level
 
+Data type: Color.
+
 Defines the input color that is (linear) mapped to black.
 
 ##### White level
+
+Data type: Color.
 
 Defines the input color that is (linear) mapped to white.
 
@@ -1094,6 +1178,8 @@ Tone mapping addresses the problem of strong contrast reduction from the scene v
 
 ##### Image
 
+Data type: Color.
+
 Plug in the HDR image.
 
 #### Properties
@@ -1141,5 +1227,7 @@ If 0, same for all channels; if 1, each independent.
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The Image output.
