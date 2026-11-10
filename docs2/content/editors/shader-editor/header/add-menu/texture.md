@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Texture"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Texture nodes."
@@ -53,6 +53,8 @@ The Checker Texture node adds a procedural checkerboard texture.
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.
 
 ##### Color1, Color 2
@@ -61,15 +63,21 @@ Color of the checkers.
 
 ##### Scale
 
+Data type: Float.
+
 Overall texture scale. The scale is a factor of the bounding box of the face divided by the scale. For example, a scale of 15 will result in 15 alternate patterns over the overall UV bounding box. Different patterns could be achieved using other nodes to give different input patterns to this socket. For example, using the Math Node.
 
 #### Outputs
 
 ##### Color
 
+Data type: Color.
+
 Texture color output.
 
 ##### Factor
+
+Data type: Float.
 
 Checker 1 mask (1 = Checker 1).
 
@@ -82,6 +90,8 @@ Load an environment texture to light your scene.
 #### Inputs
 
 ##### Vector
+
+Data type: Vector.
 
 Texture coordinate for texture look-up. If this socket is left unconnected, the image is mapped as environment with the Z axis as up.
 
@@ -135,6 +145,8 @@ Projection from an orthographic photo or mirror ball.
 
 ##### Color
 
+Data type: Color.
+
 RGB color from the image.
 
 ### Gabor Texture
@@ -147,13 +159,19 @@ The Gabor Texture is a special directional noise texture from the OSL Shading la
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate to sample texture at defaults to Generated texture coordinates if the socket is left unconnected.
 
 ##### Scale
 
+Data type: Float.
+
 The scale of the Gabor noise.
 
 ##### Frequency
+
+Data type: Float.
 
 The rate at which the Gabor noise changes across space. It differs from the input scale in that it only scales perpendicular to the gabor noise direction.
 
@@ -188,6 +206,8 @@ The Gradient Texture node generates interpolated color and intensity values base
 #### Inputs
 
 ##### Vector
+
+Data type: Vector.
 
 Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.
 
@@ -231,9 +251,13 @@ Returns a value based on the angle of the input around the Z axis.
 
 ##### Color
 
+Data type: Color.
+
 Texture color output.
 
 ##### Factor
+
+Data type: Float.
 
 Texture intensity output.
 
@@ -247,9 +271,13 @@ The IES Texture is used to match real world lights based on IES files. IES files
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate for lookup in the light distribution. Defaults to the normal.
 
 ##### Strength
+
+Data type: Float.
 
 Light strength multiplier.
 
@@ -269,6 +297,8 @@ Load IES profile from a file on the drive.
 
 ##### Factor
 
+Data type: Float.
+
 Light intensity, typically plugged into the Strength input of an Emission node.
 
 ### Image Texture
@@ -280,6 +310,8 @@ The Image Texture is used to add an image file as a texture.
 #### Inputs
 
 ##### Vector
+
+Data type: Vector.
 
 Texture coordinate for texture look-up. If this socket is left unconnected, UV coordinates from the active UV render layer are used.
 
@@ -389,9 +421,13 @@ What alpha mode is used for the image.
 
 ##### Color
 
+Data type: Color.
+
 RGB color from image. If the image has alpha, the color is premultiplied with alpha if the Alpha output is used, and unpremultiplied or straight if the Alpha output is not used.
 
 ##### Alpha
+
+Data type: Float.
 
 Alpha channel from image.
 
@@ -424,6 +460,8 @@ The Noise Texture node evaluates a fractal Perlin noise at the input texture coo
 The inputs are dynamic, they become available if needed depending on the node properties.
 
 ##### Vector
+
+Data type: Vector.
 
 Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.
 
@@ -485,9 +523,13 @@ Similar to Hybrid Multifractal creates a heterogeneous terrain, but with the lik
 
 ##### Factor
 
+Data type: Float.
+
 Value of fractal noise.
 
 ##### Color
+
+Data type: Color.
 
 Color with different fractal noise in each component.
 
@@ -553,6 +595,8 @@ Ozone influence.
 
 ##### Color
 
+Data type: Color.
+
 Texture output.
 
 ### Voronoi Texture
@@ -567,29 +611,43 @@ The inputs are dynamic, they become available if needed depending on the node pr
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.
 
 ##### W
+
+Data type: Float.
 
 The W Texture coordinate to evaluate the noise at (4D)
 
 ##### Scale
 
+Data type: Float.
+
 Scale of the noise.
 
 ##### Detail
+
+Data type: Float.
 
 The number of voronoi layers.
 
 ##### Roughness
 
+Data type: Float (factor).
+
 The influence of a voronoi layer relative to the previous layer.
 
 ##### Lacunarity
 
+Data type: Float.
+
 The scale of a voronoi layer relative to the previous layer.
 
 ##### Randomness
+
+Data type: Float (factor).
 
 The randomness of the noise.
 
@@ -665,17 +723,25 @@ Use the Minkowski distance metric. The Minkowski distance is a generalization of
 
 ##### Distance
 
+Data type: Float.
+
 The Distance.
 
 ##### Color
+
+Data type: Color.
 
 Cell color. The color is arbitrary.
 
 ##### Position
 
+Data type: Vector.
+
 Position of feature point.
 
 ##### W
+
+Data type: Float.
 
 Position of feature point. Note. In some configurations of the node, especially for low values of Randomness, rendering artifacts may occur. This happens due to the same reasons described in the Notes section in the White Noise Texture page and can be fixed in a similar manner as described there.
 
@@ -689,29 +755,43 @@ The Wave Texture node adds procedural bands or rings with noise distortion.
 
 ##### Vector
 
+Data type: Vector.
+
 Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.
 
 ##### Scale
+
+Data type: Float.
 
 Overall texture scale.
 
 ##### Distortion
 
+Data type: Float.
+
 Amount of distortion of the wave (similar to the Marble texture in Blender Internal).
 
 ##### Detail
+
+Data type: Float.
 
 Amount of distortion noise detail.
 
 ##### Detail Scale
 
+Data type: Float.
+
 Scale of distortion noise.
 
 ##### Detail Roughness
 
+Data type: Float (factor).
+
 Adds a roughness noise.
 
 ##### Phase Offset
+
+Data type: Float.
 
 Set an offset for the phase.
 
@@ -751,9 +831,13 @@ Uses a triangle shape.
 
 ##### Color
 
+Data type: Color.
+
 Texture color output.
 
 ##### Factor
+
+Data type: Float.
 
 Texture intensity output.
 
@@ -769,9 +853,13 @@ The inputs are dynamic, they become available if needed depending on the node pr
 
 ##### Vector
 
+Data type: Vector.
+
 Vector used as seed in 2D, 3D, and 4D dimensions.
 
 ##### W
+
+Data type: Float.
 
 Value used as seed in 1D and 4D dimensions.
 
@@ -802,6 +890,8 @@ Both the Vector input and the W input are used as seed.
 #### Outputs
 
 ##### Value
+
+Data type: Float.
 
 Output random value.
 

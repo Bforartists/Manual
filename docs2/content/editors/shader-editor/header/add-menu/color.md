@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Color"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Color nodes."
@@ -47,19 +47,27 @@ Convert a blackbody temperature to an RGB value.
 
 ##### Color
 
+Data type: Color.
+
 Standard input.
 
 ##### Brightness
 
+Data type: Float.
+
 An additive-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image.
 
 ##### Contrast
+
+Data type: Float.
 
 A scaling type factor by which to make brighter pixels brighter, but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.
 
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 Standard output.
 
@@ -74,6 +82,8 @@ The Color Ramp Node is used for mapping values to colors with the use of a gradi
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 The Factor input is used as an index for the color ramp.
 
@@ -141,6 +151,8 @@ Standard image output.
 
 ##### Alpha
 
+Data type: Float.
+
 Standard Alpha Output.
 
 ### Gamma
@@ -190,6 +202,8 @@ Standard input.
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 Standard output.
 
@@ -348,9 +362,13 @@ The RGB Curves Node allows color corrections for each color channel and levels a
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output image.
 
 ##### Color
+
+Data type: Color.
 
 Standard image input.
 
@@ -421,6 +439,8 @@ When you have a point selected then you will reveal further settings at the bott
 
 ##### Color
 
+Data type: Color.
+
 Standard output.
 
 ### Wavelength
@@ -466,6 +486,8 @@ Combine the single RGBA channels into a single image.
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 The rgba output color.
 

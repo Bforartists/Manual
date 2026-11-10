@@ -8,7 +8,7 @@ path:
   - "Header"
   - "Add Menu"
   - "Output"
-version: "5.1"
+version: "5.3"
 status: draft
 icon: node
 summary: "Output nodes."
@@ -73,17 +73,25 @@ The Material Output node is used to output surface material information to a sur
 
 ##### Surface
 
+Data type: Shader.
+
 Shading for the surface of the object.
 
 ##### Volume
+
+Data type: Shader.
 
 Shading for the volume inside the object. The types of volume shaders are: Emission shader. Volume Absorption shader. Volume Scatter shader.
 
 ##### Displacement
 
+Data type: Vector.
+
 Used to create bump mapping or actual subdivided displacement.
 
 ##### Thickness
+
+Data type: Float.
 
 Used to give a geometry a thickness by shader.
 
@@ -107,6 +115,8 @@ Outputs light information to a light object.
 
 ##### Surface
 
+Data type: Shader.
+
 The shading for the surface of the light object.
 
 #### Properties
@@ -127,9 +137,13 @@ Shader type World. The World Output node is used to output light and color infor
 
 ##### Surface
 
+Data type: Shader.
+
 The appearance of the environment, usually preceded by a Background shader.
 
 ##### Volume
+
+Data type: Shader.
 
 Used to add volumetric effects to the world. See the shaders Volume Absorption and Volume Scatter for more information.
 
