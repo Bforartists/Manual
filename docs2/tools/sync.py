@@ -371,6 +371,13 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
         it = existing.get(w["key"])
         if it:
             ids[w["key"]] = it["id"]
+            if it.get("isArchived"):
+                # The only item for a page that is still in the repo is archived (a refactor or a hand
+                # edit archived it). Updating it alone keeps it archived, so the page stays a 404 on the
+                # live site while every sync reports it as "updated". Bring it back first.
+                wf.req("PATCH", f"/collections/{cid}/items", {"items": [{"id": it["id"], "isArchived": False,
+                       "isDraft": False, "fieldData": {"name": it["fieldData"].get("name", w["key"])}}]})
+                report.append(("♻️", w["key"], "was archived while still in the repo; restored"))
             old_h, old_t = parse_checksum(it["fieldData"].get("checksum"))
             if old_h == h and not force:
                 report.append(("⏭️", w["key"], "unchanged"))
