@@ -1512,7 +1512,7 @@ The list of the editors that you can theme. Every editor can have its own themin
 
 Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.
 
-> **Note:** The font sizes and weights are no longer part of the theme. You find them in the [Font Style subpanel](#font-style-subpanel) of the Interface tab.
+> **Note:** The font sizes and weights are no longer part of the theme. You find them in the **Font Style** subpanel of the Interface tab, under Text Rendering.
 
 #### Color Sets
 
