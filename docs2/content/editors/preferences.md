@@ -1558,7 +1558,7 @@ Customizes tracking marker colors, clip overlays, and annotation visuals for mot
 
 #### Node Editor
 
-Defines node socket colors, wire colors, backdrop shading, and node selection highlights. How curved the wires are is set in the [Node Editor preferences](#noodle-curving).
+Defines node socket colors, wire colors, backdrop shading, and node selection highlights. How curved the wires are is set with **Noodle Curving** in the Editing tab, Node Editor panel.
 
 #### Nonlinear Animation
 
