@@ -443,7 +443,7 @@ Size of the text.
 
 ##### Line Spacing
 
-The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels.
+The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button next to the field switches to a fixed spacing in pixels.
 
 ##### Color
 
