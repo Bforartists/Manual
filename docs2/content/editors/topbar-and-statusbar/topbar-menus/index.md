@@ -293,6 +293,32 @@ Removes existing previews for some types in the target blend file.
 
 Removes all existing previews in the target blend file.
 
+## Project
+
+![Project submenu](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/project.png)
+
+A **project** is a folder that holds all the files of one production: the .blend files, textures, sounds and more. Bforartists remembers the project, so you can get back to it from this submenu and keep the paths of your files together.
+
+### New...
+
+Creates a new project. Give it a **Name** and pick the **Project Root Folder**. The folder is created when it does not exist yet. When the current file is already saved, you can also turn its folder, or one of its parent folders, into a project.
+
+### Open...
+
+Opens a project from its folder in the File Browser, and starts a new file in it.
+
+### Close
+
+Closes the active project and starts a new file. The entry is greyed out when no project is open.
+
+### Recent projects
+
+Below the three entries, the submenu lists the projects you opened last. Click one to open it again. When the list is empty, it shows **No Recent Projects**.
+
+### Clear Recent Projects List...
+
+Empties the list of recent projects. The projects and their files stay on the disk.
+
 ## Import
 
 ![Import](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import.png)
