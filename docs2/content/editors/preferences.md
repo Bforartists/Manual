@@ -783,6 +783,20 @@ Automatically close relevant character pairs when typing in the text editor.
 
 ![Node Editor](/docs2/images/editors/preferences/node-editor.png)
 
+#### Noodle Curving
+
+How curved the links (the "noodles") between nodes are drawn. The range is 0 to 10.
+
+Bforartists uses **0** by default, so links are **straight lines**. Straight links make it easy to follow where a link goes in a busy node tree. Raise the value if you prefer soft, curved links.
+
+![Noodle Curving at 0: straight links](/docs2/images/editors/preferences/noodle-curving-0.png)
+
+![Noodle Curving at 5: curved links](/docs2/images/editors/preferences/noodle-curving-5.png)
+
+The setting applies to every node editor: Shader, Geometry Nodes, Compositor and Texture nodes.
+
+> **Note:** Noodle Curving used to be a theme setting. It is a preference now, so a theme preset can no longer change it. Blender uses 4 by default.
+
 #### Auto Offset
 
 Use Auto Offset.
@@ -1544,7 +1558,7 @@ Customizes tracking marker colors, clip overlays, and annotation visuals for mot
 
 #### Node Editor
 
-Defines node socket colors, wire styles, backdrop shading, and node selection highlights.
+Defines node socket colors, wire colors, backdrop shading, and node selection highlights. How curved the wires are is set in the [Node Editor preferences](#noodle-curving).
 
 #### Nonlinear Animation
 
