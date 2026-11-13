@@ -717,6 +717,20 @@ Import option to create collection hierarchy by splitting names with a separator
 
 How to import the material name when it conflicts with an existing material in the scene.
 
+### SPZ (.spz)
+
+![Import SPZ menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-spz.png)
+
+Imports an SPZ file as a **Gaussian Splat**. A Gaussian Splat is a 3D scan made of many small, soft, colored blobs instead of polygons. It captures real places and objects with a photo-like look, for example from a phone scan.
+
+The splat comes in as a **point cloud** object. The File Browser only shows .spz files, and there are no import settings in the sidebar.
+
+> **Tip:** You can also drag an .spz file from your file manager into the 3D View to import it.
+
+To load a splat inside a node tree instead, use the [Import SPZ (.spz)](../../geometry-node-editor/header/add-menu/input.md) node in Geometry Nodes, *Add > Input > Import*.
+
+> **Note:** The entry only shows when your Bforartists build comes with SPZ support.
+
 ### Stanford (PLY)
 
 ![Import Stanford PLY menu entry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/menu-entries/import-ply.png)
