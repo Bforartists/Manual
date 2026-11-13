@@ -1,0 +1,7 @@
+{
+ "pages": {
+  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
+  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html"
+ },
+ "images": 5
+}
