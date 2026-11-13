@@ -7,7 +7,7 @@ path:
   - Shader Editor
   - Sidebar
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 13.3 Editors - Shader Editor - Sidebar.odt
