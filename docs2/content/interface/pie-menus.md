@@ -23,3 +23,11 @@ A **pie menu** opens around the mouse pointer, with its items arranged in a circ
 ## Pie menus in Bforartists
 
 Pie menus are called by hotkeys, for example the view pie (the ` key, tilde on some keyboards) and the pivot and snapping pies in the 3D Viewport. The keymap chapters list the hotkeys. You can add more pie menus with extensions.
+
+### Region Toggle pie
+
+![Region Toggle pie menu in the 3D Viewport](/docs2/images/interface/pie-menus/region-toggle-pie.png)
+
+Press **T** over an editor to open the **Region Toggle** pie. It shows or hides the regions of that editor: the Tools (tool shelf), the Sidebar, the Header, the Asset Shelf, and in some editors the Footer or the Channels. Each region sits on the side of the pie where it is in the editor, so the Tools are on the left and the Sidebar is on the right.
+
+Use it to make room in a small editor, or to bring back a region you have hidden. It works the same in every editor, and with the Bforartists keymap on Windows, Linux and macOS.
