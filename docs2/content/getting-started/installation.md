@@ -7,7 +7,7 @@ path:
   - Getting Started
   - Installation
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 2 Installing Bforartists.odt
