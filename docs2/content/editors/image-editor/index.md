@@ -8,7 +8,7 @@ path:
   - Editors
   - Image Editor
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 8 Editors - Image Editor.odt

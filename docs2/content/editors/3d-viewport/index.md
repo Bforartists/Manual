@@ -8,7 +8,7 @@ path:
   - Editors
   - 3D Viewport
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 7 Editors - 3D Viewport.odt
