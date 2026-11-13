@@ -81,23 +81,23 @@ Closes the editor.
 
 When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins, swaps and merges editors.
 
-### Horizontal Split
-
-Splits the current view horizontally into two independent editor windows.
-
 ### Vertical Split
 
 Splits the current view vertically into two independent editor windows.
 
-### Join Areas
+### Horizontal Split
 
-Joins the two editors that shares the border.
+Splits the current view horizontally into two independent editor windows.
+
+### Join Up / Join Down
+
+Join the two editors that share the border into one. There is one entry for each direction, for example **Join Up** and **Join Down** on a horizontal border.
 
 ### Swap Areas
 
 Swaps the content of the editors that shares the border.
 
-### Merge Area Edge
+### Merge Edge
 
 Merges aligned area edges into one straight edge. This entry has its own icon and only shows up when the border you clicked lines up with another border, for example where four editors meet at a cross. After the merge, the edge moves as one piece.
 
