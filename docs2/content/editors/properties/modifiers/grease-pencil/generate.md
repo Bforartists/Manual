@@ -9,7 +9,7 @@ path:
   - Modifiers tab
   - Generate modifiers
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt
