@@ -58,6 +58,8 @@ This menu is hidden by default. It is meant to edit the layouts, and should not 
 
 The Image Editor has three sub modes. View, Paint and Mask.
 
+> **Tip:** The UV Editor is not a sub mode, so it is not in this list. To unwrap or edit UVs, use the [Switch to UV / Image editor](#switch-to-uv-image-editor) button at the left of the header.
+
 ### View Mode
 
 It is as the name says a pure view mode. You can view your content.
