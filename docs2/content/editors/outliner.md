@@ -985,7 +985,9 @@ Open the category, then drag the item to the frame and channel where you want th
 
 ### Pack images
 
-> 📸 Picture to add: Blend File mode with a few images selected, right-click menu open with **Pack** highlighted.
+![Three images selected in Blend File mode](/docs2/images/editors/outliner/pack-images-selected.png)
+
+![Right-click menu of an image with Pack](/docs2/images/editors/outliner/pack-images-menu.png)
 
 Packs the selected images into the .blend file, so the file still has its textures when you move it to another computer or send it to someone. Open the Images category, select the images you want to pack, right-click one of them and choose **Pack**. Bforartists reports how many images it packed.
 
