@@ -8,7 +8,7 @@ path:
   - Editors
   - Editors introduction
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 6 Editors introduction.odt
