@@ -60,9 +60,10 @@ And when you have recent files, then the splash screen lists them instead of the
 The splash screen is a bit larger than in older versions, so it has room for more entries:
 
 - **New File**: lists the General startup file and the app templates. Templates that don't fit move into a **More** menu at the bottom of the list.
-- **Recent Files**: lists your last six files.
+- **Recent Files**: lists your last six files. **More...** below them opens a search over all your recent files.
+- **Project**: the drop-down next to the Recent Files title. It lists your recent projects, and lets you create a new project or open one. When a project is active, the list shows the files of that project first. The drop-down sits in the recent files column, so it never covers the splash picture.
 
-> 📸 The two splash screen pictures above still show the older, smaller splash screen.
+The first picture shows the splash screen with recent files, the second one at a first start without recent files.
 
 In the splash screen you can also read at what Blender version the current Bforartists version is based at.
 
