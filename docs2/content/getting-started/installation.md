@@ -19,7 +19,7 @@ icon: external_drive
 
 ### Download Bforartists
 
-Bforartists downloads can be downloaded here: [https://www.bforartists.de/content/download](https://www.bforartists.de/content/download)
+Bforartists downloads can be downloaded here: [https://www.bforartists.co/download](https://www.bforartists.co/download)
 
 Bforartists is available for download for Linux, mac OS and MS-Windows.
 

@@ -53,10 +53,10 @@ This manual will guide you through every operator and panel, editor, shelf and i
 Get the latest version of Bforartists and get directly involved here:
 
 📥**Downloads for free**  
-[https://www.bforartists.co/download](https://www.bforartists.de/download)  
+[https://www.bforartists.co/download](https://www.bforartists.co/download)  
   
 📝 **Release Notes**  
-[https://www.bforartists.co/release-notes/](https://www.bforartists.co/release-notes/)  
+[https://www.bforartists.co/support/release-notes](https://www.bforartists.co/support/release-notes)  
   
 🧰 **Source Code**  
 *Official Bug and Feature Requests Tracker*  
@@ -126,11 +126,11 @@ This reference manual is for Bforartists 5 version 5.1.1 published on 23.04.2026
 
 📥 Download Free
 
-[https://www.bforartists.de/download](https://www.bforartists.de/download)
+[https://www.bforartists.co/download](https://www.bforartists.co/download)
 
 📝 Release Notes
 
-[https://www.bforartists.de/release-notes/](https://www.bforartists.de/release-notes/)
+[https://www.bforartists.co/support/release-notes](https://www.bforartists.co/support/release-notes)
 
 🧰 Source Code
 
@@ -148,14 +148,14 @@ Official Bug and Feature Request Tracker
 
 #### 🔗Other Links
 
-##### Forum
-[https://www.bforartists.de/forum](https://www.bforartists.de/forum)  
+##### Community
+[https://www.bforartists.co/community/overview](https://www.bforartists.co/community/overview)  
   
 ##### FAQ
-[https://www.bforartists.de/wiki/FAQ](https://www.bforartists.de/wiki/FAQ)  
+[https://www.bforartists.co/about/faq](https://www.bforartists.co/about/faq)  
   
-##### Wiki
-[https://www.bforartists.de/wiki/bforartists-wiki](https://www.bforartists.de/wiki/bforartists-wiki)
+##### Support
+[https://www.bforartists.co/support/overview](https://www.bforartists.co/support/overview)
 
 ##### Manual Tracker
 [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)  
