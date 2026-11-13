@@ -108,12 +108,13 @@ The emitter element indices are gone through in a random order instead of linear
 
 Particle distribution is made even based on surface area of the elements, i.e. small elements emit less particles than large elements, so that the particle density is even.
 
-###### GridInvert Grid
+###### Grid
 
-![Invert Grid](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/invert-grid.png)
+![Distribution set to Grid](/docs2/images/editors/properties/particle-properties-tab/emitter-emission-panel/invert-grid.png)
 
-Invert what is considered the object and what is not.
+With **Distribution** set to **Grid**, the particles sit on the points of a regular grid that fall on the emitter, instead of at random places. Number and Seed are greyed out, because the grid decides how many particles there are.
 
+- **Invert Grid**: Invert what is considered the object and what is not.
 - **Hexagonal Grid**: Uses a hexagonal-shaped grid instead of a rectangular one.
-- **Resolution**: Resolution of the grid.
+- **Resolution**: Resolution of the grid. Higher values make a finer grid with more particles.
 - **Random**: Add a random offset to grid locations.
