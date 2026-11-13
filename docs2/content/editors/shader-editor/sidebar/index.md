@@ -38,34 +38,37 @@ The right click menus are explained in the chapter 6 Editors Introduction.
 
 # Node Tab
 
-### Node Tab - Node Panel
+## Node Tab - Node Panel
 
 ![Node Tab - Node Panel](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-node-panel.png)
 
 In this panel you can give nodes and node groups a name and a label, and change its color.
 
-#### Name
+### Name
 
 The type of the node.
 
-#### Label
+### Label
 
 ![Label](/docs2/images/editors/shader-editor/sidebar/node-tab/label.png)
 
 The label name of the node.
 
-#### Width and Location
+### Width and Location
 
 ![Width and Location](/docs2/images/editors/shader-editor/sidebar/node-tab/width-and-location.png)
 
 Type exact numbers to size and place the selected node. Handy for keeping big node trees tidy and lined up.
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------------------------- |
-| Width | How wide the node is. Same as dragging its side edge. |
-| Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
+#### Width
 
-#### Color
+How wide the node is. Same as dragging its side edge.
+
+#### Location
+
+Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor.
+
+### Color
 
 ![Color row](/docs2/images/editors/shader-editor/sidebar/node-tab/color-row.png)
 
@@ -73,15 +76,15 @@ Give the node a color of its own, so parts of a big node tree are easy to tell a
 
 The two small buttons next to the color field help when you color many nodes.
 
-##### Copy Color
+#### Copy Color
 
 Gives all selected nodes the same color as the active node. Select the nodes, make the one with the color you want active, then click the copy button.
 
-##### Presets
+#### Presets
 
 Stores colors you like, so you can reuse them with one click. Presets are saved globally, so they work in your other files too.
 
-### Node Tab - Properties Panel
+## Node Tab - Properties Panel
 
 ![Node Tab - Properties Panel](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-properties-panel.png)
 
@@ -91,13 +94,13 @@ This panel shows usually the same properties than the properties at the node. Th
 
 But there are exceptions like the Image node. Here the Properties panel shows much more options than at the node. It shows all the possible image settings. We will explain the extra options here.
 
-### Node Tab - Properties Panel with Image node
+## Node Tab - Properties Panel with Image node
 
 ![Node Tab - Properties Panel with Image node](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-properties-panel-with-image-node.png)
 
 Contains image related settings. Size, type, and so on.
 
-#### Image Property
+### Image Property
 
 Load an image and / or switch to other images.
 
@@ -107,18 +110,31 @@ From left to right ...
 
 ![Image Property](/docs2/images/editors/shader-editor/sidebar/node-tab/image-property-2.png)
 
+#### Image Browser
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Browser | This is a list of the images in the scene. Allows you to switch to other images. |
-| New / Open | When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one. |
-| Image Edit Box | The name of the currently selected image. And you can rename the image here too. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open Image | Load an image |
-| Remove | Delete the image. |
+This is a list of the images in the scene. Allows you to switch to other images.
 
+#### New / Open
 
-#### Source
+When nothing is loaded then you will see the New / Open buttons to load a new image, or to create a new one.
+
+#### Image Edit Box
+
+The name of the currently selected image. And you can rename the image here too.
+
+#### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+#### Open Image
+
+Load an image
+
+#### Remove
+
+Delete the image.
+
+### Source
 
 ![Source](/docs2/images/editors/shader-editor/sidebar/node-tab/source.png)
 
@@ -126,200 +142,231 @@ Choose the image type. This type gets usually automatically set. When you create
 
 Generated images does not have a path.
 
-##### Source Type Single Image
+#### Source Type Single Image
 
 ![Source Type Single Image](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-single-image.png)
 
 #
 
-###### Path edit box
+##### Path edit box
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-###### Color Space
+See and edit the path to your movie or image sequence files.
+
+###### Open
+
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space.png)
 
 The color space for the image.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha.png)
 
 How to calculate the alpha channel.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Movie + Image Sequence
+#### Source Type Movie + Image Sequence
 
 ![Source Type Movie + Image Sequence](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-movie-image-sequence.png)
 
 ![Source Type Movie + Image Sequence](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-movie-image-sequence-2.png)
 
-###### Path edit box
+##### Path edit box
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box-2.png)
 
+###### Pack
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
-| Path edit box | See and edit the path to your movie or image sequence files. |
-| Open | Open a new movie or image sequence files. A file dialog will appear. |
-| Refresh | Reread the movie or image sequence files. |
+With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.
 
+###### Path edit box
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Info string | Some information about the currently loaded movie. Frames, resolution and color space. |
-| Frames | The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video. |
-| Start | The start frame of the movie or image sequence |
-| Offset | Offset the number of the frame to use in the animation. -1 means off. |
-| Cyclic | Cycle the images in the movie. |
-| Auto Refresh | Always refresh image on frame changes. |
-| Deinterlace | Deinterlace the movie file on load. |
+See and edit the path to your movie or image sequence files.
 
+###### Open
 
-###### Color Space
+Open a new movie or image sequence files. A file dialog will appear.
+
+###### Refresh
+
+Reread the movie or image sequence files.
+
+###### Info string
+
+Some information about the currently loaded movie. Frames, resolution and color space.
+
+###### Frames
+
+The number of frames of the movie or image sequence. · **Match Movie Length**: Set Users Image Length to the one of this video.
+
+###### Start
+
+The start frame of the movie or image sequence
+
+###### Offset
+
+Offset the number of the frame to use in the animation. -1 means off.
+
+###### Cyclic
+
+Cycle the images in the movie.
+
+###### Auto Refresh
+
+Always refresh image on frame changes.
+
+###### Deinterlace
+
+Deinterlace the movie file on load.
+
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-2.png)
 
 Choose the color space type for the movie or image sequence files.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha-2.png)
 
 Choose the alpha channel mode. Straight or Premultiplied.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render-2.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Generated
+#### Source Type Generated
 
 ![Source Type Generated](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-generated.png)
 
-###### X / Y
+##### X / Y
 
 The image width and height.
 
-###### Float Buffer
+##### Float Buffer
 
 Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.
 
-###### Generated Type Blank
+##### Generated Type Blank
 
 ![Generated Type Blank](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-blank.png)
 
 This type displays an image with one blank color
 
-###### Color
+##### Color
 
 The color of the blank image.
 
-###### Generated Type UV Grid
+##### Generated Type UV Grid
 
 ![Generated Type UV Grid](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-uv-grid.png)
 
 This type displays a with a black and white checker texture but colored dots.
 
-###### Generated Type Color Grid
+##### Generated Type Color Grid
 
 ![Generated Type Color Grid](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-color-grid.png)
 
 This type displays a with a colored checker texture with numbers.
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-3.png)
 
 Choose the color space type for the image.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render-2.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Udim
+#### Source Type Udim
 
 ![Source Type Udim](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-udim.png)
 
 UDIM is an enhancement to the UV mapping and texturing workflow. And does not belong here. But in the UV Editor. It is just in the list because it shares the same menus with the UV Editor.
 
-###### Info string
+##### Info string
 
 Some information about the currently loaded image. Resolution and color space.
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-4.png)
 
 Choose the color space type for the movie or image sequence files.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha-2.png)
 
 Choose the alpha channel mode. Straight or Premultiplied.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with color space sRGB. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
 # Tool Tab
 
-### Tool Tab
+## Tool Tab
 
 ![Tool Tab](/docs2/images/editors/shader-editor/sidebar/tool-tab/tool-tab.png)
 
@@ -329,7 +376,7 @@ In the node editor we don't have something special here. The tool related settin
 
 # View Tab
 
-### View Tab - Annotation Panel
+## View Tab - Annotation Panel
 
 ![View Tab - Annotation Panel](/docs2/images/editors/shader-editor/sidebar/view-tab/view-tab-annotation-panel.png)
 
@@ -339,28 +386,35 @@ Contains view related settings. Which is in the node editor just the Annotations
 
 When you don't have drawn an annotation yet then the panel just contains a New button.
 
-#### Annotations prop
+### Annotations prop
 
 ![Annotations prop](/docs2/images/editors/shader-editor/sidebar/view-tab/annotations-prop.png)
 
 Add, remove and rename new annotations.
 
-##### Drop down box
+#### Drop down box
 
 ![Drop down box](/docs2/images/editors/shader-editor/sidebar/view-tab/drop-down-box.png)
 
 A list of the available annotation layers.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
-| Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
-| Add Annotation | Add a new annotation. |
-| Delete Annotation | Delete the annotation. |
+The name of the current annotation. You can rename the annotation to your needs here.
 
+##### Fake User
 
-#### List of Annotation Strokes
+Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
+
+##### Add Annotation
+
+Add a new annotation.
+
+##### Delete Annotation
+
+Delete the annotation.
+
+### List of Annotation Strokes
 
 ![List of Annotation Strokes](/docs2/images/editors/shader-editor/sidebar/view-tab/list-of-annotation-strokes.png)
 
@@ -372,14 +426,15 @@ You can change the color by clicking at the color field. A color dialog will pop
 
 The eye icon allows you to make it invisible And it has a search field.
 
+#### Thickness
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Thickness | The thickness of the annotation stroke. |
-| Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
+The thickness of the annotation stroke.
 
+#### Frame Locked/Unlocked
 
-#### Onion Skin
+Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.
+
+### Onion Skin
 
 ![Onion Skin](/docs2/images/editors/shader-editor/sidebar/view-tab/onion-skin.png)
 
@@ -393,7 +448,7 @@ With the numbers below the colors you can define how many frames before or after
 
 # Options Tab
 
-### Options Tab - Settings panel
+## Options Tab - Settings panel
 
 ![Options Tab - Settings panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-settings-panel.png)
 
@@ -403,213 +458,271 @@ The options tab moves around, dependent of what render engine you have chosen. W
 
 The Settings panel appears with a mesh object selected.
 
-#### Settings panel with Eevee
+### Settings panel with Eevee
 
 ![Settings panel with Eevee](/docs2/images/editors/shader-editor/sidebar/options-tab/settings-panel-with-eevee.png)
 
-##### Surface subpanel
+#### Surface subpanel
 
-###### Backface Culling
+##### Backface Culling
 
+###### Camera
 
-| Entry | What it does |
-| ------ | ------------------------------------------ |
-| Camera | Use backface culling. |
-| Shadow | Use backface culling when casting shadows. |
+Use backface culling.
 
+###### Shadow
 
-###### Displacement
+Use backface culling when casting shadows.
 
-###### Method
+##### Displacement
+
+##### Method
 
 ![Method](/docs2/images/editors/shader-editor/sidebar/options-tab/method.png)
 
 Method to use for the displacement.
 
-###### Transparency
+##### Transparency
 
-###### Transparent Shadows
+##### Transparent Shadows
 
 Use transparent shadows for this material if it contains a transparent bsdf node.
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/shader-editor/sidebar/options-tab/method-2.png)
 
 The rendering method. Forward rendering or Deferred rendering.
 
+###### Raytraced Transmissions
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- |
-| Raytraced Transmissions | Use raytracing instead light probes. |
-| From Shadow | Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree. |
+Use raytracing instead light probes.
 
+###### From Shadow
 
-###### Render
+Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree.
 
-###### Thickness
+##### Render
+
+##### Thickness
 
 ![Thickness](/docs2/images/editors/shader-editor/sidebar/options-tab/thickness.png)
 
 Approximation used to model the light interactions inside the object.
 
-###### Light Probe Volume Backfaces
+##### Light Probe Volume Backfaces
 
 Consider material single sided for light probe volume capture.
 
-##### Volume Subpanel
+#### Volume Subpanel
 
 ![Volume Subpanel](/docs2/images/editors/shader-editor/sidebar/options-tab/volume-subpanel.png)
 
-###### Intersection
+##### Intersection
 
 ![Intersection](/docs2/images/editors/shader-editor/sidebar/options-tab/intersection.png)
 
 Which inner part of the mesh will produce the volumetric effect.
 
-#### Settings panel with Cycles
+### Settings panel with Cycles
 
 ![Settings panel with Cycles](/docs2/images/editors/shader-editor/sidebar/options-tab/settings-panel-with-cycles.png)
 
-##### Pass Index
+#### Pass Index
 
 Index number for the material render index pass
 
-##### Surface sub panel
+#### Surface sub panel
 
-###### Displacement
+##### Displacement
 
 ![Displacement](/docs2/images/editors/shader-editor/sidebar/options-tab/displacement.png)
 
 Adjust the displacement method. Bump mapping is an old image based shader technique to fake displacement. Displacement deforms the geometry.
 
-###### Emission Sampling
+##### Emission Sampling
 
 ![Emission Sampling](/docs2/images/editors/shader-editor/sidebar/options-tab/emission-sampling.png)
 
 Sampling strategy for emissive surfaces.
 
+###### Transparent Shadows
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Transparent Shadows | Use transparent shadows for this material if it contains a Transparent BSDF. |
-| Bump Map Correction | Apply corrections to solve shadow terminator artifacts caused by bump mapping. |
+Use transparent shadows for this material if it contains a Transparent BSDF.
 
+###### Bump Map Correction
 
-###### Volume Sub panel
+Apply corrections to solve shadow terminator artifacts caused by bump mapping.
 
-###### Sampling
+##### Volume Sub panel
+
+##### Sampling
 
 ![Sampling](/docs2/images/editors/shader-editor/sidebar/options-tab/sampling.png)
 
 The volume sampling method.
 
-###### Interpolation
+##### Interpolation
 
 ![Interpolation](/docs2/images/editors/shader-editor/sidebar/options-tab/interpolation.png)
 
 The volume interpolation method. Linear or cubic.
 
-### Options Tab - Light panel
+## Options Tab - Light panel
 
 ![Options Tab - Light panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-light-panel.png)
 
 The Light panel appears with a light object selected.
 
-#### With Eevee + Cycles
+### With Eevee + Cycles
 
-##### Type
+#### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/options-tab/type.png)
 
 The light type. The light settings changes, dependent of what light type you have chosen.
 
-###### Animate Property
+##### Animate Property
 
 This property can be animated.
 
-##### Point light
+#### Point light
 
 ![Point light](/docs2/images/editors/shader-editor/sidebar/options-tab/point-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Soft Falloff | Apply falloff to avoid artefacts when light intersects with other objects. |
-| Radius | The size of the point light. |
+The light color.
 
+##### Temperature
 
-##### Sun light
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Soft Falloff
+
+Apply falloff to avoid artefacts when light intersects with other objects.
+
+##### Radius
+
+The size of the point light.
+
+#### Sun light
 
 ![Sun light](/docs2/images/editors/shader-editor/sidebar/options-tab/sun-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Strength | The strength of the light. This value is not in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Angle | The angular diameter for the sun as seen from the earth. |
+The light color.
 
+##### Temperature
 
-##### Spot light
+Use Blackbody Temperature to define a natural light color.
+
+##### Strength
+
+The strength of the light. This value is not in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Angle
+
+The angular diameter for the sun as seen from the earth.
+
+#### Spot light
 
 ![Spot light](/docs2/images/editors/shader-editor/sidebar/options-tab/spot-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
-| Soft Falloff | Apply falloff to avoid artefacts when light intersects with other objects. |
-| Radius | The size of the point light. |
+The light color.
 
+##### Temperature
 
-##### Area light
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Soft Falloff
+
+Apply falloff to avoid artefacts when light intersects with other objects.
+
+##### Radius
+
+The size of the point light.
+
+#### Area light
 
 ![Area light](/docs2/images/editors/shader-editor/sidebar/options-tab/area-light.png)
 
+##### Tint
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------- |
-| Tint | The light color. |
-| Temperature | Use Blackbody Temperature to define a natural light color. |
-| Power | The strength of the light in Watt. |
-| Exposure | Scales the power of the light exponentially. |
-| Normalize | Normalize light intensity by light area. |
+The light color.
 
+##### Temperature
 
-###### Shape
+Use Blackbody Temperature to define a natural light color.
+
+##### Power
+
+The strength of the light in Watt.
+
+##### Exposure
+
+Scales the power of the light exponentially.
+
+##### Normalize
+
+Normalize light intensity by light area.
+
+##### Shape
 
 ![Shape](/docs2/images/editors/shader-editor/sidebar/options-tab/shape.png)
 
 The shape of the light emitting area of the light.
 
-###### Size X / Y
+##### Size X / Y
 
 The size of the light emitting area of the light.
 
-#### With Workbench
+### With Workbench
 
 ![With Workbench](/docs2/images/editors/shader-editor/sidebar/options-tab/with-workbench.png)
 
-##### Type
+#### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/options-tab/type.png)
 
 The light type. The light settings changes, dependent of what light type you have chosen.
 
-### Options Tab - Viewport Display panel
+## Options Tab - Viewport Display panel
 
 ![Options Tab - Viewport Display panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-viewport-display-panel.png)
 
@@ -617,16 +730,21 @@ Adjust how the mesh object is displayed in the viewport when the viewport shadin
 
 The content is the same for all three render engines.
 
+### Color
 
-| Entry | What it does |
-| --------- | -------------- |
-| Color | The color. |
-| Metallic | Metallic look. |
-| Roughness | The roughness. |
+The color.
+
+### Metallic
+
+Metallic look.
+
+### Roughness
+
+The roughness.
 
 # Add Tab
 
-### Add Tab
+## Add Tab
 
 ![Add Tab](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab.png)
 
@@ -636,19 +754,19 @@ Here you can find the same nodes than in the Add menu. Panels are more convenien
 
 We won't explain the content of the panels again. The single nodes are explained in the add menu chapter.
 
-#### Usage
+### Usage
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
 
-### Add tab - Display Panel
+## Add tab - Display Panel
 
 ![Add tab - Display Panel](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab-display-panel.png)
 
-#### Icon Buttons
+### Icon Buttons
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
-#### Common
+### Common
 
 ![Common](/docs2/images/editors/shader-editor/sidebar/add-tab/common.png)
 
@@ -656,15 +774,15 @@ This checkbox allows you to display just the most common nodes for quicker searc
 
 # Relations Tab
 
-### Relations tab - Display Panel
+## Relations tab - Display Panel
 
-#### Icon Buttons
+### Icon Buttons
 
 ![Icon Buttons](/docs2/images/editors/shader-editor/sidebar/relations-tab/icon-buttons.png)
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
-### Relations tab - Group Panel
+## Relations tab - Group Panel
 
 ![Relations tab - Group Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-group-panel.png)
 
@@ -676,7 +794,7 @@ If you include a source node in your group, you will end up having the source no
 
 If you include an output node in the group, there will not be an output socket available from the group!
 
-#### Make Group
+### Make Group
 
 Groups the selected nodes together.
 
@@ -702,11 +820,11 @@ A group can be further collapsed by clicking at the triangle button in the upper
 
 The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.
 
-#### Group Insert
+### Group Insert
 
 Inserts the selected node into the selected group.
 
-##### Usage
+#### Usage
 
 Select the node.
 
@@ -714,7 +832,7 @@ Hold down shift, and select the group.
 
 Click the Group Insert button. The node will now be part of the group, and you will land in group edit mode. Press tab to exit the group edit mode.
 
-#### Group Input
+### Group Input
 
 ![Group Input](/docs2/images/editors/shader-editor/sidebar/relations-tab/group-input.png)
 
@@ -722,7 +840,7 @@ Adds a group input node.
 
 > **Note:** When at a top level, this node is unavailable. These are only available when inside a node group.
 
-#### Group Output
+### Group Output
 
 ![Group Output](/docs2/images/editors/shader-editor/sidebar/relations-tab/group-output.png)
 
@@ -730,32 +848,33 @@ Adds a group output node.
 
 > **Note:** When at a top level, this node is unavailable. These are only available when inside a node group.
 
+#### Toggle Edit Group
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------- |
-| Toggle Edit Group | Enter or exit the edit group mode. |
-| Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
+Enter or exit the edit group mode.
 
+#### Ungroup
 
-### Relations tab - Node Group Panel
+Ungroups an existing group. You need to be outside of the group edit mode.
+
+## Relations tab - Node Group Panel
 
 ![Relations tab - Node Group Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-node-group-panel.png)
 
 When you create a node group, then this node group is listed here. And can be dragged from there for reuse too.
 
-### Relations tab - Layout Panel
+## Relations tab - Layout Panel
 
 ![Relations tab - Layout Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-layout-panel.png)
 
 These nodes helps organizing the node layout.
 
-#### Frame
+### Frame
 
 ![Frame](/docs2/images/editors/shader-editor/header/add-menu-layout/frame.png)
 
 The Frame node allows you to drop nodes into a frame. This frame can be dragged around as a whole.
 
-##### Adding and Removing Nodes
+#### Adding and Removing Nodes
 
 ![Adding and Removing Nodes](/docs2/images/editors/shader-editor/header/add-menu-layout/adding-and-removing-nodes.jpg)
 
@@ -763,7 +882,7 @@ Nodes can be added by simply dropping them onto the frame. Or with the Join in N
 
 To remove a node from the frame use Remove from Frame.
 
-##### Resizing Frame
+#### Resizing Frame
 
 When the Frame node is first placed in the node editor workspace you can resize it by dragging one of the edges.
 
@@ -773,11 +892,11 @@ Once a node is placed in the Frame, the Frame shrinks around the nodes. You cann
 
 This behavior can be changed by disabling the *Shrink* option in the Item tab in the Properties panel. Then you can resize the frame again by dragging the edges.
 
-##### Label and Color
+#### Label and Color
 
 You can change the name of a frame in the Node panel. And you can give it a custom color by checking the Color checkbox and adjusting the color then.
 
-#### Reroute
+### Reroute
 
 Adds a reroute point that can be used to reroute connections. It allows just one input, but allows multiple output connections.
 
@@ -791,7 +910,7 @@ To quickly add a Reroute node into an existing connection, hold **Shift** and **
 
 When you exceed a specific angle amount between the reroute nodes, then the node connection becomes a sharp corner, and not longer a Bezier like soft curve.
 
-##### Move, Rotate, Scale
+#### Move, Rotate, Scale
 
 ![Move, Rotate, Scale](/docs2/images/editors/shader-editor/header/add-menu-layout/move-rotate-scale.png)
 
@@ -799,35 +918,35 @@ A normal node has a handler. The reroute dot not. You can't simply move it aroun
 
 # Group Tab
 
-### Group tab - Introduction
+## Group tab - Introduction
 
 ![Group tab - Introduction](/docs2/images/editors/shader-editor/sidebar/group-tab/group-tab-introduction.png)
 
 The Geometry Node sidebar Group tab at the right side contains options and settings for node groups nodes and socket input and output properties.
 
-### Group Properties Panel
+## Group Properties Panel
 
-#### Name
+### Name
 
 ![Name](/docs2/images/editors/shader-editor/sidebar/group-tab/name.png)
 
 Change the name of the current node group. Type in a new name and hit enter.
 
-#### Description
+### Description
 
 Change the description of the current node group. Type in a new name and hit enter.
 
-#### Color Tag
+### Color Tag
 
 ![Color Tag](/docs2/images/editors/shader-editor/sidebar/group-tab/color-tag.png)
 
 Changes the header color of the current node group.
 
-#### Node Width
+### Node Width
 
 The default width of the node.
 
-### Group Sockets Panel
+## Group Sockets Panel
 
 ![Group Sockets Panel](/docs2/images/editors/shader-editor/sidebar/group-tab/group-sockets-panel.png)
 
@@ -835,43 +954,49 @@ Manage the input and output properties of the Group Input and Output nodes.
 
 More than one input and output slot can be useful when you want to modify the geometry in the node group in more than one way.
 
-#### Group Socket List
+### Group Socket List
 
 List of available input and output sockets.
 
 > **Note:** The list can be sorted by dragging the items around.
 
-##### List
+#### List
 
 The list of input and output sockets.
 
-##### Name
+#### Name
 
 ![Name](/docs2/images/editors/shader-editor/sidebar/group-tab/name-2.png)
 
 Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.
 
-##### New Item
+#### New Item
 
 ![New Item](/docs2/images/editors/shader-editor/sidebar/group-tab/new-item.png)
 
 Adds a new input sockets to the list.
 
+##### Input
 
-| Entry | What it does |
-| ------ | ------------------------------------- |
-| Input | Adds a new input sockets to the list. |
-| Output | Adds a new output socket to the list. |
-| Panel | Adds a new panel socket to the list. |
+Adds a new input sockets to the list.
 
+##### Output
 
-| Entry | What it does |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![](/docs2/images/editors/shader-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item | Duplicates the active socket. |
-| ![](/docs2/images/editors/shader-editor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. |
+Adds a new output socket to the list.
 
+##### Panel
 
-##### Move Item Up/Down
+Adds a new panel socket to the list.
+
+##### ![](/docs2/images/editors/shader-editor/sidebar/group-tab/duplicate-item-icon.png) Duplicate Item
+
+Duplicates the active socket.
+
+##### ![](/docs2/images/editors/shader-editor/sidebar/group-tab/remove-item-icon.png) Remove Item
+
+Removes the selected input socket from the list.
+
+#### Move Item Up/Down
 
 ![Move Item Up/Down](/docs2/images/editors/shader-editor/sidebar/group-tab/move-item-up-down.png)
 
@@ -879,170 +1004,263 @@ Moves the active item to the specified direction. You can move the active item u
 
 > **Note:** You can also alternatively drag and drop the active item to re-order.
 
-#### Type
+### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/group-tab/type.png)
 
 What kind of node group input or output type it is. To know more about the properties of the socket types, refer to the next section.
 
-##### Type Float
+#### Type Float
 
 ![Type Float](/docs2/images/editors/shader-editor/sidebar/group-tab/type-float.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype.png)
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
 
-##### Type Integer
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional label
+
+Hide the label if not needed.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Integer
 
 ![Type Integer](/docs2/images/editors/shader-editor/sidebar/group-tab/type-integer.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype-2.png)
 
 Subtype of the default value.
 
+###### Default
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| Default | The default value for the socket. |
-| Min | The minimum value for the socket. **Note:** *This is only available for vector and float types.* |
-| Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
-| Optional label | Hide the label if not needed. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+The default value for the socket.
 
+###### Min
 
-##### Type Boolean
+The minimum value for the socket. **Note:** *This is only available for vector and float types.*
+
+###### Max
+
+The maximum value for the socket. ***Note:** This is only available for vector and float types.*
+
+###### Optional label
+
+Hide the label if not needed.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Boolean
 
 ![Type Boolean](/docs2/images/editors/shader-editor/sidebar/group-tab/type-boolean.png)
 
-
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default value for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
-
-
-##### Type Vector
-
-![Type Vector](/docs2/images/editors/shader-editor/sidebar/group-tab/type-vector.png)
-
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Default
+
+The default value for the socket.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Vector
+
+![Type Vector](/docs2/images/editors/shader-editor/sidebar/group-tab/type-vector.png)
+
+##### Description
+
+Add a tooltip to the socket description.
+
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype-3.png)
 
 What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.
 
+###### Dimensions
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Dimensions | How much dimensions to calculate. |
-| Default | The default vector. It changes, dependant of what dimensions you use. |
-| Min / Max | Minimum value and maximum value. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+How much dimensions to calculate.
 
+###### Default
 
-##### Type Color
+The default vector. It changes, dependant of what dimensions you use.
+
+###### Min / Max
+
+Minimum value and maximum value.
+
+###### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+###### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+###### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Color
 
 ![Type Color](/docs2/images/editors/shader-editor/sidebar/group-tab/type-color.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default color for the socket. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
 
-##### Type Menu
+The default color for the socket.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Menu
 
 ![Type Menu](/docs2/images/editors/shader-editor/sidebar/group-tab/type-menu.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Default | The default menu. |
-| Expanded | Draw the menu socket as an expanded drop down menu. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Default
 
-##### Type Shader
+The default menu.
+
+##### Expanded
+
+Draw the menu socket as an expanded drop down menu.
+
+##### Optional Label
+
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Shader
 
 ![Type Shader](/docs2/images/editors/shader-editor/sidebar/group-tab/type-shader.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
 
-##### Type Bundle
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Bundle
 
 ![Type Bundle](/docs2/images/editors/shader-editor/sidebar/group-tab/type-bundle.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
 
-##### Type Closure
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+#### Type Closure
 
 ![Type Closure](/docs2/images/editors/shader-editor/sidebar/group-tab/type-closure.png)
 
+##### Description
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Description | Add a tooltip to the socket description. |
-| Optional Label | Make the label optional. This may resul tin the label being skipped in some cases. |
-| Hide Value | Hide the input value even when the socket is not connected. |
-| Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
+Add a tooltip to the socket description.
 
+##### Optional Label
 
-### Animation Panel
+Make the label optional. This may resul tin the label being skipped in some cases.
+
+##### Hide Value
+
+Hide the input value even when the socket is not connected.
+
+##### Hide in Modifier
+
+Don’t show the value in the geometry nodes modifier interface.
+
+## Animation Panel
 
 ![Animation Panel](/docs2/images/editors/shader-editor/sidebar/group-tab/animation-panel.png)
 

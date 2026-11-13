@@ -86,12 +86,13 @@ Cloth presets.
 
 To add your own preset type in a name and click at the plus button behind the edit box. To remove a preset click at the minus button behind the preset.
 
+#### Quality Steps
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------------------------------- |
-| Quality Steps | Set the number of simulation steps per frame. Higher values result in better quality, but is slower. |
-| Speed multiplier | The cloth speed is multiplied by this value. |
+Set the number of simulation steps per frame. Higher values result in better quality, but is slower.
 
+#### Speed multiplier
+
+The cloth speed is multiplied by this value.
 
 ## Physical Properties subpanel
 
@@ -99,12 +100,13 @@ To add your own preset type in a name and click at the plus button behind the ed
 
 The physical settings for the cloth.
 
+### Vertex Mass
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------- |
-| Vertex Mass | The mass of the cloth material. |
-| Air Viscosity | Air has some thickness which slows falling things down. |
+The mass of the cloth material.
 
+### Air Viscosity
+
+Air has some thickness which slows falling things down.
 
 ### Bending Model
 
@@ -112,12 +114,13 @@ The physical settings for the cloth.
 
 Some settings are just available in angular bending model. Some just in linear bending model.
 
+#### Angular
 
-| Entry | What it does |
-| ------- | ---------------------------------------------- |
-| Angular | Cloth model with angular bending springs. |
-| Linear | Cloth model with linear bending springs (old). |
+Cloth model with angular bending springs.
 
+#### Linear
+
+Cloth model with linear bending springs (old).
 
 ### Stiffness sub subpanel
 
@@ -125,15 +128,25 @@ Some settings are just available in angular bending model. Some just in linear b
 
 ![Stiffness sub subpanel](/docs2/images/editors/properties/physics-properties-tab/cloth-panel/stiffness-sub-subpanel-2.png)
 
+#### Tension
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------- |
-| Tension | Angular bending. How much the material resists stretching. |
-| Compression | Angular Bending. How much the material resists compression. |
-| Structural | Linear bending. Overall stiffness of the cloth. |
-| Shear | How much the material resists shearing. |
-| Bending | Wrinkle coefficient. Higher creates more large folds. |
+Angular bending. How much the material resists stretching.
 
+#### Compression
+
+Angular Bending. How much the material resists compression.
+
+#### Structural
+
+Linear bending. Overall stiffness of the cloth.
+
+#### Shear
+
+How much the material resists shearing.
+
+#### Bending
+
+Wrinkle coefficient. Higher creates more large folds.
 
 ### Damping sub subpanel
 
@@ -141,15 +154,25 @@ Some settings are just available in angular bending model. Some just in linear b
 
 ![Damping sub subpanel](/docs2/images/editors/properties/physics-properties-tab/cloth-panel/damping-sub-subpanel-2.png)
 
+#### Tension
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------- |
-| Tension | Angular bending. Amount of damping in stretching behavior. |
-| Compression | Angular bending. Amount of damping in compression behavior. |
-| Structural | Linear bending. Amount of damping in stretching behavior (only in linear bending model). |
-| Shear | Amount of damping in shearing behavior. |
-| Bending | Amount of damping in bending behavior. |
+Angular bending. Amount of damping in stretching behavior.
 
+#### Compression
+
+Angular bending. Amount of damping in compression behavior.
+
+#### Structural
+
+Linear bending. Amount of damping in stretching behavior (only in linear bending model).
+
+#### Shear
+
+Amount of damping in shearing behavior.
+
+#### Bending
+
+Amount of damping in bending behavior.
 
 ### Internal Springs sub subpanel
 
@@ -159,18 +182,37 @@ Cloth physics are simulated through Springs connecting vertices on the surface o
 
 You need to use the bending model Angular.
 
+#### Max Spring Creation Length
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Max Spring Creation Length | The maximum length an internal spring can have during creation. If the distance between internal points is greater than this, no internal spring will be created between these points. A length of zero means that there is no length limit. |
-| Max Creation Diversion | The maximum angle that is allowed to use to connect the internal points can diverge from the vertex normal. |
-| Check Surface Normals | Requires the points the internal springs connect to have opposite normal directions. |
-| Tension | How much the material resists stretching. |
-| Compression | How much the material resists compression. |
-| Vertex Group | The Tension and Compression of internal springs can be controlled via a Vertex Group to specify which the portions of the mesh have internal springs or the spring strength. |
-| Max Tension | Maximum tension stiffness value. |
-| Max Compression | Maximum Compression stiffness value. |
+The maximum length an internal spring can have during creation. If the distance between internal points is greater than this, no internal spring will be created between these points. A length of zero means that there is no length limit.
 
+#### Max Creation Diversion
+
+The maximum angle that is allowed to use to connect the internal points can diverge from the vertex normal.
+
+#### Check Surface Normals
+
+Requires the points the internal springs connect to have opposite normal directions.
+
+#### Tension
+
+How much the material resists stretching.
+
+#### Compression
+
+How much the material resists compression.
+
+#### Vertex Group
+
+The Tension and Compression of internal springs can be controlled via a Vertex Group to specify which the portions of the mesh have internal springs or the spring strength.
+
+#### Max Tension
+
+Maximum tension stiffness value.
+
+#### Max Compression
+
+Maximum Compression stiffness value.
 
 ### Pressure sub subpanel
 
@@ -180,15 +222,25 @@ Cloth pressure allows the simulation of soft-shelled objects such as balloons or
 
 > **Note:** Non-manifold meshes will work with cloth pressure. But pressure will escape out of the mesh holes and cause drifting or propulsion forces. One way to get around this is by using the Vertex Group to exclude the non-manifold portions of the mesh.
 
+#### Pressure
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pressure | The uniform pressure that is constantly applied to the mesh. This value can be negative to simulate implosions or any other case where an object has outside pressure pushing inwards. |
-| Custom Volume | Use the Target Volume parameter as the initial volume for the cloth. This avoids having to use the Pressure to first inflate the object. |
-| Target Volume | The mesh volume where the inner/outer pressure will be the same. If set to zero the volume will not contribute to the total pressure. |
-| Factor | Scalar control over the overall pressure. |
-| Vertex Group | Cloth pressure can be controlled via a Vertex Group to specify which the portions of the mesh to apply pressure. Zero weight means no pressure while a weight of one means full pressure. Note, faces with a vertex that has zero weight will be excluded from the Target Volume calculation. |
+The uniform pressure that is constantly applied to the mesh. This value can be negative to simulate implosions or any other case where an object has outside pressure pushing inwards.
 
+#### Custom Volume
+
+Use the Target Volume parameter as the initial volume for the cloth. This avoids having to use the Pressure to first inflate the object.
+
+#### Target Volume
+
+The mesh volume where the inner/outer pressure will be the same. If set to zero the volume will not contribute to the total pressure.
+
+#### Factor
+
+Scalar control over the overall pressure.
+
+#### Vertex Group
+
+Cloth pressure can be controlled via a Vertex Group to specify which the portions of the mesh to apply pressure. Zero weight means no pressure while a weight of one means full pressure. Note, faces with a vertex that has zero weight will be excluded from the Target Volume calculation.
 
 ## Cache subpanel
 
@@ -227,21 +279,33 @@ The list of available caches. The caches have no name by default. Double click t
 
 You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.
 
+#### Drag Handler
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The two vertical lines at the end is a handler with which you can expand the list.
 
+#### Search Field
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Add New Cache | Add a new cache. |
-| Delete current Cache | Deletes the selected cache. |
-| Simulation start | The start frame of the simulation. |
-| End | The end frame of the simulation. |
-| Info string | An info string. Gives different messages, dependent of the status. |
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
 
+#### Add New Cache
+
+Add a new cache.
+
+#### Delete current Cache
+
+Deletes the selected cache.
+
+#### Simulation start
+
+The start frame of the simulation.
+
+#### End
+
+The end frame of the simulation.
+
+#### Info string
+
+An info string. Gives different messages, dependent of the status.
 
 ### Disk Cache
 
@@ -259,13 +323,17 @@ When this option is enabled, linked versions of the object will reference the sa
 
 The compression level for cached files.
 
+##### None
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------- |
-| None | Do not compress the cache. |
-| Light | Compression will optimize the speed of compressing/decompressing operations over file size. |
-| Heavy | Compression will result in smaller cache files, but requires more CPU power to compress / decompress. |
+Do not compress the cache.
 
+##### Light
+
+Compression will optimize the speed of compressing/decompressing operations over file size.
+
+##### Heavy
+
+Compression will result in smaller cache files, but requires more CPU power to compress / decompress.
 
 ### Bake / Delete Bake
 
@@ -279,15 +347,25 @@ The baking progress can be seen in the footer. You need to be in Object Mode to 
 
 ![Bake / Delete Bake](/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png)
 
+#### Calculate To Frame
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Calculate To Frame | Bake only up to the current frame. Limited by End frame set in the cache settings. |
-| Current Cache to Bake | Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it. |
-| Bake All Dynamics | Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types. |
-| Delete All Bakes | Free bakes of all physics systems in the scene, even those of different types. |
-| Update All To Frame | Bake all physics systems in the scene to the current frame. |
+Bake only up to the current frame. Limited by End frame set in the cache settings.
 
+#### Current Cache to Bake
+
+Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it.
+
+#### Bake All Dynamics
+
+Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.
+
+#### Delete All Bakes
+
+Free bakes of all physics systems in the scene, even those of different types.
+
+#### Update All To Frame
+
+Bake all physics systems in the scene to the current frame.
 
 ## Shape subpanel
 
@@ -366,14 +444,21 @@ If the cloth object needs to be deflected by some other object. To deflect a clo
 
 > **Note:** If your colliding object is not a mesh object, such as a NURBS surface, or a text object, you must convert it to a mesh object first.
 
+#### Distance
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Distance | The distance another object must get to the cloth for the simulation to repel the cloth out of the way. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value. |
-| Impulse Clamping | Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision. |
-| Vertex Group | Triangles with all vertices in this group are not used during object collision. |
-| Collision Collection | Only objects that are a part of this Collection can collide with the cloth. Note that these objects must also have Collision physics enabled. |
+The distance another object must get to the cloth for the simulation to repel the cloth out of the way. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value.
 
+#### Impulse Clamping
+
+Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision.
+
+#### Vertex Group
+
+Triangles with all vertices in this group are not used during object collision.
+
+#### Collision Collection
+
+Only objects that are a part of this Collection can collide with the cloth. Note that these objects must also have Collision physics enabled.
 
 ### Self-Collisions sub subpanel
 
@@ -383,14 +468,21 @@ Real cloth cannot penetrate itself, so you normally want the cloth to self-colli
 
 > **Tip:** A flag, viewed from a distance does not need this enabled, but a close-up of a cape or blouse on a character should have this enabled.
 
+#### Friction
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Friction | A coefficient for how slippery the cloth is when it collides with itself. For example, silk has a lower coefficient of friction than cotton. |
-| Distance | As cloth at this distance begins to repel away from itself. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value. |
-| Impulse Clamping | Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision. |
-| Vertex Group | Only vertices that are a part of this Vertex Group can collide with each other. |
+A coefficient for how slippery the cloth is when it collides with itself. For example, silk has a lower coefficient of friction than cotton.
 
+#### Distance
+
+As cloth at this distance begins to repel away from itself. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value.
+
+#### Impulse Clamping
+
+Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision.
+
+#### Vertex Group
+
+Only vertices that are a part of this Vertex Group can collide with each other.
 
 ## Property Weights subpanel
 
@@ -398,19 +490,41 @@ Real cloth cannot penetrate itself, so you normally want the cloth to self-colli
 
 This panel is used to constrain certain cloth properties to a certain vertex group. The properties that they control can be found in a combination of the Physical Properties and Shape panels.
 
+### Structural Group
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------- |
-| Structural Group | Defines a vertex group to control over structural stiffness. |
-| Max Tension | Maximum tension stiffness value. |
-| Max Compression | Maximum Compression stiffness value. |
-| Shear Group | Vertex group for fine control over shear stiffness. |
-| Max Shearing | Maximum shear scaling value. |
-| Bending Group | Vertex group for fine control over bending stiffness. |
-| Max Bending | Maximum bending stiffness value. |
-| Shrinking Group | Vertex group for shrinking cloth. |
-| Max Shrinking | Max amount to shrink cloth by, specifying a negative value controls the max amount for the cloth to grow. |
+Defines a vertex group to control over structural stiffness.
 
+### Max Tension
+
+Maximum tension stiffness value.
+
+### Max Compression
+
+Maximum Compression stiffness value.
+
+### Shear Group
+
+Vertex group for fine control over shear stiffness.
+
+### Max Shearing
+
+Maximum shear scaling value.
+
+### Bending Group
+
+Vertex group for fine control over bending stiffness.
+
+### Max Bending
+
+Maximum bending stiffness value.
+
+### Shrinking Group
+
+Vertex group for shrinking cloth.
+
+### Max Shrinking
+
+Max amount to shrink cloth by, specifying a negative value controls the max amount for the cloth to grow.
 
 ## Field Weights subpanel
 

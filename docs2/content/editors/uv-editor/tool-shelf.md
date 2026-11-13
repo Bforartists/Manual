@@ -42,13 +42,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
@@ -60,12 +56,13 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 ![Tool Settings](/docs2/images/editors/uv-editor/tool-shelf/tool-settings-2.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The brush radius. |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The brush radius.
 
 #### Select Lasso
 
@@ -81,13 +78,9 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 ### Cursor
 
@@ -103,12 +96,13 @@ Activates the move tool. Activating the move tool also reveals a move widget at 
 
 When you click at one of the square buttons at the icon, then you can move the object along the plane of the two adjacent axis. The rectangle buttons between the arrows allows you to move in direction of the blue and green arrows. This can also be done by clicking at the tip of the arrow and holding down shift. Then you can move the cube along the two other axis.
 
+#### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 #### Header Values
 
@@ -148,9 +142,11 @@ When you want to move into a specific axis, then press X or Y to limit the movem
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Move
+#### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/uv-editor/tool-shelf/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move
 
@@ -172,14 +168,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Rotate
 
@@ -187,12 +190,13 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Activates the Rotate tool. Activating the move tool also reveals a rotate widget at the object. This widget allows you to rotate the object, by using the corresponding axis.
 
+#### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision rotation | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision rotation
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 #### Header Values
 
@@ -226,9 +230,11 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Rotate
+#### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/tool-shelf/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -253,14 +259,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Scale
 
@@ -270,12 +283,13 @@ Activates the Scale tool. Activating the scale tool also reveals a traditional s
 
 The rectangle buttons between the arrows allows you to scale in direction of the adjacent arrows. This can also be done by clicking at the tip of the arrow and holding down shift. Then you can scale the cube along the two other axis.
 
+#### Snapping
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision Scale | When you hold down shift, then you will have a much slower but also much preciser scale. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision Scale
+
+When you hold down shift, then you will have a much slower but also much preciser scale.
 
 #### Header Values
 
@@ -307,9 +321,11 @@ When you want to rotate a specific axis, then press X or Y to limit the scale to
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/uv-editor/tool-shelf/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Scale
 
@@ -331,14 +347,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Transform
 
@@ -400,12 +423,8 @@ Clicking at the left color field reveals a color picker. Define the color for th
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
-
+- **Radius**: The radius for the stroke stabilization.
+- **Factor**: Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 #### Annotate Line
 
@@ -475,7 +494,7 @@ You need to be in UV selection mode Vertice, Edge or Face, and with Use UV Selec
 
 ![Rip Region](/docs2/images/editors/uv-editor/tool-shelf/rip-region-2.png)
 
-#### Last Operator UV Rip Move
+#### Adjust Last Operation - UV Rip Move
 
 ![Last Operator UV Rip Move](/docs2/images/editors/uv-editor/tool-shelf/last-operator-uv-rip-move.png)
 
@@ -504,14 +523,21 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+##### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+##### Proportional Size
+
+See and adjust the falloff radius.
+
+##### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+##### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Grab
 
@@ -525,12 +551,13 @@ The brush radius can be changed with hotkey F. See also the Tool settings in the
 
 ![Tool Settings](/docs2/images/editors/uv-editor/tool-shelf/tool-settings-12.png)
 
+##### Size
 
-| Entry | What it does |
-| -------- | ------------------------------- |
-| Size | The size of the grab brush. |
-| Strength | The strength of the grab brush. |
+The size of the grab brush.
 
+##### Strength
+
+The strength of the grab brush.
 
 ##### Falloff
 
@@ -542,12 +569,13 @@ The falloff of the grab brush.
 
 ##### Options
 
+###### Lock Borders
 
-| Entry | What it does |
-| ------------------ | ---------------------------------- |
-| Lock Borders | Disable editing of boundary edges. |
-| Sculpt all Islands | Brush operates on all islands. |
+Disable editing of boundary edges.
 
+###### Sculpt all Islands
+
+Brush operates on all islands.
 
 ##### Drag
 
@@ -567,12 +595,13 @@ The brush radius can be changed with hotkey F. See also the Tool settings in the
 
 ![Tool Settings](/docs2/images/editors/uv-editor/tool-shelf/tool-settings-13.png)
 
+##### Size
 
-| Entry | What it does |
-| -------- | ------------------------------- |
-| Size | The size of the grab brush. |
-| Strength | The strength of the grab brush. |
+The size of the grab brush.
 
+##### Strength
+
+The strength of the grab brush.
 
 ##### Falloff
 
@@ -584,12 +613,13 @@ The falloff of the grab brush.
 
 ##### Options
 
+###### Lock Borders
 
-| Entry | What it does |
-| ------------------ | ---------------------------------- |
-| Lock Borders | Disable editing of boundary edges. |
-| Sculpt all Islands | Brush operates on all islands. |
+Disable editing of boundary edges.
 
+###### Sculpt all Islands
+
+Brush operates on all islands.
 
 ##### Method
 
@@ -615,12 +645,13 @@ The brush radius can be changed with hotkey F. See also the Tool settings in the
 
 ![Tool Settings](/docs2/images/editors/uv-editor/tool-shelf/tool-settings-14.png)
 
+##### Size
 
-| Entry | What it does |
-| -------- | ------------------------------- |
-| Size | The size of the grab brush. |
-| Strength | The strength of the grab brush. |
+The size of the grab brush.
 
+##### Strength
+
+The strength of the grab brush.
 
 ##### Falloff
 
@@ -632,12 +663,13 @@ The falloff of the grab brush.
 
 ##### Options
 
+###### Lock Borders
 
-| Entry | What it does |
-| ------------------ | ---------------------------------- |
-| Lock Borders | Disable editing of boundary edges. |
-| Sculpt all Islands | Brush operates on all islands. |
+Disable editing of boundary edges.
 
+###### Sculpt all Islands
+
+Brush operates on all islands.
 
 ##### Drag
 

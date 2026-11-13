@@ -8,8 +8,8 @@ path:
   - "Mesh"
   - "Sculpt Mode"
   - "Header"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The header menus of Mesh › Sculpt Mode."
 order: 10
@@ -27,18 +27,37 @@ Face Sets is a kind of a mask that shows in different colors to assist in sculpt
 
 In the Face Sets menu you can create and manage Face Sets.
 
+### Face Sets from Mask
 
-| Entry | What it does |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Face Sets from Mask | Creates a face set from the current mask. |
-| Face Sets from Visible | Creates a face set from the visible geometry. |
-| Face Sets from Edit Mode Selection | Creates a face set from the selection that you do in edit mode. |
-| Grow Face Sets | Grows the face sets. |
-| Shrink Face Sets | Shrinks the face sets. |
-| Expand Face Set by Topology | Expands a face set from a starting point on the topology. Click and drag on the mesh once you start the operator. |
-| Expand Active Face Set | Expands a face set from the active face set under the mouse cursor. Click and drag on the face set once you start the operator. |
-| Extract Face Set | Creates a new mesh object from the selected face set. The mouse turns into a color picker to pick the face set when you activate this too. |
+Creates a face set from the current mask.
 
+### Face Sets from Visible
+
+Creates a face set from the visible geometry.
+
+### Face Sets from Edit Mode Selection
+
+Creates a face set from the selection that you do in edit mode.
+
+### Grow Face Sets
+
+Grows the face sets.
+
+### Shrink Face Sets
+
+Shrinks the face sets.
+
+### Expand Face Set by Topology
+
+Expands a face set from a starting point on the topology. Click and drag on the mesh once you start the operator.
+
+### Expand Active Face Set
+
+Expands a face set from the active face set under the mouse cursor. Click and drag on the face set once you start the operator.
+
+### Extract Face Set
+
+Creates a new mesh object from the selected face set. The mouse turns into a color picker to pick the face set when you activate this too.
 
 ### Initialize Face Sets
 
@@ -69,12 +88,17 @@ You need to click at the face set that you want to hide. Same goes for the toggl
 
 ![Show/Hide submenu](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/show-hide-submenu-2.png)
 
+#### Toggle Visibility
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------- |
-| Toggle Visibility | Toggles the visibility of the active face set. |
-| Show all Geometry | Reveals all hidden geometry. |
-| Hide Active Face Set | Hides the active face set. |
+Toggles the visibility of the active face set.
+
+#### Show all Geometry
+
+Reveals all hidden geometry.
+
+#### Hide Active Face Set
+
+Hides the active face set.
 
 # Mask menu
 
@@ -88,28 +112,61 @@ You need to click at the face set that you want to hide. Same goes for the toggl
 
 Contains legacy operators also found the in the toolshelf as modal operations.
 
+#### Box mask
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Box mask | Select a part of the mesh by box select. |
-| Lasso Mask | Select a part of the mesh by lasso select. |
-| Mask by Color | Select a part of the mesh by its color. Note that this does not work with a multiresolution modifier at the mesh. You will get a warning that multires is not supported. |
+Select a part of the mesh by box select.
 
+#### Lasso Mask
 
-| Entry | What it does |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Invert Mask | Inverts the mask. |
-| Fill Mask | Fills the mask with a given value, or inverts its values. |
-| Clear Mask | Clears the mask. |
-| Smooth Mask | Smoothens the mask selection. |
-| Sharpen Mask | Sharpens the mask selection. |
-| Grow Mask | Grows the mask |
-| Shrink Mask | Shrinks the mask. |
-| Increase Contrast | Increases the contrast between masked parts and not masked parts. |
-| Decrease Contrast | Decreases the contrast between masked parts and not masked parts. |
-| Expand Mask by Topology | Expands the mask from the initial active vertex under the mouse. Starts with a new mask. Watch the tool tip in the footer for further instructions. |
-| Expand Mask by Curvature | Expands the mask from the initial active vertex under the mouse. Keeps the previous mask. Watch the tool tip in the footer for further instructions. |
+Select a part of the mesh by lasso select.
 
+#### Mask by Color
+
+Select a part of the mesh by its color. Note that this does not work with a multiresolution modifier at the mesh. You will get a warning that multires is not supported.
+
+#### Invert Mask
+
+Inverts the mask.
+
+#### Fill Mask
+
+Fills the mask with a given value, or inverts its values.
+
+#### Clear Mask
+
+Clears the mask.
+
+#### Smooth Mask
+
+Smoothens the mask selection.
+
+#### Sharpen Mask
+
+Sharpens the mask selection.
+
+#### Grow Mask
+
+Grows the mask
+
+#### Shrink Mask
+
+Shrinks the mask.
+
+#### Increase Contrast
+
+Increases the contrast between masked parts and not masked parts.
+
+#### Decrease Contrast
+
+Decreases the contrast between masked parts and not masked parts.
+
+#### Expand Mask by Topology
+
+Expands the mask from the initial active vertex under the mouse. Starts with a new mask. Watch the tool tip in the footer for further instructions.
+
+#### Expand Mask by Curvature
+
+Expands the mask from the initial active vertex under the mouse. Keeps the previous mask. Watch the tool tip in the footer for further instructions.
 
 ### Mask Extract
 
@@ -119,16 +176,29 @@ Creates a new object out of the masked mesh part.
 
 This operation cannot be undone!
 
+#### Threshold
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| Threshold | The sharpness of the mask border. |
-| Add Boundary Loop | Add a boundary loop at the border of the new created geometry. This can help to make the geometry more stable. |
-| Smooth Iterations | How many iterations to smooth the new created geometry. |
-| Project to Sculpt | Project the extracted mesh into the original sculpt. |
-| Extract as Solid | Extract the new created mesh as a solid mesh. |
-| OK | Apply the Mask Extract tool. |
+The sharpness of the mask border.
 
+#### Add Boundary Loop
+
+Add a boundary loop at the border of the new created geometry. This can help to make the geometry more stable.
+
+#### Smooth Iterations
+
+How many iterations to smooth the new created geometry.
+
+#### Project to Sculpt
+
+Project the extracted mesh into the original sculpt.
+
+#### Extract as Solid
+
+Extract the new created mesh as a solid mesh.
+
+#### OK
+
+Apply the Mask Extract tool.
 
 ### Mask Slice
 
@@ -136,12 +206,13 @@ This operation cannot be undone!
 
 Slices the paint mask from the mesh.
 
+#### Mask Slice and fill Holes
 
-| Entry | What it does |
-| ------------------------- | ------------------------------------------------------------------------ |
-| Mask Slice and fill Holes | Slices the paint mask from the mesh. And fills existing holes. |
-| Mask Slice to new Object | Slices the paint mask from the mesh, and creates a new object out of it. |
+Slices the paint mask from the mesh. And fills existing holes.
 
+#### Mask Slice to new Object
+
+Slices the paint mask from the mesh, and creates a new object out of it.
 
 ### Mask from Cavity
 
@@ -207,12 +278,13 @@ Activates the old move tool. The old move tool does not show a widget!
 
 Note that the hotkey for this tool is not displayed correctly. But can't be fixed by us. The hotkey is ctrl W
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ##### Header Values
 
@@ -250,9 +322,11 @@ This can be combined with the numerical input. Type in X, type in X again to use
 
 The widget can have different orientations. The menu items should be self explaining.
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X, Y Z
 
@@ -270,14 +344,21 @@ The widget can have different orientations. The menu items should be self explai
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rotate
 
@@ -315,9 +396,11 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to rotate by 20 degree. Release the mouse to confirm.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-rotate.png)
+
+Change the settings of **Rotate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -342,25 +425,33 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale
 
 Activates the old Scale tool. This tool has no widget!
 
+##### Snapping
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision Scale | When you hold down shift, then you will have a much slower but also much preciser scale. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision Scale
+
+When you hold down shift, then you will have a much slower but also much preciser scale.
 
 ##### Header Values
 
@@ -384,9 +475,11 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 This can be combined with the numerical input. Hold down mouse, type in X, type in X again to use the local space, type in 20 to scale by 20 units. Release the mouse to confirm.
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -411,14 +504,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Box Hide
 
@@ -426,15 +526,25 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Calls a rectangle tool that allows you to hide away mesh parts.
 
+##### Box Show
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------- |
-| Box Show | Calls a rectangle tool that allows you to reveal hidden mesh parts. |
-| Lasso Hide | Calls a lasso tool that allows you to hide away mesh parts. |
-| Lasso Show | Calls a lasso tool that allows you to reveal hidden mesh parts. |
-| Line Hide | Calls a line tool which hides the vertices at the one side away. |
-| Line Show | Calls a line tool that allows you to reveal hidden mesh parts. |
+Calls a rectangle tool that allows you to reveal hidden mesh parts.
 
+##### Lasso Hide
+
+Calls a lasso tool that allows you to hide away mesh parts.
+
+##### Lasso Show
+
+Calls a lasso tool that allows you to reveal hidden mesh parts.
+
+##### Line Hide
+
+Calls a line tool which hides the vertices at the one side away.
+
+##### Line Show
+
+Calls a line tool that allows you to reveal hidden mesh parts.
 
 #### Polyline Hide
 
@@ -452,14 +562,21 @@ Calls a poly line tool that allows you to reveal hidden mesh parts after you dra
 
 Calls a rectangle tool that cuts away mesh parts, dependent of the view.
 
+##### Lasso Trim
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lasso Trim | Draw a free lasso shape, and the mesh inside it is cut away, seen from the current view. |
-| Line Trim | Calls a line tool that cuts away mesh parts based on ab underside of a line that you can draw from the first click to a second click. The line will show a gradient, any part of the mesh on that side of the gradient will be booleaned. |
-| Line Project | Draw a line, and the mesh on the shaded side is flattened onto that line. |
-| Polyline Trim | Click point by point to draw a shape with straight sides, then confirm. The mesh inside it is cut away, seen from the current view. |
+Draw a free lasso shape, and the mesh inside it is cut away, seen from the current view.
 
+##### Line Trim
+
+Calls a line tool that cuts away mesh parts based on ab underside of a line that you can draw from the first click to a second click. The line will show a gradient, any part of the mesh on that side of the gradient will be booleaned.
+
+##### Line Project
+
+Draw a line, and the mesh on the shaded side is flattened onto that line.
+
+##### Polyline Trim
+
+Click point by point to draw a shape with straight sides, then confirm. The mesh inside it is cut away, seen from the current view.
 
 ### Transform submenu
 
@@ -471,9 +588,11 @@ Adds a mesh filter that casts the mesh to a sphere shape.
 
 Activate the tool, click at the mesh, and adjust the sphere shape in the last operator panel.
 
-##### Last operator Filter Mesh
+##### Adjust Last Operation - Filter Mesh
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
+
+Change the settings of **Filter Mesh** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -506,9 +625,11 @@ Edits the current active face set.
 
 Creates a smooth as possible geometry patch from the face set, miniming changes in vertex tangents.
 
-#### Last Operator Edit Face Sets
+#### Adjust Last Operation - Edit Face Sets
 
 ![Last Operator Edit Face Sets](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-edit-face-sets.png)
+
+Change the settings of **Edit Face Sets** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -516,12 +637,13 @@ Creates a smooth as possible geometry patch from the face set, miniming changes 
 
 The face set modification mode.
 
+###### Strength
 
-| Entry | What it does |
-| ------------- | ------------------------------------------- |
-| Strength | How strong the operation should be applied. |
-| Modify Hidden | Also modify hidden geometry. |
+How strong the operation should be applied.
 
+###### Modify Hidden
+
+Also modify hidden geometry.
 
 ### Box Add
 
@@ -545,25 +667,43 @@ Click point by point to draw a shape with straight sides, then confirm. New mesh
 
 An act-once operator that smoothens the object.
 
+#### Surface Smooth
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------ |
-| Surface Smooth | An act-once operator that smoothens the surface while preserving volume. |
-| Inflate | An act-once operator that inflates the surface volume. |
-| Relax Topology | An act-once operator that relaxes the topology of the mesh. |
-| Relax Face Sets | An act-once operator that relaxes the face sets and smooths them out. |
-| Sharpen | An act-once operator that sharpens the face sets. |
-| Enhance Details | An act-once operator that enhances the details of the mesh. |
-| Erase Multires Displacement | An act-once operator that erases multiresolution displacement. |
+An act-once operator that smoothens the surface while preserving volume.
 
+#### Inflate
+
+An act-once operator that inflates the surface volume.
+
+#### Relax Topology
+
+An act-once operator that relaxes the topology of the mesh.
+
+#### Relax Face Sets
+
+An act-once operator that relaxes the face sets and smooths them out.
+
+#### Sharpen
+
+An act-once operator that sharpens the face sets.
+
+#### Enhance Details
+
+An act-once operator that enhances the details of the mesh.
+
+#### Erase Multires Displacement
+
+An act-once operator that erases multiresolution displacement.
 
 ### Randomize
 
 An act-once operator that randomizes the mesh topology.
 
-#### Last operator Filter Mesh
+#### Adjust Last Operation - Filter Mesh
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
+
+Change the settings of **Filter Mesh** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -592,9 +732,11 @@ Subdivide is a menu where you can quickly set the subdivision level of the selec
 
 SDS happens at Object mode level. Even when you apply it in the Sculpt Mode! And it happens at the whole object. The sculpting though still happens at the base mesh.
 
-#### Last Operator Subdivision Set
+#### Adjust Last Operation - Subdivision Set
 
 ![Last Operator Subdivision Set](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-subdivision-set.png)
+
+Change the settings of **Subdivision Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Level
 
@@ -616,7 +758,11 @@ Samples the vertex color attribute of the active vertex.
 
 Flood fills the vertex colors with the current vertex color value. Applies a vertex color to the selected or affected geometry during sculpting. Useful for painting, shading, or marking areas directly on the mesh without switching to Vertex Paint mode.
 
-#### Last operator Fill
+#### Adjust Last Operation - Fill
+
+Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fill](/docs2/images/editors/3d-viewport/mesh/sculpt/adjust-last-operation-set-vertex-color.png)
 
 
 | Entry | What it does |
@@ -631,9 +777,11 @@ Flood fills the vertex colors with the current vertex color value. Applies a ver
 
 Sets the pivot to the chosen location. The menu items should be self explaining. So we don't repeat them here.
 
-#### Last operator Set Pivot Position
+#### Adjust Last Operation - Set Pivot Position
 
 ![Last operator Set Pivot Position](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-set-pivot-position.png)
+
+Change the settings of **Set Pivot Position** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -647,9 +795,11 @@ How to set the pivot to.
 
 Toggles the visibility of face sets.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
+
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -661,9 +811,11 @@ The show hide modes for face sets.
 
 Makes the active face sets invisible.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
+
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 
@@ -679,9 +831,11 @@ Makes all invisible mesh parts visible again.
 
 Toggles the visibility of the selected face sets.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
+
+Change the settings of **Face Sets Visibility** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Mode
 

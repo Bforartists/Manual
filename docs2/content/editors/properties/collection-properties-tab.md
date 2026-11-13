@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Collection Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.7 Editors - Properties Editor - Collection Properties Tab.odt
@@ -27,13 +27,17 @@ The collection tab provides you with collection related settings.
 
 Set restrictions for the selected collection(s).
 
+### Selectable
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selectable | Make this collection and its content selectable. |
-| Show in Renders | Render the content of the collection. |
-| View Layer sub panel | **Include**: Include the collection in the scene. · **Holdout**: Mask out objects in collection from view layer. · **Indirect Only**: Make the objects in the collection just contribute indirectly. By light or shadow or reflections. |
+Make this collection and its content selectable.
 
+### Show in Renders
+
+Render the content of the collection.
+
+### View Layer sub panel
+
+**Include**: Include the collection in the scene. · **Holdout**: Mask out objects in collection from view layer. · **Indirect Only**: Make the objects in the collection just contribute indirectly. By light or shadow or reflections.
 
 ## Instancing panel
 
@@ -47,13 +51,53 @@ Adjust an offset from the origin when instancing the collection.
 
 ![Instance offset menu](/docs2/images/editors/properties/collection-properties-tab/instance-offset-menu.png)
 
+#### Set Offset from cursor
 
-| Entry | What it does |
-| ---------------------- | -------------------------------------------------------------------------------- |
-| Set Offset from cursor | Set the offset used for collection instance based on cursor position. |
-| Set Offset from Object | Set the offset used for collection instance based on the active object position. |
-| Set Cursor to Offset | Set cursor position to the offset used for collection instances. |
+Set the offset used for collection instance based on cursor position.
 
+#### Set Offset from Object
+
+Set the offset used for collection instance based on the active object position.
+
+#### Set Cursor to Offset
+
+Set cursor position to the offset used for collection instances.
+
+## Importer panel
+
+![Importer panel](/docs2/images/editors/properties/collection-properties-tab/importer-panel.png)
+
+This panel links a collection to a file on disk, for example a glTF or OBJ file. The collection imports the content of the file, and you can import it again when the file changes. Each collection has one importer.
+
+### Add Importer
+
+![Add Importer](/docs2/images/editors/properties/collection-properties-tab/add-importer.png)
+
+Adds an importer to the collection. Pick the file format, then the file. **Relative Path** stores the file path relative to the blend file.
+
+### File Path
+
+The file that the collection imports. Below the path you find the import settings of the chosen file format. These are the same settings as in the import dialog. See the import chapter in the File menu.
+
+### Import to Collection
+
+Imports the file into the collection with the current settings.
+
+### Reload Importer
+
+Clears the imported data, then imports the file again. Use it after the file changed on disk, or after you changed the import settings.
+
+### Clear Importer
+
+Deletes the imported data from the collection. The importer and its settings stay, so you can import again.
+
+### Make Importer Local
+
+Makes the imported data local to the blend file.
+
+### Remove Importer
+
+Removes the importer from the collection, and deletes the data it imported.
 
 ## Exporters panel
 
@@ -106,15 +150,25 @@ These settings comes from the chosen exporter. See chapter export in the File me
 
 The method to display the line art in this collection.
 
+#### Include
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------- |
-| Include | Generate feature lines for this collection. |
-| Occlusion Only | Only use the collection to produce occlusion. |
-| Exclude | Don't use this collection in line art. |
-| Intersection only | Only generate intersection lines for this collection |
-| No Intersection | Include this collection but do not generate intersection lines. |
+Generate feature lines for this collection.
 
+#### Occlusion Only
+
+Only use the collection to produce occlusion.
+
+#### Exclude
+
+Don't use this collection in line art.
+
+#### Intersection only
+
+Only generate intersection lines for this collection
+
+#### No Intersection
+
+Include this collection but do not generate intersection lines.
 
 ### Collection Mask
 

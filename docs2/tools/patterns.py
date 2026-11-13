@@ -95,7 +95,7 @@ def callouts(html):
 
 
 FILE_ALT = re.compile(r"^[\w.-]+\.(png|jpe?g|webp|gif)$", re.I)
-IMG = re.compile(r'<img src="([^"]+)" alt="([^"]*)"\s*/?>')
+IMG = re.compile(r'<img src="([^"]+)" alt="([^"]*)"(?: title="[^"]*")?\s*/?>')
 
 
 def figure(src, alt, cls=""):
@@ -104,16 +104,30 @@ def figure(src, alt, cls=""):
     return f'<figure{cls}><img src="{src}" alt="{htmllib.escape(alt)}" loading="lazy">{cap}</figure>'
 
 
+def compare(imgs):
+    """Two images whose alt texts start with Before / After -> the website's comparison slider (playhead, sweeps once when scrolled into view)."""
+    (s1, a1), (s2, a2) = imgs
+    a1, a2 = htmllib.unescape(a1), htmllib.unescape(a2)
+    return ('<div class="ui-compare" data-doc-compare aria-label="Drag to compare before and after">'
+            f'<img class="ui-compare-img" src="{s2}" alt="{htmllib.escape(a2)}" loading="lazy">'
+            f'<img class="ui-compare-img is-before" src="{s1}" alt="{htmllib.escape(a1)}" loading="lazy">'
+            '<div class="ui-compare-tag is-left">Before</div><div class="ui-compare-tag is-right">After</div>'
+            '<div class="ui-compare-handle"><div class="ui-compare-knob">‹ ›</div></div></div>')
+
+
 def figures(html, image_width):
     """An image alone in a paragraph -> figure (caption = alt text); two or more -> gallery."""
     def fix(m):
         imgs = IMG.findall(m.group(1))
+        if len(imgs) == 2 and imgs[0][1].lower().startswith("before") and imgs[1][1].lower().startswith("after"):
+            return compare(imgs)
         if len(imgs) > 1:
             return '<div class="ui-doc-gallery">' + "".join(figure(s, htmllib.unescape(a)) for s, a in imgs) + "</div>"
         src, alt = imgs[0]
         w = image_width(src) or 0
-        return figure(src, htmllib.unescape(alt), ' class="is-right"' if 0 < w < FLOAT_BELOW else "")
-    return re.sub(r'<p>((?:\s*<img src="[^"]+" alt="[^"]*"\s*/?>\s*)+)</p>', fix, html)
+        small = 'title="small"' in m.group(1)          # ![alt](src "small") floats a picture of unknown size (e.g. a remote one) to the right
+        return figure(src, htmllib.unescape(alt), ' class="is-right"' if small or 0 < w < FLOAT_BELOW else "")
+    return re.sub(r'<p>((?:\s*<img src="[^"]+" alt="[^"]*"(?: title="[^"]*")?\s*/?>\s*)+)</p>', fix, html)
 
 
 def videos(html):
@@ -156,9 +170,29 @@ def shared_sections(html, load_snippet):
 BADGE = re.compile(r"\[(New|Changed|Removed) in ([\d.]+)\]")
 
 
+# Socket colours of the node editor (default theme); the dot is the socket, like in the editor.
+# Socket colours from std_node_socket_colors (source/blender/editors/space_node/drawnode.cc).
+DTYPE_COLORS = {"float": "#a1a1a1", "vector": "#6363c7", "color": "#c7c729", "shader": "#63c763", "boolean": "#cca6d6", "integer": "#598c5c", "string": "#70b2ff", "object": "#ed9e5c", "image": "#633863", "geometry": "#00d6a3", "collection": "#f5f5f5", "texture": "#9e4fa3", "material": "#eb7582", "rotation": "#a663c7", "menu": "#666666", "matrix": "#b83385", "bundle": "#4c8080", "closure": "#7d7d3b", "font": "#635742", "sound": "#635742"}
+DTYPE_DIAMOND = {"float", "integer", "boolean", "vector", "color", "string", "rotation", "matrix"}   # fields can be diamonds
+
+
+def dtype_flag(m):
+    """Data type line -> a small flag in the socket colour. Webflow rich text keeps classes on <div> but drops them
+    (and style attributes) on <p>, <span> and <b>, so the colour comes from a class on the div (dt-<type>)."""
+    text = m.group(1).rstrip(".").strip()
+    key = re.match(r"[A-Za-z]+", text)
+    key = key.group(0).lower() if key else ""
+    key = {"int": "integer", "bool": "boolean", "transform": "matrix", "rgba": "color"}.get(key, key)
+    if key not in DTYPE_COLORS:
+        key = "other"
+    shape = " is-list" if "list" in text.lower() else ""
+    return f'<div class="ui-doc-dtype dt-{key}{shape}"><p><em>Data type</em><strong>{text}</strong></p></div>'
+
+
 def small_parts(html):
     """Find it rows, version badges, go links and download buttons."""
     html = re.sub(r"<p>(?:<strong>)?Find it:(?:</strong>)?", '<p class="ui-doc-find"><strong>Find it:</strong>', html)
+    html = re.sub(r"<p>Data type: ([^<]*?)</p>", dtype_flag, html)
     html = on_text(html, lambda t: BADGE.sub(
         lambda m: f'<span class="ui-doc-badge is-{m.group(1).lower()}">{m.group(1)} in {m.group(2)}</span>', t))
 

@@ -8,8 +8,8 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Tool Shelf"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: tool_settings
 summary: "The tools of Mesh › Edit Mode in the tool shelf."
 order: 20
@@ -43,12 +43,13 @@ This group contains some extrude tools. A few more exotic ones can be found in t
 
 There are some general settings, since they all have some move settings We will cover them all here for all of the tools.
 
+#### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+#### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 #### Header Values
 
@@ -106,16 +107,19 @@ Or you can use the XYZ axis type. That's a handler with three axis. This widget 
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Extrude Region and Move
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Extrude Region and Move
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-move.png)
+
+Change the settings of **Extrude Region and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -141,14 +145,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Manifold
 
@@ -174,16 +185,19 @@ The extrude amount.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Extrude Manifold
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Extrude Manifold
 
 ![Last Operator Extrude Manifold](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-manifold.png)
+
+Change the settings of **Extrude Manifold** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -209,14 +223,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Along Normals
 
@@ -246,16 +267,19 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Extrude Region and Shrink/Fatten
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Extrude Region and Shrink/Fatten
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-shrink-fatten.png)
+
+Change the settings of **Extrude Region and Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -273,14 +297,21 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Individual
 
@@ -306,16 +337,19 @@ This tool works like a shrink fatten extrude. And so you will see a correspondin
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Extrude Individual Faces and Move
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Extrude Individual Faces and Move
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-individual-faces-and-move.png)
+
+Change the settings of **Extrude Individual Faces and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -330,14 +364,21 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude to cursor
 
@@ -369,13 +410,17 @@ Activate the tool, drag the mouse. But carefully. The control is not the best. Y
 
 With outset ticked the Inset will not extrude inwards but outwards.
 
+###### Interpolate
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------- |
-| Interpolate | Blend Face Data across the inset. |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
+Blend Face Data across the inset.
 
+###### Offset Even
+
+Scales the offset to give more even thickness.
+
+###### Offset Relative
+
+Scales the offset by surrounding geometry.
 
 ##### Drag
 
@@ -383,16 +428,19 @@ With outset ticked the Inset will not extrude inwards but outwards.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-#### Last Operator Inset Faces
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+#### Adjust Last Operation - Inset Faces
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
+
+Change the settings of **Inset Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Boundary
 
@@ -400,19 +448,41 @@ With Boundary ticked you will get the connect edges in the corners. Without the 
 
 ![Boundary](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/boundary.png)
 
+###### Offset Even
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------- |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
-| Edge Rail | Inset the region along existing edges. |
-| Thickness | Thickness adjusts the thickness of the inset geometry. |
-| Depth | With depth you can bevel the inset geometry. It is then not longer co planar to the initial face. |
-| Outset | With outset ticked the Inset will not extrude inwards but outwards. |
-| Select Outer | With Select Outer the outer ring will be selected after the Inset. |
-| Individual | Inset every face individually. |
-| Interpolate | Blend Face Data across the inset. |
+Scales the offset to give more even thickness.
 
+###### Offset Relative
+
+Scales the offset by surrounding geometry.
+
+###### Edge Rail
+
+Inset the region along existing edges.
+
+###### Thickness
+
+Thickness adjusts the thickness of the inset geometry.
+
+###### Depth
+
+With depth you can bevel the inset geometry. It is then not longer co planar to the initial face.
+
+###### Outset
+
+With outset ticked the Inset will not extrude inwards but outwards.
+
+###### Select Outer
+
+With Select Outer the outer ring will be selected after the Inset.
+
+###### Individual
+
+Inset every face individually.
+
+###### Interpolate
+
+Blend Face Data across the inset.
 
 ### Bevel
 
@@ -452,15 +522,25 @@ How many segments gets created.
 
 Controls the profile shape strength. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.
 
+###### Material Index
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------- |
-| Material Index | The material for bevel faces. -1 means to use the material from the adjacent faces. |
-| Harden Normals | Match normals of new faces to adjacent faces. |
-| Clamp Overlap | Do not allow beveled edges / vertices to overlap each other. |
-| Loop Slide | Prefer sliding along edges to even widths. |
-| Mark | **Seam**: Mark seam along beveled edges. · **Sharp**: Mark beveled edges as sharp. |
+The material for bevel faces. -1 means to use the material from the adjacent faces.
 
+###### Harden Normals
+
+Match normals of new faces to adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled edges / vertices to overlap each other.
+
+###### Loop Slide
+
+Prefer sliding along edges to even widths.
+
+###### Mark
+
+**Seam**: Mark seam along beveled edges. · **Sharp**: Mark beveled edges as sharp.
 
 ##### Miter outer
 
@@ -522,14 +602,21 @@ The method to use to create meshes at intersections. Bevel can create self inter
 
 Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).
 
+###### None
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| None | Do not set face strength. |
-| New | Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak. |
-| Affected | In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong. |
-| All | In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong. |
+Do not set face strength.
 
+###### New
+
+Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.
+
+###### Affected
+
+In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.
+
+###### All
+
+In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.
 
 ##### Profile Type
 
@@ -549,31 +636,28 @@ Choose and adjust a custom bevel profile. This feature needs more than one segme
 
 Choose some profile presets.
 
+###### Zoom in
 
-| Entry | What it does |
-| -------- | ---------------------------- |
-| Zoom in | Zooms into the curve view. |
-| Zoom out | Zooms out of the curve view. |
+Zooms into the curve view.
 
+###### Zoom out
+
+Zooms out of the curve view.
 
 ##### Tools
 
-**Reset View**
+###### Reset View
 
 Resets the zoom factor of the curve view.
 
-**Reset Curve**
+###### Reset Curve
 
 ![Reset Curve](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/reset-curve.png)
 
 Resets the curve to the defaults. This means when you choose a curve preset to reset it to the values of the latest chosen preset.
 
-
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------ |
-| Reverse Path | The path gets reversed. The first point becomes the last and vice versa. |
-| Toggle Profile Clipping | Toggles the profile clipping. |
-
+- **Reverse Path**: The path gets reversed. The first point becomes the last and vice versa.
+- **Toggle Profile Clipping**: Toggles the profile clipping.
 
 ##### Curve view
 
@@ -589,22 +673,37 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
+###### Handle Type Auto Handle
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Handle Type Auto Handle | Sets the handle type of this curve point to smooth. |
-| Handle Type Vector Handle | Sets the handle type of this curve point to sharp. |
-| Handle Type Free Handle | Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each. |
-| Handle Type Aligned Free Handle | Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve. |
-| X Y Values | The position of the currently selected curve point |
-| Delete | Delete the selected curve point. |
+Sets the handle type of this curve point to smooth.
 
+###### Handle Type Vector Handle
 
-| Entry | What it does |
-| --------------------- | --------------------------------- |
-| Sample Straight Edges | Sample edges with vector handles. |
-| Sample Even Lengths | Sample edges with even lengths. |
+Sets the handle type of this curve point to sharp.
 
+###### Handle Type Free Handle
+
+Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.
+
+###### Handle Type Aligned Free Handle
+
+Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.
+
+###### X Y Values
+
+The position of the currently selected curve point
+
+###### Delete
+
+Delete the selected curve point.
+
+###### Sample Straight Edges
+
+Sample edges with vector handles.
+
+###### Sample Even Lengths
+
+Sample edges with even lengths.
 
 ##### Drag
 
@@ -612,16 +711,19 @@ When a point is selected then the curve view reveals a sub menu at the bottom.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-#### Last Operator Bevel
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+#### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bevel.png)
+
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -639,16 +741,29 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Controls the profile shape strength. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.
 
+###### Material Index
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------- |
-| Material Index | The material for bevel faces. -1 means to use the material from the adjacent faces. |
-| Harden Normals | Match normals of new faces to adjacent faces. |
-| Clamp Overlap | Do not allow beveled geometry to overlap each other. |
-| Loop Slide | Prefer slide along edge to even widths. |
-| Mark Seams | Mark the edges of the new created geometry as seams. |
-| Mark Sharp | Mark the edges of the new created geometry sharp. |
+The material for bevel faces. -1 means to use the material from the adjacent faces.
 
+###### Harden Normals
+
+Match normals of new faces to adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled geometry to overlap each other.
+
+###### Loop Slide
+
+Prefer slide along edge to even widths.
+
+###### Mark Seams
+
+Mark the edges of the new created geometry as seams.
+
+###### Mark Sharp
+
+Mark the edges of the new created geometry sharp.
 
 ##### Outer Miter
 
@@ -710,14 +825,21 @@ The method to use to create meshes at intersections. Bevel can create self inter
 
 Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).
 
+###### None
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| None | Do not set face strength. |
-| New | Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak. |
-| Affected | In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong. |
-| All | In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong. |
+Do not set face strength.
 
+###### New
+
+Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.
+
+###### Affected
+
+In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.
+
+###### All
+
+In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.
 
 ##### Profile Type
 
@@ -737,20 +859,21 @@ Choose and adjust a custom bevel profile. This feature needs more than one segme
 
 Choose some profile presets.
 
+###### Zoom in
 
-| Entry | What it does |
-| -------- | ---------------------------- |
-| Zoom in | Zooms into the curve view. |
-| Zoom out | Zooms out of the curve view. |
+Zooms into the curve view.
 
+###### Zoom out
+
+Zooms out of the curve view.
 
 ##### Tools
 
-**Reset View**
+###### Reset View
 
 Resets the zoom factor of the curve view.
 
-**Reset Curve**
+###### Reset Curve
 
 ![Reset Curve](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/reset-curve.png)
 
@@ -778,22 +901,37 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
+###### Handle Type Auto Handle
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Handle Type Auto Handle | Sets the handle type of this curve point to smooth. |
-| Handle Type Vector Handle | Sets the handle type of this curve point to sharp. |
-| Handle Type Free Handle | Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each. |
-| Handle Type Aligned Free Handle | Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve. |
-| X Y Values | The position of the currently selected curve point |
-| Delete | Delete the selected curve point. |
+Sets the handle type of this curve point to smooth.
 
+###### Handle Type Vector Handle
 
-| Entry | What it does |
-| --------------------- | --------------------------------- |
-| Sample Straight Edges | Sample edges with vector handles. |
-| Sample Even Lengths | Sample edges with even lengths. |
+Sets the handle type of this curve point to sharp.
 
+###### Handle Type Free Handle
+
+Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.
+
+###### Handle Type Aligned Free Handle
+
+Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.
+
+###### X Y Values
+
+The position of the currently selected curve point
+
+###### Delete
+
+Delete the selected curve point.
+
+###### Sample Straight Edges
+
+Sample edges with vector handles.
+
+###### Sample Even Lengths
+
+Sample edges with even lengths.
 
 ### Loop Cut tools group
 
@@ -833,14 +971,15 @@ Correct the UV's when transforming the new added loop.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Loop Cut and Slide
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Loop Cut and Slide
 
 ![Last Operator Loop Cut and Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-loop-cut-and-slide.png)
 
@@ -866,15 +1005,25 @@ Adjust the Falloff type for smoothness.
 
 Change the center of the added loop.
 
+###### Even
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------- |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
-| Mirror Editing | Enables mirror editing. |
-| Correct UV's | Corrects the UV's when modifying the geometry. |
+Make the edge loop match the shape of the adjacent edge loop
 
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
+
+###### Mirror Editing
+
+Enables mirror editing.
+
+###### Correct UV's
+
+Corrects the UV's when modifying the geometry.
 
 #### Offset Edge Loop Cut
 
@@ -886,9 +1035,11 @@ Usage: select the edges that you want to slide. Click to confirm.
 
 You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
-##### Last Operator Offset Edge Slide
+##### Adjust Last Operation - Offset Edge Slide
 
 ![Last Operator Offset Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-offset-edge-slide.png)
+
+Change the settings of **Offset Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Cap Endpoint
 
@@ -896,16 +1047,29 @@ You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
 Cap Endpoint caps the loose edges.
 
+###### Edge Slide Factor
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------- |
-| Edge Slide Factor | Adjust the slide amount. |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
-| Mirror Editing | Enables mirror editing. |
-| Correct UV's | Corrects the UV's when modifying the geometry. |
+Adjust the slide amount.
 
+###### Even
+
+Make the edge loop match the shape of the adjacent edge loop
+
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
+
+###### Mirror Editing
+
+Enables mirror editing.
+
+###### Correct UV's
+
+Corrects the UV's when modifying the geometry.
 
 ### Knife Tool Group
 
@@ -957,13 +1121,17 @@ A - activate the angle constraint.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/tool-settings-8.png)
 
+###### Occlude Geometry
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Occlude Geometry | Just cut the visible geometry that points towards you. Not the backfaces. |
-| Only Selected | Just cut through selected geometry. Not through not selected. |
-| X-Ray | Show cuts through the geometry. |
+Just cut the visible geometry that points towards you. Not the backfaces.
 
+###### Only Selected
+
+Just cut through selected geometry. Not through not selected.
+
+###### X-Ray
+
+Show cuts through the geometry.
 
 ##### Measurements
 
@@ -975,7 +1143,7 @@ The measurements modes. The names should be self explaining.
 
 Activate snap to angles. When active then the knife cut snaps to an angle either aligned to the screen or relative to the object.
 
-**Angle Snapping Increment**
+###### Angle Snapping Increment
 
 The snapping angle in case the angle snappping tool is active.
 
@@ -985,12 +1153,13 @@ The snapping angle in case the angle snappping tool is active.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
+
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
 #### Bisect
 
@@ -1012,16 +1181,19 @@ When you have set your cut and release the mouse then you reveal a widget with w
 
 Fills the cut.
 
+###### Clear Inner
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------------------------- |
-| Clear Inner | Removes the inner part of the face to cut. |
-| Clear Outer | Removes the outer part of the face to cut. · **Axis threshold**: Axis threshold. |
+Removes the inner part of the face to cut.
 
+###### Clear Outer
 
-##### Last Operator Bisect
+Removes the outer part of the face to cut. · **Axis threshold**: Axis threshold.
+
+##### Adjust Last Operation - Bisect
 
 ![Last Operator Bisect](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bisect.png)
+
+Change the settings of **Bisect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1070,14 +1242,15 @@ Create quad or tri geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-#### Last Operator
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+#### Adjust Last Operation - Poly Build
 
 We have two last operators here, dependent of which method we use. Dragging out edges will reveal the Extrude At Cursor Move panel. Holding down Ctrl will reveal the Face at Cursor Move panel.
 
@@ -1085,12 +1258,13 @@ We have two last operators here, dependent of which method we use. Dragging out 
 
 ![Extrude At Cursor Move panel](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/extrude-at-cursor-move-panel.png)
 
+###### Flip Normals
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Flip Normals | Flips the normals of the extruded faces. |
-| Move X, Y Z | The position of the new created element. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel. |
+Flips the normals of the extruded faces.
 
+###### Move X, Y Z
+
+The position of the new created element. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
 
 ##### Orientation
 
@@ -1126,14 +1300,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Spin
 
@@ -1167,12 +1348,13 @@ For an accurate rotation around a single axis you should work in one of the orth
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/tool-settings-10.png)
 
+##### Steps
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Steps | The number of divisions. |
-| Use Duplicates | With duplicate checked the geometry gets duplicated instead of extruded. · **Axis**: Activates the axis handler to perform the spin operation. Hint, you activate all three axis widgets by holding down shift, and clicking at the axis buttons in the tool settings. |
+The number of divisions.
 
+##### Use Duplicates
+
+With duplicate checked the geometry gets duplicated instead of extruded. · **Axis**: Activates the axis handler to perform the spin operation. Hint, you activate all three axis widgets by holding down shift, and clicking at the axis buttons in the tool settings.
 
 ##### Drag
 
@@ -1180,14 +1362,19 @@ For an accurate rotation around a single axis you should work in one of the orth
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Spin
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Spin
+
+Change the settings of **Spin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Spin](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-spin.png)
 
 ##### Steps
 
@@ -1197,14 +1384,21 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Steps is the number of segments.
 
+###### Duplicate
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Duplicate | With duplicate checked the geometry gets duplicated instead of extruded. |
-| Angle | Angle defines the angle of the spin. |
-| Center X Y Z | The Center edit boxes defines the center of the radius for the spin operation. In our example the X value is set to 2, and the Z value is set to 1. |
-| Axis X Y Z | Axis defines the extrude direction. With X and Z values you can twist the result. |
+With duplicate checked the geometry gets duplicated instead of extruded.
 
+###### Angle
+
+Angle defines the angle of the spin.
+
+###### Center X Y Z
+
+The Center edit boxes defines the center of the radius for the spin operation. In our example the X value is set to 2, and the Z value is set to 1.
+
+###### Axis X Y Z
+
+Axis defines the extrude direction. With X and Z values you can twist the result.
 
 ### Smooth / Randomize Tools group
 
@@ -1232,16 +1426,19 @@ How often the smoothing should be applied.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Smooth Vertices
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-smooth-vertices.png)
+
+Change the settings of **Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1263,13 +1460,17 @@ Activate the tool, move the mouse.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/tool-settings-12.png)
 
+###### Uniform
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Uniform | Uniform offset. The higher the value the more uniform the offset becomes. |
-| Normal | Align the random offset to the normals. This is a factor. 0 means no offset but completely random vertices positions. 1 means completely aligned with the normal axis, and just along this normal axis. |
-| Random Seed | The seed for the randomization. |
+Uniform offset. The higher the value the more uniform the offset becomes.
 
+###### Normal
+
+Align the random offset to the normals. This is a factor. 0 means no offset but completely random vertices positions. 1 means completely aligned with the normal axis, and just along this normal axis.
+
+###### Random Seed
+
+The seed for the randomization.
 
 ##### Drag
 
@@ -1277,16 +1478,19 @@ Activate the tool, move the mouse.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Smooth Vertices
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-smooth-vertices.png)
+
+Change the settings of **Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1335,16 +1539,19 @@ Correct UV's corrects the UV's while editing the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Edge Slide
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Edge Slide
 
 ![Last Operator Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-edge-slide.png)
+
+Change the settings of **Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1387,16 +1594,19 @@ Correct UV's corrects the UV's while editing the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Vertex Slide
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Vertex Slide
 
 ![Last Operator Vertex Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-vertex-slide.png)
+
+Change the settings of **Vertex Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1437,16 +1647,19 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Shrink/Fatten
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Shrink/Fatten
 
 ![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shrink-fatten.png)
+
+Change the settings of **Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1462,14 +1675,21 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Push/Pull
 
@@ -1495,16 +1715,19 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Push/Pull
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1519,14 +1742,21 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Shear and To Sphere Tools Group
 
@@ -1554,16 +1784,19 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Shear
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1589,14 +1822,21 @@ Enables Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### To Sphere
 
@@ -1612,9 +1852,11 @@ In Object mode this tools requires to have more than one object selected.
 
 Select the vertices, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.
 
-#### Last Operator To Sphere
+#### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
@@ -1630,14 +1872,21 @@ Enables Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Rip Tools Group
 
@@ -1667,16 +1916,19 @@ Fills the gap between the new edges when you move the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Rip
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Rip
 
 ![Last Operator Rip](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-rip.png)
+
+Change the settings of **Rip** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X , Y , Z
 
@@ -1706,13 +1958,17 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Adjust the falloff methods.
 
+###### Proportional Size
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+See and adjust the falloff radius.
 
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rip Edge
 
@@ -1730,16 +1986,19 @@ Rip Edge extrudes out the selected vertices. When you do this operation at an ed
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
+When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 
+###### Tweak, Select Box, Circle and Lasso
 
-##### Last Operator Extend Vertices
+When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
+
+##### Adjust Last Operation - Extend Vertices
 
 ![Last Operator Extend Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extend-vertices.png)
+
+Change the settings of **Extend Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1754,9 +2013,14 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
+###### Mirror Editing
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enables Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Enables Mirror Editing.
+
+###### Proportional editing
+
+Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.

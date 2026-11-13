@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Grease Pencil"
   - "Draw Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: greasepencil
 summary: "Draw strokes with the grease pencil: menus, brushes, layers and settings of Draw Mode."
 order: 10
@@ -57,7 +57,7 @@ Inserts a keyframe into the active layer.
 
 Inserts a keyframe into all layers.
 
-###### Last Operator Insert Blank Frame
+###### Adjust Last Operation - Insert Blank Frame
 
 ![Last Operator Insert Blank Frame](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-insert-blank-frame.png)
 
@@ -76,18 +76,23 @@ Interpolate strokes between the previous and next keyframe by adding multiple ke
 
 ![Show/Hide](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/show-hide.png)
 
-| Entry | What it does |
-| ----------------- | --------------------------------------- |
-| Show all Layers | Makes all layers in the scene visible . |
-| Hide Active Layer | Hides the active layer. |
+##### Show all Layers
+
+Makes all layers in the scene visible .
+
+##### Hide Active Layer
+
+Hides the active layer.
 
 ##### Hide inactive Layers
 
 Hides the not selected layers. The selected layers stays visible.
 
-###### Last Operator Hide Layers
+###### Adjust Last Operation - Hide Layers
 
 ![Last Operator Hide Layers](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-hide-layers.png)
+
+Change the settings of **Hide Layers** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 
@@ -101,9 +106,11 @@ Hides the not selected layers.
 
 Deletes not connected stroke geometry that is made of loose points.
 
-###### Last Operator Clean Loose Points
+###### Adjust Last Operation - Clean Loose Points
 
 ![Last Operator Clean Loose Points](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png)
+
+Change the settings of **Clean Loose Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Limit
 
@@ -113,9 +120,11 @@ The number of vertices below which a stroke gets counted as a loose point.
 
 Deletes all duplicated frames.
 
-###### Last Operator Clean Duplicated Frames
+###### Adjust Last Operation - Clean Duplicated Frames
 
 ![Last Operator Clean Duplicated Frames](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png)
+
+Change the settings of **Clean Duplicated Frames** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -133,9 +142,11 @@ Re project the selected strokes onto a new plane from the current viewport. So t
 
 Using this tool opens a popup menu. Choose the projection type method.
 
-###### Last Operator Re project Strokes
+###### Adjust Last Operation - Re project Strokes
 
 ![Last Operator Re project Strokes](/docs2/images/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu/last-operator-re-project-strokes.png)
+
+Change the settings of **Re project Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------- |
@@ -146,9 +157,11 @@ Using this tool opens a popup menu. Choose the projection type method.
 
 In Draw mode with the fill tool you are able to draw so called fill guide with holding down the Alt key. They act as the boundary of the fill area. This tool removes these fill guides.
 
-###### Last Operator Remove Fill Guides
+###### Adjust Last Operation - Remove Fill Guides
 
 ![Last Operator Remove Fill Guides](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png)
+
+Change the settings of **Remove Fill Guides** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -168,11 +181,15 @@ Samples the color under the mouse
 
 ![Tool Shelf - Grease Pencil - Draw Mode](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/tool-shelf-grease-pencil-draw-mode.png)
 
-In Sculpt Mode you will mainly find draw tools in the tool shelf.
+In Draw Mode you will mainly find draw tools in the tool shelf.
 
 The brushes settings are covered in the chapter 7.3.12 Editors - 3D View - Sidebar - Tool Tab - Grease Pencil - Draw Mode
 
 For the Annotate tools group see chapter 7.2.1 Editors - 3D View - Tool Shelf - Object Mode
+
+#### Select tools
+
+The first button holds the select tools: **Tweak**, **Select Box**, **Select Circle** and **Select Lasso**. Hold the button down to pick one. They select strokes and points without leaving Draw Mode, so you can select a part of the drawing and keep working on it. They work like the select tools in Edit Mode.
 
 #### 3D Cursor Tool
 
@@ -226,9 +243,9 @@ Erase stroke curve points under the mouse.
 
 ![Fill](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/fill.png)
 
-This tool does not fill, but extend strokes of closed strokes areas by click drag, coming from the border. For example, when you create a Bezier circle. When you then click in the inner area, drag the mouse and release it, then the outer line of this Bezier circle gets extended into the inner direction by the in the brush panel adjusted amount.
+The Fill tool fills a closed area with the active material. Click inside an area that strokes surround on all sides, and the area gets filled.
 
-When you use this tool outside of closed geometry, then it draws a frame around the current view.
+Small gaps in the outline are fine. The tool can close them for you. The Fill brush settings in the tool settings and the sidebar control what counts as a border, how gaps get closed, and whether the inner or the outer area gets filled (**Direction**: Normal or Inverted).
 
 #### Shapes
 
@@ -284,20 +301,57 @@ Lasso select delete tool. Erases stroke curve points in the selection.
 
 ![Tool settings](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/tool-settings.png)
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------------------------------------- |
-| Active Layer | Only edit the active layer of the object. |
-| Keep Caps | Define if after cutting the stroke the cap of the cut side will be set as flat or keep them as they are. |
+###### Active Layer
+
+Only edit the active layer of the object.
+
+###### Keep Caps
+
+Define if after cutting the stroke the cap of the cut side will be set as flat or keep them as they are.
 
 ##### Adjust last operator Grease Pencil Trim
 
 ![Adjust last operator Grease Pencil Trim](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/adjust-last-operator-grease-pencil-trim.png)
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------ |
-| Stabilize Stroke | Selection lags behind mouse, and follows a smoother path |
-| Smooth Stroke Factor | Adjust the smoothness by a factor. Higher values gives smoother strokes. |
-| Smooth Stroke Radius | Minimum distance from last point before selection continues. |
+###### Stabilize Stroke
+
+Selection lags behind mouse, and follows a smoother path
+
+###### Smooth Stroke Factor
+
+Adjust the smoothness by a factor. Higher values gives smoother strokes.
+
+###### Smooth Stroke Radius
+
+Minimum distance from last point before selection continues.
+
+#### Carver
+
+The Carver tool cuts the stroke points inside a lasso. Draw a lasso around the part of the strokes you want to cut. It sits next to Trim and has the same settings.
+
+##### Tool settings
+
+###### Active Layer
+
+Only cuts strokes on the active layer.
+
+###### Keep Caps
+
+Keeps the caps of the cut stroke ends.
+
+##### Adjust last operator Grease Pencil Carver
+
+###### Stabilize Stroke
+
+The lasso lags behind the mouse and follows a smoother path.
+
+###### Smooth Stroke Factor
+
+Higher values give a smoother lasso.
+
+###### Smooth Stroke Radius
+
+The minimum distance from the last point before the lasso continues.
 
 #### Eye Dropper
 
@@ -331,16 +385,14 @@ Add the color to a color palette.
 
 The button at the left opens a drop down list to choose between your palettes.
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Number of users | See how many users the palette currently has. |
-| Fake User | Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
-| Add palette | Add a new palette. |
-| Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
-| New Palette color | Adjust a color in the color picker. Then click at the add button to add this color to the palette. |
-| Delete Palette color | Select the color in the palette, then click at the minus button to remove it. |
-| Move Palette Color up and down | With these two buttons you can move the active color up or down in the palette. |
+- **Edit Box**: Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
+- **Number of users**: See how many users the palette currently has.
+- **Fake User**: Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
+- **Add palette**: Add a new palette.
+- **Remove Palette**: Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.
+- **New Palette color**: Adjust a color in the color picker. Then click at the add button to add this color to the palette.
+- **Delete Palette color**: Select the color in the palette, then click at the minus button to remove it.
+- **Move Palette Color up and down**: With these two buttons you can move the active color up or down in the palette.
 
 ###### Sort By
 
@@ -380,11 +432,9 @@ What layers to include in the interpolation.
 
 How to invert destination stroke to match start and end with source stroke.
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Smooth | Amount of smoothing to apply to interpolated strokes, to reduce jitter or noise. |
-| Iterations | How often to smooth newly created strokes. |
-| Excclude Breakdowns | Exclude existing breakdown keyframes as interpolation extremes. |
+- **Smooth**: Amount of smoothing to apply to interpolated strokes, to reduce jitter or noise.
+- **Iterations**: How often to smooth newly created strokes.
+- **Excclude Breakdowns**: Exclude existing breakdown keyframes as interpolation extremes.
 
 # Sidebar
 
@@ -440,18 +490,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The asset catalog in which the brush is stored.
+
+###### Author
+
+The brush author.
+
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -541,40 +606,34 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -620,38 +679,32 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
 ###### Curve Presets
 
@@ -671,10 +724,13 @@ Controls how Grease Pencil strokes are treated during editing and rendering. Use
 
 Points are interpreted as line strokes only. Produces visible outlines without fill regions. Best for sketching, inking, or line-based animation.
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fill | Points are interpreted as fill regions only. Creates solid shapes without visible outlines. Useful for coloring, shading, or shape-based animation. |
-| Both | Points contribute to both stroke outlines and fill regions. Produces combined line + fill geometry. Ideal for workflows where outlines and fills need to remain linked. |
+###### Fill
+
+Points are interpreted as fill regions only. Creates solid shapes without visible outlines. Useful for coloring, shading, or shape-based animation.
+
+###### Both
+
+Points contribute to both stroke outlines and fill regions. Produces combined line + fill geometry. Ideal for workflows where outlines and fills need to remain linked.
 
 #### Caps Type
 
@@ -682,10 +738,13 @@ Points are interpreted as line strokes only. Produces visible outlines without f
 
 Controls the shape of stroke endpoints (caps). Useful for defining whether strokes end with rounded tips or flat edges, affecting both aesthetics and readability in drawings.
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Round | Ends strokes with a smooth, circular cap. Creates softer, organic-looking stroke endings. Ideal for calligraphy, sketching, or expressive linework. |
-| Flat | Ends strokes with a straight, cut-off edge. Produces sharp, mechanical-looking stroke endings. Useful for technical drawings, graphic styles, or when clean edges are required. |
+##### Round
+
+Ends strokes with a smooth, circular cap. Creates softer, organic-looking stroke endings. Ideal for calligraphy, sketching, or expressive linework.
+
+##### Flat
+
+Ends strokes with a straight, cut-off edge. Produces sharp, mechanical-looking stroke endings. Useful for technical drawings, graphic styles, or when clean edges are required.
 
 ### Brush Settings Panel - Draw brushes - Advanced Sub panel
 
@@ -699,14 +758,29 @@ Airbrush, Ink Pen, Ink Pen Rough, Marker Bold, Marker Chisel, Pen, Pencil, Penci
 
 Measure the brush size relative to view or scene.
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Spacing | Spacing between brush daubs. Calculated as a percentage of brush diameter. |
-| Active Smooth | The amount of smoothing while drawing. |
-| Angle | Direction of the stroke at which the brush gives the maximal thickness. 0 degree for horoizontal. |
-| Factor | Reduction of the brush thickness when stroke is perpendicular to the angle direction. Calculated by a factor. |
-| Hardness | The hardness falloff from the center of dot and box strokes. 1 means a solid stroke. |
-| Aspect | Read only. And unfortunately also not to modify. The width and height of the alpha gradient, means the brush shape. |
+##### Spacing
+
+Spacing between brush daubs. Calculated as a percentage of brush diameter.
+
+##### Active Smooth
+
+The amount of smoothing while drawing.
+
+##### Angle
+
+Direction of the stroke at which the brush gives the maximal thickness. 0 degree for horoizontal.
+
+##### Factor
+
+Reduction of the brush thickness when stroke is perpendicular to the angle direction. Calculated by a factor.
+
+##### Hardness
+
+The hardness falloff from the center of dot and box strokes. 1 means a solid stroke.
+
+##### Aspect
+
+Read only. And unfortunately also not to modify. The width and height of the alpha gradient, means the brush shape.
 
 ### Brush Settings Panel - Draw brushes - Stroke Sub panel
 
@@ -726,15 +800,33 @@ Here you will find some further stroke related settings. It has three sub sectio
 
 Here you find some post processing settings for new strokes.
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Smooth | The smooth amount to reduce jittering. |
-| Iterations | Number of iterations to smooth new created strokes. |
-| Iterations | Number of iterations to smooth new created strokes. |
-| Subdivision Steps | Number of subdivisions of new created strokes |
-| Simplify | Simplify new created strokes. |
-| Trim Stroke Ends | Trim intersecting stroke ends. |
-| Outline | Convert stroke to perimeter. This tool requires an active camera in the scene. · **Material**: Material used for the secondary uses for this brush. · **Thickness**: The thickness of the outline stroke, relative to the current brush thickness. |
+##### Smooth
+
+The smooth amount to reduce jittering.
+
+##### Iterations
+
+Number of iterations to smooth new created strokes.
+
+##### Iterations
+
+Number of iterations to smooth new created strokes.
+
+##### Subdivision Steps
+
+Number of subdivisions of new created strokes
+
+##### Simplify
+
+Simplify new created strokes.
+
+##### Trim Stroke Ends
+
+Trim intersecting stroke ends.
+
+##### Outline
+
+Convert stroke to perimeter. This tool requires an active camera in the scene. · **Material**: Material used for the secondary uses for this brush. · **Thickness**: The thickness of the outline stroke, relative to the current brush thickness.
 
 #### Randomize
 
@@ -746,10 +838,13 @@ Adds variation to the brush color per stroke or while drawing a stroke.
 
 Randomize the pressure.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ###### Pressure Size Curve
 
@@ -777,40 +872,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -820,10 +909,13 @@ A curve preset to start with.
 
 Randomize the strength.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ###### Pressure Size Curve
 
@@ -851,40 +943,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -894,10 +980,13 @@ A curve preset to start with.
 
 Randomize the rotation.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ###### Pressure Size Curve
 
@@ -925,40 +1014,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -970,19 +1053,25 @@ A curve preset to start with.
 
 Shifts the base color across the color wheel. You need to be in color attribute mode.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ##### Saturation
 
 Randomize original saturation. Adjusts the intensity of the color. You need to be in color attribute mode.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ###### Pressure Size Curve
 
@@ -1010,40 +1099,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1053,10 +1136,13 @@ A curve preset to start with.
 
 Randomize original value. Modifies the brightness of the stroke. You need to be in color attribute mode.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Stroke Randomization | Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. |
-| Use Pressure | Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
+###### Stroke Randomization
+
+Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke.
+
+###### Use Pressure
+
+Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
 
 ###### Pressure Size Curve
 
@@ -1084,40 +1170,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1157,40 +1237,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1202,16 +1276,19 @@ A curve preset to start with.
 
 Draw lines with a delay to allow smooth strokes.
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------- |
-| Radius | The minimum distance from last point before the stroke continues. |
-| Factor | Smooth stroke factor. Higher values gives smoother stroke. |
+##### Radius
+
+The minimum distance from last point before the stroke continues.
+
+##### Factor
+
+Smooth stroke factor. Higher values gives smoother stroke.
 
 ### Brush Settings Panel - Erase
 
 ![Brush Settings Panel - Erase](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode/brush-settings-panel-erase.png)
 
-Eraser hard, Eraser Point, Eraser Soft, Eraser Stroke
+These settings are for the eraser brushes: Eraser Hard, Eraser Point, Eraser Soft and Eraser Stroke.
 
 ![Brush Settings Panel - Erase](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode/brush-settings-panel-erase-2.png)
 
@@ -1249,40 +1326,34 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
@@ -1322,49 +1393,54 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
-**Clipping options**
+###### Clipping options
 
 ![Clipping options](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png)
 
 Set up clipping for the stroke.
 
-**Tools**
+###### Tools
 
 ![Tools](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-**Handles**
+###### Handles
 
 ![Handles](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png)
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------ |
-| Position X / Y | The position of the selectedc curve point. |
-| Delete Points | Deletes the selected curve point. |
+- **Position X / Y**: The position of the selectedc curve point.
+- **Delete Points**: Deletes the selected curve point.
 
-**Curve Presets**
+###### Curve Presets
 
 ![Curve Presets](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png)
 
 A curve preset to start with.
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------- |
-| Keep Caps | Keep the caps as they are. Do not flatten them. |
-| Active Layer | Only edit the active layer of the object. |
+#### Mode
+
+How the eraser removes strokes. Each mode is a button with its own icon.
+
+- **Dissolve**: Fades the points out by lowering their strength and thickness. Good for soft, gradual erasing.
+- **Point**: Removes the stroke points under the brush.
+- **Stroke**: Removes whole strokes that the brush touches.
+
+#### Keep Caps
+
+Keeps the caps of the stroke ends as they are, and doesn't flatten them when erasing.
+
+#### Active Layer
+
+Only erases on the active layer of the object.
 
 ### Brush Settings Panel - Fill
 
@@ -1376,12 +1452,21 @@ A curve preset to start with.
 
 Note that the Fill tool does not fill an existing stroke like you would expect. It extends existing strokes with closed areas, or the border.
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------- |
-| Direction | The fill direction. Fill Normal or Inverted. |
-| Precision | Factor for fill boundary accuracy. Higher values are more accurate but slower. |
-| Leak Size | Size in pixels to consider the leak closed. |
-| Thickness | The thickness of the new created stroke drawn with the fill tool around existing strokes or the border. |
+#### Direction
+
+The fill direction. Fill Normal or Inverted.
+
+#### Precision
+
+Factor for fill boundary accuracy. Higher values are more accurate but slower.
+
+#### Leak Size
+
+Size in pixels to consider the leak closed.
+
+#### Thickness
+
+The thickness of the new created stroke drawn with the fill tool around existing strokes or the border.
 
 ### Brush Settings Panel - Fill - Advanced Sub panel
 
@@ -1401,12 +1486,21 @@ The mode to draw the boundary lines.
 
 What layers to use as boundaries.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------- |
-| Simplify | Number of simplify steps. Large values reduces Fill accuracy. |
-| Ignore Transparency | Show transparent lines to use as boundary for filling. |
-| Limit to Viewport | Threshold to consider a color as transparent for filling. |
-| Auto-Remove Fill Guides | Automatically remove fill guide strokes after filling. |
+##### Simplify
+
+Number of simplify steps. Large values reduces Fill accuracy.
+
+##### Ignore Transparency
+
+Show transparent lines to use as boundary for filling.
+
+##### Limit to Viewport
+
+Threshold to consider a color as transparent for filling.
+
+##### Auto-Remove Fill Guides
+
+Automatically remove fill guide strokes after filling.
 
 #### Gap closure sub panel
 
@@ -1420,15 +1514,21 @@ Strokes end extension for closing gaps. A value of zero disables the feature.
 
 ![Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode/mode.png)
 
-| Entry | What it does |
-| ------ | ------------------------------------------ |
-| Extend | Extend strokes in straight lines. |
-| Radius | Connect endpoints that are close together. |
+###### Extend
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------ |
-| Visual Aids | Show help lines for stroke extension. |
-| Stroke Collision | Check if extend lines collides with the strokes. |
+Extend strokes in straight lines.
+
+###### Radius
+
+Connect endpoints that are close together.
+
+###### Visual Aids
+
+Show help lines for stroke extension.
+
+###### Stroke Collision
+
+Check if extend lines collides with the strokes.
 
 ### Color Panel
 
@@ -1448,10 +1548,13 @@ This can also be done in the tool settings in the header.
 
 Define the color for your brush.
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active color | The active color is the left one. When you click the button with the two arrows down right then you can swap the color with the secondary color. Then this secondary color becomes the primary color, and is active. A click at one of the color fields will open a more detailed color dialog, to Set up the color by using rgb, hsv and hex colors and with value sliders. |
-| Brush colors flip | Flips the primary color with the secondary color. |
+##### Active color
+
+The active color is the left one. When you click the button with the two arrows down right then you can swap the color with the secondary color. Then this secondary color becomes the primary color, and is active. A click at one of the color fields will open a more detailed color dialog, to Set up the color by using rgb, hsv and hex colors and with value sliders.
+
+##### Brush colors flip
+
+Flips the primary color with the secondary color.
 
 #### Mode
 
@@ -1481,16 +1584,37 @@ The elements are explained from left to right and from top to bottom.
 
 The button at the left opens a drop down list to choose between your palettes.
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Number of users | See how many users the palette currently has. |
-| Fake User | Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
-| Add palette | Add a new palette. |
-| Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
-| New Palette color | Adjust a color in the color picker. Then click at the add button to add this color to the palette. |
-| Delete Palette color | Select the color in the palette, then click at the minus button to remove it. |
-| Move Palette Color up and down | With these two buttons you can move the active color up or down in the palette. |
+##### Edit Box
+
+Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
+
+##### Number of users
+
+See how many users the palette currently has.
+
+##### Fake User
+
+Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
+
+##### Add palette
+
+Add a new palette.
+
+##### Remove Palette
+
+Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.
+
+##### New Palette color
+
+Adjust a color in the color picker. Then click at the add button to add this color to the palette.
+
+##### Delete Palette color
+
+Select the color in the palette, then click at the minus button to remove it.
+
+##### Move Palette Color up and down
+
+With these two buttons you can move the active color up or down in the palette.
 
 #### Sort By
 
@@ -1534,10 +1658,8 @@ A right click at a group in the list reveals a menu with further options.
 
 When you click at a group layer, then you will reveal further options.
 
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Edit Source | Allows you to edit the source code. |
-| Reset Panel Zoom | Resets the zoom of the panel to the default value. Note that this entry is dysfunctional. You cannot zoom the panel. |
+- **Edit Source**: Allows you to edit the source code.
+- **Reset Panel Zoom**: Resets the zoom of the panel to the default value. Note that this entry is dysfunctional. You cannot zoom the panel.
 
 ###### Delete Group
 
@@ -1545,18 +1667,14 @@ When you click at a group layer, then you will reveal further options.
 
 Deletes the selected group. It does not keep the children, and deletes the whole hierarchy.
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------- |
-| Ungroup | Ungroups the selected group. |
-| Merge Group | Combine the layers in this group into a single layer. |
-| Colors | Allows you to color your layer groups in the list. It does not show |
+- **Ungroup**: Ungroups the selected group.
+- **Merge Group**: Combine the layers in this group into a single layer.
+- **Colors**: Allows you to color your layer groups in the list. It does not show
 
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------------ |
-| Mask Layer | Toggle the Masks visibility in the layer. |
-| Onion Skinning | Toggle the use the layer for Onion Skinning. |
-| Viewport/Render Visibility | Toggle layer visibility in the viewport and in render. |
-| Lock | Toggle layer from being editable. |
+- **Mask Layer**: Toggle the Masks visibility in the layer.
+- **Onion Skinning**: Toggle the use the layer for Onion Skinning.
+- **Viewport/Render Visibility**: Toggle layer visibility in the viewport and in render.
+- **Lock**: Toggle layer from being editable.
 
 ##### Search Field
 
@@ -1570,10 +1688,13 @@ You can expand a search field at the bottom of the list. Type in your term and h
 
 Adds a new layer.
 
-| Entry | What it does |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Remove Layer / Layer Group | Deletes the selected layer or layer group. **Note:***If it removed a Layer group, it keeps the children, and the hierarchy.* |
-| Add New Layer Group | Adds a group. You can then drag n drop layers into it. The group will be added as a child when you have a group selected. |
+##### Remove Layer / Layer Group
+
+Deletes the selected layer or layer group. **Note:***If it removed a Layer group, it keeps the children, and the hierarchy.*
+
+##### Add New Layer Group
+
+Adds a group. You can then drag n drop layers into it. The group will be added as a child when you have a group selected.
 
 #### Add Extra menu
 
@@ -1589,22 +1710,61 @@ Deletes the selected group. This only shows when you have a group selected.
 
 Ungroups the selected group. This only shows when you have a group selected.
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Move To Top | Moves the active selected grease pencil layer to top |
-| Move To Bottom | Moves the active selected grease pencil layer to bottom |
-| Duplicate Layer | Makes an exact copy of the selected layer appending a number to differentiate its name. This method does not duplicate empty keyframes. |
-| Duplicate Empty layer | Makes an exact copy of the selected layer appending a number to differentiate its name. This method does duplicate empty keyframes. |
-| Show All | Turns on the visibility of every layer in the list. |
-| Hide Others | Turns off the visibility of every layer in the list except the active one. |
-| Lock All | Locks edition of all the layers in the list |
-| Unlock All | Unlocks edition of all the layers in the list. |
-| Merge Down | Merge the selected layer with the layer below. The new layer keeps the name of the lower layer. |
-| Merge All | Merge the selected layer with all layers. The new layer keeps the name of the active layer. |
-| Mask with Layer Above | Mask the active layer with the layer above. |
-| Mask with Layer Below | Mask the active layer with the layer below |
-| Copy Layer to Selected | Appends the active layer to the selected object. |
-| Copy all Layers to Selected | Appends all layers to the selected object. |
+###### Move To Top
+
+Moves the active selected grease pencil layer to top
+
+###### Move To Bottom
+
+Moves the active selected grease pencil layer to bottom
+
+###### Duplicate Layer
+
+Makes an exact copy of the selected layer appending a number to differentiate its name. This method does not duplicate empty keyframes.
+
+###### Duplicate Empty layer
+
+Makes an exact copy of the selected layer appending a number to differentiate its name. This method does duplicate empty keyframes.
+
+###### Show All
+
+Turns on the visibility of every layer in the list.
+
+###### Hide Others
+
+Turns off the visibility of every layer in the list except the active one.
+
+###### Lock All
+
+Locks edition of all the layers in the list
+
+###### Unlock All
+
+Unlocks edition of all the layers in the list.
+
+###### Merge Down
+
+Merge the selected layer with the layer below. The new layer keeps the name of the lower layer.
+
+###### Merge All
+
+Merge the selected layer with all layers. The new layer keeps the name of the active layer.
+
+###### Mask with Layer Above
+
+Mask the active layer with the layer above.
+
+###### Mask with Layer Below
+
+Mask the active layer with the layer below
+
+###### Copy Layer to Selected
+
+Appends the active layer to the selected object.
+
+###### Copy all Layers to Selected
+
+Appends all layers to the selected object.
 
 #### Reorder Layer
 
@@ -1612,10 +1772,13 @@ Ungroups the selected group. This only shows when you have a group selected.
 
 Move the selected layer up or down in the list.
 
-| Entry | What it does |
-| -------------- | -------------------------------------- |
-| Isolate Layers | Locks and hides all not active layers. |
-| Isolate layers | Locks all not active layers. |
+##### Isolate Layers
+
+Locks and hides all not active layers.
+
+##### Isolate layers
+
+Locks all not active layers.
 
 #### Autolock Inactive layers
 
@@ -1633,10 +1796,13 @@ Allow editing strokes even if they use locked materials.
 
 The layer blending operation to perform. See Color Blend Modes.
 
-| Entry | What it does |
-| ------- | ---------------------------------------------- |
-| Opacity | Used to set the opacity of the layer. |
-| Lights | When enabled, the layer is affected by lights. |
+##### Opacity
+
+Used to set the opacity of the layer.
+
+##### Lights
+
+When enabled, the layer is affected by lights.
 
 # Context Menus
 
@@ -1650,20 +1816,29 @@ In Draw mode you will call a context menu with the sliders from the Brush settin
 
 ![Draw Mode - Brushes Context Menu](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu/draw-mode-brushes-context-menu.png)
 
-| Entry | What it does |
-| -------- | --------------------------------- |
-| Radius | The radius of the sculpt brush. |
-| Strength | The strength of the sculpt brush. |
+#### Radius
+
+The radius of the sculpt brush.
+
+#### Strength
+
+The strength of the sculpt brush.
 
 #### Active Layer
 
 The active grease pencil layer. You can choose another layer, and add new layers here too. It is the same content than in the Properties editor.
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Layer drop down box | The list of available layers. · **New Layer**: Add a new grease pencil layer. |
-| Layer Edit Box | The currently active grease pencil layer. Rename it by clicking into the field. |
-| Remove Layer | Remove the grease pencil layer. |
+##### Layer drop down box
+
+The list of available layers. · **New Layer**: Add a new grease pencil layer.
+
+##### Layer Edit Box
+
+The currently active grease pencil layer. Rename it by clicking into the field.
+
+##### Remove Layer
+
+Remove the grease pencil layer.
 
 #### Active Material
 
@@ -1671,7 +1846,10 @@ The active grease pencil layer. You can choose another layer, and add new layers
 
 The current active material.
 
-| Entry | What it does |
-| ---------------------- | -------------------------------------------------------------------- |
-| Material drop down box | The list of available materials. |
-| Material Edit Box | The currently active material. Rename it by clicking into the field. |
+##### Material drop down box
+
+The list of available materials.
+
+##### Material Edit Box
+
+The currently active material. Rename it by clicking into the field.

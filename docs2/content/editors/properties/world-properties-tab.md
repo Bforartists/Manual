@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - World Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.6 Editors - Properties Editor - World Properties Tab.odt
@@ -43,14 +43,22 @@ Here you can manage and change your world settings. There can be more than one W
 
 Here you can see and choose your world files.
 
+#### World Edit Box
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| World Edit Box | Here you can see and change the name of the current world file. |
-| Fake User | When enabled then this world file will be stored internally. And will remain in the scene. |
-| New | Create a new world file. · **Remove**: Note that this just sets the World file inactive. It is still in the list. You can delete the world file when it has no user anymore by saving the scene, closing and reopening Bforartists. |
+Here you can see and change the name of the current world file.
+
+#### Fake User
+
+When enabled then this world file will be stored internally. And will remain in the scene.
+
+#### New
+
+Create a new world file. · **Remove**: Note that this just sets the World file inactive. It is still in the list. You can delete the world file when it has no user anymore by saving the scene, closing and reopening Bforartists.
 
 
+#### Open Shader Editor
+
+Opens a Shader Editor window with the node tree of the active world. Use it to edit the world nodes without switching to the Shading workspace.
 ## Viewport Display - Cycles, Workbench
 
 ### Color
@@ -161,15 +169,25 @@ Volume rendering is a method to render light as it passes through a media within
 
 Adjust the ray visibility.
 
+### Camera
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------- |
-| Camera | Object Visibility for Camera rays. |
-| Diffuse | Object Visibility for Diffuse Reflection rays. |
-| Glossy | Object Visibility for Glossy Reflection rays. |
-| Transmission | Object Visibility for Transmission rays. |
-| Volume Scatter | Object Visibility for Volume Scatter rays. |
+Object Visibility for Camera rays.
 
+### Diffuse
+
+Object Visibility for Diffuse Reflection rays.
+
+### Glossy
+
+Object Visibility for Glossy Reflection rays.
+
+### Transmission
+
+Object Visibility for Transmission rays.
+
+### Volume Scatter
+
+Object Visibility for Volume Scatter rays.
 
 ## Cycles - Settings Panel
 
@@ -189,12 +207,17 @@ Here you can choose the method for the surface sampling.
 
 Just with method manual. Adjust the map resolution manually.
 
+##### Max Bounces
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------- |
-| Max Bounces | Maximum number of bounces the background light will contribute to the render. |
-| Shadow Caustics | Generate caustics in the shadows of refractive surfaces. |
+Maximum number of bounces the background light will contribute to the render.
 
+##### Shadow Caustics
+
+Generate caustics in the shadows of refractive surfaces.
+
+##### Cast Shadow
+
+Lets the world light cast shadows. Turn it off for a soft, shadowless fill light from the world, for example in product shots where only the lamps should cast shadows.
 
 ### Volume subpanel
 
@@ -210,12 +233,13 @@ Here you can choose the volume sampling method.
 
 Here you can choose between cubic and linear interpolation.
 
+##### Homogeneous
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------ |
-| Homogeneous | When using volume rendering, assume that the volume has the same density everywhere. |
-| Step Size | Distance between volume shader samples when rendering the volume. Lower values increases accuracy and render time. |
+When using volume rendering, assume that the volume has the same density everywhere.
 
+##### Step Size
+
+Distance between volume shader samples when rendering the volume. Lower values increases accuracy and render time.
 
 ### Light Group subpanel
 
@@ -233,15 +257,25 @@ You need to have a lightgroup in the scene. You create them in the View Layer Pr
 
 Adjust the ray visibility.
 
+### Camera
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------- |
-| Camera | Object Visibility for Camera rays. |
-| Diffuse | Object Visibility for Diffuse Reflection rays. |
-| Glossy | Object Visibility for Glossy Reflection rays. |
-| Transmission | Object Visibility for Transmission rays. |
-| Volume Scatter | Object Visibility for Volume Scatter rays. |
+Object Visibility for Camera rays.
 
+### Diffuse
+
+Object Visibility for Diffuse Reflection rays.
+
+### Glossy
+
+Object Visibility for Glossy Reflection rays.
+
+### Transmission
+
+Object Visibility for Transmission rays.
+
+### Volume Scatter
+
+Object Visibility for Volume Scatter rays.
 
 ## Eevee - Settings Panel
 
@@ -261,23 +295,30 @@ The resolution when baked to a texture.
 
 ![Sun subpanel](/docs2/images/editors/properties/world-properties-tab/volume-subpanel.png)
 
+#### Threshold
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Threshold | The maximum value of the world contribution that will be recorded inside the light probe. The excess contribution is converted to a sunlight. A value of zero disables the feature. |
-| Angle | Angular diameter of the sun as seen from the earth. |
+The maximum value of the world contribution that will be recorded inside the light probe. The excess contribution is converted to a sunlight. A value of zero disables the feature.
 
+#### Angle
+
+Angular diameter of the sun as seen from the earth.
 
 ### Shadow subpanel
 
 ![Shadow subpanel](/docs2/images/editors/properties/world-properties-tab/shadow-subpanel.png)
 
+#### Shadow
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shadow | Enable sun shadow casting. |
-| Jittered Shadows | Enable jittered soft shadows to increase precision in the final rendering. Note that this feature has a big perfomance impact. · **Overblur**: Apply shadow tracing to each jittered sample to reduce under-sampling artifacts. |
-| Filter | Blur shadow antialiasing. |
-| Resolution Limit | Maximum size of a shadow map pixel. Lower values gives higher resolution and better quality. |
+Enable sun shadow casting.
 
+#### Jittered Shadows
 
+Enable jittered soft shadows to increase precision in the final rendering. Note that this feature has a big perfomance impact. · **Overblur**: Apply shadow tracing to each jittered sample to reduce under-sampling artifacts.
+
+#### Filter
+
+Blur shadow antialiasing.
+
+#### Resolution Limit
+
+Maximum size of a shadow map pixel. Lower values gives higher resolution and better quality.

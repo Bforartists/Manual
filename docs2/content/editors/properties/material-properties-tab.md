@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Material Properties Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.15 Editors - Properties Editor - Material Properties Tab.odt
@@ -61,21 +61,33 @@ Clicking at the name allows renaming of the material.
 
 Grease pencil materials have additional functionality in the list.
 
+#### Show in ghosts
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Show in ghosts | Turn on onion skinning for this material. Onion skinning displays strokes before and after the current frame. |
-| Hide | Show or hide the material. |
-| Locked | Protect color from further editing. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Sort by Name**: Sort the List by name. · **Reverse**: Exclude the search term instead of searching for it. |
+Turn on onion skinning for this material. Onion skinning displays strokes before and after the current frame.
 
+#### Hide
 
-| Entry | What it does |
-| -------------------- | ---------------------------------- |
-| Add Material Slot | Add a new material slot |
-| Remove Material Slot | Remove the selected material slot. |
+Show or hide the material.
 
+#### Locked
+
+Protect color from further editing.
+
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Sort by Name**: Sort the List by name. · **Reverse**: Exclude the search term instead of searching for it.
+
+#### Add Material Slot
+
+Add a new material slot
+
+#### Remove Material Slot
+
+Remove the selected material slot.
 
 ### Materials Specials menu
 
@@ -83,26 +95,37 @@ Grease pencil materials have additional functionality in the list.
 
 ![With a mesh or curve or other object type](/docs2/images/editors/properties/material-properties-tab/with-a-mesh-or-curve-or-other-object-type.png)
 
+##### Copy Material
 
-| Entry | What it does |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Material | Copy the material settings and nodes. |
-| Copy Material to selected | Copy material to selected objects. First select the object without material. Hold down shift and select the object with material. Perform Copy material to selected. |
-| Paste Material | Pastes a copied material. |
-| Remove Unused Slots | Remove material slots that does not contain a material. |
-| Remove All Materials | Removes all material slots |
+Copy the material settings and nodes.
 
+##### Copy Material to selected
+
+Copy material to selected objects. First select the object without material. Hold down shift and select the object with material. Perform Copy material to selected.
+
+##### Paste Material
+
+Pastes a copied material.
+
+##### Remove Unused Slots
+
+Remove material slots that does not contain a material.
+
+##### Remove All Materials
+
+Removes all material slots
 
 #### With a grease pencil stroke object
 
 ![With a grease pencil stroke object](/docs2/images/editors/properties/material-properties-tab/with-a-grease-pencil-stroke-object.png)
 
+##### Show All
 
-| Entry | What it does |
-| ----------- | -------------------------- |
-| Show All | Show all materials. |
-| Hide Others | Hide unselected materials. |
+Show all materials.
 
+##### Hide Others
+
+Hide unselected materials.
 
 ### Material data property
 
@@ -120,14 +143,21 @@ A list of the available materials in the scene where you can choose a material f
 
 When the object has no material yet. Creates a new default material and adds a first material slot to the list.
 
+##### Name
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------- |
-| Name | The name of the active material. Double clicking allows to rename it. |
-| Fake User | Keep this data even when it has no user in the scene. |
-| New | Creates a new default material, and assigns it to the active material slot. |
-| Remove | — |
+The name of the active material. Double clicking allows to rename it.
 
+##### Fake User
+
+Keep this data even when it has no user in the scene.
+
+##### New
+
+Creates a new default material, and assigns it to the active material slot.
+
+##### Remove
+
+—
 
 #### Link
 
@@ -136,6 +166,10 @@ When the object has no material yet. Creates a new default material and adds a f
 Specifies whether the material is to be linked to the Object or to the Object Data.
 
 Different objects may share the same mesh data. And if the material is linked to the mesh, every object will share it. If the material is linked directly to the object data, the objects can have different materials and still share the same mesh. Default is Data.
+
+#### Open Shader Editor
+
+Opens a Shader Editor window with the node tree of the active material. Use it to edit the material nodes without switching to the Shading workspace. It works with EEVEE and Cycles.
 
 #### Right Click menus
 
@@ -155,14 +189,31 @@ When you right click at the material property then you will reveal context menus
 
 In Edit mode you can assign different materials at different mesh or curve parts.
 
+#### Workflow
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Workflow | Enter Edit Mode. Select the material that you want to assign. Select the mesh or curve part. Click at the assign button. |
-| Assign | Assign active material slot and material to the selected faces in the mesh, strokes in a Grease Pencil, and similar for other object types. |
-| Select | Select faces assigned to the active material slot. |
-| Deselect | Deselect faces assigned to the active material slot. |
+Enter Edit Mode. Select the material that you want to assign. Select the mesh or curve part. Click at the assign button.
 
+![Edit Mode - Grease Pencil](/docs2/images/editors/properties/material-properties-tab/edit-mode-grease-pencil.png)
+
+Grease Pencil objects show the same three buttons in Edit Mode, with the same icons as for meshes.
+
+#### Assign
+
+![Assign button](/docs2/images/editors/properties/material-properties-tab/edit-mode-assign.png)
+
+Assign active material slot and material to the selected faces in the mesh, strokes in a Grease Pencil, and similar for other object types.
+
+#### Select
+
+![Select button](/docs2/images/editors/properties/material-properties-tab/edit-mode-select.png)
+
+Select faces or strokes assigned to the active material slot.
+
+#### Deselect
+
+![Deselect button](/docs2/images/editors/properties/material-properties-tab/edit-mode-deselect.png)
+
+Deselect faces or strokes assigned to the active material slot.
 
 ## Preview Panel
 
@@ -170,12 +221,13 @@ In Edit mode you can assign different materials at different mesh or curve parts
 
 A preview window to judge the material.
 
+### Flat, Sphere, Cube, etc.
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------ |
-| Flat, Sphere, Cube, etc. | Different shaped preview objects. |
-| Preview World | Include the world settings into the preview rendering. |
+Different shaped preview objects.
 
+### Preview World
+
+Include the world settings into the preview rendering.
 
 ## Surface Panel
 
@@ -243,23 +295,23 @@ The draw mode for the stroke. The modes should be self explaining. Most settings
 
 The draw style.
 
-**Solid**
+###### Solid
 
 ![Solid](/docs2/images/editors/properties/material-properties-tab/solid.png)
 
-**Base Color**
+###### Base Color
 
 The color of the stroke.
 
-**Texture**
+###### Texture
 
 ![Texture](/docs2/images/editors/properties/material-properties-tab/texture.png)
 
-**Base Color**
+###### Base Color
 
 The base color of the stroke. You can blend the texture with this color.
 
-**Image Prop**
+###### Image Prop
 
 ![Image Prop](/docs2/images/editors/properties/material-properties-tab/image-prop.png)
 
@@ -269,23 +321,16 @@ This property contains the list of loaded images. When no image is loaded then i
 
 From left to right ...
 
+- **Image browser**: This is a list of the images in the scene. This list allows you to switch to other images.
+- **Search form**: Search for specific images.
+- **Image Edit Box**: Read the name of the currently selected image. And you can rename the image here too.
+- **Number of Fake Users**: In case this file has a fake user assigned, then this number displays the number of fake users.
+- **Fake User**: Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+- **Open**: Open a new image.
+- **Remove**: Removes the image.
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image browser | This is a list of the images in the scene. This list allows you to switch to other images. |
-| Search form | Search for specific images. |
-| Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
-| Number of Fake Users | In case this file has a fake user assigned, then this number displays the number of fake users. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open | Open a new image. |
-| Remove | Removes the image. |
-
-
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------- |
-| Self Overlap | Disable stencil and allow self intersections with alpha materials. |
-| Holdout | Remove the color from underneath this stroke by using the stroke as a mask. |
-
+- **Self Overlap**: Disable stencil and allow self intersections with alpha materials.
+- **Holdout**: Remove the color from underneath this stroke by using the stroke as a mask.
 
 ##### Mode Type Dots + Squares
 
@@ -299,23 +344,23 @@ From left to right ...
 
 The draw style.
 
-**Solid**
+###### Solid
 
 ![Solid](/docs2/images/editors/properties/material-properties-tab/solid.png)
 
-**Base Color**
+###### Base Color
 
 The color of the stroke.
 
-**Texture**
+###### Texture
 
 ![Texture](/docs2/images/editors/properties/material-properties-tab/texture.png)
 
-**Base Color**
+###### Base Color
 
 The base color of the stroke. You can blend the texture with this color.
 
-**Image Prop**
+###### Image Prop
 
 ![Image Prop](/docs2/images/editors/properties/material-properties-tab/image-prop.png)
 
@@ -325,41 +370,55 @@ This property contains the list of loaded images. When no image is loaded then i
 
 From left to right ...
 
+- **Image browser**: This is a list of the images in the scene. This list allows you to switch to other images.
+- **Search form**: Search for specific images.
+- **Image Edit Box**: Read the name of the currently selected image. And you can rename the image here too.
+- **Number of Fake Users**: In case this file has a fake user assigned, then this number displays the number of fake users.
+- **Fake User**: Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+- **Open**: Open a new image.
+- **Remove**: Removes the image.
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image browser | This is a list of the images in the scene. This list allows you to switch to other images. |
-| Search form | Search for specific images. |
-| Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
-| Number of Fake Users | In case this file has a fake user assigned, then this number displays the number of fake users. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open | Open a new image. |
-| Remove | Removes the image. |
+###### Placement
 
+How the dots or squares are spread along the stroke. Here is the same stroke three times, with Count 2, Spacing 150% and Density 2.2:
+
+![The same stroke with Placement set to Count, Radius and Density](/docs2/images/editors/properties/material-properties-tab/dots-placement.png)
+
+- **Count**: Places the same number of dots between every two points of the stroke, set with **Count**. Where you drew slowly the points sit close together, so the dots bunch up; where you drew fast they spread out. Good for a hand-made, uneven look.
+- **Radius**: Spaces the dots by their own size, set with **Spacing** as a percentage of the dot diameter. At 100% the dots just touch; thick parts of the stroke get bigger gaps, thin parts smaller ones. This is the default, and gives a tidy beaded line.
+- **Density**: Spreads the dots evenly along the whole length of the stroke, set with **Density**, no matter how fast you drew or how thick the stroke is. Good for dotted lines, stitches and perforations.
+
+###### Count
+
+How many dots are placed per stroke segment. Shows when Placement is Count.
+
+###### Spacing
+
+The gap between dots, as a percentage of the dot diameter. Shows when Placement is Radius.
+
+###### Density
+
+How many dots are placed along the stroke. Shows when Placement is Density.
 
 ###### Alignment
 
 ![Alignment](/docs2/images/editors/properties/material-properties-tab/alignment.png)
 
-Dots and Squares mode.
+How the dots and squares are turned.
 
+- **Path**: They follow the drawing direction of the stroke and the object rotation.
+- **Object**: They follow the object rotation only.
+- **Fixed**: They stay aligned with the view and ignore the stroke direction and the object rotation.
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------- |
-| Path | Alignment follows stroke drawing path and object rotation. |
-| Object | Alignment follows object rotation only. |
-| Fixed | Keeps aligned with viewport. |
+###### Rotation
 
+![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
+
+An extra rotation for the dots and the square textures.
 
 #### Self Overlap
 
 Disable stencil and allow self intersections with alpha materials.
-
-##### Rotation
-
-![Rotation](/docs2/images/editors/properties/material-properties-tab/rotation.png)
-
-Additional rotation applied to dot and square strokes.
 
 #### Holdout
 
@@ -387,23 +446,15 @@ Remove the color from underneath this stroke by using the stroke as a mask.
 
 ![Gradient](/docs2/images/editors/properties/material-properties-tab/gradient.png)
 
-###### Gradient Type
+A Gradient fill blends colors across your stroke's fill. It uses a **color ramp**, just like the ColorRamp node, so you can blend as many colors as you like. Older files that used two colors are converted automatically and look the same.
 
-![Gradient Type](/docs2/images/editors/properties/material-properties-tab/gradient-type.png)
+Choose **Linear** for colors that run in a straight line, or **Radial** for colors that spread out in a circle from the center.
 
-Draw a linear or a radial gradient.
+On the color ramp, click **+** to add a color stop and **–** to remove one. Drag the stops along the bar, and pick a stop to set its color.
 
+**Location**, **Rotation** and **Scale** move, turn and stretch the gradient on the fill. Rotation only matters for Linear, since a radial gradient looks the same at any angle. **Holdout** turns the fill into a mask that removes the color underneath it.
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------- |
-| Base Color | The first color of the gradient. |
-| Secondary Color | The second color of the gradient. |
-| Blend | The mix factor between the first and second gradient color. |
-| Flip Colors | Flip the filling colors. |
-| Location X / Y | The location of the gradient. |
-| Rotation | The rotation of the gradient. |
-| Scale X / Y | The scale of the gradient. |
-
+> **Tip:** You can also place the gradient right in the viewport with the **Gradient** tool in Grease Pencil Edit Mode.
 
 #### Holdout
 
@@ -427,21 +478,49 @@ This property contains the list of loaded images. When no image is loaded then i
 
 From left to right ...
 
+###### Image browser
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image browser | This is a list of the images in the scene. This list allows you to switch to other images. · **Search form**: Search for specific images. |
-| Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
-| Number of Fake Users | In case this file has a fake user assigned, then this number displays the number of fake users. |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| Open | Open a new image. |
-| Remove | Removes the image. |
-| Location X / Y | The location of the image. |
-| Rotation | The rotation of the image. |
-| Scale X / Y | The scale of the image. |
-| Clip Image | Do not repeat the image, but clamp it to one instance. |
-| Holdout | Remove the color from underneath this stroke by using the stroke as a mask. |
+This is a list of the images in the scene. This list allows you to switch to other images. · **Search form**: Search for specific images.
 
+###### Image Edit Box
+
+Read the name of the currently selected image. And you can rename the image here too.
+
+###### Number of Fake Users
+
+In case this file has a fake user assigned, then this number displays the number of fake users.
+
+###### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+###### Open
+
+Open a new image.
+
+###### Remove
+
+Removes the image.
+
+###### Location X / Y
+
+The location of the image.
+
+###### Rotation
+
+The rotation of the image.
+
+###### Scale X / Y
+
+The scale of the image.
+
+###### Clip Image
+
+Do not repeat the image, but clamp it to one instance.
+
+###### Holdout
+
+Remove the color from underneath this stroke by using the stroke as a mask.
 
 ## Volume Panel
 
@@ -497,12 +576,13 @@ Index number for the material index pass.
 
 #### Backface Culling
 
+##### Camera
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------- |
-| Camera | Use back face culling to hide the back side of faces. |
-| Shadow | Use back face culling when casting shadows. |
+Use back face culling to hide the back side of faces.
 
+##### Shadow
+
+Use back face culling when casting shadows.
 
 #### Displacement
 
@@ -522,7 +602,7 @@ Bump mapping simulates the displacement mapping.
 
 Use true displacement. Requires fine subdivision.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -532,7 +612,7 @@ The maximum distance the vertices can be displaced.
 
 Uses a mixture of displacement and bump mapping.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -592,12 +672,13 @@ Consider materials single sided for light probe volume capture.
 
 ![Intersection](/docs2/images/editors/properties/material-properties-tab/intersection.png)
 
+##### Fast
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fast | Each face is considered as a medium interface. It gives correct results for manifold geometry that contains no inner parts. |
-| Accurate | Faces are considered as a medium interface only when they have different consectuive facing. It gives correct results as longa s the max ray depth is not exceeded. This method also has a significant higher memory requirement. |
+Each face is considered as a medium interface. It gives correct results for manifold geometry that contains no inner parts.
 
+##### Accurate
+
+Faces are considered as a medium interface only when they have different consectuive facing. It gives correct results as longa s the max ray depth is not exceeded. This method also has a significant higher memory requirement.
 
 ## Settings Panel - Cycles renderer
 
@@ -627,12 +708,13 @@ What method to use for displacement.
 
 Sampling strategy for emission surfaces.
 
+##### Transparent Shadows
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------- |
-| Transparent Shadows | Use transparent shadows if the material contains a transparent bsdf node. |
-| Bump map correction | Correwct shadow terminator artifacts caused by bump mapping. |
+Use transparent shadows if the material contains a transparent bsdf node.
 
+##### Bump map correction
+
+Correwct shadow terminator artifacts caused by bump mapping.
 
 ### Volume subpanel
 
@@ -658,12 +740,13 @@ What interpolation method to use for volume rendering.
 
 Use material masks to filter out occluded strokes. You can filter out up to eight mask bits. The index starts with 0.
 
+#### Levels
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Levels | Faces with this material will behave as if it has set nubmers of layers in occlusion. |
-| Intersection Priority | Overwrite object and collection priority value. · **Intersection Priority Value**: The intersection line will be included into the object with the higher intersection priority value. |
+Faces with this material will behave as if it has set nubmers of layers in occlusion.
 
+#### Intersection Priority
+
+Overwrite object and collection priority value. · **Intersection Priority Value**: The intersection line will be included into the object with the higher intersection priority value.
 
 ## Viewport Display
 
@@ -685,12 +768,13 @@ Cycles only. And with Cycles these settings are just relevant for the viewport r
 
 #### Backface Culling
 
+##### Camera
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------- |
-| Camera | Use back face culling to hide the back side of faces. |
-| Shadow | Use back face culling when casting shadows. |
+Use back face culling to hide the back side of faces.
 
+##### Shadow
+
+Use back face culling when casting shadows.
 
 #### Displacement
 
@@ -710,7 +794,7 @@ Bump mapping simulates the displacement mapping.
 
 Use true displacement. Requires fine subdivision.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -720,7 +804,7 @@ The maximum distance the vertices can be displaced.
 
 Uses a mixture of displacement and bump mapping.
 
-**Max distance**
+###### Max distance
 
 The maximum distance the vertices can be displaced.
 
@@ -788,12 +872,13 @@ This panel exists for all object types in the Object Data Properties. Allows you
 
 In this panel you might also find custom properties from addons or scripts.
 
+### Add
 
-| Entry | What it does |
-| -------------- | -------------------------- |
-| Add | Adds a new property. |
-| Property Value | The value of the property. |
+Adds a new property.
 
+### Property Value
+
+The value of the property.
 
 ### Edit
 

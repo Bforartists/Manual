@@ -1,0 +1,63 @@
+/* Bforartists website · news-head.css · @version 1.0.0 · News template, page head code. Moved out of the page so browsers cache it (Nov 2026). */
+/* ---- block ---- */
+/* Bforartists · news post v1.2 (14 Oct 2026) · category colours, post typography, sections bar. No floating cards.
+   Everything else lives in Webflow classes (ui-*). */
+[data-cat="Releases"]{--cat:#5cb4f0;--art-a:#7cc4f4;--art-b:#23507a}
+[data-cat="Development"]{--cat:#f2994a;--art-a:#f6b97a;--art-b:#8a4a16}
+[data-cat="Artist spotlights"]{--cat:#8fd16a;--art-a:#a7e58a;--art-b:#2f6b22}
+[data-cat="Challenges"]{--cat:#c08cf2;--art-a:#d6b4ff;--art-b:#5a3496}
+[data-cat="Events"]{--cat:#f2c94c;--art-a:#f5dc84;--art-b:#8a6a12}
+.ui-art-num:empty,.ui-post-cover-num:empty{display:none}
+.ui-post-body>:first-child{margin-top:0}
+.ui-post-body h2,.ui-post-body h3,.ui-post-body p{text-align:left}
+.ui-post-body h2{font-family:var(--_bfa---type--heading);font-size:2.125rem;line-height:1.15;color:#ececec;margin:2.25rem 0 .75rem;scroll-margin-top:calc(var(--nav-h,4.375rem) + 4rem)}
+.ui-post-body h3{font-family:var(--_bfa---type--heading);font-size:1.375rem;line-height:1.2;color:#ececec;margin:1.75rem 0 .5rem}
+.ui-post-body p{margin:0 0 1.25rem}
+.ui-post-body a{color:#5cb4f0}
+.ui-post-body ul,.ui-post-body ol{margin:0 0 1.25rem;padding-left:1.25rem}
+.ui-post-body figure{margin:1.75rem 0}
+.ui-post-body img{border-radius:.3125rem}
+.ui-post-body blockquote{margin:1.75rem 0;padding:.5rem 0 .5rem 1.5rem;border-left:3px solid #5cb4f0;font-family:var(--_bfa---type--heading);font-size:1.5rem;line-height:1.3;color:#ececec}
+@media (max-width:767px){.ui-post-body h2{font-size:1.75rem}}
+/* Sections bar (phones/tablets): open state */
+.ui-post-now.is-open .ui-post-now-menu{display:flex}
+.ui-post-now.is-open .ui-post-now-caret{transform:rotate(180deg)}
+.ui-post-now-menu .ui-panel-link{text-decoration:none;padding:.625rem .75rem}
+.ui-post-now-menu .ui-panel-link:hover{background:#4c4c4c}
+/* no floating cards anywhere (motion sickness) */
+.ui-float{animation:none!important;transform:none}
+/* Wide phone (landscape): square thumbs beside the text */
+@media (orientation:landscape) and (max-height:540px){
+ .ui-card.is-post{display:grid;grid-template-columns:8.5rem minmax(0,1fr);column-gap:1rem;row-gap:.375rem;align-items:start;align-content:start}
+ .ui-card.is-post>.ui-art{grid-row:1/span 5;aspect-ratio:1/1;padding:.5rem}
+ .ui-card.is-post .ui-art-num{font-size:2rem}
+}
+/* ---- bfa-post ---- */
+/* BFA Post 1.0 - reading UX like the docs (news post template head).
+   Path bar on top of the article: docs-style breadcrumb (News > category > this post) and the docs tools on the right
+   (collapse panels, focus). Side panels open / close from their header with the disclosure triangle, like the docs.
+   Focus mode hides the side panels; the text keeps a reading width, pictures and videos run the full width. */
+.ui-post-cover .ui-crumb{display:none}
+.bfa-post-path{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 1.25rem;flex-wrap:wrap}
+.bfa-post-path .ui-doc-crumb{min-width:0;flex:1 1 auto}
+.bfa-post-path .ui-doc-crumb-here{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bfa-post-tools{display:flex;gap:.375rem;flex:0 0 auto}
+.bfa-post-tools .ui-btn.is-square{justify-content:center}
+.ui-kind.bfa-flag{background-color:rgba(36,38,42,.78);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-transform:none;letter-spacing:0}
+.ui-cat.bfa-flag .ui-cat-dot{display:none}
+.ui-cat.bfa-flag .ui-cat-label{color:inherit;font:inherit;text-transform:none;letter-spacing:0}
+aside .ui-panel-head[data-panel-toggle]{cursor:pointer;display:flex;align-items:center;gap:.5rem;-webkit-user-select:none;user-select:none}
+aside .ui-panel-head[data-panel-toggle] .ui-panel-caret{width:12px;height:12px;flex:0 0 auto}
+aside .ui-panel-head[data-panel-toggle] .ui-panel-title{flex:1 1 auto;margin:0!important;text-align:left!important}
+aside .ui-panel-head+.is-collapsed{display:none!important}
+/* videos and pictures: full width of the article */
+.ui-post-body figure.w-richtext-figure-type-video,.ui-post-body .w-embed:has(iframe),.ui-post-body .w-video{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+.ui-post-body iframe:not([height]),.ui-post-body video{width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px}
+/* focus mode */
+.bfa-post-focus .ui-side-layout{grid-template-columns:minmax(0,1fr)!important}
+.bfa-post-focus .ui-side-layout>aside{display:none!important}
+.bfa-post-focus .ui-post-body{max-width:none!important}
+.bfa-post-focus .ui-post-body>:not(figure):not(.w-embed):not(.w-video):not(.ui-spot-frame):not([data-yt]):not(.bfa-post-path){max-width:46rem;margin-left:auto;margin-right:auto}
+.bfa-post-focus .ui-post-body>figure,.bfa-post-focus .ui-post-body>.w-embed,.bfa-post-focus .ui-post-body>.w-video,.bfa-post-focus .ui-post-body>.ui-spot-frame{max-width:100%!important;width:100%!important}
+.bfa-post-focus [data-focus-post]{background-color:var(--_bfa---accent--selected);color:#fff}
+@media (max-width:767px){.bfa-post-tools{display:none}}

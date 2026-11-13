@@ -1,0 +1,319 @@
+/* Bforartists website · site-head.css · @version 1.0.0 · Site-wide head code (Webflow Site settings, Custom code, Head). Moved out of the page so browsers cache it (Nov 2026). */
+/* ---- block ---- */
+/*width*/
+::-webkit-scrollbar {
+width:8px;
+}
+/*track*/
+::-webkit-scrollbar-track {
+background:rgb(48, 48, 48);
+border-radius:4px;
+}
+/*thumb*/
+::-webkit-scrollbar-thumb {
+background:rgb(133, 133, 133);
+border-radius:4px;
+}
+/*thumb hover*/
+::-webkit-scrollbar-thumb:hover {
+background:rgba(117, 191, 256, 1);
+}
+/*thumb pressed*/
+::-webkit-scrollbar-thumb:active {
+background:rgba(255, 255, 255, 1);
+}
+/* ---- bfa-world ---- */
+/* BFA World 1.2 - the lit room behind every page (site head). JS (BFA Light, BFA Tilt) only moves the light; without JS the light rests at its fallback spot. */
+:root{--bfa-lr:46rem;--bfa-glow:min(56rem,120vmin);--w-blue:rgba(92,180,240,.11);--w-blue2:rgba(92,180,240,.035);--w-spec:rgba(255,255,255,.065);--w-warm:rgba(242,153,74,.045);--w-top:rgba(255,255,255,.04);--w-bot:rgba(0,0,0,.30);--l-sheen:#ffffff09;--l-sheen2:#ffffff03;--l-sheenh:#ffffff12;--l-rim1:#b4deff99;--l-rim2:#8cc3f533;--l-rim3:#ffffff12;--l-rim1h:#c6e8ffd9;--l-rim2h:#96cdfa52;--l-rim3h:#ffffff1f}
+html.theme-light{--w-blue:rgba(44,127,192,.10);--w-blue2:rgba(44,127,192,.03);--w-spec:rgba(255,255,255,.75);--w-warm:rgba(242,153,74,.07);--w-top:rgba(255,255,255,.5);--w-bot:rgba(0,0,0,.07);--l-sheen:#ffffffb3;--l-sheen2:#ffffff33;--l-sheenh:#ffffffe6;--l-rim1:#3f72b866;--l-rim2:#3f72b81a;--l-rim3:#0000000d;--l-rim1h:#3f72b8a6;--l-rim2h:#3f72b82e;--l-rim3h:#00000014}
+body{background-color:var(--_bfa---surface--wall)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle var(--bfa-glow) at var(--light-x,30%) var(--light-y,20%),var(--w-blue),var(--w-blue2) 45%,transparent 72%),radial-gradient(70% 55% at var(--wall-x,56%) var(--wall-y,18%),var(--w-spec),transparent 70%),radial-gradient(45% 40% at 90% 100%,var(--w-warm),transparent 70%),linear-gradient(var(--wall-a,180deg),var(--w-top),transparent 38%,var(--w-bot)),var(--_bfa---surface--wall)}
+.layout-page{background-color:transparent!important;background-image:none!important}
+/* cards: same three layers as before (sheen, solid fill, fixed rim light), now with a bigger light and theme-aware fills */
+.ui-card,.ui-wip-card,.ui-focus-card.is-open{--lf:var(--_bfa---surface--card)}
+.ui-card.is-panel,.ui-focus-card,.ui-thumb-card{--lf:var(--_bfa---surface--panel)}
+.ui-focus-kid{--lf:var(--_bfa---surface--raised)}
+.ui-card:not(.is-well),.ui-focus-card,.ui-focus-card.is-open,.ui-focus-kid,.ui-thumb-card,.ui-wip-card{background-image:radial-gradient(80rem 34rem at var(--light-x,30%) -10rem,var(--l-sheen),var(--l-sheen2) 55%,transparent),linear-gradient(var(--lf),var(--lf)),radial-gradient(circle var(--bfa-lr) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1),var(--l-rim2) 45%,var(--l-rim3))}
+.ui-card:not(.is-well):hover,.ui-focus-card:hover,.ui-focus-kid:hover,.ui-thumb-card:hover,.ui-wip-card:hover{background-image:radial-gradient(60rem 28rem at var(--light-x,30%) -8rem,var(--l-sheenh),var(--l-sheen2) 55%,transparent),linear-gradient(color-mix(in srgb,var(--lf) 93%,var(--_bfa---text--primary)),color-mix(in srgb,var(--lf) 93%,var(--_bfa---text--primary))),radial-gradient(circle calc(var(--bfa-lr) + 2rem) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1h),var(--l-rim2h) 45%,var(--l-rim3h))}
+/* Nav links when the bar is tight (classes set by the logo/nav fit script). The 4px gap between links moves INTO the links' right padding,
+   so the bar keeps its width but every hover box ends with real air after the label or caret (icon side 5px, label side 10px). */
+html.bfa-nt .ui-nav-menu,html.bfa-nt2 .ui-nav-menu{column-gap:0!important}
+html.bfa-nt .ui-nav-menu>.ui-nav-item>.ui-nav-link{padding-left:5px!important;padding-right:10px!important}
+html.bfa-nt2 .ui-nav-menu>.ui-nav-item>.ui-nav-link{padding-left:4px!important;padding-right:7px!important}
+/* smooth scroll (off when motion is reduced); anchors stop below the pinned header */
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+html.motion-reduced{scroll-behavior:auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* ---- bfa-paper ---- */
+/* BFA Paper 1.2 - a very fine grain over everything (below the lightbox) that dithers the card sheens and rim lights so they stop banding.
+   The wall itself gets its grain from the GPU (BFA Wall). 1.2: the old tiled paper layers under the content are gone (hidden whenever the GPU wall ran). Tune with --paper-d. */
+:root{--paper-d:.07}
+html.theme-light{--paper-d:.06}
+.bfa-dither{position:fixed;inset:0;z-index:9000;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.25' numOctaves='1' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='2.4' intercept='-.7'/%3E%3CfeFuncG type='linear' slope='2.4' intercept='-.7'/%3E%3CfeFuncB type='linear' slope='2.4' intercept='-.7'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");background-size:128px 128px;mix-blend-mode:overlay;opacity:var(--paper-d)}
+@media print{.bfa-dither{display:none}}
+/* ---- bfa-cover ---- */
+/* BFA Cover 1.1 - Hero Header components (Image / Video / Carousel), site head.
+   Layout lives in Webflow classes (ui-cover-*): the copy is centred in the frame. This adds the theme-aware veil and fade,
+   and the carousel crossfade (Webflow classes can't hold keyframes). */
+.ui-cover-veil{background-color:color-mix(in srgb,var(--_bfa---surface--wall) 45%,transparent);background-image:radial-gradient(70rem 40rem at var(--light-x,30%) -8rem,rgba(255,255,255,.10),transparent 60%),radial-gradient(circle 34rem at var(--light-x,30%) var(--light-y,20%),rgba(180,222,255,.12),transparent 60%);background-attachment:scroll,fixed;-webkit-backdrop-filter:saturate(.8);backdrop-filter:saturate(.8)}
+.ui-cover-fade{background-image:linear-gradient(color-mix(in srgb,var(--_bfa---surface--wall) 0%,transparent),color-mix(in srgb,var(--_bfa---surface--wall) 70%,transparent) 55%,var(--_bfa---surface--wall))}
+.ui-cover-copy{color:var(--_bfa---text--primary)}
+.ui-cover-copy.is-center .type-lead,.ui-cover-copy.is-center p{margin-left:auto;margin-right:auto}
+.ui-cover-slide{opacity:0;animation:ui-cover-x 18s linear infinite;animation-delay:-1.1s}
+.ui-cover-slide.is-2{animation-delay:4.9s}
+.ui-cover-slide.is-3{animation-delay:10.9s}
+@keyframes ui-cover-x{0%{opacity:0;transform:scale(1.06)}6%{opacity:1}33%{opacity:1}39%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.ui-cover-slide{animation:none}.ui-cover-slide:first-child{opacity:1}.ui-cover-video{display:none}}
+.motion-reduced .ui-cover-slide{animation:none}
+.motion-reduced .ui-cover-slide:first-child{opacity:1}
+.motion-reduced .ui-cover-video{display:none}
+/* ---- bfa-layers ---- */
+/* BFA Layers 1.0 - three card tiers inside ONE sink (site head).
+   A sink (.ui-group / .ui-sink) never holds another sink. Cards inside it float at three heights:
+   HIGH = the lead card (explicit .depth-float / .is-download, else the first card)
+   MID  = every other card
+   LOW  = the last card when there are 3 or more (explicit .depth-low anywhere wins).
+   Set the classes in Webflow to override the automatic order. --sx = light direction, set per element by BFA Shade 2.0 (-1 light on the right ... 1 light on the left).
+   HARD RULE: every outer shadow on the site uses these tokens (or var(--sx)), so shadows always fall away from the mouse / tilt light.
+   The tokens are declared on every element (*), so each element resolves them with its own --sx (declared on :root they froze at 0). */
+*{
+--bfa-low:0 1px 1px rgba(0,0,0,.45),calc(var(--sx,0)*5px) 5px 8px -4px rgba(0,0,0,.5);
+--bfa-mid:0 1px 2px rgba(0,0,0,.5),calc(var(--sx,0)*10px) 12px 18px -8px rgba(0,0,0,.6);
+--bfa-midh:0 2px 3px rgba(0,0,0,.45),calc(var(--sx,0)*16px) 20px 28px -12px rgba(0,0,0,.65);
+--bfa-high:0 1px 2px rgba(0,0,0,.5),calc(var(--sx,0)*14px) 18px 28px -12px rgba(0,0,0,.6),calc(var(--sx,0)*26px) 36px 54px -22px rgba(0,0,0,.55);
+--bfa-highh:0 2px 3px rgba(0,0,0,.45),calc(var(--sx,0)*18px) 24px 34px -14px rgba(0,0,0,.62),calc(var(--sx,0)*32px) 46px 66px -26px rgba(0,0,0,.55)}
+:is(.ui-group,.ui-sink) .ui-card:not(.is-well){--t:var(--bfa-mid);--th:var(--bfa-midh);box-shadow:var(--t)}
+:is(.ui-group,.ui-sink) .ui-card:not(.is-well):hover{box-shadow:var(--th)}
+:is(.ui-group,.ui-sink):not(:has(.depth-float,.is-download)) :is(.ui-grid-2,.ui-grid-3,.layout-grid,.ui-rules,.ui-start,.ui-close-docs,.ui-audience,.w-dyn-items)>.ui-card:first-child,
+:is(.ui-group,.ui-sink):not(:has(.depth-float,.is-download)) :is(.ui-grid-2,.ui-grid-3,.layout-grid,.ui-rules,.ui-start,.ui-close-docs,.ui-audience,.w-dyn-items)>:first-child:not(.ui-card)>.ui-card{--t:var(--bfa-high);--th:var(--bfa-highh)}
+:is(.ui-group,.ui-sink) :is(.ui-grid-2,.ui-grid-3,.layout-grid,.ui-rules,.ui-start,.ui-close-docs,.ui-audience,.w-dyn-items)>.ui-card:nth-child(n+3):last-child,
+:is(.ui-group,.ui-sink) :is(.ui-grid-2,.ui-grid-3,.layout-grid,.ui-rules,.ui-start,.ui-close-docs,.ui-audience,.w-dyn-items)>:nth-child(n+3):last-child:not(.ui-card)>.ui-card{--t:var(--bfa-low);--th:var(--bfa-mid)}
+:is(.ui-group,.ui-sink) .ui-card:is(.depth-float,.is-download){--t:var(--bfa-high)!important;--th:var(--bfa-highh)!important}
+:is(.ui-group,.ui-sink) .ui-card.depth-low{--t:var(--bfa-low)!important;--th:var(--bfa-mid)!important}
+/* one bevel radius for every sink (1.25rem, 1rem on phones). Webflow classes carry the same values; this covers the sinks drawn in code. */
+:root{--bfa-sink-r:1.25rem}
+@media (max-width:767px){:root{--bfa-sink-r:1rem}}
+:is(.ui-group,.ui-sink,.ui-hero-card,.ui-news-intro,.ui-chapters,.ui-keygroup,.ui-footer-cols,.ui-sticker-card,.ui-search-empty,.ui-mega-door,.depth-well){border-radius:var(--bfa-sink-r)}
+/* Webflow classes that still had fixed shadows, moved onto the tokens (insets kept). */
+.ui-point-icon,.ui-result-tile,.ui-avatar,.ui-mega-tile{box-shadow:var(--bfa-low)}
+.ui-mega-tile{box-shadow:inset .6px 1px 0 rgba(255,255,255,.25),var(--bfa-low)}
+.ui-result-tile.is-xl,.ui-quick-thumb,.ui-nav-icon-btn,.ui-lit-field,.ui-post-bar,.ui-toolbar,.ui-focus-feature{box-shadow:var(--bfa-mid)}
+.ui-mega-feature{box-shadow:inset .6px 1px 0 rgba(255,255,255,.08),var(--bfa-mid)}
+.ui-chapter-link.is-active{box-shadow:inset 3px 0 0 #5cb4f0,var(--bfa-mid)}
+.ui-band-img,.ui-art.is-hero,.ui-lost-tile,.ui-stagger-item,.ui-compare,.ui-nav-drop,.ui-menu-list,.ui-post-now-menu{box-shadow:var(--bfa-high)}
+/* safety net - no sink inside a sink: a stray .ui-sink inside a group renders flat */
+.ui-group .ui-sink{box-shadow:none;background-image:none;background-color:transparent;padding:0}
+/* ---- bfa-heroes ---- */
+/* BFA Heroes 1.1 - two kinds of hero.
+   FULL WIDTH = Hero Header · Image / Video / Carousel (class ui-cover): page headers, first impressions. Full-bleed image under the sheen veil, text over it. Untouched here.
+   HERO CARD  = Hero Card · Image / Video / Carousel (class ui-hero-card): presentation pieces inside the layout wrapper. One sink, an image card + a content card (ui-card is-hero-copy).
+   The same card rule covers Title Band with art, feature pieces (ui-card is-feature) and the News intro. */
+.ui-hero-card .type-display{font-size:clamp(2.2rem,3.4vw,3.4rem);line-height:1.03;overflow-wrap:anywhere}
+.ui-hero-card-media>*{border-radius:inherit}
+.ui-band-inner:has(.ui-band-art){align-items:stretch;column-gap:1.25rem;row-gap:1.25rem;padding:1.75rem;border-radius:var(--bfa-sink-r,1.25rem);background-color:var(--_bfa---surface--well);background-image:radial-gradient(circle 24rem at var(--light-x,30%) var(--light-y,20%),rgba(255,255,255,.045),rgba(255,255,255,0) 70%);background-attachment:fixed;box-shadow:inset 0 14px 18px -8px rgba(0,0,0,.75),inset calc(16px + var(--sx,0)*10px) 0 22px -12px rgba(0,0,0,.7),inset calc(-16px + var(--sx,0)*10px) 0 22px -12px rgba(0,0,0,.7),inset 0 -1px 0 rgba(255,255,255,.05)}
+.ui-band-inner:has(.ui-band-art)>.ui-band-copy{--lf:var(--_bfa---surface--card);justify-content:center;padding:var(--_bfa---space--m);border-radius:var(--_bfa---shape--bevel);background-color:var(--_bfa---surface--card);background-image:radial-gradient(80rem 34rem at var(--light-x,30%) -10rem,var(--l-sheen),var(--l-sheen2) 55%,transparent),linear-gradient(var(--lf),var(--lf)),radial-gradient(circle var(--bfa-lr) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1),var(--l-rim2) 45%,var(--l-rim3));box-shadow:var(--bfa-mid)}
+.ui-band-inner:has(.ui-band-art) .ui-band-art{display:flex;align-items:center}
+.ui-band-inner:has(.ui-band-art) .ui-band-img{box-shadow:var(--bfa-high)}
+@media (max-width:767px){.ui-band-inner:has(.ui-band-art){padding:1rem;border-radius:var(--bfa-sink-r,1rem)}}
+/* Feature pieces (ui-card is-feature): the image and the copy are two cards in one sink, never one card holding both.
+   On its own the piece IS the sink; inside a group it is a plain row, so there is never a sink in a sink. */
+.ui-card.is-feature{background-color:var(--_bfa---surface--well)!important;background-image:radial-gradient(circle 24rem at var(--light-x,30%) var(--light-y,20%),rgba(255,255,255,.045),rgba(255,255,255,0) 70%)!important;background-attachment:fixed!important;box-shadow:inset 0 14px 18px -8px rgba(0,0,0,.75),inset calc(16px + var(--sx,0)*10px) 0 22px -12px rgba(0,0,0,.7),inset calc(-16px + var(--sx,0)*10px) 0 22px -12px rgba(0,0,0,.7),inset 0 -1px 0 rgba(255,255,255,.05)!important;padding:1.75rem;border-radius:var(--bfa-sink-r,1.25rem);column-gap:1.25rem;row-gap:1.25rem;transform:none!important}
+:is(.ui-group,.ui-sink) .ui-card.is-feature{background:none!important;box-shadow:none!important;padding:0}
+.ui-card.is-feature>.ui-art{margin:0;border-radius:14px;overflow:hidden;box-shadow:var(--bfa-high);transition:box-shadow .25s ease}
+.ui-card.is-feature>.ui-feature-copy{--lf:var(--_bfa---surface--card);display:flex;flex-direction:column;justify-content:center;padding:var(--_bfa---space--m);border-radius:var(--_bfa---shape--bevel);background-color:var(--_bfa---surface--card);background-image:radial-gradient(80rem 34rem at var(--light-x,30%) -10rem,var(--l-sheen),var(--l-sheen2) 55%,transparent),linear-gradient(var(--lf),var(--lf)),radial-gradient(circle var(--bfa-lr) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1),var(--l-rim2) 45%,var(--l-rim3));box-shadow:var(--bfa-mid);transition:box-shadow .25s ease}
+a.ui-card.is-feature:hover>.ui-art{box-shadow:var(--bfa-highh)}
+a.ui-card.is-feature:hover>.ui-feature-copy{box-shadow:var(--bfa-midh)}
+@media (max-width:767px){.ui-card.is-feature{padding:1rem}}
+/* ---- bfa-sectors ---- */
+/* BFA Sectors 1.0 - the light changes colour by section (site head).
+   A section takes its colour from data-light="blue|orange|green|purple", or from the colour of the image frame inside it
+   (.ui-spread-frame.is-orange ...). When it reaches the middle of the screen, html gets data-sector and the mouse light (--w-blue)
+   and the card / image rim lights (--l-rim*) fade to that colour. Blue is the resting colour. */
+@property --w-blue{syntax:'<color>';inherits:true;initial-value:rgba(92,180,240,.11)}
+@property --w-blue2{syntax:'<color>';inherits:true;initial-value:rgba(92,180,240,.035)}
+@property --l-rim1{syntax:'<color>';inherits:true;initial-value:#b4deff99}
+@property --l-rim2{syntax:'<color>';inherits:true;initial-value:#8cc3f533}
+@property --l-rim1h{syntax:'<color>';inherits:true;initial-value:#c6e8ffd9}
+@property --l-rim2h{syntax:'<color>';inherits:true;initial-value:#96cdfa52}
+html[data-sector=orange]{--w-blue:rgba(242,153,74,.13);--w-blue2:rgba(242,153,74,.04);--l-rim1:#ffd2a899;--l-rim2:#f2994a33;--l-rim1h:#ffe0c0d9;--l-rim2h:#f2994a52}
+html[data-sector=green]{--w-blue:rgba(72,200,140,.12);--w-blue2:rgba(72,200,140,.035);--l-rim1:#b9f2d499;--l-rim2:#48c88c33;--l-rim1h:#cdf7e0d9;--l-rim2h:#48c88c52}
+html[data-sector=purple]{--w-blue:rgba(170,130,240,.13);--w-blue2:rgba(170,130,240,.04);--l-rim1:#dccbff99;--l-rim2:#aa82f033;--l-rim1h:#e8dcffd9;--l-rim2h:#aa82f052}
+html.theme-light[data-sector=orange]{--w-blue:rgba(214,120,40,.10);--w-blue2:rgba(214,120,40,.03);--l-rim1:#c0702a66;--l-rim2:#c0702a1a;--l-rim1h:#c0702aa6;--l-rim2h:#c0702a2e}
+html.theme-light[data-sector=green]{--w-blue:rgba(47,143,95,.10);--w-blue2:rgba(47,143,95,.03);--l-rim1:#2f8f5f66;--l-rim2:#2f8f5f1a;--l-rim1h:#2f8f5fa6;--l-rim2h:#2f8f5f2e}
+html.theme-light[data-sector=purple]{--w-blue:rgba(122,85,192,.10);--w-blue2:rgba(122,85,192,.03);--l-rim1:#7a55c066;--l-rim2:#7a55c01a;--l-rim1h:#7a55c0a6;--l-rim2h:#7a55c02e}
+/* Image cards (feature frames, insets, hero card media): no coloured gradient or glow behind the picture any more.
+   The frame floats on the HIGH shadow tier and catches the section light on its rim, like the cards do. */
+.ui-spread-frame{position:relative;background-image:none!important;background-color:var(--_bfa---surface--card)!important;box-shadow:var(--bfa-high)!important;isolation:isolate}
+.ui-spread-inset{box-shadow:var(--bfa-high)!important}
+.ui-spread-frame::after,.ui-spread-inset::after,.ui-hero-card-media::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:radial-gradient(circle var(--bfa-lr) at var(--light-x,30%) var(--light-y,20%),var(--l-rim1h),var(--l-rim2) 45%,var(--l-rim3)) border-box;background-attachment:fixed;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none;z-index:3}
+.ui-spread-frame::before,.ui-hero-card-media::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(60% 45% at var(--light-x,30%) 0%,var(--l-rim2h),transparent 70%);background-attachment:fixed;mix-blend-mode:screen;opacity:.55;pointer-events:none;z-index:2}
+/* Compare slider handle = a timeline playhead: thin line, a rounded head at the top with solid triangles. */
+.ui-compare-handle{width:2px!important;background:#5cb4f0!important;box-shadow:0 0 0 1px rgba(0,0,0,.45),0 0 14px rgba(0,0,0,.35)!important}
+.ui-compare-knob{top:.75rem!important;transform:translateX(-50%)!important;width:auto!important;height:1.75rem!important;padding:0 .6rem!important;border-radius:6px!important;background:#3f86c4!important;color:transparent!important;font-size:0!important;letter-spacing:0!important;display:flex!important;align-items:center;column-gap:.5rem;box-shadow:0 0 0 1px rgba(0,0,0,.5),0 6px 14px -6px rgba(0,0,0,.7)!important;cursor:ew-resize}
+.ui-compare-knob::before,.ui-compare-knob::after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.ui-compare-knob::before{border-right:7px solid #fff}
+.ui-compare-knob::after{border-left:7px solid #fff}
+.ui-compare-handle::after{content:"";position:absolute;left:50%;top:calc(.75rem + 1.75rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4;filter:drop-shadow(0 1px 0 rgba(0,0,0,.4))}
+/* ---- bfa-wall ---- */
+/* BFA Wall 1.2 - the lit wall drawn by the GPU (site head). Same layers as body::before in BFA World, but computed in full
+   precision with smooth falloffs and dithered (triangular noise) before it becomes 8-bit, so the big soft lights stop banding.
+   If WebGL is missing or lost, the canvas goes away and body::before draws the wall as before. */
+.bfa-wall{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block}
+html.bfa-gl body::before{background:none!important}
+/* with the GPU wall on, its own per-pixel grain replaces any paper texture; the over-everything dither stays, lighter.
+   --paper-g = grain everywhere, --paper-gs = extra grain where the light falls (paper specular), in 8-bit steps. */
+:root{--paper-g:.6;--paper-gs:1.6}
+html.theme-light{--paper-g:.4;--paper-gs:1}
+html.bfa-gl .bfa-dither{opacity:calc(var(--paper-d) * .5)}
+@media print{.bfa-wall{display:none}}
+/* ---- bfa-lite ---- */
+/* BFA Lite 1.0 - when BFA Perf Guard finds a slow device (a TV, a weak phone, or a page that stutters while scrolling) it adds html.perf-auto
+   (with motion-reduced). Then the costly layers step down: no GPU wall (the CSS wall in body::before draws), no grain overlay, light layers
+   scroll with their card instead of staying fixed to the window, and glass panels lose their blur. Fast devices never get the class: same look. */
+html.perf-auto .bfa-dither,html.perf-auto .bfa-wall{display:none!important}
+html.perf-auto *,html.perf-auto *::before,html.perf-auto *::after{background-attachment:scroll!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+/* ---- bfa-media ---- */
+/* BFA Media 1.0 - the View & accessibility settings "Thumbnails" (S / M / L) and "Density" (Comfy / Compact) scale every picture
+   on the site: cover heroes, hero cards, feature images, the gallery rows and walls, card images and thumbnails.
+   Text, buttons and icons keep their size, so pages stay legible. --mf = media factor (S .78, M 1, L 1.25) x density (Comfy 1, Compact .86).
+   Two-column picture + copy layouts give the picture a bigger or smaller share of the row; cover heroes and media blocks get taller or shorter. */
+html{--media:1;--dens:1;--mf:calc(var(--media) * var(--dens))}
+html.thumbs-s{--media:.78}
+html.thumbs-l{--media:1.25}
+html.density-compact{--dens:.86}
+.ui-cover{min-height:calc(70vh * var(--mf))}
+.ui-hero-card-media{min-height:clamp(calc(320px * var(--mf)),calc(52vh * var(--mf)),calc(560px * var(--mf)))}
+.ui-share-art{min-height:calc(22rem * var(--mf))}
+.ui-thumb-stage{height:calc(9rem * var(--mf))}
+.ui-thumb-sticker{width:calc(7.5rem * var(--mf));height:calc(7.5rem * var(--mf))}
+.ui-focus-thumb{width:calc(3.5rem * var(--mf));height:calc(3.5rem * var(--mf))}
+.ui-quick-item.is-thumb{grid-template-columns:calc(7.5rem * var(--mf)) 2.25rem minmax(0,1fr)}
+.ui-quick-item.is-thumb.is-flip{grid-template-columns:2.25rem minmax(0,1fr) calc(7.5rem * var(--mf))}
+.ui-art.is-hero,.ui-band-img{max-height:calc(36rem * var(--mf))}
+.ui-thumb-tile{width:calc(4.5rem * var(--mf));height:calc(4.5rem * var(--mf))}
+.ui-thumb-tile-icon{width:calc(3.5rem * var(--mf));height:calc(3.5rem * var(--mf))}
+html [data-home-cards] .ui-thumb-tile{width:calc(6rem * var(--mf));height:calc(6rem * var(--mf))}
+html [data-home-cards] .ui-thumb-tile-icon{width:calc(5rem * var(--mf));height:calc(5rem * var(--mf))}
+@media (min-width:992px){
+.ui-spread{grid-template-columns:minmax(0,min(72%,calc(58.3% * var(--mf)))) minmax(0,1fr)}
+.ui-spread.is-flip{grid-template-columns:minmax(0,1fr) minmax(0,min(72%,calc(58.3% * var(--mf))))}
+.ui-hero-card{grid-template-columns:minmax(0,1fr) minmax(0,min(72%,calc(58.3% * var(--mf))))}
+.ui-card.is-feature:has(>.ui-art:first-child){grid-template-columns:minmax(0,min(72%,calc(57.5% * var(--mf)))) minmax(0,1fr)}
+.ui-card.is-feature:has(>.ui-art:last-child){grid-template-columns:minmax(0,1fr) minmax(0,min(62%,calc(42.5% * var(--mf))))}
+.ui-group.ui-share{grid-template-columns:minmax(0,min(66%,calc(50% * var(--mf)))) minmax(0,1fr)}
+.ui-release.is-timeline{grid-template-columns:minmax(0,calc(25% * var(--mf))) minmax(0,1fr)}
+}
+/* Tabs: drawn like the Bforartists workspace tabs (Main, Assets, UV Editing ...): separate rounded tabs with small gaps,
+   the active one blue. Same height, colours and type as the segment buttons, so a row of tabs and a Thumbnails control line up.
+   Used by the Art style filters and the News filters; add .bfa-tabs to any row of links to get the same tabs. */
+:is(#browse .ui-jump,.ui-segment.ui-news-filter,.bfa-tabs){display:flex;flex-wrap:nowrap;align-items:center;gap:3px;margin:0;padding:0;overflow-x:auto;scrollbar-width:none;border-radius:0;background:none;box-shadow:none}
+:is(#browse .ui-jump,.ui-segment.ui-news-filter,.bfa-tabs)::-webkit-scrollbar{display:none}
+:is(#browse .ui-jump .ui-chip,.ui-segment.ui-news-filter>.ui-segment-item,.bfa-tabs>*){flex:0 0 auto;display:inline-flex;align-items:center;justify-content:flex-start;gap:.375rem;min-height:1.75rem;height:auto;margin:0;padding:.25rem .75rem;border:0;border-radius:.25rem;background-color:var(--_bfa---surface--raised);background-image:none;box-shadow:none;color:var(--_bfa---text--primary);font-size:var(--_bfa---type--label);font-weight:300;line-height:1.2;opacity:1;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .15s ease}
+:is(#browse .ui-jump .ui-chip,.ui-segment.ui-news-filter>.ui-segment-item,.bfa-tabs>*):hover{background-color:var(--_bfa---surface--hover)}
+:is(#browse .ui-jump .ui-chip,.ui-segment.ui-news-filter>.ui-segment-item,.bfa-tabs>*):is(.is-active,.w--current,[aria-selected=true]){background-color:var(--_bfa---accent--selected);color:#fff}
+/* buttons: icon and label always sit on the left, also when a button is stretched (square icon buttons stay centred) */
+.ui-btn:not(.is-square):not(.is-arrow){justify-content:flex-start}
+/* ---- bfa-gallery ---- */
+/* BFA Gallery 1.2 - art tiles, the gallery hero, the lightbox and the shared control buttons (site head). Home + Art.
+   Hero: the image row runs in a full-width sink with square ends; it drifts slowly and can be dragged, stepped with the
+   edge arrows or the card's arrows, and paused. The controls card overlaps the bottom of the images.
+   Icons are the Bforartists icons from the asset library. Disclosure convention: right triangle = collapsed / next,
+   mirrored = previous, down triangle = expanded. */
+:root{--ic-tri:url("https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/68b9b72c72af6f6934d37018_disclosure_tri_right.svg");--ic-tri-down:url("https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/68b9b7295525f292d721b75e_disclosure_tri_down.svg")}
+img.ui-panel-caret{object-position:-999px 0;background:var(--ic-tri-down) center/contain no-repeat;transform:none!important}
+img.ui-panel-caret.is-collapsed{background-image:var(--ic-tri)}
+.ui-art-tile,.ui-art-tile:hover,.ui-art-tile-title{color:#fff}
+.ui-art-tile{box-shadow:var(--bfa-mid);transition:box-shadow .25s ease;cursor:zoom-in;-webkit-tap-highlight-color:transparent}
+.ui-art-tile:hover,.ui-art-tile:focus-visible{box-shadow:var(--bfa-highh)}
+.ui-art-tile:focus-visible{outline:2px solid #5cb4f0;outline-offset:3px}
+.ui-art-tile-img{transition:transform .6s ease}
+.ui-art-tile:hover .ui-art-tile-img{transform:scale(1.035)}
+.ui-art-tile-cap{opacity:0;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+.ui-art-tile:hover .ui-art-tile-cap,.ui-art-tile:focus-visible .ui-art-tile-cap{opacity:1;transform:none}
+.ui-art-tile-tools:empty{display:none}
+@media (hover:none){.ui-art-tile-cap{opacity:1;transform:none;padding-top:1.75rem}.ui-art-tile-tools{display:none}}
+html.motion-reduced .ui-art-tile,html.motion-reduced .ui-art-tile-img,html.motion-reduced .ui-art-tile-cap{transition:none}
+html.motion-reduced .ui-art-tile:hover,html.motion-reduced .ui-art-tile:hover .ui-art-tile-img{transform:none}
+/* hero */
+.ui-art-hero,section:has(.ui-art-stage){overflow:visible!important}
+.ui-art-stage>.is-hero-copy{margin-bottom:1.5rem}
+.ui-art-stage{--strip-h:calc(clamp(340px,58vh,640px) * var(--mf,1));--lap:2.5rem;display:flex!important;flex-direction:column;align-items:center;padding:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;grid-template-rows:none!important;overflow:visible!important}
+.ui-art-stage>.ui-art-strip{order:0;position:relative;align-self:stretch;width:100vw;max-width:none;margin-left:calc(50% - 50vw);height:calc(var(--strip-h) + 2.5rem);min-height:0;border-radius:0!important;background-color:var(--_bfa---surface--well);background-image:radial-gradient(circle 30rem at var(--light-x,30%) var(--light-y,20%),rgba(255,255,255,.04),rgba(255,255,255,0) 70%);background-attachment:fixed;box-shadow:inset 0 14px 18px -8px rgba(0,0,0,.75),inset 0 -10px 14px -8px rgba(0,0,0,.45)}
+.ui-art-stage .ui-art-track{position:absolute!important;left:0!important;right:0!important;top:1.25rem!important;bottom:auto!important;height:calc(var(--strip-h) + 1.5rem)!important;padding:0 1.5rem 1.5rem!important;display:flex;column-gap:1rem;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;scroll-behavior:auto;cursor:grab;-webkit-user-select:none;user-select:none;overscroll-behavior-x:contain}
+.ui-art-stage .ui-art-track.is-drag{cursor:grabbing}
+.ui-art-stage .ui-art-track.is-drag .ui-art-tile{pointer-events:none}
+.ui-art-stage .ui-art-track::-webkit-scrollbar{display:none}
+.ui-art-stage .ui-art-slide{flex:0 0 auto;height:var(--strip-h)}:is([data-art-strip],[data-news-strip]) .ui-art-track>*{translate:var(--fx,0px) 0;will-change:translate}
+.ui-art-stage .ui-art-slide .ui-art-tile{height:100%}
+.ui-art-stage .ui-art-slide .ui-art-tile-img{height:100%;width:auto;max-width:none;-webkit-user-drag:none}
+.ui-art-slide.w-condition-invisible{display:none}
+.ui-art-stage>.is-hero-copy{order:1;position:relative;z-index:4;margin-top:calc(-1 * var(--lap) - 1.25rem);width:min(54rem,100%);display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:2rem;row-gap:1rem;padding:1.75rem 2rem!important;--t:var(--bfa-high);--th:var(--bfa-highh);box-shadow:var(--bfa-high)!important}
+.ui-art-stage>.is-hero-copy .type-display{font-size:clamp(2.5rem,4.4vw,4rem);line-height:.98;letter-spacing:-.01em;overflow-wrap:anywhere}
+.ui-art-stage>.is-hero-copy .ui-cover-copy{row-gap:.5rem}
+.ui-art-stage>.is-hero-copy .ui-cover-copy>*{margin-top:0;margin-bottom:0}
+.ui-art-stage>.is-hero-copy .ui-cover-actions{margin-top:.75rem!important}
+.ui-art-stage>.is-hero-copy .ui-cover-actions{display:flex;flex-wrap:wrap;gap:.5rem}
+.ui-art-stage .ui-art-strip-nav{display:flex;gap:.375rem}
+[data-art-prev] .ui-icon{transform:scaleX(-1)}
+.ui-art-strip-nav .ui-btn.is-square{justify-content:center}
+/* shared square control: edge arrows, play / pause, lightbox, spotlight bar */
+.bfa-ctl{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:2.25rem;height:2.25rem;margin:0;padding:0;border:0;border-radius:8px;background-color:var(--_bfa---surface--panel,#3d3d3d);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),var(--bfa-low);color:inherit;cursor:pointer;transition:background-color .15s ease}
+.bfa-ctl:hover{background-color:#3f86c4}
+.bfa-ctl:focus-visible{outline:2px solid #5cb4f0;outline-offset:2px}
+.bfa-ctl img{width:16px;height:16px;pointer-events:none}
+.bfa-ctl.is-prev img{transform:scaleX(-1)}.bfa-ctl.is-up img{transform:rotate(-90deg)}.bfa-ctl.is-down img{transform:rotate(90deg)}
+.bfa-edge{position:absolute;z-index:3;top:calc(1.25rem + var(--strip-h) / 2 - 2rem);width:2.75rem;height:4rem;background-color:rgba(40,42,46,.7);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.bfa-edge img{width:20px;height:20px}
+.bfa-edge.is-prev{left:.75rem}.bfa-edge.is-next{right:.75rem}
+.bfa-play.is-paused{box-shadow:inset 0 0 0 2px #5cb4f0}
+@media (max-width:767px){.ui-art-stage{--strip-h:calc(clamp(240px,46vh,380px) * var(--mf,1));--lap:1.5rem}.ui-art-stage>.is-hero-copy{grid-template-columns:minmax(0,1fr);padding:1.25rem!important}.bfa-edge{width:2.25rem;height:3rem;top:calc(1.25rem + var(--strip-h) / 2 - 1.5rem)}}
+/* interview video in the spotlight card */
+.ui-spot-video{background-size:cover;background-position:center;box-shadow:var(--bfa-mid);cursor:pointer}
+.ui-spot-video::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.65))}
+.ui-spot-video-play{z-index:1;display:flex;align-items:center;justify-content:center;background-color:rgba(30,32,36,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 8px 24px -8px rgba(0,0,0,.8);transition:background-color .15s ease,transform .15s ease}
+.ui-spot-video-play::before{content:"";width:24px;height:24px;background:url("https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/68b9b93626dd7c7162745f86_play.svg") center/contain no-repeat}
+.ui-spot-video:hover .ui-spot-video-play{background-color:#3f86c4;transform:scale(1.05)}
+.ui-spot-video-cap{z-index:1}
+.ui-spot-frame{position:relative;width:100%;aspect-ratio:16/9;margin-top:1rem;border-radius:12px;overflow:hidden;background:#000;box-shadow:var(--bfa-mid)}
+.ui-spot-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* lightbox */
+.bfa-lb{position:fixed;inset:0;z-index:9999;display:none;grid-template-rows:minmax(0,1fr) auto;background:rgba(8,9,11,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff}
+.bfa-lb.is-open{display:grid}
+.bfa-lb-stage{display:flex;align-items:center;justify-content:center;padding:60px 76px 8px;min-height:0}
+.bfa-lb-img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.85)}
+.bfa-lb-bar{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:14px 28px 24px;width:100%;max-width:1200px;margin:0 auto}
+.bfa-lb-title{font-weight:700;font-size:1.125rem}
+.bfa-lb-by{color:rgba(255,255,255,.82);font-size:.95rem}
+.bfa-lb-by a{color:#7cc4f4;text-decoration:none}.bfa-lb-by a:hover{text-decoration:underline}
+.bfa-lb-meta{color:rgba(255,255,255,.55);font-size:.8rem;margin-top:.2rem}
+.bfa-lb-count{color:rgba(255,255,255,.6);font-size:.875rem;white-space:nowrap}
+.bfa-lb .bfa-ctl{position:absolute;width:2.75rem;height:2.75rem;background-color:#3d3d3d;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 8px 20px -8px rgba(0,0,0,.8)}
+.bfa-lb .bfa-ctl:hover{background-color:#3f86c4}
+.bfa-lb .bfa-ctl img{width:18px;height:18px}
+.bfa-lb-close{top:14px;right:16px}
+.bfa-lb-prev{left:16px;top:calc(50% - 46px)}
+.bfa-lb-next{right:16px;top:calc(50% - 46px)}
+.bfa-lb-media{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.bfa-lb-media iframe,.bfa-lb-media video{display:block;width:min(100%,calc((100vh - 200px) * 16 / 9));aspect-ratio:16/9;height:auto;max-height:100%;border:0;border-radius:12px;background:#000;box-shadow:0 30px 80px -20px rgba(0,0,0,.85)}
+.bfa-lb-flags{margin-top:.5rem}
+.bfa-lb-flags:empty{display:none}
+.ui-art-tile[data-video]:not([data-video=""])::before{content:"";position:absolute;top:.625rem;right:.625rem;z-index:2;width:2rem;height:2rem;border-radius:8px;background:rgba(30,32,36,.78) url("https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/68b9b93626dd7c7162745f86_play.svg") center/16px no-repeat;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 6px 14px -6px rgba(0,0,0,.7);pointer-events:none}
+@media (max-width:767px){.bfa-lb-stage{padding:60px 10px 8px}.bfa-lb-prev,.bfa-lb-next{top:auto;bottom:86px}.bfa-lb-bar{padding:12px 16px 20px}}
+/* ---- bfa-shared ---- */
+/* BFA Shared 1.0 - small patterns used on many pages (site head).
+   KEEP EXPLORING: every About and Community page ends with the whole section as cards, in the mega-menu order
+   (.ui-grid-3.is-seven = 4 columns, tile on top). The page you are on stays in the row as a greyed "ghost" (.is-current, "You are here").
+   FLAGS: a tag is a small flag with a Bforartists icon (.bfa-flag): art styles, news categories. Same look everywhere. */
+.ui-grid-3.is-seven{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.ui-grid-3.is-seven>.ui-card.is-door{display:flex!important;flex-direction:column;align-items:flex-start;row-gap:.875rem;position:relative}
+.ui-grid-3.is-seven .ui-door-arrow{position:absolute;top:1.25rem;right:1.25rem}
+.ui-card.is-door.is-current{pointer-events:none;opacity:.5;filter:grayscale(1);background-image:none!important;background-color:transparent!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)!important}
+.ui-card.is-door.is-current .ui-door-arrow{display:none}
+.ui-card.is-door.is-current .type-note{font-weight:600}
+html.theme-light .ui-card.is-door.is-current{box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)!important}
+@media (max-width:991px){.ui-grid-3.is-seven{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:479px){.ui-grid-3.is-seven{grid-template-columns:minmax(0,1fr)!important}}
+.bfa-flag{display:inline-flex;align-items:center;gap:.375rem;min-height:1.5rem;padding:.125rem .5rem .125rem .375rem;border-radius:.25rem;background-color:var(--_bfa---surface--raised);color:var(--_bfa---text--primary);font-size:.75rem;font-weight:500;line-height:1.2;letter-spacing:0;text-transform:none;white-space:nowrap;box-shadow:var(--bfa-low)}
+.bfa-flag img{width:14px;height:14px;flex:0 0 auto}
+.bfa-flag.is-glass{background-color:rgba(36,38,42,.78);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.bfa-flags{display:flex;flex-wrap:wrap;gap:.375rem}

@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Point"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Point nodes."
 order: 90
@@ -37,25 +37,33 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode.png)
 
+##### Grid
 
-| Entry | What it does |
-| ------- | ------------------------------------------- |
-| Grid | The grid to import the points to. |
-| Density | Density of the points. |
-| Seed | The random seed for the point distribution. |
+The grid to import the points to.
 
+##### Density
+
+Density of the points.
+
+##### Seed
+
+The random seed for the point distribution.
 
 #### Inputs Grid mode
 
 ![Inputs Grid mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode.png)
 
+##### Grid
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------- |
-| Grid | The grid to import the points to. |
-| Spacing | The spacing between the grid points. |
-| Threshold | Minimum density of a volume cell to contain a grid point. |
+The grid to import the points to.
 
+##### Spacing
+
+The spacing between the grid points.
+
+##### Threshold
+
+Minimum density of a volume cell to contain a grid point.
 
 #### Properties
 
@@ -63,16 +71,19 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Distribution method](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png)
 
+###### Random
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------- |
-| Random | Distributes the points randomly. This allows overlappings. |
-| Grid | Distributes the points along a grid with given width. |
+Distributes the points randomly. This allows overlappings.
 
+###### Grid
+
+Distributes the points along a grid with given width.
 
 #### Output
 
 ##### Points
+
+Data type: Geometry.
 
 Points output.
 
@@ -90,25 +101,33 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-2.png)
 
+##### Volume
 
-| Entry | What it does |
-| ------- | ------------------------------------------- |
-| Volume | The volume to import the points to. |
-| Density | Density of the points. |
-| Seed | The random seed for the point distribution. |
+The volume to import the points to.
 
+##### Density
+
+Density of the points.
+
+##### Seed
+
+The random seed for the point distribution.
 
 #### Inputs Grid mode
 
 ![Inputs Grid mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode-2.png)
 
+##### Volume
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------- |
-| Volume | The volume to import the points to. |
-| Spacing | The spacing between the grid points. |
-| Threshold | Minimum density of a volume cell to contain a grid point. |
+The volume to import the points to.
 
+##### Spacing
+
+The spacing between the grid points.
+
+##### Threshold
+
+Minimum density of a volume cell to contain a grid point.
 
 #### Properties
 
@@ -116,16 +135,19 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Distribution method](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png)
 
+###### Random
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------------- |
-| Random | Distributes the points randomly. This allows overlappings. |
-| Grid | Distributes the points along a grid with given width. |
+Distributes the points randomly. This allows overlappings.
 
+###### Grid
+
+Distributes the points along a grid with given width.
 
 #### Output
 
 ##### Points
+
+Data type: Geometry.
 
 Points output.
 
@@ -143,29 +165,49 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-3.png)
 
+##### Mesh
 
-| Entry | What it does |
-| --------- | -------------------------------------------------------------------------------- |
-| Mesh | Standard geometry input. |
-| Selection | The selection of which face corners should be considered for point distribution. |
-| Density | Density of the points. |
-| Seed | The random seed for the point distribution. |
+Standard geometry input.
 
+##### Selection
+
+The selection of which face corners should be considered for point distribution.
+
+##### Density
+
+Density of the points.
+
+##### Seed
+
+The random seed for the point distribution.
 
 #### Inputs Poisson Disk mode
 
 ![Inputs Poisson Disk mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-poisson-disk-mode.png)
 
+##### Mesh
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------- |
-| Mesh | Standard geometry input. |
-| Selection | The selection of which face corners should be considered for point distribution. |
-| Distance Min | The minimum distance that two points can have. |
-| Distance Max | The naximum distance that two points can have. |
-| Density Factor | Density of the points. |
-| Seed | The random seed for the point distribution. |
+Standard geometry input.
 
+##### Selection
+
+The selection of which face corners should be considered for point distribution.
+
+##### Distance Min
+
+The minimum distance that two points can have.
+
+##### Distance Max
+
+The naximum distance that two points can have.
+
+##### Density Factor
+
+Density of the points.
+
+##### Seed
+
+The random seed for the point distribution.
 
 #### Properties
 
@@ -173,23 +215,31 @@ The node also generates a stable ID, which is then stored in the built-in id att
 
 ![Distribution method](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method-2.png)
 
+###### Random
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------ |
-| Random | Distributes the points randomly. This allows overlappings. |
-| Poisson Disk | Distributes the points randomly, but prevents overlappings by defining a minimum and maximum distance. |
+Distributes the points randomly. This allows overlappings.
 
+###### Poisson Disk
+
+Distributes the points randomly, but prevents overlappings by defining a minimum and maximum distance.
 
 #### Output
 
+##### Points
 
-| Entry | What it does |
-| ------ | -------------- |
-| Points | Points output. |
-| Normal | Normal output. |
+Data type: Geometry.
 
+Points output.
+
+##### Normal
+
+Data type: Vector.
+
+Normal output.
 
 ##### Rotation
+
+Data type: Rotation.
 
 Euler Rotation output. Please note that the Z axis of the result rotation will be arbitrary. The mesh normal used to create the rotation does not have enough information to set all three rotation axes.
 
@@ -202,6 +252,8 @@ Generates a single point or points with position, count and radius.
 #### Inputs
 
 ##### Count
+
+Data type: Integer.
 
 The count of the generated points as an integer.
 
@@ -225,12 +277,13 @@ Standard mesh output.
 
 Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Points**: Points input. · **Curve Group ID**: A curve is created from every distinct group ID. All points with the same ID are put into the same curve. · **Selection**: Selection input. |
-| Outputs | **Mesh**: Standard mesh output. |
+**Points**: Points input. · **Curve Group ID**: A curve is created from every distinct group ID. All points with the same ID are put into the same curve. · **Selection**: Selection input.
 
+#### Outputs
+
+**Mesh**: Standard mesh output.
 
 ### Points to SDF Grid
 
@@ -238,12 +291,13 @@ Generates a mesh vertex in the output geometry for each point cloud point in the
 
 Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Points**: Points input. · **Radius**: The radius of the grid. · **Voxel size**: The voxel size of the grid. |
-| Outputs | **SDF Grid**: Standard mesh output. |
+**Points**: Points input. · **Radius**: The radius of the grid. · **Voxel size**: The voxel size of the grid.
 
+#### Outputs
+
+**SDF Grid**: Standard mesh output.
 
 ### Points to Vertices
 
@@ -251,12 +305,13 @@ Generates a mesh vertex in the output geometry for each point cloud point in the
 
 Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------- |
-| Inputs | **Points**: Points input. · **Selection**: Selection input. |
-| Outputs | **Mesh**: Standard mesh output. |
+**Points**: Points input. · **Selection**: Selection input.
 
+#### Outputs
+
+**Mesh**: Standard mesh output.
 
 ### Points to Volume
 
@@ -266,31 +321,115 @@ Creates a fog volume sphere around every point in the input geometry. The new vo
 
 #### Inputs
 
+##### Points
 
-| Entry | What it does |
-| ------- | -------------------------- |
-| Points | Points input. |
-| Density | The density of the volume. |
+Data type: Geometry.
 
+Points input.
+
+##### Density
+
+Data type: Float.
+
+The density of the volume.
 
 ##### Resolution Mode
+
+Data type: Menu.
 
 ![Resolution Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/resolution-mode.png)
 
 Base the voxel resolution at the amount or the size of the point cloud.
 
+###### Voxel Amount
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------- |
-| Voxel Amount | Voxel amount of the volume. |
-| Radius | The radius of the generated volume around each point. |
+Voxel amount of the volume.
 
+###### Radius
+
+The radius of the generated volume around each point.
 
 #### Outputs
 
 ##### Volume
 
+Data type: Geometry.
+
 Standard geometry output.
+
+### Rasterize Points
+
+![Rasterize Points](/docs2/images/editors/geometry-node-editor/header/add-menu-point/rasterize-points.png)
+
+Turns points into volume grids. Each point adds its values to the voxels around it with a weighted sum. The Kernel Type decides how far a point reaches and how the weight falls off.
+
+You choose what to rasterize by adding items. Each item has a name and a type. It gives the node one input for the value of each point, and one grid output with the same name. To add an item, connect a link to the empty socket at the bottom of the node, or use the Items panel in the Node tab of the sidebar.
+
+#### Inputs
+
+##### Points
+
+Data type: Geometry.
+
+The geometry to rasterize. The points of meshes, point clouds and curves are used.
+
+##### Grid Transform Mode
+
+Data type: Menu.
+
+How the transform of the new grids is set.
+
+- Voxel Size: all grids use a uniform voxel size, without any move or rotation. This is the default.
+- Matrix: you set the transform of the grids with a matrix.
+
+##### Voxel Size
+
+Data type: Float (distance).
+
+The size of one voxel. The default is 0.3 m, the minimum is 0.01. It is only shown for Voxel Size.
+
+##### Matrix
+
+Data type: Matrix.
+
+The transform of the grids. It is only shown for Matrix. If the matrix is not valid for a grid, no grids are created.
+
+##### Kernel Type
+
+Data type: Menu.
+
+How the weight of a point is spread over the voxels.
+
+- Constant: the point only goes to the closest voxel.
+- Linear: the weight falls off linearly over the voxel range. This is the default.
+- Quadratic B-Spline: a quadratic B-spline kernel over 1.5 voxels.
+- Cubic B-Spline: a cubic B-spline kernel over 2 voxels.
+
+##### Position
+
+Data type: Vector.
+
+A field with the position of each point. By default it is the position of the point.
+
+##### Items
+
+For each item you add, there is an input with its name. It is a field that gives the value to rasterize for each point.
+
+#### Properties
+
+##### Items
+
+The Items panel in the Node tab of the sidebar lists the items. You can add, remove and move items there.
+
+##### Type
+
+The type of the active item. Scalar rasterizes a single number for each point. Vector rasterizes a vector for each point.
+
+#### Outputs
+
+##### Items
+
+For each item there is a grid output with the same name as the item. A scalar item gives a scalar grid, a vector item gives a vector grid. If a grid cannot be made, the node shows a warning with the name of the item.
 
 ### Set Point Radius
 
@@ -298,8 +437,41 @@ Standard geometry output.
 
 The Set Point Radius node controls the size each selected point cloud point should display with in the viewport.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------- |
-| Inputs | **Points**: Geometry input. · **Selection**: Selection input. · **Radius**: The radius of the points. |
-| Outputs | **Points**: Standard geometry output. |
+**Points**: Geometry input. · **Selection**: Selection input. · **Radius**: The radius of the points.
+
+#### Outputs
+
+**Points**: Standard geometry output.
+
+### Set Point Cloud Type
+
+![Set Point Cloud Type](/docs2/images/editors/geometry-node-editor/header/add-menu-point/set-point-cloud-type.png)
+
+Changes how a point cloud is represented. Use it to show the points of a point cloud as 3D Gaussian Splats, or to turn them back into simple points. The points themselves are not changed.
+
+#### Inputs
+
+##### Points
+
+Data type: Geometry.
+
+The point cloud to change the type of. Point clouds inside instances are changed too.
+
+##### Type
+
+Data type: Menu.
+
+The new type of the point cloud.
+
+- Points: a simple point cloud with a position and a radius for each point. This is the default.
+- 3D Gaussian Splat: a point cloud that works as the original 3D Gaussian Splats technique.
+
+#### Outputs
+
+##### Points
+
+Data type: Geometry.
+
+The geometry with the new point cloud type.

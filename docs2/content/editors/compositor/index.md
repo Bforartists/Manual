@@ -128,13 +128,25 @@ Duplicates the selected nodes.
 
 Allows you to rename the current active node. A popup opens up where you can type in another name.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Delete | Deletes the selected nodes. All Connections gets removed. |
-| Delete with Reconnect | Deletes the selected nodes. Existing connections gets bypassed as if the node would not have existed. |
-| Make Links | Shows when you have at least two nodes connected. Tries to connect nodes where it makes sense. For example, the BSDF output of a Principled shader with the Surface input of the Material Output node. |
-| Make and Replace Links | Shows when you have at least two nodes connected. Same as Make Links. But it will replace existing links. |
-| Detach Links | Shows when you have at least two nodes connected. Removes all connections from the selected node, but tries to reconnect the remaining nodes. |
+#### Delete
+
+Deletes the selected nodes. All Connections gets removed.
+
+#### Delete with Reconnect
+
+Deletes the selected nodes. Existing connections gets bypassed as if the node would not have existed.
+
+#### Make Links
+
+Shows when you have at least two nodes connected. Tries to connect nodes where it makes sense. For example, the BSDF output of a Principled shader with the Surface input of the Material Output node.
+
+#### Make and Replace Links
+
+Shows when you have at least two nodes connected. Same as Make Links. But it will replace existing links.
+
+#### Detach Links
+
+Shows when you have at least two nodes connected. Removes all connections from the selected node, but tries to reconnect the remaining nodes.
 
 ### Make Group
 
@@ -176,24 +188,45 @@ Select the node, hold down Shift, then select the node group so that both are se
 
 Enters a node group for editing. Or when you are in a node group, exits the node group editing.
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------- |
-| Ungroup | Removes the selected nodes from a group. |
-| Join new Frame | Frame node functionality. Adds the selected node to a frame. |
-| Remove from Frame | Frame node functionality. Removes the selected node from a frame. |
-| Rename | Allows you to rename a node. |
+#### Ungroup
+
+Removes the selected nodes from a group.
+
+#### Join new Frame
+
+Frame node functionality. Adds the selected node to a frame.
+
+#### Remove from Frame
+
+Frame node functionality. Removes the selected node from a frame.
+
+#### Rename
+
+Allows you to rename a node.
 
 ### Select submenu
 
 ![Select submenu](/docs2/images/editors/compositor/select-submenu.png)
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Grouped | Select grouped nodes. |
-| Linked From | Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy. |
-| Linked To | Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy. |
-| Activate same type previous | Activate same node type before the current selection, step by step. |
-| Activate same type next | Activate same node type after the current selection, step by step. |
+#### Grouped
+
+Select grouped nodes.
+
+#### Linked From
+
+Select the nodes that are linked from the currently selected nodes. The nodes before in the hierarchy.
+
+#### Linked To
+
+Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy.
+
+#### Activate same type previous
+
+Activate same node type before the current selection, step by step.
+
+#### Activate same type next
+
+Activate same node type after the current selection, step by step.
 
 ### Show/Hide submenu
 

@@ -46,22 +46,15 @@ Allows you to edit the source code.
 
 Resets the zoom of the panel to the default value. Note that this entry is dysfunctional. You cannot zoom the panel.
 
+- **Delete Group**: Deletes the selected group. It does not keep the children, and deletes the whole hierarchy.
+- **Ungroup**: Ungroups the selected group.
+- **Merge Group**: Combine the layers in this group into a single layer.
+- **Colors**: Allows you to color your layer groups in the list. It does not show
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------- |
-| Delete Group | Deletes the selected group. It does not keep the children, and deletes the whole hierarchy. |
-| Ungroup | Ungroups the selected group. |
-| Merge Group | Combine the layers in this group into a single layer. |
-| Colors | Allows you to color your layer groups in the list. It does not show |
-
-
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------------ |
-| Mask Layer | Toggle the Masks visibility in the layer. |
-| Onion Skinning | Toggle the use the layer for Onion Skinning. |
-| Viewport/Render Visibility | Toggle layer visibility in the viewport and in render. |
-| Lock | Toggle layer from being editable. |
-
+- **Mask Layer**: Toggle the Masks visibility in the layer.
+- **Onion Skinning**: Toggle the use the layer for Onion Skinning.
+- **Viewport/Render Visibility**: Toggle layer visibility in the viewport and in render.
+- **Lock**: Toggle layer from being editable.
 
 #### Search Field
 
@@ -75,12 +68,13 @@ You can expand a search field at the bottom of the list. Type in your term and h
 
 Adds a new layer.
 
+#### Add New Layer Group
 
-| Entry | What it does |
-| ------------------- | ---------------------------------------------------------------------- |
-| Add New Layer Group | Adds a group. You can then drag n drop layers into it. |
-| Remove Layer Group | Deletes the selected group. But keeps the children, and the hierarchy. |
+Adds a group. You can then drag n drop layers into it.
 
+#### Remove Layer Group
+
+Deletes the selected group. But keeps the children, and the hierarchy.
 
 ### Add Extra menu
 
@@ -96,36 +90,93 @@ Extra operators per layer or layer group.
 
 Adds a group. You can then drag n drop layers into it. The group will be added as a child when you have a group selected.
 
+##### Delete Group
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Group | Deletes the selected group. Note: *Only shows on Layer Groups* |
-| Ungroup | Ungroups the selected group. Note: *Only shows on Layer Groups* |
-| Merge Group | Merges any children groups with parent group. If there are no children groups, it will merge no layer groups. **Note:** *Only shows on Layer Groups* |
-| Move To Top | Moves the active selected grease pencil layer to top |
-| Move To Bottom | Moves the active selected grease pencil layer to bottom |
-| Duplicate Layer | Makes an exact copy of the selected layer appending a number to differentiate its name. This method does not duplicate empty keyframes. |
-| Duplicate Empty Keyframes | Makes an exact copy of the selected layer appending a number to differentiate its name. This method does duplicate empty keyframes. |
-| Show All | Turns on the visibility of every layer in the list. |
-| Hide Others | Turns off the visibility of every layer in the list except the active one. |
-| Lock All | Locks edition of all the layers in the list |
-| Unlock All | Unlocks edition of all the layers in the list. |
-| Merge Down | Merge the selected layer with the layer below. The new layer keeps the name of the lower layer. |
-| Merge All | Merge the selected layer with all layers. The new layer keeps the name of the active layer. |
-| Mask with Layer Above | Mask the active layer with the layer above. |
-| Mask with Layer Below | Mask the active layer with the layer below |
-| Copy Layer to Selected | Appends the active layer to the selected object. |
-| Copy all Layers to Selected | Appends all layers to the selected object. |
+Deletes the selected group. Note: *Only shows on Layer Groups*
 
+##### Ungroup
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------- |
-| Reorder Layer | Move the selected layer up or down in the list. |
-| Isolate Layers | Locks and hides all not active layers. |
-| Isolate layers | Locks all not active layers. |
-| Autolock Inactive layers | Automatically lock all layers except the active one to avoid accidental changes |
-| Ignore Material Locking | Allow editing strokes even if they use locked materials. |
+Ungroups the selected group. Note: *Only shows on Layer Groups*
 
+##### Merge Group
+
+Merges any children groups with parent group. If there are no children groups, it will merge no layer groups. **Note:** *Only shows on Layer Groups*
+
+##### Move To Top
+
+Moves the active selected grease pencil layer to top
+
+##### Move To Bottom
+
+Moves the active selected grease pencil layer to bottom
+
+##### Duplicate Layer
+
+Makes an exact copy of the selected layer appending a number to differentiate its name. This method does not duplicate empty keyframes.
+
+##### Duplicate Empty Keyframes
+
+Makes an exact copy of the selected layer appending a number to differentiate its name. This method does duplicate empty keyframes.
+
+##### Show All
+
+Turns on the visibility of every layer in the list.
+
+##### Hide Others
+
+Turns off the visibility of every layer in the list except the active one.
+
+##### Lock All
+
+Locks edition of all the layers in the list
+
+##### Unlock All
+
+Unlocks edition of all the layers in the list.
+
+##### Merge Down
+
+Merge the selected layer with the layer below. The new layer keeps the name of the lower layer.
+
+##### Merge All
+
+Merge the selected layer with all layers. The new layer keeps the name of the active layer.
+
+##### Mask with Layer Above
+
+Mask the active layer with the layer above.
+
+##### Mask with Layer Below
+
+Mask the active layer with the layer below
+
+##### Copy Layer to Selected
+
+Appends the active layer to the selected object.
+
+##### Copy all Layers to Selected
+
+Appends all layers to the selected object.
+
+##### Reorder Layer
+
+Move the selected layer up or down in the list.
+
+##### Isolate Layers
+
+Locks and hides all not active layers.
+
+##### Isolate layers
+
+Locks all not active layers.
+
+##### Autolock Inactive layers
+
+Automatically lock all layers except the active one to avoid accidental changes
+
+##### Ignore Material Locking
+
+Allow editing strokes even if they use locked materials.
 
 ### Blend Mode
 
@@ -133,12 +184,13 @@ Adds a group. You can then drag n drop layers into it. The group will be added a
 
 The layer blending operation to perform. See Color Blend Modes.
 
+#### Opacity
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------- |
-| Opacity | Used to set the opacity of the layer. |
-| Use Scene Lighting | When enabled, the layer is affected by lights. |
+Used to set the opacity of the layer.
 
+#### Use Scene Lighting
+
+When enabled, the layer is affected by lights.
 
 ## Layers panel - Masks subpanel
 
@@ -148,13 +200,17 @@ Use another grease pencil layer as a mask.
 
 ### List view
 
+#### Name of the grease pencil layer
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------ |
-| Name of the grease pencil layer | The name of the layer. |
-| Invert | Invert the mask. |
-| Hide | Set mask layer visible or invisible. |
+The name of the layer.
 
+#### Invert
+
+Invert the mask.
+
+#### Hide
+
+Set mask layer visible or invisible.
 
 #### Search Field
 
@@ -168,12 +224,13 @@ You can expand a search field at the bottom of the list. Type in your term and h
 
 Add a grease pencil layer as a mask layer. The layer must already exist.
 
+#### Subtract
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------- |
-| Subtract | Remove the grease pencil layer from the list. |
-| Move Up / Down | Move the selected grease pencil mask one up or one down. |
+Remove the grease pencil layer from the list.
 
+#### Move Up / Down
+
+Move the selected grease pencil mask one up or one down.
 
 ## Layers panel - Transform subpanel
 
@@ -185,12 +242,13 @@ Allows to transform the current grease pencil layer in the 3d view.
 
 ![Layers panel - Adjustment subpanel](/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel-adjustment-subpanel.png)
 
+### Tint Color
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Tint Color | Color that tint any material colors used in the layer. · **Factor**: The Factor controls the amount of tint color to apply. |
-| Stroke Thickness | Thickness value that override the strokes thickness in the layer. |
+Color that tint any material colors used in the layer. · **Factor**: The Factor controls the amount of tint color to apply.
 
+### Stroke Thickness
+
+Thickness value that override the strokes thickness in the layer.
 
 ## Layers panel - Relations subpanel
 
@@ -216,12 +274,13 @@ What type of object. When the parent is an armature, then you can choose between
 
 When the type is a bone, then choose which bone of the armature.
 
+#### Pass Index
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Pass Index | The layer index number. It can be used with some modifiers to restrict changes to only certain areas. |
-| View Layer | Defines the View Layer to use for the Grease Pencil layer. If empty, the layer will be included in all View Layers. This is useful to separate drawings parts for compositing. · **Use Masks in Render**: Include the mask layer when you render the view layer. You need to have a view layer selected to reveal this option. |
+The layer index number. It can be used with some modifiers to restrict changes to only certain areas.
 
+#### View Layer
+
+Defines the View Layer to use for the Grease Pencil layer. If empty, the layer will be included in all View Layers. This is useful to separate drawings parts for compositing. · **Use Masks in Render**: Include the mask layer when you render the view layer. You need to have a view layer selected to reveal this option.
 
 ## Layers panel - Display subpanel
 
@@ -251,13 +310,17 @@ Onion Skinning show ghosts of the keyframes before and after the current frame. 
 
 ![Mode](/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/mode.png)
 
+#### Frames
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Frames | Shows Frames in the range determined by the Before/After settings. |
-| Keyframes | Shows Keyframes in the range determined by the Before/After settings. |
-| Selected | Shows only on the manually selected keyframes in the Dope Sheet. |
+Shows Frames in the range determined by the Before/After settings.
 
+#### Keyframes
+
+Shows Keyframes in the range determined by the Before/After settings.
+
+#### Selected
+
+Shows only on the manually selected keyframes in the Dope Sheet.
 
 ### Opacity
 
@@ -285,12 +348,13 @@ Custom color of the ghost frames before and after the current frame.
 
 ![Display](/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/display.png)
 
+#### Fade
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------ |
-| Fade | Opacity of the ghosts frames decrease the further away from the current frame. |
-| Show Start Frame | Display onion keyframes on looping animations. |
+Opacity of the ghosts frames decrease the further away from the current frame.
 
+#### Show Start Frame
+
+Display onion keyframes on looping animations.
 
 ## Settings Panel
 
@@ -300,12 +364,13 @@ Custom color of the ghost frames before and after the current frame.
 
 ![Stroke depth order](/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/stroke-depth-order.png)
 
+#### 2D Layers
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------- |
-| 2D Layers | Display strokes by using the Grease Pencil layer order and stroke order to define depth. |
-| 3D Location | Display strokes by using the real 3D position in 3D space. |
+Display strokes by using the Grease Pencil layer order and stroke order to define depth.
 
+#### 3D Location
+
+Display strokes by using the real 3D position in 3D space.
 
 ## Attributes panel
 
@@ -369,31 +434,41 @@ Vertex groups exists for mesh and lattice objects.
 
 A List of the vertex groups for this mesh.
 
+#### Group name
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group name | The name of the group. It can be renamed by double clicking at it. |
-| Lock | The lock icon at the end of a group name locks the group from being editable. |
-| Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
-| Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
+The name of the group. It can be renamed by double clicking at it.
 
+#### Lock
 
-| Entry | What it does |
-| -------- | -------------------------------- |
-| Add + | Create an empty vertex group. |
-| Remove - | Deletes the active vertex group. |
+The lock icon at the end of a group name locks the group from being editable.
 
+#### Drag Handler
+
+The two vertical lines at the end is a handler with which you can expand the list.
+
+#### Search Field
+
+You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name.
+
+#### Add +
+
+Create an empty vertex group.
+
+#### Remove -
+
+Deletes the active vertex group.
 
 ### Vertex Group Specials menu
 
 ![Vertex Group Specials menu](/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/vertex-group-specials-menu.png)
 
+#### Sort by Name
 
-| Entry | What it does |
-| ---------------------- | --------------------------------------------------------------- |
-| Sort by Name | Sorts the vertex groups alphabetically by name. |
-| Sort by Bone Hierarchy | Sorts the vertex groups by the hierarchy of the assigned bones. |
+Sorts the vertex groups alphabetically by name.
 
+#### Sort by Bone Hierarchy
+
+Sorts the vertex groups by the hierarchy of the assigned bones.
 
 #### Copy Vertex Group
 
@@ -401,27 +476,57 @@ A List of the vertex groups for this mesh.
 
 Add a copy of the active vertex group as a new group. The new group will be named like the original group with `“_copy”` appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.
 
+##### Copy Vertex Groups to Linked
 
-| Entry | What it does |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Vertex Groups to Linked | Copy vertex groups of this mesh to all linked objects which use the same mesh data (all users of the data). |
-| Copy Vertex Group to Selected | Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited). |
-| Mirror Vertex Group | Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group. |
-| Mirror Vertex Group (Topology) | Performs the Mirror Vertex Group with the Topology Mirror option enabled. |
-| Remove from All Groups | Unassigns the selected vertices from all groups. Even locked. |
-| Clear Active Group | Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups. |
-| Delete All Unlocked Groups | Remove all vertex groups from the object that are not locked. |
-| Delete All Groups | Remove all vertex groups from the object. |
-| Lock All | Lock all groups. |
-| Unlock All | Unlock all groups. |
-| Lock Invert All | Invert group locks. |
+Copy vertex groups of this mesh to all linked objects which use the same mesh data (all users of the data).
 
+##### Copy Vertex Group to Selected
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------- |
-| Move Vertex Group Up | Moves the selected vertex group up in the list. |
-| Move Vertex Group Down | Moves the selected vertex group down in the list. |
+Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited).
 
+##### Mirror Vertex Group
+
+Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group.
+
+##### Mirror Vertex Group (Topology)
+
+Performs the Mirror Vertex Group with the Topology Mirror option enabled.
+
+##### Remove from All Groups
+
+Unassigns the selected vertices from all groups. Even locked.
+
+##### Clear Active Group
+
+Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups.
+
+##### Delete All Unlocked Groups
+
+Remove all vertex groups from the object that are not locked.
+
+##### Delete All Groups
+
+Remove all vertex groups from the object.
+
+##### Lock All
+
+Lock all groups.
+
+##### Unlock All
+
+Unlock all groups.
+
+##### Lock Invert All
+
+Invert group locks.
+
+##### Move Vertex Group Up
+
+Moves the selected vertex group up in the list.
+
+##### Move Vertex Group Down
+
+Moves the selected vertex group down in the list.
 
 ### Assign
 
@@ -429,14 +534,21 @@ Add a copy of the active vertex group as a new group. The new group will be name
 
 Assign the selected vertices to the active vertex group.
 
+#### Remove
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------- |
-| Remove | Remove the selected vertices from the active group. |
-| Select | Select all vertices in the group. |
-| Deselect | Deselect all vertices in the group. |
-| Weight | The weight value that gets assigned to the selected vertices. |
+Remove the selected vertices from the active group.
 
+#### Select
+
+Select all vertices in the group.
+
+#### Deselect
+
+Deselect all vertices in the group.
+
+#### Weight
+
+The weight value that gets assigned to the selected vertices.
 
 ## Custom Properties Panel
 

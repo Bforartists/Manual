@@ -47,13 +47,17 @@ For example in YUV color space, this is useful when compositing stock footage of
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image | Standard image input. · **Minimum**: Determines the lowest values that are considered foreground. (Which is supposed to be – relatively – height values: from this value to 1.0.) · **Maximum**: Determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – low values: from 0.0 to this value.) |
-| Color Space | This button selects what color space the channels will represent. RGB, HSV, YUV, YCbCr |
-| Key channel | This button selects the channel, defined by the Color Space, to use to determine the matte. |
+Standard image input. · **Minimum**: Determines the lowest values that are considered foreground. (Which is supposed to be – relatively – height values: from this value to 1.0.) · **Maximum**: Determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – low values: from 0.0 to this value.)
 
+##### Color Space
+
+This button selects what color space the channels will represent. RGB, HSV, YUV, YCbCr
+
+##### Key channel
+
+This button selects the channel, defined by the Color Space, to use to determine the matte.
 
 ##### Algorithm
 
@@ -71,12 +75,13 @@ With method Single you can choose a single channel.
 
 #### Outputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------- |
-| Image | Image with an alpha channel adjusted for the keyed selection. |
-| Matte | A black-and-white alpha mask of the key. |
+Image with an alpha channel adjusted for the keyed selection.
 
+##### Matte
+
+A black-and-white alpha mask of the key.
 
 ### Chroma Key
 
@@ -86,12 +91,13 @@ The Chroma Key node determines if a pixel is a foreground or background (and the
 
 Use this, for example, to composite images that have been shot in front of a green or blue screen.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Image**: Standard image input. · **Key Color**: The background color usually selected using the color picker and the original image. · **Minimum**: The minimum value to key a color. · **Maximum**: The maximum value to key a color. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges. |
-| Outputs | **Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key. |
+**Image**: Standard image input. · **Key Color**: The background color usually selected using the color picker and the original image. · **Minimum**: The minimum value to key a color. · **Maximum**: The maximum value to key a color. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
 
+#### Outputs
+
+**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
 
 ### Color Key
 
@@ -99,12 +105,13 @@ Use this, for example, to composite images that have been shot in front of a gre
 
 The Color Key node creates a matte based on a specified color of the input image.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Image**: Standard image input. · **Key Color**: The sliders represent threshold values. Higher values in this node’s context mean a wider range of colors from the specified will be added to the matte. · **Hue, Saturation, Value**: Hue, saturation and value values. |
-| Outputs | **Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key. |
+**Image**: Standard image input. · **Key Color**: The sliders represent threshold values. Higher values in this node’s context mean a wider range of colors from the specified will be added to the matte. · **Hue, Saturation, Value**: Hue, saturation and value values.
 
+#### Outputs
+
+**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
 
 ### Color Spill
 
@@ -116,13 +123,17 @@ This is common when compositing images that were shot in front of a green or blu
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ------------- | --------------------- |
-| Image | Standard image input. |
-| Factor | Standard Factor. |
-| Spill Channel | R, G, B |
+Standard image input.
 
+##### Factor
+
+Standard Factor.
+
+##### Spill Channel
+
+R, G, B
 
 ##### Limit Method
 
@@ -130,13 +141,17 @@ This is common when compositing images that were shot in front of a green or blu
 
 Simple or Average.
 
+###### Limiting Channel
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Limiting Channel | R, G, B values |
-| Limit Strength | Specifies the strtength of the limit channel. |
-| Spill Strength subpanel | Allows you to specify the spill strength for each color channel. If disabled the spill channel will have a unit scale. While other channels will be zero. · **Strength**: Specifies the spilling strengt of each color channel. |
+R, G, B values
 
+###### Limit Strength
+
+Specifies the strtength of the limit channel.
+
+###### Spill Strength subpanel
+
+Allows you to specify the spill strength for each color channel. If disabled the spill channel will have a unit scale. While other channels will be zero. · **Strength**: Specifies the spilling strengt of each color channel.
 
 #### Outputs
 
@@ -150,12 +165,13 @@ The image with the corrected channels.
 
 This node produces a matte that isolates foreground content by comparing it with a reference background image.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Image 1**: Contains foreground content against the background that is to be removed. · **Image 2**: The reference background image. · **Tolerance**: Where pixels match the reference background to within the specified threshold, the matte is made transparent. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges. |
-| Outputs | **Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key. |
+**Image 1**: Contains foreground content against the background that is to be removed. · **Image 2**: The reference background image. · **Tolerance**: Where pixels match the reference background to within the specified threshold, the matte is made transparent. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
 
+#### Outputs
+
+**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
 
 ### Distance Key
 
@@ -167,24 +183,35 @@ This key works well when trying to single out a specific color in a background (
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image | Standard image input. |
-| Key Color | The color that is to be keyed. |
-| Color Space | RGB, YCC It is also possible to work with YCbCr color space, but only the Cb and Cr channels are taken into consideration for determining the distance between the foreground and background pixels. |
-| Tolerance | A threshold what the node considers a match between the key color and the foreground pixel. The tolerance affects how close a pixel needs to be to the background pixel to be considered an absolute match. |
-| Falloff | When the Falloff value is high, pixels that are close to the Key Color are more transparent than pixels that are not as close to the Key Color (but still considered close enough to be keyed). When the Falloff value is low, it does not matter how close the pixel color (Image) is to the Key Color, it is transparent. |
+Standard image input.
 
+##### Key Color
+
+The color that is to be keyed.
+
+##### Color Space
+
+RGB, YCC It is also possible to work with YCbCr color space, but only the Cb and Cr channels are taken into consideration for determining the distance between the foreground and background pixels.
+
+##### Tolerance
+
+A threshold what the node considers a match between the key color and the foreground pixel. The tolerance affects how close a pixel needs to be to the background pixel to be considered an absolute match.
+
+##### Falloff
+
+When the Falloff value is high, pixels that are close to the Key Color are more transparent than pixels that are not as close to the Key Color (but still considered close enough to be keyed). When the Falloff value is low, it does not matter how close the pixel color (Image) is to the Key Color, it is transparent.
 
 #### Outputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------------- |
-| Image | The image with an alpha channel adjusted for the keyed selection. |
-| Matte | A black-and-white alpha mask of the key. |
+The image with an alpha channel adjusted for the keyed selection.
 
+##### Matte
+
+A black-and-white alpha mask of the key.
 
 ### Keying
 
@@ -194,12 +221,13 @@ The Keying node is a one-stop-shop for “green screen” / “blue screen” re
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Image | Standard image input. |
-| Key Color | The color of content to be removed. This may be a single color, or a reference image such as generated by the Keying Screen Node. |
+Standard image input.
 
+##### Key Color
+
+The color of content to be removed. This may be a single color, or a reference image such as generated by the Keying Screen Node.
 
 ##### Preprocess subpanel
 
@@ -239,35 +267,35 @@ This value does not impact areas detected as edges to ensure edge detail is pres
 
 ![Edges subpanel](/docs2/images/editors/compositor/header/add-menu-keying/edges-subpanel.png)
 
-**Size**
+###### Size
 
 Size of the search window to find edges.
 
-**Tolerance**
+###### Tolerance
 
 ![Tolerance](/docs2/images/editors/compositor/header/add-menu-keying/tolerance.png)
 
 The tolerance in the color difference in which a pixel is considered to be part of the edge.
 
-
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Mask subpanel | — |
-| Garbage Matte | An optional mask of area(s) to always exclude from the output. This is removed from the chroma key generated matte. |
-| Core Matte | An optional mask of area(s) to always include in the output. This is merged with the chroma key generated matte. |
-
+- **Mask subpanel**: —
+- **Garbage Matte**: An optional mask of area(s) to always exclude from the output. This is removed from the chroma key generated matte.
+- **Core Matte**: An optional mask of area(s) to always include in the output. This is merged with the chroma key generated matte.
 
 ##### Postprocess subpanel
 
 ![Postprocess subpanel](/docs2/images/editors/compositor/header/add-menu-keying/postprocess-subpanel.png)
 
+###### Blur Size
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blur Size | Blur the image with the given size. |
-| Dilate Size | Dilate or erode the image with the given size. A negative value means erosion, a positive value means dilate. |
-| Feather Size | Dilate or erode the image using an inverse distance operation with the given size. A negative value means erosion, a positive value means dilate. |
+Blur the image with the given size.
 
+###### Dilate Size
+
+Dilate or erode the image with the given size. A negative value means erosion, a positive value means dilate.
+
+###### Feather Size
+
+Dilate or erode the image using an inverse distance operation with the given size. A negative value means erosion, a positive value means dilate.
 
 ###### Feather falloff
 
@@ -279,12 +307,13 @@ The rate of the falloff at the edges of the matte when feathering, to manage edg
 
 ![Despill subpanel](/docs2/images/editors/compositor/header/add-menu-keying/despill-subpanel.png)
 
+###### Strength
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Strength | Controls how much color bleed from the key color is removed from the input image: 0 means no despilling, 1 means all possible spilling will be removed. The underlying implementation is the same as adjusting the Unspill amount of the Color Spill Node. |
-| Balance | This controls how the color channels are compared when computing spill, affecting the hue and shade of the corrected colors. It is similar to setting the Limiting Channel in the Color Spill Node. |
+Controls how much color bleed from the key color is removed from the input image: 0 means no despilling, 1 means all possible spilling will be removed. The underlying implementation is the same as adjusting the Unspill amount of the Color Spill Node.
 
+###### Balance
+
+This controls how the color channels are compared when computing spill, affecting the hue and shade of the corrected colors. It is similar to setting the Limiting Channel in the Color Spill Node.
 
 ### Keying Screen
 
@@ -336,18 +365,24 @@ When compositing footage of something that emits light and has a dark background
 
 #### Inputs
 
+##### Image
 
-| Entry | What it does |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image | Standard image input. |
-| Minimum | Determines the lowest values that are considered foreground. (Which is supposed to be – relatively – light: from this value to 1.0.) |
-| Maximum | Determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – dark: from 0.0 to this value.) Note. Brightness levels between the two values form a gradient of transparency between foreground and background objects. |
+Standard image input.
 
+##### Minimum
+
+Determines the lowest values that are considered foreground. (Which is supposed to be – relatively – light: from this value to 1.0.)
+
+##### Maximum
+
+Determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – dark: from 0.0 to this value.) Note. Brightness levels between the two values form a gradient of transparency between foreground and background objects.
 
 #### Outputs
 
+##### Image
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------- |
-| Image | Image with an alpha channel adjusted for the keyed selection. |
-| Matte | A black-and-white alpha mask of the key. |
+Image with an alpha channel adjusted for the keyed selection.
+
+##### Matte
+
+A black-and-white alpha mask of the key.

@@ -6,8 +6,8 @@ path:
   - Editors
   - Video Sequence Editor
   - Tool Shelf
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.2 Editors - Video Sequence Editor - Tool Shelf.odt
@@ -42,17 +42,15 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Lasso
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
+
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -62,28 +60,27 @@ Draws a lasso to select several elements at once. Click at the start point, then
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
 Circle select several elements at once. Click at the start point, then drag.
 
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
+
 ##### Tool Settings
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-3.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The circle radius |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The circle radius
 
 ### Move
 
@@ -135,14 +132,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Rotate
 
@@ -188,14 +192,21 @@ When you rotate the object, and hold down the mouse and type in a value, like 20
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Scale
 
@@ -247,14 +258,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Transform
 
@@ -306,14 +324,21 @@ When you have accidentally grabbed the middle of the widget, and want to move al
 
 What to do when you click in the off.
 
+###### Active Tool
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------- |
-| Active Tool | Use the transform tool. |
-| Tweak | Deselect the current element and/or select another element. |
-| Select Box | Deselect the current element and/or box select another element. |
-| Select mode | The select mode for the select methods. |
+Use the transform tool.
 
+###### Tweak
+
+Deselect the current element and/or select another element.
+
+###### Select Box
+
+Deselect the current element and/or box select another element.
+
+###### Select mode
+
+The select mode for the select methods.
 
 ### Sample
 
@@ -355,12 +380,8 @@ Clicking at the color field reveals a color picker. Define the color for the ann
 
 Helper to draw smooth and clean lines. Pressing shift inverts the effect.
 
-
-| Entry | What it does |
-| ------ | ---------------------------------------------------------------- |
-| Radius | The radius for the stroke stabilization. |
-| Factor | Stabilizer stroke factor. Higher values gives a smoother stroke. |
-
+- **Radius**: The radius for the stroke stabilization.
+- **Factor**: Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 #### Annotate Line
 
@@ -446,17 +467,15 @@ Draws a box to select several elements at once. Click at the start point, then d
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Lasso
 
 Draws a lasso to select several elements at once. Click at the start point, then drag.
+
+> **Tip:** Lasso select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
 
 ##### Tool Settings
 
@@ -466,28 +485,27 @@ Draws a lasso to select several elements at once. Click at the start point, then
 
 The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.
 
-
-| Entry | What it does |
-| --------------------------- | ------------ |
-| Set a new selection | — |
-| Extend existing selection | — |
-| Subtract existing selection | — |
-
+- **Set a new selection**: —
+- **Extend existing selection**: —
+- **Subtract existing selection**: —
 
 #### Select Circle
 
 Circle select several elements at once. Click at the start point, then drag.
 
+> **Tip:** Circle select also works without the tool, with a hotkey. See the [Video Sequencer keymap](../../keymap/keymap-table.md#video-sequencer).
+
 ##### Tool Settings
 
 ![Tool Settings](/docs2/images/editors/video-sequence-editor/tool-shelf/tool-settings-3.png)
 
+###### Mode
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mode | The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection** |
-| Radius | The circle radius |
+The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · **Set a new selection** · **Extend existing selection** · **Subtract existing selection**
 
+###### Radius
+
+The circle radius
 
 #### Blade
 
@@ -499,22 +517,25 @@ Clicking at the clip will cut the strip at the mouse position. When you drag thi
 
 ##### Active Tool settings
 
-###### Split Type
+The settings come in two groups, one for each way of using the tool. In the header you see the Split type; the rest is behind the **...** button.
 
-Create a soft split or a hard split.
+###### Split
 
-###### Remove Gaps
+Settings for a click on a strip.
 
-![Remove Gaps](/docs2/images/editors/video-sequence-editor/tool-shelf/remove-gaps.png)
+- **Soft / Hard**: A **Soft** split keeps the cut-off content, so you can drag the strip ends back out later. A **Hard** split removes it.
+- **All Channels**: Splits the strips in all channels at that frame, not only the strip under the mouse.
+- **Only Selected**: Splits only selected strips.
+- **Ignore Connections**: Splits only the strip itself, not the strips that are connected to it. Not available with All Channels.
 
-Close gaps between cut strips.
+###### Box Blade
 
+Settings for dragging a box. Everything inside the box is cut away.
 
-| Entry | What it does |
-| ------------------ | -------------------------------------------------------- |
-| Ignore Selection | Make cuts to all strips. Even if they are not connected. |
-| Ignore Connections | Don’t propagate split to connected strips. |
-
+- **Soft / Hard**: The type of the cuts, as above.
+- **Remove Gaps**: Closes the gaps that the cut leaves, and moves the later strips on the same channel to the left.
+- **Only Selected**: Cuts only selected strips.
+- **Ignore Connections**: Doesn't cut the strips that are connected to the cut strips.
 
 #### Retime
 

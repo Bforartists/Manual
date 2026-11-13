@@ -8,8 +8,8 @@ path:
   - "All Modes"
   - "Header"
   - "Select Menu"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The Select menu provides you with all functionality around selecting."
 order: 40
@@ -30,12 +30,13 @@ The select menu in Object mode is for all object types equal. It provides you wi
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -43,13 +44,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Grouped
 
@@ -59,9 +64,11 @@ Select different types of objects within the group. It requires to have a group 
 
 The menu items are pretty self explaining. So we won't go into detail here.
 
-### Last Operator Select Grouped
+### Adjust Last Operation - Select Grouped
 
 ![Last Operator Select Grouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-grouped.jpg)
+
+Change the settings of **Select Grouped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -78,16 +85,29 @@ Linked is a menu select different types.
 
 Select all objects that shares a common data-block with the active object. *Select Linked* uses the active object as a basis to select all others.
 
+### Object Data
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------------------------------- |
-| Object Data | Selects every object that is linked to the same Object Data. |
-| Material | Selects every object that is linked to the same material data-block. |
-| Instanced Collection | Selects every object that is linked to the instanced collection. |
-| Particle System | Selects all objects that use the same **Particle System**. |
-| Library | Selects all objects that are in the same Library. |
-| Library (Object Data) | Selects all objects that are in the same Library and limited to **object data**. |
+Selects every object that is linked to the same Object Data.
 
+### Material
+
+Selects every object that is linked to the same material data-block.
+
+### Instanced Collection
+
+Selects every object that is linked to the instanced collection.
+
+### Particle System
+
+Selects all objects that use the same **Particle System**.
+
+### Library
+
+Selects all objects that are in the same Library.
+
+### Library (Object Data)
+
+Selects all objects that are in the same Library and limited to **object data**.
 
 ## All by Type
 
@@ -97,9 +117,11 @@ Select objects of a specific type.
 
 The menu items are pretty self explaining. So we won't cover every single menu item here.
 
-### Last Operator Select By Type
+### Adjust Last Operation - Select By Type
 
 ![Last Operator Select By Type](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-type.png)
+
+Change the settings of **Select By Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -112,9 +134,11 @@ The menu items are pretty self explaining. So we won't cover every single menu i
 
 Selects random objects.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -128,9 +152,11 @@ Selects random objects.
 
 Select the mirrored parts of an object. For example for L.Sword it selects R.Sword.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror.png)
+
+Change the settings of **Select Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Extend
 
@@ -153,18 +179,19 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
+Type in your string.
 
+### Case Sensitive
+
+When ticked then the string comparison happens by taking upper and lower letters into account.
 
 ### Extend
 
 Extends existing selection instead of deselecting everything first.
 
-#### Last Operator Select Pattern
+#### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -178,16 +205,29 @@ Selects the active camera.
 
 ![More/ Less](/docs2/images/editors/3d-viewport/header/select-menu/more-less.png)
 
+### More
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| More | More requires to have a parent or child relationship. It expands the selection. |
-| Less | Less requires to have a parent or child relationship. It reduces the selection. |
-| Parent | Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). |
-| Child | Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). |
-| Parent extended | Parent extended requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Child Extended | Child Extended requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
+More requires to have a parent or child relationship. It expands the selection.
 
+### Less
+
+Less requires to have a parent or child relationship. It reduces the selection.
+
+### Parent
+
+Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s).
+
+### Child
+
+Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s).
+
+### Parent extended
+
+Parent extended requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+### Child Extended
+
+Child Extended requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
 
 # Mesh - Edit Mode
 
@@ -207,12 +247,13 @@ So you might want to check the mesh select mode when something does not work in 
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -220,13 +261,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
 
 ## Linked
 
@@ -234,9 +279,11 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Delimit
 
@@ -246,7 +293,7 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select the geometry that is co planar to the current selection. It works also in other selection modes, but you need to have face geometry selected.
 
-### Last Operator Select Linked Flat Faces
+### Adjust Last Operation - Select Linked Flat Faces
 
 ![Last Operator Select Linked Flat Faces](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-flat-faces.png)
 
@@ -260,9 +307,11 @@ Same as with Linked. But works with what is under the mouse cursor.
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Last Operator Select Linked
+### Adjust Last Operation - Select Linked
 
 ![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked.png)
+
+Change the settings of **Select Linked** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -283,7 +332,7 @@ Select geometry based on how similar certain properties are to it. The methods c
 
 ![Similar](/docs2/images/editors/3d-viewport/header/select-menu/similar-4.png)
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 ![Last Operator Select Similar](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-similar.png)
 
@@ -295,20 +344,23 @@ The last operator changes, dependant of the method.
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
 Selects a random group of vertices, edges, or faces, dependent of the mesh selection method.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -322,9 +374,11 @@ Selects a random group of vertices, edges, or faces, dependent of the mesh selec
 
 Deselect alternating faces, edges or vertices to create a checker like pattern. The result is dependent of the mesh selection method.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
+
+Change the settings of **Checker Deselect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -338,9 +392,11 @@ Deselect alternating faces, edges or vertices to create a checker like pattern. 
 
 Requires to have a symmetrical mesh. Selects the mirrored mesh parts from a selection.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-2.png)
+
+Change the settings of **Select Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -353,9 +409,11 @@ Requires to have a symmetrical mesh. Selects the mirrored mesh parts from a sele
 
 Selects all mesh data in direction of a single axis, starting from the current selection.
 
-### Last Operator Side of Active
+### Adjust Last Operation - Side of Active
 
 ![Last Operator Side of Active](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-side-of-active.png)
+
+Change the settings of **Side of Active** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Axis mode
 
@@ -385,9 +443,11 @@ Define a threshold to extend the selection.
 
 Select the shortest edge path between two selected mesh elements. This can be vertices, edges or faces. A start and an end point must be selected.
 
-### Last Operator Select shortest path
+### Adjust Last Operation - Select shortest path
 
 ![Last Operator Select shortest path](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-shortest-path.png)
+
+Change the settings of **Select shortest path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Face Stepping
 
@@ -413,20 +473,23 @@ Select the region faces too.
 
 Don't select the whole path, but just every nth element of it.
 
+##### Skip
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------- |
-| Skip | This is connected to nth element. Number of elements to skip at once. |
-| Offset | This is connected to nth element. Start with an offset. |
+This is connected to nth element. Number of elements to skip at once.
 
+##### Offset
+
+This is connected to nth element. Start with an offset.
 
 ## Sharp Edges
 
 Select all edges that are marked as sharp.
 
-### Last Operator Select Sharp Edges
+### Adjust Last Operation - Select Sharp Edges
 
 ![Last Operator Select Sharp Edges](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-sharp-edges.png)
+
+Change the settings of **Select Sharp Edges** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Sharpness
 
@@ -438,9 +501,11 @@ The angle after which a sharp edge gets selected.
 
 Selects a loop of edges from a selected edge. The method stops at poles. That's vertices where three or more than four edges comes together. At a UV sphere the north and south pole ...
 
-### Last Operator Multi Select Loops
+### Adjust Last Operation - Multi Select Loops
 
 ![Last Operator Multi Select Loops](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-multi-select-loops.png)
+
+Change the settings of **Multi Select Loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Ring
 
@@ -452,9 +517,11 @@ Select edge ring instead of edge loop.
 
 Selects edges parallel to a selected edge in the same ring of faces. The method stops at poles. That's vertices where three or more than four edges comes together. At a UV sphere the north and south pole ...
 
-### Last Operator Multi Select Loops
+### Adjust Last Operation - Multi Select Loops
 
 ![Last Operator Multi Select Loops](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-multi-select-loops.png)
+
+Change the settings of **Multi Select Loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Ring
 
@@ -468,9 +535,11 @@ Select everything that is enclosed by an edge loop. When the loop is not closed,
 
 By default the smaller enclosed part gets selected. The Inner-Region.
 
-### Last Operator Select Loop Inner-Region
+### Adjust Last Operation - Select Loop Inner-Region
 
 ![Last Operator Select Loop Inner-Region](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loop-inner-region.png)
+
+Change the settings of **Select Loop Inner-Region** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Select Bigger
 
@@ -498,21 +567,27 @@ If you hold Shift+Alt, you can add loops.
 
 > **Note:** This is a* *mouse-only operator**; it does not appear in menus.
 
-### Last Operator Select Loop
+### Adjust Last Operation - Select Loop
 
 ![Last Operator Select Loop](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loop.png)
+
+Change the settings of **Select Loop** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Face Loop Delimiter
 
 Controls how face loops are detected and selected based on edge properties. Useful for refining loop selection behavior when working with complex or stylized geometry.
 
+##### Seam
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Seam | When enabled, loop selection stops at UV seams.   Useful for selecting loops that respect texture boundaries or unwrap logic. |
-| Sharp | When enabled, loop selection stops at sharp edges.   Ideal for isolating loops along hard surface transitions or shading splits. |
-| Material | When enabled, loop selection stops at material boundaries.   Useful for selecting loops within a single material zone or across multi-material meshes. |
+When enabled, loop selection stops at UV seams.   Useful for selecting loops that respect texture boundaries or unwrap logic.
 
+##### Sharp
+
+When enabled, loop selection stops at sharp edges.   Ideal for isolating loops along hard surface transitions or shading splits.
+
+##### Material
+
+When enabled, loop selection stops at material boundaries.   Useful for selecting loops within a single material zone or across multi-material meshes.
 
 ## All by Trait sub menu
 
@@ -524,7 +599,7 @@ Controls how face loops are detected and selected based on edge properties. Usef
 
 Select non manifold geometry. Enclosed faces inside of a geometry for example.
 
-#### Last Operator Select Non-Manifold
+#### Adjust Last Operation - Select Non-Manifold
 
 ![Last Operator Select Non-Manifold](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-non-manifold.png)
 
@@ -536,9 +611,11 @@ What exact kind of non manifold geometry should be selected. The options names s
 
 Selects loose geometry.
 
-#### Last Operator Select Loose Geometry
+#### Adjust Last Operation - Select Loose Geometry
 
 ![Last Operator Select Loose Geometry](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loose-geometry.png)
+
+Change the settings of **Select Loose Geometry** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Extend
 
@@ -554,9 +631,11 @@ Select faces where all edges have more than 2 faces. In the picture here we have
 
 Selects faces that has the same number of edges, or better said vertices. Tris, quads, N-gons.
 
-#### Last Operator Select Faces by Side
+#### Adjust Last Operation - Select Faces by Side
 
 ![Last Operator Select Faces by Side](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-faces-by-side.png)
+
+Change the settings of **Select Faces by Side** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Sharpness
 
@@ -568,20 +647,23 @@ Extend the current selection.
 
 How many numbers of vertices the face should have. 4 is a quad.
 
+##### Type
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| Type | Selection type. |
-| Extend | Extend the current selection. |
+Selection type.
 
+##### Extend
+
+Extend the current selection.
 
 ### Poles by count
 
 Select poles. A pole is a vertice where more than four edges meet.
 
-#### Last Operator Select by Pole Count
+#### Adjust Last Operation - Select by Pole Count
 
 ![Last Operator Select by Pole Count](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-pole-count.png)
+
+Change the settings of **Select by Pole Count** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Pole count
 
@@ -593,12 +675,13 @@ What value to compare the vertice and its edges to. The number four here is the 
 
 How to compare to the pole count value.
 
+##### Extend
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------- |
-| Extend | Extend the current selection. |
-| Exclude Non Manifold | Exclude non manifold geometry from the calculation. |
+Extend the current selection.
 
+##### Exclude Non Manifold
+
+Exclude non manifold geometry from the calculation.
 
 ### Ungrouped Vertices
 
@@ -606,9 +689,11 @@ How to compare to the pole count value.
 
 This operator selects all vertices in a mesh that are **not assigned to any vertex group.** It’s especially useful in rigging, weight painting, and cleanup workflows where ungrouped vertices can cause deformation issues or be overlooked during asset preparation.
 
-### Last Operator Select Ungrouped
+### Adjust Last Operation - Select Ungrouped
 
 ![Last Operator Select Ungrouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ungrouped.png)
+
+Change the settings of **Select Ungrouped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Extend
 
@@ -628,12 +713,13 @@ To use, make sure you have a boolean attribute assigned and selected in the Prop
 
 ![More / Less](/docs2/images/editors/3d-viewport/header/select-menu/more-less-2.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 ### Next Active
 
@@ -663,12 +749,13 @@ This select menu shows with the sub modes Paint Mask and Vertex Selection in ver
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -676,14 +763,21 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
-| Ungrouped Vertices | Vertex Selection Mode. Select vertices that does not belong to a group. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
+
+### Ungrouped Vertices
+
+Vertex Selection Mode. Select vertices that does not belong to a group.
 
 ## Select Linked
 
@@ -691,9 +785,11 @@ A sub menu with the available lasso select modes.
 
 Vertex Selection Mode. Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Delimit
 
@@ -718,12 +814,13 @@ Paint Mask mode. Deselect linked faces. Mouse only tool.
 
 ![More/Less Sub-menu](/docs2/images/editors/3d-viewport/header/select-menu/more-less-sub-menu.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ----------------------- |
-| More | Icrease the selection. |
-| Less | Decrease the selection. |
+Icrease the selection.
 
+### Less
+
+Decrease the selection.
 
 # Mesh - Texture Paint Mode
 
@@ -739,12 +836,13 @@ This select menu shows with the sub mode Paint Mask.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -752,14 +850,21 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
-| Ungrouped Vertices | Vertex Selection Mode. Select vertices that does not belong to a group. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
+
+### Ungrouped Vertices
+
+Vertex Selection Mode. Select vertices that does not belong to a group.
 
 ## Select Linked
 
@@ -767,9 +872,11 @@ A sub menu with the available lasso select modes.
 
 Vertex Selection Mode. Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Delimit
 
@@ -808,12 +915,13 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 ![More/Less submenu](/docs2/images/editors/3d-viewport/header/select-menu/more-less-sub-menu.png)
 
+### More
 
-| Entry | What it does |
-| ----- | ----------------------- |
-| More | Icrease the selection. |
-| Less | Decrease the selection. |
+Icrease the selection.
 
+### Less
+
+Decrease the selection.
 
 # Curve Object - Edit Mode
 
@@ -825,12 +933,13 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -838,13 +947,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Invert
+
+Invert the current selection.
 
 ## Linked
 
@@ -852,9 +965,11 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Delimit
 
@@ -868,9 +983,11 @@ Same as with Linked. But works with what is under the mouse cursor.
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Last Operator Select Linked
+### Adjust Last Operation - Select Linked
 
 ![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-2.png)
+
+Change the settings of **Select Linked** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -885,7 +1002,11 @@ Same as with Linked. But works with what is under the mouse cursor. And deselect
 
 Select curve geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
+
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
@@ -893,20 +1014,23 @@ Select curve geometry based on how similar certain properties are to it.
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
 Selects a random group of curve points.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -920,9 +1044,11 @@ Selects a random group of curve points.
 
 Deselect alternating curve points.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
+
+Change the settings of **Checker Deselect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -951,12 +1077,13 @@ Deselect alternating curve points.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -964,13 +1091,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Linked
 
@@ -978,9 +1109,11 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Delimit
 
@@ -992,7 +1125,11 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select curve geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
+
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
@@ -1000,20 +1137,23 @@ Select curve geometry based on how similar certain properties are to it.
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
 Selects a random group of control points.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1027,9 +1167,11 @@ Selects a random group of control points.
 
 Deselect alternating control points.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
+
+Change the settings of **Checker Deselect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1055,12 +1197,13 @@ Deselect alternating control points.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1068,13 +1211,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Similar
 
@@ -1082,7 +1229,11 @@ A sub menu with the available lasso select modes.
 
 Select metaball geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
+
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
@@ -1090,20 +1241,23 @@ Select metaball geometry based on how similar certain properties are to it.
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Random
 
 Selects a random metaball element.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1133,20 +1287,23 @@ Select corresponding element.
 
 Select everything.
 
+### None
 
-| Entry | What it does |
-| ------ | ----------------------------- |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
+Select nothing.
 
+### Invert
+
+Invert the current selection.
 
 ## Random
 
 Selects random elements.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-3.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1170,12 +1327,13 @@ This is the select menu for the grease pencil object. The content changes depend
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select – Sub Menu
 
@@ -1183,13 +1341,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## By Stroke Type – Sub Menu
 
@@ -1214,9 +1376,11 @@ Selects only points that belong to filled regions.
 Useful for editing shapes, color areas, or solid regions independently.  
 Helps separate fill geometry from outline strokes.
 
-### Last Operator Select by Stroke Type
+### Adjust Last Operation - Select by Stroke Type
 
 ![Last Operator Select by Stroke Type](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-stroke-type.png)
+
+Change the settings of **Select by Stroke Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1231,17 +1395,31 @@ Helps separate fill geometry from outline strokes.
 
 Select equal elements by the chosen method.
 
+### Layer
 
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Selects all vertices that belong to the same Grease Pencil layer as the active vertex. Useful for layer-based editing and organization. |
-| Material | Selects vertices assigned to the same material. Ideal for isolating strokes by color or shading style. |
-| Vertex Color | Selects vertices with matching vertex color attributes. Useful for color-based editing in complex drawings. |
-| Radius | Selects vertices with a similar point radius (thickness). Helps isolate strokes with consistent line weight. |
-| Opacity | Selects vertices with similar opacity values. Useful for editing transparency effects or semi-opaque strokes. |
+Selects all vertices that belong to the same Grease Pencil layer as the active vertex. Useful for layer-based editing and organization.
 
+### Material
 
-### Last Operator Select Similar
+Selects vertices assigned to the same material. Ideal for isolating strokes by color or shading style.
+
+### Vertex Color
+
+Selects vertices with matching vertex color attributes. Useful for color-based editing in complex drawings.
+
+### Radius
+
+Selects vertices with a similar point radius (thickness). Helps isolate strokes with consistent line weight.
+
+### Opacity
+
+Selects vertices with similar opacity values. Useful for editing transparency effects or semi-opaque strokes.
+
+### Adjust Last Operation - Select Similar
+
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Mode
 
@@ -1259,17 +1437,21 @@ Selects all vertices that belong to **fill regions** of Grease Pencil strokes. U
 
 ## Linked
 
-![Linked](/docs2/images/editors/3d-viewport/header/select-menu/linked.png)
+Selects whole strokes: every point of each stroke that has at least one point selected.
 
-Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
+## Deselect Linked
 
-### Last Operator Select Linked All
+The opposite of Linked: deselects every point of each stroke that has a point selected.
 
-![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+### Adjust Last Operation - Select Linked All
 
-#### Delimit
+![Select Linked, Adjust Last Operation](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-grease-pencil.png)
 
-Add a limit to the selection. For example, just select up to the next seam.
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Entry | What it does |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Deselect Linked | Off: select the linked strokes. On: deselect them instead. Linked and Deselect Linked just switch this checkbox. |
 
 ## Alternated
 
@@ -1277,9 +1459,11 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select every second element.
 
-### Last Operator Alternated
+### Adjust Last Operation - Alternated
 
 ![Last Operator Alternated](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-alternated.png)
+
+Change the settings of **Alternated** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Deselect Ends
 
@@ -1289,9 +1473,11 @@ The end points are always unselected.
 
 Selects random elements.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-3.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1309,7 +1495,7 @@ Select the first element in the stroke.
 
 Select the last element in the stroke.
 
-### Last Operator Select Ends
+### Adjust Last Operation - Select Ends
 
 ![Last Operator Select Ends](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ends.png)
 
@@ -1324,12 +1510,13 @@ The last operator Select Ends is valid for both, the first and last operator.
 
 ## More / Less – Sub Menu
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Armature Object - Edit Mode
 
@@ -1341,12 +1528,13 @@ The last operator Select Ends is valid for both, the first and last operator.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1354,13 +1542,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Similar
 
@@ -1370,7 +1562,11 @@ Select armature bones based on how similar certain properties are to it.
 
 Most methods are self explaining. Immediate children selects just the direct children of the active object, while Children selects everything downwards the hierarchy.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
+
+Change the settings of **Select Similar** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Select Similar](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-select-similar.png)
 
 #### Type
 
@@ -1378,20 +1574,23 @@ Most methods are self explaining. Immediate children selects just the direct chi
 
 Choose the select similar method again.
 
+##### Compare
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------- |
-| Compare | Compare with method less, greater or equal. |
-| Threshold | Adjust the threshold value after which the element counts as similar. |
+Compare with method less, greater or equal.
 
+##### Threshold
+
+Adjust the threshold value after which the element counts as similar.
 
 ## Mirror Selection
 
 Select the mirrored parts of an object. For example for L.bone it selects R.bone.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-3.png)
+
+Change the settings of **Select Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1417,15 +1616,19 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
-| Extend | Extends existing selection instead of deselecting everything first. |
+Type in your string.
 
+### Case Sensitive
 
-### Last Operator Select Pattern
+When ticked then the string comparison happens by taking upper and lower letters into account.
+
+### Extend
+
+Extends existing selection instead of deselecting everything first.
+
+### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -1435,23 +1638,35 @@ The Last Operator Select Pattern contains the same menu items than the pop-up. S
 
 Select all bones linked by parent.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all-2.png)
+
+Change the settings of **Select Linked All** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ### All Forks
 
 Follow forks in the parents chain. Means select upwards too.
 
+#### Parent
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parent | Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). |
-| Child | Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). |
-| Extend Parent | Extend Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Extend Child | Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
-| Sub menu More / Less | **More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection. |
+Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s).
 
+#### Child
+
+Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s).
+
+#### Extend Parent
+
+Extend Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+#### Extend Child
+
+Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
+
+#### Sub menu More / Less
+
+**More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection.
 
 # Armature Object - Pose Mode
 
@@ -1463,12 +1678,13 @@ Follow forks in the parents chain. Means select upwards too.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1476,13 +1692,17 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Grouped
 
@@ -1490,12 +1710,13 @@ A sub menu with the available lasso select modes.
 
 Select grouped bones by type. Items should be self explaining.
 
+### Linked
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------- |
-| Linked | Select all bones that are either parent or child of the selected bone. |
-| Constraint Targets | Select the bones used as targets for the currently selected bone. |
+Select all bones that are either parent or child of the selected bone.
 
+### Constraint Targets
+
+Select the bones used as targets for the currently selected bone.
 
 ## By Pattern
 
@@ -1514,15 +1735,19 @@ Supported wild-cards:
 
 The tool operates immediately at entering the string.
 
+### Pattern
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| Pattern | Type in your string. |
-| Case Sensitive | When ticked then the string comparison happens by taking upper and lower letters into account. |
-| Extend | Extends existing selection instead of deselecting everything first. |
+Type in your string.
 
+### Case Sensitive
 
-### Last Operator Select Pattern
+When ticked then the string comparison happens by taking upper and lower letters into account.
+
+### Extend
+
+Extends existing selection instead of deselecting everything first.
+
+### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -1532,9 +1757,11 @@ The Last Operator Select Pattern contains the same menu items than the pop-up. S
 
 Mirrors the bone selection. Works with an armature with mirrored parts.
 
-### Last Operator Flip Active/Selected Bone
+### Adjust Last Operation - Flip Active/Selected Bone
 
 ![Last Operator Flip Active/Selected Bone](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-flip-active-selected-bone.png)
+
+Change the settings of **Flip Active/Selected Bone** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1561,12 +1788,13 @@ Mirrors the bone selection. Works with an armature with mirrored parts.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1574,21 +1802,27 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
 
 ## Mirror
 
 Select the mirrored parts to the current selection.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-4.png)
+
+Change the settings of **Select Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1603,9 +1837,11 @@ Select the mirrored parts to the current selection.
 
 Selects ungrouped Vertices. Requires to have at least one vertex group assigned.
 
-### Last Operator Select Ungrouped
+### Adjust Last Operation - Select Ungrouped
 
 ![Last Operator Select Ungrouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ungrouped-2.png)
+
+Change the settings of **Select Ungrouped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 #### Extend
 
@@ -1613,12 +1849,13 @@ Extends the current selection instead of deselecting everything first.
 
 ## Sub menu More / Less
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Particles - Particle Mode
 
@@ -1630,12 +1867,13 @@ Extends the current selection instead of deselecting everything first.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
+### Box select
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
-| Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
+Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection.
 
+### Circle select
+
+Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button.
 
 ## Lasso Select
 
@@ -1643,22 +1881,31 @@ The legacy sub menu contains tools that exists in the tool shelf already. It's t
 
 A sub menu with the available lasso select modes.
 
+### All
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Linked | Selects the linked particles. |
+Select everything.
 
+### None
+
+Select nothing.
+
+### Inverse
+
+Invert the current selection.
+
+### Linked
+
+Selects the linked particles.
 
 ## Random
 
 Selects random particles.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-4.png)
+
+Change the settings of **Select Random** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1671,12 +1918,13 @@ Selects random particles.
 
 ## More / Less sub menu
 
+### More
 
-| Entry | What it does |
-| ----- | ------------------------------ |
-| More | Extends the current selection. |
-| Less | Reduces the current selection. |
+Extends the current selection.
 
+### Less
+
+Reduces the current selection.
 
 # Hair Curve – Edit Mode
 
@@ -1692,16 +1940,29 @@ Selects all the control points of the hair strands.
 
 If you want a want a symmetrical haircut, tick X Mirror in the Symmetry panel or in the Header to the top right.
 
+### None
 
-| Entry | What it does |
-| ------------------------ | ----------------------------------------------------------------------------------------------------- |
-| None | Deselects all the control points of the hair curves. |
-| Invert | Deselects all the control points of the hair curves. |
-| Random | Randomizes existing selection or creates a new random selection of control points of the hair curves. |
-| Endpoints | Selects the end points of the control points of the hair curves. |
-| Linked | Select linked control points. |
-| Select More/Less submenu | **More**: Extends the current selection. · **Less**: Reduces the current selection. |
+Deselects all the control points of the hair curves.
 
+### Invert
+
+Deselects all the control points of the hair curves.
+
+### Random
+
+Randomizes existing selection or creates a new random selection of control points of the hair curves.
+
+### Endpoints
+
+Selects the end points of the control points of the hair curves.
+
+### Linked
+
+Select linked control points.
+
+### Select More/Less submenu
+
+**More**: Extends the current selection. · **Less**: Reduces the current selection.
 
 # Hair Curve – Sculpt Mode
 
@@ -1717,11 +1978,22 @@ Selects all the control points of the hair strands.
 
 If you want a want a symmetrical haircut, tick X Mirror in the Symmetry panel or in the Header to the top right.
 
+### None
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| None | Deselects all the control points of the hair curves. |
-| Invert | Deselects all the control points of the hair curves. |
-| Random | Randomizes existing selection or creates a new random selection of control points of the hair curves. |
-| Endpoints | Selects the end points of the control points of the hair curves. |
-| Grow | Select curves which are close to curves that are selected already. |
+Deselects all the control points of the hair curves.
+
+### Invert
+
+Deselects all the control points of the hair curves.
+
+### Random
+
+Randomizes existing selection or creates a new random selection of control points of the hair curves.
+
+### Endpoints
+
+Selects the end points of the control points of the hair curves.
+
+### Grow
+
+Select curves which are close to curves that are selected already.

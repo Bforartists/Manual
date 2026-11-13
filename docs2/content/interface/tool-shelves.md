@@ -6,8 +6,8 @@ path:
   - The Interface
   - Components
   - Tool shelf
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 3 Interface.odt
@@ -60,3 +60,6 @@ Simply press Numpad + or Numpad -
 
 To reset the area content to default scale move the mouse over the area and press Home key ( german keyboard layout Pos 1)
 
+## Switching tools for a moment
+
+> **Tip:** When a tool has a hotkey, you can **hold** the hotkey to switch to that tool only for a moment. Use the tool while you hold the key; when you let go, the tool you had before comes back. A short press switches to the tool as usual. The tool hotkeys are in the [Keymap](../keymap/keymap-table.md).

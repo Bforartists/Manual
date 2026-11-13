@@ -7,7 +7,7 @@ path:
   - Asset Browser
   - Asset Browser - Default Asset LIbrary
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28.1 Asset Browser - Default Asset LIbrary.odt
@@ -122,21 +122,23 @@ When you enable the addon, it will copy the asset library to a central library l
 
 > **Note:** Bforartists ships with one asset library addon, but you can get support the project by purchasing individual asset library addons available from the Trinumedia sponsor.
 
+#### Instructions
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Instructions | This is a note on where to find the libraries, how to use them and what they are called. |
-| Library Management | Contains operators to manually add/remove libraries from preferences. · **Remove Libraries**: Removes the addon libraries to the central library. If there are no other library addons used, this will remove all library files. · **Re-add Libraries**: Re-adds the addon libraries to the central library. |
+This is a note on where to find the libraries, how to use them and what they are called.
 
+#### Library Management
+
+Contains operators to manually add/remove libraries from preferences. · **Remove Libraries**: Removes the addon libraries to the central library. If there are no other library addons used, this will remove all library files. · **Re-add Libraries**: Re-adds the addon libraries to the central library.
 
 #### Library Information
 
+##### Location
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------- |
-| Location | Shows the path of the central library. |
-| Active Libraries | Shows how many addon libraries are used. |
+Shows the path of the central library.
 
+##### Active Libraries
+
+Shows how many addon libraries are used.
 
 ##### Status
 
@@ -168,23 +170,57 @@ You can also go to the 3D View - Header – Object – Assets – Open Asset Wiz
 
 #### Using the Sidebar to change asset properties
 
-![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png)
+![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/asset-properties-panel.png)
 
-You can adjust Geometry Nodes Asset Modifier settings and common properties through slider properties and check boxes directly from the 3D View in the Sidebar.
+You can adjust the settings of a Geometry Nodes asset, like the size, distance or angle of a primitive, right in the 3D View sidebar.
 
-You can modify numerical inputs for quick parameter changes by size, distance or angle.
+Find them in the sidebar **Item** tab, in the **Asset Properties** panel.
 
-Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.
+> **Note:** This panel only shows for the Default Library's Geometry Nodes assets, like the Primitives or Blend Mesh by Proximity.
 
-> **Note:** This panel will only enable for specific assets like Primitives or Blend mesh by Proximity
+##### Open Asset Wizard
 
+Opens the wizard again for the selected asset, so you can redo the choices you made when you placed it.
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| Open Asset Wizard | This will re-trigger the wizard for the selected asset. |
-| Modifier Name | The selected asset name. |
-| Modifier Properties | These are the asset properties also found in the Properties Editor in the Modifier stack. |
+Below the button you see the name of the asset's node group, and then the asset's settings. They're the same inputs as in the modifier stack, grouped in fold-open panels just like in the modifier, with the label in front of each field. Click the dot at the right of a field to keyframe it.
 
+#### Property groups
+
+The settings are grouped the same way on every Smart primitive. Open or close a group by clicking its title.
+
+- 📏 **Top-level properties**: the settings most assets share, as sliders and check boxes. Numeric fields change the size, a distance or an angle, so you can adjust the asset quickly.
+- 🧊 **Bevel**: the bevel depth and the bevel resolution.
+- 🔁 **Resolution**: the loop resolution and the subdivision detail.
+- 🗺️ **UV**: **Relative** scales the UVs with the asset, when the asset supports it.
+
+> **Note:** Planned for the UV group: UV scaling and alignment, and a choice between relative and absolute UVs.
+
+### Applying Smart assets
+
+Smart assets stay editable until you apply them. **Apply Selected Objects** turns the selected objects into regular mesh objects, using their visual geometry. You find it in the 3D View header under **Object › Apply**, in three forms:
+
+- 🧩 **Visual Geometry and Join** is **Join on Apply**.
+- ➕ **Visual Geometry and Boolean** is **Boolean on Apply**.
+- 🧱 **Visual Geometry and Remesh** is **Remesh on Apply**.
+
+#### Apply Selected Objects
+
+1. Select one or more meshes with Smart assets in the 3D View.
+2. Choose **Object › Apply › Visual Geometry and Join**, or one of the other entries.
+
+#### Join on Apply
+
+Joins the applied objects into a single mesh object without changing their geometry. Use it to turn a group of solid meshes into one object.
+
+#### Boolean on Apply
+
+Combines the applied objects into a single mesh object with Float boolean union operations.
+
+> **Note:** Works best with manifold meshes (no holes).
+
+#### Remesh on Apply
+
+Combines the applied objects into one voxel remeshed object with a resolution you set. The options are **Voxel Size**, **Preserve Volume**, **Preserve Attributes**, **Fix Poles** and **Adaptivity**.
 
 ## Default Library
 
@@ -232,25 +268,65 @@ This category contains Geometry Nodes nodegroups for Grease Pencil Objects, you 
 
 This category contains materials useful to quickly apply materials to your objects via drag and drop. You can then later modify the materials in the Properties Editor Materials tab or in the Shader Editor.
 
+#### Ceramic
 
-| Entry | What it does |
-| ------------- | -------------------------------------------------------- |
-| Ceramic | Procedural ceramic materials |
-| Clay | Procedural ceramic materials |
-| Fabric | Procedural fabric materials |
-| Foliage | Foilage materials |
-| Glass | Procedural glass materials |
-| Liquid | Procedural liquid materials |
-| Metal | Procedural metal materials |
-| Miscellaneous | Various materials for miscellaneous use cases |
-| Paint | Procedural paint materials |
-| Plaster | Procedural plaster materials |
-| Plastic | Procedural plastic materials |
-| Rubber | Procedural rubber materials |
-| Templates | Material templates to help setup various material setups |
-| Utility | Varopis utility materials |
-| Wood | Procedural wood materials |
+Procedural ceramic materials
 
+#### Clay
+
+Procedural ceramic materials
+
+#### Fabric
+
+Procedural fabric materials
+
+#### Foliage
+
+Foilage materials
+
+#### Glass
+
+Procedural glass materials
+
+#### Liquid
+
+Procedural liquid materials
+
+#### Metal
+
+Procedural metal materials
+
+#### Miscellaneous
+
+Various materials for miscellaneous use cases
+
+#### Paint
+
+Procedural paint materials
+
+#### Plaster
+
+Procedural plaster materials
+
+#### Plastic
+
+Procedural plastic materials
+
+#### Rubber
+
+Procedural rubber materials
+
+#### Templates
+
+Material templates to help setup various material setups
+
+#### Utility
+
+Varopis utility materials
+
+#### Wood
+
+Procedural wood materials
 
 ### Shader Nodegroups
 
@@ -364,13 +440,17 @@ This uses the material in the Material tab of the Properties editor as a Geometr
 
 This utility transfers the first material slot from an assigned material from the parent object that holds the Geometry Nodes modifier object to the Geometry Nodes procedural geometry. It’s especially useful in workflows where instanced or procedural generated geometry needs to adopt top level material settings through top level manual assignment.
 
+##### Source Geometry
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------- |
-| Source Geometry | The source object material, typically the top level geometry of the parent object. |
-| Target Geometry | The procedural geometry to pass the material to. |
-| Material Index | Selects the material slot index. |
+The source object material, typically the top level geometry of the parent object.
 
+##### Target Geometry
+
+The procedural geometry to pass the material to.
+
+##### Material Index
+
+Selects the material slot index.
 
 ### Mesh
 
@@ -382,12 +462,13 @@ This utility transfers the first material slot from an assigned material from th
 
 > **Note:** A*vailable for the Node Editor and 3D View asset shelf as a modifier.*
 
+##### Screenspace Radius
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Screenspace Radius | When enabled, line thickness is adjusted based on screen space, ensuring consistent appearance regardless of distance or object scale. This is based on the camera view only. |
-| Overall Width | Controls both the silhouette and lines width with a general size control. |
+When enabled, line thickness is adjusted based on screen space, ensuring consistent appearance regardless of distance or object scale. This is based on the camera view only.
 
+##### Overall Width
+
+Controls both the silhouette and lines width with a general size control.
 
 ##### Variation
 
@@ -395,11 +476,11 @@ This utility transfers the first material slot from an assigned material from th
 
 Introduces procedural noise into line generation for organic or sketchy effects.
 
-**Factor**
+###### Factor
 
 Intensity of variation.
 
-**Scale / Detail / Lacunarity / Distortion / Roughness**
+###### Scale / Detail / Lacunarity / Distortion / Roughness
 
 Fine-tunes the procedural noise characteristics.
 
@@ -407,12 +488,8 @@ Fine-tunes the procedural noise characteristics.
 
 Customizes variation intensity via a vertex group.
 
-
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------- |
-| Vertex Group | Name of influencing vertex group |
-| Offset | **Shifts the vertex group weight and offsets the width of the inverse hull lines** |
-
+- **Vertex Group**: Name of influencing vertex group
+- **Offset**: **Shifts the vertex group weight and offsets the width of the inverse hull lines**
 
 ##### Inner Lines
 
@@ -426,36 +503,59 @@ Controls thickness of inner lines.
 
 Highlights mesh contours by drawing a backdrop mesh that has been flattened behind the camera angle. This creates a silhouette line or mesh. This is based on the camera view only.
 
+###### Width
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Width | Sets the silhouette line thickness. |
-| Flatten Factor | Compresses and flattens the silhouette backdrop shape. Less values returns the backdrop silhouette mesh to a 3D shape. |
-| Camera Offset | Shifts silhouette backdrop mesh closer or further away from the camera relative to the object position. |
-| Polygonize | Enables silhouette line segmentation based on surface polygons by welding geometry by distance. · **Factor**: Controls degree of welding influence for polygonization. |
-| Intersections | Adds silhouette strokes where geometry intersects or overlaps. · **Width Offest**: Sets the silhouette intersection line thickness. · **Object**: Selects the intersection object to draw lines · **Use a Collection**: Defines if the intersection should be defined by a collection · **Collection**: Selects the intersection collection to draw lines |
+Sets the silhouette line thickness.
 
+###### Flatten Factor
+
+Compresses and flattens the silhouette backdrop shape. Less values returns the backdrop silhouette mesh to a 3D shape.
+
+###### Camera Offset
+
+Shifts silhouette backdrop mesh closer or further away from the camera relative to the object position.
+
+###### Polygonize
+
+Enables silhouette line segmentation based on surface polygons by welding geometry by distance. · **Factor**: Controls degree of welding influence for polygonization.
+
+###### Intersections
+
+Adds silhouette strokes where geometry intersects or overlaps. · **Width Offest**: Sets the silhouette intersection line thickness. · **Object**: Selects the intersection object to draw lines · **Use a Collection**: Defines if the intersection should be defined by a collection · **Collection**: Selects the intersection collection to draw lines
 
 ###### Weight Map Override
 
 Applies custom width influence from a vertex groups. To use, select an existing vertex group to use, then use the Weight Paint mode to paint. Weight of 1.0 is maximum influence that displaces the width of the inverse hull lines or silhouette, and weight of 0.0 is minimum influence.
 
-**Factor**
+###### Factor
 
 Strength of the effect of the weight map.
 
 ##### Color
 
+###### Silhouette Color
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------------------------- |
-| Silhouette Color | Sets color for silhouette backdrop mesh. |
-| Inner Lines Color | Sets color for inner lines. |
-| Use Silhouette Color | Forces internal lines to inherit silhouette color. |
-| Material Override | Defines a custom material for material overrides. |
-| Line Override | Applies material override to the inner mesh lines. |
-| Silhouette Override | Applies override specifically to the silhouette backdrop mesh. |
+Sets color for silhouette backdrop mesh.
 
+###### Inner Lines Color
+
+Sets color for inner lines.
+
+###### Use Silhouette Color
+
+Forces internal lines to inherit silhouette color.
+
+###### Material Override
+
+Defines a custom material for material overrides.
+
+###### Line Override
+
+Applies material override to the inner mesh lines.
+
+###### Silhouette Override
+
+Applies override specifically to the silhouette backdrop mesh.
 
 ### Normals
 
@@ -485,12 +585,8 @@ This contains a setup wizard to begin.
 
 Specifies the collection of the group of objects used to influence the normal blending.
 
-
-| Entry | What it does |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apply Blend to Materials | This applies an intersection gradient alpha to the target collection objects. This will iterate through all objects and materials and applies the alpha at the intersection. **Note:** *If you add new materials or objects to the target collection, re-running the wizard will re-apply.* If you turn it off and reapply the wizard, it will remove the material blend from all materials and objects in the target collection. |
-| Use Relative Position | This will enable the relative position of the source target collection objects, making the new blended mesh snap to the original position. If you keep this off, the new blended mesh will spawn or move to it’s asset placement position. |
-
+- **Apply Blend to Materials**: This applies an intersection gradient alpha to the target collection objects. This will iterate through all objects and materials and applies the alpha at the intersection. **Note:** *If you add new materials or objects to the target collection, re-running the wizard will re-apply.* If you turn it off and reapply the wizard, it will remove the material blend from all materials and objects in the target collection.
+- **Use Relative Position**: This will enable the relative position of the source target collection objects, making the new blended mesh snap to the original position. If you keep this off, the new blended mesh will spawn or move to it’s asset placement position.
 
 ###### Enable Bounds Display
 
@@ -504,13 +600,17 @@ If you turn it off and reapply the wizard, it will remove the Bounds display fro
 
 ##### Modifier Properties
 
+###### Target Collection
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Target Collection | Specifies the group of objects used to influence the normal blending. |
-| Normal Distance | Sets the range within which intersecting geometry will contribute to the normal blending by proximity process. |
-| Blending Iterations | Adds another blending iteration to the group of objects to assist in solving self-intersecting blending issues. This will affect performance as this repeats the operation. When enabled, calculates blending based on object-relative coordinates. Useful for maintaining orientation consistency with source objects from the target collection. |
+Specifies the group of objects used to influence the normal blending.
 
+###### Normal Distance
+
+Sets the range within which intersecting geometry will contribute to the normal blending by proximity process.
+
+###### Blending Iterations
+
+Adds another blending iteration to the group of objects to assist in solving self-intersecting blending issues. This will affect performance as this repeats the operation. When enabled, calculates blending based on object-relative coordinates. Useful for maintaining orientation consistency with source objects from the target collection.
 
 ###### Quality
 
@@ -523,14 +623,10 @@ This defines the quality of the normal blending which affects performance.
 
 ![Material Blend](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/enable-bounds-display.png)
 
-
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Strength | Controls how strongly materials are blended at the intersections. |
-| Offset | Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins. |
-| Debug Intersections | Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture. |
-| Noise | Adds procedural noise to the blend region. Useful for organic or stylized transitions. · **Scale**: Controls the scale of the noise pattern. Higher values produce larger, more visible noise features. |
-
+- **Strength**: Controls how strongly materials are blended at the intersections.
+- **Offset**: Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins.
+- **Debug Intersections**: Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture.
+- **Noise**: Adds procedural noise to the blend region. Useful for organic or stylized transitions. · **Scale**: Controls the scale of the noise pattern. Higher values produce larger, more visible noise features.
 
 ###### Intersection Displacement
 
@@ -538,13 +634,9 @@ This defines the quality of the normal blending which affects performance.
 
 Enables geometry displacement at intersection zones. Controls how intersection regions between meshes are offset and displaced before normal blending. Used to create bulges, dents, or organic merging effects
 
-
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Distance | The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface. |
-| Offset | Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts. |
-| Blur | Softens the influence of blended normals across adjacent geometry · **Iterations**: Number of smoothing passes on the displacement. · **Weight**: Intensity of smoothing. Higher values lead to broader averaging. |
-
+- **Distance**: The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface.
+- **Offset**: Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts.
+- **Blur**: Softens the influence of blended normals across adjacent geometry · **Iterations**: Number of smoothing passes on the displacement. · **Weight**: Intensity of smoothing. Higher values lead to broader averaging.
 
 ###### Normal Blur
 
@@ -552,12 +644,8 @@ Optional secondary blur targeting only normals.
 
 > **Note:** This only blurs normals at the intersections. Object normals are preserved.
 
-
-| Entry | What it does |
-| ---------- | ----------------------------------------- |
-| Iterations | Number of blur passes applied to normals. |
-| Weight | Strength of normals blur smoothing. |
-
+- **Iterations**: Number of blur passes applied to normals.
+- **Weight**: Strength of normals blur smoothing.
 
 ###### Material Override
 
@@ -565,12 +653,8 @@ Optional secondary blur targeting only normals.
 
 Toggles material overrides, otherwise it will inherit each objects from the target collections' material.
 
-
-| Entry | What it does |
-| ---------------- | -------------------------------------------------------------------------------------------------- |
-| Material | Selects the material for the material override. |
-| Inherit Material | This toggles the use of the material in the Material tab of the Properties editor as the override. |
-
+- **Material**: Selects the material for the material override.
+- **Inherit Material**: This toggles the use of the material in the Material tab of the Properties editor as the override.
 
 ###### Info
 
@@ -584,12 +668,13 @@ Displays how many mesh islands are currently being blended. Useful for performan
 
 This utility transfers the smoothness (normals) of the parent object that holds the Geometry Nodes modifier object to the Geometry Nodes procedural geometry. It’s especially useful in workflows where instanced or procedural generated geometry needs to adopt top level smoothness settings through top level manual assignment.
 
+##### Source Geometry
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------ |
-| Source Geometry | The source object smoothness, typically the top level geometry of the parent object. |
-| Target Geometry | The procedural geometry to pass the smoothness to. |
+The source object smoothness, typically the top level geometry of the parent object.
 
+##### Target Geometry
+
+The procedural geometry to pass the smoothness to.
 
 ### Primitives
 
@@ -627,51 +712,122 @@ Secondary Cyan
 
 ![Using the Sidebar and Modifier properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/using-the-sidebar-and-modifier-properties.png)
 
+###### Top-Level Properties
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Top-Level Properties | Adjust settings affecting all primitives with common properties through slider properties and check boxes Modify numerical inputs for quick parameter changes by size, distance or angle. Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel. |
-| Bevel Properties | Set bevel depth and resolution. |
-| Resolution Properties | Modify loop resolution Set subdivision detail |
-| UV Properties | Enable relative scale UV's, when applicable Modify UV scaling and alignment (Coming soon) Modify UV type, relative or absolute (In Progress) |
+Adjust settings affecting all primitives with common properties through slider properties and check boxes Modify numerical inputs for quick parameter changes by size, distance or angle. Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.
 
+###### Bevel Properties
+
+Set bevel depth and resolution.
+
+###### Resolution Properties
+
+Modify loop resolution Set subdivision detail
+
+###### UV Properties
+
+Enable relative scale UV's, when applicable Modify UV scaling and alignment (Coming soon) Modify UV type, relative or absolute (In Progress)
 
 #### Basic Shapes
 
+##### Cube
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
-| Cube | A standard six-sided shape, great for solid modeling. Includes relative Uvs and resolution gizmos. |
-| Cube Rounded | A cube with softened edges for a more organic feel. |
-| Sphere | A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls. |
-| Icosphere | A low-poly spherical shape made of triangles, great for optimization with various levels of resolution. |
-| Cone | A tapered shape with a circular base, useful for pointed structures. |
-| Cone Rounded | A cone with a smoother, more organic tip. |
-| Cylinder | A uniform circular primitive, essential for pipes and tubes. |
-| Cylinder Rounded | A cylinder with softened edges for better transitions. |
-| Tube | A hollow cylindrical primitive, great for mechanical parts. |
-| Tube Rounded | A tube with smooth edges for a more natural look. |
+A standard six-sided shape, great for solid modeling. Includes relative Uvs and resolution gizmos.
 
+##### Cube Rounded
+
+A cube with softened edges for a more organic feel.
+
+##### Sphere
+
+A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.
+
+##### Icosphere
+
+A low-poly spherical shape made of triangles, great for optimization with various levels of resolution.
+
+##### Cone
+
+A tapered shape with a circular base, useful for pointed structures.
+
+##### Cone Rounded
+
+A cone with a smoother, more organic tip.
+
+##### Cylinder
+
+A uniform circular primitive, essential for pipes and tubes.
+
+##### Cylinder Rounded
+
+A cylinder with softened edges for better transitions.
+
+##### Tube
+
+A hollow cylindrical primitive, great for mechanical parts.
+
+##### Tube Rounded
+
+A tube with smooth edges for a more natural look.
 
 #### Advanced Forms
 
+##### Capsule
 
-| Entry | What it does |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Capsule | A stretched sphere useful for stylized characters and smooth objects. |
-| Capsule Revolved | A capsule rotated for unique geometry shaping. Includes the abilty to revolve around an angle. |
-| Grid | A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative Uvs. |
-| Torus | A ring-shaped primitive, ideal for looped structures. |
-| Torus Revolved | A torus rotated for specialized forms. Includes the abilty to revolve around an angle. |
-| Spiral | A coiled shape, useful for decorative and mechanical designs. |
-| Circle | A simple 2D shape for base geometry and cutouts. Includes stamped or path based UV's. |
-| Circle Revolved | A circular shape rotated into a 3D form. Includes the abilty to revolve around an angle. |
-| Curve Lofted | Generates complex surfaces using loftes curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls. |
-| Cylinder Revolved | A cylindrical shape rotated for varied effects. Includes the abilty to revolve around an angle. |
-| Cylinder Rounded Revolved | A rounded cylinder adapted for more curvature. Includes the abilty to revolve around an angle. |
-| Tube Revolved | A tube rotated for improved modeling flexibility. Includes the abilty to revolve around an angle. |
-| Tube Rounded Revolved | A smoothed, rotated tube for streamlined designs. Includes the abilty to revolve around an angle. |
-| Cone Rounded Revolved | A tapered primitive that blends sharpness with curvature. Includes the abilty to revolve around an angle. |
-| Sphere Revolved | A sphere adjusted through rotation for unique formations. Includes the abilty to revolve around an angle. |
+A stretched sphere useful for stylized characters and smooth objects.
 
+##### Capsule Revolved
 
+A capsule rotated for unique geometry shaping. Includes the abilty to revolve around an angle.
+
+##### Grid
+
+A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative Uvs.
+
+##### Torus
+
+A ring-shaped primitive, ideal for looped structures.
+
+##### Torus Revolved
+
+A torus rotated for specialized forms. Includes the abilty to revolve around an angle.
+
+##### Spiral
+
+A coiled shape, useful for decorative and mechanical designs.
+
+##### Circle
+
+A simple 2D shape for base geometry and cutouts. Includes stamped or path based UV's.
+
+##### Circle Revolved
+
+A circular shape rotated into a 3D form. Includes the abilty to revolve around an angle.
+
+##### Curve Lofted
+
+Generates complex surfaces using loftes curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.
+
+##### Cylinder Revolved
+
+A cylindrical shape rotated for varied effects. Includes the abilty to revolve around an angle.
+
+##### Cylinder Rounded Revolved
+
+A rounded cylinder adapted for more curvature. Includes the abilty to revolve around an angle.
+
+##### Tube Revolved
+
+A tube rotated for improved modeling flexibility. Includes the abilty to revolve around an angle.
+
+##### Tube Rounded Revolved
+
+A smoothed, rotated tube for streamlined designs. Includes the abilty to revolve around an angle.
+
+##### Cone Rounded Revolved
+
+A tapered primitive that blends sharpness with curvature. Includes the abilty to revolve around an angle.
+
+##### Sphere Revolved
+
+A sphere adjusted through rotation for unique formations. Includes the abilty to revolve around an angle.

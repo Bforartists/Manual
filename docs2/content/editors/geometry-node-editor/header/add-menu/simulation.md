@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Simulation"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Simulation nodes."
 order: 110
@@ -77,12 +77,13 @@ Calculate the simulations in Geometry Nodes modifiers from the start to current 
 
 Bake simulations in all geometry node modifiers to disk. You can define the path where these will bake per Geometry Nodes modifier. If not defined, it will default to the `*.blend` file location. To bake, you must save the file first.
 
+###### Delete Cached Bake
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Cached Bake | The trashcan icon will erase the baked collection from disk. |
-| Cache | This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk. **Note:** *Baking the simulation will bake all the simulations in all modifiers in the scene.* |
+The trashcan icon will erase the baked collection from disk.
 
+###### Cache
+
+This checkbox toggles the feature to cache frames on playback. When you turn this off, then the automatic caching on playback will not bake to disk. **Note:** *Baking the simulation will bake all the simulations in all modifiers in the scene.*
 
 #### Simulation Bake Directory
 
@@ -106,12 +107,13 @@ Standard geometry input.
 
 ##### Output
 
+###### Delta Time
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Delta Time | Returns a float value with the amount of elapsed time that has passed in a linear way. This is used to ensure that the simulation runs smoothly and consistently based on elapsed time, regardless of the playback frame rate or starting frame. |
-| Geometry | Standard geometry output. |
+Returns a float value with the amount of elapsed time that has passed in a linear way. This is used to ensure that the simulation runs smoothly and consistently based on elapsed time, regardless of the playback frame rate or starting frame.
 
+###### Geometry
+
+Standard geometry output.
 
 #### Simulation Zone Output
 
@@ -125,8 +127,85 @@ This node is the end of the Simulation Zone. Custom input and output sockets can
 
 A boolean. This forwards the output of the simulation input node directly to the output node and ignore the nodes in the simulation zone – like a bypass. This will essentially “skip” the evaluation like an overall switch boolean of all evaluated nodes in the simulation zone.
 
+- **Inputs**: **Geometry**: Standard geometry input.
+- **Output**: **Geometry**: Standard geometry output.
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Geometry**: Standard geometry output. |
+### XPBD Solver (Experimental)
+
+![XPBD Solver (Experimental)](/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/xpbd-solver.png)
+
+Simulates physics with the XPBD method (Extended Position Based Dynamics). It takes a World bundle that describes what is simulated, moves it forward by one time step, and gives back the updated World.
+
+> **Warning:** This node is experimental. Its sockets and behavior can change in later versions.
+
+#### Inputs
+
+##### World
+
+Data type: Bundle.
+
+The bundle that holds the state of the simulation. The solver updates it.
+
+##### Delta Time
+
+Data type: Float (time).
+
+The length of the time step in seconds. The default is 0.04 (one 25th of a second). Negative values are treated as 0.
+
+##### Filter
+
+Data type: String.
+
+Only geometry whose tags match this filter is simulated. An empty filter simulates everything.
+
+##### Simulation to World
+
+Data type: Matrix.
+
+A transform from the space the simulation runs in to world space.
+
+##### Solver
+
+A panel that is closed by default.
+
+##### Substeps
+
+Data type: Integer.
+
+How many smaller steps the time step is split into. More substeps are more accurate but slower. The default is 10, the minimum is 1.
+
+##### Constraint Iterations
+
+Data type: Integer.
+
+How many times the constraints are solved in each substep. The default is 1, the minimum is 1.
+
+##### Solver Path
+
+Data type: String.
+
+An optional path inside the World bundle. If you fill it in, the solver stores a small bundle there with the value residual_error: the average remaining error of the constraints. Values below one are below the constraint threshold. If it is empty, nothing is stored.
+
+##### Interpolation Range
+
+A panel that is closed by default. It controls how colliders that change shape are blended during the substeps.
+
+##### Begin
+
+Data type: Float.
+
+Where the blend starts, from 0 (the previous shape of the collider) to 1 (its current shape). The default is 0.
+
+##### End
+
+Data type: Float.
+
+Where the blend ends, from 0 to 1. The default is 1. The substeps are spread evenly between Begin and End.
+
+#### Outputs
+
+##### World
+
+Data type: Bundle.
+
+The updated World bundle.

@@ -31,11 +31,17 @@ The detailed description happens for every editor one by one then.
 
 Each header has a header menu that appears when you right click at it.
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------- |
-| Toggle Header | Hides the header. To reveal it you have to click at the small triangle at the right side then. |
-| Flip to Bottom / Top | Displays the header at the top or the bottom of the editor. |
-| Collapse Menus | Displays the text menus as one collapsed icon. |
+### Toggle Header
+
+Hides the header. To reveal it you have to click at the small triangle at the right side then.
+
+### Flip to Bottom / Top
+
+Displays the header at the top or the bottom of the editor.
+
+### Collapse Menus
+
+Displays the text menus as one collapsed icon.
 
 ### Hide Editortype Menu
 
@@ -57,11 +63,17 @@ Splits the current view vertically into two independent editor windows.
 
 > **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-| Close Area | Closes the editor. |
+##### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu.
+
+##### Toggle Full screen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space.
+
+##### Close Area
+
+Closes the editor.
 
 ## Area Options
 
@@ -69,12 +81,21 @@ Splits the current view vertically into two independent editor windows.
 
 When you right click at a border of an editor, then you will call the Area options menu.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------- |
-| Horizontal Split | Splits the current view horizontally into two independent editor windows. |
-| Vertical Split | Splits the current view vertically into two independent editor windows. |
-| Join Areas | Joins the two editors that shares the border. |
-| Swap Areas | Swaps the content of the editors that shares the border. |
+### Horizontal Split
+
+Splits the current view horizontally into two independent editor windows.
+
+### Vertical Split
+
+Splits the current view vertically into two independent editor windows.
+
+### Join Areas
+
+Joins the two editors that shares the border.
+
+### Swap Areas
+
+Swaps the content of the editors that shares the border.
 
 ## Editor Type menu
 
@@ -134,11 +155,17 @@ Right click at an empty space somewhere at the menu bar of an editor. You will s
 
 ![General right click menu at Toolshelf and Sidebar panel headers](/docs2/images/editors/introduction/general-right-click-menu-at-toolshelf-and-sideba.png)
 
-| Entry | What it does |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Pin | Show the pinned panel on all tabs. |
-| Reset Panel Zoom | You can zoom the panels with holding down control and move the mouse. Reset Panel Zoom resets this zoom to 100% |
-| Flip Region to Left / Right | Flips the positions of sidebar and toolshelf. You can also display the tools at the right, and the sidebar at the left. |
+#### Pin
+
+Show the pinned panel on all tabs.
+
+#### Reset Panel Zoom
+
+You can zoom the panels with holding down control and move the mouse. Reset Panel Zoom resets this zoom to 100%
+
+#### Flip Region to Left / Right
+
+Flips the positions of sidebar and toolshelf. You can also display the tools at the right, and the sidebar at the left.
 
 ### General right click menus at menu operators
 
@@ -203,20 +230,53 @@ Note that there are also right click menus that are pure double entries that exi
 
 These buttons allows you to assign or to remove a new shortcut to the tool or to change an existing shortcut for the tool. Note that this may or may not work proper. For some tools you might need to change the shortcut in the User preferences. Non Keyboard shortcut is such a case.
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Online Python Reference | The Online Python Reference button opens the Bforartists Online Python reference page in your browser. |
-| Edit Source | The Edit Source button opens the corresponding Python file for this element. Note that you need to be in the Scripting layout. The file loads in the Text editor there. |
-| Reset to Default Value | Reset to Default Value is usually a RMB menu entry when you right click at an edit box. It resets the value to the default value. |
-| Reset All to Default Value | Reset All to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for all the edit boxes in the combo to the default value. |
-| Reset Single to Default Value | Reset Single to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for the single edit box under the mouse to the default value. |
-| Unset | Unset is usually a RMB menu entry when you right click at an edit box. It is somehow similar to Reset to Default Value. But it clears the property instead of resetting it to the default value. Which can end in another value. |
-| Insert Keyframes | Inserts keyframes at the current position. |
-| Insert Single Keyframes | Inserts a single keyframe at the current position. |
-| Add Driver | In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the element. The driver can be edited in the drivers editor. |
-| Copy Driver | Copies the driver. |
-| Copy Driver to Selected | Copies the driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object. |
-| Copy all Drivers to Selected | Copies all driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object. |
+#### Online Python Reference
+
+The Online Python Reference button opens the Bforartists Online Python reference page in your browser.
+
+#### Edit Source
+
+The Edit Source button opens the corresponding Python file for this element. Note that you need to be in the Scripting layout. The file loads in the Text editor there.
+
+#### Reset to Default Value
+
+Reset to Default Value is usually a RMB menu entry when you right click at an edit box. It resets the value to the default value.
+
+#### Reset All to Default Value
+
+Reset All to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for all the edit boxes in the combo to the default value.
+
+#### Reset Single to Default Value
+
+Reset Single to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for the single edit box under the mouse to the default value.
+
+#### Unset
+
+Unset is usually a RMB menu entry when you right click at an edit box. It is somehow similar to Reset to Default Value. But it clears the property instead of resetting it to the default value. Which can end in another value.
+
+#### Insert Keyframes
+
+Inserts keyframes at the current position.
+
+#### Insert Single Keyframes
+
+Inserts a single keyframe at the current position.
+
+#### Add Driver
+
+In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the element. The driver can be edited in the drivers editor.
+
+#### Copy Driver
+
+Copies the driver.
+
+#### Copy Driver to Selected
+
+Copies the driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object.
+
+#### Copy all Drivers to Selected
+
+Copies all driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object.
 
 ### Edit Driver
 
@@ -224,21 +284,57 @@ These buttons allows you to assign or to remove a new shortcut to the tool or to
 
 Opens the driver settings where you can edit the driver. It is the same settings that are covered in the driver editor. So we won't cover it here.
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Open Drivers Editor | Opens the Drivers editor as a floating window. |
-| Add Single Driver | In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the single element under the mouse. |
-| Add to Keying Set | Add to Keying Set adds the information of the element to the current key frame. |
-| Add All to Keying Set | Add All to Keying Set adds the information of the element to the current key frame. |
-| Add single to Keying Set | Add to Keying Set adds the information of the element to the current key frame. |
-| Remove from Keying Set | Remove from Keying Set removes the information of the element from the current key frame |
-| Copy All to Selected | Copy to Selected copies the property of this element to all selected objects or bones. |
-| Copy Single to Selected | Copy to Selected copies the property of this element to selected active objects or bones. |
-| Copy Data Path | Copy Data Path copies the last element of the RNA data path for this property. |
-| Copy Full Data Path | Copy Data Path copies the full RNA data path for this property. |
-| Copy as new Driver | Create a new driver with this property as input, and copy it. It can then be pasted to the target property. Or pasted as a driver variable to extend an existing driver. |
-| Mark as Asset | Marks the current property as an asset. It will be added to the active asset library then. |
-| Clear Asset | Removes the asset from the asset library. |
+#### Open Drivers Editor
+
+Opens the Drivers editor as a floating window.
+
+#### Add Single Driver
+
+In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the single element under the mouse.
+
+#### Add to Keying Set
+
+Add to Keying Set adds the information of the element to the current key frame.
+
+#### Add All to Keying Set
+
+Add All to Keying Set adds the information of the element to the current key frame.
+
+#### Add single to Keying Set
+
+Add to Keying Set adds the information of the element to the current key frame.
+
+#### Remove from Keying Set
+
+Remove from Keying Set removes the information of the element from the current key frame
+
+#### Copy All to Selected
+
+Copy to Selected copies the property of this element to all selected objects or bones.
+
+#### Copy Single to Selected
+
+Copy to Selected copies the property of this element to selected active objects or bones.
+
+#### Copy Data Path
+
+Copy Data Path copies the last element of the RNA data path for this property.
+
+#### Copy Full Data Path
+
+Copy Data Path copies the full RNA data path for this property.
+
+#### Copy as new Driver
+
+Create a new driver with this property as input, and copy it. It can then be pasted to the target property. Or pasted as a driver variable to extend an existing driver.
+
+#### Mark as Asset
+
+Marks the current property as an asset. It will be added to the active asset library then.
+
+#### Clear Asset
+
+Removes the asset from the asset library.
 
 ## Resize Tool Shelf and Properties content
 

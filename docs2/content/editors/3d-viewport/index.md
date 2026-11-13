@@ -79,18 +79,39 @@ For the rest of the available navigation functionality have a look into the Navi
 
 From left to right.
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| Perspective / Orthographic | Switch the view between perspectivic and orthographic view. |
-| Camera View | Enter and leave the camera view. You need to have an active camera in the scene. |
-| Move | Moves the view. |
-| Zoom | Zooms in and out. |
+#### Perspective / Orthographic
+
+Switch the view between perspectivic and orthographic view.
+
+#### Camera View
+
+Enter and leave the camera view. You need to have an active camera in the scene.
+
+#### Move
+
+Moves the view.
+
+#### Zoom
+
+Zooms in and out.
 
 #### Mini Axis
 
 ![Mini Axis](/docs2/images/editors/3d-viewport/mini-axis.png)
 
 A mini axis. It allows rotation of the view and snap to the nearest ortho view when it is in interactive navigation mode. See Viewport gizmos for more options. There you can turn it to a simple widget, or turn it even completely off.
+
+#### Roll ring
+
+![Roll ring while dragging, with the wedge and the degrees](/docs2/images/editors/3d-viewport/navigation-gizmo/roll-ring.png)
+
+A thin ring sits around the mini axis. **Drag the ring to roll the view**, tilting it sideways like turning your head.
+
+Drag **right** to roll clockwise, and **left** to roll counter-clockwise. Hold **Ctrl** while you drag to snap to the roll step, 15° by default, the same step as Shift Numpad 4 / 6.
+
+While you drag, the ring shows how far you've rolled: a wedge from the top of the ring, and the angle in degrees below it (positive is clockwise). It's the same value as **Sidebar › View › View Roll**. The mouse cursor hides and wraps around the screen, so you never run out of room to drag.
+
+> **Tip:** The ring hides in axis views (Top, Front, Right...) and when view rotation is locked. **Ctrl+Alt+MMB** still rolls the view the classic way, by dialing around the view center.
 
 #### Lock camera to view
 
@@ -112,10 +133,13 @@ Numpad `*` resets the 3D view.
 
 Left clicking into an empty space deselects what is currently selected. Exception: when you are in one of the navigation modes and drag the mouse, then the navigation takes over.
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object navigation | Hotkey W moves the selected object/s Hotkey E rotates the selected object/s Hotkey R scales the selected object/s |
-| Trackball Navigation | Pressing the hotkey for object rotation once (by default the E key in the Bforartists key map) will rotate the object around the screen axis. Pressing the hotkey for rotation twice will activate trackball rotation. Now you can rotate the object freely around all three axis. |
+#### Object navigation
+
+Hotkey W moves the selected object/s Hotkey E rotates the selected object/s Hotkey R scales the selected object/s
+
+#### Trackball Navigation
+
+Pressing the hotkey for object rotation once (by default the E key in the Bforartists key map) will rotate the object around the screen axis. Pressing the hotkey for rotation twice will activate trackball rotation. Now you can rotate the object freely around all three axis.
 
 ## Context Menus
 
@@ -231,11 +255,17 @@ The navigation hotkeys and the context menus are excluded here since they are al
 
 Calls the file menu under the mouse.
 
-| Entry | What it does |
-| ------------------------------- | --------------------------------------------------------------------------- |
-| Set 3D Cursor - Alt Right Mouse | Sets the 3D cursor position to Mouse position. |
-| Frame All - Ctrl Home | View all objects in the scene in all regions. This hotkey is for quad view. |
-| Frame All - Shift C | View and center all objects in the scene. |
+#### Set 3D Cursor - Alt Right Mouse
+
+Sets the 3D cursor position to Mouse position.
+
+#### Frame All - Ctrl Home
+
+View all objects in the scene in all regions. This hotkey is for quad view.
+
+#### Frame All - Shift C
+
+View and center all objects in the scene.
 
 ### Pivot Point Pie menu - ` (german keyboard . )
 
@@ -251,10 +281,13 @@ Calls the Snap Pie Menu.
 
 Navigate a lamp of type sun or spot light to point at objects. The lamp follows the mouse cursor.
 
-| Entry | What it does |
-| ----------------------------- | -------------------------- |
-| Call pivot pie menu - . | Call pivot pie menu. |
-| Call orientation pie menu - , | Call orientation pie menu. |
+#### Call pivot pie menu - .
+
+Call pivot pie menu.
+
+#### Call orientation pie menu - ,
+
+Call orientation pie menu.
 
 ### Cycle through select method - Shift Q
 
@@ -294,9 +327,11 @@ Mesh Object in Edit mode.
 
 Pick the shortest path by selecting the first element, holding down ctrl, then selecting the last element.
 
-#### Last Operator Pick shortest path
+#### Adjust Last Operation - Pick shortest path
 
 ![Last Operator Pick shortest path](/docs2/images/editors/3d-viewport/last-operator-pick-shortest-path.png)
+
+Change the settings of **Pick shortest path** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Face Stepping
 
@@ -322,10 +357,13 @@ Select the region faces too.
 
 Don't select the whole path, but just every nth element of it.
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------- |
-| Skip | This is connected to nth element. Number of elements to skip at once. |
-| Offset | This is connected to nth element. Start with an offset. |
+###### Skip
+
+This is connected to nth element. Number of elements to skip at once.
+
+###### Offset
+
+This is connected to nth element. Start with an offset.
 
 ### Curve Object, Add Vertex - Ctrl Right mouse
 

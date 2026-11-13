@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Lattice"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the lattice itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -53,9 +53,11 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-2.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -70,14 +72,10 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Shear
 
@@ -89,9 +87,11 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -109,12 +109,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -122,14 +118,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -141,9 +133,11 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -158,14 +152,10 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -173,7 +163,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a mesh selection between two defined points.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
+
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
@@ -196,9 +190,11 @@ The end point.
 
 This tool allows randomizes the positions of the selected vertices.
 
-##### Last Operator Randomize Transform
+##### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -225,9 +221,11 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
+
+Change the settings of **Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move
 
@@ -249,14 +247,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Scale Texture Space
 
@@ -276,9 +270,11 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
+
+Change the settings of **Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Scale
 
@@ -300,14 +296,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Set Dimensions
 
@@ -321,7 +313,11 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
-##### Last Operator Set Dimensions
+##### Adjust Last Operation - Set Dimensions
+
+Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
 
 ###### New Dimensions
 
@@ -343,7 +339,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png)
 
@@ -367,7 +363,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -386,9 +382,11 @@ Some snap operations shows a last operation panel, some not.
 
 the lattice object along the world axis X, Y or Z .
 
-#### Last Operator Flip (Distortion Free)
+#### Adjust Last Operation - Flip (Distortion Free)
 
 ![Last Operator Flip (Distortion Free)](/docs2/images/editors/3d-viewport/header/lattice-edit-mode-lattice-menu/last-operator-flip-distortion-free.png)
+
+Change the settings of **Flip (Distortion Free)** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Flip Axis
 
@@ -422,24 +420,22 @@ Creates a new Hook Modifier for the active object and assigns it to the selected
 
 Does the same as *Hook to New Object*, but instead of hooking the vertices to a new empty, it hooks them to the selected object (if it exists). There should be only one selected object (besides the mesh being edited).
 
-###### Last Operator Hook to Selected Object
+###### Adjust Last Operation - Hook to Selected Object
 
 ![Last Operator Hook to Selected Object](/docs2/images/editors/3d-viewport/header/lattice-edit-mode-lattice-menu/last-operator-hook-to-selected-object.png)
+
+Change the settings of **Hook to Selected Object** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Active Bone
 
 Hook to the object(s) of the active bone.
 
-
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hook to Selected Object Bone | Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target. |
-| Assign to Hook | Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook. |
-| Remove Hook | Removes the chosen Hook Modifier from the object. |
-| Select Hook | Selects all vertices assigned to the chosen Hook Modifier. |
-| Reset Hook | Resets the chosen Hook Modifier. |
-| Recenter Hook | **Recenter** the Hook Modifier. |
-
+- **Hook to Selected Object Bone**: Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target.
+- **Assign to Hook**: Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook.
+- **Remove Hook**: Removes the chosen Hook Modifier from the object.
+- **Select Hook**: Selects all vertices assigned to the chosen Hook Modifier.
+- **Reset Hook**: Resets the chosen Hook Modifier.
+- **Recenter Hook**: **Recenter** the Hook Modifier.
 
 #### Make Vertex Parent
 
@@ -481,16 +477,14 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Shear
+###### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -505,12 +499,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable Mirror Editing |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable Mirror Editing
 
 ###### Proportional editing
 
@@ -518,13 +508,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 # Context Menus
 
@@ -542,17 +529,27 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 
 ![Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/set-origin.png)
 
+##### Geometry to Origin
 
-| Entry | What it does |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry to Origin | Sets the geometry to origin. |
-| Origin to Geometry | Sets the origin to geometry. |
-| Origin to 3D cursor | Sets the origin to the 3D cursor. |
-| Origin to Center of Mass(Surface) | Sets the origin to the center of mass, calculating it from the center of the surface area. |
-| Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
+Sets the geometry to origin.
 
+##### Origin to Geometry
 
-##### Last Operator Set Origin
+Sets the origin to geometry.
+
+##### Origin to 3D cursor
+
+Sets the origin to the 3D cursor.
+
+##### Origin to Center of Mass(Surface)
+
+Sets the origin to the center of mass, calculating it from the center of the surface area.
+
+##### Origin to Center of Mass(Volume)
+
+Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's.
+
+##### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -573,7 +570,11 @@ Copies the selected object(s).
 
 Pastes copied object(s).
 
-##### Last Operator Paste Selection from Buffer
+##### Adjust Last Operation - Paste Objects
+
+Change the settings of **Paste Objects** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Paste Objects](/docs2/images/editors/3d-viewport/object-mode/adjust-last-operation-paste-objects.png)
 
 ###### Select
 
@@ -597,9 +598,11 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -620,14 +623,10 @@ Orientation is a drop-down box choose the type of orientation for the duplicate 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rename active Item / Object
 
@@ -651,16 +650,14 @@ Mirrors the selection.
 
 Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.
 
+- **X Y Z Global**: Mirrors along the global axis.
+- **X Y Z Local**: Mirrors along the object axis.
 
-| Entry | What it does |
-| ------------ | ------------------------------ |
-| X Y Z Global | Mirrors along the global axis. |
-| X Y Z Local | Mirrors along the object axis. |
-
-
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
+
+Change the settings of **Mirror** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Orientation
 
@@ -674,14 +671,10 @@ Choose the orientation in which the transform should happen.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Snap sub menu
 
@@ -695,9 +688,11 @@ Snaps the currently selected object(s) to the cursor location.
 
 Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.
 
-###### Last operator Snap Selection to Cursor
+###### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
+
+Change the settings of **Snap Selection to Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -707,16 +702,12 @@ Keep the offset of the selected objects to each other.
 
 Rotate to match the cursor.
 
-
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------- |
-| Selection to Active | Snaps the currently selected object(s) to the active object. |
-| Selection to Grid | Snaps the currently selected object(s) to the nearest grid point. |
-| Cursor to Selected | Moves the cursor to the center of the selected object(s). |
-| Cursor to World Origin | Moves the cursor to the world origin. |
-| Cursor to Active | Moves the cursor to the center of the active object. |
-| Cursor to Grid | Moves the cursor to the nearest grid point. |
-
+- **Selection to Active**: Snaps the currently selected object(s) to the active object.
+- **Selection to Grid**: Snaps the currently selected object(s) to the nearest grid point.
+- **Cursor to Selected**: Moves the cursor to the center of the selected object(s).
+- **Cursor to World Origin**: Moves the cursor to the world origin.
+- **Cursor to Active**: Moves the cursor to the center of the active object.
+- **Cursor to Grid**: Moves the cursor to the nearest grid point.
 
 #### Parent sub menu
 
@@ -742,16 +733,29 @@ Sets the parent to selected object, but applies all transform before the operati
 
 Armature parenting creates an armature modifier at the mesh.
 
+###### Armature Deform
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------- |
-| Armature Deform | Sets the parent to selected Armature. |
-| With empty Groups | Sets the parent to selected Armature, using empty groups. |
-| With Envelope Weights | Sets the parent to selected Armature, using envelope weights |
-| With automatic Weights | Sets the parent to selected Armature, with automatic weights. |
-| Bone | Sets the parent absolute to selected Bone. |
-| Bone Relative | Sets the parent relative to selected Bone. |
+Sets the parent to selected Armature.
 
+###### With empty Groups
+
+Sets the parent to selected Armature, using empty groups.
+
+###### With Envelope Weights
+
+Sets the parent to selected Armature, using envelope weights
+
+###### With automatic Weights
+
+Sets the parent to selected Armature, with automatic weights.
+
+###### Bone
+
+Sets the parent absolute to selected Bone.
+
+###### Bone Relative
+
+Sets the parent relative to selected Bone.
 
 ##### Curve Deform
 
@@ -839,17 +843,23 @@ Do the vertex parenting in Edit mode. You need to have an object type that has v
 
 Create a mesh or curve object, create an object, hold down shift and select the mesh object, make parent ...
 
+###### Make Parent without Inverse
 
-| Entry | What it does |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Parent without Inverse | With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting. |
-| Make Parent without Inverse (Keep Transform ) | Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position. |
-| Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
+With normal parenting the child object keeps its world transformation. Without inverse parenting the child object uses the coordinate system of the parent object. As one of the effects you will see that the child objects will jump to the origin of the parent object when parenting.
 
+###### Make Parent without Inverse (Keep Transform )
 
-##### Last Operator Make Parent
+Set the object’s parenting without setting the inverse parent connections and applies all transform before the operation. Without inverse parenting the child object uses the coordinate system of the parent object. By keeping the transform, the origin of the parent and child object stay in position.
+
+###### Object (Attach Curves to Surface)
+
+Parent a Hair Curve to the surface of a new object.
+
+##### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-make-parent.png)
+
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -864,14 +874,15 @@ Create a mesh or curve object, create an object, hold down shift and select the 
 
 Clear Parent clears the parent relation completely, including involved modifiers.
 
+###### Clear and Keep Transformation
 
-| Entry | What it does |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Clear and Keep Transformation | Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation. |
-| Clear Parent Inverse | Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself. |
+Clear Parent clears the parent relation completely, including involved modifiers. But keeps the current visual transformation.
 
+###### Clear Parent Inverse
 
-###### Last Operator Clear Parent
+Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself.
+
+###### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-clear-parent.png)
 
@@ -889,9 +900,11 @@ By clicking at this menu item a popup will appear choose the new collection. All
 
 This operator can also be found in the Header Object menu.
 
-##### Last Operator Move to Collection
+##### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-move-to-collection.png)
+
+Change the settings of **Move to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Name
 
@@ -903,12 +916,13 @@ Set a name for your new collection. When you haven't created a new collection, t
 
 Toggles local view isolating the selection in the viewport. You can find this operator in the Header View menu.
 
+##### Remove from Local
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Remove from Local | Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.* |
-| Insert Key frame | Inserts a key frame. It uses the default keying set that is defined in the Preferences. |
+Removes the selection from the Local View keeping the unselected items in the viewport. You can find this operator in the Header View menu. **Note:** *This is a conditional operator that only shows when the context of the 3D View editor is in the Local View mode.*
 
+##### Insert Key frame
+
+Inserts a key frame. It uses the default keying set that is defined in the Preferences.
 
 #### Insert Key frame with keying sets
 
@@ -942,9 +956,11 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 

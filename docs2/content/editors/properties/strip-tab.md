@@ -6,8 +6,8 @@ path:
   - Editors
   - Properties Editor
   - Strip Tab
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.19 Editors - Properties Editor - Strip Tab.odt
@@ -114,6 +114,16 @@ The X offset.
 #### Y
 
 The Y offset.
+
+#### Width
+
+For a Color strip: the width of the strip in pixels. The smallest value is 1.
+
+#### Height
+
+For a Color strip: the height of the strip in pixels. The smallest value is 1.
+
+![Transform panel of a Color strip](/docs2/images/editors/properties/strip-tab/transform-panel-color-strip.png)
 
 #### Scale X
 

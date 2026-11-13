@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Mesh"
   - "Texture Paint"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: tpaint_hlt
 summary: "Paint textures right on the mesh: menus, brushes and settings."
 order: 50
@@ -38,6 +38,24 @@ With texture mapping type stencil you will see the navigation controls to naviga
 #### Color Picker
 
 Allows you to pick a color in the 3D view. Hotkey tool!
+
+#### Show/Hide
+
+Shows and hides parts of the mesh while **Face Selection Masking** or **Vertex Selection Masking** is on, so you can paint only the parts you can see. The submenu follows the masking mode that is on.
+
+##### Show Hidden
+
+Shows all hidden faces or vertices again.
+
+##### Hide Selected
+
+Hides the selected faces or vertices.
+
+##### Hide Unselected
+
+Hides everything that is not selected.
+
+In Texture Paint the submenu is in the **Brush** menu.
 
 # Tool Shelf
 
@@ -102,12 +120,21 @@ The Brush tool covers several paint brushes in the All panel. The names of the b
 
 ![Brush](/docs2/images/editors/3d-viewport/tool-shelf/mesh-texture-paint-mode/brush.png)
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blur | Smooths out the colours of adjacent vertices. In this mode the Colour Value is ignored. The strength defines how much the colours are blurred. |
-| Smear | Smears the color under the brush cursor. |
-| Clone | Clone a texture area and paint with it. · **Usage**: Hold down Ctrl and click at the source area that you want to draw with. Then draw with left mouse strokes |
-| Fill | Fills the whole selection with the chosen color. |
+##### Blur
+
+Smooths out the colours of adjacent vertices. In this mode the Colour Value is ignored. The strength defines how much the colours are blurred.
+
+##### Smear
+
+Smears the color under the brush cursor.
+
+##### Clone
+
+Clone a texture area and paint with it. · **Usage**: Hold down Ctrl and click at the source area that you want to draw with. Then draw with left mouse strokes
+
+##### Fill
+
+Fills the whole selection with the chosen color.
 
 #### Mask
 
@@ -173,18 +200,33 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------- |
-| Catalog | The asset catalog in which the brush is stored. |
-| Author | The brush author. |
-| Desctription | Add a description |
-| OK / Cancel | Accept or decline the changes. |
-| Edit Preview Image | Allows you to load a custom preview image. |
+###### Catalog
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
-| Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
+The asset catalog in which the brush is stored.
+
+###### Author
+
+The brush author.
+
+###### Desctription
+
+Add a description
+
+###### OK / Cancel
+
+Accept or decline the changes.
+
+###### Edit Preview Image
+
+Allows you to load a custom preview image.
+
+###### Save Brush Asset
+
+This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.
+
+###### Revert Brush Asset
+
+Reverts the brush settings to the default values of the brush in the asset library.
 
 ##### Name
 
@@ -246,10 +288,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -263,10 +303,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -278,7 +316,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 The position of the selectedc curve point.
 
-**Delete Points**
+###### Delete Points
 
 Deletes the selected curve point.
 
@@ -326,10 +364,8 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-| Entry | What it does |
-| -------- | ------------ |
-| Zoom in | Zooms in. |
-| Zoom out | Zooms out. |
+- **Zoom in**: Zooms in.
+- **Zoom out**: Zooms out.
 
 ###### Clipping options
 
@@ -343,10 +379,8 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ###### Handles
 
@@ -358,7 +392,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 
 The position of the selectedc curve point.
 
-**Delete Points**
+###### Delete Points
 
 Deletes the selected curve point.
 
@@ -384,10 +418,13 @@ The active color is the left one. When you click the button with the two arrows 
 
 A click at one of the color fields will open a more detailed color dialog, where you can set up the color by using rgb, hsv and hex colors and with value sliders.
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------- |
-| Brush colors flip | Flips the primary color with the secondary color. |
-| Use unified Color | Choose if you want to use global colors or local color just for vertex painting. |
+#### Brush colors flip
+
+Flips the primary color with the secondary color.
+
+#### Use unified Color
+
+Choose if you want to use global colors or local color just for vertex painting.
 
 ### Brush Settings Panel - Color Palette Sub panel
 
@@ -413,13 +450,25 @@ The elements are explained from left to right.
 
 The button at the left opens a dropdown list where you can choose between your palettes.
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
-| Number of users | See how many users the palette currently has. |
-| Fake User | Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
-| Add palette | Add a new palette. |
-| Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
+##### Edit Box
+
+The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.
+
+##### Number of users
+
+See how many users the palette currently has.
+
+##### Fake User
+
+Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.
+
+##### Add palette
+
+Add a new palette.
+
+##### Remove Palette
+
+Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.
 
 #### Sort By
 
@@ -433,11 +482,17 @@ Sort the palette by the chosen method.
 
 Brush specific settings.
 
-| Entry | What it does |
-| ------------ | -------------------------------------------------------------------------- |
-| Brush Type | Displays the current brush type (e.g., **Draw, **Blur, Average, Smear) |
-| Accumulate | Accumulate stroke daubts on top of each other. |
-| Affect Alpha | When disabled then the alpha is locked while painting. |
+#### Brush Type
+
+Displays the current brush type (e.g., **Draw, **Blur, Average, Smear)
+
+#### Accumulate
+
+Accumulate stroke daubts on top of each other.
+
+#### Affect Alpha
+
+When disabled then the alpha is locked while painting.
 
 #### Randomize Color – Subpanel
 
@@ -445,12 +500,21 @@ Brush specific settings.
 
 Adds variation to the brush color per stroke or while drawing a stroke.
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Slider Properties | **Stroke Randomization**: Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. · **Use Pressure**: Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization. |
-| Hue | Shifts the base color across the color wheel. |
-| Saturation | Adjusts the intensity of the color. |
-| Value | Modifies the brightness of the stroke. |
+##### Slider Properties
+
+**Stroke Randomization**: Use randomness per stroke, instead of while drawing a stroke. This will define a new random value when you draw a new stroke. · **Use Pressure**: Uses the brush pressure to define how random the influence will be. Maximum pressure is maximum randomization.
+
+##### Hue
+
+Shifts the base color across the color wheel.
+
+##### Saturation
+
+Adjusts the intensity of the color.
+
+##### Value
+
+Modifies the brightness of the stroke.
 
 #### Sharpen / Soften (Soften Brush)
 
@@ -542,10 +606,13 @@ The brush mapping method Tiled tiles the brush stroke at the surface. The mappin
 
 The angle of the brush.
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Offset | The offset of the texture in the brush. |
-| Size | The size of the texture in the brush. |
+###### Offset
+
+The offset of the texture in the brush.
+
+###### Size
+
+The size of the texture in the brush.
 
 ##### Brush Mapping with mapping method View Plane
 
@@ -553,11 +620,17 @@ The angle of the brush.
 
 The brush mapping method View Plane simply paints onto the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle | The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random. |
-| Offset | The offset of the texture in the brush. |
-| Size | The size of the texture in the brush. |
+###### Angle
+
+The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random.
+
+###### Offset
+
+The offset of the texture in the brush.
+
+###### Size
+
+The size of the texture in the brush.
 
 ##### Brush Mapping with mapping method 3D
 
@@ -587,10 +660,13 @@ The brush mapping method Random paints onto the surface, and randomizes the text
 
 The angle of the brush.
 
-| Entry | What it does |
-| ------ | ---------------------------------------------------- |
-| Rake | The angle follows the direction of the brush stroke. |
-| Random | The brush angle gets set random. |
+###### Rake
+
+The angle follows the direction of the brush stroke.
+
+###### Random
+
+The brush angle gets set random.
 
 ##### Brush Mapping with mapping method Stencil
 
@@ -604,13 +680,25 @@ It gets by default displayed down left. You have to position it where you need i
 
 ![Brush Mapping with mapping method Stencil](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/brush-mapping-with-mapping-method-stencil-2.png)
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Aspect | Adjust the stencil size to fit to the image aspect ratio. |
-| Reset Transform | Resets the stencil image to be down right in the 3D view. |
-| Angle edit box | Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder. |
-| Offset | Fine tune the offset of the texture in the brush. |
-| Size | Fine tune the size of the texture in the brush. |
+###### Image Aspect
+
+Adjust the stencil size to fit to the image aspect ratio.
+
+###### Reset Transform
+
+Resets the stencil image to be down right in the 3D view.
+
+###### Angle edit box
+
+Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder.
+
+###### Offset
+
+Fine tune the offset of the texture in the brush.
+
+###### Size
+
+Fine tune the size of the texture in the brush.
 
 ### Brush Settings Panel - Texture Mask Subanel
 
@@ -664,11 +752,17 @@ The brush mapping method Tiled tiles the brush stroke at the surface. The mappin
 
 A dropdown box to choose the mask pressure mode for tablets.
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Angle | The angle of the brush. |
-| Offset | The offset of the texture in the brush. |
-| Size | The size of the texture in the brush. |
+###### Angle
+
+The angle of the brush.
+
+###### Offset
+
+The offset of the texture in the brush.
+
+###### Size
+
+The size of the texture in the brush.
 
 #### Brush Mapping with mapping method View Plane
 
@@ -684,11 +778,17 @@ The brush mapping method View Plane simply paints onto the surface. The mapping 
 
 A dropdown box to choose the mask pressure mode for tablets.
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle | The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random. |
-| Offset | The offset of the texture in the brush. |
-| Size | The size of the texture in the brush. |
+###### Angle
+
+The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random.
+
+###### Offset
+
+The offset of the texture in the brush.
+
+###### Size
+
+The size of the texture in the brush.
 
 ##### Brush Mapping with mapping method Random
 
@@ -704,11 +804,17 @@ The brush mapping method Random paints onto the surface, and randomizes the text
 
 A dropdown box to choose the mask pressure mode for tablets.
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle | The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random. |
-| Offset | The offset of the texture in the brush. |
-| Size | The size of the texture in the brush. |
+###### Angle
+
+The angle of the brush. · **Rake**: The angle follows the direction of the brush stroke. · **Random**: The brush angle gets set random.
+
+###### Offset
+
+The offset of the texture in the brush.
+
+###### Size
+
+The size of the texture in the brush.
 
 ##### Brush Mapping with mapping method Stencil
 
@@ -730,11 +836,17 @@ Resets the stencil transformation to default.
 
 A dropdown box to choose the mask pressure mode for tablets.
 
-| Entry | What it does |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle edit box | Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder. |
-| Offset | Fine tune the offset of the texture in the brush. |
-| Size | Fine tune the size of the texture in the brush. |
+###### Angle edit box
+
+Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder.
+
+###### Offset
+
+Fine tune the offset of the texture in the brush.
+
+###### Size
+
+Fine tune the size of the texture in the brush.
 
 ### Brush Settings Panel - Stroke Sub panel
 
@@ -758,14 +870,12 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adjust Strength for Spacing | Automatically adjust strength to give consistent results for different spacing. |
-| Dash Ratio | Ratio of samples in a cycle that the brush is covering. |
-| Dash Length | Length of a dash cycle measured in stroke samples. |
-| Jitter Edit Box | Add Jitter to the brush while painting. · **Spacing Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
-| Stabilize Stroke | The brush lags behind the mouse position, and produces a much smoother stroke by that. · **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. · **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+- **Adjust Strength for Spacing**: Automatically adjust strength to give consistent results for different spacing.
+- **Dash Ratio**: Ratio of samples in a cycle that the brush is covering.
+- **Dash Length**: Length of a dash cycle measured in stroke samples.
+- **Jitter Edit Box**: Add Jitter to the brush while painting. · **Spacing Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size.
+- **Input Samples Edit Box**: Average multiple input samples together to smooth the brush stroke.
+- **Stabilize Stroke**: The brush lags behind the mouse position, and produces a much smoother stroke by that. · **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. · **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 #### Stroke Panel with Stroke method Curve
 
@@ -811,11 +921,17 @@ Here you set the active curve.
 
 **The X button** deletes the brush as the active one. It does NOT delete it from the brushes list.
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Draw Curve Button | A click at it to turns the curve into a sculpt stroke. |
-| Jitter Edit Box | Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
+###### Draw Curve Button
+
+A click at it to turns the curve into a sculpt stroke.
+
+###### Jitter Edit Box
+
+Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size.
+
+###### Input Samples Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
 
 #### Stroke Panel with Stroke method Line
 
@@ -835,11 +951,17 @@ The drawing happens by mapping the pencil onto the mouse position. And when you 
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adjust Strength for Spacing | Automatically adjust strength to give consistent results for different spacing. |
-| Jitter Edit Box | Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
+###### Adjust Strength for Spacing
+
+Automatically adjust strength to give consistent results for different spacing.
+
+###### Jitter Edit Box
+
+Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size.
+
+###### Input Samples Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
 
 #### Stroke Panel with Stroke method Anchored
 
@@ -857,11 +979,17 @@ Drag Anchor Brush from edge to edge.
 
 Add Jitter to the brush while painting.
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------- |
-| Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
-| Jitter Unit | Jitter in screen space, or relative to the brush size. |
-| Input Sample Edit Box | Average multiple input samples together to smooth the brush stroke. |
+###### Jitter Pressure
+
+The icon behind the edit box enables tablet pressure sensitivity for tablets.
+
+###### Jitter Unit
+
+Jitter in screen space, or relative to the brush size.
+
+###### Input Sample Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
 
 ##### Stroke Panel with Stroke method Airbrush
 
@@ -871,12 +999,21 @@ The stroke acts like an airbrush pencil. The dots gets placed randomly.
 
 ![Stroke Panel with Stroke method Airbrush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/stroke-panel-with-stroke-method-airbrush-2.png)
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rate Edit Box | Define the rate of the drawing. |
-| Jitter Edit Box | Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
-| Stabilize Stroke | The brush lags behind the mouse position, and produces a much smoother stroke by that. · **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. · **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+###### Rate Edit Box
+
+Define the rate of the drawing.
+
+###### Jitter Edit Box
+
+Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size.
+
+###### Input Samples Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
+
+###### Stabilize Stroke
+
+The brush lags behind the mouse position, and produces a much smoother stroke by that. · **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. · **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 ##### Stroke Panel with Stroke method Drag Dot
 
@@ -884,10 +1021,13 @@ The stroke acts like an airbrush pencil. The dots gets placed randomly.
 
 Paint a dot and drag it around. The actual painting happens then at releasing the mouse
 
-| Entry | What it does |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jitter Edit Box | Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
+###### Jitter Edit Box
+
+Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size.
+
+###### Input Samples Edit Box
+
+Average multiple input samples together to smooth the brush stroke.
 
 ##### Stroke Panel with Stroke method Dots
 
@@ -909,12 +1049,10 @@ The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
 Jitter in screen space, or relative to the brush size.
 
-| Entry | What it does |
-| ----------------------------- | -------------------------------------------------------------------------------------- |
-| Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
-| Stabilize Stroke | The brush lags behind the mouse position, and produces a much smoother stroke by that. |
-| Smooth Stroke Radius Edit Box | Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing. |
-| Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
+- **Input Samples Edit Box**: Average multiple input samples together to smooth the brush stroke.
+- **Stabilize Stroke**: The brush lags behind the mouse position, and produces a much smoother stroke by that.
+- **Smooth Stroke Radius Edit Box**: Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.
+- **Smooth Stroke Factor Edit Box**: Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.
 
 ### Brush Settings Panel - Falloff Sub panel
 
@@ -946,10 +1084,13 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 The navigation elements at the top are described from left to right.
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape. |
+###### Zoom in and out
+
+The two buttons with the magnifying glass at it zooms in and out in the curve window.
+
+###### Tools
+
+Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape.
 
 ##### Use Clipping
 
@@ -997,28 +1138,37 @@ Choose another color for the brush cursor. Double clicking at the color field wi
 
 You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | -------------------------------------- |
-| Override Overlay | Hide the Cursor Overlay when painting. |
-| Use Cursor Overlay | Turn on Cursor Overlay. |
+##### Override Overlay
+
+Hide the Cursor Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Cursor Overlay.
 
 #### Texture Opacity
 
 This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | --------------------------------------- |
-| Override Overlay | Hide the Texture Overlay when painting. |
-| Use Cursor Overlay | Turn on Texture Overlay. |
+##### Override Overlay
+
+Hide the Texture Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Texture Overlay.
 
 #### Mask Texture Opacity
 
 This is for the case when you mask paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-| Entry | What it does |
-| ------------------ | --------------------------------------- |
-| Override Overlay | Hide the Texture Overlay when painting. |
-| Use Cursor Overlay | Turn on Texture Overlay. |
+##### Override Overlay
+
+Hide the Texture Overlay when painting.
+
+##### Use Cursor Overlay
+
+Turn on Texture Overlay.
 
 ### Brush Settings Panel - Clone from Paint Slot Sub panel
 
@@ -1042,16 +1192,37 @@ The same buttons can also be found in the tool settings bar as icon buttons. Thi
 
 ![Symmetry Panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/symmetry-panel-3.png)
 
+#### Radial Symmetry
+
+![Radial Symmetry](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/radial-symmetry.png)
+
+Repeats each stroke around the X, Y or Z axis, like the spokes of a wheel. Use it for round objects such as flowers, wheels or ornaments: paint one part and the others follow.
+
+Tick the checkbox in the subpanel header to turn radial symmetry on or off. Turning it off keeps the counts, so you can switch it back on without setting them again.
+
+##### Count
+
+How many times the stroke is repeated around each axis. For example, a Z count of 8 paints 8 copies of the stroke around the Z axis. A count of 1 means no repeat on that axis.
+
 ### Options Panel
 
 ![Options Panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/options-panel.png)
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| Bleed | An edit box to adjust the amount of bleeding into the areas outside of the faces UV. |
-| Dither | An Edit box to adjust the amount of dither when painting on byte images |
-| Occlude | Only paint the faces directly under the mouse. |
-| Backface Culling | Ignore faces that are painting away from the viewport. |
+#### Bleed
+
+An edit box to adjust the amount of bleeding into the areas outside of the faces UV.
+
+#### Dither
+
+An Edit box to adjust the amount of dither when painting on byte images
+
+#### Occlude
+
+Only paint the faces directly under the mouse.
+
+#### Backface Culling
+
+Ignore faces that are painting away from the viewport.
 
 #### External
 
@@ -1059,12 +1230,21 @@ The same buttons can also be found in the tool settings bar as icon buttons. Thi
 
 The external sub panel allows you to do projection painting by using an external 2d image editor. The projection happens from the current view. So this can lead to distortions.
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Screen Grab Size | Set the resolution of the shot. |
-| Quick Edit | Opens a shot of the current view in your 2D Image Editor. |
-| Apply | Applies the changes that you made and saved in your 2D Image Editor. |
-| Apply Camera Image | Project an edited render from the active camera back onto the object. This feature requires to have a background image loaded. Then this background image can be projected onto the object from the camera view. |
+##### Screen Grab Size
+
+Set the resolution of the shot.
+
+##### Quick Edit
+
+Opens a shot of the current view in your 2D Image Editor.
+
+##### Apply
+
+Applies the changes that you made and saved in your 2D Image Editor.
+
+##### Apply Camera Image
+
+Project an edited render from the active camera back onto the object. This feature requires to have a background image loaded. Then this background image can be projected onto the object from the camera view.
 
 ##### Workflow for external editing
 
@@ -1110,10 +1290,13 @@ In Vertex Paint mode you will call a context menu with the sliders from the Brus
 
 And the fill tool comes with a color dialog.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Radius | The Radius edit box allows you to adjust the radius of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
-| Strength | The Strength edit box allows you to adjust the strength of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools. |
+#### Radius
+
+The Radius edit box allows you to adjust the radius of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
+
+#### Strength
+
+The Strength edit box allows you to adjust the strength of the brush. · **Size Pressure**: The first button behind the edit box enables tablet pressure sensitivity for radius. · **Use Unified Radius**: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.
 
 #### Color dialog
 

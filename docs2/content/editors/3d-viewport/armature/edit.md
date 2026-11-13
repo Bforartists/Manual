@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Armature"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the armature itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 10
@@ -51,9 +51,11 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/usage.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -68,14 +70,10 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Shear
 
@@ -87,9 +85,11 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -107,12 +107,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -120,14 +116,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -139,9 +131,11 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -156,14 +150,10 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Warp
 
@@ -171,7 +161,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a mesh selection between two defined points.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
+
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
@@ -190,13 +184,15 @@ The start point.
 
 The end point.
 
-#### Randomize Transform
+#### Randomize
 
-This tool allows randomizes the positions of the selected vertices.
+Moves the selected bone joints by a random amount. Use it to break up a too regular setup, for example the bones of a tail or of hair strands.
 
-##### Last Operator Randomize Transform
+##### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -207,9 +203,9 @@ This tool allows randomizes the positions of the selected vertices.
 | Random Seed | The seed value for randomization. |
 
 
-#### Align Bones
+#### Align to Active Bone or Parent
 
-Aligns the selected bones to the orientation of the active bone.
+Aligns the selected bones to the active bone, or to their parent bone. Use it to line up a chain of bones quickly.
 
 ### Mirror
 
@@ -225,7 +221,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-mirror.png)
 
@@ -247,7 +243,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-#### Last operator Snap Selection to Cursor
+#### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -268,9 +264,11 @@ Recalculate Bone Roll Recalculate Roll is a menu where you can recalculate the b
 
 The menu items are pretty self explaining. So we will not repeat the descriptions here.
 
-#### Last Operator Recalculate Roll
+#### Adjust Last Operation - Recalculate Roll
 
 ![Last Operator Recalculate Roll](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-recalculate-roll.png)
+
+Change the settings of **Recalculate Roll** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -294,7 +292,7 @@ This operation is relative to the starting value, and starts always with zero. I
 
 While operating you will see the current relative Roll value in the header.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-transform.png)
 
@@ -330,14 +328,10 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff.
 
 #### Clear Roll
 
@@ -345,7 +339,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Set the bone roll value directly.
 
-##### Last Operator Clear Roll
+##### Adjust Last Operation - Clear Roll
+
+Change the settings of **Clear Roll** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Clear Roll](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-clear-roll.png)
 
 ###### Roll
 
@@ -357,9 +355,11 @@ Set the bone roll.
 
 Extrudes out a bone from the selected joints.
 
-##### Last Operator Extrude
+##### Adjust Last Operation - Extrude
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-extrude.png)
+
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Forked
 
@@ -379,20 +379,18 @@ The transform values for the new created joint(s)
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude to Cursor
 
 Hotkey only tool. Extrude to the mouse position.
 
-##### Last Operator Extrude to Cursor or Add
+##### Adjust Last Operation - Extrude to Cursor or Add
 
 ![Last Operator Extrude to Cursor or Add](/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu/last-operator-extrude-to-cursor-or-add.png)
+
+Change the settings of **Extrude to Cursor or Add** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Location X Y Z
 
@@ -408,9 +406,11 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -435,14 +435,26 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+#### Duplicate and Rename
+
+Makes copies of the selected bones in the same armature and changes a part of their names. Use it to build the other side of a rig: duplicate the bones of the left arm and replace `.L` with `.R` in one step. Afterwards you move the copies into place.
+
+##### Adjust Last Operation - Duplicate and Rename
+
+Change the settings of **Duplicate and Rename** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Duplicate and Rename](/docs2/images/editors/3d-viewport/armature/adjust-last-operation-duplicate-and-rename.png)
 
 | Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+| --- | --- |
+| Flip Names | Tries to flip the names of the bones (for example `.L` to `.R`) instead of adding a number at the end. |
+| Search | The part of the bone names to replace. |
+| Replace | The text that goes in its place. Leave it empty to remove the search text. |
 
 #### Fill between Joints
 
@@ -452,12 +464,13 @@ Fill between joints fills a bone between two selected joints.
 
 When there is just one joint selected, then the bone is created between this selected joint and the 3D cursor.
 
+##### Split
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Split | Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. The Last operator for Split has no content. |
-| Separate Bones | Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. The Last operator for Separate has no content. |
+Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. The Last operator for Split has no content.
 
+##### Separate Bones
+
+Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. The Last operator for Separate has no content.
 
 #### Symmetrize
 
@@ -469,9 +482,11 @@ Creates a symmetrical mirrored copy of the currently selected bones along the X 
 
 The bones that you want to symmetrize needs to follow the left right name conventions for bones. Bones without this left right naming are not affected by the tool. If there is a lower or upper case “L”, “R”, “left” or “right” with a separating dot in the bone name, then this tool creates and renames the bones names to its counter part. Bone.L becomes Bone.R.
 
-##### Last Operator Symmetrize
+##### Adjust Last Operation - Symmetrize
 
 ![Last Operator Symmetrize](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-symmetrize.png)
+
+Change the settings of **Symmetrize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -481,9 +496,11 @@ Define the calculation direction. From -X to + X or from +X to -X
 
 Subdivide subdivides the current selection.
 
-##### Last Operator Subdivide Multi
+##### Adjust Last Operation - Subdivide Multi
 
 ![Last Operator Subdivide Multi](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-subdivide-multi.png)
+
+Change the settings of **Subdivide Multi** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Number of Cuts
 
@@ -501,12 +518,13 @@ Switches the direction in which the selected bones are pointing.
 
 Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependant at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.
 
+##### Autoname Left/Right
 
-| Entry | What it does |
-| ------------------- | ------------------------------------- |
-| Autoname Left/Right | Renames the bones from left to right. |
-| Autoname Front/Back | Renames the bones from front to back. |
+Renames the bones from left to right.
 
+##### Autoname Front/Back
+
+Renames the bones from front to back.
 
 ##### Autoname Top/Bottom
 
@@ -514,9 +532,11 @@ Bforartists has some internal name conventions for a symmetrical armature. Bones
 
 Renames the bones from top to bottom.
 
-###### Last operator Autoname by Axis
+###### Adjust Last Operation - Autoname by Axis
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png)
+
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Axis
 
@@ -526,9 +546,11 @@ Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and 
 
 When you mirror a half of an armature you end in names like Bone.001.R.001. But what we need is Bone.001.L for a symmetrical armature. Flip names flips the names to follow the left right name conventions.
 
-###### Last operator Flip Names
+###### Adjust Last Operation - Flip Names
 
 ![Last operator Flip Names](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-flip-names.png)
+
+Change the settings of **Flip Names** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Strip Numbers
 
@@ -546,12 +568,13 @@ Bone Collections is a menu to handle bone collection functionality from within a
 
 Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Bone Collections – Sub Menu
 
@@ -565,12 +588,13 @@ Armature and bones has its own collection system.
 
 Add or remove the bone from the listed bone collections. The green + icon and red – icon show if you can remove or add a bone to the listed collection. A bone can be in multiple collections at the same time.
 
+###### New
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+###### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 ##### Show All
 
@@ -580,9 +604,11 @@ Show all bone collections.
 
 Add selected bones to a new collection with a new name.
 
-###### Last Operator Add Selected Bones to Collection
+###### Adjust Last Operation - Add Selected Bones to Collection
 
 ![Last Operator Add Selected Bones to Collection](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-add-selected-bones-to-collection.png)
+
+Change the settings of **Add Selected Bones to Collection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Bone Collection
 
@@ -608,9 +634,11 @@ The child bone will jump to the position of the tail joint of the parent bone.
 
 The bone will remain in its original position. The relationship will be displayed by a black dotted line.
 
-###### Last Operator Make Parent
+###### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-make-parent.png)
+
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Parent Type
 
@@ -622,16 +650,19 @@ Choose between Connected and Keep Offset method again.
 
 Clears the parent relationship of the selected bone(s). It calls a pop-up menu. Choose between two methods.
 
+##### Clear Parent
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Parent | Clears the parent relationship of the selected bone(s). |
-| Disconnect Bone | The parent ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it. |
+Clears the parent relationship of the selected bone(s).
 
+##### Disconnect Bone
 
-##### Last Operator Clear Parent
+The parent ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it.
+
+##### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-clear-parent.png)
+
+Change the settings of **Clear Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Clear Type
 
@@ -643,7 +674,7 @@ Choose between Clear Parent and Disconnect Bone method again.
 
 Bone Settings is a menu with menu items to toggle special checkboxes in the Properties editor. But here you can do it for a selection too, and not just one object.
 
-##### Last Operator Collection Boolean Set
+##### Adjust Last Operation - Collection Boolean Set
 
 ![Last Operator Collection Boolean Set](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-collection-boolean-set.png)
 
@@ -655,13 +686,17 @@ Each of the menu items uses the same Last Operator. With different strings for t
 
 Show or hide the selected bones in the viewport.
 
+##### Show Hidden
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------------- |
-| Show Hidden | Makes all bones visible again. |
-| Hide Selected | Hides the selected bones. |
-| Hide Unselected | Hides the not selected bones. The selected bones stays visible. |
+Makes all bones visible again.
 
+##### Hide Selected
+
+Hides the selected bones.
+
+##### Hide Unselected
+
+Hides the not selected bones. The selected bones stays visible.
 
 #### Delete Selected Bone(s)
 
@@ -697,12 +732,13 @@ The tweak, select, 3D cursor and transform tools and the annotation and measure 
 
 Adjust the bone roll of the selected bone(s).
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Rotate and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Rotate and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ##### Header Values
 
@@ -720,16 +756,14 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Transform
+###### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -756,14 +790,10 @@ Enable Mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bone Size / Envelope Tools group
 
@@ -781,12 +811,13 @@ This tool just works with bone display type Bbone. With other bone display types
 
 The bone display can be changed in the properties editor in the Object Data tab in the Viewport Display panel.
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ###### Header Values
 
@@ -804,16 +835,14 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Transform
+###### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -822,7 +851,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Axis | The axis to use. Axis has no effect, the bone axis X is always used. |
 
 
-**Orientation**
+###### Orientation
 
 ![Orientation](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/orientation.png)
 
@@ -834,21 +863,17 @@ Orientation has no effect, the bone axis X is always used.
 
 Enable Mirror editing.
 
-**Proportional editing**
+###### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/proportional-editing.png)
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-
-
-**Projected(2D)**
+###### Projected(2D)
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
@@ -864,12 +889,13 @@ This tool just works with bone display type Bbone. With other bone display types
 
 The bone display can be changed in the properties editor in the Object Data tab in the Viewport Display panel.
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snapping | Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser rotation. |
+Move and holding down Ctrl activates temporary global snapping. The rotation snaps every 5 degrees. With holding shift too it snaps every 1 degree.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser rotation.
 
 ###### Header Values
 
@@ -887,16 +913,14 @@ When you move the mouse then you will see some values in the header, which shows
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Transform
+###### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -905,7 +929,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Axis | The axis to use. Axis has no effect, the bone axis X is always used. |
 
 
-**Orientation**
+###### Orientation
 
 ![Orientation](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/orientation.png)
 
@@ -917,20 +941,16 @@ Orientation has no effect, the bone axis X is always used.
 
 Enable Mirror editing.
 
-**Proportional editing**
+###### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/proportional-editing.png)
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Tools group
 
@@ -940,12 +960,13 @@ This group contains some extrude tools.
 
 There are some general settings, since they all have some move settings We will cover them all here for all of the tools.
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ##### Header Values
 
@@ -1001,16 +1022,14 @@ Or you can use the XYZ axis type. That's a handler with three axis. This widget 
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Extrude
+###### Adjust Last Operation - Extrude
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-extrude.png)
+
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Forked
 
@@ -1066,16 +1085,14 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Shear
+###### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1090,12 +1107,8 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable Mirror Editing |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable Mirror Editing
 
 ###### Proportional editing
 
@@ -1103,13 +1116,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 # Context Menus
 
@@ -1127,9 +1137,11 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 
 Subdivide subdivides the current selection.
 
-##### Last Operator Subdivide Multi
+##### Adjust Last Operation - Subdivide Multi
 
 ![Last Operator Subdivide Multi](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-subdivide-multi.png)
+
+Change the settings of **Subdivide Multi** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Number of Cuts
 
@@ -1145,9 +1157,11 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1162,20 +1176,18 @@ When you drag the duplicate around you will see the position values in the heade
 
 Orientation is a drop-down box choose the type of orientation for the duplicate action.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude
 
 Extrudes out a bone from the selected joints.
 
-##### Last Operator Extrude
+##### Adjust Last Operation - Extrude
 
 ![Last Operator Extrude](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-extrude.png)
+
+Change the settings of **Extrude** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Forked
 
@@ -1195,12 +1207,8 @@ The transform values for the new created joint(s)
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ###### Fill between Joints
 
@@ -1216,14 +1224,15 @@ When there is just one joint selected, then the bone is created between this sel
 
 Mirror mirrors the selected geometry along the defined axis.
 
+##### Interactive Mirror
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Interactive Mirror | Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored. |
-| X Global, Y Global etc. | Mirrors the selection around the chosen axis. |
+Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.
 
+##### X Global, Y Global etc.
 
-##### Last Operator Mirror
+Mirrors the selection around the chosen axis.
+
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-mirror.png)
 
@@ -1245,7 +1254,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last Operator Snap
+##### Adjust Last Operation - Snap
 
 ![Last Operator Snap](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -1269,9 +1278,11 @@ Creates a symmetrical mirrored copy of the currently selected bones along the X 
 
 The bones that you want to symmetrize needs to follow the left right name conventions for bones. Bones without this left right naming are not affected by the tool. If there is a lower or upper case “L”, “R”, “left” or “right” with a separating dot in the bone name, then this tool creates and renames the bones names to its counter part. Bone.L becomes Bone.R.
 
-##### Last Operator Symmetrize
+##### Adjust Last Operation - Symmetrize
 
 ![Last Operator Symmetrize](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-symmetrize.png)
+
+Change the settings of **Symmetrize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -1285,12 +1296,13 @@ Define the calculation direction. From -X to + X or from +X to -X
 
 Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependent at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.
 
+##### Autoname Left/Right
 
-| Entry | What it does |
-| ------------------- | ------------------------------------- |
-| Autoname Left/Right | Renames the bones from left to right. |
-| Autoname Front/Back | Renames the bones from front to back. |
+Renames the bones from left to right.
 
+##### Autoname Front/Back
+
+Renames the bones from front to back.
 
 ##### Autoname Top/Bottom
 
@@ -1298,9 +1310,11 @@ Bforartists has some internal name conventions for a symmetrical armature. Bones
 
 Renames the bones from top to bottom.
 
-###### Last operator Autoname by Axis
+###### Adjust Last Operation - Autoname by Axis
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png)
+
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Axis
 
@@ -1310,9 +1324,11 @@ Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and 
 
 When you mirror a half of an armature you end in names like Bone.001.R.001. But what we need is Bone.001.L for a symmetrical armature. Flip names flips the names to follow the left right name conventions.
 
-###### Last operator Autoname by Axis
+###### Adjust Last Operation - Autoname by Axis
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis-2.png)
+
+Change the settings of **Autoname by Axis** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Strip Numbers
 
@@ -1338,9 +1354,11 @@ The child bone will jump to the position of the tail joint of the parent bone.
 
 The bone will remain in its original position. The relationship will be displayed by a black dotted line.
 
-###### Last Operator Make Parent
+###### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-make-parent.png)
+
+Change the settings of **Make Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Parent Type
 
@@ -1352,27 +1370,26 @@ Choose between Connected and Keep Offset method again.
 
 Clears the parent relationship of the selected bone(s). It calls a popup menu choose between two methods.
 
+##### Clear Parent
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clear Parent | Clears the parent relationship of the selected bone(s). |
-| Disconnect Bone | The parent-ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it. |
+Clears the parent relationship of the selected bone(s).
 
+##### Disconnect Bone
 
-##### Last Operator Clear Parent
+The parent-ship is kept. Turns a Connected parent relationship into a Keep Offset parent relationship. You can move the disconnected bone around without to pull the parent with it.
+
+##### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-clear-parent.png)
+
+Change the settings of **Clear Parent** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Clear Type
 
 Choose between Clear Parent and Disconnect Bone method again.
 
-
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Split | Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around. |
-| Separate Bones | Separate separates the selected bone(s) from the armature. And creates a new, independent, armature. |
-
+- **Split**: Split splits the selected bone(s) from connected bones. They are still part of the armature. But the bone is now floating. And you can pull this bone(s) around without pulling the rest of the armature around.
+- **Separate Bones**: Separate separates the selected bone(s) from the armature. And creates a new, independent, armature.
 
 #### Move to Bone Collection
 
@@ -1380,12 +1397,13 @@ Choose between Clear Parent and Disconnect Bone method again.
 
 Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.
 
+##### New Bone Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Bone Collection | Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection. |
-| Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
+Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.
 
+##### Bone List
+
+Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.
 
 #### Show/Hide sub menu
 
@@ -1401,9 +1419,11 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 

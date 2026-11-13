@@ -54,7 +54,7 @@ Note that added operators in this menu does not have icons. Just text.
 
 Note also that the Quick menu for the UV editor shares the content with the Quick menu from the Image editor.
 
-#### Adding an operator to the Quick menu
+### Adding an operator to the Quick menu
 
 ![Adding an operator to the Quick menu](/docs2/images/editors/uv-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png)
 
@@ -70,7 +70,7 @@ As a rule of thumb, when the right click menu has an Add to Quick Favorites, the
 
 Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.
 
-#### Adding a menu to the Quick menu
+### Adding a menu to the Quick menu
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/uv-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png)
 
@@ -78,19 +78,19 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/uv-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png)
 
-#### Order
+### Order
 
 You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
 
 Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
 
-#### Removing an operator from the Quick menu
+### Removing an operator from the Quick menu
 
 ![Removing an operator from the Quick menu](/docs2/images/editors/uv-editor/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
 
 Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
 
-#### Context and mode dependent content
+### Context and mode dependent content
 
 The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
 

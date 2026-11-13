@@ -46,13 +46,17 @@ Don't render the particles.
 
 Render the hair particles as a halo.
 
+##### Scale
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------- |
-| Scale | The size of the particles. |
-| Scale Randomness | Give the particle size a random variation. |
-| Material | Set which of the object’s materials is used to shade the particles. |
+The size of the particles.
 
+##### Scale Randomness
+
+Give the particle size a random variation.
+
+##### Material
+
+Set which of the object’s materials is used to shade the particles.
 
 ##### Coordinates System
 
@@ -62,13 +66,9 @@ Use a different object’s coordinates to determine the birth of particles.
 
 ![Extra sub tab](/docs2/images/editors/properties/particle-properties-tab/emitter-render-panel/extra.png)
 
-
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parents Particles | Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children. |
-| Unborn | Render particles before they are born. |
-| Dead | Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles. |
-
+- **Parents Particles**: Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children.
+- **Unborn**: Render particles before they are born.
+- **Dead**: Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles.
 
 #### Render as Path
 
@@ -76,14 +76,21 @@ Use a different object’s coordinates to determine the birth of particles.
 
 Render the hair particles as paths.
 
+##### Scale
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------- |
-| Scale | The size of the particles. |
-| Scale Randomness | Give the particle size a random variation. |
-| Material | Set which of the object’s materials is used to shade the particles. |
-| Coordinates System | Use a different object’s coordinates to determine the birth of particles. |
+The size of the particles.
 
+##### Scale Randomness
+
+Give the particle size a random variation.
+
+##### Material
+
+Set which of the object’s materials is used to shade the particles.
+
+##### Coordinates System
+
+Use a different object’s coordinates to determine the birth of particles.
 
 ##### Path subpanel
 
@@ -101,25 +108,33 @@ Set the number of subdivisions of the rendered paths (the value is a power of 2)
 
 ![Timing subpanel](/docs2/images/editors/properties/particle-properties-tab/hair-render-panel/timing-subpanel.png)
 
+###### Absolute Path Time
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------- |
-| Absolute Path Time | Path timing is in absolute frames. |
-| End | End time of the path. |
-| Random | Give the path length a random variation. |
+Path timing is in absolute frames.
 
+###### End
+
+End time of the path.
+
+###### Random
+
+Give the path length a random variation.
 
 ##### Extra subpanel
 
 ![Extra subpanel](/docs2/images/editors/properties/particle-properties-tab/emitter-render-panel/extra.png)
 
+###### Parents Particles
 
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parents Particles | Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children. |
-| Unborn | Render particles before they are born. |
-| Dead | Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles. |
+Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children.
 
+###### Unborn
+
+Render particles before they are born.
+
+###### Dead
+
+Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles.
 
 #### Render as Object
 
@@ -127,12 +142,13 @@ Set the number of subdivisions of the rendered paths (the value is a power of 2)
 
 Render collections instead of the paths of the hair particles.
 
+##### Scale
 
-| Entry | What it does |
-| ---------------- | ------------------------------------ |
-| Scale | The scale factor of the object. |
-| Scale randomness | Give the particle size a randomness. |
+The scale factor of the object.
 
+##### Scale randomness
+
+Give the particle size a randomness.
 
 ##### Object Sub tab
 
@@ -140,26 +156,29 @@ Render collections instead of the paths of the hair particles.
 
 Choose the object to render instead of the path.
 
+###### Instance Object
 
-| Entry | What it does |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Instance Object | Pick the object that you want to use as the particle. |
-| Global Coordinates | Use the global coordinates of the object for duplication. This sets the particles to the position of the chosen object. |
-| Object Rotation | Use the rotation of the object for duplication. |
-| Object Scale | Use the scale of the object for duplication. |
+Pick the object that you want to use as the particle.
 
+###### Global Coordinates
+
+Use the global coordinates of the object for duplication. This sets the particles to the position of the chosen object.
+
+###### Object Rotation
+
+Use the rotation of the object for duplication.
+
+###### Object Scale
+
+Use the scale of the object for duplication.
 
 ###### Extra sub tab
 
 ![Extra sub tab](/docs2/images/editors/properties/particle-properties-tab/emitter-render-panel/extra.png)
 
-
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parents Particles | Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children. |
-| Unborn | Render particles before they are born. |
-| Dead | Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles. |
-
+- **Parents Particles**: Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children.
+- **Unborn**: Render particles before they are born.
+- **Dead**: Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles.
 
 #### Render as Collection
 
@@ -167,12 +186,13 @@ Choose the object to render instead of the path.
 
 Render the content of a collection instead of the paths of the hair particles.
 
+##### Scale
 
-| Entry | What it does |
-| ---------------- | ------------------------------------ |
-| Scale | The scale factor of the object. |
-| Scale randomness | Give the particle size a randomness. |
+The scale factor of the object.
 
+##### Scale randomness
+
+Give the particle size a randomness.
 
 ##### Collection Sub tab
 
@@ -180,16 +200,29 @@ Render the content of a collection instead of the paths of the hair particles.
 
 Choose the object to render instead of the path.
 
+###### Instance Collection
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Instance Collection | Pick the collection that you want to use as the particle. |
-| Whole collection | Use the whole collection at once. |
-| Pick Random | Pick objects from the collection randomly. |
-| Global Coordinates | Use the global coordinates of the object for duplication. This sets the particles to the position of the chosen object. |
-| Object Rotation | Use the rotation of the object for duplication. |
-| Object Scale | Use the scale of the object for duplication. |
+Pick the collection that you want to use as the particle.
 
+###### Whole collection
+
+Use the whole collection at once.
+
+###### Pick Random
+
+Pick objects from the collection randomly.
+
+###### Global Coordinates
+
+Use the global coordinates of the object for duplication. This sets the particles to the position of the chosen object.
+
+###### Object Rotation
+
+Use the rotation of the object for duplication.
+
+###### Object Scale
+
+Use the scale of the object for duplication.
 
 ###### Use Count
 
@@ -197,48 +230,36 @@ Choose the object to render instead of the path.
 
 Use objects multiple times in the collection.
 
-**Active Dupli Object Index list**
+###### Active Dupli Object Index list
 
 The list with the objects from the collection. The number behind the object tells you how often this object is used in the particles, relative to the other objects.
 
-**Drag Handler**
+###### Drag Handler
 
 ![Drag Handler](/docs2/images/editors/properties/particle-properties-tab/hair-render-panel/drag-handler.png)
 
 The two vertical lines at the end is a handler with which you can expand the list.
 
-**Search Field**
+###### Search Field
 
 ![Search Field](/docs2/images/editors/properties/particle-properties-tab/hair-render-panel/search-field.png)
 
 You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.
 
+- **Invert**: Exclude the search term instead of searching for it.
+- **Sort by Name**: Sort the List by name.
+- **Revert**: Revert the list. The last list item becomes the first, and vice versa.
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------- |
-| Invert | Exclude the search term instead of searching for it. |
-| Sort by Name | Sort the List by name. |
-| Revert | Revert the list. The last list item becomes the first, and vice versa. |
-
-
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------- |
-| Copy Particle Dupliobject | Duplicate the current dupli object. |
-| Remove Particle Dupliobject | Remove the selected dupli object. |
-| Move Up / Down Dupli Object | Move the dupli object up or down in the list. |
-| Refresh Dupli Objects | Refresh the list of dupli objects and their weights. |
-| Count | The number of times this object is repeated with respect to other objects. |
-
+- **Copy Particle Dupliobject**: Duplicate the current dupli object.
+- **Remove Particle Dupliobject**: Remove the selected dupli object.
+- **Move Up / Down Dupli Object**: Move the dupli object up or down in the list.
+- **Refresh Dupli Objects**: Refresh the list of dupli objects and their weights.
+- **Count**: The number of times this object is repeated with respect to other objects.
 
 ###### Extra sub tab
 
 ![Extra sub tab](/docs2/images/editors/properties/particle-properties-tab/emitter-render-panel/extra.png)
 
-
-| Entry | What it does |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Parents Particles | Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children. |
-| Unborn | Render particles before they are born. |
-| Dead | Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles. |
-
-
+- **Parents Particles**: Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default Parents are not rendered if you activate Children. See Children.
+- **Unborn**: Render particles before they are born.
+- **Dead**: Render particles after they have died. This is very useful if particles die in a collision Die on hit, so you can cover objects with particles.

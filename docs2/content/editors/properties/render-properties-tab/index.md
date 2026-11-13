@@ -61,12 +61,13 @@ When you turn on Cuda in the User Preferences then you will get a Device drop do
 
 When you render with Cycles at the CPU, then you can choose to use the Open Shading Language.
 
+##### EEVEE Feature Set
 
-| Entry | What it does |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EEVEE Feature Set | When you choose EEVEE, you will be able to user a raster based render engine that uses your GPU to render light and materials. This includes features like screenspace raytraced reflections and global illumination, light and reflection volumes, raytraced cast shadows, and more. This renderer is akin to modern game engine rendering techniques. |
-| Workbench Feature Set | When you choose Workbench, this use the internal viewport rendering typical of mesh editing and playback. You can use matcaps and other viewport settings to render to disk from here. **Note:** Changing these settings will also change the sequencer preview of scene strips. |
+When you choose EEVEE, you will be able to user a raster based render engine that uses your GPU to render light and materials. This includes features like screenspace raytraced reflections and global illumination, light and reflection volumes, raytraced cast shadows, and more. This renderer is akin to modern game engine rendering techniques.
 
+##### Workbench Feature Set
+
+When you choose Workbench, this use the internal viewport rendering typical of mesh editing and playback. You can use matcaps and other viewport settings to render to disk from here. **Note:** Changing these settings will also change the sequencer preview of scene strips.
 
 ## Grease Pencil panel
 
@@ -82,13 +83,17 @@ This setting is used for the SMAA *(subpixel morphological anti-aliasing)* for G
 
 ### Render Anti-Aliasing
 
+#### Edge Threshold
 
-| Entry | What it does |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edge Threshold | Sensitivity for detecting edges to anti-alias.   Lowering this value detects more edges at the cost of performance.   This setting is used for the SMAA *(subpixel morphological anti-aliasing)* for Grease Pencil objects. |
-| Supersampling | Number of extra samples done per pixel in final render.   This setting is used for SSAA *(super sampling anti-aliasing)* for Grease Pencil objects.   *(This anti-aliasing method only affects the final render.)* |
-| Motion Blur Steps | Controls the accuracy of Motion Blur. Motion Blur needs to be enabled. See Motion Blur panel. A value of 0 will also disable this feature. |
+Sensitivity for detecting edges to anti-alias.   Lowering this value detects more edges at the cost of performance.   This setting is used for the SMAA *(subpixel morphological anti-aliasing)* for Grease Pencil objects.
 
+#### Supersampling
+
+Number of extra samples done per pixel in final render.   This setting is used for SSAA *(super sampling anti-aliasing)* for Grease Pencil objects.   *(This anti-aliasing method only affects the final render.)*
+
+#### Motion Blur Steps
+
+Controls the accuracy of Motion Blur. Motion Blur needs to be enabled. See Motion Blur panel. A value of 0 will also disable this feature.
 
 ## Freestyle panel
 
@@ -114,12 +119,13 @@ Enabling the checkbox reveals the Freestyle Settings in the View Layer Propertie
 
 ### Line Thickness Mode
 
+#### Absolute
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Absolute | The line thickness is given by a user-specified number of pixels. The default value is **1.0**. |
-| Relative | The unit line thickness is scaled by the proportion of the present vertical image resolution to **480** pixels. For instance, the unit line thickness is **1.0** with the image height set to **480**, **1.5** with **720**, and **2.0** with **960**. |
+The line thickness is given by a user-specified number of pixels. The default value is **1.0**.
 
+#### Relative
+
+The unit line thickness is scaled by the proportion of the present vertical image resolution to **480** pixels. For instance, the unit line thickness is **1.0** with the image height set to **480**, **1.5** with **720**, and **2.0** with **960**.
 
 ### Line Thickness
 
@@ -153,19 +159,41 @@ Color management can also be disabled by setting the device to None.
 
 Choose between different ways to view the image on the same monitor.
 
+#### Standard
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard | Does no extra conversion besides the conversion for the display device. |
-| ACES 1.3 | Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping. |
-| ACES 2.0 | Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping. |
-| Khronos PBR Neutral | A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization. A tone mapper designed specifically for PBR color accuracy. It aims to get sRGB colors in the output render that match as faithfully as possible the input sRGB baseColor under gray-scale lighting. |
-| AgX | A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation. AgX is a further development to Filmic. It brings an implementation of False Colors view transform, and replaces Filmic-based. It is available for all display devices. |
-| Filmic | For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the *Look*option for the Filmic view transform. |
-| Filmic Log | Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas. |
-| Raw | Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion. |
-| False Color | Shows a heat map of image intensities, to visualize the dynamic range. |
+Does no extra conversion besides the conversion for the display device.
 
+#### ACES 1.3
+
+Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.
+
+#### ACES 2.0
+
+Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.
+
+#### Khronos PBR Neutral
+
+A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization. A tone mapper designed specifically for PBR color accuracy. It aims to get sRGB colors in the output render that match as faithfully as possible the input sRGB baseColor under gray-scale lighting.
+
+#### AgX
+
+A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation. AgX is a further development to Filmic. It brings an implementation of False Colors view transform, and replaces Filmic-based. It is available for all display devices.
+
+#### Filmic
+
+For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the *Look*option for the Filmic view transform.
+
+#### Filmic Log
+
+Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas.
+
+#### Raw
+
+Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion.
+
+#### False Color
+
+Shows a heat map of image intensities, to visualize the dynamic range.
 
 ### Look
 
@@ -213,23 +241,41 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu that contains some cuve related tools.
 
+###### Reset View
 
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Extend Horizontal | Causes the curve to stay horizontal before the first point and after the last point. |
-| Extend Extrapolated | Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve. |
-| Reset Curve | Resets the curve to the initial shape. |
-| Vector Handle | Set handle type to Vector. |
-| Auto Handle | Set handle type to Auto. |
-| Auto Clamped Handle | Set handle type to Auto Clamped. |
+Resets the curve windows zoom.
 
+###### Extend Horizontal
 
-| Entry | What it does |
-| ------------- | --------------------------------------------------- |
-| X / Y | The position of the currently selected curve point. |
-| Delete Points | Delete the currently selected curve point. |
+Causes the curve to stay horizontal before the first point and after the last point.
 
+###### Extend Extrapolated
+
+Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.
+
+###### Reset Curve
+
+Resets the curve to the initial shape.
+
+###### Vector Handle
+
+Set handle type to Vector.
+
+###### Auto Handle
+
+Set handle type to Auto.
+
+###### Auto Clamped Handle
+
+Set handle type to Auto Clamped.
+
+###### X / Y
+
+The position of the currently selected curve point.
+
+###### Delete Points
+
+Delete the currently selected curve point.
 
 #### Black Level
 
@@ -265,12 +311,13 @@ Enables manual control over the color temperature and tint of the scene or image
 
 ##### Header Operators
 
+###### Presets
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Presets | These presets are based on international standards (like CIE and ISO) and are used in photography, rendering, and color science. |
-| Eyedropper | Used to sample a pixel in your render or image that should appear neutral white. Once selected, the values adjusts the temperature and tint automatically to correct the overall color cast. |
+These presets are based on international standards (like CIE and ISO) and are used in photography, rendering, and color science.
 
+###### Eyedropper
+
+Used to sample a pixel in your render or image that should appear neutral white. Once selected, the values adjusts the temperature and tint automatically to correct the overall color cast.
 
 ##### Temperature
 

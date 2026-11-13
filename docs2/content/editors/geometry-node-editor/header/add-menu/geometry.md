@@ -1,26 +1,31 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.geometry
-title: "Geometry"
+title: Geometry
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Geometry"
-version: "5.1"
-status: draft
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Geometry
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Geometry nodes: Read, Sample, Write, Material, Operations."
 order: 40
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt"
-  - "12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Read.odt"
-  - "12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Sample.odt"
-  - "12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Write.odt"
-  - "12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Material.odt"
-  - "12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Operations.odt"
+  - 12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt
+  - 12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Read.odt
+  - 12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Sample.odt
+  - 12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Write.odt
+  - 12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Material.odt
+  - 12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Operations.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-geometry
   - editors.geometry-node-editor.header.add-menu-geometry-read
@@ -28,6 +33,7 @@ replaces:
   - editors.geometry-node-editor.header.add-menu-geometry-write
   - editors.geometry-node-editor.header.add-menu-geometry-material
   - editors.geometry-node-editor.header.add-menu-geometry-operations
+screenshots: 5.2.3
 ---
 ## Add menu - Geometry
 
@@ -41,12 +47,21 @@ Here you find nodes to modify the geometry.
 
 Turns every connected input geometry into an instance. These instances can then for example be used in the Instance on Points node.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------ |
-| Inputs | **Geometry**: The input geometry. |
-| Outputs | **Instances**: The output instances. |
+##### Geometry
 
+Data type: Geometry.
+
+The input geometry.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The output instances.
 
 ### Join Geometry
 
@@ -54,71 +69,89 @@ Turns every connected input geometry into an instance. These instances can then 
 
 The Join Geometry enables you to merge separately generated pieces of geometry into a single one. In case that the inputted pieces contain different types of geometry, the output will contain multiple types of geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | --------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Geometry**: Standard geometry output. |
+##### Geometry
+
+Data type: Geometry.
+
+Standard geometry input.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+Standard geometry output.
 
 # Read
 
-### Add menu - Geometry - Read
+## Add menu - Geometry - Read
 
 ![Add menu - Geometry - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/add-menu-geometry-read.png)
 
 Here you find nodes to modify the geometry.
 
-#### ID
+### ID
 
 ![ID](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/id.png)
 
 Retreive the ID of the object.
 
-##### Outputs
+#### Outputs
 
-###### ID
+##### ID
+
+Data type: Integer.
 
 The ID of the object.
 
-#### Index
+### Index
 
 ![Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/index.png)
 
 Retreives an integer value indicating the position of each element in the list. This list depends on the internal order of the data in the geometry, which is not necessarily visible in the 3D Viewport. However, the index value is visible in the left-most column in the Spreadsheet Editor.
 
-##### Outputs
+#### Outputs
 
-###### Index
+##### Index
+
+Data type: Integer.
 
 Integer value which enumerates each point on the geometry.
 
-#### Named Attribute
+### Named Attribute
 
 ![Named Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/named-attribute.png)
 
 Adds a field input.
 
-##### Input
+#### Input
 
-###### Name
+##### Name
+
+Data type: String.
 
 The input name for the field.
 
-##### Input
+#### Input
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/data-type.png)
 
 What data type to use.
 
-##### Output
+#### Output
 
-###### Attribute
+##### Attribute
+
+Data type: follows the Data Type setting.
 
 The output attribute name.
 
-#### Normal
+### Normal
 
 ![Normal](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/normal.png)
 
@@ -126,36 +159,45 @@ Returns a vector for each evaluated point indicating the normal direction. The o
 
 The output depends on where you plug in the normal node.
 
+#### Face
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Face | On the face domain, the normal is the “up” direction of the face. |
-| Mesh Vertices | For mesh vertices, the normal is an average of the surrounding face normals. If the vertex does not have any connected faces, the output is simply the normalized position of that vertex. |
-| Edge | The normal output for each edge is the average of the edge’s two vertex normals. |
+On the face domain, the normal is the “up” direction of the face.
 
+#### Mesh Vertices
 
-##### Face Corner
+For mesh vertices, the normal is an average of the surrounding face normals. If the vertex does not have any connected faces, the output is simply the normalized position of that vertex.
+
+#### Edge
+
+The normal output for each edge is the average of the edge’s two vertex normals.
+
+#### Face Corner
 
 The output for each face corner is the same as the face normal of the corresponding face.
 
-###### Curve Control Points
+##### Curve Control Points
 
 The output of this node when used for curve geometry is the evaluated normal of the curve, which depends on the twist method. The normal vector is always perpendicular to the direction of the curve’s path at every point.
 
-###### Warning!
+##### Warning!
 
 Please keep in mind that for NURBS and Bézier spline curves the value retrieved from this node is the value at every control point. Which may not correspond to the visible evaluated points. For NURBS splines the difference may be even more pronounced and the result may not be as expected. A Resample Curve Node can be used to create a poly spline, where there is a control point for every evaluated point.
 
-##### Outputs
+#### Outputs
 
+##### Normal
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------- |
-| Normal | The normal vector output. |
-| True Normal | For meshes, outputs normal without custom normal attributes taken into account. |
+Data type: Vector.
 
+The normal vector output.
 
-#### Position
+##### True Normal
+
+Data type: Vector.
+
+For meshes, outputs normal without custom normal attributes taken into account.
+
+### Position
 
 ![Position](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/position.png)
 
@@ -165,235 +207,431 @@ The node can work on geometry domains besides points. In that case, the position
 
 For instances, the output is the origin of each instance. However, if the node is for a geometry node that adjusts data inside instances, the position output of this node will be in the local space of each instance.
 
-##### Outputs
+#### Outputs
 
-###### Position
+##### Position
+
+Data type: Vector.
 
 The position vector output.
 
-#### Radius
+### Radius
 
 ![Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-read/radius.png)
 
 Retrieve the radius of the object.
 
-##### Outputs
+#### Outputs
 
-###### Radius
+##### Radius
+
+Data type: Float.
 
 The radius output.
 
+### Get Geometry Bundle
+
+![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
+
+Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to get the bundle from.
+
+##### Remove
+
+Data type: Boolean.
+
+Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The input geometry. It no longer holds the bundle when Remove is on.
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle that was stored on the geometry.
+
 # Sample
 
-### Add menu - Geometry - Sample
+## Add menu - Geometry - Sample
 
 ![Add menu - Geometry - Sample](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/add-menu-geometry-sample.png)
 
 Here you find nodes to modify the geometry.
 
-#### Geometry Proximity
+### Geometry Proximity
 
 ![Geometry Proximity](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/geometry-proximity.png)
 
 This node finds the closest position on the target for each point in the input geometry.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Geometry | The target object. |
-| Group ID | Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id. |
-| Sample Position | The position where the computed location is stored. |
-| Sample Group ID | Determines in which group the closest nearest surface is detected. |
+Data type: Geometry.
 
+The target object.
 
-##### Properties
+##### Group ID
 
-###### Target Geometry
+Data type: Integer.
+
+Is evaluated on the face domain, and splits the input mesh into multiple parts, each with its own id.
+
+##### Sample Position
+
+Data type: Vector.
+
+The position where the computed location is stored.
+
+##### Sample Group ID
+
+Data type: Integer.
+
+Determines in which group the closest nearest surface is detected.
+
+#### Properties
+
+##### Target Geometry
 
 ![Target Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/target-geometry.png)
 
 The element of the target geometry to calculate the distance from.
 
-##### Outputs
+#### Outputs
 
+##### Position
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------ |
-| Position | Closest location on the surface of the target mesh, or the closest point in the target point cloud in Points mode. |
-| Distance | Distance from the source position to the closest location in the target. |
-| Is Valid | Wether the sampling was successful. It is false when the sampled group is empty. |
+Data type: Vector.
 
+Closest location on the surface of the target mesh, or the closest point in the target point cloud in Points mode.
 
-#### Index of Nearest
+##### Distance
+
+Data type: Float.
+
+Distance from the source position to the closest location in the target.
+
+##### Is Valid
+
+Data type: Boolean.
+
+Wether the sampling was successful. It is false when the sampled group is empty.
+
+### Index of Nearest
 
 ![Index of Nearest](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/index-of-nearest.png)
 
 Retreive values from specific geometry elements.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------- |
-| Inputs | **Position**: The position of the nearest element. · **Group ID**: The group ID of the nearest element. |
-| Outputs | **Index**: The Index of the nearest element. · **Has Neighbor**: Has this element a neighbor. |
+##### Position
 
+Data type: Vector.
 
-#### Raycast
+The position of the nearest element.
+
+##### Group ID
+
+Data type: Integer.
+
+The group ID of the nearest element.
+
+#### Outputs
+
+##### Index
+
+Data type: Integer.
+
+The Index of the nearest element.
+
+##### Has Neighbor
+
+Data type: Boolean.
+
+Has this element a neighbor.
+
+### Raycast
 
 ![Raycast](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/raycast.png)
 
 This node sends a raycast and retreives data from the hit target.
 
-##### Inputs
+#### Inputs
 
+##### Target Geometry
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------ |
-| Target Geometry | This is actually the source object that sends the ray. |
-| Attribute | Attribute input. |
+Data type: Geometry.
 
+This is actually the source object that sends the ray.
 
-###### Interpolation
+##### Attribute
+
+Data type: follows the Data Type setting.
+
+Attribute input.
+
+##### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/interpolation.png)
 
 Mapping from the target geometry to hit points.
 
+###### Source Position
 
-| Entry | What it does |
-| --------------- | --------------------------------- |
-| Source Position | Source position input. |
-| Ray Direction | A vector 3 for the ray direction. |
-| Ray Length | The length of the ray. |
+Source position input.
 
+###### Ray Direction
 
-##### Properties
+A vector 3 for the ray direction.
 
-###### Data Type
+###### Ray Length
+
+The length of the ray.
+
+#### Properties
+
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/data-type.png)
 
 What data to calculate on hit.
 
-##### Output
+#### Output
 
+##### Is Hit
 
-| Entry | What it does |
-| ------------ | -------------------------------- |
-| Is Hit | Has the raycast hit something? |
-| Hit Position | The hit position if any. |
-| Hit Normal | The normal of the hit point. |
-| Hit Distance | The distance of the hit point. |
-| Attribute | The attribute of the hit object. |
+Data type: Boolean.
 
+Has the raycast hit something?
 
-#### Sample Index
+##### Hit Position
+
+Data type: Vector.
+
+The hit position if any.
+
+##### Hit Normal
+
+Data type: Vector.
+
+The normal of the hit point.
+
+##### Hit Distance
+
+Data type: follows the Data Type setting.
+
+The distance of the hit point.
+
+##### Attribute
+
+Data type: follows the Data Type setting.
+
+The attribute of the hit object.
+
+### Sample Index
 
 ![Sample Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/sample-index.png)
 
 Retreive values from specific geometry elements.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| -------- | ---------------------------------------- |
-| Geometry | The source object to take the data from. |
-| Value | The value to retreive. |
-| Index | The index position of the value. |
+Data type: Geometry.
 
+The source object to take the data from.
 
-##### Properties
+##### Value
 
-###### Data Type
+Data type: follows the Data Type setting.
+
+The value to retreive.
+
+##### Index
+
+Data type: Integer.
+
+The index position of the value.
+
+#### Properties
+
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/data-type-2.png)
 
 The type for the source and result data.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/domain.png)
 
 What kind of data to process.
 
-###### Clamp
+##### Clamp
 
 Clamp the indices to the size of the attribute domain.
 
-##### Output
+#### Output
 
-###### Value
+##### Value
+
+Data type: follows the Data Type setting.
 
 The output value.
 
-#### Sample Nearest
+### Sample Nearest
 
 ![Sample Nearest](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/sample-nearest.png)
 
 Retreives the element of a geometry closest to a position.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ---------------------------------------- |
-| Geometry | The source object to take the data from. |
-| Sample Position | The position of the source object. |
+Data type: Geometry.
 
+The source object to take the data from.
 
-##### Properties
+##### Sample Position
+
+Data type: Vector.
+
+The position of the source object.
+
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/properties.png)
 
-###### Domain
+##### Domain
 
 What data to process.
 
-##### Output
+#### Output
 
-###### Index
+##### Index
+
+Data type: Integer.
 
 The index output.
 
 # Write
 
-### Add menu - Geometry - Write
+## Add menu - Geometry - Write
 
 ![Add menu - Geometry - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/add-menu-geometry-write.png)
 
 Here you find nodes to modify the geometry.
 
-#### Set Geometry Name
+### Set Geometry Bundle
+
+![Set Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/set-geometry-bundle.png)
+
+Attaches a bundle to a geometry. Use it to send extra values along with a geometry, for example settings that a later group should read with Get Geometry Bundle.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to attach the bundle to.
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle to attach.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry with the bundle attached.
+
+### Set Geometry Name
 
 ![Set Geometry Name](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/set-geometry-name.png)
 
 Sets the name of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ----------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Name**: The name that you want to set |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Set ID
+Geometry input.
+
+##### Name
+
+Data type: String.
+
+The name that you want to set
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
+
+### Set ID
 
 ![Set ID](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/set-id.png)
 
 Sets the ID of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: Selection input. · **ID**: ID Input |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Set Position
+Geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+Selection input.
+
+##### ID
+
+Data type: Integer.
+
+ID Input
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
+
+### Set Position
 
 ![Set Position](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/set-position.png)
 
@@ -401,98 +639,226 @@ The Set Position node controls the location of each point, the same way as contr
 
 The input node for this data is the Position Node.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: Whether or not to change the position of each point or instance. True values mean the position will be changed, false values mean it will remain the same. · **Position**: The new position for selected elements. By default, this is the same as if the Position Node was connected, meaning the node will do nothing. · **Offset**: An optional translation for each point. This is evaluated at the same time as the Position input, meaning that fields evaluated for it will not reflect the changed position. |
-| Outputs | — |
-| Geometry | Geometry outputs. |
+##### Geometry
+
+Data type: Geometry.
+
+Geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+Whether or not to change the position of each point or instance. True values mean the position will be changed, false values mean it will remain the same.
+
+##### Position
+
+Data type: Vector.
+
+The new position for selected elements. By default, this is the same as if the Position Node was connected, meaning the node will do nothing.
+
+##### Offset
+
+Data type: Vector (translation).
+
+An optional translation for each point. This is evaluated at the same time as the Position input, meaning that fields evaluated for it will not reflect the changed position.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry outputs.
 
 # Material
 
-### Add menu - Geometry - Material
+## Add menu - Geometry - Material
 
 ![Add menu - Geometry - Material](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/add-menu-geometry-material.png)
 
 Here you find nodes to modify the material.
 
-#### Replace Material.
+### Geometry Materials
+
+![Geometry Materials](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/geometry-materials.png)
+
+Gets the list of materials that a geometry uses. Use it to see which materials a mesh, point cloud, curve or Grease Pencil object has in its material slots. Choose which part of the geometry to read with Component Type.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to read the materials from.
+
+##### Component Type
+
+Data type: Menu.
+
+Which part of the geometry to read the materials from. The list has one entry for each material slot of that part.
+
+- Mesh: the materials of the mesh. This is the default.
+- Point Cloud: the materials of the point cloud.
+- Curve: the materials of the curves.
+- Grease Pencil: the materials of the Grease Pencil object.
+
+#### Outputs
+
+##### Materials
+
+Data type: Material list.
+
+The list of materials, in slot order. If the geometry has no part of the chosen type, or that part has no material slots, nothing is output.
+
+### Replace Material.
 
 ![Replace Material.](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/replace-material.png)
 
 Sets the name of the target geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Old**: The material that you want to replace. · **New**: The new material that replaces the old material. |
-| Outputs | — |
-| Geometry | Geometry output. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Material Index
+Geometry input.
+
+##### Old
+
+Data type: Material.
+
+The material that you want to replace.
+
+##### New
+
+Data type: Material.
+
+The new material that replaces the old material.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry output.
+
+### Material Index
 
 ![Material Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/material-index.png)
 
 Retreive the material index.
 
+#### Outputs
 
-| Entry | What it does |
-| -------------- | ------------------- |
-| Outputs | — |
-| Material Index | The material index. |
+—
 
+#### Material Index
 
-#### Material Selection
+The material index.
+
+### Material Selection
 
 ![Material Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/material-selection.png)
 
 Select a mesh part by material.
 
+#### Inputs
 
-| Entry | What it does |
-| -------------- | ----------------------------- |
-| Inputs | **Geometry**: Geometry input. |
-| Outputs | — |
-| Material Index | The material index. |
+##### Geometry
 
+Geometry input.
 
-#### Set Material
+#### Outputs
+
+—
+
+#### Material Index
+
+The material index.
+
+### Set Material
 
 ![Set Material](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/set-material.png)
 
 Assign a material to a selection.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: The selection of the geometry. · **Material**: The material to assign. |
-| Outputs | — |
-| Geometry | The geometry with the new material assigned. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Set Material Index
+Geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+The selection of the geometry.
+
+##### Material
+
+Data type: Material.
+
+The material to assign.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+The geometry with the new material assigned.
+
+### Set Material Index
 
 ![Set Material Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/set-material.png)
 
 Set the material index of a selection.
 
+#### Inputs
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Geometry**: Geometry input. · **Selection**: The selection of the geometry. · **Material Index**: The material index to assign to the selection. |
-| Outputs | — |
-| Geometry | The geometry with the new material index assigned. |
+##### Geometry
+
+Data type: Geometry.
+
+Geometry input.
+
+##### Selection
+
+Data type: Boolean.
+
+The selection of the geometry.
+
+##### Material Index
+
+Data type: Integer.
+
+The material index to assign to the selection.
+
+#### Outputs
+
+—
+
+#### Geometry
+
+The geometry with the new material index assigned.
 
 # Operations
 
-### Add menu - Geometry - Operations
+## Add menu - Geometry - Operations
 
 ![Add menu - Geometry - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/add-menu-geometry-operations.png)
 
 Here you find nodes to modify the geometry.
 
-#### Bake
+### Bake
 
 ![Bake](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/bake.png)
 
@@ -502,250 +868,441 @@ To bake, the file must be saved first.
 
 > **Note:** When baked, the header of the node will show how many frames have been baked.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Geometry**: Standard geometry input. You can bake multiple geometry inputs. |
-| Properties | **Animation / Still**: Bake an animation or a single frame. Note that the bake node does not do automatic caching. |
-| Operators | **Bake**: The bake operator button. Press this to bake. · **Delete Geometry Node Bake**: Delete baked data of a single bake node or simulation. |
-| Output | **Geometry**: Standard geometry output. |
+##### Geometry
 
+Standard geometry input. You can bake multiple geometry inputs.
 
-#### Bounding Box
+#### Properties
+
+##### Animation / Still
+
+Bake an animation or a single frame. Note that the bake node does not do automatic caching.
+
+#### Operators
+
+##### Bake
+
+The bake operator button. Press this to bake.
+
+##### Delete Geometry Node Bake
+
+Delete baked data of a single bake node or simulation.
+
+#### Outputs
+
+##### Geometry
+
+Standard geometry output.
+
+### Bounding Box
 
 ![Bounding Box](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/bounding-box.png)
 
 The Bounding Box geometry node allows you to work with the values of a bounding box.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Geometry**: Standard geometry input. · **Use Radius**: Take the radius attribute into account when computing curves, point clouds and grease pencil. |
-| Output | **Bounding Box**: Standard output. · **Min**: The minimum values of the bounding box. · **Max**: The maximum values of the bounding box. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Convex Hull
+Standard geometry input.
+
+##### Use Radius
+
+Data type: Boolean.
+
+Take the radius attribute into account when computing curves, point clouds and grease pencil.
+
+#### Outputs
+
+##### Bounding Box
+
+Data type: Geometry.
+
+Standard output.
+
+##### Min
+
+Data type: Vector.
+
+The minimum values of the bounding box.
+
+##### Max
+
+Data type: Vector.
+
+The maximum values of the bounding box.
+
+### Convex Hull
 
 ![Convex Hull](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/convex-hull.png)
 
 The node allows you to work with the values of a convex hull of this object.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------------------- |
-| Inputs | **Geometry**: Standard geometry input. |
-| Output | **Convex Hull**: Standard output. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Delete Geometry
+Standard geometry input.
+
+#### Outputs
+
+##### Convex Hull
+
+Data type: Geometry.
+
+Standard output.
+
+### Delete Geometry
 
 ![Delete Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/delete-geometry.png)
 
 The node allows you to work with the values of a convex hull of this object.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | --------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geomerty |
+Data type: Geometry.
 
+Standard geometry input.
 
-##### Properties
+##### Selection
+
+Data type: Boolean.
+
+A selection of the geomerty
+
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/properties.png)
 
-###### Domain
+##### Domain
 
 What element to delete.
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode.png)
 
 Delete mode. Names should be self explaining.
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
+
+Data type: Geometry.
 
 Standard output.
 
-#### Duplicate Elements
+### Duplicate Elements
 
 ![Duplicate Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/duplicate-elements.png)
 
 Duplicates a part of a geometry a dynamic number of times.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | -------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Selection | A selection of the geomerty. |
-| Amount | Number of times the geometry should be duplicated. |
+Data type: Geometry.
 
+Standard geometry input.
 
-##### Properties
+##### Selection
+
+Data type: Boolean.
+
+A selection of the geomerty.
+
+##### Amount
+
+Data type: Integer.
+
+Number of times the geometry should be duplicated.
+
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/properties-2.png)
 
-###### Domain
+##### Domain
 
 What element to duplicate.
 
-##### Output
+#### Output
 
+##### Geometry
 
-| Entry | What it does |
-| --------------- | ------------------------------------- |
-| Geometry | Standard output. |
-| Duplicate Index | The index of the duplicated elements. |
+Data type: Geometry.
 
+Standard output.
 
-#### Merge by Distance
+##### Duplicate Index
+
+Data type: Integer.
+
+The index of the duplicated elements.
+
+### Merge by Distance
 
 ![Merge by Distance](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/merge-by-distance.png)
 
 Welds the selected geometry below a given distance into one vertice.
 
-##### Input
+#### Input
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ---------------------------------- |
-| Geometry | The input geometry. |
-| Selection | A selection of the input geometry. |
+Data type: Geometry.
 
+The input geometry.
 
-###### Mode
+##### Selection
+
+Data type: Boolean.
+
+A selection of the input geometry.
+
+##### Mode
+
+Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode-2.png)
 
+###### All
 
-| Entry | What it does |
-| --------- | ------------------------------------------------- |
-| All | Merges all vertices in reach. |
-| Connected | Merges just vertices that are connected by edges. |
+Merges all vertices in reach.
 
+###### Connected
 
-###### Distance
+Merges just vertices that are connected by edges.
+
+##### Distance
+
+Data type: Float (distance).
 
 The merge distance. Everything below this distance will be merged into one vertice.
 
-##### Output
+#### Output
 
-###### Geometry
+##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
-#### Sort Elements
+### Merge Points
+
+![Merge Points](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/merge-points.png)
+
+Merges points that share the same Merge ID into a single point. It works on meshes and on point clouds. The node does not decide by itself which points go together, you do: points with the same ID are merged. This makes it more flexible than Merge by Distance, because you can merge by distance, by color, by layer or by any number you can calculate. Edges and faces that belonged to the merged points are kept.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The mesh or point cloud to merge.
+
+##### Selection
+
+Data type: Boolean.
+
+Which points are merged.
+
+##### Merge ID
+
+Data type: Integer.
+
+The group number of each point. Points with the same number become one point.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry with the merged points.
+
+#### How to use
+
+Connect **Cluster by Distance** to Merge ID. Connect the Position node to its Position input and set a small Distance. Points that are closer than the Distance become one point. In a test with five points and four edges, two close pairs were merged, so five points became three and the two edges inside the pairs were kept.
+
+### Sort Elements
 
 ![Sort Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/sort-elements.png)
 
 The *Sort Elements* node rearranges geometry elements by changing their indices.
 
-##### Input
+#### Input
 
-###### Geometry
+##### Geometry
+
+Data type: Geometry.
 
 The input geometry.
 
-###### Selection
+##### Selection
+
+Data type: Boolean.
 
 ![Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/selection.png)
 
 A selection of the input geometry. If left blank, all elements are sorted. Non selected elements will be keep their current indices.
 
+###### Group ID
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group ID | Group ID input value. A group is defined as all elements with the same group id. Elements with the same group ID are sorted together. If this is not a field, the node has no affect. |
-| Sort Weight | The sorted values used to do the reordering. If this is not a field, the node has no affect. |
+Group ID input value. A group is defined as all elements with the same group id. Elements with the same group ID are sorted together. If this is not a field, the node has no affect.
 
+###### Sort Weight
 
-##### Properties
+The sorted values used to do the reordering. If this is not a field, the node has no affect.
 
-###### Domain
+#### Properties
 
+##### Domain
 
-| Entry | What it does |
-| -------- | ------------------------------------------------------------------------------------ |
-| Point | The fields are evaluated on points, control points, and vertices. |
-| Face | The fields are evaluated on the edges of the mesh component. |
-| Edge | The fields are evaluated on the faces of the mesh component. |
-| Spline | The fields are evaluated on the splines in the curve component. |
-| Instance | The fields are evaluated on the top-level instances. Realized instances are ignored. |
+###### Point
 
+The fields are evaluated on points, control points, and vertices.
 
-##### Output
+###### Face
 
-###### Geometry
+The fields are evaluated on the edges of the mesh component.
+
+###### Edge
+
+The fields are evaluated on the faces of the mesh component.
+
+###### Spline
+
+The fields are evaluated on the splines in the curve component.
+
+###### Instance
+
+The fields are evaluated on the top-level instances. Realized instances are ignored.
+
+#### Output
+
+##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
-#### Transform Geometry
+### Transform Geometry
 
 ![Transform Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/transform-geometry.png)
 
 Move, rotate or scale the geometry. The transformation is applied to the entire geometry, and not per element. For example, you can not rotate individual point cloud points with this node.
 
-##### Inputs
+#### Inputs
 
-##### Mode
+#### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode-3.png)
 
 The transformation mode for the node.
 
-###### Components mode
+##### Components mode
 
 Uses single values and vectors.
 
+###### Geometry
 
-| Entry | What it does |
-| ----------- | -------------------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Translation | Translates the geometry in local space of the modified object. |
-| Rotation | Euler rotation in local space. |
-| Scale | Scale to transform the geometries in local space. |
+Standard geometry input.
 
+###### Translation
 
-###### Matrix mode
+Translates the geometry in local space of the modified object.
+
+###### Rotation
+
+Euler rotation in local space.
+
+###### Scale
+
+Scale to transform the geometries in local space.
+
+##### Matrix mode
 
 ![Matrix mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/matrix-mode.png)
 
 Uses a matrix to transform.
 
-
-| Entry | What it does |
-| --------- | ------------------------ |
-| Geometry | Standard geometry input. |
-| Transform | Transform matrix input. |
-
-
-##### Output
-
 ###### Geometry
+
+Standard geometry input.
+
+###### Transform
+
+Transform matrix input.
+
+#### Output
+
+##### Geometry
+
+Data type: Geometry.
 
 Standard geometry output.
 
-#### Separate Components
+### Separate Components
 
 ![Separate Components](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/separate-components.png)
 
 Splits a geometry into its components.
 
+#### Inputs
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Geometry**: Geometry input. |
-| Outputs | **Mesh**: Mesh component of the input geometry. · **Curve**: Curve component of the input geometry. · **Grease Pencil**: Grease Pencil component of the input geometry. · **Point Cloud**: Point cloud component of the input geometry. · **Volume**: Volume component of the input geometry. In case that the input contains multiple volume instances, only the first volume component will be calculated. · **Instance**: The single instances of the geometry. |
+##### Geometry
 
+Data type: Geometry.
 
-#### Separate Geometry
+Geometry input.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+Mesh component of the input geometry.
+
+##### Curve
+
+Data type: Geometry.
+
+Curve component of the input geometry.
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+Grease Pencil component of the input geometry.
+
+##### Point Cloud
+
+Data type: Geometry.
+
+Point cloud component of the input geometry.
+
+##### Volume
+
+Data type: Geometry.
+
+Volume component of the input geometry. In case that the input contains multiple volume instances, only the first volume component will be calculated.
+
+##### Instance
+
+The single instances of the geometry.
+
+### Separate Geometry
 
 ![Separate Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/separate-geometry.png)
 
@@ -753,18 +1310,23 @@ Separates a selection of a geometry into its own object.
 
 > **Tip:** when you combine it with the Compare Floats nodem then you get a more precise control of which parts are separated to a given output geometry.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | ---------------- |
-| Geometry | Geometry input. |
-| Selection | Selection input. |
+Data type: Geometry.
 
+Geometry input.
 
-##### Properties
+##### Selection
 
-###### Domain
+Data type: Boolean.
+
+Selection input.
+
+#### Properties
+
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/domain.png)
 
@@ -772,14 +1334,19 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
+###### Outputs
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------- |
-| Outputs | — |
-| Selection | Separated selection. · **Inverted**: The inverted separated selection. |
+—
 
+###### Selection
 
-#### Split to Instances
+Separated selection.
+
+###### Inverted
+
+The inverted separated selection.
+
+### Split to Instances
 
 ![Split to Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/split-to-instances.png)
 
@@ -787,19 +1354,29 @@ This node allows splitting up a geometry into groups. A group is defined as all 
 
 The node supports meshes, curves, point clouds and instances. Note that it only works on the top-level geometry. It does not go into nested instances because it also generates new instances.
 
-##### Inputs
+#### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| --------- | --------------------- |
-| Geometry | Geometry input. |
-| Selection | Selection input. |
-| Group ID | Group ID input value. |
+Data type: Geometry.
 
+Geometry input.
 
-##### Properties
+##### Selection
 
-###### Domain
+Data type: Boolean.
+
+Selection input.
+
+##### Group ID
+
+Data type: Integer.
+
+Group ID input value.
+
+#### Properties
+
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/domain-2.png)
 
@@ -807,8 +1384,60 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
+###### Outputs
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------- |
-| Outputs | — |
-| Instances | Instances output. An Instance per group. · **Group ID**: Group ID output value. |
+—
+
+###### Instances
+
+Instances output. An Instance per group.
+
+###### Group ID
+
+Group ID output value.
+
+### Get Geometry Component
+
+![Get Geometry Component](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/get-geometry-component.png)
+
+Picks one kind of geometry out of a mixed geometry, for example only the mesh of a geometry that also holds curves and instances. Use it to work on one part and leave the rest alone. The node copies the chosen component and can remove it from the original.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to take a component from.
+
+##### Type
+
+Data type: Menu.
+
+Which component to take: Mesh, Point Cloud, Curve, Instances, Grease Pencil or Volume.
+
+##### Remove
+
+Data type: Boolean.
+
+On: the component is taken out of the geometry output.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry. Without the component if Remove is on.
+
+##### Component
+
+Data type: Geometry.
+
+The component that was taken.
+
+##### Exists
+
+Data type: Boolean.
+
+True when the geometry had a component of that type.

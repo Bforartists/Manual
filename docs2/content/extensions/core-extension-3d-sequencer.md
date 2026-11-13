@@ -44,13 +44,17 @@ To use, set the sequencer timeline to the master scene then toggle to synchroniz
 
 An additional header menu for Scene Strip operators in the Sequencer Editor.
 
+#### Adjust Timing
 
-| Entry | What it does |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adjust Timing | Adjusts the timing of the active Scene Strip by extending or compressing the Scene Strip length directly from the Sequencer timeline. |
-| Toggle Active Scene Strip | Updates the current scene to the active scene strip. If the timeline in sequencer header is not set, this toggles the current scene to active Scene Strip in the sequencer. |
-| Play Master Scene | Toggle playback of the master scene from the sequencer timeline. |
+Adjusts the timing of the active Scene Strip by extending or compressing the Scene Strip length directly from the Sequencer timeline.
 
+#### Toggle Active Scene Strip
+
+Updates the current scene to the active scene strip. If the timeline in sequencer header is not set, this toggles the current scene to active Scene Strip in the sequencer.
+
+#### Play Master Scene
+
+Toggle playback of the master scene from the sequencer timeline.
 
 ## Panels and Operators
 
@@ -78,15 +82,25 @@ Each Scene Strip in the timeline will change the active 3D View camera and activ
 
 These define the advanced settings for Sequencer synchronizes the Timeline to the 3D View.
 
+##### Keep Grease Pencil Settings
 
-| Entry | What it does |
-| --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Keep Grease Pencil Settings | Keep active Grease Pencil tool settings while switching and navigating Scene Strips from the timeline. |
-| Bidirectional | Whether changing the Active Scene’s time should update the Master Scene’s current frame. |
-| Use Preview Range | Update the preview range of current strip’s scenes to match the useful range of the strip. |
-| Synchronize all Windows | Whether the 3D View Sync impacts all the Main Windows. |
-| Active Follows Playhead | Update the active strip while scrubbing the sequencer. |
+Keep active Grease Pencil tool settings while switching and navigating Scene Strips from the timeline.
 
+##### Bidirectional
+
+Whether changing the Active Scene’s time should update the Master Scene’s current frame.
+
+##### Use Preview Range
+
+Update the preview range of current strip’s scenes to match the useful range of the strip.
+
+##### Synchronize all Windows
+
+Whether the 3D View Sync impacts all the Main Windows.
+
+##### Active Follows Playhead
+
+Update the active strip while scrubbing the sequencer.
 
 ### 3D View - Sequencer Sync Panel
 
@@ -112,13 +126,17 @@ This shows the list of scene strips from the Master Scene timeline from the Sequ
 
 This box shows the active Scene Strip in the 3D View with properties to select the assigned scene, the active camera selector and other operators.
 
+##### Scene Selector
 
-| Entry | What it does |
-| ------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Scene Selector | Select the active scene for the active Scene Strip. |
-| Create Child Scene Setup | Duplicate Linked the active scene as a new scene then update the active Scene Strip to the new scene. |
-| Active Camera Selector | Overrides the scene active camera and camera markers to a fixed camera. |
+Select the active scene for the active Scene Strip.
 
+##### Create Child Scene Setup
+
+Duplicate Linked the active scene as a new scene then update the active Scene Strip to the new scene.
+
+##### Active Camera Selector
+
+Overrides the scene active camera and camera markers to a fixed camera.
 
 ##### Set Active Camera
 

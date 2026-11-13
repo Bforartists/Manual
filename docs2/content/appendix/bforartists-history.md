@@ -28,7 +28,7 @@ This also marks a milestone where the File Server 2.0, Website 2.0 and Documenta
 
 28.10.2026 – Bforartists 5.2.3 released 
 
-28.10.2026 – Bforartists 5.2.0 released 
+28.07.2026 – Bforartists 5.2.0 released 
 
 23.04.2026 – Bforartists 5.1.1 released 
 

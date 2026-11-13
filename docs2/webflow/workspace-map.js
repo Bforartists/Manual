@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.10
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.11
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -109,7 +109,8 @@
     '.wsx-all{padding:.875rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006}',
     '.wsx-all>small,.wsx-for>small{display:block;margin:0 0 .5rem;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
     '.wsx-chips{display:flex;flex-wrap:wrap;gap:.375rem}',
-    '.wsx .wsx-chip{cursor:pointer;font-family:inherit;box-shadow:inset 0 -2px 0 var(--c)}',
+    '.wsx .wsx-chip{cursor:pointer;font-family:inherit;background:color-mix(in srgb,var(--c) 14%,transparent);box-shadow:inset 3px 0 0 var(--c);border-radius:.375rem}',
+    '.wsx .wsx-chip.is-active{background:color-mix(in srgb,var(--_bfa---accent--blue,#5cb4f0) 28%,transparent);box-shadow:inset 3px 0 0 var(--_bfa---accent--blue,#5cb4f0)}',
     '.wsx .wsx-chip img{margin:0!important}',
     '.wsx-for{padding:1rem 1.125rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;justify-content:space-between}',
     '.wsx-for p{margin:0!important;flex:1 1 18rem;color:var(--wsx-text);font-size:.9375rem;line-height:1.55}',
@@ -365,7 +366,7 @@
       }
       m.opts.title = w.name; m.show(w);
       pager.innerHTML = '<button type="button" class="wsx-pg" data-go="-1">' + img(IC.prev) + '<span><small>Previous</small><b>' + esc(pv.name) + '</b></span></button>' +
-        '<span class="wsx-pos"><span class="wsx-key">←</span>' + (cur + 1) + ' of ' + n + '<span class="wsx-key">→</span></span>' +
+        '<span class="wsx-pos">' + (cur + 1) + ' of ' + n + '</span>' +
         '<button type="button" class="wsx-pg is-r" data-go="1"><span><small>Next</small><b>' + esc(nx.name) + '</b></span>' + img(IC.next) + '</button>';
       forb.innerHTML = '<p><small>What ' + esc(w.name) + ' is for</small>' + esc(w.sum || 'A ready-made layout of editors.') + (w.v ? ' <span class="wsx-ver">Screenshot from version ' + esc(w.v) + '.</span>' : '') + '</p>' +
         (focus ? '<span>' + (w.href ? btn('Open the ' + w.name + ' page', IC.doc, 'is-small', w.href) : '') + (more.href ? btn('Explore all ' + (more.n ? more.n + ' ' : '') + 'workspaces', IC.ws, 'is-small is-accent', more.href) : '') + '</span>'

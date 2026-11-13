@@ -48,7 +48,7 @@ sections:
       Nodes: [shader-editor, geometry-node-editor, compositor, texture-node-editor]
       Animation: [dope-sheet, timeline, graph-editor, drivers-editor, nonlinear-animation-editor]
       Video and tracking: [video-sequence-editor, movie-clip-editor]
-      Data and files: [properties, outliner, file-browser, asset-browser, spreadsheet, preferences, toolbar]
+      Data and files: [properties, outliner, file-browser, asset-browser, spreadsheet, preferences, project-settings, toolbar]
       Scripting: [text-editor, python-console, info-editor]
     groups:
       "5.1": Topbar menus

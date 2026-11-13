@@ -7,8 +7,8 @@ section: editors
 path:
   - Editors
   - Graph Editor
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 18 Editors - Graph Editor.odt
@@ -47,10 +47,13 @@ The Time Cursor is the green line. It is used to set and display the current tim
 
 The timeline displays the function curves for the animation. This curve can also be manipulated in various ways.
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Keyframes | In the Graph editor every keyframe is represented by a dot and the handlers for it. |
-| Handles | Every keyframe has handles assigned. The curve can be manipulated by dragging these handlers. You can also change the handle type in the Keyframe Handle Type menu in the header. To make the curve sharp at this keyframe for example. |
+#### Keyframes
+
+In the Graph editor every keyframe is represented by a dot and the handlers for it.
+
+#### Handles
+
+Every keyframe has handles assigned. The curve can be manipulated by dragging these handlers. You can also change the handle type in the Keyframe Handle Type menu in the header. To make the curve sharp at this keyframe for example.
 
 ### Markers
 
@@ -96,16 +99,37 @@ To manipulate a keyframe, grab one of its handlers and drag.
 
 When you right click into the channel area, then you will call the Channel context menu.
 
-| Entry | What it does |
-| -------------------------- | -------------------------------------------------------------------------------------- |
-| Frame selected channels | Centers the selected channels in view. |
-| Mute Channel | This channel is not calculated. |
-| Unmute Channel | This channel is calculated. |
-| Protect Channels | Protect channels from editing. |
-| Unprotect Channels | Enables editing of channels again. |
-| Group Channels | Groups channels together. |
-| Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
-| Toggle Channel Editability | Protects or unprotects the selected channels. |
+### Frame selected channels
+
+Centers the selected channels in view.
+
+### Mute Channel
+
+This channel is not calculated.
+
+### Unmute Channel
+
+This channel is calculated.
+
+### Protect Channels
+
+Protect channels from editing.
+
+### Unprotect Channels
+
+Enables editing of channels again.
+
+### Group Channels
+
+Groups channels together.
+
+### Ungroup Channels
+
+Ungroup grouped channels. Beware, the channels will not return to their initial group.
+
+### Toggle Channel Editability
+
+Protects or unprotects the selected channels.
 
 ### Extrapolation Mode submenu
 
@@ -113,12 +137,21 @@ When you right click into the channel area, then you will call the Channel conte
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
+#### Constant Extrapolation
+
+The animation curve continues straight at the end.
+
+#### Linear Extrapolation
+
+The animation curve continues the last direction.
+
+#### Make Cyclic
+
+Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.
+
+#### Clear Cyclic
+
+Removes the cyclic extrapolation.
 
 ### Add F-Curve Modifier submenu
 
@@ -126,23 +159,47 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 
 This group of operators addes modifiers to the the selected curve channel. This is useful for procedural animation. To access the modifier stack, open the Property Shelf and switch to the Modifier tab.
 
-| Entry | What it does |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Generator | Generator creates a polynomial function. These are basic mathematical formulas that represent lines, parabolas, and other more complex curves, depending on the values used. |
-| Built-In Function | These are additional formulas, each with the same options to control their shape. |
-| Envelope | Allows you to adjust the overall shape of a curve with control points. |
-| Cycles | Cycles allows you add cyclic motion to a curve that has two or more control points. The options can be set for before and after the curve. |
-| Noise | Modifies the curve with a noise formula. This is useful for creating subtle or extreme randomness to animated movements, like camera shake. |
-| Limits | Limit curve values to specified X and Y ranges. |
-| Stepped Interpolation | Gives the curve a stepped appearance by rounding values down within a certain range of frames. |
+#### Generator
+
+Generator creates a polynomial function. These are basic mathematical formulas that represent lines, parabolas, and other more complex curves, depending on the values used.
+
+#### Built-In Function
+
+These are additional formulas, each with the same options to control their shape.
+
+#### Envelope
+
+Allows you to adjust the overall shape of a curve with control points.
+
+#### Cycles
+
+Cycles allows you add cyclic motion to a curve that has two or more control points. The options can be set for before and after the curve.
+
+#### Noise
+
+Modifies the curve with a noise formula. This is useful for creating subtle or extreme randomness to animated movements, like camera shake.
+
+#### Limits
+
+Limit curve values to specified X and Y ranges.
+
+#### Stepped Interpolation
+
+Gives the curve a stepped appearance by rounding values down within a certain range of frames.
+
+#### Smooth (Gaussian)
+
+Smooths the curve by averaging the values around each frame. Use it to calm down shaky motion, for example from motion capture, without changing the keys.
 
 ### Reveal Curves
 
 Reveals all hidden curves.
 
-#### Last Operator Reveal Curves
+#### Adjust Last Operation - Reveal Curves
 
 ![Last Operator Reveal Curves](/docs2/images/editors/graph-editor/last-operator-reveal-curves.png)
+
+Change the settings of **Reveal Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Select
 
@@ -156,18 +213,23 @@ Hides the selected curves.
 
 Hides the unselected curves.
 
-#### Last Operator Hide Curves
+#### Adjust Last Operation - Hide Curves
 
 ![Last Operator Hide Curves](/docs2/images/editors/graph-editor/last-operator-hide-curves.png)
+
+Change the settings of **Hide Curves** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 
 Hide the unselected or selected curves.
 
-| Entry | What it does |
-| ----------------- | ----------------------- |
-| Expand Channels | Expands the channels. |
-| Collapse Channels | Collapses the channels. |
+###### Expand Channels
+
+Expands the channels.
+
+###### Collapse Channels
+
+Collapses the channels.
 
 ### Move submenu
 
@@ -185,18 +247,23 @@ Removes the selected channels.
 
 When you right click into the viewport then you will call the F-Curve context menu.
 
-| Entry | What it does |
-| ----- | ------------------------------------------ |
-| Copy | Copies the currently selected keyframe(s). |
-| Paste | Pastes copied keyframe(s) |
+### Copy
+
+Copies the currently selected keyframe(s).
+
+### Paste
+
+Pastes copied keyframe(s)
 
 ### Paste Flipped
 
 Pastes copied keyframe(s), but flipped.
 
-#### Last operator Paste Keyframes / Flipped
+#### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/graph-editor/last-operator-paste-keyframes-flipped.png)
+
+Change the settings of **Paste Keyframes / Flipped** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Frame Offset
 
@@ -230,7 +297,11 @@ Set the handle type for the currently selected keyframes.
 
 This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behavior. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dope sheet editor too.
 
-#### Last Operator Set Keyframe Handle Type
+#### Adjust Last Operation - Set Keyframe Handle Type
+
+Change the settings of **Set Keyframe Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Keyframe Handle Type](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-handle-type.png)
 
 ##### Type
 
@@ -246,7 +317,11 @@ The Interpolation mode defines how the curve acts from keyframe to keyframe. You
 
 The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.
 
-#### Last Operator Set Keyframe Interpolation
+#### Adjust Last Operation - Set Keyframe Interpolation
+
+Change the settings of **Set Keyframe Interpolation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Keyframe Interpolation](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-interpolation.png)
 
 ##### Type
 
@@ -260,7 +335,11 @@ Set the interpolation mode.
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
-#### Last Operator Set Keyframe Easing Type
+#### Adjust Last Operation - Set Keyframe Easing Type
+
+Change the settings of **Set Keyframe Easing Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Keyframe Easing Type](/docs2/images/editors/graph-editor/adjust-last-operation-set-keyframe-easing-type.png)
 
 ##### Type
 
@@ -276,9 +355,11 @@ Insert a keyframe at the current position.
 
 Duplicate the selected keyframe(s).
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/graph-editor/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -302,12 +383,21 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Delete Keyframes
 
@@ -319,9 +409,11 @@ Delete the selected keyframe(s).
 
 Mirrors the animation by the given method.
 
-#### Last Operator Mirror Keys
+#### Adjust Last Operation - Mirror Keys
 
 ![Last Operator Mirror Keys](/docs2/images/editors/graph-editor/last-operator-mirror-keys.png)
+
+Change the settings of **Mirror Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -333,9 +425,11 @@ Flips the selected keyframes over the current frame position by the chosen metho
 
 Snaps the selected keyframes by the given method.
 
-#### Last Operator Snap Keys
+#### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/graph-editor/last-operator-snap-keys.png)
+
+Change the settings of **Snap Keys** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -355,10 +449,13 @@ If there is not Graph Editor open, then it will warn you that there is no Graph 
 
 Frame the individual property under the cursor in an open Graph Editor
 
-| Entry | What it does |
-| --------------------------- | ---------------------------------------------------------------------------------- |
-| View Single in Graph Editor | Frame one property of a set of properties under the cursor in an open Graph Editor |
-| View All in Graph Editor | Frame a set of properties under the cursor in an open Graph Editor. |
+#### View Single in Graph Editor
+
+Frame one property of a set of properties under the cursor in an open Graph Editor
+
+#### View All in Graph Editor
+
+Frame a set of properties under the cursor in an open Graph Editor.
 
 ## Slider snapping
 

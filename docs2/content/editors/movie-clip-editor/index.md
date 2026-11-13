@@ -53,10 +53,13 @@ The clip editor contains the footage related tools and settings. Here you deal w
 
 In the upper right corner you will find two navigation elements.
 
-| Entry | What it does |
-| -------------------- | ---------------- |
-| Pan the View | Pans the view |
-| Zoom In/Out the View | Zooms in or out. |
+#### Pan the View
+
+Pans the view
+
+#### Zoom In/Out the View
+
+Zooms in or out.
 
 ### Timeline
 
@@ -100,16 +103,19 @@ Masks are defined by splines. Means you work with splines, and you have a bunch 
 
 In the upper right corner you will find two navigation elements.
 
-| Entry | What it does |
-| -------------------- | ---------------- |
-| Pan the View | Pans the view |
-| Zoom In/Out the View | Zooms in or out. |
+#### Pan the View
+
+Pans the view
+
+#### Zoom In/Out the View
+
+Zooms in or out.
 
 ### 2D Cursor
 
 In Mask mode you will see a 2d cursor down left. It is for example the point at which the mask primitives are created. This 2D cursor can be set and moved by hotkey Alt + Right Mouse
 
-#### Last Operator Set 2D cursor
+#### Adjust Last Operation - Set 2D cursor
 
 ![Last Operator Set 2D cursor](/docs2/images/editors/movie-clip-editor/last-operator-set-2d-cursor.png)
 
@@ -123,9 +129,11 @@ Adjust the position of the 2D cursor.
 
 You can create mask spline primitives from the Add menu. But you can also draw your own mask spline with hotkey Ctrl + Left Mouse.
 
-#### Last Operator Add Vertex and Slide
+#### Adjust Last Operation - Add Vertex and Slide
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/last-operator-add-vertex-and-slide.png)
+
+Change the settings of **Add Vertex and Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Location X / Y
 
@@ -151,22 +159,39 @@ When you double right click into the viewport, then you will open a menu. The Co
 
 Graph and Dope sheet sub modes does not have a context menu.
 
-| Entry | What it does |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy Track Settings | Copies track settings from active to selected track. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings. |
-| Copy from Active Track | Copies track settings from active to default settings. |
-| Copy Color | Copies color to all selected tracks. What color? Ask the Blender developers ... |
-| Copy Tracks | Copies the selected tracks. |
-| Paste Tracks | Pastes the selected tracks. |
-| Disable Markers | Disables the currently selected marker(s) |
+### Copy Track Settings
+
+Copies track settings from active to selected track. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings.
+
+### Copy from Active Track
+
+Copies track settings from active to default settings.
+
+### Copy Color
+
+Copies color to all selected tracks. What color? Ask the Blender developers ...
+
+### Copy Tracks
+
+Copies the selected tracks.
+
+### Paste Tracks
+
+Pastes the selected tracks.
+
+### Disable Markers
+
+Disables the currently selected marker(s)
 
 ### Enable Markers
 
 Enables the currently selected marker(s)
 
-#### Last operator Disable Markers
+#### Adjust Last Operation - Disable Markers
 
 ![Last operator Disable Markers](/docs2/images/editors/movie-clip-editor/last-operator-disable-markers.png)
+
+Change the settings of **Disable Markers** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Action
 
@@ -180,9 +205,11 @@ Hides the selected track(s)
 
 Shows the selected track(s)
 
-#### Last Operator Hide Tracks
+#### Adjust Last Operation - Hide Tracks
 
 ![Last Operator Hide Tracks](/docs2/images/editors/movie-clip-editor/last-operator-hide-tracks.png)
+
+Change the settings of **Hide Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Unselected
 
@@ -196,18 +223,23 @@ Locks the selected tracks. You will see the locks in the Dopesheet view.
 
 Unlocks the selected tracks. You will see the locks in the Dopesheet view.
 
-#### Last Operator Lock Tracks
+#### Adjust Last Operation - Lock Tracks
 
 ![Last Operator Lock Tracks](/docs2/images/editors/movie-clip-editor/last-operator-lock-tracks.png)
+
+Change the settings of **Lock Tracks** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Action
 
 Lock or unlock the selected tracks.
 
-| Entry | What it does |
-| ------------ | ---------------------------- |
-| Join Tracks | Joins the selected tracks. |
-| Delete Track | Deletes the selected tracks. |
+###### Join Tracks
+
+Joins the selected tracks.
+
+###### Delete Track
+
+Deletes the selected tracks.
 
 ## Mask mode - Context menu
 
@@ -229,20 +261,31 @@ This tool is hotkey only, and should only be used with the mouse.
 
 In this sub menu you can set the handle type for the currently selected spline points.
 
-#### Last operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last operator Set Handle Type](/docs2/images/editors/movie-clip-editor/last-operator-set-handle-type.png)
+
+Change the settings of **Set Handle Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
 Choose the handle type again.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Switch Direction | Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point. |
-| Toggle Cyclic | Make the spline closed or open. |
-| Copy Splines | Copies the currently selected spline. |
-| Paste Splines | Pastes a copied spline. |
+###### Switch Direction
+
+Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point.
+
+###### Toggle Cyclic
+
+Make the spline closed or open.
+
+###### Copy Splines
+
+Copies the currently selected spline.
+
+###### Paste Splines
+
+Pastes a copied spline.
 
 ### Re-key Shape Points
 
@@ -260,10 +303,13 @@ Besides the handles, every control point also has points that define the feather
 
 Resets the feather offset across all animated frames.
 
-| Entry | What it does |
-| ------------ | ---------------------------- |
-| Make Parent | Set the mask's parenting. |
-| Clear Parent | Clears the mask's parenting. |
+#### Make Parent
+
+Set the mask's parenting.
+
+#### Clear Parent
+
+Clears the mask's parenting.
 
 ### Delete
 

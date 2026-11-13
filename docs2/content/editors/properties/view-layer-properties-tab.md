@@ -39,12 +39,13 @@ Shows the active render engine. Specific renderer does have other settings. And 
 
 ![View Layer Prop](/docs2/images/editors/properties/view-layer-properties-tab/view-layer-prop.png)
 
+#### View Layer list
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| View Layer list | The list of available view layers |
-| View Layer edit box | Set the active view layer, and view and edit the name of the current active view layer. Click into the edit box to edit the name. |
+The list of available view layers
 
+#### View Layer edit box
+
+Set the active view layer, and view and edit the name of the current active view layer. Click into the edit box to edit the name.
 
 #### Add View Layer
 
@@ -52,20 +53,29 @@ Shows the active render engine. Specific renderer does have other settings. And 
 
 Adds a new view layer.
 
+##### New
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------- |
-| New | Adds a new view layer with the default content. |
-| Copy Settings | Adds a new view layer with the content of the current active layer. |
-| Blank | Adds a new view layer and deactivates all collections. |
-| Remove View Layer | Removes the selected view layer. |
+Adds a new view layer with the default content.
 
+##### Copy Settings
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use for Rendering | Disable or enable the render layer. · **Animate Property**: This property can be animated. Activating this button sets a keyframe at the current frame. |
-| Render Single Layer | Only render the active layer. This just works for rendering from the interface. Rendering from command line ignores this setting. |
+Adds a new view layer with the content of the current active layer.
 
+##### Blank
+
+Adds a new view layer and deactivates all collections.
+
+##### Remove View Layer
+
+Removes the selected view layer.
+
+##### Use for Rendering
+
+Disable or enable the render layer. · **Animate Property**: This property can be animated. Activating this button sets a keyframe at the current frame.
+
+##### Render Single Layer
+
+Only render the active layer. This just works for rendering from the interface. Rendering from command line ignores this setting.
 
 ## Override panel - EEVEE + Cycles
 
@@ -73,13 +83,17 @@ Adds a new view layer.
 
 The override panel allows you to define a material that is used on all objects in the current view layer. Think of it as a clay rendering.
 
+### Material Override
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------ |
-| Material Override | Material to override all materials in this view layers. |
-| World Override | Override the world material in this view layer. |
-| Samples | Override number of render samples for this view layer. A value of 0 will use the Scene settings. |
+Material to override all materials in this view layers.
 
+### World Override
+
+Override the world material in this view layer.
+
+### Samples
+
+Override number of render samples for this view layer. A value of 0 will use the Scene settings.
 
 ## Passes panel - EEVEE
 
@@ -89,41 +103,71 @@ Here you enable or disable passes for single features.
 
 ### Data subpanel
 
+#### Combined
 
-| Entry | What it does |
-| ------------- | ------------------------------------ |
-| Combined | Deliver full combined RGBA Buffer. |
-| Depth | Deliver Z Value pass. |
-| Mist | Deliver Mist factor pass. 0.0 to 1.0 |
-| Normal | Deliver Normal pass. |
-| Position | Deliver Position pass. |
-| Vector | Deliver Vector pass. |
-| Grease Pencil | Deliver Grease Pencil pass. |
+Deliver full combined RGBA Buffer.
 
+#### Depth
+
+Deliver Z Value pass.
+
+#### Mist
+
+Deliver Mist factor pass. 0.0 to 1.0
+
+#### Normal
+
+Deliver Normal pass.
+
+#### Position
+
+Deliver Position pass.
+
+#### Vector
+
+Deliver Vector pass.
+
+#### Grease Pencil
+
+Deliver Grease Pencil pass.
 
 ### Light subpanel
 
 ![Light subpanel](/docs2/images/editors/properties/view-layer-properties-tab/light-subpanel.png)
 
+#### Diffuse
 
-| Entry | What it does |
-| -------- | ---------------------------------------------------------------------------------- |
-| Diffuse | **Light**: Deliver diffuse direct pass. · **Color**: Deliver diffuse color pass. |
-| Specular | **Light**: Deliver specular direct pass. · **Color**: Deliver specular color pass. |
-| Volume | **Light**: Deliver volume direct light pass. |
+**Light**: Deliver diffuse direct pass. · **Color**: Deliver diffuse color pass.
 
+#### Specular
+
+**Light**: Deliver specular direct pass. · **Color**: Deliver specular color pass.
+
+#### Volume
+
+**Light**: Deliver volume direct light pass.
 
 #### Other
 
+##### Emission
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Emission | Deliver emission pass. |
-| Environment | Deliver environment lighting pass. |
-| Shadow | Deliver shadow pass. |
-| Ambient Occlusion | Deliver Ambient Occlusion pass. Ambient Occlusion needs to be enabled in the Render Properties. · **Occlusion Distance**: Distance of object that contribute to the ambient occlusion effct. |
-| Transparent | Deliver alpha blended surfaces in a separate pass. |
+Deliver emission pass.
 
+##### Environment
+
+Deliver environment lighting pass.
+
+##### Shadow
+
+Deliver shadow pass.
+
+##### Ambient Occlusion
+
+Deliver Ambient Occlusion pass. Ambient Occlusion needs to be enabled in the Render Properties. · **Occlusion Distance**: Distance of object that contribute to the ambient occlusion effct.
+
+##### Transparent
+
+Deliver alpha blended surfaces in a separate pass.
 
 ### Cryptomatte subpanel
 
@@ -131,12 +175,13 @@ Here you enable or disable passes for single features.
 
 Cryptomatte passes can be used to isolate objects or materials or assets in compositing.
 
+#### Include
 
-| Entry | What it does |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Include | **Object**: Render Cryptomatte Object Pass. · **Materials**: Render Cryptomatte Materials Pass. · **Asset**: Render Cryptomatte Asset Pass. |
-| Include Settings | These settings appears when you tick one of the above includes. · **Levels**: How many unique objects can be distinguished per pixel. **Note:** *Only active when you have something to include activated.* · **Accurate Mode**: Generate a more accurate cryptomatte pass. |
+**Object**: Render Cryptomatte Object Pass. · **Materials**: Render Cryptomatte Materials Pass. · **Asset**: Render Cryptomatte Asset Pass.
 
+#### Include Settings
+
+These settings appears when you tick one of the above includes. · **Levels**: How many unique objects can be distinguished per pixel. **Note:** *Only active when you have something to include activated.* · **Accurate Mode**: Generate a more accurate cryptomatte pass.
 
 ### Shader AOV subpanel
 
@@ -160,12 +205,13 @@ Right clicking at the black triangle at the end will refveal the type menu.
 
 Shader AOVs can either express a Color or a Value variable. The Color variable as the name suggest can be used for a color but also a normal value. A Value variable can be used for any single numerical value.
 
+###### Add AOV
 
-| Entry | What it does |
-| ---------- | --------------------------------------- |
-| Add AOV | Adds an AOV to the list. |
-| Remove AOV | Removes the selected AOV from the list. |
+Adds an AOV to the list.
 
+###### Remove AOV
+
+Removes the selected AOV from the list.
 
 ## Passes Panel - Cycles
 
@@ -177,15 +223,25 @@ Here you enable or disable render passes for single features.
 
 ![Data subpanel](/docs2/images/editors/properties/view-layer-properties-tab/data-subpanel.png)
 
+#### Include
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Include | **Combined**: Deliver full combined RGBA Buffer. · **Depth**: Deliver Z Value pass. · **Mist**: Deliver Mist factor pass. 0.0 - 1.0. · **Normal**: Deliver Normal pass. · **Vector**: Deliver Speed Vector pass. · **UV**: Deliver UV pass. · **Denoising Data**: Store the denoising feature passes and the noisy image. |
-| Indexes | **Object Index**: Deliver Object Index pass. · **Material Index**: Deliver Material Index pass. |
-| Debug | **Sample Count**: Number of samples/camera rays per pixel. |
-| Render Time | Reports time in pixel per miliseconds. |
-| Alpha Threshold | Z, Index, Normal, UV and Vector passes are just affected by surfaces with alpha transparency equal or higher this threshold. |
+**Combined**: Deliver full combined RGBA Buffer. · **Depth**: Deliver Z Value pass. · **Mist**: Deliver Mist factor pass. 0.0 - 1.0. · **Normal**: Deliver Normal pass. · **Vector**: Deliver Speed Vector pass. · **UV**: Deliver UV pass. · **Denoising Data**: Store the denoising feature passes and the noisy image.
 
+#### Indexes
+
+**Object Index**: Deliver Object Index pass. · **Material Index**: Deliver Material Index pass.
+
+#### Debug
+
+**Sample Count**: Number of samples/camera rays per pixel.
+
+#### Render Time
+
+Reports time in pixel per miliseconds.
+
+#### Alpha Threshold
+
+Z, Index, Normal, UV and Vector passes are just affected by surfaces with alpha transparency equal or higher this threshold.
 
 ### Mist subpanel
 
@@ -193,12 +249,13 @@ Here you enable or disable render passes for single features.
 
 When you activate Mist pass, then the Mist Pass subpanel shows.
 
+#### Start
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------ |
-| Start | The starting distance of the mist, measured from the camera. |
-| Depth | The distance over which the mist effect fades in. |
+The starting distance of the mist, measured from the camera.
 
+#### Depth
+
+The distance over which the mist effect fades in.
 
 ### Falloff
 
@@ -210,15 +267,25 @@ The falloff progression of the mist.
 
 ![Light subpanel](/docs2/images/editors/properties/view-layer-properties-tab/light-subpanel-2.png)
 
+#### Diffuse
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Diffuse | **Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass. |
-| Glossy | **Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass. |
-| Transmission | **Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass. |
-| Volume | **Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass. |
-| Other | **Emission**: Deliver Emission pass. · **Environment**: Deliver Environment pass. · **Ambient Occlusion**: Deliver Ambient Occlusion pass. · **Shadow Catcher**: Pass containing light and shadows that you want to multiply into the background image. |
+**Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass.
 
+#### Glossy
+
+**Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass.
+
+#### Transmission
+
+**Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass.
+
+#### Volume
+
+**Direct**: Deliver direct pass. · **Indirect**: Deliver indirect pass. · **Color**: Deliver color pass.
+
+#### Other
+
+**Emission**: Deliver Emission pass. · **Environment**: Deliver Environment pass. · **Ambient Occlusion**: Deliver Ambient Occlusion pass. · **Shadow Catcher**: Pass containing light and shadows that you want to multiply into the background image.
 
 ### Cryptomatte subpanel
 
@@ -226,12 +293,13 @@ The falloff progression of the mist.
 
 Cryptomatte passes can be used to isolate objects or materials or assets in compositing.
 
+#### Include
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Include | **Object**: Render Cryptomatte Object Pass. · **Materials**: Render Cryptomatte Materials Pass. · **Asset**: Render Cryptomatte Asset Pass. |
-| Include Settings | These settings appears when you tick one of the above includes. · **Levels**: How many unique objects can be distinguished per pixel. |
+**Object**: Render Cryptomatte Object Pass. · **Materials**: Render Cryptomatte Materials Pass. · **Asset**: Render Cryptomatte Asset Pass.
 
+#### Include Settings
+
+These settings appears when you tick one of the above includes. · **Levels**: How many unique objects can be distinguished per pixel.
 
 ### Shader AOV subpanel
 
@@ -255,12 +323,13 @@ Right clicking at the black triangle at the end will refveal the type menu.
 
 Shader AOVs can either express a Color or a Value variable. The Color variable as the name suggest can be used for a color but also a normal value. A Value variable can be used for any single numerical value.
 
+###### Add AOV
 
-| Entry | What it does |
-| ---------- | --------------------------------------- |
-| Add AOV | Adds an AOV to the list. |
-| Remove AOV | Removes the selected AOV from the list. |
+Adds an AOV to the list.
 
+###### Remove AOV
+
+Removes the selected AOV from the list.
 
 ### Light Groups sub panel
 
@@ -276,12 +345,13 @@ To assign a light source to a Light Pass, use the Light Options panel in the Obj
 
 > **Note:** Light groups are identified by name - therefore the name of the Light Group in the View Layer and the name that in set in and Light Source Light Options must match for them to to be included in the Light Group pass.
 
+#### Add Light Group
 
-| Entry | What it does |
-| ------------------ | ---------------------------------------------- |
-| Add Light Group | Adds a new light group to the list. |
-| Remove Light Group | Removes the selected lightgroup from the list. |
+Adds a new light group to the list.
 
+#### Remove Light Group
+
+Removes the selected lightgroup from the list.
 
 #### Lightgroup Sync menu
 
@@ -311,13 +381,17 @@ Here you enable or disable render passes for single features.
 
 ### Data subpanel
 
+#### Combined
 
-| Entry | What it does |
-| ------------- | ------------------------------------------ |
-| Combined | Deliver full combined RGBA Buffer. |
-| Depth | Deliver Z Value pass. |
-| Grease Pencil | Deliver Grease Pencil in a separated pass. |
+Deliver full combined RGBA Buffer.
 
+#### Depth
+
+Deliver Z Value pass.
+
+#### Grease Pencil
+
+Deliver Grease Pencil in a separated pass.
 
 ## Filter Panel - EEVEE
 
@@ -325,14 +399,21 @@ Here you enable or disable render passes for single features.
 
 ![Include](/docs2/images/editors/properties/view-layer-properties-tab/include.png)
 
+#### Environment
 
-| Entry | What it does |
-| ----------- | ------------------------------------ |
-| Environment | Render Sky in this layer. |
-| Surfaces | Render solid surfaces in this layer. |
-| Curves | Render Hair in this layer. |
-| Volume | Render volumes in this layer. |
+Render Sky in this layer.
 
+#### Surfaces
+
+Render solid surfaces in this layer.
+
+#### Curves
+
+Render Hair in this layer.
+
+#### Volume
+
+Render volumes in this layer.
 
 ### Use
 
@@ -348,15 +429,25 @@ Render Motion Blur, if enabled in the scene.
 
 ### Include
 
+#### Environment
 
-| Entry | What it does |
-| ----------------- | --------------------------------------- |
-| Environment | Render Sky in this layer. |
-| Ambient Occlusion | Render Ambient Occlusion in this layer. |
-| Surfaces | Render solid surfaces in this layer. |
-| Curves | Render Hair in this layer. |
-| Volume | Render volumes in this layer. |
+Render Sky in this layer.
 
+#### Ambient Occlusion
+
+Render Ambient Occlusion in this layer.
+
+#### Surfaces
+
+Render solid surfaces in this layer.
+
+#### Curves
+
+Render Hair in this layer.
+
+#### Volume
+
+Render volumes in this layer.
 
 ### Use
 
@@ -404,15 +495,25 @@ Renders the freestyle pass as a separate pass instead of adding it as an overlay
 
 How the edge detection happens.
 
+##### Crease Angle
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------- |
-| Crease Angle | Angular Threshold for detecting crease angles. |
-| Culling | Ignore edges that are out of view. |
-| Face Smoothness | Take the face smoothness into account for the view map calculation. |
-| Sphere Radius | The sphere radius for calculating curvatures |
-| Kr Derivate Epsilon | The Ki Derivate Epsilon radius for calculating suggestive contours. |
+Angular Threshold for detecting crease angles.
 
+##### Culling
+
+Ignore edges that are out of view.
+
+##### Face Smoothness
+
+Take the face smoothness into account for the view map calculation.
+
+##### Sphere Radius
+
+The sphere radius for calculating curvatures
+
+##### Kr Derivate Epsilon
+
+The Ki Derivate Epsilon radius for calculating suggestive contours.
 
 #### Style Module subpanel
 
@@ -436,25 +537,33 @@ A line set holds the line style. You can have more than one line set. But just o
 
 The line sets can be activated or deactivated with the checkbox at the end.
 
+#### Drag Handler
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Drag Handler | Allows to resize the list. |
-| Search field | When you click at the triangle button then you can reveal a search field. · **Edit Box**: Tpye in the search term and hit enter. · **Invert**: Inverts the search. · **Sort by Name**: Sorts the list by name · **Reverse**: Reverts the list content. |
-| Add Line Set | Adds a new line set. Adding a new line set also adds a new LineStyle. |
-| Remove Line Set | Removes the selected line set. |
+Allows to resize the list.
 
+#### Search field
+
+When you click at the triangle button then you can reveal a search field. · **Edit Box**: Tpye in the search term and hit enter. · **Invert**: Inverts the search. · **Sort by Name**: Sorts the list by name · **Reverse**: Reverts the list content.
+
+#### Add Line Set
+
+Adds a new line set. Adding a new line set also adds a new LineStyle.
+
+#### Remove Line Set
+
+Removes the selected line set.
 
 #### Lineset Specials menu
 
 ![Lineset Specials menu](/docs2/images/editors/properties/view-layer-properties-tab/lineset-specials-menu.png)
 
+##### Copy Line Set
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------- |
-| Copy Line Set | Copies the currently selected line set and all its settings. |
-| Paste Line Set | Pastes the copied line set and all its settings into the currently selected line set. |
+Copies the currently selected line set and all its settings.
 
+##### Paste Line Set
+
+Pastes the copied line set and all its settings into the currently selected line set.
 
 #### Move Line Set up or down
 
@@ -470,14 +579,21 @@ Moves the selected up or down in the list.
 
 A list of available LineStyles.
 
+##### Edit Box
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Edit Box | Displays the name of the currently active LineStyle. It also allows you to rename the LineStyle. Click into the edit box, change the name, hit enter. |
-| Fake User | Save this LineStyle with the scene even when it has no user. Fake User is an old Blender concept to keep data in the scene that has no user. Data without an user gets usually deleted with saving the scene. |
-| Add new LineStyle | Adds a new LineStyle. |
-| Remove LineStyle | This button is dysfunctional and permanently greyed out. Once added LineStyles are permanent by Blender design since every line set needs at least one linestyle. You can only remove unused linestyles by purging unused Data in the outliner. |
+Displays the name of the currently active LineStyle. It also allows you to rename the LineStyle. Click into the edit box, change the name, hit enter.
 
+##### Fake User
+
+Save this LineStyle with the scene even when it has no user. Fake User is an old Blender concept to keep data in the scene that has no user. Data without an user gets usually deleted with saving the scene.
+
+##### Add new LineStyle
+
+Adds a new LineStyle.
+
+##### Remove LineStyle
+
+This button is dysfunctional and permanently greyed out. Once added LineStyles are permanent by Blender design since every line set needs at least one linestyle. You can only remove unused linestyles by purging unused Data in the outliner.
 
 ### Select by Image Border
 
@@ -493,12 +609,13 @@ Determine how to use visibility for feature edge detection.
 
 ![Type](/docs2/images/editors/properties/view-layer-properties-tab/type.png)
 
+##### Visible
 
-| Entry | What it does |
-| ------- | ----------------------------- |
-| Visible | Select visible feature edges. |
-| Hidden | Select hidden feature edges. |
+Select visible feature edges.
 
+##### Hidden
+
+Select hidden feature edges.
 
 ##### Quantitative invisibility
 
@@ -506,24 +623,29 @@ Determine how to use visibility for feature edge detection.
 
 Select feature edges within a range of quantitative invisibility values. The value is called QI.
 
+###### Start
 
-| Entry | What it does |
-| ----- | ---------------- |
-| Start | The first value. |
-| End | The last value. |
+The first value.
 
+###### End
+
+The last value.
 
 ### Edge Type subpanel
 
 ![Edge Type subpanel](/docs2/images/editors/properties/view-layer-properties-tab/edge-type-subpanel.png)
 
+#### Selection by Edge Types
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selection by Edge Types | The checkbox in the header activates or deactivates the feature. Select feature edges based on Edge Types. |
-| Negation | **Inclusive**: Select edges by satisfying the selected options. · **Exclusive**: Select edges by satisfying the exact opposite of the selected options. |
-| Combination | **Logical Or**: Select edges by satisfying at least of the selected options. · **Logical And**: Select edges by satisfying all of the selected options. · **Type**: What type to use. The names should be self explaining. The X Button at the end is to exclude this type instead of including it. |
+The checkbox in the header activates or deactivates the feature. Select feature edges based on Edge Types.
 
+#### Negation
+
+**Inclusive**: Select edges by satisfying the selected options. · **Exclusive**: Select edges by satisfying the exact opposite of the selected options.
+
+#### Combination
+
+**Logical Or**: Select edges by satisfying at least of the selected options. · **Logical And**: Select edges by satisfying all of the selected options. · **Type**: What type to use. The names should be self explaining. The X Button at the end is to exclude this type instead of including it.
 
 #### Face Masks Subpanel
 
@@ -533,24 +655,29 @@ Select feature edges within a range of quantitative invisibility values. The val
 
 Select Feature Edges by Face Marks.
 
+##### Negation
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------------------- |
-| Negation | Include or exclude the edges selected by face marks. |
-| Condition | Select a feature edge if one face is marked. Or select a feature edge if the two adjacent faces are marked. |
+Include or exclude the edges selected by face marks.
 
+##### Condition
+
+Select a feature edge if one face is marked. Or select a feature edge if the two adjacent faces are marked.
 
 ### Collection Subpanel
 
 ![Collection Subpanel](/docs2/images/editors/properties/view-layer-properties-tab/collection-subpanel.png)
 
+#### Selection by Collection
 
-| Entry | What it does |
-| ----------------------- | ----------------------------------------------------------------------- |
-| Selection by Collection | Select feature edges based on a collection of objects. |
-| Line Set Collection | Pick the collection that you want to use. |
-| Negation | Select feature edges by including or excluding the selected collection. |
+Select feature edges based on a collection of objects.
 
+#### Line Set Collection
+
+Pick the collection that you want to use.
+
+#### Negation
+
+Select feature edges by including or excluding the selected collection.
 
 ## Freestyle Strokes Panel
 
@@ -592,14 +719,21 @@ Number of rounds in a sketchy multiple touch.
 
 ![Splitting subpanel](/docs2/images/editors/properties/view-layer-properties-tab/splitting-subpanel.png)
 
+#### Min 2D Angle
 
-| Entry | What it does |
-| ----------------- | ----------------------------------------------------- |
-| Min 2D Angle | Minimum 2d angle for splitting chains. |
-| Max 2D Angle | Maximum 2d angle for splitting chains. |
-| 2D Length | Curvilinear length for 2d splitting |
-| Material Boundary | Split chains of feature edges at material boundaries. |
+Minimum 2d angle for splitting chains.
 
+#### Max 2D Angle
+
+Maximum 2d angle for splitting chains.
+
+#### 2D Length
+
+Curvilinear length for 2d splitting
+
+#### Material Boundary
+
+Split chains of feature edges at material boundaries.
 
 #### Split Pattern sub subpanel
 
@@ -609,12 +743,13 @@ Number of rounds in a sketchy multiple touch.
 
 Enable chain splitting by dashed line patterns.
 
+###### Dash 1, 2, 3
 
-| Entry | What it does |
-| ------------ | ----------------------------------- |
-| Dash 1, 2, 3 | Length of the dashes for splitting. |
-| Gap 1, 2, 3 | Length of the gaps for splitting. |
+Length of the dashes for splitting.
 
+###### Gap 1, 2, 3
+
+Length of the gaps for splitting.
 
 ### Sorting subpanel
 
@@ -640,13 +775,17 @@ Sort by default or inverse.
 
 ![Selection Subpanel](/docs2/images/editors/properties/view-layer-properties-tab/selection-subpanel.png)
 
+#### Min 2D Length
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------- |
-| Min 2D Length | The selection of chains by a minimum 2D length. |
-| Max 2D Length | The selection of chains by a maximum 2D length. |
-| Chain Count | Select first N chains. N stands for a variable, and is defined in the edit box. |
+The selection of chains by a minimum 2D length.
 
+#### Max 2D Length
+
+The selection of chains by a maximum 2D length.
+
+#### Chain Count
+
+Select first N chains. N stands for a variable, and is defined in the edit box.
 
 ### Dashed Line subpanel
 
@@ -656,12 +795,13 @@ Sort by default or inverse.
 
 Enable dashed line. A line is then displayed as dashes.
 
+##### Dash 1, 2, 3
 
-| Entry | What it does |
-| ------------ | ---------------------------------------- |
-| Dash 1, 2, 3 | Length of the dash for the dashed lines. |
-| Gap 1, 2, 3 | Length of the gap for the dashed lines. |
+Length of the dash for the dashed lines.
 
+##### Gap 1, 2, 3
+
+Length of the gap for the dashed lines.
 
 ## Freestyle Modifiers
 
@@ -683,16 +823,29 @@ Color, Alpha and Thickness Modifier
 
 From left to right.
 
+#### Triangle button
 
-| Entry | What it does |
-| --------------- | -------------------------------------------------------------------------------------------------------------- |
-| Triangle button | Open or close the modifier panel. |
-| Edit Box | Displays the name of the modifier. You can also rename it. Click into the edit box, change name and hit enter. |
-| Use | Enable the modifier. |
-| Copy Modifier | Copies the Modifier. |
-| Move Modifier | Moves the modifier up or down the list. |
-| Remove Modifier | Removes the modifier from the list. |
+Open or close the modifier panel.
 
+#### Edit Box
+
+Displays the name of the modifier. You can also rename it. Click into the edit box, change name and hit enter.
+
+#### Use
+
+Enable the modifier.
+
+#### Copy Modifier
+
+Copies the Modifier.
+
+#### Move Modifier
+
+Moves the modifier up or down the list.
+
+#### Remove Modifier
+
+Removes the modifier from the list.
 
 ### Color Ramp
 
@@ -700,25 +853,33 @@ The color, alpha and thickness modifiers all have a color ramp.
 
 #### Controls
 
+##### +
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
-| - | Deletes the selected color stop from the list. |
+Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one.
 
+##### -
+
+Deletes the selected color stop from the list.
 
 ##### Tools menu
 
 ![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
+###### Flip Color Ramp
 
-| Entry | What it does |
-| --------------------------- | -------------------------------------------------------------------------------------------- |
-| Flip Color Ramp | Flips the gradient, inverting the values of the color ramp. |
-| Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
-| Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
-| Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
+Flips the gradient, inverting the values of the color ramp.
 
+###### Distribute Stops from Left
+
+Rearrange the stops so that every step has the same space to the right.
+
+###### Distribute Stops Evenly
+
+Space between all neighboring stops becomes equal.
+
+###### Eyedropper (pipette icon) E
+
+An Eyedropper to sample a color or gradient from the interface to be used in the color ramp.
 
 ###### Reset Color Ramp
 
@@ -728,26 +889,37 @@ Resets the color ramp to its default state.
 
 ##### Color Mode
 
+###### RGB
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RGB | Blends color by mixing each color channel and combining. |
-| HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
+Blends color by mixing each color channel and combining.
 
+###### HSV/HSL
+
+Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient.
 
 ##### Interpolation
 
 ![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
+###### Ease
 
-| Entry | What it does |
-| -------- | -------------------------------------------------- |
-| Ease | Uses an Ease Interpolation for the color stops. |
-| Cardinal | Uses a Cardinal Interpolation for the color stops. |
-| Linear | Uses a Linear Interpolation for the color stops. |
-| B-Spline | Uses a B-Spline Interpolation for the color stops. |
-| Constant | Uses a Constant Interpolation for the color stops. |
+Uses an Ease Interpolation for the color stops.
 
+###### Cardinal
+
+Uses a Cardinal Interpolation for the color stops.
+
+###### Linear
+
+Uses a Linear Interpolation for the color stops.
+
+###### B-Spline
+
+Uses a B-Spline Interpolation for the color stops.
+
+###### Constant
+
+Uses a Constant Interpolation for the color stops.
 
 ##### Color Ramp
 
@@ -759,12 +931,13 @@ The color band. A click at one of the color stops makes it the active one. You c
 
 Adjust the active color stop.
 
+###### Choose active color stop
 
-| Entry | What it does |
-| ------------------------ | ------------------------------- |
-| Choose active color stop | Choose the color stop by index. |
-| Number of Stop | The active color stop. |
+Choose the color stop by index.
 
+###### Number of Stop
+
+The active color stop.
 
 ###### Pos
 
@@ -790,12 +963,13 @@ Here you can choose the base color that needs to be modified.
 
 Add a colorband along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 ### Crease Angle
 
@@ -803,13 +977,17 @@ Add a colorband along the stroke.
 
 Add a color band along a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.
 
+#### Blend Mode
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Angle Min / Max | The minimum and maximum crease angle to modify thickness. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Angle Min / Max
+
+The minimum and maximum crease angle to modify thickness.
 
 ### Curvature 3D
 
@@ -819,13 +997,17 @@ This modifier is based on the radial curvatures of the underlying 3D surface. Th
 
 This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.
 
+#### Blend Mode
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Curvature Min and Max | The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Curvature Min and Max
+
+The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.
 
 ### Distance from Camera
 
@@ -833,14 +1015,21 @@ This modifier requires to have the Face Smoothness option on and the object need
 
 Recalculates the base property by the distance to the camera.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Fill Range by Selection | Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+#### Fill Range by Selection
+
+Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.
 
 ### Distance from Object
 
@@ -848,15 +1037,25 @@ Recalculates the base property by the distance to the camera.
 
 Recalculates the base property by the distance to a chosen object.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Target | Pick the target object. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Fill Range by Selection | Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Target
+
+Pick the target object.
+
+#### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+#### Fill Range by Selection
+
+Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.
 
 ### Material
 
@@ -864,12 +1063,13 @@ Recalculates the base property by the distance to a chosen object.
 
 Alters the base property on the current material under the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Material Attribute
 
@@ -887,16 +1087,29 @@ Shows and activates the color ramp.
 
 Uses a noise based pseudo random number generator to add some variation along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Amplitude | The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke. |
-| Period | The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke. |
-| Seed | Seed used by the pseudo-random number generator. |
-| Asymmetric | Thickness only – Allows the thickness to be distributed unevenly at every point. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Amplitude
+
+The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.
+
+#### Period
+
+The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.
+
+#### Seed
+
+Seed used by the pseudo-random number generator.
+
+#### Asymmetric
+
+Thickness only – Allows the thickness to be distributed unevenly at every point.
 
 ### Tangent
 
@@ -904,12 +1117,13 @@ Uses a noise based pseudo random number generator to add some variation along th
 
 Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 ## Freestyle Alpha panel
 
@@ -929,12 +1143,13 @@ The base transparency that you want to modify.
 
 Add a gradient along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -952,13 +1167,17 @@ Inverts the values.
 
 Add a gradientalong a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.
 
+#### Blend Mode
 
-| Entry | What it does |
-| --------------- | --------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Angle Min / Max | The minimum and maximum crease angle to modify thickness. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Angle Min / Max
+
+The minimum and maximum crease angle to modify thickness.
 
 #### Mapping
 
@@ -978,12 +1197,13 @@ This modifier is based on the radial curvatures of the underlying 3D surface. Th
 
 This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -991,12 +1211,13 @@ This modifier requires to have the Face Smoothness option on and the object need
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Curvature Min and Max | The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping. |
+Inverts the values.
 
+##### Curvature Min and Max
+
+The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.
 
 ### Distance from Camera
 
@@ -1004,12 +1225,13 @@ The mapping type. Linear or Curve.
 
 Recalculates the base property by the distance to the camera.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -1017,13 +1239,17 @@ Recalculates the base property by the distance to the camera.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Fill Range by Selection | Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target. |
+Inverts the values.
 
+##### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+##### Fill Range by Selection
+
+Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.
 
 ### Distance from Object
 
@@ -1031,13 +1257,17 @@ The mapping type. Linear or Curve.
 
 Recalculates the base property by the distance to a chosen object.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Target | Pick the target object. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Target
+
+Pick the target object.
 
 #### Mapping
 
@@ -1045,13 +1275,17 @@ Recalculates the base property by the distance to a chosen object.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Fill Range by Selection | Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target. |
+Inverts the values.
 
+##### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+##### Fill Range by Selection
+
+Sets the minimum and maximum range values from the distances between the current selected mesh vertices and the camera or the target.
 
 ### Material
 
@@ -1059,12 +1293,13 @@ The mapping type. Linear or Curve.
 
 Alters the base property on the current material under the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Material Attribute
 
@@ -1088,15 +1323,25 @@ Inverts the values.
 
 Uses a noise based pseudo random number generator to add some variation along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Amplitude | The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke. |
-| Period | The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke. |
-| Seed | Seed used by the pseudo-random number generator. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Amplitude
+
+The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.
+
+#### Period
+
+The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.
+
+#### Seed
+
+Seed used by the pseudo-random number generator.
 
 #### Mapping
 
@@ -1114,12 +1359,13 @@ Inverts the values.
 
 Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -1147,13 +1393,17 @@ The base thickness that you want to modify.
 
 The thickness position of silhouettes and border edges.
 
+#### Center
 
-| Entry | What it does |
-| ------- | ------------------------------------------------------------- |
-| Center | Silhouettes and border edges are centered along the stroke. |
-| Inside | Silhouettes and border edges are drawn inside of the stroke. |
-| Outside | Silhouettes and border edges are drawn outside of the stroke. |
+Silhouettes and border edges are centered along the stroke.
 
+#### Inside
+
+Silhouettes and border edges are drawn inside of the stroke.
+
+#### Outside
+
+Silhouettes and border edges are drawn outside of the stroke.
 
 #### Relative
 
@@ -1173,12 +1423,13 @@ The thickness ratio to shift the silhouettes and border edges.
 
 Add a gradient along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -1186,12 +1437,13 @@ Add a gradient along the stroke.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| --------------- | --------------------------------- |
-| Invert | Inverts the values. |
-| Value Min / Max | Minimum and maximum output value. |
+Inverts the values.
 
+##### Value Min / Max
+
+Minimum and maximum output value.
 
 ### Calligraphy
 
@@ -1199,14 +1451,21 @@ The mapping type. Linear or Curve.
 
 Generates different thickness, based on the orientation of the stroke. The result is a stroke thickness that orients at calligraphy.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Orientation | The angle of the virtual drawing tool, based at the vertical axis of the image. The thickest strokes will align with this angle. |
-| Thickness Min / Max | Minimum and maximum output value. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Orientation
+
+The angle of the virtual drawing tool, based at the vertical axis of the image. The thickest strokes will align with this angle.
+
+#### Thickness Min / Max
+
+Minimum and maximum output value.
 
 ### Crease Angle
 
@@ -1214,14 +1473,21 @@ Generates different thickness, based on the orientation of the stroke. The resul
 
 Add a gradientalong a crease angle. Which is the angle between two adjacent faces) If a stroke segment does not lie on a crease , then its properties are not touched by the modifier.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Thickness Min / Max | The minimum and maximum thickness. |
-| Angle Min / Max | The minimum and maximum crease angle to modify thickness. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Thickness Min / Max
+
+The minimum and maximum thickness.
+
+#### Angle Min / Max
+
+The minimum and maximum crease angle to modify thickness.
 
 #### Mapping
 
@@ -1241,14 +1507,21 @@ This modifier is based on the radial curvatures of the underlying 3D surface. Th
 
 This modifier requires to have the Face Smoothness option on and the object needs to have Smooth Shading.
 
+#### Blend Mode
 
-| Entry | What it does |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Thickness Min / Max | The minimum and maximum thickness. |
-| Curvature Min and Max | The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Thickness Min / Max
+
+The minimum and maximum thickness.
+
+#### Curvature Min and Max
+
+The limits of the mapping. If the current point of the stroke is at Min Curvature or less from the target, it will take the start point of the mapping. If it is at Max Curvature or more from the target, it will take the end-point value of the mapping.
 
 #### Mapping
 
@@ -1266,12 +1539,13 @@ Inverts the values.
 
 Recalculates the base property by the distance to the camera.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Mapping
 
@@ -1279,13 +1553,17 @@ Recalculates the base property by the distance to the camera.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Value Min and Value Max | The minimum and maximum output value of the mapping. These values are in scene units. |
+Inverts the values.
 
+##### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+##### Value Min and Value Max
+
+The minimum and maximum output value of the mapping. These values are in scene units.
 
 ### Distance from Object
 
@@ -1293,13 +1571,17 @@ The mapping type. Linear or Curve.
 
 Recalculates the base property by the distance to a chosen object.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Target | Pick the target object. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Target
+
+Pick the target object.
 
 #### Mapping
 
@@ -1307,13 +1589,17 @@ Recalculates the base property by the distance to a chosen object.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Range Min and Range Max | The minimum and maximum range. These values are in scene units. |
-| Value Min and Value Max | The minimum and maximum output value of the mapping. These values are in scene units. |
+Inverts the values.
 
+##### Range Min and Range Max
+
+The minimum and maximum range. These values are in scene units.
+
+##### Value Min and Value Max
+
+The minimum and maximum output value of the mapping. These values are in scene units.
 
 ### Material
 
@@ -1321,12 +1607,13 @@ The mapping type. Linear or Curve.
 
 Alters the thickness of the stroke based on the current material under the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ------------------------------ |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
 
 #### Material Attribute
 
@@ -1340,12 +1627,13 @@ What attribute of the material under the stroke to alter.
 
 The mapping type. Linear or Curve.
 
+##### Invert
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Invert | Inverts the values. |
-| Value Min and Value Max | The minimum and maximum output value of the mapping. These values are in scene units. |
+Inverts the values.
 
+##### Value Min and Value Max
+
+The minimum and maximum output value of the mapping. These values are in scene units.
 
 ### Noise
 
@@ -1353,16 +1641,29 @@ The mapping type. Linear or Curve.
 
 Uses a noise based pseudo random number generator to add some variation along the stroke.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Amplitude | The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke. |
-| Period | The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke. |
-| Seed | Seed used by the pseudo-random number generator. |
-| Asymetric | Assign the thickness asymetrical at both sides of the stroke. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Amplitude
+
+The maximum value of the noise. A higher amplitude means a less transparent (more solid) stroke.
+
+#### Period
+
+The period of the noise. This means how quickly the property value can change. A higher value means a more smoothly changing color along the stroke.
+
+#### Seed
+
+Seed used by the pseudo-random number generator.
+
+#### Asymetric
+
+Assign the thickness asymetrical at both sides of the stroke.
 
 ### Tangent
 
@@ -1370,13 +1671,17 @@ Uses a noise based pseudo random number generator to add some variation along th
 
 Modifies the base value on the traveling direction of the stroke, evaluated at the stroke’s vertices.
 
+#### Blend Mode
 
-| Entry | What it does |
-| ------------------- | ---------------------------------- |
-| Blend Mode | The color blend mode. |
-| Influence | The influence of the modifier. |
-| Thickness Min / Max | The minimum and maximum thickness. |
+The color blend mode.
 
+#### Influence
+
+The influence of the modifier.
+
+#### Thickness Min / Max
+
+The minimum and maximum thickness.
 
 #### Mapping
 
@@ -1404,12 +1709,13 @@ The modifier Sampling is on by default.
 
 Offset the stroke vertices from its original position.
 
+#### Start / End
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------ |
-| Start / End | The start and end of the offset relative to the stroke. |
-| X / Y | The offset amount along X and Y axis of the stroke vertices. |
+The start and end of the offset relative to the stroke.
 
+#### X / Y
+
+The offset amount along X and Y axis of the stroke vertices.
 
 ### 2D Transform
 
@@ -1417,13 +1723,17 @@ Offset the stroke vertices from its original position.
 
 Scale the stroke.
 
+#### Pivot
 
-| Entry | What it does |
-| -------------- | ----------------------------------------- |
-| Pivot | What center point to use for the scaling. |
-| Scale X / Y | The scale amount along X and Y. |
-| Rotation Angle | Rotate the stroke |
+What center point to use for the scaling.
 
+#### Scale X / Y
+
+The scale amount along X and Y.
+
+#### Rotation Angle
+
+Rotate the stroke
 
 ### Backbone Stretcher
 
@@ -1451,14 +1761,21 @@ The maximal allowed distance between the new bezier curve and the original backb
 
 Turn the strokes into a blueprint/cad like style stroke.
 
+#### Shape
 
-| Entry | What it does |
-| ------------- | ------------------------------------------- |
-| Shape | The shape of the blueprint contour strokes. |
-| Rounds | Number of rounds in contour strokes. |
-| Random Radius | Randomness of the radius. |
-| Center | Randomness of the center. |
+The shape of the blueprint contour strokes.
 
+#### Rounds
+
+Number of rounds in contour strokes.
+
+#### Random Radius
+
+Randomness of the radius.
+
+#### Center
+
+Randomness of the center.
 
 ### Guiding Lines
 
@@ -1476,15 +1793,25 @@ Add an offset to the the start and end points along the original stroke, before 
 
 Adds one-dimensional Perlin noise to the stroke. This modifier will give an identical result for two strokes with the same length and sampling interval.
 
+#### Frequency
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------ |
-| Frequency | How dense the noise is (kind of a scale factor along the stroke). |
-| Amplitude | How much the noise distorts the stroke in the Angle direction. |
-| Seed | The seed of the random generator (the same seed over a stroke will always give the same result). |
-| Octaves | The “level of detail” of the noise. |
-| Angle | In which direction the noise is applied (0.0 is fully horizontal). |
+How dense the noise is (kind of a scale factor along the stroke).
 
+#### Amplitude
+
+How much the noise distorts the stroke in the Angle direction.
+
+#### Seed
+
+The seed of the random generator (the same seed over a stroke will always give the same result).
+
+#### Octaves
+
+The “level of detail” of the noise.
+
+#### Angle
+
+In which direction the noise is applied (0.0 is fully horizontal).
 
 ### Perlin Noise 2D
 
@@ -1492,15 +1819,25 @@ Adds one-dimensional Perlin noise to the stroke. This modifier will give an iden
 
 Adds one-dimensional Perlin noise to the stroke. Different to the Perlin Noise 1D modifier the modifier generates noisy displacements using 2D coordinates of stroke vertices as the input of the noise generator.
 
+#### Frequency
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------ |
-| Frequency | How dense the noise is (kind of a scale factor along the stroke). |
-| Amplitude | How much the noise distorts the stroke in the Angle direction. |
-| Seed | The seed of the random generator (the same seed over a stroke will always give the same result). |
-| Octaves | The “level of detail” of the noise. |
-| Angle | In which direction the noise is applied (0.0 is fully horizontal). |
+How dense the noise is (kind of a scale factor along the stroke).
 
+#### Amplitude
+
+How much the noise distorts the stroke in the Angle direction.
+
+#### Seed
+
+The seed of the random generator (the same seed over a stroke will always give the same result).
+
+#### Octaves
+
+The “level of detail” of the noise.
+
+#### Angle
+
+In which direction the noise is applied (0.0 is fully horizontal).
 
 ### Polygonization
 
@@ -1538,13 +1875,17 @@ How close the vertices nees to be to each other to be merged.
 
 Adds a sinusoidal displacement to the stroke.
 
+#### Wavelength
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wavelength | How wide the undulations are along the stroke. |
-| Amplitude | How high the undulations are across the stroke. |
-| Phase | Allows “offsetting” (“moving”) the undulations along the stroke. Tip! With a phase of 0 the undulations this modifier produces look exactly the same at a Phase of 0. Same goes for any positive or negative multiple of the Wavelength set on the modifier. This allows you to render short video sequences with wavy lines that can then be seamlessly looped without any visual jumps in the undulations along the line. |
+How wide the undulations are along the stroke.
 
+#### Amplitude
+
+How high the undulations are across the stroke.
+
+#### Phase
+
+Allows “offsetting” (“moving”) the undulations along the stroke. Tip! With a phase of 0 the undulations this modifier produces look exactly the same at a Phase of 0. Same goes for any positive or negative multiple of the Wavelength set on the modifier. This allows you to render short video sequences with wavy lines that can then be seamlessly looped without any visual jumps in the undulations along the line.
 
 ### Spatial Noise
 
@@ -1552,15 +1893,25 @@ Adds a sinusoidal displacement to the stroke.
 
 Adds some spatial noise to the stroke. Spatial noise displacements are added in the normal direction of each stroke vertex.
 
+#### Amplitude
 
-| Entry | What it does |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Amplitude | How much the noise distorts the stroke. |
-| Scale | How wide the noise is along the stroke. |
-| Octaves | The level of detail of the noise. |
-| Smooth | When enabled, apply some smoothing over the generated noise. |
-| Pure Random | The usual noise is not really random. Each value depends of the value before. So as a result is more a series of values. Which can lead to patterns. Pure random adds much more randomness to the strokes. |
+How much the noise distorts the stroke.
 
+#### Scale
+
+How wide the noise is along the stroke.
+
+#### Octaves
+
+The level of detail of the noise.
+
+#### Smooth
+
+When enabled, apply some smoothing over the generated noise.
+
+#### Pure Random
+
+The usual noise is not really random. Each value depends of the value before. So as a result is more a series of values. Which can lead to patterns. Pure random adds much more randomness to the strokes.
 
 ### Tip remover
 
@@ -1580,13 +1931,17 @@ You can use a texture for the freestyle lines. The texture is created and manage
 
 In this panel you just manage some settings for it
 
+### Use Nodes
 
-| Entry | What it does |
-| ---------------------------------- | ---------------------------------------------------------------------- |
-| Use Nodes | Use shader nodes for the line style. |
-| Spacing along Stroke | The spacing for textures along stroke length |
-| Go to Linestyle Texture Properties | Switch to the Texture Properties tab to create and manage the texture. |
+Use shader nodes for the line style.
 
+### Spacing along Stroke
+
+The spacing for textures along stroke length
+
+### Go to Linestyle Texture Properties
+
+Switch to the Texture Properties tab to create and manage the texture.
 
 ## Freestyle Animation
 

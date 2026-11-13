@@ -8,8 +8,8 @@ path:
   - "Mesh"
   - "Edit Mode"
   - "Header"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: topbar
 summary: "The header menus of Mesh › Edit Mode."
 order: 10
@@ -33,7 +33,7 @@ The added objects in edit mode becomes part of the current object geometry. It i
 
 ![Edit Mode - Add Menu](/docs2/images/editors/3d-viewport/header/edit-mode-add-menu/edit-mode-add-menu-5.png)
 
-### Last Operator
+### Adjust Last Operation - Edit Mode - Add Menu
 
 ![Last Operator](/docs2/images/editors/3d-viewport/header/add-menu/plane.png)
 
@@ -71,9 +71,11 @@ In the header you can see further advice. And the current values for the bevel.
 
 ![Bevel Edges](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/bevel-edges-2.png)
 
-##### Last Operator Bevel
+##### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-bevel.png)
+
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Width type
 
@@ -81,20 +83,45 @@ In the header you can see further advice. And the current values for the bevel.
 
 Width Type is a drop-down box choose the Amount type for the bevel action.
 
+###### Offset
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------- |
-| Offset | Amount is offset of new edges from original. |
-| Width | Amount is width of new face. |
-| Depth | Amount is perpendicular distance from original edge to bevel face |
-| Percent | Controls the Profile shape. 0.5 means round. |
-| Absolute | Amount is absolute distance along adjacent edge. |
-| Harden Normals | Match normals to new faces of adjacent faces. |
-| Clamp Overlap | Do not allow beveled geometry to overlap each other. |
-| Loop Slide | Prefer slide along edge to even widths. |
-| Mark Seams | Mark seams along the beveled edges. |
-| Mark Sharp | Mark the beveled edges sharp. |
+Amount is offset of new edges from original.
 
+###### Width
+
+Amount is width of new face.
+
+###### Depth
+
+Amount is perpendicular distance from original edge to bevel face
+
+###### Percent
+
+Controls the Profile shape. 0.5 means round.
+
+###### Absolute
+
+Amount is absolute distance along adjacent edge.
+
+###### Harden Normals
+
+Match normals to new faces of adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled geometry to overlap each other.
+
+###### Loop Slide
+
+Prefer slide along edge to even widths.
+
+###### Mark Seams
+
+Mark seams along the beveled edges.
+
+###### Mark Sharp
+
+Mark the beveled edges sharp.
 
 ##### Miter Outer
 
@@ -102,19 +129,19 @@ Width Type is a drop-down box choose the Amount type for the bevel action.
 
 How the outer miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Patch**
+###### Patch
 
 ![Patch](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png)
 
 This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
@@ -126,19 +153,19 @@ This replaces the vertex of a miter with 2 vertices, joined by an arc. A separat
 
 How the inner miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
 This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.
 
-**Spread**
+###### Spread
 
 ![Spread](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/spread.png)
 
@@ -162,40 +189,32 @@ Wether to set face strength, and which faces to set the strength at.
 
 The profile type.
 
-**Superellipse**
+###### Superellipse
 
 Uses a mathematically smooth curve for bevel profiles
 
-**Custom**
+###### Custom
 
 Allows manual control of the bevel profile shape via a curve widget.
 
-**Presets**
+###### Presets
 
 ![Presets](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png)
 
 Curve presets.
 
-**Navigation elements**
+###### Navigation elements
 
+- **Zoom in and out**: The two buttons with the magnifying glass at it zooms in and out in the curve window.
+- **Reverse Path**: Reverses the curve path.
+- **Toggle Profile Clipping**: Turns the profile clipping on or off.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Reverse Path | Reverses the curve path. |
-| Toggle Profile Clipping | Turns the profile clipping on or off. |
-
-
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
-
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
-
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
 ##### Curve view
 
@@ -211,27 +230,20 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
-**Handler and node position**
+###### Handler and node position
 
 ![Handler and node position](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png)
 
 When you select a node, then the handler and node position tools shows below the curve window.
 
+- **Handle Type Auto Handle**: Sets the handle type of this curve point to smooth.
+- **Handle Type Vector Handle**: Sets the handle type of this curve point to sharp.
+- **Handle Type Free Handle**: Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.
+- **Handle Type Aligned Free Handle**: Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.
+- **X Y Values**: The position of the currently selected curve point
 
-| Entry | What it does |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Handle Type Auto Handle | Sets the handle type of this curve point to smooth. |
-| Handle Type Vector Handle | Sets the handle type of this curve point to sharp. |
-| Handle Type Free Handle | Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each. |
-| Handle Type Aligned Free Handle | Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve. |
-| X Y Values | The position of the currently selected curve point |
-
-
-| Entry | What it does |
-| -------------------- | --------------------------------- |
-| Sample straigt edges | Sample edges with vector handles. |
-| Sample even length | Sample edges with even lengths. |
-
+- **Sample straigt edges**: Sample edges with vector handles.
+- **Sample even length**: Sample edges with even lengths.
 
 #### Edge Slide
 
@@ -253,9 +265,11 @@ The header values shows you the current transformation. But also hints towards a
 
 Holding down Alt will allow you to slide the edges behind the limits of the guide edge. Yellow infinite guide lines appears.
 
-##### Last Operator Edge Slide
+##### Adjust Last Operation - Edge Slide
 
 ![Last Operator Edge Slide](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-edge-slide.png)
+
+Change the settings of **Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -278,7 +292,7 @@ When you click once, then this edge gets created. When you click and hold, then 
 
 Loop cut and Slide ignores selections. It will try to divide the face under the mouse, and continue the loop until it is closed, or until it cannot continue.
 
-#### Last Operator Loop Cut and Slide
+#### Adjust Last Operation - Loop Cut and Slide
 
 ![Last Operator Loop Cut and Slide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-loop-cut-and-slide.png)
 
@@ -300,16 +314,29 @@ This value defines how smooth the loop cut gets added. From flat to bent.
 
 Adjust the Falloff type for smoothness.
 
+###### Factor
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------- |
-| Factor | Change the center of the added loop. |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
-| Mirror Editing | Enable mirror editing. |
-| Correct UV's | Corrects the UV's when modifying the geometry. |
+Change the center of the added loop.
 
+###### Even
+
+Make the edge loop match the shape of the adjacent edge loop
+
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
+
+###### Mirror Editing
+
+Enable mirror editing.
+
+###### Correct UV's
+
+Corrects the UV's when modifying the geometry.
 
 #### Offset Edge Slide
 
@@ -321,7 +348,11 @@ Usage: select the edges that you want to slide. Click to confirm.
 
 You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
-##### Last Operator Offset Edge Slide
+##### Adjust Last Operation - Offset Edge Slide
+
+Change the settings of **Offset Edge Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Offset Edge Slide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-offset-edge-slide.png)
 
 ##### Cap Endpoint
 
@@ -331,14 +362,21 @@ You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
 Cap Endpoint caps the loose edges.
 
+###### Edge Slide Factor
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------- |
-| Edge Slide Factor | Adjust the slide amount. |
-| Even | Make the edge loop match the shape of the adjacent edge loop |
-| Flipped | When Even mode is active, flips between the two adjacent edge loops. |
-| Clamp | Clamp within the edge extend. |
+Adjust the slide amount.
 
+###### Even
+
+Make the edge loop match the shape of the adjacent edge loop
+
+###### Flipped
+
+When Even mode is active, flips between the two adjacent edge loops.
+
+###### Clamp
+
+Clamp within the edge extend.
 
 ##### Mirror Editing
 
@@ -354,9 +392,11 @@ Corrects the UV's when modifying the geometry.
 
 The Bridge edge loops tool bridges selected edges, and adds a polygon between them. You need to have at least two edges selected.
 
-#### Last Operator Bridge Edge loops
+#### Adjust Last Operation - Bridge Edge loops
 
 ![Last Operator Bridge Edge loops](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/merge.png)
+
+Change the settings of **Bridge Edge loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Connect Loops
 
@@ -364,13 +404,17 @@ The Bridge edge loops tool bridges selected edges, and adds a polygon between th
 
 Choose the method how to deal with bridging multiple loops.
 
+###### Merge
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Merge | With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges. |
-| Twist | The twist offset for closed loops. |
-| Number of Cuts | Adds cuts to the bridge face. |
+With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.
 
+###### Twist
+
+The twist offset for closed loops.
+
+###### Number of Cuts
+
+Adds cuts to the bridge face.
 
 ##### Interpolation
 
@@ -378,12 +422,13 @@ Choose the method how to deal with bridging multiple loops.
 
 Choose the interpolation mode for the cuts.
 
+###### Smoothness
 
-| Entry | What it does |
-| -------------- | --------------------------------------- |
-| Smoothness | Adjust the smoothness for the cuts. |
-| Profile Factor | Adjust the profile factor for the cuts. |
+Adjust the smoothness for the cuts.
 
+###### Profile Factor
+
+Adjust the profile factor for the cuts.
 
 ##### Profile shape
 
@@ -401,9 +446,11 @@ Subdivide divides the selected edges. It subdivides the involved faces too, and 
 
 A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.
 
-#### Last Operator Subdivide
+#### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Number of Cuts
 
@@ -425,13 +472,17 @@ Create N-Gons if required. Else subdividing N-Gons creates Tris.
 
 Adjust the corner type.
 
+###### Fractal
 
-| Entry | What it does |
-| ------------ | ----------------------------------------------------------------------------------------------------------- |
-| Fractal | Randomize the selected vertices. |
-| Along Normal | When randomized, this value defines how strong the subdivision follows the normals of the initial vertices. |
-| Random Seed | Randomizing value for fractal randomizing. |
+Randomize the selected vertices.
 
+###### Along Normal
+
+When randomized, this value defines how strong the subdivision follows the normals of the initial vertices.
+
+###### Random Seed
+
+Randomizing value for fractal randomizing.
 
 #### Subdivide Edge ring
 
@@ -439,9 +490,11 @@ Adjust the corner type.
 
 Subdivides the selected edge ring(s).
 
-##### Last Operator Subdivide Edge ring
+##### Adjust Last Operation - Subdivide Edge ring
 
 ![Last Operator Subdivide Edge ring](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-subdivide-edge-ring.png)
+
+Change the settings of **Subdivide Edge ring** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -472,7 +525,11 @@ A drop-down box where you can define a profile for the generated geometry.
 
 Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.
 
-#### Last Operator Un-Subdivide
+#### Adjust Last Operation - Un-Subdivide
+
+Change the settings of **Un-Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Un-Subdivide](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-un-subdivide.png)
 
 ##### Iterations
 
@@ -492,7 +549,11 @@ Rotate Edge rotates the selected edge clockwise.
 
 Rotate Edge rotates the selected edge counter clockwise.
 
-#### Last Operator Rotate Selected Edge
+#### Adjust Last Operation - Rotate Selected Edge
+
+Change the settings of **Rotate Selected Edge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Rotate Selected Edge](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-rotate-selected-edge.png)
 
 ##### Counter Clockwise
 
@@ -512,9 +573,11 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.
 
-#### Last Operator Edge Crease
+#### Adjust Last Operation - Edge Crease
 
 ![Last Operator Edge Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-crease.png)
+
+Change the settings of **Edge Crease** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
@@ -536,7 +599,11 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative Edge Bevel Weight value will subtract from the current active crease value in case it exists already from a former crease operation. An Edge Bevel Weight value of -1 removes the weight from this edge.
 
-#### Last Operator Edge Bevel Weight
+#### Adjust Last Operation - Edge Bevel Weight
+
+Change the settings of **Edge Bevel Weight** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Edge Bevel Weight](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-edge-bevel-weight.png)
 
 ##### Factor
 
@@ -552,9 +619,11 @@ Mark Sharp is a tool that you need for the Edge Split modifier. Marked edges are
 
 ![Mark Sharp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/mark-sharp.png)
 
-#### Last Operator Mark Sharp
+#### Adjust Last Operation - Mark Sharp
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-mark-sharp.png)
+
+Change the settings of **Mark Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -564,28 +633,33 @@ Calculate by the selected vertices instead of edges to mark the edges.
 
 Clears formerly as sharp marked selected edges.
 
-#### Last Operator Mark Sharp
+#### Adjust Last Operation - Mark Sharp
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-mark-sharp-2.png)
+
+Change the settings of **Mark Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
 Calculate by the selected vertices instead of edges to mark the edges.
 
+###### Mark Sharp from Vertices
 
-| Entry | What it does |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mark Sharp from Vertices | Same as Mark Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. |
-| Clear Sharp from Vertice | Same as Clear Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. the selected edges as Freestyle feature edges. |
+Same as Mark Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges.
 
+###### Clear Sharp from Vertice
+
+Same as Clear Sharp, but with Vertices already ticked in the Adjust Last Operation panel. The calculation happens from the selected vertices instead of the selected edges. the selected edges as Freestyle feature edges.
 
 ### Set Sharpness by Angle
 
 Set edge sharpness based on the angle between neighboring faces.
 
-#### Last Operator Set Sharpness by Angle
+#### Adjust Last Operation - Set Sharpness by Angle
 
 ![Last Operator Set Sharpness by Angle](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-edge-menu/last-operator-set-sharpness-by-angle.png)
+
+Change the settings of **Set Sharpness by Angle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -630,9 +704,11 @@ Inset insets edges into the selected faces. Think of it as an extrude inwards th
 
 Activate the tool, drag the mouse. But carefully. The control is not the best. You better adjust the amount in the last operator.
 
-##### Last Operator Inset Faces
+##### Adjust Last Operation - Inset Faces
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
+
+Change the settings of **Inset Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Boundary
 
@@ -640,19 +716,41 @@ With Boundary ticked you will get the connect edges in the corners. Without the 
 
 ![Boundary](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/boundary.png)
 
+###### Offset Even
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------- |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
-| Edge Rail | Inset the region along existing edges. |
-| Thickness | Thickness adjusts the thickness of the inset geometry. |
-| Depth | With depth you can bevel the inset geometry. It is then not longer co planar to the initial face. |
-| Outset | With outset ticked the Inset will not extrude inwards but outwards. |
-| Select Outer | With Select Outer the outer ring will be selected after the Inset. |
-| Individual | Inset every face individually. |
-| Interpolate | Blend Face Data across the inset. |
+Scales the offset to give more even thickness.
 
+###### Offset Relative
+
+Scales the offset by surrounding geometry.
+
+###### Edge Rail
+
+Inset the region along existing edges.
+
+###### Thickness
+
+Thickness adjusts the thickness of the inset geometry.
+
+###### Depth
+
+With depth you can bevel the inset geometry. It is then not longer co planar to the initial face.
+
+###### Outset
+
+With outset ticked the Inset will not extrude inwards but outwards.
+
+###### Select Outer
+
+With Select Outer the outer ring will be selected after the Inset.
+
+###### Individual
+
+Inset every face individually.
+
+###### Interpolate
+
+Blend Face Data across the inset.
 
 #### Bridge Faces
 
@@ -662,9 +760,11 @@ This tool is basically the Bridge Edge Loops tool, just that it operates in Face
 
 Note that this tool just shows when you are in Face Select Mode.
 
-##### Last Operator Bridge Edge loops
+##### Adjust Last Operation - Bridge Edge loops
 
 ![Last Operator Bridge Edge loops](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/merge.png)
+
+Change the settings of **Bridge Edge loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Connect Loops
 
@@ -672,13 +772,17 @@ Note that this tool just shows when you are in Face Select Mode.
 
 Choose the method how to deal with bridging multiple loops.
 
+###### Merge
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Merge | With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges. |
-| Twist | The twist offset for closed loops. |
-| Number of Cuts | Adds cuts to the bridge face. |
+With merge ticked it will not create a bridge face, but merge the selected edges. · **Merge Factor**: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.
 
+###### Twist
+
+The twist offset for closed loops.
+
+###### Number of Cuts
+
+Adds cuts to the bridge face.
 
 ##### Interpolation
 
@@ -686,12 +790,13 @@ Choose the method how to deal with bridging multiple loops.
 
 Choose the interpolation mode for the cuts.
 
+###### Smoothness
 
-| Entry | What it does |
-| -------------- | --------------------------------------- |
-| Smoothness | Adjust the smoothness for the cuts. |
-| Profile Factor | Adjust the profile factor for the cuts. |
+Adjust the smoothness for the cuts.
 
+###### Profile Factor
+
+Adjust the profile factor for the cuts.
 
 ##### Profile shape
 
@@ -705,7 +810,11 @@ Adjust the profile shape for the cuts.
 
 Splits the selected faces to create a triangulated geometry.
 
-#### Last Operator Poke Faces
+#### Adjust Last Operation - Poke Faces
+
+Change the settings of **Poke Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Poke Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-poke-faces.png)
 
 ##### Poke Offset
 
@@ -731,7 +840,11 @@ Poke Center is a drop-down box choose what the center of the poke operation shou
 
 Triangulate Faces triangulates the faces of the selected geometry.
 
-#### Last Operator Triangulate Faces
+#### Adjust Last Operation - Triangulate Faces
+
+Change the settings of **Triangulate Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Triangulate Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-triangulate-faces.png)
 
 ##### Quad Method
 
@@ -749,12 +862,13 @@ Splits the quads based on their distance between vertices.
 
 Splits the quads on the second and fourth vertice.
 
+###### Fixed
 
-| Entry | What it does |
-| ------ | ------------------------------------------------ |
-| Fixed | Splits the quads on the first and third vertice. |
-| Beauty | Tries to optimize the triangulation. |
+Splits the quads on the first and third vertice.
 
+###### Beauty
+
+Tries to optimize the triangulation.
 
 ##### Polygon Method
 
@@ -762,12 +876,13 @@ Splits the quads on the second and fourth vertice.
 
 Choose how N-Gons should be triangulated.
 
+###### Clip
 
-| Entry | What it does |
-| ------ | --------------------------------------------------- |
-| Clip | Splits the polygons with an ear clipping algorithm. |
-| Beauty | Tries to optimize the triangulation. |
+Splits the polygons with an ear clipping algorithm.
 
+###### Beauty
+
+Tries to optimize the triangulation.
 
 ### Triangles to Quads
 
@@ -775,7 +890,11 @@ Choose how N-Gons should be triangulated.
 
 Tris to quads tries to convert triangulated geometry back to a quad geometry by removing the edges inside of the quads.
 
-#### Last Operator Tris to Quads
+#### Adjust Last Operation - Tris to Quads
+
+Change the settings of **Tris to Quads** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Tris to Quads](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-tris-to-quads.png)
 
 ##### Max Face Angle
 
@@ -783,18 +902,37 @@ Tris to quads tries to convert triangulated geometry back to a quad geometry by 
 
 Adjust the threshold to adjacent triangles.
 
+###### Max Shape Angle
 
-| Entry | What it does |
-| ------------------------ | --------------------------------------------------------------------------------------------------------- |
-| Max Shape Angle | Adjust the shape angle limit. |
-| Topology influence | How much to priorize regular grids of qads as well as quads that touch existing quads. |
-| Compare UV's | Takes the UV patches for the calculation into account. Border geometry will not be calculated. |
-| Compare Color attributes | Takes the Vertex colors for the calculation into account. Border geometry will not be calculated. |
-| Compare Seam | Takes the Vertex colors for the calculation into account. Border geometry will not be calculated. |
-| Compare Sharp | Takes the as sharp marked edges for the calculation into account. Border geometry will not be calculated. |
-| Compare Materials | Takes the Materials colors for the calculation into account. Border geometry will not be calculated. |
-| Deselect Joined | Only select remaining triangles that were not merged. |
+Adjust the shape angle limit.
 
+###### Topology influence
+
+How much to priorize regular grids of qads as well as quads that touch existing quads.
+
+###### Compare UV's
+
+Takes the UV patches for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Color attributes
+
+Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Seam
+
+Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Sharp
+
+Takes the as sharp marked edges for the calculation into account. Border geometry will not be calculated.
+
+###### Compare Materials
+
+Takes the Materials colors for the calculation into account. Border geometry will not be calculated.
+
+###### Deselect Joined
+
+Only select remaining triangles that were not merged.
 
 ### Solidify Faces
 
@@ -806,7 +944,11 @@ Gives the selected faces a thickness, and makes it solid.
 
 There is also a Solidify modifier available.
 
-#### Last Operator Solidify
+#### Adjust Last Operation - Solidify
+
+Change the settings of **Solidify** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Solidify](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-solidify.png)
 
 ##### Thickness
 
@@ -818,7 +960,11 @@ Adjust the thickness. You can scale also into the negative range.
 
 Wire frame grabs the edges of the faces and turns them into tubes.
 
-#### Last Operator Wire Frame
+#### Adjust Last Operation - Wire Frame
+
+Change the settings of **Wire Frame** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Wire Frame](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-wire-frame.png)
 
 #### Boundary
 
@@ -826,17 +972,33 @@ Wire frame grabs the edges of the faces and turns them into tubes.
 
 Inset Face Boundaries.
 
+##### Offset Even
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| Offset Even | Scales the offset to give more even thickness. |
-| Offset Relative | Scales the offset by surrounding geometry. |
-| Replace | Removes the source geometry. |
-| Thickness | Adjust he thickness of the tubes. |
-| Offset | Adjust the offset of the tubes. |
-| Crease | Crease adds close edges so that you have sharp corners when you use Subdivision Surface. |
-| Crease Weight | Adjust the crease weight. |
+Scales the offset to give more even thickness.
 
+##### Offset Relative
+
+Scales the offset by surrounding geometry.
+
+##### Replace
+
+Removes the source geometry.
+
+##### Thickness
+
+Adjust he thickness of the tubes.
+
+##### Offset
+
+Adjust the offset of the tubes.
+
+##### Crease
+
+Crease adds close edges so that you have sharp corners when you use Subdivision Surface.
+
+##### Crease Weight
+
+Adjust the crease weight.
 
 ### Fill
 
@@ -844,7 +1006,11 @@ Inset Face Boundaries.
 
 Fill closes holes in the selected mesh geometry, and triangulates the faces.
 
-#### Last Operator Fill
+#### Adjust Last Operation - Fill
+
+Change the settings of **Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fill](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fill.png)
 
 ##### Beauty
 
@@ -860,7 +1026,11 @@ Grid Fill allows you to fill two edge loops with quad geometry that follows the 
 
 Usage: select two opposite edge loops. Then perform the tool.
 
-#### Last Operator Grid Fill
+#### Adjust Last Operation - Grid Fill
+
+Change the settings of **Grid Fill** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Grid Fill](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-grid-fill.png)
 
 ##### Span
 
@@ -868,12 +1038,13 @@ Usage: select two opposite edge loops. Then perform the tool.
 
 Number of sides.
 
+###### Offset
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------ |
-| Offset | Define an offset |
-| Simple Blending | Uses a simple interpolation. Faster but less accurate. |
+Define an offset
 
+###### Simple Blending
+
+Uses a simple interpolation. Faster but less accurate.
 
 ### Beautify Faces
 
@@ -881,9 +1052,11 @@ Number of sides.
 
 Beautify faces tries to optimize triangulation.
 
-#### Last Operator Beautify Faces
+#### Adjust Last Operation - Beautify Faces
 
 ![Last Operator Beautify Faces](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/last-operator-beautify-faces.png)
+
+Change the settings of **Beautify Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Max Angle
 
@@ -897,28 +1070,37 @@ Intersect creates edges where geometry intersects.
 
 This operation happens in Edit mode, and so all parts must be in the same mesh.
 
-#### Last Operator Intersect
+#### Adjust Last Operation - Intersect
+
+Change the settings of **Intersect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Intersect](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-intersect-knife.png)
 
 ##### Source
 
 ![Source](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/source.png)
 
+###### Selected/Unselected
 
-| Entry | What it does |
-| ------------------- | --------------------------------------------------- |
-| Selected/Unselected | works between the selected and unselected geometry. |
-| Self Intersect | works on the overlapping geometry of the mesh. |
+works between the selected and unselected geometry.
 
+###### Self Intersect
+
+works on the overlapping geometry of the mesh.
 
 ##### Separate Mode
 
+###### All
 
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------- |
-| All | Splits the geometry at the new edge. |
-| Cut | keeps each side of the intersection separate without splitting the faces in half. |
-| Merge | Merge all geometry from the intersection. **Merge** merges all the geometry from the intersection. |
+Splits the geometry at the new edge.
 
+###### Cut
+
+keeps each side of the intersection separate without splitting the faces in half.
+
+###### Merge
+
+Merge all geometry from the intersection. **Merge** merges all the geometry from the intersection.
 
 ##### Solver
 
@@ -926,7 +1108,7 @@ This operation happens in Edit mode, and so all parts must be in the same mesh.
 
 ![Float](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/float.png)
 
-**Merge Threshold**
+###### Merge Threshold
 
 Adjust the merge threshold. Increase it when some geometry is not calculated. But keep it small for fast calculation.
 
@@ -942,7 +1124,11 @@ Intersect (Boolean) performs a Boolean operation between the selected and unsele
 
 This operation happens in Edit mode, and so all parts must be in the same mesh.
 
-#### Last Operator Intersect (Boolean)
+#### Adjust Last Operation - Intersect (Boolean)
+
+Change the settings of **Intersect (Boolean)** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Intersect (Boolean)](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-intersect-boolean.png)
 
 ##### Boolean Operation
 
@@ -972,12 +1158,13 @@ Removes all geometry but the overlapping geometry.
 
 ##### Solver
 
+###### Float
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Float | **Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. · **Merge Threshold**: Adjust the tolerance for the Boolean operation. Increase it when some geometry is not calculated. But keep it small for fast calculation. |
-| Exact | **Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. |
+**Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection. · **Merge Threshold**: Adjust the tolerance for the Boolean operation. Increase it when some geometry is not calculated. But keep it small for fast calculation.
 
+###### Exact
+
+**Swap**: Inverts source and target geometry. · **Self intersection**: Enable self union / self intersection.
 
 ### Weld Edges into Faces
 
@@ -1001,9 +1188,11 @@ Rotates the vertex colors for the selected geometry. This tool requires to have 
 
 Note that there is no way to display vertex colors in Edit mode. So you need to switch to Vertex paint mode to see the result.
 
-##### Last Operator Rotate Colors
+##### Adjust Last Operation - Rotate Colors
 
 ![Last Operator Rotate Colors](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/last-operator-rotate-colors.png)
+
+Change the settings of **Rotate Colors** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Counter Clockwise
 
@@ -1023,7 +1212,7 @@ Note that there is no way to display vertex colors in Edit mode. So you need to 
 
 Rotates the UV space for the selected geometry by 90 degrees. This tool requires to have a working UV mapping.
 
-##### Last Operator Rotate UV's
+##### Adjust Last Operation - Rotate UV's
 
 ![Last Operator Rotate UV's](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-face-menu/last-operator-rotate-uv-s.png)
 
@@ -1063,9 +1252,11 @@ Bisect cuts geometry along a plane. This description is a bit misleading though.
 
 When you have set your cut and release the mouse then you reveal a widget with which you can move and rotate the cut. Clicking at the arrow and drag moves the cut. Clicking at the circle and drag rotates the cut.
 
-#### Last Operator Bisect
+#### Adjust Last Operation - Bisect
 
 ![Last Operator Bisect](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-bisect.png)
+
+Change the settings of **Bisect** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1132,9 +1323,11 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-2.png)
 
-#### Last Operator To Sphere
+#### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1149,41 +1342,21 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
 
-### To Circle
+See and adjust the falloff radius.
 
-Transforms selected vertices into a circular arrangement.  
-Useful for reshaping loops, aligning geometry, or creating radial structures with precision.
+###### Connected
 
-#### Usage
+The proportional falloff gets calculated for connected parts only.
 
-![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-3.png)
+###### Projected(2D)
 
-Select the loop of mesh geometry, activate the tool. In the Last Operator panel, you can then adjust properties after the operation.
-
-#### Last Operator To Sphere
-
-![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-to-sphere.png)
-
-
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Factor | Controls the strength of the circular transformation.   – **1.000**: full circle.   – **&lt; 1.000**: partial influence, blending with original shape. |
-| Method | Defines how the circle is calculated:   – **Best Fit**: fits a circle to the selection using least-squares approximation.   – Interior Fit: Moves vertices inward toward the center of the selection. |
-| Rotation | Applies a rotational offset to the resulting circle. |
-| Radius | Sets a fixed radius for the circle. |
-| Space Evenly | Distributes vertices evenly along the circle’s perimeter.   – Enabled: uniform spacing.   – Disabled: preserves original spacing. |
-| Flatten | Controls how much the selection is flattened onto a plane before circularization.   – **1.000**: full flattening.   – **0.000**: preserves original depth variation. |
-| Lock Axis (X, Y, Z) | Constrains transformation to specific axes. Useful for maintaining symmetry or aligning with existing geometry. |
-
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Shear
 
@@ -1195,9 +1368,11 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-#### Last Operator Shear
+#### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Offset
 
@@ -1231,14 +1406,21 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Bend
 
@@ -1250,9 +1432,11 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-#### Last Operator Push/Pull
+#### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1267,14 +1451,226 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+### To Circle
+
+Transforms selected vertices into a circular arrangement.  
+Useful for reshaping loops, aligning geometry, or creating radial structures with precision.
+
+#### Usage
+
+![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-3.png)
+
+Select the loop of mesh geometry, activate the tool. In the Last Operator panel, you can then adjust properties after the operation.
+
+#### Adjust Last Operation - To Circle
+
+![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-to-sphere.png)
+
+Change the settings of **To Circle** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Factor | Controls the strength of the circular transformation.   – **1.000**: full circle.   – **&lt; 1.000**: partial influence, blending with original shape. |
+| Method | Defines how the circle is calculated:   – **Best Fit**: fits a circle to the selection using least-squares approximation.   – Interior Fit: Moves vertices inward toward the center of the selection. |
+| Rotation | Applies a rotational offset to the resulting circle. |
+| Radius | Sets a fixed radius for the circle. |
+| Space Evenly | Distributes vertices evenly along the circle’s perimeter.   – Enabled: uniform spacing.   – Disabled: preserves original spacing. |
+| Flatten | Controls how much the selection is flattened onto a plane before circularization.   – **1.000**: full flattening.   – **0.000**: preserves original depth variation. |
+| Lock Axis (X, Y, Z) | Constrains transformation to specific axes. Useful for maintaining symmetry or aligning with existing geometry. |
 
+
+### Flatten
+
+Moves the selected vertices onto one flat plane. Use it to level a bumpy area, for example the base of a model or a wall that should be flat. The plane is found from the selection itself, from its face normals, or from the view.
+
+#### Adjust Last Operation - Flatten
+
+Change the settings of **Flatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Flatten](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-flatten.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How far the vertices move onto the plane. 1 makes them fully flat. |
+| Method | The plane to flatten on. **Best Fit** uses the plane that fits the selection best. **Normal** uses the average of the face normals. **View** uses a plane that faces the view. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+
+### Shrink/Fatten
+
+Shrink/Fatten scales the selected geometry along its normals. Transform orientation and Pivot point gets ignored.
+
+A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.
+
+#### Adjust Last Operation - Shrink/Fatten
+
+![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-shrink-fatten.png)
+
+The Last Operator Shrink/Fatten panel gives you tools to adjust the Shrink/Fatten operation. Here you have numeric input for the strength and a few more options.
+
+
+| Entry | What it does |
+| -------------- | ---------------------------------------------------------------------- |
+| Offset | Offset is the strength of the offset for Shrink/Fatten. |
+| Offset Even | Offset Even scales the selection to give more thickness in even areas. |
+| Mirror Editing | Enable mirror editing. |
+
+
+##### Proportional editing
+
+![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
+
+Enables proportional editing. Activating proportional editing reveals further settings.
+
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
+
+### Space Edge Loops Evenly
+
+Moves the vertices of the selected edge loops so they are the same distance apart along the loop. Use it to clean up uneven spacing after cutting or sculpting. The shape of the loop stays, only the spacing changes.
+
+#### Adjust Last Operation - Space Edge Loops Evenly
+
+Change the settings of **Space Edge Loops Evenly** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Space Edge Loops Evenly](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-space-edge-loops-evenly.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How much of the effect to apply. 1 is fully even. |
+| Interpolation | **Cubic** follows a smooth curve through the vertices. **Linear** keeps the vertices on the existing edges. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+
+### Relax Edge Loops
+
+Smooths the selected edge loops so they have fewer bumps and zigzags, like a rope that is pulled loose. Use it to clean up a wobbly loop without moving it by hand. Each iteration smooths the loop a bit more.
+
+#### Adjust Last Operation - Relax Edge Loops
+
+Change the settings of **Relax Edge Loops** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Relax Edge Loops](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-relax-edge-loops.png)
+
+| Entry | What it does |
+| --- | --- |
+| Iterations | How many times the loop is relaxed. More iterations give a smoother loop. |
+| Space Evenly | Also spaces the vertices at the same distance along the loop. |
+| Interpolation | **Cubic** gives smooth results. **Linear** relaxes with straight lines between the vertices. |
+
+### Curve Edge Loops Between Selected
+
+Bends edge loops into a smooth curve that passes through the selected vertices. Use it to shape a row of edges into an arc, for example the rim of a bowl, by selecting a few vertices as guides. The unselected parts of each loop follow the curve.
+
+#### Adjust Last Operation - Curve Edge Loops Between Selected
+
+Change the settings of **Curve Edge Loops Between Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Curve Edge Loops Between Selected](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-curve-edge-loops-between-selected.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How much the loops are curved. 1 follows the curve fully. |
+| Clamp Elevation | Limits how the vertices move. **None** has no limit. **Only Raise** only moves them outward. **Only Lower** only moves them inward. |
+| Extend Loop | Also curves the parts of the loop beyond the selected vertices. |
+| Space Evenly | Spaces the vertices at the same distance along the curve. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+| Interpolation | **Cubic** gives a smooth curve. **Linear** is simpler and faster. |
+
+### Fit Edge Loops To Annotation
+
+Moves the selected vertices onto the active annotation stroke. Use it to shape a loop by drawing it: draw an annotation stroke where the edges should go, select the loop, then run the tool. The vertices are spread along the stroke.
+
+#### Adjust Last Operation - Fit Edge Loops To Annotation
+
+Change the settings of **Fit Edge Loops To Annotation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fit Edge Loops To Annotation](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fit-edge-loops-to-annotation.png)
+
+| Entry | What it does |
+| --- | --- |
+| Factor | How far the vertices move onto the stroke. 1 moves them fully. |
+| Method | How the vertices are placed. **Spread** uses the whole stroke and keeps the spacing between the vertices. **Spread Evenly** uses the whole stroke and spaces the vertices evenly. **Project** moves each vertex to the stroke along its normal; the stroke must be close to the mesh, or nothing happens. |
+| Delete Strokes | Removes the annotation stroke after it is used. |
+| Lock X, Y, Z | Keeps the vertices from moving along that axis. |
+
+### Skin Resize
+
+![Skin Resize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize.png)
+
+This tool requires to have a skin modifier at the mesh. It scales the thickness of the skin.
+
+While the operation you will see in the header the strength value for the skin.
+
+![Skin Resize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize-2.png)
+
+#### Adjust Last Operation - Skin Resize
+
+Change the settings of **Skin Resize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Skin Resize](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-skin-resize.png)
+
+##### Scale X, Y, Z
+
+The scale of the skin radius on each axis.
+
+##### Orientation
+
+Orientation is a drop-down box. Choose the orientation of the scale axes.
+
+##### Mirror Editing
+
+Enable mirror editing.
+
+##### Proportional editing
+
+![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
+
+Enables proportional editing. Activating proportional editing reveals further settings.
+
+###### Proportional Falloff
+
+Adjust the falloff methods.
+
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Warp
 
@@ -1282,7 +1678,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a mesh selection between two defined points.
 
-#### Last operator Warp
+#### Adjust Last Operation - Warp
+
+Change the settings of **Warp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Warp](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-warp.png)
 
 
 | Entry | What it does |
@@ -1305,9 +1705,11 @@ The end point.
 
 This tool allows randomizes the positions of the selected vertices.
 
-#### Last Operator Randomize
+#### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
+
+Change the settings of **Randomize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1316,188 +1718,6 @@ This tool allows randomizes the positions of the selected vertices.
 | Uniform | The uniform offset distance. |
 | Normal | Align the offset direction to the normals. |
 | Random Seed | The seed value for randomization. |
-
-
-### Shrink/Fatten
-
-Shrink/Fatten scales the selected geometry along its normals. Transform orientation and Pivot point gets ignored.
-
-A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.
-
-#### Last Operator Shrink/Fatten
-
-![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-shrink-fatten.png)
-
-The Last Operator Shrink/Fatten panel gives you tools to adjust the Shrink/Fatten operation. Here you have numeric input for the strength and a few more options.
-
-
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------------------- |
-| Offset | Offset is the strength of the offset for Shrink/Fatten. |
-| Offset Even | Offset Even scales the selection to give more thickness in even areas. |
-| Mirror Editing | Enable mirror editing. |
-
-
-##### Proportional editing
-
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
-
-Enables proportional editing. Activating proportional editing reveals further settings.
-
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
-
-### Skin Resize
-
-![Skin Resize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize.png)
-
-This tool requires to have a skin modifier at the mesh. It scales the thickness of the skin.
-
-While the operation you will see in the header the strength value for the skin.
-
-![Skin Resize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize-2.png)
-
-#### Last Operator Skin Resize
-
-##### Vector
-
-![Vector](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vector.png)
-
-Adjust the position values for the three values.
-
-##### Scale X, Y, Z
-
-Limit the position relative to the source object.
-
-##### Orientation
-
-![Orientation](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png)
-
-Orientation is a drop-down box choose the type of orientation for the mirroring action.
-
-##### Mirror Editing
-
-Enable mirror editing.
-
-##### Proportional editing
-
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
-
-Enables proportional editing. Activating proportional editing reveals further settings.
-
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
-
-### Move Texture Space
-
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space.png)
-
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png)
-
-This tool relies at the move tool. With the difference that it moves the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.
-
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png)
-
-In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.
-
-Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.
-
-![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
-
-#### Last Operator Move
-
-![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
-
-##### Move
-
-Adjust in which directions you want to transform.
-
-##### Orientation
-
-![Orientation](/docs2/images/editors/3d-viewport/header/object-menu/orientation.png)
-
-Choose the orientation.
-
-##### Mirror Editing
-
-Enable mirror editing.
-
-##### Proportional editing
-
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
-
-Enables proportional editing. Activating proportional editing reveals further settings.
-
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
-
-### Scale Texture Space
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space.png)
-
-Scale Texture space is similar to the Move texture Space. With the only difference that it scales the UV space instead of moving it.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png)
-
-This tool relies at the scale tool. With the difference that it scales the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png)
-
-In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.
-
-Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.
-
-![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
-
-#### Last Operator Resize
-
-![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
-
-##### Scale
-
-Adjust in which directions you want to transform.
-
-##### Orientation
-
-![Orientation](/docs2/images/editors/3d-viewport/header/object-menu/orientation.png)
-
-Choose the orientation.
-
-##### Mirror Editing
-
-Enable mirror editing.
-
-##### Proportional editing
-
-![Proportional editing](/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png)
-
-Enables proportional editing. Activating proportional editing reveals further settings.
-
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
 
 ### Set Dimensions
@@ -1512,7 +1732,11 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
-#### Last Operator Set Dimensions
+#### Adjust Last Operation - Set Dimensions
+
+Change the settings of **Set Dimensions** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Set Dimensions](/docs2/images/editors/3d-viewport/transform/adjust-last-operation-set-dimensions.png)
 
 ##### New Dimensions
 
@@ -1536,7 +1760,9 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-#### Last Operator Mirror
+#### Adjust Last Operation - Mirror
+
+![Adjust Last Operation - Mirror](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-mirror.png)
 
 The Last Operator Mirror panel gives you tools to adjust the mirror action.
 
@@ -1556,9 +1782,11 @@ This tool requires to have a vertex group assigned. It mirrors the selected vert
 
 This tool works only with a perfectly symmetrical mesh along the local X axis. Vertices that have no corresponding vertex on the other side will not be affected.
 
-#### Last Operator Mirror Vertex Group
+#### Adjust Last Operation - Mirror Vertex Group
 
 ![Last Operator Mirror Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mirror-vertex-group.png)
+
+Change the settings of **Mirror Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1575,9 +1803,11 @@ This tool works only with a perfectly symmetrical mesh along the local X axis. V
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-### Last operator Snap Selection to Cursor
+### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-snap-selection-to-cursor.png)
+
+Change the settings of **Snap Selection to Cursor** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1594,13 +1824,11 @@ Duplicates the current selection.
 
 When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
-##### Mode
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-![Mode](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-duplicate.png)
 
 ##### Move X, Y, Z
 
@@ -1622,14 +1850,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Extrude
 
@@ -1649,9 +1884,11 @@ Note that the tool shelf also contains extrude functionality. And a few methods 
 
 Extrudes out the selected vertices by moving the mouse.
 
-##### Last Operator Extrude Only Vertices and Move
+##### Adjust Last Operation - Extrude Only Vertices and Move
 
 ![Last Operator Extrude Only Vertices and Move](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-only-vertices-and-move.png)
+
+Change the settings of **Extrude Only Vertices and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X Y Z
 
@@ -1673,22 +1910,31 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Edges
 
 Extrudes out the selected edges by moving the mouse.
 
-##### Last Operator Extrude Only Edges and Move
+##### Adjust Last Operation - Extrude Only Edges and Move
 
 ![Last Operator Extrude Only Edges and Move](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-only-edges-and-move.png)
+
+Change the settings of **Extrude Only Edges and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1713,22 +1959,31 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Faces (Legacy)
 
 Extrude the selected faces along their normals. This functionality is part of the Extrude Region tool in the tool shelf.
 
-##### Last Operator Extrude Region and Move
+##### Adjust Last Operation - Extrude Region and Move
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-region-and-move.png)
+
+Change the settings of **Extrude Region and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1754,14 +2009,21 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Faces along Normals (Legacy)
 
@@ -1769,9 +2031,11 @@ In the toolshelf it's the Extrude Along Normals tool. Extrudes the selection alo
 
 The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
-##### Last Operator Extrude Region and Shrink/Fatten
+##### Adjust Last Operation - Extrude Region and Shrink/Fatten
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-region-and-shrink-fatten.png)
+
+Change the settings of **Extrude Region and Shrink/Fatten** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1789,14 +2053,21 @@ The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Individual Faces ( Legacy)
 
@@ -1804,9 +2075,11 @@ In the tool shelf the tool is called Extrude Individual. Extrudes the selection 
 
 The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
-##### Last Operator Extrude Individual Faces and Move
+##### Adjust Last Operation - Extrude Individual Faces and Move
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-individual-faces-and-move.png)
+
+Change the settings of **Extrude Individual Faces and Move** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1821,14 +2094,21 @@ The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Manifold (Legacy)
 
@@ -1836,9 +2116,11 @@ The same tool exists in the tool shelf. Extrude, dissolve Edges whose faces form
 
 The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
-##### Last Operator Extrude Manifold
+##### Adjust Last Operation - Extrude Manifold
 
 ![Last Operator Extrude Manifold](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-manifold.png)
+
+Change the settings of **Extrude Manifold** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1864,22 +2146,31 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+###### Proportional Falloff
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Adjust the falloff methods.
 
+###### Proportional Size
+
+See and adjust the falloff radius.
+
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Extrude Repeat
 
 All modes. Extrudes into the Z depth of the viewport, and repeats the extrusion by the adjusted amount. You have to adjust the extrusion afterwards.
 
-##### Last Operator Extrude Repeat
+##### Adjust Last Operation - Extrude Repeat
 
 ![Last Operator Extrude Repeat](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-repeat.png)
+
+Change the settings of **Extrude Repeat** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Steps
 
@@ -1897,9 +2188,11 @@ The scale factor of the extruded element.
 
 All modes. Extrudes in a curve form.
 
-##### Last Operator Spin
+##### Adjust Last Operation - Spin
 
 ![Last Operator Spin](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-spin.png)
+
+Change the settings of **Spin** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1927,9 +2220,11 @@ Merges the geometry with the given methods.
 
 The methods At First and At Last just shows when you have vertices selected, and there is at least one first vertice and one last vertice to merge at. So minimum two. But you can have more than one vertices selected.
 
-#### Last Operator Merge
+#### Adjust Last Operation - Merge
 
 ![Last Operator Merge](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-merge.png)
+
+Change the settings of **Merge** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1942,9 +2237,11 @@ The methods At First and At Last just shows when you have vertices selected, and
 
 Merge the vertices by their distance to each other. This tool is meant to remove double vertices at the same location.
 
-#### Last Operator Merge by Distance
+#### Adjust Last Operation - Merge by Distance
 
 ![Last Operator Merge by Distance](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-merge-by-distance.png)
+
+Change the settings of **Merge by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1970,9 +2267,11 @@ The mode doesn't matter. There will always the edges be splitted.
 
 Splits selected edges so that each neighbor face gets its own copy. You have two methods here.
 
-#### Last Operator Edge Split
+#### Adjust Last Operation - Edge Split
 
 ![Last Operator Edge Split](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-edge-split.png)
+
+Change the settings of **Edge Split** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
@@ -1984,13 +2283,17 @@ Choose the method again.
 
 Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.
 
+#### Selection
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| Selection | Selection separates the current selection. |
-| By Material | By Material separates all geometry that has the same material than the current selection. |
-| By Loose Parts | By Loose parts separates all geometry that is connected by edges to the current selection. |
+Selection separates the current selection.
 
+#### By Material
+
+By Material separates all geometry that has the same material than the current selection.
+
+#### By Loose Parts
+
+By Loose parts separates all geometry that is connected by edges to the current selection.
 
 ### Knife Project
 
@@ -2005,9 +2308,11 @@ Now that both objects are selected, go into front view, or whatever view you wan
 | ![Knife Project](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project.png) | ![Knife Project](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-2.png) | ![Knife Project](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-3.png) | ![Knife Project](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-4.png) |
 
 
-#### Last Operator Knife Project
+#### Adjust Last Operation - Knife Project
 
 ![Last Operator Knife Project](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-knife-project.png)
+
+Change the settings of **Knife Project** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Cut through
 
@@ -2021,7 +2326,11 @@ The cut goes through the whole object when the Cut through checkbox is ticked.
 
 Creates a convex hull around the outside of selected vertices. The old faces and inlaying vertices gets removed.
 
-#### Last Operator Convex Hull
+#### Adjust Last Operation - Convex Hull
+
+Change the settings of **Convex Hull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Convex Hull](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-convex-hull.png)
 
 ##### Delete Unused
 
@@ -2033,21 +2342,49 @@ Removes vertices that are not part of the convex geometry.
 
 Use existing input faces that lies on the hull where possible. This option allows to have N-Gons in the convex hull.
 
+###### Make Holes
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Make Holes | Deletes edges and faces in the hull that were part of the input. This allows to delete faces between the existing mesh and the convex hull. |
-| Join Triangles | Joins adjacent triangles into quads. |
-| Max Face Angle | Max Face Angle belongs to the Join Triangles setting. Set the maximum face angle. |
-| Max Shape Angle | Max Face Angle belongs to the Join Triangles setting. Set the maximum shape angle. |
-| Topology influence | How much to priorize regular grids of quads as well as quads that touch existing quads. |
-| Compare UV's | Takes existing UV patches for the calculation into account. |
-| Compare Color Attributes | Takes existing color attributes for the calculation into account. |
-| Compare Seam | Takes existing seams for the calculation into account. |
-| Compare Sharp | Takes existing sharp edges for the calculation into account. |
-| Compare Materials | Takes existing materials for the calculation into account. |
-| Deselect joined | Only select remaining triangles that were not merged. |
+Deletes edges and faces in the hull that were part of the input. This allows to delete faces between the existing mesh and the convex hull.
 
+###### Join Triangles
+
+Joins adjacent triangles into quads.
+
+###### Max Face Angle
+
+Max Face Angle belongs to the Join Triangles setting. Set the maximum face angle.
+
+###### Max Shape Angle
+
+Max Face Angle belongs to the Join Triangles setting. Set the maximum shape angle.
+
+###### Topology influence
+
+How much to priorize regular grids of quads as well as quads that touch existing quads.
+
+###### Compare UV's
+
+Takes existing UV patches for the calculation into account.
+
+###### Compare Color Attributes
+
+Takes existing color attributes for the calculation into account.
+
+###### Compare Seam
+
+Takes existing seams for the calculation into account.
+
+###### Compare Sharp
+
+Takes existing sharp edges for the calculation into account.
+
+###### Compare Materials
+
+Takes existing materials for the calculation into account.
+
+###### Deselect joined
+
+Only select remaining triangles that were not merged.
 
 ### Symmetrize
 
@@ -2055,9 +2392,11 @@ Use existing input faces that lies on the hull where possible. This option allow
 
 The Symmetrize tool mirrors the selected geometry symmetrical along a world axis.
 
-#### Last Operator Symmetrize
+#### Adjust Last Operation - Symmetrize
 
 ![Last Operator Symmetrize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-symmetrize.png)
+
+Change the settings of **Symmetrize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -2073,9 +2412,11 @@ Adjust a distance after which the mirroring should happen, relative to the mirro
 
 Tries to snap the selected vertices symmetrical along the chosen world orientation.
 
-#### Last Operator Snap to Symmetry
+#### Adjust Last Operation - Snap to Symmetry
 
 ![Last Operator Snap to Symmetry](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-snap-to-symmetry.png)
+
+Change the settings of **Snap to Symmetry** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2104,9 +2445,11 @@ Recalculates the normals of the selected geometry so that everything points outw
 
 Recalculates the normals of the selected geometry so that everything points inwards.
 
-#### Last Operator Recalc Outside
+#### Adjust Last Operation - Recalc Outside
 
 ![Last Operator Recalc Outside](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-recalc-outside.png)
+
+Change the settings of **Recalc Outside** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Inside
 
@@ -2116,9 +2459,11 @@ Inside recalculates the normals of the selected geometry so that everything poin
 
 Flips the direction of the normals of the selected geometry.
 
-#### Last Operator Flip Normals
+#### Adjust Last Operation - Flip Normals
 
 ![Last Operator Flip Normals](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-recalc-outside.png)
+
+Change the settings of **Flip Normals** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Custom Normals only
 
@@ -2128,9 +2473,11 @@ Only flip the custom loop normals of the selected elements.
 
 Sets the vertex normals from the selected faces. This tool requires to have Auto smooth activated!
 
-#### Last Operator Set Normals from Faces
+#### Adjust Last Operation - Set Normals from Faces
 
 ![Last Operator Set Normals from Faces](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-set-normals-from-faces.png)
+
+Change the settings of **Set Normals from Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Keep Sharp Edges
 
@@ -2140,9 +2487,11 @@ Don’t set sharp edges to faces.
 
 Rotate the normals of the selected vertices manually.
 
-#### Last Operator Rotate Normals
+#### Adjust Last Operation - Rotate Normals
 
 ![Last Operator Rotate Normals](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-rotate-normals.png)
+
+Change the settings of **Rotate Normals** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2169,9 +2518,11 @@ All vertex normals will point to a specific target. This target can be chosen fr
 
 Pressing R for Reset will reset the normals to where they were before the operation.
 
-#### Last Operator Point Normals to Target
+#### Adjust Last Operation - Point Normals to Target
 
 ![Last Operator Point Normals to Target](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-point-normals-to-target.png)
+
+Change the settings of **Point Normals to Target** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2194,31 +2545,35 @@ Pressing R for Reset will reset the normals to where they were before the operat
 
 Average all of the normals in each fan of faces between sharp edges at a vertex.
 
+#### Custom Normal
 
-| Entry | What it does |
-| ------------- | -------------------------------------- |
-| Custom Normal | Take the average of vertices normals. |
-| Face Area | Set all vertices normals by face area. |
+Take the average of vertices normals.
 
+#### Face Area
+
+Set all vertices normals by face area.
 
 #### Corner Angle
 
 Set all vertices by corner angle.
 
-##### Last Operator Average Normals
+##### Adjust Last Operation - Average Normals
 
 ![Last Operator Average Normals](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-average-normals.png)
+
+Change the settings of **Average Normals** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Type
 
 Choose the average type again.
 
+###### Weigh
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------ |
-| Weigh | Just for custom normals method. Weight applied by face. |
-| Threshold | Just for custom normals method. Threshold value for different weights to be considered as equal. |
+Just for custom normals method. Weight applied by face.
 
+###### Threshold
+
+Just for custom normals method. Threshold value for different weights to be considered as equal.
 
 ### Copy Vectors
 
@@ -2230,7 +2585,11 @@ Copies the normals of a single selected vertice.
 
 Pastes the normals from a formerly copied selected vertice to the currently selected vertice.
 
-#### Last Operator Normals Vector Tools
+#### Adjust Last Operation - Normals Vector Tools
+
+Change the settings of **Normals Vector Tools** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Normals Vector Tools](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-normals-vector-tools.png)
 
 ##### Absolute Coordinates
 
@@ -2240,20 +2599,23 @@ When you paste normals then they get pasted relative to the current orientation 
 
 Smooth custom normals towards the adjacent vertex normals.
 
-#### Last Operator Smooth Normals Vectors
+#### Adjust Last Operation - Smooth Normals Vectors
 
 ![Last Operator Smooth Normals Vectors](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-smooth-normals-vectors.png)
+
+Change the settings of **Smooth Normals Vectors** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
 Adjust how strong the smoothen should be.
 
+###### Reset Vectors
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reset Vectors | Resets the normal of the selected element(s). |
-| Select by Face Strength | Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox. Select faces with either weak or medium or strong face strength. |
+Resets the normal of the selected element(s).
 
+###### Select by Face Strength
+
+Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox. Select faces with either weak or medium or strong face strength.
 
 ### Set Face Strength
 
@@ -2261,9 +2623,11 @@ Face strength gets used by the Weighted Normals modifier. See Face Influence che
 
 Set selected faces to either a weak, a medium or a strong face strength.
 
-#### Last Operator Face Normal Strength
+#### Adjust Last Operation - Face Normal Strength
 
 ![Last Operator Face Normal Strength](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-face-normal-strength.png)
+
+Change the settings of **Face Normal Strength** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Set Value
 
@@ -2281,20 +2645,23 @@ Sets the shading of the selected elements to either smooth or flat.
 
 Shading is under the hood a normals operation.
 
+### Shade smooth
 
-| Entry | What it does |
-| ------------ | ----------------------- |
-| Shade smooth | Display shading smooth. |
-| Shade Flat | Display shading flat. |
+Display shading smooth.
 
+### Shade Flat
+
+Display shading flat.
 
 ### Smooth Edges
 
 Clear as sharp marked edges and set them to smooth.
 
-#### Last Operator Clear Sharp
+#### Adjust Last Operation - Clear Sharp
 
 ![Last Operator Clear Sharp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clear-sharp.png)
+
+Change the settings of **Clear Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -2304,9 +2671,11 @@ Consider vertices instead of edges to select which edges to set to smooth.
 
 Mark selected edges as sharp.
 
-#### Last Operator Mark Sharp
+#### Adjust Last Operation - Mark Sharp
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mark-sharp.png)
+
+Change the settings of **Mark Sharp** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -2316,9 +2685,11 @@ Consider vertices instead of edges to select which edges to set to sharp.
 
 Clear as sharp marked edges and set them to smooth. But the calculation happens from the selected vertices instead of the edges.
 
-#### Last Operator Clear Sharp from Vertices
+#### Adjust Last Operation - Clear Sharp from Vertices
 
 ![Last Operator Clear Sharp from Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clear-sharp-from-vertices.png)
+
+Change the settings of **Clear Sharp from Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -2328,9 +2699,11 @@ Consider vertices instead of edges to select which edges to set to sharp.
 
 Mark selected edges as sharp. But the calculation happens from the selected vertices instead of the edges.
 
-#### Last Operator Mark Sharp from Vertices
+#### Adjust Last Operation - Mark Sharp from Vertices
 
 ![Last Operator Mark Sharp from Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mark-sharp-from-vertices.png)
+
+Change the settings of **Mark Sharp from Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Vertices
 
@@ -2362,7 +2735,11 @@ Contains legacy menu items. They can currently not be activated.
 
 While weight painting it can happen that a vertice gets several weightings assigned. Normalize all normalizes the weight of all Vertex groups so that the values for the single vertices in the sum is 1.
 
-#### Last Operator Normalize all
+#### Adjust Last Operation - Normalize all
+
+Change the settings of **Normalize all** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Normalize all](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-normalize-all.png)
 
 ##### Subset
 
@@ -2384,9 +2761,11 @@ The Last Operator Normalize panel has no adjustable settings.
 
 Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It only edits selected Vertices. It flips when both sides are selected. Otherwise it copies from Unselected.
 
-#### Last Operator Mirror Vertex Group
+#### Adjust Last Operation - Mirror Vertex Group
 
 ![Last Operator Mirror Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mirror-vertex-group-2.png)
+
+Change the settings of **Mirror Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2401,9 +2780,11 @@ Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It onl
 
 Invert inverts the weight painting for the selected vertex group.
 
-#### Last Operator Invert Vertex Group
+#### Adjust Last Operation - Invert Vertex Group
 
 ![Last Operator Invert Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-invert-vertex-group.png)
+
+Change the settings of **Invert Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Subset
 
@@ -2423,9 +2804,11 @@ Remove Vertices from Groups that have zero weight after inverting.
 
 Removes Vertex group assignments that are not required from the active vertex group.
 
-#### Last Operator Clean Vertex Group
+#### Adjust Last Operation - Clean Vertex Group
 
 ![Last Operator Clean Vertex Group](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clean-vertex-group.png)
+
+Change the settings of **Clean Vertex Group** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Subset
 
@@ -2433,12 +2816,13 @@ Removes Vertex group assignments that are not required from the active vertex gr
 
 Subset is a drop-down menu choose the Subset method.
 
+###### Limit
 
-| Entry | What it does |
-| ----------- | ------------------------------------------------------------------ |
-| Limit | Remove weights that are below or equal to the limit value. |
-| Keep Single | Keep Vertices assigned to at least one vertex group when cleaning. |
+Remove weights that are below or equal to the limit value.
 
+###### Keep Single
+
+Keep Vertices assigned to at least one vertex group when cleaning.
 
 ### Quantize
 
@@ -2446,9 +2830,11 @@ Subset is a drop-down menu choose the Subset method.
 
 Quantize quantizes the weight paint values. It starts with 4 steps. With a step of 1 you have a single vertex color, no matter how you have painted it before.
 
-#### Last Operator Quantize
+#### Adjust Last Operation - Quantize
 
 ![Last Operator Quantize](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset-2.png)
+
+Change the settings of **Quantize** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2463,7 +2849,11 @@ Quantize quantizes the weight paint values. It starts with 4 steps. With a step 
 
 Adds some offset to the Weight paint, and multiplys it with some gain.
 
-#### Last Operator Vertex Group Levels
+#### Adjust Last Operation - Vertex Group Levels
+
+Change the settings of **Vertex Group Levels** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Vertex Group Levels](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-vertex-group-levels.png)
 
 ##### Subset
 
@@ -2485,7 +2875,11 @@ Here you adjust the gain.
 
 Smooths the weight for selected vertices.
 
-#### Last Operator Smooth Vertex Weights
+#### Adjust Last Operation - Smooth Vertex Weights
+
+Change the settings of **Smooth Vertex Weights** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Smooth Vertex Weights](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-smooth-vertex-weights.png)
 
 ##### Subset
 
@@ -2493,13 +2887,17 @@ Smooths the weight for selected vertices.
 
 Subset is a drop-down menu choose the Subset method.
 
+###### Factor
 
-| Entry | What it does |
-| --------------- | -------------------------------------------- |
-| Factor | Here you adjust the factor. |
-| Iterations | Here you adjust how many iterations you use. |
-| Expand/Contract | Expand or contract the weights. |
+Here you adjust the factor.
 
+###### Iterations
+
+Here you adjust how many iterations you use.
+
+###### Expand/Contract
+
+Expand or contract the weights.
 
 ### Limit Total
 
@@ -2509,7 +2907,11 @@ Limit number of Weights per vertex. The lowest weights gets removed.
 
 This is of interest when you have for example five bones associated with a vertice. But your game engine just allows four ...
 
-#### Last Operator Limit Number of Weights per Vertex
+#### Adjust Last Operation - Limit Number of Weights per Vertex
+
+Change the settings of **Limit Number of Weights per Vertex** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Limit Number of Weights per Vertex](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-limit-number-of-weights-per-vertex.png)
 
 ##### Subset
 
@@ -2569,18 +2971,19 @@ Faces only! Sorts faces by their lowest material index up to highest material in
 
 Note that the **Reverse** option only reverses the order of the materials**.* *And** the order of the faces inside them.
 
+#### Selected
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selected | Moves all selected elements to the beginning without affecting their relative orders. Attention, this option will also affect unselected element indices! |
-| Randomize | Randomizes the indices of selected elements. This option does not affect the unselected elements. |
+Moves all selected elements to the beginning without affecting their relative orders. Attention, this option will also affect unselected element indices!
 
+#### Randomize
+
+Randomizes the indices of selected elements. This option does not affect the unselected elements.
 
 ### Reverse
 
 Reverses the order of the selected elements.
 
-#### Last Operator Sort Mesh Elements
+#### Adjust Last Operation - Sort Mesh Elements
 
 ![Last Operator Sort Mesh Elements](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-sort-mesh-elements.png)
 
@@ -2592,12 +2995,13 @@ Sort Elements always brings up the same last operator. But with a small differen
 
 This is a drop-down box choose the sort method again.
 
+###### Vertices, Edges or Faces
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------ |
-| Vertices, Edges or Faces | Adjust if the sort will affect the vertices, edges or faces. |
-| Reverse | Reverses the sorting. |
+Adjust if the sort will affect the vertices, edges or faces.
 
+###### Reverse
+
+Reverses the sorting.
 
 ##### Seed Edit box (Randomize only)
 
@@ -2613,9 +3017,11 @@ The seed option allows you to get another randomization – the same seed over t
 
 Subdivide is a menu where you can quickly add and change a subdivision surface modifier with a predefined resolution in a quick way. Especially when you use the hotkey for it. The subdivision surface modifier panel can then as usual be found in the Properties editor in the Modifier tab.
 
-### Last Operator Subdivision Set
+### Adjust Last Operation - Subdivision Set
 
 ![Last Operator Subdivision Set](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-subdivision-set.png)
+
+Change the settings of **Subdivision Set** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2630,20 +3036,23 @@ Subdivide is a menu where you can quickly add and change a subdivision surface m
 
 The Show/Hide menu is available for all object types and in all modes. It is usually in the object related menu to find. In Object mode it's the Object menu, for a curve object in edit mode it is the Curve menu. It always contains three menu items. Show Hidden, Hide Selected and Hide Unselected.
 
+### Show Hidden
 
-| Entry | What it does |
-| ------------- | ----------------------------------------------------- |
-| Show Hidden | Makes all hidden elements in the scene visible again. |
-| Hide Selected | Hides the selected elements. |
+Makes all hidden elements in the scene visible again.
 
+### Hide Selected
+
+Hides the selected elements.
 
 ### Hide Unselected
 
 Hides the not selected elements. The selected elements stays visible.
 
-#### Last Operator Reveal Hidden / Hide Selected
+#### Adjust Last Operation - Reveal Hidden / Hide Selected
 
 ![Last Operator Reveal Hidden / Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-reveal-hidden-hide-selected.png)
+
+Change the settings of **Reveal Hidden / Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Select
 
@@ -2661,7 +3070,11 @@ In the Cleanup menu you will find tools to clean up the current geometry.
 
 Delete loose deletes not connected geometry. Vertices, Edges, and Faces. The tool starts with deleting Vertices and Edges. But you can tick Faces in the Last Operator too, and then it also removes not connected Faces.
 
-#### Last Operator Delete Loose
+#### Adjust Last Operation - Delete Loose
+
+Change the settings of **Delete Loose** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Delete Loose](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-delete-loose.png)
 
 ##### Vertices
 
@@ -2669,12 +3082,13 @@ Delete loose deletes not connected geometry. Vertices, Edges, and Faces. The too
 
 Delete Vertices.
 
+###### Edges
 
-| Entry | What it does |
-| ----- | ------------- |
-| Edges | Delete Edges. |
-| Faces | Delete Faces. |
+Delete Edges.
 
+###### Faces
+
+Delete Faces.
 
 ### Decimate Geometry
 
@@ -2682,7 +3096,11 @@ Delete Vertices.
 
 Decimate Geometry decimates the currently selected geometry. It starts with a Ratio of 1. Which means no decimation. The lower the ratio the more decimation you will get. The Decimate Modifier works with Tris!
 
-#### Last Operator Decimate Geometry
+#### Adjust Last Operation - Decimate Geometry
+
+Change the settings of **Decimate Geometry** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Decimate Geometry](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-decimate-geometry.png)
 
 ##### Ratio
 
@@ -2690,20 +3108,31 @@ Decimate Geometry decimates the currently selected geometry. It starts with a Ra
 
 Adjust the strength of decimation.
 
+###### Vertex Group
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------------------------- |
-| Vertex Group | Use active Vertex Group as an influence. You need to have a Vertex Group. |
-| Weight | Adjust the Vertex Group Strength. |
-| Invert | Invert Vertex Group Influence. |
-| Symmetry | Make the decimation geometry symmetric along a chosen world axis. |
+Use active Vertex Group as an influence. You need to have a Vertex Group.
 
+###### Weight
+
+Adjust the Vertex Group Strength.
+
+###### Invert
+
+Invert Vertex Group Influence.
+
+###### Symmetry
+
+Make the decimation geometry symmetric along a chosen world axis.
 
 ### Degenerate Dissolve
 
 Removes zero size Faces and Edges.
 
-#### Last Operator Degenerate Dissolve
+#### Adjust Last Operation - Degenerate Dissolve
+
+Change the settings of **Degenerate Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Degenerate Dissolve](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-degenerate-dissolve.png)
 
 ##### Merge Distance
 
@@ -2717,7 +3146,11 @@ Maximum distance between elements to merge.
 
 Make Planar Faces tries to make the selected faces planar. Quads or N-Gons for example can have vertices that are not planar.
 
-#### Last Operator Make Planar Faces
+#### Adjust Last Operation - Make Planar Faces
+
+Change the settings of **Make Planar Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Make Planar Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-make-planar-faces.png)
 
 ##### Factor
 
@@ -2735,7 +3168,11 @@ Here you adjust how often it should repeat in the try to find a solution.
 
 Split Non Planar Faces splits up non planar Quads and N-Gons to end in planar faces.
 
-#### Last Operator Split Non-Planar Faces
+#### Adjust Last Operation - Split Non-Planar Faces
+
+Change the settings of **Split Non-Planar Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Split Non-Planar Faces](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-split-non-planar-faces.png)
 
 ##### Max Angle
 
@@ -2757,7 +3194,11 @@ Fill holes closes holes in the mesh geometry.
 
 Fill holes can just calculate one face size at one time. So when you have several holes in the mesh, let's say one is a tri, and one is a quad, then you need to calculate twice.
 
-#### Last Operator Fill Holes
+#### Adjust Last Operation - Fill Holes
+
+Change the settings of **Fill Holes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Fill Holes](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-fill-holes.png)
 
 ##### Sides
 
@@ -2791,12 +3232,13 @@ Deletes the selected edges and the connected faces.
 
 This one works similar to the smart delete. It deletes the selected faces.
 
+#### Only Edges and Faces
 
-| Entry | What it does |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Only Edges and Faces | This mode is of interest when you have more than one selection mode activated. It deletes then just the selected edges and faces. And not single vertices. |
-| Only Faces | This mode is of interest when you have more than one selection mode activated. Just selected faces gets deleted. Not single edges or vertices. |
+This mode is of interest when you have more than one selection mode activated. It deletes then just the selected edges and faces. And not single vertices.
 
+#### Only Faces
+
+This mode is of interest when you have more than one selection mode activated. Just selected faces gets deleted. Not single edges or vertices.
 
 ### Edge Loops
 
@@ -2804,7 +3246,11 @@ This one works similar to the smart delete. It deletes the selected faces.
 
 This method works similar to the smart delete tool. It deletes the edge loop. But it selects the faces of the edge ring. And the Last operator offers you the option to split off face corners.
 
-#### Last Operator Delete Edge Loop
+#### Adjust Last Operation - Delete Edge Loop
+
+Change the settings of **Delete Edge Loop** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Delete Edge Loop](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-delete-edge-loop.png)
 
 ##### Face Split
 
@@ -2828,9 +3274,11 @@ Dissolve Vertices dissolves the selected Vertices.
 
 Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.
 
-#### Last Operator Dissolve Vertices
+#### Adjust Last Operation - Dissolve Vertices
 
 ![Last Operator Dissolve Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-vertices.png)
+
+Change the settings of **Dissolve Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2845,7 +3293,11 @@ Dissolve Edges dissolves the selected Edges.
 
 Note that pressing Del in Edge select mode calls Dissolve Edges already. It's the same operator. But you don't get the Last operator that way.
 
-#### Last Operator Dissolve Edges
+#### Adjust Last Operation - Dissolve Edges
+
+Change the settings of **Dissolve Edges** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Dissolve Edges](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-dissolve-edges.png)
 
 ##### Dissolve Vertices
 
@@ -2853,20 +3305,23 @@ Note that pressing Del in Edge select mode calls Dissolve Edges already. It's th
 
 When the dissolve operation leaves vertices behind, then this vertices will be dissolved too.
 
+###### Angle Threshold
 
-| Entry | What it does |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Angle Threshold | Remaining vertices which eseparate edge pairs are preseved if their edge angle exceeds this threshold |
-| Face Split | Split off Face corners to maintain surrounding geometry. |
+Remaining vertices which eseparate edge pairs are preseved if their edge angle exceeds this threshold
 
+###### Face Split
+
+Split off Face corners to maintain surrounding geometry.
 
 ### Dissolve Faces
 
 Dissolve Faces removes the inlaying edges of the selected faces. This faces becomes one big N-Gon.
 
-#### Last Operator Dissolve Faces
+#### Adjust Last Operation - Dissolve Faces
 
 ![Last Operator Dissolve Faces](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-faces.png)
+
+Change the settings of **Dissolve Faces** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Dissolve Vertices
 
@@ -2876,7 +3331,11 @@ When the dissolve operation leaves vertices behind, then this vertices will be d
 
 Dissolve selected edges and vertices, limited by the surrounded angles.
 
-#### Last Operator Limited Dissolve
+#### Adjust Last Operation - Limited Dissolve
+
+Change the settings of **Limited Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Limited Dissolve](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-limited-dissolve.png)
 
 ##### Max Angle
 
@@ -2884,20 +3343,23 @@ Dissolve selected edges and vertices, limited by the surrounded angles.
 
 The angle limit up to which the dissolve happens.
 
+###### All Boundaries
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------- |
-| All Boundaries | Dissolve all vertices in between face boundaries. |
-| Delimit | By which element to delimit. |
+Dissolve all vertices in between face boundaries.
 
+###### Delimit
+
+By which element to delimit.
 
 ### Dissolve Selection
 
 Dissolves the selected geometry.
 
-#### Last Operator Dissolve Selection
+#### Adjust Last Operation - Dissolve Selection
 
 ![Last Operator Dissolve Selection](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-selection.png)
+
+Change the settings of **Dissolve Selection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -2943,18 +3405,23 @@ Here you find the uv mapping methods and some further functionality. You use it 
 
 The UV menu is just available for Mesh objects.
 
+### Angle Based
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Angle Based | Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes. |
-| Conformal | Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes. |
+Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes.
 
+### Conformal
+
+Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes.
 
 ### Minimum Stretch
 
 Unwraps the selected geometry with the method SLIM, which is a “state-of-the-art” iterative UV unwrapping algorithm.
 
-#### Last Operator Unwrap
+#### Adjust Last Operation - Unwrap
+
+Change the settings of **Unwrap** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Unwrap](/docs2/images/editors/3d-viewport/mesh/edit/adjust-last-operation-unwrap.png)
 
 ##### Method
 
@@ -2964,38 +3431,30 @@ Method is a drop down box where you can choose the unwrap method.
 
 ![Method Angle based + Conformal](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/method-angle-based-conformal.png)
 
-Unwrap ABF and Unwrap LSCM shares the same Last Operator.
+Angle Based and Conformal share the same settings.
 
-**Method**
+###### Method
 
 Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.
 
-**Fill Holes**
+###### Fill Holes
 
 ![Fill Holes](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/fill-holes.png)
 
 Fill holes in the mesh before unwrapping.
 
+- **Use Subdivision Surface**: Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+- **Correct Aspect**: Take the Image Aspect Ratio into account.
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
-
-
-**Margin Method**
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
-
-
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -3007,28 +3466,31 @@ The distance between the single UV patches.
 
 Number of iterations.
 
+###### No Flip
 
-| Entry | What it does |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| No Flip | Prevent flipping UV's |
-| Importance Weight | Take per vertex importance weights into account. |
-| Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+Prevent flipping UV's
 
+###### Importance Weight
 
-**Margin Method**
+Take per vertex importance weights into account.
+
+###### Use Subdivision Surface
+
+Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.
+
+###### Correct Aspect
+
+Take the Image Aspect Ratio into account.
+
+###### Margin Method
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
+- **Scaled**: Use the scale of existing UV to multiply margin.
+- **Add**: Just add the margin and ignore any existing UV.
+- **Fraction**: Specify a precise fraction of specific UV.
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
-
-
-**Margin**
+###### Margin
 
 The distance between the single UV patches.
 
@@ -3048,13 +3510,17 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 ![Margin Method](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png)
 
+###### Scaled
 
-| Entry | What it does |
-| -------- | ------------------------------------------------ |
-| Scaled | Use the scale of existing UV to multiply margin. |
-| Add | Just add the margin and ignore any existing UV. |
-| Fraction | Specify a precise fraction of specific UV. |
+Use the scale of existing UV to multiply margin.
 
+###### Add
+
+Just add the margin and ignore any existing UV.
+
+###### Fraction
+
+Specify a precise fraction of specific UV.
 
 ##### Rotation Method
 
@@ -3062,15 +3528,19 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 How to rotate islands.
 
+###### Island Margin
 
-| Entry | What it does |
-| -------------- | ---------------------------------------------------------- |
-| Island Margin | Island Margin defines the distance between the UV patches. |
-| Area Weight | Weight Projection Vector by faces with larger areas. |
-| Correct Aspect | Take the Image Aspect Ratio into account. |
+Island Margin defines the distance between the UV patches.
 
+###### Area Weight
 
-#### Last Operator Smart UV Project
+Weight Projection Vector by faces with larger areas.
+
+###### Correct Aspect
+
+Take the Image Aspect Ratio into account.
+
+#### Adjust Last Operation - Smart UV Project
 
 ![Last Operator Smart UV Project](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-smart-uv-project.png)
 
@@ -3086,15 +3556,25 @@ Lightmap Pack has no Last Operator.
 
 #### Settings
 
+##### Selection
 
-| Entry | What it does |
-| --------------- | ---------------------------------------------------------------------------------------------------------- |
-| Selection | Selection is a drop-down box where you can choose what will be packed, either Selected Faces or All Faces. |
-| Share Tex Space | Map all objects into one lightmap. |
-| New UV Map | Create a new UV map for every new mesh. |
-| Pack Quality | The pack quality. |
-| Margin | The distance between the single UV patches. |
+Selection is a drop-down box where you can choose what will be packed, either Selected Faces or All Faces.
 
+##### Share Tex Space
+
+Map all objects into one lightmap.
+
+##### New UV Map
+
+Create a new UV map for every new mesh.
+
+##### Pack Quality
+
+The pack quality.
+
+##### Margin
+
+The distance between the single UV patches.
 
 ### Follow Active Quads
 
@@ -3108,7 +3588,7 @@ Follow Active quads maps UV coordinates starting from an active face, and maps a
 
 Edge Length Mode is a drop-down box where you can choose the Length method.
 
-#### Last Operator Follow Active Quads
+#### Adjust Last Operation - Follow Active Quads
 
 ![Last Operator Follow Active Quads](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-follow-active-quads.png)
 
@@ -3118,9 +3598,11 @@ The Last Operator contains the same settings than the Settings dialogue.
 
 Cube Projection maps the mesh from six sides, means cubic.
 
-#### Last Operator Cube Projection
+#### Adjust Last Operation - Cube Projection
 
 ![Last Operator Cube Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cube-projection.png)
+
+Change the settings of **Cube Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3135,9 +3617,11 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 Cylinder Projection tries to map the geometry cylindric.
 
-##### Last Operator Cylinder Projection
+##### Adjust Last Operation - Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cylinder-projection.png)
+
+Change the settings of **Cylinder Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -3157,23 +3641,35 @@ Align is a drop-down box where you can choose the Align method.
 
 How to handle the faces at the poles.
 
+###### Preserve Seams
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------- |
-| Preserve Seams | Keep existing seams intact. |
-| Radius | Radius defines the Polar size of the UV mesh in the UV space. |
-| Correct Aspect | Take Image Aspect ratio into account. |
-| Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
-| Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
+Keep existing seams intact.
 
+###### Radius
+
+Radius defines the Polar size of the UV mesh in the UV space.
+
+###### Correct Aspect
+
+Take Image Aspect ratio into account.
+
+###### Clip to Bounds
+
+Clip UV Coordinates to bounds after unwrapping.
+
+###### Scale to Bounds
+
+Scale UV Coordinates to bounds after unwrapping.
 
 #### Sphere Projection
 
 Sphere Projection tries to map the geometry spherical.
 
-##### Last Operator Sphere Projection
+##### Adjust Last Operation - Sphere Projection
 
 ![Last Operator Sphere Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-sphere-projection.png)
+
+Change the settings of **Sphere Projection** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Direction
 
@@ -3193,22 +3689,31 @@ Align is a drop-down box where you can choose the Align method.
 
 How to handle the faces at the poles.
 
+###### Preserve Seams
 
-| Entry | What it does |
-| --------------- | ------------------------------------------------ |
-| Preserve Seams | Keep existing seams intact. |
-| Correct Aspect | Take Image Aspect ratio into account. |
-| Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
-| Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
+Keep existing seams intact.
 
+###### Correct Aspect
+
+Take Image Aspect ratio into account.
+
+###### Clip to Bounds
+
+Clip UV Coordinates to bounds after unwrapping.
+
+###### Scale to Bounds
+
+Scale UV Coordinates to bounds after unwrapping.
 
 ### Project from View
 
 Project from View projects the UV from the current 3D view.
 
-#### Last Operator Project from View
+#### Adjust Last Operation - Project from View
 
 ![Last Operator Project from View](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-project-from-view.png)
+
+Change the settings of **Project from View** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3236,11 +3741,13 @@ Same goes for the UV patches when you use Angle based or conformal unwrapping. Y
 
 Mark seam marks the currently selected edge(s) as a seam. Seam edges will be displayed as red in the 3D viewport.
 
+#### Clear Seam
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------- |
-| Clear Seam | Clear seam removes the seam from the currently selected edge(s). |
-| Reset | Resets the UV Projection. |
+Clear seam removes the seam from the currently selected edge(s).
+
+#### Reset
+
+Resets the UV Projection.
 
 # Vertex Menu
 
@@ -3264,9 +3771,11 @@ The Bevel Tool adds a bevel to the selected geometry.
 
 Usage: first select the geometry that you want to bevel. Then activate the tool. Don't wonder that the mouse movement does nothing until you move the mouse really really far away. That's by design. Best is to adjust the amount in the Last Operator Bevel panel.
 
-##### Last Operator Bevel
+##### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-bevel.png)
+
+Change the settings of **Bevel** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Affect
 
@@ -3290,16 +3799,29 @@ How many segments gets created.
 
 Controls the profile shape strength. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.
 
+###### Material Index
 
-| Entry | What it does |
-| -------------- | ----------------------------------------------------------------------------------- |
-| Material Index | The material for bevel faces. -1 means to use the material from the adjacent faces. |
-| Harden Normals | Match normals of new faces to adjacent faces. |
-| Clamp Overlap | Do not allow beveled geometry to overlap each other. |
-| Loop Slide | Prefer slide along edge to even widths. |
-| Mark Seams | Mark the edges of the new created geometry as seams. |
-| Mark Sharp | Mark the edges of the new created geometry sharp. |
+The material for bevel faces. -1 means to use the material from the adjacent faces.
 
+###### Harden Normals
+
+Match normals of new faces to adjacent faces.
+
+###### Clamp Overlap
+
+Do not allow beveled geometry to overlap each other.
+
+###### Loop Slide
+
+Prefer slide along edge to even widths.
+
+###### Mark Seams
+
+Mark the edges of the new created geometry as seams.
+
+###### Mark Sharp
+
+Mark the edges of the new created geometry sharp.
 
 ##### Miter Outer
 
@@ -3307,19 +3829,19 @@ Controls the profile shape strength. A value close to 0 bends the roundness to i
 
 How the outer miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Patch**
+###### Patch
 
 ![Patch](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png)
 
 This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
@@ -3331,13 +3853,13 @@ This replaces the vertex of a miter with 2 vertices, joined by an arc. A separat
 
 How the inner miter is set. Miter is how the bevel rounding at a corner is done.
 
-**Sharp**
+###### Sharp
 
 ![Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png)
 
 Creates a sharp miter.
 
-**Arc**
+###### Arc
 
 ![Arc](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png)
 
@@ -3355,14 +3877,21 @@ The method to use to create meshes at intersections. Bevel can create self inter
 
 Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).
 
+###### None
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| None | Do not set face strength. |
-| New | Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak. |
-| Affected | In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong. |
-| All | In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong. |
+Do not set face strength.
 
+###### New
+
+Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.
+
+###### Affected
+
+In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.
+
+###### All
+
+In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.
 
 ##### Profile Type
 
@@ -3370,53 +3899,41 @@ Set Face Strength on the faces involved in the bevel, according to the specified
 
 The profile type.
 
-**Superellipse**
+###### Superellipse
 
 Uses a mathematically smooth curve for bevel profiles
 
-**Custom**
+###### Custom
 
 Allows manual control of the bevel profile shape via a curve widget.
 
-**Presets**
+###### Presets
 
 ![Presets](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png)
 
 Curve presets.
 
-**Navigation elements**
+###### Navigation elements
 
+- **Zoom in and out**: The two buttons with the magnifying glass at it zooms in and out in the curve window.
+- **Reverse Path**: Reverses the curve path.
+- **Toggle Profile Clipping**: Turns the profile clipping on or off.
 
-| Entry | What it does |
-| ----------------------- | ------------------------------------------------------------------------------------- |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
-| Reverse Path | Reverses the curve path. |
-| Toggle Profile Clipping | Turns the profile clipping on or off. |
-
-
-**Tools menu**
+###### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png)
 
+- **Reset View**: Resets the curve windows zoom.
+- **Reset Curve**: Resets the curve to the initial shape.
 
-| Entry | What it does |
-| ----------- | -------------------------------------- |
-| Reset View | Resets the curve windows zoom. |
-| Reset Curve | Resets the curve to the initial shape. |
-
-
-**Handler and node position**
+###### Handler and node position
 
 ![Handler and node position](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png)
 
 When you select a node, then the handler and node position tools shows below the curve window.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------- |
-| Sample straigt edges | Sample edges with vector handles. |
-| Sample even length | Sample edges with even lengths. |
-
+- **Sample straigt edges**: Sample edges with vector handles.
+- **Sample even length**: Sample edges with even lengths.
 
 #### Rip Vertices
 
@@ -3426,9 +3943,11 @@ Rip splits the edges between the selected vertices. It creates two edges out of 
 
 This tool works similar to the Edge Split tool. It also selects the outer edges so that you immediately move them. Right click will snap them back to the initial space.
 
-##### Last Operator Rip
+##### Adjust Last Operation - Rip
 
 ![Last Operator Rip](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-rip.png)
+
+Change the settings of **Rip** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X , Y , Z
 
@@ -3454,13 +3973,17 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Adjust the falloff methods.
 
+###### Proportional Size
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+See and adjust the falloff radius.
 
+###### Connected
+
+The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Rip Vertices and Fill
 
@@ -3478,9 +4001,11 @@ This tool is the same tool than the Rip Edge tool from the tool shelf.
 
 Rip Vertices and Extend extrudes out the selected vertices. When you do this operation at an edge then you will create N-Gons that way.
 
-##### Last Operator Extend Vertices
+##### Adjust Last Operation - Extend Vertices
 
 ![Last Operator Extend Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-extend-vertices.png)
+
+Change the settings of **Extend Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Move X , Y , Z
 
@@ -3492,13 +4017,17 @@ Adjust the position.
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
+###### Mirror Editing
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
+Enable mirror editing.
 
+###### Proportional editing
+
+Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only.
+
+###### Projected(2D)
+
+The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Slide Vertices
 
@@ -3506,9 +4035,11 @@ Orientation is a drop-down box. Choose the type of orientation for the mirroring
 
 Same tool than the Vertex Slide in the Tool Shelf. Vertex Slide slides the selected vertice along the edge that it is part of. This is for the corner vertice at a cube into three possible directions.
 
-##### Last Operator Vertex Slide
+##### Adjust Last Operation - Vertex Slide
 
 ![Last Operator Vertex Slide](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-vertex-slide.png)
+
+Change the settings of **Vertex Slide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3525,9 +4056,11 @@ Same tool than the Vertex Slide in the Tool Shelf. Vertex Slide slides the selec
 
 Same tool than in the tool shelf. Smoothens the selected vertices.
 
-##### Last Operator Smooth Vertices
+##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-smooth-vertices.png)
+
+Change the settings of **Smooth Vertices** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3587,9 +4120,11 @@ Connect Vertex pair connects selected vertices and makes a face of the pairs.
 
 Laplacian Smooth Vertex smooths out the angles between the selected vertices. It is a tool to reduce noise at the mesh. It works a bit different than the normal Smooth Vertex tool. And gives a different result. The Laplacian method allows you to preserve the volume, and to adjust border smoothing.
 
-#### Last Operator Laplacian Smooth Vertex
+#### Adjust Last Operation - Laplacian Smooth Vertex
 
 ![Last Operator Laplacian Smooth Vertex](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-laplacian-smooth-vertex.png)
+
+Change the settings of **Laplacian Smooth Vertex** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3613,9 +4148,11 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.
 
-#### Last Operator Vertex Crease
+#### Adjust Last Operation - Vertex Crease
 
 ![Last Operator Vertex Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-vertex-crease.png)
+
+Change the settings of **Vertex Crease** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Factor
 
@@ -3627,9 +4164,11 @@ Adjust the crease factor.
 
 This tool requires to have a shape key at the mesh. It blends the selected shape key into the mesh.
 
-#### Last Operator Blend from Shape
+#### Adjust Last Operation - Blend from Shape
 
 ![Last Operator Blend from Shape](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-blend-from-shape.png)
+
+Change the settings of **Blend from Shape** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -3655,14 +4194,21 @@ When there is no vertex group assigned yet then you can only see one menu item. 
 
 Once you have a vertex group assigned you will see the full functionality.
 
+#### Assign to New Group
 
-| Entry | What it does |
-| ------------------------ | ------------------------------------------------------------------ |
-| Assign to New Group | Assigns the mesh selection to a new vertex group. |
-| Assign to active Group | Assigns the mesh selection to the currently active vertex group. |
-| Remove from Active Group | Removes the mesh selection from the currently active vertex group. |
-| Remove from All | Removes the mesh selection from all vertex groups. |
+Assigns the mesh selection to a new vertex group.
 
+#### Assign to active Group
+
+Assigns the mesh selection to the currently active vertex group.
+
+#### Remove from Active Group
+
+Removes the mesh selection from the currently active vertex group.
+
+#### Remove from All
+
+Removes the mesh selection from all vertex groups.
 
 #### Set Active Group
 
@@ -3670,12 +4216,13 @@ Once you have a vertex group assigned you will see the full functionality.
 
 Select a vertex group to be the active one.
 
+##### Remove Active Group
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------ |
-| Remove Active Group | Removes the currently active vertex group. |
-| Remove All Groups | Removes all vertex groups from the mesh. |
+Removes the currently active vertex group.
 
+##### Remove All Groups
+
+Removes all vertex groups from the mesh.
 
 ### Hooks
 
@@ -3697,24 +4244,39 @@ Creates a new Hook Modifier for the active object and assigns it to the selected
 
 Does the same as *Hook to New Object*, but instead of hooking the vertices to a new empty, it hooks them to the selected object (if it exists). There should be only one selected object (besides the mesh being edited).
 
-##### Last Operator Hook to Selected Object
+##### Adjust Last Operation - Hook to Selected Object
 
 ![Last Operator Hook to Selected Object](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-hook-to-selected-object.png)
+
+Change the settings of **Hook to Selected Object** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ##### Active Bone
 
 Hook to the object(s) of the active bone.
 
+###### Hook to Selected Object Bone
 
-| Entry | What it does |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hook to Selected Object Bone | Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target. |
-| Assign to Hook | Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook. |
-| Remove Hook | Removes the chosen Hook Modifier from the object. |
-| Select Hook | Selects all vertices assigned to the chosen Hook Modifier. |
-| Reset Hook | Resets the chosen Hook Modifier. |
-| Recenter Hook | **Recenter** the Hook Modifier. |
+Does the same as **Hook to New Object**. B**ut it sets the last selected bone in the also selected armature as a target.
 
+###### Assign to Hook
+
+Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook.
+
+###### Remove Hook
+
+Removes the chosen Hook Modifier from the object.
+
+###### Select Hook
+
+Selects all vertices assigned to the chosen Hook Modifier.
+
+###### Reset Hook
+
+Resets the chosen Hook Modifier.
+
+###### Recenter Hook
+
+**Recenter** the Hook Modifier.
 
 ### Make Vertex Parent
 

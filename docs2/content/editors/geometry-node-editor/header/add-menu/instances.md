@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Instances"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Instances nodes."
 order: 70
@@ -29,12 +29,13 @@ replaces:
 
 Instances geometry on points.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Points**: Standard points input. · **Selection**: A selection of the point cloud. · **Instance**: Instance input. · **Pick Instance**: Select an instance of the point cloud. · **Instance Index**: The instance of the index · **Rotation**: The initial rotation. This is a rotation socket. · **Scale**: The initial scale. |
-| Output | **Instances**: Instances output. |
+**Points**: Standard points input. · **Selection**: A selection of the point cloud. · **Instance**: Instance input. · **Pick Instance**: Select an instance of the point cloud. · **Instance Index**: The instance of the index · **Rotation**: The initial rotation. This is a rotation socket. · **Scale**: The initial scale.
 
+#### Output
+
+**Instances**: Instances output.
 
 ### Instances to Points
 
@@ -46,12 +47,13 @@ geometry set (not nested instances). It also has position and radius
 inputs to allow overriding the default, and a selection input to only  
 generate points for some instances.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Instances**: Instances input. · **Selection**: A selection of the instance. · **Position**: The position of the instance. · **Radius**: The radius of the points. |
-| Output | **Instances**: Points output. |
+**Instances**: Instances input. · **Selection**: A selection of the instance. · **Position**: The position of the instance. · **Radius**: The radius of the points.
 
+#### Output
+
+**Instances**: Points output.
 
 ### Realize Instances
 
@@ -59,16 +61,29 @@ generate points for some instances.
 
 Makes the instances in the geometry input real. This means each instance becomes its own object with unique mesh data. This node is useful to realize instances either on everything or to a level of instance depth.
 
+#### Inputs
 
-| Entry | What it does |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | — |
-| Geometry | Geometry Input. |
-| Selection | Geometry Input. |
-| Realize All | Boolean Input. This realizes all level of nested instances for a top-level realization of instances. This overrides the value of the Depth input. Depth Input Number of levels of nested instances to realize for each top-level instance. **Note:** *Only relevant when Realize All is toggled off.* |
-| Outputs | — |
-| Geometry | Geometry outputs. |
+—
 
+#### Geometry
+
+Geometry Input.
+
+#### Selection
+
+Geometry Input.
+
+#### Realize All
+
+Boolean Input. This realizes all level of nested instances for a top-level realization of instances. This overrides the value of the Depth input. Depth Input Number of levels of nested instances to realize for each top-level instance. **Note:** *Only relevant when Realize All is toggled off.*
+
+#### Outputs
+
+—
+
+#### Geometry
+
+Geometry outputs.
 
 ### Rotate Instances
 
@@ -76,12 +91,13 @@ Makes the instances in the geometry input real. This means each instance becomes
 
 Rotates the instances of a geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Geometry**: Standard geometry input. · **Selection**: A selection of the geometry. · **Rotation**: The initial rotation. · **Pivot Point**: The pivot point position to rotate around. · **Local Space**: Rotate in world space or in Local Space of the object. |
-| Output | **Geometry**: Standard geometry output. |
+**Geometry**: Standard geometry input. · **Selection**: A selection of the geometry. · **Rotation**: The initial rotation. · **Pivot Point**: The pivot point position to rotate around. · **Local Space**: Rotate in world space or in Local Space of the object.
 
+#### Output
+
+**Geometry**: Standard geometry output.
 
 ### Scale Instances
 
@@ -89,12 +105,13 @@ Rotates the instances of a geometry.
 
 Rotates the instances of a geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Scale**: The initial scale. · **Center**: The pivot point position to scale around. · **Local Space**: Rotate in world space or in Local Space of the object. |
-| Output | **Geometry**: Standard geometry output. |
+**Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Scale**: The initial scale. · **Center**: The pivot point position to scale around. · **Local Space**: Rotate in world space or in Local Space of the object.
 
+#### Output
+
+**Geometry**: Standard geometry output.
 
 ### Translate Instances
 
@@ -102,12 +119,13 @@ Rotates the instances of a geometry.
 
 Rotates the instances of a geometry.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Inputs | **Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Translation**: The amount to move. · **Local Space**: Rotate in world space or in Local Space of the object. |
-| Output | **Geometry**: Standard geometry output. |
+**Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Translation**: The amount to move. · **Local Space**: Rotate in world space or in Local Space of the object.
 
+#### Output
+
+**Geometry**: Standard geometry output.
 
 ### Set Instance Transform
 
@@ -115,12 +133,13 @@ Rotates the instances of a geometry.
 
 This node allows replacing the transformation of every instance by providing a matrix.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Instances**: The input instances. · **Selection**: A selection of the geometry. · **Transform**: The transform matrix that you want to apply to every instance. |
-| Output | **Instances**: The output instances. |
+**Instances**: The input instances. · **Selection**: A selection of the geometry. · **Transform**: The transform matrix that you want to apply to every instance.
 
+#### Output
+
+**Instances**: The output instances.
 
 ### Instance Bounds
 
@@ -128,12 +147,13 @@ This node allows replacing the transformation of every instance by providing a m
 
 Calculate position bounds of the geometry set of each instance.
 
+#### Input
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| Input | **Use Radius**: For curves, point clouds and grease pencil. Take the radius attribute into account when computing the bounds. |
-| Output | **Min**: The minimum bounding box dimension. · **Max**: The maximum bounding box dimension. |
+**Use Radius**: For curves, point clouds and grease pencil. Take the radius attribute into account when computing the bounds.
 
+#### Output
+
+**Min**: The minimum bounding box dimension. · **Max**: The maximum bounding box dimension.
 
 ### Instance Transform
 
@@ -157,6 +177,8 @@ Retrieves the rotation of the instances.
 
 ##### Rotation
 
+Data type: Rotation.
+
 Vector Field output
 
 ### Instance Scale
@@ -168,5 +190,7 @@ Retrieves the scale of an instances.
 #### Output
 
 ##### Scale
+
+Data type: Vector.
 
 Vector Field output

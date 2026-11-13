@@ -7,8 +7,8 @@ path:
   - "3D Viewport"
   - "Grease Pencil"
   - "Edit Mode"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: editmode_hlt
 summary: "Edit the grease pencil itself: every header menu, tool, sidebar tab and context menu of Edit Mode."
 order: 20
@@ -45,9 +45,11 @@ Grease Pencil › Edit Mode: every menu, tool, sidebar tab and context menu of t
 
 Transforms the selected geometry into a sphere shape.
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -64,14 +66,10 @@ Transforms the selected geometry into a sphere shape.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Shear
 
@@ -83,9 +81,11 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Offset
 
@@ -103,12 +103,8 @@ Defines one axis of the imaginary shear axis plane.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
-| Entry | What it does |
-| -------------- | -------------------------------------------- |
-| Orientation | Choose the orientation for the shear action. |
-| Mirror Editing | Enable mirror editing. |
-
+- **Orientation**: Choose the orientation for the shear action.
+- **Mirror Editing**: Enable mirror editing.
 
 ###### Proportional editing
 
@@ -116,14 +112,10 @@ Defines the other axis of the imaginary shear axis plane.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
@@ -135,9 +127,11 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
+
+Change the settings of **Push/Pull** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -152,14 +146,10 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Radius
 
@@ -167,9 +157,11 @@ Scales the selected geometry of a curve along its normals. Grease pencil is unde
 
 A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -187,12 +179,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ##### Opacity
 
@@ -202,9 +190,11 @@ To use, activate then drag left or right to change the stroke opacity.
 
 > **Note:** This does not affect fill opacity, only stroke.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Values
 
@@ -222,12 +212,8 @@ The transform axis.
 
 Choose the orientation.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ### Mirror submenu
 
@@ -243,7 +229,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png)
 
@@ -267,7 +253,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -308,7 +294,7 @@ Inserts a key frame into the active layer.
 
 Inserts a key frame into all layers.
 
-#### Last Operator Insert Blank Frame
+#### Adjust Last Operation - Insert Blank Frame
 
 ![Last Operator Insert Blank Frame](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame.png)
 
@@ -326,7 +312,7 @@ Duplicates the active key frame in the active layer.
 
 Duplicates the active key frame in all layers.
 
-#### Last Operator Insert Blank Frame
+#### Adjust Last Operation - Insert Blank Frame
 
 ![Last Operator Insert Blank Frame](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame-2.png)
 
@@ -360,9 +346,11 @@ The copy sticks to the mouse until you release it. A Right click while moving wi
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
+
+Change the settings of **Duplicate** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move X , Y , Z
 
@@ -372,27 +360,22 @@ When you drag the duplicate around you will see the position values in the heade
 
 Choose the orientation.
 
+- **Mirror Editing**: Enable Mirror Editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable Mirror Editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
-
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------- |
-| Split | Split selected points to a new stroke. |
-| Copy | Copies the selection. |
-| Paste | Pastes a copied selection to active layer. You can have more than one layer. |
-
+- **Split**: Split selected points to a new stroke.
+- **Copy**: Copies the selection.
+- **Paste**: Pastes a copied selection to active layer. You can have more than one layer.
 
 #### Paste by Layer
 
 Pastes a copied selection to same, original layer. You can have more than one layer.
 
-##### Last operator Paste Strokes
+##### Adjust Last Operation - Paste Strokes
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
+
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -404,20 +387,23 @@ Choose between the paste methods again.
 
 Dissolve is a union operation. Two edges becomes one edge by removing the vertice in between.
 
+##### Dissolve
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------- |
-| Dissolve | Dissolves the selection. |
-| Dissolve Between | Dissolves the vertices between the selected vertices. |
+Dissolves the selection.
 
+##### Dissolve Between
+
+Dissolves the vertices between the selected vertices.
 
 ##### Dissolve Unselect
 
 Dissolves the vertices that are not selected.
 
-###### Last Operator Dissolve
+###### Adjust Last Operation - Dissolve
 
 ![Last Operator Dissolve](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png)
+
+Change the settings of **Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -427,13 +413,17 @@ Choose how you want to dissolve.
 
 ![Delete](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/delete.png)
 
+##### Delete
 
-| Entry | What it does |
-| ------------------------------------- | --------------------------------------------------------- |
-| Delete | Delete selected stroke points. |
-| Delete Active Key frame(Active Layer) | Deletes the active key frame in the current active layer. |
-| Delete Active Key frame(All Layers) | Deletes the active key frame in all layers. |
+Delete selected stroke points.
 
+##### Delete Active Key frame(Active Layer)
+
+Deletes the active key frame in the current active layer.
+
+##### Delete Active Key frame(All Layers)
+
+Deletes the active key frame in all layers.
 
 #### Cleanup sub menu
 
@@ -443,9 +433,11 @@ Choose how you want to dissolve.
 
 Deletes not connected stroke geometry that is made of loose points.
 
-###### Last Operator Clean Loose Points
+###### Adjust Last Operation - Clean Loose Points
 
 ![Last Operator Clean Loose Points](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png)
+
+Change the settings of **Clean Loose Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Limit
 
@@ -455,9 +447,11 @@ The number of vertices below which a stroke gets counted as a loose point.
 
 Deletes all duplicated frames.
 
-###### Last Operator Clean Duplicated Frames
+###### Adjust Last Operation - Clean Duplicated Frames
 
 ![Last Operator Clean Duplicated Frames](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png)
+
+Change the settings of **Clean Duplicated Frames** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -469,9 +463,11 @@ Delete just in the selected frames or in all frames.
 
 Merge selected geometry that is in a specific range to each other.
 
-###### Last Operator Merge by Distance
+###### Adjust Last Operation - Merge by Distance
 
 ![Last Operator Merge by Distance](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-merge-by-distance.png)
+
+Change the settings of **Merge by Distance** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -490,9 +486,11 @@ Re project the selected strokes onto a new plane from the current viewport. So t
 
 Using this tool opens a popup menu. Choose the projection type method.
 
-###### Last Operator Re projectStrokes
+###### Adjust Last Operation - Re projectStrokes
 
 ![Last Operator Re projectStrokes](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-re-projectstrokes.png)
+
+Change the settings of **Re projectStrokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Projection Type
 
@@ -502,9 +500,11 @@ A popup menu. Choose the projection type method.
 
 In Draw mode with the fill tool you are able to draw so called fill guide with holding down the Alt key. They act as the boundary of the fill area. This tool removes these fill guides.
 
-###### Last Operator Remove Fill Guides
+###### Adjust Last Operation - Remove Fill Guides
 
 ![Last Operator Remove Fill Guides](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png)
+
+Change the settings of **Remove Fill Guides** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Mode
 
@@ -524,9 +524,11 @@ Makes all curve geometry in the scene visible again.
 
 Hides the selected curve geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png)
+
+Change the settings of **Hide Selected** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Unselected
 
@@ -540,9 +542,11 @@ Hides the not selected curve geometry. The selected geometry stays visible.
 
 Convert selected strokes to perimeter.
 
-##### Last Operator Outline
+##### Adjust Last Operation - Outline
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-outline.png)
+
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -559,29 +563,31 @@ Convert selected strokes to perimeter.
 
 Separates the selection into a new grease pencil object.
 
+##### Selection
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------- |
-| Selected Points | Separate the selected points with its edges. |
-| Selected Strokes | Separate the whole stroke of the current selection. |
-| Active Layer | Separate all the strokes at the current active layer. |
+Separates the selected points or strokes into a new object.
 
+##### By Material
 
-##### Last Operator Separate Strokes
+Separates each material into its own object.
+
+##### By Layer
+
+Separates each layer into its own object.
+
+##### Adjust Last Operation - Separate Strokes
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Separate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-separate-strokes.png)
 
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-
-| Entry | What it does |
-| ---------------- | --------------------------------------------------- |
-| Selected Strokes | Separate the whole stroke of the current selection. |
-| Selected Points | Separate the selected points with its edges. |
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.
 
 ## Point menu
 
@@ -595,9 +601,11 @@ Extrude selected points and move them. The new points stay connected with the or
 
 Extrude does not show in Select mode Stroke.
 
-##### Last Operator Extrude Stroke Points
+##### Adjust Last Operation - Extrude Stroke Points
 
 ![Last Operator Extrude Stroke Points](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png)
+
+Change the settings of **Extrude Stroke Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move
 
@@ -609,20 +617,18 @@ The vector coordinates. They start relative to the initial vector.
 
 The orientation in which the extrude happens.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | — |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: —
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Smooth
 
 Smoothens out the selected geometry.
 
-##### Last Operator Smooth Stroke
+##### Adjust Last Operation - Smooth Stroke
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/last-operator-smooth-stroke.png)
+
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -670,9 +676,11 @@ The menu content changes dependant of the Select mode. In Select mode Stroke a f
 
 Subdivides the selected grease pencil geometry.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-subdivide.png)
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -685,7 +693,11 @@ Subdivides the selected grease pencil geometry.
 
 Subdivides the selected grease pencil geometry, and smoothens it.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide and Smooth
+
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Subdivide and Smooth](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-subdivide-and-smooth.png)
 
 ###### Number of Cuts
 
@@ -693,18 +705,14 @@ Subdivides the selected grease pencil geometry, and smoothens it.
 
 Number of subdivision cuts.
 
-
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------- |
-| Selected Points | Limits the effect to only the selected points within the stroke. |
-| Iterations | How often to smooth. |
-| Factor | The smoothing factor |
-| Smooth Endpoints | Smoothen the endpoints. |
-| Keep Shape | Try to keep the original shape. |
-| Position | The operator affects the points location. |
-| Radius | The smooth radius around vertices. |
-| Opacity | The smooth opacity. |
-
+- **Selected Points**: Limits the effect to only the selected points within the stroke.
+- **Iterations**: How often to smooth.
+- **Factor**: The smoothing factor
+- **Smooth Endpoints**: Smoothen the endpoints.
+- **Keep Shape**: Try to keep the original shape.
+- **Position**: The operator affects the points location.
+- **Radius**: The smooth radius around vertices.
+- **Opacity**: The smooth opacity.
 
 #### Simplify Strokes - Sub Menu
 
@@ -712,16 +720,23 @@ Number of subdivision cuts.
 
 Stroke mode. Simplify the stroke.
 
+##### Fixed
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fixed | Deletes every second point in the stroke, except the start and end points. |
-| Adaptive | This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points. |
-| Sample | Samples points along the shape of the stroke, and increases the length of the edges. |
-| Merge | Simplify the stroke by merging vertices closer than a given distance. |
+Deletes every second point in the stroke, except the start and end points.
 
+##### Adaptive
 
-##### Last Operator Simplify Stroke
+This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points.
+
+##### Sample
+
+Samples points along the shape of the stroke, and increases the length of the edges.
+
+##### Merge
+
+Simplify the stroke by merging vertices closer than a given distance.
+
+##### Adjust Last Operation - Simplify Stroke
 
 ![Last Operator Simplify Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-simplify-stroke.png)
 
@@ -733,23 +748,20 @@ The simplify strokes operators share the same last operator.
 
 The method.
 
-
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------- |
-| Steps (Fixed) | How much levels of simplifying. |
-| Factor (Adaptive) | How strong the simplification should be performed. |
-| Length (Sample) | The sample length. |
-| Distance (Merge) | The distance. Below this value the vertices gets merged. |
-
+- **Steps (Fixed)**: How much levels of simplifying.
+- **Factor (Adaptive)**: How strong the simplification should be performed.
+- **Length (Sample)**: The sample length.
+- **Distance (Merge)**: The distance. Below this value the vertices gets merged.
 
 #### Join - Sub Menu
 
+##### Join and Copy
 
-| Entry | What it does |
-| ------------- | ------------------------------------- |
-| Join and Copy | Copy the selection in the new stroke. |
-| Join | Move the selection to the new stroke. |
+Copy the selection in the new stroke.
 
+##### Join
+
+Move the selection to the new stroke.
 
 ##### Adjust last operator Join Selection
 
@@ -773,13 +785,9 @@ Convert selected strokes to perimeter.
 
 How to project the stroke.
 
-
-| Entry | What it does |
-| ------------------- | --------------------------------- |
-| Radius | How big. |
-| Offset Factor | Offset from the stroke. |
-| Corner Subdivisions | How much subdivisions at corners. |
-
+- **Radius**: How big.
+- **Offset Factor**: Offset from the stroke.
+- **Corner Subdivisions**: How much subdivisions at corners.
 
 #### Move to Layer – Sub Menu
 
@@ -793,9 +801,11 @@ Move the current selected stroke to another grease pencil layer. It lists the cu
 
 New Layer button adds a new grease pencil layer.
 
-###### Last Operator Move Strokes to Layer
+###### Adjust Last Operation - Move Strokes to Layer
 
 ![Last Operator Move Strokes to Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png)
+
+Change the settings of **Move Strokes to Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Grease Pencil Layer
 
@@ -815,9 +825,11 @@ Assign a new material to the current selected stroke geometry.
 
 The materials can be found and edited in the Properties editor. Here you can also create new materials.
 
-##### Last Operator Change Stroke Color
+##### Adjust Last Operation - Change Stroke Color
 
 ![Last Operator Change Stroke Color](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png)
+
+Change the settings of **Change Stroke Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Material
 
@@ -833,21 +845,27 @@ Sets the current selected material as the active material.
 
 Changes the drawing order of the strokes in the 2D layer.
 
+##### Bring Forward
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------ |
-| Bring Forward | Moves the selected points/strokes upper the next one in the drawing order. |
-| Send Backward | Moves the selected points/strokes below the previous one in the drawing order. |
-| Bring to Front | Moves to the top the selected points/strokes. |
+Moves the selected points/strokes upper the next one in the drawing order.
 
+##### Send Backward
+
+Moves the selected points/strokes below the previous one in the drawing order.
+
+##### Bring to Front
+
+Moves to the top the selected points/strokes.
 
 ##### Send to Back
 
 Moves to the bottom the selected points/strokes.
 
-###### Last Operator Arrange Stroke
+###### Adjust Last Operation - Arrange Stroke
 
 ![Last Operator Arrange Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png)
+
+Change the settings of **Arrange Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -861,9 +879,11 @@ Closes the current stroke by connecting the first vertice with the last vertice 
 
 When the curve is open, then it Closes the current stroke by connecting the first vertice with the last vertice by a stroke. When the curve is closed, then it removes the connection between first and last vertice, and makes the curve open.
 
-##### Last Operator Set Cyclical State
+##### Adjust Last Operation - Set Cyclical State
 
 ![Last Operator Set Cyclical State](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-cyclical-state.png)
+
+Change the settings of **Set Cyclical State** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -884,17 +904,23 @@ Toggles if the start and endpoints of the strokes are rounded or flat.
 
 Sets stroke start and end points to rounded (default).
 
+###### Both
 
-| Entry | What it does |
-| ----- | ----------------------------------------------------------- |
-| Both | Toggle stroke start and end points caps to flat or rounded. |
-| Start | Toggle stroke start point cap to flat or rounded. |
-| End | Toggle stroke end point cap to flat or rounded. |
+Toggle stroke start and end points caps to flat or rounded.
 
+###### Start
 
-##### Last Operator Set Caps Mode
+Toggle stroke start point cap to flat or rounded.
+
+###### End
+
+Toggle stroke end point cap to flat or rounded.
+
+##### Adjust Last Operation - Set Caps Mode
 
 ![Last Operator Set Caps Mode](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-caps-mode.png)
+
+Change the settings of **Set Caps Mode** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -920,7 +946,7 @@ Adjust the thickness of the stroke.
 
 Adjust the opacity of the stroke.
 
-##### Last operator Normalize Stroke
+##### Adjust Last Operation - Normalize Stroke
 
 ![Last operator Normalize Stroke](/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-normalize-stroke.png)
 
@@ -960,13 +986,17 @@ The resolution that you want to choose.
 
 Defines how selected points are interpreted on the Grease Pencil.
 
+##### Stroke
 
-| Entry | What it does |
-| ------ | ---------------------------------------------- |
-| Stroke | Points are treated as part of a line stroke. |
-| Fill | Points are treated as part of a filled region. |
-| Both | Points contribute to both stroke and fill. |
+Points are treated as part of a line stroke.
 
+##### Fill
+
+Points are treated as part of a filled region.
+
+##### Both
+
+Points contribute to both stroke and fill.
 
 #### Reset UVs
 
@@ -1021,6 +1051,23 @@ The thickness of the generated stroke.
 
 Where to place the stroke, relative to what element.
 
+The same Stroke Placement popover is in the header of Draw Mode.
+
+- **Origin**: Draws the stroke at the object origin.
+- **3D Cursor**: Draws the stroke at the 3D cursor.
+- **Surface**: Sticks the stroke to the surfaces of other objects.
+- **Stroke**: Sticks the stroke to other strokes.
+
+![Stroke Placement set to Surface](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/stroke-placement-surface.png)
+
+With **Surface**, more settings show up:
+
+- **Offset**: How far the stroke floats above the surface, along the surface normal. A small offset keeps the stroke from sinking into the surface.
+- **Sync Radius with Surface** (the link button next to Offset): When on, the brush size controls the offset, so thick strokes float a bit higher than thin ones and don't cut into the surface. Pressure changes the offset during the stroke too. When off, offset and brush size are independent. The icon shows a closed link when it's on.
+- **Extra Offset**: Shows when Sync is on. An extra distance added on top of the synced offset.
+- **Project Onto Selected**: Projects the strokes only onto the selected objects.
+- **Target**: Which points of the stroke stick to the surface: **All Points**, **End Points** (the first and last point, with the points in between interpolated) or **First Point**.
+
 ###### Drawing Plane
 
 ![Drawing Plane](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/drawing-plane.png)
@@ -1049,16 +1096,14 @@ When you resize the curve radius then you will see a value in the header. It tel
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png)
+
+Change the settings of **Transform** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1073,23 +1118,20 @@ When you click at the widget of the active tool, then you perform the tool actio
 
 Adjust the orientation of the extrusion. It usually starts with Normal.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Bend
 
 Bends the selection.
 
+##### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+##### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ##### Header Values
 
@@ -1103,12 +1145,13 @@ When you move the mouse then you will see some values in the header, which shows
 
 ##### Shear
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ###### Header Values
 
@@ -1136,16 +1179,14 @@ Choose the orientation for the shear action.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+- **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
+- **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
-| Entry | What it does |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Tool | When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool. |
-| Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
-
-
-###### Last Operator Shear
+###### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png)
+
+Change the settings of **Shear** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1164,23 +1205,20 @@ Defines the other axis of the imaginary shear axis plane.
 
 Choose the orientation for the shear action.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Enable mirror editing. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Enable mirror editing.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ##### To Sphere
 
 Transforms the selection into a sphere shape.
 
+###### Snapping
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Snapping | Holding down Ctrl activates temporary global snapping. |
-| Precision movement | When you hold down shift, then you will have a much slower but also much preciser movement. |
+Holding down Ctrl activates temporary global snapping.
 
+###### Precision movement
+
+When you hold down shift, then you will have a much slower but also much preciser movement.
 
 ###### Header Values
 
@@ -1188,9 +1226,11 @@ Transforms the selection into a sphere shape.
 
 When you move the mouse then you will see some values in the header, which shows the current to sphere factor. This value is relative to the starting value, which always starts with 0.
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png)
+
+Change the settings of **To Sphere** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Factor
 
@@ -1206,14 +1246,10 @@ Enables Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Interpolate
 
@@ -1239,16 +1275,21 @@ Exclude existing breakdowns keyframes as interpolation extremes.
 
 The method to invert destination stroke to match start and end with source stroke.
 
-
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------------------------- |
-| Smooth | Amount of smoothing to apply to interpolate strokes, to reduce jitter and noise. |
-| Iterations | Number of times to smooth newly created strokes. |
-
+- **Smooth**: Amount of smoothing to apply to interpolate strokes, to reduce jitter and noise.
+- **Iterations**: Number of times to smooth newly created strokes.
 
 #### Gradient
 
-Draw a line to set the fill material gradient for the selected stroke.
+![Gradient tool, dragging a line across the strokes](/docs2/images/editors/3d-viewport/grease-pencil/gradient-tool-drag.png)
+
+The Gradient tool sets **where the fill gradient runs** on the selected strokes. You draw the gradient straight in the viewport instead of typing numbers.
+
+1. Give the stroke a material whose **Fill** uses the **Gradient** style (Material Properties › Surface › Fill › Style).
+2. In Edit Mode, select the strokes you want to change.
+3. Pick the **Gradient** tool in the tool shelf.
+4. Click and drag across the strokes. Where you press is the start of the gradient, and where you release is the end.
+
+> **Note:** If nothing happens, check the material: the tool only changes fills that use the Gradient style. A plain Solid fill has no gradient to move.
 
 # Context Menus
 
@@ -1266,9 +1307,11 @@ Call this menu with right click in the 3D viewport.
 
 Extrude selected points and move them. The new points stay connected with the original points of the stroke.
 
-##### Last Operator Extrude Stroke Points
+##### Adjust Last Operation - Extrude Stroke Points
 
 ![Last Operator Extrude Stroke Points](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png)
+
+Change the settings of **Extrude Stroke Points** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Move
 
@@ -1280,20 +1323,18 @@ The vector coordinates. They start relative to the initial vector.
 
 The orientation in which the extrude happens.
 
-
-| Entry | What it does |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mirror Editing | Edit along a mirror axis. |
-| Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Mirror Editing**: Edit along a mirror axis.
+- **Proportional editing**: Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Subdivide
 
 Subdivides the selected grease pencil geometry.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png)
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1312,9 +1353,11 @@ Subdivides the selected grease pencil geometry.
 
 Subdivides the selected grease pencil geometry.
 
-##### Last Operator Subdivide and Smooth
+##### Adjust Last Operation - Subdivide and Smooth
 
 ![Last Operator Subdivide and Smooth](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png)
+
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1337,13 +1380,17 @@ Subdivides the selected grease pencil geometry.
 Defines how selected points are interpreted in the  
 Options:
 
+##### Stroke
 
-| Entry | What it does |
-| ------ | ---------------------------------------------- |
-| Stroke | Points are treated as part of a line stroke. |
-| Fill | Points are treated as part of a filled region. |
-| Both | Points contribute to both stroke and fill. |
+Points are treated as part of a line stroke.
 
+##### Fill
+
+Points are treated as part of a filled region.
+
+##### Both
+
+Points contribute to both stroke and fill.
 
 #### Transform – Sub Menu
 
@@ -1352,24 +1399,39 @@ Options:
 Provides geometric and visual transformations for selected Grease Pencil points or strokes.  
 Useful for reshaping, stylizing, and refining drawings with precise control
 
+##### To Sphere
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| To Sphere | Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes. |
-| Shear | Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration. |
-| Bend | Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs. |
-| Push/Pull | Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry. |
-| Radius | Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis. |
-| Opacity | Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings. |
+Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes.
 
+##### Shear
+
+Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration.
+
+##### Bend
+
+Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs.
+
+##### Push/Pull
+
+Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry.
+
+##### Radius
+
+Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis.
+
+##### Opacity
+
+Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings.
 
 #### Smooth Points
 
 Smoothens out the selected geometry.
 
-##### Last Operator Smooth Stroke
+##### Adjust Last Operation - Smooth Stroke
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png)
+
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1420,14 +1482,15 @@ Commonly used for precise, technical shapes or hard edges.
 
 Mirror mirrors the selected geometry along the defined axis.
 
+##### Interactive Mirror
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Interactive Mirror | Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored. |
-| X Global, Y Global etc. | Mirrors the selection around the chosen axis. |
+Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.
 
+##### X Global, Y Global etc.
 
-##### Last Operator Mirror
+Mirrors the selection around the chosen axis.
+
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-mirror.png)
 
@@ -1449,7 +1512,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last Operator Snap
+##### Adjust Last Operation - Snap
 
 ![Last Operator Snap](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-snap.png)
 
@@ -1465,13 +1528,11 @@ Duplicates the current selection.
 
 When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.
 
-##### Last Operator Duplicate Strokes
+##### Adjust Last Operation - Duplicate Strokes
 
-###### Mode
+Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-duplicate-strokes.png)
 
 ###### Move X, Y, Z
 
@@ -1493,14 +1554,10 @@ Edit along a mirror axis.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 #### Copy
 
@@ -1510,9 +1567,11 @@ Copies the selection.
 
 Pastes a copied selection to active layer. You can have more than one layer.
 
-##### Last operator Paste Strokes
+##### Adjust Last Operation - Paste Strokes
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
+
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -1524,20 +1583,23 @@ Choose between the paste methods again.
 
 Merges seleceted vertices by distance.
 
+##### Dissolve
 
-| Entry | What it does |
-| ---------------- | ----------------------------------------------------- |
-| Dissolve | Dissolves the selection. |
-| Dissolve Between | Dissolves the vertices between the selected vertices. |
+Dissolves the selection.
 
+##### Dissolve Between
+
+Dissolves the vertices between the selected vertices.
 
 #### Dissolve Unselect
 
 Dissolves the vertices that are not selected.
 
-##### Last Operator Dissolve
+##### Adjust Last Operation - Dissolve
 
 ![Last Operator Dissolve](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png)
+
+Change the settings of **Dissolve** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -1549,16 +1611,23 @@ Choose how you want to dissolve.
 
 Stroke mode. Simplify the stroke.
 
+##### Fixed
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fixed | Deletes every second point in the stroke, except the start and end points. |
-| Adaptive | This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points. |
-| Sample | Samples points along the shape of the stroke, and increases the length of the edges. |
-| Merge | Simplify the stroke by merging vertices closer than a given distance. |
+Deletes every second point in the stroke, except the start and end points.
 
+##### Adaptive
 
-##### Last Operator Simplify Stroke
+This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points.
+
+##### Sample
+
+Samples points along the shape of the stroke, and increases the length of the edges.
+
+##### Merge
+
+Simplify the stroke by merging vertices closer than a given distance.
+
+##### Adjust Last Operation - Simplify Stroke
 
 ![Last Operator Simplify Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-simplify-stroke.png)
 
@@ -1570,22 +1639,20 @@ The simplify strokes operators share the same last operator.
 
 The method.
 
-
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------- |
-| Steps (Fixed) | How much levels of simplifying. |
-| Factor (Adaptive) | How strong the simplification should be performed. |
-| Length (Sample) | The sample length. |
-| Distance (Merge) | The distance. Below this value the vertices gets merged. |
-
+- **Steps (Fixed)**: How much levels of simplifying.
+- **Factor (Adaptive)**: How strong the simplification should be performed.
+- **Length (Sample)**: The sample length.
+- **Distance (Merge)**: The distance. Below this value the vertices gets merged.
 
 #### Outline
 
 Adds an outline to the grease pencil.
 
-##### Last Operator Outline
+##### Adjust Last Operation - Outline
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png)
+
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Projection Mode
 
@@ -1593,36 +1660,27 @@ Adds an outline to the grease pencil.
 
 The orientation to project the outline.
 
-
-| Entry | What it does |
-| ------------------- | --------------------------------------------- |
-| Radius | Thickness of the outline |
-| Offset Factor | Offset from original outline. |
-| Corner Subdivisions | How much iterations to subdivide the corners. |
-
+- **Radius**: Thickness of the outline
+- **Offset Factor**: Offset from original outline.
+- **Corner Subdivisions**: How much iterations to subdivide the corners.
 
 #### Separate
 
 Separates the selection into a new grease pencil object.
 
-##### Last Operator Separate Strokes
+##### Adjust Last Operation - Separate Strokes
 
 ![Last Operator Separate Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes.png)
 
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-
-| Entry | What it does |
-| ---------------- | --------------------------------------------------- |
-| Selected Strokes | Separate the whole stroke of the current selection. |
-| Selected Points | Separate the selected points with its edges. |
-
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.
 
 #### Set Spline Type – Sub Menu
 
@@ -1630,24 +1688,33 @@ Separate all the strokes at the current active layer.
 
 Convert the curve type of the grease pencil to another curve type. These different curve types allows you different ways of modification.
 
+##### Catmull Rom
 
-| Entry | What it does |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Catmull Rom | Generates smooth curves passing through all control points.   Produces natural, flowing strokes with minimal manual adjustment.   Best for organic shapes and freehand drawing cleanup. |
-| Poly | Represents strokes as straight line segments between points. No interpolation is applied. |
-| Bézier | Converts strokes into Bézier curves with editable handles. Provides precise control over curvature and tangents. |
-| NURBS | Uses Non-Uniform Rational B-Splines for interpolation. Allows smooth curves with weighted control points. |
+Generates smooth curves passing through all control points.   Produces natural, flowing strokes with minimal manual adjustment.   Best for organic shapes and freehand drawing cleanup.
 
+##### Poly
 
-##### Last Operator Separate Strokes
+Represents strokes as straight line segments between points. No interpolation is applied.
+
+##### Bézier
+
+Converts strokes into Bézier curves with editable handles. Provides precise control over curvature and tangents.
+
+##### NURBS
+
+Uses Non-Uniform Rational B-Splines for interpolation. Allows smooth curves with weighted control points.
+
+##### Adjust Last Operation - Set Curve Type
 
 ![Last Operator Separate Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes-2.png)
 
+Change the settings of **Set Curve Type** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
 
 | Entry | What it does |
-| --------- | ---------------------------------------------------------------- |
-| Type | The curve types. |
-| Threshold | The distance that the resulting points are allowed to be within. |
+| ------- | ------------------------------------------------------- |
+| Type | The curve type to convert to. |
+| Handles | Uses the handle information in the conversion. |
 
 
 #### Set Handle Type – Sub Menu
@@ -1657,14 +1724,25 @@ Convert the curve type of the grease pencil to another curve type. These differe
 Defines how control point handles behave when editing curves or strokes.  
 Useful for shaping curvature, controlling tangents, and refining stroke flow in both Grease Pencil and curve objects.
 
+##### Auto
 
-| Entry | What it does |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto | Automatically positions handles to create smooth, natural curves.   Handles adjust dynamically as points are moved. |
-| Vector | Creates straight, angular transitions at the control point.   Handles point directly toward adjacent vertices. |
-| Align | Keeps both handles aligned in opposite directions.   Ensures smooth, symmetrical transitions through the control point. |
-| Free | Allows each handle to move independently.   Provides maximum flexibility for custom curve shaping.   Best for fine-tuning irregular or stylized strokes. |
-| Toggle Free/Align | Switches between Free and Align modes for the selected point. |
+Automatically positions handles to create smooth, natural curves.   Handles adjust dynamically as points are moved.
+
+##### Vector
+
+Creates straight, angular transitions at the control point.   Handles point directly toward adjacent vertices.
+
+##### Align
+
+Keeps both handles aligned in opposite directions.   Ensures smooth, symmetrical transitions through the control point.
+
+##### Free
+
+Allows each handle to move independently.   Provides maximum flexibility for custom curve shaping.   Best for fine-tuning irregular or stylized strokes.
+
+##### Toggle Free/Align
+
+Switches between Free and Align modes for the selected point.
 
 ## Stroke context menu
 
@@ -1680,9 +1758,11 @@ Call this menu with right click in the 3D viewport. The stroke menu appears in s
 
 Subdivides the selected grease pencil geometry.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png)
+
+Change the settings of **Subdivide** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1701,9 +1781,11 @@ Subdivides the selected grease pencil geometry.
 
 Subdivides the selected grease pencil geometry.
 
-##### Last Operator Subdivide and Smooth
+##### Adjust Last Operation - Subdivide and Smooth
 
 ![Last Operator Subdivide and Smooth](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png)
+
+Change the settings of **Subdivide and Smooth** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1725,13 +1807,17 @@ Subdivides the selected grease pencil geometry.
 
 Defines how selected points are interpreted on the Grease Pencil.
 
+##### Stroke
 
-| Entry | What it does |
-| ------ | ---------------------------------------------- |
-| Stroke | Points are treated as part of a line stroke. |
-| Fill | Points are treated as part of a filled region. |
-| Both | Points contribute to both stroke and fill. |
+Points are treated as part of a line stroke.
 
+##### Fill
+
+Points are treated as part of a filled region.
+
+##### Both
+
+Points contribute to both stroke and fill.
 
 #### Transform – Sub Menu
 
@@ -1740,24 +1826,39 @@ Defines how selected points are interpreted on the Grease Pencil.
 Provides geometric and visual transformations for selected Grease Pencil points or strokes.  
 Useful for reshaping, stylizing, and refining drawings with precise control
 
+##### To Sphere
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| To Sphere | Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes. |
-| Shear | Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration. |
-| Bend | Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs. |
-| Push/Pull | Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry. |
-| Radius | Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis. |
-| Opacity | Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings. |
+Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes.
 
+##### Shear
+
+Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration.
+
+##### Bend
+
+Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs.
+
+##### Push/Pull
+
+Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry.
+
+##### Radius
+
+Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis.
+
+##### Opacity
+
+Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings.
 
 #### Smooth
 
 Smoothens out the selected geometry.
 
-##### Last Operator Smooth Stroke
+##### Adjust Last Operation - Smooth Stroke
 
 ![Last Operator Smooth Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png)
+
+Change the settings of **Smooth Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
@@ -1783,9 +1884,11 @@ Move the current selected stroke to another grease pencil layer. It lists the cu
 
 New Layer button adds a new grease pencil layer.
 
-###### Last Operator Move Strokes to Layer
+###### Adjust Last Operation - Move Strokes to Layer
 
 ![Last Operator Move Strokes to Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png)
+
+Change the settings of **Move Strokes to Layer** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Grease Pencil Layer
 
@@ -1805,9 +1908,11 @@ Assign a new material to the current selected stroke geometry.
 
 The materials can be found and edited in the Properties editor. Here you can also create new materials.
 
-##### Last Operator Change Stroke Color
+##### Adjust Last Operation - Change Stroke Color
 
 ![Last Operator Change Stroke Color](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png)
+
+Change the settings of **Change Stroke Color** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Material
 
@@ -1823,21 +1928,27 @@ Sets the current selected material as the active material.
 
 Changes the drawing order of the strokes in the 2D layer.
 
+##### Bring Forward
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------ |
-| Bring Forward | Moves the selected points/strokes upper the next one in the drawing order. |
-| Send Backward | Moves the selected points/strokes below the previous one in the drawing order. |
-| Bring to Front | Moves to the top the selected points/strokes. |
+Moves the selected points/strokes upper the next one in the drawing order.
 
+##### Send Backward
+
+Moves the selected points/strokes below the previous one in the drawing order.
+
+##### Bring to Front
+
+Moves to the top the selected points/strokes.
 
 ##### Send to Back
 
 Moves to the bottom the selected points/strokes.
 
-###### Last Operator Arrange Stroke
+###### Adjust Last Operation - Arrange Stroke
 
 ![Last Operator Arrange Stroke](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png)
+
+Change the settings of **Arrange Stroke** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Direction
 
@@ -1849,14 +1960,15 @@ Choose the method again.
 
 Mirror mirrors the selected geometry along the defined axis.
 
+##### Interactive Mirror
 
-| Entry | What it does |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Interactive Mirror | Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored. |
-| X Global, Y Global etc. | Mirrors the selection around the chosen axis. |
+Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.
 
+##### X Global, Y Global etc.
 
-##### Last Operator Mirror
+Mirrors the selection around the chosen axis.
+
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-mirror.png)
 
@@ -1878,7 +1990,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last Operator Snap
+##### Adjust Last Operation - Snap
 
 ![Last Operator Snap](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-snap.png)
 
@@ -1894,13 +2006,11 @@ Duplicates the current selection.
 
 When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.
 
-##### Last Operator Duplicate Strokes
+##### Adjust Last Operation - Duplicate Strokes
 
-###### Mode
+Change the settings of **Duplicate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
-![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
-
-Not to find out. It has no tooltip and is not documented upstream.
+![Adjust Last Operation - Duplicate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-duplicate-strokes.png)
 
 ###### Move X, Y, Z
 
@@ -1912,12 +2022,8 @@ Adjust the position.
 
 Orientation is a drop-down box. Choose the type of orientation for the mirroring action.
 
-
-| Entry | What it does |
-| --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Constraint Axis | Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here. |
-| Mirror Editing | Edit along a mirror axis. |
-
+- **Constraint Axis**: Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.
+- **Mirror Editing**: Edit along a mirror axis.
 
 ###### Proportional editing
 
@@ -1925,28 +2031,23 @@ Orientation is a drop-down box. Choose the type of orientation for the mirroring
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
+- **Proportional Falloff**: Adjust the falloff methods.
+- **Proportional Size**: See and adjust the falloff radius.
+- **Connected**: The proportional falloff gets calculated for connected parts only.
+- **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proportional Falloff | Adjust the falloff methods. |
-| Proportional Size | See and adjust the falloff radius. |
-| Connected | The proportional falloff gets calculated for connected parts only. |
-| Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
-
-| Entry | What it does |
-| ----- | ---------------------------------------------------------------------------- |
-| Copy | Copies the selection. |
-| Paste | Pastes a copied selection to active layer. You can have more than one layer. |
-
+- **Copy**: Copies the selection.
+- **Paste**: Pastes a copied selection to active layer. You can have more than one layer.
 
 #### Paste by Layer
 
 Pastes a copied selection to same, original layer. You can have more than one layer.
 
-##### Last operator Paste Strokes
+##### Adjust Last Operation - Paste Strokes
 
 ![Last operator Paste Strokes](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png)
+
+Change the settings of **Paste Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Type
 
@@ -1956,9 +2057,11 @@ Choose between the paste methods again.
 
 Adds an outline to the grease pencil.
 
-##### Last Operator Outline
+##### Adjust Last Operation - Outline
 
 ![Last Operator Outline](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png)
+
+Change the settings of **Outline** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Projection Mode
 
@@ -1966,13 +2069,9 @@ Adds an outline to the grease pencil.
 
 The orientation to project the outline.
 
-
-| Entry | What it does |
-| ------------------- | --------------------------------------------- |
-| Radius | Thickness of the outline |
-| Offset Factor | Offset from original outline. |
-| Corner Subdivisions | How much iterations to subdivide the corners. |
-
+- **Radius**: Thickness of the outline
+- **Offset Factor**: Offset from original outline.
+- **Corner Subdivisions**: How much iterations to subdivide the corners.
 
 #### Split
 
@@ -1984,18 +2083,16 @@ Splits the selection.
 
 Separates the selection into a new grease pencil object.
 
-##### Last Operator Separate Strokes
+##### Adjust Last Operation - Separate Strokes
+
+Change the settings of **Separate Strokes** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+![Adjust Last Operation - Separate Strokes](/docs2/images/editors/3d-viewport/grease-pencil/adjust-last-operation-separate-strokes.png)
 
 ###### Mode
 
-###### Active Layer
+Choose what goes into the new object.
 
-![Active Layer](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png)
-
-Separate all the strokes at the current active layer.
-
-
-| Entry | What it does |
-| ---------------- | --------------------------------------------------- |
-| Selected Strokes | Separate the whole stroke of the current selection. |
-| Selected Points | Separate the selected points with its edges. |
+- **Selection**: Separates the selected points or strokes.
+- **By Material**: Separates each material into its own object.
+- **By Layer**: Separates each layer into its own object.

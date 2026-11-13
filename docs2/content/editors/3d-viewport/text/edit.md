@@ -37,20 +37,27 @@ Text › Edit Mode: every menu, tool, sidebar tab and context menu of this mode,
 
 Cuts the selection.
 
+##### Copy
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------- |
-| Copy | Copies the selection. |
-| Paste | Pastes a copied selection. |
-| Paste File | Opens the file browser where you can choose a text file to paste the text from. It needs to be UTF8. |
-| To Uppercase | Sets the selected text to be uppercase letters. |
+Copies the selection.
 
+##### Paste
+
+Pastes a copied selection.
+
+##### Paste File
+
+Opens the file browser where you can choose a text file to paste the text from. It needs to be UTF8.
+
+##### To Uppercase
+
+Sets the selected text to be uppercase letters.
 
 #### To Lowercase
 
 Sets the selected text to be uppercase letters.
 
-##### Last Operator Set Case
+##### Adjust Last Operation - Set Case
 
 ![Last Operator Set Case](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-set-case.png)
 
@@ -93,14 +100,21 @@ Special characters is a sub menu that contains some special text characters, lik
 
 Set the cursor at specific positions in the text.
 
+##### Toggle Bold
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Bold | Bold sets the selected letters to be displayed as bold letters. |
-| Toggle Italic | Italic sets the selected letters to be displayed as italic letters. |
-| Toggle Underline | Underline sets the selected letters to be displayed as underlined letters. |
-| Toggle Small Caps | Toggle small caps sets the selected letters to be displayed as if they were upper case letters, but with lower case size. |
+Bold sets the selected letters to be displayed as bold letters.
 
+##### Toggle Italic
+
+Italic sets the selected letters to be displayed as italic letters.
+
+##### Toggle Underline
+
+Underline sets the selected letters to be displayed as underlined letters.
+
+##### Toggle Small Caps
+
+Toggle small caps sets the selected letters to be displayed as if they were upper case letters, but with lower case size.
 
 #### Kerning
 
@@ -108,17 +122,23 @@ Set the cursor at specific positions in the text.
 
 Kerning is the distance between letters. Increase, decrease and reset the kerning.
 
+##### Decrease Kerning
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------- |
-| Decrease Kerning | Decreases the distance between the letters. |
-| Increase Kerning | Increases the distance between the letters. |
-| Reset Kerning | Resets the distance between the letters to the default values from the font. |
+Decreases the distance between the letters.
 
+##### Increase Kerning
 
-##### Last Operator Change Spacing
+Increases the distance between the letters.
+
+##### Reset Kerning
+
+Resets the distance between the letters to the default values from the font.
+
+##### Adjust Last Operation - Change Spacing
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
+
+Change the settings of **Change Spacing** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Delta
 
@@ -156,34 +176,51 @@ The 3D Cursor, Measure and annotate tools at the end of the list are explained i
 
 Call this menu with double right click in the 3D viewport. You need to be in Edit mode with a Text object.
 
+#### Cut
 
-| Entry | What it does |
-| ---------- | -------------------------- |
-| Cut | Cuts the selection. |
-| Copy | Copies the selection. |
-| Paste | Pastes a copied selection. |
-| Select All | Selects the whole text. |
+Cuts the selection.
 
+#### Copy
+
+Copies the selection.
+
+#### Paste
+
+Pastes a copied selection.
+
+#### Select All
+
+Selects the whole text.
 
 #### Text
 
 ![Text](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/text.png)
 
+##### Cut
 
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------------------------------------------------- |
-| Cut | Cuts the selection. |
-| Copy | Copies the selection. |
-| Paste | Pastes a copied selection. |
-| Paste File | Opens the file browser where you can choose a text file to paste the text from. It needs to be UTF8. |
-| To Uppercase | Sets the selected text to be uppercase letters. |
+Cuts the selection.
 
+##### Copy
+
+Copies the selection.
+
+##### Paste
+
+Pastes a copied selection.
+
+##### Paste File
+
+Opens the file browser where you can choose a text file to paste the text from. It needs to be UTF8.
+
+##### To Uppercase
+
+Sets the selected text to be uppercase letters.
 
 ##### To Lowercase
 
 Sets the selected text to be uppercase letters.
 
-###### Last Operator Set Case
+###### Adjust Last Operation - Set Case
 
 ![Last Operator Set Case](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-set-case.png)
 
@@ -201,14 +238,21 @@ Special characters is a sub menu that contains some special text characters, lik
 
 Set the cursor at specific positions in the text.
 
+###### Toggle Bold
 
-| Entry | What it does |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Toggle Bold | Bold sets the selected letters to be displayed as bold letters. |
-| Toggle Italic | Italic sets the selected letters to be displayed as italic letters. |
-| Toggle Underline | Underline sets the selected letters to be displayed as underlined letters. |
-| Toggle Small Caps | Toggle small caps sets the selected letters to be displayed as if they were upper case letters, but with lower case size. |
+Bold sets the selected letters to be displayed as bold letters.
 
+###### Toggle Italic
+
+Italic sets the selected letters to be displayed as italic letters.
+
+###### Toggle Underline
+
+Underline sets the selected letters to be displayed as underlined letters.
+
+###### Toggle Small Caps
+
+Toggle small caps sets the selected letters to be displayed as if they were upper case letters, but with lower case size.
 
 ##### Kerning
 
@@ -216,17 +260,23 @@ Set the cursor at specific positions in the text.
 
 Kerning is the distance between letters. Increase, decrease and reset the kerning.
 
+###### Decrease Kerning
 
-| Entry | What it does |
-| ---------------- | ---------------------------------------------------------------------------- |
-| Decrease Kerning | Decreases the distance between the letters. |
-| Increase Kerning | Increases the distance between the letters. |
-| Reset Kerning | Resets the distance between the letters to the default values from the font. |
+Decreases the distance between the letters.
 
+###### Increase Kerning
 
-###### Last Operator Change Spacing
+Increases the distance between the letters.
+
+###### Reset Kerning
+
+Resets the distance between the letters to the default values from the font.
+
+###### Adjust Last Operation - Change Spacing
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
+
+Change the settings of **Change Spacing** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 ###### Delta
 
