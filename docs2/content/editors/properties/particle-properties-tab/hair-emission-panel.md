@@ -8,7 +8,7 @@ path:
   - Particle Properties Tab
   - Hair - Emission Panel
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.10.17 Editors - Properties Editor - Particle Properties Tab - Hair - Emission Panel.odt

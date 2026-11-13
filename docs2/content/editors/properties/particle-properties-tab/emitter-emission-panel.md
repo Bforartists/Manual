@@ -8,7 +8,7 @@ path:
   - Particle Properties Tab
   - Emitter - Emission Panel
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.10.2 Editors - Properties Editor - Particle Properties Tab - Emitter - Emission Panel.odt
