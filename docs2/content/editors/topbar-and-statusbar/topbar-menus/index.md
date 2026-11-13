@@ -83,6 +83,20 @@ The Video Editing application template comes with the workspaces for video editi
 
 Open a blend file.
 
+### Drag and drop a .blend file
+
+> 📸 Picture to add: the "Open dragged blend file?" dialog after dropping a .blend file into the window.
+
+You can also drag a .blend file from your file manager into the Bforartists window. A dialog asks **Open dragged blend file?** and shows the file name. Pick what to do with it:
+
+- **Open**: opens the file, like File > Open. This is the default button, so pressing Enter opens it.
+- **Append**: copies data from the file into your current file, like File > Append. The File Browser opens inside the dropped file, so you can pick what to bring in.
+- **Link**: links data from the file, like File > Link. The data stays in the dropped file and updates when that file changes.
+
+The **Trusted Source** checkbox lets the file run its scripts, for example drivers and rigs that need Python. Only tick it for files you trust. When Auto Run Python Scripts is on but the file sits in one of its excluded folders (Preferences > Save & Load), the checkbox is greyed out and says **Trusted Source [Untrusted Path]**.
+
+Press Esc to close the dialog without doing anything.
+
 ### Clear Recent Files List
 
 Clears the recent files list.
