@@ -6,7 +6,7 @@ path:
   - "Interface"
   - "Pie Menus"
 version: "5.1"
-status: draft
+status: needs-review
 icon: menu_panel
 summary: "Round menus that open around the mouse: pick an item by direction."
 source:
