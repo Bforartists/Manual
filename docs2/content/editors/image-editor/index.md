@@ -163,11 +163,11 @@ The navigation hotkeys and the context menus are excluded here since they are al
 
 ### Radial Control
 
-In Paint modes you can set the strength or radius of the brush not only by the sliders. But also by hotkeys.
+In Paint modes you can set the strength or radius of the brush not only by the sliders. But also by hotkeys. Press the key and move the mouse to change the value, then release the key to confirm. Esc or a right click cancels.
 
 Sets the brush radius - X
 
 Sets the brush strength - C
 
-Sets the brush direction - V
+Sets the angle of the brush texture - V
 
