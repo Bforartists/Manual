@@ -8,7 +8,7 @@ path:
   - "All Modes"
   - "Tool Shelf"
 version: "5.1"
-status: draft
+status: needs-review
 icon: tool_settings
 summary: "The tools of All Modes in the tool shelf."
 order: 20
