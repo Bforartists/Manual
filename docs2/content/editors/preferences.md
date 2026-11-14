@@ -809,6 +809,20 @@ Automatically close relevant character pairs when typing in the text editor.
 
 ![Node Editor](/docs2/images/editors/preferences/node-editor.png)
 
+#### Noodle Curving
+
+How curved the links (the "noodles") between nodes are drawn. The range is 0 to 10.
+
+Bforartists uses **0** by default, so links are **straight lines**. Straight links make it easy to follow where a link goes in a busy node tree. Raise the value if you prefer soft, curved links.
+
+![Noodle Curving at 0: straight links](/docs2/images/editors/preferences/noodle-curving-0.png)
+
+![Noodle Curving at 5: curved links](/docs2/images/editors/preferences/noodle-curving-5.png)
+
+The setting applies to every node editor: Shader, Geometry Nodes, Compositor and Texture nodes.
+
+> **Note:** Noodle Curving used to be a theme setting. It is a preference now, so a theme preset can no longer change it. Blender uses 4 by default.
+
 #### Auto Offset
 
 Use Auto Offset.
@@ -893,8 +907,6 @@ Contains the settings for the animation editors.
 
 ### Timeline
 
-#### Allow negative Frames
-
 #### Minimum Grid Spacing
 
 ![Minimum Grid Spacing](/docs2/images/editors/preferences/minimum-grid-spacing.png)
@@ -914,6 +926,20 @@ In Timeline, Dope sheet, Graph and NLE editor you can either display the keyfram
 ![Zoom To Frame Type](/docs2/images/editors/preferences/zoom-to-frame-type.png)
 
 Timeline, Dope sheet, Graph and NLE. Define how zooming to frame focuses around current frame.
+
+#### Advanced subpanel
+
+![Advanced subpanel of the Timeline panel](/docs2/images/editors/preferences/timeline-advanced.png)
+
+Settings you rarely need to change. The subpanel is closed by default.
+
+##### Allow Negative Frames
+
+Lets you set the current frame to a negative number, so the playhead can go before frame 0. This is handy when an animation needs a run-up before the shot starts, or when you line up imported data that starts below zero.
+
+The warning under the checkbox is always shown, so you see it before you turn the option on.
+
+> **Warning:** Negative frames can cause issues with audio playback and with exporters. If you run into problems there, move the animation so it starts at frame 0 or later.
 
 #### Keyframes
 
@@ -1514,6 +1540,33 @@ Controls the global look of Blender’s UI—buttons, panels, headers, and backg
 
 > **Note:** The font sizes and weights are no longer part of the theme. You find them in the **Font Style** subpanel of the Interface tab, under Text Rendering.
 
+##### Editor & Widgets subpanel
+
+![Editor & Widgets subpanel](/docs2/images/editors/preferences/editor-and-widgets-subpanel.png)
+
+The borders and outlines of the editors, the shadow of panels and menus, and the look of the widgets: emboss, text cursor, links and the shadow under the interface text.
+
+###### Text Shadow
+
+A shadow under **all interface text**, to make it easier to read on busy or light backgrounds. One setting covers every kind of text: labels, buttons, menus and panel titles.
+
+- **None:** text without a shadow. This is the Bforartists theme default.
+- **Small:** a soft shadow with a small blur. The Blender Dark preset uses this.
+- **Large:** a soft shadow with a large blur.
+- **Outline:** a thin outline around the characters.
+
+The two settings below only show when Text Shadow is not None.
+
+###### Shadow Color
+
+The color of the text shadow. The alpha value sets how strong it is: at 0 the shadow is invisible, and the Offset field is greyed out.
+
+###### Offset
+
+How far the shadow is moved from the text, in pixels: **X** to the right, **Y** up. The range is -10 to 10 on each axis. Negative values move it left or down.
+
+> **Note:** This one Text Shadow setting replaces the shadow settings that each text style had before.
+
 #### Color Sets
 
 Groups the color lists you pick from by name in other editors. It has three subpanels:
@@ -1560,7 +1613,7 @@ Customizes tracking marker colors, clip overlays, and annotation visuals for mot
 
 #### Node Editor
 
-Defines node socket colors, wire styles, backdrop shading, and node selection highlights.
+Defines node socket colors, wire colors, backdrop shading, and node selection highlights. How curved the wires are is set with **Noodle Curving** in the Editing tab, Node Editor panel.
 
 #### Nonlinear Animation
 

@@ -741,6 +741,58 @@ The generated mesh.
 
 
 
+### Grid to Points
+
+![Grid to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-to-points.png)
+
+Turns the active voxels of a grid into a point cloud, one point per voxel. Good for scattering things where a volume has data, or for looking at a grid as points. Each point also carries the voxel's value and its index.
+
+#### Inputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid to turn into points.
+
+#### Properties
+
+##### Data Type
+
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
+
+#### Outputs
+
+##### Points
+
+Data type: Geometry.
+
+A point cloud with a point at each active voxel.
+
+##### Value
+
+Data type: follows the Data Type setting.
+
+The grid value at each point.
+
+##### X, Y, Z
+
+Data type: Integer.
+
+The voxel index of each point, in the Voxel Index panel.
+
+##### Is Tile
+
+Data type: Boolean.
+
+True when the point stands for a whole tile instead of a single voxel. In the Voxel Index panel.
+
+##### Extent
+
+Data type: Integer.
+
+The size of the tile, in voxels, for points that stand for a tile. In the Voxel Index panel.
+
 ### Volume to Mesh
 
 ![Volume to Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/volume-to-mesh.png)
@@ -881,7 +933,7 @@ The generated grid.
 
 ![SDF Grid Mean](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean.png)
 
-Apply lmean (box) filter smoothing to a signed distance field. Fast separable averaging filter for general smoothing of the distance field.
+Apply mean (box) filter smoothing to a signed distance field. Fast separable averaging filter for general smoothing of the distance field.
 
 #### Inputs
 
@@ -913,11 +965,11 @@ The generated grid.
 
 
 
-### SDF Grid Mean
+### SDF Grid Mean Curvature
 
-![SDF Grid Mean](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean-2.png)
+![SDF Grid Mean Curvature](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean-2.png)
 
-Apply mean filter smoothing to a signed distance field. Evolves the surface based on its mean curvature. This smooths high curvature regions more than flat areas.
+Applies mean curvature flow smoothing to a signed distance field. Evolves the surface based on its mean curvature. This smooths high curvature regions more than flat areas.
 
 #### Inputs
 
@@ -947,7 +999,7 @@ The generated grid.
 
 ![SDF Grid Median](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-median.png)
 
-Apply median filter smoothing to a signed distance field. Reduces nioise while preserving sharp features and edges in the distance field.
+Apply median filter smoothing to a signed distance field. Reduces noise while preserving sharp features and edges in the distance field.
 
 #### Inputs
 
@@ -1008,6 +1060,46 @@ Data type: Float.
 The generated grid.
 
 
+
+### Clip Grid
+
+![Clip Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/clip-grid.png)
+
+Keeps only the part of a grid inside a box of voxel coordinates. Voxels outside the box become inactive and get the background value. Use it to cut a volume down to a region, or to save memory.
+
+#### Inputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid to clip.
+
+##### Min X, Min Y, Min Z
+
+Data type: Integer.
+
+The lower corner of the box, in voxel coordinates.
+
+##### Max X, Max Y, Max Z
+
+Data type: Integer.
+
+The upper corner of the box, in voxel coordinates.
+
+#### Properties
+
+##### Data Type
+
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
+
+#### Outputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The clipped grid.
 
 ### Deactivate Voxels
 
@@ -1071,6 +1163,138 @@ The data type to evaluate.
 
 The generated grid.
 
+### Grid Dilate & Erode
+
+![Grid Dilate & Erode](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-dilate-and-erode.png)
+
+Grows or shrinks the active region of a grid by a number of voxel steps. It only changes which voxels are active, not their values. Use it to pad a volume before an operation, or to trim its outer layer.
+
+#### Inputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid to dilate or erode.
+
+##### Connectivity
+
+Data type: Menu.
+
+Which neighbor voxels count when the region grows or shrinks: **Face** (the 6 face neighbors), **Edge** (face and edge neighbors) or **Vertex** (all 26 neighbors). More neighbors give a rounder growth.
+
+##### Tiles
+
+Data type: Menu.
+
+What happens to tiles, the big blocks of voxels that share one value.
+
+![Tiles](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/tiles-menu.png)
+
+- **Ignore**: Leaves tiles out of the operation.
+- **Expand**: Turns tiles into voxels first, so they grow or shrink too.
+- **Preserve**: Keeps tiles as they are. This is the default.
+
+##### Steps
+
+Data type: Integer.
+
+How many voxels to grow or shrink. Positive values dilate, negative values erode.
+
+#### Properties
+
+##### Data Type
+
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
+
+#### Outputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid with the new active region.
+
+### Grid Mean
+
+![Grid Mean](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-mean.png)
+
+Smooths a grid with a box filter. Each voxel gets the average value of the voxels in a box around it. Good for softening noisy or blocky density.
+
+#### Inputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid to smooth.
+
+##### Width
+
+Data type: Integer.
+
+The radius of the box, in voxels.
+
+##### Iterations
+
+Data type: Integer.
+
+How many times the filter runs. More iterations smooth more.
+
+#### Properties
+
+##### Data Type
+
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
+
+#### Outputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The smoothed grid.
+
+### Grid Median
+
+![Grid Median](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-median.png)
+
+Smooths a grid with a median filter. Each voxel gets the middle value of the voxels in a box around it. Removes single noisy voxels while keeping sharper edges than Grid Mean.
+
+#### Inputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The grid to smooth.
+
+##### Width
+
+Data type: Integer.
+
+The radius of the box, in voxels.
+
+##### Iterations
+
+Data type: Integer.
+
+How many times the filter runs.
+
+#### Properties
+
+##### Data Type
+
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
+
+#### Outputs
+
+##### Grid
+
+Data type: follows the Data Type setting.
+
+The smoothed grid.
+
 ### Prune Grid
 
 ![Prune Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid.png)
@@ -1095,11 +1319,11 @@ How to progress the state.
 
 ###### Inactive
 
-Turn inactive voxels and tiels into inactive background tiles.
+Turn inactive voxels and tiles into inactive background tiles.
 
 ###### Threshold
 
-Turn regioons where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.
+Turn regions where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.
 
 ###### SDF
 
@@ -1123,11 +1347,11 @@ Data type: follows the Data Type setting.
 
 The generated grid.
 
-### Prune Grid
+### Voxelize Grid
 
-![Prune Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid-2.png)
+![Voxelize Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/voxelize-grid.png)
 
-Create new grids by evaulating new values on an existing volume grid topology.
+Makes a sparse grid dense: every active tile is split into single active voxels. Use it before nodes that need to work on each voxel, like Grid to Points or a field evaluation per voxel.
 
 #### Inputs
 
@@ -1135,27 +1359,21 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 Data type: follows the Data Type setting.
 
-The input grid.
+The grid to voxelize.
 
-##### Properties
-
-—
-
-
+#### Properties
 
 ##### Data Type
 
-![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png)
+The type of data the grid holds: Float, Integer, Boolean or Vector. The node's grid sockets follow this setting.
 
-The data type to evaluate.
-
-#### Output
+#### Outputs
 
 ##### Grid
 
 Data type: follows the Data Type setting.
 
-The generated grid.
+The voxelized grid.
 
 # Primitives
 

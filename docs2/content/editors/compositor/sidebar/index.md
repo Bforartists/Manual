@@ -868,9 +868,15 @@ Removes the selected input socket from the list.
 
 ![Move Item Up/Down](/docs2/images/editors/compositor/sidebar/group-tab/move-item-up-down.png)
 
-Moves the active item to the specified direction. You can move the active item up or down the list.
+Moves the **selected items** one step up or down the list. Use it to put the sockets and panels of the group in the order you want them on the node.
 
-> **Note:** You can also alternatively drag and drop the active item to re-order.
+You can move several items at once: Shift click a second item to select the range between them, then press Move Up or Move Down. The items keep their order and move together.
+
+- A selected panel takes its sockets with it.
+- A socket that reaches a panel steps **into** the panel first, instead of jumping over it. Press again to keep moving it inside the panel.
+- When an item can't move any further, the selected items behind it stop there too, so they don't pass each other.
+
+> **Note:** You can also drag and drop the selected items to re-order them.
 
 ### Inputs
 

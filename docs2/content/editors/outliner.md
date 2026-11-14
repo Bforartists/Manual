@@ -131,6 +131,12 @@ Deselect all items in the list.
 
 Inverts the selection. Unselected list items becomes selected, selected list items becomes unselected.
 
+#### Hide Unselected
+
+Hides every object and collection that is **not selected**, so only your selection stays visible in the viewport. Use it to focus on a few objects in a busy scene without changing the scene itself.
+
+It only shows in the **View Layer** display mode. To bring everything back, use **Unhide** (Alt H), see Hotkey only functionality below.
+
 #### Manage Unused Data
 
 ![Manage Unused Data](/docs2/images/editors/outliner/manage-unused-data.png)
@@ -251,15 +257,19 @@ Scenes, Collections, Objects, Brushes, Materials, Nodegroups and Worlds can be m
 
 ![Collection](/docs2/images/editors/outliner/collection-2.png)
 
-This menu appears when you right click at a collection. Clicking at a Scene collection will have not this much entries than licking at the Collection item lower in the hierarchy.
+This menu appears when you right click at a collection. The first picture shows the menu of a collection. Right clicking at the Scene Collection shows a shorter menu, the second picture.
 
-#### New Nested
-
-Create a new nested collection. There is no difference. Both gets added in the selected collection as a child, and the functionality is the same. Ask the Blender developers what they did here.
+There are two ways to add a collection. They differ in **where** the new collection goes.
 
 #### New
 
-Create a new scene collection.
+Adds a new collection directly to the **Scene Collection**, at the top of the hierarchy. It does not matter which collection you right clicked at. The New Collection button in the Outliner header does the same.
+
+#### New Nested
+
+Adds a new collection **inside the selected collection**, as its child. Use it to build a hierarchy, for example a "Props" collection inside "Set".
+
+> **Tip:** The C hotkey in the Outliner adds a collection like **New**. New Nested has no hotkey in the Bforartists keymap, so use this menu. (Blender has it on Shift C.)
 
 #### Duplicate Collection
 
@@ -488,6 +498,10 @@ Deletes the selected object. Child objects gets unparented.
 
 Deletes the selected object and all its child objects.
 
+#### Hide Unselected
+
+Hides all objects and collections that are not selected. It is the same entry as **Hide Unselected** in the View menu, and it only shows in the View Layer display mode.
+
 #### Unlink
 
 Deletes the selected object.
@@ -548,9 +562,9 @@ Removes the collection from the asset library.
 
 Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.
 
-#### ID Data
+#### Data-block
 
-![ID Data](/docs2/images/editors/outliner/id-data-4.png)
+![Data-block submenu](/docs2/images/editors/outliner/id-data-4.png)
 
 Data related operations. Note that the tool tips are currently missing here.
 
@@ -829,7 +843,12 @@ Sorts the content of the outliner in alphabetically order.
 
 ##### Sync Selection
 
-Synchronize the selection between outliner and 3d view.
+![Sync Selection](/docs2/images/editors/outliner/sync-selection.png)
+
+Synchronize the selection between the outliner and the other editors, like the 3D View. When it's on, the arrow next to it opens two more settings:
+
+- **Scroll to Active**: When the active item changes outside of the outliner, the outliner scrolls it into view.
+- **Expand on Focus**: Opens the collapsed parents of the active item when the outliner scrolls to it. Only works when Scroll to Active is on.
 
 #### Show Mode Column
 
@@ -917,7 +936,12 @@ Sorts the content of the outliner in alphabetically order.
 
 #### Sync Selection
 
-Synchronize the selection between outliner and 3d view.
+![Sync Selection](/docs2/images/editors/outliner/sync-selection.png)
+
+Synchronize the selection between the outliner and the other editors, like the 3D View. When it's on, the arrow next to it opens two more settings:
+
+- **Scroll to Active**: When the active item changes outside of the outliner, the outliner scrolls it into view.
+- **Expand on Focus**: Opens the collapsed parents of the active item when the outliner scrolls to it. Only works when Scroll to Active is on.
 
 #### Show Mode Column
 
@@ -982,6 +1006,16 @@ You can drag items from Blend File mode straight into the Video Sequencer timeli
 | Movie Clip | A Movie Clip strip, for example a tracked clip from the Movie Clip Editor. |
 
 Open the category, then drag the item to the frame and channel where you want the strip. This is quicker than going through the Add menu when you already see the item in the Outliner.
+
+### Pack images
+
+![Three images selected in Blend File mode](/docs2/images/editors/outliner/pack-images-selected.png)
+
+![Right-click menu of an image with Pack](/docs2/images/editors/outliner/pack-images-menu.png)
+
+Packs the selected images into the .blend file, so the file still has its textures when you move it to another computer or send it to someone. Open the Images category, select the images you want to pack, right-click one of them and choose **Pack**. Bforartists reports how many images it packed.
+
+Pack only shows when you right-click an image. The Render Result and Viewer images are skipped, since they aren't files.
 
 ### Filter
 

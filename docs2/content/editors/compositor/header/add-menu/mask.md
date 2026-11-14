@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Mask"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Mask nodes."
 order: 70
@@ -63,6 +63,8 @@ Use the Matte output of the Cryptomatte node to get the alpha mask.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 #### Properties
@@ -111,13 +113,19 @@ List of object and material crypto IDs to include in matte. This can be used for
 
 ##### Image
 
+Data type: Color.
+
 A colored output of the input image with the matte applied to only include selected layers.
 
 ##### Matte
 
+Data type: Float.
+
 A black-and-white alpha mask of the all the selected crypto layers.
 
 ##### Pick
+
+Data type: Color.
 
 A colored representation of the Cryptomatte pass which can be used with a Viewer node to select which crypto passes are used to create the matte image.
 
@@ -171,6 +179,8 @@ The Box Mask node creates an image suitable for use as a simple matte.
 
 ##### Operation
 
+Data type: Menu.
+
 ![Operation](/docs2/images/editors/compositor/header/add-menu-mask/operation.png)
 
 Operation to use against the input mask.
@@ -211,6 +221,8 @@ Rotation of the box around its center point.
 
 ##### Mask
 
+Data type: Float.
+
 A generated rectangular mask merged with the input mask. The created mask is the size of the current scene render dimensions.
 
 Tip. For soft edges, pass the output mask through a slight Blur node.
@@ -224,6 +236,8 @@ The Ellipse Mask node creates an image suitable for use as a simple matte or vig
 #### Inputs
 
 ##### Operation
+
+Data type: Menu.
 
 ![Operation](/docs2/images/editors/compositor/header/add-menu-mask/operation.png)
 
@@ -264,6 +278,8 @@ Rotation of the box around its center point.
 #### Outputs
 
 ##### Mask
+
+Data type: Float.
 
 A generated rectangular mask merged with the input mask. The created mask is the size of the current scene render dimensions.
 

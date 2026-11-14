@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Tracking"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Tracking nodes."
 order: 80
@@ -36,6 +36,8 @@ Before using this node, plane track for the footage should be made in the Movie 
 #### Inputs
 
 ##### Image
+
+Data type: Color.
 
 Image to put in place of the plane track, and thus, override that area in the movie clip.
 
@@ -71,9 +73,13 @@ Motion Blur setting. Time (in frames) the shutter is open. If you are rendering 
 
 ##### Image
 
+Data type: Color.
+
 The output by perspective wrapping the image to that plane track.
 
 ##### Plane
+
+Data type: Float.
 
 Produces a black-and-white mask of the plane track.
 
@@ -89,9 +95,13 @@ The Stabilize 2D node stabilizes the footage according to the settings set in Mo
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Invert
+
+Data type: Boolean.
 
 Invert the stabilization. If the stabilization calculated is to move the movie clip up by 5 units, this will move the movie clip down by 5 units.
 
@@ -150,6 +160,8 @@ How to extend the image in x direction.
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
@@ -224,5 +236,7 @@ Outputs the absolute positions of a marker at the given Frame.
 The marker’s X and Y location.
 
 ##### Speed
+
+Data type: Vector (velocity).
 
 The velocity of the marker, measured in pixels per frame. This could be used to fake effects like motion blur by connecting it to the Vector Blur Node.
