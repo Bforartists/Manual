@@ -239,7 +239,7 @@ Clipping options. Set up clipping for the stroke.
 
 ![Tools](/docs2/images/editors/properties/render-properties-tab/tools.png)
 
-Tools is a menu that contains some cuve related tools.
+Tools is a menu that contains some curve related tools.
 
 ###### Reset View
 

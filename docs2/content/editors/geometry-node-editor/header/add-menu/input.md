@@ -267,6 +267,8 @@ The string that you want to input.
 
 ##### Value
 
+Data type: String.
+
 The value set in the node properties.
 
 ### Value
@@ -529,6 +531,8 @@ The **Import OBJ** node is used to load **Wavefront OBJ** files into Geometry No
 
 ##### Path
 
+Data type: String.
+
 Specifies the location of the OBJ file to be imported. This can also be a string input.
 
 ##### Open
@@ -539,17 +543,21 @@ Includes a **folder icon button** for browsing files.
 
 ##### Instances
 
+Data type: Geometry.
+
 Outputs the imported OBJ file as an instance within the node tree. You can later realize the instance for mesh data.
 
-### Import Standford (.ply)
+### Import Stanford (.ply)
 
-![Import Standford (.ply)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-standford-ply.png)
+![Import Stanford (.ply)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-stanford-ply.png)
 
 The **Import PLY** node is used to bring **Polygon File Format (PLY) meshes** into Geometry Nodes, facilitating workflows that incorporate 3D scanned data or procedural mesh generation. It allows you to load PLY files with vertex color and geometry information into the Geometry Nodes node tree.
 
 #### Inputs
 
 ##### Path
+
+Data type: String.
 
 Specifies the location of the PLY file to be imported. This can also be a string input.
 
@@ -596,6 +604,8 @@ The **Import STL** node is used to bring **Stereolithography (STL) files** into 
 #### Inputs
 
 ##### Path
+
+Data type: String.
 
 Specifies the location of the STL file to be imported. This can also be a string input.
 
@@ -645,6 +655,8 @@ The** I**mport VDB node is used to bring** OpenVDB volumetric data **into Geomet
 
 ##### Path
 
+Data type: String.
+
 Specifies the location of the VDB file to be imported. This can also be a string input.
 
 ##### Open
@@ -654,6 +666,8 @@ Includes a **folder icon button** for browsing files.
 #### Outputs
 
 ##### Volume
+
+Data type: Geometry.
 
 Outputs the imported VDB file as a volumetric grid, which can be modified within the node tree.
 

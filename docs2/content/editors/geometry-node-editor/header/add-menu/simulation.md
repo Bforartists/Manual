@@ -109,6 +109,8 @@ Standard geometry input.
 
 ###### Delta Time
 
+Data type: Float.
+
 Returns a float value with the amount of elapsed time that has passed in a linear way. This is used to ensure that the simulation runs smoothly and consistently based on elapsed time, regardless of the playback frame rate or starting frame.
 
 ###### Geometry

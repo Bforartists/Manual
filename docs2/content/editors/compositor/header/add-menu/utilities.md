@@ -37,6 +37,8 @@ Changes a value from one socket type to another, the same way Bforartists does i
 
 ##### Value
 
+Data type: follows the Data Type setting.
+
 The value to convert.
 
 #### Properties
@@ -48,6 +50,8 @@ The type to convert to.
 #### Outputs
 
 ##### Value
+
+Data type: follows the Data Type setting.
 
 The converted value.
 
@@ -117,9 +121,13 @@ The Random Value node gives a random value for each ID. Use it to vary an effect
 
 ##### Min
 
+Data type: follows the Data Type setting.
+
 The lowest value that can be returned (default 0). It appears for Float, Integer and Vector.
 
 ##### Max
+
+Data type: follows the Data Type setting.
 
 The highest value that can be returned (default 1.0 for Float, 1.0 on each axis for Vector, 100 for Integer). It appears for Float, Integer and Vector.
 
@@ -150,6 +158,8 @@ The type of the random value: Float, Integer, Boolean or Vector.
 #### Outputs
 
 ##### Value
+
+Data type: follows the Data Type setting.
 
 The random value, in the chosen data type.
 
@@ -249,19 +259,27 @@ The content changes. dependant of the data type.
 
 ##### Index
 
+Data type: Integer.
+
 The index input value.
 
 ##### 0
 
+Data type: follows the Data Type setting.
+
 The 0 value
 
 ##### 1
+
+Data type: follows the Data Type setting.
 
 The 1 value
 
 #### Output
 
 ##### Output
+
+Data type: follows the Data Type setting.
 
 The output index value.
 
@@ -305,9 +323,13 @@ The output string.
 
 ##### A
 
+Data type: Boolean.
+
 The A output
 
 ##### B
+
+Data type: Boolean.
 
 The B output
 
@@ -356,6 +378,8 @@ Using **Per Dimension **type, each component of the vector is multiplied by its 
 
 ##### Value
 
+Data type: follows the Data Type setting.
+
 The input float value to convert. This would be your absolute value.
 
 ##### Image
@@ -391,6 +415,8 @@ Determines how the relative value is interpreted.
 #### Outputs
 
 ##### Value
+
+Data type: follows the Data Type setting.
 
 The converted float value, based on the selected mode and input type.
 
@@ -471,9 +497,13 @@ The Boolean Math node combines true and false values with a logical operation. U
 
 ##### First Boolean
 
+Data type: Boolean.
+
 The first true or false value (default false).
 
 ##### Second Boolean
+
+Data type: Boolean.
 
 The second true or false value (default false). It is not shown for Not.
 
@@ -529,6 +559,8 @@ The minimum and maximum allowed value. Any input lower or higher than this will 
 
 ##### Value
 
+Data type: Float.
+
 Standard value output.
 
 ### Compare
@@ -541,9 +573,13 @@ The Compare node compares two values and outputs true or false. Use it to turn a
 
 ##### A
 
+Data type: follows the Input Type setting.
+
 The first value. Its type follows the Input Type property.
 
 ##### B
+
+Data type: follows the Input Type setting.
 
 The second value. Its type follows the Input Type property.
 
@@ -745,6 +781,8 @@ The Hash Value node turns any value into a random-looking whole number. The same
 
 ##### Value
 
+Data type: follows the Data Type setting.
+
 The value to hash. Its type follows the Data Type property.
 
 ##### Seed
@@ -777,13 +815,19 @@ The Integer Math node performs math operations on whole numbers. The result is a
 
 ##### First Value
 
+Data type: Integer.
+
 The first number. It is called Base for Power.
 
 ##### Second Value
 
+Data type: Integer.
+
 The second number (default 0). It is called Multiplier for Multiply Add and Exponent for Power. It is not shown for Absolute, Negate and Sign. For Multiply, Divide, Multiply Add, the Divide variants and both Modulo operations, a node added from the menu starts with 1.
 
 ##### Third Value
+
+Data type: Integer.
 
 The third number, called Addend. It only appears for Multiply Add.
 
@@ -842,13 +886,19 @@ Standard value input.
 
 ##### From Min/Max
 
+Data type: follows the Data Type setting.
+
 Start/End of the input value range.
 
 ##### To Min/Max
 
+Data type: follows the Data Type setting.
+
 Start/End of the destination range.
 
 ##### Steps
+
+Data type: Float.
 
 The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.*
 
@@ -926,6 +976,8 @@ The Mix Node mixes float values by working on the individual and corresponding p
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output Value.
 
 ##### Value A
@@ -946,6 +998,8 @@ Limit the highest color value to not exceed 1.
 
 ##### Result
 
+Data type: follows the Data Type setting.
+
 Value output.
 
 # Matrix
@@ -965,6 +1019,8 @@ Builds a matrix from sixteen separate numbers. Use it when you worked the number
 #### Inputs
 
 ##### Column 1 to Column 4
+
+Data type: Float.
 
 Each column is a collapsible panel with four values, **Row 1** to **Row 4**.
 
@@ -1110,6 +1166,8 @@ The first matrix.
 
 ##### Matrix (second)
 
+Data type: Matrix.
+
 The second matrix.
 
 #### Outputs
@@ -1165,6 +1223,8 @@ The matrix to read.
 #### Outputs
 
 ##### Column 1 to Column 4
+
+Data type: Float.
 
 Each column holds four values, **Row 1** to **Row 4**.
 
@@ -1452,13 +1512,19 @@ Blends between two rotations. This is the Mix node set to the Rotation type, so 
 
 ##### Factor
 
+Data type: Float (factor).
+
 How far to blend. 0 gives A, 1 gives B.
 
 ##### A
 
+Data type: Rotation.
+
 The first rotation.
 
 ##### B
+
+Data type: Rotation.
 
 The second rotation.
 
@@ -1471,6 +1537,8 @@ Keeps the factor between 0 and 1.
 #### Outputs
 
 ##### Result
+
+Data type: Rotation.
 
 The blended rotation.
 
@@ -1689,6 +1757,8 @@ Data type: String.
 The template. Names in curly brackets become inputs.
 
 ##### +
+
+Data type: String.
 
 Adds another value to fill in.
 
@@ -1990,6 +2060,8 @@ Reads the number as a **Float** or as an **Integer**.
 
 ##### Value
 
+Data type: follows the Data Type setting.
+
 The number that was read.
 
 ##### Length
@@ -2007,6 +2079,8 @@ Writes a number as text. Use it to put a frame number or a value into a label or
 #### Inputs
 
 ##### Value
+
+Data type: follows the Data Type setting.
 
 The number to write.
 
@@ -2080,6 +2154,8 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 
 ##### X Y and Z
 
+Data type: Float.
+
 X, Y and Z values.
 
 #### Outputs
@@ -2110,13 +2186,19 @@ Standard vector input.
 
 ##### From Min/Max
 
+Data type: follows the Data Type setting.
+
 Vector 3 of the Start/End of the input value range.
 
 ##### To Min/Max
 
+Data type: follows the Data Type setting.
+
 Vector 3 of the Start/End of the destination range.
 
 ##### Steps
+
+Data type: Float.
 
 The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.*
 
@@ -2156,6 +2238,8 @@ The **Mix Vector** node blends two vector inputs using a specified factor. It’
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output result.
 
 ##### Value A
@@ -2187,6 +2271,8 @@ Limit the highest color value to not exceed 1.
 
 ##### Result
 
+Data type: Vector.
+
 Vector output.
 
 ### Separate XYZ
@@ -2206,6 +2292,8 @@ The Input vector.
 #### Outputs
 
 ##### X, Y and Z
+
+Data type: Float.
 
 The output vectors for X, Y and Z
 

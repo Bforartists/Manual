@@ -319,13 +319,19 @@ Displaces hair curves by a vector based on options.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Factor to blend overall effect.
 
 ##### Shape
+
+Data type: Float.
 
 Shape of the influence along curves. 0 means constant. 0.5 means linear.
 
@@ -334,6 +340,8 @@ Shape of the influence along curves. 0 means constant. 0.5 means linear.
 The object to determine the displacement space.
 
 ##### Displace Vector
+
+Data type: Vector (translation).
 
 The vector for the displacement.
 
@@ -347,6 +355,8 @@ Surface geometry used to sample the normal for displacement.
 
 ##### Surface UV Map
 
+Data type: Vector.
+
 Surface UV Map used to sample the normal for displacement.
 
 ##### Surface Normal Displacement
@@ -356,6 +366,8 @@ Amount of displacement along the surface normals.
 #### Output
 
 ##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
@@ -383,41 +395,61 @@ Deforms hair curves using noise texture.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Cumulative Offset
+
+Data type: Boolean.
 
 Apply offset cumulatively.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Factor to blend overall effect.
 
 ##### Distance
+
+Data type: Float (distance).
 
 Overall distance factor for the deformation.
 
 ##### Shape
 
+Data type: Float.
+
 Shape of the influence along curves. 0 means constant. 0.5 means linear.
 
 ##### Scale
+
+Data type: Float.
 
 Scale of the noise texture by root position.
 
 ##### Scale along Curve
 
+Data type: Float.
+
 Scale of the noise texture along the curve.
 
 ##### Offset per curve
+
+Data type: Float.
 
 —
 
 ##### Seed
 
+Data type: Integer.
+
 Random seed for the operation.
 
 ##### Preserve Length
+
+Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
@@ -425,9 +457,13 @@ Preserve the length of each curve during deformation.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Offset Vector
+
+Data type: Vector.
 
 The vector by which each point was offset during deformation.
 
@@ -441,13 +477,19 @@ Rolls up hair curves, starting from their tips.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Factor to blend overall effect.
 
 ##### Subdivision
 
+Data type: Integer.
+
 Subdivision level applied before deformation.
 
 ##### Variation Level
+
+Data type: Integer.
 
 Level of smoothing on the roll path to include shape variation.
 
@@ -457,39 +499,57 @@ Length of each curve to be rolled
 
 ##### Roll Radius
 
+Data type: Float (distance).
+
 Radius of the rolls.
 
 ##### Roll Depth
+
+Data type: Float (distance).
 
 Depth offset of the rolls.
 
 ##### Roll Taper
 
+Data type: Float (factor).
+
 Taper of the roll.
 
 ##### Retain Overall Shape
+
+Data type: Float (factor).
 
 Offset the roll along the original curve to retain shape.
 
 ##### Roll Direction
 
+Data type: Vector.
+
 The axis around each curve is rolled.
 
 ##### Random Orientation
+
+Data type: Float (factor).
 
 Amount of randomization of the direction of the roll.
 
 ##### Seed
 
+Data type: Integer.
+
 Random seed for the operation.
 
 ##### Preserve Length
+
+Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
 #### Output
 
 ##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
@@ -559,43 +619,63 @@ Trims or scales hair curves to a certain length.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Scale Uniform
+
+Data type: Boolean.
 
 Scale each curve uniformly to reach the target length.
 
 ##### Length Factor
 
+Data type: Float.
+
 Multiply the original length by a factor
 
 ##### Replace Length
+
+Data type: Boolean.
 
 Use the length input to fully replace the original length.
 
 ##### Length
 
+Data type: Float (distance).
+
 Target length for the operation.
 
 ##### Mask
+
+Data type: Float (factor).
 
 Mask to blend overall effect.
 
 ##### Random Offset
 
+Data type: Float (distance).
+
 Trim hair curves randomly up to a certain amount.
 
 ##### Pin at parameter
 
+Data type: Float (factor).
+
 Pin each curve at a certain point for the operation.
 
 ##### Seed
+
+Data type: Integer.
 
 Random seed for the operation.
 
 #### Output
 
 ##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
@@ -645,6 +725,8 @@ Generates new hair curves on a surface mesh.
 
 ##### Surface
 
+Data type: Object.
+
 The surface to generate the hairs on.
 
 ##### Surface Object
@@ -652,6 +734,8 @@ The surface to generate the hairs on.
 A surface object to generate the hairs on.
 
 ##### Surface UV map
+
+Data type: Vector.
 
 Surface UV map used for attachment.
 
@@ -661,13 +745,19 @@ Set the surface mesh into its rest position before attachment.
 
 ##### Hair Length
 
+Data type: Float (distance).
+
 Length of the generated hair curves.
 
 ##### Hair Material
 
+Data type: Material.
+
 The material for the hair curves.
 
 ##### Control Points
+
+Data type: Integer.
 
 Amount of control points for the generated hair curves.
 
@@ -677,21 +767,31 @@ Use Poisson Disk distribution to keep a minimum distance between the hair curves
 
 ##### Density
 
+Data type: Float.
+
 How dense the generated hair curves are.
 
 ##### Density Mask
+
+Data type: Float (factor).
 
 Factor for the density of generated hair curves.
 
 ##### Mask Texture
 
+Data type: Image.
+
 Discard points based on a mask texture after distribution. This mask can be loaded here.
 
 ##### Viewport Amount
 
+Data type: Float (factor).
+
 How dense the generated hair curves are displayed in the viewport.
 
 ##### Seed
+
+Data type: Integer.
 
 Random seed for operation.
 
@@ -699,13 +799,19 @@ Random seed for operation.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Curves
 
+Data type: Geometry.
+
 The output curves.
 
 ##### Surface Normal
+
+Data type: Vector.
 
 The surface normals.
 
@@ -739,17 +845,25 @@ Set the surface mesh into its rest position before attachment.
 
 ##### Follow Surface Normal
 
+Data type: Boolean.
+
 Align the interpolated curves to the surface normal.
 
 ##### Part by Mesh Islands
+
+Data type: Boolean.
 
 Use mesh islands of the surface geometry for painting.
 
 ##### Interpolation Guides
 
+Data type: Integer.
+
 Amount of guides to be used for interploation per curve.
 
 ##### Distance to Guides
+
+Data type: Float (distance).
 
 Distance aorund each guide to spawn interpollated curves.
 
@@ -759,21 +873,31 @@ Use Poisson Disk distribution to keep a minimum distance between the hair curves
 
 ##### Density
 
+Data type: Float.
+
 How dense the generated hair curves are.
 
 ##### Density Mask
+
+Data type: Float (factor).
 
 Factor for the density of generated hair curves.
 
 ##### Mask Texture
 
+Data type: Image.
+
 Discard points based on a mask texture after distribution. This mask can be loaded here.
 
 ##### Viewport Amount
 
+Data type: Float (factor).
+
 How dense the generated hair curves are displayed in the viewport.
 
 ##### Seed
+
+Data type: Integer.
 
 Random seed for operation.
 
@@ -781,13 +905,19 @@ Random seed for operation.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Guide Index
 
+Data type: Integer.
+
 The output curves.
 
 ##### Surface Normal
+
+Data type: Vector.
 
 The surface normals.
 
@@ -823,61 +953,91 @@ Deforms existing hair curves into braids.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Guide Index
+
+Data type: Integer.
 
 Index map input. This input has priority.
 
 ##### Guide Distance
 
+Data type: Float (distance).
+
 Minimum distance between two guides for new guide map.
 
 ##### Guide Mask
+
+Data type: Float.
 
 Mash for which curve are eligible to be selected as guides.
 
 ##### Existing Guide Map
 
+Data type: Boolean.
+
 Use the existing guide map attribute if available
 
 ##### Factor
+
+Data type: Float (factor).
 
 Factor to blend overall effect.
 
 ##### Subdivision
 
+Data type: Integer.
+
 Subdivision level applied before deformation.
 
 ##### Braid Start
+
+Data type: Float.
 
 Where to start to blend deformation in percent from the root.
 
 ##### Radius
 
+Data type: Float (distance).
+
 Overall radius of the braids.
 
 ##### Shape
+
+Data type: Float.
 
 Shape of the braid radius along each curve.
 
 ##### Factor Min
 
+Data type: Float.
+
 Minimum radius of the braid.
 
 ##### Factor Max
+
+Data type: Float.
 
 Maximum radius of the braid.
 
 ##### Frequency
 
+Data type: Float.
+
 Frequency factor of the braids.
 
 ##### Thickness
 
+Data type: Float.
+
 Thickness of the braids.
 
 ##### Thickness Shape
+
+Data type: Float.
 
 Shape adjsutment of the strand thickness for the braids.
 
@@ -887,9 +1047,13 @@ Asymetry of the shape adjustment of the strand thickness.
 
 ##### Flare Length
 
+Data type: Float (distance).
+
 Length of the flare at the end of the braid.
 
 ##### Flare Opening
+
+Data type: Float (distance).
 
 Opening radius of the flare at the tip of the braid.
 
@@ -903,23 +1067,33 @@ Geometry used for the hair tie instance. This has priority.
 
 ##### Hair Tie Scale
 
+Data type: Float.
+
 Scale of the hair tie instance.
 
 #### Output
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Guide Index
+
+Data type: Integer.
 
 The guide index map that was used for the operation.
 
 ##### Flare Parameter
 
+Data type: Float.
+
 Parameter between 0 and 1 along the flare.
 
 ##### Strand Index
+
+Data type: Integer.
 
 Index of the strand within a braid that each curve belongs to.
 
@@ -933,49 +1107,73 @@ Clumps together existing hair curves.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Guide Index
+
+Data type: Integer.
 
 Index map input. This input has priority.
 
 ##### Guide Distance
 
+Data type: Float (distance).
+
 Minimum distance between two guides for new guide map.
 
 ##### Guide Mask
+
+Data type: Float.
 
 Mash for which curve are eligible to be selected as guides.
 
 ##### Existing Guide Map
 
+Data type: Boolean.
+
 Use the existing guide map attribute if available.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Factor to blend overall effect.
 
 ##### Shape
 
+Data type: Float.
+
 Shape of the influence along curves. 0 means constant. 0.5 means linear.
 
 ##### Tip Spread
+
+Data type: Float.
 
 Distance of random sread at the curve tips
 
 ##### Clump Offset
 
+Data type: Float (distance).
+
 Offset of clump in a random direction.
 
 ##### Distance Falloff
+
+Data type: Float (distance).
 
 Falloff distance for the clumping effect. 0 means no falloff.
 
 ##### Distance Threshold
 
+Data type: Float (distance).
+
 Distance threshold for the clumping effect. 0 means no falloff.
 
 ##### Preserve Length
+
+Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
@@ -983,9 +1181,13 @@ Preserve the length of each curve during deformation.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Guide Index
+
+Data type: Integer.
 
 The guide index map that was used for the operation.
 
@@ -1013,63 +1215,93 @@ Deform existing hair curves into curls.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Guide Index
+
+Data type: Integer.
 
 Index map input. This input has priority.
 
 ##### Guide Distance
 
+Data type: Float (distance).
+
 Minimum distance between two guides for new guide map.
 
 ##### Guide Mask
+
+Data type: Float.
 
 Mash for which curve are eligible to be selected as guides.
 
 ##### Existing Guide Map
 
+Data type: Boolean.
+
 Use the existing guide map attribute if available.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Factor to blend overall effect.
 
 ##### Subdivision
 
+Data type: Integer.
+
 Subdivision level applied before deformation.
 
 ##### Curl start
+
+Data type: Float.
 
 —
 
 ##### Radius
 
+Data type: Float (distance).
+
 —
 
 ##### Factor Start
+
+Data type: Float.
 
 Form where to blend deformation in percent, starting from the root.
 
 ##### Factor End
 
+Data type: Float.
+
 Factor for the radius at the curl end.
 
 ##### Frequency
+
+Data type: Float.
 
 Frequency factor of the curls.
 
 ##### Random Offset
 
+Data type: Float.
+
 Amount of random offset per curve.
 
 ##### Seed
+
+Data type: Integer.
 
 Random seed for the operation.
 
 #### Output
 
 ##### Geometry
+
+Data type: Geometry.
 
 The output geometry.
 
@@ -1105,25 +1337,37 @@ Reads information about each curve.
 
 ##### Curve Index
 
+Data type: Integer.
+
 Index of each curve.
 
 ##### Curve ID
+
+Data type: Integer.
 
 ID of each curve.
 
 ##### Length
 
+Data type: Float.
+
 Length of each curve.
 
 ##### Direction
+
+Data type: Vector.
 
 Direction of each curve.
 
 ##### Random
 
+Data type: Float.
+
 Random Vector of each curve.
 
 ##### Surface UV
+
+Data type: Vector.
 
 Attachment surface UV coordinate of each curve.
 
@@ -1137,17 +1381,25 @@ Reads information about the root point of each curve.
 
 ##### Root Selection
 
+Data type: Boolean.
+
 Boolean selection of curve root points.
 
 ##### Root Position
+
+Data type: Vector.
 
 The position of a root point of a curve.
 
 ##### Root Direction
 
+Data type: Vector.
+
 Direction of the root segment of a curve.
 
 ##### Root Index
+
+Data type: Integer.
 
 Index of the root point of a curve.
 
@@ -1245,9 +1497,13 @@ Attaches hair curves to a surface mesh.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The input geometry.
 
 ##### Surface Object
+
+Data type: Object.
 
 A surface object to attach to. It needs to have matching transforms.
 
@@ -1256,6 +1512,8 @@ A surface object to attach to. It needs to have matching transforms.
 Surface geometry to attach hair curves to.
 
 ##### Surface UV Map
+
+Data type: Vector.
 
 Surface UV Map used to attach hairs to.
 
@@ -1269,13 +1527,19 @@ Sample the surface UV mapp at the attachment point.
 
 ##### Snap to Surface
 
+Data type: Boolean.
+
 Snap the root of the curve to the closest surface point.
 
 ##### Align to Surface Normal
 
+Data type: Boolean.
+
 Align the curves to surface normals. Needs a guide as reference.
 
 ##### Blend along Curve
+
+Data type: Float (factor).
 
 Blend deformation along eacah curve from the root.
 
@@ -1283,13 +1547,19 @@ Blend deformation along eacah curve from the root.
 
 ##### Geometry
 
+Data type: Geometry.
+
 The output geometry.
 
 ##### Surface UV Coordinate
 
+Data type: Vector.
+
 Surface UV Coordinate at the attachment point.
 
 ##### Surface Normal
+
+Data type: Vector.
 
 Surface Normal at the attachment point.
 

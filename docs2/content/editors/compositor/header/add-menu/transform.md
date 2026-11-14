@@ -137,6 +137,8 @@ Render Size setting. Stretch distorts the image so that it fits into the render 
 
 ##### X, Y
 
+Data type: Float.
+
 Scale in the axis directions, only available if Space is set to Relative or Absolute.
 
 ##### Sampling Subpanel
@@ -192,6 +194,8 @@ Data type: Color.
 Standard image input.
 
 ##### X, Y
+
+Data type: Float.
 
 Used to move the input image horizontally and vertically.
 
@@ -263,6 +267,8 @@ Standard image input.
 
 ##### X, Y
 
+Data type: Float.
+
 Used to move the input image horizontally and vertically.
 
 ##### Sampling Subpanel
@@ -318,6 +324,8 @@ Data type: Color.
 Standard image input.
 
 ##### Corners ( Upper left, Upper Right, etc. )
+
+Data type: Vector (factor).
 
 Four vector inputs to define the plane warping. (Z component of vector inputs is ignored.)
 

@@ -507,19 +507,27 @@ Combine the single RGBA channels into a single image.
 
 ##### Image
 
+Data type: Color.
+
 The image input.
 
 #### Output
 
 ##### Red, Green, Blue and Alpha
 
+Data type: Float.
+
 The red, green, blue and alpha channels of an image in RGB mode.
 
 ##### Hue Saturation Value Alpha
 
+Data type: Float.
+
 The Hue Saturation Value Alpha channels in HSV mode.
 
 ##### Hue Saturation Lightness Alpha
+
+Data type: Float.
 
 The Hue Saturation Lightness Alpha channels in HSL mode.
 

@@ -67,9 +67,9 @@ The right handle of the curve point.
 
 
 
-### Cuve Length
+### Curve Length
 
-![Cuve Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/cuve-length.png)
+![Curve Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-length.png)
 
 Retreives the length of all splines added together.
 
@@ -77,11 +77,15 @@ Retreives the length of all splines added together.
 
 ##### Curve
 
+Data type: Geometry.
+
 The input curve.
 
 #### Outputs
 
 ##### Length
+
+Data type: Float.
 
 The length of the curve.
 
@@ -722,9 +726,9 @@ Standard geometry output.
 
 Here you find curve related nodes.
 
-### Cuve to Mesh
+### Curve to Mesh
 
-![Cuve to Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-mesh.png)
+![Curve to Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/curve-to-mesh.png)
 
 Converts a curve object to a mesh object. Optionally, a profile curve can be provided to give the curve a custom shape.
 
@@ -732,17 +736,25 @@ Converts a curve object to a mesh object. Optionally, a profile curve can be pro
 
 ##### Curve
 
+Data type: Geometry.
+
 The input curve.
 
 ##### Profile Curve
+
+Data type: Geometry.
 
 If a profile curve is provided, it will be extruded along all splines. Otherwise the generated mesh will just be a chain of edges.
 
 ##### Scale
 
+Data type: Float.
+
 Scale of the profile at each point.
 
 ##### Fill Caps
+
+Data type: Boolean.
 
 For cyclic profile curve. Fill the ends of the generated mesh for each spline combination with an N-gon. The resulting mesh is Manifold, the two new faces for each spline are simply connected to existing edges.
 
@@ -750,19 +762,23 @@ For cyclic profile curve. Fill the ends of the generated mesh for each spline co
 
 ##### Mesh
 
+Data type: Geometry.
+
 Standard mesh output.
 
 
 
-### Cuve to Points
+### Curve to Points
 
-![Cuve to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-points.png)
+![Curve to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/curve-to-points.png)
 
 Converts a curve object to a Point cloud.
 
 #### Inputs
 
 ##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -808,21 +824,27 @@ Generated point cloud.
 
 ##### Tangent
 
+Data type: Vector.
+
 The normalized curve tangent at the sampled position, or the direct evaluated normal in Evaluated mode.
 
 ##### Normal
+
+Data type: Vector.
 
 The normal value from the evaluated curve at each result point. This is the same value from the Normal Node at those positions.
 
 ##### Rotation
 
+Data type: Rotation.
+
 —
 
 
 
-### Cuves to Grease Pencil
+### Curves to Grease Pencil
 
-![Cuves to Grease Pencil](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuves-to-grease-pencil.png)
+![Curves to Grease Pencil](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/curves-to-grease-pencil.png)
 
 Converts a curve object to a mesh object. Optionally, a profile curve can be provided to give the curve a custom shape.
 
@@ -830,19 +852,27 @@ Converts a curve object to a mesh object. Optionally, a profile curve can be pro
 
 ##### Curves
 
+Data type: Geometry.
+
 The input curves.
 
 ##### Selection
 
+Data type: Boolean.
+
 A selection of the curve
 
 ##### Instances as Layers
+
+Data type: Boolean.
 
 Create separate layers for each instance.
 
 #### Outputs
 
 ##### Grease Pencil
+
+Data type: Geometry.
 
 Standard output. The Euler rotation build from the Tangent and Normal outputs.
 
@@ -1338,13 +1368,19 @@ Adds a bezier curve segment.
 
 ##### Resolution
 
+Data type: Integer (unsigned).
+
 The number of edges on the curve.
 
 ##### Start, End
 
+Data type: Vector (translation).
+
 Positions of the start and end control point of the curve.
 
 ##### Start Handle, End Handle
+
+Data type: Vector (translation).
 
 Positions of the handles used to define the shape of the curve.
 
@@ -1367,6 +1403,8 @@ The handle positions are relative to the control point on the curve. The handle 
 #### Outputs
 
 ##### Curve
+
+Data type: Geometry.
 
 Bezier spline generated from the inputs.
 
@@ -1393,6 +1431,8 @@ Data type: Float (distance).
 The radius of the circle.
 
 ##### Point 1, Point 2, Point 3
+
+Data type: Vector (translation).
 
 Appears when you change the method to Points. Defines three points on the circle. The order of the points determines the direction (clockwise or counterclockwise) of the circle.
 
@@ -1500,6 +1540,8 @@ Number of times the spiral makes a full rotation.
 
 ##### Start Radius, End Radius
 
+Data type: Float (distance).
+
 Radius of the start point and end point of the spiral. The radius of the spiral changes linearly between the two values over the whole spiral.
 
 ##### Height
@@ -1534,15 +1576,21 @@ Adds a curve from the given control points. The generated shape is a parabola.
 
 ##### Resolution
 
+Data type: Integer (unsigned).
+
 The number of edges on the curve.
 
 ##### Start, Middle, End
+
+Data type: Vector (translation).
 
 Positions of the three control points. The generated curve passes through the two end points, and is tangent to the lines between the middle point and the two end points.
 
 #### Outputs
 
 ##### Curve
+
+Data type: Geometry.
 
 Poly spline generated from the inputs.
 
@@ -1664,6 +1712,8 @@ Number of points on each of the circles.
 
 ##### Inner Radius, Outer Radius
 
+Data type: Float (distance).
+
 Radii of the two circles. The inner radius can be bigger than the outer radius.
 
 ##### Twist
@@ -1733,9 +1783,13 @@ Offset a control point index in the curve.
 
 ##### Point Index
 
+Data type: Integer.
+
 The point index of the curve.
 
 ##### Offset
+
+Data type: Integer.
 
 Offset of the point index.
 
@@ -1743,9 +1797,13 @@ Offset of the point index.
 
 ##### Is Valid Offset
 
+Data type: Boolean.
+
 Outputs true if the evaluated controlpoint plus the offset is a valid index.
 
 ##### Point Index
+
+Data type: Integer.
 
 The index of the control point plus the offset.
 

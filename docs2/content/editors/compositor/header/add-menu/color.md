@@ -1164,6 +1164,8 @@ When you have a point selected then you will reveal further settings at the bott
 
 ##### Color
 
+Data type: Color.
+
 Standard output.
 
 ### Tonemap

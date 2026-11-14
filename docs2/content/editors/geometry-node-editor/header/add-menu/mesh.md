@@ -107,6 +107,8 @@ Outputs the number of faces connected to each edge.
 
 ##### Face Count
 
+Data type: Integer.
+
 The number of faces.
 
 ### Edge Vertices
@@ -156,6 +158,8 @@ The input edges.
 #### Outputs
 
 ##### Face Group ID
+
+Data type: Integer.
 
 The output face group.
 
@@ -209,9 +213,13 @@ Outputs the number of vertices or faces connected to each face.
 
 ##### Vertex Count
 
+Data type: Integer.
+
 The vertex count for the face neighbors.
 
 ##### Face Count
+
+Data type: Integer.
 
 The face count for the face neighbors.
 
@@ -293,9 +301,13 @@ Calculates the shortest path from multiple start points.
 
 ##### End Vertex
 
+Data type: Boolean.
+
 The last point of the path.
 
 ##### Edge Cost
+
+Data type: Float.
 
 The amount of calculation to find the shortest path.
 
@@ -303,9 +315,13 @@ The amount of calculation to find the shortest path.
 
 ##### Next Vertex Index
 
+Data type: Integer.
+
 The vertices index of the shortest path.
 
 ##### Total Cost
+
+Data type: Float.
 
 The calculation amount.
 
@@ -657,15 +673,21 @@ Calculates an edge path, and converts it to a selectoin
 
 ##### Start Vertices
 
+Data type: Boolean.
+
 The start vertices of the edge path.
 
 ##### Next Vertex Index
+
+Data type: Integer.
 
 The edge path by index.
 
 #### Outputs
 
 ##### Selection
+
+Data type: Boolean.
 
 The selection
 

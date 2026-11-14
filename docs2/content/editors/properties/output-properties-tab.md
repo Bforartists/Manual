@@ -746,7 +746,7 @@ Deletes selected curve points.
 
 ![Tools](/docs2/images/editors/properties/output-properties-tab/tools.png)
 
-Tools is a menu that contains some cuve related tools.
+Tools is a menu that contains some curve related tools.
 
 - **Reset View**: Resets the curve windows zoom.
 - **Extend Horizontal**: Causes the curve to stay horizontal before the first point and after the last point.
