@@ -56,13 +56,13 @@ Note that the Adjust Last Operation panel can also be called from the edit menu 
 
 ![Adjust Last Operation](/docs2/images/editors/3d-viewport/header/view-menu/adjust-last-operation-3.png)
 
-## Tool Shelf Tabs
+## Toolbar Tabs
 
-![Tool Shelf Tabs](/docs2/images/editors/3d-viewport/header/view-menu/tool-shelf-tabs.png)
+![Toolbar Tabs](/docs2/images/editors/3d-viewport/header/view-menu/tool-shelf-tabs.png)
 
-Shows or hides the tool shelf tabs. This tool shelf tabs contains tools from the header menus, and are a double menu entry by design. Here you can turn them off if you don't want to work with this tool set.
+Shows or hides the category tabs on the tool shelf. The tabs hold tools from the header menus, and are a double menu entry by design: they are faster to reach. Turn them off if you don't want to work with this tool set.
 
-![Tool Shelf Tabs](/docs2/images/editors/3d-viewport/header/view-menu/tool-shelf-tabs-2.png)
+![Toolbar Tabs](/docs2/images/editors/3d-viewport/header/view-menu/tool-shelf-tabs-2.png)
 
 Note that you need to adjust the width of the tool shelf manually afterwards since it does not automatically update the width of the tool shelf area.
 

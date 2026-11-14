@@ -586,9 +586,9 @@ Shows or hides the Adjust Last Operation panel down left.
 
 Note that the Adjust Last Operation menu item in the Edit menu in the main header and the Last button in the toolbar are not related and not functional with this last operator panel. It is an independent element.
 
-### Tool Shelf Tabs
+### Toolbar Tabs
 
-Show or hide the tabs in the tool shelf.
+Shows or hides the category tabs on the tool shelf (the toolbar at the left). The tabs hold the same tools as the header menus, sorted by category, so you reach them with one click.
 
 ### Legacy
 

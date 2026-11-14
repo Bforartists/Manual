@@ -6,7 +6,7 @@ path:
   - Extensions
   - Bforartists Extensions
   - Core Extension - Brush Panels
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -32,7 +32,7 @@ This adds a **Brushes Tab** to most painting and drawing modes and objects. This
 
 To use, go into a paint mode (**Sculpt, Texture Paint, Vertex Paint, Weight Paint or Grease Pencil Draw Mode**), select the Brush tab in the Tool Shelf to the left, and then select a brush. When you select a brush, the button will automatically select the brush operator and select the brush type stored in the brush library. You can link/append and create any new brush type for later use – you can also assign iconography on demand.
 
-If you don’t see the toolshelf tabs, go to View and turn on Tool Shelf Tabs.
+If you don’t see the tool shelf tabs, go to **View** and turn on **Toolbar Tabs**.
 
 To add brushes, you can use the add button in the Property Shelf under the Tool tab or in the Header brush type dropdown, you can add new brushes or remove brushes.
 
