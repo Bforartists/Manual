@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Output Properties Tab
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.3 Editors - Properties Editor - Output Properties Tab.odt

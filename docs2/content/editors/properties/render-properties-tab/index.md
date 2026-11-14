@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Render Properties Tab
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.2 Editors - Properties Editor - Render Properties Tab.odt

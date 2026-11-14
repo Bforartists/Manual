@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Node Groups"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Node Groups nodes: Geometry, Geometry › Operations, Geometry › Selection, Grease Pencil › Operations, Grease Pencil › Read, Grease Pencil › Write…."
 order: 160
