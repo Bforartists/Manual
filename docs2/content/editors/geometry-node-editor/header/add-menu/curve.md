@@ -101,7 +101,9 @@ Note that for NURBS and Bézier spline curves the value retrieved from this node
 
 #### Outputs
 
-##### Factor
+##### Tangent
+
+Data type: Vector.
 
 The vector of the tangent.
 
@@ -172,7 +174,7 @@ Wether to check for the type of handles.
 
 What handle type to compare.
 
-#### Output
+#### Outputs
 
 ##### Selection
 
@@ -311,41 +313,37 @@ The sampled values are linearly interpolated from the values at the evaluated cu
 
 In case that the curve contains multiple splines, the sample position is found based on the total accumulated length, including the lengths of all previous splines. The order of the splines is the same order as displayed in the Spreadsheet Editor.
 
-#### Input
+#### Inputs
 
-##### Curve
+##### Curves
 
-The input geometry.
+Data type: Geometry.
+
+The curves to sample positions on.
 
 ##### Value
 
 Data type: follows the Data Type setting.
 
-Input Value.
+The value to sample on the curves.
 
-##### Mode Factor
+##### Factor
 
-###### Factor
+Data type: Float (factor).
 
-The resample amount with method Factor.
-
-###### Curve Index
-
-The curve index.
-
-##### Mode Factor
-
-###### Factor
-
-The resample amount with method Factor.
+Where to sample, as a factor of the curve length. Only in Factor mode.
 
 ##### Length
 
-Data type: follows the Data Type setting.
+Data type: Float (distance).
 
-The resample amount with method Length.
+Where to sample, as a length from the start of the curve. Only in Length mode.
 
+##### Curve Index
 
+Data type: Integer.
+
+The index of the curve to sample. Not when All Curves is on.
 
 #### Properties
 
@@ -355,17 +353,15 @@ The resample amount with method Length.
 
 What data to calculate.
 
-###### Sample Curve Mode
+##### Mode
 
 How to calculate the curve. By a factor, or by its length.
 
-###### All Curves
+##### All Curves
 
 Sample lengths based on the length of all curves.
 
-
-
-#### Output
+#### Outputs
 
 ##### Value
 
@@ -406,7 +402,7 @@ Here you find curve related nodes.
 
 Set the evaluation mode for curve normals.
 
-#### Input
+#### Inputs
 
 ##### Curve
 
@@ -420,8 +416,6 @@ Data type: Boolean.
 
 A selection of the input curve.
 
-
-
 ##### Mode
 
 Data type: Menu.
@@ -429,6 +423,12 @@ Data type: Menu.
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/mode.png)
 
 The evaluation mode for the curve normals.
+
+##### Normal
+
+Data type: Vector (XYZ).
+
+The custom normal for each point. Only in Free mode.
 
 #### Outputs
 
@@ -446,7 +446,9 @@ Set the curve radius.
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -464,7 +466,9 @@ The radius to set.
 
 #### Outputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -478,7 +482,9 @@ Controls the tilt angle at each curve control point.
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -512,7 +518,9 @@ Set the handle positions of bezier curves
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -542,7 +550,9 @@ Left or right handles.
 
 #### Outputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -554,7 +564,7 @@ Standard geometry output.
 
 Sets a handle type for the curve points of a bezier curve. Handle types determines how the interpolation before and after the curve point happens.
 
-#### Input
+#### Inputs
 
 ##### Curve
 
@@ -568,8 +578,6 @@ Data type: Boolean.
 
 A selection of the input curve.
 
-
-
 #### Properties
 
 ##### Mode
@@ -582,31 +590,31 @@ Left or right handles.
 
 The different available handle types.
 
-##### Free
+###### Free
 
 ![Free](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/free.png)
 
 The handles can be adjusted individually.
 
-##### Auto
+###### Auto
 
 ![Auto](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/auto.png)
 
 The left and the right handle will always point to each other. The length of the handles will start in equal size.
 
-##### Vector
+###### Vector
 
 ![Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/vector.png)
 
 The handles can be adjusted individually.
 
-##### Aligned
+###### Aligned
 
 ![Aligned](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/aligned.png)
 
 The left and the right handle will always point to each other.
 
-#### Output
+#### Outputs
 
 ##### Curve
 
@@ -614,15 +622,17 @@ Data type: Geometry.
 
 Standard geometry output.
 
-### Set Spline cyclic
+### Set Spline Cyclic
 
-![Set Spline cyclic](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-cyclic.png)
+![Set Spline Cyclic](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-cyclic.png)
 
 Sets the spline cyclic. Means looping.
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -640,7 +650,9 @@ Cyclic or not
 
 #### Outputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -654,7 +666,9 @@ Sets the resolution of the spline. Means how many evaluated points should be gen
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -672,7 +686,9 @@ The resolution of the spline.
 
 #### Outputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -684,7 +700,7 @@ Standard geometry output.
 
 Change the curve spline type.
 
-#### Input
+#### Inputs
 
 ##### Curve
 
@@ -698,8 +714,6 @@ Data type: Boolean.
 
 A selection of the input curve.
 
-
-
 #### Properties
 
 ##### Spline Type
@@ -710,7 +724,7 @@ The spline type to set the curve to.
 
 Note that when converting from a NURBS spline to a Bézier spline, at least six points are needed. When the number of points is not a multiple of three a full conversion is not possible and the spline has to be truncated.
 
-#### Output
+#### Outputs
 
 ##### Curve
 
@@ -758,6 +772,22 @@ Data type: Boolean.
 
 For cyclic profile curve. Fill the ends of the generated mesh for each spline combination with an N-gon. The resulting mesh is Manifold, the two new faces for each spline are simply connected to existing edges.
 
+##### Miter Scale
+
+A panel that is closed by default. Its checkbox is the Miter Scale input.
+
+###### Miter Scale
+
+Data type: Boolean.
+
+Scales the profile along the axis of the turn at the corners, so that the width looks the same everywhere.
+
+###### Miter Scale Limit
+
+Data type: Float (angle).
+
+The angle at which the miter scale stops increasing.
+
 #### Outputs
 
 ##### Mesh
@@ -782,6 +812,18 @@ Data type: Geometry.
 
 The input curve.
 
+##### Count
+
+Data type: Integer.
+
+The number of points to distribute along each spline. Only in Count mode.
+
+##### Length
+
+Data type: Float (distance).
+
+The length of the single segments. Only in Length mode.
+
 #### Properties
 
 ##### Mode
@@ -790,35 +832,29 @@ The input curve.
 
 How to generate points from the input curve.
 
-##### Evaluated
+###### Evaluated
 
 ![Evaluated](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/evaluated.png)
 
 Create points from the evaluation points of the curve. This is based on the resolution attribute for nurbs and bezier splines.
 
-##### Count
+###### Count
 
 ![Count](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/count.png)
 
 Sample each spline by evenly distributing the specified number of points along the spline.
 
-###### Count Input
-
-The number of points to distribute along the spline.
-
-##### Length
+###### Length
 
 ![Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/length.png)
 
 Sample each spline by splitting the spline into segments by the specified length.
 
-###### Length Input
-
-The length of the single segments.
-
 #### Outputs
 
-##### Point
+##### Points
+
+Data type: Geometry.
 
 Generated point cloud.
 
@@ -838,7 +874,7 @@ The normal value from the evaluated curve at each result point. This is the same
 
 Data type: Rotation.
 
-—
+The rotation built from the Tangent and Normal outputs.
 
 
 
@@ -874,7 +910,7 @@ Create separate layers for each instance.
 
 Data type: Geometry.
 
-Standard output. The Euler rotation build from the Tangent and Normal outputs.
+The new grease pencil geometry.
 
 
 
@@ -916,11 +952,11 @@ Data type: Geometry.
 
 The input curve.
 
-##### Group Input
+##### Group ID
 
-An index used to rgoup curves together. Filling is done separately for each group.
+Data type: Integer.
 
-
+An index used to group curves together. Filling is done separately for each group.
 
 ##### Mode
 
@@ -928,9 +964,16 @@ Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-2.png)
 
-##### Triangles or N-gons
-
 Fill the curve with either triangles, or use N-Gon geometry.
+
+##### Fill Rule
+
+Data type: Menu.
+
+The rule that decides which regions are inside and which are outside.
+
+- **Even-Odd**: Inside and outside alternate each time a curve is crossed.
+- **Non-Zero**: Overlapping curves with the same winding direction are filled as a union.
 
 #### Outputs
 
@@ -948,19 +991,13 @@ The Fillet Curve rounds corners on curve control points, similar to the effect o
 
 A key difference is that the rounded portions created by the Fillet Curve node are always portions of a circle.
 
-#### Input
+#### Inputs
 
 ##### Curve
 
 Data type: Geometry.
 
 The input curve.
-
-##### Count
-
-Data type: Integer.
-
-Polymode. Define the number of vertices that are created.
 
 ##### Radius
 
@@ -974,23 +1011,20 @@ Data type: Boolean.
 
 Prevent overlapping when the defined radius exceeds the maximum possible radius for a given point.
 
-
-
 ##### Mode
 
 Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-3.png)
 
-###### Bezier
+- **Bézier**: Creates a circular arc at vertices by changing handle lengths (applicable only for Bézier splines).
+- **Poly**: Creates a circular arc by creating vertices (as many as defined by the Count fields input) along the arc (applicable for all spline types).
 
-Creates a circular arc at vertices by changing handle lengths (applicable only for Bezier splines).
+##### Count
 
-###### Poly
+Data type: Integer.
 
-Creates a circular arc by creating vertices (as many as defined by the Count fields input) along the arc (applicable for all spline types).
-
-
+Define the number of vertices that are created. Only in Poly mode.
 
 #### Outputs
 
@@ -1006,7 +1040,7 @@ Standard geometry input with a curve component.
 
 Generates new curve parts by interpolating between existing curves.
 
-#### Input
+#### Inputs
 
 ##### Guide Curves
 
@@ -1032,7 +1066,9 @@ Data type: Geometry.
 
 The positions of the first root control points of the newly generated interpolated curves.
 
-##### Points Up
+##### Point Up
+
+Data type: Vector.
 
 Optional up vector that is typically a surface normal.
 
@@ -1042,11 +1078,11 @@ Data type: Integer.
 
 The curve group to interpolate in.
 
-##### Max Neighbor
+##### Max Neighbors
+
+Data type: Integer.
 
 Maximum amount of close guide curves that are taken into account for interpolation.
-
-
 
 #### Outputs
 
@@ -1060,7 +1096,7 @@ The new curve.
 
 Data type: Integer.
 
-Index of the closest guide curve for each generated curve. Note that internally this node mixes the data from multiple guide curves, with the maximum number of sources depending on the Max Neighbor input. This output is only the index of the curve with the largest weight.
+Index of the closest guide curve for each generated curve. Note that internally this node mixes the data from multiple guide curves, with the maximum number of sources depending on the Max Neighbors input. This output is only the index of the curve with the largest weight.
 
 ##### Closest Weight
 
@@ -1070,13 +1106,13 @@ Weight of the closest guide curve for each generated curve.
 
 
 
-### Resample curve
+### Resample Curve
 
-![Resample curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/resample-curve.png)
+![Resample Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/resample-curve.png)
 
 Creates a poly spline for each input spline. In the Count and Length modes, the control points of the new poly splines will have uniform spacing.
 
-#### Input
+#### Inputs
 
 ##### Curve
 
@@ -1090,14 +1126,6 @@ Data type: Boolean.
 
 A selection of the input geometry
 
-##### Length
-
-Data type: Float (distance).
-
-The approximate length between the control points of the new splines.
-
-
-
 ##### Mode
 
 Data type: Menu.
@@ -1106,27 +1134,23 @@ Data type: Menu.
 
 The resample mode.
 
-###### Evaluated
-
-Use the resolution attribute for spline and bezier curves.
-
-###### Count
-
-Use the count of the curve points.
-
-###### Length
-
-Use the length of the curve.
-
-
+- **Evaluated**: Use the resolution attribute for spline and bezier curves.
+- **Count**: Use the count of the curve points.
+- **Length**: Use the length of the curve.
 
 ##### Count
 
 Data type: Integer.
 
-The number of control points on the new splines.
+The number of control points on the new splines. Only in Count mode.
 
-#### Output
+##### Length
+
+Data type: Float (distance).
+
+The approximate length between the control points of the new splines. Only in Length mode.
+
+#### Outputs
 
 ##### Curve
 
@@ -1172,7 +1196,9 @@ Subdivides the curve. The shape is not changed.
 
 #### Inputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 The input curve.
 
@@ -1184,7 +1210,9 @@ The number of cuts per segment.
 
 #### Outputs
 
-##### Geometry
+##### Curve
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -1218,17 +1246,15 @@ A selection of the curve.
 
 ##### Start
 
-Data type: Float (factor) or Float (distance).
+Data type: follows the Mode setting.
 
-The start point of the spline, as a factor.
+The start point of the spline, as a factor or as a length.
 
 ##### End
 
-Data type: Float (factor) or Float (distance).
+Data type: follows the Mode setting.
 
-The end point of the spline, as a factor.
-
-
+The end point of the spline, as a factor or as a length.
 
 #### Properties
 
@@ -1276,39 +1302,49 @@ Adds a bezier curve segment in the shape of an arc
 
 Data type: Integer (unsigned).
 
-The number of edges on the curve.
+The number of points on the arc.
 
-##### in Radius mode
+##### Start
 
-###### Radius
+Data type: Vector (translation).
 
-Just Radius mode. The radius of the arc.
+The start point of the arc. Only in Points mode.
 
-###### Start Angle
+##### Middle
 
-Just Radius mode. The start angle of the arc.
+Data type: Vector (translation).
 
-###### Sweep Angle
+The middle point of the arc. Only in Points mode.
 
-Just Radius mode. The sweep angle of the arc.
+##### End
 
-##### In Points Mode
+Data type: Vector (translation).
 
-###### Start
+The end point of the arc. Only in Points mode.
 
-The start point vector of the ark.
+##### Radius
 
-###### Middle
+Data type: Float (distance).
 
-The middle point vector of the ark.
+The radius of the arc. Only in Radius mode.
 
-###### End
+##### Start Angle
 
-The end point vector of the ark.
+Data type: Float (angle).
 
-###### Offset Angle
+The start angle of the arc. Only in Radius mode.
 
-The offset angle of the ark.
+##### Sweep Angle
+
+Data type: Float (angle).
+
+The length of the arc, as an angle. Only in Radius mode.
+
+##### Offset Angle
+
+Data type: Float (angle).
+
+The offset angle of the arc. Only in Points mode.
 
 ##### Connect Center
 
@@ -1321,8 +1357,6 @@ Connect the start and endpoins to the center.
 Data type: Boolean.
 
 Inverts the arc.
-
-
 
 #### Properties
 
@@ -1342,25 +1376,29 @@ Data type: Geometry.
 
 Curve output.
 
-##### In Points Mode
+##### Center
 
-###### Center
+Data type: Vector.
 
-The center vector of the arc.
+The center of the circle described by the three points. Only in Points mode.
 
-###### Normal
+##### Normal
 
-The normal of the arc.
+Data type: Vector.
 
-###### Radius
+The normal direction of the plane of the three points, pointing towards the positive Z axis. Only in Points mode.
 
-The radius of the arc.
+##### Radius
+
+Data type: Float.
+
+The radius of the circle described by the three points. Only in Points mode.
 
 
 
-### Bezier Segment
+### Bézier Segment
 
-![Bezier Segment](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/bezier-segment.png)
+![Bézier Segment](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/bezier-segment.png)
 
 Adds a bezier curve segment.
 
@@ -1372,19 +1410,29 @@ Data type: Integer (unsigned).
 
 The number of edges on the curve.
 
-##### Start, End
+##### Start
 
 Data type: Vector (translation).
 
-Positions of the start and end control point of the curve.
+The position of the start control point of the curve.
 
-##### Start Handle, End Handle
+##### Start Handle
 
 Data type: Vector (translation).
 
-Positions of the handles used to define the shape of the curve.
+The position of the handle at the start, used to define the shape of the curve.
 
+##### End Handle
 
+Data type: Vector (translation).
+
+The position of the handle at the end, used to define the shape of the curve.
+
+##### End
+
+Data type: Vector (translation).
+
+The position of the end control point of the curve.
 
 #### Properties
 
@@ -1397,8 +1445,6 @@ The handle inputs are the absolute positions of the handles in 3D space.
 ###### Offset
 
 The handle positions are relative to the control point on the curve. The handle inputs give the offset from the control points.
-
-
 
 #### Outputs
 
@@ -1428,15 +1474,27 @@ Data type: Float (distance).
 
 ![Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/radius.png)
 
-The radius of the circle.
+The radius of the circle. Only in Radius mode.
 
-##### Point 1, Point 2, Point 3
+##### Point 1
 
 Data type: Vector (translation).
 
-Appears when you change the method to Points. Defines three points on the circle. The order of the points determines the direction (clockwise or counterclockwise) of the circle.
+The first of three points on the circle. Only in Points mode. The order of the points determines the direction (clockwise or counterclockwise) of the circle.
 
 Note that because of the finite resolution, the three points do not necessarily lie on the generated curve.
+
+##### Point 2
+
+Data type: Vector (translation).
+
+The second point on the circle. Only in Points mode.
+
+##### Point 3
+
+Data type: Vector (translation).
+
+The third point on the circle. Only in Points mode.
 
 #### Properties
 
@@ -1449,8 +1507,6 @@ The position and radius of the circle is defined by three points. The center of 
 ###### Radius
 
 The circle is defined by the radius.
-
-
 
 #### Outputs
 
@@ -1474,41 +1530,45 @@ Appears when you change the method to Points. The center of the circle defined b
 
 Adds a curve in the shape of a straight line.
 
-#### Properties
+#### Inputs
 
-##### Points
+##### Start
 
-Calculates the curve by a start and end point.
-
-###### Start
+Data type: Vector (translation).
 
 The start point of the curve.
 
-###### End
+##### End
 
-The end point of the curve.
+Data type: Vector (translation).
 
-
+The end point of the curve. Only in Points mode.
 
 ##### Direction
+
+Data type: Vector.
+
+The direction the line goes in. The length of this vector does not matter. Only in Direction mode.
+
+##### Length
+
+Data type: Float (distance).
+
+The length of the curve. Only in Direction mode.
+
+#### Properties
+
+##### Mode
+
+###### Points
+
+Calculates the curve by a start and end point.
+
+###### Direction
 
 ![Direction](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/direction.png)
 
 Calculates the curve by a start point, a direction vector and the length of the curve.
-
-###### Start
-
-The start point of the curve.
-
-###### Direction
-
-The direction vector.
-
-###### Length
-
-The length of the curve.
-
-
 
 #### Outputs
 
@@ -1538,11 +1598,17 @@ Data type: Float.
 
 Number of times the spiral makes a full rotation.
 
-##### Start Radius, End Radius
+##### Start Radius
 
 Data type: Float (distance).
 
-Radius of the start point and end point of the spiral. The radius of the spiral changes linearly between the two values over the whole spiral.
+Radius of the start point of the spiral. The radius of the spiral changes linearly between the start and end radius over the whole spiral.
+
+##### End Radius
+
+Data type: Float (distance).
+
+Radius of the end point of the spiral.
 
 ##### Height
 
@@ -1566,9 +1632,9 @@ Poly spline generated from the inputs.
 
 
 
-### Quadratic Bezier
+### Quadratic Bézier
 
-![Quadratic Bezier](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadratic-bezier.png)
+![Quadratic Bézier](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadratic-bezier.png)
 
 Adds a curve from the given control points. The generated shape is a parabola.
 
@@ -1580,11 +1646,23 @@ Data type: Integer (unsigned).
 
 The number of edges on the curve.
 
-##### Start, Middle, End
+##### Start
 
 Data type: Vector (translation).
 
-Positions of the three control points. The generated curve passes through the two end points, and is tangent to the lines between the middle point and the two end points.
+The position of the first control point. The generated curve passes through the two end points, and is tangent to the lines between the middle point and the two end points.
+
+##### Middle
+
+Data type: Vector (translation).
+
+The position of the middle control point.
+
+##### End
+
+Data type: Vector (translation).
+
+The position of the last control point.
 
 #### Outputs
 
@@ -1604,9 +1682,75 @@ Adds a curve in different geometric shapes.
 
 Note that the names does not necessarily fit to the generated geometry.
 
-#### Input
+#### Inputs
 
-The input nodes may vary. See Properties.
+The inputs change with the Mode setting. Each input below says in which modes it is shown.
+
+##### Width
+
+Data type: Float (distance).
+
+The size of the shape along the X axis. In Rectangle, Parallelogram and Kite mode.
+
+##### Height
+
+Data type: Float (distance).
+
+The size of the shape along the Y axis. In Rectangle, Parallelogram and Trapezoid mode.
+
+##### Offset
+
+Data type: Float (distance).
+
+For Parallelogram, the X difference between the top and bottom sides. For Trapezoid, how far the top side moves along the positive X axis. In Parallelogram and Trapezoid mode.
+
+##### Bottom Width
+
+Data type: Float (distance).
+
+The width of the bottom side. Only in Trapezoid mode.
+
+##### Top Width
+
+Data type: Float (distance).
+
+The width of the top side. Only in Trapezoid mode.
+
+##### Bottom Height
+
+Data type: Float (distance).
+
+The distance between the bottom point and the X axis. Only in Kite mode.
+
+##### Top Height
+
+Data type: Float (distance).
+
+The distance between the top point and the X axis. Only in Kite mode.
+
+##### Point 1
+
+Data type: Vector (translation).
+
+The exact location of the first point. Only in Points mode.
+
+##### Point 2
+
+Data type: Vector (translation).
+
+The exact location of the second point. Only in Points mode.
+
+##### Point 3
+
+Data type: Vector (translation).
+
+The exact location of the third point. Only in Points mode.
+
+##### Point 4
+
+Data type: Vector (translation).
+
+The exact location of the fourth point. Only in Points mode.
 
 #### Properties
 
@@ -1614,85 +1758,53 @@ The input nodes may vary. See Properties.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/mode.png)
 
-##### Rectangle
+###### Rectangle
 
 ![Rectangle](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle.png)
 
 ![Rectangle](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle-2.png)
 
-creates a straight line in y direction.
+Creates a rectangle from a width and a height.
 
-###### Width
-
-The length of the straight line.
-
-##### Parallelogram
+###### Parallelogram
 
 ![Parallelogram](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/parallelogram.png)
 
 ![Parallelogram](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/parallelogram-2.png)
 
-Creates a straight line that is adjustable in x and y direction.
+Creates a parallelogram. The top side is moved along the X axis by the offset.
 
-###### Height
-
-The height of the line.
-
-###### Offset
-
-The width of the line.
-
-
-
-##### Trapezoid
+###### Trapezoid
 
 ![Trapezoid](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/trapezoid.png)
 
 ![Trapezoid](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/trapezoid-2.png)
 
-###### Height
+Creates a trapezoid with a separate width for the bottom and the top side.
 
-The height of the trapez.
-
-###### Bottom Width
-
-The width of the bottom line of the trapez.
-
-###### Top Width
-
-The width of the top line of the trapez.
-
-###### Offset
-
-The offset of the top line of the trapez.
-
-
-
-##### Kite
+###### Kite
 
 ![Kite](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/kite.png)
 
 ![Kite](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle.png)
 
-creates a straight line in y direction. The curve end points are separately adjustable
+Creates a kite. The top and bottom points are separately adjustable.
 
-###### Bottom Height
-
-The length of the bottom part of the line.
-
-###### Top Height
-
-The length of the top part of the line.
-
-
-
-##### Points
+###### Points
 
 ![Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/points.png)
 
 ![Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/points-2.png)
 
-Creates a rectangle. Each point of the rectangle is independantly adjustable in x, y and z position.
+Creates a shape from four points. Each point is independently adjustable in x, y and z position.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The generated curve.
 
 ### Star
 
@@ -1710,11 +1822,17 @@ Data type: Integer (unsigned).
 
 Number of points on each of the circles.
 
-##### Inner Radius, Outer Radius
+##### Inner Radius
 
 Data type: Float (distance).
 
-Radii of the two circles. The inner radius can be bigger than the outer radius.
+Radius of the inner circle. It can be bigger than the outer radius.
+
+##### Outer Radius
+
+Data type: Float (distance).
+
+Radius of the outer circle. It can be smaller than the inner radius.
 
 ##### Twist
 
@@ -1729,6 +1847,12 @@ Angle offset of the inner circle. The twist value rotates the points on the circ
 Data type: Geometry.
 
 Poly spline generated from the inputs.
+
+##### Outer Points
+
+Data type: Boolean.
+
+A selection of the outer points of the star.
 
 
 # Topology
@@ -1753,10 +1877,6 @@ Data type: Integer.
 
 The point index of the curve.
 
-##### Offset
-
-Offset of the point index.
-
 #### Outputs
 
 ##### Curve Index
@@ -1773,9 +1893,9 @@ How far along the curve the control point is.
 
 
 
-### Offset Points in Curve
+### Offset Point in Curve
 
-![Offset Points in Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/offset-points-in-curve.png)
+![Offset Point in Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/offset-points-in-curve.png)
 
 Offset a control point index in the curve.
 

@@ -285,7 +285,7 @@ The mesh Island Index. This defines where the gizmos will also draw. Default: 0.
 
 #### Angle
 
-Data type: Float.
+Data type: Float (angle).
 
 Sets the angle of the projection. Default: 0°.
 
@@ -390,25 +390,25 @@ The mesh to create the UV coordinates for.
 
 #### Cut Angle
 
-Data type: Float.
+Data type: Float (angle).
 
 Adjusts the cut angle. Default: 180°.
 
 #### Top Angle
 
-Data type: Float.
+Data type: Float (angle).
 
 Adjusts the top angle of the cut. Default: 0°.
 
 #### Bottom Angle
 
-Data type: Float.
+Data type: Float (angle).
 
 Adjusts the bottom angle of the cut. Default: 0°.
 
 #### Radius
 
-Data type: Float.
+Data type: Float (distance).
 
 The radius of the Cylinder UV Projection. Default: 1.
 
@@ -790,7 +790,7 @@ The method the seams are detected on edges by angle. Default: Unsigned.
 
 #### Angle Limit
 
-Data type: Float.
+Data type: Float (angle).
 
 The detection angle for the seams for the auto-unwrap. Default: 30°.
 
@@ -1163,7 +1163,7 @@ Toggles relative UV positions to world space or local space. Default: On.
 
 #### Translation
 
-Data type: Vector.
+Data type: Vector (translation).
 
 Translates the triplanar UV projection in XYZ vectors.
 
@@ -1175,7 +1175,7 @@ Rotates the triplanar UV projection.
 
 #### Scale
 
-Data type: Vector.
+Data type: Vector (XYZ).
 
 Scales the triplanar UV projection.
 
@@ -1311,79 +1311,30 @@ If you turn it off and re-run and re-apply the wizard, it will remove the Bounds
 
 #### Target Collection
 
+Data type: Collection.
+
 Specifies the group of objects used to influence the normal blending.
 
 #### Normal Distance
 
+Data type: Float.
+
 Sets the range within which intersecting geometry will contribute to the normal blending by proximity process.
-
-#### Blending Iterations
-
-Adds another blending iteration to the group of objects to assist in solving self-intersecting blending issues. This will affect performance as this repeats the operation.
 
 #### Relative Position
 
+Data type: Boolean.
+
 When enabled, calculates blending based on object-relative coordinates. Useful for maintaining orientation consistency with source objects from the target collection.
-
-#### Quality
-
-This defines the quality of the normal blending which affects performance.
-
-- **High**: Uses blending by proximity. Default. This can be low on performance if there are many islands or instances being evaluated.
-- **Low**: Uses a "neutral" normal at the intersections. This is more performant but less noticeable.
 
 #### Process
 
-This defines the method the blending evaluates mesh islands or instances.
+Data type: Menu.
 
-- **Islands**: Uses blending by proximity. Default. This can be low on performance if there are many islands or instances being evaluated.
-- **Instances**: Uses a "neutral" normal at the intersections. This is more performant but less noticeable.
+This defines how the blending evaluates the geometry.
 
-#### Material Blend
-
-##### Strength
-
-Controls how strongly materials are blended at the intersections.
-
-##### Offset
-
-Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins.
-
-##### Debug Intersections
-
-Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture.
-
-##### Noise
-
-Adds procedural noise to the blend region. Useful for organic or stylized transitions.
-
-###### Scale
-
-Controls the scale of the noise pattern. Higher values produce larger, more visible noise features.
-
-#### Intersection Displacement
-
-Enables geometry displacement at intersection zones. Controls how intersection regions between meshes are offset and displaced before normal blending. Used to create bulges, dents, or organic merging effects.
-
-##### Distance
-
-The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface.
-
-##### Offset
-
-Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts.
-
-##### Blur
-
-Softens the influence of blended normals across adjacent geometry.
-
-###### Iterations
-
-Number of smoothing passes on the displacement.
-
-###### Weight
-
-Intensity of smoothing. Higher values lead to broader averaging.
+- **Islands**: Evaluates the mesh islands. Default.
+- **Instances**: Evaluates the instances.
 
 #### Normal Blur
 
@@ -1393,11 +1344,123 @@ Optional secondary blur targeting only normals.
 
 ##### Iterations
 
+Data type: Integer.
+
 Number of blur passes applied to normals.
 
 ##### Weight
 
+Data type: Float (factor).
+
 Strength of normals blur smoothing.
+
+#### Material Blend
+
+Settings for the material blend at the intersections.
+
+##### Strength
+
+Data type: Float.
+
+Controls how strongly materials are blended at the intersections.
+
+##### Offset
+
+Data type: Float.
+
+Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins.
+
+##### Debug Intersections
+
+Data type: Boolean.
+
+Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture.
+
+##### Blur
+
+Softens the material blend.
+
+###### Iterations
+
+Data type: Integer.
+
+How many times the values are blurred.
+
+###### Weight
+
+Data type: Float (factor).
+
+Relative mix weight of the neighboring elements.
+
+##### Noise
+
+Settings for the noise on the material blend.
+
+###### Noise
+
+Data type: Boolean.
+
+Adds procedural noise to the blend region. Useful for organic or stylized transitions.
+
+###### Noise Scale
+
+Data type: Float.
+
+Controls the scale of the noise pattern. Higher values produce larger, more visible noise features.
+
+#### Intersection Displacement
+
+Controls how intersection regions between meshes are offset and displaced before normal blending. Used to create bulges, dents, or organic merging effects.
+
+##### Intersection Displacement
+
+Data type: Boolean.
+
+Enables geometry displacement at intersection zones.
+
+##### Distance
+
+Data type: Float.
+
+The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface.
+
+##### Offset
+
+Data type: Float.
+
+Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts.
+
+##### Blur
+
+Softens the influence of blended normals across adjacent geometry.
+
+###### Iterations
+
+Data type: Integer.
+
+Number of smoothing passes on the displacement.
+
+###### Weight
+
+Data type: Float (factor).
+
+Intensity of smoothing. Higher values lead to broader averaging.
+
+#### Intersection Removal
+
+Settings for the intersection removal.
+
+##### Intersection Removal
+
+Data type: Boolean.
+
+Turns the intersection removal on or off.
+
+##### Threshold
+
+Data type: Float.
+
+The threshold of the intersection removal.
 
 #### Material Override
 
@@ -1405,11 +1468,21 @@ Strength of normals blur smoothing.
 
 Toggles material overrides; otherwise each object inherits its material from the target collection.
 
+##### Material Override
+
+Data type: Boolean.
+
+Turns the material override on or off.
+
 ##### Material
+
+Data type: Material.
 
 Selects the material for the material override.
 
 ##### Inherit Material
+
+Data type: Boolean.
 
 This toggles the use of the material in the Material tab of the Properties editor as the override.
 
@@ -1462,6 +1535,12 @@ This asset uses the **Smart Cube** node group.
 - **Scale All**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### X
 
@@ -1536,6 +1615,12 @@ This asset uses the **Smart Cube Rounded** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### X
 
 Data type: Float (distance).
@@ -1558,7 +1643,7 @@ Changes the height of the primitive in unit sizes. Default: 2 m.
 
 ###### Bevel Amount
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. Default: 50.
 
@@ -1613,6 +1698,12 @@ This asset uses the **Smart Sphere** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Radius
 
 Data type: Float (distance).
@@ -1665,6 +1756,12 @@ This asset uses the **Smart Icosphere** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Radius
 
 Data type: Float (distance).
@@ -1708,6 +1805,12 @@ This asset uses the **Smart Cone** node group.
 - **Loop resolution**: 3
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Height
 
@@ -1767,6 +1870,12 @@ This asset uses the **Smart Cone Rounded** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Height
 
 Data type: Float (distance).
@@ -1783,7 +1892,7 @@ Changes the radius of the primitive in unit sizes. Default: 1 m.
 
 ###### Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.
 
@@ -1837,6 +1946,12 @@ This asset uses the **Smart Cylinder** node group.
 - **Scale All**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Radius
 
@@ -1898,6 +2013,12 @@ This asset uses the **Smart Cylinder Rounded Revolved** node group. The same gro
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -1920,7 +2041,7 @@ Changes the radius of the primitive in unit sizes. Default: 1.
 
 ###### Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. Default: 25.
 
@@ -1983,6 +2104,12 @@ This asset uses the **Smart Tube Revolved** node group. The same group is used b
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -2003,7 +2130,7 @@ Changes the height of the primitive in unit sizes. Default: 2 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -2067,6 +2194,12 @@ This asset uses the **Smart Tube Rounded Revolved** node group. The same group i
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -2081,7 +2214,7 @@ Changes the radius of the primitive in unit sizes. Default: 1 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -2164,6 +2297,12 @@ This asset uses the **Smart Capsule** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Height
 
 Data type: Float (distance).
@@ -2236,6 +2375,12 @@ This asset uses the **Smart Capsule Revolved** node group.
 - **Scale All**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Angle
 
@@ -2326,6 +2471,12 @@ This asset uses the **Smart Grid** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material from it.
+
 ##### X
 
 Data type: Float (distance).
@@ -2386,6 +2537,12 @@ This asset uses the **Smart Torus** node group. The same group is used by Torus 
 - **Scale All**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Angle
 
@@ -2457,6 +2614,12 @@ This asset uses the **Smart Torus** node group. The same group is used by Torus;
 - **Scale All**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Angle
 
@@ -2530,6 +2693,12 @@ This asset uses the **Smart Spiral** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Height
 
 Data type: Float (distance).
@@ -2575,8 +2744,6 @@ Data type: Float (angle).
 Changes the tilt of the profile loft which creates a twist. Default: 0°.
 
 ##### Resolution
-
-Data type: Integer (unsigned).
 
 ###### Horizontal
 
@@ -2642,6 +2809,12 @@ This asset uses the **Smart Circle** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material from it.
+
 ##### Outer Radius
 
 Data type: Float (distance).
@@ -2650,7 +2823,7 @@ Changes the outer radius in unit sizes. Default: 1 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -2710,6 +2883,12 @@ This asset uses the **Smart Circle Revolved** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -2724,7 +2903,7 @@ Changes the outer radius in unit sizes. Default: 1 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -2783,6 +2962,12 @@ This asset uses the **Smart Curve Lofted** node group.
 - **Bend profile**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The curve or Grease Pencil geometry of the object that holds the modifier. The shape is lofted along it when Custom Object is off. The generated shape also takes its material and its smooth shading from it.
 
 ##### Volume
 
@@ -2936,6 +3121,12 @@ This asset uses the **Smart Cylinder Rounded Revolved** node group. The same gro
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -2958,7 +3149,7 @@ Changes the radius of the primitive in unit sizes. Default: 1.
 
 ###### Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. Default: 25. This asset starts at 0.
 
@@ -3022,6 +3213,12 @@ This asset uses the **Smart Cylinder Rounded Revolved** node group. The same gro
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -3044,7 +3241,7 @@ Changes the radius of the primitive in unit sizes. Default: 1.
 
 ###### Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. Default: 25.
 
@@ -3107,6 +3304,12 @@ This asset uses the **Smart Tube Revolved** node group. The same group is used b
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -3127,7 +3330,7 @@ Changes the height of the primitive in unit sizes. Default: 2 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -3191,6 +3394,12 @@ This asset uses the **Smart Tube Rounded Revolved** node group. The same group i
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -3205,7 +3414,7 @@ Changes the radius of the primitive in unit sizes. Default: 1 m.
 
 ##### Inner Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the inner radius percentage. 100% is a full circle, meanwhile 0% is no inner radius. Default: 50.
 
@@ -3289,6 +3498,12 @@ This asset uses the **Smart Cone Rounded Revolved** node group.
 
 #### Inputs
 
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material from it.
+
 ##### Angle
 
 Data type: Float (angle).
@@ -3311,7 +3526,7 @@ Changes the radius of the primitive in unit sizes. Default: 1 m.
 
 ###### Radius
 
-Data type: Float.
+Data type: Float (percentage).
 
 Changes the radius percentage of the bevel. The bevel will clamp to the horizontal resolution, less horizontal loops increases bevel maximum limit. Default: 25.
 
@@ -3378,6 +3593,12 @@ This asset uses the **Smart Sphere Revolved** node group.
 - **Bend profile**: 1
 
 #### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry of the object that holds the modifier. The generated shape takes its material and its smooth shading from it.
 
 ##### Angle
 

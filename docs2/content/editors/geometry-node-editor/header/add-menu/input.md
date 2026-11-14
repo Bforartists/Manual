@@ -99,13 +99,17 @@ Standard color output.
 
 Provides a constant reference to a font data inside Geometry Nodes. Useful for procedural text generation, typography-driven effects, and node-based workflows where font consistency is required
 
-#### Parameters
+#### Properties
 
 ##### Font Selector
 
 Dropdown or file browser to choose the font datablock. Can reference internal fonts or external font files.
 
-##### Outputs
+#### Outputs
+
+##### Font
+
+Data type: Font.
 
 Provides a **Font datablock reference** that other nodes can consume. Typically used as input for text-related nodes.
 
@@ -265,7 +269,7 @@ The string that you want to input.
 
 #### Outputs
 
-##### Value
+##### String
 
 Data type: String.
 
@@ -297,9 +301,9 @@ The value set in the node properties.
 
 Creates a single vector of three values that can be used as an input.
 
-Properties
+#### Properties
 
-#### X Y Z
+##### X Y Z
 
 The values of the vector.
 
@@ -331,7 +335,7 @@ Displays the rotation gizmo in the 3d view.
 
 Data type: Float.
 
-Show or hide the widget.
+The value that the gizmo changes. You can connect more than one value.
 
 ##### Position
 
@@ -389,7 +393,7 @@ Displays the translation gizmo in the 3d view.
 
 Data type: Float.
 
-Show or hide the widget.
+The value that the gizmo changes. You can connect more than one value.
 
 ##### Position
 
@@ -402,14 +406,6 @@ Where to show the widget in relation to the object.
 Data type: Vector (XYZ).
 
 The direction vector.
-
-##### Screen Space
-
-Use screen space or object space values to display the widget.
-
-##### Radius
-
-The radius of the widget.
 
 #### Properties
 
@@ -449,7 +445,7 @@ Displays the transform gizmo in the 3d view.
 
 Data type: Matrix.
 
-Show or hide the widget.
+The transform that the gizmo changes. You can connect more than one value.
 
 ##### Position
 
@@ -461,15 +457,7 @@ Where to show the widget in relation to the object.
 
 Data type: Rotation.
 
-The rotation vector.
-
-##### Screen Space
-
-Use screen space or object space values to display the widget.
-
-##### Radius
-
-The radius of the widget.
+The rotation of the gizmo.
 
 #### Properties
 
@@ -505,11 +493,7 @@ The **Import CSV** node is used to bring structured tabular data into Geometry N
 
 Data type: String.
 
-Specifies the location of the CSV file to be imported. This can also be a string input.
-
-###### Open
-
-Includes a folder icon button for browsing files.
+Specifies the location of the CSV file to be imported. This can also be a string input. The folder icon button opens a file browser.
 
 ##### Delimiter
 
@@ -518,6 +502,10 @@ Data type: String.
 Defines the character separating values in the CSV file. Default value is a comma (*,*). The **Delimiter** field determines how data is parsed from the fil
 
 #### Outputs
+
+##### Point Cloud
+
+Data type: Geometry.
 
 Generates a point cloud data type from the imported CSV file.
 
@@ -533,11 +521,7 @@ The **Import OBJ** node is used to load **Wavefront OBJ** files into Geometry No
 
 Data type: String.
 
-Specifies the location of the OBJ file to be imported. This can also be a string input.
-
-##### Open
-
-Includes a **folder icon button** for browsing files.
+Specifies the location of the OBJ file to be imported. This can also be a string input. The **folder icon button** opens a file browser.
 
 #### Outputs
 
@@ -559,19 +543,17 @@ The **Import PLY** node is used to bring **Polygon File Format (PLY) meshes** in
 
 Data type: String.
 
-Specifies the location of the PLY file to be imported. This can also be a string input.
-
-##### Open
-
-Includes a **folder icon button** for browsing files.
+Specifies the location of the PLY file to be imported. This can also be a string input. The **folder icon button** opens a file browser.
 
 #### Outputs
 
-##### Mesh
+##### Geometry
+
+Data type: Geometry.
 
 Outputs the imported PLY file as a **mesh**, including vertex positions, colors, and potential additional attributes.
 
-#### Import SPZ (.spz)
+### Import SPZ (.spz)
 
 ![Import SPZ (.spz)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-spz.png)
 
@@ -579,23 +561,23 @@ Loads an SPZ file as a point cloud that is shown as a 3D Gaussian Splat. The fil
 
 If your version of Bforartists was built without SPZ support, the node shows the error "Disabled, Blender was compiled without SPZ I/O".
 
-##### Inputs
+#### Inputs
 
-###### Path
+##### Path
 
 Data type: String.
 
 The path to the SPZ file. Use the folder button to browse for a file. Only files that end with .spz are offered.
 
-##### Outputs
+#### Outputs
 
-###### Points
+##### Points
 
 Data type: Geometry.
 
 The imported point cloud. Warnings from the import are shown on the node.
 
-#### Import STL (.stl)
+### Import STL (.stl)
 
 ![Import STL (.stl)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-stl-stl.png)
 
@@ -607,15 +589,13 @@ The **Import STL** node is used to bring **Stereolithography (STL) files** into 
 
 Data type: String.
 
-Specifies the location of the STL file to be imported. This can also be a string input.
-
-##### Open
-
-Includes a **folder icon button** for browsing files.
+Specifies the location of the STL file to be imported. This can also be a string input. The **folder icon button** opens a file browser.
 
 #### Outputs
 
 ##### Mesh
+
+Data type: Geometry.
 
 Outputs the imported STL file as a **mesh**. Typically this may be curve data, so you can use the Mesh to Curve node to convert to curves without a problem.
 
@@ -631,11 +611,7 @@ The Text Node is used to generate and manipulate text within Geometry Nodes. It 
 
 Data type: String.
 
-Specifies the location of the TXT file to be imported. This can also be a string input.
-
-##### Open
-
-Includes a **folder icon button** for browsing files.
+Specifies the location of the TXT file to be imported. This can also be a string input. The **folder icon button** opens a file browser.
 
 #### Outputs
 
@@ -657,11 +633,7 @@ The** I**mport VDB node is used to bring** OpenVDB volumetric data **into Geomet
 
 Data type: String.
 
-Specifies the location of the VDB file to be imported. This can also be a string input.
-
-##### Open
-
-Includes a **folder icon button** for browsing files.
+Specifies the location of the VDB file to be imported. This can also be a string input. The **folder icon button** opens a file browser.
 
 #### Outputs
 
@@ -715,41 +687,57 @@ The camera object.
 
 #### Outputs
 
-—
+##### Projection Matrix
 
-#### Projection Matrix
+Data type: Matrix.
 
 The projection matrix.
 
-#### Focal length
+##### Focal Length
 
-The focal length.
+Data type: Float.
 
-#### Sensor
+The focal length of a perspective camera.
+
+##### Sensor
+
+Data type: Vector (2d).
 
 The sensor size.
 
-#### Shift
+##### Shift
+
+Data type: Vector (2d).
 
 The camera shift.
 
-#### Clip Start
+##### Clip Start
+
+Data type: Float.
 
 The camera near clipping distance.
 
-#### Clip End
+##### Clip End
+
+Data type: Float.
 
 The camera far clipping distance.
 
-#### Focus Distance
+##### Focus Distance
+
+Data type: Float.
 
 Distance to the focus point for depth of field.
 
-#### Is Orthographic
+##### Is Orthographic
+
+Data type: Boolean.
 
 If the camera is using orthographic view.
 
-#### Orthographic Scale
+##### Orthographic Scale
+
+Data type: Float.
 
 The orthographic camera scale in case it is using Orthographic view.
 
@@ -773,13 +761,15 @@ Data type: Boolean.
 
 Output each child of the collection as a separate instance. The output is sorted alphabetically.
 
-###### Reset Children
+##### Reset Children
+
+Data type: Boolean.
 
 Reset the transform of every child instance in the output. This setting is just active when Separate Children is active.
 
-##### Properties
+#### Properties
 
-###### Transform Space
+##### Transform Space
 
 The transformation of the geometry outputs.
 
@@ -791,11 +781,13 @@ Output the geometry relative to the collection offset.
 
 Bring the input collection geometry into the modified object, maintaining the relative position between the objects in the scene.
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Instances
 
-Geometry of the collection in world space with all its modifiers applied.
+Data type: Geometry.
+
+Geometry of the collection in world space with all its modifiers applied, as instances.
 
 ### Image Info
 
@@ -803,7 +795,7 @@ Geometry of the collection in world space with all its modifiers applied.
 
 Retreive infos from an image.
 
-#### Input
+#### Inputs
 
 ##### Image
 
@@ -811,49 +803,23 @@ Data type: Image.
 
 Load or connect a image.
 
-##### New
-
 ![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
 
-Create a new image.
+When no image is loaded, the socket shows two buttons:
 
-Opens a new image dialog where you can adjust the color, size and further settings.
-
-##### Open
-
-Open a existing image.
-
-##### Image prop
+- **New**: Create a new image. Opens a new image dialog where you can adjust the color, size and further settings.
+- **Open**: Open a existing image.
 
 ![Image prop](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/image-prop.png)
 
-###### Image browser
+When an image is loaded, the socket shows the image picker:
 
-A list of available images
-
-###### Image name
-
-The name of the image
-
-###### Fake user
-
-Add a fake user to this asset.
-
-###### New
-
-![New](/docs2/images/editors/geometry-node-editor/header/add-menu-input-constant/new.png)
-
-Create a new image.
-
-Opens a new image dialog where you can adjust the color, size and further settings.
-
-###### Open Image
-
-Open a existing image.
-
-###### Remove
-
-Removes the image as the active image.
+- **Image browser**: A list of available images.
+- **Image name**: The name of the image.
+- **Fake user**: Add a fake user to this asset.
+- **New**: Create a new image.
+- **Open Image**: Open a existing image.
+- **Remove**: Removes the image as the active image.
 
 ##### Frame
 
@@ -921,6 +887,12 @@ Data type: Object.
 
 Object to get the properties from.
 
+##### As Instance
+
+Data type: Boolean.
+
+Output the whole object as one instance. This lets you instance object types that have no geometry.
+
 #### Outputs
 
 ##### Transform
@@ -953,9 +925,9 @@ Data type: Geometry.
 
 Geometry of the object in world space with all its modifiers applied.
 
-### Scene time
+### Scene Time
 
-![Scene time](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/scene-time.png)
+![Scene Time](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/scene-time.png)
 
 Outputs the current scene time in seconds or in frames.  
 The Frame output is a float value to make subframe rendering for motion  
@@ -980,6 +952,14 @@ Output in Frames.
 ![Self Object](/docs2/images/editors/geometry-node-editor/header/add-menu-input-scene/self-object.png)
 
 Retreives the parent object of the geometry nodegroup.
+
+#### Outputs
+
+##### Self Object
+
+Data type: Object.
+
+The object that the geometry nodes modifier is on.
 
 ### Collection Children
 

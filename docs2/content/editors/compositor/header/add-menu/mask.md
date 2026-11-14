@@ -155,19 +155,63 @@ Use the Matte output of the Cryptomatte node to get the alpha mask.
 
 ##### Adding/Removing Layers
 
-By default there are only four crypto layers available as inputs to the Cryptomatte node. You can add or remove layer inputs through Sidebar &gt; Item &gt; Properties &gt; Add/Remove Crypto Layer. These operators will add/remove layers from the bottom of the pass inputs.
+By default there are only three crypto layers available as inputs to the Cryptomatte node. You can add or remove layer inputs through Sidebar &gt; Item &gt; Properties &gt; Add/Remove Crypto Layer. These operators will add/remove layers from the bottom of the pass inputs.
 
-###### Inputs
+#### Inputs
 
-**Image**: Standard image input. · **Crypto Passes**: Each crypto layer will be given its own render pass; each of these render passes must be connected to one of these crypto layer inputs. By default there are only four layers, see Adding/Removing Layers to add more.
+##### Image
 
-###### Properties
+Data type: Color.
 
-**Add/Remove**: Adds/Removes an object or material from matte, by picking a color from the Pick output. · **Matte ID**: List of object and material crypto IDs to include in matte. This can be used for example to quickly clear all mattes by deleting the text or used to copy-and-paste crypto IDs from other software.
+Standard image input.
 
-###### Outputs
+##### Crypto 00
 
-**Image**: A colored output of the input image with the matte applied to only include selected layers. · **Matte**: A black-and-white alpha mask of the all the selected crypto layers. · **Pick**: A colored representation of the Cryptomatte pass which can be used with a Viewer node to select which crypto passes are used to create the matte image.
+Data type: Color.
+
+The first crypto layer. Each crypto layer has its own render pass. Connect each of these render passes to one of the crypto layer inputs.
+
+##### Crypto 01
+
+Data type: Color.
+
+The second crypto layer.
+
+##### Crypto 02
+
+Data type: Color.
+
+The third crypto layer. To get more crypto layer inputs, see Adding/Removing Layers.
+
+#### Properties
+
+##### Add/Remove
+
+Adds or removes an object or material from the matte, by picking a color from the Pick output.
+
+##### Matte ID
+
+List of object and material crypto IDs to include in the matte. This can be used for example to quickly clear all mattes by deleting the text or used to copy-and-paste crypto IDs from other software.
+
+#### Outputs
+
+##### Image
+
+Data type: Color.
+
+A colored output of the input image with the matte applied to only include selected layers.
+
+##### Matte
+
+Data type: Float.
+
+A black-and-white alpha mask of all the selected crypto layers.
+
+##### Pick
+
+Data type: Color.
+
+A colored representation of the Cryptomatte pass which can be used with a Viewer node to select which crypto passes are used to create the matte image.
 
 ### Box Mask
 
@@ -191,31 +235,45 @@ This yields the union of the input mask and the generated mask: Areas covered by
 
 ###### Subtract
 
-Values of the input mask have the specified Value subtracted from them. Multiply This yields the intersection of this generated mask and the input mask: Values of the input mask are multiplied by the specified Value for the area covered by the generated mask. All other areas become black.
+Values of the input mask have the specified Value subtracted from them.
+
+###### Multiply
+
+This yields the intersection of this generated mask and the input mask: Values of the input mask are multiplied by the specified Value for the area covered by the generated mask. All other areas become black.
 
 ###### Not
 
 Any area covered by both the input mask and the generated mask becomes black. Areas covered by the generated mask that are black on the input mask become the specified Value. Areas uncovered by the generated mask remain unchanged.
 
-###### Mask
+##### Mask
+
+Data type: Float (factor).
 
 An optional mask to use as the base for mask operations.
 
-###### Value
+##### Value
+
+Data type: Float (factor).
 
 Intensity of the generated mask.
 
-###### Position
+##### Position
+
+Data type: Vector (factor).
 
 Position of the center of the box as a fraction of the total width or height in X and Y direction. (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
 
-###### Size
+##### Size
+
+Data type: Vector (factor).
 
 The size of the masking box as a fraction of the total width or height in X and Y direction. (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
 
-###### Rotation
+##### Rotation
 
-Rotation of the box around its center point.
+Data type: Float (angle).
+
+Rotation of the shape around its center point.
 
 #### Outputs
 
@@ -249,31 +307,45 @@ This yields the union of the input mask and the generated mask: Areas covered by
 
 ###### Subtract
 
-Values of the input mask have the specified Value subtracted from them. Multiply This yields the intersection of this generated mask and the input mask: Values of the input mask are multiplied by the specified Value for the area covered by the generated mask. All other areas become black.
+Values of the input mask have the specified Value subtracted from them.
+
+###### Multiply
+
+This yields the intersection of this generated mask and the input mask: Values of the input mask are multiplied by the specified Value for the area covered by the generated mask. All other areas become black.
 
 ###### Not
 
 Any area covered by both the input mask and the generated mask becomes black. Areas covered by the generated mask that are black on the input mask become the specified Value. Areas uncovered by the generated mask remain unchanged.
 
-###### Mask
+##### Mask
+
+Data type: Float (factor).
 
 An optional mask to use as the base for mask operations.
 
-###### Value
+##### Value
+
+Data type: Float (factor).
 
 Intensity of the generated mask.
 
-###### Position
+##### Position
+
+Data type: Vector (factor).
 
 Position of the center of the ellipse as a fraction of the total width or height in X and Y direction. (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
 
-###### Size
+##### Size
+
+Data type: Vector (factor).
 
 The size of the masking ellipse as a fraction of the total width or height in X and Y direction. (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
 
-###### Rotation
+##### Rotation
 
-Rotation of the box around its center point.
+Data type: Float (angle).
+
+Rotation of the shape around its center point.
 
 #### Outputs
 
@@ -281,7 +353,7 @@ Rotation of the box around its center point.
 
 Data type: Float.
 
-A generated rectangular mask merged with the input mask. The created mask is the size of the current scene render dimensions.
+A generated elliptical mask merged with the input mask. The created mask is the size of the current scene render dimensions.
 
 Tip. For soft edges, pass the output mask through a slight Blur node.
 
@@ -293,11 +365,37 @@ The Double Edge Mask node creates a gradient between two masks.
 
 #### Inputs
 
-**Outer Mask**: A mask representing the outside shape, which will fade from black at its edges to white at the Inner Mask. · **Inner Mask**: A mask representing the inside shape, which will be fully white. · **Image Edges**: The edges of the image that intersect sthe outer mask will be considered edges of the outer mask. Otherwise, the outer mask will be considered open-ended · **Only Inside Outer**: Only edgfes of the inner mask that lie inside the outer mask will be considered. Otherwise, all edges of the inner mask will be considered.
+##### Outer Mask
+
+Data type: Float.
+
+A mask representing the outside shape, which will fade from black at its edges to white at the Inner Mask.
+
+##### Inner Mask
+
+Data type: Float.
+
+A mask representing the inside shape, which will be fully white.
+
+##### Image Edges
+
+Data type: Boolean.
+
+The edges of the image that intersect the outer mask will be considered edges of the outer mask. Otherwise, the outer mask will be considered open-ended.
+
+##### Only Inside Outer
+
+Data type: Boolean.
+
+Only edges of the inner mask that lie inside the outer mask will be considered. Otherwise, all edges of the inner mask will be considered.
 
 #### Outputs
 
-**Mask**: Standard mask output.
+##### Mask
+
+Data type: Float.
+
+Standard mask output.
 
 ### ID Mask
 
@@ -307,11 +405,31 @@ The ID Mask Node can be used to access an alpha mask per object or per material.
 
 #### Inputs
 
-**ID value**: Input for the Object Index or Material Index render pass. Which is an output of the Render Layers node or the Image node with a multi-layer format. · **Index**: Selection of the previously specified index. · **Anti-Aliased**: This post-process function refines the mask. See anti-aliasing.
+##### ID value
+
+Data type: Float.
+
+Input for the Object Index or Material Index render pass. This is an output of the Render Layers node, or of the Image node with a multi-layer format.
+
+##### Index
+
+Data type: Integer.
+
+The index to make the mask for.
+
+##### Anti-Alias
+
+Data type: Boolean.
+
+Smooths the edges of the mask. See anti-aliasing.
 
 #### Outputs
 
-**Alpha**: The mask is white where the object is and black where it is not. If the object is transparent, the alpha mask represent that with gray values.
+##### Alpha
+
+Data type: Float.
+
+The mask is white where the object is and black where it is not. If the object is transparent, the alpha mask represents that with gray values.
 
 #### Setup
 

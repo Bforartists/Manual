@@ -23,7 +23,7 @@ replaces:
 
 ![Add menu - Point](/docs2/images/editors/geometry-node-editor/header/add-menu-point/add-menu-point.png)
 
-### Distribute Points In Grid
+### Distribute Points in Grid
 
 ![Distribute Points In Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-grid.png)
 
@@ -33,37 +33,41 @@ Point, corner and polygon attributes of the input geometry are transferred to th
 
 The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the geoemetry is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.
 
-#### Inputs Random mode
+#### Inputs
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode.png)
-
-##### Grid
-
-The grid to import the points to.
-
-##### Density
-
-Density of the points.
-
-##### Seed
-
-The random seed for the point distribution.
-
-#### Inputs Grid mode
 
 ![Inputs Grid mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode.png)
 
 ##### Grid
 
-The grid to import the points to.
+Data type: Float.
+
+The volume grid to put the points in.
+
+##### Density
+
+Data type: Float.
+
+Density of the points. Together with the value of each voxel it sets the number of points per unit volume. Only in Random mode.
+
+##### Seed
+
+Data type: Integer.
+
+The random seed for the point distribution. Only in Random mode.
 
 ##### Spacing
 
-The spacing between the grid points.
+Data type: Vector (XYZ).
+
+The spacing between the grid points. Only in Grid mode.
 
 ##### Threshold
 
-Minimum density of a volume cell to contain a grid point.
+Data type: Float.
+
+Minimum density of a voxel to contain a grid point. Only in Grid mode.
 
 #### Properties
 
@@ -79,7 +83,7 @@ Distributes the points randomly. This allows overlappings.
 
 Distributes the points along a grid with given width.
 
-#### Output
+#### Outputs
 
 ##### Points
 
@@ -87,7 +91,7 @@ Data type: Geometry.
 
 Points output.
 
-### Distribute Points In Volume
+### Distribute Points in Volume
 
 ![Distribute Points In Volume](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribute-points-in-volume.png)
 
@@ -97,53 +101,54 @@ Point, corner and polygon attributes of the input geometry are transferred to th
 
 The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the geoemetry is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.
 
-#### Inputs Random mode
+#### Inputs
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-2.png)
-
-##### Volume
-
-The volume to import the points to.
-
-##### Density
-
-Density of the points.
-
-##### Seed
-
-The random seed for the point distribution.
-
-#### Inputs Grid mode
 
 ![Inputs Grid mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-grid-mode-2.png)
 
 ##### Volume
 
-The volume to import the points to.
+Data type: Geometry.
 
-##### Spacing
+The volume with the fog grids to put the points in.
 
-The spacing between the grid points.
+##### Mode
 
-##### Threshold
-
-Minimum density of a volume cell to contain a grid point.
-
-#### Properties
-
-##### Distribution method
+Data type: Menu.
 
 ![Distribution method](/docs2/images/editors/geometry-node-editor/header/add-menu-point/distribution-method.png)
 
-###### Random
+The method to use for scattering the points.
 
-Distributes the points randomly. This allows overlappings.
+- **Random**: Distributes the points randomly. This allows overlappings.
+- **Grid**: Distributes the points along a grid with given width.
 
-###### Grid
+##### Density
 
-Distributes the points along a grid with given width.
+Data type: Float.
 
-#### Output
+The number of points per unit volume. Only in Random mode.
+
+##### Seed
+
+Data type: Integer.
+
+The random seed for the point distribution. Only in Random mode.
+
+##### Spacing
+
+Data type: Vector (XYZ).
+
+The spacing between the grid points. Only in Grid mode.
+
+##### Threshold
+
+Data type: Float.
+
+Minimum density of a volume cell to contain a grid point. Only in Grid mode.
+
+#### Outputs
 
 ##### Points
 
@@ -161,51 +166,51 @@ Point, corner and polygon attributes of the input geometry are transferred to th
 
 The node also generates a stable ID, which is then stored in the built-in id attribute. It is used as a stable identifier for each point. When the mesh is deformed or the density changes the values will be consistent for each remaining point. This attribute is used in the Random Value and Instance on Points nodes.
 
-#### Inputs Random mode
+#### Inputs
 
 ![Inputs Random mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-random-mode-3.png)
-
-##### Mesh
-
-Standard geometry input.
-
-##### Selection
-
-The selection of which face corners should be considered for point distribution.
-
-##### Density
-
-Density of the points.
-
-##### Seed
-
-The random seed for the point distribution.
-
-#### Inputs Poisson Disk mode
 
 ![Inputs Poisson Disk mode](/docs2/images/editors/geometry-node-editor/header/add-menu-point/inputs-poisson-disk-mode.png)
 
 ##### Mesh
 
-Standard geometry input.
+Data type: Geometry.
+
+The mesh to put the points on its faces.
 
 ##### Selection
 
-The selection of which face corners should be considered for point distribution.
+Data type: Boolean.
+
+The selection of which faces should be considered for point distribution.
 
 ##### Distance Min
 
-The minimum distance that two points can have.
+Data type: Float (distance).
 
-##### Distance Max
+The minimum distance that two points can have. Only in Poisson Disk mode.
 
-The naximum distance that two points can have.
+##### Density Max
+
+Data type: Float.
+
+The highest number of points per square unit, before points that are too close are removed. Only in Poisson Disk mode.
+
+##### Density
+
+Data type: Float.
+
+Density of the points, as the number of points per square unit. Only in Random mode.
 
 ##### Density Factor
 
-Density of the points.
+Data type: Float (factor).
+
+A factor from 0 to 1 that scales the Density Max value at each part of the mesh. Only in Poisson Disk mode.
 
 ##### Seed
+
+Data type: Integer.
 
 The random seed for the point distribution.
 
@@ -221,9 +226,9 @@ Distributes the points randomly. This allows overlappings.
 
 ###### Poisson Disk
 
-Distributes the points randomly, but prevents overlappings by defining a minimum and maximum distance.
+Distributes the points randomly, but prevents overlappings by defining a minimum distance.
 
-#### Output
+#### Outputs
 
 ##### Points
 
@@ -257,19 +262,25 @@ Data type: Integer.
 
 The count of the generated points as an integer.
 
-Position
+##### Position
+
+Data type: Vector (translation).
 
 The position of the points as a vector. This is a field meaning you can set the position per index or ID of the point.
 
-Radius
+##### Radius
+
+Data type: Float (distance).
 
 The radius of the points as a float. This is a field meaning you can set the scale per index or ID of the point.
 
 #### Outputs
 
-##### Mesh
+##### Points
 
-Standard mesh output.
+Data type: Geometry.
+
+The new point cloud.
 
 ### Points to Curves
 
@@ -279,11 +290,31 @@ Generates a mesh vertex in the output geometry for each point cloud point in the
 
 #### Inputs
 
-**Points**: Points input. · **Curve Group ID**: A curve is created from every distinct group ID. All points with the same ID are put into the same curve. · **Selection**: Selection input.
+##### Points
+
+Data type: Geometry.
+
+The points to make the curves from.
+
+##### Curve Group ID
+
+Data type: Integer.
+
+A curve is created from every distinct group ID. All points with the same ID are put into the same curve.
+
+##### Weight
+
+Data type: Float.
+
+Sets the order of the points in each curve.
 
 #### Outputs
 
-**Mesh**: Standard mesh output.
+##### Curves
+
+Data type: Geometry.
+
+The new curves.
 
 ### Points to SDF Grid
 
@@ -293,11 +324,31 @@ Generates a mesh vertex in the output geometry for each point cloud point in the
 
 #### Inputs
 
-**Points**: Points input. · **Radius**: The radius of the grid. · **Voxel size**: The voxel size of the grid.
+##### Points
+
+Data type: Geometry.
+
+The points to convert to a signed distance field grid.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius of the sphere around each point.
+
+##### Voxel Size
+
+Data type: Float (distance).
+
+The voxel size of the grid.
 
 #### Outputs
 
-**SDF Grid**: Standard mesh output.
+##### SDF Grid
+
+Data type: Float.
+
+The new signed distance field grid.
 
 ### Points to Vertices
 
@@ -307,11 +358,25 @@ Generates a mesh vertex in the output geometry for each point cloud point in the
 
 #### Inputs
 
-**Points**: Points input. · **Selection**: Selection input.
+##### Points
+
+Data type: Geometry.
+
+The points to convert to mesh vertices.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points are converted.
 
 #### Outputs
 
-**Mesh**: Standard mesh output.
+##### Mesh
+
+Data type: Geometry.
+
+The mesh with one vertex for each selected point.
 
 ### Points to Volume
 
@@ -341,11 +406,21 @@ Data type: Menu.
 
 Base the voxel resolution at the amount or the size of the point cloud.
 
-###### Voxel Amount
+##### Voxel Size
 
-Voxel amount of the volume.
+Data type: Float (distance).
 
-###### Radius
+The size of one voxel. Only in Size mode.
+
+##### Voxel Amount
+
+Data type: Float.
+
+The approximate number of voxels along the diagonal of the volume. Only in Amount mode.
+
+##### Radius
+
+Data type: Float (distance).
 
 The radius of the generated volume around each point.
 
@@ -413,6 +488,8 @@ A field with the position of each point. By default it is the position of the po
 
 ##### Items
 
+Data type: follows the Type setting.
+
 For each item you add, there is an input with its name. It is a field that gives the value to rasterize for each point.
 
 #### Properties
@@ -429,6 +506,8 @@ The type of the active item. Scalar rasterizes a single number for each point. V
 
 ##### Items
 
+Data type: follows the Type setting.
+
 For each item there is a grid output with the same name as the item. A scalar item gives a scalar grid, a vector item gives a vector grid. If a grid cannot be made, the node shows a warning with the name of the item.
 
 ### Set Point Radius
@@ -439,11 +518,31 @@ The Set Point Radius node controls the size each selected point cloud point shou
 
 #### Inputs
 
-**Points**: Geometry input. · **Selection**: Selection input. · **Radius**: The radius of the points.
+##### Points
+
+Data type: Geometry.
+
+The points to set the radius of.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points get the new radius.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius of the points.
 
 #### Outputs
 
-**Points**: Standard geometry output.
+##### Points
+
+Data type: Geometry.
+
+The points with the new radius.
 
 ### Set Point Cloud Type
 

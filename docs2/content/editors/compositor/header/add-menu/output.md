@@ -43,21 +43,35 @@ When used inside a **Node Group**, this node helps to **automatically filter or 
 
 ![Use](/docs2/images/editors/compositor/header/add-menu-output/use.png)
 
+#### Inputs
+
+##### Enable
+
+Data type: Boolean.
+
+When on, the node passes the input value through to the output. When off, it outputs a fallback value and hides the output socket from the group.
+
+##### Value
+
+Data type: follows the Data Type setting.
+
+The data to pass to the output when Enable is on.
+
 #### Properties
 
 ##### Data Type
 
 ![Data Type](/docs2/images/editors/compositor/header/add-menu-output/data-type.png)
 
-Defines the type of the Value input and output. Options include Float, Vector, Color, Boolean, Geometry, etc. This ensures compatibility with the group output socket.
+Defines the type of the Value input and output. Options include Float, Integer, Boolean, Vector, Color, Rotation, Matrix, String, Menu, Object, Bundle, Closure, Font and Integer Vector. This keeps the value compatible with the group output socket.
 
-###### Inputs
+#### Outputs
 
-**Enable**: When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**.
+##### Value
 
-###### Outputs
+Data type: follows the Data Type setting.
 
-When True, the node passes the input value through to the output socket. When False, it outputs a fallback value and hides the output socket from the group output interface.
+The input value when Enable is on. When Enable is off, a fallback value, and the output socket is hidden from the group output interface.
 
 ### Viewer
 
@@ -75,7 +89,7 @@ When a Viewer node is selected, then the backdrop shows a widget cage that allow
 
 Further settings can be adjusted in the header. In the Backdrop toolsgroup.
 
-#### Input
+#### Inputs
 
 ##### Image
 
@@ -96,6 +110,8 @@ This node can be used as a way to automatically save the image after a render; I
 Use the **+** under the sockets to add another image input.
 
 ##### Image
+
+Data type: follows the socket type of the input (Float, Vector or Color).
 
 The image(s) will be saved on rendering, writing to the current frame. An entire sequence of images will be saved, when an animation is rendered.
 

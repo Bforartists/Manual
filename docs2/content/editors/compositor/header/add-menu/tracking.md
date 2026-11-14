@@ -41,6 +41,30 @@ Data type: Color.
 
 Image to put in place of the plane track, and thus, override that area in the movie clip.
 
+##### Motion Blur
+
+![Motion Blur subpanel](/docs2/images/editors/compositor/header/add-menu-tracking/motion-blur-subpanel.png)
+
+This panel holds the motion blur settings. It is closed by default.
+
+###### Motion Blur
+
+Data type: Boolean.
+
+Use blur caused by the motion of the plane track. This is the checkbox in the panel header.
+
+###### Samples
+
+Data type: Integer.
+
+The number of samples to take for each frame. The higher this number, the smoother the blur effect, but the longer the render, as each virtual intermediate frame has to be rendered. Note: Samples are taken only from the next frame, not the previous one. Therefore the blurred object will appear to be slightly ahead of how it would look without motion blur.
+
+###### Shutter
+
+Data type: Float (factor).
+
+Time (in frames) the shutter is open. If you are rendering at 24 fps, and the Shutter is set to 0.5, the time in between frames is 41.67 ms, so the shutter is open for half that, 20.83 ms.
+
 #### Properties
 
 ##### Movie Clip
@@ -54,20 +78,6 @@ Used to select the object to which the plane track is linked.
 ##### Plane Track
 
 Used to select the plane track to use.
-
-##### Motion Blur subpanel
-
-![Motion Blur subpanel](/docs2/images/editors/compositor/header/add-menu-tracking/motion-blur-subpanel.png)
-
-Specify whether to use blur caused by motion of the plane track or not.
-
-###### Samples
-
-Motion Blur setting. Set the number of samples to take for each frame. The higher this number, the smoother the blur effect, but the longer the render, as each virtual intermediate frame has to be rendered. Note. Samples are taken only from the next frame, not the previous one. Therefore the blurred object will appear to be slightly ahead of how it would look without motion blur.
-
-###### Shutter
-
-Motion Blur setting. Time (in frames) the shutter is open. If you are rendering at 24 fps, and the Shutter is set to 0.5, the time in between frames is 41.67 ms, so the shutter is open for half that, 20.83 ms.
 
 #### Outputs
 
@@ -99,11 +109,45 @@ Data type: Color.
 
 Standard image input.
 
+##### Frame
+
+Data type: Integer.
+
+The frame to get the stabilization data at. By default this is the current scene frame.
+
 ##### Invert
 
 Data type: Boolean.
 
 Invert the stabilization. If the stabilization calculated is to move the movie clip up by 5 units, this will move the movie clip down by 5 units.
+
+##### Sampling
+
+This panel holds the sampling settings. It is closed by default.
+
+###### Interpolation
+
+Data type: Menu.
+
+![Interpolation](/docs2/images/editors/compositor/header/add-menu-tracking/interpolation.png)
+
+Filter methods for the stabilization.
+
+###### Extension X
+
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-tracking/extension-x.png)
+
+How to extend the image in X direction.
+
+###### Extension Y
+
+Data type: Menu.
+
+![Extension Y](/docs2/images/editors/compositor/header/add-menu-tracking/extension-y.png)
+
+How to extend the image in Y direction.
 
 #### Properties
 
@@ -137,39 +181,51 @@ Open a new clip.
 
 Remove the active clip. The clip will remain in the scene, and will be removed when you close Bforartists and it has no user anymore. See Fake User.
 
-##### Sampling subpanel
-
-###### Interpolation
-
-![Interpolation](/docs2/images/editors/compositor/header/add-menu-tracking/interpolation.png)
-
-Filter methods for the stabilization.
-
-###### Extension X
-
-![Extension X](/docs2/images/editors/compositor/header/add-menu-tracking/extension-x.png)
-
-How to extend the image in x direction.
-
-###### Extension Y
-
-![Extension Y](/docs2/images/editors/compositor/header/add-menu-tracking/extension-y.png)
-
-How to extend the image in x direction.
-
 #### Outputs
 
 ##### Image
 
 Data type: Color.
 
-Standard image input.
+Standard image output.
 
 ### Track Position
 
 ![Track Position](/docs2/images/editors/compositor/header/add-menu-tracking/track-position.png)
 
 The Track Position node is used to return information about a tracking marker to the Compositor. You need a tracking project here.
+
+#### Inputs
+
+##### Mode
+
+Data type: Menu.
+
+![Mode](/docs2/images/editors/compositor/header/add-menu-tracking/mode.png)
+
+Which marker position to use for output.
+
+###### Absolute
+
+Outputs an absolute position of a marker.
+
+###### Relative Start
+
+Outputs the positions of a marker relative to the first marker of a track.
+
+###### Relative Frame
+
+Outputs the positions of a marker relative to the markers of the given Frame.
+
+###### Absolute Frame
+
+Outputs the absolute positions of a marker at the given Frame.
+
+##### Frame
+
+Data type: Integer.
+
+The frame to use as reference. Only visible when Mode is Relative Frame or Absolute Frame.
 
 #### Properties
 
@@ -207,35 +263,19 @@ Camera object to get track information from.
 
 The name of the track to get track information from.
 
-##### Mode
-
-![Mode](/docs2/images/editors/compositor/header/add-menu-tracking/mode.png)
-
-Which marker position to use for output.
-
-###### Absolute
-
-Outputs an absolute position of a marker.
-
-###### Relative Start
-
-Outputs the positions of a marker relative to the first marker of a track.
-
-###### Relative Frame
-
-Outputs the positions of a marker relative to the markers of the given Frame.
-
-###### Absolute Frame
-
-Outputs the absolute positions of a marker at the given Frame.
-
 #### Outputs
 
-##### X/Y
+##### X
 
 Data type: Float.
 
-The marker’s X and Y location.
+The marker’s X location.
+
+##### Y
+
+Data type: Float.
+
+The marker’s Y location.
 
 ##### Speed
 
