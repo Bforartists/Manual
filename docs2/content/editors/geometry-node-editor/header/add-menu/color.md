@@ -33,11 +33,19 @@ The Blackbody node converts a blackbody temperature to RGB value. This can be us
 
 #### Inputs
 
-**Temperature**: The temperature in Kelvin.
+##### Temperature
+
+Data type: Float (color temperature).
+
+The temperature in Kelvin.
 
 #### Outputs
 
-**Color**: RGB color output.
+##### Color
+
+Data type: Color.
+
+The RGB color of the temperature.
 
 ### Gamma
 
@@ -47,11 +55,25 @@ Apply a gamma correction.
 
 #### Inputs
 
-**Color**: RGB Color input. · **Gamma**: The gamma correction value. 1 is unchanged.
+##### Color
+
+Data type: Color.
+
+The RGB color input.
+
+##### Gamma
+
+Data type: Float.
+
+The gamma correction value. 1 is unchanged.
 
 #### Outputs
 
-**Color**: RGB color output.
+##### Color
+
+Data type: Color.
+
+The corrected RGB color.
 
 ### Color Ramp
 
@@ -125,15 +147,17 @@ Adjust the active color stop.
 
 #### Outputs
 
-##### Image
+##### Color
 
-Standard image output.
+Data type: Color.
+
+The color from the color ramp at the Factor position.
 
 ##### Alpha
 
 Data type: Float.
 
-Standard Alpha Output.
+The alpha value from the color ramp at the Factor position.
 
 ### RGB Curves
 
@@ -141,7 +165,7 @@ Standard Alpha Output.
 
 Adjust the RGB channels by curves.
 
-#### Input
+#### Inputs
 
 ##### Factor
 
@@ -155,7 +179,7 @@ Data type: Color.
 
 The input color.
 
-#### RGB Curve
+#### Properties
 
 ##### C R G B
 
@@ -206,7 +230,7 @@ You can choose between Auto handle, Vector Handle and Auto Clamped.
 - **Position X / Y**: The position of the selectedc curve point.
 - **Delete Points**: Deletes the selected curve point.
 
-#### Output
+#### Outputs
 
 ##### Color
 
@@ -234,15 +258,15 @@ Controls the amount of influence the node exerts on the output image.
 
 ##### A
 
-Data type: Color.
+Data type: follows the Data Type setting.
 
-Usually the background image. The image size and resolution sets the dimensions of the output image.
+The first value. A Factor of 0 gives this value.
 
 ##### B
 
-Data type: Color.
+Data type: follows the Data Type setting.
 
-Usually he foreground image.
+The second value. A Factor of 1 gives this value.
 
 #### Properties
 
@@ -264,7 +288,14 @@ Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, C
 
 - **Clamp Result**: Clamp the result to 0, 1 range.
 - **Clamp Factor**: Clamp the factor to 0, 1 range.
-- **Outputs**: **Result**: Standard output.
+
+#### Outputs
+
+##### Result
+
+Data type: follows the Data Type setting.
+
+The mixed value.
 
 ### Combine Color
 
@@ -272,25 +303,39 @@ Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, C
 
 Combine the single RGBA channels into a single image.
 
-#### Input
+#### Inputs
+
+##### Red
+
+Data type: Float (factor).
+
+The red channel. In HSV and HSL mode this socket is called Hue.
+
+##### Green
+
+Data type: Float (factor).
+
+The green channel. In HSV and HSL mode this socket is called Saturation.
+
+##### Blue
+
+Data type: Float (factor).
+
+The blue channel. In HSV mode this socket is called Value, in HSL mode Lightness.
+
+##### Alpha
+
+Data type: Float (factor).
+
+The alpha channel.
+
+#### Properties
 
 ##### Mode
 
 - **RGB** colour processing
 - **HSV** colour processing
 - **HSL** colour processing
-
-###### Input – RGB mode
-
-**R, G and B**: The red, green and blue channels of an image.
-
-###### Input – HSV mode
-
-**H , S and V**: The Hue, Saturation and Value channels of an image.
-
-###### Input – HSL mode
-
-**H , S and L**: The Hue, Saturation and Luminescence channels of an image.
 
 #### Outputs
 
@@ -304,9 +349,17 @@ The rgba output color.
 
 ![Separate Color](/docs2/images/editors/geometry-node-editor/header/add-menu-color/combine-color.png)
 
-Combine the single RGBA channels into a single image.
+Split a color into its single channels.
 
-#### Input
+#### Inputs
+
+##### Color
+
+Data type: Color.
+
+The color to split into channels.
+
+#### Properties
 
 ##### Mode
 
@@ -314,28 +367,28 @@ Combine the single RGBA channels into a single image.
 - **HSV** colour processing
 - **HSL** colour processing
 
-##### Image
+#### Outputs
 
-Data type: Color.
-
-The image input.
-
-#### Output
-
-##### Red, Green, Blue and Alpha
+##### Red
 
 Data type: Float.
 
-The red, green, blue and alpha channels of an image in RGB mode.
+The red channel. In HSV and HSL mode this socket is called Hue.
 
-##### Hue Saturation Value Alpha
-
-Data type: Float.
-
-The Hue Saturation Value Alpha channels in HSV mode.
-
-##### Hue Saturation Lightness Alpha
+##### Green
 
 Data type: Float.
 
-The Hue Saturation Lightness Alpha channels in HSL mode.
+The green channel. In HSV and HSL mode this socket is called Saturation.
+
+##### Blue
+
+Data type: Float.
+
+The blue channel. In HSV mode this socket is called Value, in HSL mode Lightness.
+
+##### Alpha
+
+Data type: Float.
+
+The alpha channel.

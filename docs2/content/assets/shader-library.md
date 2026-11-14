@@ -510,11 +510,11 @@ Data type: Vector.
 
 Coordinates to use. Leave unconnected for automatic Object coordinates.
 
-#### Factor
+#### Fac
 
 Data type: Float (factor).
 
-Amount of blur. Default: 0.2.
+Amount of blur. Default: 0.2. More render samples give a smoother result, because the blur is made with white noise.
 
 ### Outputs
 
@@ -526,7 +526,7 @@ The resulting vector.
 
 ### How to use
 
-Connect a vector to Vector. The coordinates are shaken with random noise, Factor sets how much. Use the result as the vector of a texture for a grainy blur.
+Connect a vector to Vector. The coordinates are shaken with random noise, Fac sets how much. Use the result as the vector of a texture for a grainy blur.
 
 ## Equirectangular
 
@@ -702,7 +702,7 @@ Data type: Vector.
 
 The resulting vector.
 
-#### Is Original
+#### isOriginal
 
 Data type: Float.
 
@@ -710,7 +710,7 @@ White on the original side of the mirror, black on the mirrored side.
 
 ### How to use
 
-Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. Is Original is white on the side that was not mirrored.
+Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. isOriginal is white on the side that was not mirrored.
 
 ## Object-World Normal
 
@@ -810,7 +810,7 @@ Coordinates to convert.
 
 ### Outputs
 
-#### Cylindrical
+#### Cylindrical(Polar + Z)
 
 Data type: Vector.
 
@@ -842,7 +842,7 @@ Data type: Vector.
 
 Center point of the repeat. Default: (0.5, 0.5, 0).
 
-#### Number of Repetitions
+#### Number of repetitions
 
 Data type: Float.
 
@@ -864,7 +864,7 @@ The changed coordinates.
 
 ### How to use
 
-Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of Repetitions sets how often and Scale the size. UV is the result.
+Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of repetitions sets how often and Scale the size. UV is the result.
 
 ## Radial Symmetry 2
 
@@ -888,7 +888,7 @@ Data type: Vector.
 
 Center point of the repeat.
 
-#### Number of Repetitions
+#### Number of repetitions
 
 Data type: Float.
 
@@ -922,7 +922,7 @@ The resulting vector.
 
 ### How to use
 
-Connect a vector to Vector. Space is repeated around Center Axis, Number of Repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
+Connect a vector to Vector. Space is repeated around Center Axis, Number of repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
 
 ## Spherical
 
@@ -942,7 +942,7 @@ Coordinates to convert.
 
 ### Outputs
 
-#### Spherical
+#### Spherical(r, theta, phi)
 
 Data type: Vector.
 
@@ -2446,13 +2446,13 @@ Data type: Vector.
 
 Coordinates to use. Leave unconnected for automatic Object coordinates.
 
-#### Color 1
+#### Color1
 
 Data type: Color.
 
 First pattern color.
 
-#### Color 2
+#### Color2
 
 Data type: Color.
 
@@ -2504,7 +2504,7 @@ The UVs per checker vector output.
 
 ### How to use
 
-Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. A checkerboard with any two colors. Color 1 and Color 2 set the colors, Modulo the number of steps and Dot a dot variant. Scale sets the size of the squares.
+Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. A checkerboard with any two colors. Color1 and Color2 set the colors, Modulo the number of steps and Dot a dot variant. Scale sets the size of the squares.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -3452,12 +3452,6 @@ Data type: Float.
 
 Rotates each cell point around its cell center. Animate it for a swirling effect. Default: 0.
 
-#### Smoothness
-
-Data type: Float (factor).
-
-How much Smooth F1 rounds off the edges between cells. 0 matches F1. Default: 0.5.
-
 #### Scale
 
 Data type: Float.
@@ -3498,7 +3492,7 @@ Position of the nearest cell point.
 
 ### How to use
 
-Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness, Point Rotation and Smoothness shape the cells. F1 is the distance to the nearest point and Random Color gives each cell a color.
+Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness and Point Rotation shape the cells. F1 is the distance to the nearest point and Random Color gives each cell a color.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -3682,7 +3676,7 @@ The asset with default values on a plane, with the UV coordinates of the plane m
 
 ![Bean](/docs2/images/assets/shader-library/shapes/bean.png)
 
-Draws a vector shape with controls. Value is the smooth shape and Mask the sharp one.
+Draws a vector shape with controls. Normalized Value is the smooth shape and Mask the sharp one.
 
 ### Inputs
 
@@ -3700,7 +3694,7 @@ The scale of the shape. Default: 0.5.
 
 ### Outputs
 
-#### Value
+#### Normalized Value
 
 Data type: Float.
 
@@ -3714,7 +3708,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Size sets its size. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Size sets its size. Normalized Value is the smooth shape, Mask is the sharp version of it.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -4018,7 +4012,7 @@ Data type: Float.
 
 The offset of the shape. Default: 1.
 
-#### Number of Wings
+#### Number of wings
 
 Data type: Integer.
 
@@ -4046,7 +4040,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Scale sets its size. Offset moves it. Number of Wings sets the wings. Form changes the shape of the curve. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Scale sets its size. Offset moves it. Number of wings sets the wings. Form changes the shape of the curve. Value is the smooth shape, Mask is the sharp version of it.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -5560,13 +5554,13 @@ Second mask. Default: 0.
 
 ### Outputs
 
-#### Union (OR)
+#### Union(OR)
 
 Data type: Float.
 
 White where either mask is white.
 
-#### Intersection (AND)
+#### Intersection(AND)
 
 Data type: Float.
 
@@ -5586,7 +5580,7 @@ White where only one mask is white.
 
 ### How to use
 
-Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union (OR) adds them, Intersection (AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
+Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union(OR) adds them, Intersection(AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
 
 ## Image Edge Detection
 

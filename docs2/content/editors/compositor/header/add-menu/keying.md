@@ -51,31 +51,83 @@ For example in YUV color space, this is useful when compositing stock footage of
 
 Data type: Color.
 
-Standard image input. · **Minimum**: Determines the lowest values that are considered foreground. (Which is supposed to be – relatively – height values: from this value to 1.0.) · **Maximum**: Determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – low values: from 0.0 to this value.)
+Standard image input.
+
+##### Minimum
+
+Data type: Float (factor).
+
+Channel values lower than this minimum are keyed. It determines the lowest values that are considered foreground. (Which is supposed to be – relatively – high values: from this value to 1.0.)
+
+##### Maximum
+
+Data type: Float (factor).
+
+Channel values higher than this maximum are not keyed. It determines the highest values that are considered to be background objects. (Which is supposed to be – relatively – low values: from 0.0 to this value.)
 
 ##### Color Space
 
 Data type: Menu.
 
-This button selects what color space the channels will represent. RGB, HSV, YUV, YCbCr
+Selects what color space the channels will represent: RGB, HSV, YUV or YCbCr. It decides which of the Key Channel and Limit Channel inputs is visible.
 
-##### Key channel
+##### RGB Key Channel
 
-This button selects the channel, defined by the Color Space, to use to determine the matte.
+Data type: Menu.
 
-##### Algorithm
+The channel to use to determine the matte: R, G or B. Only visible when Color Space is RGB.
+
+##### HSV Key Channel
+
+Data type: Menu.
+
+The channel to use to determine the matte: H, S or V. Only visible when Color Space is HSV.
+
+##### YUV Key Channel
+
+Data type: Menu.
+
+The channel to use to determine the matte: Y, U or V. Only visible when Color Space is YUV.
+
+##### YCbCr Key Channel
+
+Data type: Menu.
+
+The channel to use to determine the matte: Y, Cb or Cr. Only visible when Color Space is YCbCr.
+
+##### Limit Method
+
+Data type: Menu.
 
 ![Algorithm](/docs2/images/editors/compositor/header/add-menu-keying/algorithm.png)
 
-Max or Single.
+How to limit the matte. Single limits by a single channel that you choose. Max limits by the maximum of the other channels.
 
-##### Limit
+##### RGB Limit Channel
+
+Data type: Menu.
 
 ![Limit](/docs2/images/editors/compositor/header/add-menu-keying/limit.png)
 
-Limit by single channel or limit by maximum of other channels.
+The channel to limit by: R, G or B. Only visible when Limit Method is Single and Color Space is RGB.
 
-With method Single you can choose a single channel.
+##### HSV Limit Channel
+
+Data type: Menu.
+
+The channel to limit by: H, S or V. Only visible when Limit Method is Single and Color Space is HSV.
+
+##### YUV Limit Channel
+
+Data type: Menu.
+
+The channel to limit by: Y, U or V. Only visible when Limit Method is Single and Color Space is YUV.
+
+##### YCbCr Limit Channel
+
+Data type: Menu.
+
+The channel to limit by: Y, Cb or Cr. Only visible when Limit Method is Single and Color Space is YCbCr.
 
 #### Outputs
 
@@ -101,11 +153,49 @@ Use this, for example, to composite images that have been shot in front of a gre
 
 #### Inputs
 
-**Image**: Standard image input. · **Key Color**: The background color usually selected using the color picker and the original image. · **Minimum**: The minimum value to key a color. · **Maximum**: The maximum value to key a color. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
+##### Image
+
+Data type: Color.
+
+Standard image input.
+
+##### Key Color
+
+Data type: Color.
+
+The background color, usually picked with the color picker from the original image.
+
+##### Minimum
+
+Data type: Float (angle).
+
+If the angle between the color and the key color in CrCb space is less than this minimum angle, the color is keyed.
+
+##### Maximum
+
+Data type: Float (angle).
+
+If the angle between the color and the key color in CrCb space is larger than this maximum angle, the color is not keyed.
+
+##### Falloff
+
+Data type: Float (factor).
+
+Increase to make nearby pixels partially transparent, for a smoother blend along the edges. 0 is completely sharp and 1 is completely smooth.
 
 #### Outputs
 
-**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
+##### Image
+
+Data type: Color.
+
+Image with its alpha channel adjusted for the keyed selection.
+
+##### Matte
+
+Data type: Float.
+
+A black-and-white alpha mask of the key.
 
 ### Color Key
 
@@ -115,11 +205,49 @@ The Color Key node creates a matte based on a specified color of the input image
 
 #### Inputs
 
-**Image**: Standard image input. · **Key Color**: The sliders represent threshold values. Higher values in this node’s context mean a wider range of colors from the specified will be added to the matte. · **Hue, Saturation, Value**: Hue, saturation and value values.
+##### Image
+
+Data type: Color.
+
+Standard image input.
+
+##### Key Color
+
+Data type: Color.
+
+The color to key.
+
+##### Hue
+
+Data type: Float (factor).
+
+If the difference in hue between the color and the key color is less than this threshold, the color is keyed. Higher values add a wider range of colors to the matte.
+
+##### Saturation
+
+Data type: Float (factor).
+
+If the difference in saturation between the color and the key color is less than this threshold, the color is keyed.
+
+##### Value
+
+Data type: Float (factor).
+
+If the difference in value (brightness) between the color and the key color is less than this threshold, the color is keyed.
 
 #### Outputs
 
-**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
+##### Image
+
+Data type: Color.
+
+Image with its alpha channel adjusted for the keyed selection.
+
+##### Matte
+
+Data type: Float.
+
+A black-and-white alpha mask of the key.
 
 ### Color Spill
 
@@ -147,7 +275,7 @@ Standard Factor.
 
 Data type: Menu.
 
-R, G, B
+The color channel that has the spill: R, G or B.
 
 ##### Limit Method
 
@@ -155,19 +283,35 @@ Data type: Menu.
 
 ![Limit Method](/docs2/images/editors/compositor/header/add-menu-keying/limit-method.png)
 
-Simple or Average.
+How to limit the spill. Single limits by a single channel that you choose. Average limits by the average of the other two channels.
 
-###### Limiting Channel
+##### Limit Channel
 
-R, G, B values
+Data type: Menu.
 
-###### Limit Strength
+The channel to limit by: R, G or B. Only visible when Limit Method is Single.
 
-Specifies the strtength of the limit channel.
+##### Limit Strength
 
-###### Spill Strength subpanel
+Data type: Float (factor).
 
-Allows you to specify the spill strength for each color channel. If disabled the spill channel will have a unit scale. While other channels will be zero. · **Strength**: Specifies the spilling strengt of each color channel.
+Specifies the limiting strength of the limit channel.
+
+##### Spill Strength
+
+This panel holds the spill strength settings. It is closed by default.
+
+###### Use Spill Strength
+
+Data type: Boolean.
+
+Allows you to specify the spill strength for each color channel. If disabled, the spill channel will have a unit scale, while the other channels will be zero. This is the checkbox in the panel header.
+
+###### Strength
+
+Data type: Color.
+
+Specifies the spilling strength of each color channel.
 
 #### Outputs
 
@@ -185,11 +329,43 @@ This node produces a matte that isolates foreground content by comparing it with
 
 #### Inputs
 
-**Image 1**: Contains foreground content against the background that is to be removed. · **Image 2**: The reference background image. · **Tolerance**: Where pixels match the reference background to within the specified threshold, the matte is made transparent. · **Falloff**: Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
+##### Image 1
+
+Data type: Color.
+
+Contains foreground content against the background that is to be removed.
+
+##### Image 2
+
+Data type: Color.
+
+The reference background image.
+
+##### Tolerance
+
+Data type: Float (factor).
+
+Where pixels match the reference background to within the specified threshold, the matte is made transparent.
+
+##### Falloff
+
+Data type: Float (factor).
+
+Increase to make nearby pixels partially transparent, for a smoother blend along the edges.
 
 #### Outputs
 
-**Image**: Image with its alpha channel adjusted for the keyed selection. · **Matte**: A black-and-white alpha mask of the key.
+##### Image
+
+Data type: Color.
+
+Image with its alpha channel adjusted for the keyed selection.
+
+##### Matte
+
+Data type: Float.
+
+A black-and-white alpha mask of the key.
 
 ### Distance Key
 
@@ -217,7 +393,7 @@ The color that is to be keyed.
 
 Data type: Menu.
 
-RGB, YCC It is also possible to work with YCbCr color space, but only the Cb and Cr channels are taken into consideration for determining the distance between the foreground and background pixels.
+The color space to measure the distance in: RGB or YCC. It is also possible to work with YCbCr color space, but only the Cb and Cr channels are taken into consideration for determining the distance between the foreground and background pixels.
 
 ##### Tolerance
 
@@ -265,29 +441,41 @@ Data type: Color.
 
 The color of content to be removed. This may be a single color, or a reference image such as generated by the Keying Screen Node.
 
-##### Preprocess subpanel
+##### Preprocess
 
 ![Preprocess subpanel](/docs2/images/editors/compositor/header/add-menu-keying/preprocess-subpanel.png)
 
+This panel holds the settings that prepare the image before keying. It is closed by default.
+
 ###### Blur Size
+
+Data type: Integer.
 
 Reduce the effects of color noise in the image by blurring only color by the given amount, leaving luminosity intact. This will affect matte calculation only, not the result image.
 
-##### Key subpanel
+##### Key
 
 ![Key subpanel](/docs2/images/editors/compositor/header/add-menu-keying/key-subpanel.png)
 
+This panel holds the key settings. It is closed by default.
+
 ###### Balance
+
+Data type: Float (factor).
 
 This is the balance between color channels compared with the key color. 0.5 will average the other channels (red and blue in the case of a green screen).
 
 ![Balance](/docs2/images/editors/compositor/header/add-menu-keying/balance.png)
 
-This may be tweaked in tandem with Clip Black and Clip White while checking the Matte output to create a mask with optimal separation.
+This may be tweaked in tandem with Black Level and White Level while checking the Matte output to create a mask with optimal separation.
 
-##### Tweak subpanel
+##### Tweak
+
+This panel holds the settings to tweak the matte. It is closed by default. It also contains the Edges panel.
 
 ###### Black Level
+
+Data type: Float (factor).
 
 This sets the threshold for what becomes fully transparent in the output (black in the matte). It should be set as low as possible. Uneven backdrops will require this value to be increased. Use of the Keying Screen Node can help keep this value low. You may also use a Garbage Matte to exclude problematic areas.
 
@@ -295,61 +483,113 @@ This value does not impact areas detected as edges to ensure edge detail is pres
 
 ###### White Level
 
-This sets the threshold for what becomes fully opaque in the output (white in the matte). It should be set as high as possible. Colors close to green in the foreground may require reducing this value and/or adjusting the Screen Balance. Particularly problematic parts can fixed with a Core Matte instead of a low Clip White.
+Data type: Float (factor).
+
+This sets the threshold for what becomes fully opaque in the output (white in the matte). It should be set as high as possible. Colors close to green in the foreground may require reducing this value and/or adjusting the Balance. Particularly problematic parts can be fixed with a Core Matte instead of a low White Level.
 
 This value does not impact areas detected as edges to ensure edge detail is preserved.
 
-###### Edges subpanel
+###### Size
+
+Data type: Integer.
 
 ![Edges subpanel](/docs2/images/editors/compositor/header/add-menu-keying/edges-subpanel.png)
 
-###### Size
-
-Size of the search window to find edges.
+Size of the search window to find edges. In the Edges panel inside the Tweak panel.
 
 ###### Tolerance
 
+Data type: Float (factor).
+
 ![Tolerance](/docs2/images/editors/compositor/header/add-menu-keying/tolerance.png)
 
-The tolerance in the color difference in which a pixel is considered to be part of the edge.
+The tolerance in the color difference in which a pixel is considered to be part of the edge. In the Edges panel inside the Tweak panel.
 
-- **Mask subpanel**: —
-- **Garbage Matte**: An optional mask of area(s) to always exclude from the output. This is removed from the chroma key generated matte.
-- **Core Matte**: An optional mask of area(s) to always include in the output. This is merged with the chroma key generated matte.
+##### Mask
 
-##### Postprocess subpanel
+This panel holds optional masks. It is closed by default.
+
+###### Garbage Matte
+
+Data type: Float (factor).
+
+An optional mask of area(s) to always exclude from the output. This is removed from the chroma key generated matte.
+
+###### Core Matte
+
+Data type: Float (factor).
+
+An optional mask of area(s) to always include in the output. This is merged with the chroma key generated matte.
+
+##### Postprocess
 
 ![Postprocess subpanel](/docs2/images/editors/compositor/header/add-menu-keying/postprocess-subpanel.png)
 
+This panel holds the settings that change the matte after keying. It is closed by default.
+
 ###### Blur Size
 
-Blur the image with the given size.
+Data type: Integer.
+
+Blur the matte with the given size.
 
 ###### Dilate Size
 
-Dilate or erode the image with the given size. A negative value means erosion, a positive value means dilate.
+Data type: Integer.
+
+Dilate or erode the matte with the given size. A negative value means erosion, a positive value means dilate.
 
 ###### Feather Size
 
-Dilate or erode the image using an inverse distance operation with the given size. A negative value means erosion, a positive value means dilate.
+Data type: Integer.
 
-###### Feather falloff
+Dilate or erode the matte using an inverse distance operation with the given size. A negative value means erosion, a positive value means dilate.
+
+###### Feather Falloff
+
+Data type: Menu.
 
 ![Feather falloff](/docs2/images/editors/compositor/header/add-menu-keying/feather-falloff.png)
 
 The rate of the falloff at the edges of the matte when feathering, to manage edge detail.
 
-##### Despill subpanel
+##### Despill
 
 ![Despill subpanel](/docs2/images/editors/compositor/header/add-menu-keying/despill-subpanel.png)
 
+This panel holds the despill settings. It is closed by default.
+
 ###### Strength
+
+Data type: Float (factor).
 
 Controls how much color bleed from the key color is removed from the input image: 0 means no despilling, 1 means all possible spilling will be removed. The underlying implementation is the same as adjusting the Unspill amount of the Color Spill Node.
 
 ###### Balance
 
-This controls how the color channels are compared when computing spill, affecting the hue and shade of the corrected colors. It is similar to setting the Limiting Channel in the Color Spill Node.
+Data type: Float (factor).
+
+This controls how the color channels are compared when computing spill, affecting the hue and shade of the corrected colors. It is similar to setting the Limit Channel in the Color Spill Node.
+
+#### Outputs
+
+##### Image
+
+Data type: Color.
+
+The image with the backdrop removed and the spill corrected.
+
+##### Matte
+
+Data type: Float.
+
+A black-and-white alpha mask of the key.
+
+##### Edges
+
+Data type: Float.
+
+Shows the pixels that the node identified as edges. Use it to check the Size and Tolerance settings.
 
 ### Keying Screen
 
@@ -360,6 +600,14 @@ The Keying Screen node creates plates for use as a color reference for keying no
 Note that you need to have a motion tracking project loaded. This gives you the Camera then.
 
 ![Keying Screen](/docs2/images/editors/compositor/header/add-menu-keying/keying-screen-2.png)
+
+#### Inputs
+
+##### Smoothness
+
+Data type: Float (factor).
+
+The smoothness of the keying screen.
 
 #### Properties
 
@@ -376,10 +624,6 @@ Loads a new movie clip right from the node, so you don't have to load it in the 
 ![Tracking Object](/docs2/images/editors/compositor/header/add-menu-keying/tracking-object.png)
 
 Tracking Object to generate the gradient. You will probably want to create new a tracking object in the Object panel, because tracks used for gradients can not actually be used for camera/object tracking. After this tracks might be placed in places where gradient colors should be sampled. These tracks could be tracked or moved manually, so gradients would be updating automatically along the movie. Tracks might have an offset for easier tracking of feature-less screens.
-
-##### Smooth
-
-The smoothness of the keying screen.
 
 #### Outputs
 

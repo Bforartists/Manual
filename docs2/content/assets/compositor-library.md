@@ -140,7 +140,7 @@ Controls the intensity of the color temperature adjustment.
 
 #### Temp Kelvin
 
-Data type: Float.
+Data type: Float (factor).
 
 Sets the color temperature in Kelvin.
 
@@ -240,13 +240,13 @@ How strong the color variation is.
 
 #### Scale
 
-Data type: Vector.
+Data type: Vector (XYZ).
 
 Size of the variation pattern.
 
 #### Offset
 
-Data type: Vector.
+Data type: Vector (translation).
 
 Shifts the variation pattern.
 
@@ -481,7 +481,7 @@ The input image to process.
 
 #### Saturation
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the image's color saturation. The range is 0 to 2.
 
@@ -592,7 +592,7 @@ Controls the intensity of line variation effects.
 
 ##### Grid Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the grid pattern.
 
@@ -612,7 +612,7 @@ Adjusts the thickness of the grid lines.
 
 ##### Detailed Grid Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of a finer grid pattern.
 
@@ -632,7 +632,7 @@ Adjusts the thickness of the finer grid lines.
 
 ##### Border Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the object borders.
 
@@ -760,7 +760,7 @@ Color of the second checker
 
 ##### Frame Start
 
-Data type: Float.
+Data type: Float (factor).
 
 The starting frame for the animation effect.
 
@@ -778,13 +778,13 @@ Controls the speed of the animation transition.
 
 ##### Transition Feather
 
-Data type: Float.
+Data type: Float (factor).
 
 Adjusts the softness of the transition edges.
 
 ##### Transition Rotation
 
-Data type: Float.
+Data type: Float (angle).
 
 Rotates the transition effect.
 
@@ -1953,7 +1953,7 @@ The size of the glare relative to the image. 1 means the glare covers the entire
 
 ##### Sun Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 The position of the source of the rays in normalized coordinates. 0 means lower left corner and 1 means upper right corner. Default: (0.5, 0.65, 0).
 
@@ -2381,13 +2381,13 @@ Controls the softness of the vignette edges. Default: 0.5.
 
 ##### Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Sets the center position of the vignette effect. Default: (0.5, 0.5, 0).
 
 ##### Size
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Controls the size of the vignette effect. Default: (0.75, 0.35, 0).
 
@@ -2514,13 +2514,13 @@ Controls the softness of the vignette edges. Default: 0.5.
 
 ##### Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Sets the center position of the vignette effect. Default: (0.5, 0.5, 0).
 
 ##### Size
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Controls the size of the vignette effect. Default: (0.75, 0.35, 0).
 
@@ -2853,11 +2853,11 @@ Data type: Float.
 
 Wave pattern using distance metric 3.
 
-#### Metric 4
+#### Metric 3 (fourth output)
 
 Data type: Float.
 
-Wave pattern using distance metric 4.
+Wave pattern using distance metric 4. In the node, this fourth output is also named Metric 3.
 
 ### How to use
 
@@ -7514,7 +7514,7 @@ The amount of translations along each axis.
 
 #### Rotation
 
-Data type: Vector.
+Data type: Vector (euler).
 
 The amount of rotation on each axis, around the X, Y, then Z axes in that order.
 

@@ -230,21 +230,16 @@ Data type: Geometry.
 
 The grease pencil geometry.
 
-#### Properties
-
 ##### Depth Order
+
+Data type: Menu.
 
 ![Depth Order](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/depth-order.png)
 
-###### 2D Layers
+How the strokes are sorted in depth.
 
-Set the grease pencil depth by the 2d layers.
-
-###### 3D Location
-
-Set the grease pencil depth by the postion in 3d space.
-
-
+- **2D Layers**: Set the grease pencil depth by the 2D layers.
+- **3D Location**: Set the grease pencil depth by the position in 3D space.
 
 #### Outputs
 
@@ -339,37 +334,38 @@ Curves output.
 
 Merge all grease pencil layers into one layer
 
-#### Grease Pencil
+#### Inputs
 
 ![Grease Pencil](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil.png)
+
+##### Grease Pencil
+
+Data type: Geometry.
 
 The grease pencil geometry.
 
 ##### Selection
 
-A selection of the grease pencil geometry.
+Data type: Boolean.
 
-##### Group ID
-
-In By Group ID mode. Input a group ID value.
-
-
-
-#### Properties
-
-![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/properties.png)
+A selection of the grease pencil layers to merge.
 
 ##### Mode
 
-###### By Name
+Data type: Menu.
 
-Combine all layers which have the same name.
+![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/properties.png)
 
-###### By Group ID
+How the layers are grouped for merging.
 
-Combine all layers by a provided Group ID.
+- **By Name**: Combine all layers which have the same name.
+- **By Group ID**: Combine all layers by a provided Group ID.
 
+##### Group ID
 
+Data type: Integer.
+
+The group ID of each layer. Layers with the same ID are merged. Only in By Group ID mode.
 
 #### Outputs
 

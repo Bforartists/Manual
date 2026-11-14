@@ -33,11 +33,19 @@ Convert a blackbody temperature to an RGB value.
 
 #### Inputs
 
-**Temperature**: Standard input.
+##### Temperature
+
+Data type: Float (color temperature).
+
+The temperature in Kelvin.
 
 #### Outputs
 
-**Color**: Standard output.
+##### Color
+
+Data type: Color.
+
+The color that matches the temperature.
 
 ### Brightness/Contrast
 
@@ -145,9 +153,11 @@ Adjust the active color stop.
 
 #### Outputs
 
-##### Image
+##### Color
 
-Standard image output.
+Data type: Color.
+
+The color at the position given by the Factor.
 
 ##### Alpha
 
@@ -163,39 +173,63 @@ Use this node to apply a gamma correction.
 
 #### Inputs
 
-**Color**: Standard image input. · **Gamma**: An exponential brightness factor.
+##### Color
+
+Data type: Color.
+
+The color on which the gamma correction is applied.
+
+##### Gamma
+
+Data type: Float.
+
+An exponential brightness factor. It controls how bright the mid-tones are compared to full black and full white.
 
 #### Outputs
 
-**Color**: Standard output.
+##### Color
 
-### Hue Saturation Value
+Data type: Color.
+
+Standard output.
+
+### Hue/Saturation/Value
 
 ![Hue Saturation Value](/docs2/images/editors/shader-editor/header/add-menu-color/hue-saturation-value.png)
 
 The Hue Saturation Node applies a color transformation in the HSV color space. Called “Hue Saturation Value” in shader and texture context.
 
-#### Inputs / Properties
+#### Inputs
 
-The inputs also works as properties when nothing is connected.
+The inputs also work as properties when nothing is connected.
 
 ##### Hue
+
+Data type: Float.
 
 Specifies the hue rotation of the image. 360° are mapped to (0 to 1). The hue shifts of 0 (-180°) and 1 (+180°) have the same result.
 
 ##### Saturation
 
+Data type: Float.
+
 A saturation of 0 removes hues from the image, resulting in a greyscale image. A shift greater than 1.0 increases saturation.
 
 ##### Value
+
+Data type: Float.
 
 Value is the overall brightness of the image. De/Increasing values shift an image darker/lighter.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output image.
 
 ##### Color
+
+Data type: Color.
 
 Standard input.
 
@@ -235,11 +269,25 @@ The Invert Node inverts the colors in the input image, producing a negative.
 
 #### Inputs
 
-**Factor**: Controls the amount of influence the node exerts on the output image. · **Color**: Standard input.
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of influence the node exerts on the output image.
+
+##### Color
+
+Data type: Color.
+
+Standard input.
 
 #### Outputs
 
-**Color**: Standard image output.
+##### Color
+
+Data type: Color.
+
+Standard image output.
 
 ### Light Falloff
 
@@ -251,11 +299,37 @@ The Light Falloff node allows you to manipulate how light intensity decreases ov
 
 #### Inputs
 
-**Strength**: Light strength before applying falloff modification. · **Smooth**: Smooth intensity of light near light sources. This can avoid harsh highlights, and reduce global illumination noise. 0.0 corresponds to no smoothing; higher values smooth more. The maximum light strength will be strength/smooth.
+##### Strength
+
+Data type: Float.
+
+Light strength before applying falloff modification.
+
+##### Smooth
+
+Data type: Float.
+
+Smooth intensity of light near light sources. This can avoid harsh highlights, and reduce global illumination noise. 0.0 corresponds to no smoothing; higher values smooth more. The maximum light strength will be strength/smooth.
 
 #### Outputs
 
-**Quadratic**: Quadratic light falloff; this will leave strength unmodified if smooth is 0.0 and corresponds to reality. · **Linear**: Linear light falloff, giving a slower decrease in intensity over distance. · **Constant**: Constant light falloff, where the distance to the light has no influence on its intensity.
+##### Quadratic
+
+Data type: Float.
+
+Quadratic light falloff; this will leave strength unmodified if smooth is 0.0 and corresponds to reality.
+
+##### Linear
+
+Data type: Float.
+
+Linear light falloff, giving a slower decrease in intensity over distance.
+
+##### Constant
+
+Data type: Float.
+
+Constant light falloff, where the distance to the light has no influence on its intensity.
 
 ### Mix Color
 
@@ -267,90 +341,73 @@ The Mix node is meant to mix values. This can be colors, or also a vector or a s
 
 Note that the Mix Color node does not start in Color mode when you insert it from the sidebar due a techical limitation in the Blender Python api. Here you have to manually switch to the color mode.
 
-#### Data Type
+#### Inputs
+
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of mixing between the A and B inputs. In Vector mode with the Factor Mode set to Non-Uniform, this is a Vector with one factor per axis.
+
+##### A
+
+Data type: follows the Data Type setting.
+
+The first value to mix. In Color mode this is usually the background color.
+
+##### B
+
+Data type: follows the Data Type setting.
+
+The second value to mix. In Color mode this is usually the foreground color.
+
+#### Properties
+
+##### Data Type
 
 ![Data Type](/docs2/images/editors/shader-editor/header/add-menu-color/data-type.png)
 
-The mode in which the node works.
+The mode in which the node works. It sets the data type of the A, B and Result sockets.
 
-##### Color
-
-The Mix Node in color mode mixes images by working on the individual and corresponding pixels of the two input images. Called “MixRGB” in the shader and texture context.
-
-###### Inputs
-
-- **Factor**: Controls the amount of influence the node exerts on the output image.
-- **Color 1**: Usually the background image. The image size and resolution sets the dimensions of the output image.
-- **Color 2**: Usually he foreground image.
-
-###### Properties
-
-###### Mix
-
-![Mix](/docs2/images/editors/shader-editor/header/add-menu-color/mix.png)
-
-Choose the different blending modes.
-
-Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, Color Dodge, Color Burn, Hue, Saturation, Value, Color, Soft Light, Linear Light.
-
-- **Clamp Result**: Clamp the result to 0, 1 range.
-- **Clamp Factor**: Clamp the factor to 0, 1 range.
-
-###### Outputs
-
-###### Result
-
-Standard output.
-
-##### Vector
+- **Float**: Mixes two single values.
+- **Vector**: Mixes two vectors.
+- **Color**: Mixes two colors with a blending mode. Called “MixRGB” in older versions.
 
 ![Vector](/docs2/images/editors/shader-editor/header/add-menu-color/vector.png)
 
-The vector mode allows you to mix vectors.
+![Float](/docs2/images/editors/shader-editor/header/add-menu-color/float.png)
 
-###### Inputs
+##### Blending Mode
 
-- **Factor**: Controls the amount of influence.
-- **A**: The input vector.
-- **B**: The output vector.
+![Mix](/docs2/images/editors/shader-editor/header/add-menu-color/mix.png)
 
-###### Properties
+Only in Color mode. Choose the different blending modes.
 
-###### Factor Mode
+Mix, Darken, Multiply, Color Burn, Lighten, Screen, Color Dodge, Add, Overlay, Soft Light, Linear Light, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value.
+
+##### Factor Mode
 
 ![Factor Mode](/docs2/images/editors/shader-editor/header/add-menu-color/factor-mode.png)
 
 ![Factor Mode](/docs2/images/editors/shader-editor/header/add-menu-color/factor-mode-2.png)
 
-Use a single factor for all values, or a factor per value.
+Only in Vector mode. Use a single factor for all values (Uniform), or a factor per value (Non-Uniform).
 
-###### Clamp Factor
+##### Clamp Result
 
-Clamp the factor to 0, 1 range.
+Only in Color mode. Clamp the result to the 0 to 1 range.
 
-###### Outputs
+##### Clamp Factor
 
-###### Result
+Clamp the factor to the 0 to 1 range.
 
-Standard output.
+#### Outputs
 
-##### Float
+##### Result
 
-![Float](/docs2/images/editors/shader-editor/header/add-menu-color/float.png)
+Data type: follows the Data Type setting.
 
-The vector mode allows you to mix vectors.
-
-###### Inputs
-
-**Factor**: Controls the amount of influence. · **A**: The input value. · **B**: The output value.
-
-###### Properties
-
-**Clamp Factor**: Clamp the factor to 0, 1 range.
-
-###### Outputs
-
-**Result**: Standard output.
+The mixed value.
 
 ### RGB Curves
 
@@ -451,37 +508,11 @@ Convert a Wavelength value to a RGB value.
 
 #### Inputs
 
-**Wavelength**: The wavelength input.
+##### Wavelength
 
-#### Outputs
+Data type: Float (wavelength).
 
-**Color**: Standard output.
-
-### Combine Color
-
-![Combine Color](/docs2/images/editors/shader-editor/header/add-menu-color/combine-color.png)
-
-Combine the single RGBA channels into a single image.
-
-#### Input
-
-##### Mode
-
-- **RGB** colour processing
-- **HSV** colour processing
-- **HSL** colour processing
-
-###### Input – RGB mode
-
-**R, G and B**: The red, green and blue channels of an image.
-
-###### Input – HSV mode
-
-**H , S and V**: The Hue, Saturation and Value channels of an image.
-
-###### Input – HSL mode
-
-**H , S and L**: The Hue, Saturation and Luminescence channels of an image.
+The wavelength of the light in nanometers.
 
 #### Outputs
 
@@ -489,7 +520,51 @@ Combine the single RGBA channels into a single image.
 
 Data type: Color.
 
-The rgba output color.
+The color that matches the wavelength.
+
+### Combine Color
+
+![Combine Color](/docs2/images/editors/shader-editor/header/add-menu-color/combine-color.png)
+
+Combine the single RGBA channels into a single image.
+
+#### Inputs
+
+The names of the three inputs follow the Mode setting.
+
+##### Red
+
+Data type: Float (factor).
+
+The red channel. Called Hue in HSV and HSL mode.
+
+##### Green
+
+Data type: Float (factor).
+
+The green channel. Called Saturation in HSV and HSL mode.
+
+##### Blue
+
+Data type: Float (factor).
+
+The blue channel. Called Value in HSV mode and Lightness in HSL mode.
+
+#### Properties
+
+##### Mode
+
+- **RGB**: Combine the red, green and blue channels.
+- **HSV**: Combine the hue, saturation and value channels.
+- **HSL**: Combine the hue, saturation and lightness channels.
+
+#### Outputs
+
+##### Color
+
+Data type: Color.
+
+The combined output color.
 
 ### Separate Color
 
@@ -497,39 +572,43 @@ The rgba output color.
 
 Combine the single RGBA channels into a single image.
 
-#### Input
+#### Inputs
 
-##### Mode
-
-- **RGB** colour processing
-- **HSV** colour processing
-- **HSL** colour processing
-
-##### Image
+##### Color
 
 Data type: Color.
 
-The image input.
+The color to split into its channels.
 
-#### Output
+#### Properties
 
-##### Red, Green, Blue and Alpha
+##### Mode
 
-Data type: Float.
+- **RGB**: Split the color into red, green and blue channels.
+- **HSV**: Split the color into hue, saturation and value channels.
+- **HSL**: Split the color into hue, saturation and lightness channels.
 
-The red, green, blue and alpha channels of an image in RGB mode.
+#### Outputs
 
-##### Hue Saturation Value Alpha
+The names of the three outputs follow the Mode setting.
 
-Data type: Float.
-
-The Hue Saturation Value Alpha channels in HSV mode.
-
-##### Hue Saturation Lightness Alpha
+##### Red
 
 Data type: Float.
 
-The Hue Saturation Lightness Alpha channels in HSL mode.
+The red channel. Called Hue in HSV and HSL mode.
+
+##### Green
+
+Data type: Float.
+
+The green channel. Called Saturation in HSV and HSL mode.
+
+##### Blue
+
+Data type: Float.
+
+The blue channel. Called Value in HSV mode and Lightness in HSL mode.
 
 ### RGB to BW
 
@@ -539,11 +618,19 @@ Convert a 24 bit RGB value to a 8 bit black and white value.
 
 #### Inputs
 
-**Color**: Standard output.
+##### Color
+
+Data type: Color.
+
+The color to convert.
 
 #### Outputs
 
-**Val**: Standard output.
+##### Val
+
+Data type: Float.
+
+The grayscale value, based on the luminance of the color.
 
 ### Shader to RGB
 
@@ -553,8 +640,22 @@ Convert rendering effects to RGB value. Eevee only.
 
 #### Inputs
 
-**Shader**: Standard output.
+##### Shader
+
+Data type: Shader.
+
+The shader to convert.
 
 #### Outputs
 
-**Color**: Color output. · **Alpha**: Alphachannel output.
+##### Color
+
+Data type: Color.
+
+Color output.
+
+##### Alpha
+
+Data type: Float.
+
+Alpha channel output.
