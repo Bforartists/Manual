@@ -2000,7 +2000,7 @@ Strength, Direction, Min and Max shape the mask. World Coordinates switches the 
 
 ![Raycast Edges](/docs2/images/assets/shader-library/masks/raycast-edges.png)
 
-Procedural edge mask from Raycast Edges by using object, co-planar and normal edges.
+Draws lines on the edges of your objects, like an ink outline or a technical drawing. Use it for toon and blueprint looks, or as a mask to put wear on the edges. It casts short rays around every point of the surface and draws a line where they find another object, a surface at a different depth, or a surface that faces another way. It works in Cycles and in EEVEE.
 
 ### Inputs
 
@@ -2060,7 +2060,7 @@ Width of the Planar Edges. Default: 0.1.
 
 Data type: Float.
 
-Facomg angle threshold of the co-planar edges. Default: 0.5.
+Facing angle threshold of the co-planar edges. Default: 0.5.
 
 #### Normal Edges
 
@@ -2094,35 +2094,83 @@ Optional. The output of the overlayed edges onto the shader. Place after your sh
 
 Data type: Color.
 
-The color output of the edges mixed over black.
+The edges in the Color of the input, on black.
 
 #### Value
 
 Data type: Float.
 
-Combined edges output value that can be used as a mask.
+All edge types together as a mask: 0 (black) on the edges and 1 (white) everywhere else.
 
 #### Object Edges
 
 Data type: Float.
 
-Object edges output value.
+Only the object edges, as a mask: 0 on the edges, 1 everywhere else.
 
 #### Planar Edges
 
 Data type: Float.
 
-Planar edges output value.
+Only the planar edges, as a mask: 0 on the edges, 1 everywhere else.
 
 #### Normal Edges
 
 Data type: Float.
 
-Normal edges output value.
+Only the normal edges, as a mask: 0 on the edges, 1 everywhere else.
 
 ### How to use
 
-Connect a shader to Shader and a color to Color. Each of Object Edges, Planar Edges and Normal Edges has its own width and threshold. Samples sets the quality. Value is the combined mask.
+Put the node between your shader and the Material Output: connect the shader to **Shader**, and **Shader** out to the Surface of the Material Output. Pick the line color with **Color** and the line thickness with **Width**.
+
+Each edge type has its own panel, so you can turn it off or give it its own width. **Samples** sets the quality of the lines: more samples give cleaner lines but render slower.
+
+> **Tip:** The mask outputs are black on the edges. To use them as an edge mask, for example as the Factor of a Mix Shader that puts wear on the edges, invert them with a Math node set to Subtract (1 minus the value), or swap the two shaders of the Mix Shader.
+
+### Examples
+
+The same scene in every example: a cube standing on the floor, a cylinder, a torus sunk into the floor and a small staircase. The example file is `docs2/examples/assets/shader-library/raycast-edges.blend` in the manual repository, with one scene per picture.
+
+#### Outline over a shader
+
+![Raycast Edges over a grey Principled BSDF](/docs2/images/assets/shader-library/masks/raycast-edges-overlay.png)
+
+A grey Principled BSDF goes into **Shader**, and **Shader** out goes to the Material Output. Color is black and all settings are at their defaults. The lit scene gets an ink outline.
+
+#### Colored and wider lines
+
+![Raycast Edges with orange lines over a dark blue shader](/docs2/images/assets/shader-library/masks/raycast-edges-colored.png)
+
+The same setup with a dark blue shader, an orange **Color** and **Width** 0.25. The lines are thicker everywhere.
+
+#### The Value mask
+
+![Raycast Edges Value output](/docs2/images/assets/shader-library/masks/raycast-edges-value.png)
+
+**Value** connected to an Emission shader. All three edge types together, black on white.
+
+#### The Color output
+
+![Raycast Edges Color output](/docs2/images/assets/shader-library/masks/raycast-edges-color.png)
+
+**Color** connected to an Emission shader, with an orange Color input. The same lines in color, on black.
+
+#### Object, Planar and Normal edges
+
+Each edge type has its own output, so you can see which lines come from where.
+
+![Raycast Edges Object Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-object.png)
+
+**Object Edges:** the outline of each object, against the floor and against the other objects, including the hole of the torus. Where the staircase stands in front of the cube, the two get one shared outline.
+
+![Raycast Edges Planar Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-planar.png)
+
+**Planar Edges:** lines where a surface in front sits on a surface further away, like the top of the cube against the floor far behind it. Lower down the gap to the floor gets small, so the lines fade out.
+
+![Raycast Edges Normal Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-normal.png)
+
+**Normal Edges:** lines where the surface changes direction, like the corners of the cube, the steps and the places where an object meets the floor. Smooth surfaces, like the side of the cylinder, get no lines across them.
 
 # Shader
 
