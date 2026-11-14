@@ -1,0 +1,14 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/all-modes/tool-shelf.md": "editors/3d-viewport/all-modes/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
+  "docs2/content/editors/3d-viewport/curve/edit.md": "editors/3d-viewport/curve/edit.html",
+  "docs2/content/editors/3d-viewport/grease-pencil/edit.md": "editors/3d-viewport/grease-pencil/edit.html",
+  "docs2/content/editors/3d-viewport/hair-curves/edit.md": "editors/3d-viewport/hair-curves/edit.html",
+  "docs2/content/editors/3d-viewport/lattice/edit.md": "editors/3d-viewport/lattice/edit.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/tool-shelf.md": "editors/3d-viewport/mesh/edit/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/metaball/edit.md": "editors/3d-viewport/metaball/edit.html",
+  "docs2/content/editors/3d-viewport/object-mode/tool-shelf.md": "editors/3d-viewport/object-mode/tool-shelf.html"
+ },
+ "images": 599
+}
