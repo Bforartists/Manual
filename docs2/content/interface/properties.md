@@ -6,7 +6,7 @@ path:
   - The Interface
   - Components
   - Menus, buttons and controls
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -188,3 +188,34 @@ Set handle type to Auto.
 #### Auto Clamped Handle
 
 Set handle type to Auto Clamped.
+
+## Tree Lists
+
+Some lists show their items as a tree, with groups you can open and close. You find them for example in the **Grease Pencil layers**, the **Bone Collections** of an armature, **Light Linking** in the Object properties, and the socket list of a node group. Drag the grip at the bottom of the list to show more or fewer rows.
+
+### Filter Options
+
+Click the small arrow at the bottom left of a tree list to show its filter options. They change only what you see in the list, not the data itself.
+
+#### Search
+
+Type part of a name to show only the items that contain it.
+
+#### Invert Search
+
+Shows the items that don't match the search text instead.
+
+#### Sort Alphabetically
+
+Sorts the items by name, from A to Z.
+
+#### Reverse Order
+
+Flips the order of the items, so the last one is shown on top. Click the button again to step through its three states:
+
+- **Off**: the normal order.
+- **Top level**: only the top level of the list is reversed. Items inside a group keep their order.
+- **All levels**: the items inside every group are reversed too.
+
+Dragging an item to a new place still works when the order is reversed.
+
