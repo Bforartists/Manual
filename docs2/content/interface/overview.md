@@ -65,5 +65,7 @@ The splash screen is a bit larger than in older versions, so it has room for mor
 
 The first picture shows the splash screen with recent files, the second one at a first start without recent files.
 
+When a project with its own splash artwork is open, the splash screen shows that artwork instead. See **Splash Screen panel** on the [Project Settings](../editors/project-settings.md) page.
+
 In the splash screen you can also read at what Blender version the current Bforartists version is based at.
 

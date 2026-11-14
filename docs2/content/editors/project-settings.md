@@ -87,6 +87,10 @@ The folder of the project. Read only: to move a project, move its folder.
 
 A custom image for the splash screen while this project is open. **Create from Image** picks an image file; Bforartists crops and scales it to 1000 × 500 pixels and stores it in the project folder. Use an image with a 2:1 shape for the best result. **Clear** removes the custom artwork again; the image file stays on disk.
 
+![The splash screen of a project with custom artwork](/docs2/images/editors/project-settings/project-splash-screen.png)
+
+While the project is open, the splash screen shows your artwork in place of the Bforartists picture. The Bforartists logo stays on top of it, in its usual colors, so the splash still says which program it is. The Project dropdown of the splash screen shows the name of the project.
+
 ### Color Management panel
 
 #### OpenColorIO Configuration
