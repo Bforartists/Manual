@@ -521,9 +521,9 @@ Shows or hides the sidebar at the right in the viewport.
 
 Show or hide the tool settings at the top.
 
-#### Tool shelf tabs
+#### Toolbar Tabs
 
-Show or hide the tool shelf tabs in the tool shelf.
+Shows or hides the category tabs on the tool shelf (the toolbar at the left). The tabs hold the same tools as the header menus, sorted by category, so you reach them with one click.
 
 #### Playback Controls
 
@@ -703,9 +703,9 @@ Displays the Adjust last operation panel down left.
 
 Display the channels in front of the timeline
 
-#### Tool Shelf Tabs
+#### Toolbar Tabs
 
-Show or hide the tool shelf tabs in the tool shelf.
+Shows or hides the category tabs on the tool shelf (the toolbar at the left). The tabs hold the same tools as the header menus, sorted by category, so you reach them with one click.
 
 #### Footer
 

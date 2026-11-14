@@ -6,7 +6,7 @@ path:
   - The Interface
   - Components
   - Panels and tabs
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:
@@ -49,4 +49,8 @@ This can be done by clicking at the header of a panel and holding down ctrl.
 ![Tabs](/docs2/images/ui/interface/panels/tabs.png)
 
 The Sidebars can have Tabs to switch between different content. Also the Properties editor has them. The tabs helps to organize the available tools into categories. In the 3D view it's also a common place where addons adds themselves.
+
+### Compact Tabs
+
+Shows the sidebar tabs in a smaller size, with an icon instead of the name when the tab has one. This leaves more room for the panels. To turn it on or off, right-click a panel header in a sidebar and choose **Compact Tabs**. The setting applies to all sidebars.
 

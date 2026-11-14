@@ -7,7 +7,7 @@ path:
   - "3D Viewport"
   - "All Modes"
   - "Tool Shelf"
-version: "5.1"
+version: "5.3"
 status: needs-review
 icon: tool_settings
 summary: "The tools of All Modes in the tool shelf."
@@ -109,7 +109,7 @@ You can also pin panels. This allows for example to display the snap tools below
 
 We won't explain the tools here, since they are already covered in the corresponding text menus.
 
-You can turn the tabs off in the View menu if you don't want to work with this tool set.
+You can turn the tabs off with **View › Toolbar Tabs** in the editor header if you don't want to work with this tool set.
 
 Note that you need to adjust the width of the tool shelf manually afterwards since it does not automatically update the width of the tool shelf area.
 
