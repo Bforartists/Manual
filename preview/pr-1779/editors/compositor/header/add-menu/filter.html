@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filter · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:6px;padding:.3125rem .625rem;font:600 .8125rem/1.2 sans-serif;position:absolute;top:.75rem;bottom:auto;height:auto;width:auto}.ui-compare-tag.is-left{left:.75rem}.ui-compare-tag.is-right{right:.75rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1779 · <code>docs2/socket-names-1735</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Tear-Off Menus and Panels</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Compositor</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a class="is-current" style="padding-left:3.5rem" href="filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<a style="padding-left:3.5rem" href="tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Object Data</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span>Project Settings</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<a href="../../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Compositor › Header › Add Menu › Filter</div><h1 class="pv-title">Filter</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.3</span><span>🕒 18 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-filter">Add menu - Filter</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/add-menu-filter.png" alt="Add menu - Filter" loading="lazy"><figcaption>Add menu - Filter</figcaption></figure>
+<p>The Filter add menu contains multiple filters you can use on image data, including blurs and other lens effects.</p>
+<h3 id="anti-aliasing">Anti-Aliasing</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/anti-aliasing.png" alt="Anti-Aliasing" loading="lazy"></figure>
+<p>Adds antialiasing to edges in an image.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="image">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="threshold">Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Threshold to detect edges.</p>
+<h5 id="contrast-limit">Contrast Limit</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>How much to eliminate suspicious edges to avoid artifacts.</p>
+<h5 id="corner-rounding">Corner Rounding</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>How much sharp corners will be rounded.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="image-2">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="convolve">Convolve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/convolve.png" alt="Convolve" loading="lazy"></figure>
+<p>Applies a <strong>custom convolution kernel</strong> to an image, enabling advanced filtering effects like blurring, sharpening, edge detection, embossing, and more. This node gives artists direct control over pixel-level transformations.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="image-3">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The source image to be processed. Accepts any RGBA input.</p>
+<h5 id="kernel-data-type">Kernel Data Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Which data type to use for the Kernel input. Float convolves the same kernel with all channels of the image. Color convolves each channel of the kernel with the matching channel of the image.</p>
+<h5 id="kernel">Kernel</h5>
+<div class="ui-doc-dtype dt-other"><p><em>Data type</em><strong>follows the Kernel Data Type setting</strong></p></div>
+<p>A matrix of values that defines the convolution operation. Can be manually defined or procedurally generated. Operates per-channel (R, G, B, A) unless separated beforehand.</p>
+<h5 id="normalize-kernel">Normalize Kernel</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>When enabled, the kernel values are normalized to prevent brightness shifts.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="image-4">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The result of the convolution operation as an image.</p>
+<h3 id="denoise">Denoise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/denoise.png" alt="Denoise" loading="lazy"></figure>
+<p>The Denoise node is used to denoise renders from Cycles and other ray tracing renderers. This helps to significantly reduce render time by rendering with fewer samples.</p>
+<p>It is uses Open Image Denoise, which transforms noisy images into clean images with machine learning.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="image-5">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Noise image input.</p>
+<h5 id="albedo">Albedo</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Optional Albedo render pass to better preserve detail. For Cycles, it is recommended to use the Denoising Albedo render pass, which is available when enabling the Denoising Data passes.</p>
+<h5 id="normal">Normal</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Optional normal render pass to better preserve detail. For Cycles, it is recommended to use the Denoising Normal render pass, which is available when enabling the Denoising Data passes.</p>
+<h5 id="hdr">HDR</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve colors outside the 0 to 1 range.</p>
+<h5 id="prefilter">Prefilter</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/prefilter.png" alt="Prefilter" loading="lazy"></figure>
+<p>Allows users to apply a prefiltering step before denoising, which can improve the denoising result.</p>
+<h6 id="none">None</h6>
+<p>No prefiltering applied.</p>
+<h6 id="fast">Fast</h6>
+<p>Applies a quick prefiltering step to improve denoising with minimal processing time.</p>
+<h6 id="accurate">Accurate</h6>
+<p>Applies a detailed prefiltering step for the best denoising result, but takes more processing time.</p>
+<h5 id="quality">Quality</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/quality.png" alt="Quality" loading="lazy"></figure>
+<p>Defines the quality level of the denoising process:</p>
+<h6 id="follow-scene">Follow Scene</h6>
+<p>Uses the quality set in the scene settings, allowing quick switching between different quality modes for all nodes.</p>
+<h6 id="high">High</h6>
+<p>Highest quality, but longest processing time.</p>
+<h6 id="balanced">Balanced</h6>
+<p>Slightly lower quality, but halves processing time compared to High.</p>
+<h6 id="fast-2">Fast</h6>
+<p>Further reduced quality for a small increase in speed over Balanced.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="image-6">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Denoised image output.</p>
+<h3 id="despeckle">Despeckle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/despeckle.png" alt="Despeckle" loading="lazy"></figure>
+<p>The Despeckle node is used to smooth areas of an image in which noise is noticeable, while leaving complex areas untouched.</p>
+<p>This works by the standard deviation of each pixel and its neighbors is calculated to determine if the area is one of high complexity or low complexity. If the complexity is lower than the threshold then the area is smoothed using a simple mean filter.</p>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="image-7">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="factor">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls the amount the filter effects the image.</p>
+<h5 id="color-threshold">Color Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The threshold to control high/low complexity.</p>
+<h5 id="neighbor-threshold">Neighbor Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The threshold to control the number of pixels that must match.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="image-8">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="dilate-erode">Dilate/Erode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/dilate-erode.png" alt="Dilate/Erode" loading="lazy"></figure>
+<p>The Dilate/Erode node provides a morphology (mathematical shape analysis) filter.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="mask">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Single color channel (or a black-and-white image) input.</p>
+<h5 id="size">Size</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The filter radius. A positive value of Distance dilates (expands) the influence of a pixel on its surrounding pixels. A negative value erodes (shrinks) its influence.</p>
+<h5 id="type">Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/type.png" alt="Type" loading="lazy"></figure>
+<p>There are four different dilate / erode modes: Steps, Threshold, Distance and Feather.</p>
+<h5 id="falloff-size">Falloff Size</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The size of the falloff from the edges, in pixels. If it is less than two pixels, the edges are anti-aliased. Only visible when Type is Threshold.</p>
+<h5 id="falloff">Falloff</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The shape of the falloff at the edges. Only visible when Type is Feather.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="mask-2">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The filtered mask output.</p>
+<h3 id="inpaint">Inpaint</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/inpaint.png" alt="Inpaint" loading="lazy"></figure>
+<p>The Inpaint node is used to extend borders of an image into transparent or masked regions. This can be useful to solve problems like “wire removal” and holes created during chroma keying.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="image-9">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="size-2">Size</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The size of the inpaint in pixels.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="image-10">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="mask-to-sdf">Mask To SDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf.png" alt="Mask To SDF" loading="lazy"></figure>
+<p>Turns a black and white mask into a distance map. Every pixel is given its distance to the nearest edge of the mask. Use it to grow or shrink a mask smoothly, to make soft glows that follow a shape, or to make outlines of any width. Pixels outside the shape get positive values that grow the further away they are. Pixels inside get negative values that grow the deeper they are. The edge sits at zero.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="mask-3">Mask</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>The mask to measure. White (true) pixels are inside the shape.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="sdf">SDF</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The distance of each pixel to the edge, in pixels.</p>
+<h5 id="nearest-pixel">Nearest Pixel</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer Vector</strong></p></div>
+<p>The position of the nearest pixel of the shape, as two whole numbers.</p>
+<h4 id="how-to-use-mask-to-sdf">How to use Mask To SDF</h4>
+<p>The output is a distance, not a picture, so it is used as a ruler: compare it, remap it or run it through a curve to turn the distance into a shape.</p>
+<h5 id="example-distance-bands-around-a-shape">Example: distance bands around a shape</h5>
+<p>A chain that shows what the distance looks like. A heart shape goes in as the mask. The SDF is multiplied by <code>0.01</code> and the result is wrapped with Floored Modulo, so the value restarts every 100 pixels.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf-chain.png" alt="Mask To SDF example chain" loading="lazy"><figcaption>Mask To SDF example chain</figcaption></figure>
+<ol>
+<li>The mask comes from a group that draws a heart. Any mask works here.</li>
+<li><strong>Mask To SDF</strong> measures the distance of every pixel to the edge of the heart.</li>
+<li>A <strong>Math</strong> node set to <strong>Multiply</strong> scales that distance by <code>0.01</code>, so 100 pixels become <code>1.0</code>.</li>
+<li>A <strong>Math</strong> node set to <strong>Floored Modulo</strong> with a value of <code>1.0</code> keeps only the part after the decimal point. The value climbs from 0 to 1, then starts again.</li>
+<li>The result goes to a Viewer.</li>
+</ol>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf-result.png" alt="Mask To SDF result" loading="lazy"><figcaption>Mask To SDF result</figcaption></figure>
+<p>Each band is 100 pixels wide and follows the outline of the heart. The bands also repeat inside the shape, because pixels inside have negative distances and Floored Modulo wraps them the same way. Change the Multiply value to make the bands wider or narrower.</p>
+<h5 id="grow-or-shrink-a-mask-by-a-set-number-of-pixels">Grow or shrink a mask by a set number of pixels</h5>
+<ol>
+<li>Connect any mask to <strong>Mask</strong>. A Box Mask or an Ellipse Mask works. Anything above zero counts as inside.</li>
+<li>Connect <strong>SDF</strong> to the <strong>A</strong> input of a <strong>Compare</strong> node (Add &gt; Utilities &gt; Math &gt; Compare).</li>
+<li>Set the operation to <strong>Less Than</strong> and type the amount in <strong>B</strong>. A value of <code>10</code> grows the mask by 10 pixels. A value of <code>-10</code> shrinks it by 10 pixels.</li>
+<li>The Compare result is the new mask. Plug it into a Set Alpha, a Mix or a Viewer.</li>
+</ol>
+<h5 id="make-an-outline-of-any-width">Make an outline of any width</h5>
+<ol>
+<li>Plug <strong>SDF</strong> into a <strong>Math</strong> node set to <strong>Absolute</strong>, so inside and outside distances both become positive.</li>
+<li>Compare the result with <strong>Less Than</strong> and a width of <span class="ui-doc-keys"><kbd>3</kbd></span>. You get a ring 3 pixels to each side of the original edge.</li>
+</ol>
+<h5 id="make-a-soft-glow-that-follows-the-shape">Make a soft glow that follows the shape</h5>
+<ol>
+<li>Plug <strong>SDF</strong> into a <strong>Map Range</strong> node. Set From Min to <span class="ui-doc-keys"><kbd>0</kbd></span>, From Max to the glow size in pixels (say <code>60</code>), To Min to <span class="ui-doc-keys"><kbd>1</kbd></span> and To Max to <span class="ui-doc-keys"><kbd>0</kbd></span>, and turn on <strong>Clamp</strong>.</li>
+<li>The result is white at the edge and fades to black 60 pixels away. Use it as a Mix factor over a glow colour.</li>
+</ol>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> The distance is measured in pixels of the image you are working on, so the same values give a different look at 1080p and at 4K. Scale the numbers if you change the resolution.</p></div>
+<h3 id="filter">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/filter.png" alt="Filter" loading="lazy"></figure>
+<p>The Filter node implements various common image enhancement filters.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="image-11">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="factor-2">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/factor.png" alt="Factor" loading="lazy"></figure>
+<p>Controls the amount of influence the node exerts on the output image.</p>
+<h5 id="type-2">Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The available filter types. Soften, Laplace, Sobel, Prewitt and Kirsch all perform edge detection (in slightly different ways) based on vector calculus and set theory equations.</p>
+<h6 id="soften">Soften</h6>
+<p>Slightly blurs the image.</p>
+<h6 id="box-sharpen">Box Sharpen</h6>
+<p>Increases the contrast, especially at edges.</p>
+<h6 id="diamond-sharpen">Diamond Sharpen</h6>
+<p>A moderate sharpening filter</p>
+<h6 id="laplace">Laplace</h6>
+<p>Softens around edges.</p>
+<h6 id="sobel">Sobel</h6>
+<p>Creates a negative image that highlights edges.</p>
+<h6 id="prewitt">Prewitt</h6>
+<p>Tries to do Sobel one better.</p>
+<h6 id="kirsch">Kirsch</h6>
+<p>Giving a better blending than Sobel or Prewitt, when approaching an edge.</p>
+<h6 id="shadow">Shadow</h6>
+<p>Performs a relief, emboss effect, darkening outside edges.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="image-12">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="glare">Glare</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare.png" alt="Glare" loading="lazy"></figure>
+<p>The Glare node is used to add bloom, lens flares, fog, glows around exposed parts of an image and much more.</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="image-13">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="type-3">Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The glare type. It decides which inputs the Glare panel shows.</p>
+<h6 id="bloom">Bloom</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-bloom.png" alt="Glare subpanel with glare type Bloom" loading="lazy"><figcaption>Glare subpanel with glare type Bloom</figcaption></figure>
+<p>Creates a bloom effect.</p>
+<h6 id="ghosts">Ghosts</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-ghosts.png" alt="Glare subpanel with glare type Ghosts" loading="lazy"><figcaption>Glare subpanel with glare type Ghosts</figcaption></figure>
+<p>Creates a haze over the image.</p>
+<h6 id="streaks">Streaks</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-streaks.png" alt="Glare subpanel with glare type Streaks" loading="lazy"><figcaption>Glare subpanel with glare type Streaks</figcaption></figure>
+<p>Creates bright streaks used to simulate lens flares.</p>
+<h6 id="fog-glow">Fog Glow</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-fog-glow.png" alt="Glare subpanel with glare type Fog Glow" loading="lazy"><figcaption>Glare subpanel with glare type Fog Glow</figcaption></figure>
+<p>Looks similar to Ghost. However, it is much smaller in size and gives more of an atmospheric haze or “glow” around the image.</p>
+<h6 id="simple-star">Simple Star</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-simple-star.png" alt="Glare subpanel with glare type Simple Star" loading="lazy"><figcaption>Glare subpanel with glare type Simple Star</figcaption></figure>
+<p>Works similar to Streaks but gives a simpler shape looking like a star.</p>
+<h6 id="sun-beams">Sun Beams</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-sunbeams.png" alt="Glare subpanel with glare type Sunbeams" loading="lazy"><figcaption>Glare subpanel with glare type Sunbeams</figcaption></figure>
+<p>Creates sun beams.</p>
+<h6 id="kernel-2">Kernel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-kernel.png" alt="Glare subpanel with glare type Kernel" loading="lazy"><figcaption>Glare subpanel with glare type Kernel</figcaption></figure>
+<p>A custom kernel convolution mode. It allows you for example to generate the glare aura of a candle flame.</p>
+<h5 id="quality-2">Quality</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/quality-2.png" alt="Quality" loading="lazy"></figure>
+<p>If not set to High, the glare effect is only applied to a low resolution copy of the image. This can be helpful to save render times while only doing preview renders.</p>
+<h5 id="highlights">Highlights</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/highlights-subpanel.png" alt="Highlights subpanel" loading="lazy"></figure>
+<p>This panel holds the settings that pick the bright parts of the image. It is closed by default.</p>
+<h6 id="threshold-2">Threshold</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Pixels brighter than this value will be affected by the glare filter.</p>
+<h6 id="smoothness">Smoothness</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The smoothness of the extracted highlights.</p>
+<h6 id="clamp">Clamp</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Clamp bright highlights to a maximum value. In the Clamp panel inside the Highlights panel. This is the checkbox in the panel header.</p>
+<h6 id="maximum">Maximum</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The maximum brightness of the highlights when Clamp is on. In the Clamp panel inside the Highlights panel.</p>
+<h5 id="adjust">Adjust</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/adjust-subpanel.png" alt="Adjust subpanel" loading="lazy"></figure>
+<p>This panel holds the settings that change the look of the glare.</p>
+<h6 id="strength">Strength</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Adjusts the brightness of the glare. Soft range of <code>[0</code>, <code>1]</code>, can be boosted beyond 1. Serves the same function as a Mix option but offers better control.</p>
+<h6 id="saturation">Saturation</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Adjusts the intensity of the colors in the glare effect. A higher value results in more vivid colors, while a lower value will desaturate the colors, making them appear more muted.</p>
+<h6 id="tint">Tint</h6>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Applies a color tint to the glare effect. This allows you to add a specific hue to the glare, giving you creative control over the color balance and overall mood of the effect. For a more accurate tint, lower the Saturation first.</p>
+<h5 id="glare-2">Glare</h5>
+<p>This panel holds the settings of the chosen glare type. Each input is only visible for some types.</p>
+<h6 id="size-3">Size</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The size of the glare relative to the image. 1 means the glare covers the entire image, 0.5 means it covers half the image. Only visible when Type is Bloom, Fog Glow or Sun Beams.</p>
+<h6 id="streaks-2">Streaks</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The number of streaks. Only visible when Type is Streaks.</p>
+<h6 id="streaks-angle">Streaks Angle</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The angle of the first streak to the horizontal axis. Only visible when Type is Streaks.</p>
+<h6 id="iterations">Iterations</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The number of ghosts for Ghosts, or the quality and spread of the glare for Streaks and Simple Star. Higher values take longer to compute. Only visible when Type is Ghosts, Streaks or Simple Star.</p>
+<h6 id="fade">Fade</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Controls how fast the streaks fade out. A higher fade value means the effect will dissipate more smoothly and subtly over a larger area, whereas a lower fade value will keep the glare more concentrated and abrupt. Only visible when Type is Streaks or Simple Star.</p>
+<h6 id="color-modulation">Color Modulation</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Changes the colors of streaks and ghosts for a spectral dispersion effect. Johannes Itten describes this effect, Color Modulation, as subtle variations in tones and chroma. Only visible when Type is Ghosts or Streaks.</p>
+<h6 id="diagonal">Diagonal</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Align the star diagonally. Only visible when Type is Simple Star.</p>
+<h6 id="sun-position">Sun Position</h6>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (factor)</strong></p></div>
+<p>The position of the source of the rays in normalized coordinates. 0 means lower left corner. 1 means upper right corner. Only visible when Type is Sun Beams.</p>
+<h6 id="jitter">Jitter</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The amount of jitter when computing rays. Higher jitter can be faster but can give grainy or noisy results. Only visible when Type is Sun Beams.</p>
+<h6 id="kernel-data-type-2">Kernel Data Type</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter/kernel-data-type.png" alt="Kernel Data Type" loading="lazy"></figure>
+<p>What data to compute for the kernel: Float or Color. Only visible when Type is Kernel.</p>
+<h6 id="kernel-3">Kernel</h6>
+<div class="ui-doc-dtype dt-other"><p><em>Data type</em><strong>follows the Kernel Data Type setting</strong></p></div>
+<p>The kernel input. Only visible when Type is Kernel.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="image-14">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The image with the generated glare added.</p>
+<h5 id="glare-3">Glare</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The generated glare only.</p>
+<h5 id="highlights-2">Highlights</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The highlights that were extracted from the image to make the glare.</p>
+<h1 id="blur">Blur</h1>
+<h2 id="add-menu-filter-blur">Add menu - Filter - Blur</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/add-menu-filter-blur.png" alt="Add menu - Filter - Blur" loading="lazy"><figcaption>Add menu - Filter - Blur</figcaption></figure>
+<p>The Filter add menu contains multiple filters you can use on image data, including blurs and other lens effects.</p>
+<h3 id="bilateral-blur">Bilateral Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/bilateral-blur.png" alt="Bilateral Blur" loading="lazy"></figure>
+<p>The Bilateral Blur node performs a high-quality adaptive blur on the source image, allowing to blur images while retaining their sharp edges.</p>
+<p>It can be used for various purposes like: smoothing noisy render passes to avoid longer computation times in example ray-traced ambient occlusion, blurry refraction's/reflections, soft shadows, or to make non-photo realistic compositing effects.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="image-15">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input. If only the image input is connected, the node blurs the image depending on the edges present in the source image.</p>
+<h5 id="determinator">Determinator</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Which is non-obligatory and if the Determinator is connected, it serves as the source for defining edges/borders for the blur in the image. This has great advantage in case the source image is too noisy, but normals in combination with Z-buffer can still define exact borders/edges of objects.</p>
+<h5 id="size-4">Size</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The size of the blur in pixels.</p>
+<h5 id="threshold-3">Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The threshold of the blur area. Pixels are considered to be in the blur area if the average difference between their determinator of the center pixels is less than this threshold.</p>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="image-16">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="blur-2">Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/blur.png" alt="Blur" loading="lazy"></figure>
+<p>The Blur node provides several blur modes to blur an image. The icon top right allows you to collapse and show the image part of the node.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="image-17">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="size-5">Size</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (2d)</strong></p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/size.png" alt="Size" loading="lazy"></figure>
+<p>The optional Size input will be multiplied with the X and Y blur radius values. It accepts also a value image, to control the blur radius with a mask. The values should be mapped between (0 to 1) for an optimal effect.</p>
+<h5 id="type-4">Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The different blur types.</p>
+<h6 id="flat">Flat</h6>
+<p>Simply blurs everything uniformly.</p>
+<h6 id="tent">Tent</h6>
+<p>Preserves the high and the lows better by making a linear falloff.</p>
+<h6 id="quadratic">Quadratic</h6>
+<p>Looks similar to Gaussian but can be a little faster but slightly worse looking.</p>
+<h6 id="cubic">Cubic</h6>
+<p>Preserve the highs, but give an almost out-of-focus blur while smoothing sharp edges.</p>
+<h6 id="gaussian">Gaussian</h6>
+<p>Gives the best looking results but tends to be the slowest.</p>
+<h6 id="fast-gaussian">Fast Gaussian</h6>
+<p>An approximation of the Gaussian that is much faster and looks almost the same. This is the default type.</p>
+<h6 id="catrom">Catrom</h6>
+<p>A Catmull-Rom filter. It keeps sharp contrast edges crisp.</p>
+<h6 id="mitch">Mitch</h6>
+<p>Preserve the highs, but give an almost out-of-focus blur while smoothing sharp edges.</p>
+<h5 id="extend-bounds">Extend Bounds</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Allows the image, that is being blurred, to extend past its original dimension.</p>
+<h5 id="separable">Separable</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Blur along the horizontal and vertical directions independently. This method is faster.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="image-18">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image output.</p>
+<h3 id="bokeh-blur">Bokeh Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/bokeh-blur.png" alt="Bokeh Blur" loading="lazy"></figure>
+<p>The Bokeh Blur node generates a bokeh type blur similar to Defocus. Unlike defocus an in-focus region is defined in the Compositor.</p>
+<p>Several performance optimizations are also available such as OpenCL support, calculation area restriction and masking.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="image-19">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="bokeh">Bokeh</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>This is an input for the Bokeh Image node.</p>
+<h5 id="size-6">Size</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Size controls the amount of blur. Size can either be a single value across the entire image or a variable value controlled by an input image. In order to use the latter, the Variable Size option must be selected. See the examples section below for more on how to use this.</p>
+<h5 id="mask-4">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Here you can input a Box Mask matte node or a Mask input node to restrict the area of the image the blur is applied to. This could be helpful, for example, when developing a node system by allowing only a small area of the image to be filtered thus saving composite time each time adjustments are made.</p>
+<h5 id="extend-bounds-2">Extend Bounds</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Extend the bounds of the input image to fully fit the blurred image.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="image-20">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image output.</p>
+<h3 id="defocus">Defocus</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/defocus.png" alt="Defocus" loading="lazy"></figure>
+<p>It is typically used to emulate depth of field (DOF) using a post-processing method with a Z-buffer input. But also allows to blur images that are not based on Z depth too.</p>
+<h4 id="inputs-13">Inputs</h4>
+<h5 id="image-21">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="z">Z</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Z-buffer input, but could also be a (greyscale) image used as a mask, or a single value input.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="bokeh-type">Bokeh Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/bokeh-type.png" alt="Bokeh Type" loading="lazy"></figure>
+<p>The number of iris blades of the virtual camera’s diaphragm.</p>
+<p>Disk (to emulate a perfect circle) or Triangle (3 blades), Square (4 blades), Pentagon (5 blades), Hexagon (6 blades), Heptagon (7 blades) or Octagon (8 blades).</p>
+<h6 id="angle">Angle</h6>
+<p>This button is deactivated, if the Bokeh Type is set to Disk. It can be used to add a rotation offset to the Bokeh shape. The value is the angle in degrees.</p>
+<h6 id="f-stop">F-Stop</h6>
+<p>This option controls the amount of focal blur in the same way as a real camera. It simulates the aperture f of a real lens’ iris, without modifying the luminosity of the picture. The default value 128 is assumed to be infinity: everything is in perfect focus. Half the value will double the amount of blur. This button is deactivated, if No Z-buffer is enabled.</p>
+<h6 id="max-blur">Max Blur</h6>
+<p>This value limits the amount of blur by setting a maximum blur radius. Could be used to optimize the performance. The default value of 0 means no limit.</p>
+<h5 id="scene">Scene</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/scene.png" alt="Scene" loading="lazy"></figure>
+<p>Select the linked scene. Scenes can be created in the properties editor in the Scene properties tab in the Scene panel.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/scene-2.png" alt="Scene" loading="lazy"></figure>
+<h6 id="use-z-buffer">Use Z-buffer</h6>
+<p>Should be activated for a non Z-buffer in the Z input. No Z-buffer will be enabled automatically whenever a node that is not image based is connected to the Z input.</p>
+<h6 id="z-scale">Z Scale</h6>
+<p>Only active when No Z-buffer is enabled. When No Z-buffer is used, the input is used directly to control the blur radius (similar to F-Stop when using the Z-buffer). This parameter can be used to scale the range of the Z input.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="image-22">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image output.</p>
+<h3 id="directional-blur">Directional Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/directional-blur.png" alt="Directional Blur" loading="lazy"></figure>
+<p>Blurs an image in a specified direction and magnitude. Can be used to fake motion blur.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="image-23">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Standard image input.</p>
+<h5 id="samples">Samples</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The number of samples to compute the blur.</p>
+<h5 id="center">Center</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (factor)</strong></p></div>
+<p>Sets the position where the blur center is. This makes a difference if Rotation or Scale are used. 0 is the lower left corner and 1 is the upper right corner of the image.</p>
+<h5 id="rotation">Rotation</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>Rotates the image each iteration to create a spin effect, from the center point.</p>
+<h5 id="scale">Scale</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Scales the image each iteration, creating the effect of a zoom.</p>
+<h5 id="translation">Translation</h5>
+<p>This panel holds the settings that move the blur in one direction. It is open by default.</p>
+<h6 id="amount">Amount</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The translation amount relative to the size of the image. Negative values move in the opposite direction.</p>
+<h6 id="direction">Direction</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The translation direction.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="image-24">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image output.</p>
+<h3 id="vector-blur">Vector Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/compositor/header/add-menu-filter-blur/vector-blur.png" alt="Vector Blur" loading="lazy"></figure>
+<p>The Vector Blur node is a fast method for simulating Motion blur in compositing. It uses the vector speed render pass to blur the image pixels in 2D.</p>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="image-25">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Image input, to be linked to the “Combined” render pass.</p>
+<h5 id="speed">Speed</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (velocity)</strong></p></div>
+<p>Input for the “Vector” render pass. See Cycles render passes.</p>
+<h5 id="depth">Depth</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Z depth, to be linked to the “Depth” render pass.</p>
+<h5 id="samples-2">Samples</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Quality factor.</p>
+<h5 id="shutter">Shutter</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Time between open and close the shutter.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="image-26">Image</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>Motion blurred image output.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fsocket-names-1735/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fcompositor%2Fheader%2Fadd-menu%2Ffilter.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/socket-names-1735/docs2/content/editors/compositor/header/add-menu/filter.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-filter">Add menu - Filter</a><a class="h3" href="#anti-aliasing">Anti-Aliasing</a><a class="h3" href="#convolve">Convolve</a><a class="h3" href="#denoise">Denoise</a><a class="h3" href="#despeckle">Despeckle</a><a class="h3" href="#dilate-erode">Dilate/Erode</a><a class="h3" href="#inpaint">Inpaint</a><a class="h3" href="#mask-to-sdf">Mask To SDF</a><a class="h3" href="#filter">Filter</a><a class="h3" href="#glare">Glare</a><a class="h2" href="#add-menu-filter-blur">Add menu - Filter - Blur</a><a class="h3" href="#bilateral-blur">Bilateral Blur</a><a class="h3" href="#blur-2">Blur</a><a class="h3" href="#bokeh-blur">Bokeh Blur</a><a class="h3" href="#defocus">Defocus</a><a class="h3" href="#directional-blur">Directional Blur</a><a class="h3" href="#vector-blur">Vector Blur</a></aside></div></body></html>

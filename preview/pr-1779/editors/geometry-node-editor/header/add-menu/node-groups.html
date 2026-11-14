@@ -1,0 +1,2210 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Node Groups · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>.ui-compare{touch-action:pan-y;user-select:none;background:#1f1f1f;border-radius:1.25rem;width:100%;position:relative;overflow:hidden;margin:1.25rem 0;line-height:0;box-shadow:0 50px 120px -50px #000c,0 0 0 1px #ffffff10}.ui-compare-img{pointer-events:none;object-fit:cover;width:100%;max-width:none;height:auto;display:block;position:relative;top:0;left:0;margin:0;border-radius:0;box-shadow:none}.ui-compare-img.is-before{z-index:1;height:100%;position:absolute}.ui-compare-handle{z-index:2;pointer-events:none;width:2px;margin-left:-1px;position:absolute;top:0;bottom:0;left:50%;background:#5cb4f0;box-shadow:0 0 0 1px #0007,0 0 14px #0006}.ui-compare-knob{z-index:2;align-items:center;column-gap:.5rem;cursor:ew-resize;position:absolute;top:.75rem;left:50%;transform:translateX(-50%);height:1.75rem;padding:0 .6rem;border-radius:6px;background:#3f86c4;color:transparent;font-size:0;display:flex;box-shadow:0 0 0 1px #0007,0 6px 14px -6px #000b}.ui-compare-knob:before,.ui-compare-knob:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}.ui-compare-knob:before{border-right:7px solid #fff}.ui-compare-knob:after{border-left:7px solid #fff}.ui-compare-handle:after{content:"";position:absolute;left:50%;top:calc(2.5rem - 1px);transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #3f86c4}.ui-compare-tag{z-index:3;backdrop-filter:blur(8px);pointer-events:none;color:#fff;background:#141414a0;border-radius:6px;padding:.3125rem .625rem;font:600 .8125rem/1.2 sans-serif;position:absolute;top:.75rem;bottom:auto;height:auto;width:auto}.ui-compare-tag.is-left{left:.75rem}.ui-compare-tag.is-right{right:.75rem}@media(max-width:767px){.ui-compare{border-radius:.875rem}.ui-compare-tag{font-size:.75rem;padding:.3125rem .625rem}}
+
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>(function(){function init(c){if(c.dataset.ready)return;var b=c.querySelector('.is-before'),h=c.querySelector('.ui-compare-handle');if(!b||!h)return;c.dataset.ready='1';var p=50,d=0;function set(v){if(v!==v)return;p=Math.max(0,Math.min(100,v));b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p))}function at(e){var r=c.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100)}c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');c.style.cursor='ew-resize';c.addEventListener('pointerdown',function(e){d=1;c.setPointerCapture(e.pointerId);at(e)});c.addEventListener('pointermove',function(e){if(d)at(e)});c.addEventListener('pointerup',function(){d=0});c.addEventListener('pointercancel',function(){d=0});c.addEventListener('keydown',function(e){var m={ArrowLeft:-2,ArrowDown:-2,ArrowRight:2,ArrowUp:2,Home:-100,End:100}[e.key];if(m){set(p+m*(e.shiftKey&&Math.abs(m)<9?5:1));e.preventDefault()}});set(50);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.IntersectionObserver){var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(n){var k=(n-t0)/2600;if(d)return;if(k>=1)return set(50);set(50+Math.sin(k*Math.PI*2)*37);requestAnimationFrame(f)})(t0)},{threshold:.5});o.observe(c)}}function go(){document.querySelectorAll('[data-doc-compare]').forEach(init)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})();
+
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1779 · <code>docs2/socket-names-1735</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Tear-Off Menus and Panels</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="attribute.html">Attribute</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Compositor</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="instances.html">Instances</a>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:1.5rem">Object Data</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a class="is-current" style="padding-left:3.5rem" href="node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<a style="padding-left:3.5rem" href="normals.html">Normals</a>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span>Project Settings</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<a href="../../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Node Groups</div><h1 class="pv-title">Node Groups</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 48 min read</span></div><article class="ui-doc-body"><h1 id="geometry">Geometry</h1>
+<h2 id="add-menu-geometry-nodes-geometry">Add menu - Geometry nodes - Geometry</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/add-menu-geometry-nodes-geometry.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<h3 id="geometry-input">Geometry Input</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/geometry-input.png" alt="Geometry Input" loading="lazy"></figure>
+<p>Brings in the geometry of an object or a collection, so you can use it in the node tree. You can join it to the incoming geometry or replace the incoming geometry with it.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="geometry-2">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The incoming geometry. The geometry of the object or the collection is joined to it.</p>
+<h5 id="input-type">Input Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose where the geometry comes from: <strong>Object</strong> or <strong>Collection</strong>.</p>
+<h5 id="object">Object</h5>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>The object to read the geometry from. Used when Input Type is Object.</p>
+<h5 id="collection">Collection</h5>
+<div class="ui-doc-dtype dt-collection"><p><em>Data type</em><strong>Collection</strong></p></div>
+<p>The collection to read the geometry from. Used when Input Type is Collection.</p>
+<h5 id="relative-space">Relative Space</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Keep the position of the geometry relative to this object, as it is in the scene. When off, the original coordinates are used.</p>
+<h5 id="as-instance">As Instance</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Bring in the geometry as an instance instead of real geometry.</p>
+<h5 id="replace-original">Replace Original</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use only the geometry of the object or the collection, and drop the incoming geometry.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="geometry-3">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The resulting geometry.</p>
+<h1 id="geometry-operations">Geometry › Operations</h1>
+<h2 id="add-menu-geometry-nodes-geometry-operations">Add menu - Geometry nodes - Geometry - Operations</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/add-menu-geometry-nodes-geometry-operations.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<h3 id="displace-geometry">Displace Geometry</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/displace-geometry.png" alt="Displace Geometry" loading="lazy"></figure>
+<p>Displaces the geometry.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="geometry-4">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry to displace.</p>
+<h5 id="selection">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected points move.</p>
+<h5 id="strength">Strength</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The overall strength of the displacement.</p>
+<h5 id="offset-method">Offset Method</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>How the points move: <strong>Normal</strong> moves them along their normals, <strong>Vector</strong> moves them by the Offset Vector.</p>
+<h5 id="offset-vector">Offset Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (translation)</strong></p></div>
+<p>The direction and distance to move each point. Used when Offset Method is Vector.</p>
+<h5 id="offset-distance">Offset Distance</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>How far to move each point along its normal. Used when Offset Method is Normal.</p>
+<h5 id="substeps">Substeps</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Splits the displacement into this number of smaller steps.</p>
+<h5 id="post-substep-process">Post Substep Process</h5>
+<div class="ui-doc-dtype dt-closure"><p><em>Data type</em><strong>Closure</strong></p></div>
+<p>An optional closure that runs on the geometry after each substep.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="geometry-5">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The displaced geometry.</p>
+<h3 id="smooth-geometry">Smooth Geometry</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/smooth-geometry.png" alt="Smooth Geometry" loading="lazy"></figure>
+<p>Smoothens the geometry.</p>
+<h4 id="inputs-3">Inputs</h4>
+<h5 id="geometry-6">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The points to smooth, based on their neighbors.</p>
+<h5 id="selection-2">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected points are smoothed.</p>
+<h5 id="iterations">Iterations</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>How many times the smoothing step is repeated.</p>
+<h5 id="weight">Weight</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>How much the neighboring elements count in the mix.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="geometry-7">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The smoothed geometry.</p>
+<h1 id="geometry-selection">Geometry › Selection</h1>
+<h2 id="add-menu-geometry-nodes-geometry-selection">Add menu - Geometry nodes - Geometry - Selection</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/add-menu-geometry-nodes-geometry-selection.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<h3 id="box-selection">Box Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/box-selection.png" alt="Box Selection" loading="lazy"></figure>
+<p>Box select geometry.</p>
+<h4 id="inputs-4">Inputs</h4>
+<h5 id="center">Center</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (translation)</strong></p></div>
+<p>The center of the box.</p>
+<h5 id="size">Size</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (translation)</strong></p></div>
+<p>The size of the box along X, Y and Z.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="selection-3">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for the elements inside the box.</p>
+<h3 id="normal-selection">Normal Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/normal-selection.png" alt="Normal Selection" loading="lazy"></figure>
+<p>Select geometry by the normals direction.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="direction">Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (XYZ)</strong></p></div>
+<p>The direction to compare the normals with.</p>
+<h5 id="threshold">Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The largest angle between a normal and the direction that still counts as selected.</p>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="selection-4">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for the elements whose normals point in the direction.</p>
+<h3 id="sphere-selection">Sphere Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/sphere-selection.png" alt="Sphere Selection" loading="lazy"></figure>
+<p>Select geometry by a sphere shape.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="center-2">Center</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (translation)</strong></p></div>
+<p>The center of the sphere.</p>
+<h5 id="radius">Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>The radius of the sphere.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="selection-5">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for the elements inside the sphere.</p>
+<h1 id="grease-pencil-operations">Grease Pencil › Operations</h1>
+<h2 id="add-menu-geometry-nodes-grease-pencil-operations">Add menu - Geometry nodes - Grease Pencil - Operations</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/add-menu-geometry-nodes-grease-pencil-operations.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<h3 id="delete-empty-layers">Delete Empty Layers</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/delete-empty-layers.png" alt="Delete Empty Layers" loading="lazy"></figure>
+<p>Deletes the empty layers of a Grease Pencil object.</p>
+<h4 id="inputs-7">Inputs</h4>
+<h5 id="grease-pencil">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="grease-pencil-2">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry without the empty layers.</p>
+<h1 id="grease-pencil-read">Grease Pencil › Read</h1>
+<h2 id="add-menu-geometry-nodes-grease-pencil-read">Add menu - Geometry nodes - Grease Pencil - Read</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/add-menu-geometry-nodes-grease-pencil-read.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<h3 id="layer-size">Layer Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/layer-size.png" alt="Layer Size" loading="lazy"></figure>
+<p>Retrieves the point count and the spline count of a Grease Pencil layer.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="grease-pencil-3">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry to read.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="point-count">Point Count</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The number of points in the layer.</p>
+<h5 id="spline-count">Spline Count</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The number of splines in the layer.</p>
+<h3 id="material-fill-info">Material Fill Info</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/material-fill-info.png" alt="Material Fill Info" loading="lazy"></figure>
+<p>Retrieves the fill color and the fill opacity of a Grease Pencil material.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="color">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The fill color of the Grease Pencil material.</p>
+<h5 id="opacity">Opacity</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The fill opacity of the Grease Pencil material.</p>
+<h3 id="stroke-info">Stroke Info</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/stroke-info.png" alt="Stroke Info" loading="lazy"></figure>
+<p>Retrieves the color, the opacity and the softness of a Grease Pencil stroke.</p>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="color-2">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The vertex color of the Grease Pencil points.</p>
+<h5 id="opacity-2">Opacity</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The opacity of the Grease Pencil points.</p>
+<h5 id="softness">Softness</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The softness of the Grease Pencil points.</p>
+<h1 id="grease-pencil-write">Grease Pencil › Write</h1>
+<h2 id="add-menu-geometry-nodes-grease-pencil-write">Add menu - Geometry nodes - Grease Pencil - Write</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/add-menu-geometry-nodes-grease-pencil-write.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<h3 id="set-screenspace-radius">Set Screenspace Radius</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-screenspace-radius.png" alt="Set Screenspace Radius" loading="lazy"></figure>
+<p>Sets the radius of a Grease Pencil object in screen space.</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="grease-pencil-4">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry. It also works with curve geometry.</p>
+<h5 id="scale-multiplier">Scale Multiplier</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Multiplies the radius, so the lines look larger in the viewport.</p>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="grease-pencil-5">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry with the new radius.</p>
+<h3 id="set-stroke-softness">Set Stroke Softness</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/material-fill-info.png" alt="Set Stroke Softness" loading="lazy"></figure>
+<p>Sets the stroke softness of a Grease Pencil object.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="grease-pencil-6">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry.</p>
+<h5 id="selection-6">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected strokes change.</p>
+<h5 id="softness-2">Softness</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The softness value to set on the selected strokes.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="grease-pencil-7">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry with the new softness.</p>
+<h3 id="set-stroke-fill-color">Set Stroke/Fill Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-color.png" alt="Set Stroke/Fill Color" loading="lazy"></figure>
+<p>Sets the stroke color or the fill color of a Grease Pencil object.</p>
+<h4 id="inputs-11">Inputs</h4>
+<h5 id="grease-pencil-8">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry.</p>
+<h5 id="mode">Mode</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose whether to set the color of the <strong>Stroke</strong> or of the <strong>Fill</strong>.</p>
+<h5 id="selection-7">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected points change.</p>
+<h5 id="color-3">Color</h5>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The color to set on the selected Grease Pencil data.</p>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="grease-pencil-9">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry with the new color.</p>
+<h3 id="set-stroke-fill-opacity">Set Stroke/Fill Opacity</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-opacity.png" alt="Set Stroke/Fill Opacity" loading="lazy"></figure>
+<p>Sets the stroke opacity or the fill opacity of a Grease Pencil object.</p>
+<h4 id="inputs-12">Inputs</h4>
+<h5 id="grease-pencil-10">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry.</p>
+<h5 id="mode-2">Mode</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose whether to set the opacity of the <strong>Stroke</strong> or of the <strong>Fill</strong>.</p>
+<h5 id="selection-8">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected points change.</p>
+<h5 id="opacity-3">Opacity</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The opacity to set on the selected points.</p>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="grease-pencil-11">Grease Pencil</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The Grease Pencil geometry with the new opacity.</p>
+<h1 id="hair-deformation">Hair › Deformation</h1>
+<h2 id="add-menu-hair-deformation">Add menu - Hair - Deformation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<h3 id="blend-hair-curves">Blend Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/blend-hair-curves.png" alt="Blend Hair Curves" loading="lazy"></figure>
+<p>Blends the shape between multiple hair curves in a certain radius together.</p>
+<h4 id="inputs-13">Inputs</h4>
+<h5 id="geometry-8">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="factor">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="blend-radius">Blend Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Radius to select the neighbors for blending.</p>
+<h5 id="blend-neighbors">Blend Neighbors</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of neighbors used for blending.</p>
+<h5 id="preserve-length">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h4 id="outputs-15">Outputs</h4>
+<h5 id="geometry-9">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="displace-hair-curves">Displace Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/displace-hair-curves.png" alt="Displace Hair Curves" loading="lazy"></figure>
+<p>Displaces hair curves by a vector based on options.</p>
+<h4 id="inputs-14">Inputs</h4>
+<h5 id="geometry-10">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="factor-2">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to scale the overall displacement.</p>
+<h5 id="shape">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the influence along the curves. 0 means constant. 0.5 means linear.</p>
+<h5 id="object-space">Object Space</h5>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>The object that defines the displacement space.</p>
+<h5 id="displace-vector">Displace Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (translation)</strong></p></div>
+<p>The vector for the displacement.</p>
+<h5 id="surface-normal">Surface Normal</h5>
+<p>Settings to displace along the normal of a surface.</p>
+<h6 id="surface-normal-2">Surface Normal</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the displacement along the surface normal on or off.</p>
+<h6 id="surface-input-type">Surface Input Type</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose whether the surface comes from an <strong>Object</strong> or from a <strong>Geometry</strong> input.</p>
+<h6 id="surface">Surface</h6>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry or Object</strong></p></div>
+<p>The surface geometry or the surface object used to sample the normal for displacement.</p>
+<h6 id="surface-uv-map">Surface UV Map</h6>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface UV map used to sample the normal for displacement.</p>
+<h6 id="surface-normal-distance">Surface Normal Distance</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Amount of displacement along the surface normal.</p>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="geometry-11">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="frizz-hair-curves">Frizz Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/frizz-hair-curves.png" alt="Frizz Hair Curves" loading="lazy"></figure>
+<p>Deforms hair curves using a random vector per point to frizz them.</p>
+<h4 id="inputs-15">Inputs</h4>
+<h5 id="geometry-12">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="cumulative-offset">Cumulative Offset</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Apply the offset cumulatively. Earlier points affect the points after them.</p>
+<h5 id="factor-3">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="distance">Distance</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Overall distance factor for the deformation.</p>
+<h5 id="shape-2">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the influence along the curves. 0 means constant. 0.5 means linear.</p>
+<h5 id="seed">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h5 id="preserve-length-2">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h4 id="outputs-17">Outputs</h4>
+<h5 id="geometry-13">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="offset-vector-2">Offset Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The vector by which each point was offset during deformation.</p>
+<h3 id="hair-curves-noise">Hair Curves Noise</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/hair-curves-noise.png" alt="Hair Curves Noise" loading="lazy"></figure>
+<p>Deforms hair curves using noise texture.</p>
+<h4 id="inputs-16">Inputs</h4>
+<h5 id="geometry-14">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="cumulative-offset-2">Cumulative Offset</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Apply the offset cumulatively. Earlier points affect the points after them.</p>
+<h5 id="factor-4">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Overall factor for the deformation.</p>
+<h5 id="distance-2">Distance</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Overall distance factor for the deformation.</p>
+<h5 id="shape-3">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the amount along each curve. 0 means constant. 0.5 means linear.</p>
+<h5 id="scale">Scale</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Scale of the noise texture by root position.</p>
+<h5 id="scale-along-curve">Scale along Curve</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Scale of the noise texture along each curve.</p>
+<h5 id="offset-per-curve">Offset per Curve</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Random offset of the noise texture for each curve.</p>
+<h5 id="seed-2">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Seed value for the randomization.</p>
+<h5 id="preserve-length-3">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of the curves, segment by segment.</p>
+<h4 id="outputs-18">Outputs</h4>
+<h5 id="geometry-15">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="offset-vector-3">Offset Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The vector by which each point was offset during deformation.</p>
+<h3 id="roll-hair-curves">Roll Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/roll-hair-curves.png" alt="Roll Hair Curves" loading="lazy"></figure>
+<p>Rolls up hair curves, starting from their tips.</p>
+<h4 id="inputs-17">Inputs</h4>
+<h5 id="geometry-16">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="factor-5">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="subdivision">Subdivision</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Subdivision level applied before deformation.</p>
+<h5 id="variation-level">Variation Level</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Level of smoothing on the roll path to include shape variation.</p>
+<h5 id="roll-length">Roll Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Length of each curve to be rolled.</p>
+<h5 id="roll-radius">Roll Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Radius of the rolls.</p>
+<h5 id="roll-depth">Roll Depth</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Depth offset of the rolls.</p>
+<h5 id="roll-taper">Roll Taper</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Taper of the roll.</p>
+<h5 id="retain-overall-shape">Retain Overall Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Offset the roll along the original curve to retain the shape.</p>
+<h5 id="roll-direction">Roll Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The axis around which each curve is rolled.</p>
+<h5 id="random-orientation">Random Orientation</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Amount of randomization of the direction of the roll.</p>
+<h5 id="seed-3">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h5 id="preserve-length-4">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h4 id="outputs-19">Outputs</h4>
+<h5 id="geometry-17">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="rotate-hair-curves">Rotate Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/rotate-hair-curves.png" alt="Rotate Hair Curves" loading="lazy"></figure>
+<p>Rotates each hair curve around an axis.</p>
+<h4 id="inputs-18">Inputs</h4>
+<h5 id="geometry-18">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="factor-6">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to influence the rotation angle.</p>
+<h5 id="axis">Axis</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (XYZ)</strong></p></div>
+<p>The rotation axis. By default this is the tangent at the root.</p>
+<h5 id="angle">Angle</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The angle of rotation.</p>
+<h5 id="random-offset">Random Offset</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>Random offset to the rotation angle per curve.</p>
+<h5 id="lock-ends">Lock Ends</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Lock the rotation to the axis between the curve ends.</p>
+<h5 id="seed-4">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-20">Outputs</h4>
+<h5 id="geometry-19">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="shrinkwrap-hair-curves">Shrinkwrap Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/shrinkwrap-hair-curves.png" alt="Shrinkwrap Hair Curves" loading="lazy"></figure>
+<p>Shrinkwrap hair curves to a mesh surface from below and optionally from above.</p>
+<h4 id="inputs-19">Inputs</h4>
+<h5 id="geometry-20">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="surface-input-type-2">Surface Input Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose whether the surface comes from an <strong>Object</strong> or from a <strong>Geometry</strong> input.</p>
+<h5 id="surface-2">Surface</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry or Object</strong></p></div>
+<p>The surface object or the surface geometry used for shrinkwrap.</p>
+<h5 id="factor-7">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="offset-distance-2">Offset Distance</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Distance from the surface used for shrinkwrap.</p>
+<h5 id="above-surface">Above Surface</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Blend the shrinkwrap for points above the surface.</p>
+<h5 id="smoothing-steps">Smoothing Steps</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of smoothing steps applied after shrinkwrap.</p>
+<h5 id="lock-roots">Lock Roots</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Lock the position of the root points.</p>
+<h4 id="outputs-21">Outputs</h4>
+<h5 id="geometry-21">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="smooth-hair-curves">Smooth Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/smooth-hair-curves.png" alt="Smooth Hair Curves" loading="lazy"></figure>
+<p>Smooths the shape of hair curves.</p>
+<h4 id="inputs-20">Inputs</h4>
+<h5 id="geometry-22">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="amount">Amount</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Amount of smoothing.</p>
+<h5 id="shape-4">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the influence along the curves. 0 means constant. 0.5 means linear.</p>
+<h5 id="iterations-2">Iterations</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of smoothing steps.</p>
+<h5 id="weight-2">Weight</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Weight used for smoothing.</p>
+<h5 id="lock-tips">Lock Tips</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Lock the position of the tip points.</p>
+<h5 id="preserve-length-5">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h4 id="outputs-22">Outputs</h4>
+<h5 id="geometry-23">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="straighten-hair-curves">Straighten Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/straighten-hair-curves.png" alt="Straighten Hair Curves" loading="lazy"></figure>
+<p>Straightens hair curves between the root and the tip.</p>
+<h4 id="inputs-21">Inputs</h4>
+<h5 id="geometry-24">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="amount-2">Amount</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Amount of straightening.</p>
+<h5 id="shape-5">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the influence along the curves. 0 means constant. 0.5 means linear.</p>
+<h5 id="preserve-length-6">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h4 id="outputs-23">Outputs</h4>
+<h5 id="geometry-25">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h3 id="trim-hair-curves">Trim Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/trim-hair-curves.png" alt="Trim Hair Curves" loading="lazy"></figure>
+<p>Trims or scales hair curves to a certain length.</p>
+<h4 id="inputs-22">Inputs</h4>
+<h5 id="geometry-26">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="scale-uniform">Scale Uniform</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Scale each curve uniformly to reach the target length.</p>
+<h5 id="length-factor">Length Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Multiply the original length by a factor.</p>
+<h5 id="replace-length">Replace Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the Length input to fully replace the original length.</p>
+<h5 id="length">Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Target length for the operation.</p>
+<h5 id="mask">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Mask to blend the overall effect.</p>
+<h5 id="random-offset-2">Random Offset</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Trim the hair curves randomly up to a certain amount.</p>
+<h5 id="pin-at-parameter">Pin at Parameter</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Pin each curve at a certain point for the operation.</p>
+<h5 id="seed-5">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-24">Outputs</h4>
+<h5 id="geometry-27">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h1 id="hair-generation">Hair › Generation</h1>
+<h2 id="add-menu-hair-generation">Add menu - Hair - Generation</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/add-menu-hair-generation.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<h3 id="duplicate-hair-curves">Duplicate Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/duplicate-hair-curves.png" alt="Duplicate Hair Curves" loading="lazy"></figure>
+<p>Duplicates hair curves a certain amount of times in the given radius.</p>
+<h4 id="inputs-23">Inputs</h4>
+<h5 id="geometry-28">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="amount-3">Amount</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of duplicates per curve.</p>
+<h5 id="viewport-amount">Viewport Amount</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Percentage of the amount that is used in the viewport.</p>
+<h5 id="radius-2">Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>The radius in which the duplicate curves are offset from the guides.</p>
+<h5 id="distribution-shape">Distribution Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the distribution from the center to the edge around the guide.</p>
+<h5 id="tip-roundness">Tip Roundness</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Offset of the curves to round the tip.</p>
+<h5 id="even-thickness">Even Thickness</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Keep an even thickness of the distribution of duplicates.</p>
+<h5 id="seed-6">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-25">Outputs</h4>
+<h5 id="geometry-29">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="guide-index">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map that was used for the operation.</p>
+<h3 id="generate-hair-curves">Generate Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/generate-hair-curves.png" alt="Generate Hair Curves" loading="lazy"></figure>
+<p>Generates new hair curves on a surface mesh.</p>
+<h4 id="inputs-24">Inputs</h4>
+<h5 id="hair-surface">Hair Surface</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The surface geometry, or hair geometry that already has a surface attachment, to use as reference.</p>
+<h5 id="surface-source">Surface Source</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose where the surface comes from. <strong>Attached</strong> uses the surface that the hair is attached to. <strong>Input</strong> uses the Hair Surface input. <strong>Object</strong> uses the Surface object.</p>
+<h5 id="surface-3">Surface</h5>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>The surface object to generate the hair curves on. It needs matching transforms.</p>
+<h5 id="surface-uv-map-2">Surface UV Map</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface UV map used for attachment.</p>
+<h5 id="resting-surface">Resting Surface</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the resting state of the surface, so the hair stays stable when the surface deforms.</p>
+<h5 id="attach-to-surface">Attach to Surface</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Attach the generated hair curves to the surface geometry, for dynamics.</p>
+<h5 id="hair-length">Hair Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Length of the generated hair curves.</p>
+<h5 id="hair-material">Hair Material</h5>
+<div class="ui-doc-dtype dt-material"><p><em>Data type</em><strong>Material</strong></p></div>
+<p>The material of the generated hair curves.</p>
+<h5 id="control-points">Control Points</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of control points of the generated hair curves.</p>
+<h5 id="distribution">Distribution</h5>
+<p>Settings for how the hair curves are spread over the surface.</p>
+<h6 id="distribution-method">Distribution Method</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p><strong>Random</strong> places the curves at random. <strong>Poisson Disk</strong> keeps a minimum distance between the curves.</p>
+<h6 id="density">Density</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Surface density of the generated hair curves.</p>
+<h6 id="density-mask">Density Mask</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor applied on the density for curve distribution.</p>
+<h6 id="mask-texture">Mask Texture</h6>
+<div class="ui-doc-dtype dt-image"><p><em>Data type</em><strong>Image</strong></p></div>
+<p>Discard points based on a mask texture after distribution.</p>
+<h6 id="viewport-amount-2">Viewport Amount</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor applied on the density for the viewport.</p>
+<h6 id="seed-7">Seed</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-26">Outputs</h4>
+<h5 id="geometry-30">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="curves">Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output curves.</p>
+<h5 id="surface-normal-3">Surface Normal</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The normal direction of the surface mesh at the attachment point.</p>
+<h3 id="interpolate-hair-curves">Interpolate Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/interpolate-hair-curves.png" alt="Interpolate Hair Curves" loading="lazy"></figure>
+<p>Interpolates existing guide curves on a surface.</p>
+<h4 id="inputs-25">Inputs</h4>
+<h5 id="geometry-31">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry with the guide curves. It can also hold other data than curves.</p>
+<h5 id="resting-surface-2">Resting Surface</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the resting state of the surface, so the hair stays stable when the surface deforms.</p>
+<h5 id="follow-surface-normal">Follow Surface Normal</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Align the interpolated curves to the surface normal.</p>
+<h5 id="part-by-mesh-islands">Part by Mesh Islands</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the mesh islands of the surface geometry for parting.</p>
+<h5 id="interpolation-guides">Interpolation Guides</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Amount of guides used for interpolation per curve.</p>
+<h5 id="distance-to-guides">Distance to Guides</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Distance around each guide to spawn interpolated curves.</p>
+<h5 id="distribution-2">Distribution</h5>
+<p>Settings for how the hair curves are spread over the surface.</p>
+<h6 id="distribution-method-2">Distribution Method</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p><strong>Random</strong> places the curves at random. <strong>Poisson Disk</strong> keeps a minimum distance between the curves.</p>
+<h6 id="density-2">Density</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Surface density of the generated hair curves.</p>
+<h6 id="density-mask-2">Density Mask</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor applied on the density for curve distribution.</p>
+<h6 id="mask-texture-2">Mask Texture</h6>
+<div class="ui-doc-dtype dt-image"><p><em>Data type</em><strong>Image</strong></p></div>
+<p>Discard points based on a mask texture after distribution.</p>
+<h6 id="viewport-amount-3">Viewport Amount</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor applied on the density for the viewport.</p>
+<h6 id="seed-8">Seed</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-27">Outputs</h4>
+<h5 id="geometry-32">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="guide-index-2">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of the main guide curve per curve.</p>
+<h5 id="surface-normal-4">Surface Normal</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The normal direction of the surface mesh at the attachment point.</p>
+<h1 id="hair-guides">Hair › Guides</h1>
+<h2 id="add-menu-hair-guides">Add menu - Hair - Guides</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/add-menu-hair-guides.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<h3 id="braid-hair-curves">Braid Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/braid-hair-curves.png" alt="Braid Hair Curves" loading="lazy"></figure>
+<p>Deforms existing hair curves into braids.</p>
+<h4 id="inputs-26">Inputs</h4>
+<h5 id="geometry-33">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="factor-8">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="subdivision-2">Subdivision</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Subdivision level applied before deformation.</p>
+<h5 id="braid-start">Braid Start</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Percentage along each curve to blend the deformation from the root.</p>
+<h5 id="radius-3">Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Overall radius of the braids.</p>
+<h5 id="shape-6">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the braid radius along each curve.</p>
+<h5 id="frequency">Frequency</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Frequency factor of the braids.</p>
+<h5 id="shape-parameters">Shape Parameters</h5>
+<p>Settings for the shape of the braids and their strands.</p>
+<h6 id="factor-min">Factor Min</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor of the minimum radius of the braids.</p>
+<h6 id="factor-max">Factor Max</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor of the maximum radius of the braids.</p>
+<h6 id="thickness">Thickness</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Thickness of each strand of hair.</p>
+<h6 id="thickness-shape">Thickness Shape</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape adjustment of the strand thickness for the braids.</p>
+<h6 id="shape-asymmetry">Shape Asymmetry</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Asymmetry of the shape adjustment of the strand thickness.</p>
+<h6 id="flare-length">Flare Length</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Length of the flare at the end of the braid.</p>
+<h6 id="flare-opening">Flare Opening</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Opening radius of the flare at the tip of the braid.</p>
+<h5 id="hair-tie">Hair Tie</h5>
+<p>Settings for a hair tie at the end of each braid.</p>
+<h6 id="hair-tie-2">Hair Tie</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the hair tie on or off.</p>
+<h6 id="hair-tie-input-type">Hair Tie Input Type</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose whether the hair tie comes from an <strong>Object</strong> or from a <strong>Geometry</strong> input.</p>
+<h6 id="hair-tie-3">Hair Tie</h6>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry or Object</strong></p></div>
+<p>The geometry or the object used for the hair tie instance. The geometry has priority.</p>
+<h6 id="hair-tie-scale">Hair Tie Scale</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Scale of the hair tie instance.</p>
+<h5 id="guide-map">Guide Map</h5>
+<p>Settings for the guide index map.</p>
+<h6 id="guide-index-3">Guide Index</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map to use. This input has priority.</p>
+<h6 id="guide-distance">Guide Distance</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Minimum distance between two guides for a new guide map.</p>
+<h6 id="guide-mask">Guide Mask</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Mask for which curves can be selected as guides.</p>
+<h6 id="existing-guide-map">Existing Guide Map</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the existing guide map attribute if available.</p>
+<h4 id="outputs-28">Outputs</h4>
+<h5 id="geometry-34">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="flare-parameter">Flare Parameter</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Parameter from 0 to 1 along the flare.</p>
+<h5 id="strand-index">Strand Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of the strand within a braid that each curve belongs to.</p>
+<h5 id="guide-index-4">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map that was used for the operation. In the Guide Map panel.</p>
+<h3 id="clump-hair-curves">Clump Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/clump-hair-curves.png" alt="Clump Hair Curves" loading="lazy"></figure>
+<p>Clumps together existing hair curves.</p>
+<h4 id="inputs-27">Inputs</h4>
+<h5 id="geometry-35">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="factor-9">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="shape-7">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the influence along the curves. 0 means constant. 0.5 means linear.</p>
+<h5 id="tip-spread">Tip Spread</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Distance of the random spread at the curve tips.</p>
+<h5 id="clump-offset">Clump Offset</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Offset of each clump in a random direction.</p>
+<h5 id="distance-falloff">Distance Falloff</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Falloff distance for the clumping effect. 0 means no falloff.</p>
+<h5 id="distance-threshold">Distance Threshold</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Distance threshold for the falloff around the guide.</p>
+<h5 id="seed-9">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h5 id="preserve-length-7">Preserve Length</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Preserve the length of each curve during deformation.</p>
+<h5 id="guide-map-2">Guide Map</h5>
+<p>Settings for the guide index map.</p>
+<h6 id="guide-index-5">Guide Index</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map to use. This input has priority.</p>
+<h6 id="guide-distance-2">Guide Distance</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Minimum distance between two guides for a new guide map.</p>
+<h6 id="guide-mask-2">Guide Mask</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Mask for which curves can be selected as guides.</p>
+<h6 id="existing-guide-map-2">Existing Guide Map</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the existing guide map attribute if available.</p>
+<h4 id="outputs-29">Outputs</h4>
+<h5 id="geometry-36">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="guide-index-6">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map that was used for the operation. In the Guide Map panel.</p>
+<h3 id="create-guide-index-map">Create Guide Index Map</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/create-guide-index-map.png" alt="Create Guide Index Map" loading="lazy"><figcaption>Create Guide Index Map</figcaption></figure>
+<p>Creates an attribute that maps each curve to its nearest guide via index.</p>
+<h4 id="inputs-28">Inputs</h4>
+<h5 id="geometry-37">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="guides">Guides</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>Guide curves or points used to select the guide curves.</p>
+<h5 id="guide-distance-3">Guide Distance</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Minimum distance between two guides.</p>
+<h5 id="guide-mask-3">Guide Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Mask for which curves can be selected as guides.</p>
+<h5 id="group-id">Group ID</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>ID to group curves together for the guide map creation.</p>
+<h4 id="outputs-30">Outputs</h4>
+<h5 id="geometry-38">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="guide-curves">Guide Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The guide curves.</p>
+<h5 id="guide-index-7">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map that was created.</p>
+<h5 id="guide-selection">Guide Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>The selection of the curves that are guides.</p>
+<h3 id="curl-hair-curves">Curl Hair Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/curl-hair-curves.png" alt="Curl Hair Curves" loading="lazy"></figure>
+<p>Deforms existing hair curves into curls.</p>
+<h4 id="inputs-29">Inputs</h4>
+<h5 id="geometry-39">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="factor-10">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="subdivision-3">Subdivision</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Subdivision level applied before deformation.</p>
+<h5 id="curl-start">Curl Start</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Percentage along each curve to blend the deformation from the root.</p>
+<h5 id="radius-4">Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Overall radius of the curls.</p>
+<h5 id="factor-start">Factor Start</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor for the radius at the curl start.</p>
+<h5 id="factor-end">Factor End</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor for the radius at the curl end.</p>
+<h5 id="frequency-2">Frequency</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Frequency factor of the curls.</p>
+<h5 id="random-offset-3">Random Offset</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Amount of random offset per curve.</p>
+<h5 id="seed-10">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h5 id="guide-map-3">Guide Map</h5>
+<p>Settings for the guide index map.</p>
+<h6 id="guide-index-8">Guide Index</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map to use. This input has priority.</p>
+<h6 id="guide-distance-4">Guide Distance</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Minimum distance between two guides for a new guide map.</p>
+<h6 id="guide-mask-4">Guide Mask</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Mask for which curves can be selected as guides.</p>
+<h6 id="existing-guide-map-3">Existing Guide Map</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the existing guide map attribute if available.</p>
+<h4 id="outputs-31">Outputs</h4>
+<h5 id="geometry-40">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="guide-index-9">Guide Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The guide index map that was used for the operation. In the Guide Map panel.</p>
+<h1 id="hair-read">Hair › Read</h1>
+<h2 id="add-menu-hair-read">Add menu - Hair - Read</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/add-menu-hair-read.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<h3 id="curve-info">Curve Info</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-info.png" alt="Curve Info" loading="lazy"></figure>
+<p>Reads information about each curve.</p>
+<h4 id="outputs-32">Outputs</h4>
+<h5 id="curve-index">Curve Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of each curve.</p>
+<h5 id="curve-id">Curve ID</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>ID of each curve.</p>
+<h5 id="length-2">Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Length of each curve.</p>
+<h5 id="direction-2">Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Direction from the root to the tip of each curve.</p>
+<h5 id="random">Random</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>A random value for each curve.</p>
+<h5 id="surface-uv">Surface UV</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Attachment surface UV coordinate of each curve.</p>
+<h3 id="curve-root">Curve Root</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-root.png" alt="Curve Root" loading="lazy"></figure>
+<p>Reads information about the root point of each curve.</p>
+<h4 id="outputs-33">Outputs</h4>
+<h5 id="root-selection">Root Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Boolean selection of the curve root points.</p>
+<h5 id="root-position">Root Position</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The position of the root point of a curve.</p>
+<h5 id="root-direction">Root Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Direction of the root segment of a curve.</p>
+<h5 id="root-index">Root Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of the root point of a curve.</p>
+<h3 id="curve-segment">Curve Segment</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-segment.png" alt="Curve Segment" loading="lazy"></figure>
+<p>Reads the information of the curve segment before the current point.</p>
+<h4 id="outputs-34">Outputs</h4>
+<h5 id="segment-length">Segment Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Distance to the previous point on the curve.</p>
+<h5 id="segment-direction">Segment Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Direction from the previous neighboring point on the segment.</p>
+<h5 id="neighbor-index">Neighbor Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of the previous neighboring point on the segment.</p>
+<h3 id="curve-tip">Curve Tip</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-tip.png" alt="Curve Tip" loading="lazy"></figure>
+<p>Reads information about the tip point of each curve.</p>
+<h4 id="outputs-35">Outputs</h4>
+<h5 id="tip-selection">Tip Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Boolean selection of the curve tip points.</p>
+<h5 id="tip-position">Tip Position</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Position of the tip point of a curve.</p>
+<h5 id="tip-direction">Tip Direction</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Direction of the tip segment of a curve.</p>
+<h5 id="tip-index">Tip Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Index of the tip point of a curve.</p>
+<h3 id="attachment-info">Attachment Info</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/hair-attachment-info.png" alt="Attachment Info" loading="lazy"></figure>
+<p>Reads the attachment information of hair curves on a surface mesh.</p>
+<h4 id="inputs-30">Inputs</h4>
+<h5 id="hair-curves">Hair Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The hair curves to read the attachment from.</p>
+<h4 id="outputs-36">Outputs</h4>
+<h5 id="surface-geometry">Surface Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The surface geometry that the curves are attached to.</p>
+<h5 id="surface-exists">Surface Exists</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True when a surface geometry is found.</p>
+<h5 id="attachment-uv">Attachment UV</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface attachment UV coordinate stored on each curve.</p>
+<h5 id="attachment-is-valid">Attachment is Valid</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Whether the stored attachment UV coordinate is valid.</p>
+<h5 id="surface-normal-5">Surface Normal</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The normal direction of the surface mesh at the attachment point.</p>
+<h1 id="hair-utility">Hair › Utility</h1>
+<h2 id="add-menu-hair-utility">Add menu - Hair - Utility</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/add-menu-hair-utility.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<h3 id="attach-hair-curves-to-surface">Attach Hair Curves to Surface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/attach-hair-curves-to-surface.png" alt="Attach Hair Curves to Surface" loading="lazy"><figcaption>Attach Hair Curves to Surface</figcaption></figure>
+<p>Attaches hair curves to a surface mesh.</p>
+<h4 id="inputs-31">Inputs</h4>
+<h5 id="geometry-41">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry. It can also hold other data than curves.</p>
+<h5 id="surface-source-2">Surface Source</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose where the surface comes from. <strong>Attached</strong> uses the surface that the hair is attached to. <strong>Input</strong> uses the Surface Geometry input. <strong>Object</strong> uses the Surface Object.</p>
+<h5 id="surface-geometry-2">Surface Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>Surface geometry to attach the hair curves to.</p>
+<h5 id="surface-object">Surface Object</h5>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>A surface object to attach to. It needs matching transforms.</p>
+<h5 id="surface-uv-map-3">Surface UV Map</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface UV map used for attachment.</p>
+<h5 id="resting-surface-3">Resting Surface</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the resting state of the surface, so the hair stays stable when the surface deforms.</p>
+<h5 id="use-existing-attachment">Use Existing Attachment</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the existing attachment of the curves, and sample the surface UV map at that attachment point.</p>
+<h5 id="snap-to-surface">Snap to Surface</h5>
+<p>Settings to snap the curves to the surface.</p>
+<h6 id="snap-to-surface-2">Snap to Surface</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Snap the root of each curve to the closest surface point.</p>
+<h6 id="blend-along-curve">Blend along Curve</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Blend the deformation along each curve from the root.</p>
+<h6 id="align-to-surface-normal">Align to Surface Normal</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Align the curves to the surface normal. This needs a guide as reference.</p>
+<h4 id="outputs-37">Outputs</h4>
+<h5 id="geometry-42">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h5 id="surface-uv-coordinate">Surface UV Coordinate</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface UV coordinate at the attachment point.</p>
+<h5 id="surface-normal-6">Surface Normal</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>Surface normal at the attachment point.</p>
+<h3 id="redistribute-curve-points">Redistribute Curve Points</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/redistribute-curve-points.png" alt="Redistribute Curve Points" loading="lazy"></figure>
+<p>Redistributes existing control points evenly along each curve.</p>
+<h4 id="inputs-32">Inputs</h4>
+<h5 id="curves-2">Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input curves.</p>
+<h5 id="factor-11">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="feature-awareness">Feature Awareness</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use simple feature awareness to keep the feature definition.</p>
+<h4 id="outputs-38">Outputs</h4>
+<h5 id="curves-3">Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output curves.</p>
+<h3 id="restore-curve-segment-length">Restore Curve Segment Length</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/restore-curve-segment-length.png" alt="Restore Curve Segment Length" loading="lazy"><figcaption>Restore Curve Segment Length</figcaption></figure>
+<p>Restores the length of each curve segment after a deformation. It uses a reference position from before the deformation.</p>
+<h4 id="inputs-33">Inputs</h4>
+<h5 id="curves-4">Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input curves.</p>
+<h5 id="selection-9">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected elements are affected.</p>
+<h5 id="factor-12">Factor</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Factor to blend the overall effect.</p>
+<h5 id="reference-position">Reference Position</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The reference position before the deformation.</p>
+<h5 id="pin-at-parameter-2">Pin at Parameter</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Pin each curve at a certain point for the operation.</p>
+<h4 id="outputs-39">Outputs</h4>
+<h5 id="curves-5">Curves</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output curves.</p>
+<h1 id="hair-write">Hair › Write</h1>
+<h2 id="add-menu-hair-write">Add menu - Hair - Write</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/add-menu-hair-write.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<h3 id="set-hair-curve-profile">Set Hair Curve Profile</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/set-hair-curve-profile.png" alt="Set Hair Curve Profile" loading="lazy"><figcaption>Set Hair Curve Profile</figcaption></figure>
+<p>Sets the radius attribute of hair curves according to a profile shape.</p>
+<h4 id="inputs-34">Inputs</h4>
+<h5 id="geometry-43">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The input geometry.</p>
+<h5 id="replace-radius">Replace Radius</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Replace the original radius.</p>
+<h5 id="radius-5">Radius</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Base radius to set when Replace Radius is on.</p>
+<h5 id="shape-8">Shape</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shape of the radius along the curve.</p>
+<h5 id="factor-min-2">Factor Min</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor of the radius at the minimum.</p>
+<h5 id="factor-max-2">Factor Max</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Factor of the radius at the maximum.</p>
+<h4 id="outputs-40">Outputs</h4>
+<h5 id="geometry-44">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The output geometry.</p>
+<h1 id="instances">Instances</h1>
+<h2 id="add-menu-geometry-nodes-instances">Add menu - Geometry nodes - Instances</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/add-menu-geometry-nodes-instances.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<h3 id="instance-on-elements">Instance on Elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/instance-on-elements.png" alt="Instance on Elements" loading="lazy"></figure>
+<p>Create copies of referenced geometry on geometry elements.</p>
+<h4 id="inputs-35">Inputs</h4>
+<h5 id="geometry-45">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry to put the instances on.</p>
+<h5 id="instance-on">Instance On</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The elements to put the instances on: <strong>Points</strong>, <strong>Edges</strong>, <strong>Faces</strong> or <strong>Corners</strong>.</p>
+<h5 id="mask-2">Mask</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The chance that an element gets an instance. At 1, every element gets one.</p>
+<h5 id="input-type-2">Input Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose where the instances come from. <strong>Data-Block</strong> uses an object or a collection. <strong>Geometry</strong> uses the Instance input.</p>
+<h5 id="instance-type">Instance Type</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose the type of data-block: <strong>Object</strong> or <strong>Collection</strong>. Used when Input Type is Data-Block.</p>
+<h5 id="collection-2">Collection</h5>
+<div class="ui-doc-dtype dt-collection"><p><em>Data type</em><strong>Collection</strong></p></div>
+<p>The collection to instance.</p>
+<h5 id="object-2">Object</h5>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>The object to instance.</p>
+<h5 id="instance">Instance</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry to instance. Used when Input Type is Geometry.</p>
+<h5 id="realize-instances">Realize Instances</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turn the instances into real geometry.</p>
+<h5 id="keep-surface">Keep Surface</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Keep the original geometry of the object.</p>
+<h5 id="seed-11">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h5 id="pick-instance">Pick Instance</h5>
+<p>Settings to pick single instances from the Instance input.</p>
+<h6 id="pick-instance-2">Pick Instance</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Choose instances from the Instance input at each point, instead of instancing the whole geometry.</p>
+<h6 id="instance-index">Instance Index</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>How the instances are picked: <strong>Random</strong>, <strong>Sequence</strong> or <strong>Input</strong>.</p>
+<h6 id="instance-index-2">Instance Index</h6>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The index of the instance to pick. Used when the Instance Index menu is set to Input.</p>
+<h5 id="transform">Transform</h5>
+<p>Settings for the position, rotation and scale of the instances.</p>
+<h6 id="surface-offset">Surface Offset</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>Moves the instances away from the surface by this distance.</p>
+<h6 id="align-rotation">Align Rotation</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Rotate the instances to follow the surface.</p>
+<h6 id="scale-2">Scale</h6>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (XYZ)</strong></p></div>
+<p>The scale of the instances.</p>
+<h5 id="scale-by-face-area">Scale by Face Area</h5>
+<p>Settings to scale the instances by the size of the faces.</p>
+<h6 id="scale-by-face-area-2">Scale by Face Area</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Scale the instances by the area of the faces.</p>
+<h6 id="scale-by-face-area-multiplier">Scale by Face Area Multiplier</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Multiplies the scale that comes from the face area.</p>
+<h5 id="corner-offset">Corner Offset</h5>
+<p>Settings to move the instances on the corners.</p>
+<h6 id="corner-offset-method">Corner Offset Method</h6>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>Choose how the corner instances are offset: <strong>Face Center</strong> or <strong>Corner Center</strong>.</p>
+<h6 id="corner-offset-factor">Corner Offset Factor</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Move the instances towards the center of the face.</p>
+<h6 id="corner-offset-distance">Corner Offset Distance</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (distance)</strong></p></div>
+<p>The distance to move the instances.</p>
+<h6 id="even-edge-distance">Even Edge Distance</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Keep an even distance to the edges.</p>
+<h4 id="outputs-41">Outputs</h4>
+<h5 id="geometry-46">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry with the instances.</p>
+<h3 id="randomize-transforms">Randomize Transforms</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/randomize-transforms.png" alt="Randomize Transforms" loading="lazy"></figure>
+<p>Randomize the transform of instances.</p>
+<h4 id="inputs-36">Inputs</h4>
+<h5 id="instances-2">Instances</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The instances to transform one by one.</p>
+<h5 id="selection-10">Selection</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Only the selected instances change.</p>
+<h5 id="local-space">Local Space</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Transform each instance in its own local space.</p>
+<h5 id="offset">Offset</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (XYZ)</strong></p></div>
+<p>The largest random offset along each axis.</p>
+<h5 id="rotation">Rotation</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (euler)</strong></p></div>
+<p>The largest random rotation around each axis.</p>
+<h5 id="scale-axes">Scale Axes</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p><strong>Uniform</strong> scales all axes by the same random value. <strong>Axes</strong> uses a random value for each axis.</p>
+<h5 id="scale-3">Scale</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The highest random scale for each axis. Used when Scale Axes is Axes.</p>
+<h5 id="scale-4">Scale</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The highest random scale for all axes. Used when Scale Axes is Uniform.</p>
+<h5 id="flipping">Flipping</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector (factor)</strong></p></div>
+<p>The chance to flip each instance along each axis.</p>
+<h5 id="seed-12">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-42">Outputs</h4>
+<h5 id="instances-3">Instances</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The transformed instances.</p>
+<h1 id="material">Material</h1>
+<h2 id="add-menu-geometry-nodes-material">Add menu - Geometry nodes - Material</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/add-menu-geometry-nodes-material.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<h3 id="inherit-material">Inherit Material</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png" alt="Inherit Material" loading="lazy"></figure>
+<p>Applies an existing material from the source geometry at the target geometry.</p>
+<h4 id="inputs-37">Inputs</h4>
+<h5 id="source-geometry">Source Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The source geometry with the original materials.</p>
+<h5 id="target-geometry">Target Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The target geometry to pass the materials to.</p>
+<h5 id="material-index">Material Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The material index to set on the target geometry.</p>
+<h4 id="outputs-43">Outputs</h4>
+<h5 id="geometry-47">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The target geometry with the materials.</p>
+<h1 id="mesh">Mesh</h1>
+<h2 id="add-menu-geometry-nodes-mesh">Add menu - Geometry nodes - Mesh</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh/add-menu-geometry-nodes-mesh.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<h3 id="mesh-lines-and-silhouette">Mesh Lines and Silhouette</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png" alt="Mesh Lines and Silhouette" loading="lazy"><figcaption>Mesh Lines and Silhouette</figcaption></figure>
+<p>Creates inverted hull lines with a mesh silhouette. It also contains overrides, randomization and other settings.</p>
+<h4 id="inputs-38">Inputs</h4>
+<h5 id="geometry-48">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The mesh to draw the lines and the silhouette for.</p>
+<h5 id="screenspace-radius">Screenspace Radius</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Keep the line thickness the same on screen. The thickness is based on the camera.</p>
+<h5 id="overall-width">Overall Width</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Controls both the silhouette width and the line width.</p>
+<h5 id="randomization">Randomization</h5>
+<p>In the Variation panel. Settings to vary the line width with noise.</p>
+<h6 id="randomization-2">Randomization</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the randomization on or off.</p>
+<h6 id="factor-13">Factor</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Intensity of the variation.</p>
+<h6 id="scale-5">Scale</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Fine-tunes the procedural noise by scale.</p>
+<h6 id="detail">Detail</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The number of noise octaves. Higher values give more detailed noise, but take longer to render.</p>
+<h6 id="lacunarity">Lacunarity</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The difference between the scale of two octaves that follow each other. Larger values give a larger scale for higher octaves.</p>
+<h6 id="distortion">Distortion</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Amount of distortion.</p>
+<h6 id="roughness">Roughness</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Blend factor between an octave and the one before it. 0 means no detail.</p>
+<h5 id="weight-map">Weight Map</h5>
+<p>In the Variation panel. Settings to vary the line width with a vertex group.</p>
+<h6 id="weight-map-2">Weight Map</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the weight map on or off.</p>
+<h6 id="vertex-group">Vertex Group</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The vertex group that influences the lines.</p>
+<h6 id="offset-2">Offset</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Shifts the vertex group weight and offsets the width of the inverted hull lines.</p>
+<h5 id="inner-lines">Inner Lines</h5>
+<p>Settings for the lines inside the mesh.</p>
+<h6 id="inner-lines-2">Inner Lines</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the inner lines on or off.</p>
+<h6 id="width">Width</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Controls the thickness of the inner lines.</p>
+<h5 id="silhouette">Silhouette</h5>
+<p>Settings for the silhouette backdrop mesh.</p>
+<h6 id="silhouette-2">Silhouette</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the silhouette on or off.</p>
+<h6 id="width-2">Width</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Sets the thickness of the silhouette line.</p>
+<h6 id="flatten-factor">Flatten Factor</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Compresses and flattens the silhouette backdrop shape.</p>
+<h6 id="camera-offset">Camera Offset</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Moves the silhouette backdrop mesh closer to or further from the camera, relative to the object position.</p>
+<h5 id="polygonize">Polygonize</h5>
+<p>In the Silhouette panel. Settings to give the silhouette a polygonal look.</p>
+<h6 id="polygonize-2">Polygonize</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the polygonize effect on or off.</p>
+<h6 id="factor-14">Factor</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Controls how strongly the welding polygonizes the shape.</p>
+<h5 id="intersections">Intersections</h5>
+<p>In the Silhouette panel. Settings for lines where the mesh meets other objects.</p>
+<h6 id="intersections-2">Intersections</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the intersection lines on or off.</p>
+<h6 id="width-offset">Width Offset</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>Sets the thickness of the silhouette intersection line.</p>
+<h6 id="object-3">Object</h6>
+<div class="ui-doc-dtype dt-object"><p><em>Data type</em><strong>Object</strong></p></div>
+<p>The object to draw intersection lines with.</p>
+<h6 id="use-collection">Use Collection</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use a collection instead of an object for the intersections.</p>
+<h6 id="collection-3">Collection</h6>
+<div class="ui-doc-dtype dt-collection"><p><em>Data type</em><strong>Collection</strong></p></div>
+<p>The collection to draw intersection lines with.</p>
+<h5 id="weight-map-override">Weight Map Override</h5>
+<p>In the Silhouette panel. Settings to let the weight map change the silhouette.</p>
+<h6 id="weight-map-override-2">Weight Map Override</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Turns the weight map override on or off.</p>
+<h6 id="factor-15">Factor</h6>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>Strength of the effect of the weight map.</p>
+<h5 id="color-4">Color</h5>
+<p>Settings for the colors and the material overrides.</p>
+<h6 id="silhouette-3">Silhouette</h6>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The color of the silhouette backdrop mesh.</p>
+<h6 id="inner-lines-3">Inner Lines</h6>
+<div class="ui-doc-dtype dt-color"><p><em>Data type</em><strong>Color</strong></p></div>
+<p>The color of the inner lines.</p>
+<h6 id="use-silhouette-color">Use Silhouette Color</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>The inner lines use the silhouette color.</p>
+<h6 id="material-override">Material Override</h6>
+<div class="ui-doc-dtype dt-material"><p><em>Data type</em><strong>Material</strong></p></div>
+<p>A custom material for the material overrides.</p>
+<h6 id="line-override">Line Override</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Applies the material override to the inner mesh lines.</p>
+<h6 id="silhouette-override">Silhouette Override</h6>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Applies the material override to the silhouette backdrop mesh.</p>
+<h4 id="outputs-44">Outputs</h4>
+<h5 id="geometry-49">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The mesh with the lines and the silhouette.</p>
+<h1 id="mesh-read">Mesh › Read</h1>
+<h2 id="add-menu-geometry-nodes-mesh-read">Add menu - Geometry nodes - Mesh - Read</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/add-menu-geometry-nodes-mesh-read.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<h3 id="edge-length">Edge Length</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/edge-length.png" alt="Edge Length" loading="lazy"></figure>
+<p>Returns the length of an edge.</p>
+<h4 id="outputs-45">Outputs</h4>
+<h5 id="length-3">Length</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The length of each edge.</p>
+<h3 id="face-corner-angle">Face Corner Angle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/face-corner-angle.png" alt="Face Corner Angle" loading="lazy"></figure>
+<p>Returns the angle between two edges.</p>
+<h4 id="outputs-46">Outputs</h4>
+<h5 id="corner-angle">Corner Angle</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The angle between the two edges at each face corner.</p>
+<h5 id="bisector">Bisector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The direction that splits the corner angle in half.</p>
+<h3 id="is-edge-boundary">Is Edge Boundary</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-boundary.png" alt="Is Edge Boundary" loading="lazy"></figure>
+<p>Returns a selection of boundary edges.</p>
+<h4 id="outputs-47">Outputs</h4>
+<h5 id="is-edge-boundary-2">Is Edge Boundary</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for edges that have only one face.</p>
+<h3 id="is-edge-loose">Is Edge Loose</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-loose.png" alt="Is Edge Loose" loading="lazy"></figure>
+<p>Returns a selection of loose edges.</p>
+<h4 id="outputs-48">Outputs</h4>
+<h5 id="is-edge-loose-2">Is Edge Loose</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for edges that have no faces.</p>
+<h3 id="is-edge-manifold">Is Edge Manifold</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-manifold.png" alt="Is Edge Manifold" loading="lazy"></figure>
+<p>Returns a selection of manifold edges.</p>
+<h4 id="outputs-49">Outputs</h4>
+<h5 id="is-edge-manifold-2">Is Edge Manifold</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for edges that have exactly two faces.</p>
+<h3 id="is-uv-split">Is UV Split</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-uv-split.png" alt="Is UV Split" loading="lazy"></figure>
+<p>Returns a selection of seam edges at the border of UV patches.</p>
+<h4 id="inputs-39">Inputs</h4>
+<h5 id="uv-map">UV Map</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The UV map to check. It also supports 3D vectors.</p>
+<h4 id="outputs-50">Outputs</h4>
+<h5 id="is-uv-split-2">Is UV Split</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>True for edges where the UV map is split, at the border of UV islands.</p>
+<h1 id="normals">Normals</h1>
+<h2 id="add-menu-geometry-nodegroups-normals">Add menu - Geometry nodegroups - Normals</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/add-menu-geometry-nodegroups-normals.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<h3 id="inherit-smoothness">Inherit Smoothness</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/inherit-smoothness.png" alt="Inherit Smoothness" loading="lazy"></figure>
+<p>Passes normal smoothness of the parent object.</p>
+<h4 id="inputs-40">Inputs</h4>
+<h5 id="source-geometry-2">Source Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry to take the smooth shading from.</p>
+<h5 id="target-geometry-2">Target Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The geometry to pass the smooth shading to.</p>
+<h4 id="outputs-51">Outputs</h4>
+<h5 id="geometry-50">Geometry</h5>
+<div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
+<p>The target geometry with the smooth shading.</p>
+<h1 id="utilities">Utilities</h1>
+<h2 id="add-menu-geometry-nodegroups-utilities">Add menu - Geometry nodegroups - Utilities</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/add-menu-geometry-nodegroups-utilities.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<h3 id="random-rotation">Random Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/random-rotation.png" alt="Random Rotation" loading="lazy"></figure>
+<p>Returns a random rotation with an even spread.</p>
+<h4 id="inputs-41">Inputs</h4>
+<h5 id="min-zenith">Min Zenith</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The smallest angle away from the up axis.</p>
+<h5 id="max-zenith">Max Zenith</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The largest angle away from the up axis.</p>
+<h5 id="id">ID</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The ID used for the random value.</p>
+<h5 id="seed-13">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the operation.</p>
+<h4 id="outputs-52">Outputs</h4>
+<h5 id="rotation-2">Rotation</h5>
+<div class="ui-doc-dtype dt-rotation"><p><em>Data type</em><strong>Rotation</strong></p></div>
+<p>A random rotation with an even spread.</p>
+<h1 id="utilities-vector">Utilities › Vector</h1>
+<h2 id="add-menu-geometry-nodegroups-utilities-vector">Add menu - Geometry nodegroups - Utilities - Vector</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/add-menu-geometry-nodegroups-utilities-vector.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<h3 id="combine-cylindrical">Combine Cylindrical</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-cylindrical.png" alt="Combine Cylindrical" loading="lazy"></figure>
+<p>Create a vector from its cylindrical components.</p>
+<h4 id="inputs-42">Inputs</h4>
+<h5 id="r">R</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The radius, the distance from the up axis.</p>
+<h5 id="phi">Phi</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The azimuth, the angle around the up axis.</p>
+<h5 id="z">Z</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The distance from the ground plane.</p>
+<h4 id="outputs-53">Outputs</h4>
+<h5 id="vector">Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The combined vector.</p>
+<h3 id="combine-spherical">Combine Spherical</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-spherical.png" alt="Combine Spherical" loading="lazy"></figure>
+<p>Create a vector from its spherical components.</p>
+<h4 id="inputs-43">Inputs</h4>
+<h5 id="r-2">R</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The radius, the length of the vector.</p>
+<h5 id="phi-2">Phi</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The azimuth, the angle around the up axis.</p>
+<h5 id="theta">Theta</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The zenith, the angle from the ground plane.</p>
+<h4 id="outputs-54">Outputs</h4>
+<h5 id="vector-2">Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The combined vector.</p>
+<h3 id="separate-cylindrical">Separate Cylindrical</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png" alt="Separate Cylindrical" loading="lazy"></figure>
+<p>Splits a vector into its cylindrical components.</p>
+<h4 id="inputs-44">Inputs</h4>
+<h5 id="vector-3">Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The vector to split into its cylindrical components.</p>
+<h4 id="outputs-55">Outputs</h4>
+<h5 id="r-3">R</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The radius, the distance from the up axis.</p>
+<h5 id="phi-3">Phi</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The azimuth, the angle around the up axis.</p>
+<h5 id="z-2">Z</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The distance from the ground plane.</p>
+<h3 id="separate-spherical">Separate Spherical</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png" alt="Separate Spherical" loading="lazy"></figure>
+<p>Splits a vector into its spherical components.</p>
+<h4 id="inputs-45">Inputs</h4>
+<h5 id="vector-4">Vector</h5>
+<div class="ui-doc-dtype dt-vector"><p><em>Data type</em><strong>Vector</strong></p></div>
+<p>The vector to split into its spherical components.</p>
+<h4 id="outputs-56">Outputs</h4>
+<h5 id="r-4">R</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float</strong></p></div>
+<p>The radius, the length of the vector.</p>
+<h5 id="phi-4">Phi</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The azimuth, the angle around the up axis.</p>
+<h5 id="theta-2">Theta</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (angle)</strong></p></div>
+<p>The zenith, the angle from the ground plane.</p>
+<h1 id="utility">Utility</h1>
+<h2 id="add-menu-geometry-nodegroups-utility">Add menu - Geometry nodegroups - Utility</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/add-menu-geometry-nodegroups-utility.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<h3 id="g-index-mask-u">G Index Mask U</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f029ec9d0590758f2159f24c7900c0c8f5c7c8f2/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/g-index-mask-u.png" alt="G Index Mask U" loading="lazy"><figcaption>G Index Mask U</figcaption></figure>
+<p>Selects indices by using various functions.</p>
+<h4 id="inputs-46">Inputs</h4>
+<h5 id="masking-method">Masking Method</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The method to mask and select indices: <strong>Every N-th Index</strong>, <strong>Individual Index</strong> or <strong>Random Indicies</strong>.</p>
+<h5 id="evaluated-domain">Evaluated Domain</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The domain of the evaluated indices: <strong>Point</strong>, <strong>Edge</strong>, <strong>Face</strong>, <strong>Face Corner</strong>, <strong>Spline</strong>, <strong>Instance</strong> or <strong>Layer</strong>.</p>
+<h5 id="selection-interval">Selection Interval</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The interval of the selection.</p>
+<h5 id="selection-range">Selection Range</h5>
+<div class="ui-doc-dtype dt-menu"><p><em>Data type</em><strong>Menu</strong></p></div>
+<p>The range of the selection: <strong>Single Index</strong>, <strong>All Indicies</strong> or <strong>First - Last Index</strong>.</p>
+<h5 id="selection-index">Selection Index</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>The index to select.</p>
+<h5 id="start-index">Start Index</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the start of the selection index.</p>
+<h5 id="end-index">End Index</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>Use the end of the selection index.</p>
+<h5 id="selection-width">Selection Width</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>How many indices around the selection index are selected.</p>
+<h5 id="probability">Probability</h5>
+<div class="ui-doc-dtype dt-float"><p><em>Data type</em><strong>Float (factor)</strong></p></div>
+<p>The probability bias of the random selection.</p>
+<h5 id="seed-14">Seed</h5>
+<div class="ui-doc-dtype dt-integer"><p><em>Data type</em><strong>Integer</strong></p></div>
+<p>Random seed for the random selection.</p>
+<h4 id="outputs-57">Outputs</h4>
+<h5 id="selection-mask">Selection Mask</h5>
+<div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
+<p>The selection of the masked indices.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fsocket-names-1735/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fnode-groups.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/socket-names-1735/docs2/content/editors/geometry-node-editor/header/add-menu/node-groups.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-geometry-nodes-geometry">Add menu - Geometry nodes - Geometry</a><a class="h3" href="#geometry-input">Geometry Input</a><a class="h2" href="#add-menu-geometry-nodes-geometry-operations">Add menu - Geometry nodes - Geometry - Operations</a><a class="h3" href="#displace-geometry">Displace Geometry</a><a class="h3" href="#smooth-geometry">Smooth Geometry</a><a class="h2" href="#add-menu-geometry-nodes-geometry-selection">Add menu - Geometry nodes - Geometry - Selection</a><a class="h3" href="#box-selection">Box Selection</a><a class="h3" href="#normal-selection">Normal Selection</a><a class="h3" href="#sphere-selection">Sphere Selection</a><a class="h2" href="#add-menu-geometry-nodes-grease-pencil-operations">Add menu - Geometry nodes - Grease Pencil - Operations</a><a class="h3" href="#delete-empty-layers">Delete Empty Layers</a><a class="h2" href="#add-menu-geometry-nodes-grease-pencil-read">Add menu - Geometry nodes - Grease Pencil - Read</a><a class="h3" href="#layer-size">Layer Size</a><a class="h3" href="#material-fill-info">Material Fill Info</a><a class="h3" href="#stroke-info">Stroke Info</a><a class="h2" href="#add-menu-geometry-nodes-grease-pencil-write">Add menu - Geometry nodes - Grease Pencil - Write</a><a class="h3" href="#set-screenspace-radius">Set Screenspace Radius</a><a class="h3" href="#set-stroke-softness">Set Stroke Softness</a><a class="h3" href="#set-stroke-fill-color">Set Stroke/Fill Color</a><a class="h3" href="#set-stroke-fill-opacity">Set Stroke/Fill Opacity</a><a class="h2" href="#add-menu-hair-deformation">Add menu - Hair - Deformation</a><a class="h3" href="#blend-hair-curves">Blend Hair Curves</a><a class="h3" href="#displace-hair-curves">Displace Hair Curves</a><a class="h3" href="#frizz-hair-curves">Frizz Hair Curves</a><a class="h3" href="#hair-curves-noise">Hair Curves Noise</a><a class="h3" href="#roll-hair-curves">Roll Hair Curves</a><a class="h3" href="#rotate-hair-curves">Rotate Hair Curves</a><a class="h3" href="#shrinkwrap-hair-curves">Shrinkwrap Hair Curves</a><a class="h3" href="#smooth-hair-curves">Smooth Hair Curves</a><a class="h3" href="#straighten-hair-curves">Straighten Hair Curves</a><a class="h3" href="#trim-hair-curves">Trim Hair Curves</a><a class="h2" href="#add-menu-hair-generation">Add menu - Hair - Generation</a><a class="h3" href="#duplicate-hair-curves">Duplicate Hair Curves</a><a class="h3" href="#generate-hair-curves">Generate Hair Curves</a><a class="h3" href="#interpolate-hair-curves">Interpolate Hair Curves</a><a class="h2" href="#add-menu-hair-guides">Add menu - Hair - Guides</a><a class="h3" href="#braid-hair-curves">Braid Hair Curves</a><a class="h3" href="#clump-hair-curves">Clump Hair Curves</a><a class="h3" href="#create-guide-index-map">Create Guide Index Map</a><a class="h3" href="#curl-hair-curves">Curl Hair Curves</a><a class="h2" href="#add-menu-hair-read">Add menu - Hair - Read</a><a class="h3" href="#curve-info">Curve Info</a><a class="h3" href="#curve-root">Curve Root</a><a class="h3" href="#curve-segment">Curve Segment</a><a class="h3" href="#curve-tip">Curve Tip</a><a class="h3" href="#attachment-info">Attachment Info</a><a class="h2" href="#add-menu-hair-utility">Add menu - Hair - Utility</a><a class="h3" href="#attach-hair-curves-to-surface">Attach Hair Curves to Surface</a><a class="h3" href="#redistribute-curve-points">Redistribute Curve Points</a><a class="h3" href="#restore-curve-segment-length">Restore Curve Segment Length</a><a class="h2" href="#add-menu-hair-write">Add menu - Hair - Write</a><a class="h3" href="#set-hair-curve-profile">Set Hair Curve Profile</a><a class="h2" href="#add-menu-geometry-nodes-instances">Add menu - Geometry nodes - Instances</a><a class="h3" href="#instance-on-elements">Instance on Elements</a><a class="h3" href="#randomize-transforms">Randomize Transforms</a><a class="h2" href="#add-menu-geometry-nodes-material">Add menu - Geometry nodes - Material</a><a class="h3" href="#inherit-material">Inherit Material</a><a class="h2" href="#add-menu-geometry-nodes-mesh">Add menu - Geometry nodes - Mesh</a><a class="h3" href="#mesh-lines-and-silhouette">Mesh Lines and Silhouette</a><a class="h2" href="#add-menu-geometry-nodes-mesh-read">Add menu - Geometry nodes - Mesh - Read</a><a class="h3" href="#edge-length">Edge Length</a><a class="h3" href="#face-corner-angle">Face Corner Angle</a><a class="h3" href="#is-edge-boundary">Is Edge Boundary</a><a class="h3" href="#is-edge-loose">Is Edge Loose</a><a class="h3" href="#is-edge-manifold">Is Edge Manifold</a><a class="h3" href="#is-uv-split">Is UV Split</a><a class="h2" href="#add-menu-geometry-nodegroups-normals">Add menu - Geometry nodegroups - Normals</a><a class="h3" href="#inherit-smoothness">Inherit Smoothness</a><a class="h2" href="#add-menu-geometry-nodegroups-utilities">Add menu - Geometry nodegroups - Utilities</a><a class="h3" href="#random-rotation">Random Rotation</a><a class="h2" href="#add-menu-geometry-nodegroups-utilities-vector">Add menu - Geometry nodegroups - Utilities - Vector</a><a class="h3" href="#combine-cylindrical">Combine Cylindrical</a><a class="h3" href="#combine-spherical">Combine Spherical</a><a class="h3" href="#separate-cylindrical">Separate Cylindrical</a><a class="h3" href="#separate-spherical">Separate Spherical</a><a class="h2" href="#add-menu-geometry-nodegroups-utility">Add menu - Geometry nodegroups - Utility</a><a class="h3" href="#g-index-mask-u">G Index Mask U</a></aside></div></body></html>
