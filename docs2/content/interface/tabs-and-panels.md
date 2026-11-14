@@ -7,7 +7,7 @@ path:
   - Components
   - Panels and tabs
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 3 Interface.odt
