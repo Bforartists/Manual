@@ -126,6 +126,7 @@
     - { id: "editors.properties.output-properties-tab", title: "Output", file: "content/editors/properties/output-properties-tab.md", icon: null }
     - { id: "editors.properties.view-layer-properties-tab", title: "View Layer", file: "content/editors/properties/view-layer-properties-tab.md", icon: null }
     - { id: "editors.properties.scene-properties-tab", title: "Scene", file: "content/editors/properties/scene-properties-tab.md", icon: null }
+    - { id: "editors.properties.compositor-properties-tab", title: "Compositor", file: "content/editors/properties/compositor-properties-tab.md", icon: null }
     - { id: "editors.properties.world-properties-tab", title: "World", file: "content/editors/properties/world-properties-tab.md", icon: null }
     - { id: "editors.properties.collection-properties-tab", title: "Collection", file: "content/editors/properties/collection-properties-tab.md", icon: null }
     - { id: "editors.properties.object-properties-tab", title: "Object", file: "content/editors/properties/object-properties-tab.md", icon: null }
