@@ -1,0 +1,10 @@
+{
+ "pages": {
+  "docs2/content/editors/preferences.md": "editors/preferences.html",
+  "docs2/content/editors/topbar-and-statusbar/topbar-menus/index.md": "editors/topbar-and-statusbar/topbar-menus.html",
+  "docs2/content/interface/floating-menus.md": "interface/floating-menus.html",
+  "docs2/content/interface/tabs-and-panels.md": "interface/tabs-and-panels.html",
+  "docs2/content/interface/tear-off-menus-and-panels.md": "interface/tear-off-menus-and-panels.html"
+ },
+ "images": 445
+}
