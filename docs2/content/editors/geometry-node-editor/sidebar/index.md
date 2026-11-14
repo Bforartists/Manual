@@ -1043,6 +1043,14 @@ We won't explain the content of the panels again. The single nodes are explained
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
 
+### Geometry > Operations
+
+![The Operations subpanel of the Geometry panel in the Add tab](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-geometry-operations.png)
+
+The nodes that change a whole geometry: Bake, Bounding Box, Convex Hull, Delete Geometry, Duplicate Elements, **Merge by Distance**, Merge Points, Sort Elements and Transform Geometry, then the nodes that split a geometry into parts. They are in the same order as in **Add > Geometry > Operations**.
+
+**Merge by Distance** merges points that are closer to each other than a distance, for example to weld the seams of mesh pieces. It used to be in Mesh > Operations. Like in the Add menu, it is in Geometry > Operations now. See [Merge by Distance](../header/add-menu/geometry.md) on the Geometry page of the Add menu.
+
 ## Add tab - Display Panel
 
 ![Add tab - Display Panel](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-display-panel.png)
