@@ -8,7 +8,7 @@ path:
   - Editors
   - Properties Editor
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26 Editors - Properties Editor.odt
