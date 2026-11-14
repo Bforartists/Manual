@@ -251,15 +251,19 @@ Scenes, Collections, Objects, Brushes, Materials, Nodegroups and Worlds can be m
 
 ![Collection](/docs2/images/editors/outliner/collection-2.png)
 
-This menu appears when you right click at a collection. Clicking at a Scene collection will have not this much entries than licking at the Collection item lower in the hierarchy.
+This menu appears when you right click at a collection. The first picture shows the menu of a collection. Right clicking at the Scene Collection shows a shorter menu, the second picture.
 
-#### New Nested
-
-Create a new nested collection. There is no difference. Both gets added in the selected collection as a child, and the functionality is the same. Ask the Blender developers what they did here.
+There are two ways to add a collection. They differ in **where** the new collection goes.
 
 #### New
 
-Create a new scene collection.
+Adds a new collection directly to the **Scene Collection**, at the top of the hierarchy. It does not matter which collection you right clicked at. The New Collection button in the Outliner header does the same.
+
+#### New Nested
+
+Adds a new collection **inside the selected collection**, as its child. Use it to build a hierarchy, for example a "Props" collection inside "Set".
+
+> **Tip:** The C hotkey in the Outliner adds a collection like **New**. New Nested has no hotkey in the Bforartists keymap, so use this menu. (Blender has it on Shift C.)
 
 #### Duplicate Collection
 
