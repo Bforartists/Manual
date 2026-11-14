@@ -867,8 +867,6 @@ Contains the settings for the animation editors.
 
 ### Timeline
 
-#### Allow negative Frames
-
 #### Minimum Grid Spacing
 
 ![Minimum Grid Spacing](/docs2/images/editors/preferences/minimum-grid-spacing.png)
@@ -888,6 +886,20 @@ In Timeline, Dope sheet, Graph and NLE editor you can either display the keyfram
 ![Zoom To Frame Type](/docs2/images/editors/preferences/zoom-to-frame-type.png)
 
 Timeline, Dope sheet, Graph and NLE. Define how zooming to frame focuses around current frame.
+
+#### Advanced subpanel
+
+![Advanced subpanel of the Timeline panel](/docs2/images/editors/preferences/timeline-advanced.png)
+
+Settings you rarely need to change. The subpanel is closed by default.
+
+##### Allow Negative Frames
+
+Lets you set the current frame to a negative number, so the playhead can go before frame 0. This is handy when an animation needs a run-up before the shot starts, or when you line up imported data that starts below zero.
+
+The warning under the checkbox is always shown, so you see it before you turn the option on.
+
+> **Warning:** Negative frames can cause issues with audio playback and with exporters. If you run into problems there, move the animation so it starts at frame 0 or later.
 
 #### Keyframes
 
