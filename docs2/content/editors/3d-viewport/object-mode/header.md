@@ -2144,8 +2144,12 @@ Change the settings of **Apply Selected Objects** right after you use it, in the
 | ---------------- | --------------------------------------------------------------------------------- |
 | Join on Apply | Applies and joins the selected meshes into one mesh. |
 | Boolean on Apply | Applies and joins the selected meshes into one mesh with boolean union operators. |
-| Remesh on Apply | Applies and joins the selected meshes into one mesh with a voxel remesh operator. |
+| Remesh on Apply | Applies and joins the selected meshes into one mesh with a voxel remesh operator. The settings below only apply to this option. |
 | Voxel Size | Changes the resolution of the Voxel Size of the new remesh operator. |
+| Preserve Volume | Projects the remeshed surface back onto the original, so it keeps its volume and details. |
+| Preserve Attributes | Transfers all attributes (such as colors and UV maps) to the new mesh. |
+| Fix Poles | Produces fewer poles and a better topology flow. |
+| Adaptivity | Reduces the face count by simplifying flat areas where detail is not needed. 0 keeps every face. |
 
 
 ## Snap
