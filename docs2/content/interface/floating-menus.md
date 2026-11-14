@@ -80,25 +80,29 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ### Order
 
-New entries go in the order in which you add them, menus first, then operators. You can change the order afterwards in the Quick Favorites editor.
+Each new entry goes to the bottom of the menu, so the entries are in the order in which you added them. Menus and operators mix freely. You can change the order afterwards in the Quick Favorites editor.
 
 ### Edit Quick Favorites
 
-> 📸 Picture to add: the Edit Quick Favorites dialog with a few entries, opened from the bottom of the Quick Favorites menu.
+![The Quick Favorites menu with Edit Quick Favorites at the bottom](/docs2/images/ui/interface/controls/quick-favorites-menu.png)
 
-When the menu has entries, its last entry is **Edit Quick Favorites...**. It opens a small editor with all your entries, grouped by the editor they belong to and shown with their icons.
+When the menu has entries, its last entry is **Edit Quick Favorites...**. It opens a small editor with your entries, grouped by the editor they belong to and shown with their icons. It lists the entries of the editor and mode you opened it from.
+
+![The Edit Quick Favorites editor](/docs2/images/ui/interface/controls/edit-quick-favorites.png)
+
+Your changes apply right away. **OK** and **Cancel** both just close the editor.
 
 #### Select an entry
 
-Click an entry in the list to select it. The buttons next to the list work on the selected entry.
+Click the checkbox in front of an entry to select it. Only one entry is selected at a time. The buttons at the right work on the selected entry.
 
 #### Move up and Move down
 
-Moves the selected entry one step up or down in the menu. This is how you sort the menu after you've added things.
+The arrow buttons move the selected entry one step up or down in the menu. This is how you sort the menu after you've added things. The up arrow is hidden for the first entry, and the down arrow for the last one.
 
 #### Remove
 
-Removes the selected entry from Quick Favorites.
+The **X** button removes the selected entry from Quick Favorites.
 
 ### Removing an operator from the Quick menu
 
