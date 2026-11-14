@@ -214,6 +214,8 @@ The widget can have different orientations. The menu items should be self explai
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 #### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
@@ -319,6 +321,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png)
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 #### Adjust Last Operation - Rotate
 
@@ -433,6 +437,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 #### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
@@ -525,6 +531,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 What to do at dragging with the mouse with an active tool. Active Tool means the current tool is used then. When you choose Select Box then a mouse drag will rectangle select instead.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 #### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
@@ -594,6 +602,8 @@ The 3d cursor can have different orientations. The menu items should be self exp
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png)
 
 What to do at dragging with the mouse with an active tool. Active Tool means the current tool is used then. When you choose Select Box then a mouse drag will rectangle select instead.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ### Modal Operators for the Transform tools
 
@@ -819,6 +829,8 @@ Stabilizer stroke factor. Higher values gives a smoother stroke.
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ### Annotate Line
 
 Click and drag to create a line.
@@ -919,6 +931,8 @@ The stroke end style. With an arrow for example you place an arrow at the end of
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ### Annotate Polygon
 
 Click multiple times to create multiple connected lines. The current polygon is finished when Esc or RMB is pressed.
@@ -1007,6 +1021,8 @@ Define how annotation strokes are aligned in the 3d space.
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ### Annotate Eraser
 
 ![Annotate Eraser](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotate-eraser.png)
@@ -1026,6 +1042,8 @@ The radius of the eraser pencil.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-2.png)
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ## Measure
 
