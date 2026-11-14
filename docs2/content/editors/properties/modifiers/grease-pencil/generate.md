@@ -9,7 +9,7 @@ path:
   - Modifiers tab
   - Generate modifiers
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt
@@ -659,7 +659,7 @@ This panel allows you to add a light object as a source for line art.
 
 | Property | What it changes |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Custom Camera | Allows to pick a different camera than the active scene camera for line art rendering. |
+| Custom Camera | Draws the line art from a different camera than the active scene camera. Tick the checkbox, then pick the camera in the field next to it. While it is off, a small triangle shows in place of the field. Useful when you want lines from a fixed angle while you animate the render camera. |
 | Overlapping Edges as Contour | This option allows overlapping edges (e.g. from an edge split modifier or imported geometry where two edges occupy the exact same space) to be drawn as contour. Enabling this option will slow down the calculation slightly but it will handle edge overlapping cases without erroneous occlusion results. |
 | Instanced Objects | This option enables particles and other instanced objects to be loaded for line art calculation. There will be performance impact when there are a large amount of instanced objects in the scene. |
 | Clipping Boundaries | When enabled, line art will generate clipping lines as contour type at the place where near or far clipping planes cut the model. Otherwise there will be no lines. |
