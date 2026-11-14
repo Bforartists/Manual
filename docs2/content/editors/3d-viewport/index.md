@@ -8,7 +8,7 @@ path:
   - Editors
   - 3D Viewport
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 7 Editors - 3D Viewport.odt
@@ -407,15 +407,14 @@ Ctrl Alt Right Mouse
 
 ### Radial Control
 
-In Paint modes you can set the strength or radius of the brush not only by the sliders. But also by hotkeys.
+In the Paint and Sculpt modes you can change the brush settings with a hotkey instead of the sliders. Press the key and move the mouse to change the value, then **release the key to confirm**. Esc or a right click cancels.
 
-Sets the brush radius - F
+- **X**: brush radius
+- **C**: brush strength
+- **V**: the angle of the brush texture. In Weight Paint mode it sets the weight instead.
+- **Ctrl V**: the angle of the brush mask texture, in Texture Paint mode.
 
-Sets the brush strength - Shift F
-
-Sets the brush direction - Ctrl F
-
-Sets the brush direction - Ctrl Alt F
+X and C also work in Particle Edit, Curves Sculpt and the Grease Pencil paint modes.
 
 ### Face sets edit
 
