@@ -131,6 +131,12 @@ Deselect all items in the list.
 
 Inverts the selection. Unselected list items becomes selected, selected list items becomes unselected.
 
+#### Hide Unselected
+
+Hides every object and collection that is **not selected**, so only your selection stays visible in the viewport. Use it to focus on a few objects in a busy scene without changing the scene itself.
+
+It only shows in the **View Layer** display mode. To bring everything back, use **Unhide** (Alt H), see Hotkey only functionality below.
+
 #### Manage Unused Data
 
 ![Manage Unused Data](/docs2/images/editors/outliner/manage-unused-data.png)
@@ -492,6 +498,10 @@ Deletes the selected object. Child objects gets unparented.
 
 Deletes the selected object and all its child objects.
 
+#### Hide Unselected
+
+Hides all objects and collections that are not selected. It is the same entry as **Hide Unselected** in the View menu, and it only shows in the View Layer display mode.
+
 #### Unlink
 
 Deletes the selected object.
@@ -552,9 +562,9 @@ Removes the collection from the asset library.
 
 Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.
 
-#### ID Data
+#### Data-block
 
-![ID Data](/docs2/images/editors/outliner/id-data-4.png)
+![Data-block submenu](/docs2/images/editors/outliner/id-data-4.png)
 
 Data related operations. Note that the tool tips are currently missing here.
 
