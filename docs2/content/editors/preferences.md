@@ -321,6 +321,32 @@ Define a custom interface font. The font in the whole UI.
 
 Define a custom Monospace font. That's the one used in the python console for example.
 
+#### Font Style subpanel
+
+![Font Style subpanel](/docs2/images/editors/preferences/font-style-subpanel.png)
+
+The **Font Style** subpanel sets how big and how bold the interface text is. There are three kinds of text, and each one has its own **Size** and **Weight**.
+
+Use it when the text is hard to read on your screen, or when you want panel titles to stand out more than the rest.
+
+> **Note:** These settings used to be part of the theme. They are preferences now, so loading a theme preset no longer changes your font sizes.
+
+##### Panel Title Size
+
+The font size of the panel headers, in points. The range is 6 to 32, the default is 11.
+
+##### Widget Size
+
+The font size of the buttons, fields, menus and labels, in points. This is most of the text you see in the interface.
+
+##### Tooltip Size
+
+The font size of the tooltips, in points.
+
+##### Weight
+
+Each size has a **Weight** field under it. It sets how thick the characters are, from 100 (thin) to 900 (very bold). 400 is normal.
+
 
 
 ### Menus Panel
@@ -1512,6 +1538,8 @@ The list of the editors that you can theme. Every editor can have its own themin
 
 Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.
 
+> **Note:** The font sizes and weights are no longer part of the theme. You find them in the **Font Style** subpanel of the Interface tab, under Text Rendering.
+
 ##### Editor & Widgets subpanel
 
 ![Editor & Widgets subpanel](/docs2/images/editors/preferences/editor-and-widgets-subpanel.png)
@@ -1539,33 +1567,21 @@ How far the shadow is moved from the text, in pixels: **X** to the right, **Y** 
 
 > **Note:** This one Text Shadow setting replaces the shadow settings that each text style had before.
 
-#### Text Style
+#### Color Sets
 
-Defines font colors and styles used in labels, tooltips, and text-based editors.
+Groups the color lists you pick from by name in other editors. It has three subpanels:
 
-#### Bone Color Sets
-
-Lets you assign custom colors to bone groups in Pose Mode, useful for rigging and animation clarity.
-
-#### Collection Colors
-
-Sets colors for collections in the Outliner, helping visually organize scene hierarchies.
-
-#### Strip Color Tags
-
-Applies tag colors to strips in the Video Sequencer and Nonlinear Animation editors for quick identification.
+- **Bone Color Sets:** the colors you can give to bones, useful for rigging and animation clarity.
+- **Collection Colors:** the color tags for collections in the Outliner, to organize the scene at a glance.
+- **Sequencer Strip Color Tags:** the color tags for strips in the Video Sequencer.
 
 #### Regions
 
-Handles the common region areas like Asset Shelves, channels, scrubbing and marker settings and toolbars and sidebars.
+Handles the common region areas like the Asset Shelf, channels, scrubbing and marker settings, toolbars and sidebars.
 
 #### Common
 
 Handles shared UI elements like animation and curve settings.
-
-#### Asset Shelf
-
-Customizes the appearance of the Asset Shelf, including preview thumbnails, labels, and background styling.
 
 #### 3D Viewport
 
