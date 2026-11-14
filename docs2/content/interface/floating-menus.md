@@ -14,6 +14,8 @@ source:
 ---
 A **floating menu** opens on top of the editor: the text menus in the headers, the menus that hotkeys call (such as **Add** with Shift A), and the search menu (F3). They close as soon as you choose an item, move away, or press Esc.
 
+> **Tip:** Want a menu to stay open? Click the **Tear Off Menu** row at its top. See [Tear-Off Menus and Panels](tear-off-menus-and-panels.md).
+
 ## Menu
 
 ![Menu](/docs2/images/ui/interface/controls/menu.png)

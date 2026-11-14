@@ -31,6 +31,7 @@
     - { id: "interface.asset-shelves", title: "Asset Shelves", file: "content/interface/asset-shelves.md", icon: null }
     - { id: "interface.context-menus", title: "Context Menus", file: "content/interface/context-menus.md", icon: null }
     - { id: "interface.floating-menus", title: "Floating Menus", file: "content/interface/floating-menus.md", icon: null }
+    - { id: "interface.tear-off-menus-and-panels", title: "Tear-Off Menus and Panels", file: "content/interface/tear-off-menus-and-panels.md", icon: null }
     - { id: "interface.pie-menus", title: "Pie Menus", file: "content/interface/pie-menus.md", icon: null }
     - { id: "interface.last-operator-panel", title: "Last Operator Panel", file: "content/interface/last-operator-panel.md", icon: null }
     - { id: "interface.floating-dialogues", title: "Floating Dialogues", file: "content/interface/floating-dialogues.md", icon: null }

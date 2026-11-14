@@ -36,6 +36,10 @@ Right click at the tab that you want to pin. A menu pops up. Check the Pin check
 
 To unpin the panel simply click at the Pin icon.
 
+### Tearing off panels
+
+Shift+drag a panel header, or right-click it and choose **Tear Off Panel**, to take the panel out of its place. It then floats over the editor and stays open. See [Tear-Off Menus and Panels](tear-off-menus-and-panels.md).
+
 ### Open just one Panel at a time
 
 This can be done by clicking at the header of a panel and holding down ctrl.

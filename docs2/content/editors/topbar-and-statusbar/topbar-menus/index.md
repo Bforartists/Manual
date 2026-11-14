@@ -31,13 +31,13 @@ The File menu contains file related functionality.
 
 ## New
 
-Creates a new scene, using the current active template.
+Creates a new, empty scene, using the current active template. You keep your current workspaces, with their tear-offs. The New button in the toolbar and Ctrl+N do the same.
 
 ## New from Template
 
 ![New from Template](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/new-from-template.jpg)
 
-Choose to create a new file with predefined Application Templates.
+Choose to create a new file with predefined Application Templates. A template always brings its own workspaces, even when Load UI is off.
 
 Application templates is a collection of workspaces for a predefined purpose.
 
