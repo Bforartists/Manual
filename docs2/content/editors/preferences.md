@@ -131,6 +131,10 @@ Ignore menus toggling with Search on Key Press, and fallback to using accelerato
 
 Stops the preview icons on the material properties from rendering, which helps avoid causing the UI to stutter or freeze. This is a Bforartists only feature.
 
+#### Tear-Off Menus and Panels
+
+Lets you tear menus, dropdowns, popovers and panels off, so they stay open and float over the editor. On by default. When off, menus have no Tear Off row and behave as in Blender, and open tear-offs close until you turn it on again. This is a Bforartists only feature. See [Tear-Off Menus and Panels](../interface/tear-off-menus-and-panels.md).
+
 
 
 ### Editors Panel
