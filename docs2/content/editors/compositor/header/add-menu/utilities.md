@@ -61,6 +61,8 @@ The Levels Node reads the inputs color channels and outputs analytical values. I
 
 ##### Image
 
+Data type: Color.
+
 The image input.
 
 #### Properties
@@ -93,11 +95,15 @@ Find the minimum and maximum values of a single channel. Then map the values to 
 
 ##### Value
 
+Data type: Float.
+
 Standard value input.
 
 #### Outputs
 
 ##### Value
+
+Data type: Float.
 
 Standard value output.
 
@@ -119,13 +125,19 @@ The highest value that can be returned (default 1.0 for Float, 1.0 on each axis 
 
 ##### Probability
 
+Data type: Float (factor).
+
 The chance that the result is true, from 0.0 to 1.0 (default 0.5). It replaces Min and Max for Boolean.
 
 ##### ID
 
+Data type: Integer.
+
 Gives each value its own random number (default 0). In the Compositor it is a plain value input. Connect an image here, for example one with IDs, to get a different random value per pixel.
 
 ##### Seed
+
+Data type: Integer.
 
 Changes the whole set of random values at once (default 0).
 
@@ -157,23 +169,33 @@ Allows to combine two images horizontally or vertically
 
 ##### Position
 
+Data type: Vector (factor).
+
 Line position where the image should be split.
 
 ##### Rotation
+
+Data type: Float (angle).
 
 Line angle where the image should be split.
 
 ##### Image
 
+Data type: Color.
+
 The first image.
 
 ##### Image
+
+Data type: Color.
 
 The second image.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Image output.
 
@@ -193,9 +215,13 @@ The toggle that turns the switch on or off resulting in the final output being w
 
 ##### Off
 
+Data type: Color.
+
 The image that is shown when the toggle is off.
 
 ##### On
+
+Data type: Color.
 
 The image that is shown when the toggle is on.
 
@@ -334,6 +360,8 @@ The input float value to convert. This would be your absolute value.
 
 ##### Image
 
+Data type: Color.
+
 The reference image used to determine pixel dimensions. If not connected, the active compositing image is used.
 
 #### Properties
@@ -396,13 +424,19 @@ The Bit Math node works on the individual bits of whole numbers (32-bit integers
 
 ##### A
 
+Data type: Integer.
+
 The integer to work on (default 0).
 
 ##### B
 
+Data type: Integer.
+
 The second integer (default 0). It is not shown for Not, Shift and Rotate.
 
 ##### Shift
+
+Data type: Integer.
 
 How many bits to shift or rotate A by, from -31 to 31 (default 0). It only appears for Shift and Rotate.
 
@@ -422,6 +456,8 @@ Chooses the bit operation.
 #### Outputs
 
 ##### Value
+
+Data type: Integer.
 
 The resulting integer.
 
@@ -461,6 +497,8 @@ Chooses the logical operation.
 
 ##### Boolean
 
+Data type: Boolean.
+
 The result of the operation.
 
 ### Clamp
@@ -472,6 +510,8 @@ The **Clamp** node restricts a value to lie within a specified range. It’s com
 #### Inputs
 
 ##### Value
+
+Data type: Float.
 
 Standard Value input. (Value refers to each vector in the set.)
 
@@ -509,13 +549,19 @@ The second value. Its type follows the Input Type property.
 
 ##### C
 
+Data type: Float.
+
 The value that the dot product of A and B is compared against (default 0.9). It only appears for Vector inputs in Dot Product mode.
 
 ##### Angle
 
+Data type: Float (angle).
+
 The angle that the angle between A and B is compared against (default 5 degrees). It only appears for Vector inputs in Direction mode.
 
 ##### Epsilon
+
+Data type: Float.
 
 How close two values must be to count as equal (default 0.001). It only appears for Equal and Not Equal with Float, Vector and Color inputs.
 
@@ -552,6 +598,8 @@ Chooses the comparison. The choices depend on the Input Type.
 
 ##### Result
 
+Data type: Boolean.
+
 True or false.
 
 ### Float Curve
@@ -563,6 +611,8 @@ The Float Curves node maps an input value to a curve.
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 Input factor.
 
@@ -648,6 +698,8 @@ Deletes the selected curve point.
 
 ##### Value
 
+Data type: Float.
+
 Standard float value output.
 
 ### Float to Integer
@@ -659,6 +711,8 @@ The Float to Integer node turns a number with decimals into a whole number. You 
 #### Inputs
 
 ##### Float
+
+Data type: Float.
 
 The number to convert (default 0.0).
 
@@ -677,6 +731,8 @@ How the decimals are removed.
 
 ##### Integer
 
+Data type: Integer.
+
 The whole number.
 
 ### Hash Value
@@ -693,6 +749,8 @@ The value to hash. Its type follows the Data Type property.
 
 ##### Seed
 
+Data type: Integer.
+
 Changes the result without changing the value (default 0).
 
 #### Properties
@@ -704,6 +762,8 @@ The type of the Value input. You can choose Float, Integer, Vector, Color, Rotat
 #### Outputs
 
 ##### Hash
+
+Data type: Integer.
 
 The random-looking integer.
 
@@ -756,6 +816,8 @@ Chooses the operation.
 
 ##### Value
 
+Data type: Integer.
+
 The resulting integer.
 
 ### Map Range
@@ -773,6 +835,8 @@ One important use case is to easily map the original range of the Z-depth channe
 This chapter deals with the input type Float. The same node exists in the Vector menu too. With preselected type Vector.
 
 ##### Value
+
+Data type: Float.
 
 Standard value input.
 
@@ -822,9 +886,13 @@ The Math Node performs math operations.
 
 ##### Value
 
+Data type: Float.
+
 First numerical value. The trigonometric functions accept values in radians.
 
 ##### Value
+
+Data type: Float.
 
 Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.
 
@@ -843,6 +911,8 @@ Limits the output to the range (0 to 1). See clamp.
 #### Outputs
 
 ##### Value
+
+Data type: Float.
 
 Numerical value output.
 
@@ -902,6 +972,8 @@ Each column is a collapsible panel with four values, **Row 1** to **Row 4**.
 
 ##### Matrix
 
+Data type: Matrix.
+
 The finished matrix.
 
 ### Combine Transform
@@ -914,19 +986,27 @@ Builds a matrix from a location, a rotation and a scale. This is the easy way to
 
 ##### Translation
 
+Data type: Vector (translation).
+
 The location, as a vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation.
 
 ##### Scale
+
+Data type: Vector (XYZ).
 
 The size along each axis. 1 keeps the original size.
 
 #### Outputs
 
 ##### Transform
+
+Data type: Matrix.
 
 The matrix that holds all three.
 
@@ -940,11 +1020,15 @@ Calculates one number from a matrix, its determinant, which tells how the matrix
 
 ##### Matrix
 
+Data type: Matrix.
+
 The matrix to measure.
 
 #### Outputs
 
 ##### Determinant
+
+Data type: Float.
 
 The determinant as a single value.
 
@@ -958,15 +1042,21 @@ Gives the matrix that undoes the input matrix. If a matrix moves, turns and scal
 
 ##### Matrix
 
+Data type: Matrix.
+
 The matrix to invert.
 
 #### Outputs
 
 ##### Matrix
 
+Data type: Matrix.
+
 The inverted matrix.
 
 ##### Invertible
+
+Data type: Boolean.
 
 On when the matrix could be inverted. A matrix that flattens space has no inverse.
 
@@ -980,19 +1070,27 @@ Splits a matrix into three parts: a rotation **U**, a scale **S** and a second r
 
 ##### Matrix
 
+Data type: Matrix.
+
 The matrix to split.
 
 #### Outputs
 
 ##### U
 
+Data type: Matrix.
+
 The first rotation, as a matrix.
 
 ##### S
 
+Data type: Vector.
+
 The scale along each axis, as a vector.
 
 ##### V
+
+Data type: Matrix.
 
 The second rotation, as a matrix.
 
@@ -1006,6 +1104,8 @@ Joins two transforms into one. The result does the same as applying one matrix a
 
 ##### Matrix
 
+Data type: Matrix.
+
 The first matrix.
 
 ##### Matrix (second)
@@ -1015,6 +1115,8 @@ The second matrix.
 #### Outputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The combined matrix.
 
@@ -1028,15 +1130,21 @@ Moves a point through a matrix and then divides by the depth, the way a camera t
 
 ##### Vector
 
+Data type: Vector (XYZ).
+
 The point to project.
 
 ##### Transform
+
+Data type: Matrix.
 
 The projection matrix.
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector (XYZ).
 
 The projected point.
 
@@ -1049,6 +1157,8 @@ The opposite of Combine Matrix: reads the sixteen numbers out of a matrix. Use i
 #### Inputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The matrix to read.
 
@@ -1068,19 +1178,27 @@ The opposite of Combine Transform: reads the location, rotation and scale out of
 
 ##### Transform
 
+Data type: Matrix.
+
 The matrix to read.
 
 #### Outputs
 
 ##### Translation
 
+Data type: Vector (translation).
+
 The location, as a vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation.
 
 ##### Scale
+
+Data type: Vector (XYZ).
 
 The size along each axis.
 
@@ -1094,15 +1212,21 @@ Turns and scales a direction with a matrix, but ignores the matrix's location. A
 
 ##### Direction
 
+Data type: Vector (XYZ).
+
 The direction to transform.
 
 ##### Transform
+
+Data type: Matrix.
 
 The matrix to apply.
 
 #### Outputs
 
 ##### Direction
+
+Data type: Vector (XYZ).
 
 The transformed direction.
 
@@ -1116,15 +1240,21 @@ Moves a point with a matrix: it is turned, scaled and moved. Use it to place a p
 
 ##### Vector
 
+Data type: Vector (XYZ).
+
 The point to transform.
 
 ##### Transform
+
+Data type: Matrix.
 
 The matrix to apply.
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector (XYZ).
 
 The transformed point.
 
@@ -1138,11 +1268,15 @@ Swaps the rows and columns of a matrix. For a matrix that only rotates, the tran
 
 ##### Matrix
 
+Data type: Matrix.
+
 The matrix to transpose.
 
 #### Outputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The transposed matrix.
 
@@ -1164,13 +1298,19 @@ Turns a rotation so that one of its axes points along a vector. Use it to make s
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to start from.
 
 ##### Factor
 
+Data type: Float (factor).
+
 How much of the alignment is applied. 0 keeps the original rotation, 1 aligns fully.
 
 ##### Vector
+
+Data type: Vector (XYZ).
 
 The direction to point at.
 
@@ -1188,6 +1328,8 @@ The axis the rotation turns around while it aligns. **Auto** picks the shortest 
 
 ##### Rotation
 
+Data type: Rotation.
+
 The aligned rotation.
 
 ### Axes to Rotation
@@ -1200,9 +1342,13 @@ Builds a rotation from two directions. The primary axis is followed exactly, and
 
 ##### Primary Axis
 
+Data type: Vector.
+
 The direction the primary axis points to.
 
 ##### Secondary Axis
+
+Data type: Vector.
 
 The direction the secondary axis should lean towards.
 
@@ -1220,6 +1366,8 @@ Which axis follows the secondary direction. It has to differ from the primary ax
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation that matches the two directions.
 
 ### Axis Angle to Rotation
@@ -1232,15 +1380,21 @@ Makes a rotation from an axis and an angle: turn this far around this line. It i
 
 ##### Axis
 
+Data type: Vector.
+
 The direction of the line to turn around.
 
 ##### Angle
+
+Data type: Float (angle).
 
 How far to turn.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The rotation.
 
@@ -1254,11 +1408,15 @@ Makes a rotation from three angles, one around each of the X, Y and Z axes. This
 
 ##### Euler
 
+Data type: Vector (euler).
+
 The angles around X, Y and Z.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The rotation.
 
@@ -1272,11 +1430,15 @@ Gives the opposite rotation, the one that turns back what the input turned. Use 
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to invert.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The inverted rotation.
 
@@ -1322,23 +1484,33 @@ Makes a rotation from the four numbers of a quaternion. Use it when your rotatio
 
 ##### W
 
+Data type: Float.
+
 The scalar part.
 
 ##### X
+
+Data type: Float.
 
 The X part of the vector.
 
 ##### Y
 
+Data type: Float.
+
 The Y part of the vector.
 
 ##### Z
+
+Data type: Float.
 
 The Z part of the vector.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The rotation.
 
@@ -1352,9 +1524,13 @@ Turns a rotation by another rotation. Use it to add a turn to one that already e
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to turn.
 
 ##### Rotate By
+
+Data type: Rotation.
 
 The turn to add.
 
@@ -1368,6 +1544,8 @@ The turn to add.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The combined rotation.
 
 ### Rotate Vector
@@ -1380,15 +1558,21 @@ Turns a vector by a rotation. Use it to point a direction the way an object is f
 
 ##### Vector
 
+Data type: Vector.
+
 The vector to turn.
 
 ##### Rotation
+
+Data type: Rotation.
 
 The rotation to apply.
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The turned vector.
 
@@ -1402,15 +1586,21 @@ Reads a rotation as an axis and an angle. The opposite of Axis Angle to Rotation
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to read.
 
 #### Outputs
 
 ##### Axis
 
+Data type: Vector.
+
 The line the rotation turns around.
 
 ##### Angle
+
+Data type: Float (angle).
 
 How far it turns.
 
@@ -1424,11 +1614,15 @@ Reads a rotation as three angles around X, Y and Z. Use it to show or edit a rot
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to read.
 
 #### Outputs
 
 ##### Euler
+
+Data type: Vector (euler).
 
 The angles around X, Y and Z.
 
@@ -1442,23 +1636,33 @@ Reads a rotation as the four numbers of a quaternion. Use it to hand a rotation 
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation to read.
 
 #### Outputs
 
 ##### W
 
+Data type: Float.
+
 The scalar part.
 
 ##### X
+
+Data type: Float.
 
 The X part of the vector.
 
 ##### Y
 
+Data type: Float.
+
 The Y part of the vector.
 
 ##### Z
+
+Data type: Float.
 
 The Z part of the vector.
 
@@ -1480,6 +1684,8 @@ Builds a text from a template with gaps in it. Write the fixed words in the form
 
 ##### Format
 
+Data type: String.
+
 The template. Names in curly brackets become inputs.
 
 ##### +
@@ -1489,6 +1695,8 @@ Adds another value to fill in.
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The finished text.
 
@@ -1502,19 +1710,27 @@ Checks a text against a key and tells you whether it fits. Use it to choose a pa
 
 ##### String
 
+Data type: String.
+
 The text to check.
 
 ##### Operation
 
+Data type: Menu.
+
 How to compare: **Starts With**, **Ends With** or **Contains**.
 
 ##### Key
+
+Data type: String.
 
 The text to look for.
 
 #### Outputs
 
 ##### Result
+
+Data type: Boolean.
 
 On when the text matches.
 
@@ -1528,19 +1744,27 @@ Swaps every occurrence of one piece of text for another. Use it to clean up a na
 
 ##### String
 
+Data type: String.
+
 The text to change.
 
 ##### Find
 
+Data type: String.
+
 The part to look for.
 
 ##### Replace
+
+Data type: String.
 
 What to put in its place.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The changed text.
 
@@ -1554,11 +1778,15 @@ Writes a text backwards. Use it for the odd case where the end of a name matters
 
 ##### String
 
+Data type: String.
+
 The text to reverse.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The reversed text.
 
@@ -1572,15 +1800,21 @@ Changes a text to all capitals or all small letters. Use it to make names consis
 
 ##### String
 
+Data type: String.
+
 The text to change.
 
 ##### Case
+
+Data type: Menu.
 
 **Uppercase** or **Lowercase**.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The changed text.
 
@@ -1594,19 +1828,27 @@ Cuts a piece out of a text. You say where the piece starts and how long it is. U
 
 ##### String
 
+Data type: String.
+
 The text to cut from.
 
 ##### Position
 
+Data type: Integer.
+
 The place where the piece starts, counted from 0.
 
 ##### Length
+
+Data type: Integer.
 
 How many characters to keep.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The piece of text.
 
@@ -1620,27 +1862,39 @@ Removes unwanted characters from the start or the end of a text. Use it to strip
 
 ##### String
 
+Data type: String.
+
 The text to trim.
 
 ##### Characters
+
+Data type: String.
 
 The characters to remove.
 
 ##### Whitespace
 
+Data type: Boolean.
+
 Also removes spaces, tabs and line breaks.
 
 ##### Start
 
+Data type: Boolean.
+
 Trims the start of the text.
 
 ##### End
+
+Data type: Boolean.
 
 Trims the end of the text.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The trimmed text.
 
@@ -1654,13 +1908,19 @@ Looks for a piece of text inside another and tells you where it is and how often
 
 ##### String
 
+Data type: String.
+
 The text to search in.
 
 ##### Search
 
+Data type: String.
+
 The text to look for.
 
 ##### Mode
+
+Data type: Menu.
 
 Where to start looking: **From Start** or from the end.
 
@@ -1668,9 +1928,13 @@ Where to start looking: **From Start** or from the end.
 
 ##### First Found
 
+Data type: Integer.
+
 The position of the first match, counted from 0.
 
 ##### Count
+
+Data type: Integer.
 
 How many times the text was found.
 
@@ -1684,11 +1948,15 @@ Counts the characters in a text. Use it to check that a name is long enough, or 
 
 ##### String
 
+Data type: String.
+
 The text to measure.
 
 #### Outputs
 
 ##### Length
+
+Data type: Integer.
 
 The number of characters.
 
@@ -1702,9 +1970,13 @@ Reads a number from a text. Use it to turn a frame number in a file name back in
 
 ##### String
 
+Data type: String.
+
 The text to read.
 
 ##### Base
+
+Data type: Integer.
 
 The number base, 10 for normal numbers.
 
@@ -1722,6 +1994,8 @@ The number that was read.
 
 ##### Length
 
+Data type: Integer.
+
 How many characters of the text were used.
 
 ### Value to String
@@ -1738,13 +2012,19 @@ The number to write.
 
 ##### Decimals
 
+Data type: Integer.
+
 How many digits to show after the decimal point.
 
 ##### Base
 
+Data type: Integer.
+
 The number base, 10 for normal numbers.
 
 ##### Padding
+
+Data type: Integer.
 
 The minimum number of digits. Shorter numbers get zeros in front.
 
@@ -1758,6 +2038,8 @@ Writes a **Float** or an **Integer**.
 
 ##### String
 
+Data type: String.
+
 The number as text.
 
 ### Special Characters
@@ -1770,9 +2052,13 @@ Gives you characters that are hard to type into a text field: a line break and a
 
 ##### Line Break
 
+Data type: String.
+
 A character that starts a new line.
 
 ##### Tab
+
+Data type: String.
 
 A tab character.
 
@@ -1818,6 +2104,8 @@ This chapter deals with the input type Float. The same node exists in the Math m
 
 ##### Vector
 
+Data type: Vector.
+
 Standard vector input.
 
 ##### From Min/Max
@@ -1853,6 +2141,8 @@ Clamps values to Min/Max of the destination range.
 #### Outputs
 
 ##### vector
+
+Data type: Vector.
 
 Standard value output.
 
@@ -1909,6 +2199,8 @@ Same as with Separate RGB node. It separates color values. But instead separatin
 
 ##### Vector
 
+Data type: Vector.
+
 The Input vector.
 
 #### Outputs
@@ -1927,13 +2219,19 @@ Transform coordinate system for radial tiling.
 
 ##### Vector
 
+Data type: Vector.
+
 Vector 2 input
 
 ##### Sides
 
+Data type: Float.
+
 Number of angular segments for tiling. A non integer value results in an irrgeluar segment.
 
 ##### Roundness
+
+Data type: Float (factor).
 
 Roundness of the segment coordindates system.
 
@@ -1954,6 +2252,8 @@ The Vector Curves node maps an input vector components to a curve.
 In the shader context the node also has an additional Factor property.
 
 ##### Vector
+
+Data type: Vector.
 
 Standard vector 3 input.
 
@@ -2043,6 +2343,8 @@ Deletes selected curve points.
 
 ##### Vector
 
+Data type: Vector.
+
 Standard vector 3 output.
 
 ### Vector Math
@@ -2055,9 +2357,13 @@ The Vector Math Node performs math operations.
 
 ##### Vector
 
+Data type: Vector.
+
 First numerical value. The trigonometric functions accept values in radians.
 
 ##### Vector
+
+Data type: Vector.
 
 Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.
 
@@ -2073,6 +2379,8 @@ Here you can choose what mathematical operation to perform.
 
 ##### Value
 
+Data type: Float.
+
 Numerical value output.
 
 ### Vector Rotate
@@ -2085,17 +2393,25 @@ The **Vector Rotate** node rotates a vector around a specified axis and center p
 
 ##### Vector
 
+Data type: Vector.
+
 The input vector to be rotated.
 
 ##### Center
+
+Data type: Vector.
 
 The pivot point around which the vector is rotated.
 
 ##### Axis
 
+Data type: Vector.
+
 The axis of rotation, defined as am XYZ based 3D vector
 
 ##### Angle
+
+Data type: Float (angle).
 
 The amount of rotation in **degrees**.
 
@@ -2118,5 +2434,7 @@ When enabled, reverses the direction of the rotation.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The rotated vector result.

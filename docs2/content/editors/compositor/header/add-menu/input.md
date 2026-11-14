@@ -8,7 +8,7 @@ path:
   - Header
   - Add Menu
   - Input
-version: 5.2.3
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Input nodes: Constant, Scene."
@@ -41,9 +41,13 @@ The Blank Image node generates a solid image of a chosen size and color. It is u
 
 ##### Color
 
+Data type: Color.
+
 Defines the fill color of the image. Chosen through a swatch or color picker, supporting any RGB value. Determines the visual appearance of the generated blank image.
 
 ##### Size
+
+Data type: Integer Vector.
 
 Specifies the resolution of the image in pixels. Allows matching render dimensions or creating custom aspect ratios.
 
@@ -65,9 +69,13 @@ The first three settings simulate the aperture of the camera.
 
 ##### Flaps
 
+Data type: Integer.
+
 Sets an integer number of blades for the cameras iris diaphragm.
 
 ##### Angle
+
+Data type: Float (angle).
 
 Gives these blades an angular offset relative to the image plane.
 
@@ -81,11 +89,15 @@ Provides a type of distortion found in mirror lenses and some telescopes. This c
 
 ##### Color Shift
 
+Data type: Float (factor).
+
 Introduces chromatic aberration into the blur such as would be caused by a tilt-shift lens.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The generated bokeh image.
 
@@ -277,11 +289,15 @@ Returns informations about an image.
 
 ##### Image
 
+Data type: Color.
+
 The input image.
 
 #### Outputs
 
 ##### Dimensions
+
+Data type: Integer Vector.
 
 The dimensions output value.
 
@@ -291,13 +307,19 @@ The resolutions output value.
 
 ##### Location
 
+Data type: Vector.
+
 The locations output value.
 
 ##### Rotation
 
+Data type: Float.
+
 The rotation output value.
 
 ##### Scale
+
+Data type: Vector.
 
 The scale output value.
 
@@ -311,19 +333,27 @@ Returns the coordinates of the pixles of an image
 
 ##### Image
 
+Data type: Color.
+
 The input image.
 
 #### Outputs
 
 ##### Uniform
 
+Data type: Vector.
+
 Zero centered coordinates normalizes along the larger dimension for uniform scaling.
 
 ##### Normalized
 
+Data type: Vector.
+
 Normalized coordinates with half pixels offset.
 
 ##### Pixel
+
+Data type: Integer Vector.
 
 Integer pixel coordinates.
 
@@ -366,6 +396,8 @@ Expose for motion blur as a factor of Frames per Seconds.
 #### Outputs
 
 ##### Mask
+
+Data type: Float.
 
 The black-and-white output of the mask.
 
@@ -443,21 +475,31 @@ Reads where a strip of the Video Sequencer sits. This node only appears when the
 
 ##### Start Frame
 
+Data type: Integer.
+
 The first frame of the strip.
 
 ##### End Frame
+
+Data type: Integer.
 
 The last frame of the strip.
 
 ##### Location
 
+Data type: Vector.
+
 The strip's position in the frame.
 
 ##### Rotation
 
+Data type: Float.
+
 The strip's rotation.
 
 ##### Scale
+
+Data type: Vector.
 
 The strip's scale.
 
@@ -523,6 +565,8 @@ The boolean toggle.
 
 ##### Boolean
 
+Data type: Boolean.
+
 The state of the toggle.
 
 ### Color
@@ -575,6 +619,8 @@ The value.
 
 ##### Integer
 
+Data type: Integer.
+
 The output value.
 
 ### Integer Vector
@@ -597,6 +643,8 @@ The values of the vector.
 
 ##### Vector
 
+Data type: Integer Vector.
+
 The integer vector.
 
 ### Menu
@@ -615,6 +663,8 @@ The list of choices and the one that is picked.
 
 ##### Menu
 
+Data type: Menu.
+
 The picked choice.
 
 ### Normal
@@ -632,6 +682,8 @@ Here you can adjust the directory of the light to see how the normals behaves.
 #### Outputs
 
 ##### Normal
+
+Data type: Vector (direction).
 
 The output value.
 
@@ -669,6 +721,8 @@ The angles around X, Y and Z.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation.
 
 ### String
@@ -686,6 +740,8 @@ The text.
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The text you typed.
 
@@ -705,6 +761,8 @@ The float value.
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Vector
@@ -722,6 +780,8 @@ The single values of the vector 3.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The output vector.
 
@@ -883,6 +943,8 @@ The object's transform, as a matrix.
 
 ##### Location
 
+Data type: Vector.
+
 The location.
 
 ##### Rotation
@@ -927,9 +989,13 @@ The render button allows you to re-render the active scene with one click.
 
 ##### Image
 
+Data type: Color.
+
 The rendered image.
 
 ##### Alpha
+
+Data type: Float.
 
 The Alpha channel.
 
@@ -953,9 +1019,13 @@ Gives you the time of the scene: the current frame and the time in seconds. Use 
 
 ##### Seconds
 
+Data type: Float.
+
 The scene time in seconds.
 
 ##### Frame
+
+Data type: Float.
 
 The current frame, as a decimal number.
 
@@ -1052,6 +1122,8 @@ Start frame and End frame of the range of time specifying the values the output 
 #### Outputs
 
 ##### Factor
+
+Data type: Float.
 
 A speed of time factor (from 0.00 to 1.00) relative to the frame rate defined in the Render Dimensions Panel. The factor changes according to the defined curve.
 

@@ -37,23 +37,33 @@ Adds antialiasing to edges in an image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Threshold
+
+Data type: Float (factor).
 
 Threshold to detect edges.
 
 ##### Contrast Limit
 
+Data type: Float.
+
 How much to eliminate suspicious edges to avoid artifacts.
 
 ##### Corner Rounding
+
+Data type: Float (factor).
 
 How much sharp corners will be rounded.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -67,9 +77,13 @@ Applies a **custom convolution kernel** to an image, enabling advanced filtering
 
 ##### Image
 
+Data type: Color.
+
 The source image to be processed. Accepts any RGBA input.
 
 ##### Kernel Data Type
+
+Data type: Menu.
 
 Which data type input to use.
 
@@ -79,11 +93,15 @@ A matrix of values that defines the convolution operation. Can be manually defin
 
 ##### Normalize Kernel
 
+Data type: Boolean.
+
 When enabled, the kernel values are normalized to prevent brightness shifts.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The result of the convolution operation as an image.
 
@@ -99,21 +117,31 @@ It is uses Open Image Denoise, which transforms noisy images into clean images w
 
 ##### Image
 
+Data type: Color.
+
 Noise image input.
 
 ##### Albedo
+
+Data type: Color.
 
 Optional Albedo render pass to better preserve detail. For Cycles, it is recommended to use the Denoising Albedo render pass, which is available when enabling the Denoising Data passes.
 
 ##### Normal
 
+Data type: Vector.
+
 Optional normal render pass to better preserve detail. For Cycles, it is recommended to use the Denoising Normal render pass, which is available when enabling the Denoising Data passes.
 
 ##### HDR
 
+Data type: Boolean.
+
 Preserve colors outside the 0 to 1 range.
 
 ##### Prefilter
+
+Data type: Menu.
 
 ![Prefilter](/docs2/images/editors/compositor/header/add-menu-filter/prefilter.png)
 
@@ -132,6 +160,8 @@ Applies a quick prefiltering step to improve denoising with minimal processing t
 Applies a detailed prefiltering step for the best denoising result, but takes more processing time.
 
 ##### Quality
+
+Data type: Menu.
 
 ![Quality](/docs2/images/editors/compositor/header/add-menu-filter/quality.png)
 
@@ -157,6 +187,8 @@ Further reduced quality for a small increase in speed over Balanced.
 
 ##### Image
 
+Data type: Color.
+
 Denoised image output.
 
 ### Despeckle
@@ -171,23 +203,33 @@ This works by the standard deviation of each pixel and its neighbors is calculat
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount the filter effects the image.
 
 ##### Color Threshold
 
+Data type: Float.
+
 The threshold to control high/low complexity.
 
 ##### Neighbor Threshold
+
+Data type: Float (factor).
 
 The threshold to control the number of pixels that must match.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -201,13 +243,19 @@ The Dilate/Erode node provides a morphology (mathematical shape analysis) filter
 
 ##### Mask
 
+Data type: Float.
+
 Single color channel (or a black-and-white image) input.
 
 ##### Size
 
+Data type: Integer.
+
 The filter radius. A positive value of Distance dilates (expands) the influence of a pixel on its surrounding pixels. A negative value erodes (shrinks) its influence.
 
 ##### Type
+
+Data type: Menu.
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-filter/type.png)
 
@@ -216,6 +264,8 @@ There are four different dilate / erode modes. Step, Threshold, Distance and Fea
 #### Outputs
 
 ##### Mask
+
+Data type: Float.
 
 The filtered mask output.
 
@@ -229,15 +279,21 @@ The Inpaint node is used to extend borders of an image into transparent or maske
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Size
+
+Data type: Integer.
 
 The size of the inpaint in pixels.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -251,15 +307,21 @@ Turns a black and white mask into a distance map. Every pixel is given its dista
 
 ##### Mask
 
+Data type: Boolean.
+
 The mask to measure. White (true) pixels are inside the shape.
 
 #### Outputs
 
 ##### SDF
 
+Data type: Float.
+
 The distance of each pixel to the edge, in pixels.
 
 ##### Nearest Pixel
+
+Data type: Integer Vector.
 
 The position of the nearest pixel of the shape, as two whole numbers.
 
@@ -312,15 +374,21 @@ The Filter node implements various common image enhancement filters.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 ![Factor](/docs2/images/editors/compositor/header/add-menu-filter/factor.png)
 
 Controls the amount of influence the node exerts on the output image.
 
 ##### Type
+
+Data type: Menu.
 
 The available filter types. Soften, Laplace, Sobel, Prewitt and Kirsch all perform edge detection (in slightly different ways) based on vector calculus and set theory equations.
 
@@ -359,6 +427,8 @@ Performs a relief, emboss effect, darkening outside edges.
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -411,6 +481,8 @@ If not set to something other the High, then the glare effect will only be appli
 #### Inputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
@@ -520,6 +592,8 @@ Controls the gradual reduction of thestreakseffect's intensity. A higher fade va
 
 ##### Diagonal
 
+Data type: Boolean.
+
 Align the star diagonally.
 
 ##### Glare subpanel with glare type Sunbeams
@@ -556,13 +630,19 @@ The kernel input.
 
 ##### Image
 
+Data type: Color.
+
 Output with the generated glare result.
 
 ##### Glare
 
+Data type: Color.
+
 The generated glare only.
 
 ##### Highlights
+
+Data type: Color.
 
 The highlights from the generated glare.
 
@@ -586,23 +666,33 @@ It can be used for various purposes like: smoothing noisy render passes to avoid
 
 ##### Image
 
+Data type: Color.
+
 Standard image input. If only the image input is connected, the node blurs the image depending on the edges present in the source image.
 
 ##### Determinator
+
+Data type: Color.
 
 Which is non-obligatory and if the Determinator is connected, it serves as the source for defining edges/borders for the blur in the image. This has great advantage in case the source image is too noisy, but normals in combination with Z-buffer can still define exact borders/edges of objects.
 
 ##### Size
 
+Data type: Integer.
+
 The size of the blur in pixels.
 
 ##### Threshold
+
+Data type: Float.
 
 The threshold of the blur area. Pixels are considered to be in the blur area if the average difference between their determinator of the center pixels is less than this threshold.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -616,9 +706,13 @@ The Blur node provides several blur modes to blur an image. The icon top right a
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Size
+
+Data type: Vector.
 
 ![Size](/docs2/images/editors/compositor/header/add-menu-filter-blur/size.png)
 
@@ -672,6 +766,8 @@ Blur along the horizontal and vertical directions independently. This method is 
 
 ##### Image
 
+Data type: Color.
+
 Standard image output.
 
 ### Bokeh Blur
@@ -686,27 +782,39 @@ Several performance optimizations are also available such as OpenCL support, cal
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Bokeh
+
+Data type: Color.
 
 This is an input for the Bokeh Image node.
 
 ##### Size
 
+Data type: Float.
+
 Size controls the amount of blur. Size can either be a single value across the entire image or a variable value controlled by an input image. In order to use the latter, the Variable Size option must be selected. See the examples section below for more on how to use this.
 
 ##### Mask
 
+Data type: Float.
+
 Here you can input a Box Mask matte node or a Mask input node to restrict the area of the image the blur is applied to. This could be helpful, for example, when developing a node system by allowing only a small area of the image to be filtered thus saving composite time each time adjustments are made.
 
 ##### Extend Bounds
+
+Data type: Boolean.
 
 Extend the bounds of the input image to fully fit the blurred image.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Image output.
 
@@ -720,9 +828,13 @@ It is typically used to emulate depth of field (DOF) using a post-processing met
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Z
+
+Data type: Float.
 
 Z-buffer input, but could also be a (greyscale) image used as a mask, or a single value input.
 
@@ -776,6 +888,8 @@ The Z value of the image.
 
 ##### Image
 
+Data type: Color.
+
 Image output.
 
 ### Directional Blur
@@ -788,9 +902,13 @@ Blurs an image in a specified direction and magnitude. Can be used to fake motio
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Samples
+
+Data type: Integer.
 
 The number of samples to compute the blur.
 
@@ -804,9 +922,13 @@ How large the blur effect is.
 
 ##### Rotation
 
+Data type: Float (angle).
+
 Rotates the image each iteration to create a spin effect, from the center point.
 
 ##### Scale
+
+Data type: Float.
 
 Scales the image each iteration, creating the effect of a zoom.
 
@@ -824,6 +946,8 @@ The translation direction.
 
 ##### Image
 
+Data type: Color.
+
 Image output.
 
 ### Vector Blur
@@ -836,9 +960,13 @@ The Vector Blur node is a fast method for simulating Motion blur in compositing.
 
 ##### Image
 
+Data type: Color.
+
 Image input, to be linked to the “Combined” render pass.
 
 ##### Speed
+
+Data type: Vector (velocity).
 
 Input for the “Vector” render pass. See Cycles render passes.
 
@@ -848,15 +976,21 @@ Z depth, to be linked to the “Depth” render pass.
 
 ##### Samples
 
+Data type: Integer.
+
 Quality factor.
 
 ##### Shutter
+
+Data type: Float.
 
 Time between open and close the shutter.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Motion blurred image output.
 
