@@ -1498,6 +1498,33 @@ The list of the editors that you can theme. Every editor can have its own themin
 
 Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.
 
+##### Editor & Widgets subpanel
+
+![Editor & Widgets subpanel](/docs2/images/editors/preferences/editor-and-widgets-subpanel.png)
+
+The borders and outlines of the editors, the shadow of panels and menus, and the look of the widgets: emboss, text cursor, links and the shadow under the interface text.
+
+###### Text Shadow
+
+A shadow under **all interface text**, to make it easier to read on busy or light backgrounds. One setting covers every kind of text: labels, buttons, menus and panel titles.
+
+- **None:** text without a shadow. This is the Bforartists theme default.
+- **Small:** a soft shadow with a small blur. The Blender Dark preset uses this.
+- **Large:** a soft shadow with a large blur.
+- **Outline:** a thin outline around the characters.
+
+The two settings below only show when Text Shadow is not None.
+
+###### Shadow Color
+
+The color of the text shadow. The alpha value sets how strong it is: at 0 the shadow is invisible, and the Offset field is greyed out.
+
+###### Offset
+
+How far the shadow is moved from the text, in pixels: **X** to the right, **Y** up. The range is -10 to 10 on each axis. Negative values move it left or down.
+
+> **Note:** This one Text Shadow setting replaces the shadow settings that each text style had before.
+
 #### Text Style
 
 Defines font colors and styles used in labels, tooltips, and text-based editors.
