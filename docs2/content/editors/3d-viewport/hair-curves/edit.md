@@ -557,6 +557,8 @@ When you resize the curve radius then you will see a value in the header. It tel
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 - **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 - **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.
 
@@ -601,6 +603,8 @@ When you rotate the curve with the tilt tool, then you will see a value in the h
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 - **Active Tool**: When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
 - **Tweak, Select Box, Circle and Lasso**: When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.

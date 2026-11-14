@@ -107,6 +107,8 @@ Or you can use the XYZ axis type. That's a handler with three axis. This widget 
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -184,6 +186,8 @@ The extrude amount.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -267,6 +271,8 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -336,6 +342,8 @@ This tool works like a shrink fatten extrude. And so you will see a correspondin
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -427,6 +435,8 @@ Scales the offset by surrounding geometry.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -711,6 +721,8 @@ Sample edges with even lengths.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -971,6 +983,8 @@ Correct the UV's when transforming the new added loop.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1153,6 +1167,8 @@ The snapping angle in case the angle snappping tool is active.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1241,6 +1257,8 @@ Create quad or tri geometry.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag-2.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -1362,6 +1380,8 @@ With duplicate checked the geometry gets duplicated instead of extruded. · **Ax
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1426,6 +1446,8 @@ How often the smoothing should be applied.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1477,6 +1499,8 @@ The seed for the randomization.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -1539,6 +1563,8 @@ Correct UV's corrects the UV's while editing the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1594,6 +1620,8 @@ Correct UV's corrects the UV's while editing the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1646,6 +1674,8 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -1715,6 +1745,8 @@ Scales the offset to give more even thickness. Without this checked the farer aw
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1783,6 +1815,8 @@ Choose the orientation for the shear action.
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 
@@ -1916,6 +1950,8 @@ Fills the gap between the new edges when you move the geometry.
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
 
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
+
 ###### Active Tool
 
 When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.
@@ -1985,6 +2021,8 @@ Rip Edge extrudes out the selected vertices. When you do this operation at an ed
 ![Drag](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png)
 
 When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.
+
+See **Drag** under Tool Settings on the [Tool Shelf](../../all-modes/tool-shelf.md) page for the choices and what the button icon shows.
 
 ###### Active Tool
 

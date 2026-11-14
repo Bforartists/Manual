@@ -8,7 +8,7 @@ path:
   - "All Modes"
   - "Tool Shelf"
 version: "5.1"
-status: draft
+status: needs-review
 icon: tool_settings
 summary: "The tools of All Modes in the tool shelf."
 order: 20
@@ -29,6 +29,19 @@ In the tool shelf there can just be one active tool in the tool shelf. An activa
 When you activate a tool in the tool shelf then you will also reveal its tool settings. There are two locations where you can find the tool settings. In the header, and in the sidebar in the Tool tab. It's your choice with which panel you want to work.
 
 ![Tool Settings](/docs2/images/editors/3d-viewport/tool-shelf/tool-settings.png)
+
+#### Drag
+
+![The Drag popover with Select Box chosen](/docs2/images/editors/3d-viewport/tool-shelf/drag-popover.png)
+
+Tools with a widget, such as Move, Rotate, Scale and Transform, have a **Drag** setting in their tool settings. It decides what happens when you click and drag next to the widget, not on it:
+
+- **Active Tool:** the drag uses the active tool itself, for example it moves the selection with the Move tool.
+- **Tweak**, **Select Box**, **Select Circle** or **Select Lasso:** the drag selects with that tool instead, and you keep the widget of the active tool for transforming. The row of buttons below sets the selection mode of the select tool, as for the select tools themselves.
+
+![The Drag button showing the Select Box icon](/docs2/images/editors/3d-viewport/tool-shelf/drag-fallback.png)
+
+The button shows the icon of the chosen select tool, so you see at a glance what a drag does. With Active Tool it shows the tool settings icon.
 
 ### Mode dependent content
 
