@@ -6,7 +6,7 @@ path:
   - "Interface"
   - "Floating Menus"
 version: "5.3"
-status: draft
+status: needs-review
 icon: search_menu
 summary: "Header menus, hotkey menus and the F3 search menu: open, search and navigate them."
 source:
