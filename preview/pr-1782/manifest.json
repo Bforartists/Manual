@@ -1,0 +1,11 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/all-modes/header/view-menu.md": "editors/3d-viewport/all-modes/header/view-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/tool-shelf.md": "editors/3d-viewport/all-modes/tool-shelf.html",
+  "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
+  "docs2/content/editors/video-sequence-editor/header/index.md": "editors/video-sequence-editor/header.html",
+  "docs2/content/extensions/core-extension-brush-panels.md": "extensions/core-extension-brush-panels.html",
+  "docs2/content/interface/tabs-and-panels.md": "interface/tabs-and-panels.html"
+ },
+ "images": 384
+}
