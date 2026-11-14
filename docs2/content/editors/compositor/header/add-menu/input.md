@@ -583,6 +583,8 @@ The RGB node uses the color picker widget.
 
 ##### Color / RGBA
 
+Data type: Color.
+
 A single RGBA color value.
 
 ### Font
@@ -600,6 +602,8 @@ The font to use. Pick one from the font browser.
 #### Outputs
 
 ##### Font
+
+Data type: Font.
 
 The chosen font.
 
@@ -703,6 +707,8 @@ The object to provide. Pick one from the list.
 
 ##### Object
 
+Data type: Object.
+
 The chosen object.
 
 ### Rotation
@@ -801,6 +807,8 @@ Gives you the camera the scene is currently using. Use it with Camera Info to re
 
 ##### Active Camera
 
+Data type: Object.
+
 The scene's active camera, as an object.
 
 ### Bone Info
@@ -813,9 +821,13 @@ Reads the position of a bone of an armature. Use it to let a bone drive somethin
 
 ##### Armature
 
+Data type: Object.
+
 The armature object that holds the bone.
 
 ##### Bone Name
+
+Data type: String.
 
 The name of the bone to read.
 
@@ -829,25 +841,37 @@ The name of the bone to read.
 
 ##### Pose
 
+Data type: Matrix.
+
 The bone's pose, as a matrix.
 
 ##### Local Pose
+
+Data type: Matrix.
 
 The pose relative to the parent bone.
 
 ##### Transform Pose
 
+Data type: Matrix.
+
 The pose with the bone's own transform removed.
 
 ##### Rest Pose
+
+Data type: Matrix.
 
 The bone in its rest position.
 
 ##### Rest Length
 
+Data type: Float.
+
 The length of the bone at rest.
 
 ##### Exists
+
+Data type: Boolean.
 
 On when a bone with that name exists.
 
@@ -861,43 +885,63 @@ Reads the settings of a camera: its lens, sensor, clipping and projection. Use i
 
 ##### Camera
 
+Data type: Object.
+
 The camera object to read.
 
 #### Outputs
 
 ##### Projection Matrix
 
+Data type: Matrix.
+
 The matrix that turns a point of the scene into a position in the camera's picture.
 
 ##### Focal Length
+
+Data type: Float.
 
 The lens length in millimetres.
 
 ##### Sensor
 
+Data type: Vector (2d).
+
 The width and height of the sensor.
 
 ##### Shift
+
+Data type: Vector (2d).
 
 The lens shift in X and Y.
 
 ##### Clip Start
 
+Data type: Float.
+
 The nearest distance the camera sees.
 
 ##### Clip End
+
+Data type: Float.
 
 The farthest distance the camera sees.
 
 ##### Focus Distance
 
+Data type: Float.
+
 The distance that is in focus.
 
 ##### Is Orthographic
 
+Data type: Boolean.
+
 On for an orthographic camera.
 
 ##### Orthographic Scale
+
+Data type: Float.
 
 The size of the view of an orthographic camera.
 
@@ -911,6 +955,8 @@ The Is Viewport node tells you whether the compositor is running in the 3D View 
 
 ##### Is Viewport
 
+Data type: Boolean.
+
 On (true) when the node tree is evaluated by the viewport compositor, off (false) in the node editor and in a final render.
 
 ### Object Info
@@ -922,6 +968,8 @@ Reads where an object is, how it is turned and how big it is. Use it to let an o
 #### Inputs
 
 ##### Object
+
+Data type: Object.
 
 The object to read.
 
@@ -939,6 +987,8 @@ Passes the geometry as an instance instead of a copy.
 
 ##### Transform
 
+Data type: Matrix.
+
 The object's transform, as a matrix.
 
 ##### Location
@@ -949,9 +999,13 @@ The location.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation. Use Rotate Vector or Rotation to Euler to work with it.
 
 ##### Scale
+
+Data type: Vector.
 
 The size along each axis.
 

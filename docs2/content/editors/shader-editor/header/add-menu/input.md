@@ -45,6 +45,8 @@ Tint for AO output color.
 
 ##### Distance Cycles Only
 
+Data type: Float.
+
 Distance up to which other objects are considered to occlude the shading point.
 
 ##### Normal
@@ -371,9 +373,13 @@ Data type: Float.
 
 ##### Pointiness Cycles Only
 
+Data type: Float.
+
 An approximation of the curvature of the mesh per vertex. Lighter values indicate convex angles, darker values indicate concave angles. It allows you to do effects like dirt maps and wear-off effects.
 
 ##### Random Per Island Cycles Only
+
+Data type: Float.
 
 A random value for each connected component (island) of the mesh. It is useful to add variations to meshes composed of separated units like tree leaves, wood planks, or curves of multiple splines.
 
@@ -549,17 +555,25 @@ Data type: Float.
 
 ##### Is Singular Ray Cycles Only
 
+Data type: Float.
+
 1.0 if shading is executed for a singular ray, 0.0 otherwise.
 
 ##### Is Reflection Ray Cycles Only
+
+Data type: Float.
 
 1.0 if shading is executed for a reflection ray, 0.0 otherwise.
 
 ##### Is Transmission Ray Cycles Only
 
+Data type: Float.
+
 1.0 if shading is executed for a transmission ray, 0.0 otherwise.
 
 ##### Ray Length Cycles Only
+
+Data type: Float.
 
 Distance traveled by the light ray from the last bounce or camera.
 
@@ -571,17 +585,25 @@ Number of times the ray been reflected or transmitted on interaction with a surf
 
 ##### Diffuse Depth Cycles Only
 
+Data type: Float.
+
 Number of times the ray has gone through diffuse reflection or transmission.
 
 ##### Glossy Depth Cycles Only
+
+Data type: Float.
 
 Number of times the ray has gone through glossy reflection or transmission.
 
 ##### Transparent Depth Cycles Only
 
+Data type: Float.
+
 Returns the number of transparent surfaces passed through.
 
 ##### Transmission Depth Cycles Only
+
+Data type: Float.
 
 Replace a Transmission light path after X bounces with another shader, e.g. a Diffuse one. This can be used to avoid black surfaces, due to low amount of max bounces.
 

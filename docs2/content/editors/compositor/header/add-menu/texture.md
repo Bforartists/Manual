@@ -60,6 +60,8 @@ Texture coordinate to sample texture at; defaults to Generated texture coordinat
 
 ##### Color1, Color 2
 
+Data type: Color.
+
 Color of the checkers.
 
 ##### Scale
@@ -113,6 +115,8 @@ The rate at which the Gabor noise changes across space. It differs from the inpu
 The directionality of the Gabor noise. 1 means the noise is completely directional. With a value of 0 the noise goes in all directions.
 
 ##### Orientation
+
+Data type: follows the Type setting.
 
 The direction of the anisotropic Gabor noise. With the 2ds method you have a orientation value. With the 3d method you will have a trackball to adjust the orientation.
 

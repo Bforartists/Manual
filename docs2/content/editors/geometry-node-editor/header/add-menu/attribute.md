@@ -35,13 +35,19 @@ Retreive statistic values from the input mesh.
 
 ##### Geometry
 
+Data type: Geometry.
+
 Standard geometry input.
 
 ##### Selection
 
+Data type: Boolean.
+
 A selection of the geometry input.
 
 ##### Attribute
+
+Data type: follows the Data Type setting.
 
 Attribute to get the statistics from.
 
@@ -69,25 +75,37 @@ Outputs the statistics for the different types.
 
 ##### Mean
 
+Data type: follows the Data Type setting.
+
 The average value of all data.
 
 ##### Median
+
+Data type: follows the Data Type setting.
 
 The median value of all data.
 
 ##### Sum
 
+Data type: follows the Data Type setting.
+
 The sum value of all data.
 
 ##### Min
+
+Data type: follows the Data Type setting.
 
 The min value of all data.
 
 ##### Max
 
+Data type: follows the Data Type setting.
+
 The max value of all data.
 
 ##### Range
+
+Data type: follows the Data Type setting.
 
 The difference between the max and min value.
 
@@ -96,6 +114,8 @@ The difference between the max and min value.
 How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range.
 
 ##### Variance
+
+Data type: follows the Data Type setting.
 
 The variance of all data, defined as the square of the standard deviation.
 

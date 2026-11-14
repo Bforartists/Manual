@@ -271,9 +271,9 @@ The radius of the points as a float. This is a field meaning you can set the sca
 
 Standard mesh output.
 
-### Points to Cuves
+### Points to Curves
 
-![Points to Cuves](/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-cuves.png)
+![Points to Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-point/points-to-curves.png)
 
 Generates a mesh vertex in the output geometry for each point cloud point in the input geometry.
 

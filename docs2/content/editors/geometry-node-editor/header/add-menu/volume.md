@@ -147,6 +147,8 @@ Retreive the integer coordinates of the voxel that the field is evaluated on.
 
 ##### X / Y / Z
 
+Data type: Integer.
+
 Vector 3 output of the voxel.
 
 ##### Tile subpanel
@@ -540,9 +542,13 @@ Set the background value used for inactive voxels and tiles.
 
 ##### Grid
 
+Data type: follows the Data Type setting.
+
 Standard geometry input.
 
 ##### Background
+
+Data type: follows the Data Type setting.
 
 Volume density per voxel. Higher values makes it more dense.
 
@@ -559,6 +565,8 @@ What data type to calculate.
 #### Output
 
 ##### Grid
+
+Data type: follows the Data Type setting.
 
 The grid output.
 

@@ -59,9 +59,13 @@ However, it's less efficient for handling tiny elements, like individual strands
 
 ###### Geometry
 
+Data type: Geometry.
+
 The input geometry whose elements will be processed individually. This can include meshes, curves, or other geometry types.
 
 ###### Selection
+
+Data type: Boolean.
 
 Specifies which subset of elements to process. This allows filtering based on boolean attributes or conditions per field – typically used as a true/false mask.
 
@@ -80,6 +84,8 @@ The input geometry is divided into individual geometries, each corresponding to 
 ##### Output
 
 ###### Index
+
+Data type: Integer.
 
 Provides the Index integer of the current elements of the selected domain to be processed.
 
@@ -135,6 +141,8 @@ Iteration index that is used by inspection features like the viewer node or sock
 
 ###### Geometry
 
+Data type: Geometry.
+
 The original input geometry with potentially new attributes that are output by the zone.
 
 ###### Element
@@ -156,6 +164,8 @@ Data type: Integer.
 Wich input to choose.
 
 ##### 0 , 1 ...
+
+Data type: follows the Data Type setting.
 
 ![0 , 1 ...](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/0-1.png)
 
@@ -203,6 +213,8 @@ Same level Menu Switches with the same input cause a conflict:
 
 ##### A / B
 
+Data type: follows the Data Type setting.
+
 Becomes the output if the value is chosen.
 
 ##### Menu
@@ -214,6 +226,8 @@ Data type: Menu.
 Determines which of the input options will be selected and passed through as the default.
 
 ##### A , B ...
+
+Data type: follows the Data Type setting.
 
 The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.
 
@@ -301,6 +315,8 @@ The beginning of the iteration or loop.
 
 ###### Iterations
 
+Data type: Integer.
+
 Number of repetitions or loops.
 
 ###### Geometry
@@ -321,11 +337,15 @@ The result and output of the iteration or loop. You can define custom attributes
 
 ###### Geometry
 
+Data type: Geometry.
+
 Standard geometry output.
 
 ##### Outputs
 
 ###### Geometry
+
+Data type: Geometry.
 
 Standard geometry output.
 
@@ -600,6 +620,8 @@ The Compare node takes two inputs and does a math comparison between them.
 #### Inputs
 
 ##### A, B
+
+Data type: follows the Input Type setting.
 
 Standard float value input.
 
@@ -909,45 +931,67 @@ Input Value. Trigonometric functions read this value as radians.
 
 ##### Addend
 
+Data type: Float.
+
 Input Addend.
 
 ##### Base
+
+Data type: Float.
 
 Input Base.
 
 ##### Exponent
 
+Data type: Float.
+
 Input Exponent.
 
 ##### Epsilon
+
+Data type: Float.
 
 Input Epsilon.
 
 ##### Distance
 
+Data type: Float.
+
 Input Distance.
 
 ##### Min
+
+Data type: Float.
 
 Input Minimum.
 
 ##### Max
 
+Data type: Float.
+
 Input Maximum.
 
 ##### Increment
+
+Data type: Float.
 
 Input Increment.
 
 ##### Scale
 
+Data type: Float.
+
 Input Scale.
 
 ##### Degrees
 
+Data type: Float.
+
 Input Degrees.
 
 ##### Radians
+
+Data type: Float.
 
 Input Radians.
 
@@ -1201,6 +1245,8 @@ The syntax can be found here: [https://docs.python.org/3/library/string.html#for
 
 ##### Strings
 
+Data type: String.
+
 The strings that you want to modify.
 
 #### Properties
@@ -1255,9 +1301,13 @@ Allows you to compare strings to match conditions
 
 ##### String
 
+Data type: String.
+
 The input string.
 
 ##### Key
+
+Data type: String.
 
 An input key.
 
@@ -1273,6 +1323,8 @@ What string condition to match.
 
 ##### Result
 
+Data type: Boolean.
+
 The output strings that matches the condition.
 
 ### Replace Strings
@@ -1285,19 +1337,27 @@ Find and replace strings inside of the input string.
 
 ##### String
 
+Data type: String.
+
 The input string.
 
 ##### Find
 
+Data type: String.
+
 The string part that you want to replace.
 
 ##### Replace
+
+Data type: String.
 
 The string part that you use to replace the selected string part.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The strings that you want to join into one text string.
 
@@ -1585,9 +1645,13 @@ Adds special characters to the text string.
 
 ##### Line Break
 
+Data type: String.
+
 Adds a Line Break to the text string.
 
 ##### Tab
+
+Data type: String.
 
 Adds a tab to the text string.
 
@@ -1677,6 +1741,8 @@ The Combine XYZ Node combines a vector from its individual components.
 
 ##### X Y and Z
 
+Data type: Float.
+
 X, Y and Z values.
 
 #### Outputs
@@ -1753,6 +1819,8 @@ Allows to mix values and vectors in various ways. The node has three different m
 
 ##### Factor
 
+Data type: Float (factor).
+
 ![Factor](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor.png)
 
 ![Factor](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-2.png)
@@ -1761,11 +1829,15 @@ The mix factor. With mode Uniform it is a single value. With mode Non Uniform it
 
 ##### A
 
+Data type: Vector.
+
 ![A](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/a.png)
 
 Vector A input.
 
 ##### B
+
+Data type: Vector.
 
 Vector B input.
 
@@ -1787,6 +1859,8 @@ Use a single value or a vector for the factor.
 
 ##### Result
 
+Data type: Vector.
+
 The output value or vector.
 
 ### Separate XYZ
@@ -1806,6 +1880,8 @@ The Input vector.
 #### Outputs
 
 ##### X, Y and Z
+
+Data type: Float.
 
 The output vectors for X, Y and Z.
 
@@ -2508,6 +2584,8 @@ From which domain to use the data.
 
 ##### Leading and Trailing
 
+Data type: follows the Data Type setting.
+
 Returns the running totals starting at either the first value of each accumulations or 0 if there is no data
 
 ##### Total
@@ -3007,6 +3085,8 @@ Combines values into a matrix. A matrix is something like a transform cage. A ve
 
 ##### Column 1 , 2, 3, 4
 
+Data type: Float.
+
 Allows you to combine values into the matrix. A matrix is made of four vector 4 in 4 dimensions. So 16 values.
 
 #### Output
@@ -3109,11 +3189,15 @@ Multiplies the values of two matrices.
 
 ##### Matrix, Matrix
 
+Data type: Matrix.
+
 The input matrices
 
 #### Outputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The output matrix.
 
@@ -3164,6 +3248,8 @@ The input matrix.
 ![Output](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/output.png)
 
 ##### Column 1 , 2, 3, 4
+
+Data type: Float.
 
 Extract the values from a row in a column. A matrix is made of four vector 4 in 4 dimensions. So 16 values.
 
@@ -3485,9 +3571,13 @@ Rotates an euler rotation by another euler rotation.
 
 ##### Factor
 
+Data type: Float (factor).
+
 amount of mixing between a and b inputs.
 
 ##### A, B
+
+Data type: Rotation.
 
 The input.
 
@@ -3609,11 +3699,15 @@ Converts a rotation vector to an euler angle.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The input vector.
 
 #### Outputs
 
 ##### Euler
+
+Data type: Vector (euler).
 
 The euler angle.
 
@@ -3635,6 +3729,8 @@ The input vector.
 
 ##### W, X, Y, Z
 
+Data type: Float.
+
 The single output values of the quaternion.
 
 ### Quaternion to Rotation
@@ -3646,6 +3742,8 @@ Converts a rotation vector to a quaternion.
 #### Inputs
 
 ##### W, X, Y, Z
+
+Data type: Float.
 
 The single input values of the quaternion.
 

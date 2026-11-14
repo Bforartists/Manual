@@ -179,6 +179,8 @@ Retrieves the transform of the instances.
 
 ##### Transform
 
+Data type: Matrix.
+
 Transform Field output.
 
 ### Instance Rotation

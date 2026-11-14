@@ -233,6 +233,8 @@ Outputs the absolute positions of a marker at the given Frame.
 
 ##### X/Y
 
+Data type: Float.
+
 The marker’s X and Y location.
 
 ##### Speed

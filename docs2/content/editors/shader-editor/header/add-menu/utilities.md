@@ -47,6 +47,8 @@ The beginning of the iteration or loop.
 
 ###### Iterations
 
+Data type: Integer.
+
 Number of repetitions or loops.
 
 ###### Geometry
@@ -138,6 +140,8 @@ Which item to pass through, counting from 0. If the index is outside the availab
 
 ##### 0 , 1 ...
 
+Data type: follows the Data Type setting.
+
 The values to choose from. A new node starts with two (0 and 1). Add more with the empty socket at the bottom of the node, or with Add Item in the Items panel of the sidebar. The Items panel also removes and reorders items.
 
 #### Properties
@@ -181,6 +185,8 @@ Same level Menu Switches with the same input cause a conflict:
 
 ##### A / B
 
+Data type: follows the Data Type setting.
+
 Becomes the output if the value is chosen.
 
 ##### Menu
@@ -192,6 +198,8 @@ Data type: Menu.
 Determines which of the input options will be selected and passed through as the default.
 
 ##### A , B ...
+
+Data type: follows the Data Type setting.
 
 The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.
 
@@ -669,6 +677,8 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 
 ##### X Y and Z
 
+Data type: Float.
+
 X, Y and Z values.
 
 #### Outputs
@@ -881,6 +891,8 @@ Clamp the input factor to 0-1 range.
 
 ##### Result
 
+Data type: Vector.
+
 The output value or vector.
 
 ### Separate XYZ
@@ -900,6 +912,8 @@ The Input vector.
 #### Outputs
 
 ##### X, Y and Z
+
+Data type: Float.
 
 The output vectors for X, Y and Z
 
