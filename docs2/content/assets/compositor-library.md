@@ -2853,11 +2853,11 @@ Data type: Float.
 
 Wave pattern using distance metric 3.
 
-#### Metric 3 (fourth output)
+#### Metric 4
 
 Data type: Float.
 
-Wave pattern using distance metric 4. In the node, this fourth output is also named Metric 3.
+Wave pattern using distance metric 4.
 
 ### How to use
 
