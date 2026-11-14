@@ -155,6 +155,20 @@ Calculate position bounds of the geometry set of each instance.
 
 **Min**: The minimum bounding box dimension. · **Max**: The maximum bounding box dimension.
 
+### Instance Reference
+
+![Instance Reference](/docs2/images/editors/geometry-node-editor/header/add-menu-instances/instance-reference.png)
+
+Gives the reference index of each instance: which of the instanced objects or geometries it shows. When you instance a collection on points with Pick Instance, every point picks one of the collection's children, and this index tells you which one. Use it to give each kind of instance its own color, scale or rotation.
+
+#### Output
+
+##### Reference Index
+
+Data type: Integer.
+
+The index of the geometry or object that the instance refers to, per instance.
+
 ### Instance Transform
 
 ![Instance Transform](/docs2/images/editors/geometry-node-editor/header/add-menu-instances/instance-transform.png)
@@ -163,7 +177,7 @@ Retrieves the transform of the instances.
 
 #### Output
 
-##### Transfrom
+##### Transform
 
 Transform Field output.
 
