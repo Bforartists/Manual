@@ -1,0 +1,11 @@
+{
+ "pages": {
+  "docs2/content/editors/dope-sheet/footer-tools-and-options.md": "editors/dope-sheet/footer-tools-and-options.html",
+  "docs2/content/editors/dope-sheet/header/index.md": "editors/dope-sheet/header.html",
+  "docs2/content/editors/graph-editor/footer-tools-and-options.md": "editors/graph-editor/footer-tools-and-options.html",
+  "docs2/content/editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.md": "editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.html",
+  "docs2/content/editors/timeline/header.md": "editors/timeline/header.html",
+  "docs2/content/editors/video-sequence-editor/footer-tools-and-options.md": "editors/video-sequence-editor/footer-tools-and-options.html"
+ },
+ "images": 190
+}
