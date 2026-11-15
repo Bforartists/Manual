@@ -25,9 +25,9 @@ replaces:
 
 The Attribute menu contains the attribute nodes. These nodes allows you to work with object attributes.
 
-### Attribute Statistics
+### Attribute Statistic
 
-![Attribute Statistics](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/attribute-statistics.png)
+![Attribute Statistic](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/attribute-statistics.png)
 
 Retreive statistic values from the input mesh.
 
@@ -53,15 +53,15 @@ Attribute to get the statistics from.
 
 #### Properties
 
-##### Domain Type
+##### Domain
 
 ![Domain Type](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-type.png)
 
 From which domain to retreive the data.
 
-![Domain Type](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-type-2.png)
+##### Data Type
 
-Data Type
+![Domain Type](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain-type-2.png)
 
 What data type to use.
 
@@ -109,7 +109,9 @@ Data type: follows the Data Type setting.
 
 The difference between the max and min value.
 
-##### Standard Derivation
+##### Standard Deviation
+
+Data type: follows the Data Type setting.
 
 How much values differ from the mean. A low standard deviation indicates that the values are grouped tightly together at the mean. A high standard deviation indicates that the values are spread out over a large range.
 
@@ -125,13 +127,13 @@ The variance of all data, defined as the square of the standard deviation.
 
 The Domain Size node has a single geometry input and a selection for the component type. And outputs containing single values for the related domains are shown, based on this chosen component.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-Geometry input.
+Geometry input. Only the top level of the geometry is counted, not nested instances.
 
 #### Properties
 
@@ -141,55 +143,59 @@ Geometry input.
 
 What component to calculate.
 
-#### Output
+#### Outputs
 
-##### With type mesh
+The outputs that you see depend on the Component setting.
 
 ![With type mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-mesh.png)
 
-###### Point Count
+##### Point Count
 
-The point count of the mesh.
-
-###### Edge Count
-
-The edge count of the mesh.
-
-###### Face Count
-
-The face count of the mesh.
-
-###### Face Corner Count
-
-The face corner count of the mesh.
-
-##### With type Point Cloud
+Data type: Integer.
 
 ![With type Point Cloud](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-point-cloud.png)
 
-###### Point Count
+The point count of the mesh, the point cloud or the curve. Only for the Mesh, Point Cloud and Curve components.
 
-The point count of the point cloud.
+##### Edge Count
 
-##### With type Curve
+Data type: Integer.
 
-###### Point Count
+The edge count of the mesh. Only for the Mesh component.
+
+##### Face Count
+
+Data type: Integer.
+
+The face count of the mesh. Only for the Mesh component.
+
+##### Face Corner Count
+
+Data type: Integer.
+
+The face corner count of the mesh. Only for the Mesh component.
+
+##### Spline Count
+
+Data type: Integer.
 
 ![Point Count](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/point-count.png)
 
-The point count of the curve.
+The number of splines in the curve. Only for the Curve component.
 
-###### Spline Count
+##### Instance Count
 
-The number of splines in the curve.
-
-##### With type Instances
+Data type: Integer.
 
 ![With type Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/with-type-instances.png)
 
-###### Instances count
+How many instances the input geometry has. Only for the Instances component.
 
-How many instances the input geometry has.
+##### Layer Count
+
+Data type: Integer.
+
+How many layers the Grease Pencil geometry has. Only for the Grease Pencil component.
 
 ### Get Attribute Names
 
@@ -211,7 +217,7 @@ Data type: Boolean.
 
 A panel with a checkbox in its header. Turn it on to list only attributes of one data type.
 
-##### Data Type
+###### Data Type
 
 Data type: Menu.
 
@@ -223,7 +229,7 @@ Data type: Boolean.
 
 A panel with a checkbox in its header. Turn it on to list only attributes on one domain.
 
-##### Domain
+###### Domain
 
 Data type: Menu.
 
@@ -255,13 +261,19 @@ Name of the attribute that is used as input. It should be a float attribute with
 
 Data type: Integer.
 
-How many times to blur the values for all elements. Weight Relative mix weigth of neighbouring elements.
+How many times to blur the values for all elements.
+
+##### Weight
+
+Data type: Float (factor).
+
+The relative mix weight of neighboring elements.
 
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/properties.png)
 
-Data Type
+##### Data Type
 
 What data type to use.
 
@@ -289,9 +301,13 @@ Data type: Geometry.
 
 Standard geometry input.
 
-##### Empty socket
+##### Selection
 
-Connect a node to get its attribute. Note that adding a connection creates a new empty socket. Note also that further input and output settings depends of the input socket. For a position node you will get a vector numberfield. For a color node a color output when you disconnect the former connected socket types.
+Data type: Boolean.
+
+The selection is captured as an attribute too. It is the default capture item.
+
+The other inputs are dynamic. Connect a node to the empty socket to get its attribute. Note that adding a connection creates a new empty socket. Note also that further input and output settings depends of the input socket. For a position node you will get a vector numberfield. For a color node a color output when you disconnect the former connected socket types.
 
 ![Empty socket](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/empty-socket.png)
 
@@ -305,15 +321,19 @@ Data type: Geometry.
 
 Standard geometry output.
 
-##### Attribute
+##### Selection
 
-Attribute output.
+Data type: Boolean.
+
+The captured selection.
+
+The other outputs are dynamic. There is one attribute output for each captured input.
 
 ### Remove Named Attribute
 
 ![Remove Named Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/remove-named-attribute.png)
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
@@ -323,11 +343,15 @@ Data type: Geometry.
 
 Geometry input.
 
-###### Pattern Mode
+##### Pattern Mode
+
+Data type: Menu.
 
 How to choose the attribute to remove.
 
-###### Name
+##### Name
+
+Data type: String.
 
 The attribute name that you want to remove.
 
@@ -365,7 +389,9 @@ Data type: String.
 
 The attribute name that you want to store.
 
-#### Value
+##### Value
+
+Data type: follows the Data Type setting.
 
 The value that is connected with the stored attribute.
 
@@ -377,7 +403,7 @@ The value that is connected with the stored attribute.
 
 The type for the source and result data.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/domain.png)
 
@@ -409,7 +435,43 @@ The geometry that receives the attributes.
 
 ##### Target IDs
 
-A panel that is closed by default. It has one ID field for each domain: Target Point ID, Target Edge ID, Target Face ID, Target Corner ID, Target Curve ID and Target Instance ID. They are evaluated on the target. By default they are the index.
+A panel that is closed by default. It has one ID field for each domain. They are evaluated on the target.
+
+###### Target Point ID
+
+Data type: Integer.
+
+The ID of the points of the target. By default it is the index.
+
+###### Target Edge ID
+
+Data type: Integer.
+
+The ID of the edges of the target. By default it is the index.
+
+###### Target Face ID
+
+Data type: Integer.
+
+The ID of the faces of the target. By default it is the index.
+
+###### Target Corner ID
+
+Data type: Integer.
+
+The ID of the face corners of the target. By default it is the index.
+
+###### Target Curve ID
+
+Data type: Integer.
+
+The ID of the curves of the target. By default it is the index.
+
+###### Target Instance ID
+
+Data type: Integer.
+
+The ID of the instances of the target. By default it is the index.
 
 ##### Source
 
@@ -419,9 +481,46 @@ The geometry that the attributes are copied from.
 
 ##### Source IDs
 
-A panel that is closed by default. It has one ID field for each domain: Source Point ID, Source Edge ID, Source Face ID, Source Corner ID, Source Curve ID and Source Instance ID. They are evaluated on the source. By default they are the index.
+A panel that is closed by default. It has one ID field for each domain. They are evaluated on the source.
 
 Each target element takes the values of the source element with the same ID. If no source element has that ID, the target element keeps its old value, or gets the default value if the attribute is new. If both IDs are the index, the values are copied by index.
+
+###### Source Point ID
+
+Data type: Integer.
+
+The ID of the points of the source. By default it is the index.
+
+###### Source Edge ID
+
+Data type: Integer.
+
+The ID of the edges of the source. By default it is the index.
+
+###### Source Face ID
+
+Data type: Integer.
+
+The ID of the faces of the source. By default it is the index.
+
+###### Source Corner ID
+
+Data type: Integer.
+
+The ID of the face corners of the source. By default it is the index.
+
+###### Source Curve ID
+
+Data type: Integer.
+
+The ID of the curves of the source. By default it is the index.
+
+###### Source Instance ID
+
+Data type: Integer.
+
+The ID of the instances of the source. By default it is the index.
+
 
 ##### Pattern Mode
 

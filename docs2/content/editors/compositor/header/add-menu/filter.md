@@ -85,9 +85,11 @@ The source image to be processed. Accepts any RGBA input.
 
 Data type: Menu.
 
-Which data type input to use.
+Which data type to use for the Kernel input. Float convolves the same kernel with all channels of the image. Color convolves each channel of the kernel with the matching channel of the image.
 
 ##### Kernel
+
+Data type: follows the Kernel Data Type setting.
 
 A matrix of values that defines the convolution operation. Can be manually defined or procedurally generated. Operates per-channel (R, G, B, A) unless separated beforehand.
 
@@ -259,7 +261,19 @@ Data type: Menu.
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-filter/type.png)
 
-There are four different dilate / erode modes. Step, Threshold, Distance and Feather.
+There are four different dilate / erode modes: Steps, Threshold, Distance and Feather.
+
+##### Falloff Size
+
+Data type: Float.
+
+The size of the falloff from the edges, in pixels. If it is less than two pixels, the edges are anti-aliased. Only visible when Type is Threshold.
+
+##### Falloff
+
+Data type: Menu.
+
+The shape of the falloff at the edges. Only visible when Type is Feather.
 
 #### Outputs
 
@@ -438,46 +452,6 @@ Standard image output.
 
 The Glare node is used to add bloom, lens flares, fog, glows around exposed parts of an image and much more.
 
-#### Type
-
-![Type](/docs2/images/editors/compositor/header/add-menu-filter/type-2.png)
-
-The glare type
-
-##### Bloom
-
-Creates a bloom effect.
-
-##### Ghosts
-
-Creates a haze over the image.
-
-##### Streaks
-
-Creates bright streaks used to simulate lens flares.
-
-##### Fog Glow
-
-Looks similar to Ghost. However, it is much smaller in size and gives more of an atmospheric haze or “glow” around the image.
-
-##### Simple Star
-
-Works similar to Streaks but gives a simpler shape looking like a star.
-
-##### Sun Beams
-
-Creates sun beams.
-
-##### Kernel
-
-A custom kernel convolution mode. It allows you for example to generate the glare aura of a candle flame.
-
-##### Quality
-
-![Quality](/docs2/images/editors/compositor/header/add-menu-filter/quality-2.png)
-
-If not set to something other the High, then the glare effect will only be applied to a low resolution copy of the image. This can be helpful to save render times while only doing preview renders.
-
 #### Inputs
 
 ##### Image
@@ -486,145 +460,189 @@ Data type: Color.
 
 Standard image input.
 
-##### Highlights subpanel
+##### Type
+
+Data type: Menu.
+
+![Type](/docs2/images/editors/compositor/header/add-menu-filter/type-2.png)
+
+The glare type. It decides which inputs the Glare panel shows.
+
+###### Bloom
+
+![Glare subpanel with glare type Bloom](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-bloom.png)
+
+Creates a bloom effect.
+
+###### Ghosts
+
+![Glare subpanel with glare type Ghosts](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-ghosts.png)
+
+Creates a haze over the image.
+
+###### Streaks
+
+![Glare subpanel with glare type Streaks](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-streaks.png)
+
+Creates bright streaks used to simulate lens flares.
+
+###### Fog Glow
+
+![Glare subpanel with glare type Fog Glow](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-fog-glow.png)
+
+Looks similar to Ghost. However, it is much smaller in size and gives more of an atmospheric haze or “glow” around the image.
+
+###### Simple Star
+
+![Glare subpanel with glare type Simple Star](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-simple-star.png)
+
+Works similar to Streaks but gives a simpler shape looking like a star.
+
+###### Sun Beams
+
+![Glare subpanel with glare type Sunbeams](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-sunbeams.png)
+
+Creates sun beams.
+
+###### Kernel
+
+![Glare subpanel with glare type Kernel](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-kernel.png)
+
+A custom kernel convolution mode. It allows you for example to generate the glare aura of a candle flame.
+
+##### Quality
+
+Data type: Menu.
+
+![Quality](/docs2/images/editors/compositor/header/add-menu-filter/quality-2.png)
+
+If not set to High, the glare effect is only applied to a low resolution copy of the image. This can be helpful to save render times while only doing preview renders.
+
+##### Highlights
 
 ![Highlights subpanel](/docs2/images/editors/compositor/header/add-menu-filter/highlights-subpanel.png)
 
+This panel holds the settings that pick the bright parts of the image. It is closed by default.
+
 ###### Threshold
+
+Data type: Float.
 
 Pixels brighter than this value will be affected by the glare filter.
 
-###### Smooth
+###### Smoothness
 
-The smoothness of the extracted highlight.
+Data type: Float (factor).
+
+The smoothness of the extracted highlights.
 
 ###### Clamp
 
-Clamp the values between 0 and a maximum value.
+Data type: Boolean.
 
-###### Maximum Value
+Clamp bright highlights to a maximum value. In the Clamp panel inside the Highlights panel. This is the checkbox in the panel header.
 
-The maximum clamp value.
+###### Maximum
 
-##### Adjust subpanel
+Data type: Float.
+
+The maximum brightness of the highlights when Clamp is on. In the Clamp panel inside the Highlights panel.
+
+##### Adjust
 
 ![Adjust subpanel](/docs2/images/editors/compositor/header/add-menu-filter/adjust-subpanel.png)
 
+This panel holds the settings that change the look of the glare.
+
 ###### Strength
 
-Soft range of `[0`, `1]`, can be boosted beyond 1. Serves the same function as a Mix option but offers better control.
+Data type: Float (factor).
+
+Adjusts the brightness of the glare. Soft range of `[0`, `1]`, can be boosted beyond 1. Serves the same function as a Mix option but offers better control.
 
 ###### Saturation
+
+Data type: Float (factor).
 
 Adjusts the intensity of the colors in the glare effect. A higher value results in more vivid colors, while a lower value will desaturate the colors, making them appear more muted.
 
 ###### Tint
 
-Applies a color tint to the glare effect. This allows you to add a specific hue to the glare, giving you creative control over the color balance and overall mood of the effect.
+Data type: Color.
 
-##### Glare subpanel with glare type Bloom
+Applies a color tint to the glare effect. This allows you to add a specific hue to the glare, giving you creative control over the color balance and overall mood of the effect. For a more accurate tint, lower the Saturation first.
 
-![Glare subpanel with glare type Bloom](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-bloom.png)
+##### Glare
 
-###### Size
-
-Scale of the glow relative to the size of the original bright pixels.
-
-##### Glare subpanel with glare type Ghosts
-
-![Glare subpanel with glare type Ghosts](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-ghosts.png)
+This panel holds the settings of the chosen glare type. Each input is only visible for some types.
 
 ###### Size
 
-Scale of the glow relative to the size of the original bright pixels.
+Data type: Float (factor).
 
-###### Iterations
-
-The number of times to run through the filter algorithm. Higher values will give more accurate results but will take longer to compute. Note that, this is not available for Fog Glow as it does not use an iterative-based algorithm.
-
-###### Color Modulation
-
-Used for Streaks and Ghosts to create a special dispersion effect. Johannes Itten describes this effect, Color Modulation, as subtle variations in tones and chroma.
-
-##### Glare subpanel with glare type Streaks
-
-![Glare subpanel with glare type Streaks](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-streaks.png)
+The size of the glare relative to the image. 1 means the glare covers the entire image, 0.5 means it covers half the image. Only visible when Type is Bloom, Fog Glow or Sun Beams.
 
 ###### Streaks
 
-Creates bright streaks used to simulate lens flares.
+Data type: Integer.
 
-###### Streak Angle
+The number of streaks. Only visible when Type is Streaks.
 
-The angle of the streaks.
+###### Streaks Angle
+
+Data type: Float (angle).
+
+The angle of the first streak to the horizontal axis. Only visible when Type is Streaks.
 
 ###### Iterations
 
-The number of times to run through the filter algorithm. Higher values will give more accurate results but will take longer to compute. Note that, this is not available for Fog Glow as it does not use an iterative-based algorithm.
+Data type: Integer.
+
+The number of ghosts for Ghosts, or the quality and spread of the glare for Streaks and Simple Star. Higher values take longer to compute. Only visible when Type is Ghosts, Streaks or Simple Star.
 
 ###### Fade
 
-Controls the gradual reduction of thestreakseffect's intensity. A higher fade value means the effect will dissipate more smoothly and subtly over a larger area, whereas a lower fade value will keep the glare more concentrated and abrupt.
+Data type: Float (factor).
+
+Controls how fast the streaks fade out. A higher fade value means the effect will dissipate more smoothly and subtly over a larger area, whereas a lower fade value will keep the glare more concentrated and abrupt. Only visible when Type is Streaks or Simple Star.
 
 ###### Color Modulation
 
-Used for Streaks and Ghosts to create a special dispersion effect. Johannes Itten describes this effect, Color Modulation, as subtle variations in tones and chroma.
+Data type: Float (factor).
 
-##### Glare subpanel with glare type Fog Glow
+Changes the colors of streaks and ghosts for a spectral dispersion effect. Johannes Itten describes this effect, Color Modulation, as subtle variations in tones and chroma. Only visible when Type is Ghosts or Streaks.
 
-![Glare subpanel with glare type Fog Glow](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-fog-glow.png)
-
-###### Size
-
-The size of the glare relative ot the image
-
-##### Glare subpanel with glare type Simple Star
-
-![Glare subpanel with glare type Simple Star](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-simple-star.png)
-
-###### Iterations
-
-The number of times to run through the filter algorithm. Higher values will give more accurate results but will take longer to compute. Note that, this is not available for Fog Glow as it does not use an iterative-based algorithm..
-
-###### Fade
-
-Controls the gradual reduction of thestreakseffect's intensity. A higher fade value means the effect will dissipate more smoothly and subtly over a larger area, whereas a lower fade value will keep the glare more concentrated and abrupt.
-
-##### Diagonal
+###### Diagonal
 
 Data type: Boolean.
 
-Align the star diagonally.
+Align the star diagonally. Only visible when Type is Simple Star.
 
-##### Glare subpanel with glare type Sunbeams
+###### Sun Position
 
-![Glare subpanel with glare type Sunbeams](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-sunbeams.png)
+Data type: Vector (factor).
 
-###### Size
-
-Scale of the glow relative to the size of the original bright pixels.
-
-###### Sun position
-
-The position of the source of the rays in normalized coordinates. 0 means lower left corner. 1 means upper right corner.
+The position of the source of the rays in normalized coordinates. 0 means lower left corner. 1 means upper right corner. Only visible when Type is Sun Beams.
 
 ###### Jitter
 
-The amount of jitter when computing rays.
+Data type: Float (factor).
 
-##### Glare subpanel with glare type Kernel
-
-![Glare subpanel with glare type Kernel](/docs2/images/editors/compositor/header/add-menu-filter/glare-subpanel-with-glare-type-kernel.png)
+The amount of jitter when computing rays. Higher jitter can be faster but can give grainy or noisy results. Only visible when Type is Sun Beams.
 
 ###### Kernel Data Type
 
+Data type: Menu.
+
 ![Kernel Data Type](/docs2/images/editors/compositor/header/add-menu-filter/kernel-data-type.png)
 
-What data to compute for the kernel. Float or color.
+What data to compute for the kernel: Float or Color. Only visible when Type is Kernel.
 
-##### Kernel
+###### Kernel
 
-The kernel input.
+Data type: follows the Kernel Data Type setting.
+
+The kernel input. Only visible when Type is Kernel.
 
 #### Outputs
 
@@ -632,7 +650,7 @@ The kernel input.
 
 Data type: Color.
 
-Output with the generated glare result.
+The image with the generated glare added.
 
 ##### Glare
 
@@ -644,7 +662,7 @@ The generated glare only.
 
 Data type: Color.
 
-The highlights from the generated glare.
+The highlights that were extracted from the image to make the glare.
 
 # Blur
 
@@ -712,13 +730,15 @@ Standard image input.
 
 ##### Size
 
-Data type: Vector.
+Data type: Vector (2d).
 
 ![Size](/docs2/images/editors/compositor/header/add-menu-filter-blur/size.png)
 
 The optional Size input will be multiplied with the X and Y blur radius values. It accepts also a value image, to control the blur radius with a mask. The values should be mapped between (0 to 1) for an optimal effect.
 
-###### Type
+##### Type
+
+Data type: Menu.
 
 The different blur types.
 
@@ -746,19 +766,23 @@ Gives the best looking results but tends to be the slowest.
 
 An approximation of the Gaussian that is much faster and looks almost the same. This is the default type.
 
-###### Catmull-Rom
+###### Catrom
 
-Catmull-Rom keeps sharp contrast edges crisp.
+A Catmull-Rom filter. It keeps sharp contrast edges crisp.
 
 ###### Mitch
 
 Preserve the highs, but give an almost out-of-focus blur while smoothing sharp edges.
 
-###### Extend Bounds
+##### Extend Bounds
+
+Data type: Boolean.
 
 Allows the image, that is being blurred, to extend past its original dimension.
 
-###### Separable
+##### Separable
+
+Data type: Boolean.
 
 Blur along the horizontal and vertical directions independently. This method is faster.
 
@@ -876,14 +900,6 @@ Should be activated for a non Z-buffer in the Z input. No Z-buffer will be enabl
 
 Only active when No Z-buffer is enabled. When No Z-buffer is used, the input is used directly to control the blur radius (similar to F-Stop when using the Z-buffer). This parameter can be used to scale the range of the Z input.
 
-###### Image
-
-Input Image
-
-###### Z
-
-The Z value of the image.
-
 #### Outputs
 
 ##### Image
@@ -912,13 +928,11 @@ Data type: Integer.
 
 The number of samples to compute the blur.
 
-##### Center X, Y
+##### Center
 
-Sets the position where the blur center is. This makes a difference if the angle, spin, and/or zoom are used.
+Data type: Vector (factor).
 
-##### Distance
-
-How large the blur effect is.
+Sets the position where the blur center is. This makes a difference if Rotation or Scale are used. 0 is the lower left corner and 1 is the upper right corner of the image.
 
 ##### Rotation
 
@@ -932,13 +946,19 @@ Data type: Float.
 
 Scales the image each iteration, creating the effect of a zoom.
 
-##### Translation subtab
+##### Translation
+
+This panel holds the settings that move the blur in one direction. It is open by default.
 
 ###### Amount
 
-The translation amount relative to the image.
+Data type: Float (factor).
+
+The translation amount relative to the size of the image. Negative values move in the opposite direction.
 
 ###### Direction
+
+Data type: Float (angle).
 
 The translation direction.
 
@@ -970,7 +990,9 @@ Data type: Vector (velocity).
 
 Input for the “Vector” render pass. See Cycles render passes.
 
-##### Z
+##### Depth
+
+Data type: Float.
 
 Z depth, to be linked to the “Depth” render pass.
 

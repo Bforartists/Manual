@@ -31,11 +31,55 @@ Instances geometry on points.
 
 #### Inputs
 
-**Points**: Standard points input. · **Selection**: A selection of the point cloud. · **Instance**: Instance input. · **Pick Instance**: Select an instance of the point cloud. · **Instance Index**: The instance of the index · **Rotation**: The initial rotation. This is a rotation socket. · **Scale**: The initial scale.
+##### Points
 
-#### Output
+Data type: Geometry.
 
-**Instances**: Instances output.
+The points to put the instances on.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points get an instance.
+
+##### Instance
+
+Data type: Geometry.
+
+The geometry that is instanced on the points.
+
+##### Pick Instance
+
+Data type: Boolean.
+
+When on, each point picks one instance from the Instance input instead of using the whole geometry.
+
+##### Instance Index
+
+Data type: Integer.
+
+The index of the instance to use for each point. It is only used when Pick Instance is on. By default the point index is used.
+
+##### Rotation
+
+Data type: Rotation.
+
+The rotation of the instances.
+
+##### Scale
+
+Data type: Vector (XYZ).
+
+The scale of the instances.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The instances on the points.
 
 ### Instances to Points
 
@@ -49,11 +93,37 @@ generate points for some instances.
 
 #### Inputs
 
-**Instances**: Instances input. · **Selection**: A selection of the instance. · **Position**: The position of the instance. · **Radius**: The radius of the points.
+##### Instances
 
-#### Output
+Data type: Geometry.
 
-**Instances**: Points output.
+The instances to convert to points.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances create a point.
+
+##### Position
+
+Data type: Vector.
+
+The position of the new points. By default this is the position of the instance.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius of the new points.
+
+#### Outputs
+
+##### Points
+
+Data type: Geometry.
+
+The point cloud with one point for each selected instance.
 
 ### Realize Instances
 
@@ -63,27 +133,43 @@ Makes the instances in the geometry input real. This means each instance becomes
 
 #### Inputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
-Geometry Input.
+The geometry with the instances to realize.
 
-#### Selection
+##### Selection
 
-Geometry Input.
+Data type: Boolean.
 
-#### Realize All
+Which top-level instances to realize.
 
-Boolean Input. This realizes all level of nested instances for a top-level realization of instances. This overrides the value of the Depth input. Depth Input Number of levels of nested instances to realize for each top-level instance. **Note:** *Only relevant when Realize All is toggled off.*
+##### Realize All
+
+Data type: Boolean.
+
+Realizes all levels of nested instances for each top-level instance. This overrides the value of the Depth input.
+
+##### Depth
+
+Data type: Integer.
+
+The number of levels of nested instances to realize for each top-level instance. **Note:** *Only relevant when Realize All is toggled off.*
+
+##### Preserve Normals
+
+Data type: Boolean.
+
+Keeps the visible face orientation of mirrored mesh instances.
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
-Geometry outputs.
+The geometry with the realized instances.
 
 ### Rotate Instances
 
@@ -93,39 +179,129 @@ Rotates the instances of a geometry.
 
 #### Inputs
 
-**Geometry**: Standard geometry input. · **Selection**: A selection of the geometry. · **Rotation**: The initial rotation. · **Pivot Point**: The pivot point position to rotate around. · **Local Space**: Rotate in world space or in Local Space of the object.
+##### Instances
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: Standard geometry output.
+The instances to rotate. Each instance rotates on its own.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances are rotated.
+
+##### Rotation
+
+Data type: Rotation.
+
+The rotation to add to the instances.
+
+##### Pivot Point
+
+Data type: Vector (translation).
+
+The pivot point position to rotate around.
+
+##### Local Space
+
+Data type: Boolean.
+
+When on, the instances rotate in their own local space. When off, they rotate in world space.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The rotated instances.
 
 ### Scale Instances
 
 ![Scale Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-instances/scale-instances.png)
 
-Rotates the instances of a geometry.
+Scales the instances of a geometry.
 
 #### Inputs
 
-**Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Scale**: The initial scale. · **Center**: The pivot point position to scale around. · **Local Space**: Rotate in world space or in Local Space of the object.
+##### Instances
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: Standard geometry output.
+The instances to scale. Each instance scales on its own.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances are scaled.
+
+##### Scale
+
+Data type: Vector (XYZ).
+
+The scale factor on each axis.
+
+##### Center
+
+Data type: Vector (translation).
+
+The pivot point position to scale around.
+
+##### Local Space
+
+Data type: Boolean.
+
+When on, the instances scale in their own local space. When off, they scale in world space.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The scaled instances.
 
 ### Translate Instances
 
 ![Translate Instances](/docs2/images/editors/geometry-node-editor/header/add-menu-instances/translate-instances.png)
 
-Rotates the instances of a geometry.
+Moves the instances of a geometry.
 
 #### Inputs
 
-**Instances**: Standard geometry input. · **Selection**: A selection of the geometry. · **Translation**: The amount to move. · **Local Space**: Rotate in world space or in Local Space of the object.
+##### Instances
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: Standard geometry output.
+The instances to move. Each instance moves on its own.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances are moved.
+
+##### Translation
+
+Data type: Vector (translation).
+
+The amount to move.
+
+##### Local Space
+
+Data type: Boolean.
+
+When on, the instances move in their own local space. When off, they move in world space.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The moved instances.
 
 ### Set Instance Transform
 
@@ -135,11 +311,31 @@ This node allows replacing the transformation of every instance by providing a m
 
 #### Inputs
 
-**Instances**: The input instances. · **Selection**: A selection of the geometry. · **Transform**: The transform matrix that you want to apply to every instance.
+##### Instances
 
-#### Output
+Data type: Geometry.
 
-**Instances**: The output instances.
+The input instances.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances get the new transform.
+
+##### Transform
+
+Data type: Matrix.
+
+The transform matrix that you want to apply to every instance.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The output instances.
 
 ### Instance Bounds
 
@@ -147,13 +343,27 @@ This node allows replacing the transformation of every instance by providing a m
 
 Calculate position bounds of the geometry set of each instance.
 
-#### Input
+#### Inputs
 
-**Use Radius**: For curves, point clouds and grease pencil. Take the radius attribute into account when computing the bounds.
+##### Use Radius
 
-#### Output
+Data type: Boolean.
 
-**Min**: The minimum bounding box dimension. · **Max**: The maximum bounding box dimension.
+For curves, point clouds and Grease Pencil. Takes the radius attribute into account when computing the bounds.
+
+#### Outputs
+
+##### Min
+
+Data type: Vector.
+
+The minimum corner of the bounding box of each instance.
+
+##### Max
+
+Data type: Vector.
+
+The maximum corner of the bounding box of each instance.
 
 ### Instance Reference
 
@@ -161,7 +371,7 @@ Calculate position bounds of the geometry set of each instance.
 
 Gives the reference index of each instance: which of the instanced objects or geometries it shows. When you instance a collection on points with Pick Instance, every point picks one of the collection's children, and this index tells you which one. Use it to give each kind of instance its own color, scale or rotation.
 
-#### Output
+#### Outputs
 
 ##### Reference Index
 
@@ -175,13 +385,13 @@ The index of the geometry or object that the instance refers to, per instance.
 
 Retrieves the transform of the instances.
 
-#### Output
+#### Outputs
 
 ##### Transform
 
 Data type: Matrix.
 
-Transform Field output.
+The transform matrix of each instance.
 
 ### Instance Rotation
 
@@ -189,13 +399,13 @@ Transform Field output.
 
 Retrieves the rotation of the instances.
 
-#### Output
+#### Outputs
 
 ##### Rotation
 
 Data type: Rotation.
 
-Vector Field output
+The rotation of each instance.
 
 ### Instance Scale
 
@@ -203,10 +413,10 @@ Vector Field output
 
 Retrieves the scale of an instances.
 
-#### Output
+#### Outputs
 
 ##### Scale
 
 Data type: Vector.
 
-Vector Field output
+The scale of each instance.
