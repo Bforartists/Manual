@@ -6,7 +6,7 @@ path:
   - Editors
   - Graph Editor
   - Footer tools and options
-version: "5.1"
+version: "5.3"
 status: draft
 screenshots: "5.1"
 source:
@@ -219,6 +219,10 @@ Don't allow frame selection with the mouse outside of the play range.
 #### Follow Current Frame
 
 Follow current frame in editors.
+
+#### Use Scene Strip Range
+
+When this scene is used as a scene strip in the sequencer scene, playback stays inside the frame range of the strip under the playhead. Handy when you animate a shot that is cut into an edit: you only play the frames the edit uses. It only limits playback in the active workspace and changes no scene data. The Scene Strip Gizmo options **Set Preview Range** and **Set Frame Range** in the Dope Sheet overlays change the ranges of the scene instead.
 
 ### Play in
 
