@@ -754,6 +754,9 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Vert select all: Deselect | `A` (double-click) |
 | Vert select all: Invert | Ctrl + I |
 | Vert select all: Select | `A` |
+| Vert select loop | Alt + Left mouse |
+| Vert select loop: extend | Shift + Alt + Left mouse |
+| Vert select loop: extend | Shift + Ctrl + Alt + Left mouse |
 
 ## Weight Paint
 
@@ -1146,7 +1149,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Translate | `W` |
 | Translate | `Left mouse` (drag) |
 | View all | `Home` |
-| View all: fit view | `Home` |
+| View all: fit view | Shift + Home |
 | View pan | `Middle mouse` |
 | View pan | Shift + Middle mouse |
 | View pan | `Trackpad pan` |
@@ -1339,6 +1342,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Toggle Show overlays | Shift + Alt + Z |
 | Toggle Show overlays | `Tab` |
 | Toggle Show region ui | Ctrl + T |
+| Tool set by id hold | `C` |
 | Translate: cursor transform | Shift + Right mouse (drag) |
 | Unlock | Shift + Alt + L |
 | Unmute | Alt + H |
