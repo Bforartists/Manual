@@ -1,4 +1,4 @@
-/* Bforartists website · site-foot.js · @version 1.0.0 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Each original <script> block is wrapped on its own, so one failing block cannot stop the next. */
+/* Bforartists website · site-foot.js · @version 1.0.1 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Each original <script> block is wrapped on its own, so one failing block cannot stop the next. */
 try{
 /* BFA IX Idle 1.0 - Webflow's interaction engine loops every frame even with no interactions on the page (75/s on Home). No targets here: switch it off. */
 addEventListener('load',function(){setTimeout(function(){try{var W=window.Webflow,ix=W&&W.require&&W.require('ix2');if(!ix||!ix.store||!ix.destroy)return;var D=document,ev=(ix.store.getState().ixData||{}).events||{},pg=D.documentElement.getAttribute('data-wf-page');
@@ -211,3 +211,40 @@ var b=d.createElement('div');b.className='bfa-perf-note';b.setAttribute('role','
 var x=b.querySelectorAll('button');x[0].onclick=function(){var p=d.querySelector('[data-pref="motion"][data-value="on"]');R.classList.remove('perf-auto');if(p)p.click();else{try{var o=JSON.parse(L.getItem('bfa-prefs')||'{}')||{};o.motion='on';L.setItem('bfa-prefs',JSON.stringify(o))}catch(e){}R.classList.remove('motion-reduced')}b.remove()};x[1].onclick=function(){b.remove()}}
 d.addEventListener('bfa-perf-note',show);show()})();
 }catch(e){console.error("site-foot block 9",e)}
+try{
+/* BFA Row Drag 1.0 - picture rows (Home + Art hero row, Art spotlight wall, News head row) and the testimonials band: the browser never starts its own
+   link or picture drag inside them, so pressing and moving the mouse drags the row, and a click still opens the piece.
+   (A link is draggable by default; its native drag took the mouse away from the row's own drag.) */
+(function(){var S='[data-art-strip],[data-spot-wall],[data-news-strip],[data-marquee]',D=document;
+function off(){D.querySelectorAll(S).forEach(function(w){w.querySelectorAll('a,img').forEach(function(e){e.draggable=false})})}
+D.addEventListener('dragstart',function(e){var t=e.target;if(t&&t.closest&&t.closest(S))e.preventDefault()},true);
+off();addEventListener('load',off);setTimeout(off,1500)})();
+}catch(e){console.error("site-foot block 10",e)}
+try{
+/* BFA Band Drag 1.0 - the testimonials band (Home, [data-marquee]) can be dragged with the mouse, like the picture rows.
+   While it moves on its own, this script drives it (same speed as the CSS loop it replaces: --shift / --dur from BFA Home), so a drag
+   carries on from where it was let go. Paused by hover, focus, the pause button (.is-paused) or Motion off. When still (motion off),
+   a drag scrolls it. The pause button moves up beside the section title, on the right. */
+(function(){var D=document,B=D.querySelector('[data-marquee]'),T=B&&B.querySelector('.ui-quote-track');if(!T)return;
+var x=0,drag=null,moved=0,hov=0,vis=1,tk=0,last=0;
+function live(){return B.classList.contains('is-live')&&!B.classList.contains('is-still')}
+function num(k,f){return parseFloat(T.style.getPropertyValue(k))||f}
+function put(){var s=num('--shift',0);if(s)x=((x%s)+s)%s;T.style.transform='translate3d('+(-x).toFixed(2)+'px,0,0)'}
+function going(){return live()&&!B.classList.contains('is-paused')&&!hov&&vis&&!D.hidden&&!B.matches(':focus-within')}
+function tick(t){tk=0;var dt=Math.min(.05,(t-last)/1000);last=t;if(!drag&&going())x+=num('--shift',0)/num('--dur',60)*dt;put();if(drag||going())tk=requestAnimationFrame(tick)}
+function wake(){if(!tk&&live()){last=performance.now();tk=requestAnimationFrame(tick)}}
+function sync(){var j=live();if(B.classList.contains('is-js')!==j)B.classList.toggle('is-js',j);if(j){put();wake()}else T.style.transform=''}
+if(matchMedia('(hover: hover) and (pointer: fine)').matches){B.addEventListener('mouseenter',function(){hov=1});B.addEventListener('mouseleave',function(){hov=0;wake()})}
+B.addEventListener('focusout',function(){setTimeout(wake,0)});
+B.addEventListener('pointerdown',function(e){if(e.pointerType!='mouse'||e.button)return;drag={p:e.clientX,s:live()?x:B.scrollLeft};moved=0});
+addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.p;if(!moved&&Math.abs(dx)>4){moved=1;B.classList.add('is-drag')}if(!moved)return;if(live()){x=drag.s-dx;put()}else B.scrollLeft=drag.s-dx});
+addEventListener('pointerup',function(){if(!drag)return;drag=null;setTimeout(function(){B.classList.remove('is-drag')},0);wake()});
+B.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=0}},true);
+if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[es.length-1].isIntersecting?1:0;wake()}).observe(B);
+D.addEventListener('visibilitychange',wake);
+new MutationObserver(sync).observe(B,{attributes:true,attributeFilter:['class']});
+var sec=B.closest('section'),head=sec&&sec.querySelector('.layout-section-head');
+function moveCtl(){var c=sec&&sec.querySelector('.bfa-band-ctl');if(c&&head&&c.parentNode!==head){c.classList.add('is-head');head.appendChild(c)}}
+if(sec)new MutationObserver(moveCtl).observe(sec,{childList:true});
+moveCtl();sync();addEventListener('load',function(){moveCtl();setTimeout(sync,50)})})();
+}catch(e){console.error("site-foot block 11",e)}
