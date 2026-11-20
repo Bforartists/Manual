@@ -1018,6 +1018,65 @@ Data type: Geometry.
 
 Standard output.
 
+### Delaunay Triangulation
+
+![Delaunay Triangulation](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/delaunay-triangulation.png)
+
+Builds a triangle mesh from a set of points. Use it to fill a flat shape with triangles, or to turn scattered points into a surface. The node connects the points with triangles so that the triangles are as even as possible. It works on the X-Y plane, and edges and faces of the input geometry act as constraints that the triangles must follow.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry that sets the points, edges and faces for the triangulation. Meshes, curves, Grease Pencil and point clouds are supported.
+
+##### Group ID
+
+Data type: Integer.
+
+Groups points together. Each group is triangulated on its own.
+
+##### Mode
+
+Data type: Menu.
+
+Which triangles are kept in the result.
+
+- **Full**: All triangles. The outer boundary is the convex hull of the input points.
+- **Inside**: Only triangles that are fully enclosed by constraint edges or faces.
+- **Inside With Holes**: Like Inside, but triangles inside detected holes are removed.
+
+##### Type
+
+Data type: Menu.
+
+The shape of the output faces: **Triangles** or **N-gons**. This option is only available when Mode is Inside or Inside With Holes.
+
+##### Fill Rule
+
+Data type: Menu.
+
+How the node decides what is inside when shapes overlap. This option is only available when Mode is Inside With Holes.
+
+- **Even-Odd**: Alternates between inside and outside based on the number of crossings.
+- **Non-Zero**: Overlapping curves with the same winding direction are filled as a union.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The triangulated mesh.
+
+##### Intersection Points
+
+Data type: Boolean.
+
+A selection of the newly created intersection points.
+
 ### Duplicate Elements
 
 ![Duplicate Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/duplicate-elements.png)
