@@ -273,7 +273,9 @@ Adds a new collection **inside the selected collection**, as its child. Use it t
 
 Adds a new collection and **moves the objects that are selected in the Outliner into it**. Use it to tidy up: select some objects, and put them into one new collection in a single step. The tooltip says: Add a new collection and move selected Outliner objects into it.
 
-The tool reads the selection of the Outliner. When Sync Selection is off, this can differ from the selection in the 3D Viewport. When no object is selected, the result is an empty collection. The entry is also in the menu that opens when you right click at the Scene Collection. The hotkey C and the entries New and New Nested do not move objects.
+The tool reads the selection of the Outliner. When Sync Selection is off, this can differ from the selection in the 3D Viewport. When no object is selected, the result is an empty collection. The entry is also in the menu that opens when you right click at the Scene Collection. The entries New and New Nested do not move objects.
+
+> **Tip:** The **C** hotkey adds an empty collection, like New. It does not move objects.
 
 > **Tip:** The C hotkey in the Outliner adds a collection like **New**. New Nested has no hotkey in the Bforartists keymap, so use this menu. (Blender has it on Shift C.)
 
