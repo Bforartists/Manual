@@ -100,7 +100,11 @@ Sets the current frame position as the end frame.
 
 #### Insert Keyframe
 
+![Insert Keyframe in the NLA footer](/docs2/images/editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options/nla-footer-keyframing.png)
+
 Inserts a keyframe. If you do not have a keying set assigned, this will default to the default keying set defined in the Preferences.
+
+This is the same button as in the other animation editors, and it works in the NLA Editor too. It inserts a keyframe into the action of the selected object at the current frame.
 
 #### Delete Keyframe
 
