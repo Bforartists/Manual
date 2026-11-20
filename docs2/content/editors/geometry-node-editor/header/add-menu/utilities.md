@@ -251,6 +251,12 @@ The node has one input socket for each menu item. A and B are the default items.
 
 Determines the type of the data that is handled by the node.
 
+##### Menu Items
+
+![Menu Items](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-items.png)
+
+The sidebar Node tab lists the menu items. Select an item to edit it. The **Description** box under the list is a multi-line text box: press Enter to start a new line, and drag its lower right corner to make it taller. The description is shown as the tooltip of the menu entry.
+
 #### Outputs
 
 ##### Output

@@ -23,11 +23,11 @@ replaces:
   - editors.shader-editor.header.add-menu-utilities-math
   - editors.shader-editor.header.add-menu-utilities-vector
 ---
-## Add menu - Utilities - Vector
+## Add menu - Utilities
 
-![Add menu - Utilities - Vector](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png)
+![Add menu - Utilities](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png)
 
-This menu contains nodes that deals with vector data.
+This menu contains the utility nodes of the Shader Editor. The Math, Text and Vector submenus group the nodes by data. The **Bundle** and **Closure** submenus have their own entries in the menu, and are described in their own sections after this one. The other nodes are listed directly in the Utilities menu.
 
 ### Repeat
 
@@ -63,84 +63,6 @@ The index of the current iteration. It starts counting at zero.
 
 The result and output of the iteration or loop. It has no fixed sockets. It shows one input and one output for each item of the zone.
 
-
-### Closure
-
-![Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png)
-
-Wrap nodes inside a closure that can be executed at a different part of the node-tree
-
-#### Outputs
-
-##### Closure
-
-Data type: Closure.
-
-The closure made from the nodes inside the zone. This socket is on the Closure Output node.
-
-### Evaluate Closure
-
-![Evaluate Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png)
-
-Execute a given closure.
-
-#### Inputs
-
-##### Closure
-
-Data type: Closure.
-
-The closure to execute. The other inputs and outputs of the node follow the items of the closure.
-
-### Combine Bundle
-
-![Combine Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png)
-
-Combine multiple socket values into one.
-
-#### Outputs
-
-##### Bundle
-
-Data type: Bundle.
-
-The bundle with all the values. Connect a link to the empty input socket to add a value.
-
-### Join Bundle
-
-![Join Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png)
-
-Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.
-
-#### Inputs
-
-##### Bundle
-
-Data type: Bundle.
-
-One or more bundles. The empty socket at the bottom adds another one.
-
-#### Outputs
-
-##### Bundle
-
-Data type: Bundle.
-
-One bundle with the items of all input bundles.
-
-### Separate Bundle
-
-![Separate Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png)
-
-Decompose a bundle of values into the single values.
-
-#### Inputs
-
-##### Bundle
-
-Data type: Bundle.
-
-The bundle to split. Connect a link to the empty output socket to add a value.
 
 ### Index Switch
 
@@ -225,6 +147,12 @@ The values to switch between, one for each menu item. An item becomes the output
 
 Determines the type of the data that is handled by the node.
 
+##### Menu Items
+
+![Menu Items](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-items.png)
+
+The sidebar Node tab lists the menu items. Select an item to edit it. The **Description** box under the list is a multi-line text box: press Enter to start a new line, and drag its lower right corner to make it taller. The description is shown as the tooltip of the menu entry.
+
 #### Outputs
 
 ##### Output
@@ -279,6 +207,96 @@ Data type: Color.
 
 The True or False value, depending on Switch.
 
+
+## Add menu - Utilities - Bundle
+
+![Add menu - Utilities - Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-bundle.png)
+
+The Bundle submenu holds the nodes that build, merge and split bundles. A bundle is a group of named values that travels along one link.
+
+### Combine Bundle
+
+![Combine Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png)
+
+Combine multiple socket values into one.
+
+#### Outputs
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle with all the values. Connect a link to the empty input socket to add a value.
+
+### Join Bundle
+
+![Join Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png)
+
+Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.
+
+#### Inputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One or more bundles. The empty socket at the bottom adds another one.
+
+#### Outputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One bundle with the items of all input bundles.
+
+### Separate Bundle
+
+![Separate Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png)
+
+Decompose a bundle of values into the single values.
+
+#### Inputs
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle to split. Connect a link to the empty output socket to add a value.
+
+## Add menu - Utilities - Closure
+
+![Add menu - Utilities - Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-closure.png)
+
+The Closure submenu holds the nodes that wrap nodes inside a closure and run it somewhere else in the node tree.
+
+### Closure
+
+![Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png)
+
+Wrap nodes inside a closure that can be executed at a different part of the node-tree
+
+#### Outputs
+
+##### Closure
+
+Data type: Closure.
+
+The closure made from the nodes inside the zone. This socket is on the Closure Output node.
+
+### Evaluate Closure
+
+![Evaluate Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png)
+
+Execute a given closure.
+
+#### Inputs
+
+##### Closure
+
+Data type: Closure.
+
+The closure to execute. The other inputs and outputs of the node follow the items of the closure.
 
 # Math
 

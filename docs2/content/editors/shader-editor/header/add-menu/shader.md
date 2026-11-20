@@ -123,7 +123,7 @@ Color of the surface, or physically speaking, the probability that light is refl
 
 Data type: Float (factor).
 
-Cycles only. Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF.
+Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF. Works in EEVEE and Cycles, and both engines give the same look for the same roughness.
 
 ##### Normal
 

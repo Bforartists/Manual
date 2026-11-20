@@ -251,6 +251,8 @@ Data type: Float (factor).
 
 An optional mask to use as the base for mask operations.
 
+This is the socket that connects by default: when you insert the node on a link, or add it from a dragged link, the link goes to **Mask**.
+
 ##### Value
 
 Data type: Float (factor).
@@ -322,6 +324,8 @@ Any area covered by both the input mask and the generated mask becomes black. Ar
 Data type: Float (factor).
 
 An optional mask to use as the base for mask operations.
+
+This is the socket that connects by default: when you insert the node on a link, or add it from a dragged link, the link goes to **Mask**.
 
 ##### Value
 
