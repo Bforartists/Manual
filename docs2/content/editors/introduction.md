@@ -79,7 +79,7 @@ Closes the editor.
 
 ![Area Edge Options](/docs2/images/editors/introduction/area-options.png)
 
-When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins, swaps and merges editors.
+When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins, swaps, and merges and splits borders of editors.
 
 ### Vertical Split
 
@@ -97,8 +97,11 @@ Join the two editors that share the border into one. There is one entry for each
 
 Swaps the content of the editors that shares the border.
 
-### Merge Edge
+### Split Edge
 
+Splits an area edge at the position where you right clicked. It is the inverse of **Merge Edge**. Both editors that share the border are cut at the cursor, at a right angle to the border. This recreates a junction, so you can move the two halves of the border separately again. Use it after a Merge Edge, or any time one long border should become two. The entry shows up on every border between two editors.
+
+### Merge Edge
 Merges aligned area edges into one straight edge. This entry has its own icon and only shows up when the border you clicked lines up with another border, for example where four editors meet at a cross. After the merge, the edge moves as one piece.
 
 ## Editor Type menu
