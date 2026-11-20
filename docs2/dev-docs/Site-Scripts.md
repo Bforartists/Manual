@@ -11,7 +11,7 @@
 | `docs-layer.js` | `bfa_docs_layer` | Doc Pages template, footer | Sidebar carets and Overview rows, breadcrumbs, section overview pages, the Docs home, status chips |
 | `workspace-map.js` | `bfa_workspace_map` | Doc Pages template, footer | Workspace hover maps and the Workspaces explorer |
 | `keymap-explorer.js` | `bfa_keymap_explorer` | Doc Pages template, footer | The interactive keymap ([Keymap](Keymap.md)) |
-| `compare.js` | `bfa_compare` | Whole site, footer | The before / after slider (`[data-compare]`, `[data-doc-compare]`): drag, keys, tabs, and the intro (old screen first, the new one slides in to the middle) |
+| `compare.js` | `bfa_compare` | Whole site, footer | The before / after slider (`[data-compare]`, `[data-doc-compare]`): drag, keys, tabs, and the intro (old screen first, the new one sweeps in to the left edge, then eases back to the middle) |
 | `perf-guard.js` | `bfa_perf_guard` | Whole site, header | Slow-device guard: lite mode and still motion on TVs, weak devices and machines that stutter while scrolling (tested after load, twice, expires after 14 days). Smooth scrolling is not part of it |
 | `quicksearch.js` | `bfa_quicksearch` | Whole site, footer | The instant search popup (Ctrl K) |
 | `docs-loading.js` | `bfa_docs_loading` (inline) | Doc Pages template, header | Hides the sidebar until it is ready (no flicker), with a spinner in the middle of the page |
