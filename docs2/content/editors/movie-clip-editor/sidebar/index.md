@@ -421,6 +421,8 @@ The brown model also provides P1 and P2 values.
 
 The Marker panel contains the settings for the selected marker(s). Here you can also enable or disable the marker.
 
+The settings come in four groups: Position, Offset, Pattern Area and Search Area. Each group has a label, and the fields sit indented below it, one row per value (X and Y, or Width and Height).
+
 ### Enabled
 
 Enable the selected marker(s).
@@ -445,7 +447,7 @@ The handler size.
 
 ![Search Area](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/search-area.png)
 
-The size and position of the search area for this marker for tracking.
+The size and position of the search area for this marker for tracking. **X** and **Y** move the search area relative to the marker. **Width** and **Height** set its size.
 
 The search area can be turned on in the Clip Display options in the header up right.
 
