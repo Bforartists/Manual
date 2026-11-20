@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Object Constraints Properties Tab
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.13 Editors - Properties Editor - Object Constraints Properties Tab.odt
