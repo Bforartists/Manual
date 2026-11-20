@@ -602,7 +602,7 @@ Sets what the selected strokes are made of. It does the same as **Stroke > Set S
 
 ![Cyclic](/docs2/images/editors/3d-viewport/sidebar/item-tab/cyclic.png)
 
-Make the stroke a closed loop.
+The checkbox is labeled **U**, like the Cyclic checkbox in the Active Spline panel of curves. Turn it on to make the selected stroke (or curve, for a Curves object) a closed loop. Hover over the checkbox to see the tooltip "Make the stroke a closed loop".
 
 ### Fill Opacity
 
