@@ -79,7 +79,7 @@ Closes the editor.
 
 ![Area Edge Options](/docs2/images/editors/introduction/area-options.png)
 
-When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins, swaps, and merges and splits borders of editors.
+When you right click at a border of an editor, the Area Edge Options menu opens. It splits, joins and swaps editors, and it splits or merges their borders.
 
 ### Vertical Split
 
