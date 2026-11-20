@@ -85,9 +85,9 @@ Open a blend file.
 
 ### Drag and drop a .blend file
 
-> 📸 Picture to add: the "Open dragged blend file?" dialog after dropping a .blend file into the window.
-
 You can also drag a .blend file from your file manager into the Bforartists window. A dialog asks **Open dragged blend file?** and shows the file name. Pick what to do with it:
+
+![Open dragged blend file dialog](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/drop-blend-dialog.png)
 
 - **Open**: opens the file, like File > Open. This is the default button, so pressing Enter opens it.
 - **Append**: copies data from the file into your current file, like File > Append. The File Browser opens inside the dropped file, so you can pick what to bring in.
