@@ -134,7 +134,7 @@ Resets the color ramp to its default state.
 
 ![Color Ramp](/docs2/images/editors/geometry-node-editor/header/add-menu-color/color-ramp-2.png)
 
-The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
+The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around. Hold **Ctrl** while you drag to snap the stop to steps of 0.1, the same steps as the Pos slider. Hold **Ctrl + Shift** for finer steps. Hold **Shift** alone for slower, more precise movement. The status bar shows the Snap and Precision keys while you drag.
 
 ###### Active Color Stop elements
 

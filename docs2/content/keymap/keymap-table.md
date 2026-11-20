@@ -434,8 +434,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select all: Select | `A` |
 | Select fill | Ctrl + L |
 | Select less | Ctrl + Numpad - |
-| Select linked | `L` |
-| Select linked: deselect | Shift + L |
+| Select linked | Ctrl + L |
 | Select more | Ctrl + Numpad + |
 | Select similar | Shift + G |
 
@@ -496,6 +495,8 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select circle tool | `G` |
 | Select less | Ctrl + Numpad - |
 | Select linked | Ctrl + L |
+| Select linked pick | `L` |
+| Select linked pick: deselect | Shift + L |
 | Select more | Ctrl + Numpad + |
 | Select tool | `D` |
 | Set selection mode: Point | `X` |

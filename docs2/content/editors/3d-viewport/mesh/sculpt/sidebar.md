@@ -3371,13 +3371,21 @@ Adjust the radius of the smoothing.
 
 Adjust the factor of the smoothing.
 
-## Brush Settings Panel - Falloff Sub panel
+## Brush Settings Panel - Shape Sub panel
 
-![Brush Settings Panel - Falloff Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-settings-panel-falloff-sub-panel.png)
+![Brush Settings Panel - Shape Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-settings-panel-falloff-sub-panel.png)
 
-![Brush Settings Panel - Falloff Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-settings-panel-falloff-sub-panel-2.png)
+![Brush Settings Panel - Shape Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-settings-panel-falloff-sub-panel-2.png)
 
-The Falloff panel allows you to define different falloffs methods for the border of the brush.
+The Shape panel sets the shape of the brush tip and the falloff at the border of the brush. It holds Hardness, Tip Roundness, Tip Scale X and the falloff settings. Which of the tip settings you see depends on the brush.
+
+### Tip Roundness
+
+Roundness of the brush tip. 1.0 is a round tip. Lower values change the tip into a rounded square, so the brush works in a square area. Tip Roundness is available for most brushes, including the Draw brush with vector displacement, the Smooth brush with the Surface deformation, the Relax brush with the Topology method, and the Smear and Blur brushes.
+
+### Tip Scale X
+
+Scale of the tip in X direction. Values below 1.0 make the tip narrower and the brush works in a rectangular area. It is shown together with Tip Roundness.
 
 ### Presets
 

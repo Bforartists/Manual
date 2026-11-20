@@ -1624,9 +1624,7 @@ Standard shader output.
 
 ![Sheen BSDF](/docs2/images/editors/shader-editor/header/add-menu-shader/sheen-bsdf.png)
 
-Cycles Only
-
-The Sheen BSDF is used to add reflection to materials such as cloth. It is meant to be used together with other shaders (such as a Diffuse Shader) and is not particularly useful on its own.
+The Sheen BSDF is used to add reflection to materials such as cloth. It is meant to be used together with other shaders (such as a Diffuse Shader) and is not particularly useful on its own. EEVEE and Cycles both render the sheen, as does the Sheen layer of the Principled BSDF.
 
 #### Inputs
 

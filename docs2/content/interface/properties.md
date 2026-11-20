@@ -62,6 +62,10 @@ A drop down box is another kind of a menu. Usually you choose something here. Li
 
 You may stumble across color pickers in the UI. When you do a painting job for example. This allows you to adjust color for the specific task. Like adjusting the brush color.
 
+### Hue wrap
+
+Drag in the hue strip or in the hue area of the color picker, and keep going past the left or right edge. The hue wraps around to the other side, so you can pass through red without having to stop and start again. Hold **Ctrl** while you drag to turn the wrap off. With Ctrl held, the drag stops at the edge, which makes it easy to reach pure red.
+
 ## Widgets
 
 There are various widget types in Bforartists to find. Most of them in the 3D View. Widgets allows you to manipulate the transformation along one or more axis.
