@@ -69,12 +69,18 @@ The assets are grouped by categories.
  - Shapes
  - Utility
 - Geometry Nodes
+ - Curve
+ - Fill
+ - Operations
+ - Shapes
  - Grease Pencil
  - Operations
  - Read
  - Write
  - Material
  - Mesh
+ - Operations
+ - UV
  - Normals
  - Primitives
 
@@ -257,6 +263,18 @@ This category contains utility meshes for object scale, lighting and others, inc
 ### Curve
 
 These are Geometry Nodes nodegroups for Curve and Curves objects.
+
+#### Fill
+
+This category contains seven Fill nodegroups that turn a closed curve into a mesh, and the Solidify nodegroup that gives a mesh thickness. They are described in the [Geometry Nodes Library](geometry-nodes-library.md#fill).
+
+#### Shapes
+
+This category contains 34 nodegroups that draw a flat curve in the shape of a heart, a rose, a ring and other figures. They are described in the [Geometry Nodes Library](geometry-nodes-library.md#shapes).
+
+#### Operations
+
+This category contains nodegroups that change a curve. Decimate Curve removes points from a curve by angle. It is described in the [Geometry Nodes Library](geometry-nodes-library.md#operations).
 
 #### Grease Pencil
 
@@ -453,6 +471,10 @@ The procedural geometry to pass the material to.
 Selects the material slot index.
 
 ### Mesh
+
+#### Operations
+
+This category contains Solidify, which gives a mesh thickness, and Bevel Advanced, which bevels edges or vertices. Both are described in the [Geometry Nodes Library](geometry-nodes-library.md#solidify).
 
 #### Mesh Lines and Silhouette
 
