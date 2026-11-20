@@ -259,15 +259,21 @@ Scenes, Collections, Objects, Brushes, Materials, Nodegroups and Worlds can be m
 
 This menu appears when you right click at a collection. The first picture shows the menu of a collection. Right clicking at the Scene Collection shows a shorter menu, the second picture.
 
-There are two ways to add a collection. They differ in **where** the new collection goes.
+There are three ways to add a collection. They differ in **where** the new collection goes, and in what goes into it.
 
 #### New
 
-Adds a new collection directly to the **Scene Collection**, at the top of the hierarchy. It does not matter which collection you right clicked at. The New Collection button in the Outliner header does the same.
+Adds a new collection directly to the **Scene Collection**, at the top of the hierarchy. It does not matter which collection you right clicked at. It creates an empty collection and does not move any object. The New Collection button in the Outliner header is different, see Add Collection.
 
 #### New Nested
 
 Adds a new collection **inside the selected collection**, as its child. Use it to build a hierarchy, for example a "Props" collection inside "Set".
+
+#### New Collection from Selection
+
+Adds a new collection and **moves the objects that are selected in the Outliner into it**. Use it to tidy up: select some objects, and put them into one new collection in a single step. The tooltip says: Add a new collection and move selected Outliner objects into it.
+
+The tool reads the selection of the Outliner. When Sync Selection is off, this can differ from the selection in the 3D Viewport. When no object is selected, the result is an empty collection. The entry is also in the menu that opens when you right click at the Scene Collection. The hotkey C and the entries New and New Nested do not move objects.
 
 > **Tip:** The C hotkey in the Outliner adds a collection like **New**. New Nested has no hotkey in the Bforartists keymap, so use this menu. (Blender has it on Shift C.)
 
@@ -805,7 +811,7 @@ Set a name for your new collection. When you haven't created a new collection, t
 
 ![Add Collection](/docs2/images/editors/outliner/add-collection.png)
 
-Add a collection inside of the current selected collection.
+Adds a new collection and moves the objects that are selected in the Outliner into it. It is the same tool as **New Collection from Selection** in the Collection right click menu. With no object selected, it adds an empty collection.
 
 ### New Scene
 
@@ -918,7 +924,7 @@ Objects can be in more than one collection. Removes the selected object from the
 
 ![Add Collection](/docs2/images/editors/outliner/add-collection.png)
 
-Add a collection inside of the current selected collection.
+Adds a new collection and moves the objects that are selected in the Outliner into it. It is the same tool as **New Collection from Selection** in the Collection right click menu. With no object selected, it adds an empty collection.
 
 ### Filter
 
