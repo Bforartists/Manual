@@ -758,6 +758,19 @@ We won't explain the content of the panels again. The single nodes are explained
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
 
+### Utilities
+
+![The Utilities panel of the Add tab, with the Bundle and Closure subpanels closed](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab-utilities.png)
+
+The Utilities panel has subpanels, like the **Add > Utilities** menu. **Math** and **Vector** hold the math and vector nodes. **Bundle** and **Closure** have their own subpanels too. They are closed by default. Click a subpanel header to open it.
+
+![The Bundle and Closure subpanels opened](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab-utilities-bundle-closure.png)
+
+- **Bundle**: Combine Bundle, Join Bundle and Separate Bundle.
+- **Closure**: Closure and Evaluate Closure.
+
+With **Common** switched on, Bundle only shows Combine Bundle and Separate Bundle, and Closure is hidden. The nodes are explained on the [Utilities page](../header/add-menu/utilities.md) of the Add menu.
+
 ## Add tab - Display Panel
 
 ![Add tab - Display Panel](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab-display-panel.png)
