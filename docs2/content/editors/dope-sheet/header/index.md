@@ -467,6 +467,8 @@ Show the overlays.
 
 ##### Scene Strip Gizmo
 
+![Scene Strip Gizmo section of the Dope Sheet Overlays](/docs2/images/editors/dope-sheet/header/header-tools-and-options/scene-strip-gizmo-overlay.png)
+
 Shows interactive gizmos on the scene strip in the Dope Sheet: retime, move or slip the current scene strip, and scrub the master sequence, without going to the Video Sequencer. It works with or without scene time synchronization. Turn it off to hide all scene strip gizmos.
 
 ###### Set Preview Range
@@ -479,7 +481,7 @@ Sets the start and end frame of the strip's scene to the visible part of the str
 
 ###### Show Frame Range
 
-Shades the time outside the frame range of the scene strip, behind the keys, so you see at a glance which frames of this scene end up in the edit. It shows while the Scene Strip Gizmo or **Use Scene Strip Range** (Timeline > Playback) is on. It changes no scene data.
+Shades the time outside the frame range of the scene strip, behind the keys, so you see at a glance which frames of this scene end up in the edit. It works with or without scene time synchronization. It shows while the Scene Strip Gizmo or **Use Scene Strip Range** (Timeline > Playback) is on. It changes no scene data.
 
 ###### Show All Strips
 
