@@ -964,6 +964,8 @@ List of available input and output sockets.
 
 The list of input and output sockets.
 
+Click an item to select it. Hold Ctrl and click to add more items to the selection (Cmd on macOS). Hold Shift and click to select all items between the active item and the clicked item.
+
 #### Name
 
 ![Name](/docs2/images/editors/shader-editor/sidebar/group-tab/name-2.png)
