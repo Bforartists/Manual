@@ -587,43 +587,23 @@ Zooms in or out until the video displays fitting in the viewport.
 
 Centers the selection and zooms to fit.
 
-### Proxy
-
-![Proxy](/docs2/images/editors/video-sequence-editor/header/view-menu/proxy.png)
-
-Proxy works just with movie or image strips. What it does is to create a smaller set of preview images. This speeds up the calculation while you are at editing the video. The final result uses the final images again then.
-
-#### Setup
-
-![Setup](/docs2/images/editors/video-sequence-editor/header/view-menu/setup.png)
-
-Calls a panel where you can choose the resolution of the proxy images. Clicking OK starts the creation process.
-
-#### Rebuild
-
-Recreates the proxy images
-
-#### Scene Render Size
-
-![Scene Render Size](/docs2/images/editors/video-sequence-editor/header/view-menu/scene-render-size.png)
-
-What render size the display should choose.
-
-##### Refresh All
+### Refresh All
 
 Refresh the sequence editor.
 
-##### Sequence render Image
+### Sequence Render Image
 
 Renders an image of the current frame.
 
-##### Sequence render Animation
+### Sequence Render Animation
 
 Renders the animation in the preview range.
 
-##### Toggle Sequencer/Preview
+### Toggle Sequencer/Preview
 
 Toggles the type of sequencer view between Sequencer or Preview.
+
+> **Note:** The View menu of the Preview has no Proxy submenu. Proxies are set up and rebuilt in the Proxy tab of the sidebar, and the proxy render size is in the sidebar of the Preview. See the [Sequencer Proxy Tab](../sidebar/index.md#sequencer--proxy-tab).
 
 ### Pie Menu
 
