@@ -3024,6 +3024,8 @@ Two optional buttons from **View > Navigation**: **Reset Roll** levels the view 
 
 This panel shows in most of the modes. It is the same content than the Layers panel in the Object Data Properties.
 
+Open it with the layer button in the header. The button shows the name of the active layer, for example **Lines**. The popover has the title **Layers**, the same name as the panel in the Object Data Properties, so you can see that both show the same content.
+
 ## Layer list
 
 ### Layer name
