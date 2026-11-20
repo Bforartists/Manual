@@ -18,7 +18,7 @@
 | `docs-head.css` · `docs-head.js` | loaded by `template-head.html` | Doc Pages template, head | The docs kit styles (`bfa-doc-kit`), panel heads, section icons |
 | `docs-foot.css` · `docs-foot.js` | loaded by `template-footer.html` | Doc Pages template, footer | The base docs script `bfa-docs-v6` and its CSS |
 | `site-head.css` · `site-head.js` | loaded by `site-head.html` | Whole site, head | World, Paper, Cover, Layers, Heroes, Sectors, Wall, Lite, Media, Gallery, Shared |
-| `site-foot.css` · `site-foot.js` | loaded by `site-footer.html` | Whole site, footer | IX Idle, Fallbacks, Fork Light, Hero Rows, Light, Shade, Round 8–10, Thumb Sizes, Site Path, Paths, Perf Note, Row Drag, Band Drag; CSS: Lift, Compare Foot, Sink Room |
+| `site-foot.css` · `site-foot.js` | loaded by `site-footer.html` | Whole site, footer | IX Idle, Fallbacks, Fork Light, Hero Rows, Light, Shade, Round 8–10, Thumb Sizes, Site Path, Paths, Perf Note, Row Drag, Band Drag; CSS: Lift, Compare Foot, Sink Room, Compare Rows |
 | `news-head.css` · `news-foot.js` | loaded by `news-head.html` / `news-footer.html` | News template | Post styles, "On this page", interview video, reading UX |
 | `*.html` (loaders) | (pasted into Webflow) | Site settings or template custom code | A few `<link>` / `<script>` tags with the version and hash. Nothing else is inline. |
 
