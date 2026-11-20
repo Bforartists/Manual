@@ -857,4 +857,4 @@ Recalculate the sculpt BVH to improve performance.
 
 Switch to another object in Sculpt mode. The tool calls an object picker with which you can choose the object that you want to switch to.
 
-There is also a hotkey that works directly. Hover with the mouse over the object, and press `D` or `Z`. `Z` works the same way in the other modes, see [Transfer Mode](../../all-modes/header/select-menu.md#transfer-mode).
+> **Tip:** Hover over an object and press **D** or **Z** to switch to it directly. **Z** works the same way in the other modes, see [Transfer Mode](../../all-modes/header/select-menu.md#transfer-mode).
