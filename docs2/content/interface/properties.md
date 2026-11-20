@@ -64,7 +64,9 @@ You may stumble across color pickers in the UI. When you do a painting job for e
 
 ### Hue wrap
 
-Drag in the hue strip or in the hue area of the color picker, and keep going past the left or right edge. The hue wraps around to the other side, so you can pass through red without having to stop and start again. Hold **Ctrl** while you drag to turn the wrap off. With Ctrl held, the drag stops at the edge, which makes it easy to reach pure red.
+Drag in the hue strip or in the hue area of the color picker, and keep going past the left or right edge. The hue wraps around to the other side, so you can pass through red without having to stop and start again.
+
+> **Tip:** Hold **Ctrl** while you drag to turn the wrap off. The drag then stops at the edge, which makes it easy to reach pure red.
 
 ## Widgets
 

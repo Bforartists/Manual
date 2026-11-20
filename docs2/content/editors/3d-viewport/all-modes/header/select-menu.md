@@ -1437,7 +1437,9 @@ Selects all vertices that belong to **fill regions** of Grease Pencil strokes. U
 
 ## Linked
 
-Selects whole strokes: every point of each stroke that has at least one point selected. Hotkey: **Ctrl L**. The entry is hidden in Stroke selection mode, where every selection already covers whole strokes.
+Selects whole strokes: every point of each stroke that has at least one point selected. The entry is hidden in Stroke selection mode, where every selection already covers whole strokes.
+
+> **Tip:** Hotkey **Ctrl+L**.
 
 ## Deselect Linked
 
@@ -1445,11 +1447,15 @@ The opposite of Linked: deselects every point of each stroke that has a point se
 
 ## Linked Pick
 
-Selects the whole stroke under the mouse cursor. You do not need a selection first, so it is a fast way to pick one stroke in a drawing with many strokes. Hotkey: **L**, with the mouse over the stroke.
+Selects the whole stroke under the mouse cursor. You do not need a selection first, so it is a fast way to pick one stroke in a drawing with many strokes.
+
+> **Tip:** Hover over the stroke and press **L**.
 
 ## Linked Pick Deselect
 
-Deselects the whole stroke under the mouse cursor. Hotkey: **Shift L**, with the mouse over the stroke.
+Deselects the whole stroke under the mouse cursor.
+
+> **Tip:** Hover over the stroke and press **Shift+L**.
 
 ### Adjust Last Operation - Select Linked All
 
