@@ -1,0 +1,16 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/all-modes/header/select-menu.md": "editors/3d-viewport/all-modes/header/select-menu.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/sidebar.md": "editors/3d-viewport/mesh/sculpt/sidebar.html",
+  "docs2/content/editors/compositor/header/add-menu/color.md": "editors/compositor/header/add-menu/color.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/color.md": "editors/geometry-node-editor/header/add-menu/color.html",
+  "docs2/content/editors/properties/collection-properties-tab.md": "editors/properties/collection-properties-tab.html",
+  "docs2/content/editors/shader-editor/header/add-menu/color.md": "editors/shader-editor/header/add-menu/color.html",
+  "docs2/content/editors/shader-editor/header/add-menu/shader.md": "editors/shader-editor/header/add-menu/shader.html",
+  "docs2/content/editors/video-sequence-editor/header/index.md": "editors/video-sequence-editor/header.html",
+  "docs2/content/editors/video-sequence-editor/sidebar/index.md": "editors/video-sequence-editor/sidebar.html",
+  "docs2/content/interface/properties.md": "interface/properties.html",
+  "docs2/content/keymap/keymap-table.md": "keymap/keymap-table.html"
+ },
+ "images": 788
+}
