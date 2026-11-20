@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Layout"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Layout nodes."
 order: 120
@@ -24,6 +24,14 @@ replaces:
 ![Add menu - Layout](/docs2/images/editors/compositor/header/add-menu-layout/add-menu-layout.png)
 
 These nodes helps organizing the node layout.
+
+### Comment
+
+![Comment](/docs2/images/editors/compositor/header/add-menu-layout/comment.png)
+
+Adds a note to the node tree. Use it to explain what a part of your nodes does. The new node shows the heading Comment. It has no sockets and does not change the result of the tree.
+
+To change the text, select the node and click the pencil button in its top right corner, or edit Text in the Node tab of the sidebar. The text can use Markdown formatting. The Comment node is the same in all node editors, so see [Comment](../../../geometry-node-editor/header/add-menu/layout.md) in the Geometry Node Editor for the Markdown details.
 
 ### Frame
 
