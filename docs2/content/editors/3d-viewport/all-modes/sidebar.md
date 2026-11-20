@@ -588,7 +588,7 @@ Smooth the normals of the surface or a beveled curve.
 
 ![Cyclic](/docs2/images/editors/3d-viewport/sidebar/item-tab/cyclic.png)
 
-Make this curve or surface a closed loop in the U direction.
+The checkbox is labeled **U**, like the Cyclic checkbox in the Active Spline panel of curves. Turn it on to make the selected stroke (or curve, for a Curves object) a closed loop. Hover over the checkbox to see the tooltip "Make the stroke a closed loop".
 
 # View Tab
 

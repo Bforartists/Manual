@@ -593,23 +593,26 @@ Applies the line art grease pencil strokes to the whole scene.
 
 Which kind of edges to influence.
 
+The **Illumination Filtering** row is at the top of the panel. It only works when a light object is set in the Light Reference panel (see below).
+
 #### Create
 
-##### Use Contour
+**Create** is a section label. All checkboxes below it are aligned left and indented, each with a decorator on the right for animation.
 
-Use a contour.
+##### Contour
+
+Generates strokes from the contour of the objects. Turn the checkbox on or off. The list below it is indented under Contour and is greyed out while Contour is off.
 
 ###### Silhouette Filtering
 
 ![Silhouette Filtering](/docs2/images/ui/properties/modifiers/grease-pencil-generate/silhouette-filtering.png)
 
-What kind of contour to use.
+What kind of contour to use. When you choose a filter other than None, a button with two arrows appears next to the list to invert the filtering.
 
 
 | Property | What it changes |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Use Crease | Generate strokes from crease edges. · **Crease Threshold**: Angles smaller than this value will be treaten as creases. |
-| Crease | Influence crease edges. The angle what edges are treaten as creases can be adjusted in the edit box. |
+| Crease | Generate strokes from crease edges. The **Crease Threshold** slider is indented under it: angles smaller than this value are treated as creases. |
 | Material Borders | Generate strokes from borders between materials. |
 | Intersections | Generate strokes from intersections. |
 | Edge Marks | Generate strokes from edge marks. |

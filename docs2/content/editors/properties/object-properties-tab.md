@@ -845,6 +845,8 @@ When you set the Color type to Object in the viewport shading settings, then the
 
 Adjust the maximum display method for the object. For example when you set the maximum draw type to Wire, then it will always display as wire, regardless if you set the Viewport render method to Material or Textured.
 
+Display As has no effect in **Rendered** shading, because the Rendered view shows the object as it renders. When every 3D Viewport of the window uses Rendered shading, the Display As property is shown dimmed (inactive) to tell you this. With Solid or Material Preview in at least one viewport, it looks normal again. The tooltip says: How to display object in the viewport (has no effect in Rendered shading). The same property in the viewport display popover of the Topbar behaves the same.
+
 #### Bounds
 
 ![Bounds](/docs2/images/editors/properties/object-properties-tab/bounds.png)
