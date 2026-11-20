@@ -1429,7 +1429,7 @@ The shape as a flat curve.
 
 The Fill assets turn a closed curve into a mesh. They differ in the layout of the faces: triangles, quads in a grid, quads in rings or bands. Pick the one that fits what you do next. A mesh with even quads is good for sculpting and for subdividing, a mesh with a few triangles is light.
 
-All Fill nodes use the same input curve and have the same extra settings, listed under **Shared inputs**. All of them output a mesh. The pictures below fill the same heart shape, drawn by the Curve Heart 1 shape asset.
+All Fill nodes use the same input curve and have the same extra settings, listed under **Shared inputs**. All of them output a mesh. The pictures below fill the same capsule shape, drawn by the Curve Stadium shape asset with its Resolution set to 64 for a smooth outline.
 
 ### Shared inputs
 
@@ -1499,7 +1499,7 @@ Fills a flat curve with triangles, or with one N-gon. It is the lightest fill an
 
 ![Fill Curve example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-example.png)
 
-The picture shows a heart shape filled with the default settings.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1529,7 +1529,7 @@ Fills a flat curve with even triangles. Points are scattered inside the outline 
 
 ![Fill Curve Delaunay example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-example.png)
 
-The picture shows a heart shape filled with the default settings.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1565,7 +1565,7 @@ Fills one closed curve with a grid of quads. The outline is resampled and mapped
 
 ![Fill Curve Grid example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-example.png)
 
-The picture shows a heart shape filled with the default settings.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1601,7 +1601,7 @@ Fills a flat curve with bands of quads along the edge and a filled center. The e
 
 ![Fill Curve Inset example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-example.png)
 
-The picture shows a heart shape filled with the default settings.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1649,7 +1649,7 @@ Fills a curve with even quads of a chosen size. Rings of quads grow from the edg
 
 ![Fill Curve Quad example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-example.png)
 
-The picture shows a heart shape filled with the default settings. Size is 0.08.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1691,7 +1691,7 @@ Fills a closed curve with rings of quads around a center point, like a spider we
 
 ![Fill Curve Radial example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-example.png)
 
-The picture shows a heart shape filled with the default settings.
+The picture shows a capsule filled with the default settings.
 
 #### Inputs
 
@@ -1727,7 +1727,7 @@ Grows rings of quads from a curve, inward, outward or both. Each ring is solved 
 
 ![Fill Curve Wavefront example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-example.png)
 
-The picture shows a rounded rectangle with the default settings. Fill Center is None, so the middle stays open.
+The picture shows a capsule filled with the default settings. Fill Center is None, so the middle stays open.
 
 #### Inputs
 
