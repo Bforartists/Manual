@@ -393,7 +393,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Find them in the Asset Browser and in the Asset Shelf of the Geometry Node Editor, under <strong><span class="ui-doc-menu">Geometry Nodegroups › Curve</span></strong>. Drag one into the node tree to add it.</p>
 <h2 id="shapes">Shapes</h2>
 <p>The Shapes assets draw a flat curve in the shape of a classic mathematical figure: a heart, a rose, a butterfly, a ring and more. Use the curve as an outline, as the input of a Fill node to make a mesh, as a profile for Curve to Mesh, or as a path. Most of the shapes also exist as pictures in the Texture / Shapes assets of the <a href="https://github.com/Bforartists/Manual/blob/docs/library-geometry-nodes-1816/docs2/content/assets/compositor-library.md">Compositor Library</a> and the <a href="https://github.com/Bforartists/Manual/blob/docs/library-geometry-nodes-1816/docs2/content/assets/shader-library.md">Shader Library</a>, with the same controls.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/gallery.png" alt="Gallery of the 34 curve shapes" loading="lazy"><figcaption>Gallery of the 34 curve shapes</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/gallery.png" alt="Gallery of the 34 curve shapes" loading="lazy"><figcaption>Gallery of the 34 curve shapes</figcaption></figure>
 <p>The shapes share the same kind of interface:</p>
 <ul>
 <li>Most shapes have a <strong>Scale</strong>. Some have a <strong>Position</strong>, a <strong>Form</strong> or other controls that change the figure.</li>
@@ -402,7 +402,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <li>The only output is <strong>Curve</strong>, the shape as a flat curve.</li>
 </ul>
 <p>Each shape has its own section below, in alphabetical order. The tooltip of a socket in the editor tells you more about it.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/curve-rounded-rectangle.png" alt="The Curve Rounded Rectangle node in the Geometry Node Editor" loading="lazy"><figcaption>The Curve Rounded Rectangle node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/curve-rounded-rectangle.png" alt="The Curve Rounded Rectangle node in the Geometry Node Editor" loading="lazy"><figcaption>The Curve Rounded Rectangle node in the Geometry Node Editor</figcaption></figure>
 <h3 id="curve-ampersand">Curve Ampersand</h3>
 <p>Draws the Ampersand shape as a flat curve.</p>
 <h4 id="inputs">Inputs</h4>
@@ -1097,7 +1097,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The shape as a flat curve.</p>
 <h2 id="fill">Fill</h2>
 <p>The Fill assets turn a closed curve into a mesh. They differ in the layout of the faces: triangles, quads in a grid, quads in rings or bands. Pick the one that fits what you do next. A mesh with even quads is good for sculpting and for subdividing, a mesh with a few triangles is light.</p>
-<p>All Fill nodes use the same input curve and have the same extra settings, listed under <strong>Shared inputs</strong>. All of them output a mesh. The pictures below fill the same heart shape, drawn by the Curve Heart 1 shape asset.</p>
+<p>All Fill nodes use the same input curve and have the same extra settings, listed under <strong>Shared inputs</strong>. All of them output a mesh. The pictures below fill the same capsule shape, drawn by the Curve Stadium shape asset with its Resolution set to 64 for a smooth outline.</p>
 <h3 id="shared-inputs">Shared inputs</h3>
 <p>These inputs are on every Fill node.</p>
 <h4 id="curve-68">Curve</h4>
@@ -1128,11 +1128,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
 <p>Uses shading and shadows on a simple Diffuse material with the Grease Pencil color attributes. Default: Off.</p>
 <h3 id="fill-curve">Fill Curve</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-thumb.png" alt="Fill Curve asset thumbnail" loading="lazy"><figcaption>Fill Curve asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve.png" alt="The Fill Curve node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-thumb.png" alt="Fill Curve asset thumbnail" loading="lazy"><figcaption>Fill Curve asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve.png" alt="The Fill Curve node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve node in the Geometry Node Editor</figcaption></figure>
 <p>Fills a flat curve with triangles, or with one N-gon. It is the lightest fill and it keeps holes, so it is a good first choice for flat covers and for shapes that you solidify next. It triangulates the area inside the outline, and Overlaps decides how curves that cross or sit inside each other combine.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-example.png" alt="Fill Curve example" loading="lazy"></figure>
-<p>The picture shows a heart shape filled with the default settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-example.png" alt="Fill Curve example" loading="lazy"></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-35">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="n-gons">N-gons</h5>
@@ -1143,11 +1143,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-delaunay">Fill Curve Delaunay</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-thumb.png" alt="Fill Curve Delaunay asset thumbnail" loading="lazy"><figcaption>Fill Curve Delaunay asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay.png" alt="The Fill Curve Delaunay node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Delaunay node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-thumb.png" alt="Fill Curve Delaunay asset thumbnail" loading="lazy"><figcaption>Fill Curve Delaunay asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay.png" alt="The Fill Curve Delaunay node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Delaunay node in the Geometry Node Editor</figcaption></figure>
 <p>Fills a flat curve with even triangles. Points are scattered inside the outline and joined into triangles of about the same size, which gives a mesh that bends and sculpts evenly. Point Distance sets the spacing of the points, and Seed changes how they are scattered.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-example.png" alt="Fill Curve Delaunay example" loading="lazy"><figcaption>Fill Curve Delaunay example</figcaption></figure>
-<p>The picture shows a heart shape filled with the default settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-example.png" alt="Fill Curve Delaunay example" loading="lazy"><figcaption>Fill Curve Delaunay example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-36">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="point-distance">Point Distance</h5>
@@ -1161,11 +1161,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-grid">Fill Curve Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-thumb.png" alt="Fill Curve Grid asset thumbnail" loading="lazy"><figcaption>Fill Curve Grid asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid.png" alt="The Fill Curve Grid node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Grid node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-thumb.png" alt="Fill Curve Grid asset thumbnail" loading="lazy"><figcaption>Fill Curve Grid asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid.png" alt="The Fill Curve Grid node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Grid node in the Geometry Node Editor</figcaption></figure>
 <p>Fills one closed curve with a grid of quads. The outline is resampled and mapped on a square grid, which gives clean quad topology for shapes that are close to a square or a circle. Resolution sets the points along each side of the grid, and Corner Offset slides the four corners along the curve.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-example.png" alt="Fill Curve Grid example" loading="lazy"><figcaption>Fill Curve Grid example</figcaption></figure>
-<p>The picture shows a heart shape filled with the default settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-example.png" alt="Fill Curve Grid example" loading="lazy"><figcaption>Fill Curve Grid example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-37">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="resolution-33">Resolution</h5>
@@ -1179,11 +1179,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-inset">Fill Curve Inset</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-thumb.png" alt="Fill Curve Inset asset thumbnail" loading="lazy"><figcaption>Fill Curve Inset asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset.png" alt="The Fill Curve Inset node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Inset node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-thumb.png" alt="Fill Curve Inset asset thumbnail" loading="lazy"><figcaption>Fill Curve Inset asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset.png" alt="The Fill Curve Inset node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Inset node in the Geometry Node Editor</figcaption></figure>
 <p>Fills a flat curve with bands of quads along the edge and a filled center. The edge loops follow the outline, which is useful for a clean border to bevel or to subdivide. Width and Rings set the band, and Center sets how the middle is filled.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-example.png" alt="Fill Curve Inset example" loading="lazy"><figcaption>Fill Curve Inset example</figcaption></figure>
-<p>The picture shows a heart shape filled with the default settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-example.png" alt="Fill Curve Inset example" loading="lazy"><figcaption>Fill Curve Inset example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-38">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="width-2">Width</h5>
@@ -1203,11 +1203,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-quad">Fill Curve Quad</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-thumb.png" alt="Fill Curve Quad asset thumbnail" loading="lazy"><figcaption>Fill Curve Quad asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad.png" alt="The Fill Curve Quad node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Quad node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-thumb.png" alt="Fill Curve Quad asset thumbnail" loading="lazy"><figcaption>Fill Curve Quad asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad.png" alt="The Fill Curve Quad node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Quad node in the Geometry Node Editor</figcaption></figure>
 <p>Fills a curve with even quads of a chosen size. Rings of quads grow from the edge, and they thin out until a grid closes the middle. Use it for an all-quad mesh with a size you control. Size sets the target size of the quads and Max Rings limits how many rings grow before the center is capped.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-example.png" alt="Fill Curve Quad example" loading="lazy"><figcaption>Fill Curve Quad example</figcaption></figure>
-<p>The picture shows a heart shape filled with the default settings. Size is 0.08.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-example.png" alt="Fill Curve Quad example" loading="lazy"><figcaption>Fill Curve Quad example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-39">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="size-2">Size</h5>
@@ -1224,11 +1224,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-radial">Fill Curve Radial</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-thumb.png" alt="Fill Curve Radial asset thumbnail" loading="lazy"><figcaption>Fill Curve Radial asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial.png" alt="The Fill Curve Radial node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Radial node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-thumb.png" alt="Fill Curve Radial asset thumbnail" loading="lazy"><figcaption>Fill Curve Radial asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial.png" alt="The Fill Curve Radial node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Radial node in the Geometry Node Editor</figcaption></figure>
 <p>Fills a closed curve with rings of quads around a center point, like a spider web. It suits round shapes, disks and anything you want to scale in rings. Rings sets the number of rings and Center Offset moves the center away from the average of the curve points.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-example.png" alt="Fill Curve Radial example" loading="lazy"><figcaption>Fill Curve Radial example</figcaption></figure>
-<p>The picture shows a heart shape filled with the default settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-example.png" alt="Fill Curve Radial example" loading="lazy"><figcaption>Fill Curve Radial example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings.</p>
 <h4 id="inputs-40">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="rings-2">Rings</h5>
@@ -1242,11 +1242,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The filled mesh.</p>
 <h3 id="fill-curve-wavefront">Fill Curve Wavefront</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-thumb.png" alt="Fill Curve Wavefront asset thumbnail" loading="lazy"><figcaption>Fill Curve Wavefront asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront.png" alt="The Fill Curve Wavefront node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Wavefront node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-thumb.png" alt="Fill Curve Wavefront asset thumbnail" loading="lazy"><figcaption>Fill Curve Wavefront asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront.png" alt="The Fill Curve Wavefront node in the Geometry Node Editor" loading="lazy"><figcaption>The Fill Curve Wavefront node in the Geometry Node Editor</figcaption></figure>
 <p>Grows rings of quads from a curve, inward, outward or both. Each ring is solved from the last one, like a wave that travels from the outline. Use it for borders, outlines with thickness and ribbons: with Close Curves off, an open stroke grows a ribbon of rings. Direction picks the way, Width is the total width of all rings and Rings is their number.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-example.png" alt="Fill Curve Wavefront example" loading="lazy"><figcaption>Fill Curve Wavefront example</figcaption></figure>
-<p>The picture shows a rounded rectangle with the default settings. Fill Center is None, so the middle stays open.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-example.png" alt="Fill Curve Wavefront example" loading="lazy"><figcaption>Fill Curve Wavefront example</figcaption></figure>
+<p>The picture shows a capsule filled with the default settings. Fill Center is None, so the middle stays open.</p>
 <h4 id="inputs-41">Inputs</h4>
 <p>This node has the <a href="#shared-inputs">shared inputs</a> and the inputs below.</p>
 <h5 id="direction">Direction</h5>
@@ -1270,8 +1270,8 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The filled mesh.</p>
 <h2 id="operations">Operations</h2>
 <h3 id="decimate-curve">Decimate Curve</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve-thumb.png" alt="Decimate Curve asset thumbnail" loading="lazy"><figcaption>Decimate Curve asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve.png" alt="The Decimate Curve node in the Geometry Node Editor" loading="lazy"><figcaption>The Decimate Curve node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve-thumb.png" alt="Decimate Curve asset thumbnail" loading="lazy"><figcaption>Decimate Curve asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve.png" alt="The Decimate Curve node in the Geometry Node Editor" loading="lazy"><figcaption>The Decimate Curve node in the Geometry Node Editor</figcaption></figure>
 <p>Removes points from a curve by angle. Straight runs reduce to their end points, while bends keep their detail. Use it to clean up a hand-drawn stroke or a dense curve before you fill it. It checks how much the curve turns at each point and removes the points that do not turn more than the Angle.</p>
 <h4 id="inputs-42">Inputs</h4>
 <h5 id="curve-69">Curve</h5>
@@ -1292,9 +1292,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The Mesh assets are in two catalogs: <strong><span class="ui-doc-menu">Mesh › UV</span></strong> and <strong><span class="ui-doc-menu">Mesh › Operations</span></strong>. The Operations assets, <a href="#solidify">Solidify</a> and <a href="#bevel-advanced">Bevel Advanced</a>, change an existing mesh.</p>
 <p>The UV assets write UV coordinates onto a mesh. Drag one onto an object from the Asset Shelf or the Asset Browser. Each picture shows the result on a checker texture, next to the UV layout.</p>
 <h2 id="camera-uv">Camera UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/camera-uv.png" alt="Camera UV asset thumbnail" loading="lazy"><figcaption>Camera UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/camera-uv-node.png" alt="The Camera UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Camera UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/camera-uv.png" alt="Camera UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/camera-uv.png" alt="Camera UV asset thumbnail" loading="lazy"><figcaption>Camera UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/camera-uv-node.png" alt="The Camera UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Camera UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/camera-uv.png" alt="Camera UV" loading="lazy"></figure>
 <p>Creates UV coordinates by projecting the mesh through a camera. Use it to place a texture on an object as the camera sees it. Size, Rotation, Offset and Scale adjust the projection, and Custom Camera lets you choose another camera.</p>
 <h3 id="gizmos">Gizmos</h3>
 <p>The projection frame is drawn in the viewport and has gizmos:</p>
@@ -1351,9 +1351,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="cube-uv">Cube UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv.png" alt="Cube UV asset thumbnail" loading="lazy"><figcaption>Cube UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cube-uv-node.png" alt="The Cube UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cube-uv.png" alt="Cube UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv.png" alt="Cube UV asset thumbnail" loading="lazy"><figcaption>Cube UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cube-uv-node.png" alt="The Cube UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cube-uv.png" alt="Cube UV" loading="lazy"></figure>
 <p>Creates cube projected UV coordinates, with each side of the box mapped flat. Mode switches between all islands and a single island chosen by Island Index. Axis and Angle turn the projection.</p>
 <h3 id="gizmos-2">Gizmos</h3>
 <p>The <strong>Angle</strong> input has a <strong>dial gizmo</strong> in the viewport on the selected island. Drag the dial to rotate the projection, instead of typing a number. Island Index decides which island shows the gizmo.</p>
@@ -1407,9 +1407,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="cube-uv-island">Cube UV Island</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv-island.png" alt="Cube UV Island asset thumbnail" loading="lazy"><figcaption>Cube UV Island asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island-node.png" alt="The Cube UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV Island node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island.png" alt="Cube UV Island" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/cube-uv-island.png" alt="Cube UV Island asset thumbnail" loading="lazy"><figcaption>Cube UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island-node.png" alt="The Cube UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cube UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cube-uv-island.png" alt="Cube UV Island" loading="lazy"></figure>
 <p>Creates cube projected UV coordinates on a single island. Island Index chooses the island. It works like Cube UV with Mode set to one island.</p>
 <h3 id="gizmos-3">Gizmos</h3>
 <p>The <strong>Angle</strong> input has a <strong>dial gizmo</strong> in the viewport on the selected island. Drag the dial to rotate the projection, instead of typing a number. Island Index decides which island shows the gizmo.</p>
@@ -1460,9 +1460,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="cut-cylinder-uv">Cut Cylinder UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/cut-cylinder-uv.png" alt="Cut Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cut Cylinder UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv-node.png" alt="The Cut Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cut Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png" alt="Cut Cylinder UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/cut-cylinder-uv.png" alt="Cut Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cut Cylinder UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv-node.png" alt="The Cut Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cut Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cut-cylinder-uv.png" alt="Cut Cylinder UV" loading="lazy"></figure>
 <p>Creates cylinder projected UV coordinates by cutting the cylinder open. Cut Angle sets where the cut is made, and Top and Bottom set the limits of the projection. The side and the caps become separate islands.</p>
 <h3 id="gizmos-4">Gizmos</h3>
 <p>The projection cylinder is drawn in the viewport and can be tuned directly:</p>
@@ -1520,9 +1520,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="cylinder-uv">Cylinder UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv.png" alt="Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cylinder UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-node.png" alt="The Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png" alt="Cylinder UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv.png" alt="Cylinder UV asset thumbnail" loading="lazy"><figcaption>Cylinder UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-node.png" alt="The Cylinder UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv.png" alt="Cylinder UV" loading="lazy"></figure>
 <p>Creates cylinder projected UV coordinates, with the side and the caps scaled separately. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the cylinder.</p>
 <h3 id="gizmos-5">Gizmos</h3>
 <p>The projection can be tuned in the viewport with gizmos on the selected island:</p>
@@ -1583,9 +1583,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="cylinder-uv-island">Cylinder UV Island</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv-island.png" alt="Cylinder UV Island asset thumbnail" loading="lazy"><figcaption>Cylinder UV Island asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island-node.png" alt="The Cylinder UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV Island node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png" alt="Cylinder UV Island" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/cylinder-uv-island.png" alt="Cylinder UV Island asset thumbnail" loading="lazy"><figcaption>Cylinder UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island-node.png" alt="The Cylinder UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Cylinder UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/cylinder-uv-island.png" alt="Cylinder UV Island" loading="lazy"></figure>
 <p>Creates cylinder projected UV coordinates on a single island. Island Index chooses the island. It works like Cylinder UV with Mode set to one island.</p>
 <h3 id="gizmos-6">Gizmos</h3>
 <p>The projection can be tuned in the viewport with gizmos on the selected island:</p>
@@ -1643,9 +1643,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="generated-uv">Generated UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/generated-uv.png" alt="Generated UV asset thumbnail" loading="lazy"><figcaption>Generated UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/generated-uv-node.png" alt="The Generated UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Generated UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/generated-uv.png" alt="Generated UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/generated-uv.png" alt="Generated UV asset thumbnail" loading="lazy"><figcaption>Generated UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/generated-uv-node.png" alt="The Generated UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Generated UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/generated-uv.png" alt="Generated UV" loading="lazy"></figure>
 <p>Creates the default generated UV coordinates for procedural meshes. It has no settings beyond the UV name and the selection.</p>
 <h3 id="inputs-49">Inputs</h3>
 <h4 id="geometry-13">Geometry</h4>
@@ -1669,9 +1669,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="smart-uv">Smart UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/smart-uv.png" alt="Smart UV asset thumbnail" loading="lazy"><figcaption>Smart UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/smart-uv-node.png" alt="The Smart UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Smart UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/smart-uv.png" alt="Smart UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/smart-uv.png" alt="Smart UV asset thumbnail" loading="lazy"><figcaption>Smart UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/smart-uv-node.png" alt="The Smart UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Smart UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/smart-uv.png" alt="Smart UV" loading="lazy"></figure>
 <p>Creates smart projected UV coordinates. It uses signed angles to find seams on the edges, then unwraps the geometry into islands. Angle Limit and Minimum Edge Length decide which edges become seams.</p>
 <h3 id="inputs-50">Inputs</h3>
 <h4 id="geometry-15">Geometry</h4>
@@ -1740,9 +1740,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="sphere-uv">Sphere UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv.png" alt="Sphere UV asset thumbnail" loading="lazy"><figcaption>Sphere UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-node.png" alt="The Sphere UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png" alt="Sphere UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv.png" alt="Sphere UV asset thumbnail" loading="lazy"><figcaption>Sphere UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-node.png" alt="The Sphere UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/sphere-uv.png" alt="Sphere UV" loading="lazy"></figure>
 <p>Creates sphere projected UV coordinates, with longitude and latitude. Mode switches between all islands and a single island chosen by Island Index. Axis sets the direction of the poles.</p>
 <h3 id="gizmos-7">Gizmos</h3>
 <p>The projection sphere is drawn in the viewport and has gizmos on the selected island:</p>
@@ -1800,9 +1800,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="sphere-uv-island">Sphere UV Island</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv-island.png" alt="Sphere UV Island asset thumbnail" loading="lazy"><figcaption>Sphere UV Island asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island-node.png" alt="The Sphere UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV Island node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island.png" alt="Sphere UV Island" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/sphere-uv-island.png" alt="Sphere UV Island asset thumbnail" loading="lazy"><figcaption>Sphere UV Island asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island-node.png" alt="The Sphere UV Island node in the Geometry Nodes editor" loading="lazy"><figcaption>The Sphere UV Island node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/sphere-uv-island.png" alt="Sphere UV Island" loading="lazy"></figure>
 <p>Creates sphere projected UV coordinates on a single island. Island Index chooses the island. It works like Sphere UV with Mode set to one island.</p>
 <h3 id="gizmos-8">Gizmos</h3>
 <p>The projection sphere is drawn in the viewport and has gizmos on the selected island:</p>
@@ -1857,9 +1857,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <h2 id="triplanar-uv">Triplanar UV</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/thumbs/triplanar-uv.png" alt="Triplanar UV asset thumbnail" loading="lazy"><figcaption>Triplanar UV asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv-node.png" alt="The Triplanar UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Triplanar UV node in the Geometry Nodes editor</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png" alt="Triplanar UV" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/thumbs/triplanar-uv.png" alt="Triplanar UV asset thumbnail" loading="lazy"><figcaption>Triplanar UV asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv-node.png" alt="The Triplanar UV node in the Geometry Nodes editor" loading="lazy"><figcaption>The Triplanar UV node in the Geometry Nodes editor</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/uv/triplanar-uv.png" alt="Triplanar UV" loading="lazy"></figure>
 <p>Creates triplanar cube projected UV coordinates, with scaling that stays relative to the object. Translation, Rotation and Scale move the projection.</p>
 <h3 id="gizmos-9">Gizmos</h3>
 <p>The projection box is drawn in the viewport and has gizmos:</p>
@@ -1918,10 +1918,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.</p>
 <p><em>The Mesh Operations assets will be documented here.</em></p>
 <h2 id="solidify-2">Solidify</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/solidify-thumb.png" alt="Solidify asset thumbnail" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/solidify.png" alt="The Solidify node in the Geometry Node Editor" loading="lazy"><figcaption>The Solidify node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/solidify-thumb.png" alt="Solidify asset thumbnail" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/solidify.png" alt="The Solidify node in the Geometry Node Editor" loading="lazy"><figcaption>The Solidify node in the Geometry Node Editor</figcaption></figure>
 <p>Gives a mesh thickness, like the Solidify modifier, with a quick choice of side wall: straight, chamfered, rounded, inset or a bubbly remesh. Use it to turn a flat mesh, such as the result of a Fill node, into a solid. It pushes a second surface along the normals by the Thickness and closes the open edges with a rim.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/solidify-modes.png" alt="The four side wall modes: Straight, Chamfer, Round and Inset" loading="lazy"><figcaption>The four side wall modes: Straight, Chamfer, Round and Inset</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/solidify-modes.png" alt="The four side wall modes: Straight, Chamfer, Round and Inset" loading="lazy"><figcaption>The four side wall modes: Straight, Chamfer, Round and Inset</figcaption></figure>
 <p>The picture shows a filled rounded rectangle with Thickness 0.25 in the modes Straight, Chamfer, Round and Inset.</p>
 <h3 id="inputs-54">Inputs</h3>
 <h4 id="mesh-9">Mesh</h4>
@@ -2014,8 +2014,8 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-boolean"><p><em>Data type</em><strong>Boolean</strong></p></div>
 <p>The rim faces, like the Rim Vertex Group of the modifier.</p>
 <h2 id="bevel-advanced">Bevel Advanced</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced-thumb.png" alt="Bevel Advanced asset thumbnail" loading="lazy"><figcaption>Bevel Advanced asset thumbnail</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced.png" alt="The Bevel Advanced node in the Geometry Node Editor" loading="lazy"><figcaption>The Bevel Advanced node in the Geometry Node Editor</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced-thumb.png" alt="Bevel Advanced asset thumbnail" loading="lazy"><figcaption>Bevel Advanced asset thumbnail</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced.png" alt="The Bevel Advanced node in the Geometry Node Editor" loading="lazy"><figcaption>The Bevel Advanced node in the Geometry Node Editor</figcaption></figure>
 <p>Bevels edges or vertices like the Bevel modifier, with extra controls: width types, limit by angle or weight, a profile, miters and shading, and overlap clamping built in. Use it to soften the hard edges of a mesh for a more realistic look. It cuts a chamfer of the given Amount along each chosen edge and splits it into Segments.</p>
 <h3 id="inputs-55">Inputs</h3>
 <h4 id="mesh-11">Mesh</h4>
@@ -2309,7 +2309,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Every Smart Primitive can also be changed with numbers, in the <strong>Asset Properties</strong> panel of the 3D View sidebar (<strong>Item</strong> tab) or in its Geometry Nodes modifier. The properties are grouped into top-level, bevel, resolution and UV properties. To turn Smart Primitives into regular meshes, use <strong><span class="ui-doc-menu">Object › Apply</span></strong>, with the Join, Boolean and Remesh options. Both are explained in <a href="default-library.html#using-the-sidebar-to-change-asset-properties">Default Library</a>.</p>
 <h2 id="basic-shapes">Basic Shapes</h2>
 <h3 id="cube">Cube</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cube-thumb.png" alt="Cube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cube.png" alt="Cube with its gizmos" loading="lazy"><figcaption>Cube with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cube-thumb.png" alt="Cube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cube.png" alt="Cube with its gizmos" loading="lazy"><figcaption>Cube with its gizmos</figcaption></figure></div>
 <p>A standard six-sided shape, great for solid modeling. Includes relative UVs and resolution gizmos.</p>
 <p>This asset uses the <strong>Smart Cube</strong> node group.</p>
 <h4 id="gizmos-10">Gizmos</h4>
@@ -2350,7 +2350,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cube-rounded">Cube Rounded</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded-thumb.png" alt="Cube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded.png" alt="Cube Rounded with its gizmos" loading="lazy"><figcaption>Cube Rounded with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded-thumb.png" alt="Cube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cube-rounded.png" alt="Cube Rounded with its gizmos" loading="lazy"><figcaption>Cube Rounded with its gizmos</figcaption></figure></div>
 <p>A cube with softened edges for a more organic feel.</p>
 <p>This asset uses the <strong>Smart Cube Rounded</strong> node group.</p>
 <h4 id="gizmos-11">Gizmos</h4>
@@ -2396,7 +2396,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="sphere">Sphere</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/sphere-thumb.png" alt="Sphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/sphere.png" alt="Sphere with its gizmos" loading="lazy"><figcaption>Sphere with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/sphere-thumb.png" alt="Sphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/sphere.png" alt="Sphere with its gizmos" loading="lazy"><figcaption>Sphere with its gizmos</figcaption></figure></div>
 <p>A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.</p>
 <p>This asset uses the <strong>Smart Sphere</strong> node group.</p>
 <h4 id="gizmos-12">Gizmos</h4>
@@ -2428,7 +2428,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="icosphere">Icosphere</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/icosphere-thumb.png" alt="Icosphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/icosphere.png" alt="Icosphere with its gizmos" loading="lazy"><figcaption>Icosphere with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/icosphere-thumb.png" alt="Icosphere thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/icosphere.png" alt="Icosphere with its gizmos" loading="lazy"><figcaption>Icosphere with its gizmos</figcaption></figure></div>
 <p>A low-poly spherical shape made of triangles, great for optimization, with various levels of resolution.</p>
 <p>This asset uses the <strong>Smart Icosphere</strong> node group.</p>
 <h4 id="gizmos-13">Gizmos</h4>
@@ -2455,7 +2455,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cone">Cone</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone-thumb.png" alt="Cone thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone.png" alt="Cone with its gizmos" loading="lazy"><figcaption>Cone with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone-thumb.png" alt="Cone thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone.png" alt="Cone with its gizmos" loading="lazy"><figcaption>Cone with its gizmos</figcaption></figure></div>
 <p>A tapered shape with a circular base, useful for pointed structures.</p>
 <p>This asset uses the <strong>Smart Cone</strong> node group.</p>
 <h4 id="gizmos-14">Gizmos</h4>
@@ -2488,7 +2488,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cone-rounded">Cone Rounded</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-thumb.png" alt="Cone Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded.png" alt="Cone Rounded with its gizmos" loading="lazy"><figcaption>Cone Rounded with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-thumb.png" alt="Cone Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded.png" alt="Cone Rounded with its gizmos" loading="lazy"><figcaption>Cone Rounded with its gizmos</figcaption></figure></div>
 <p>A cone with a smoother, more organic tip.</p>
 <p>This asset uses the <strong>Smart Cone Rounded</strong> node group.</p>
 <h4 id="gizmos-15">Gizmos</h4>
@@ -2530,7 +2530,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cylinder">Cylinder</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-thumb.png" alt="Cylinder thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder.png" alt="Cylinder with its gizmos" loading="lazy"><figcaption>Cylinder with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-thumb.png" alt="Cylinder thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder.png" alt="Cylinder with its gizmos" loading="lazy"><figcaption>Cylinder with its gizmos</figcaption></figure></div>
 <p>A uniform circular primitive, essential for pipes and tubes.</p>
 <p>This asset uses the <strong>Smart Cylinder</strong> node group.</p>
 <h4 id="gizmos-16">Gizmos</h4>
@@ -2564,7 +2564,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cylinder-rounded">Cylinder Rounded</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-thumb.png" alt="Cylinder Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded.png" alt="Cylinder Rounded with its gizmos" loading="lazy"><figcaption>Cylinder Rounded with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-thumb.png" alt="Cylinder Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded.png" alt="Cylinder Rounded with its gizmos" loading="lazy"><figcaption>Cylinder Rounded with its gizmos</figcaption></figure></div>
 <p>A cylinder with softened edges for better transitions.</p>
 <p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Revolved, Cylinder Rounded Revolved; each asset starts from its own settings.</p>
 <h4 id="gizmos-17">Gizmos</h4>
@@ -2614,7 +2614,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="tube">Tube</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-thumb.png" alt="Tube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube.png" alt="Tube with its gizmos" loading="lazy"><figcaption>Tube with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-thumb.png" alt="Tube thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube.png" alt="Tube with its gizmos" loading="lazy"><figcaption>Tube with its gizmos</figcaption></figure></div>
 <p>A hollow cylindrical primitive, great for mechanical parts.</p>
 <p>This asset uses the <strong>Smart Tube Revolved</strong> node group. The same group is used by Tube Revolved; each asset starts from its own settings.</p>
 <h4 id="gizmos-18">Gizmos</h4>
@@ -2662,7 +2662,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="tube-rounded">Tube Rounded</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-thumb.png" alt="Tube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded.png" alt="Tube Rounded with its gizmos" loading="lazy"><figcaption>Tube Rounded with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-thumb.png" alt="Tube Rounded thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded.png" alt="Tube Rounded with its gizmos" loading="lazy"><figcaption>Tube Rounded with its gizmos</figcaption></figure></div>
 <p>A tube with smooth edges for a more natural look.</p>
 <p>This asset uses the <strong>Smart Tube Rounded Revolved</strong> node group. The same group is used by Tube Rounded Revolved; each asset starts from its own settings.</p>
 <h4 id="gizmos-19">Gizmos</h4>
@@ -2719,7 +2719,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The generated shape.</p>
 <h2 id="advanced-forms">Advanced Forms</h2>
 <h3 id="capsule">Capsule</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/capsule-thumb.png" alt="Capsule thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/capsule.png" alt="Capsule with its gizmos" loading="lazy"><figcaption>Capsule with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/capsule-thumb.png" alt="Capsule thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/capsule.png" alt="Capsule with its gizmos" loading="lazy"><figcaption>Capsule with its gizmos</figcaption></figure></div>
 <p>A stretched sphere useful for stylized characters and smooth objects.</p>
 <p>This asset uses the <strong>Smart Capsule</strong> node group.</p>
 <h4 id="gizmos-20">Gizmos</h4>
@@ -2760,7 +2760,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="capsule-revolved">Capsule Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved-thumb.png" alt="Capsule Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved.png" alt="Capsule Revolved with its gizmos" loading="lazy"><figcaption>Capsule Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved-thumb.png" alt="Capsule Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/capsule-revolved.png" alt="Capsule Revolved with its gizmos" loading="lazy"><figcaption>Capsule Revolved with its gizmos</figcaption></figure></div>
 <p>A capsule rotated for unique geometry shaping. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Capsule Revolved</strong> node group.</p>
 <h4 id="gizmos-21">Gizmos</h4>
@@ -2812,7 +2812,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="grid">Grid</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/grid-thumb.png" alt="Grid thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/grid.png" alt="Grid with its gizmos" loading="lazy"><figcaption>Grid with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/grid-thumb.png" alt="Grid thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/grid.png" alt="Grid with its gizmos" loading="lazy"><figcaption>Grid with its gizmos</figcaption></figure></div>
 <p>A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative UVs.</p>
 <p>This asset uses the <strong>Smart Grid</strong> node group.</p>
 <h4 id="gizmos-22">Gizmos</h4>
@@ -2847,7 +2847,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="torus">Torus</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/torus-thumb.png" alt="Torus thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/torus.png" alt="Torus with its gizmos" loading="lazy"><figcaption>Torus with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/torus-thumb.png" alt="Torus thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/torus.png" alt="Torus with its gizmos" loading="lazy"><figcaption>Torus with its gizmos</figcaption></figure></div>
 <p>A ring-shaped primitive, ideal for looped structures.</p>
 <p>This asset uses the <strong>Smart Torus</strong> node group. The same group is used by Torus Revolved; each asset starts from its own settings.</p>
 <h4 id="gizmos-23">Gizmos</h4>
@@ -2889,7 +2889,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="torus-revolved">Torus Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved-thumb.png" alt="Torus Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved.png" alt="Torus Revolved with its gizmos" loading="lazy"><figcaption>Torus Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved-thumb.png" alt="Torus Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/torus-revolved.png" alt="Torus Revolved with its gizmos" loading="lazy"><figcaption>Torus Revolved with its gizmos</figcaption></figure></div>
 <p>A torus rotated for specialized forms. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Torus</strong> node group. The same group is used by Torus; each asset starts from its own settings.</p>
 <h4 id="gizmos-24">Gizmos</h4>
@@ -2931,7 +2931,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="spiral">Spiral</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/spiral-thumb.png" alt="Spiral thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/spiral.png" alt="Spiral with its gizmos" loading="lazy"><figcaption>Spiral with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/spiral-thumb.png" alt="Spiral thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/spiral.png" alt="Spiral with its gizmos" loading="lazy"><figcaption>Spiral with its gizmos</figcaption></figure></div>
 <p>A coiled shape, useful for decorative and mechanical designs.</p>
 <p>This asset uses the <strong>Smart Spiral</strong> node group.</p>
 <h4 id="gizmos-25">Gizmos</h4>
@@ -2994,7 +2994,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="circle">Circle</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/circle-thumb.png" alt="Circle thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/circle.png" alt="Circle with its gizmos" loading="lazy"><figcaption>Circle with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/circle-thumb.png" alt="Circle thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/circle.png" alt="Circle with its gizmos" loading="lazy"><figcaption>Circle with its gizmos</figcaption></figure></div>
 <p>A simple 2D shape for base geometry and cutouts. Includes stamped or path based UVs.</p>
 <p>This asset uses the <strong>Smart Circle</strong> node group.</p>
 <h4 id="gizmos-26">Gizmos</h4>
@@ -3033,7 +3033,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="circle-revolved">Circle Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved-thumb.png" alt="Circle Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved.png" alt="Circle Revolved with its gizmos" loading="lazy"><figcaption>Circle Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved-thumb.png" alt="Circle Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/circle-revolved.png" alt="Circle Revolved with its gizmos" loading="lazy"><figcaption>Circle Revolved with its gizmos</figcaption></figure></div>
 <p>A circular shape rotated into a 3D form. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Circle Revolved</strong> node group.</p>
 <h4 id="gizmos-27">Gizmos</h4>
@@ -3077,7 +3077,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="curve-lofted">Curve Lofted</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted-thumb.png" alt="Curve Lofted thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted.png" alt="Curve Lofted with its gizmos" loading="lazy"><figcaption>Curve Lofted with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted-thumb.png" alt="Curve Lofted thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/curve-lofted.png" alt="Curve Lofted with its gizmos" loading="lazy"><figcaption>Curve Lofted with its gizmos</figcaption></figure></div>
 <p>Generates complex surfaces using lofted curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.</p>
 <p>This asset uses the <strong>Smart Curve Lofted</strong> node group.</p>
 <h4 id="gizmos-28">Gizmos</h4>
@@ -3160,7 +3160,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cylinder-revolved">Cylinder Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved-thumb.png" alt="Cylinder Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved.png" alt="Cylinder Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved-thumb.png" alt="Cylinder Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-revolved.png" alt="Cylinder Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Revolved with its gizmos</figcaption></figure></div>
 <p>A cylindrical shape rotated for varied effects. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Rounded, Cylinder Rounded Revolved; each asset starts from its own settings.</p>
 <h4 id="gizmos-29">Gizmos</h4>
@@ -3210,7 +3210,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cylinder-rounded-revolved">Cylinder Rounded Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved-thumb.png" alt="Cylinder Rounded Revolved thumbnail" loading="lazy"><figcaption>Cylinder Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved.png" alt="Cylinder Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Rounded Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved-thumb.png" alt="Cylinder Rounded Revolved thumbnail" loading="lazy"><figcaption>Cylinder Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cylinder-rounded-revolved.png" alt="Cylinder Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cylinder Rounded Revolved with its gizmos</figcaption></figure></div>
 <p>A rounded cylinder adapted for more curvature. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Cylinder Rounded Revolved</strong> node group. The same group is used by Cylinder Revolved, Cylinder Rounded; each asset starts from its own settings.</p>
 <h4 id="gizmos-30">Gizmos</h4>
@@ -3260,7 +3260,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="tube-revolved">Tube Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved-thumb.png" alt="Tube Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved.png" alt="Tube Revolved with its gizmos" loading="lazy"><figcaption>Tube Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved-thumb.png" alt="Tube Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-revolved.png" alt="Tube Revolved with its gizmos" loading="lazy"><figcaption>Tube Revolved with its gizmos</figcaption></figure></div>
 <p>A tube rotated for improved modeling flexibility. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Tube Revolved</strong> node group. The same group is used by Tube; each asset starts from its own settings.</p>
 <h4 id="gizmos-31">Gizmos</h4>
@@ -3308,7 +3308,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="tube-rounded-revolved">Tube Rounded Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved-thumb.png" alt="Tube Rounded Revolved thumbnail" loading="lazy"><figcaption>Tube Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved.png" alt="Tube Rounded Revolved with its gizmos" loading="lazy"><figcaption>Tube Rounded Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved-thumb.png" alt="Tube Rounded Revolved thumbnail" loading="lazy"><figcaption>Tube Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/tube-rounded-revolved.png" alt="Tube Rounded Revolved with its gizmos" loading="lazy"><figcaption>Tube Rounded Revolved with its gizmos</figcaption></figure></div>
 <p>A smoothed, rotated tube for streamlined designs. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Tube Rounded Revolved</strong> node group. The same group is used by Tube Rounded; each asset starts from its own settings.</p>
 <h4 id="gizmos-32">Gizmos</h4>
@@ -3364,7 +3364,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="cone-rounded-revolved">Cone Rounded Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved-thumb.png" alt="Cone Rounded Revolved thumbnail" loading="lazy"><figcaption>Cone Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved.png" alt="Cone Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cone Rounded Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved-thumb.png" alt="Cone Rounded Revolved thumbnail" loading="lazy"><figcaption>Cone Rounded Revolved thumbnail</figcaption></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/cone-rounded-revolved.png" alt="Cone Rounded Revolved with its gizmos" loading="lazy"><figcaption>Cone Rounded Revolved with its gizmos</figcaption></figure></div>
 <p>A tapered primitive that blends sharpness with curvature. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Cone Rounded Revolved</strong> node group.</p>
 <h4 id="gizmos-33">Gizmos</h4>
@@ -3417,7 +3417,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-dtype dt-geometry"><p><em>Data type</em><strong>Geometry</strong></p></div>
 <p>The generated shape.</p>
 <h3 id="sphere-revolved">Sphere Revolved</h3>
-<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved-thumb.png" alt="Sphere Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2f4b2592edeb9b06032324f81e520666e79bc666/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved.png" alt="Sphere Revolved with its gizmos" loading="lazy"><figcaption>Sphere Revolved with its gizmos</figcaption></figure></div>
+<div class="ui-doc-gallery"><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved-thumb.png" alt="Sphere Revolved thumbnail" loading="lazy"></figure><figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/08687058cc7f0dfbeb8b180225420b4681e9cdf0/docs2/images/assets/geometry-nodes-library/primitives/sphere-revolved.png" alt="Sphere Revolved with its gizmos" loading="lazy"><figcaption>Sphere Revolved with its gizmos</figcaption></figure></div>
 <p>A sphere adjusted through rotation for unique formations. Includes the ability to revolve around an angle.</p>
 <p>This asset uses the <strong>Smart Sphere Revolved</strong> node group.</p>
 <h4 id="gizmos-34">Gizmos</h4>
