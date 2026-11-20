@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Layout"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Layout nodes."
 order: 80
