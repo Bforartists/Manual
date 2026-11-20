@@ -303,7 +303,7 @@ Adjust the angle up to which a face counts as co planar.
 
 Same as with Linked. But works with what is under the mouse cursor.
 
-You can also call it with hotkeys, without the menu. Point at the island and press `L`, or hold Shift and double-click the left mouse button. Double-click with Shift selects only that island and clears the rest of the selection, the same way Shift + double-click selects a whole collection in Object Mode. Add Ctrl (Shift + Ctrl + double-click) to add the island to the selection instead. Use Shift + `L` to remove an island from the selection. The hotkeys work in vertex, edge and face select mode, and in several objects at once in Edit Mode.
+> **Tip:** Call it without the menu. Point at the island and press **L** to add it to the selection, or **Shift+L** to remove it. **Shift+double-click** selects only that island and clears the rest of the selection, the same way it selects a whole collection in Object Mode. **Shift+Ctrl+double-click** adds the island to the selection instead. The hotkeys work in vertex, edge and face select mode, and in several objects at once in Edit Mode.
 
 ## Linked Pick Deselect
 
@@ -319,7 +319,7 @@ Change the settings of **Select Linked Pick** right after you use it, in the Adj
 | Entry | What it does |
 | -------- | --------------------------------------------------------------------------- |
 | Deselect | Select or deselect. |
-| Extend | On: the island is added to the current selection. Off: the current selection is cleared first, so only the island is selected. The hotkey `L` and Shift + Ctrl + double-click extend. Shift + double-click does not. |
+| Extend | On: the island is added to the current selection. Off: the current selection is cleared first, so only the island is selected. |
 | Delimit | Add a limit to the selection. For example, just select up to the next seam. |
 
 
