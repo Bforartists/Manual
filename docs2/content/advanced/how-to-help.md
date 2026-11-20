@@ -6,7 +6,7 @@ path:
   - "Advanced"
   - "How to Help"
 version: "5.1"
-status: draft
+status: needs-review
 icon: community
 summary: "Ways to help Bforartists: test, report, write docs, translate, code and share."
 ---
