@@ -303,20 +303,23 @@ Adjust the angle up to which a face counts as co planar.
 
 Same as with Linked. But works with what is under the mouse cursor.
 
+> **Tip:** Call it without the menu. Point at the island and press **L** to add it to the selection, or **Shift+L** to remove it. **Shift+double-click** selects only that island and clears the rest of the selection, the same way it selects a whole collection in Object Mode. **Shift+Ctrl+double-click** adds the island to the selection instead. The hotkeys work in vertex, edge and face select mode, and in several objects at once in Edit Mode.
+
 ## Linked Pick Deselect
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Adjust Last Operation - Select Linked
+### Adjust Last Operation - Select Linked Pick
 
-![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked.png)
+![Last Operator Select Linked Pick](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-pick.png)
 
-Change the settings of **Select Linked** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Select Linked Pick** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
 | -------- | --------------------------------------------------------------------------- |
 | Deselect | Select or deselect. |
+| Extend | On: the island is added to the current selection. Off: the current selection is cleared first, so only the island is selected. |
 | Delimit | Add a limit to the selection. For example, just select up to the next seam. |
 
 
