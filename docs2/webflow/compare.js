@@ -1,7 +1,8 @@
-/* Bforartists website · compare.js · @version 1.2.0 · BFA Compare: the before / after slider (Home, Features, Template, docs pages). Registered in Webflow as bfa_compare, applied site-wide. */
-/* 1.2: one script for the website ([data-compare]) and the docs ([data-doc-compare]); it runs once per slider (data-ready), so the
-   docs layer's own copy stands down. Intro: the slider shows the old screen (Blender) first, then the new one slides in from the right
-   edge to the middle with an ease, once, when it scrolls into view. Again on a tab change. Stops as soon as someone touches it.
+/* Bforartists website · compare.js · @version 1.3.0 · BFA Compare: the before / after slider (Home, Features, Template, docs pages). Registered in Webflow as bfa_compare, applied site-wide. */
+/* 1.3: the intro sweeps all the way. The slider starts on the old screen (Blender, handle at the right edge), the new one (Bforartists)
+   slides in across the whole frame to the left edge, then the handle eases back to the middle. Same cubic ease in-out as 1.2.
+   1.2: one script for the website ([data-compare]) and the docs ([data-doc-compare]); it runs once per slider (data-ready), so the
+   docs layer's own copy stands down. The intro plays once, when the slider scrolls into view. Again on a tab change. Stops as soon as someone touches it.
    No intro when the reader asked for less motion (system setting, or Motion: off in the View menu). The automatic lite mode
    (perf-auto) keeps it: it is one short clip, cheap on any device. 1.1: tabs swap the picture pair ([data-compare-tab]). */
 (function () {
@@ -27,19 +28,26 @@
     }
     function at(e) { var r = c.getBoundingClientRect(); if (r.width) set((e.clientX - r.left) / r.width * 100); }
     function stop() { run++; }
+    /* one eased leg from a to b in ms, then done() */
+    function leg(id, a, b, ms, done) {
+      var t0 = performance.now();
+      (function f(n) {
+        if (id !== run) return;
+        var k = Math.min(1, (n - t0) / ms);
+        set(a + (b - a) * ease(k));
+        if (k < 1) requestAnimationFrame(f); else if (done) done();
+      })(t0);
+    }
+    /* intro: right edge (old screen) -> left edge (new screen, whole frame) -> middle. ms = length of the long sweep */
     function intro(ms, wait) {
       if (still()) { set(50); return; }
       var id = ++run;
       set(100);
       setTimeout(function () {
         if (id !== run) return;
-        var t0 = performance.now();
-        (function f(n) {
-          if (id !== run) return;
-          var k = Math.min(1, (n - t0) / ms);
-          set(100 - 50 * ease(k));
-          if (k < 1) requestAnimationFrame(f);
-        })(t0);
+        leg(id, 100, 0, ms, function () {
+          setTimeout(function () { if (id === run) leg(id, 0, 50, ms * .6); }, 250);
+        });
       }, wait);
     }
     c.setAttribute('role', 'slider'); c.setAttribute('tabindex', '0');
