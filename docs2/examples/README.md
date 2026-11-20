@@ -6,6 +6,7 @@ One `.blend` per chapter, with the same folder structure as `docs2/content/`. Op
 |---|---|
 | `assets/geometry-nodes-library/primitives.blend` | Smart Primitives: all 25 assets laid out in a grid, in the `Smart Primitives` collection, plus a camera |
 | `assets/geometry-nodes-library/uv.blend` | UV nodes: source objects, applied copies, per-asset gizmo scenes |
+| `assets/geometry-nodes-library/fill-solidify.blend` | Curve Fill nodes and Solidify: 7 scenes "Fill <Asset>" (a capsule from G Curve Stadium, Resolution 64, filled with the asset's defaults, top orthographic camera) and 4 scenes "Solidify <Mode>" (filled rounded rectangle, Thickness 0.25, 50 mm camera from front and above). Node groups appended, so no asset library needed. Built by `tools/build_fill_examples.py`; crop notes in the scene property `capture` |
 | `assets/compositor-library/lenses.blend`, `patterns.blend` | Compositor Library: one scene per asset (example image > asset > output), render 480x300. lenses.blend also has "Example Bokeh" and "Example Fast Defocus": two rows of columns in perspective with glowing lamps and a back wall, Render Layers Image + Depth into the asset (EEVEE, Z pass) |
 | `assets/compositor-library/room.blend` (+ `room.png`) | The example room for Compositor pictures: red and green side walls, a back wall with an open door and warm light outside, a gold Suzanne on a pedestal under a spot light, RGB spheres and CMY cubes (scene "Example Room", Cycles 96 samples, AgX, 480x300, Depth and Normal passes). Plus one scene per Utilities / Vector example: room image > Image Coordinates (Normalized) > asset > Map UV (Z set to 1) > output. Utilities examples (Channel Invert, Color Boolean, Float Boolean, Compare Color, Layer Color, Combine CMYK, Separate CMYK) have their own scene, setup and values in the scene property `capture`. "Example Select Color" waits for an asset fix (see its `capture` note) |
 | `assets/shader-library/raycast-edges.blend` | Shader Library, Raycast Edges: 7 scenes "Raycast <Example>" (Overlay, Colored, Value, Color, Object, Planar, Normal) with the same floor, cube, cylinder, torus and staircase, 50 mm camera, sun for the shader pictures. Cycles 256 samples (shader) or 64 (masks), 480x300. Built and rendered by `tools/render_raycast_examples.py`; notes in the scene property `capture` |
@@ -37,9 +38,10 @@ Also:
 
 | Script | Does |
 |---|---|
-| `capture_viewport.py` | Viewport pictures of the scenes that have a `capture` property |
+| `capture_viewport.py` | Viewport pictures of the scenes that have a `capture` property. An optional `viewport` entry in that property sets extra overlay and shading values for the scene |
 | `capture_comp_nodes.py` | Node picture and thumbnail of Compositor and Shader Library assets (EDITOR = COMPOSITOR or SHADER, auto-cropped) |
 | `render_comp_examples.py` | Builds the example scenes of Compositor Library assets and renders the "after" picture |
 | `capture_uv_views.py` | 3D views of the Geometry Nodes Library UV assets: UV grid texture, gizmos, tight framing (scenes "UV <Asset>" in uv.blend) |
 | `render_shader_examples.py` | Builds the example scenes of Shader Library patterns and shapes and renders the output picture |
+| `build_fill_examples.py` | Builds `fill-solidify.blend`, the Fill and Solidify example scenes (also runs in the background: `-- <save .blend>`) |
 | `render_raycast_examples.py` | Builds the Raycast Edges example scenes and renders their pictures (also runs in the background: `-- <out folder> [<save .blend>]`) |
