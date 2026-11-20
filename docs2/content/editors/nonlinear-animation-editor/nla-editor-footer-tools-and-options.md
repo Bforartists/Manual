@@ -7,7 +7,7 @@ path:
   - Nonlinear Animation Editor
   - NLA Editor - Footer tools and options
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 20.4 Editors - NLA Editor - Footer tools and options.odt
