@@ -560,19 +560,27 @@ The name of the asset. Here you can also rename the asset. Note that the name of
 
 ![Info Panel](/docs2/images/editors/asset-browser/info-panel.png)
 
-Some additional infos about the asset.
+Some additional information about the asset. You can edit all fields except Source for assets of the current file. For assets of other files, the fields are read only.
 
 #### Source
 
-A source that can't be edited for the Blender developers.
+The file the asset comes from. For an asset of the current file it says **Current File**. The button next to it opens the source file of an asset from another file.
 
 #### Description
 
-Add a description for the asset.
+A description of the asset. The field has several lines, so longer texts fit; drag its corner to make it taller.
+
+#### License
+
+The license under which the asset may be used, for example CC0 or CC-BY.
+
+#### Copyright
+
+Who owns the rights to the asset.
 
 #### Author
 
-Add the name of the author of the asset.
+The name of the author of the asset.
 
 ### Preview Panel
 

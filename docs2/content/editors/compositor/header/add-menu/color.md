@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Color"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Color nodes: Adjust."
 order: 30
@@ -33,23 +33,27 @@ Here you find color related nodes.
 
 This node converts the alpha channel interpretation of an image from pre-multiplied to straight or vice versa. With a straight alpha channel you might run into artifacts at the borders when the pixels in the semi transparent areas.
 
-#### Input
+#### Inputs
 
 ##### Image
+
+Data type: Color.
 
 The input image.
 
-#### Properties
+##### Type
 
-##### Mapping Type
+Data type: Menu.
 
 ![Mapping Type](/docs2/images/editors/compositor/header/add-menu-color/mapping-type.png)
 
-Convert straight to premultiplied. Or convert premultiplied to straight.
+To Premultiplied converts straight alpha to premultiplied alpha. To Straight converts premultiplied alpha to straight alpha.
 
-#### Output
+#### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The image output.
 
@@ -63,31 +67,55 @@ Where the foreground image pixels have an alpha greater than 0, the background i
 
 #### Inputs
 
-**Background**: Input for the background image. · **Foreground**: Input for the foreground image. · **Factor**: Controls the amount of foreground image. A factor less than 1 will make the foreground more transparent.
+##### Background
 
-#### Straight Alpha
+Data type: Color.
 
-Defines wether teh foreground ins in straight alpha form, which is necessary to konw for proper alpha composing. Images in the compositor are in premultiplied alpha form by default. So it should be false in most cases. But if, and only if, the foreground was converted to straight alpha form for some reason, this should be set to true.
+Input for the background image.
 
-#### Properties
+##### Foreground
+
+Data type: Color.
+
+Input for the foreground image.
+
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of foreground image. A factor less than 1 will make the foreground more transparent.
+
+##### Type
+
+Data type: Menu.
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-color/properties.png)
 
-##### Over
+How the foreground goes over the background.
+
+###### Over
 
 The foreground goes over the background according to the alpha of the foreground.
 
-##### Disjoint Over
+###### Disjoint Over
 
 The foreground goes over the background according to the alpha of the foreground while assuming the background is being held out by the foreground.
 
-##### Conjoint Over
+###### Conjoint Over
 
 The foreground goes over the background according to the alpha of the foreground. But the foreground completely covers the background if it is more opaque but not necessarily completely opaque.
+
+##### Straight Alpha
+
+Data type: Boolean.
+
+Defines whether the foreground is in straight alpha form, which is necessary to know for proper alpha compositing. Images in the compositor are in premultiplied alpha form by default. So it should be off in most cases. But if, and only if, the foreground was converted to straight alpha form for some reason, this should be on.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Image output.
 
@@ -101,19 +129,27 @@ The Set Alpha Node adds an alpha channel to an image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Alpha
+
+Data type: Float.
 
 The amount of Alpha can be set for the whole image by using the input field or per pixel by connecting to the socket.
 
 ##### Type
 
+Data type: Menu.
+
 ![Type](/docs2/images/editors/compositor/header/add-menu-color/type.png)
+
+How the Alpha input is used.
 
 ###### Apply Mask
 
-Multiply the alpha channel of the input image by the alpha input value.
+Multiply the RGBA channels of the input image by the alpha input value.
 
 ###### Replace Alpha
 
@@ -123,6 +159,8 @@ Replace the alpha channel of the input image by the alpha input value.
 
 ##### Image
 
+Data type: Color.
+
 The image output.
 
 ### Combine Color
@@ -131,7 +169,33 @@ The image output.
 
 Combine single RGBA floating point channels into a single image.
 
-#### Input
+#### Inputs
+
+##### Red
+
+Data type: Float (factor).
+
+The red channel. In HSV and HSL mode this input is called Hue. In YCbCr and YUV mode it is called Y (luminance).
+
+##### Green
+
+Data type: Float (factor).
+
+The green channel. In HSV and HSL mode this input is called Saturation. In YCbCr mode it is called Cb (chrominance blue), in YUV mode U.
+
+##### Blue
+
+Data type: Float (factor).
+
+The blue channel. In HSV mode this input is called Value, in HSL mode Lightness. In YCbCr mode it is called Cr (chrominance red), in YUV mode V.
+
+##### Alpha
+
+Data type: Float (factor).
+
+The alpha channel.
+
+#### Properties
 
 ##### Mode
 
@@ -145,37 +209,19 @@ Combine single RGBA floating point channels into a single image.
 - YUV converts an YUVA image to RGBA color space. Note that U and V values range
     from -0.5 to +0.5.
 
-###### Input – RGB mode
+##### Color Space
 
-**R, G, B and A**: The red, green, blue and alpha channels of an image.
+![Color Space](/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png)
 
-###### Input – HSV mode
+The encoding standard for the YCbCrA color space: ITU 601, ITU 709 or JPEG. Only visible when Mode is YCbCr.
 
-**H , S and V**: The Hue, Saturation and Value channels of an image.
+#### Outputs
 
-###### Input – HSL mode
+##### Image
 
-**H , S and L**: The Hue, Saturation and Luminescence channels of an image.
+Data type: Color.
 
-#### Input – YCbCRA mode
-
-![Input – YCbCRA mode](/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png)
-
-##### Y, Cb, Cr and A
-
-Luminance, Chrominance Blue, Chrominance Red and Alpha input.
-
-###### Properties
-
-**Modes**: ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space.
-
-###### Input – YUVA mode
-
-**Y, U, V and A**: Luminance, Chrominance U, Chrominance V and Alpha channel.
-
-###### Output
-
-**Image**: The output image.
+The output image.
 
 ### Separate Color
 
@@ -183,7 +229,15 @@ Luminance, Chrominance Blue, Chrominance Red and Alpha input.
 
 Separates the single RGBA channels from a single image.
 
-#### Input
+#### Inputs
+
+##### Image
+
+Data type: Color.
+
+The image to split into channels.
+
+#### Properties
 
 ##### Mode
 
@@ -197,41 +251,37 @@ Separates the single RGBA channels from a single image.
 - YUV converts an YUVA image to RGBA color space. Note that U and V values range
     from -0.5 to +0.5.
 
-#### Output – RGB mode
+##### Color Space
 
-##### R, G, B and A
+![Color Space](/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png)
 
-The red, green, blue and alpha channels of an image.
+The encoding standard for the YCbCrA color space: ITU 601, ITU 709 or JPEG. Only visible when Mode is YCbCr.
 
-##### Output – HSV mode
+#### Outputs
 
-**H , S and V**: The Hue, Saturation and Value channels of an image.
+##### Red
 
-##### Output – HSL mode
+Data type: Float.
 
-**H , S and L**: The Hue, Saturation and Luminescence channels of an image.
+The red channel. In HSV and HSL mode this output is called Hue. In YCbCr and YUV mode it is called Y (luminance).
 
-##### Output – YCbCRA mode
+##### Green
 
-![Output – YCbCRA mode](/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png)
+Data type: Float.
 
-###### Y, Cb, Cr and A
+The green channel. In HSV and HSL mode this output is called Saturation. In YCbCr mode it is called Cb (chrominance blue), in YUV mode U.
 
-Luminance, Chrominance Blue, Chrominance Red and Alpha input.
+##### Blue
 
-###### Properties
+Data type: Float.
 
-—
+The blue channel. In HSV mode this output is called Value, in HSL mode Lightness. In YCbCr mode it is called Cr (chrominance red), in YUV mode V.
 
-###### Modes
+##### Alpha
 
-ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space.
+Data type: Float.
 
-#### Output – YUVA mode
-
-##### Y, U, V and A
-
-Luminance, Chrominance U, Chrominance V and Alpha channel.
+The alpha channel.
 
 ### Depth Combine
 
@@ -243,25 +293,37 @@ The Depth Combine node combines two images based on their Z-depth maps. It overl
 
 ##### A
 
+Data type: Color.
+
 The background image.
 
 ##### Depth A
+
+Data type: Float.
 
 Z depth of the background image.
 
 ##### B
 
+Data type: Color.
+
 The foreground image.
 
 ##### Depth B
+
+Data type: Float.
 
 Z depth of the foreground image.
 
 ##### Use Alpha
 
+Data type: Boolean.
+
 The chosen Image pixel alpha channel is also carried over. If a pixel is partially or totally transparent, the result of the Z Combine will also be partially transparent; in which case the background image will show through the foreground (chosen) pixel.
 
-##### Anti-Alias Z
+##### Anti-Alias
+
+Data type: Boolean.
 
 Applies Anti-Aliasing to avoid artifacts at sharp edges or areas with a high contrast.
 
@@ -269,9 +331,13 @@ Applies Anti-Aliasing to avoid artifacts at sharp edges or areas with a high con
 
 ##### Result
 
+Data type: Color.
+
 If both Z values are equal, it will use the foreground image. Whichever Z value is less decides which image pixel is used. See Z-buffer.
 
 ##### Depth
+
+Data type: Float.
 
 The combined Z depth, which allows to thread multiple Z-combines together.
 
@@ -283,15 +349,49 @@ The Mix Node mixes images by working on the individual and corresponding pixels 
 
 #### Inputs
 
-**Factor**: Controls the amount of influence the node exerts on the output image. · **Image 1**: Usually the background image. The image size and resolution sets the dimensions of the output image. · **Image 2**: Usually he foreground image.
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of influence the node exerts on the output image.
+
+##### A
+
+Data type: Color.
+
+Usually the background image. The image size and resolution sets the dimensions of the output image.
+
+##### B
+
+Data type: Color.
+
+Usually the foreground image.
 
 #### Properties
 
-**Mix**: Choose the different blending modes. Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, Color Dodge, Color Burn, Hue, Saturation, Value, Color, Soft Light, Linear Light. · **Clamp**: Limit the highest color value to not exceed 1.
+##### Data Type
+
+The type of data to mix. Color for this node. Other types turn it into a Mix node for that type.
+
+##### Blending Mode
+
+Choose the different blending modes. Mix, Darken, Multiply, Color Burn, Lighten, Screen, Color Dodge, Add, Overlay, Soft Light, Linear Light, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value.
+
+##### Clamp Result
+
+Limit the highest color value to not exceed 1.
+
+##### Clamp Factor
+
+Limit the Factor to the range 0 to 1.
 
 #### Outputs
 
-**Image**: Image output.
+##### Result
+
+Data type: Color.
+
+The mixed image.
 
 ### Blackbody
 
@@ -301,13 +401,21 @@ Convert a blackbody temperature to a rgb value.
 
 #### Inputs
 
-**Temperature**: The blackbody temperature.
+##### Temperature
+
+Data type: Float (color temperature).
+
+The blackbody temperature, in Kelvin.
 
 #### Outputs
 
-**Color**: The output RGB color.
+##### Color
 
-### ColorRamp
+Data type: Color.
+
+The output RGB color.
+
+### Color Ramp
 
 ![ColorRamp](/docs2/images/editors/compositor/header/add-menu-color/colorramp.png)
 
@@ -316,6 +424,8 @@ The Color Ramp Node is used for mapping values to colors with the use of a gradi
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 The Factor input is used as an index for the color ramp.
 
@@ -379,9 +489,13 @@ Adjust the active color stop.
 
 ##### Color
 
+Data type: Color.
+
 The color output.
 
 ##### Alpha
+
+Data type: Float.
 
 Alpha channel output.
 
@@ -393,9 +507,11 @@ Convert between color spaces.
 
 Note that the conversion is skipped when converting between the same color spaces or to or from data spaces.
 
-#### Input
+#### Inputs
 
 ##### Image
+
+Data type: Color.
 
 The input image.
 
@@ -411,9 +527,11 @@ The current color space.
 
 The destination color space.
 
-#### Output
+#### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The image output.
 
@@ -427,9 +545,13 @@ Transforms an image from **scene-linear color space** into a **display-referred 
 
 ##### Image
 
+Data type: Color.
+
 The input image in scene-linear space—typically the result of render layers, raw file input, or procedural compositing.
 
 ##### Invert
+
+Data type: Boolean.
 
 Reverses the display transform—useful for decoding display-referred images back to linear.
 
@@ -456,9 +578,11 @@ Controls contrast, highlight rolloff, and perceptual brightness.
 Optional artistic adjustment layer (e.g. **Medium Contrast**, **High Contrast**, **None**).  
 Adds stylized tweaks on top of the view transform.
 
-#### Output
+#### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The display-referred result, ready for preview, export, or further compositing.
 
@@ -472,23 +596,33 @@ The Invert Node inverts the colors in the input image, producing a negative.
 
 ##### Color
 
+Data type: Color.
+
 Standard input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
 ##### Invert Color
 
+Data type: Boolean.
+
 Invert the RGB values.
 
 ##### Invert Alpha
+
+Data type: Boolean.
 
 Invert the Alpha values.
 
 #### Outputs
 
 ##### Color
+
+Data type: Color.
 
 Standard image output.
 
@@ -500,11 +634,19 @@ The RGB to BW Node converts an RGB color image to a gray-scale image based at it
 
 #### Inputs
 
-**Image**: Color image input.
+##### Image
+
+Data type: Color.
+
+Color image input.
 
 #### Outputs
 
-**Val**: Gray-scale value output.
+##### Val
+
+Data type: Float.
+
+Gray-scale value output.
 
 # Adjust
 
@@ -524,19 +666,27 @@ Adjust the brightness and contrast.
 
 ##### Image
 
+Data type: Color.
+
 The image input
 
 ##### Brightness
+
+Data type: Float.
 
 An additive-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image.
 
 ##### Contrast
 
+Data type: Float.
+
 A scaling type factor by which to make brighter pixels brighter, but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.
 
 #### Outputs
 
-##### Color
+##### Image
+
+Data type: Color.
 
 Standard output.
 
@@ -550,107 +700,125 @@ The Color Balance node can adjust the color and values of an image.
 
 #### Inputs
 
-##### Factor
-
-Controls the amount of influence the node exerts on the output image.
-
 ##### Image
+
+Data type: Color.
 
 Standard image input.
 
-#### Properties
+##### Factor
 
-![Properties](/docs2/images/editors/compositor/header/add-menu-color-adjust/properties.png)
+Data type: Float (factor).
+
+Controls the amount of influence the node exerts on the output image.
 
 ##### Type
 
+Data type: Menu.
+
+![Properties](/docs2/images/editors/compositor/header/add-menu-color-adjust/properties.png)
+
 You can choose between different formulas.
 
-##### Lift/Gamma/Gain
+###### Lift/Gamma/Gain
 
 ![Lift/Gamma/Gain](/docs2/images/editors/compositor/header/add-menu-color-adjust/lift-gamma-gain.png)
 
-###### Lift
+Shows the Lift, Gamma and Gain inputs.
 
-Increases the value of dark colors.
-
-###### Gamma
-
-Will adjust mid tones.
-
-###### Gain
-
-Adjusts highlights.
-
-##### Color wheel
-
-![Color wheel](/docs2/images/editors/compositor/header/add-menu-color-adjust/color-wheel.png)
-
-When you click at one of the colors then you will call a color wheel where you can adjust the colors.
-
-##### Offset/Power/Slope (ASC-CDL)
+###### Offset/Power/Slope (ASC-CDL)
 
 ![Offset/Power/Slope (ASC-CDL)](/docs2/images/editors/compositor/header/add-menu-color-adjust/offset-power-slope-asc-cdl.png)
 
-###### Offset
+The ASC-CDL standard color correction. Shows the Offset, Power and Slope inputs.
 
-Summand. (Adjusts the overall brightness.)
+###### White Point
 
-###### Basis
+![White Point](/docs2/images/editors/compositor/header/add-menu-color-adjust/white-point.png)
 
-Additional offset, allows to specify a negative Offset value.
+Chromatic adaption from a different white point. Shows the Input and Output panels.
 
-###### Power
+##### Lift
 
-Over-all exponent. (Adjusts the mid tones.
+Data type: Float (factor) and Color.
 
-###### Slope
-
-Multiplier. (Adjusts the highlights.)
-
-###### Color wheel
+Increases the value of dark colors. There are two Lift inputs: a value and a color. The value is added to each channel of the color. Only visible when Type is Lift/Gamma/Gain.
 
 ![Color wheel](/docs2/images/editors/compositor/header/add-menu-color-adjust/color-wheel.png)
 
 When you click at one of the colors then you will call a color wheel where you can adjust the colors.
 
-##### White Point
+##### Gamma
 
-![White Point](/docs2/images/editors/compositor/header/add-menu-color-adjust/white-point.png)
+Data type: Float (factor) and Color.
 
-Chromatic adaption from a different white point.
+Will adjust mid tones. Like Lift, it has a value and a color input. Only visible when Type is Lift/Gamma/Gain.
 
-###### Input
+##### Gain
 
-—
+Data type: Float (factor) and Color.
+
+Adjusts highlights. Like Lift, it has a value and a color input. Only visible when Type is Lift/Gamma/Gain.
+
+##### Offset
+
+Data type: Float (factor) and Color.
+
+Summand. (Adjusts the overall brightness.) There are two Offset inputs: a value and a color. The value is added to each channel of the color, which also allows a negative offset. Only visible when Type is Offset/Power/Slope (ASC-CDL).
+
+##### Power
+
+Data type: Float (factor) and Color.
+
+Over-all exponent. (Adjusts the mid tones.) Like Offset, it has a value and a color input. Only visible when Type is Offset/Power/Slope (ASC-CDL).
+
+##### Slope
+
+Data type: Float (factor) and Color.
+
+Multiplier. (Adjusts the highlights.) Like Offset, it has a value and a color input. Only visible when Type is Offset/Power/Slope (ASC-CDL).
+
+##### Input
+
+The white point of the input. The panel also has a picker to pick the input white point: the color that gets mapped to white. Only visible when Type is White Point.
 
 ###### Temperature
 
-Color temperature of the inputs white point.
+Data type: Float (color temperature).
+
+Color temperature of the input white point.
 
 ###### Tint
 
-Color tint of the inputs white point.
+Data type: Float (factor).
 
-###### Picker
+Color tint of the input white point. The default of 10 matches daylight.
 
-Pick an input whitepoint. The color that gets mapped to white.
+##### Output
 
-###### Output
-
-—
+The white point of the output. The panel also has a picker to pick the output white point: the color that white gets mapped to. Only visible when Type is White Point.
 
 ###### Temperature
 
-Color temperature of the outputs white point. · **Tint**: Color tint of the outputs white point. · **Picker**: Pick an output whitepoint. The color which gets white gets mapped to.
+Data type: Float (color temperature).
 
-##### Outputs
+Color temperature of the output white point.
+
+###### Tint
+
+Data type: Float (factor).
+
+Color tint of the output white point. The default of 10 matches daylight.
+
+#### Outputs
 
 ##### Image
 
+Data type: Color.
+
 The output image.
 
-##### Advanced
+#### Advanced
 
 ##### The Offset/Power/Slope Formula
 
@@ -674,153 +842,199 @@ p: Power (any number greater than 0, nominal value is 1.0).
 
 With the Color Correction node you can adjust the color of an image. Separated in several tonal ranges (highlights, mid tones and shadows) and only affect the necessary RGB channels.
 
-#### Input
+#### Inputs
 
 ##### Image
+
+Data type: Color.
 
 Image Input.
 
 ##### Mask
 
+Data type: Float.
+
 Input a mask to cover parts of the image so that they are affected.
 
-#### Properties
-
-##### Master panel
+##### Master
 
 ![Master panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/master-panel.png)
 
 ###### Saturation
 
+Data type: Float (factor).
+
 Adjusts the image’s saturation.
 
 ###### Contrast
+
+Data type: Float (factor).
 
 Adjust image contrast.
 
 ###### Gamma
 
+Data type: Float (factor).
+
 Exponential gamma correction, affecting the whole image. (Works like Power in the Color Balance node.)
 
 ###### Gain
+
+Data type: Float (factor).
 
 Multiplier, stronger influence on the whole image. (Works like Slope in the Color Balance node.)
 
 ###### Offset
 
+Data type: Float (factor).
+
 Controls the offset of the entire image.
 
-##### Highlights panel
+##### Highlights
 
 ![Highlights panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/highlights-panel.png)
 
 ###### Saturation
 
+Data type: Float (factor).
+
 Adjusts the saturation of the highlights.
 
 ###### Contrast
+
+Data type: Float (factor).
 
 Adjust image contrast of the highlights.
 
 ###### Gamma
 
+Data type: Float (factor).
+
 Exponential gamma correction, affecting the highlights of the image. (Works like Power in the Color Balance node.)
 
 ###### Gain
+
+Data type: Float (factor).
 
 Multiplier, stronger influence on the highlights. (Works like Slope in the Color Balance node.)
 
 ###### Offset
 
-Controls the offset of the of the highlights.
+Data type: Float (factor).
 
-##### Midtones panel
+Controls the offset of the highlights.
+
+##### Midtones
 
 ![Midtones panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png)
 
 ###### Saturation
 
+Data type: Float (factor).
+
 Adjusts the saturation of the midtones.
 
 ###### Contrast
+
+Data type: Float (factor).
 
 Adjust image contrast of the midtones.
 
 ###### Gamma
 
+Data type: Float (factor).
+
 Exponential gamma correction, affecting the midtones of the image. (Works like Power in the Color Balance node.)
 
 ###### Gain
+
+Data type: Float (factor).
 
 Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.)
 
 ###### Offset
 
-Controls the offset of the of the midtones.
+Data type: Float (factor).
 
-##### Midtones panel
+Controls the offset of the midtones.
 
-![Midtones panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png)
-
-###### Saturation
-
-Adjusts the saturation of the midtones.
-
-###### Contrast
-
-Adjust image contrast of the midtones.
-
-###### Gamma
-
-Exponential gamma correction, affecting the midtones of the image. (Works like Power in the Color Balance node.)
-
-###### Gain
-
-Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.) · **Offset**: Controls the offset of the of the midtones.
-
-##### Shadows panel
+##### Shadows
 
 ![Shadows panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/shadows-panel.png)
 
 ###### Saturation
 
+Data type: Float (factor).
+
 Adjusts the saturation of the shadows.
 
 ###### Contrast
+
+Data type: Float (factor).
 
 Adjust image contrast of the shadows.
 
 ###### Gamma
 
+Data type: Float (factor).
+
 Exponential gamma correction, affecting the shadows of the image. (Works like Power in the Color Balance node.)
 
 ###### Gain
+
+Data type: Float (factor).
 
 Multiplier, stronger influence on the shadows. (Works like Slope in the Color Balance node.)
 
 ###### Offset
 
-Controls the offset of the of the shadows.
+Data type: Float (factor).
 
-##### Tonal range panel
+Controls the offset of the shadows.
+
+##### Tonal Range
 
 ![Tonal range panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/tonal-range-panel.png)
 
-##### Mid tones Start, Mid tones End
+###### Midtones Start
 
-Defines the start and the end of mid tones range, i.e. values where the whole tonal range is divided into the highlights, mid tones and shadows (there is also a smooth transition between the ranges of width 0.2 units).
+Data type: Float (factor).
+
+The luminance where the midtones start and the shadows end. Together with Midtones End it divides the whole tonal range into highlights, midtones and shadows (there is also a smooth transition between the ranges of width 0.2 units).
+
+###### Midtones End
+
+Data type: Float (factor).
+
+The luminance where the midtones end and the highlights start.
 
 ##### Channels
 
 ![Channels](/docs2/images/editors/compositor/header/add-menu-color-adjust/channels.png)
 
-###### Red, Green, Blue
+###### Red
 
-Specifies which RGB channels will be affected by correction.
+Data type: Boolean.
+
+When on, the correction is applied to the red channel.
+
+###### Green
+
+Data type: Boolean.
+
+When on, the correction is applied to the green channel.
+
+###### Blue
+
+Data type: Boolean.
+
+When on, the correction is applied to the blue channel.
 
 #### Outputs
 
-##### Color
+##### Image
+
+Data type: Color.
 
 The image output.
 
@@ -832,11 +1046,25 @@ The Exposure Node node allows you to make areas of an image brighter or dimmer.
 
 #### Inputs
 
-**Image**: Standard image input. · **Exposure**: The scalar factor to adjust the exposure of the image.
+##### Image
+
+Data type: Color.
+
+Standard image input.
+
+##### Exposure
+
+Data type: Float.
+
+The scalar factor to adjust the exposure of the image.
 
 #### Outputs
 
-**Image**: Standard image output.
+##### Image
+
+Data type: Color.
+
+Standard image output.
 
 ### Gamma
 
@@ -846,11 +1074,25 @@ Use this node to apply a gamma correction.
 
 #### Inputs
 
-**Image**: Image input. · **Gamma**: An exponential brightness factor.
+##### Color
+
+Data type: Color.
+
+Image input.
+
+##### Gamma
+
+Data type: Float.
+
+An exponential brightness factor.
 
 #### Outputs
 
-**Image**: Image output.
+##### Color
+
+Data type: Color.
+
+Image output.
 
 ### Hue Correct
 
@@ -862,9 +1104,13 @@ With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an im
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
@@ -906,9 +1152,11 @@ The x and y position of the currently selected curve point.
 
 Deletes the currently selected curve point.
 
-#### Output
+#### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Image Output
 
@@ -918,41 +1166,49 @@ Image Output
 
 The Hue Saturation Node applies a color transformation in the HSV color space. Called “Hue Saturation Value” in shader and texture context.
 
-#### Inputs / Properties
+#### Inputs
 
-The inputs also works as properties when nothing is connected.
+The inputs also work as properties when nothing is connected.
 
 ##### Image
+
+Data type: Color.
 
 Plug in an image.
 
 ##### Hue
 
+Data type: Float (factor).
+
 Specifies the hue rotation of the image. 360° are mapped to (0 to 1). The hue shifts of 0 (-180°) and 1 (+180°) have the same result.
 
 ##### Saturation
+
+Data type: Float (factor).
 
 A saturation of 0 removes hues from the image, resulting in a gray scale image. A shift greater than 1.0 increases saturation.
 
 ##### Value
 
+Data type: Float (factor).
+
 Value is the overall brightness of the image. De/Increasing values shift an image darker/lighter.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Controls the amount of influence the node exerts on the output image.
-
-##### Image
-
-Standard input.
 
 #### Outputs
 
 ##### Image
 
+Data type: Color.
+
 Standard output.
 
-##### Hue/Saturation Tips
+#### Hue/Saturation Tips
 
 Some things to keep in mind that might help you use this node better:
 
@@ -982,17 +1238,25 @@ The RGB Curves Node allows color corrections for each color channel and levels a
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Factor
+
+Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output image.
 
 ##### Black Level
 
+Data type: Color.
+
 Defines the input color that is (linear) mapped to black.
 
-##### White level
+##### White Level
+
+Data type: Color.
 
 Defines the input color that is (linear) mapped to white.
 
@@ -1078,7 +1342,9 @@ When you have a point selected then you will reveal further settings at the bott
 
 #### Outputs
 
-##### Color
+##### Image
+
+Data type: Color.
 
 Standard output.
 
@@ -1094,52 +1360,74 @@ Tone mapping addresses the problem of strong contrast reduction from the scene v
 
 ##### Image
 
-Plug in the HDR image.
+Data type: Color.
 
-#### Properties
+Plug in the HDR image.
 
 ##### Type
 
-There are two methods of tone mapping. Rh Simple and R/D Photo receptor.
+Data type: Menu.
 
-##### Rh Simple
+There are two methods of tone mapping: Rh Simple and R/D Photoreceptor.
+
+###### Rh Simple
 
 ![Rh Simple](/docs2/images/editors/compositor/header/add-menu-color-adjust/rh-simple.png)
 
-###### Key
+A simpler photographic algorithm by Reinhard. Shows the Key, Balance and Gamma inputs.
 
-The value the average luminance is mapped to.
-
-###### Balance
-
-Normally always 1, but can be used as an extra control to alter the brightness curve.
-
-###### Gamma
-
-If not used, set to 1.
-
-##### R/D Photo receptor
+###### R/D Photoreceptor
 
 ![R/D Photo receptor](/docs2/images/editors/compositor/header/add-menu-color-adjust/r-d-photo-receptor.png)
 
-###### Intensity
+A more advanced algorithm based on the human eye, by Reinhard and Devlin. Shows the Intensity, Contrast, Light Adaptation and Chromatic Adaptation inputs.
 
-A value smaller than zero darkens image. A value greater than zero makes it brighter.
+##### Key
 
-###### Contrast
+Data type: Float.
 
-Set to 0 to use estimate from input image.
+The value the average luminance is mapped to. It is usually set to the middle gray value. Only visible when Type is Rh Simple.
 
-###### Adaptation
+##### Balance
 
-If 0, global; if 1, based on pixel intensity.
+Data type: Float.
 
-###### Color Correction
+Normally always 1, but can be used as an extra control to alter the brightness curve. Lower values show more detail in the shadows, higher values compress the highlights more smoothly. Only visible when Type is Rh Simple.
 
-If 0, same for all channels; if 1, each independent.
+##### Gamma
+
+Data type: Float.
+
+Gamma correction applied after tone mapping. If not used, set to 1. Only visible when Type is Rh Simple.
+
+##### Intensity
+
+Data type: Float.
+
+A value smaller than zero darkens image. A value greater than zero makes it brighter. Only visible when Type is R/D Photoreceptor.
+
+##### Contrast
+
+Data type: Float.
+
+Set to 0 to use estimate from input image. Only visible when Type is R/D Photoreceptor.
+
+##### Light Adaptation
+
+Data type: Float (factor).
+
+If 0, global; if 1, based on pixel intensity. Values in between blend both. Only visible when Type is R/D Photoreceptor.
+
+##### Chromatic Adaptation
+
+Data type: Float (factor).
+
+If 0, same for all channels (luminance); if 1, each channel is independent. Values in between blend both. Only visible when Type is R/D Photoreceptor.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The Image output.

@@ -1,4 +1,4 @@
-/* Bforartists website · site-foot.css · @version 1.0.0 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Moved out of the page so browsers cache it (Nov 2026). */
+/* Bforartists website · site-foot.css · @version 1.0.1 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Moved out of the page so browsers cache it (Nov 2026). */
 /* ---- block ---- */
 /* BFA Feature Cards 1.0 - a feature card (picture card + text card in one sink) keeps both cards the same height. */
 .ui-card.is-feature{align-items:stretch}
@@ -147,3 +147,32 @@ html.theme-light .ui-segment-item.is-tag{border-color:rgba(0,0,0,.18)}
 .bfa-perf-note button+button{background:transparent;color:#bbb}
 html.theme-light .bfa-perf-note{background:rgba(250,250,250,.97);color:#222;box-shadow:0 12px 32px -12px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.08)}
 @media print{.bfa-perf-note{display:none}}
+/* ---- block ---- */
+/* BFA Lift 1.0 - a card that overlaps pictures casts its shadow up onto them as well (Home and Art hero card over the picture row). */
+.ui-art-stage>.ui-card.is-hero-copy{box-shadow:0 -14px 30px -10px rgba(0,0,0,.6),var(--bfa-high)!important}
+html.theme-light .ui-art-stage>.ui-card.is-hero-copy{box-shadow:0 -12px 26px -10px rgba(0,0,0,.28),var(--bfa-high)!important}
+/* BFA Compare Foot 1.0 - the note and the button under a compare slider sit on one line, centred on each other, and clear of the
+   picture's shadow. General rule: content under a picture gets at least 1.75rem, so it never sits in the picture's shadow. */
+.ui-compare-foot{align-items:center!important;margin-top:1.75rem!important}
+.ui-compare-foot>p,.ui-compare-foot>.type-note{margin:0!important;line-height:1.3}
+/* ---- block ---- */
+/* BFA Band Drag 1.0 - the testimonials band is driven by script (no CSS loop) and dragged with the mouse; the pause button sits beside the title. */
+.ui-quote-band.is-js .ui-quote-track{animation:none!important;will-change:transform}
+.ui-quote-band{cursor:grab}
+.ui-quote-band.is-drag{cursor:grabbing;-webkit-user-select:none;user-select:none}
+.ui-quote-band.is-drag .ui-quote-track>*{pointer-events:none}
+.layout-section-head:has(>.bfa-band-ctl){display:flex;align-items:flex-end;justify-content:space-between;column-gap:1rem}
+.bfa-band-ctl.is-head{margin:0;flex:0 0 auto}
+/* ---- block ---- */
+/* BFA Sink Room 1.0 - every sink (.ui-group) has the same room around and between its cards, with a little more at the bottom, so the
+   cards' shadows always show. Desktop 2rem (bottom 2.5rem) and 2rem between cards; tablet 1.5rem / 2rem / 1.5rem; phone 1rem / 1.5rem / 1rem.
+   The picture rows (.ui-art-stage) keep their own layout. */
+.ui-group:not(.ui-art-stage){padding:2rem 2rem 2.5rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:2rem;row-gap:2rem}
+@media (max-width:991px){.ui-group:not(.ui-art-stage){padding:1.5rem 1.5rem 2rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:1.5rem;row-gap:1.5rem}}
+@media (max-width:767px){.ui-group:not(.ui-art-stage){padding:1rem 1rem 1.5rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:1rem;row-gap:1rem}}

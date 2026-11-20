@@ -510,11 +510,11 @@ Data type: Vector.
 
 Coordinates to use. Leave unconnected for automatic Object coordinates.
 
-#### Factor
+#### Fac
 
 Data type: Float (factor).
 
-Amount of blur. Default: 0.2.
+Amount of blur. Default: 0.2. More render samples give a smoother result, because the blur is made with white noise.
 
 ### Outputs
 
@@ -526,7 +526,7 @@ The resulting vector.
 
 ### How to use
 
-Connect a vector to Vector. The coordinates are shaken with random noise, Factor sets how much. Use the result as the vector of a texture for a grainy blur.
+Connect a vector to Vector. The coordinates are shaken with random noise, Fac sets how much. Use the result as the vector of a texture for a grainy blur.
 
 ## Equirectangular
 
@@ -702,7 +702,7 @@ Data type: Vector.
 
 The resulting vector.
 
-#### Is Original
+#### isOriginal
 
 Data type: Float.
 
@@ -710,7 +710,7 @@ White on the original side of the mirror, black on the mirrored side.
 
 ### How to use
 
-Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. Is Original is white on the side that was not mirrored.
+Connect a vector to Vector. The coordinates are mirrored across a line: Normal is the direction of the line, Offset moves it and Mirror Position sets what is mirrored. isOriginal is white on the side that was not mirrored.
 
 ## Object-World Normal
 
@@ -810,7 +810,7 @@ Coordinates to convert.
 
 ### Outputs
 
-#### Cylindrical
+#### Cylindrical(Polar + Z)
 
 Data type: Vector.
 
@@ -842,7 +842,7 @@ Data type: Vector.
 
 Center point of the repeat. Default: (0.5, 0.5, 0).
 
-#### Number of Repetitions
+#### Number of repetitions
 
 Data type: Float.
 
@@ -864,7 +864,7 @@ The changed coordinates.
 
 ### How to use
 
-Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of Repetitions sets how often and Scale the size. UV is the result.
+Connect a vector to Vector. Space is repeated around Center Axis like a kaleidoscope, Number of repetitions sets how often and Scale the size. UV is the result.
 
 ## Radial Symmetry 2
 
@@ -888,7 +888,7 @@ Data type: Vector.
 
 Center point of the repeat.
 
-#### Number of Repetitions
+#### Number of repetitions
 
 Data type: Float.
 
@@ -922,7 +922,7 @@ The resulting vector.
 
 ### How to use
 
-Connect a vector to Vector. Space is repeated around Center Axis, Number of Repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
+Connect a vector to Vector. Space is repeated around Center Axis, Number of repetitions sets how often, Phase and Rotate turn the copies and Scale sets the size. It is like Radial Symmetry 1 with more control.
 
 ## Spherical
 
@@ -942,7 +942,7 @@ Coordinates to convert.
 
 ### Outputs
 
-#### Spherical
+#### Spherical(r, theta, phi)
 
 Data type: Vector.
 
@@ -2000,7 +2000,7 @@ Strength, Direction, Min and Max shape the mask. World Coordinates switches the 
 
 ![Raycast Edges](/docs2/images/assets/shader-library/masks/raycast-edges.png)
 
-Procedural edge mask from Raycast Edges by using object, co-planar and normal edges.
+Draws lines on the edges of your objects, like an ink outline or a technical drawing. Use it for toon and blueprint looks, or as a mask to put wear on the edges. It casts short rays around every point of the surface and draws a line where they find another object, a surface at a different depth, or a surface that faces another way. It works in Cycles and in EEVEE.
 
 ### Inputs
 
@@ -2060,7 +2060,7 @@ Width of the Planar Edges. Default: 0.1.
 
 Data type: Float.
 
-Facomg angle threshold of the co-planar edges. Default: 0.5.
+Facing angle threshold of the co-planar edges. Default: 0.5.
 
 #### Normal Edges
 
@@ -2094,35 +2094,83 @@ Optional. The output of the overlayed edges onto the shader. Place after your sh
 
 Data type: Color.
 
-The color output of the edges mixed over black.
+The edges in the Color of the input, on black.
 
 #### Value
 
 Data type: Float.
 
-Combined edges output value that can be used as a mask.
+All edge types together as a mask: 0 (black) on the edges and 1 (white) everywhere else.
 
 #### Object Edges
 
 Data type: Float.
 
-Object edges output value.
+Only the object edges, as a mask: 0 on the edges, 1 everywhere else.
 
 #### Planar Edges
 
 Data type: Float.
 
-Planar edges output value.
+Only the planar edges, as a mask: 0 on the edges, 1 everywhere else.
 
 #### Normal Edges
 
 Data type: Float.
 
-Normal edges output value.
+Only the normal edges, as a mask: 0 on the edges, 1 everywhere else.
 
 ### How to use
 
-Connect a shader to Shader and a color to Color. Each of Object Edges, Planar Edges and Normal Edges has its own width and threshold. Samples sets the quality. Value is the combined mask.
+Put the node between your shader and the Material Output: connect the shader to **Shader**, and **Shader** out to the Surface of the Material Output. Pick the line color with **Color** and the line thickness with **Width**.
+
+Each edge type has its own panel, so you can turn it off or give it its own width. **Samples** sets the quality of the lines: more samples give cleaner lines but render slower.
+
+> **Tip:** The mask outputs are black on the edges. To use them as an edge mask, for example as the Factor of a Mix Shader that puts wear on the edges, invert them with a Math node set to Subtract (1 minus the value), or swap the two shaders of the Mix Shader.
+
+### Examples
+
+The same scene in every example: a cube standing on the floor, a cylinder, a torus sunk into the floor and a small staircase. The example file is `docs2/examples/assets/shader-library/raycast-edges.blend` in the manual repository, with one scene per picture.
+
+#### Outline over a shader
+
+![Raycast Edges over a grey Principled BSDF](/docs2/images/assets/shader-library/masks/raycast-edges-overlay.png)
+
+A grey Principled BSDF goes into **Shader**, and **Shader** out goes to the Material Output. Color is black and all settings are at their defaults. The lit scene gets an ink outline.
+
+#### Colored and wider lines
+
+![Raycast Edges with orange lines over a dark blue shader](/docs2/images/assets/shader-library/masks/raycast-edges-colored.png)
+
+The same setup with a dark blue shader, an orange **Color** and **Width** 0.25. The lines are thicker everywhere.
+
+#### The Value mask
+
+![Raycast Edges Value output](/docs2/images/assets/shader-library/masks/raycast-edges-value.png)
+
+**Value** connected to an Emission shader. All three edge types together, black on white.
+
+#### The Color output
+
+![Raycast Edges Color output](/docs2/images/assets/shader-library/masks/raycast-edges-color.png)
+
+**Color** connected to an Emission shader, with an orange Color input. The same lines in color, on black.
+
+#### Object, Planar and Normal edges
+
+Each edge type has its own output, so you can see which lines come from where.
+
+![Raycast Edges Object Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-object.png)
+
+**Object Edges:** the outline of each object, against the floor and against the other objects, including the hole of the torus. Where the staircase stands in front of the cube, the two get one shared outline.
+
+![Raycast Edges Planar Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-planar.png)
+
+**Planar Edges:** lines where a surface in front sits on a surface further away, like the top of the cube against the floor far behind it. Lower down the gap to the floor gets small, so the lines fade out.
+
+![Raycast Edges Normal Edges output](/docs2/images/assets/shader-library/masks/raycast-edges-normal.png)
+
+**Normal Edges:** lines where the surface changes direction, like the corners of the cube, the steps and the places where an object meets the floor. Smooth surfaces, like the side of the cylinder, get no lines across them.
 
 # Shader
 
@@ -2398,13 +2446,13 @@ Data type: Vector.
 
 Coordinates to use. Leave unconnected for automatic Object coordinates.
 
-#### Color 1
+#### Color1
 
 Data type: Color.
 
 First pattern color.
 
-#### Color 2
+#### Color2
 
 Data type: Color.
 
@@ -2456,7 +2504,7 @@ The UVs per checker vector output.
 
 ### How to use
 
-Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. A checkerboard with any two colors. Color 1 and Color 2 set the colors, Modulo the number of steps and Dot a dot variant. Scale sets the size of the squares.
+Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. A checkerboard with any two colors. Color1 and Color2 set the colors, Modulo the number of steps and Dot a dot variant. Scale sets the size of the squares.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -3404,12 +3452,6 @@ Data type: Float.
 
 Rotates each cell point around its cell center. Animate it for a swirling effect. Default: 0.
 
-#### Smoothness
-
-Data type: Float (factor).
-
-How much Smooth F1 rounds off the edges between cells. 0 matches F1. Default: 0.5.
-
 #### Scale
 
 Data type: Float.
@@ -3450,7 +3492,7 @@ Position of the nearest cell point.
 
 ### How to use
 
-Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness, Point Rotation and Smoothness shape the cells. F1 is the distance to the nearest point and Random Color gives each cell a color.
+Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness and Point Rotation shape the cells. F1 is the distance to the nearest point and Random Color gives each cell a color.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -3634,7 +3676,7 @@ The asset with default values on a plane, with the UV coordinates of the plane m
 
 ![Bean](/docs2/images/assets/shader-library/shapes/bean.png)
 
-Draws a vector shape with controls. Value is the smooth shape and Mask the sharp one.
+Draws a vector shape with controls. Normalized Value is the smooth shape and Mask the sharp one.
 
 ### Inputs
 
@@ -3652,7 +3694,7 @@ The scale of the shape. Default: 0.5.
 
 ### Outputs
 
-#### Value
+#### Normalized Value
 
 Data type: Float.
 
@@ -3666,7 +3708,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Size sets its size. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Size sets its size. Normalized Value is the smooth shape, Mask is the sharp version of it.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -3970,7 +4012,7 @@ Data type: Float.
 
 The offset of the shape. Default: 1.
 
-#### Number of Wings
+#### Number of wings
 
 Data type: Integer.
 
@@ -3998,7 +4040,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Scale sets its size. Offset moves it. Number of Wings sets the wings. Form changes the shape of the curve. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape. Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Scale sets its size. Offset moves it. Number of wings sets the wings. Form changes the shape of the curve. Value is the smooth shape, Mask is the sharp version of it.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 
@@ -5512,13 +5554,13 @@ Second mask. Default: 0.
 
 ### Outputs
 
-#### Union (OR)
+#### Union(OR)
 
 Data type: Float.
 
 White where either mask is white.
 
-#### Intersection (AND)
+#### Intersection(AND)
 
 Data type: Float.
 
@@ -5538,7 +5580,7 @@ White where only one mask is white.
 
 ### How to use
 
-Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union (OR) adds them, Intersection (AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
+Connect two masks to Value A and Value B. The four outputs combine them like boolean operations: Union(OR) adds them, Intersection(AND) keeps what both share, Subtract removes B from A and Difference keeps what only one of them has.
 
 ## Image Edge Detection
 

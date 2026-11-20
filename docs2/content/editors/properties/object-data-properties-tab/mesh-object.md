@@ -7,8 +7,8 @@ path:
   - Properties Editor
   - Object Data Properties Tab
   - Mesh Object
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.1 Editors - Properties Editor - Object Data Properties Tab - Mesh Object.odt
@@ -626,21 +626,35 @@ Starts the remesher in the chosen method.
 
 ![Geometry Data panel](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-panel.png)
 
-Mesh objects can have different types of custom data attached to them. This data is mostly used internally and can be exported by some exporters like Collada or Alembic.
+Mesh objects can have different types of custom data attached to them. This data is mostly used internally and can be exported by some exporters like Collada or Alembic. The clear buttons have a clear icon, and Reorder Mesh Spatially has a sort icon. Buttons for data the mesh doesn't have are grayed out.
 
-### Clear Sculpt-Mask Data
+### Clear Sculpt Mask Data
+
+![Clear Sculpt Mask Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-sculpt-mask-data.png)
 
 Removes the sculpting mask data layer. It has no big impact, but this can speed up sculpting if the mask is not longer used.
 
+### Clear Sculpt Face Sets
+
+![Clear Sculpt Face Sets button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-sculpt-face-sets.png)
+
+Removes the face set data that sculpting uses to group faces. Use it when you're done with face sets and want a clean mesh.
+
 ### Clear Skin Data
+
+![Clear Skin Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-clear-skin-data.png)
 
 Used to manage the skin data layer which is used by the Skin Modifier. This operator can be needed in case a Skin modifier is created but no skin data exist.
 
 ### Reorder Mesh Spatially
 
+![Reorder Mesh Spatially button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-reorder-mesh-spatially.png)
+
 Reorder mesh faces and vertices based on their spatial position for better BVH building and sculpting performance.
 
 ### Add Custom Normals Data
+
+![Add Custom Normals Data button](/docs2/images/editors/properties/object-data-properties-tab/mesh-object/geometry-data-add-custom-normals-data.png)
 
 Add a custom normals layer if none exists yet.
 

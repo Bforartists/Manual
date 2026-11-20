@@ -8,7 +8,7 @@ path:
   - Editors
   - Properties Editor
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26 Editors - Properties Editor.odt
@@ -95,7 +95,7 @@ The navigation tabs are divided into two groups. Globals section and Object Data
 
 #### Globals section (green)
 
-The Globals section contains everything that is not related to the currently selected object. But global. Render settings, View-, Scene- and World settings.
+The Globals section contains everything that is not related to the currently selected object. But global. Render settings, View-, Scene-, [Compositor](compositor-properties-tab.md) and World settings.
 
 #### Object Data Section (blue)
 

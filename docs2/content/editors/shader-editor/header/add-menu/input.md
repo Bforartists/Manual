@@ -43,9 +43,11 @@ Data type: Color.
 
 Tint for AO output color.
 
-##### Distance Cycles Only
+##### Distance
 
-Distance up to which other objects are considered to occlude the shading point.
+Data type: Float.
+
+Cycles only. Distance up to which other objects are considered to occlude the shading point.
 
 ##### Normal
 
@@ -55,17 +57,17 @@ Normal used for ambient occlusion. If nothing is connected the default shading n
 
 #### Properties
 
-##### Samples Cycles Only
+##### Samples
 
-Number of samples to use for ray traced ambient occlusion sampling. Keep as low as possible for an optimal performance.
+Cycles only. Number of samples to use for ray traced ambient occlusion sampling. Keep as low as possible for an optimal performance.
 
-##### Inside Cycles Only
+##### Inside
 
-Detect convex rather than concave shapes, by computing occlusion inside mesh.
+Cycles only. Detect convex rather than concave shapes, by computing occlusion inside mesh.
 
-##### Only Local Cycles Only
+##### Only Local
 
-Only detect occlusion from the object itself, and not others.
+Cycles only. Only detect occlusion from the object itself, and not others.
 
 #### Outputs
 
@@ -129,35 +131,47 @@ Data type: Float.
 
 Scalar value interpolated from the attribute.
 
+##### Alpha
+
+Data type: Float.
+
+Alpha value interpolated from the attribute.
+
 
 
 ### Bevel
 
 ![Bevel](/docs2/images/editors/shader-editor/header/add-menu-input/bevel.png)
 
-#### Cycles Only
+Cycles Only
 
 The Bevel shader node can be used for rendering rounded corners to capture specular highlights. The geometry is not modified. The modification happens at shader level.
 
-##### Inputs
+#### Inputs
 
-###### Radius
+##### Radius
+
+Data type: Float.
 
 Width of the bevel effect on edges.
 
-###### Normal
+##### Normal
+
+Data type: Vector.
 
 Normal to apply bevel on top of, to be combined with a Bump node for example.
 
-##### Properties
+#### Properties
 
-###### Samples
+##### Samples
 
 Number of samples to take for each shader evaluation. More samples give more accurate results, but are also slower to render. The default value of 4 works well for most cases, with any noise resolved by using more AA samples.
 
-##### Outputs
+#### Outputs
 
-###### Normal
+##### Normal
+
+Data type: Vector.
 
 Standard normal output.
 
@@ -168,14 +182,6 @@ Standard normal output.
 ![Camera Data](/docs2/images/editors/shader-editor/header/add-menu-input/camera-data.png)
 
 With the Camera Data node you can get get information about the position of the object relative to the camera. This could be used for example to change the shading of objects further away from the camera, or make custom fog effects.
-
-#### Inputs
-
-This node has no inputs.
-
-#### Properties
-
-This node has no properties.
 
 #### Outputs
 
@@ -369,13 +375,17 @@ Data type: Float.
 
 1.0 if the face is being viewed from the back side, 0.0 for the front side.
 
-##### Pointiness Cycles Only
+##### Pointiness
 
-An approximation of the curvature of the mesh per vertex. Lighter values indicate convex angles, darker values indicate concave angles. It allows you to do effects like dirt maps and wear-off effects.
+Data type: Float.
 
-##### Random Per Island Cycles Only
+Cycles only. An approximation of the curvature of the mesh per vertex. Lighter values indicate convex angles, darker values indicate concave angles. It allows you to do effects like dirt maps and wear-off effects.
 
-A random value for each connected component (island) of the mesh. It is useful to add variations to meshes composed of separated units like tree leaves, wood planks, or curves of multiple splines.
+##### Random Per Island
+
+Data type: Float.
+
+Cycles only. A random value for each connected component (island) of the mesh. It is useful to add variations to meshes composed of separated units like tree leaves, wood planks, or curves of multiple splines.
 
 
 
@@ -547,19 +557,33 @@ Data type: Float.
 
 1.0 if shading is executed for a glossy ray, 0.0 otherwise.
 
-##### Is Singular Ray Cycles Only
+##### Is Singular Ray
 
-1.0 if shading is executed for a singular ray, 0.0 otherwise.
+Data type: Float.
 
-##### Is Reflection Ray Cycles Only
+1.0 if shading is executed for a singular ray, 0.0 otherwise. In EEVEE this gives the same value as Is Glossy Ray.
 
-1.0 if shading is executed for a reflection ray, 0.0 otherwise.
+##### Is Reflection Ray
 
-##### Is Transmission Ray Cycles Only
+Data type: Float.
 
-1.0 if shading is executed for a transmission ray, 0.0 otherwise.
+1.0 if shading is executed for a reflection ray, 0.0 otherwise. In EEVEE this gives the same value as Is Glossy Ray.
 
-##### Ray Length Cycles Only
+##### Is Transmission Ray
+
+Data type: Float.
+
+1.0 if shading is executed for a transmission ray, 0.0 otherwise. In EEVEE this gives the same value as Is Glossy Ray.
+
+##### Is Volume Scatter Ray
+
+Data type: Float.
+
+Cycles only. 1.0 if shading is executed for a volume scatter ray, 0.0 otherwise.
+
+##### Ray Length
+
+Data type: Float.
 
 Distance traveled by the light ray from the last bounce or camera.
 
@@ -569,19 +593,27 @@ Data type: Float.
 
 Number of times the ray been reflected or transmitted on interaction with a surface. Note. Passing through a transparent shader does not count as a normal “bounce”.
 
-##### Diffuse Depth Cycles Only
+##### Diffuse Depth
+
+Data type: Float.
 
 Number of times the ray has gone through diffuse reflection or transmission.
 
-##### Glossy Depth Cycles Only
+##### Glossy Depth
+
+Data type: Float.
 
 Number of times the ray has gone through glossy reflection or transmission.
 
-##### Transparent Depth Cycles Only
+##### Transparent Depth
 
-Returns the number of transparent surfaces passed through.
+Data type: Float.
 
-##### Transmission Depth Cycles Only
+Cycles only. Returns the number of transparent surfaces passed through.
+
+##### Transmission Depth
+
+Data type: Float.
 
 Replace a Transmission light path after X bounces with another shader, e.g. a Diffuse one. This can be used to avoid black surfaces, due to low amount of max bounces.
 
@@ -589,7 +621,7 @@ Replace a Transmission light path after X bounces with another shader, e.g. a Di
 
 Data type: Float.
 
-The light portal depth.
+Cycles only. The light portal depth.
 
 
 
@@ -906,9 +938,9 @@ The UV Map node is used to retrieve specific UV maps. This node can retrieve any
 
 #### Properties
 
-##### From Instancer Cycles Only
+##### From Instancer
 
-See the From Instancer option of the Texture Coordinate Node.
+Cycles only. See the From Instancer option of the Texture Coordinate Node.
 
 ##### UV Map edit box
 

@@ -1,0 +1,44 @@
+# 🧹 Deploys the "clear the site cache after a live publish" Worker (docs2/worker/purge-on-publish).
+#
+# Runs after a merge that changes the Worker, or by hand (Actions → this workflow → Run workflow).
+# Uses the repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (same as the edit gateway),
+# CF_PURGE_TOKEN (Cloudflare token with only Zone · Cache Purge · Purge on bforartists.co) and the
+# repository variable CF_ZONE_CO (the Zone ID of bforartists.co). The token is stored in the Worker as a
+# secret and never written to the repo.
+
+name: Docs 2.0 deploy purge on publish
+
+on:
+  push:
+    branches: [master]
+    paths: ["docs2/worker/purge-on-publish/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Deploy first, then store the purge token as a Worker secret
+      # (uploading a secret before the Worker exists fails on the very first run).
+      - name: Deploy the Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.114.0"
+          workingDirectory: docs2/worker/purge-on-publish
+          command: deploy --var CF_ZONE_CO:${{ vars.CF_ZONE_CO }}
+          postCommands: |
+            echo "$PURGE_TOKEN" | npx wrangler secret put CF_PURGE_TOKEN
+        env:
+          PURGE_TOKEN: ${{ secrets.CF_PURGE_TOKEN }}
+      - name: Check it answers
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" \
+            -d '{"payload":{"domains":["bforartists.webflow.io"]}}' https://bfa-purge-on-publish.trinumedia.workers.dev/)
+          echo "Staging-only test call: HTTP $code (200 = the Worker runs and ignores staging publishes)" >> "$GITHUB_STEP_SUMMARY"
+          [ "$code" = "200" ]

@@ -127,7 +127,7 @@ Integer value which enumerates each point on the geometry.
 
 Adds a field input.
 
-#### Input
+#### Inputs
 
 ##### Name
 
@@ -135,7 +135,7 @@ Data type: String.
 
 The input name for the field.
 
-#### Input
+#### Properties
 
 ##### Data Type
 
@@ -143,13 +143,19 @@ The input name for the field.
 
 What data type to use.
 
-#### Output
+#### Outputs
 
 ##### Attribute
 
 Data type: follows the Data Type setting.
 
-The output attribute name.
+The values of the attribute with that name.
+
+##### Exists
+
+Data type: Boolean.
+
+True if the geometry has an attribute with that name.
 
 ### Normal
 
@@ -329,7 +335,7 @@ Distance from the source position to the closest location in the target.
 
 Data type: Boolean.
 
-Wether the sampling was successful. It is false when the sampled group is empty.
+Whether the sampling was successful. It is false when the sampled group is empty.
 
 ### Index of Nearest
 
@@ -393,15 +399,21 @@ Data type: Menu.
 
 Mapping from the target geometry to hit points.
 
-###### Source Position
+##### Source Position
+
+Data type: Vector.
 
 Source position input.
 
-###### Ray Direction
+##### Ray Direction
+
+Data type: Vector.
 
 A vector 3 for the ray direction.
 
-###### Ray Length
+##### Ray Length
+
+Data type: Float (distance).
 
 The length of the ray.
 
@@ -413,7 +425,7 @@ The length of the ray.
 
 What data to calculate on hit.
 
-#### Output
+#### Outputs
 
 ##### Is Hit
 
@@ -435,7 +447,7 @@ The normal of the hit point.
 
 ##### Hit Distance
 
-Data type: follows the Data Type setting.
+Data type: Float.
 
 The distance of the hit point.
 
@@ -489,7 +501,7 @@ What kind of data to process.
 
 Clamp the indices to the size of the attribute domain.
 
-#### Output
+#### Outputs
 
 ##### Value
 
@@ -525,7 +537,7 @@ The position of the source object.
 
 What data to process.
 
-#### Output
+#### Outputs
 
 ##### Index
 
@@ -591,9 +603,9 @@ The name that you want to set
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 Geometry output.
 
@@ -625,9 +637,9 @@ ID Input
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 Geometry output.
 
@@ -667,9 +679,9 @@ An optional translation for each point. This is evaluated at the same time as th
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 Geometry outputs.
 
@@ -714,11 +726,11 @@ Data type: Material list.
 
 The list of materials, in slot order. If the geometry has no part of the chosen type, or that part has no material slots, nothing is output.
 
-### Replace Material.
+### Replace Material
 
-![Replace Material.](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/replace-material.png)
+![Replace Material](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/replace-material.png)
 
-Sets the name of the target geometry.
+Replaces one material with another material on the geometry.
 
 #### Inputs
 
@@ -742,9 +754,9 @@ The new material that replaces the old material.
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 Geometry output.
 
@@ -756,9 +768,9 @@ Retreive the material index.
 
 #### Outputs
 
-—
+##### Material Index
 
-#### Material Index
+Data type: Integer.
 
 The material index.
 
@@ -770,17 +782,19 @@ Select a mesh part by material.
 
 #### Inputs
 
-##### Geometry
+##### Material
 
-Geometry input.
+Data type: Material.
+
+The material to select.
 
 #### Outputs
 
-—
+##### Selection
 
-#### Material Index
+Data type: Boolean.
 
-The material index.
+True for the faces that use this material.
 
 ### Set Material
 
@@ -810,9 +824,9 @@ The material to assign.
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 The geometry with the new material assigned.
 
@@ -844,9 +858,9 @@ The material index to assign to the selection.
 
 #### Outputs
 
-—
+##### Geometry
 
-#### Geometry
+Data type: Geometry.
 
 The geometry with the new material index assigned.
 
@@ -872,7 +886,9 @@ To bake, the file must be saved first.
 
 ##### Geometry
 
-Standard geometry input. You can bake multiple geometry inputs.
+Data type: Geometry.
+
+Standard geometry input. It is the default bake item. You can add more bake items of other types in the sidebar, so you can bake multiple inputs.
 
 #### Properties
 
@@ -894,7 +910,9 @@ Delete baked data of a single bake node or simulation.
 
 ##### Geometry
 
-Standard geometry output.
+Data type: Geometry.
+
+Standard geometry output. There is one output for each bake item.
 
 ### Bounding Box
 
@@ -976,7 +994,7 @@ Standard geometry input.
 
 Data type: Boolean.
 
-A selection of the geomerty
+A selection of the geometry
 
 #### Properties
 
@@ -992,7 +1010,7 @@ What element to delete.
 
 Delete mode. Names should be self explaining.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -1018,7 +1036,7 @@ Standard geometry input.
 
 Data type: Boolean.
 
-A selection of the geomerty.
+A selection of the geometry.
 
 ##### Amount
 
@@ -1034,7 +1052,7 @@ Number of times the geometry should be duplicated.
 
 What element to duplicate.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -1054,7 +1072,7 @@ The index of the duplicated elements.
 
 Welds the selected geometry below a given distance into one vertice.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
@@ -1074,13 +1092,7 @@ Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode-2.png)
 
-###### All
-
-Merges all vertices in reach.
-
-###### Connected
-
-Merges just vertices that are connected by edges.
+How to find the vertices to merge. **All** merges all vertices in reach. **Connected** merges just vertices that are connected by edges.
 
 ##### Distance
 
@@ -1088,7 +1100,7 @@ Data type: Float (distance).
 
 The merge distance. Everything below this distance will be merged into one vertice.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -1140,7 +1152,7 @@ Connect **Cluster by Distance** to Merge ID. Connect the Position node to its Po
 
 The *Sort Elements* node rearranges geometry elements by changing their indices.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
@@ -1156,11 +1168,15 @@ Data type: Boolean.
 
 A selection of the input geometry. If left blank, all elements are sorted. Non selected elements will be keep their current indices.
 
-###### Group ID
+##### Group ID
+
+Data type: Integer.
 
 Group ID input value. A group is defined as all elements with the same group id. Elements with the same group ID are sorted together. If this is not a field, the node has no affect.
 
-###### Sort Weight
+##### Sort Weight
+
+Data type: Float.
 
 The sorted values used to do the reordering. If this is not a field, the node has no affect.
 
@@ -1188,7 +1204,7 @@ The fields are evaluated on the splines in the curve component.
 
 The fields are evaluated on the top-level instances. Realized instances are ignored.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -1204,47 +1220,47 @@ Move, rotate or scale the geometry. The transformation is applied to the entire 
 
 #### Inputs
 
-#### Mode
+##### Geometry
+
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Mode
+
+Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/mode-3.png)
 
-The transformation mode for the node.
+The transformation mode for the node. **Components** uses single values and vectors. **Matrix** uses a matrix to transform.
 
-##### Components mode
+##### Translation
 
-Uses single values and vectors.
+Data type: Vector (translation).
 
-###### Geometry
+Translates the geometry in local space of the modified object. Only in Components mode.
 
-Standard geometry input.
+##### Rotation
 
-###### Translation
+Data type: Rotation.
 
-Translates the geometry in local space of the modified object.
+The rotation in local space. Only in Components mode.
 
-###### Rotation
+##### Scale
 
-Euler rotation in local space.
+Data type: Vector (XYZ).
 
-###### Scale
+Scale to transform the geometries in local space. Only in Components mode.
 
-Scale to transform the geometries in local space.
+##### Transform
 
-##### Matrix mode
+Data type: Matrix.
 
 ![Matrix mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/matrix-mode.png)
 
-Uses a matrix to transform.
+Transform matrix input. Only in Matrix mode.
 
-###### Geometry
-
-Standard geometry input.
-
-###### Transform
-
-Transform matrix input.
-
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -1298,9 +1314,11 @@ Data type: Geometry.
 
 Volume component of the input geometry. In case that the input contains multiple volume instances, only the first volume component will be calculated.
 
-##### Instance
+##### Instances
 
-The single instances of the geometry.
+Data type: Geometry.
+
+The instances component of the input geometry.
 
 ### Separate Geometry
 
@@ -1334,15 +1352,17 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
-###### Outputs
+#### Outputs
 
-—
+##### Selection
 
-###### Selection
+Data type: Geometry.
 
 Separated selection.
 
-###### Inverted
+##### Inverted
+
+Data type: Geometry.
 
 The inverted separated selection.
 
@@ -1384,15 +1404,17 @@ What kind of geometry to separate.
 
 Note that when selecting a domain that doesn’t modify all components, the unmodified components will appear in both outputs.
 
-###### Outputs
+#### Outputs
 
-—
+##### Instances
 
-###### Instances
+Data type: Geometry.
 
 Instances output. An Instance per group.
 
-###### Group ID
+##### Group ID
+
+Data type: Integer.
 
 Group ID output value.
 

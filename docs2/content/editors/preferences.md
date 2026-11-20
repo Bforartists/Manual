@@ -131,6 +131,10 @@ Ignore menus toggling with Search on Key Press, and fallback to using accelerato
 
 Stops the preview icons on the material properties from rendering, which helps avoid causing the UI to stutter or freeze. This is a Bforartists only feature.
 
+#### Tear-Off Menus and Panels
+
+Lets you tear menus, dropdowns, popovers and panels off, so they stay open and float over the editor. On by default. When off, menus have no Tear Off row and behave as in Blender, and open tear-offs close until you turn it on again. This is a Bforartists only feature. See [Tear-Off Menus and Panels](../interface/tear-off-menus-and-panels.md).
+
 
 
 ### Editors Panel
@@ -320,6 +324,32 @@ Define a custom interface font. The font in the whole UI.
 ##### Monospace Font
 
 Define a custom Monospace font. That's the one used in the python console for example.
+
+#### Font Style subpanel
+
+![Font Style subpanel](/docs2/images/editors/preferences/font-style-subpanel.png)
+
+The **Font Style** subpanel sets how big and how bold the interface text is. There are three kinds of text, and each one has its own **Size** and **Weight**.
+
+Use it when the text is hard to read on your screen, or when you want panel titles to stand out more than the rest.
+
+> **Note:** These settings used to be part of the theme. They are preferences now, so loading a theme preset no longer changes your font sizes.
+
+##### Panel Title Size
+
+The font size of the panel headers, in points. The range is 6 to 32, the default is 11.
+
+##### Widget Size
+
+The font size of the buttons, fields, menus and labels, in points. This is most of the text you see in the interface.
+
+##### Tooltip Size
+
+The font size of the tooltips, in points.
+
+##### Weight
+
+Each size has a **Weight** field under it. It sets how thick the characters are, from 100 (thin) to 900 (very bold). 400 is normal.
 
 
 
@@ -783,6 +813,20 @@ Automatically close relevant character pairs when typing in the text editor.
 
 ![Node Editor](/docs2/images/editors/preferences/node-editor.png)
 
+#### Noodle Curving
+
+How curved the links (the "noodles") between nodes are drawn. The range is 0 to 10.
+
+Bforartists uses **0** by default, so links are **straight lines**. Straight links make it easy to follow where a link goes in a busy node tree. Raise the value if you prefer soft, curved links.
+
+![Noodle Curving at 0: straight links](/docs2/images/editors/preferences/noodle-curving-0.png)
+
+![Noodle Curving at 5: curved links](/docs2/images/editors/preferences/noodle-curving-5.png)
+
+The setting applies to every node editor: Shader, Geometry Nodes, Compositor and Texture nodes.
+
+> **Note:** Noodle Curving used to be a theme setting. It is a preference now, so a theme preset can no longer change it. Blender uses 4 by default.
+
 #### Auto Offset
 
 Use Auto Offset.
@@ -867,8 +911,6 @@ Contains the settings for the animation editors.
 
 ### Timeline
 
-#### Allow negative Frames
-
 #### Minimum Grid Spacing
 
 ![Minimum Grid Spacing](/docs2/images/editors/preferences/minimum-grid-spacing.png)
@@ -888,6 +930,20 @@ In Timeline, Dope sheet, Graph and NLE editor you can either display the keyfram
 ![Zoom To Frame Type](/docs2/images/editors/preferences/zoom-to-frame-type.png)
 
 Timeline, Dope sheet, Graph and NLE. Define how zooming to frame focuses around current frame.
+
+#### Advanced subpanel
+
+![Advanced subpanel of the Timeline panel](/docs2/images/editors/preferences/timeline-advanced.png)
+
+Settings you rarely need to change. The subpanel is closed by default.
+
+##### Allow Negative Frames
+
+Lets you set the current frame to a negative number, so the playhead can go before frame 0. This is handy when an animation needs a run-up before the shot starts, or when you line up imported data that starts below zero.
+
+The warning under the checkbox is always shown, so you see it before you turn the option on.
+
+> **Warning:** Negative frames can cause issues with audio playback and with exporters. If you run into problems there, move the animation so it starts at frame 0 or later.
 
 #### Keyframes
 
@@ -1486,33 +1542,50 @@ The list of the editors that you can theme. Every editor can have its own themin
 
 Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.
 
-#### Text Style
+> **Note:** The font sizes and weights are no longer part of the theme. You find them in the **Font Style** subpanel of the Interface tab, under Text Rendering.
 
-Defines font colors and styles used in labels, tooltips, and text-based editors.
+##### Editor & Widgets subpanel
 
-#### Bone Color Sets
+![Editor & Widgets subpanel](/docs2/images/editors/preferences/editor-and-widgets-subpanel.png)
 
-Lets you assign custom colors to bone groups in Pose Mode, useful for rigging and animation clarity.
+The borders and outlines of the editors, the shadow of panels and menus, and the look of the widgets: emboss, text cursor, links and the shadow under the interface text.
 
-#### Collection Colors
+###### Text Shadow
 
-Sets colors for collections in the Outliner, helping visually organize scene hierarchies.
+A shadow under **all interface text**, to make it easier to read on busy or light backgrounds. One setting covers every kind of text: labels, buttons, menus and panel titles.
 
-#### Strip Color Tags
+- **None:** text without a shadow. This is the Bforartists theme default.
+- **Small:** a soft shadow with a small blur. The Blender Dark preset uses this.
+- **Large:** a soft shadow with a large blur.
+- **Outline:** a thin outline around the characters.
 
-Applies tag colors to strips in the Video Sequencer and Nonlinear Animation editors for quick identification.
+The two settings below only show when Text Shadow is not None.
+
+###### Shadow Color
+
+The color of the text shadow. The alpha value sets how strong it is: at 0 the shadow is invisible, and the Offset field is greyed out.
+
+###### Offset
+
+How far the shadow is moved from the text, in pixels: **X** to the right, **Y** up. The range is -10 to 10 on each axis. Negative values move it left or down.
+
+> **Note:** This one Text Shadow setting replaces the shadow settings that each text style had before.
+
+#### Color Sets
+
+Groups the color lists you pick from by name in other editors. It has three subpanels:
+
+- **Bone Color Sets:** the colors you can give to bones, useful for rigging and animation clarity.
+- **Collection Colors:** the color tags for collections in the Outliner, to organize the scene at a glance.
+- **Sequencer Strip Color Tags:** the color tags for strips in the Video Sequencer.
 
 #### Regions
 
-Handles the common region areas like Asset Shelves, channels, scrubbing and marker settings and toolbars and sidebars.
+Handles the common region areas like the Asset Shelf, channels, scrubbing and marker settings, toolbars and sidebars.
 
 #### Common
 
 Handles shared UI elements like animation and curve settings.
-
-#### Asset Shelf
-
-Customizes the appearance of the Asset Shelf, including preview thumbnails, labels, and background styling.
 
 #### 3D Viewport
 
@@ -1544,7 +1617,7 @@ Customizes tracking marker colors, clip overlays, and annotation visuals for mot
 
 #### Node Editor
 
-Defines node socket colors, wire styles, backdrop shading, and node selection highlights.
+Defines node socket colors, wire colors, backdrop shading, and node selection highlights. How curved the wires are is set with **Noodle Curving** in the Editing tab, Node Editor panel.
 
 #### Nonlinear Animation
 

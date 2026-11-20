@@ -42,6 +42,20 @@ When used inside a **Node Group**, this node helps to **automatically **filter o
 - ![Use](/docs2/images/editors/geometry-node-editor/header/add-menu-output/use.png)
     It’s especially useful in **menu-driven setups**, where only certain outputs are relevant depending on user selection based on the menu they choose – like the example below
 
+#### Inputs
+
+##### Enable
+
+Data type: Boolean.
+
+When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group.
+
+##### Value
+
+Data type: follows the Data Type setting.
+
+The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**.
+
 #### Properties
 
 ##### Data Type
@@ -50,13 +64,13 @@ When used inside a **Node Group**, this node helps to **automatically **filter o
 
 Defines the type of the **Value** input and output. Options include **Float**, **Vector**, **Color**, **Boolean**, **Geometry**, etc. This ensures compatibility with the group output socket.
 
-###### Inputs
+#### Outputs
 
-**Enable**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group. · **Value**: The data to be conditionally passed to the output. Can be Float, Vector, Color, Geometry, etc., depending on the selected **Data Type**.
+##### Value
 
-###### Outputs
+Data type: follows the Data Type setting.
 
-**Value**: When **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group output interface.
+When Enable is **True**, the node passes the input value through to the output socket. When **False**, it outputs a fallback value and hides the output socket from the group output interface.
 
 ### Viewer
 
@@ -66,9 +80,7 @@ This node allows you to output the geometry data of a node in the node tree to t
 
 #### Inputs
 
-##### Geometry
-
-Standard geometry input.
+The inputs are dynamic. The node starts with one empty socket. Connect a link to it to add an input of that type, for example a geometry or a field. You can view more than one value at the same time.
 
 ### Warning
 
@@ -82,11 +94,13 @@ Allows node groups to throw expectations.
 
 Data type: Boolean.
 
-Is true or false.
+When true, the node shows the warning.
 
-##### String
+##### Message
 
-The string to show at evaluation.
+Data type: String.
+
+The message to show at evaluation.
 
 #### Properties
 
@@ -96,8 +110,10 @@ The string to show at evaluation.
 
 What type the warning should be.
 
-#### Output
+#### Outputs
 
-##### Output
+##### Show
 
-Output the warning string if true.
+Data type: Boolean.
+
+Passes the Show value through, so you can use it further in the node tree.

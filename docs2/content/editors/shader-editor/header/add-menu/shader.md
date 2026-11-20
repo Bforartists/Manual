@@ -49,11 +49,25 @@ The Add node is used to add two Shaders together.
 
 #### Inputs
 
-**Shaders**: Standard shader inputs.
+##### Shader
+
+Data type: Shader.
+
+The first shader to add.
+
+##### Shader
+
+Data type: Shader.
+
+The second shader to add.
 
 #### Outputs
 
-**Shader**: Standard shader output.
+##### Shader
+
+Data type: Shader.
+
+Standard shader output.
 
 ### Mix Shader
 
@@ -63,11 +77,31 @@ The Mix node is used to mix two shaders together. Mixing can be used for materia
 
 #### Inputs
 
-**Shader**: Shaders to mix, such that incoming rays hit either with the specified probability in the Factor socket. · **Factor**: Blend weight to use for mixing two shaders; at zero it uses the first shader entirely and at one the second shader.
+##### Factor
+
+Data type: Float (factor).
+
+Blend weight to use for mixing two shaders; at zero it uses the first shader entirely and at one the second shader.
+
+##### Shader
+
+Data type: Shader.
+
+The first shader to mix. Incoming rays hit either shader with the probability set in the Factor socket.
+
+##### Shader
+
+Data type: Shader.
+
+The second shader to mix.
 
 #### Outputs
 
-**Shader**: Standard shader output.
+##### Shader
+
+Data type: Shader.
+
+Standard shader output.
 
 ### Diffuse BSDF
 
@@ -79,11 +113,31 @@ The Diffuse BSDF node is used to add Lambertian and Oren-Nayar diffuse reflectio
 
 #### Inputs
 
-**Color**: Color of the surface, or physically speaking, the probability that light is reflected or transmitted for each wavelength. · **Roughness Cycles Only**: Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF. · **Normal**: Normal used for shading; if nothing is connected the default shading normal is used.
+##### Color
+
+Data type: Color.
+
+Color of the surface, or physically speaking, the probability that light is reflected or transmitted for each wavelength.
+
+##### Roughness
+
+Data type: Float (factor).
+
+Cycles only. Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF.
+
+##### Normal
+
+Data type: Vector.
+
+Normal used for shading; if nothing is connected the default shading normal is used.
 
 #### Outputs
 
-**BSDF**: Standard shader output.
+##### BSDF
+
+Data type: Shader.
+
+Standard shader output.
 
 ### Emission
 
@@ -133,11 +187,23 @@ Data type: Float (factor).
 
 Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.
 
+##### Anisotropy
+
+Data type: Float (factor).
+
+Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction.
+
+##### Rotation
+
+Data type: Float (factor).
+
+Rotates the direction of anisotropy, with 1.0 going full circle.
+
 ##### IOR
 
 Data type: Float.
 
-Index of refraction (IOR) defining how much the ray changes direction. At 1. 0 rays pass straight through like transparent; higher values give more refraction.
+Index of refraction (IOR) defining how much the ray changes direction. At 1.0 rays pass straight through like transparent; higher values give more refraction.
 
 ##### Normal
 
@@ -145,9 +211,27 @@ Data type: Vector.
 
 Normal used for shading.
 
-##### Thin film subpanel
+##### Tangent
 
-Thin film is an optical effect where light interference in a very thin surface layer creates colorful, angle-dependent reflections (like soap bubbles or oil on water). · **Thickness**: Thin film thickness. · **IOR**: Thin film refraction factor.
+Data type: Vector.
+
+Tangent used for the direction of anisotropy.
+
+##### Thin Film
+
+Thin film is an optical effect where light interference in a very thin surface layer creates colorful, angle-dependent reflections (like soap bubbles or oil on water).
+
+###### Thickness
+
+Data type: Float (wavelength).
+
+Thickness of the film in nanometers.
+
+###### IOR
+
+Data type: Float.
+
+Index of refraction (IOR) of the thin film.
 
 #### Properties
 
@@ -328,6 +412,78 @@ The lit result, to connect to the Material Output.
 
 A metallic shader, which gives more realistic results than the glossy node.
 
+#### Inputs
+
+##### Base Color
+
+Data type: Color.
+
+The base color of the metal. Only with the F82 Tint fresnel type.
+
+##### Edge Tint
+
+Data type: Color.
+
+The color of the reflection at grazing angles, near the edges. Only with the F82 Tint fresnel type.
+
+##### IOR
+
+Data type: Vector.
+
+The refractive index for all three color channels. Mathematically called n. Only with the Physical Conductor fresnel type.
+
+##### Extinction
+
+Data type: Vector.
+
+Imaginary part of the refractive index. Mathematically called k. Only with the Physical Conductor fresnel type.
+
+##### Roughness
+
+Data type: Float (factor).
+
+The roughness of the surface. 0 is a perfect mirror reflection, 1 is completely rough.
+
+##### Anisotropy
+
+Data type: Float (factor).
+
+Amount of anisotropy for reflection.
+
+##### Rotation
+
+Data type: Float (factor).
+
+Rotates the direction of anisotropy, with 1.0 going full circle.
+
+##### Normal
+
+Data type: Vector.
+
+Input normal.
+
+##### Tangent
+
+Data type: Vector.
+
+Input tangent.
+
+##### Thin Film
+
+![Thin film subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/thin-film-subpanel.png)
+
+###### Thickness
+
+Data type: Float (wavelength).
+
+Thickness of the film in nanometers.
+
+###### IOR
+
+Data type: Float.
+
+Index of Refraction of the Thin Film.
+
 #### Properties
 
 ##### Distribution
@@ -342,43 +498,14 @@ The available scatter methods. They all give a slighty differnt result.
 
 The fresnel type. Fresnel is a real life effect that adds a mirroring the more the angle diverts from the line of sight. At 90 degrees the mirroring is 100%.
 
+- **F82 Tint**: Set the look with the Base Color and Edge Tint inputs.
+- **Physical Conductor**: Set the look with the IOR and Extinction inputs.
+
 ![Fresnel Type](/docs2/images/editors/shader-editor/header/add-menu-shader/fresnel-type-2.png)
-
-###### Input with F 82 Tint
-
-- **Base Color**: The base color of the fresnel.
-- **Edge Tint**: The edge tint color of the fresnel.
-- **Roughness**: The roughness of the fresnel. 0 is 100% mirroring.
-- **Anisotropy**: Amount of anisotropy for reflection.
-- **Rotation**: Rotates the direction of anisotropy, with going full circle with a value of one.
-- **Normal**: Input normal
-- **Tangent**: Input tangent.
-
-###### Input with Physical Conductor
 
 ![Input with Physical Conductor](/docs2/images/editors/shader-editor/header/add-menu-shader/input-with-physical-conductor.png)
 
-- **IOR**: The refractive index for all three axis. Mathematically called N
-- **Extinction**: Imaginary part of the refractive index. Mathematically called K
-- **Roughness**: The roughness of the fresnel. 0 is 100% mirroring.
-- **Anisotropy**: Amount of anisotropy for reflection.
-- **Rotation**: Rotates the direction of anisotropy, with going full circle with a value of one.
-- **Normal**: Input normal
-- **Tangent**: Input tangent.
-
-##### Thin film subpanel
-
-![Thin film subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/thin-film-subpanel.png)
-
-###### Thickness
-
-Thickness of the film in nanometers
-
-###### IOR
-
-Index of Refraction of the Thin Film.
-
-#### Output
+#### Outputs
 
 ##### BSDF
 
@@ -420,7 +547,7 @@ Specifies micro facet roughness of the surface for diffuse and specular reflecti
 
 Data type: Float.
 
-Index of refraction for transmission.
+Index of refraction (IOR) for specular reflection and transmission. For most materials the IOR is between 1.0 (vacuum and air) and 4.0 (germanium). The default value of 1.5 is a good value for glass.
 
 ##### Alpha
 
@@ -428,97 +555,119 @@ Data type: Float (factor).
 
 Controls the transparency of the surface, with 1.0 fully opaque. Usually linked to the Alpha output of an Image Texture node.
 
+##### Thin Wall
+
+Data type: Boolean.
+
+Treats the surface as a thin structure with the same material on both sides. Useful for thin objects such as windows, paper and leaves.
+
 ##### Normal
 
 Data type: Vector.
 
 Controls the normals of the base layers.
 
-##### Subsurface Subtab
+##### Diffuse
 
-###### Mode Christensen-Burley
+###### Roughness
 
-![Mode Christensen-Burley](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-christensen-burley.png)
+Data type: Float (factor).
 
-Christensen-Burley is an approximation to physically-based volume scattering. Gives less blurry results than Cubic and Gaussian functions.
+Microfacet roughness of the diffuse base. 0.0 is perfect Lambertian reflection, 1.0 is completely rough.
 
-- **Weight**: Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.
-- **Subsurface Radius**: Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-- **Scale**: Scale of the subsurf scattering ( multiplied with radius).
+##### Subsurface
 
-###### Mode Random Walk
+The Subsurface Method setting at the top of this panel is described under Properties.
 
-![Mode Random Walk](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk.png)
+###### Weight
 
-Random Walk Provides the most accurate results for thin and curved objects. This comes at the cost of increased render time or noise for more dense media like skin, but also better geometry detail preservation. Random Walk uses true volumetric scattering inside the mesh, which means that it works best for closed meshes. Overlapping faces and holes in the mesh can cause problems.
+Data type: Float (factor).
 
-- **Weight**: Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.
-- **Subsurface Radius**: Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-- **Scale**: Scale of the subsurf scattering ( multiplied with radius).
-- **Anisotropy**: Adds some random directional light scattering.
+Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.
 
-###### Mode Random Walk (Skin)
+###### Radius
 
-![Mode Random Walk (Skin)](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk-skin.png)
+Data type: Vector.
 
-Random Walk Provides the most accurate results for thin and curved objects. This comes at the cost of increased render time or noise for more dense media like skin, but also better geometry detail preservation. Random Walk uses true volumetric scattering inside the mesh, which means that it works best for closed meshes. Overlapping faces and holes in the mesh can cause problems.
+Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively. The value is multiplied with Scale. Not used when Thin Wall is enabled.
 
-- **Weight**: Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.
-- **Subsurface Radius**: Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-- **Scale**: Scale of the subsurf scattering ( multiplied with radius).
-- **IOR**: Adds a refraction for more realistic results.
-- **Anisotropy**: Adds some random directional light scattering.
+###### Scale
 
-##### Specular Subtab
+Data type: Float (distance).
+
+Scale of the subsurface scattering, multiplied with Radius. Not used when Thin Wall is enabled.
+
+###### IOR
+
+Data type: Float (factor).
+
+Index of refraction (IOR) for rays that enter the subsurface component. Only with the Random Walk (Skin) method.
+
+###### Anisotropy
+
+Data type: Float (factor).
+
+The direction of the light scattering inside the material. 0 scatters evenly in all directions, positive values scatter more forward and negative values more backward. Skin has an anisotropy of about 0.8. Not used by the Christensen-Burley method, unless Thin Wall is enabled.
+
+##### Specular
 
 ![Specular Subtab](/docs2/images/editors/shader-editor/header/add-menu-shader/specular-subtab.png)
 
-###### Specular Mode
+The Distribution setting at the top of this panel is described under Properties.
 
-- **GGX**: A method that is faster than Multiple-scattering GGX but is less physically accurate. Selecting it enables the Transmission Roughness input.
-- **Multiple-scattering GGX**: Takes multiple bounce (scattering) events between micro facets into account. This gives a more energy conserving results, which would otherwise be visible as excessive darkening.
+###### IOR Level
 
-##### IOR Level
+Data type: Float (factor).
 
-Amount of dielectric specular reflection. Specifies facing (along normal) reflectivity in the most common 0 - 8% range.
-
-Hint. To compute this value for a realistic material with a known index of refraction, you may use this special case of the Fresnel formula: specular=((ior-1)/(ior+1))2/0.08
-
-For example:
-
-water: ior = 1.33, specular = 0.25
-
-glass: ior = 1.5, specular = 0.5
-
-diamond: ior = 2.417, specular = 2.15
-
-Since materials with reflectivity above 8% do exist, the field allows values above 1.
+Adjusts the IOR to make the specular reflection stronger or weaker. 0.5 means no change, 0 removes all reflections, and 1 doubles them when you look straight at the surface.
 
 ###### Tint
 
-Tints the facing specular reflection using the base color, while glancing reflection remains white. Normal dielectrics have colorless reflection, so this parameter is not technically physically correct and is provided for faking the appearance of materials with complex surface structure.
+Data type: Color.
 
-###### Anisotropic
+Tints the dielectric reflection when you look straight at the surface, for artistic control. For metals it tints the reflection at grazing angles, to simulate a complex index of refraction.
+
+###### Anisotropy
+
+Data type: Float (factor).
 
 Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction; negative values give highlights shaped perpendicular to the tangent direction.
 
 ###### Anisotropic Rotation
 
+Data type: Float (factor).
+
 Rotates the direction of anisotropy, with 1.0 going full circle. Hint. Compared to the Anisotropic BSDF node, the direction of highlight elongation is rotated by 90°. Add 0.25 to the value to correct.
 
 ###### Tangent
 
+Data type: Vector.
+
 Controls the tangent for the Anisotropic layer.
 
-##### Transmission Subpanel
+##### Transmission
 
 ![Transmission Subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/transmission-subpanel.png)
 
-###### Weigth
+###### Weight
+
+Data type: Float (factor).
 
 Blend between transmission and other base layers.
 
-##### Coat subpanel
+###### Dispersion Scale
+
+Data type: Float (factor).
+
+Scales the amount of dispersion, where light splits into its colors like in a prism.
+
+###### Dispersion Abbe Number
+
+Data type: Float.
+
+The Abbe number of the base material. A smaller number gives stronger dispersion.
+
+##### Coat
 
 ![Coat subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/coat-subpanel.png)
 
@@ -526,41 +675,57 @@ Extra white specular layer on top of others. This is useful for materials like c
 
 ###### Weight
 
-Controls the intensity of the coat layer. Both, the reflection and the tinting. For physically based materials this value should be zero.
+Data type: Float (factor).
+
+Controls the intensity of the coat layer. Both, the reflection and the tinting. For physically based materials this value should be zero or one.
 
 ###### Roughness
+
+Data type: Float (factor).
 
 Roughness of clear coat specular.
 
 ###### IOR
 
+Data type: Float.
+
 The index of refraction of the coat layer. It affects the reflectivity and the falloff of coat tinting.
 
 ###### Tint
+
+Data type: Color.
 
 The coat color. Saturation increases at shallower angles as the light travels farther through the medium.
 
 ###### Normal
 
+Data type: Vector.
+
 Controls the normals of the coat layer.
 
-##### Sheen subpanel
+##### Sheen
 
 ![Sheen subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/sheen-subpanel.png)
 
 ###### Weight
 
-Controls the intensity of the layer.
+Data type: Float (factor).
+
+Controls the intensity of the sheen layer, which simulates very small fibers on the surface.
 
 ###### Roughness
+
+Data type: Float (factor).
 
 Controls the roughness of the layer.
 
 ###### Tint
 
-Mix between white and using base color for sheen reflection.
+Data type: Color.
 
-##### Emission subpanel
+The color of the sheen reflection.
+
+##### Emission
 
 ![Emission subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/emission-subpanel.png)
 
@@ -568,13 +733,17 @@ Light emission from the surface, like the Emission shader.
 
 ###### Color
 
+Data type: Color.
+
 The emission color.
 
-###### Emission Strength
+###### Strength
+
+Data type: Float.
 
 The strength of the light emission.
 
-##### Thin Film subpanel
+##### Thin Film
 
 ![Thin Film subpanel](/docs2/images/editors/shader-editor/header/add-menu-shader/thin-film-subpanel-2.png)
 
@@ -584,11 +753,50 @@ A thin film coating of a material with a normal angle of incidence.
 
 ###### Thickness
 
-The thickness of the thin film.
+Data type: Float (wavelength).
+
+The thickness of the thin film in nanometers.
 
 ###### IOR
 
+Data type: Float.
+
 The index of refraction of the thin film layer. It affects the reflectivity and the falloff of thin film.
+
+#### Properties
+
+##### Distribution
+
+In the Specular panel.
+
+- **GGX**: A method that is faster than Multiscatter GGX but is less physically accurate.
+- **Multiscatter GGX**: Takes multiple bounce (scattering) events between micro facets into account. This gives a more energy conserving results, which would otherwise be visible as excessive darkening.
+
+##### Subsurface Method
+
+In the Subsurface panel.
+
+###### Christensen-Burley
+
+![Mode Christensen-Burley](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-christensen-burley.png)
+
+Christensen-Burley is an approximation to physically-based volume scattering. Gives less blurry results than Cubic and Gaussian functions.
+
+###### Random Walk
+
+![Mode Random Walk](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk.png)
+
+Random Walk Provides the most accurate results for thin and curved objects. This comes at the cost of increased render time or noise for more dense media like skin, but also better geometry detail preservation. Random Walk uses true volumetric scattering inside the mesh, which means that it works best for closed meshes. Overlapping faces and holes in the mesh can cause problems.
+
+###### Random Walk (Skin)
+
+![Mode Random Walk (Skin)](/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk-skin.png)
+
+Like Random Walk, but the scattering radius is adjusted automatically to match color textures. Designed for skin shading. This method adds the IOR input.
+
+###### Random Walk (Legacy)
+
+The older Random Walk method, using the scattering radius as specified.
 
 #### Outputs
 
@@ -617,6 +825,12 @@ Color of the surface, or physically speaking, the probability that light is refr
 Data type: Float (factor).
 
 Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.
+
+##### IOR
+
+Data type: Float.
+
+Index of refraction (IOR) defining how much the ray changes direction. At 1.0 rays pass straight through; higher values give more refraction.
 
 ##### Normal
 
@@ -660,7 +874,9 @@ Data type: Color.
 
 Diffuse surface color. For conductor materials (metals) it should be black.
 
-##### Specular Color
+##### Specular
+
+Data type: Color.
 
 Amount of specular reflection. Specifies facing (along normal) reflectivity. Conductor materials (metals) can have colored specular reflection. Hint. To compute this value for a realistic material with a known index of refraction, you may use this special case of the Fresnel formula: specular=((ior-1)/(ior+1))2 For example: water: ior = 1.33, specular = 0.25 glass: ior = 1.5, specular = 0.5 diamond: ior = 2.417, specular = 2.15
 
@@ -688,23 +904,23 @@ Data type: Vector.
 
 Controls the normals of the base layers.
 
-##### Clear coat
+##### Clear Coat
 
 Data type: Float (factor).
 
 Extra white specular layer on top of others. This is useful for materials like car paint and the like.
 
-##### Clear coat Roughness
+##### Clear Coat Roughness
 
 Data type: Float (factor).
 
 Roughness of clear coat specular.
 
-##### Clear coat Normal
+##### Clear Coat Normal
 
 Data type: Vector.
 
-Controls the normals of the Clear coat layer.
+Controls the normals of the Clear Coat layer.
 
 #### Outputs
 
@@ -722,6 +938,52 @@ The Subsurface Scattering node is used to add simple subsurface multiple scatter
 
 How far the color scatters on average can be configured per RGB color channel. For example, for skin, red colors scatter further, which gives distinctive red-colored shadows, and a soft appearance.
 
+#### Inputs
+
+##### Color
+
+Data type: Color.
+
+Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
+
+##### Scale
+
+Data type: Float.
+
+Global scale factor for the scattering radius.
+
+##### Radius
+
+Data type: Vector.
+
+![Radius](/docs2/images/editors/shader-editor/header/add-menu-shader/radius.png)
+
+Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
+
+##### IOR
+
+Data type: Float (factor).
+
+Refraction value. Only with the Random Walk and Random Walk (Skin) methods.
+
+##### Roughness
+
+Data type: Float (factor).
+
+The roughness of the subsurface scattering. It controls how light reflects off the surface **before** and **after** it scatters inside. Only with the Random Walk method.
+
+##### Anisotropy
+
+Data type: Float (factor).
+
+The anisotropy level of the subsurface scattering. Anisotropy controls the preferred direction in which light scatters **inside** the material rather than spreading evenly in all directions. Only with the Random Walk and Random Walk (Skin) methods.
+
+##### Normal
+
+Data type: Vector.
+
+Normal used for shading; if nothing is connected the default shading normal is used.
+
 #### Properties
 
 ##### Method
@@ -732,58 +994,19 @@ Method for rendering subsurface scattering.
 
 ![Christensen-Burley](/docs2/images/editors/shader-editor/header/add-menu-shader/christensen-burley.png)
 
-##### Color
-
-Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
-
-###### Scale
-
-Global scale factor for the scattering radius.
-
-###### Radius
-
-![Radius](/docs2/images/editors/shader-editor/header/add-menu-shader/radius.png)
-
-Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-
-###### Normal
-
-Normal used for shading; if nothing is connected the default shading normal is used.
+An approximation to physically based volume scattering. It uses the Color, Scale, Radius and Normal inputs.
 
 ###### Random Walk
 
 ![Random Walk](/docs2/images/editors/shader-editor/header/add-menu-shader/random-walk.png)
 
-- **Color**: Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
-- **Scale**: Global scale factor for the scattering radius.
-- **Radius**: Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-
-##### IOR
-
-Refraction value.
-
-###### Roughness
-
-The roughness of the subsurface scattering. It controls how light reflects off the**surfacebefore** and **after** it scatters inside.
-
-###### Anisotropy
-
-The anisotropy level of the subsurface scattering. Anisotropy controls the the preferred direction in which light scatters**inside **the material rather than spreading evenly in all directions.
-
-##### Normal
-
-Normal used for shading; if nothing is connected the default shading normal is used.
+A volumetric approximation to physically based volume scattering, using the scattering radius as specified. It uses all inputs.
 
 ###### Random Walk (Skin)
 
 ![Random Walk (Skin)](/docs2/images/editors/shader-editor/header/add-menu-shader/random-walk-skin.png)
 
-- **Color**: Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
-- **Scale**: Global scale factor for the scattering radius.
-- **Radius**: Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.
-
-- **IOR**: Refraction value. · **Anisotropy**: The anisotropy level of the subsurface scattering. Anisotropy controls the the preferred direction in which light scatters**inside**the material rather than spreading evenly in all directions.
-- **Normal**: Normal used for shading; if nothing is connected the default shading normal is used.
+Like Random Walk, but the scattering radius is adjusted automatically to match color textures. Designed for skin shading. It has no Roughness input.
 
 #### Outputs
 
@@ -801,11 +1024,25 @@ The Translucent BSDF is used to add Lambertian diffuse transmission.
 
 #### Inputs
 
-**Color**: Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength. · **Normal**: Normal used for shading; if nothing is connected the default shading normal is used.
+##### Color
+
+Data type: Color.
+
+Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength.
+
+##### Normal
+
+Data type: Vector.
+
+Normal used for shading; if nothing is connected the default shading normal is used.
 
 #### Outputs
 
-**BSDF output**: Standard shader output.
+##### BSDF
+
+Data type: Shader.
+
+Standard shader output.
 
 ### Transparent BSDF
 
@@ -815,11 +1052,19 @@ The Transparent BSDF is used to add transparency without refraction, passing str
 
 #### Inputs
 
-**Color**: Color of the surface, or physically speaking, the probability for each wavelength that light is blocked or passes straight through the surface.
+##### Color
+
+Data type: Color.
+
+Color of the surface, or physically speaking, the probability for each wavelength that light is blocked or passes straight through the surface.
 
 #### Outputs
 
-**BSDF**: Standard shader output.
+##### BSDF
+
+Data type: Shader.
+
+Standard shader output.
 
 ### Principled Volume
 
@@ -917,17 +1162,75 @@ The Volume Absorption node allows light to be absorbed as it passes through the 
 
 #### Inputs
 
-**Color**: Color of the volume. · **Density**: The density of the absorption effect.
+##### Color
+
+Data type: Color.
+
+Color of the volume.
+
+##### Density
+
+Data type: Float.
+
+The density of the absorption effect.
 
 #### Outputs
 
-**Volume**: The Volume Shader.
+##### Volume
+
+Data type: Shader.
+
+The Volume Shader.
 
 ### Volume Scatter
 
 ![Volume Scatter](/docs2/images/editors/shader-editor/header/add-menu-shader/volume-scatter.png)
 
 The Volume Scatter node allows light to be scattered as it passes through the volume. Typical usage would be to add fog to a scene. It can also be used with the Volume Absorption node to create smoke.
+
+#### Inputs
+
+##### Color
+
+Data type: Color.
+
+Color of the volume.
+
+##### Density
+
+Data type: Float.
+
+The density of the scatter effect.
+
+##### Anisotropy
+
+Data type: Float (factor).
+
+Controls the look of the scatter effect depending on the direction of the light passing through it. Zero scatters evenly, negative values scatter backward, positive values scatter forward. Only with the Henyey-Greenstein and Draine phases.
+
+##### IOR
+
+Data type: Float (factor).
+
+The index of refraction of the scattering particles. Only with the Fournier-Forand phase.
+
+##### Backscatter
+
+Data type: Float (factor).
+
+Fraction of light that is scattered backwards. Only with the Fournier-Forand phase.
+
+##### Alpha
+
+Data type: Float.
+
+A shape parameter of the Draine phase function. Only with the Draine phase.
+
+##### Diameter
+
+Data type: Float.
+
+Diameter of the water droplets in micrometers. Only with the Mie phase.
 
 #### Properties
 
@@ -937,58 +1240,37 @@ The Volume Scatter node allows light to be scattered as it passes through the vo
 
 Phase function for the scattered light.
 
-Henyey-Greenstein: Common for biological tissues and fog.
-
-Fournier-Forand: Suitable for underwater scattering.
-
-Draine: Models interstellar dust.
-
-Rayleigh: For small particles like atmospheric haze.
-
-Mie: For large particles like clouds or mist.
-
 ###### Henyey-Greenstein
 
 ![Henyey-Greenstein](/docs2/images/editors/shader-editor/header/add-menu-shader/henyey-greenstein.png)
 
-- **Color**: Color of the volume.
-- **Density**: The density of the scatter effect.
-- **Anisotropy**: Controls the look of the scatter effect depending on the direction of the light passing through it.
+Common for biological tissues and fog. Uses the Anisotropy input.
 
 ###### Fournier-Forand
 
 ![Fournier-Forand](/docs2/images/editors/shader-editor/header/add-menu-shader/fournier-forand.png)
 
-- **Color**: Color of the volume.
-- **Density**: The density of the scatter effect.
-- **IOR**: The refraction of the scatterning particles
-- **Backscatter**: Fraction of light that is scattered backwards.
+Suitable for underwater scattering. Uses the IOR and Backscatter inputs.
 
 ###### Draine
 
 ![Draine](/docs2/images/editors/shader-editor/header/add-menu-shader/draine.png)
 
-- **Color**: Color of the volume.
-- **Density**: The density of the scatter effect.
-- **Anisotropy**: Controls the look of the scatter effect depending on the direction of the light passing through it.
-- **Alpha**: Fraction of light that is scattered backwards.
+Models interstellar dust. Uses the Anisotropy and Alpha inputs.
 
 ###### Rayleigh
 
 ![Rayleigh](/docs2/images/editors/shader-editor/header/add-menu-shader/rayleigh.png)
 
-- **Color**: Color of the volume.
-- **Density**: The density of the scatter effect.
+For small particles like atmospheric haze. Uses only Color and Density.
 
 ###### Mie
 
 ![Mie](/docs2/images/editors/shader-editor/header/add-menu-shader/mie.png)
 
-- **Color**: Color of the volume.
-- **Density**: The density of the scatter effect.
-- **Diameter**: Diameter of the water droplets in micrometers.
+For large particles like clouds or mist. Uses the Diameter input.
 
-#### Output
+#### Outputs
 
 ##### Volume
 
@@ -1004,77 +1286,101 @@ The Volume Coefficients node models how light interacts with volumetric material
 
 #### Inputs
 
-##### Absorbtion subpanel
+##### Absorption
 
 ###### Coefficients
 
+Data type: Vector.
+
 A vector input representing the probability per unit distance that light is absorbed in each color channel (R, G, B) of a vector.
 
-> **Note:** Higher values result in* *darker, denser volumes**.
+> **Note:** Higher values result in **darker, denser volumes**.
 
-##### Scatter subpanel
+##### Scatter
 
-The density of the scatter effect.
+The Phase setting at the top of this panel is described under Properties.
 
-###### Phase
+###### Coefficients
 
-Dropdown to select the scattering phase function.
+Data type: Vector.
 
-Henyey-Greenstein: Common for biological tissues and fog.
+A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
 
-Fournier-Forand: Suitable for underwater scattering.
+###### Anisotropy
 
-Draine: Models interstellar dust.
+Data type: Float (factor).
 
-Rayleigh: For small particles like atmospheric haze.
+Controls the directionality of scattering. Zero scatters evenly, negative values scatter backward, positive values scatter forward. Only with the Henyey-Greenstein and Draine phases.
 
-Mie: For large particles like clouds or mist.
+###### IOR
+
+Data type: Float (factor).
+
+The index of refraction of the scattering particles. Only with the Fournier-Forand phase.
+
+###### Backscatter
+
+Data type: Float (factor).
+
+Fraction of light that is scattered backwards. Only with the Fournier-Forand phase.
+
+###### Alpha
+
+Data type: Float.
+
+A shape parameter of the Draine phase function. Only with the Draine phase.
+
+###### Diameter
+
+Data type: Float.
+
+Diameter of the water droplets in micrometers. Only with the Mie phase.
+
+##### Emission
+
+###### Coefficients
+
+Data type: Vector.
+
+The light that is added per unit distance in each color channel. Simulates glowing volumes like fire or plasma.
+
+#### Properties
+
+##### Phase
+
+In the Scatter panel. Dropdown to select the scattering phase function.
 
 ###### Henyey-Greenstein
 
 ![Henyey-Greenstein](/docs2/images/editors/shader-editor/header/add-menu-shader/henyey-greenstein-2.png)
 
-- **Coefficients**: A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
-- **Anisotropy**: A float value controlling the directionality of scattering.
+Common for biological tissues and fog. Uses the Anisotropy input.
 
 ###### Fournier-Forand
 
 ![Fournier-Forand](/docs2/images/editors/shader-editor/header/add-menu-shader/fournier-forand-2.png)
 
-- **Coefficients**: A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
-- **IOR**: The refraction of the scatterning particles
-- **Backscatter**: Fraction of light that is scattered backwards.
+Suitable for underwater scattering. Uses the IOR and Backscatter inputs.
 
 ###### Draine
 
 ![Draine](/docs2/images/editors/shader-editor/header/add-menu-shader/draine-2.png)
 
-- **Coefficients**: A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
-- **Density**: The density of the scatter effect.
-- **Anisotropy**: Controls the look of the scatter effect depending on the direction of the light passing through it.
+Models interstellar dust. Uses the Anisotropy and Alpha inputs.
 
-###### Raileigh
+###### Rayleigh
 
 ![Raileigh](/docs2/images/editors/shader-editor/header/add-menu-shader/raileigh.png)
 
-###### Coefficients
-
-A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
+For small particles like atmospheric haze. Uses only the Coefficients inputs.
 
 ###### Mie
 
 ![Mie](/docs2/images/editors/shader-editor/header/add-menu-shader/mie-2.png)
 
-- **Coefficients**: A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.
-- **Diameter**: Diameter of the water droplets in micrometers.
+For large particles like clouds or mist. Uses the Diameter input.
 
-##### Emission subpanel
-
-###### Coefficients
-
-Controls the look of the scatter effect depending on the direction of the light passing through it. Simulates glowing volumes like fire or plasma.
-
-#### Output
+#### Outputs
 
 ##### Volume
 
@@ -1108,9 +1414,17 @@ Data type: Float (angle).
 
 Controls the way the light is rotated (angular shift) for the reflection/transmission.
 
-##### Roughness U/V
+##### RoughnessU
 
-Controls the roughness in the direction light is skewed, and perpendicular to it.
+Data type: Float (factor).
+
+Controls the roughness in the direction the light is skewed.
+
+##### RoughnessV
+
+Data type: Float (factor).
+
+Controls the roughness perpendicular to the direction the light is skewed.
 
 ##### Tangent
 
@@ -1148,15 +1462,119 @@ Cycles Only
 
 The Principled Hair BSDF is a physically-based, easy-to-use shader for rendering hair and fur.
 
+#### Inputs
+
+Which inputs are shown depends on the Scattering Model and Color Parametrization settings.
+
+##### Color
+
+Data type: Color.
+
+The RGB color of the strand. The shader converts the color to the matching absorption coefficient. Only with the Direct Coloring parametrization.
+
+##### Melanin
+
+Data type: Float (factor).
+
+Absolute quantity of pigment. Range `[0,1]` equivalent to `[0%,100%]`. Hint. This is a linear mapping to the underlying exponential function: melanin_qty=-ln(max(1.0-Melanin,0.0001)). Only with the Melanin Concentration parametrization.
+
+##### Melanin Redness
+
+Data type: Float (factor).
+
+Ratio of pheomelanin to eumelanin. Range `[0,1]` equivalent to `[0%,100%]`. Low values give a brown to black color, high values a yellow to red color. Only with the Melanin Concentration parametrization.
+
+##### Tint
+
+Data type: Color.
+
+Color used for dyeing the hair after applying the melanin pigment. It is not subject to randomization. It can be disabled by setting the color to white. Only with the Melanin Concentration parametrization.
+
+##### Absorption Coefficient
+
+Data type: Vector.
+
+Specifies the light absorption per unit length as the light passes through the hair. A higher value leads to a darker color. Only with the Absorption Coefficient parametrization.
+
+##### Aspect Ratio
+
+Data type: Float (factor).
+
+For elliptical hair cross-section the aspect ratio is the ratio of the minor axis to the major axis. The major axis is aligned with the curve normal. Recommended values are 0.8 to 1 for Asian hair, 0.65 to 0.9 for Caucasian hair and 0.5 to 0.65 for African hair. Only with the Huang model.
+
+##### Roughness
+
+Data type: Float (factor).
+
+The hair roughness. A lower value leads to a metallic look.
+
+##### Radial Roughness
+
+Data type: Float (factor).
+
+Specify how much the glints are smoothed in the direction of the hair tangent. Too low values will concentrate the glint; while setting it too high will spread the light across the width of the strand. Only with the Chiang model.
+
+##### Coat
+
+Data type: Float (factor).
+
+Simulate a shiny coat by reducing the roughness to the given factor only for the first light bounce (diffuse). Range `[0, 1]` is equivalent to a reduction of `[0%, 100%]` of the original roughness. Only with the Chiang model.
+
+##### IOR
+
+Data type: Float.
+
+Index of refraction (IOR) defining how much the ray changes direction. At 1.0 rays pass straight through like in a transparent material; higher values give more refraction. Default value is 1.55, the IOR of keratin.
+
+##### Offset
+
+Data type: Float (angle).
+
+The tilt angle of the cuticle scales, the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4 degrees.
+
+##### Random Color
+
+Data type: Float (factor).
+
+For each strand, vary the melanin concentration by RandomFactor. Range `[0,1]` equivalent to `[0%,100%]` of the initial melanin concentration. Only with the Melanin Concentration parametrization.
+
+##### Random Roughness
+
+Data type: Float (factor).
+
+For each strand, vary both Roughness values by RandomFactor. Range `[0,1]` equivalent to `[0%,100%]` of the initial roughness values.
+
+##### Random
+
+Data type: Float.
+
+The random value for each strand, used by Random Color and Random Roughness. If nothing is connected, a random value is generated for each strand.
+
+##### Reflection
+
+Data type: Float (factor).
+
+Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness. Only with the Huang model.
+
+##### Transmission
+
+Data type: Float (factor).
+
+Optional factor for modulating the transmission component. It picks up the color of the pigment inside the hair. Keep it 1.0 for physical correctness. Only with the Huang model.
+
+##### Secondary Reflection
+
+Data type: Float (factor).
+
+Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness. Only with the Huang model.
+
 #### Properties
 
-##### Scattering Mode
-
-###### Chiang Model versus Huang Model
+##### Scattering Model
 
 ![Chiang Model versus Huang Model](/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-model-versus-huang-model.png)
 
-There are two scattering models available. Chiang and Huang. Chiang is the older model, with a less accurate result. Huang the newer model. The available options differs from model to model.
+There are two scattering models available. Chiang and Huang. Chiang is the older model, with a less accurate result. Huang the newer model. The available inputs differ from model to model.
 
 ![Chiang Model versus Huang Model](/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-model-versus-huang-model-2.png)
 
@@ -1166,181 +1584,17 @@ There are two scattering models available. Chiang and Huang. Chiang is the older
 
 The shader provides three different ways, or parametrizations, to color the hair strands. Direct coloring, Melanin concentration and Absorption coefficient. They have some different settings and inputs.
 
-#### Inputs
-
-##### Huang - Absorption coefficient
-
-![Huang - Absorption coefficient](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-absorption-coefficient.png)
-
-Specifies the attenuation coefficient sa, as applied by the Beer-Lambert law. This mode is intended mainly for technical users who want to use coefficients from the literature without any sort of conversion.
-
 ###### Absorption Coefficient
 
-Specifies the light absorption per unit length as the light passes through the value. A higher value leads to a darker color. The absorption coefficient is a vector 3.
-
-###### Aspect Ratio
-
-For elliptical hair cross-section the aspect ratio is the ratio of the minor axis to the major axis. The major axis is alighed with the curve normal. Recommended values are 0.8 to 1 for asian hair, 0.654 to 0.9 for caucasian hair and 0.5 to 0.65 for african hair. Set it to 1 for a circular cross section.
-
-###### Roughness
-
-The hair roughness. A lower value leads to a metallic look.
-
-###### IOR
-
-Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.
-
-###### Offset
-
-The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.
-
-###### Random Roughness
-
-Adds a random roughness to each strand.
-
-###### Random
-
-Add a random input value.
-
-###### Reflection
-
-Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Transmission
-
-Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Secondary Reflection
-
-Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.
-
-##### Huang - Melanin concentration
-
-![Huang - Melanin concentration](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-melanin-concentration.png)
-
-This mode defines the color as the quantity and ratio of the pigments which are commonly found in hair and fur, eumelanin (prevalent in brown-black hair) and pheomelanin (red hair). The quantity is specified in the Melanin input, and the ratio between them in Melanin Redness. Increasing concentrations darken the hair (the following are with Melanin Redness 1):
-
-White (Melanin 0), Blonde (Melanin 0.25), Reddish (Melanin 0.5), Brown (Melanin 0.75), Black (Melanin 1)
-
-Additionally, the Tint inputs allows to dye the hair with the desired color.
-
-###### Melanin
-
-Absolute quantity of pigment. Range `[0,1]` equivalent to `[0%,100%]`. Hint. This is a linear mapping to the underlying exponential function: melanin_qty=-ln(max(1.0-Melanin,0.0001))
-
-###### Melanin Redness
-
-Ratio of pheomelanin to eumelanin. Range `[0,1]` equivalent to `[0%,100%]`. Hint. The ratio formula is: `eumelanin=Melanin*(1.0-MelaninRedness)`, `pheomelanin=Melanin*MelaninRedness`. The resulting quantities are converted (after randomization, if specified) to absorption concentration via the following formula (section 6.1 of `[EFHLA11]`, adjusted for the range `[0,1])`: `sa=eumelanin*???0.5060.8411.653???+pheomelanin*???0.3430.7331.924???`
-
-###### Tint
-
-Color used for dyeing the hair after applying the melanin pigment. It is not subject to randomization. It can be disabled by setting the color to white. Hint. This is converted via the Color mapping above and added to the absorption coefficient of the melanin concentration.
-
-###### IOR
-
-Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.
-
-###### Offset
-
-The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.
-
-###### Random Color
-
-For each strand, vary the melanin concentration by RandomFactor. Range `[0,1]` equivalent to `[0%,100%]` of the initial melanin concentration. Hint. The melanin concentration is multiplied by randomFactor, where `randomFactor=1.0+2.0*(Random-0.5)*RandomColor`.
-
-###### Random Roughness
-
-Adds a random roughness to each strand.
-
-###### Reflection
-
-Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Transmission
-
-Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Secondary Reflection
-
-Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.
-
-##### Huang - Direct Coloring
-
-![Huang - Direct Coloring](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-direct-coloring.png)
-
-Choose the desired RGB color and the shader will approximate the necessary absorption coefficient (below).
-
-###### Aspect Ratio
-
-For elliptical hair cross-section the aspect ratio is the ratio of the minor axis to the major axis. The major axis is alighed with the curve normal. Recommended values are 0.8 to 1 for asian hair, 0.654 to 0.9 for caucasian hair and 0.5 to 0.65 for african hair. Set it to 1 for a circular cross section.
-
-###### Roughness
-
-The hair roughness. A lower value leads to a metallic look.
-
-###### IOR
-
-Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.
-
-###### Offset
-
-The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.
-
-###### Random Roughness
-
-Adds a random roughness to each strand.
-
-###### Reflection
-
-Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Transmission
-
-Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.
-
-###### Secondary Reflection
-
-Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.
-
-##### Chiang - Absorption coefficient
+![Huang - Absorption coefficient](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-absorption-coefficient.png)
 
 ![Chiang - Absorption coefficient](/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-absorption-coefficient.png)
 
 Specifies the attenuation coefficient sa, as applied by the Beer-Lambert law. This mode is intended mainly for technical users who want to use coefficients from the literature without any sort of conversion.
 
-###### Absorption Coefficient
+###### Melanin Concentration
 
-Specifies the light absorption per unit length as the light passes through the value. A higher value leads to a darker color. The absorption coefficient is a vector 3.
-
-###### Roughness
-
-The hair roughness. A lower value leads to a metallic look.
-
-###### Radial Roughness
-
-Specify how much the glints are smoothed in the direction of the hair tangent. Too low values will concentrate the glint; while setting it too high will spread the light across the width of the strand. Hint. Mathematically, this parameter is mapped to the logistic distribution’s scale factor s (section 4.1 of `[CBTB16])`.
-
-###### Coat
-
-Simulate a shiny coat by reducing the roughness to the given factor only for the first light bounce (diffuse). Range `[0`, `1]` is equivalent to a reduction of `[0%`, `100%]` of the original roughness.")
-
-###### IOR
-
-Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.
-
-###### Offset
-
-The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.
-
-###### Random Roughness
-
-Adds a random roughness to each strand.
-
-###### Random
-
-Add a random value.
-
-##### Chiang - Melanin concentration
+![Huang - Melanin concentration](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-melanin-concentration.png)
 
 ![Chiang - Melanin concentration](/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-melanin-concentration.png)
 
@@ -1348,81 +1602,15 @@ This mode defines the color as the quantity and ratio of the pigments which are 
 
 White (Melanin 0), Blonde (Melanin 0.25), Reddish (Melanin 0.5), Brown (Melanin 0.75), Black (Melanin 1)
 
-Additionally, the Tint inputs allows to dye the hair with the desired color.
+Additionally, the Tint input allows to dye the hair with the desired color.
 
-###### Melanin
+###### Direct Coloring
 
-Absolute quantity of pigment. Range `[0,1]` equivalent to `[0%,100%]`. Hint. This is a linear mapping to the underlying exponential function: melanin_qty=-ln(max(1.0-Melanin,0.0001))
-
-###### Melanin Redness
-
-Ratio of pheomelanin to eumelanin. Range `[0,1]` equivalent to `[0%,100%]`. Hint. The ratio formula is: `eumelanin=Melanin*(1.0-MelaninRedness)`, `pheomelanin=Melanin*MelaninRedness`. The resulting quantities are converted (after randomization, if specified) to absorption concentration via the following formula (section 6.1 of `[EFHLA11]`, adjusted for the range `[0,1])`: `sa=eumelanin*???0.5060.8411.653???+pheomelanin*???0.3430.7331.924???`
-
-###### Tint
-
-Color used for dyeing the hair after applying the melanin pigment. It is not subject to randomization. It can be disabled by setting the color to white. Hint. This is converted via the Color mapping above and added to the absorption coefficient of the melanin concentration.
-
-###### Roughness
-
-The hair roughness. A lower value leads to a metallic look.
-
-###### Radial Roughness
-
-Specify how much the glints are smoothed in the direction of the hair tangent. Too low values will concentrate the glint; while setting it too high will spread the light across the width of the strand. Hint. Mathematically, this parameter is mapped to the logistic distribution’s scale factor s (section 4.1 of `[CBTB16])`.
-
-###### Coat
-
-Simulate a shiny coat by reducing the roughness to the given factor only for the first light bounce (diffuse). Range `[0`, `1]` is equivalent to a reduction of `[0%`, `100%]` of the original roughness.")
-
-###### IOR
-
-Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.
-
-###### Offset
-
-The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.
-
-###### Random Color
-
-For each strand, vary the melanin concentration by RandomFactor. Range `[0,1]` equivalent to `[0%,100%]` of the initial melanin concentration. Hint. The melanin concentration is multiplied by randomFactor, where `randomFactor=1.0+2.0*(Random-0.5)*RandomColor`.
-
-###### Random Roughness
-
-Adds a random roughness to each strand.
-
-##### Chiang - Direct Coloring
+![Huang - Direct Coloring](/docs2/images/editors/shader-editor/header/add-menu-shader/huang-direct-coloring.png)
 
 ![Chiang - Direct Coloring](/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-direct-coloring.png)
 
-Choose the desired RGB color and the shader will approximate the necessary absorption coefficient (below).
-
-###### Color
-
-The RGB color of the strand. Only used in Direct coloring. Hint. The chosen color is converted to an absorption coefficient with the following formula (section 4.2 of `[CBTB16])`: sa=ln(Color)(5.969-0.215ßN+2.532ß2N-10.73ß3N+5.574ß4N+0.245ß5N)2 where ßN is the radial roughness of the hair after applying randomization (if specified).
-
-###### Roughness
-
-The hair roughness. A lower value leads to a metallic look.
-
-###### Radial Roughness
-
-Add an extra radial roughness.
-
-###### Coat
-
-Simulate a shiny coat of fur, by reducing the Roughness to the given factor only for the first light bounce (diffuse). Range `[0,1]` equivalent to a reduction of `[0%,100%]` of the original Roughness.
-
-###### IOR
-
-Index of refraction (IOR) defining how much the ray changes direction. At 1.0 rays pass straight through like in a transparent material; higher values give more refraction. Default value is 1.55.
-
-###### Offset
-
-Tilts the glint of the hair by increasing the angle of the scales of the hair’s cuticle with respect to the hair shaft. Human hair usually has low values.
-
-###### Random Roughness
-
-For each strand, vary both Roughness values by RandomFactor. Range `[0,1]` equivalent to `[0%,100%]` of the initial roughness values. Hint. The applied formula is the same one as for Random Color.
+Choose the desired RGB color and the shader will approximate the necessary absorption coefficient.
 
 #### Outputs
 
@@ -1448,9 +1636,11 @@ Data type: Color.
 
 Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 
-##### Sigma
+##### Roughness
 
-Variance of the normal distribution, controlling the sharpness of the peak. It can be thought of as a kind of roughness.
+Data type: Float (factor).
+
+Controls the sharpness of the sheen. It works like a roughness.
 
 ##### Normal
 
@@ -1544,8 +1734,22 @@ The Background shader node is used to add background light emission.
 
 #### Inputs
 
-**Color**: Color of the emitted light. · **Strength**: Strength of the emitted light.
+##### Color
+
+Data type: Color.
+
+Color of the emitted light.
+
+##### Strength
+
+Data type: Float.
+
+Strength of the emitted light.
 
 #### Outputs
 
-**Background**: Standard shader output.
+##### Background
+
+Data type: Shader.
+
+Standard shader output.

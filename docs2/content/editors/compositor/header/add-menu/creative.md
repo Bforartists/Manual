@@ -8,8 +8,8 @@ path:
   - "Header"
   - "Add Menu"
   - "Creative"
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 icon: node
 summary: "Creative nodes."
 order: 40
@@ -33,36 +33,65 @@ Kuwahara is a filter that converts a realistic image into a stylized image.
 
 ##### Image
 
+Data type: Color.
+
 Standard image input.
 
 ##### Size
 
+Data type: Float.
+
 The size of the kuwahara filter in pixels.
 
-#### Properties
+##### Type
 
-##### Kuwahara Filter
+Data type: Menu.
 
 ![Kuwahara Filter](/docs2/images/editors/compositor/header/add-menu-creative/kuwahara-filter.png)
 
-There are two Kuwahara variations available. Classic and Anisotropic.
+Chooses the Kuwahara variation. There are two: Classic and Anisotropic.
 
 ###### Classic
 
 ![Classic](/docs2/images/editors/compositor/header/add-menu-creative/classic.png)
 
-###### High Precision
+Fast but less accurate. Shows the High Precision input.
+
+###### Anisotropic
+
+Accurate but slower. Shows the Uniformity, Sharpness and Eccentricity inputs.
+
+##### Uniformity
+
+Data type: Integer.
+
+Controls the uniformity of the direction of the filter. Higher values give more uniform directions. Only visible when Type is Anisotropic.
+
+##### Sharpness
+
+Data type: Float (factor).
+
+Controls the sharpness of the filter. 0 is completely smooth, while 1 is completely sharp. Only visible when Type is Anisotropic.
+
+##### Eccentricity
+
+Data type: Float (factor).
+
+Controls how directional the filter is. 0 means the filter works the same in all directions. 2 means it follows the edges of the image as much as possible. Only visible when Type is Anisotropic.
+
+##### High Precision
+
+Data type: Boolean.
 
 ![High Precision](/docs2/images/editors/compositor/header/add-menu-creative/high-precision.png)
 
-Use high precision. Slower but more accurate.
-
-- **Anisotopic**: **Uniformity**: Controls the uniformity of the direction of the filter. · **Sharpness**: Controls the sharpness of the filter. 0 is completely smooth, while 1 is completely sharp.
-- **Eccentricity**: Controls how directional the filter is.
+Uses a more precise but slower method. Use it if the output shows unwanted noise. Only visible when Type is Classic.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 Standard image output.
 
@@ -74,11 +103,25 @@ Add this node in front of a Scale node to get a pixelated (non-smoothed) image f
 
 #### Inputs
 
-**Color**: Standard image input. · **Size**: The number of pixels that corresponds to the same output pixel.
+##### Color
+
+Data type: Color.
+
+Standard image input.
+
+##### Size
+
+Data type: Integer.
+
+The number of pixels that become one output pixel.
 
 #### Outputs
 
-**Color**: Image output.
+##### Color
+
+Data type: Color.
+
+Image output.
 
 ### Posterize
 
@@ -88,8 +131,22 @@ The Posterize node reduces the number of colors in the image to a palette. The e
 
 #### Inputs
 
-**Image**: The image to reduce the colors at. · **Steps**: The number of steps to perform a color reduction.
+##### Image
+
+Data type: Color.
+
+The image to reduce the colors of.
+
+##### Steps
+
+Data type: Float.
+
+The number of steps to perform a color reduction.
 
 #### Outputs
 
-**Image**: Standard image output.
+##### Image
+
+Data type: Color.
+
+Standard image output.

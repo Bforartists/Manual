@@ -237,12 +237,17 @@ Move the transformed strip to the nearest free space to resolve overlap.
 
 ![Ripple options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/ripple-options.png)
 
-The drop-down next to the Overlap Mode buttons holds the **Ripple** settings:
+The drop-down next to the Overlap Mode buttons holds the **Ripple** settings. They are grouped by what you do to the strips:
 
-- **All Channels** ripples the strips on the other channels too. When it is off, only strips on the same channels as the edited strips move.
-- **Markers** moves the markers along with the strips.
-- **Insert** splits the strips at the leftmost edited handle and pushes the rest aside. When it is off, strips only move as far as needed to resolve the overlap.
-- **Clear Ranges** deletes the strip contents inside the removed ranges on the rippled channels, so the later strips close the whole gap. When it is off, the later strips only move as far as they can.
+- **Edit**
+  - **All Channels** ripples the strips on the other channels too. When it is off, only strips on the same channels as the edited strips move.
+  - **Markers** moves the markers along with the strips.
+- **Add**
+  - **Insert** splits the strips at the leftmost edited handle and pushes the rest aside. When it is off, strips only move as far as needed to resolve the overlap.
+- **Remove**
+  - **Clear Ranges** deletes the strip contents inside the removed ranges on the rippled channels, so the later strips close the whole gap. When it is off, the later strips only move as far as they can. It works for both **Ripple Delete** and the Ripple Trim Start and Ripple Trim End operators.
+
+> **Note:** The Remove section was called Delete before. It was renamed because Clear Ranges now also applies when you ripple trim, not only when you ripple delete.
 
 ### Snap
 

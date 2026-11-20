@@ -169,9 +169,15 @@ What kind of data structure flows through this socket. Each choice has its own i
 
 ![Move Item Up/Down](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/move-item-up-down.png)
 
-Moves the active item to the specified direction. You can move the active item up or down the list.
+Moves the **selected items** one step up or down the list. Use it to put the sockets and panels of the group in the order you want them on the node.
 
-> **Note:** You can also alternatively drag and drop the active item to re-order.
+You can move several items at once: Shift click a second item to select the range between them, then press Move Up or Move Down. The items keep their order and move together.
+
+- A selected panel takes its sockets with it.
+- A socket that reaches a panel steps **into** the panel first, instead of jumping over it. Press again to keep moving it inside the panel.
+- When an item can't move any further, the selected items behind it stop there too, so they don't pass each other.
+
+> **Note:** You can also drag and drop the selected items to re-order them.
 
 ### Inputs
 
@@ -1036,6 +1042,14 @@ We won't explain the content of the panels again. The single nodes are explained
 ### Usage
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
+
+### Geometry > Operations
+
+![The Operations subpanel of the Geometry panel in the Add tab](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-geometry-operations.png)
+
+The nodes that change a whole geometry: Bake, Bounding Box, Convex Hull, Delete Geometry, Duplicate Elements, **Merge by Distance**, Merge Points, Sort Elements and Transform Geometry, then the nodes that split a geometry into parts. They are in the same order as in **Add > Geometry > Operations**.
+
+**Merge by Distance** merges points that are closer to each other than a distance, for example to weld the seams of mesh pieces. It used to be in Mesh > Operations. Like in the Add menu, it is in Geometry > Operations now. See [Merge by Distance](../header/add-menu/geometry.md) on the Geometry page of the Add menu.
 
 ## Add tab - Display Panel
 

@@ -57,11 +57,23 @@ Shader AOVs (Arbitrary Output Variables) provide custom render passes for arbitr
 
 #### Inputs
 
-**Color**: Output a color variable; as the name suggest can be used for a color but also a normal value. · **Value**: Output a single numerical value.
+##### Color
+
+Data type: Color.
+
+Output a color variable. As the name suggests, it can be used for a color, but also for a normal value.
+
+##### Value
+
+Data type: Float.
+
+Output a single numerical value.
 
 #### Properties
 
-**Name**: The name of the render pass to assign the input value to. This property is the same Name that is specified in the Shader AOV panel.
+##### Name
+
+The name of the render pass to assign the input value to. This property is the same Name that is specified in the Shader AOV panel.
 
 ### Material Output
 
@@ -147,9 +159,7 @@ Data type: Shader.
 
 Used to add volumetric effects to the world. See the shaders Volume Absorption and Volume Scatter for more information.
 
-##### Note
-
-It is not possible to have an HDR and volumetric due to the fact that HDR’s are assumed to be an infinite distance from the camera.
+> **Note:** It is not possible to have an HDR and volumetric due to the fact that HDR’s are assumed to be an infinite distance from the camera.
 
 #### Properties
 
@@ -167,11 +177,29 @@ Shader Type Line Style
 
 #### Inputs
 
-**Color**: The input color. · **Color factor**: The factor for the color. · **Alpha**: Alpha channel information. · **Alpha Factor**: The factor for the alpha channel.
+##### Color
 
-#### Properties
+Data type: Color.
 
-**Blending Mode**: Choose the Blending mode. · **Clamp**: Clamp the result to the range between 0 and 1.
+The input color.
+
+##### Color Fac
+
+Data type: Float (factor).
+
+The factor for the color.
+
+##### Alpha
+
+Data type: Float (factor).
+
+Alpha channel information.
+
+##### Alpha Fac
+
+Data type: Float (factor).
+
+The factor for the alpha channel.
 
 #### Properties
 
@@ -180,3 +208,7 @@ Shader Type Line Style
 ![Blending Mode](/docs2/images/editors/shader-editor/header/add-menu-output/blending-mode.png)
 
 The blending mode between grease pencil and background.
+
+##### Clamp
+
+Clamp the result to the range between 0 and 1.

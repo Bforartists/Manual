@@ -2727,7 +2727,9 @@ The setting that appears on activation and is valid for both, Cavity, and Cavity
 
 ##### Create Mask
 
-Creates a mask based on the curvature of the surface.
+![Create Mask button](/docs2/images/editors/3d-viewport/header/header-tools-and-options/create-mask.png)
+
+Creates a mask based on the curvature of the surface. The button has a mask icon. Use it to turn the cavity auto-masking into a real mask you can see and edit, for example to paint dirt only into the crevices.
 
 ##### Factor
 

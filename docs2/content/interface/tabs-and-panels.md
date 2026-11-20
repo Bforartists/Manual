@@ -7,7 +7,7 @@ path:
   - Components
   - Panels and tabs
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 3 Interface.odt
@@ -35,6 +35,10 @@ Normally the tabs just displays the panels of the current tab. But you can pin p
 Right click at the tab that you want to pin. A menu pops up. Check the Pin checkbox. The tab will now show a pin, and will display permanently.
 
 To unpin the panel simply click at the Pin icon.
+
+### Tearing off panels
+
+Shift+drag a panel header, or right-click it and choose **Tear Off Panel**, to take the panel out of its place. It then floats over the editor and stays open. See [Tear-Off Menus and Panels](tear-off-menus-and-panels.md).
 
 ### Open just one Panel at a time
 

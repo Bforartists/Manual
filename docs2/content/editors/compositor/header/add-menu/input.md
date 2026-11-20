@@ -8,7 +8,7 @@ path:
   - Header
   - Add Menu
   - Input
-version: 5.2.3
+version: "5.3"
 status: needs-review
 icon: node
 summary: "Input nodes: Constant, Scene."
@@ -41,13 +41,21 @@ The Blank Image node generates a solid image of a chosen size and color. It is u
 
 ##### Color
 
+Data type: Color.
+
 Defines the fill color of the image. Chosen through a swatch or color picker, supporting any RGB value. Determines the visual appearance of the generated blank image.
 
 ##### Size
 
+Data type: Integer Vector.
+
 Specifies the resolution of the image in pixels. Allows matching render dimensions or creating custom aspect ratios.
 
 #### Outputs
+
+##### Image
+
+Data type: Color.
 
 Produces a standard image that can be connected to other compositor nodes. This can be layered with Mix or Alpha Over, processed with filters, or used as a mask source.
 
@@ -65,27 +73,39 @@ The first three settings simulate the aperture of the camera.
 
 ##### Flaps
 
+Data type: Integer.
+
 Sets an integer number of blades for the cameras iris diaphragm.
 
 ##### Angle
 
+Data type: Float (angle).
+
 Gives these blades an angular offset relative to the image plane.
 
-##### Rounding
+##### Roundness
+
+Data type: Float (factor).
 
 Sets the curvature of the blades with (0 to 1) from straight to bringing them to a perfect circle.
 
-##### Catadioptric
+##### Catadioptric Size
+
+Data type: Float (factor).
 
 Provides a type of distortion found in mirror lenses and some telescopes. This can be useful to produce a visual complex bokeh.
 
 ##### Color Shift
+
+Data type: Float (factor).
 
 Introduces chromatic aberration into the blur such as would be caused by a tilt-shift lens.
 
 #### Outputs
 
 ##### Image
+
+Data type: Color.
 
 The generated bokeh image.
 
@@ -267,6 +287,20 @@ The color space for the image.
 
 The alpha channel mode.
 
+#### Outputs
+
+##### Image
+
+Data type: Color.
+
+The image.
+
+##### Alpha
+
+Data type: Float.
+
+The alpha channel of the image. A multilayer OpenEXR image gives one output for each of its layers and passes instead.
+
 ### Image Info
 
 ![Image Info](/docs2/images/editors/compositor/header/add-menu-input/image-info.png)
@@ -277,27 +311,45 @@ Returns informations about an image.
 
 ##### Image
 
+Data type: Color.
+
 The input image.
 
 #### Outputs
 
 ##### Dimensions
 
-The dimensions output value.
+Data type: Integer Vector.
 
-##### Resolutions
+The dimensions of the image in pixels, with transformations applied.
 
-The resolutions output value.
+##### Resolution
+
+Data type: Integer Vector.
+
+The original resolution of the image in pixels, before any transformations.
+
+##### Pixel Size
+
+Data type: Vector (2d).
+
+The size of a pixel relative to its original size, for a proxy or an anamorphic image. For example, a 50% proxy image has a pixel size of 0.5.
 
 ##### Location
+
+Data type: Vector (2d).
 
 The locations output value.
 
 ##### Rotation
 
+Data type: Float.
+
 The rotation output value.
 
 ##### Scale
+
+Data type: Vector (2d).
 
 The scale output value.
 
@@ -311,19 +363,27 @@ Returns the coordinates of the pixles of an image
 
 ##### Image
 
+Data type: Color.
+
 The input image.
 
 #### Outputs
 
 ##### Uniform
 
+Data type: Vector (2d).
+
 Zero centered coordinates normalizes along the larger dimension for uniform scaling.
 
 ##### Normalized
 
+Data type: Vector (2d).
+
 Normalized coordinates with half pixels offset.
 
 ##### Pixel
+
+Data type: Integer Vector.
 
 Integer pixel coordinates.
 
@@ -335,6 +395,54 @@ The Mask node can be used to select a Mask data. This node can be used with othe
 
 Masks can be created in the Image and Movie Clip editors, by changing the mode to Mask in the header. So you first need to create one in one of those editors.
 
+#### Inputs
+
+##### Size Source
+
+Data type: Menu.
+
+The source where the size of the mask comes from. Scene Size uses the render size of the scene. Fixed uses the Size X and Size Y inputs in pixels. Fixed/Scene uses the Size X and Size Y inputs, scaled by the render percentage of the scene.
+
+##### Size X
+
+Data type: Integer.
+
+The resolution of the mask in the X direction. Only visible when Size Source is Fixed or Fixed/Scene.
+
+##### Size Y
+
+Data type: Integer.
+
+The resolution of the mask in the Y direction. Only visible when Size Source is Fixed or Fixed/Scene.
+
+##### Feather
+
+Data type: Boolean.
+
+Use or ignore feather points defined for splines see Mask Feathers for more details.
+
+##### Motion Blur
+
+This panel holds the motion blur settings. It is closed by default.
+
+###### Motion Blur
+
+Data type: Boolean.
+
+For animated masks, creating a motion blurred mask from the surrounding frames, with a given number of samples (higher gives better quality), and a camera shutter time. This is the checkbox in the panel header.
+
+###### Samples
+
+Data type: Integer.
+
+The number of motion blur samples.
+
+###### Shutter
+
+Data type: Float (factor).
+
+Exposure for motion blur as a factor of frames per second.
+
 #### Properties
 
 ##### Masks
@@ -343,33 +451,13 @@ Masks can be created in the Image and Movie Clip editors, by changing the mode t
 
 The available mask data. If the label is left blank, the mask name will be set.
 
-###### Size X / Y
-
-The resolution of the mask
-
-###### Feather
-
-Use or ignore feather points defined for splines see Mask Feathers for more details.
-
-###### Motion Blur
-
-For animated masks, creating a motion blurred mask from the surrounding frames, with a given number of samples (higher gives better quality), and a camera shutter time in seconds.
-
-###### Samples
-
-The number of motion blur samples.
-
-###### Shutter
-
-Expose for motion blur as a factor of Frames per Seconds.
-
 #### Outputs
 
 ##### Mask
 
-The black-and-white output of the mask.
+Data type: Float.
 
-hier weiter
+The black-and-white output of the mask.
 
 ### Movie Clip
 
@@ -407,31 +495,41 @@ Load a new video.
 
 Delete this video.
 
-###### Outputs
+#### Outputs
 
-—
+##### Image
 
-###### Image
+Data type: Color.
 
 Outputs the entire image at the specified color space.
 
-###### Alpha
+##### Alpha
+
+Data type: Float.
 
 The alpha value taken from the movie or image.
 
-###### Offset X
+##### Offset X
+
+Data type: Float.
 
 The X offset value from the footage camera or tracking.
 
-###### Offset Y
+##### Offset Y
+
+Data type: Float.
 
 The Y offset value from the footage camera or tracking.
 
-###### Scale
+##### Scale
+
+Data type: Float.
 
 The scale of the image taken from the footage camera or tracking.
 
-###### Angle
+##### Angle
+
+Data type: Float.
 
 The lens angle taken from the footage camera or tracking.
 
@@ -443,57 +541,97 @@ Reads where a strip of the Video Sequencer sits. This node only appears when the
 
 ##### Start Frame
 
+Data type: Integer.
+
 The first frame of the strip.
 
 ##### End Frame
+
+Data type: Integer.
 
 The last frame of the strip.
 
 ##### Location
 
+Data type: Vector (2d).
+
 The strip's position in the frame.
 
 ##### Rotation
+
+Data type: Float.
 
 The strip's rotation.
 
 ##### Scale
 
+Data type: Vector (2d).
+
 The strip's scale.
 
-### String to Image
+### String To Image
 
 ![String to Image](/docs2/images/editors/compositor/header/add-menu-input/string-to-image.png)
 
 Converts a text string into an image buffer directly inside the compositor. Useful for overlaying text, generating procedural titles, or integrating dynamic labels into compositing workflows without external text objects.
 
-#### Properties
+#### Inputs
 
 ##### String
+
+Data type: String.
 
 Input field for the text content. Accepts plain text or dynamic string inputs. Can be used for captions, labels, or procedural text overlays.
 
 ##### Font
 
-Dropdown or file selector for choosing the font datablock. Supports internal packed fonts and external font files. Ensures consistent typography across compositing setups.
+Data type: Font.
+
+The font to use. Supports internal packed fonts and external font files. Ensures consistent typography across compositing setups.
 
 ##### Size
 
-Defines the pixel size of the rendered text. Larger values = bigger text. Scales proportionally with resolution.
+Data type: Float.
+
+The height of each line of text in pixels. Larger values give bigger text.
 
 ##### Alignment
 
-Horizontal: **Left, Center, Right**. Vertical: **Top, Middle, Bottom**. Controls text placement within the image buffer.
+This panel holds the alignment settings. It is closed by default.
+
+###### Horizontal Alignment
+
+Data type: Menu.
+
+The horizontal placement of the text: Left, Center or Right.
+
+###### Vertical Alignment
+
+Data type: Menu.
+
+The vertical placement of the text: Top, Top Baseline, Middle, Bottom Baseline or Bottom.
 
 ##### Wrap
 
-Checkbox to enable word wrapping. When enabled, text flows into multiple lines based on width. Useful for paragraphs or captions.
+This panel holds the word wrap settings. It is closed by default.
 
-##### Width
+###### Wrap
 
-Defines the maximum width (in pixels) for text wrapping. Only active when **Wrap** is enabled. Controls line breaks and text block layout.
+Data type: Boolean.
 
-#### Output
+Enable word wrapping. When enabled, text flows into multiple lines based on the width. Useful for paragraphs or captions. This is the checkbox in the panel header.
+
+###### Width
+
+Data type: Integer.
+
+The maximum width of each line in pixels. Longer lines are wrapped into new lines. Only used when **Wrap** is enabled.
+
+#### Outputs
+
+##### Image
+
+Data type: Float.
 
 Produces an **Image output** containing the rendered text as a float black and white image at the dimensions of the text.
 
@@ -523,6 +661,8 @@ The boolean toggle.
 
 ##### Boolean
 
+Data type: Boolean.
+
 The state of the toggle.
 
 ### Color
@@ -537,7 +677,9 @@ The RGB node uses the color picker widget.
 
 #### Outputs
 
-##### Color / RGBA
+##### Color
+
+Data type: Color.
 
 A single RGBA color value.
 
@@ -557,6 +699,8 @@ The font to use. Pick one from the font browser.
 
 ##### Font
 
+Data type: Font.
+
 The chosen font.
 
 ### Integer
@@ -574,6 +718,8 @@ The value.
 #### Outputs
 
 ##### Integer
+
+Data type: Integer.
 
 The output value.
 
@@ -597,6 +743,8 @@ The values of the vector.
 
 ##### Vector
 
+Data type: Integer Vector.
+
 The integer vector.
 
 ### Menu
@@ -614,6 +762,8 @@ The list of choices and the one that is picked.
 #### Outputs
 
 ##### Menu
+
+Data type: Menu.
 
 The picked choice.
 
@@ -633,6 +783,8 @@ Here you can adjust the directory of the light to see how the normals behaves.
 
 ##### Normal
 
+Data type: Vector (direction).
+
 The output value.
 
 ### Object
@@ -650,6 +802,8 @@ The object to provide. Pick one from the list.
 #### Outputs
 
 ##### Object
+
+Data type: Object.
 
 The chosen object.
 
@@ -669,6 +823,8 @@ The angles around X, Y and Z.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation.
 
 ### String
@@ -686,6 +842,8 @@ The text.
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The text you typed.
 
@@ -705,6 +863,8 @@ The float value.
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Vector
@@ -722,6 +882,8 @@ The single values of the vector 3.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The output vector.
 
@@ -741,6 +903,8 @@ Gives you the camera the scene is currently using. Use it with Camera Info to re
 
 ##### Active Camera
 
+Data type: Object.
+
 The scene's active camera, as an object.
 
 ### Bone Info
@@ -753,9 +917,13 @@ Reads the position of a bone of an armature. Use it to let a bone drive somethin
 
 ##### Armature
 
+Data type: Object.
+
 The armature object that holds the bone.
 
 ##### Bone Name
+
+Data type: String.
 
 The name of the bone to read.
 
@@ -769,27 +937,61 @@ The name of the bone to read.
 
 ##### Pose
 
+Data type: Matrix.
+
 The bone's pose, as a matrix.
 
 ##### Local Pose
+
+Data type: Matrix.
 
 The pose relative to the parent bone.
 
 ##### Transform Pose
 
+Data type: Matrix.
+
 The pose with the bone's own transform removed.
 
 ##### Rest Pose
+
+Data type: Matrix.
 
 The bone in its rest position.
 
 ##### Rest Length
 
+Data type: Float.
+
 The length of the bone at rest.
 
 ##### Exists
 
+Data type: Boolean.
+
 On when a bone with that name exists.
+
+##### Envelope
+
+This panel holds the envelope outputs. It is closed by default.
+
+###### Envelope Distance
+
+Data type: Float.
+
+The original envelope distance of the bone.
+
+###### Radius Head
+
+Data type: Float.
+
+The original radius of the head of the bone.
+
+###### Radius Tail
+
+Data type: Float.
+
+The original radius of the tail of the bone.
 
 ### Camera Info
 
@@ -801,43 +1003,63 @@ Reads the settings of a camera: its lens, sensor, clipping and projection. Use i
 
 ##### Camera
 
+Data type: Object.
+
 The camera object to read.
 
 #### Outputs
 
 ##### Projection Matrix
 
+Data type: Matrix.
+
 The matrix that turns a point of the scene into a position in the camera's picture.
 
 ##### Focal Length
+
+Data type: Float.
 
 The lens length in millimetres.
 
 ##### Sensor
 
+Data type: Vector (2d).
+
 The width and height of the sensor.
 
 ##### Shift
+
+Data type: Vector (2d).
 
 The lens shift in X and Y.
 
 ##### Clip Start
 
+Data type: Float.
+
 The nearest distance the camera sees.
 
 ##### Clip End
+
+Data type: Float.
 
 The farthest distance the camera sees.
 
 ##### Focus Distance
 
+Data type: Float.
+
 The distance that is in focus.
 
 ##### Is Orthographic
 
+Data type: Boolean.
+
 On for an orthographic camera.
 
 ##### Orthographic Scale
+
+Data type: Float.
 
 The size of the view of an orthographic camera.
 
@@ -851,6 +1073,8 @@ The Is Viewport node tells you whether the compositor is running in the 3D View 
 
 ##### Is Viewport
 
+Data type: Boolean.
+
 On (true) when the node tree is evaluated by the viewport compositor, off (false) in the node editor and in a final render.
 
 ### Object Info
@@ -863,11 +1087,9 @@ Reads where an object is, how it is turned and how big it is. Use it to let an o
 
 ##### Object
 
+Data type: Object.
+
 The object to read.
-
-##### As Instance
-
-Passes the geometry as an instance instead of a copy.
 
 #### Properties
 
@@ -879,23 +1101,27 @@ Passes the geometry as an instance instead of a copy.
 
 ##### Transform
 
+Data type: Matrix.
+
 The object's transform, as a matrix.
 
 ##### Location
+
+Data type: Vector.
 
 The location.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation. Use Rotate Vector or Rotation to Euler to work with it.
 
 ##### Scale
 
+Data type: Vector.
+
 The size along each axis.
-
-##### Geometry
-
-The object's geometry.
 
 ### Render Layers
 
@@ -927,13 +1153,19 @@ The render button allows you to re-render the active scene with one click.
 
 ##### Image
 
+Data type: Color.
+
 The rendered image.
 
 ##### Alpha
 
+Data type: Float.
+
 The Alpha channel.
 
 ##### Render passes sockets
+
+Data type: follows the render pass (Color, Float or Vector).
 
 ![Render passes sockets](/docs2/images/editors/compositor/header/add-menu-input-scene/render-passes-sockets.png)
 
@@ -941,7 +1173,9 @@ Depending on the Render passes that are enabled, other sockets are available. Se
 
 ##### Depth
 
-By default the Z depth pass is enabled.
+Data type: Float.
+
+The Z depth pass. By default this pass is enabled.
 
 ### Scene Time
 
@@ -953,9 +1187,13 @@ Gives you the time of the scene: the current frame and the time in seconds. Use 
 
 ##### Seconds
 
+Data type: Float.
+
 The scene time in seconds.
 
 ##### Frame
+
+Data type: Float.
 
 The current frame, as a decimal number.
 
@@ -964,6 +1202,20 @@ The current frame, as a decimal number.
 ![Time Curve](/docs2/images/editors/compositor/header/add-menu-input-scene/time-curve.png)
 
 The Time node generates a factor value that changes according to the curve as time progresses through the Timeline. The range goes from 0.0 to 1.0. The default is a linear line from 0.0 to 1.0. But the curve can be adjusted.
+
+#### Inputs
+
+##### Start Frame
+
+Data type: Integer.
+
+The first frame of the range of time that the output lasts. This range becomes the X axis of the graph. To reverse the time, set a start frame greater than the end frame.
+
+##### End Frame
+
+Data type: Integer.
+
+The last frame of the range of time that the output lasts.
 
 #### Properties
 
@@ -1045,13 +1297,11 @@ The X and Y value for the currently selected curve point.
 
 Deletes selected curve points.
 
-###### Start Frame/ End Frame
-
-Start frame and End frame of the range of time specifying the values the output should last. This range becomes the X axis of the graph. The time input could be reversed by specifying a start frame greater than the end frame.
-
 #### Outputs
 
 ##### Factor
+
+Data type: Float.
 
 A speed of time factor (from 0.00 to 1.00) relative to the frame rate defined in the Render Dimensions Panel. The factor changes according to the defined curve.
 

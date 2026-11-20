@@ -1,0 +1,15 @@
+name = "bfa-purge-on-publish"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# Secrets and settings are set by .github/workflows/docs2-deploy-purge-on-publish.yml:
+#   CF_PURGE_TOKEN  (secret)  Cloudflare API token with only "Zone · Cache Purge · Purge" on bforartists.co
+#   CF_ZONE_CO      (var)     the Zone ID of bforartists.co
+
+# At most 3 clears per minute, whoever calls. Keeps a stray or fake call from emptying the cache over and over.
+[[unsafe.bindings]]
+name = "LIMIT"
+type = "ratelimit"
+namespace_id = "1002"
+simple = { limit = 3, period = 60 }

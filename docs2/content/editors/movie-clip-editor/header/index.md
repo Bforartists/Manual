@@ -1510,7 +1510,11 @@ Creates an Empty which will be copying movement of active track.
 
 # Tracking Mode › Graph Submode › Graph Menu
 
-## Track Menu
+## Graph Menu
+
+![Graph Menu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/graph-menu.png)
+
+The Graph menu shows in Tracking mode when the view is set to **Graph**. It edits the motion curves of the tracks: delete curves and knots, clear track paths, disable markers, and move, rotate or scale the selected knots.
 
 ### Delete Curve
 
@@ -1534,23 +1538,23 @@ Clears the track path after the current position.
 
 Clears the track path up to the current position.
 
-#### Clear Track Path All
+### Clear Track Path All
 
 Clears the complete track path.
 
-#### Disable Markers
+### Disable Markers
 
 Disables the selected curve points.
 
-#### Move
+### Move
 
 Moves the selected curve points.
 
-#### Rotate
+### Rotate
 
 Rotates the selected curve points.
 
-#### Resize
+### Resize
 
 Scales the selected curve points.
 
