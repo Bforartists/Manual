@@ -103,6 +103,10 @@ List of available input and output sockets.
 
 The list of input and output sockets.
 
+Click an item to select it.
+
+> **Tip:** **Ctrl+click** adds an item to the selection (**Cmd+click** on macOS). **Shift+click** selects all items between the active item and the clicked one.
+
 #### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/name-2.png)

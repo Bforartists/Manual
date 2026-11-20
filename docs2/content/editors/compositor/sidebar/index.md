@@ -810,6 +810,10 @@ List of available input and output sockets.
 
 The list of input and output sockets.
 
+Click an item to select it.
+
+> **Tip:** **Ctrl+click** adds an item to the selection (**Cmd+click** on macOS). **Shift+click** selects all items between the active item and the clicked one.
+
 ##### Socket Name
 
 Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.
