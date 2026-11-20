@@ -711,6 +711,8 @@ To use, make sure you have a boolean attribute assigned and selected in the Prop
 
 ## Transfer Mode
 
+![Transfer Mode in the Mesh - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-edit-mode.png)
+
 Switches to another object and keeps the current mode. Use it to jump from object to object, for example to edit the next mesh, without going back to Object Mode first. Choose **Transfer Mode** in the menu, then click the object you want to switch to. The object you leave returns to Object Mode.
 
 There is also a hotkey. Hold the mouse over the object and press `Z`. It works in every mode except Object Mode, and it switches directly, without the menu. In Sculpt Mode `D` works as well. For Sculpt Mode see also [Transfer Sculpt Mode](../../mesh/sculpt/header.md#transfer-sculpt-mode).
@@ -818,6 +820,8 @@ Paint Mask mode. Deselect linked faces. Mouse only tool.
 
 ## Transfer Mode
 
+![Transfer Mode in the Mesh - Vertex and Weight Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-vertex-and-weight-paint-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 ## More/Less Sub-menu
@@ -922,6 +926,8 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 
 ## Transfer Mode
+
+![Transfer Mode in the Mesh - Texture Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-texture-paint-mode.png)
 
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
@@ -1083,6 +1089,8 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 
 ## Transfer Mode
 
+![Transfer Mode in the Curve Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-curve-object-edit-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Surface Object - Edit Mode
@@ -1207,6 +1215,8 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 
 ## Transfer Mode
 
+![Transfer Mode in the Surface Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-surface-object-edit-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Metaball Object - Edit Mode
@@ -1291,6 +1301,8 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 
 ## Transfer Mode
 
+![Transfer Mode in the Metaball Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-metaball-object-edit-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Text Object - Edit Mode
@@ -1342,6 +1354,8 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 
 
 ## Transfer Mode
+
+![Transfer Mode in the Point Cloud Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-point-cloud-object-edit-mode.png)
 
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
@@ -1542,6 +1556,8 @@ The last operator Select Ends is valid for both, the first and last operator.
 
 ## Transfer Mode
 
+![Transfer Mode in the Grease Pencil Object - Edit Mode, Vertex Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-grease-pencil-object-edit-mode-vertex-paint-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 ## More / Less – Sub Menu
@@ -1706,6 +1722,8 @@ Extend Child requires to have a parent or child relationship. It selects the chi
 
 ## Transfer Mode
 
+![Transfer Mode in the Armature Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-armature-object-edit-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Armature Object - Pose Mode
@@ -1820,6 +1838,8 @@ Change the settings of **Flip Active/Selected Bone** right after you use it, in 
 
 ## Transfer Mode
 
+![Transfer Mode in the Armature Object - Pose Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-armature-object-pose-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Lattice Object - Edit Mode
@@ -1892,6 +1912,8 @@ Change the settings of **Select Ungrouped** right after you use it, in the Adjus
 Extends the current selection instead of deselecting everything first.
 
 ## Transfer Mode
+
+![Transfer Mode in the Lattice Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-lattice-object-edit-mode.png)
 
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
@@ -1966,6 +1988,8 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 
 ## Transfer Mode
 
+![Transfer Mode in the Particles - Particle Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-particles-particle-mode.png)
+
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 ## More / Less sub menu
@@ -2017,6 +2041,8 @@ Select linked control points.
 **More**: Extends the current selection. · **Less**: Reduces the current selection.
 
 ## Transfer Mode
+
+![Transfer Mode in the Hair Curve – Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-hair-curve-edit-mode.png)
 
 Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
