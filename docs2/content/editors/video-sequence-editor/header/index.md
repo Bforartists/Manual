@@ -1011,6 +1011,10 @@ Flip the selection.
 
 Drag a rectangle to select strips. Hold Shift to remove strips from the selection.
 
+### All by Type submenu
+
+Selects every strip of one kind, for example all Sound strips or all Text strips.
+
 ### Grouped
 
 ![Grouped](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
@@ -1025,13 +1029,13 @@ These operators are used to select characters, words, lines and blocks of text.
 
 You can also select all and deselect all.
 
-> **Note:** These are only shown when a text strip is selected. And they are greyed out first.
+> **Note:** These entries are only in the menu while text editing is active. With a text strip selected but not edited, the Select menu shows only the normal entries (All, None, Invert, Box Select, All by Type, Grouped).
 
-You need to edit the text at least once in the sidebar.
+To start text editing, double-click the text strip in the Preview, or use Edit Text in the Text menu.
 
 ![Text Select](/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-2.png)
 
-AND you need to go in edit mode by a double click then.
+You can change the text itself in the Strip tab of the sidebar.
 
 ![Text Select](/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-3.png)
 
