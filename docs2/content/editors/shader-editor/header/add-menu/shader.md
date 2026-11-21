@@ -1626,6 +1626,12 @@ Standard shader output.
 
 The Sheen BSDF is used to add reflection to materials such as cloth. It is meant to be used together with other shaders (such as a Diffuse Shader) and is not particularly useful on its own. EEVEE and Cycles both render the sheen, as does the Sheen layer of the Principled BSDF.
 
+![A dark red ball: Diffuse BSDF only, then Diffuse plus Sheen BSDF in EEVEE and in Cycles](/docs2/images/editors/shader-editor/header/add-menu-shader/sheen-bsdf-example.png)
+
+The same dark red Diffuse BSDF, alone and then added to a light pink Sheen BSDF with an Add Shader node. The sheen shows as a soft, bright rim where the surface turns away from the camera, the way velvet catches the light. EEVEE and Cycles give almost the same result.
+
+> **Note:** In EEVEE the Sheen BSDF is not in the Add menu yet. Switch the render engine to Cycles to add the node, then switch back: the node keeps working in EEVEE. Or use the Sheen panel of the Principled BSDF.
+
 #### Inputs
 
 ##### Color
