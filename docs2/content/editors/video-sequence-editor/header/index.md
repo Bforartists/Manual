@@ -591,43 +591,23 @@ Zooms in or out until the video displays fitting in the viewport.
 
 Centers the selection and zooms to fit.
 
-### Proxy
-
-![Proxy](/docs2/images/editors/video-sequence-editor/header/view-menu/proxy.png)
-
-Proxy works just with movie or image strips. What it does is to create a smaller set of preview images. This speeds up the calculation while you are at editing the video. The final result uses the final images again then.
-
-#### Setup
-
-![Setup](/docs2/images/editors/video-sequence-editor/header/view-menu/setup.png)
-
-Calls a panel where you can choose the resolution of the proxy images. Clicking OK starts the creation process.
-
-#### Rebuild
-
-Recreates the proxy images
-
-#### Scene Render Size
-
-![Scene Render Size](/docs2/images/editors/video-sequence-editor/header/view-menu/scene-render-size.png)
-
-What render size the display should choose.
-
-##### Refresh All
+### Refresh All
 
 Refresh the sequence editor.
 
-##### Sequence render Image
+### Sequence Render Image
 
 Renders an image of the current frame.
 
-##### Sequence render Animation
+### Sequence Render Animation
 
 Renders the animation in the preview range.
 
-##### Toggle Sequencer/Preview
+### Toggle Sequencer/Preview
 
 Toggles the type of sequencer view between Sequencer or Preview.
+
+> **Note:** The View menu of the Preview has no Proxy submenu. Proxies are set up and rebuilt in the Proxy tab of the sidebar, and the proxy render size is in the sidebar of the Preview. See the [Sequencer Proxy Tab](../sidebar/index.md#sequencer--proxy-tab).
 
 ### Pie Menu
 
@@ -1015,6 +995,10 @@ Flip the selection.
 
 Drag a rectangle to select strips. Hold Shift to remove strips from the selection.
 
+### All by Type submenu
+
+Selects every strip of one kind, for example all Sound strips or all Text strips.
+
 ### Grouped
 
 ![Grouped](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
@@ -1029,13 +1013,13 @@ These operators are used to select characters, words, lines and blocks of text.
 
 You can also select all and deselect all.
 
-> **Note:** These are only shown when a text strip is selected. And they are greyed out first.
+> **Note:** These entries are only in the menu while text editing is active. With a text strip selected but not edited, the Select menu shows only the normal entries (All, None, Invert, Box Select, All by Type, Grouped).
 
-You need to edit the text at least once in the sidebar.
+To start text editing, double-click the text strip in the Preview, or use Edit Text in the Text menu.
 
 ![Text Select](/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-2.png)
 
-AND you need to go in edit mode by a double click then.
+You can change the text itself in the Strip tab of the sidebar.
 
 ![Text Select](/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-3.png)
 

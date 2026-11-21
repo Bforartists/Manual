@@ -303,20 +303,23 @@ Adjust the angle up to which a face counts as co planar.
 
 Same as with Linked. But works with what is under the mouse cursor.
 
+> **Tip:** Call it without the menu. Point at the island and press **L** to add it to the selection, or **Shift+L** to remove it. **Shift+double-click** selects only that island and clears the rest of the selection, the same way it selects a whole collection in Object Mode. **Shift+Ctrl+double-click** adds the island to the selection instead. The hotkeys work in vertex, edge and face select mode, and in several objects at once in Edit Mode.
+
 ## Linked Pick Deselect
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Adjust Last Operation - Select Linked
+### Adjust Last Operation - Select Linked Pick
 
-![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked.png)
+![Last Operator Select Linked Pick](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-pick.png)
 
-Change the settings of **Select Linked** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+Change the settings of **Select Linked Pick** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
 
 
 | Entry | What it does |
 | -------- | --------------------------------------------------------------------------- |
 | Deselect | Select or deselect. |
+| Extend | On: the island is added to the current selection. Off: the current selection is cleared first, so only the island is selected. |
 | Delimit | Add a limit to the selection. For example, just select up to the next seam. |
 
 
@@ -709,6 +712,14 @@ This operator selects elements based on the active boolean attribute. Useful for
 
 To use, make sure you have a boolean attribute assigned and selected in the Properties Editor - Mesh Data – Attributes tab.
 
+## Transfer Mode
+
+![Transfer Mode in the Mesh - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-edit-mode.png)
+
+Switches to another object and keeps the current mode. Use it to jump from object to object, for example to edit the next mesh, without going back to Object Mode first. Choose **Transfer Mode** in the menu, then click the object you want to switch to. The object you leave returns to Object Mode.
+
+There is also a hotkey. Hold the mouse over the object and press `Z`. It works in every mode except Object Mode, and it switches directly, without the menu. In Sculpt Mode `D` works as well. For Sculpt Mode see also [Transfer Sculpt Mode](../../mesh/sculpt/header.md#transfer-sculpt-mode).
+
 ## More / Less
 
 ![More / Less](/docs2/images/editors/3d-viewport/header/select-menu/more-less-2.png)
@@ -810,6 +821,12 @@ Paint Mask mode. Deselect linked faces. Mouse only tool.
 
 
 
+## Transfer Mode
+
+![Transfer Mode in the Mesh - Vertex and Weight Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-vertex-and-weight-paint-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 ## More/Less Sub-menu
 
 ![More/Less Sub-menu](/docs2/images/editors/3d-viewport/header/select-menu/more-less-sub-menu.png)
@@ -910,6 +927,12 @@ Removes a face loop from the selection. Uses the face under the mouse.
 
 > **Note:** The three loop entries work in the face selection mask of **Weight Paint**, **Vertex Paint** and **Texture Paint**, not only Texture Paint.
 
+
+## Transfer Mode
+
+![Transfer Mode in the Mesh - Texture Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-mesh-texture-paint-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 ## More/Less submenu
 
@@ -1067,6 +1090,12 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 | Sub menu More / Less | **More**: Extends the current selection. · **Less**: Reduces the current selection. |
 
 
+## Transfer Mode
+
+![Transfer Mode in the Curve Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-curve-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 # Surface Object - Edit Mode
 
 ![Surface Object - Edit Mode](/docs2/images/editors/3d-viewport/header/select-menu/surface-object-edit-mode.png)
@@ -1187,6 +1216,12 @@ Change the settings of **Checker Deselect** right after you use it, in the Adjus
 | Sub menu More / Less | **More**: Extends the current selection. · **Less**: Reduces the current selection. |
 
 
+## Transfer Mode
+
+![Transfer Mode in the Surface Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-surface-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 # Metaball Object - Edit Mode
 
 ![Metaball Object - Edit Mode](/docs2/images/editors/3d-viewport/header/select-menu/metaball-object-edit-mode.png)
@@ -1267,6 +1302,12 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 | Action | Select or deselect. |
 
 
+## Transfer Mode
+
+![Transfer Mode in the Metaball Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-metaball-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 # Text Object - Edit Mode
 
 ## All
@@ -1280,6 +1321,8 @@ Select everything.
 Select corresponding element.
 
 # Point Cloud Object - Edit Mode
+
+![Point Cloud Object - Edit Mode](/docs2/images/editors/3d-viewport/header/select-menu/point-cloud-object-edit-mode.png)
 
 ## All
 
@@ -1312,6 +1355,12 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 | Random Seed | The Seed for the random number generator. |
 | Action | Action is a drop-down box choose if you want to select or to deselect random. |
 
+
+## Transfer Mode
+
+![Transfer Mode in the Point Cloud Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-point-cloud-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Grease Pencil Object - Edit Mode, Vertex Paint Mode
 
@@ -1522,6 +1571,12 @@ The last operator Select Ends is valid for both, the first and last operator.
 | Amount End | Number of points to select from the end. |
 
 
+## Transfer Mode
+
+![Transfer Mode in the Grease Pencil Object - Edit Mode, Vertex Paint Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-grease-pencil-object-edit-mode-vertex-paint-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 ## More / Less – Sub Menu
 
 ### More
@@ -1678,9 +1733,27 @@ Extend Parent requires to have a parent or child relationship. It selects the pa
 
 Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
 
+## Deform
+
+Selects the bones that have the Deform option turned on, or turned off. Use it to select only the bones that move the mesh, or to find helper bones that do not. The Deform option of a bone is in the Bone tab of the Properties editor.
+
+### Adjust Last Operation - Select Deform Bones
+
+Change the settings of **Select Deform Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Deform | **Enabled** selects bones that have Deform on. **Disabled** selects bones that have Deform off. |
+
 #### Sub menu More / Less
 
 **More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection.
+
+## Transfer Mode
+
+![Transfer Mode in the Armature Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-armature-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Armature Object - Pose Mode
 
@@ -1724,13 +1797,41 @@ Invert the current selection.
 
 Select grouped bones by type. Items should be self explaining.
 
-### Linked
+## Linked
 
 Select all bones that are either parent or child of the selected bone.
 
-### Constraint Targets
+## Constraint Targets
 
-Select the bones used as targets for the currently selected bone.
+Select the bones that are used as targets by the constraints of the currently selected bones. Use it to find the bones a rig follows or points at. This entry was called Constraint Target before.
+
+## Constraint Owners
+
+Select the bones that have a constraint which targets one of the currently selected bones. It is the reverse of Constraint Targets. Use it to find out which bones are controlled by a bone, for example to see everything that follows a control bone.
+
+## Scaled
+
+Selects bones that have a scale other than 1. Use it to find bones that stretch the mesh by accident. The check uses the final scale of the bone, including scale that comes from the parent, from constraints and from drivers.
+
+### Adjust Last Operation - Select Scaled Bones
+
+Change the settings of **Select Scaled Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Scale | **Non-Uniform** selects bones whose scale is not the same on all axes. **Non-Unit** selects bones whose scale is not 1 on at least one axis. |
+
+## Deform
+
+Selects the bones that have the Deform option turned on, or turned off. Use it to select only the bones that move the mesh, or to find helper bones that do not. The Deform option of a bone is in the Bone tab of the Properties editor.
+
+### Adjust Last Operation - Select Deform Bones
+
+Change the settings of **Select Deform Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Deform | **Enabled** selects bones that have Deform on. **Disabled** selects bones that have Deform off. |
 
 ## By Pattern
 
@@ -1791,6 +1892,12 @@ Change the settings of **Flip Active/Selected Bone** right after you use it, in 
 | Extend Parent | Extend Parent requires to have a parent or child relationship. It selects the parent object of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
 | Extend Child | Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected. |
 
+
+## Transfer Mode
+
+![Transfer Mode in the Armature Object - Pose Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-armature-object-pose-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Lattice Object - Edit Mode
 
@@ -1861,6 +1968,12 @@ Change the settings of **Select Ungrouped** right after you use it, in the Adjus
 
 Extends the current selection instead of deselecting everything first.
 
+## Transfer Mode
+
+![Transfer Mode in the Lattice Object - Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-lattice-object-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 ## Sub menu More / Less
 
 ### More
@@ -1930,6 +2043,12 @@ Change the settings of **Select Random** right after you use it, in the Adjust L
 | Type | Select the whole hair, or hair points. |
 
 
+## Transfer Mode
+
+![Transfer Mode in the Particles - Particle Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-particles-particle-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
+
 ## More / Less sub menu
 
 ### More
@@ -1977,6 +2096,12 @@ Select linked control points.
 ### Select More/Less submenu
 
 **More**: Extends the current selection. · **Less**: Reduces the current selection.
+
+## Transfer Mode
+
+![Transfer Mode in the Hair Curve – Edit Mode Select menu](/docs2/images/editors/3d-viewport/header/select-menu/transfer-mode-hair-curve-edit-mode.png)
+
+Switches to the object you click and keeps the current mode. Hotkey `Z` over an object. See [Transfer Mode](#transfer-mode) for details.
 
 # Hair Curve – Sculpt Mode
 

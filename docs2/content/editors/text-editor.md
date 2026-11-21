@@ -91,6 +91,10 @@ The autosave does not replace your *.blend* file or your text file. To keep chan
 
 The Templates category contains some example scripts. There are two kind of templates. Python scripts and Open Shading Language scripts. The name of the files should tell you what the script is good for.
 
+#### Addon Manifest
+
+Inserts a template of the manifest file for a Bforartists extension. The manifest is the *.toml* file that describes the extension: its name, version, author and license. Use it as the starting point when you write your own extension. The entry was called **Blender Manifest** before. It sits on the top level of the Templates menu, below the Python and Open Shading Language categories.
+
 ### Redraw Timer
 
 ![Redraw Timer](/docs2/images/editors/text-editor/redraw-timer.png)

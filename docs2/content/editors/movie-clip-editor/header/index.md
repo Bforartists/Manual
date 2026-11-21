@@ -978,19 +978,25 @@ Select the tracks that are used for rotation stabilization.
 
 ## Select Menu in Tracking mode in Graph sub mode
 
-### All
+![Select Menu in Graph sub mode](/docs2/images/editors/movie-clip-editor/header/select-menu/all-2.png)
 
-![All](/docs2/images/editors/movie-clip-editor/header/select-menu/all-2.png)
+In the Graph sub mode the header has one Select menu. It selects the curves and markers shown in the graph.
+
+### All
 
 Select everything.
 
-#### None
+### None
 
 Select nothing.
 
-#### Inverse
+### Invert
 
 Invert the current selection.
+
+### Box Select
+
+Draw a rectangle to select curves and markers in the graph. This entry is only in the Graph sub mode and is a part of the same Select menu.
 
 ## Select Menu in Mask mode
 
