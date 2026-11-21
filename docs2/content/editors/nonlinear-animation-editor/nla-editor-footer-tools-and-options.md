@@ -6,13 +6,8 @@ path:
   - Editors
   - Nonlinear Animation Editor
   - NLA Editor - Footer tools and options
-<<<<<<< HEAD
 version: "5.3"
-status: draft
-=======
-version: "5.1"
 status: needs-review
->>>>>>> origin/master
 screenshots: "5.1"
 source:
   - 20.4 Editors - NLA Editor - Footer tools and options.odt
