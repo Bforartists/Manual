@@ -63,21 +63,25 @@ A list of the names of all grids in the volume, sorted alphabetically. If the ge
 
 Get volume grid from a volume geometry with the specified name
 
-### Inputs
+#### Inputs
 
-#### Volume
+##### Volume
+
+Data type: Geometry.
 
 The input volume.
 
-#### Name
+##### Name
+
+Data type: String.
 
 The name of the grid.
 
-#### Remove
+##### Remove
 
-Removes the grid from the volume after retreive.
+Data type: Boolean.
 
-
+Removes the grid from the volume after it is read.
 
 #### Properties
 
@@ -87,13 +91,17 @@ Removes the grid from the volume after retreive.
 
 The type of data stored in the grid. It determines both, the expected data type of the **Grid** output, and how it can be used in subsequent nodes.
 
-#### Output
+#### Outputs
 
 ##### Volume
 
-The output grid.
+Data type: Geometry.
+
+The output volume.
 
 ##### Grid
+
+Data type: follows the Data Type setting.
 
 The extracted grid.
 
@@ -111,17 +119,17 @@ Retreive informations about a grid.
 
 Data type: follows the Data Type setting.
 
-Standard geometry input.
+The grid to get the information of.
 
 #### Properties
 
-##### Data type
+##### Data Type
 
 ![Data type](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png)
 
 The data type to retreive.
 
-#### Output
+#### Outputs
 
 ##### Transform
 
@@ -145,21 +153,51 @@ Retreive the integer coordinates of the voxel that the field is evaluated on.
 
 #### Outputs
 
-##### X / Y / Z
+##### X
 
 Data type: Integer.
 
-Vector 3 output of the voxel.
+The X coordinate of the voxel in index space, or the minimum X coordinate of a tile.
 
-##### Tile subpanel
+##### Y
+
+Data type: Integer.
+
+The Y coordinate of the voxel in index space, or the minimum Y coordinate of a tile.
+
+##### Z
+
+Data type: Integer.
+
+The Z coordinate of the voxel in index space, or the minimum Z coordinate of a tile.
+
+##### Tile
+
+This panel is closed by default.
 
 ###### Is Tile
 
-True when the field is evaluated on a tile.
+Data type: Boolean.
 
-###### Extend X / Y / Z
+True when the field is evaluated on a tile, that is on many voxels at once. When it is false, the extent is always 1.
 
-Number of voxels in the corresponding direction. Or 1 if the field is evaluated at a voxel.
+###### Extent X
+
+Data type: Integer.
+
+The number of voxels in the X direction of the tile, or 1 if the field is evaluated on a voxel.
+
+###### Extent Y
+
+Data type: Integer.
+
+The number of voxels in the Y direction of the tile, or 1 if the field is evaluated on a voxel.
+
+###### Extent Z
+
+Data type: Integer.
+
+The number of voxels in the Z direction of the tile, or 1 if the field is evaluated on a voxel.
 
 
 # Sample
@@ -200,7 +238,7 @@ Data type: Menu.
 
 How to interpolate the values between neighbouring voxels.
 
-#### Input
+#### Properties
 
 ##### Data Type
 
@@ -208,7 +246,7 @@ How to interpolate the values between neighbouring voxels.
 
 Which data type to calculate.
 
-#### Output
+#### Outputs
 
 ##### Value
 
@@ -220,7 +258,7 @@ The output value.
 
 ![Sample Grid Index](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png)
 
-Retreive values from the specified volume grid.
+Retreive values from the specified volume grid at specific voxels.
 
 #### Inputs
 
@@ -230,19 +268,25 @@ Data type: follows the Data Type setting.
 
 The input grid
 
-##### Position
+##### X
 
-The position field.
+Data type: Integer.
 
+The X index of the voxel to sample.
 
+##### Y
 
-##### Interpolation
+Data type: Integer.
 
-![Interpolation](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png)
+The Y index of the voxel to sample.
 
-How to interpolate the values between neighbouring voxels.
+##### Z
 
-#### Input
+Data type: Integer.
+
+The Z index of the voxel to sample.
+
+#### Properties
 
 ##### Data Type
 
@@ -250,7 +294,7 @@ How to interpolate the values between neighbouring voxels.
 
 Which data type to calculate.
 
-#### Output
+#### Outputs
 
 ##### Value
 
@@ -276,25 +320,19 @@ The input grid.
 
 Data type: Vector.
 
-The velocity.
+The velocity grid that moves the values.
 
-##### Position
+##### Time Step
 
-The position field.
-
-##### Time step
-
-Data type: follows the Data Type setting.
+Data type: Float (time).
 
 Time step for advection in seconds.
 
-
-
-##### Integration scheme
+##### Integration Scheme
 
 Data type: Menu.
 
-![Integration scheme](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png)
+![Integration Scheme](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png)
 
 Numerical integration method for advection.
 
@@ -306,7 +344,13 @@ Data type: Menu.
 
 Limiting strategy to prevent numerical artifacts.
 
-#### Output
+#### Properties
+
+##### Data Type
+
+The data type of the grid.
+
+#### Outputs
 
 ##### Grid
 
@@ -409,7 +453,7 @@ Data type: Float.
 The output grid.
 
 
-#### Grid Solve Poisson
+### Grid Solve Poisson
 
 ![Grid Solve Poisson](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-solve-poisson.png)
 
@@ -417,27 +461,27 @@ Solves the Poisson equation for a scalar grid. It computes a grid whose Laplacia
 
 The solver works on grids with the same voxel size in all directions. If the voxel size is not uniform, the node shows a warning.
 
-##### Inputs
+#### Inputs
 
-###### Grid
+##### Grid
 
 Data type: Float.
 
 The scalar grid on the right-hand side of the equation.
 
-###### Max Iterations
+##### Max Iterations
 
 Data type: Integer.
 
 The most steps the solver may take. The default is 100. The value can be 1 to 10000.
 
-###### Error Threshold
+##### Error Threshold
 
 Data type: Float.
 
 The solver stops when the error is below this value. The default is 0.001.
 
-###### Threshold Mode
+##### Threshold Mode
 
 Data type: Menu.
 
@@ -446,7 +490,7 @@ How the error threshold is measured.
 - Relative: the error is measured relative to the largest absolute value of the input grid. This is the default.
 - Absolute: the error is measured as an absolute value in the units of the solution.
 
-###### Boundary
+##### Boundary
 
 Data type: Menu.
 
@@ -456,61 +500,65 @@ What happens at the boundary between active and inactive voxels.
 - Gradient: you set the gradient of the solution at the boundary.
 - Mixed: you set both and blend between them with Boundary Factor.
 
-###### Boundary Value
+##### Boundary Value
 
 Data type: Float.
 
 The value of the solution at the boundary. It is a field, so it can change from voxel to voxel. It is only shown for Fixed and Mixed.
 
-###### Boundary Gradient
+##### Boundary Gradient
 
 Data type: Vector.
 
 The gradient of the solution at the boundary. It is a field. It is only shown for Gradient and Mixed.
 
-###### Boundary Factor
+##### Boundary Factor
 
 Data type: Float (factor).
 
 How much of the gradient is used instead of the value, from 0 to 1. At 0 the value is used, at 1 the gradient. It is a field. It is only shown for Mixed.
 
-##### Outputs
+#### Outputs
 
-###### Solution
+##### Solution
 
 Data type: Float.
 
 The grid that solves the equation.
 
-###### Success
+##### Success
 
 Data type: Boolean.
 
 True if the solver reached the error threshold.
 
-###### Iterations
+##### Iterations
 
 Data type: Integer.
 
 How many steps the solver took.
 
-###### Absolute Error
+##### Absolute Error
 
 Data type: Float.
 
 The absolute error of the solution at the end.
 
-###### Relative Error
+##### Relative Error
 
 Data type: Float.
 
 The relative error of the solution at the end.
 
+##### Debug
+
+A panel with three outputs. It is closed by default.
+
 ###### Debug Boundary Value
 
 Data type: Float.
 
-A panel with three outputs that is closed by default. This one is the grid of boundary values the solver used. It is only shown for Fixed and Mixed.
+The grid of boundary values the solver used. It is only shown for Fixed and Mixed.
 
 ###### Debug Boundary Gradient
 
@@ -532,9 +580,9 @@ The grid of boundary factors the solver used. It is only shown for Mixed.
 
 Here you find nodes to modify the volume.
 
-### Grid Background
+### Set Grid Background
 
-![Grid Background](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/grid-background.png)
+![Set Grid Background](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/grid-background.png)
 
 Set the background value used for inactive voxels and tiles.
 
@@ -544,15 +592,19 @@ Set the background value used for inactive voxels and tiles.
 
 Data type: follows the Data Type setting.
 
-Standard geometry input.
+The grid to change.
 
 ##### Background
 
 Data type: follows the Data Type setting.
 
-Volume density per voxel. Higher values makes it more dense.
+The new background value.
 
+##### Update Inactive
 
+Data type: Boolean.
+
+Also replaces all values stored for inactive voxels with the new background value.
 
 #### Properties
 
@@ -562,7 +614,7 @@ Volume density per voxel. Higher values makes it more dense.
 
 What data type to calculate.
 
-#### Output
+#### Outputs
 
 ##### Grid
 
@@ -582,7 +634,7 @@ Set the transform for the grid from index space into object space.
 
 Data type: follows the Data Type setting.
 
-Standard geometry input.
+The grid to change.
 
 ##### Transform
 
@@ -600,7 +652,7 @@ The input transform.
 
 What data type to calculate.
 
-#### Output
+#### Outputs
 
 ##### Is Valid
 
@@ -620,7 +672,7 @@ The grid output.
 
 ![Store Named Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png)
 
-Set the transform for the grid from index space into object space.
+Stores a grid in a volume geometry under the given name.
 
 #### Inputs
 
@@ -628,21 +680,19 @@ Set the transform for the grid from index space into object space.
 
 Data type: Geometry.
 
-The volume input.
+The volume to add the grid to.
 
 ##### Name
 
 Data type: String.
 
-The name
+The name of the grid.
 
 ##### Grid
 
 Data type: follows the Data Type setting.
 
-Standard geometry input.
-
-
+The grid to store.
 
 #### Properties
 
@@ -652,11 +702,13 @@ Standard geometry input.
 
 What data type to calculate.
 
-#### Output
+#### Outputs
 
-##### Volume Geometry
+##### Volume
 
-The volume geometry to add to.
+Data type: Geometry.
+
+The volume with the stored grid.
 
 # Operations
 
@@ -783,23 +835,39 @@ Data type: follows the Data Type setting.
 
 The grid value at each point.
 
-##### X, Y, Z
+##### Voxel Index
+
+This panel is closed by default.
+
+###### X
 
 Data type: Integer.
 
-The voxel index of each point, in the Voxel Index panel.
+The X coordinate of the voxel in index space, or the minimum X coordinate of a tile.
 
-##### Is Tile
+###### Y
+
+Data type: Integer.
+
+The Y coordinate of the voxel in index space, or the minimum Y coordinate of a tile.
+
+###### Z
+
+Data type: Integer.
+
+The Z coordinate of the voxel in index space, or the minimum Z coordinate of a tile.
+
+###### Is Tile
 
 Data type: Boolean.
 
-True when the point stands for a whole tile instead of a single voxel. In the Voxel Index panel.
+True when the point stands for a whole tile instead of a single voxel.
 
-##### Extent
+###### Extent
 
 Data type: Integer.
 
-The size of the tile, in voxels, for points that stand for a tile. In the Voxel Index panel.
+The size of the tile, in voxels. For single voxels this is 1.
 
 ### Volume to Mesh
 
@@ -815,25 +883,41 @@ Note that currently this node only works on volumes generated using geometry nod
 
 Data type: Geometry.
 
-Standard geometry input.
+The volume to convert to a mesh.
 
-##### Resolution
+##### Resolution Mode
+
+Data type: Menu.
 
 ![Resolution](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/resolution.png)
 
-Base the voxel resolution at the gridsize, the amount or the size of the point cloud.
+How the voxel size is set: from the grid, by the amount, or by the size.
 
-###### Threshold
+##### Voxel Size
 
-The voxel amount to use.
+Data type: Float (distance).
 
-###### Adaptivity
+The size of one voxel. Only in Size mode.
 
-The input radius.
+##### Voxel Amount
 
+Data type: Float.
 
+The number of voxels along one axis. Only in Amount mode.
 
-#### Output
+##### Threshold
+
+Data type: Float.
+
+Values larger than the threshold are inside the generated mesh.
+
+##### Adaptivity
+
+Data type: Float (factor).
+
+Reduces the number of faces in flat areas. 0 keeps all faces.
+
+#### Outputs
 
 ##### Mesh
 
@@ -853,13 +937,19 @@ Bool multiple sdf grids with each other.
 
 Data type: Float.
 
-The first input grid.
+The grid to cut from. Only in Difference mode.
 
 ##### Grid 2
 
 Data type: Float.
 
-The second input grid
+The grids to cut away from Grid 1. You can connect more than one grid. Only in Difference mode.
+
+##### Grid
+
+Data type: Float.
+
+The grids to combine. You can connect more than one grid. Only in Intersect and Union mode.
 
 #### Properties
 
@@ -1083,17 +1173,41 @@ Data type: follows the Data Type setting.
 
 The grid to clip.
 
-##### Min X, Min Y, Min Z
+##### Min X
 
 Data type: Integer.
 
-The lower corner of the box, in voxel coordinates.
+The lower corner of the box along X, in voxel coordinates.
 
-##### Max X, Max Y, Max Z
+##### Min Y
 
 Data type: Integer.
 
-The upper corner of the box, in voxel coordinates.
+The lower corner of the box along Y, in voxel coordinates.
+
+##### Min Z
+
+Data type: Integer.
+
+The lower corner of the box along Z, in voxel coordinates.
+
+##### Max X
+
+Data type: Integer.
+
+The upper corner of the box along X, in voxel coordinates.
+
+##### Max Y
+
+Data type: Integer.
+
+The upper corner of the box along Y, in voxel coordinates.
+
+##### Max Z
+
+Data type: Integer.
+
+The upper corner of the box along Z, in voxel coordinates.
 
 #### Properties
 
@@ -1129,6 +1243,18 @@ Data type: Boolean.
 
 The voxels to deactivate. A boolean field, evaluated at every voxel. Voxels where it is true are turned off.
 
+##### Set Background Value
+
+Data type: Boolean.
+
+When on, the deactivated voxels also get the background value of the grid.
+
+#### Properties
+
+##### Data Type
+
+Data type, shown at the top of the node, is the type of the values in the grid: Float, Integer, Boolean or Vector.
+
 #### Outputs
 
 ##### Grid
@@ -1136,8 +1262,6 @@ The voxels to deactivate. A boolean field, evaluated at every voxel. Voxels wher
 Data type: follows the Data Type setting.
 
 The grid without the deactivated voxels.
-
-Data type, shown at the top of the node, is the type of the values in the grid: Float, Integer, Boolean or Vector.
 
 ### Field to Grid
 
@@ -1153,11 +1277,13 @@ Data type: follows the Data Type setting.
 
 The input topology.
 
-##### Properties
+##### Fields
 
-—
+Data type: follows the Data Type setting of the item.
 
+For each item you add, there is an input with its name. It is the field that is evaluated on the voxels of the topology. To add an item, connect a link to the empty socket at the bottom of the node, or use the Fields panel in the Node tab of the sidebar.
 
+#### Properties
 
 ##### Data Type
 
@@ -1165,11 +1291,13 @@ The input topology.
 
 The data type to evaluate.
 
-#### Output
+#### Outputs
 
-##### Grid
+##### Grids
 
-The generated grid.
+Data type: follows the Data Type setting of the item.
+
+For each item there is a grid output with the same name, with the field values evaluated on the topology.
 
 ### Grid Dilate & Erode
 
@@ -1307,7 +1435,7 @@ The smoothed grid.
 
 ![Prune Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid.png)
 
-Create new grids by evaulating new values on an existing volume grid topology.
+Makes the storage of a volume grid more efficient by collapsing data into tiles or inner nodes.
 
 #### Inputs
 
@@ -1323,23 +1451,19 @@ Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/mode.png)
 
-How to progress the state.
+How to prune the grid.
 
-###### Inactive
+- **Inactive**: Turn inactive voxels and tiles into inactive background tiles.
+- **Threshold**: Turn regions where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.
+- **SDF**: Replace inactive tiles with inactive nodes.
 
-Turn inactive voxels and tiles into inactive background tiles.
+##### Threshold
 
-###### Threshold
+Data type: follows the Data Type setting.
 
-Turn regions where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.
+Voxels whose values differ by less than this value are seen as the same. Only in Threshold mode, and not for the Boolean data type.
 
-###### SDF
-
-Replace inactive tiles with inactive nodes.
-
-
-
-##### Properties
+#### Properties
 
 ##### Data Type
 
@@ -1347,7 +1471,7 @@ Replace inactive tiles with inactive nodes.
 
 The data type to evaluate.
 
-#### Output
+#### Outputs
 
 ##### Grid
 
@@ -1429,23 +1553,27 @@ Data type: Integer.
 
 How many voxels the box has along Z.
 
-##### Min X
+##### Min
+
+This panel is closed by default.
+
+###### Min X
 
 Data type: Integer.
 
-Panel Min. The index of the first voxel along X. It moves the box along the grid index space without changing its size.
+The index of the first voxel along X. It moves the box along the grid index space without changing its size.
 
-##### Min Y
-
-Data type: Integer.
-
-Panel Min. The same for Y.
-
-##### Min Z
+###### Min Y
 
 Data type: Integer.
 
-Panel Min. The same for Z.
+The index of the first voxel along Y.
+
+###### Min Z
+
+Data type: Integer.
+
+The index of the first voxel along Z.
 
 #### Outputs
 
@@ -1473,10 +1601,6 @@ The Volume Cube node generates a voxel based volume cube primitive that can be u
 
 #### Inputs
 
-##### Geometry
-
-Standard geometry input.
-
 ##### Density
 
 Data type: Float.
@@ -1489,9 +1613,41 @@ Data type: Float.
 
 Value per voxel outside the cube domain.
 
-##### Min:
+##### Min
 
 Data type: Vector.
 
-Minimum boundary of the volume cube. Max: Maximum boundary of the volume cube. Resolution X Number of volume voxules in the X axis. Resolution Y Number of volume voxules in the Y axis. Resolution Z Number of volume voxules in the Z axis.
+Minimum boundary of the volume cube.
+
+##### Max
+
+Data type: Vector.
+
+Maximum boundary of the volume cube.
+
+##### Resolution X
+
+Data type: Integer.
+
+Number of volume voxels in the X axis.
+
+##### Resolution Y
+
+Data type: Integer.
+
+Number of volume voxels in the Y axis.
+
+##### Resolution Z
+
+Data type: Integer.
+
+Number of volume voxels in the Z axis.
+
+#### Outputs
+
+##### Volume
+
+Data type: Geometry.
+
+The new volume cube.
 

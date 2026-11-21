@@ -97,7 +97,7 @@ Data type: Float.
 
 The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle.
 
-### Edge Neighbours
+### Edge Neighbors
 
 ![Edge Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-neighbours.png)
 
@@ -143,17 +143,19 @@ Data type: Vector.
 
 The position of the second vertice.
 
-### Edges to Face Group
+### Edges to Face Groups
 
 ![Edges to Face Group](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edges-to-face-group.png)
 
 Group Faces into regions, surrounded by the selected boundary edges.
 
-#### Inuputs
+#### Inputs
 
 ##### Boundary Edges
 
-The input edges.
+Data type: Boolean.
+
+The edges that make the borders of the face groups.
 
 #### Outputs
 
@@ -185,11 +187,11 @@ Find edges on the boundaries between face sets
 
 #### Inputs
 
-—
+##### Face Group ID
 
-#### Face Set
+Data type: Integer.
 
-The input face sets to calculate the boundaries from.
+The face groups to calculate the boundaries from. An index value for each face.
 
 #### Outputs
 
@@ -197,13 +199,9 @@ The input face sets to calculate the boundaries from.
 
 Data type: Boolean.
 
-The edges that lies on the boundaries between the different face sets
+The edges that lie on the boundaries between the different face groups.
 
-##### Face Count
-
-The face count for the face neighbors.
-
-### Face Neighbours
+### Face Neighbors
 
 ![Face Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-neighbours.png)
 
@@ -281,9 +279,11 @@ Outputs a separate index for each mesh island. The indices are based on the orde
 
 #### Outputs
 
-##### Index Index
+##### Island Index
 
-The index output.
+Data type: Integer.
+
+The index of the mesh island of each element.
 
 ##### Island Count
 
@@ -291,7 +291,7 @@ Data type: Integer.
 
 The count output.
 
-### Shortest Edge Path
+### Shortest Edge Paths
 
 ![Shortest Edge Path](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/shortest-edge-path.png)
 
@@ -391,7 +391,7 @@ Data type: Integer.
 
 Determines in which group the closest nearest surface is detected.
 
-##### Properties
+#### Properties
 
 ##### Data Type
 
@@ -433,9 +433,11 @@ Data type: follows the Data Type setting.
 
 The value to calculate.
 
-##### Source UV Map
+##### UV Map
 
-The input UV map.
+Data type: Vector.
+
+The UV map of the mesh to sample with.
 
 ##### Sample UV
 
@@ -443,7 +445,7 @@ Data type: Vector.
 
 The sample position to calculate.
 
-##### Properties
+#### Properties
 
 ##### Data Type
 
@@ -479,7 +481,7 @@ These are nodes for working with Mesh data.
 
 The **Set Mesh Normal** node is used to modify custom normals on a mesh, providing control over shading smoothness and surface appearance. This is useful for adjustingnormalsmoothness, sharp edges, and tangent-based effects
 
-#### Input
+#### Inputs
 
 ##### Mesh
 
@@ -487,51 +489,49 @@ Data type: Geometry.
 
 Input mesh.
 
+##### Remove Custom
+
+Data type: Boolean.
+
+Removes **custom normals** previously set by the user on the original mesh data when enabled. Only in Sharpness mode.
+
+##### Edge Sharpness
+
+Data type: Boolean.
+
+Sets the normal sharpness to the edge domain to “flat”. Only in Sharpness mode.
+
+##### Face Sharpness
+
+Data type: Boolean.
+
+Sets the normal sharpness to the face domain to “flat”. Only in Sharpness mode.
+
+##### Custom Normal
+
+Data type: Vector (XYZ).
+
+The new custom normal. It is a vector field. Only in Free and Tangent Space mode.
+
 #### Properties
 
 ##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/mode.png)
 
-##### Sharpness
+###### Sharpness
 
 ![Sharpness](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/sharpness.png)
 
-Controls the intensity of edge sharpness. Higher values create stronger shading contrasts between faces.
-
 Store the sharpness of each face or edge. Similar to the "Shade Smooth" and "Shade Flat" operators.
 
-###### Remove Custom
-
-Removes **custom normals** previously set by the user on the original mesh data when enabled.
-
-###### Edge Sharpness
-
-Sets the normal sharpness to the edge domain to “flat”.
-
-###### Face Sharpness
-
-Sets the normal sharpness to the face domain to “flat”.
-
-##### Free
+###### Free
 
 ![Free](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/free.png)
 
 Allows direct manipulation of normals as **free vectors,** rather than constrained by geometry. Useful for custom shading effects and non-destructive normal adjustments.
 
-###### Domain
-
-![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/domain.png)
-
-Attribute domain to store the free custom normals.
-
-- Point
-- Face
-- Face Corner
-
-> **Note:** Default object normals are stored to Facecorner, this will “pass-through” the normal data. Face normals will make “flat” sharp edges.
-
-##### Tangent Space
+###### Tangent Space
 
 ![Tangent Space](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/tangent-space.png)
 
@@ -539,27 +539,37 @@ Adjusts normals relative to the surface tangentto store the source meshes normal
 
 > **Note:** This method is slower, but can be better when subsequent operations change the mesh without handling normals specifically.
 
-##### Custom Normal
+##### Domain
 
-*Vector Field based on the normal.*
+![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/domain.png)
+
+Attribute domain to store the free custom normals. Only in Free mode.
+
+- Point
+- Face
+- Face Corner
+
+> **Note:** Default object normals are stored to Facecorner, this will “pass-through” the normal data. Face normals will make “flat” sharp edges.
 
 #### Outputs
 
-##### Geometry
+##### Mesh
 
-Geometry output.
+Data type: Geometry.
 
-Got it! Here's the documentation for the **Set Mesh Normal** node:
+The mesh with the new normals.
 
 ### Set Shade Smooth
 
 ![Set Shade Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/set-shade-smooth.png)
 
-Retrieves if the geometry is shaded smooth.
+Sets the smooth or flat shading of the faces or edges of a mesh.
 
-#### Input
+#### Inputs
 
-##### Geometry
+##### Mesh
+
+Data type: Geometry.
 
 Input mesh.
 
@@ -589,9 +599,11 @@ Set Face to smooth
 
 #### Outputs
 
-##### Geometry
+##### Mesh
 
-Geometry output.
+Data type: Geometry.
+
+The mesh with the new shading.
 
 # Operations
 
@@ -663,7 +675,7 @@ Data type: Geometry.
 
 The output curve.
 
-### Edge Path to Selection
+### Edge Paths to Selection
 
 ![Edge Path to Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-path-to-selection.png)
 
@@ -782,7 +794,9 @@ A selection of the input mesh.
 
 #### Outputs
 
-##### Dual Mesh
+##### Mesh
+
+Data type: Geometry.
 
 The output mesh.
 
@@ -928,23 +942,31 @@ The Boolean Node allows you to cut, subtract, and join the geometry of two input
 
 Data type: Geometry.
 
-Standard geometry input.
+The mesh to cut from. Only in Difference mode.
 
 ##### Mesh 2
 
 Data type: Geometry.
 
-Standard geometry input.
+The meshes to cut away from Mesh 1. You can connect more than one mesh. Only in Difference mode.
 
-##### Self Intersect
+##### Mesh
 
-Allow self intersection.
+Data type: Geometry.
+
+The meshes to combine. You can connect more than one mesh. Only in Intersect and Union mode.
+
+##### Self Intersection
+
+Data type: Boolean.
+
+Allow self intersection. Only with the Exact solver.
 
 ##### Hole Tolerant
 
 Data type: Boolean.
 
-Allow holes.
+Allow holes. Only with the Exact solver.
 
 #### Properties
 
@@ -982,17 +1004,19 @@ Exact solver for the most accurate result.
 
 Fastest solver with best result, but only works on manifold meshes.
 
-#### Output
+#### Outputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry output.
+Data type: Geometry.
+
+The result of the boolean operation.
 
 ##### Intersecting Edges
 
 Data type: Boolean.
 
-Outputs the intersecting edges.
+Outputs the intersecting edges. Only with the Exact and Manifold solver.
 
 ### Mesh to Curve
 
@@ -1032,7 +1056,7 @@ Standard curve output.
 
 ![Mesh to Density Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-density-grid.png)
 
-Converts a mesh geometry to a curve geometry.
+Creates a filled volume grid from a mesh.
 
 #### Inputs
 
@@ -1052,17 +1076,17 @@ Mesh density.
 
 Data type: Float (distance).
 
-The vodel size.
+The voxel size.
 
 ##### Gradient Width
 
 Data type: Float (distance).
 
-The width of the gradient.
+The width of the gradient inside of the mesh.
 
 #### Outputs
 
-##### Density Grid.
+##### Density Grid
 
 Data type: Float.
 
@@ -1110,15 +1134,17 @@ What geometry to convert to points.
 
 #### Outputs
 
-##### Curve
+##### Points
 
-Standard curve output.
+Data type: Geometry.
+
+The new point cloud.
 
 ### Mesh to SDF Grid
 
 ![Mesh to SDF Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-sdf-grid.png)
 
-Converts a mesh geometry to a curve geometry.
+Creates a signed distance volume grid from a mesh.
 
 #### Inputs
 
@@ -1132,19 +1158,21 @@ Input mesh.
 
 Data type: Float (distance).
 
-The vodel size.
+The voxel size.
 
 ##### Band Width
 
 Data type: Integer.
 
-The width of the band.
+The width of the active voxel surface, in voxels.
 
 #### Outputs
 
-##### Density Grid.
+##### SDF Grid
 
-Density Grid output.
+Data type: Float.
+
+The signed distance field grid.
 
 ### Mesh to Volume
 
@@ -1174,13 +1202,23 @@ Data type: Menu.
 
 How to calculate the volume. Based of the size or based at the amount.
 
-###### Voxel Amount / Voxel Size
+##### Voxel Size
 
-The voxel amount / the voxel size.
+Data type: Float (distance).
 
-###### Interior Bandwidth
+The size of one voxel. Only in Size mode.
 
-Where to start the calculation inside of the volume.
+##### Voxel Amount
+
+Data type: Float.
+
+The number of voxels along one axis. Only in Amount mode.
+
+##### Interior Band Width
+
+Data type: Float (distance).
+
+The width of the gradient inside of the mesh.
 
 #### Outputs
 
@@ -1294,9 +1332,11 @@ Subdivides the geometry by a simple division.
 
 #### Inputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry input.
+Data type: Geometry.
+
+The input mesh.
 
 ##### Level
 
@@ -1306,9 +1346,11 @@ To which degree the geometry will be deformed.
 
 #### Outputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry output.
+Data type: Geometry.
+
+The subdivided mesh.
 
 ### Subdivision Surface
 
@@ -1348,6 +1390,12 @@ Data type: Boolean.
 
 Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape.
 
+##### Quality
+
+Data type: Integer.
+
+The accuracy of the vertex positions. A lower value is faster but less precise.
+
 ##### UV Smooth
 
 Data type: Menu.
@@ -1366,9 +1414,11 @@ Controls if open boundaries and corners are smooth.
 
 #### Outputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry output.
+Data type: Geometry.
+
+The subdivided mesh.
 
 ### Triangulate
 
@@ -1378,61 +1428,50 @@ The Triangulate node triangulates all faces in a mesh.
 
 #### Inputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry input.
+Data type: Geometry.
 
-##### Minimum Vertices
+The input mesh.
 
-Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons.
+##### Selection
 
-#### Properties
+Data type: Boolean.
+
+Only the selected faces are triangulated.
 
 ##### Quad Method
 
+Data type: Menu.
+
 ![Quad Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/quad-method.png)
 
-A quad is a polygon with four edges.
+How quads are split into triangles. A quad is a polygon with four edges.
 
-###### Beauty
+- **Beauty**: Split the quads in nice triangles, slower method.
+- **Fixed**: Split the quads on their 1st and 3rd vertices.
+- **Fixed Alternate**: Split the quads on their 2nd and 4th vertices.
+- **Shortest Diagonal**: Split the quads based on the shortest diagonal distance between their vertices.
+- **Longest Diagonal**: Split the quads based on the longest diagonal distance between their vertices.
 
-Split the quads in nice triangles, slower method.
+##### N-gon Method
 
-###### Fixed
-
-Split the quads on their 1st and 3rd vertices.
-
-###### Fixed Alternate
-
-Split the quads on their 2nd and 4th vertices.
-
-###### Shortest Diagonal
-
-Split the quads based on the shortest diagonal distance between their vertices.
-
-###### Longest Diagonal
-
-Split the quads based on the longest diagonal distance between their vertices.
-
-##### Polygon Method
+Data type: Menu.
 
 ![Polygon Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/polygon-method.png)
 
-Meant are N-Gons. Faces with more than four edges. Tris, Quads and N-Gons are all Polygons.
+How n-gons are split into triangles. N-gons are faces with more than four edges.
 
-###### Beauty
-
-Arrange the new triangles nicely, slower method.
-
-###### Clip
-
-Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering).
+- **Beauty**: Arrange the new triangles nicely, slower method.
+- **Clip**: Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering).
 
 #### Outputs
 
-##### Geometry
+##### Mesh
 
-Standard geometry output.
+Data type: Geometry.
+
+The triangulated mesh.
 
 # Primitives
 
@@ -1448,19 +1487,13 @@ Nodes to modify the mesh geometry.
 
 Cone creates a Cone mesh.
 
-#### Input
+#### Inputs
 
 ##### Vertices
 
 Data type: Integer.
 
 Number of vertices.
-
-##### Radius Top
-
-Data type: Float (distance).
-
-The initial radius at the top.
 
 ##### Side Segments
 
@@ -1472,7 +1505,13 @@ Adjust the number of segments at the side.
 
 Data type: Integer.
 
-Adjust the number of segments at the fill faces.
+Adjust the number of segments at the fill faces. Not when Fill Type is None.
+
+##### Radius Top
+
+Data type: Float (distance).
+
+The initial radius at the top.
 
 ##### Radius Bottom
 
@@ -1552,9 +1591,23 @@ Data type: Vector (translation).
 
 The initial size in X , Y and Z dimensions
 
-##### Vertices
+##### Vertices X
 
-How much vertices the single edges has. This allows to subdivide the cube.
+Data type: Integer.
+
+How many vertices the cube has along X. This allows to subdivide the cube.
+
+##### Vertices Y
+
+Data type: Integer.
+
+How many vertices the cube has along Y. This allows to subdivide the cube.
+
+##### Vertices Z
+
+Data type: Integer.
+
+How many vertices the cube has along Z. This allows to subdivide the cube.
 
 #### Outputs
 
@@ -1576,7 +1629,7 @@ UV map output.
 
 Cylinder creates a Cylinder mesh.
 
-#### Input
+#### Inputs
 
 ##### Vertices
 
@@ -1594,7 +1647,7 @@ Adjust the number of segments at the side.
 
 Data type: Integer.
 
-Adjust the number of segments at the fill faces.
+Adjust the number of segments at the fill faces. Not when Fill Type is None.
 
 ##### Radius
 
@@ -1642,17 +1695,17 @@ Data type: Boolean.
 
 Top radius output.
 
+##### Side
+
+Data type: Boolean.
+
+The side faces.
+
 ##### Bottom
 
 Data type: Boolean.
 
 Bottom radius output.
-
-##### Side
-
-Data type: Boolean.
-
-The depth output
 
 ##### UV Map
 
@@ -1668,9 +1721,17 @@ Grid creates a grid mesh.
 
 #### Inputs
 
-##### Size
+##### Size X
 
-The initial size.
+Data type: Float (distance).
+
+The initial size in X direction.
+
+##### Size Y
+
+Data type: Float (distance).
+
+The initial size in Y direction.
 
 ##### Vertices X
 
@@ -1738,7 +1799,7 @@ UV map output.
 
 Circle creates a Circle mesh.
 
-#### Input
+#### Inputs
 
 ##### Vertices
 
@@ -1786,13 +1847,19 @@ Mesh output.
 
 Line creates a line mesh.
 
-#### Input
+#### Inputs
 
 ##### Count
 
 Data type: Integer.
 
-The initial number of segments.
+The number of vertices on the line. Not in End Points mode with Count Mode set to Resolution.
+
+##### Resolution
+
+Data type: Float (distance).
+
+The length of each edge. Only in End Points mode with Count Mode set to Resolution.
 
 ##### Start Location
 
@@ -1804,7 +1871,7 @@ The initial location.
 
 Data type: Vector (translation).
 
-The initial offset.
+In Offset mode, the distance from one vertex to the next. In End Points mode this socket is called End Location, and it is the position of the last vertex.
 
 #### Properties
 
@@ -1812,25 +1879,19 @@ The initial offset.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mode.png)
 
-##### Offset
+- **Offset**: Specify the offset from one vertex to the next.
+- **End Points**: Specify the line start and endpoints.
 
-Specify the offset from one vertice to the next.
+##### Count Mode
 
-##### End Points
-
-Specify the line start and endpoints.
-
-###### Count ModeCount
+Only in End Points mode.
 
 ![Count](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/count.png)
 
-Specify the number of total vertices.
-
-###### End Points
-
 ![End Points](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/end-points.png)
 
-Specify the distance between the vertices.
+- **Count**: Specify the number of total vertices.
+- **Resolution**: Specify the distance between the vertices.
 
 #### Outputs
 
@@ -1896,15 +1957,17 @@ Retreive the corners that makes up a edge.
 
 #### Inputs
 
-##### Face Index
+##### Edge Index
 
-The face to get the data from.
+Data type: Integer.
+
+The edge to get the data from. By default this is the edge from the context.
 
 ##### Weights
 
 Data type: Float.
 
-Values used to sort the corners of the face.
+Values used to sort the corners attached to the edge.
 
 ##### Sort Index
 
@@ -1924,7 +1987,7 @@ The output corner.
 
 Data type: Integer.
 
-The number of corners in the face.
+The number of faces or corners connected to each edge.
 
 ### Corners of Face
 
@@ -2130,7 +2193,7 @@ Data type: Integer.
 
 The index of the offset corner.
 
-### Vertex of corner
+### Vertex of Corner
 
 ![Vertex of corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/vertex-of-corner.png)
 
@@ -2143,10 +2206,6 @@ Retreive the vertex each corner is attached to.
 Data type: Integer.
 
 The corner to get the data from.
-
-##### Offset
-
-The numbers of corners to move around the face before getting the result. It circles around the start of the face if necessary.
 
 #### Outputs
 
@@ -2204,11 +2263,15 @@ Data type: Menu.
 
 Method used for packing UV Islands.
 
-###### Bottom Left
+##### Bottom Left
+
+Data type: Vector (2d).
 
 Bottom left corner of packing bounds.
 
-###### Top Right
+##### Top Right
+
+Data type: Vector (2d).
 
 Top right corner of packing bounds.
 
@@ -2238,7 +2301,7 @@ Exact or fast calculation.
 
 ##### UV
 
-Data type: Vector (xyz2d).
+Data type: Vector (2d).
 
 x and y values of the UV space.
 
@@ -2289,6 +2352,18 @@ Data type: Menu.
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-3.png)
 
 The unwrap method.
+
+##### Iterations
+
+Data type: Integer.
+
+The number of iterations to run the SLIM solver for. Only in Minimum Stretch mode.
+
+##### No Flip
+
+Data type: Boolean.
+
+Prevents flipping UVs. Only in Minimum Stretch mode.
 
 #### Outputs
 

@@ -1033,6 +1033,8 @@ Here you can find tools to edit the curve geometry of the grease pencil strokes.
 
 The tweak, select, transform, 3d cursor, measure and annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.
 
+**Select Lasso** is the active tool when you enter Edit Mode on a Grease Pencil object, so you can drag a free-form loop around points straight away. Pick another select tool (Tweak, Select Box or Select Circle) from the first slot of the tool shelf if you prefer it. A scene that already has a tool stored keeps that tool.
+
 #### Pen
 
 Extrude selected curve points to the mouse click position.

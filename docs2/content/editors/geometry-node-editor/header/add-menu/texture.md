@@ -33,15 +33,86 @@ The Brick Texture node is used to add a procedural brick texture.
 
 #### Inputs
 
-**Color 1, Color 2 and Mortar**: Color of the bricks and mortar. · **Scale**: Overall texture scale. · **Mortar Size**: The size of the filling between the bricks known as “mortar”; 0 means no mortar. · **Mortar Smooth**: Blurs/softens the edge between the mortar and the bricks. This can be useful with a texture and displacement textures. · **Bias**: The color variation between Color 1/2. Values of -1 and 1 only use one of the two colors; values in between mix the colors. · **Brick Width**: The width of the bricks. · **Row Height**: The height of the brick rows.
+##### Vector
+
+Data type: Vector.
+
+The texture coordinate to sample the texture at.
+
+##### Color1
+
+Data type: Color.
+
+The color of the first reference brick.
+
+##### Color2
+
+Data type: Color.
+
+The color of the second reference brick.
+
+##### Mortar
+
+Data type: Color.
+
+The color of the area between the bricks.
+
+##### Scale
+
+Data type: Float.
+
+Overall texture scale.
+
+##### Mortar Size
+
+Data type: Float.
+
+The size of the filling between the bricks known as “mortar”; 0 means no mortar.
+
+##### Mortar Smooth
+
+Data type: Float.
+
+Blurs/softens the edge between the mortar and the bricks. This can be useful with a texture and displacement textures.
+
+##### Bias
+
+Data type: Float.
+
+The color variation between Color1 and Color2. Values of -1 and 1 only use one of the two colors; values in between mix the colors.
+
+##### Brick Width
+
+Data type: Float.
+
+The width of the bricks, relative to the texture scale.
+
+##### Row Height
+
+Data type: Float.
+
+The height of the brick rows, relative to the texture scale.
 
 #### Properties
 
-**Offset**: Determines the brick offset of the various rows. · **Frequency**: Determines the offset frequency. A value of 2 gives an even/uneven pattern of rows. · **Squash**: Amount of brick squashing. · **Frequency**: Brick squashing frequency.
+- **Offset**: Determines the brick offset of the various rows.
+- **Frequency**: Determines the offset frequency. A value of 2 gives an even/uneven pattern of rows.
+- **Squash**: Amount of brick squashing.
+- **Frequency**: Brick squashing frequency.
 
 #### Outputs
 
-**Color**: Texture color output. · **Factor**: Mortar mask (1 = mortar).
+##### Color
+
+Data type: Color.
+
+Texture color output.
+
+##### Factor
+
+Data type: Float.
+
+Mortar mask (1 = mortar).
 
 ### Checker Texture
 
@@ -51,11 +122,43 @@ Adds a checker texture.
 
 #### Inputs
 
-**Vector**: Vector input. · **Color 1**: The first checker color. · **Color 2**: The second checker color. · **Scale**: The scale of the checker texture.
+##### Vector
 
-#### Output
+Data type: Vector.
 
-**Color**: The checker texture output. · **Factor**: Factor output.
+The texture coordinate to sample the texture at.
+
+##### Color1
+
+Data type: Color.
+
+The first checker color.
+
+##### Color2
+
+Data type: Color.
+
+The second checker color.
+
+##### Scale
+
+Data type: Float.
+
+The scale of the checker texture.
+
+#### Outputs
+
+##### Color
+
+Data type: Color.
+
+The checker texture output.
+
+##### Factor
+
+Data type: Float.
+
+The checker mask. 1 is Color1 and 0 is Color2.
 
 ### Gabor Texture
 
@@ -63,71 +166,66 @@ Adds a checker texture.
 
 Adds a Gabor texture.
 
-#### Properties
+#### Inputs
 
-##### 2D Mode
+##### Vector
 
-Uses the X Y vector. Z value is ignored.
+Data type: Vector.
 
-###### Vector
+The coordinates at which the gabor noise is evaluated. In 2D mode the Z value is ignored.
 
-Vector input.
+##### Scale
 
-###### Scale
+Data type: Float.
 
 The scale of the gabor noise.
 
-###### Frequency
+##### Frequency
+
+Data type: Float.
 
 The rate at which the gabor noise changes across space. The scale is global, the frequency relative to the current noise direction.
 
-###### Anisotrophy
+##### Anisotropy
+
+Data type: Float (factor).
 
 The directionality of gabor noise. A value of 1 is completely directional, while a value of 0 is omnidirectional.
 
-###### Orientation
+##### Orientation
 
-The direction of the anisotropic gabor noise. It is an angle, since it is 2d.
+Data type: follows the Type setting.
 
-##### 3D Mode
+The direction of the anisotropic gabor noise. In 2D mode it is an angle (Float (angle)). In 3D mode it is a direction in 3D space (Vector (direction)) that you can adjust with the 3D widget.
+
+#### Properties
+
+##### Type
 
 ![3D Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-texture/3d-mode.png)
 
-###### Scale
+- **2D**: Uses the X and Y values of the vector. The Z value is ignored.
+- **3D**: Uses the full 3D vector.
 
-The scale of the gabor noise.
-
-###### Frequency
-
-The rate at which the gabor noise changes across space. The scale is global, the frequency relative to the current noise direction.
-
-###### Anisotrophy
-
-The directionality of gabor noise. A value of 1 is completely directional, while a value of 0 is omnidirectional.
-
-###### Orientation
-
-The direction of the anisotropic gabor noise. It is oriented in the 3d space. And can be adjusted with the 3d widget.
-
-#### Output
+#### Outputs
 
 ##### Value
 
 Data type: Float.
 
-The sum of gabor phase and intensity.
+The gabor noise value with both random intensity and phase.
 
 ##### Phase
 
 Data type: Float.
 
-The gabor phase.
+The phase of the gabor noise, without random intensity.
 
 ##### Intensity
 
 Data type: Float.
 
-The gabor intensity.
+The intensity of the gabor noise, without random phase.
 
 ### Gradient Texture
 
@@ -151,19 +249,19 @@ Vector input.
 
 What gradient type to use.
 
-#### Output
-
-##### Factor
-
-Data type: Float.
-
-Factor output.
+#### Outputs
 
 ##### Color
 
 Data type: Color.
 
 Color output.
+
+##### Factor
+
+Data type: Float.
+
+Factor output.
 
 ### Image Texture
 
@@ -202,8 +300,17 @@ The settings of this image can be further adjusted in the sidebar of the UV Edit
 - **Open Image**: Open an image.
 - **Remove**: Remove the image. Note that it is still in the blend file as long as it has users, and as long as you haven't purged it. By saving and reloading the blend file for example.
 
-- **Vector**: Texture coordinate for texture look-up. If this socket is left unconnected, UV coordinates from the active UV render layer are used.
-- **Frame**: The frame of an image sequence, if available.
+##### Vector
+
+Data type: Vector.
+
+Texture coordinate for texture look-up. If this socket is left unconnected, UV coordinates from the active UV render layer are used.
+
+##### Frame
+
+Data type: Integer.
+
+The frame of an image sequence, if available.
 
 #### Properties
 
@@ -269,15 +376,43 @@ The Magic Texture node is used to add a procedural psychedelic color texture.
 
 #### Inputs
 
-**Vector**: Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected. · **Scale**: Scale of the texture. · **Distortion**: Amount of distortion.
+##### Vector
+
+Data type: Vector.
+
+Texture coordinate to sample texture at; defaults to Generated texture coordinates if the socket is left unconnected.
+
+##### Scale
+
+Data type: Float.
+
+Scale of the texture.
+
+##### Distortion
+
+Data type: Float.
+
+Amount of distortion.
 
 #### Properties
 
-**Depth**: Number of iterations.
+##### Depth
+
+Number of iterations.
 
 #### Outputs
 
-**Color**: Texture color output. · **Factor**: Texture intensity output.
+##### Color
+
+Data type: Color.
+
+Texture color output.
+
+##### Factor
+
+Data type: Float.
+
+Texture intensity output.
 
 ### Noise Texture
 
@@ -293,11 +428,55 @@ The inputs are dynamic, they become available if needed depending on the node pr
 
 Data type: Vector.
 
-Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected.
+Texture coordinate to evaluate the noise at; defaults to Generated texture coordinates if the socket is left unconnected. Not in 1D mode.
 
-##### Normalize
+##### W
 
-Normalize the output to the 0 - 1 range. · **W**: Texture coordinate to evaluate the noise at. Appears with 4 dimensions. · **Scale**: Scale of the base noise octave. · **Detail**: Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher render time. · **Roughness**: Adds a roughness noise. · **Lacunarity**: The scale of a perlin noise octave relative to the perlin noise octave from the previous octave. · **Offset**: An added offset to each octave, determines the level where the highest octave will appear. · **Gain**: An extra multiplier to tune the magnitude of octaves. · **Distortion**: Amount of distortion.
+Data type: Float.
+
+Texture coordinate to evaluate the noise at. Only in 1D and 4D mode.
+
+##### Scale
+
+Data type: Float.
+
+Scale of the base noise octave.
+
+##### Detail
+
+Data type: Float.
+
+Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher render time.
+
+##### Roughness
+
+Data type: Float (factor).
+
+The blend factor between an octave and the octave before it. A value of 0 gives no detail.
+
+##### Lacunarity
+
+Data type: Float.
+
+The scale of a perlin noise octave relative to the perlin noise octave from the previous octave.
+
+##### Offset
+
+Data type: Float.
+
+An added offset to each octave, determines the level where the highest octave will appear. Only in Ridged Multifractal, Hybrid Multifractal and Hetero Terrain mode.
+
+##### Gain
+
+Data type: Float.
+
+An extra multiplier to tune the magnitude of octaves. Only in Ridged Multifractal and Hybrid Multifractal mode.
+
+##### Distortion
+
+Data type: Float.
+
+Amount of distortion.
 
 #### Properties
 
@@ -349,6 +528,10 @@ Produces an unnatural homogeneous and isotropic result. Uses an additive cascade
 
 Similar to Hybrid Multifractal creates a heterogeneous terrain, but with the likeness of river channels.
 
+##### Normalize
+
+Normalize the output to the 0 - 1 range.
+
 #### Outputs
 
 ##### Factor
@@ -375,13 +558,13 @@ Add a voronoi texture.
 
 Data type: Vector.
 
-Vector input.
+Vector input. Not in 1D mode.
 
 ##### W
 
 Data type: Float.
 
-The value w scale in 4 dimensions.
+The fourth coordinate of the texture. Only in 1D and 4D mode.
 
 ##### Scale
 
@@ -393,29 +576,37 @@ The scale of the voronoi texture.
 
 Data type: Float.
 
-The number ovf voronoi layers.
+The number of voronoi layers to sum. Not in N-Sphere Radius mode.
 
 ##### Roughness
 
 Data type: Float (factor).
 
-The influence of the voronoi layer relative to the previous layer.
+The influence of the voronoi layer relative to the previous layer. Not in N-Sphere Radius mode.
 
-##### Lacunacy
+##### Lacunarity
 
-The scale of the voronoi layer relative to the previous layer.
+Data type: Float.
+
+The scale of the voronoi layer relative to the previous layer. Not in N-Sphere Radius mode.
 
 ##### Smoothness
 
 Data type: Float (factor).
 
-Smoothness of Smooth F1
+The smoothness of the cell borders. Only in Smooth F1 mode.
+
+##### Exponent
+
+Data type: Float.
+
+The exponent of the Minkowski distance metric. Only when Distance Metric is Minkowski.
 
 ##### Randomness
 
 Data type: Float (factor).
 
-The detail of the voronoi texture.
+How random the positions of the cell points are. A value of 0 gives a regular grid.
 
 #### Properties
 
@@ -461,17 +652,37 @@ Distance calculation mode. The modes are different mathematical methods.
 
 Normalize the output distance to the 0.0 - 1.0 range.
 
-#### Output
+#### Outputs
 
-##### Factor
+##### Distance
 
-Factor output.
+Data type: Float.
+
+The distance to the cell point, or to the cell edge in Distance to Edge mode. Not in N-Sphere Radius mode.
 
 ##### Color
 
 Data type: Color.
 
-Color output.
+A random color for each cell. Not in Distance to Edge and N-Sphere Radius mode.
+
+##### Position
+
+Data type: Vector.
+
+The position of the cell point. Not in 1D mode, and not in Distance to Edge and N-Sphere Radius mode.
+
+##### W
+
+Data type: Float.
+
+The fourth coordinate of the cell point. Only in 1D and 4D mode.
+
+##### Radius
+
+Data type: Float.
+
+The radius of the n-sphere inside the cell. Only in N-Sphere Radius mode.
 
 ### Wave Texture
 
@@ -531,27 +742,27 @@ Set an offset for the phase.
 
 Bands or Rings shaped waves.
 
-##### Bands direction
+##### Bands Direction
 
 ![Bands direction](/docs2/images/editors/geometry-node-editor/header/add-menu-texture/bands-direction.png)
 
-In which direction the bands should point.
+In which direction the bands should point. In Rings mode this setting is Rings Direction.
 
-#### Wave Profile
+##### Wave Profile
 
 ![Wave Profile](/docs2/images/editors/geometry-node-editor/header/add-menu-texture/wave-profile.png)
 
 Controls the shape and look of the wave type.
 
-##### Saw
+###### Saw
 
 Uses a saw tooth profile.
 
-##### Sine
+###### Sine
 
 Uses the standard sine profile.
 
-##### Triangle
+###### Triangle
 
 Uses a triangle shape.
 
@@ -581,7 +792,13 @@ Add a white noise texture.
 
 Data type: Vector.
 
-Vector input.
+Vector input. Not in 1D mode.
+
+##### W
+
+Data type: Float.
+
+The value used as seed. Only in 1D and 4D mode.
 
 #### Properties
 
@@ -589,13 +806,15 @@ Vector input.
 
 ![Dimensions](/docs2/images/editors/geometry-node-editor/header/add-menu-texture/dimensions-3.png)
 
-What gradient type to use.
+How many dimensions to use for the noise.
 
-#### Output
+#### Outputs
 
-##### Vector
+##### Value
 
-Factor output.
+Data type: Float.
+
+A random value.
 
 ##### Color
 
