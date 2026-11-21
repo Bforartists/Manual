@@ -151,6 +151,8 @@ You can also drag and drop the assets onto data slots.
 
 Modifier-ready node groups that build new geometry from the object. You can add them as modifiers from the Add Modifier menu or drag them into the Geometry Node Editor.
 
+![Generate](/docs2/images/editors/asset-browser/asset-browser-essentials-asset-library/generate.png)
+
 #### Array
 
 Creates copies of the geometry, each one moved a bit further than the last. Good for fences, stairs or chains.
@@ -390,6 +392,8 @@ Smooth normals by angle procedurally. Anything above a certain angle threshold w
 ### Simulation
 
 Node groups for physics simulations built with geometry nodes. Several of them are modifiers you can add straight to an object.
+
+![Simulation](/docs2/images/editors/asset-browser/asset-browser-essentials-asset-library/simulation.png)
 
 #### Capture Rest Geometry
 
