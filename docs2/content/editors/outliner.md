@@ -821,13 +821,9 @@ Two buttons in the header add a collection. Both put the new collection **inside
 
 #### New Nested
 
-![New Nested button](/docs2/images/editors/outliner/add-collection-new-nested.png)
-
 Adds a new, empty collection inside the active collection. It is the same tool as **New Nested** in the Collection right click menu.
 
 #### New Nested from Selection
-
-![New Nested from Selection button](/docs2/images/editors/outliner/add-collection-new-nested-from-selection.png)
 
 Adds a new collection inside the active collection and moves the objects that are selected in the Outliner into it. It is the same tool as **New Nested from Selection** in the Collection right click menu. With no object selected, it adds an empty collection. Its icon shows a collection with the select cursor.
 
@@ -946,13 +942,9 @@ Two buttons in the header add a collection. Both put the new collection **inside
 
 #### New Nested
 
-![New Nested button](/docs2/images/editors/outliner/add-collection-new-nested.png)
-
 Adds a new, empty collection inside the active collection. It is the same tool as **New Nested** in the Collection right click menu.
 
 #### New Nested from Selection
-
-![New Nested from Selection button](/docs2/images/editors/outliner/add-collection-new-nested-from-selection.png)
 
 Adds a new collection inside the active collection and moves the objects that are selected in the Outliner into it. It is the same tool as **New Nested from Selection** in the Collection right click menu. With no object selected, it adds an empty collection. Its icon shows a collection with the select cursor.
 
