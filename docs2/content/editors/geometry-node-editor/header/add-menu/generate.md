@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Generate"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Generate nodes."
 order: 150
@@ -49,7 +49,9 @@ Generate and manage an array of elements.
 
 ![Curve to Tube](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/curve-to-tube.png)
 
-Convert a curve to a tube geometry.
+Convert a curve to a tube geometry. The input can be a curve or Grease Pencil strokes. For strokes, the attributes (such as color) are passed on to the tube mesh.
+
+The settings are grouped in the panels Profile, Miter Scale, Resample, Caps, UV Map and Grease Pencil Material. The Grease Pencil Material panel decides which material the tubes made from strokes use.
 
 ### Scatter on Surface
 
