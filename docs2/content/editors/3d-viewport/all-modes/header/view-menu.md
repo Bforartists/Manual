@@ -64,8 +64,6 @@ Shows or hides the category tabs on the tool shelf. The tabs hold tools from the
 
 ![Toolbar Tabs](/docs2/images/editors/3d-viewport/header/view-menu/tool-shelf-tabs-2.png)
 
-Note that you need to adjust the width of the tool shelf manually afterwards since it does not automatically update the width of the tool shelf area.
-
 Note that you need to save the startup.blend to save the state of this checkbox.
 
 ## Legacy

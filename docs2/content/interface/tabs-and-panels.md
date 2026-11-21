@@ -52,5 +52,7 @@ The Sidebars can have Tabs to switch between different content. Also the Propert
 
 ### Compact Tabs
 
+![Compact Tabs](/docs2/images/ui/interface/panels/compact-tabs.png)
+
 Shows the sidebar tabs in a smaller size, with an icon instead of the name when the tab has one. This leaves more room for the panels. To turn it on or off, right-click a panel header in a sidebar and choose **Compact Tabs**. The setting applies to all sidebars.
 
