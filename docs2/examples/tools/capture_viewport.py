@@ -8,9 +8,11 @@ HOW TO USE (no agent needed)
    selects the "capture_subject" object and saves a screenshot of the area as <scene name>.png.
 4. Afterwards crop the middle 4:3 of each picture (1200x900) and scale it to 800x600 (see the "image" line of the capture property).
 Preferences that are NOT stored in the .blend (see the "preferences" line): Gizmo Size and Line Width.
+Optional: a "viewport" entry in the capture property, for example {"overlay": {"show_floor": false}, "shading": {"color_type": "SINGLE"}},
+sets extra overlay and shading values for that scene (they are put back afterwards).
 The script restores the viewport (panels, overlays, scene) when it is done.
 """
-import bpy, os, re
+import bpy, os, re, json
 
 OUT = r"//captures"          # change me: folder for the pictures ("//" = next to the .blend)
 ONLY = ""                     # only scenes whose name starts with this (empty = all), e.g. "UV " or "Primitive "
@@ -31,13 +33,30 @@ def main():
                 color=sp.shading.color_type, over=sp.overlay.show_overlays, wire=sp.overlay.show_wireframes,
                 text=sp.overlay.show_text, stats=sp.overlay.show_stats, cursor=sp.overlay.show_cursor,
                 gizmo=sp.show_gizmo, nav=sp.show_gizmo_navigate)
+    # show_region_hud is left alone: turning it back on from a timer crashes Bforartists 5.3 (ED_area_init)
     panels = {a: getattr(sp, a) for a in ('show_region_ui', 'show_region_toolbar', 'show_region_header',
-                                           'show_region_tool_header', 'show_region_asset_shelf', 'show_region_hud') if hasattr(sp, a)}
+                                           'show_region_tool_header', 'show_region_asset_shelf') if hasattr(sp, a)}
     for a in panels:
         setattr(sp, a, False)
-    state = {"i": 0, "phase": 0}
+    state = {"i": 0, "phase": 0, "extra": []}
+
+    def viewport_extras(sc):
+        try:
+            vp = json.loads(sc["capture"]).get("viewport", {})
+        except (ValueError, AttributeError):
+            return
+        for group, target in (("overlay", sp.overlay), ("shading", sp.shading)):
+            for k, v in vp.get(group, {}).items():
+                state["extra"].append((target, k, getattr(target, k)))
+                setattr(target, k, tuple(v) if isinstance(v, list) else v)
+
+    def undo_extras():
+        for target, k, v in reversed(state["extra"]):
+            setattr(target, k, v)
+        state["extra"].clear()
 
     def restore():
+        undo_extras()
         for a, val in panels.items():
             setattr(sp, a, val)
         win.scene = keep["scene"]
@@ -59,6 +78,7 @@ def main():
             sp.overlay.show_text = False; sp.overlay.show_stats = False; sp.overlay.show_cursor = False
             sp.show_gizmo = True; sp.show_gizmo_modifier = True; sp.show_gizmo_navigate = False
             sp.region_3d.view_perspective = 'CAMERA'
+            undo_extras(); viewport_extras(sc)
             subject = sc.objects.get(sc.get("capture_subject", ""))
             with bpy.context.temp_override(window=win, area=area, region=reg):
                 bpy.ops.view3d.view_center_camera()

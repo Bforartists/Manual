@@ -10,13 +10,1799 @@ status: needs-review
 source:
   - "webflow:assets/geometry-nodes/normals"
 icon: geometry_nodes
-summary: "Geometry node groups that come with Bforartists: grease pencil, material, mesh, normals, primitives and utilities."
+summary: "Geometry node groups that come with Bforartists: curve, grease pencil, material, mesh, normals, primitives and utilities."
 cta: "Browse"
 order: 40
 ---
-Geometry node groups that come with Bforartists: grease pencil, material, mesh, normals, primitives and utilities.
+Geometry node groups that come with Bforartists: curve, grease pencil, material, mesh, normals, primitives and utilities.
 
 > **Draft:** the assets of this library will be listed here: one section per category, one entry per asset with what it does and how to use it.
+
+# Curve
+
+The Curve assets work on curves. The **Shapes** catalog draws flat curve shapes, the **Fill** catalog turns closed curves into meshes, and the **Operations** catalog simplifies curves. Curves can be Curve objects, Curves objects or Grease Pencil strokes, so you can draw an outline by hand and let a Fill node build the mesh.
+
+Find them in the Asset Browser and in the Asset Shelf of the Geometry Node Editor, under **Geometry Nodegroups › Curve**. Drag one into the node tree to add it.
+
+## Shapes
+
+The Shapes assets draw a flat curve in the shape of a classic mathematical figure: a heart, a rose, a butterfly, a ring and more. Use the curve as an outline, as the input of a Fill node to make a mesh, as a profile for Curve to Mesh, or as a path. Most of the shapes also exist as pictures in the Texture / Shapes assets of the [Compositor Library](compositor-library.md) and the [Shader Library](shader-library.md), with the same controls.
+
+![Gallery of the 34 curve shapes](/docs2/images/assets/geometry-nodes-library/shapes/gallery.png)
+
+The shapes share the same kind of interface:
+
+- Most shapes have a **Scale**. Some have a **Position**, a **Form** or other controls that change the figure.
+- The **Curve** panel sets how the figure is turned into a curve. **Resolution** is the number of points. Shapes made from a formula draw the figure by tracing it, and for those **Bounds** is half the size of the traced area. Parts of the figure outside of it are cut off, so raise Bounds when a large Scale cuts the shape.
+- Hexagon and Equilateral Triangle are made of straight lines and have no Curve panel.
+- The only output is **Curve**, the shape as a flat curve.
+
+Each shape has its own section below, in alphabetical order. The tooltip of a socket in the editor tells you more about it.
+
+![The Curve Rounded Rectangle node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/curve-rounded-rectangle.png)
+
+### Curve Ampersand
+
+Draws the Ampersand shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 96.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Astroid
+
+Draws the Astroid shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Bean
+
+Draws the Bean shape as a flat curve.
+
+#### Inputs
+
+##### Size
+
+Data type: Float.
+
+The scale of the shape. Default: 0.5.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Bicorn
+
+Draws the Bicorn shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Bicuspid
+
+Draws the Bicuspid shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 64.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Boat Propeller
+
+Draws the Boat Propeller shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 48.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Brush Tip
+
+Draws the Brush Tip shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 48.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Bullet Nose
+
+Draws the Bullet Nose shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 96.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Burnside
+
+Draws the Burnside shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Butterfly 1
+
+Draws the Butterfly 1 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 3.
+
+##### Offset
+
+Data type: Float.
+
+The offset of the shape. Default: 1.
+
+##### Number of Wings
+
+Data type: Integer.
+
+The number of wings. Default: 4.
+
+##### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 64.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Butterfly 2
+
+Draws the Butterfly 2 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Offset
+
+Data type: Float.
+
+The offset of the shape. Default: 0.
+
+##### Form
+
+Data type: Vector.
+
+Modifies the shape procedurally. Default: (2, 6, 6).
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 48.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Cardioid
+
+Draws the Cardioid shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Form
+
+Data type: Vector.
+
+Modifies the shape procedurally. Default: (0.5, 0.5).
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Circle
+
+Draws a circle as a flat curve.
+
+#### Inputs
+
+##### Position
+
+Data type: Vector.
+
+The position of the shape. Default: (0, 0, 0).
+
+##### Radius
+
+Data type: Float.
+
+The radius of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Circumcircle
+
+Draws the Circumcircle shape as a flat curve.
+
+#### Inputs
+
+##### Point A
+
+Data type: Vector.
+
+Vector of point A, modifies the shape procedurally. Default: (1, 0, 0).
+
+##### Point B
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally. Default: (0, 1, 0).
+
+##### Point C
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally. Default: (0, 0, 0).
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Dumbbell
+
+Draws the Dumbbell shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 96.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Ellipse
+
+Draws the Ellipse shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Dimensions
+
+Data type: Vector.
+
+The Dimensions of the shape. Default: (1, 0.5, 0).
+
+##### Position
+
+Data type: Vector.
+
+The position of the shape. Default: (0, 0, 0).
+
+##### Roundness
+
+Data type: Float.
+
+The roundness order of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Epispiral
+
+Draws the Epispiral shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Number of lines
+
+Data type: Float.
+
+The number of lines of the spiral. Default: 4.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 48.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Equilateral Triangle
+
+Draws the Equilateral Triangle shape as a flat curve.
+
+#### Inputs
+
+##### Height
+
+Data type: Float.
+
+The scale/height of the shape. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Figure Eight
+
+Draws the Figure Eight shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Form
+
+Data type: Float.
+
+Modifies the shape procedurally. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 64.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Habenicht Trefoil
+
+Draws the Habenicht Trefoil shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Form
+
+Data type: Vector.
+
+Modifies the shape procedurally. Default: (3, 2, 0.25).
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 96.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Heart 1
+
+Draws the Heart 1 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Heart 2
+
+Draws the Heart 2 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Heart 3
+
+Draws the Heart 3 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 2.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Hexagon
+
+Draws the Hexagon shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Links
+
+Draws the Links shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 3.
+
+##### Form
+
+Data type: Vector.
+
+Modifies the shape procedurally. Default: (2, 2, 3).
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Detail of the tracing grid. Higher is more accurate but slower. Default: 64.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 1.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Petal 2
+
+Draws the Petal 2 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 0.75.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 48.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Petal 4
+
+Draws the Petal 4 shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 0.5.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 64.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Regular Polygon
+
+Draws the Regular Polygon shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Number of sides
+
+Data type: Integer.
+
+The number of sides. Default: 5.
+
+##### Curviness Exponent
+
+Data type: Float.
+
+How curved the sides are. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Ring
+
+Draws the Ring shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Position
+
+Data type: Vector.
+
+The position of the shape. Default: (0, 0, 0).
+
+##### Outer
+
+Data type: Float.
+
+The outer edge of the shape. Default: 1.
+
+##### Inner
+
+Data type: Float.
+
+The inner edge of the shape. Default: 0.5.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on each circle. Higher is smoother but slower. Default: 32.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Rose
+
+Draws the Rose shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Number of Petals
+
+Data type: Integer.
+
+The number of petals. Default: 5.
+
+##### Rotate
+
+Data type: Float.
+
+Rotates the shape. Default: 0.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 128.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Rounded Rectangle
+
+Draws the Rounded Rectangle shape as a flat curve.
+
+#### Inputs
+
+##### Width
+
+Data type: Float.
+
+The width of the shape. Default: 1.
+
+##### Height
+
+Data type: Float.
+
+The height of the shape. Default: 1.
+
+##### Bevel
+
+Data type: Float.
+
+The bevel of the shape. Default: 0.5.
+
+##### Bevel Clamp
+
+Data type: Float.
+
+The bevel clamp of the shape. Default: 0.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Stadium
+
+Draws the Stadium shape as a flat curve.
+
+#### Inputs
+
+##### Scale
+
+Data type: Float.
+
+The scale of the shape. Default: 1.
+
+##### Dimensions
+
+Data type: Vector.
+
+Modifies the shape procedurally. Default: (0.5, 1, 0.5).
+
+##### Radius
+
+Data type: Float.
+
+The offset of the shape. Default: 0.5.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Superellipse
+
+Draws the Superellipse shape as a flat curve.
+
+#### Inputs
+
+##### Point A
+
+Data type: Vector.
+
+The Dimensions of the shape. Default: (4, 2, 2).
+
+##### Point B
+
+Data type: Vector.
+
+The position of the shape. Default: (1, 1, 1).
+
+##### Offset
+
+Data type: Float.
+
+The roundness order of the shape. Default: 1.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher is smoother but slower. Default: 32.
+
+###### Bounds
+
+Data type: Float.
+
+Half the size of the traced area. Parts outside are cut off. Default: 2.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+### Curve Triangle
+
+Draws the Triangle shape as a flat curve.
+
+#### Inputs
+
+##### Point A
+
+Data type: Vector.
+
+Vector of point A, modifies the shape procedurally. Default: (1, 0).
+
+##### Point B
+
+Data type: Vector.
+
+Vector of point B, modifies the shape procedurally. Default: (0, 1).
+
+##### Point C
+
+Data type: Vector.
+
+Vector of point C, modifies the shape procedurally. Default: (0, 0).
+
+##### Smooth
+
+Data type: Float.
+
+The smoothness/roundness of the shape. Default: 0.
+
+##### Curve
+
+How the shape is turned into a curve.
+
+###### Resolution
+
+Data type: Integer.
+
+Number of points on the curve. Higher gives smoother rounded corners. Default: 24.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The shape as a flat curve.
+
+## Fill
+
+The Fill assets turn a closed curve into a mesh. They differ in the layout of the faces: triangles, quads in a grid, quads in rings or bands. Pick the one that fits what you do next. A mesh with even quads is good for sculpting and for subdividing, a mesh with a few triangles is light.
+
+All Fill nodes use the same input curve and have the same extra settings, listed under **Shared inputs**. All of them output a mesh. The pictures below fill the same capsule shape, drawn by the Curve Stadium shape asset with its Resolution set to 64 for a smooth outline.
+
+### Shared inputs
+
+These inputs are on every Fill node.
+
+#### Curve
+
+Data type: Geometry.
+
+The curve to fill. It takes Curve, Curves or Grease Pencil objects. Open curves are closed with a straight edge.
+
+#### Overlaps
+
+Data type: Menu.
+
+What happens where curves overlap. **Join** merges them and treats fully enclosed curves as holes. **Cut** lets later curves cut the earlier ones. **Even-Odd** alternates filled and empty areas. Default: Join.
+
+#### Split By Plane
+
+Data type: Boolean.
+
+Fills curves on different planes separately, so only curves on the same plane join or cut each other. Default: On.
+
+#### Solidify
+
+Gives the fill thickness, in one step. The panel has a checkbox named **Solidify**, which is off by default, and the same settings as the [Solidify](#solidify) node: Mode, Thickness, Offset, Even Thickness and the panels Rim, Thickness Clamp, Normals, Profile and Bubbly. The panel has no Factor input and no Materials panel.
+
+#### Grease Pencil
+
+Options that only apply to Grease Pencil input. They have no effect on other curves.
+
+##### Separate Layers
+
+Data type: Boolean.
+
+Fills each layer on its own, so Overlaps only joins and cuts strokes on the same layer. Turn it off to treat all layers as one drawing. Default: On.
+
+##### Material
+
+How Grease Pencil materials and colors carry over to the mesh.
+
+###### Inherit Material
+
+Data type: Boolean.
+
+Uses a simple default Grease Pencil material and the color attributes of the stroke. When it is off, the Material Override is used. Default: On.
+
+###### Material Override
+
+Data type: Material.
+
+A custom material for the Grease Pencil fill mesh.
+
+###### Use Shading
+
+Data type: Boolean.
+
+Uses shading and shadows on a simple Diffuse material with the Grease Pencil color attributes. Default: Off.
+
+### Fill Curve
+
+![Fill Curve asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-thumb.png)
+
+![The Fill Curve node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve.png)
+
+Fills a flat curve with triangles, or with one N-gon. It is the lightest fill and it keeps holes, so it is a good first choice for flat covers and for shapes that you solidify next. It triangulates the area inside the outline, and Overlaps decides how curves that cross or sit inside each other combine.
+
+![Fill Curve example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### N-gons
+
+Data type: Boolean.
+
+Fill with one N-gon instead of triangles. Default: Off.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Delaunay
+
+![Fill Curve Delaunay asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-thumb.png)
+
+![The Fill Curve Delaunay node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay.png)
+
+Fills a flat curve with even triangles. Points are scattered inside the outline and joined into triangles of about the same size, which gives a mesh that bends and sculpts evenly. Point Distance sets the spacing of the points, and Seed changes how they are scattered.
+
+![Fill Curve Delaunay example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-delaunay-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Point Distance
+
+Data type: Float.
+
+Spacing of the inner points. Smaller gives more, finer triangles. Default: 0.15.
+
+##### Seed
+
+Data type: Integer.
+
+Changes the scatter of the inner points. Default: 0.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Grid
+
+![Fill Curve Grid asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-thumb.png)
+
+![The Fill Curve Grid node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid.png)
+
+Fills one closed curve with a grid of quads. The outline is resampled and mapped on a square grid, which gives clean quad topology for shapes that are close to a square or a circle. Resolution sets the points along each side of the grid, and Corner Offset slides the four corners along the curve.
+
+![Fill Curve Grid example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-grid-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Resolution
+
+Data type: Integer.
+
+Points along each side of the grid. The outline is resampled to 4 x (Resolution - 1) points. Default: 6.
+
+##### Corner Offset
+
+Data type: Integer.
+
+Slides the four grid corners along the curve, in points. Default: 0.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Inset
+
+![Fill Curve Inset asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-thumb.png)
+
+![The Fill Curve Inset node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset.png)
+
+Fills a flat curve with bands of quads along the edge and a filled center. The edge loops follow the outline, which is useful for a clean border to bevel or to subdivide. Width and Rings set the band, and Center sets how the middle is filled.
+
+![Fill Curve Inset example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-inset-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Width
+
+Data type: Float.
+
+Width of the band of quads along the edge. Points stop where they would meet, so narrow parts stay clean. Default: 0.2.
+
+##### Rings
+
+Data type: Integer.
+
+Number of quad rings in the band. Default: 2.
+
+##### Center
+
+Data type: Menu.
+
+How the middle is filled. Grid gives all quads but uses only the first curve, so holes are not kept. Options: Triangles, N-gon or Grid. Default: Triangles.
+
+##### Resolution
+
+Data type: Integer.
+
+Points along each side of the center grid. Only used when Center is Grid. Default: 4.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Quad
+
+![Fill Curve Quad asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-thumb.png)
+
+![The Fill Curve Quad node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad.png)
+
+Fills a curve with even quads of a chosen size. Rings of quads grow from the edge, and they thin out until a grid closes the middle. Use it for an all-quad mesh with a size you control. Size sets the target size of the quads and Max Rings limits how many rings grow before the center is capped.
+
+![Fill Curve Quad example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-quad-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Size
+
+Data type: Float.
+
+Target size of the quads. Default: 0.15.
+
+##### Max Rings
+
+Data type: Integer.
+
+Most rings to grow before the center is capped. Default: 12.
+
+##### Corner Offset
+
+Data type: Integer.
+
+Slides the four grid corners along the curve, in points. Default: 0.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Radial
+
+![Fill Curve Radial asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-thumb.png)
+
+![The Fill Curve Radial node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial.png)
+
+Fills a closed curve with rings of quads around a center point, like a spider web. It suits round shapes, disks and anything you want to scale in rings. Rings sets the number of rings and Center Offset moves the center away from the average of the curve points.
+
+![Fill Curve Radial example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-radial-example.png)
+
+The picture shows a capsule filled with the default settings.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Rings
+
+Data type: Integer.
+
+Number of rings between the edge and the center. Default: 3.
+
+##### Center Offset
+
+Data type: Vector (translation).
+
+Moves the center away from the average of the curve points. Default: (0, 0, 0).
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+### Fill Curve Wavefront
+
+![Fill Curve Wavefront asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-thumb.png)
+
+![The Fill Curve Wavefront node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront.png)
+
+Grows rings of quads from a curve, inward, outward or both. Each ring is solved from the last one, like a wave that travels from the outline. Use it for borders, outlines with thickness and ribbons: with Close Curves off, an open stroke grows a ribbon of rings. Direction picks the way, Width is the total width of all rings and Rings is their number.
+
+![Fill Curve Wavefront example](/docs2/images/assets/geometry-nodes-library/shapes/fill-curve-wavefront-example.png)
+
+The picture shows a capsule filled with the default settings. Fill Center is None, so the middle stays open.
+
+#### Inputs
+
+This node has the [shared inputs](#shared-inputs) and the inputs below.
+
+##### Direction
+
+Data type: Menu.
+
+Grow the rings inward from the curve, outward, or both. Options: Inset, Outset or Both. Default: Inset.
+
+##### Width
+
+Data type: Float.
+
+Total width of the rings. Default: 0.3.
+
+##### Rings
+
+Data type: Integer.
+
+Number of rings. Each ring is a full solve, so this is the main cost. Default: 4.
+
+##### Fill Center
+
+Data type: Menu.
+
+Close the middle with triangles or one N-gon, or leave it open. On Outset this fills the area inside the curve. Options: None, Triangles or N-gon. Default: None.
+
+##### Close Curves
+
+Data type: Boolean.
+
+Close open curves with a straight edge. Turn off to keep curves as drawn, so open strokes grow a ribbon of rings. Overlaps, Fill Center and the repair pass only apply to closed curves. Default: On.
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The filled mesh.
+
+## Operations
+
+### Decimate Curve
+
+![Decimate Curve asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve-thumb.png)
+
+![The Decimate Curve node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/decimate-curve.png)
+
+Removes points from a curve by angle. Straight runs reduce to their end points, while bends keep their detail. Use it to clean up a hand-drawn stroke or a dense curve before you fill it. It checks how much the curve turns at each point and removes the points that do not turn more than the Angle.
+
+#### Inputs
+
+##### Curve
+
+Data type: Geometry.
+
+The curve to simplify. Takes Curve, Curves or Grease Pencil objects.
+
+##### Angle
+
+Data type: Float (angle).
+
+How much the curve may turn between kept points. Straight runs always reduce to their ends. Lower keeps more detail, higher removes more. Default: 5.002Â°.
+
+#### Outputs
+
+##### Curve
+
+Data type: Geometry.
+
+The simplified curve.
+
 
 # Grease Pencil
 
@@ -27,6 +1813,8 @@ _Assets in this category will be documented here._
 _Assets in this category will be documented here._
 
 # Mesh
+
+The Mesh assets are in two catalogs: **Mesh › UV** and **Mesh › Operations**. The Operations assets, [Solidify](#solidify) and [Bevel Advanced](#bevel-advanced), change an existing mesh.
 
 The UV assets write UV coordinates onto a mesh. Drag one onto an object from the Asset Shelf or the Asset Browser. Each picture shows the result on a checker texture, next to the UV layout.
 
@@ -1246,6 +3034,417 @@ Data type: Geometry.
 The mesh with the UV coordinates written to the UV map named by the UV Name or UV Map input.
 
 _The Mesh Operations assets will be documented here._
+
+## Solidify
+
+![Solidify asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/solidify-thumb.png)
+
+![The Solidify node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/solidify.png)
+
+Gives a mesh thickness, like the Solidify modifier, with a quick choice of side wall: straight, chamfered, rounded, inset or a bubbly remesh. Use it to turn a flat mesh, such as the result of a Fill node, into a solid. It pushes a second surface along the normals by the Thickness and closes the open edges with a rim.
+
+![The four side wall modes: Straight, Chamfer, Round and Inset](/docs2/images/assets/geometry-nodes-library/shapes/solidify-modes.png)
+
+The picture shows a filled rounded rectangle with Thickness 0.25 in the modes Straight, Chamfer, Round and Inset.
+
+### Inputs
+
+#### Mesh
+
+Data type: Geometry.
+
+The mesh to give thickness. This needs mesh data: fill curves first, or use the Solidify panel on a Fill node.
+
+#### Mode
+
+Data type: Menu.
+
+Shape of the side wall. Options: Straight, Chamfer, Round, Inset or Bubbly. Default: Straight.
+
+#### Thickness
+
+Data type: Float.
+
+Total thickness of the solid. Default: 0.2.
+
+#### Offset
+
+Data type: Float.
+
+Which way the thickness grows. -1 grows behind the surface so it stays in place, 1 grows in front of it, and 0 grows equally both ways. Default: -1.
+
+#### Even Thickness
+
+Data type: Boolean.
+
+Keep the same thickness at corners, like Even Thickness on the Solidify modifier. Default: On.
+
+#### Factor
+
+Data type: Float (factor).
+
+Works like a mask for the thickness. 1 keeps the full Thickness, 0 leaves no thickness, and values in between taper it. Connect a vertex group or a painted attribute to control it across the surface. Default: 1.
+
+#### Rim
+
+Close the open edges of the surface with a side wall.
+
+##### Fill Rim
+
+Data type: Boolean.
+
+Fill the gap between the two faces at open edges. Default: On.
+
+##### Only Rim
+
+Data type: Boolean.
+
+Keep only the rim and remove both faces. Default: Off.
+
+#### Thickness Clamp
+
+Limit the thickness where it would collide with nearby geometry.
+
+##### Clamp
+
+Data type: Float.
+
+Limit the offset to this many times the shortest edge at each vertex, so tight shapes do not cross themselves. 0 turns it off. Default: 0.
+
+#### Normals
+
+Control which way the surface faces.
+
+##### Flip Normals
+
+Data type: Boolean.
+
+Flip the direction of the faces. Default: Off.
+
+#### Profile
+
+Shape of the side wall: bevel, segments and depth.
+
+##### Bevel
+
+Data type: Float.
+
+Width of the chamfer, the rounding or the inset rim. Default: 0.05.
+
+##### Segments
+
+Data type: Integer.
+
+Segments in each chamfered or rounded edge. Chamfers stay straight, so more segments only add edge loops. Rounds get smoother. Default: 3.
+
+##### Loops
+
+Data type: Integer.
+
+Extra edge loops around the side wall. Default: 0.
+
+##### Depth
+
+Data type: Float.
+
+How far the faces sit below the rim in Inset mode. Default: 0.05.
+
+#### Bubbly
+
+Remesh settings for the Bubbly mode.
+
+##### Voxel Size
+
+Data type: Float.
+
+Detail of the Bubbly remesh. 0 picks a third of the Thickness. Smaller is much slower. Default: 0.
+
+##### Smoothing
+
+Data type: Float.
+
+How round the shape gets, relative to Thickness. Higher is rounder and a little slower. Default: 0.6.
+
+#### Materials
+
+Material slots for the shell and the rim.
+
+##### Material Offset
+
+Data type: Integer.
+
+Added to the material index of the new shell faces. Default: 0.
+
+##### Rim Material Offset
+
+Data type: Integer.
+
+Added to the material index of the rim faces. Default: 0.
+
+#### Grease Pencil
+
+Options that only apply to Grease Pencil input.
+
+##### Material
+
+How Grease Pencil materials and colors carry over to the mesh.
+
+###### Inherit Material
+
+Data type: Boolean.
+
+Keep the material and colors of the input mesh, such as a Grease Pencil fill. Otherwise, use the Material Override. Default: On.
+
+###### Material Override
+
+Data type: Material.
+
+Use a custom material for the Grease Pencil fill mesh.
+
+###### Use Shading
+
+Data type: Boolean.
+
+Turn on shading and shadows in the simple Grease Pencil material. Default: Off.
+
+### Outputs
+
+#### Mesh
+
+Data type: Geometry.
+
+The solid mesh.
+
+#### Shell
+
+Data type: Boolean.
+
+The new faces, like the Shell Vertex Group of the modifier.
+
+#### Rim
+
+Data type: Boolean.
+
+The rim faces, like the Rim Vertex Group of the modifier.
+
+## Bevel Advanced
+
+![Bevel Advanced asset thumbnail](/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced-thumb.png)
+
+![The Bevel Advanced node in the Geometry Node Editor](/docs2/images/assets/geometry-nodes-library/shapes/bevel-advanced.png)
+
+Bevels edges or vertices like the Bevel modifier, with extra controls: width types, limit by angle or weight, a profile, miters and shading, and overlap clamping built in. Use it to soften the hard edges of a mesh for a more realistic look. It cuts a chamfer of the given Amount along each chosen edge and splits it into Segments.
+
+### Inputs
+
+#### Mesh
+
+Data type: Geometry.
+
+The mesh to bevel.
+
+#### Affect
+
+Data type: Menu.
+
+Bevel along edges, or round off corners at vertices. Options: Vertices or Edges. Default: Edges.
+
+#### Width Type
+
+Data type: Menu.
+
+How Amount is measured. Offset is the distance along each face, Width is the size of the new bevel, Depth is how far it cuts in, and Percent is a share of the neighbouring edge. Options: Offset, Width, Depth or Percent. Default: Offset.
+
+#### Amount
+
+Data type: Float.
+
+Size of the bevel, measured the way Width Type says. With Width Type Percent, this stops just before 50. Default: 0.1.
+
+#### Segments
+
+Data type: Integer.
+
+How many pieces each bevel is split into. Higher is rounder. Default: 2.
+
+#### Limit
+
+Choose which edges get bevelled.
+
+##### Limit Method
+
+Data type: Menu.
+
+Bevel every edge, only edges sharper than Angle, or scale each edge by a stored weight. Options: None, Angle or Weight. Default: Angle.
+
+##### Angle
+
+Data type: Float (angle).
+
+Only bevel edges sharper than this. Default: 30Â°.
+
+##### Weight Attribute
+
+Data type: String.
+
+Attribute that scales the bevel in Weight mode. Edges normally use bevel_weight_edge and vertices bevel_weight_vert. Default: bevel_weight_edge.
+
+##### Selection
+
+Data type: Boolean.
+
+Only bevel what is selected here. Connect a vertex group or any mask. Default: On.
+
+#### Profile
+
+The shape of the bevel.
+
+##### Profile Type
+
+Data type: Menu.
+
+Superellipse uses the Shape slider, and Custom uses a preset or your own curve. Options: Superellipse or Custom. Default: Superellipse.
+
+##### Shape
+
+Data type: Float (factor).
+
+Profile curve of the bevel. 0.5 is round, lower is concave, higher is convex. Default: 0.5.
+
+##### Preset
+
+Data type: Menu.
+
+Ready-made profiles matching the Bevel modifier, or Custom Curve to use your own. They look best with plenty of Segments. Options: Custom Curve, Support Loops, Cornice, Crown or Steps. Default: Custom Curve.
+
+##### Custom Profile
+
+Data type: Geometry.
+
+Your own profile curve, drawn like the modifier: from (1, 0) to (0, 1) in X and Y, with (1, 1) at the original edge and (0, 0) on the inside.
+
+#### Geometry
+
+How corners are built.
+
+##### Miter Outer
+
+Data type: Menu.
+
+Corners sticking outward where two bevelled edges meet. Sharp lets them meet in a point, Patch adds a small extra face, and Arc rounds them. Arc is built by bending the Patch, and with Shape above 0.5 or a Custom profile it stays closer to Patch. With Width Type Percent, Arc uses the Patch shape. Options: Sharp, Patch or Arc. Default: Sharp.
+
+##### Miter Inner
+
+Data type: Menu.
+
+Corners folding inward where two bevelled edges meet. Sharp lets them meet in a point, and Arc rounds them using Spread. Options: Sharp or Arc. Default: Sharp.
+
+##### Spread
+
+Data type: Float.
+
+How far an inner Arc miter spreads along the edges. Clamp Spread keeps it from poking out past the corner. Default: 0.1.
+
+##### Clamp Spread
+
+Data type: Boolean.
+
+Keep Spread from going past Amount, so inner Arc miters do not poke out past the corner. Turn off to match the Bevel modifier. Default: On.
+
+##### Clamp Overlap
+
+Data type: Menu.
+
+Keep the bevel from running past its neighbours. Minimum per Island limits each separate piece on its own, Minimum uses one size for the whole mesh, and Off leaves it free but it can turn inside-out. Options: Off, Minimum or Minimum per Island. Default: Minimum per Island.
+
+#### Shading
+
+Normals, marks and materials for the new faces.
+
+##### Harden Normals
+
+Data type: Boolean.
+
+Keep the faces between bevels perfectly flat, and blend each bevel into the flat faces next to it. Default: Off.
+
+##### Mark Sharp
+
+Data type: Boolean.
+
+Mark the outer edges of the bevel as sharp. Default: Off.
+
+##### Mark Seam
+
+Data type: Boolean.
+
+Mark the outer edges of the bevel as UV seams. Default: Off.
+
+##### Material Index
+
+Data type: Integer.
+
+Material slot for the new faces. -1 keeps the material of the neighbours. Default: -1.
+
+#### Advanced
+
+Controls the Bevel modifier does not have. At their defaults, the bevel is unchanged.
+
+##### Amount Factor
+
+Data type: Float.
+
+Multiplies Amount per edge. Plug in a field or attribute to vary the width along the mesh. Edges at 0 are not beveled. Default: 1.
+
+##### Side Bias
+
+Data type: Float (factor).
+
+Makes the bevel wider on one face and narrower on the other. Positive widens the upper face of each edge, negative the lower. Edges whose faces sit level, like the upright edges of a box, stay even. Outer Arc uses the Patch shape while this is on. Edges only. Default: 0.
+
+##### Miter Selection
+
+Data type: Boolean.
+
+Vertices that can get a miter. Others stay sharp, whatever Miter Outer and Miter Inner are set to. Default: On.
+
+### Outputs
+
+#### Mesh
+
+Data type: Geometry.
+
+The beveled mesh.
+
+#### Bevel Position
+
+Data type: Float.
+
+0 on the outer edge of the bevel, rising to 1 at the center, and 0 on the rest of the mesh. Handy for edge wear. Needs 2 or more segments. It is in the Advanced panel of the node.
+
+#### Vertex Face
+
+Data type: Boolean.
+
+New faces at vertices. It is in the Selections panel of the node.
+
+#### Edge Face
+
+Data type: Boolean.
+
+New faces along edges. It is in the Selections panel of the node.
+
+#### Outer Edge
+
+Data type: Boolean.
+
+Outer edges of the new faces. It is in the Selections panel of the node.
+
+#### Mid Edge
+
+Data type: Boolean.
+
+Edges between the segments. It is in the Selections panel of the node.
+
 
 # Normals
 
