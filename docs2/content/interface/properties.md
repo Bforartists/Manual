@@ -7,7 +7,7 @@ path:
   - Components
   - Menus, buttons and controls
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 3 Interface.odt
@@ -61,6 +61,12 @@ A drop down box is another kind of a menu. Usually you choose something here. Li
 ![Color Picker](/docs2/images/ui/interface/controls/color-picker-2.png)
 
 You may stumble across color pickers in the UI. When you do a painting job for example. This allows you to adjust color for the specific task. Like adjusting the brush color.
+
+### Hue wrap
+
+Drag in the hue strip or in the hue area of the color picker, and keep going past the left or right edge. The hue wraps around to the other side, so you can pass through red without having to stop and start again.
+
+> **Tip:** Hold **Ctrl** while you drag to turn the wrap off. The drag then stops at the edge, which makes it easy to reach pure red.
 
 ## Widgets
 

@@ -476,6 +476,8 @@ Resets the color ramp to its default state.
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
+> **Tip:** Hold **Ctrl** while you drag to snap the stop to steps of 0.1, the same steps as the Pos slider. **Ctrl+Shift** gives finer steps, and **Shift** alone moves it slower and more precisely. The status bar shows these keys while you drag.
+
 ###### Active Color Stop elements
 
 ![Active Color Stop elements](/docs2/images/editors/compositor/header/add-menu-color/active-color-stop-elements.png)

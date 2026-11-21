@@ -160,6 +160,16 @@ Information (graphics or text) inside this area can be seen by the majority of v
 
 Safe area for general elements in a different aspect ratio.
 
+## Composition Guides panel
+
+![Composition Guides panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/composition-guides.png)
+
+The Composition Guides panel chooses the guide lines that are drawn over the preview to help you frame the image. The panel offers the same guides as the camera: Thirds, Center, Diagonal, Golden Ratio, Golden Triangles A and B, Harmony Triangles A and B, and a Color for the lines.
+
+The guides are only drawn when the **Guides** checkbox in the Overlays popover of the preview is on. When it is off, the whole panel is greyed out, so you can see that the settings have no effect.
+
+![Composition Guides panel, greyed out](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/composition-guides-off.png)
+
 ## Scene Strip Display panel
 
 ![Scene Strip Display panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/scene-strip-display-panel.png)

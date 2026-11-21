@@ -197,6 +197,10 @@ Show the 2d cursor.
 
 Show the safe area overlays.
 
+###### Guides
+
+Show the composition guides in the preview. Choose the guides in the Composition Guides panel of the sidebar View tab. That panel is greyed out while this checkbox is off.
+
 ###### Annotations
 
 Show the annotations.
