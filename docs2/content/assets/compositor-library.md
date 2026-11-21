@@ -140,9 +140,9 @@ Controls the intensity of the color temperature adjustment.
 
 #### Temp Kelvin
 
-Data type: Float (factor).
+Data type: Float.
 
-Sets the color temperature in Kelvin.
+Sets the color temperature in Kelvin. Default: 6500.
 
 ### Outputs
 
@@ -423,15 +423,17 @@ Size of the roughness.
 
 #### Vector Coordinates
 
+##### Vector Coordinates
+
 Data type: Boolean.
 
-Use the Vector input instead of the automatic image coordinates.
+Use the Vector input instead of the automatic image coordinates. Default: Off.
 
-#### Vector
+##### Vector
 
 Data type: Vector.
 
-Used when Vector Coordinates is on. Best used with the Vector Mapping node group.
+Vector Coordinates input. Best used with the Vector Mapping node group.
 
 ### Outputs
 
@@ -760,7 +762,7 @@ Color of the second checker
 
 ##### Frame Start
 
-Data type: Float (factor).
+Data type: Float.
 
 The starting frame for the animation effect.
 
@@ -1623,33 +1625,33 @@ Data type: Boolean.
 
 Enables or disables defocus for far-field areas. Default: On.
 
-#### Manual Focus
-
 ##### Manual Focus
+
+####### Manual Focus
 
 Data type: Boolean.
 
 Set the focus distance by hand instead of using the camera. Default: Off.
 
-##### Focus Distance
+###### Focus Distance
 
 Data type: Float.
 
 Adjusts the center offset for the defocus mask. Default: 5.
 
-##### F-Stop
+###### F-Stop
 
 Data type: Float.
 
 Adjusts the fstop depth field for the defocus mask. Default: 2.8.
 
-##### Near Offset
+###### Near Offset
 
 Data type: Float.
 
 Sets the distance threshold for near-field defocus. Default: 0.
 
-##### Far Offset
+###### Far Offset
 
 Data type: Float.
 
@@ -1796,33 +1798,33 @@ Data type: Boolean.
 
 Enables or disables defocus for far-field areas. Default: On.
 
-#### Manual Focus
-
 ##### Manual Focus
+
+####### Manual Focus
 
 Data type: Boolean.
 
 Set the focus distance by hand instead of using the camera. Default: Off.
 
-##### Focus Distance
+###### Focus Distance
 
 Data type: Float (distance).
 
 Adjusts the center offset for the defocus mask. Default: 5.
 
-##### F-Stop
+###### F-Stop
 
 Data type: Float.
 
 Adjusts the fstop depth field for the defocus mask. Default: 2.8.
 
-##### Near Offset
+###### Near Offset
 
 Data type: Float.
 
 Sets the distance threshold for near-field defocus. Default: 0.
 
-##### Far Offset
+###### Far Offset
 
 Data type: Float.
 
@@ -2050,9 +2052,9 @@ Size of the smudges. Default: 0.5.
 
 Data type: Boolean.
 
-Use a. Default: Off.
+Use a custom image as the grunge texture instead of the procedural one. Default: Off.
 
-##### Image
+##### Grunge Image
 
 Data type: Color.
 
@@ -5428,12 +5430,6 @@ Data type: Float.
 
 The scale of the shape. Default: 2.
 
-#### Factor
-
-Data type: Boolean.
-
-Amount of mixing between the A and B inputs. Default: Off.
-
 #### Vector Coordinates
 
 ##### Vector Coordinates
@@ -5464,7 +5460,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape that covers the whole image by default. Scale sets its size. Factor changes the shape. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
 
 The pattern with default values:
 

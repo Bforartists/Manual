@@ -138,6 +138,56 @@ Data type: Boolean.
 
 True for strokes that are hidden.
 
+### Grease Pencil Material Info
+
+![Grease Pencil Material Info](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/grease-pencil-material-info.png)
+
+Reads the Grease Pencil settings of a material. Use it to get the color of strokes and fills that use the material, for example to tint other geometry with the same color, or to react to the holdout setting. It looks up the Grease Pencil style of the material you give it and outputs its stroke and fill values.
+
+> **Warning:** The material must be a Grease Pencil material. With any other material, the node shows an error icon in its header with the message "Material is not a Grease Pencil material", and all outputs keep their default values.
+
+#### Inputs
+
+##### Material
+
+Data type: Material.
+
+The material to read. It must be a Grease Pencil material.
+
+#### Outputs
+
+The outputs are in two panels, **Stroke** and **Fill**.
+
+##### Stroke Base Color
+
+Data type: Color.
+
+The base color of the strokes that use the material.
+
+##### Stroke Holdout
+
+Data type: Boolean.
+
+True when the material is set to Holdout for strokes.
+
+##### Stroke Self Overlap
+
+Data type: Boolean.
+
+True when the Self Overlap option of the material is on. Then the overlapping parts of one stroke are drawn on top of each other, which matters for strokes with transparency.
+
+##### Fill Base Color
+
+Data type: Color.
+
+The base color of the fills that use the material.
+
+##### Fill Holdout
+
+Data type: Boolean.
+
+True when the material is set to Holdout for fills.
+
 ### Named Layer Selection
 
 ![Named Layer Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/named-layer-selection.png)
