@@ -7,7 +7,7 @@ path:
   - Asset Browser
   - Asset Browser - Essentials Asset Library
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 28.2 Asset Browser - Essentials Asset Library.odt
