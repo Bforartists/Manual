@@ -1,4 +1,4 @@
-/* Bforartists website · site-foot.css · @version 1.0.0 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Moved out of the page so browsers cache it (Nov 2026). */
+/* Bforartists website · site-foot.css · @version 1.0.2 · Site-wide footer code (Webflow Site settings, Custom code, Footer). Moved out of the page so browsers cache it (Nov 2026). */
 /* ---- block ---- */
 /* BFA Feature Cards 1.0 - a feature card (picture card + text card in one sink) keeps both cards the same height. */
 .ui-card.is-feature{align-items:stretch}
@@ -147,3 +147,47 @@ html.theme-light .ui-segment-item.is-tag{border-color:rgba(0,0,0,.18)}
 .bfa-perf-note button+button{background:transparent;color:#bbb}
 html.theme-light .bfa-perf-note{background:rgba(250,250,250,.97);color:#222;box-shadow:0 12px 32px -12px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.08)}
 @media print{.bfa-perf-note{display:none}}
+/* ---- block ---- */
+/* BFA Lift 1.0 - a card that overlaps pictures casts its shadow up onto them as well (Home and Art hero card over the picture row). */
+.ui-art-stage>.ui-card.is-hero-copy{box-shadow:0 -14px 30px -10px rgba(0,0,0,.6),var(--bfa-high)!important}
+html.theme-light .ui-art-stage>.ui-card.is-hero-copy{box-shadow:0 -12px 26px -10px rgba(0,0,0,.28),var(--bfa-high)!important}
+/* BFA Compare Foot 1.0 - the note and the button under a compare slider sit on one line, centred on each other, and clear of the
+   picture's shadow. General rule: content under a picture gets at least 1.75rem, so it never sits in the picture's shadow. */
+.ui-compare-foot{align-items:center!important;margin-top:1.75rem!important}
+.ui-compare-foot>p,.ui-compare-foot>.type-note{margin:0!important;line-height:1.3}
+/* ---- block ---- */
+/* BFA Band Drag 1.0 - the testimonials band is driven by script (no CSS loop) and dragged with the mouse; the pause button sits beside the title. */
+.ui-quote-band.is-js .ui-quote-track{animation:none!important;will-change:transform}
+.ui-quote-band{cursor:grab}
+.ui-quote-band.is-drag{cursor:grabbing;-webkit-user-select:none;user-select:none}
+.ui-quote-band.is-drag .ui-quote-track>*{pointer-events:none}
+.layout-section-head:has(>.bfa-band-ctl){display:flex;align-items:flex-end;justify-content:space-between;column-gap:1rem}
+.bfa-band-ctl.is-head{margin:0;flex:0 0 auto}
+/* ---- block ---- */
+/* BFA Sink Room 1.1 - every sink (.ui-group) has the same room around and between its cards, on all four sides, so the gaps read as one
+   rhythm (1.0 gave the bottom extra room for the shadow; that looked uneven). Desktop 2rem, tablet 1.5rem, phone 1rem.
+   The picture rows (.ui-art-stage) keep their own layout. */
+.ui-group:not(.ui-art-stage){padding:2rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:2rem;row-gap:2rem}
+@media (max-width:991px){.ui-group:not(.ui-art-stage){padding:1.5rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:1.5rem;row-gap:1.5rem}}
+@media (max-width:767px){.ui-group:not(.ui-art-stage){padding:1rem}
+.ui-group:not(.ui-art-stage)>.ui-grid-2,.ui-group:not(.ui-art-stage)>.ui-grid-3,.ui-group:not(.ui-art-stage)>.ui-grid-4,
+.ui-group:not(.ui-art-stage)>.layout-grid,.ui-group:not(.ui-art-stage)>.ui-audience,.ui-group:not(.ui-art-stage)>.ui-start{column-gap:1rem;row-gap:1rem}}
+/* BFA Compare Rows 1.0 - the Compare Chapters block when its root has data-rows (Features): each slider is its own row with its own text card, and the rows alternate (slider left, then right).
+   The text card stays in the middle of the screen while its slider scrolls up past it; the sticky ends with its row.
+   The chapter list and the captions under the sliders are hidden (the card says it now). One column on tablets and phones. */
+[data-chapters][data-rows]{display:block!important;padding:2rem!important}
+[data-chapters][data-rows] .ui-chapters-nav,[data-chapters][data-rows] .ui-chapters-cap{display:none!important}
+[data-chapters][data-rows] .ui-chapters-track{height:auto!important;overflow:visible!important;scroll-snap-type:none!important;-webkit-mask-image:none!important;mask-image:none!important;padding-bottom:0!important;row-gap:0!important}
+[data-chapters][data-rows] .ui-chapters-slide{display:grid!important;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);column-gap:2rem;align-items:stretch}
+[data-chapters][data-rows] .ui-chapters-slide:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.75fr)}
+[data-chapters][data-rows] .ui-chapters-slide:nth-child(even)>.ui-chapters-side{order:-1}
+[data-chapters][data-rows] .ui-chapters-slide>.ui-compare{align-self:center;margin:16vh 0}
+[data-chapters][data-rows] .ui-chapters-slide:first-child>.ui-compare{margin-top:0}
+[data-chapters][data-rows] .ui-chapters-slide:last-child>.ui-compare{margin-bottom:0}
+[data-chapters][data-rows] .ui-chapters-side>.ui-card{position:sticky;top:calc(50% - 6rem)}
+@media (max-width:991px){[data-chapters][data-rows] .ui-chapters-track{row-gap:2rem!important}[data-chapters][data-rows] .ui-chapters-slide,[data-chapters][data-rows] .ui-chapters-slide:nth-child(even){grid-template-columns:minmax(0,1fr);row-gap:1rem}[data-chapters][data-rows] .ui-chapters-slide>.ui-chapters-side{order:-1}[data-chapters][data-rows] .ui-chapters-slide>.ui-compare{margin:0!important}[data-chapters][data-rows] .ui-chapters-side>.ui-card{position:static}}
+@media (max-width:767px){[data-chapters][data-rows]{padding:1rem!important}}

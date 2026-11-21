@@ -58,6 +58,8 @@ Shift+click on the header still pins the panel, as before. See **Pinning panels*
 
 A torn-off panel shows the same settings as the original panel, and both stay in sync. Panels of the tool shelf keep their width and their number of columns when you tear them off.
 
+The contents work as in the original panel: click buttons, drag sliders, and use its lists. Click an entry to select it, drag an entry to reorder it, and scroll a long list with the mouse wheel.
+
 > **Note:** Panels that belong to one item of a stack, such as a modifier, a constraint or a scene effect, can't be torn off.
 
 ## Work with tear-offs

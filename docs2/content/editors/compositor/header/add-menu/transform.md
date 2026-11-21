@@ -45,43 +45,44 @@ Data type: Float (angle).
 
 Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise.
 
-#### Sampling Subpanel
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
-##### Interpolation
+This panel holds the sampling settings. It is closed by default.
+
+###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
 The interpolation mode.
 
-###### Nearest
+- **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
+- **Bilinear**: Simple interpolation between adjacent pixels.
+- **Bicubic**: Highest quality interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
-No interpolation. This method uses the nearest neighboring pixel.
+###### Extension X
 
-###### Bilinear
+Data type: Menu.
 
-Simple interpolation between adjacent pixels.
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
 
-###### Bicubic
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
 
-Highest quality interpolation.
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
-###### Anisotropic
+###### Extension Y
 
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
-
-##### Extension X
-
-The extension mode applied to the X axis.
-
-##### Extension Y
+Data type: Menu.
 
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -129,23 +130,35 @@ Sizes an image to the size of the final render resolution for the scene. For exa
 
 ![Render Size](/docs2/images/editors/compositor/header/add-menu-transform/render-size.png)
 
-Image dimensions set in the Render panel.
+Image dimensions set in the Render panel. Shows the Frame Type input.
 
-###### Stretch, Fit, Crop
-
-Render Size setting. Stretch distorts the image so that it fits into the render size. Fit scales the image until the bigger axis “fits” into the render size. Crop cuts the image so that it is the same aspect ratio as the render size.
-
-##### X, Y
+##### X
 
 Data type: Float.
 
-Scale in the axis directions, only available if Space is set to Relative or Absolute.
+Scale in the X direction. Only visible when Type is Relative or Absolute.
 
-##### Sampling Subpanel
+##### Y
+
+Data type: Float.
+
+Scale in the Y direction. Only visible when Type is Relative or Absolute.
+
+##### Frame Type
+
+Data type: Menu.
+
+How the image fits in the camera frame. Only visible when Type is Render Size. Stretch distorts the image so that it fits into the render size. Fit scales the image until the bigger axis “fits” into the render size. Crop cuts the image so that it is the same aspect ratio as the render size.
+
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -154,22 +167,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -193,11 +211,17 @@ Data type: Color.
 
 Standard image input.
 
-##### X, Y
+##### X
 
 Data type: Float.
 
-Used to move the input image horizontally and vertically.
+Used to move the input image horizontally.
+
+##### Y
+
+Data type: Float.
+
+Used to move the input image vertically.
 
 ##### Angle
 
@@ -211,11 +235,15 @@ Data type: Float.
 
 Used to resize the image. The scaling is relative, meaning a value of 0.5 gives half the size and a value of 2.0 gives twice the size of the original image.
 
-##### Sampling Subpanel
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -224,22 +252,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -265,17 +298,27 @@ Data type: Color.
 
 Standard image input.
 
-##### X, Y
+##### X
 
 Data type: Float.
 
-Used to move the input image horizontally and vertically.
+Used to move the input image horizontally.
 
-##### Sampling Subpanel
+##### Y
+
+Data type: Float.
+
+Used to move the input image vertically.
+
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -284,22 +327,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -323,17 +371,39 @@ Data type: Color.
 
 Standard image input.
 
-##### Corners ( Upper left, Upper Right, etc. )
+##### Upper Left
 
 Data type: Vector (factor).
 
-Four vector inputs to define the plane warping. (Z component of vector inputs is ignored.)
+The position of the upper left corner of the plane.
 
-##### Sampling Subpanel
+##### Upper Right
+
+Data type: Vector (factor).
+
+The position of the upper right corner of the plane.
+
+##### Lower Left
+
+Data type: Vector (factor).
+
+The position of the lower left corner of the plane.
+
+##### Lower Right
+
+Data type: Vector (factor).
+
+The position of the lower right corner of the plane.
+
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -342,22 +412,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -381,11 +456,49 @@ The Crop Node takes an input image and crops it to a selected region.
 
 #### Inputs
 
-**Image**: Standard image input. · **X / Y**: X and Y position of the origin. · **Width / Height**: The size of the crop area. · **Alpha Crop**: Make the outer areas of the area transparent instead of cropping the image.
+##### Image
+
+Data type: Color.
+
+Standard image input.
+
+##### X
+
+Data type: Integer.
+
+The X position of the lower left corner of the crop area, in pixels.
+
+##### Y
+
+Data type: Integer.
+
+The Y position of the lower left corner of the crop area, in pixels.
+
+##### Width
+
+Data type: Integer.
+
+The width of the crop area, in pixels.
+
+##### Height
+
+Data type: Integer.
+
+The height of the crop area, in pixels.
+
+##### Alpha Crop
+
+Data type: Boolean.
+
+Make the areas outside of the crop area transparent instead of cropping the image.
 
 #### Outputs
 
-**Image**: Standard image output.
+##### Image
+
+Data type: Color.
+
+Standard image output.
 
 ### Displace
 
@@ -405,19 +518,19 @@ Standard image input.
 
 ##### Displacement
 
-Data type: Vector.
+Data type: Vector (2d).
 
 Input of the displacement map. If the a color output is implicitly converted in the vector input, the first channel (red) value determines displacement along X axis. The second channel (green) the displacement along Y axis. If the input is a greyscale image, where both the channel values are equal, the input image will be displaced equally in both X and Y directions.
 
-##### Scale X, Y
-
-Separate scaling of the vector input in X and Y direction. Acting as multipliers by increasing or decreasing the strength of the displacement along their respective axes.
-
-##### Sampling Subpanel
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -426,22 +539,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -461,15 +579,31 @@ You can use this node to just flip or use it as a part of mirror setting. Mix ha
 
 #### Inputs
 
-**Image**: Standard image input.
+##### Image
 
-#### Flip X
+Data type: Color.
 
-Flip the image along the X axis. · **Flip Y**: Flip the image along the Y axis.
+Standard image input.
+
+##### Flip X
+
+Data type: Boolean.
+
+Flip the image along the X axis.
+
+##### Flip Y
+
+Data type: Boolean.
+
+Flip the image along the Y axis.
 
 #### Outputs
 
-**Image**: Standard image output.
+##### Image
+
+Data type: Color.
+
+Standard image output.
 
 ### Map UV
 
@@ -493,11 +627,15 @@ Data type: Vector.
 
 The input for UV render pass. See Cycles render passes. Hint. To store the UV pass a multi-layer OpenEXR format could be used.
 
-##### Sampling Subpanel
+##### Sampling
 
 ![Sampling Subpanel](/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png)
 
+This panel holds the sampling settings. It is closed by default.
+
 ###### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png)
 
@@ -506,22 +644,27 @@ The interpolation mode.
 - **Nearest**: No interpolation. This method uses the nearest neighboring pixel.
 - **Bilinear**: Simple interpolation between adjacent pixels.
 - **Bicubic**: Highest quality interpolation.
-
-###### Anisotropic
-
-![Anisotropic](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
-
-Anisotropic interpolation.
+- **Anisotropic**: Anisotropic interpolation.
 
 ###### Extension X
 
-The extension mode applied to the X axis.
+Data type: Menu.
+
+![Extension X](/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png)
+
+The extension mode applied to the X axis. It sets what fills the areas outside of the image.
+
+- **Clip**: Areas outside of the image stay empty.
+- **Extend**: Areas outside of the image are filled with the closest edge pixel of the image.
+- **Repeat**: Areas outside of the image are filled with repeats of the image.
 
 ###### Extension Y
 
+Data type: Menu.
+
 ![Extension Y](/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png)
 
-The extension mode applied to the Y axis.
+The extension mode applied to the Y axis. It has the same options as Extension X.
 
 #### Outputs
 
@@ -553,22 +696,39 @@ Data type: Menu.
 
 The lens distortion type.
 
-###### Type Radial
+###### Radial
 
 ![Type Radial](/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png)
 
-- **Distortion**: This creates a bulging or pinching effect from the center of the image.
-- **Dispersion**: This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
-- **Jitter**: Adds jitter to the distortion. Faster, but noisier.
-- **Fit**: Scales image so black areas are not visible. Only works for positive distortion.
+Bends the image outward from the center (barrel) or inward (pincushion). Shows the Distortion, Jitter and Fit inputs.
 
-###### Type Radial
+###### Horizontal
 
-![Type Radial](/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png)
+Shifts the color channels sideways, for a color fringe effect.
 
-###### Dispersion
+##### Distortion
+
+Data type: Float (factor).
+
+This creates a bulging or pinching effect from the center of the image. 0 means no distortion, -1 is full pincushion distortion and 1 is full barrel distortion. Only visible when Type is Radial.
+
+##### Dispersion
+
+Data type: Float (factor).
 
 This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
+
+##### Jitter
+
+Data type: Boolean.
+
+Adds jitter to the distortion. Faster, but noisier. Only visible when Type is Radial.
+
+##### Fit
+
+Data type: Boolean.
+
+Scales the image so black areas are not visible. Only works for positive distortion. Only visible when Type is Radial.
 
 #### Outputs
 
@@ -623,6 +783,8 @@ Used to undistort the image received, and is usually used for the raw distorted 
 ###### Distort
 
 Used to distort the image received, and is usually used for rendered images.
+
+#### Properties
 
 ##### Movie Clip
 

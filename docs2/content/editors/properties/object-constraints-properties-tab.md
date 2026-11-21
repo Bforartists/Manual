@@ -7,7 +7,7 @@ path:
   - Properties Editor
   - Object Constraints Properties Tab
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.13 Editors - Properties Editor - Object Constraints Properties Tab.odt
@@ -558,15 +558,15 @@ The limits for an object are calculated from its center. Te limits of a bone are
 
 #### Minimum X Y Z
 
-The minimum size. You can adjust the value in the edit boxes below.
+The minimum size. The layout is the same as in Limit Location and Limit Rotation: tick the checkbox left of an axis to limit it, and set the value in the field on the right. While the checkbox is off, a disclosure triangle shows instead of the field.
 
 #### Maximum X Y Z
 
-The maximum size. You can adjust the value in the edit boxes below.
+The maximum size. Works like Minimum: tick the checkbox of an axis, then set the value in the field.
 
-#### For Transform
+#### Affect Transform
 
-The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.
+The constraint limits the scale. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.
 
 #### Convert
 

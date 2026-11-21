@@ -69,25 +69,41 @@ Data type: Color.
 
 The image input.
 
-#### Properties
+##### Channel
+
+Data type: Menu.
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities/properties.png)
 
-##### Channel
+The channel to measure: Combined, Red, Green, Blue or Luminance.
 
-The Red, Green, Blue or Luminance channels
+#### Outputs
 
-##### Outputs
-
-1D values based on the levels of an image.
+These are single values (1D values) based on the levels of an image.
 
 ##### Mean
+
+Data type: Float.
 
 The mean is the average value of all image pixels in specified channel (combined, red, green, blue, luminance). It tells you how dark or bright the image is and can be used as such for setups that depend on how is input “bright” or “dark”.
 
 ##### Standard Deviation
 
+Data type: Float.
+
 How much those pixel values differ from the mean. A low standard deviation indicates that the pixel values tend to be very close to the mean. A high standard deviation indicates that the values are spread out over a large range of values. The visualization of such data is just a gray rectangle.
+
+##### Minimum
+
+Data type: Float.
+
+The lowest value of all image pixels in the specified channel.
+
+##### Maximum
+
+Data type: Float.
+
+The highest value of all image pixels in the specified channel.
 
 ### Normalize
 
@@ -215,41 +231,45 @@ Image output.
 
 The Switch node is akin to a boolean, where you can use a toggle to choose what is shown with on or off.
 
-#### Properties
+#### Inputs
 
 ##### Switch
 
-The toggle that turns the switch on or off resulting in the final output being whatever is in the on or off input.
+Data type: Boolean.
 
-#### Inputs
+The toggle that turns the switch on or off resulting in the final output being whatever is in the True or False input.
 
-##### Off
+##### False
 
-Data type: Color.
+Data type: follows the Input Type setting.
 
-The image that is shown when the toggle is off.
+What is passed on when the switch is off.
 
-##### On
+##### True
 
-Data type: Color.
+Data type: follows the Input Type setting.
 
-The image that is shown when the toggle is on.
+What is passed on when the switch is on.
 
-##### Image
+#### Properties
 
-Standard RGB image output.
+##### Input Type
+
+The data type of the False and True inputs and of the output. The default is Color.
+
+#### Outputs
+
+##### Output
+
+Data type: follows the Input Type setting.
+
+The False or the True input, depending on the switch.
 
 ### Index Switch
 
 ![Index Switch](/docs2/images/editors/compositor/header/add-menu-utilities/index-switch.png)
 
 Choose between an arbitrary number of values with an index.
-
-#### Properties
-
-##### Data Type
-
-What data type to evaluate.
 
 #### Inputs
 
@@ -275,7 +295,13 @@ Data type: follows the Data Type setting.
 
 The 1 value
 
-#### Output
+#### Properties
+
+##### Data Type
+
+What data type to evaluate.
+
+#### Outputs
 
 ##### Output
 
@@ -289,49 +315,57 @@ The output index value.
 
 Select from multiple inputs by name.
 
-#### Properties
-
-##### Data Type
-
-What data type to evaluate.
-
 #### Inputs
 
 ![Inputs](/docs2/images/editors/compositor/header/add-menu-utilities/inputs.png)
 
 The content changes. dependant of the data type.
 
-##### Menu input
+##### Menu
+
+Data type: Menu.
 
 ![Menu input](/docs2/images/editors/compositor/header/add-menu-utilities/menu-input.png)
 
-The default menu.
+The menu that picks which input is passed on. Its items are named after the inputs below.
 
-###### A
+##### A
+
+Data type: follows the Data Type setting.
 
 The A input.
 
-###### B
+##### B
+
+Data type: follows the Data Type setting.
 
 The B input.
 
-#### Output
+#### Properties
 
-##### Outputs
+##### Data Type
 
-The output string.
+What data type to evaluate.
+
+#### Outputs
+
+##### Output
+
+Data type: follows the Data Type setting.
+
+The input that is picked in the menu.
 
 ##### A
 
 Data type: Boolean.
 
-The A output
+On when A is picked in the menu.
 
 ##### B
 
 Data type: Boolean.
 
-The B output
+On when B is picked in the menu.
 
 ### Switch Stereo View
 
@@ -341,11 +375,17 @@ The Switch View node combines the views (left and right) into a single Stereo 3D
 
 #### Inputs
 
-##### Left
+The inputs are named after the views of the scene. By default these are left and right.
+
+##### left
+
+Data type: Color.
 
 Left-eye image input.
 
-##### Right
+##### right
+
+Data type: Color.
 
 Right-eye image input.
 
@@ -353,9 +393,11 @@ Right-eye image input.
 
 ##### Image
 
+Data type: Color.
+
 Stereo 3D image output.
 
-### Relative to Pixel
+### Relative To Pixel
 
 ![Relative to Pixel](/docs2/images/editors/compositor/header/add-menu-utilities/relative-to-pixel.png)
 
@@ -434,6 +476,14 @@ Adds a closure zone: a **Closure Input** and a **Closure Output** node. The node
 
 Runs the logic of a closure with the inputs you give it, and outputs its result. The input and output sockets must have the same names and types as the ones in the closure zone.
 
+#### Inputs
+
+##### Closure
+
+Data type: Closure.
+
+The closure to run. Add the other inputs and the outputs with the empty sockets.
+
 # Math
 
 ## Add menu - Utilities - Math
@@ -495,13 +545,13 @@ The Boolean Math node combines true and false values with a logical operation. U
 
 #### Inputs
 
-##### First Boolean
+##### Boolean
 
 Data type: Boolean.
 
 The first true or false value (default false).
 
-##### Second Boolean
+##### Boolean
 
 Data type: Boolean.
 
@@ -545,23 +595,31 @@ Data type: Float.
 
 Standard Value input. (Value refers to each vector in the set.)
 
+##### Min
+
+Data type: Float.
+
+The minimum allowed value. Any input lower than this will be raised to this value.
+
+##### Max
+
+Data type: Float.
+
+The maximum allowed value. Any input higher than this will be lowered to this value.
+
 #### Properties
 
 ##### Clamp Type
 
-A dropdown that determines how the clamping is applied: Min / Max or Range.
-
-##### Min / Max
-
-The minimum and maximum allowed value. Any input lower or higher than this will be lowered or raised to this value.
+A dropdown that determines how the clamping is applied: Min Max or Range.
 
 #### Outputs
 
-##### Value
+##### Result
 
 Data type: Float.
 
-Standard value output.
+The clamped value.
 
 ### Compare
 
@@ -652,7 +710,9 @@ Data type: Float (factor).
 
 Input factor.
 
-#### Value
+##### Value
+
+Data type: Float.
 
 Standard float value input.
 
@@ -813,19 +873,19 @@ The Integer Math node performs math operations on whole numbers. The result is a
 
 #### Inputs
 
-##### First Value
+##### Value
 
 Data type: Integer.
 
 The first number. It is called Base for Power.
 
-##### Second Value
+##### Value
 
 Data type: Integer.
 
 The second number (default 0). It is called Multiplier for Multiply Add and Exponent for Power. It is not shown for Absolute, Negate and Sign. For Multiply, Divide, Multiply Add, the Divide variants and both Modulo operations, a node added from the menu starts with 1.
 
-##### Third Value
+##### Value
 
 Data type: Integer.
 
@@ -882,19 +942,31 @@ This chapter deals with the input type Float. The same node exists in the Vector
 
 Data type: Float.
 
-Standard value input.
+Standard value input. When Data Type is Vector, this input is called Vector.
 
-##### From Min/Max
-
-Data type: follows the Data Type setting.
-
-Start/End of the input value range.
-
-##### To Min/Max
+##### From Min
 
 Data type: follows the Data Type setting.
 
-Start/End of the destination range.
+Start of the input value range.
+
+##### From Max
+
+Data type: follows the Data Type setting.
+
+End of the input value range.
+
+##### To Min
+
+Data type: follows the Data Type setting.
+
+Start of the destination range.
+
+##### To Max
+
+Data type: follows the Data Type setting.
+
+End of the destination range.
 
 ##### Steps
 
@@ -922,7 +994,9 @@ Clamps values to Min/Max of the destination range.
 
 #### Outputs
 
-##### Value
+##### Result
+
+Data type: Float.
 
 Standard value output.
 
@@ -980,19 +1054,27 @@ Data type: Float (factor).
 
 Controls the amount of influence the node exerts on the output Value.
 
-##### Value A
+##### A
+
+Data type: follows the Data Type setting.
 
 The back value.
 
-##### Value B
+##### B
+
+Data type: follows the Data Type setting.
 
 The top value.
 
 #### Properties
 
+##### Data Type
+
+The type of data to mix: Float, Vector, Color or Rotation. Float for this node.
+
 ##### Clamp Factor
 
-Limit the highest color value to not exceed 1.
+Limit the Factor to the range 0 to 1.
 
 #### Outputs
 
@@ -1018,11 +1100,45 @@ Builds a matrix from sixteen separate numbers. Use it when you worked the number
 
 #### Inputs
 
-##### Column 1 to Column 4
+##### Column 1
+
+This panel holds the four values of the first column. It is closed by default.
+
+###### Column 1 Row 1 to Column 1 Row 4
 
 Data type: Float.
 
-Each column is a collapsible panel with four values, **Row 1** to **Row 4**.
+The four values of the first column, from top to bottom.
+
+##### Column 2
+
+This panel holds the four values of the second column. It is closed by default.
+
+###### Column 2 Row 1 to Column 2 Row 4
+
+Data type: Float.
+
+The four values of the second column, from top to bottom.
+
+##### Column 3
+
+This panel holds the four values of the third column. It is closed by default.
+
+###### Column 3 Row 1 to Column 3 Row 4
+
+Data type: Float.
+
+The four values of the third column, from top to bottom.
+
+##### Column 4
+
+This panel holds the four values of the fourth column. It is closed by default.
+
+###### Column 4 Row 1 to Column 4 Row 4
+
+Data type: Float.
+
+The four values of the fourth column, from top to bottom.
 
 #### Outputs
 
@@ -1222,11 +1338,45 @@ The matrix to read.
 
 #### Outputs
 
-##### Column 1 to Column 4
+##### Column 1
+
+This panel holds the four values of the first column. It is closed by default.
+
+###### Column 1 Row 1 to Column 1 Row 4
 
 Data type: Float.
 
-Each column holds four values, **Row 1** to **Row 4**.
+The four values of the first column, from top to bottom.
+
+##### Column 2
+
+This panel holds the four values of the second column. It is closed by default.
+
+###### Column 2 Row 1 to Column 2 Row 4
+
+Data type: Float.
+
+The four values of the second column, from top to bottom.
+
+##### Column 3
+
+This panel holds the four values of the third column. It is closed by default.
+
+###### Column 3 Row 1 to Column 3 Row 4
+
+Data type: Float.
+
+The four values of the third column, from top to bottom.
+
+##### Column 4
+
+This panel holds the four values of the fourth column. It is closed by default.
+
+###### Column 4 Row 1 to Column 4 Row 4
+
+Data type: Float.
+
+The four values of the fourth column, from top to bottom.
 
 ### Separate Transform
 
@@ -2152,17 +2302,31 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 
 #### Inputs
 
-##### X Y and Z
+##### X
 
 Data type: Float.
 
-X, Y and Z values.
+The X value.
+
+##### Y
+
+Data type: Float.
+
+The Y value.
+
+##### Z
+
+Data type: Float.
+
+The Z value.
 
 #### Outputs
 
-##### Color
+##### Vector
 
-Color output.
+Data type: Vector.
+
+The combined vector.
 
 ### Map Range
 
@@ -2176,7 +2340,7 @@ One important use case is to easily map the original range of the Z-depth channe
 
 #### Inputs
 
-This chapter deals with the input type Float. The same node exists in the Math menu too. With preselected type Float.
+This chapter deals with the input type Vector. The same node exists in the Math menu too. With preselected type Float.
 
 ##### Vector
 
@@ -2184,17 +2348,29 @@ Data type: Vector.
 
 Standard vector input.
 
-##### From Min/Max
+##### From Min
 
 Data type: follows the Data Type setting.
 
-Vector 3 of the Start/End of the input value range.
+The vector at the start of the input value range.
 
-##### To Min/Max
+##### From Max
 
 Data type: follows the Data Type setting.
 
-Vector 3 of the Start/End of the destination range.
+The vector at the end of the input value range.
+
+##### To Min
+
+Data type: follows the Data Type setting.
+
+The vector at the start of the destination range.
+
+##### To Max
+
+Data type: follows the Data Type setting.
+
+The vector at the end of the destination range.
 
 ##### Steps
 
@@ -2222,11 +2398,11 @@ Clamps values to Min/Max of the destination range.
 
 #### Outputs
 
-##### vector
+##### Vector
 
 Data type: Vector.
 
-Standard value output.
+Standard vector output.
 
 ### Mix Vector
 
@@ -2240,17 +2416,21 @@ The **Mix Vector** node blends two vector inputs using a specified factor. It’
 
 Data type: Float (factor).
 
-Controls the amount of influence the node exerts on the output result.
+Controls the amount of influence the node exerts on the output result. When Factor Mode is Non-Uniform, it is a Vector, so you can mix each component (X, Y, Z) by its own amount.
 
-##### Value A
+##### A
+
+Data type: Vector.
 
 The back value.
 
-##### Value B
+##### B
+
+Data type: Vector.
 
 The top value.
 
-##### Properties
+#### Properties
 
 ##### Data Type
 
@@ -2265,7 +2445,7 @@ The method of mixing.
 
 ##### Clamp Factor
 
-Limit the highest color value to not exceed 1.
+Limit the Factor to the range 0 to 1.
 
 #### Outputs
 
@@ -2291,11 +2471,23 @@ The Input vector.
 
 #### Outputs
 
-##### X, Y and Z
+##### X
 
 Data type: Float.
 
-The output vectors for X, Y and Z
+The X value of the vector.
+
+##### Y
+
+Data type: Float.
+
+The Y value of the vector.
+
+##### Z
+
+Data type: Float.
+
+The Z value of the vector.
 
 ### Radial Tiling
 
@@ -2307,9 +2499,9 @@ Transform coordinate system for radial tiling.
 
 ##### Vector
 
-Data type: Vector.
+Data type: Vector (2d).
 
-Vector 2 input
+The input texture coordinates.
 
 ##### Sides
 
@@ -2329,6 +2521,32 @@ Roundness of the segment coordindates system.
 
 Normalize the X coordinate of the segment coordinates output to a `[` 0 / 1 `]` interval and offset the Y coordinate into a `[0`, `infinity]` interval. This stretches the textures to fit into each angular segment. Else they are cropped.
 
+#### Outputs
+
+##### Segment Coordinates
+
+Data type: Vector.
+
+The coordinates for texture mapping inside each angular segment.
+
+##### Segment ID
+
+Data type: Float.
+
+A unique ID for every angular segment. It starts at 0 and goes up by 1 counterclockwise.
+
+##### Segment Width
+
+Data type: Float.
+
+The relative width of each angular segment. Use it to scale textures so they fit into each segment.
+
+##### Segment Rotation
+
+Data type: Float.
+
+The counterclockwise rotation of the coordinate system of each segment. Use it to align the rotation of the textures of each segment.
+
 ### Vector Curves
 
 ![Vector Curves](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-curves.png)
@@ -2337,7 +2555,11 @@ The Vector Curves node maps an input vector components to a curve.
 
 #### Inputs
 
-In the shader context the node also has an additional Factor property.
+##### Factor
+
+Data type: Float (factor).
+
+Controls the amount of influence the node exerts on the output vector.
 
 ##### Vector
 
@@ -2455,6 +2677,18 @@ Data type: Vector.
 
 Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.
 
+##### Vector
+
+Data type: Vector.
+
+Third numerical value. Only visible for Multiply Add, Faceforward and Wrap.
+
+##### Scale
+
+Data type: Float.
+
+A single number. Only visible for Scale and Refract.
+
 #### Properties
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities-vector/properties.png)
@@ -2465,11 +2699,17 @@ Here you can choose what mathematical operation to perform.
 
 #### Outputs
 
+##### Vector
+
+Data type: Vector.
+
+The resulting vector. Not visible for Dot Product, Distance and Length.
+
 ##### Value
 
 Data type: Float.
 
-Numerical value output.
+Numerical value output. Only visible for Dot Product, Distance and Length.
 
 ### Vector Rotate
 
@@ -2495,13 +2735,19 @@ The pivot point around which the vector is rotated.
 
 Data type: Vector.
 
-The axis of rotation, defined as am XYZ based 3D vector
+The axis of rotation, defined as an XYZ based 3D vector. Only visible when Type is Axis Angle.
 
 ##### Angle
 
 Data type: Float (angle).
 
-The amount of rotation in **degrees**.
+The amount of rotation in **degrees**. Not visible when Type is Euler.
+
+##### Rotation
+
+Data type: Vector (euler).
+
+The rotation as Euler angles in XYZ order. Only visible when Type is Euler.
 
 #### Properties
 

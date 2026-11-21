@@ -58,11 +58,11 @@ Shows or hides the minimap.
 
 #### Aspect Ratio
 
-The shape of the minimap. Higher values make it wider.
+The shape of the minimap. Higher values make it wider. The default is 2.0.
 
 #### Scale
 
-The size of the minimap.
+The size of the minimap. The default is 1.5. Loading the factory settings or an application template resets the minimap of every node editor to Scale 1.5 and Aspect Ratio 2.0. A startup file that you saved yourself keeps its own values.
 
 #### Auto Hide
 

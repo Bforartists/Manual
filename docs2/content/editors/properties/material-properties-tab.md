@@ -332,6 +332,39 @@ From left to right ...
 - **Self Overlap**: Disable stencil and allow self intersections with alpha materials.
 - **Holdout**: Remove the color from underneath this stroke by using the stroke as a mask.
 
+###### Source
+
+Where the texture image comes from. **Single Image** is one image file. **Image Sequence** is a numbered series of image files, and **Movie** is a movie file. **Generated** is an image made inside Bforartists. **UDIM Tiles** is a tiled UDIM image. With a sequence or a movie, the texture is animated: the image changes with the frame of the scene.
+
+###### Frames
+
+Only for Image Sequence and Movie. The number of images of the sequence, or of frames of the movie, to use. The button on the right (Match Movie Length) sets it to the full length of the movie.
+
+###### Start Frame
+
+Only for Image Sequence and Movie. The scene frame on which the sequence or movie starts, assuming the first picture is number 1.
+
+###### Offset
+
+Only for Image Sequence and Movie. Shifts the number of the picture that is used. Use it to start in the middle of the sequence.
+
+###### Cyclic
+
+Only for Image Sequence and Movie. Repeats the images in a loop after the last one.
+
+###### Auto Refresh
+
+Only for Image Sequence and Movie. Always shows the picture that belongs to the current frame, so the texture updates while you move through the timeline.
+
+###### Color Space
+
+How the colors of the image file are read. Leave it at sRGB for normal color images.
+
+###### Alpha Mode
+
+How transparency is stored in the image file. **Straight** keeps color and alpha separate, as most image editors and PNG files do. **Premultiplied** has the alpha already multiplied into the colors, as in renders and OpenEXR. **Channel Packed** stores separate images in the color and alpha channels. **None** ignores the alpha channel and makes the image fully opaque.
+
+
 ##### Mode Type Dots + Squares
 
 ![Mode Type Dots + Squares](/docs2/images/editors/properties/material-properties-tab/mode-type-dots-squares.png)
@@ -378,6 +411,10 @@ From left to right ...
 - **Open**: Open a new image.
 - **Remove**: Removes the image.
 
+###### Image settings
+
+The settings below the image (**Source**, **Frames**, **Start Frame**, **Offset**, **Cyclic**, **Auto Refresh**, **Color Space** and **Alpha Mode**) are the same as in Mode Type Line. See Mode Type Line, Texture, above.
+
 ###### Placement
 
 How the dots or squares are spread along the stroke. Here is the same stroke three times, with Count 2, Spacing 150% and Density 2.2:
@@ -423,6 +460,44 @@ Disable stencil and allow self intersections with alpha materials.
 #### Holdout
 
 Remove the color from underneath this stroke by using the stroke as a mask.
+
+#### Randomize
+
+![Randomize](/docs2/images/editors/properties/material-properties-tab/randomize.png)
+
+Only for the Dots and Squares line types. Turn on the checkbox in the header of the panel to add random variation to every dot or square. Use it for a hand-made look, for example for chalk or scattered sand. The values below only act while the checkbox is on.
+
+##### Size
+
+Randomizes the size of the dots or squares.
+
+##### Strength
+
+Randomizes the strength (opacity) of the dots or squares.
+
+##### Rotation
+
+Randomizes the rotation of the texture.
+
+##### Hue
+
+Randomizes the hue of the color.
+
+##### Saturation
+
+Randomizes the saturation of the color.
+
+##### Value
+
+Randomizes the value (brightness) of the color.
+
+##### Noise Scale
+
+Scales the frequency of the noise that drives the random values. Higher values change faster along the stroke.
+
+##### Seed
+
+The seed of the random pattern. Change the number to get a different random result with the same settings. Strokes keep the same look as long as the seed stays the same.
 
 ### Fill Subpanel
 
@@ -517,6 +592,10 @@ The scale of the image.
 ###### Clip Image
 
 Do not repeat the image, but clamp it to one instance.
+
+###### Image settings
+
+Below the image, the Fill texture has the same settings as the Stroke texture: **Source**, **Frames**, **Start Frame**, **Offset**, **Cyclic**, **Auto Refresh**, **Color Space** and **Alpha Mode**. They are explained in the Stroke Subpanel, in Mode Type Line under Texture. A fill texture can also be a movie or an image sequence.
 
 ###### Holdout
 

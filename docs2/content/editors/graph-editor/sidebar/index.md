@@ -140,6 +140,8 @@ F-Curve modifiers are similar to Object modifiers. They allow to add adjustable 
 
 Different to the Object modifiers you can't reorder this modifiers. You have to create it in the order that you need it.
 
+In all modifier panels the properties are aligned to the left, with the label inside the field. The pictures of the modifiers below show this layout.
+
 ### Add Modifier
 
 ![Add Modifier](/docs2/images/editors/graph-editor/sidebar/modifiers-tab/add-modifier.png)
@@ -213,9 +215,9 @@ Add on top of the existing curve instead of replacing the existing curve.
 
 The hightes value of X for this polynominal.
 
-#### Coefficient
+#### Constant
 
-Coefficient for X.
+The constant term of the polynomial. This is the value of the curve when X is zero.
 
 #### x^1
 

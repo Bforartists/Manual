@@ -53,6 +53,10 @@ Specifies the resolution of the image in pixels. Allows matching render dimensio
 
 #### Outputs
 
+##### Image
+
+Data type: Color.
+
 Produces a standard image that can be connected to other compositor nodes. This can be layered with Mix or Alpha Over, processed with filters, or used as a mask source.
 
 ### Bokeh Image
@@ -79,11 +83,15 @@ Data type: Float (angle).
 
 Gives these blades an angular offset relative to the image plane.
 
-##### Rounding
+##### Roundness
+
+Data type: Float (factor).
 
 Sets the curvature of the blades with (0 to 1) from straight to bringing them to a perfect circle.
 
-##### Catadioptric
+##### Catadioptric Size
+
+Data type: Float (factor).
 
 Provides a type of distortion found in mirror lenses and some telescopes. This can be useful to produce a visual complex bokeh.
 
@@ -279,6 +287,20 @@ The color space for the image.
 
 The alpha channel mode.
 
+#### Outputs
+
+##### Image
+
+Data type: Color.
+
+The image.
+
+##### Alpha
+
+Data type: Float.
+
+The alpha channel of the image. A multilayer OpenEXR image gives one output for each of its layers and passes instead.
+
 ### Image Info
 
 ![Image Info](/docs2/images/editors/compositor/header/add-menu-input/image-info.png)
@@ -299,15 +321,23 @@ The input image.
 
 Data type: Integer Vector.
 
-The dimensions output value.
+The dimensions of the image in pixels, with transformations applied.
 
-##### Resolutions
+##### Resolution
 
-The resolutions output value.
+Data type: Integer Vector.
+
+The original resolution of the image in pixels, before any transformations.
+
+##### Pixel Size
+
+Data type: Vector (2d).
+
+The size of a pixel relative to its original size, for a proxy or an anamorphic image. For example, a 50% proxy image has a pixel size of 0.5.
 
 ##### Location
 
-Data type: Vector.
+Data type: Vector (2d).
 
 The locations output value.
 
@@ -319,7 +349,7 @@ The rotation output value.
 
 ##### Scale
 
-Data type: Vector.
+Data type: Vector (2d).
 
 The scale output value.
 
@@ -341,13 +371,13 @@ The input image.
 
 ##### Uniform
 
-Data type: Vector.
+Data type: Vector (2d).
 
 Zero centered coordinates normalizes along the larger dimension for uniform scaling.
 
 ##### Normalized
 
-Data type: Vector.
+Data type: Vector (2d).
 
 Normalized coordinates with half pixels offset.
 
@@ -365,6 +395,54 @@ The Mask node can be used to select a Mask data. This node can be used with othe
 
 Masks can be created in the Image and Movie Clip editors, by changing the mode to Mask in the header. So you first need to create one in one of those editors.
 
+#### Inputs
+
+##### Size Source
+
+Data type: Menu.
+
+The source where the size of the mask comes from. Scene Size uses the render size of the scene. Fixed uses the Size X and Size Y inputs in pixels. Fixed/Scene uses the Size X and Size Y inputs, scaled by the render percentage of the scene.
+
+##### Size X
+
+Data type: Integer.
+
+The resolution of the mask in the X direction. Only visible when Size Source is Fixed or Fixed/Scene.
+
+##### Size Y
+
+Data type: Integer.
+
+The resolution of the mask in the Y direction. Only visible when Size Source is Fixed or Fixed/Scene.
+
+##### Feather
+
+Data type: Boolean.
+
+Use or ignore feather points defined for splines see Mask Feathers for more details.
+
+##### Motion Blur
+
+This panel holds the motion blur settings. It is closed by default.
+
+###### Motion Blur
+
+Data type: Boolean.
+
+For animated masks, creating a motion blurred mask from the surrounding frames, with a given number of samples (higher gives better quality), and a camera shutter time. This is the checkbox in the panel header.
+
+###### Samples
+
+Data type: Integer.
+
+The number of motion blur samples.
+
+###### Shutter
+
+Data type: Float (factor).
+
+Exposure for motion blur as a factor of frames per second.
+
 #### Properties
 
 ##### Masks
@@ -373,26 +451,6 @@ Masks can be created in the Image and Movie Clip editors, by changing the mode t
 
 The available mask data. If the label is left blank, the mask name will be set.
 
-###### Size X / Y
-
-The resolution of the mask
-
-###### Feather
-
-Use or ignore feather points defined for splines see Mask Feathers for more details.
-
-###### Motion Blur
-
-For animated masks, creating a motion blurred mask from the surrounding frames, with a given number of samples (higher gives better quality), and a camera shutter time in seconds.
-
-###### Samples
-
-The number of motion blur samples.
-
-###### Shutter
-
-Expose for motion blur as a factor of Frames per Seconds.
-
 #### Outputs
 
 ##### Mask
@@ -400,8 +458,6 @@ Expose for motion blur as a factor of Frames per Seconds.
 Data type: Float.
 
 The black-and-white output of the mask.
-
-hier weiter
 
 ### Movie Clip
 
@@ -439,31 +495,41 @@ Load a new video.
 
 Delete this video.
 
-###### Outputs
+#### Outputs
 
-—
+##### Image
 
-###### Image
+Data type: Color.
 
 Outputs the entire image at the specified color space.
 
-###### Alpha
+##### Alpha
+
+Data type: Float.
 
 The alpha value taken from the movie or image.
 
-###### Offset X
+##### Offset X
+
+Data type: Float.
 
 The X offset value from the footage camera or tracking.
 
-###### Offset Y
+##### Offset Y
+
+Data type: Float.
 
 The Y offset value from the footage camera or tracking.
 
-###### Scale
+##### Scale
+
+Data type: Float.
 
 The scale of the image taken from the footage camera or tracking.
 
-###### Angle
+##### Angle
+
+Data type: Float.
 
 The lens angle taken from the footage camera or tracking.
 
@@ -487,7 +553,7 @@ The last frame of the strip.
 
 ##### Location
 
-Data type: Vector.
+Data type: Vector (2d).
 
 The strip's position in the frame.
 
@@ -499,43 +565,73 @@ The strip's rotation.
 
 ##### Scale
 
-Data type: Vector.
+Data type: Vector (2d).
 
 The strip's scale.
 
-### String to Image
+### String To Image
 
 ![String to Image](/docs2/images/editors/compositor/header/add-menu-input/string-to-image.png)
 
 Converts a text string into an image buffer directly inside the compositor. Useful for overlaying text, generating procedural titles, or integrating dynamic labels into compositing workflows without external text objects.
 
-#### Properties
+#### Inputs
 
 ##### String
+
+Data type: String.
 
 Input field for the text content. Accepts plain text or dynamic string inputs. Can be used for captions, labels, or procedural text overlays.
 
 ##### Font
 
-Dropdown or file selector for choosing the font datablock. Supports internal packed fonts and external font files. Ensures consistent typography across compositing setups.
+Data type: Font.
+
+The font to use. Supports internal packed fonts and external font files. Ensures consistent typography across compositing setups.
 
 ##### Size
 
-Defines the pixel size of the rendered text. Larger values = bigger text. Scales proportionally with resolution.
+Data type: Float.
+
+The height of each line of text in pixels. Larger values give bigger text.
 
 ##### Alignment
 
-Horizontal: **Left, Center, Right**. Vertical: **Top, Middle, Bottom**. Controls text placement within the image buffer.
+This panel holds the alignment settings. It is closed by default.
+
+###### Horizontal Alignment
+
+Data type: Menu.
+
+The horizontal placement of the text: Left, Center or Right.
+
+###### Vertical Alignment
+
+Data type: Menu.
+
+The vertical placement of the text: Top, Top Baseline, Middle, Bottom Baseline or Bottom.
 
 ##### Wrap
 
-Checkbox to enable word wrapping. When enabled, text flows into multiple lines based on width. Useful for paragraphs or captions.
+This panel holds the word wrap settings. It is closed by default.
 
-##### Width
+###### Wrap
 
-Defines the maximum width (in pixels) for text wrapping. Only active when **Wrap** is enabled. Controls line breaks and text block layout.
+Data type: Boolean.
 
-#### Output
+Enable word wrapping. When enabled, text flows into multiple lines based on the width. Useful for paragraphs or captions. This is the checkbox in the panel header.
+
+###### Width
+
+Data type: Integer.
+
+The maximum width of each line in pixels. Longer lines are wrapped into new lines. Only used when **Wrap** is enabled.
+
+#### Outputs
+
+##### Image
+
+Data type: Float.
 
 Produces an **Image output** containing the rendered text as a float black and white image at the dimensions of the text.
 
@@ -581,7 +677,7 @@ The RGB node uses the color picker widget.
 
 #### Outputs
 
-##### Color / RGBA
+##### Color
 
 Data type: Color.
 
@@ -875,6 +971,28 @@ Data type: Boolean.
 
 On when a bone with that name exists.
 
+##### Envelope
+
+This panel holds the envelope outputs. It is closed by default.
+
+###### Envelope Distance
+
+Data type: Float.
+
+The original envelope distance of the bone.
+
+###### Radius Head
+
+Data type: Float.
+
+The original radius of the head of the bone.
+
+###### Radius Tail
+
+Data type: Float.
+
+The original radius of the tail of the bone.
+
 ### Camera Info
 
 ![Camera Info](/docs2/images/editors/compositor/header/add-menu-input-scene/camera-info.png)
@@ -973,10 +1091,6 @@ Data type: Object.
 
 The object to read.
 
-##### As Instance
-
-Passes the geometry as an instance instead of a copy.
-
 #### Properties
 
 ##### Transform Space
@@ -1008,10 +1122,6 @@ The rotation. Use Rotate Vector or Rotation to Euler to work with it.
 Data type: Vector.
 
 The size along each axis.
-
-##### Geometry
-
-The object's geometry.
 
 ### Render Layers
 
@@ -1055,13 +1165,17 @@ The Alpha channel.
 
 ##### Render passes sockets
 
+Data type: follows the render pass (Color, Float or Vector).
+
 ![Render passes sockets](/docs2/images/editors/compositor/header/add-menu-input-scene/render-passes-sockets.png)
 
 Depending on the Render passes that are enabled, other sockets are available. See Cycles and Eevee render passes. The Workbench renderer does not have extra render passes sockets. It just provides Image and Alpha output.
 
 ##### Depth
 
-By default the Z depth pass is enabled.
+Data type: Float.
+
+The Z depth pass. By default this pass is enabled.
 
 ### Scene Time
 
@@ -1088,6 +1202,20 @@ The current frame, as a decimal number.
 ![Time Curve](/docs2/images/editors/compositor/header/add-menu-input-scene/time-curve.png)
 
 The Time node generates a factor value that changes according to the curve as time progresses through the Timeline. The range goes from 0.0 to 1.0. The default is a linear line from 0.0 to 1.0. But the curve can be adjusted.
+
+#### Inputs
+
+##### Start Frame
+
+Data type: Integer.
+
+The first frame of the range of time that the output lasts. This range becomes the X axis of the graph. To reverse the time, set a start frame greater than the end frame.
+
+##### End Frame
+
+Data type: Integer.
+
+The last frame of the range of time that the output lasts.
 
 #### Properties
 
@@ -1168,10 +1296,6 @@ The X and Y value for the currently selected curve point.
 ###### Delete Points
 
 Deletes selected curve points.
-
-###### Start Frame/ End Frame
-
-Start frame and End frame of the range of time specifying the values the output should last. This range becomes the X axis of the graph. The time input could be reversed by specifying a start frame greater than the end frame.
 
 #### Outputs
 
