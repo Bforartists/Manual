@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Armature Object
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.9 Editors - Properties Editor - Object Data Properties Tab - Armature Object.odt
@@ -37,6 +37,8 @@ This panel allows the creation, deletion and editing of Bone Collections.
 Bone Collection can be used for bone selections.
 
 Bone Collections is a Pose Mode and Edit Mode feature. The controls will be disabled in Object mode.
+
+> **Note:** The list has filter options to search, sort and reverse the order of its items. See [Tree Lists](../../../interface/properties.md#tree-lists).
 
 ![Bone Collections panel](/docs2/images/editors/properties/object-data-properties-tab/armature-object/bone-collections-panel-2.png)
 
