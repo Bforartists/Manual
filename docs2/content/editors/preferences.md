@@ -1438,7 +1438,10 @@ The list of available asset libraries. You can deactivate and activate single li
 
 #### Add
 
-Add a new asset library to the asset list.
+Add a new asset library to the asset list. You choose the kind of library first:
+
+- **Add Remote Asset Library**: A library that comes from an online repository. Bforartists lists its assets and keeps them up to date from the URL.
+- **Add Local Asset Library**: A folder on your computer or network. You manage its files yourself.
 
 #### Remove
 
@@ -1450,9 +1453,33 @@ Move the selected library up or down the list. This is available for remote libr
 
 #### Path
 
-The path to the current selected asset library.
+The path to the current selected asset library. Only local libraries have a path.
 
+### Remote Libraries
 
+A remote library shows its online settings below the list instead of a path.
+
+![Remote asset library with the Authentication settings](/docs2/images/editors/preferences/asset-libraries-remote.png)
+
+#### Repository URL
+
+The web address of the online repository the library comes from. The field turns red while it is empty. Libraries that come from an extension show the URL of the extension and you can't edit it here.
+
+#### Advanced
+
+A collapsed subpanel for online libraries that need you to sign in. The **Authentication** settings sit indented below its label, in line with the other settings.
+
+##### Requires Access Token
+
+Turn this on when the online library asks for a personal access token before you can download from it.
+
+##### Secret
+
+Your personal access token. The lock icon shows closed once a token is stored, and the field turns red while the token is still missing.
+
+### Include Online Essentials
+
+Shows when the Essentials library is selected. Adds the online assets to the Essentials library. Downloading them needs **Allow Online Access** in the System section, under Network.
 
 ### Import Method
 
@@ -1471,6 +1498,10 @@ Imports the assets as a copied data. The data is fully imported, and not linked 
 #### Link
 
 Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed.
+
+#### Pack
+
+Links the asset and packs it into your current file. Your file keeps the asset unchanged, even when the library changes or is no longer available.
 
 
 ### Relative Path
