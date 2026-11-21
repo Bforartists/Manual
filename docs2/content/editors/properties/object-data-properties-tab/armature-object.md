@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Armature Object
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.9 Editors - Properties Editor - Object Data Properties Tab - Armature Object.odt

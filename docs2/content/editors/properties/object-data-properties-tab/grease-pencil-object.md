@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Grease Pencil Object
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.8 Editors - Properties Editor - Object Data Properties Tab - Grease Pencil Object.odt
