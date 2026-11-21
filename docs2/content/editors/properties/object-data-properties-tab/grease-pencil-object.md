@@ -22,6 +22,8 @@ Grease Pencil objects each have a list of 2D layers for grouping and arranging s
 
 Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode). Layers can also be used together with Modifiers to only affects part of your drawing.
 
+> **Note:** The list has filter options to search, sort and reverse the order of its items. See [Tree Lists](../../../interface/properties.md#tree-lists).
+
 ### Layer list
 
 #### Layer name

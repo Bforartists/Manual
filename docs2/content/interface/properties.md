@@ -195,21 +195,31 @@ Some lists show their items as a tree, with groups you can open and close. You f
 
 ### Filter Options
 
+![Tree list with its filter options open](/docs2/images/ui/interface/properties/tree-list-filter-options.png)
+
 Click the small arrow at the bottom left of a tree list to show its filter options. They change only what you see in the list, not the data itself.
 
 #### Search
+
+![Search field](/docs2/images/ui/interface/properties/tree-list-search.png)
 
 Type part of a name to show only the items that contain it.
 
 #### Invert Search
 
+![Invert Search button](/docs2/images/ui/interface/properties/tree-list-invert-search.png)
+
 Shows the items that don't match the search text instead.
 
 #### Sort Alphabetically
 
+![Sort Alphabetically button](/docs2/images/ui/interface/properties/tree-list-sort-alphabetically.png)
+
 Sorts the items by name, from A to Z.
 
 #### Reverse Order
+
+![Reverse Order button](/docs2/images/ui/interface/properties/tree-list-reverse-order.png)
 
 Flips the order of the items, so the last one is shown on top. Click the button again to step through its three states:
 

@@ -38,6 +38,8 @@ Bone Collection can be used for bone selections.
 
 Bone Collections is a Pose Mode and Edit Mode feature. The controls will be disabled in Object mode.
 
+> **Note:** The list has filter options to search, sort and reverse the order of its items. See [Tree Lists](../../../interface/properties.md#tree-lists).
+
 ![Bone Collections panel](/docs2/images/editors/properties/object-data-properties-tab/armature-object/bone-collections-panel-2.png)
 
 > **Note:** Using collection selections, you can then assign a color to the bone group in the Properties Editor &gt; Bone Properties Tab. For example, you can color the left parts of the rig as blue and right parts as red – and you can also assign a color per edit and pose mode.
