@@ -1,6 +1,8 @@
 {
  "pages": {
+  "docs2/content/editors/properties/object-data-properties-tab/armature-object.md": "editors/properties/object-data-properties-tab/armature-object.html",
+  "docs2/content/editors/properties/object-data-properties-tab/grease-pencil-object.md": "editors/properties/object-data-properties-tab/grease-pencil-object.html",
   "docs2/content/interface/properties.md": "interface/properties.html"
  },
- "images": 19
+ "images": 114
 }
