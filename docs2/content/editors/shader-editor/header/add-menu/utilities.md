@@ -23,11 +23,11 @@ replaces:
   - editors.shader-editor.header.add-menu-utilities-math
   - editors.shader-editor.header.add-menu-utilities-vector
 ---
-## Add menu - Utilities - Vector
+## Add menu - Utilities
 
-![Add menu - Utilities - Vector](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png)
+![Add menu - Utilities](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-vector.png)
 
-This menu contains nodes that deals with vector data.
+This menu contains the utility nodes of the Shader Editor. The Math, Text and Vector submenus group the nodes by data. The **Bundle** and **Closure** submenus have their own entries in the menu, and are described in their own sections after this one. The other nodes are listed directly in the Utilities menu.
 
 ### Repeat
 
@@ -39,11 +39,11 @@ In the example in the image above, we duplicate the cube, transform it with a ro
 
 > **Note:** It is not possible to set data outside the Repeat Zone, you can only get data from outside the Repeat Zone. Any data connected from the outside of the zone are constant throughout every iteration based on their value at the current frame. The result of the looping can only be accessed via the Repeat Output node.
 
-#### Repeat Zone Input
+#### Repeat Input
 
-The beginning of the iteration or loop.
+The beginning of the iteration or loop. In the shader editor the zone starts without any items. Connect a link to the empty socket to add an item. Each item gets a matching input and output on both zone nodes.
 
-##### Input
+##### Inputs
 
 ###### Iterations
 
@@ -51,78 +51,18 @@ Data type: Integer.
 
 Number of repetitions or loops.
 
-###### Geometry
-
-Standard geometry input.
-
-##### Output
-
-###### Geometry
-
-Standard geometry output.
-
-#### Repeat Zone Output
-
-The result and output of the iteration or loop. You can define custom attributes outputs here from the
-
-##### Inputs
-
-###### Geometry
-
-Standard geometry output.
-
 ##### Outputs
 
-###### Geometry
+###### Iteration
 
-Standard geometry output.
+Data type: Integer.
 
+The index of the current iteration. It starts counting at zero.
 
-### Closure
+#### Repeat Output
 
-![Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png)
+The result and output of the iteration or loop. It has no fixed sockets. It shows one input and one output for each item of the zone.
 
-Wrap nodes inside a closure that can be executed at a different part of the node-tree
-
-### Evaluate Closure
-
-![Evaluate Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png)
-
-Execute a given closure.
-
-### Combine Bundle
-
-![Combine Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png)
-
-Combine multiple socket values into one.
-
-### Join Bundle
-
-![Join Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png)
-
-Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.
-
-#### Inputs
-
-##### Bundle
-
-Data type: Bundle.
-
-One or more bundles. The empty socket at the bottom adds another one.
-
-#### Outputs
-
-##### Bundle
-
-Data type: Bundle.
-
-One bundle with the items of all input bundles.
-
-### Separate Bundle
-
-![Separate Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png)
-
-Decompose a bundle of values into the single values.
 
 ### Index Switch
 
@@ -183,12 +123,6 @@ Same level Menu Switches with the same input cause a conflict:
 
 #### Inputs
 
-##### A / B
-
-Data type: follows the Data Type setting.
-
-Becomes the output if the value is chosen.
-
 ##### Menu
 
 Data type: Menu.
@@ -201,7 +135,7 @@ Determines which of the input options will be selected and passed through as the
 
 Data type: follows the Data Type setting.
 
-The available input index types that you want to switch between. You can define more input sockets in the sidebar Menu Switch panel.
+The values to switch between, one for each menu item. An item becomes the output value if it is chosen by the menu input. You can define more input sockets in the sidebar Menu Switch panel.
 
 > **Note:** You can add more menu switch options to the empty socket.
 
@@ -213,13 +147,25 @@ The available input index types that you want to switch between. You can define 
 
 Determines the type of the data that is handled by the node.
 
+##### Menu Items
+
+![Menu Items](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-items.png)
+
+The sidebar Node tab lists the menu items. Select an item to edit it. The **Description** box under the list is a multi-line text box: press Enter to start a new line, and drag its lower right corner to make it taller. The description is shown as the tooltip of the menu entry.
+
 #### Outputs
 
 ##### Output
 
 Data type: follows the Data Type setting.
 
-The output index.
+The value of the chosen item.
+
+##### A , B ...
+
+Data type: Boolean.
+
+One output for each menu item, next to its input. It is true if this item is chosen by the menu input.
 
 ### Switch
 
@@ -261,6 +207,96 @@ Data type: Color.
 
 The True or False value, depending on Switch.
 
+
+## Add menu - Utilities - Bundle
+
+![Add menu - Utilities - Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-bundle.png)
+
+The Bundle submenu holds the nodes that build, merge and split bundles. A bundle is a group of named values that travels along one link.
+
+### Combine Bundle
+
+![Combine Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/combine-bundle.png)
+
+Combine multiple socket values into one.
+
+#### Outputs
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle with all the values. Connect a link to the empty input socket to add a value.
+
+### Join Bundle
+
+![Join Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/join-bundle.png)
+
+Merges two or more bundles into one. A bundle holds several values under names, like a small folder of settings, and Join Bundle puts the contents of several folders into a single one. Use it to collect the settings of different parts of a node tree into one bundle that you pass on.
+
+#### Inputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One or more bundles. The empty socket at the bottom adds another one.
+
+#### Outputs
+
+##### Bundle
+
+Data type: Bundle.
+
+One bundle with the items of all input bundles.
+
+### Separate Bundle
+
+![Separate Bundle](/docs2/images/editors/shader-editor/header/add-menu-utilities/separate-bundle.png)
+
+Decompose a bundle of values into the single values.
+
+#### Inputs
+
+##### Bundle
+
+Data type: Bundle.
+
+The bundle to split. Connect a link to the empty output socket to add a value.
+
+## Add menu - Utilities - Closure
+
+![Add menu - Utilities - Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/add-menu-utilities-closure.png)
+
+The Closure submenu holds the nodes that wrap nodes inside a closure and run it somewhere else in the node tree.
+
+### Closure
+
+![Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/closure.png)
+
+Wrap nodes inside a closure that can be executed at a different part of the node-tree
+
+#### Outputs
+
+##### Closure
+
+Data type: Closure.
+
+The closure made from the nodes inside the zone. This socket is on the Closure Output node.
+
+### Evaluate Closure
+
+![Evaluate Closure](/docs2/images/editors/shader-editor/header/add-menu-utilities/evaluate-closure.png)
+
+Execute a given closure.
+
+#### Inputs
+
+##### Closure
+
+Data type: Closure.
+
+The closure to execute. The other inputs and outputs of the node follow the items of the closure.
 
 # Math
 
@@ -404,6 +440,13 @@ The x and y position of the currently selected curve point.
 
 Delete the currently selected curve point.
 
+#### Outputs
+
+##### Value
+
+Data type: Float.
+
+The value after mapping it through the curve.
 
 ### Map Range
 
@@ -415,9 +458,15 @@ The Map Range node remaps a value from a range to a target range.
 
 ##### Value
 
-Data type: follows the Data Type setting.
+Data type: Float.
 
-The input value to be remapped.
+The input value to be remapped. Only with the Float data type.
+
+##### Vector
+
+Data type: Vector.
+
+The input vector to be remapped. Only with the Vector data type.
 
 ##### From Min
 
@@ -442,6 +491,12 @@ The lower bound of the target range.
 Data type: follows the Data Type setting.
 
 The higher bound of the target range.
+
+##### Steps
+
+Data type: follows the Data Type setting.
+
+The number of steps. Only with the Stepped Linear interpolation type.
 
 
 #### Properties
@@ -481,9 +536,15 @@ If enabled, the output is clamped to the target range.
 
 ##### Result
 
-Data type: follows the Data Type setting.
+Data type: Float.
 
-The input value after remapping.
+The input value after remapping. Only with the Float data type.
+
+##### Vector
+
+Data type: Vector.
+
+The input vector after remapping. Only with the Vector data type.
 
 ### Math
 
@@ -504,6 +565,12 @@ First numerical value. The trigonometric functions accept values in radians.
 Data type: Float.
 
 Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute.
+
+##### Value
+
+Data type: Float.
+
+Third numerical value. Only for the operations that need three values: Multiply Add, Compare, Smooth Minimum, Smooth Maximum and Wrap.
 
 
 #### Properties
@@ -532,132 +599,73 @@ Numerical value output.
 
 Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color
 
-#### Input
+#### Inputs
 
-![Input](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png)
+##### Factor
 
-##### Float
+Data type: Float (factor).
 
-###### Factor
+The mix factor. In Vector mode with the Factor Mode set to Non-Uniform, this is a Vector with one factor per axis.
 
-The mix factor.
+##### A
 
-###### A
+Data type: follows the Data Type setting.
 
-Float value A input.
+The first value to mix.
 
-###### B
+##### B
 
-Float value B input.
+Data type: follows the Data Type setting.
 
-
-##### Vector
-
-##### Factor mode Uniform
-
-![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
-
-###### Factor
-
-The mix factor.
-
-###### A
-
-Vector A input.
-
-###### B
-
-Vector B input.
-
-
-##### Factor mode Non Uniform
-
-![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
-
-###### Factor
-
-The vector mix factor.
-
-###### A
-
-Vector A input.
-
-###### B
-
-Vector B input.
-
-
-##### Color
-
-![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
-
-###### Factor
-
-The mix factor.
-
-###### A
-
-Color A input.
-
-###### B
-
-Color B input.
-
+The second value to mix.
 
 #### Properties
 
 ##### Data Type
 
+The mode in which the node works: Float, Vector or Color. It sets the data type of the A, B and Result sockets.
+
+![Input](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png)
+
 ![Data Type](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/data-type-2.png)
-
-Which mode to use.
-
-##### Float mode
 
 ![Float mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png)
 
-###### Clamp Factor
-
-Clamp the factor to 0-1 range.
-
-##### Vector mode
-
 ![Vector mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png)
 
-###### Factor mode
+![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
+
+##### Factor Mode
 
 ![Factor mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png)
 
-Uniform or non uniform factor.
+Only in Vector mode. Uniform uses one factor for all axes. Non-Uniform uses a vector factor, with one factor per axis.
 
-###### Clamp Factor
+![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
 
-Clamp the factor to 0-1 range.
+![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
 
-##### Color mode
+##### Blending Mode
 
 ![Color mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png)
 
-###### Blending mode
+Only in Color mode. What blending mode to use for the color.
 
-What blending mode to use for the color.
+##### Clamp Result
 
-###### Clamp Result
+Only in Color mode. Clamp the result to 0-1 range.
 
-Clamp the result to 0-1 range.
+##### Clamp Factor
 
-###### Clamp Factor
+Clamp the factor to 0-1 range.
 
-Clamp the input factor to 0-1 range.
-
-
-#### Output
+#### Outputs
 
 ##### Result
 
 Data type: follows the Data Type setting.
 
-The output value or vector.
+The output value, vector or color.
 
 # Vector
 
@@ -675,17 +683,31 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 
 #### Inputs
 
-##### X Y and Z
+##### X
 
 Data type: Float.
 
-X, Y and Z values.
+The X value.
+
+##### Y
+
+Data type: Float.
+
+The Y value.
+
+##### Z
+
+Data type: Float.
+
+The Z value.
 
 #### Outputs
 
-##### Color
+##### Vector
 
-Color output.
+Data type: Vector.
+
+The vector made from the X, Y and Z values.
 
 
 ### Map Range
@@ -698,9 +720,15 @@ The Map Range node remaps a value from a range to a target range.
 
 ##### Value
 
-Data type: follows the Data Type setting.
+Data type: Float.
 
-The input value to be remapped.
+The input value to be remapped. Only with the Float data type.
+
+##### Vector
+
+Data type: Vector.
+
+The input vector to be remapped. Only with the Vector data type.
 
 ##### From Min
 
@@ -725,6 +753,12 @@ The lower bound of the target range.
 Data type: follows the Data Type setting.
 
 The higher bound of the target range.
+
+##### Steps
+
+Data type: follows the Data Type setting.
+
+The number of steps. Only with the Stepped Linear interpolation type.
 
 
 #### Properties
@@ -758,9 +792,15 @@ If enabled, the output is clamped to the target range.
 
 ##### Result
 
-Data type: follows the Data Type setting.
+Data type: Float.
 
-The input value after remapping.
+The input value after remapping. Only with the Float data type.
+
+##### Vector
+
+Data type: Vector.
+
+The input vector after remapping. Only with the Vector data type.
 
 ### Mix Vector
 
@@ -768,132 +808,73 @@ The input value after remapping.
 
 A mix node with vector preselected.
 
-#### Input
+#### Inputs
 
-![Input](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png)
+##### Factor
 
-##### Float
+Data type: Float (factor).
 
-###### Factor
+The mix factor. In Vector mode with the Factor Mode set to Non-Uniform, this is a Vector with one factor per axis.
 
-The mix factor.
+##### A
 
-###### A
+Data type: follows the Data Type setting.
 
-Float value A input.
+The first value to mix.
 
-###### B
+##### B
 
-Float value B input.
+Data type: follows the Data Type setting.
 
-
-##### Vector
-
-##### Factor mode Uniform
-
-![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
-
-###### Factor
-
-The mix factor.
-
-###### A
-
-Vector A input.
-
-###### B
-
-Vector B input.
-
-
-##### Factor mode Non Uniform
-
-![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
-
-###### Factor
-
-The vector mix factor.
-
-###### A
-
-Vector A input.
-
-###### B
-
-Vector B input.
-
-
-##### Color
-
-![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
-
-###### Factor
-
-The mix factor.
-
-###### A
-
-Color A input.
-
-###### B
-
-Color B input.
-
+The second value to mix.
 
 #### Properties
 
 ##### Data Type
 
+The mode in which the node works: Float, Vector or Color. It sets the data type of the A, B and Result sockets.
+
+![Input](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/input.png)
+
 ![Data Type](/docs2/images/editors/shader-editor/header/add-menu-utilities-vector/data-type.png)
-
-Which mode to use.
-
-##### Float mode
 
 ![Float mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/float-mode.png)
 
-###### Clamp Factor
-
-Clamp the factor to 0-1 range.
-
-##### Vector mode
-
 ![Vector mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/vector-mode.png)
 
-###### Factor mode
+![Color](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color.png)
+
+##### Factor Mode
 
 ![Factor mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode.png)
 
-Uniform or non uniform factor.
+Only in Vector mode. Uniform uses one factor for all axes. Non-Uniform uses a vector factor, with one factor per axis.
 
-###### Clamp Factor
+![Factor mode Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-uniform.png)
 
-Clamp the factor to 0-1 range.
+![Factor mode Non Uniform](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/factor-mode-non-uniform.png)
 
-##### Color mode
+##### Blending Mode
 
 ![Color mode](/docs2/images/editors/shader-editor/header/add-menu-utilities-math/color-mode.png)
 
-###### Blending mode
+Only in Color mode. What blending mode to use for the color.
 
-What blending mode to use for the color.
+##### Clamp Result
 
-###### Clamp Result
+Only in Color mode. Clamp the result to 0-1 range.
 
-Clamp the result to 0-1 range.
+##### Clamp Factor
 
-###### Clamp Factor
+Clamp the factor to 0-1 range.
 
-Clamp the input factor to 0-1 range.
-
-
-#### Output
+#### Outputs
 
 ##### Result
 
-Data type: Vector.
+Data type: follows the Data Type setting.
 
-The output value or vector.
+The output value, vector or color.
 
 ### Separate XYZ
 
@@ -911,11 +892,23 @@ The Input vector.
 
 #### Outputs
 
-##### X, Y and Z
+##### X
 
 Data type: Float.
 
-The output vectors for X, Y and Z
+The X value of the vector.
+
+##### Y
+
+Data type: Float.
+
+The Y value of the vector.
+
+##### Z
+
+Data type: Float.
+
+The Z value of the vector.
 
 
 ### Mapping
@@ -938,7 +931,7 @@ The vector to be transformed.
 
 Data type: Vector (translation).
 
-The amount of translation along each axis.
+The amount of translation along each axis. Only with the Point and Texture vector types.
 
 ##### Rotation
 
@@ -961,7 +954,7 @@ The amount of scaling along each axis.
 
 The node applies the transformation differently depending on the semantic type of the input vector.
 
-##### Point
+###### Point
 
 For this vector type, the node performs a straightforward transformation.
 
@@ -975,7 +968,7 @@ Rotation rotates the input around the origin of the space.
 
 Scaling scales the input along the global axis.
 
-##### Texture
+###### Texture
 
 For this vector type, the node performs an inverse transformation.
 
@@ -1073,21 +1066,29 @@ Roundness of the segment coordinate system.
 Normalize the output to a 0/1 range.
 
 
-### Outputs
+#### Outputs
 
-#### Segment Coordinates
+##### Segment Coordinates
+
+Data type: Vector.
 
 Segment coordinates for texture mapping.
 
-#### Segment ID
+##### Segment ID
+
+Data type: Float.
 
 Unique ID for every segment.
 
-#### Segment Width
+##### Segment Width
+
+Data type: Float.
 
 The width of each segment.
 
-#### Segment Rotation
+##### Segment Rotation
+
+Data type: Float.
 
 The rotation of each segment.
 
@@ -1100,7 +1101,7 @@ The Vector Curves node maps an input vector components to a curve.
 
 #### Inputs
 
-In the shader context the node also has an additional Factor property.
+In the shader context the node also has an additional Factor input.
 
 ##### Factor
 
@@ -1112,8 +1113,9 @@ Controls the amount of influence the node exerts on the output vector.
 
 Data type: Vector.
 
-Standard vector input. Properties Channel
+Standard vector input.
 
+#### Properties
 
 ##### Channel buttons
 
@@ -1200,7 +1202,7 @@ The Vector Math node performs the selected math operation on the input vectors.
 
 #### Inputs
 
-The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.
+The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale and Refract operations.
 
 ##### Vector
 
@@ -1212,13 +1214,19 @@ Input vector A.
 
 Data type: Vector.
 
-Input vector B.
+Input vector B. Not used by operations that need only one vector, such as Length or Normalize.
+
+##### Vector
+
+Data type: Vector.
+
+Input vector C. Only for the Multiply Add, Faceforward and Wrap operations.
 
 ##### Scale
 
 Data type: Float.
 
-Input Scale.
+Input Scale. Only for the Scale and Refract operations.
 
 
 #### Properties
@@ -1237,13 +1245,13 @@ The output of the node is dynamic. It is either a vector or a scalar depending o
 
 Data type: Vector.
 
-Output vector.
+Output vector. For all operations that give a vector.
 
 ##### Value
 
 Data type: Float.
 
-Output value.
+Output value. Only for the Dot Product, Distance and Length operations.
 
 
 ### Vector Rotate
@@ -1270,13 +1278,19 @@ The center for the rotation.
 
 Data type: Vector.
 
-The axis angles.
+The axis to rotate around. Only with the Axis Angle type.
 
 ##### Angle
 
 Data type: Float (angle).
 
-The rotation angle.
+The rotation angle. Not with the Euler type.
+
+##### Rotation
+
+Data type: Vector (euler).
+
+The rotation angles around the X, Y and Z axes. Only with the Euler type.
 
 
 #### Properties
@@ -1307,7 +1321,9 @@ The Vector Transform node allows converting a vector, point, or normal between w
 
 #### Inputs
 
-##### Vector Input
+##### Vector
+
+Data type: Vector.
 
 Standard vector input.
 
@@ -1333,6 +1349,8 @@ Coordinate Space to convert to World, Object or Camera.
 
 #### Outputs
 
-##### Vector Output
+##### Vector
+
+Data type: Vector.
 
 The transformed output vector.

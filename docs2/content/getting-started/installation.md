@@ -132,6 +132,15 @@ Additional notes for Linux users:
 - Our repository includes linux_rocky8_setup.sh to automate environment setup on Rocky 8.
 - Some components, like Nvidia OptiX, require manual installation due to download restrictions.
 
+### Packaging a release build (Linux)
+
+After a `make release` build, `tools/utils/bforartists_package_linux.sh` in the repository produces the distributable Linux packages from the build's `bin` folder:
+
+- `./tools/utils/bforartists_package_linux.sh all` — builds the `.AppImage`, `.deb` and `.tar.xz` into `../build_output/`
+- `./tools/utils/bforartists_package_linux.sh tar devbuild` — builds a `linux-devbuild-DD-MM-YYYY.tar.xz` for the devbuilds page
+
+Run the script with `--help` for all options and environment overrides (`BFA_BUILD_DIR`, `OUTPUT_DIR`, `APPIMAGETOOL`, `DEVBUILD`).
+
 If you have questions or need help building on any platform, feel free to reach out on our Discord!
 
 ## Linux

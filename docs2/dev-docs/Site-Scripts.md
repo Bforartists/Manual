@@ -11,12 +11,14 @@
 | `docs-layer.js` | `bfa_docs_layer` | Doc Pages template, footer | Sidebar carets and Overview rows, breadcrumbs, section overview pages, the Docs home, status chips |
 | `workspace-map.js` | `bfa_workspace_map` | Doc Pages template, footer | Workspace hover maps and the Workspaces explorer |
 | `keymap-explorer.js` | `bfa_keymap_explorer` | Doc Pages template, footer | The interactive keymap ([Keymap](Keymap.md)) |
+| `compare.js` | `bfa_compare` | Whole site, footer | The before / after slider (`[data-compare]`, `[data-doc-compare]`): drag, keys, tabs, and the intro (old screen first, the new one sweeps in to the left edge, then eases back to the middle) |
+| `perf-guard.js` | `bfa_perf_guard` | Whole site, header | Slow-device guard: lite mode and still motion on TVs, weak devices and machines that stutter while scrolling (tested after load, twice, expires after 14 days). Smooth scrolling is not part of it |
 | `quicksearch.js` | `bfa_quicksearch` | Whole site, footer | The instant search popup (Ctrl K) |
 | `docs-loading.js` | `bfa_docs_loading` (inline) | Doc Pages template, header | Hides the sidebar until it is ready (no flicker), with a spinner in the middle of the page |
 | `docs-head.css` · `docs-head.js` | loaded by `template-head.html` | Doc Pages template, head | The docs kit styles (`bfa-doc-kit`), panel heads, section icons |
 | `docs-foot.css` · `docs-foot.js` | loaded by `template-footer.html` | Doc Pages template, footer | The base docs script `bfa-docs-v6` and its CSS |
 | `site-head.css` · `site-head.js` | loaded by `site-head.html` | Whole site, head | World, Paper, Cover, Layers, Heroes, Sectors, Wall, Lite, Media, Gallery, Shared |
-| `site-foot.css` · `site-foot.js` | loaded by `site-footer.html` | Whole site, footer | IX Idle, Fallbacks, Fork Light, Hero Rows, Light, Shade, Round 8–10, Thumb Sizes, Site Path, Paths, Perf Note |
+| `site-foot.css` · `site-foot.js` | loaded by `site-footer.html` | Whole site, footer | IX Idle, Fallbacks, Fork Light, Hero Rows, Light, Shade, Round 8–10, Thumb Sizes, Site Path, Paths, Perf Note, Row Drag, Band Drag; CSS: Lift, Compare Foot, Sink Room, Compare Rows |
 | `news-head.css` · `news-foot.js` | loaded by `news-head.html` / `news-footer.html` | News template | Post styles, "On this page", interview video, reading UX |
 | `*.html` (loaders) | (pasted into Webflow) | Site settings or template custom code | A few `<link>` / `<script>` tags with the version and hash. Nothing else is inline. |
 
