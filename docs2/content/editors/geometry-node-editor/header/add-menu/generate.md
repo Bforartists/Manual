@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Generate"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Generate nodes."
 order: 150
