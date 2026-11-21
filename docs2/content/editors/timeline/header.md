@@ -6,8 +6,8 @@ path:
   - Editors
   - Timeline
   - Header
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 17.1.1 Editors - Timeline - Header Tools and Options.odt
@@ -145,6 +145,7 @@ Play existing audio from sequence editor when scrubbing.
 | Sub frames | Show current scene sub frame and allow to set it by using interface tools. |
 | Limit Playback to Frame Range | Don't allow frame selection with the mouse outside of the play range. |
 | Follow Current Frame | Follow current frame in editors. |
+| Use Scene Strip Range | When this scene is used as a scene strip in the sequencer scene, playback stays inside the frame range of the strip under the playhead. Only for the active workspace, changes no scene data. |
 
 ### Play in
 
