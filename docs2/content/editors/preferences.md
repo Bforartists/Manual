@@ -1457,6 +1457,8 @@ The path to the current selected asset library. Only local libraries have a path
 
 A remote library shows its online settings below the list instead of a path.
 
+![Remote asset library with the Authentication settings](/docs2/images/editors/preferences/asset-libraries-remote.png)
+
 #### Repository URL
 
 The web address of the online repository the library comes from. The field turns red while it is empty. Libraries that come from an extension show the URL of the extension and you can't edit it here.
