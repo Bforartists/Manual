@@ -142,7 +142,7 @@ Controls the intensity of the color temperature adjustment.
 
 Data type: Float.
 
-Sets the color temperature in Kelvin.
+Sets the color temperature in Kelvin. Default: 6500.
 
 ### Outputs
 
@@ -240,13 +240,13 @@ How strong the color variation is.
 
 #### Scale
 
-Data type: Vector.
+Data type: Vector (XYZ).
 
 Size of the variation pattern.
 
 #### Offset
 
-Data type: Vector.
+Data type: Vector (translation).
 
 Shifts the variation pattern.
 
@@ -423,15 +423,17 @@ Size of the roughness.
 
 #### Vector Coordinates
 
+##### Vector Coordinates
+
 Data type: Boolean.
 
-Use the Vector input instead of the automatic image coordinates.
+Use the Vector input instead of the automatic image coordinates. Default: Off.
 
-#### Vector
+##### Vector
 
 Data type: Vector.
 
-Used when Vector Coordinates is on. Best used with the Vector Mapping node group.
+Vector Coordinates input. Best used with the Vector Mapping node group.
 
 ### Outputs
 
@@ -481,7 +483,7 @@ The input image to process.
 
 #### Saturation
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the image's color saturation. The range is 0 to 2.
 
@@ -592,7 +594,7 @@ Controls the intensity of line variation effects.
 
 ##### Grid Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the grid pattern.
 
@@ -612,7 +614,7 @@ Adjusts the thickness of the grid lines.
 
 ##### Detailed Grid Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of a finer grid pattern.
 
@@ -632,7 +634,7 @@ Adjusts the thickness of the finer grid lines.
 
 ##### Border Strength
 
-Data type: Float.
+Data type: Float (factor).
 
 Controls the intensity of the object borders.
 
@@ -778,13 +780,13 @@ Controls the speed of the animation transition.
 
 ##### Transition Feather
 
-Data type: Float.
+Data type: Float (factor).
 
 Adjusts the softness of the transition edges.
 
 ##### Transition Rotation
 
-Data type: Float.
+Data type: Float (angle).
 
 Rotates the transition effect.
 
@@ -1623,33 +1625,33 @@ Data type: Boolean.
 
 Enables or disables defocus for far-field areas. Default: On.
 
-#### Manual Focus
-
 ##### Manual Focus
+
+####### Manual Focus
 
 Data type: Boolean.
 
 Set the focus distance by hand instead of using the camera. Default: Off.
 
-##### Focus Distance
+###### Focus Distance
 
 Data type: Float.
 
 Adjusts the center offset for the defocus mask. Default: 5.
 
-##### F-Stop
+###### F-Stop
 
 Data type: Float.
 
 Adjusts the fstop depth field for the defocus mask. Default: 2.8.
 
-##### Near Offset
+###### Near Offset
 
 Data type: Float.
 
 Sets the distance threshold for near-field defocus. Default: 0.
 
-##### Far Offset
+###### Far Offset
 
 Data type: Float.
 
@@ -1796,33 +1798,33 @@ Data type: Boolean.
 
 Enables or disables defocus for far-field areas. Default: On.
 
-#### Manual Focus
-
 ##### Manual Focus
+
+####### Manual Focus
 
 Data type: Boolean.
 
 Set the focus distance by hand instead of using the camera. Default: Off.
 
-##### Focus Distance
+###### Focus Distance
 
 Data type: Float (distance).
 
 Adjusts the center offset for the defocus mask. Default: 5.
 
-##### F-Stop
+###### F-Stop
 
 Data type: Float.
 
 Adjusts the fstop depth field for the defocus mask. Default: 2.8.
 
-##### Near Offset
+###### Near Offset
 
 Data type: Float.
 
 Sets the distance threshold for near-field defocus. Default: 0.
 
-##### Far Offset
+###### Far Offset
 
 Data type: Float.
 
@@ -1953,7 +1955,7 @@ The size of the glare relative to the image. 1 means the glare covers the entire
 
 ##### Sun Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 The position of the source of the rays in normalized coordinates. 0 means lower left corner and 1 means upper right corner. Default: (0.5, 0.65, 0).
 
@@ -2050,9 +2052,9 @@ Size of the smudges. Default: 0.5.
 
 Data type: Boolean.
 
-Use a. Default: Off.
+Use a custom image as the grunge texture instead of the procedural one. Default: Off.
 
-##### Image
+##### Grunge Image
 
 Data type: Color.
 
@@ -2381,13 +2383,13 @@ Controls the softness of the vignette edges. Default: 0.5.
 
 ##### Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Sets the center position of the vignette effect. Default: (0.5, 0.5, 0).
 
 ##### Size
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Controls the size of the vignette effect. Default: (0.75, 0.35, 0).
 
@@ -2514,13 +2516,13 @@ Controls the softness of the vignette edges. Default: 0.5.
 
 ##### Position
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Sets the center position of the vignette effect. Default: (0.5, 0.5, 0).
 
 ##### Size
 
-Data type: Vector.
+Data type: Vector (factor).
 
 Controls the size of the vignette effect. Default: (0.75, 0.35, 0).
 
@@ -5428,12 +5430,6 @@ Data type: Float.
 
 The scale of the shape. Default: 2.
 
-#### Factor
-
-Data type: Boolean.
-
-Amount of mixing between the A and B inputs. Default: Off.
-
 #### Vector Coordinates
 
 ##### Vector Coordinates
@@ -5464,7 +5460,7 @@ A black and white mask of the shape.
 
 ### How to use
 
-A vector shape that covers the whole image by default. Scale sets its size. Factor changes the shape. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
+A vector shape that covers the whole image by default. Scale sets its size. Switch Vector Coordinates on to use your own Vector instead. Value is the smooth shape, Mask is the sharp version of it.
 
 The pattern with default values:
 
@@ -7514,7 +7510,7 @@ The amount of translations along each axis.
 
 #### Rotation
 
-Data type: Vector.
+Data type: Vector (euler).
 
 The amount of rotation on each axis, around the X, Y, then Z axes in that order.
 

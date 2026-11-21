@@ -237,6 +237,8 @@ Choose another default language for Bforartists.
 
 Choose between automatic language detection. In this case the system language gets chosen. Or pick a language that you want to use.
 
+Azerbaijani (Azərbaycan dili) is a new language in the list.
+
 #### Translate
 
 ##### Tool tips

@@ -103,9 +103,11 @@ This node is the beginning of the Simulation Zone. Custom input and output socke
 
 ###### Geometry
 
-Standard geometry input.
+Data type: Geometry.
 
-##### Output
+Standard geometry input. It is the default simulation item. You can add more items in the sidebar.
+
+##### Outputs
 
 ###### Delta Time
 
@@ -115,6 +117,8 @@ Returns a float value with the amount of elapsed time that has passed in a linea
 
 ###### Geometry
 
+Data type: Geometry.
+
 Standard geometry output.
 
 #### Simulation Zone Output
@@ -123,14 +127,27 @@ Standard geometry output.
 
 This node is the end of the Simulation Zone. Custom input and output sockets can be defined in the property shelf to the right in the Group tab.
 
-##### Properties
+##### Inputs
 
 ###### Skip
 
-A boolean. This forwards the output of the simulation input node directly to the output node and ignore the nodes in the simulation zone – like a bypass. This will essentially “skip” the evaluation like an overall switch boolean of all evaluated nodes in the simulation zone.
+Data type: Boolean.
 
-- **Inputs**: **Geometry**: Standard geometry input.
-- **Output**: **Geometry**: Standard geometry output.
+This forwards the output of the simulation input node directly to the output node and ignore the nodes in the simulation zone – like a bypass. This will essentially “skip” the evaluation like an overall switch boolean of all evaluated nodes in the simulation zone.
+
+###### Geometry
+
+Data type: Geometry.
+
+Standard geometry input.
+
+##### Outputs
+
+###### Geometry
+
+Data type: Geometry.
+
+Standard geometry output.
 
 ### XPBD Solver (Experimental)
 
@@ -170,19 +187,19 @@ A transform from the space the simulation runs in to world space.
 
 A panel that is closed by default.
 
-##### Substeps
+###### Substeps
 
 Data type: Integer.
 
 How many smaller steps the time step is split into. More substeps are more accurate but slower. The default is 10, the minimum is 1.
 
-##### Constraint Iterations
+###### Constraint Iterations
 
 Data type: Integer.
 
 How many times the constraints are solved in each substep. The default is 1, the minimum is 1.
 
-##### Solver Path
+###### Solver Path
 
 Data type: String.
 
@@ -192,13 +209,13 @@ An optional path inside the World bundle. If you fill it in, the solver stores a
 
 A panel that is closed by default. It controls how colliders that change shape are blended during the substeps.
 
-##### Begin
+###### Begin
 
 Data type: Float.
 
 Where the blend starts, from 0 (the previous shape of the collider) to 1 (its current shape). The default is 0.
 
-##### End
+###### End
 
 Data type: Float.
 

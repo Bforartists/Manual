@@ -514,7 +514,7 @@ Coordinates to use. Leave unconnected for automatic Object coordinates.
 
 Data type: Float (factor).
 
-Amount of blur. Default: 0.2.
+Amount of blur. Default: 0.2. More render samples give a smoother result, because the blur is made with white noise.
 
 ### Outputs
 
@@ -3498,7 +3498,7 @@ Position of the nearest cell point.
 
 ### How to use
 
-Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness, Point Rotation and Smoothness shape the cells. F1 is the distance to the nearest point and Random Color gives each cell a color.
+Connect a vector, for example the UV output of a Texture Coordinate node, to Vector. Set Scale to the number of cells. With Tileable on, the pattern repeats without visible seams, so it can be used as a texture tile. Randomness and Point Rotation shape the cells, and Smoothness sets how soft Smooth F1 is. F1 is the distance to the nearest point and Random Color gives each cell a color.
 
 The asset with default values on a plane, with the UV coordinates of the plane mapped from -1.6 to 1.6 in X and -1 to 1 in Y:
 

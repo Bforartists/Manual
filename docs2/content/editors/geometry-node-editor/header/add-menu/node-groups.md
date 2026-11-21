@@ -83,7 +83,59 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Geometry Input](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/geometry-input.png)
 
-Geometry input
+Brings in the geometry of an object or a collection, so you can use it in the node tree. You can join it to the incoming geometry or replace the incoming geometry with it.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The incoming geometry. The geometry of the object or the collection is joined to it.
+
+##### Input Type
+
+Data type: Menu.
+
+Choose where the geometry comes from: **Object** or **Collection**.
+
+##### Object
+
+Data type: Object.
+
+The object to read the geometry from. Used when Input Type is Object.
+
+##### Collection
+
+Data type: Collection.
+
+The collection to read the geometry from. Used when Input Type is Collection.
+
+##### Relative Space
+
+Data type: Boolean.
+
+Keep the position of the geometry relative to this object, as it is in the scene. When off, the original coordinates are used.
+
+##### As Instance
+
+Data type: Boolean.
+
+Bring in the geometry as an instance instead of real geometry.
+
+##### Replace Original
+
+Data type: Boolean.
+
+Use only the geometry of the object or the collection, and drop the incoming geometry.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The resulting geometry.
 
 # Geometry › Operations
 
@@ -113,11 +165,103 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Displaces the geometry.
 
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to displace.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points move.
+
+##### Strength
+
+Data type: Float.
+
+The overall strength of the displacement.
+
+##### Offset Method
+
+Data type: Menu.
+
+How the points move: **Normal** moves them along their normals, **Vector** moves them by the Offset Vector.
+
+##### Offset Vector
+
+Data type: Vector (translation).
+
+The direction and distance to move each point. Used when Offset Method is Vector.
+
+##### Offset Distance
+
+Data type: Float (distance).
+
+How far to move each point along its normal. Used when Offset Method is Normal.
+
+##### Substeps
+
+Data type: Integer.
+
+Splits the displacement into this number of smaller steps.
+
+##### Post Substep Process
+
+Data type: Closure.
+
+An optional closure that runs on the geometry after each substep.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The displaced geometry.
+
 ### Smooth Geometry
 
 ![Smooth Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/smooth-geometry.png)
 
 Smoothens the geometry.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The points to smooth, based on their neighbors.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points are smoothed.
+
+##### Iterations
+
+Data type: Integer.
+
+How many times the smoothing step is repeated.
+
+##### Weight
+
+Data type: Float (factor).
+
+How much the neighboring elements count in the mix.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The smoothed geometry.
 
 # Geometry › Selection
 
@@ -147,17 +291,83 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Box select geometry.
 
+#### Inputs
+
+##### Center
+
+Data type: Vector (translation).
+
+The center of the box.
+
+##### Size
+
+Data type: Vector (translation).
+
+The size of the box along X, Y and Z.
+
+#### Outputs
+
+##### Selection
+
+Data type: Boolean.
+
+True for the elements inside the box.
+
 ### Normal Selection
 
 ![Normal Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/normal-selection.png)
 
 Select geometry by the normals direction.
 
+#### Inputs
+
+##### Direction
+
+Data type: Vector (XYZ).
+
+The direction to compare the normals with.
+
+##### Threshold
+
+Data type: Float (angle).
+
+The largest angle between a normal and the direction that still counts as selected.
+
+#### Outputs
+
+##### Selection
+
+Data type: Boolean.
+
+True for the elements whose normals point in the direction.
+
 ### Sphere Selection
 
 ![Sphere Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/sphere-selection.png)
 
 Select geometry by a sphere shape.
+
+#### Inputs
+
+##### Center
+
+Data type: Vector (translation).
+
+The center of the sphere.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius of the sphere.
+
+#### Outputs
+
+##### Selection
+
+Data type: Boolean.
+
+True for the elements inside the sphere.
 
 # Grease Pencil › Operations
 
@@ -185,7 +395,23 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Delete Empty Layers](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/delete-empty-layers.png)
 
-Deletes empty grease pencil layers
+Deletes the empty layers of a Grease Pencil object.
+
+#### Inputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry.
+
+#### Outputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry without the empty layers.
 
 # Grease Pencil › Read
 
@@ -213,19 +439,75 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Layer Size](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/layer-size.png)
 
-Retreive the point count and spline count of a grease pencil layer.
+Retrieves the point count and the spline count of a Grease Pencil layer.
+
+#### Inputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry to read.
+
+#### Outputs
+
+##### Point Count
+
+Data type: Integer.
+
+The number of points in the layer.
+
+##### Spline Count
+
+Data type: Integer.
+
+The number of splines in the layer.
 
 ### Material Fill Info
 
 ![Material Fill Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/material-fill-info.png)
 
-Retreive the color and opacity of a grease pencil layer.
+Retrieves the fill color and the fill opacity of a Grease Pencil material.
+
+#### Outputs
+
+##### Color
+
+Data type: Color.
+
+The fill color of the Grease Pencil material.
+
+##### Opacity
+
+Data type: Float.
+
+The fill opacity of the Grease Pencil material.
 
 ### Stroke Info
 
 ![Stroke Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/stroke-info.png)
 
-Retreive the color, opacity and softness of a grease pencil stroke.
+Retrieves the color, the opacity and the softness of a Grease Pencil stroke.
+
+#### Outputs
+
+##### Color
+
+Data type: Color.
+
+The vertex color of the Grease Pencil points.
+
+##### Opacity
+
+Data type: Float.
+
+The opacity of the Grease Pencil points.
+
+##### Softness
+
+Data type: Float.
+
+The softness of the Grease Pencil points.
 
 # Grease Pencil › Write
 
@@ -253,25 +535,143 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Set Screenspace Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-screenspace-radius.png)
 
-Set the screenspace radius of the grease pencil.
+Sets the radius of a Grease Pencil object in screen space.
 
-### Material Fill Info
+#### Inputs
 
-![Material Fill Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/material-fill-info.png)
+##### Grease Pencil
 
-Set the stroke softness of the grease pencil.
+Data type: Geometry.
 
-### Set Stroke / Fill Color
+The Grease Pencil geometry. It also works with curve geometry.
 
-![Set Stroke / Fill Color](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-color.png)
+##### Scale Multiplier
 
-Set the stroke fill color of the grease pencil.
+Data type: Float.
 
-### Set Stroke / Fill Opacity
+Multiplies the radius, so the lines look larger in the viewport.
 
-![Set Stroke / Fill Opacity](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-opacity.png)
+#### Outputs
 
-Set the stroke fill opacity of the grease pencil.
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry with the new radius.
+
+### Set Stroke Softness
+
+![Set Stroke Softness](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/material-fill-info.png)
+
+Sets the stroke softness of a Grease Pencil object.
+
+#### Inputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected strokes change.
+
+##### Softness
+
+Data type: Float (factor).
+
+The softness value to set on the selected strokes.
+
+#### Outputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry with the new softness.
+
+### Set Stroke/Fill Color
+
+![Set Stroke/Fill Color](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-color.png)
+
+Sets the stroke color or the fill color of a Grease Pencil object.
+
+#### Inputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry.
+
+##### Mode
+
+Data type: Menu.
+
+Choose whether to set the color of the **Stroke** or of the **Fill**.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points change.
+
+##### Color
+
+Data type: Color.
+
+The color to set on the selected Grease Pencil data.
+
+#### Outputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry with the new color.
+
+### Set Stroke/Fill Opacity
+
+![Set Stroke/Fill Opacity](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-opacity.png)
+
+Sets the stroke opacity or the fill opacity of a Grease Pencil object.
+
+#### Inputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry.
+
+##### Mode
+
+Data type: Menu.
+
+Choose whether to set the opacity of the **Stroke** or of the **Fill**.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected points change.
+
+##### Opacity
+
+Data type: Float (factor).
+
+The opacity to set on the selected points.
+
+#### Outputs
+
+##### Grease Pencil
+
+Data type: Geometry.
+
+The Grease Pencil geometry with the new opacity.
 
 # Hair › Deformation
 
@@ -301,13 +701,45 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Blends the shape between multiple hair curves in a certain radius together.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Factor**: Factor to blend overall effect. · **Blend Radius**: Radius to select neighbors for blending. · **Blend Neighbours**: Amount of neighbors used for blending. · **Preserve Length**: Preserve the length of each curve during deformation.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Factor
+
+Data type: Float (factor).
+
+Factor to blend the overall effect.
+
+##### Blend Radius
+
+Data type: Float (distance).
+
+Radius to select the neighbors for blending.
+
+##### Blend Neighbors
+
+Data type: Integer.
+
+Amount of neighbors used for blending.
+
+##### Preserve Length
+
+Data type: Boolean.
+
+Preserve the length of each curve during deformation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 ### Displace Hair Curves
 
@@ -315,29 +747,31 @@ Blends the shape between multiple hair curves in a certain radius together.
 
 Displaces hair curves by a vector based on options.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-The input geometry.
+The input geometry. It can also hold other data than curves.
 
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to scale the overall displacement.
 
 ##### Shape
 
 Data type: Float.
 
-Shape of the influence along curves. 0 means constant. 0.5 means linear.
+Shape of the influence along the curves. 0 means constant. 0.5 means linear.
 
-##### Object
+##### Object Space
 
-The object to determine the displacement space.
+Data type: Object.
+
+The object that defines the displacement space.
 
 ##### Displace Vector
 
@@ -345,25 +779,41 @@ Data type: Vector (translation).
 
 The vector for the displacement.
 
-##### Surface Object
+##### Surface Normal
 
-Surface object used to sample the normal for displacement.
+Settings to displace along the normal of a surface.
 
-##### Surface Geometry
+###### Surface Normal
 
-Surface geometry used to sample the normal for displacement.
+Data type: Boolean.
 
-##### Surface UV Map
+Turns the displacement along the surface normal on or off.
+
+###### Surface Input Type
+
+Data type: Menu.
+
+Choose whether the surface comes from an **Object** or from a **Geometry** input.
+
+###### Surface
+
+Data type: Geometry or Object.
+
+The surface geometry or the surface object used to sample the normal for displacement.
+
+###### Surface UV Map
 
 Data type: Vector.
 
-Surface UV Map used to sample the normal for displacement.
+Surface UV map used to sample the normal for displacement.
 
-##### Surface Normal Displacement
+###### Surface Normal Distance
 
-Amount of displacement along the surface normals.
+Data type: Float (distance).
 
-#### Output
+Amount of displacement along the surface normal.
+
+#### Outputs
 
 ##### Geometry
 
@@ -377,39 +827,25 @@ The output geometry.
 
 Deforms hair curves using a random vector per point to frizz them.
 
-#### Input
-
-**Geometry**: The input geometry. · **Cumulative Offset**: Apply offset cumulatively. · **Factor**: Factor to blend overall effect. · **Distance**: Overall distance factor for the deformation. · **Shape**: Shape of the influence along curves. 0 means constant. 0.5 means linear. · **Seed**: Random seed for the operation. · **Preserve Length**: Preserve the length of each curve during deformation.
-
-#### Output
-
-**Geometry**: The output geometry. · **Offset Vector**: The vector by which each point was offset during deformation.
-
-### Hair Curves Noise
-
-![Hair Curves Noise](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/hair-curves-noise.png)
-
-Deforms hair curves using noise texture.
-
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-The input geometry.
+The input geometry. It can also hold other data than curves.
 
 ##### Cumulative Offset
 
 Data type: Boolean.
 
-Apply offset cumulatively.
+Apply the offset cumulatively. Earlier points affect the points after them.
 
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to blend the overall effect.
 
 ##### Distance
 
@@ -421,25 +857,7 @@ Overall distance factor for the deformation.
 
 Data type: Float.
 
-Shape of the influence along curves. 0 means constant. 0.5 means linear.
-
-##### Scale
-
-Data type: Float.
-
-Scale of the noise texture by root position.
-
-##### Scale along Curve
-
-Data type: Float.
-
-Scale of the noise texture along the curve.
-
-##### Offset per curve
-
-Data type: Float.
-
-—
+Shape of the influence along the curves. 0 means constant. 0.5 means linear.
 
 ##### Seed
 
@@ -453,7 +871,89 @@ Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
-#### Output
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
+
+##### Offset Vector
+
+Data type: Vector.
+
+The vector by which each point was offset during deformation.
+
+### Hair Curves Noise
+
+![Hair Curves Noise](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/hair-curves-noise.png)
+
+Deforms hair curves using noise texture.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The input geometry.
+
+##### Cumulative Offset
+
+Data type: Boolean.
+
+Apply the offset cumulatively. Earlier points affect the points after them.
+
+##### Factor
+
+Data type: Float (factor).
+
+Overall factor for the deformation.
+
+##### Distance
+
+Data type: Float (distance).
+
+Overall distance factor for the deformation.
+
+##### Shape
+
+Data type: Float.
+
+Shape of the amount along each curve. 0 means constant. 0.5 means linear.
+
+##### Scale
+
+Data type: Float.
+
+Scale of the noise texture by root position.
+
+##### Scale along Curve
+
+Data type: Float.
+
+Scale of the noise texture along each curve.
+
+##### Offset per Curve
+
+Data type: Float.
+
+Random offset of the noise texture for each curve.
+
+##### Seed
+
+Data type: Integer.
+
+Seed value for the randomization.
+
+##### Preserve Length
+
+Data type: Boolean.
+
+Preserve the length of the curves, segment by segment.
+
+#### Outputs
 
 ##### Geometry
 
@@ -473,13 +973,19 @@ The vector by which each point was offset during deformation.
 
 Rolls up hair curves, starting from their tips.
 
-#### Input
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The input geometry.
 
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to blend the overall effect.
 
 ##### Subdivision
 
@@ -493,9 +999,11 @@ Data type: Integer.
 
 Level of smoothing on the roll path to include shape variation.
 
-##### Roll Lenght
+##### Roll Length
 
-Length of each curve to be rolled
+Data type: Float (distance).
+
+Length of each curve to be rolled.
 
 ##### Roll Radius
 
@@ -519,13 +1027,13 @@ Taper of the roll.
 
 Data type: Float (factor).
 
-Offset the roll along the original curve to retain shape.
+Offset the roll along the original curve to retain the shape.
 
 ##### Roll Direction
 
 Data type: Vector.
 
-The axis around each curve is rolled.
+The axis around which each curve is rolled.
 
 ##### Random Orientation
 
@@ -545,7 +1053,7 @@ Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -559,13 +1067,57 @@ The output geometry.
 
 Rotates each hair curve around an axis.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Factor**: Factor to blend overall effect. · **Axis**: Rotation Axis. The default is tangent at root. · **Angle**: Angle of rotation · **Random Off**: Random offset to the rotation angle per curve. · **Lock Ends**: Lock rotation to the axis between the curve ends. · **Seed**: Random seed for the operation.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Factor
+
+Data type: Float (factor).
+
+Factor to influence the rotation angle.
+
+##### Axis
+
+Data type: Vector (XYZ).
+
+The rotation axis. By default this is the tangent at the root.
+
+##### Angle
+
+Data type: Float (angle).
+
+The angle of rotation.
+
+##### Random Offset
+
+Data type: Float (angle).
+
+Random offset to the rotation angle per curve.
+
+##### Lock Ends
+
+Data type: Boolean.
+
+Lock the rotation to the axis between the curve ends.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 ### Shrinkwrap Hair Curves
 
@@ -573,41 +1125,161 @@ Rotates each hair curve around an axis.
 
 Shrinkwrap hair curves to a mesh surface from below and optionally from above.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Surface**: Surface geometry used for shrinkwrap. · **Surface Object**: A surface object used for shrinkwrap. · **Factor**: Factor to blend overall effect. · **Offset Distance**: Distance of the surface to shrinkwrap. · **Above Surface**: Blend shrinkwrap for points above the surface. · **Smoothing Steps**: The steps of Smoothing applied after shrinkwrap. · **Lock Roots**: Lock the position of root points.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Surface Input Type
+
+Data type: Menu.
+
+Choose whether the surface comes from an **Object** or from a **Geometry** input.
+
+##### Surface
+
+Data type: Geometry or Object.
+
+The surface object or the surface geometry used for shrinkwrap.
+
+##### Factor
+
+Data type: Float (factor).
+
+Factor to blend the overall effect.
+
+##### Offset Distance
+
+Data type: Float (distance).
+
+Distance from the surface used for shrinkwrap.
+
+##### Above Surface
+
+Data type: Float (factor).
+
+Blend the shrinkwrap for points above the surface.
+
+##### Smoothing Steps
+
+Data type: Integer.
+
+Amount of smoothing steps applied after shrinkwrap.
+
+##### Lock Roots
+
+Data type: Boolean.
+
+Lock the position of the root points.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 ### Smooth Hair Curves
 
 ![Smooth Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/smooth-hair-curves.png)
 
-Smoothes the shape of hair curves.
+Smooths the shape of hair curves.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Amount**: Amount of smoothing. · **Shape**: Shape of the influence along curves. 0 means constant. 0.5 means linear. · **Iterations**: Amount of smoothing steps. · **Weight**: Smoothing weight. · **Lock Tip**: Lock the position of tip points. · **Preserve Length**: Preserve the length of each curve during deformation.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Amount
+
+Data type: Float (factor).
+
+Amount of smoothing.
+
+##### Shape
+
+Data type: Float.
+
+Shape of the influence along the curves. 0 means constant. 0.5 means linear.
+
+##### Iterations
+
+Data type: Integer.
+
+Amount of smoothing steps.
+
+##### Weight
+
+Data type: Float (factor).
+
+Weight used for smoothing.
+
+##### Lock Tips
+
+Data type: Boolean.
+
+Lock the position of the tip points.
+
+##### Preserve Length
+
+Data type: Boolean.
+
+Preserve the length of each curve during deformation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 ### Straighten Hair Curves
 
 ![Straighten Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/straighten-hair-curves.png)
 
-Straighten hair curves between root and tip.
+Straightens hair curves between the root and the tip.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Amount**: Amount of smoothing. · **Shape**: Shape of the influence along curves. 0 means constant. 0.5 means linear. · **Preserve Length**: Preserve the length of each curve during deformation.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Amount
+
+Data type: Float (factor).
+
+Amount of straightening.
+
+##### Shape
+
+Data type: Float.
+
+Shape of the influence along the curves. 0 means constant. 0.5 means linear.
+
+##### Preserve Length
+
+Data type: Boolean.
+
+Preserve the length of each curve during deformation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 ### Trim Hair Curves
 
@@ -615,13 +1287,13 @@ Straighten hair curves between root and tip.
 
 Trims or scales hair curves to a certain length.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-The input geometry.
+The input geometry. It can also hold other data than curves.
 
 ##### Scale Uniform
 
@@ -633,13 +1305,13 @@ Scale each curve uniformly to reach the target length.
 
 Data type: Float.
 
-Multiply the original length by a factor
+Multiply the original length by a factor.
 
 ##### Replace Length
 
 Data type: Boolean.
 
-Use the length input to fully replace the original length.
+Use the Length input to fully replace the original length.
 
 ##### Length
 
@@ -651,15 +1323,15 @@ Target length for the operation.
 
 Data type: Float (factor).
 
-Mask to blend overall effect.
+Mask to blend the overall effect.
 
 ##### Random Offset
 
 Data type: Float (distance).
 
-Trim hair curves randomly up to a certain amount.
+Trim the hair curves randomly up to a certain amount.
 
-##### Pin at parameter
+##### Pin at Parameter
 
 Data type: Float (factor).
 
@@ -671,7 +1343,7 @@ Data type: Integer.
 
 Random seed for the operation.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -705,15 +1377,71 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Duplicate Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/duplicate-hair-curves.png)
 
-Duplicates hair curves a certain amouunt of times in the given radius.
+Duplicates hair curves a certain amount of times in the given radius.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Amount**: Amount of duplication per curve. · **Viewport Amount**: How much percent is used in the viewport. · **Radius**: The radius in which the duplicate curves are offset from the guides. · **Distribution Shape**: Shape of distriubution from center to the edge aroudn the guide. · **Tip Roundness**: Offset of the curves to round the tip. · **Even Thickness**: Keep an even thickness of the distribution of duplicates. · **Seed**: Random seed for the operation.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry. · **Guide Index**: The guide index map that was used for the operation.
+The input geometry. It can also hold other data than curves.
+
+##### Amount
+
+Data type: Integer.
+
+Amount of duplicates per curve.
+
+##### Viewport Amount
+
+Data type: Float (factor).
+
+Percentage of the amount that is used in the viewport.
+
+##### Radius
+
+Data type: Float (distance).
+
+The radius in which the duplicate curves are offset from the guides.
+
+##### Distribution Shape
+
+Data type: Float.
+
+Shape of the distribution from the center to the edge around the guide.
+
+##### Tip Roundness
+
+Data type: Float (factor).
+
+Offset of the curves to round the tip.
+
+##### Even Thickness
+
+Data type: Boolean.
+
+Keep an even thickness of the distribution of duplicates.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
+
+##### Guide Index
+
+Data type: Integer.
+
+The guide index map that was used for the operation.
 
 ### Generate Hair Curves
 
@@ -721,27 +1449,43 @@ Duplicates hair curves a certain amouunt of times in the given radius.
 
 Generates new hair curves on a surface mesh.
 
-#### Input
+#### Inputs
+
+##### Hair Surface
+
+Data type: Geometry.
+
+The surface geometry, or hair geometry that already has a surface attachment, to use as reference.
+
+##### Surface Source
+
+Data type: Menu.
+
+Choose where the surface comes from. **Attached** uses the surface that the hair is attached to. **Input** uses the Hair Surface input. **Object** uses the Surface object.
 
 ##### Surface
 
 Data type: Object.
 
-The surface to generate the hairs on.
+The surface object to generate the hair curves on. It needs matching transforms.
 
-##### Surface Object
-
-A surface object to generate the hairs on.
-
-##### Surface UV map
+##### Surface UV Map
 
 Data type: Vector.
 
 Surface UV map used for attachment.
 
-##### Surface Rest Position
+##### Resting Surface
 
-Set the surface mesh into its rest position before attachment.
+Data type: Boolean.
+
+Use the resting state of the surface, so the hair stays stable when the surface deforms.
+
+##### Attach to Surface
+
+Data type: Boolean.
+
+Attach the generated hair curves to the surface geometry, for dynamics.
 
 ##### Hair Length
 
@@ -753,49 +1497,55 @@ Length of the generated hair curves.
 
 Data type: Material.
 
-The material for the hair curves.
+The material of the generated hair curves.
 
 ##### Control Points
 
 Data type: Integer.
 
-Amount of control points for the generated hair curves.
+Amount of control points of the generated hair curves.
 
-##### Poisson Disk Distribution
+##### Distribution
 
-Use Poisson Disk distribution to keep a minimum distance between the hair curves.
+Settings for how the hair curves are spread over the surface.
 
-##### Density
+###### Distribution Method
+
+Data type: Menu.
+
+**Random** places the curves at random. **Poisson Disk** keeps a minimum distance between the curves.
+
+###### Density
 
 Data type: Float.
 
-How dense the generated hair curves are.
+Surface density of the generated hair curves.
 
-##### Density Mask
+###### Density Mask
 
 Data type: Float (factor).
 
-Factor for the density of generated hair curves.
+Factor applied on the density for curve distribution.
 
-##### Mask Texture
+###### Mask Texture
 
 Data type: Image.
 
-Discard points based on a mask texture after distribution. This mask can be loaded here.
+Discard points based on a mask texture after distribution.
 
-##### Viewport Amount
+###### Viewport Amount
 
 Data type: Float (factor).
 
-How dense the generated hair curves are displayed in the viewport.
+Factor applied on the density for the viewport.
 
-##### Seed
+###### Seed
 
 Data type: Integer.
 
-Random seed for operation.
+Random seed for the operation.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -813,7 +1563,7 @@ The output curves.
 
 Data type: Vector.
 
-The surface normals.
+The normal direction of the surface mesh at the attachment point.
 
 ### Interpolate Hair Curves
 
@@ -821,27 +1571,19 @@ The surface normals.
 
 Interpolates existing guide curves on a surface.
 
-#### Input
+#### Inputs
 
-##### Guide Curves
+##### Geometry
 
-Input guide curves.
+Data type: Geometry.
 
-##### Surface Geometry
+The input geometry with the guide curves. It can also hold other data than curves.
 
-The surface geometry to generate the hairs on.
+##### Resting Surface
 
-##### Surface Object
+Data type: Boolean.
 
-A surface object to generate the hairs on.
-
-##### Surface UV map
-
-Surface UV map used for attachment.
-
-##### Surface Rest Position
-
-Set the surface mesh into its rest position before attachment.
+Use the resting state of the surface, so the hair stays stable when the surface deforms.
 
 ##### Follow Surface Normal
 
@@ -853,55 +1595,61 @@ Align the interpolated curves to the surface normal.
 
 Data type: Boolean.
 
-Use mesh islands of the surface geometry for painting.
+Use the mesh islands of the surface geometry for parting.
 
 ##### Interpolation Guides
 
 Data type: Integer.
 
-Amount of guides to be used for interploation per curve.
+Amount of guides used for interpolation per curve.
 
 ##### Distance to Guides
 
 Data type: Float (distance).
 
-Distance aorund each guide to spawn interpollated curves.
+Distance around each guide to spawn interpolated curves.
 
-##### Poisson Disk Distribution
+##### Distribution
 
-Use Poisson Disk distribution to keep a minimum distance between the hair curves.
+Settings for how the hair curves are spread over the surface.
 
-##### Density
+###### Distribution Method
+
+Data type: Menu.
+
+**Random** places the curves at random. **Poisson Disk** keeps a minimum distance between the curves.
+
+###### Density
 
 Data type: Float.
 
-How dense the generated hair curves are.
+Surface density of the generated hair curves.
 
-##### Density Mask
+###### Density Mask
 
 Data type: Float (factor).
 
-Factor for the density of generated hair curves.
+Factor applied on the density for curve distribution.
 
-##### Mask Texture
+###### Mask Texture
 
 Data type: Image.
 
-Discard points based on a mask texture after distribution. This mask can be loaded here.
+Discard points based on a mask texture after distribution.
 
-##### Viewport Amount
+###### Viewport Amount
 
 Data type: Float (factor).
 
-How dense the generated hair curves are displayed in the viewport.
+Factor applied on the density for the viewport.
 
-##### Seed
+###### Seed
 
 Data type: Integer.
 
-Random seed for operation.
+Random seed for the operation.
 
-#### Output
+#### Outputs
 
 ##### Geometry
 
@@ -913,13 +1661,13 @@ The output geometry.
 
 Data type: Integer.
 
-The output curves.
+Index of the main guide curve per curve.
 
 ##### Surface Normal
 
 Data type: Vector.
 
-The surface normals.
+The normal direction of the surface mesh at the attachment point.
 
 # Hair › Guides
 
@@ -949,7 +1697,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Deforms existing hair curves into braids.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
@@ -957,35 +1705,11 @@ Data type: Geometry.
 
 The input geometry.
 
-##### Guide Index
-
-Data type: Integer.
-
-Index map input. This input has priority.
-
-##### Guide Distance
-
-Data type: Float (distance).
-
-Minimum distance between two guides for new guide map.
-
-##### Guide Mask
-
-Data type: Float.
-
-Mash for which curve are eligible to be selected as guides.
-
-##### Existing Guide Map
-
-Data type: Boolean.
-
-Use the existing guide map attribute if available
-
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to blend the overall effect.
 
 ##### Subdivision
 
@@ -997,7 +1721,7 @@ Subdivision level applied before deformation.
 
 Data type: Float.
 
-Where to start to blend deformation in percent from the root.
+Percentage along each curve to blend the deformation from the root.
 
 ##### Radius
 
@@ -1011,67 +1735,115 @@ Data type: Float.
 
 Shape of the braid radius along each curve.
 
-##### Factor Min
-
-Data type: Float.
-
-Minimum radius of the braid.
-
-##### Factor Max
-
-Data type: Float.
-
-Maximum radius of the braid.
-
 ##### Frequency
 
 Data type: Float.
 
 Frequency factor of the braids.
 
-##### Thickness
+##### Shape Parameters
+
+Settings for the shape of the braids and their strands.
+
+###### Factor Min
 
 Data type: Float.
 
-Thickness of the braids.
+Factor of the minimum radius of the braids.
 
-##### Thickness Shape
+###### Factor Max
 
 Data type: Float.
 
-Shape adjsutment of the strand thickness for the braids.
+Factor of the maximum radius of the braids.
 
-##### Shape Assymetry
+###### Thickness
 
-Asymetry of the shape adjustment of the strand thickness.
+Data type: Float.
 
-##### Flare Length
+Thickness of each strand of hair.
+
+###### Thickness Shape
+
+Data type: Float.
+
+Shape adjustment of the strand thickness for the braids.
+
+###### Shape Asymmetry
+
+Data type: Float.
+
+Asymmetry of the shape adjustment of the strand thickness.
+
+###### Flare Length
 
 Data type: Float (distance).
 
 Length of the flare at the end of the braid.
 
-##### Flare Opening
+###### Flare Opening
 
 Data type: Float (distance).
 
 Opening radius of the flare at the tip of the braid.
 
-##### Hair Tie Object
-
-Object used for the hair tie instance.
-
 ##### Hair Tie
 
-Geometry used for the hair tie instance. This has priority.
+Settings for a hair tie at the end of each braid.
 
-##### Hair Tie Scale
+###### Hair Tie
+
+Data type: Boolean.
+
+Turns the hair tie on or off.
+
+###### Hair Tie Input Type
+
+Data type: Menu.
+
+Choose whether the hair tie comes from an **Object** or from a **Geometry** input.
+
+###### Hair Tie
+
+Data type: Geometry or Object.
+
+The geometry or the object used for the hair tie instance. The geometry has priority.
+
+###### Hair Tie Scale
 
 Data type: Float.
 
 Scale of the hair tie instance.
 
-#### Output
+##### Guide Map
+
+Settings for the guide index map.
+
+###### Guide Index
+
+Data type: Integer.
+
+The guide index map to use. This input has priority.
+
+###### Guide Distance
+
+Data type: Float (distance).
+
+Minimum distance between two guides for a new guide map.
+
+###### Guide Mask
+
+Data type: Float.
+
+Mask for which curves can be selected as guides.
+
+###### Existing Guide Map
+
+Data type: Boolean.
+
+Use the existing guide map attribute if available.
+
+#### Outputs
 
 ##### Geometry
 
@@ -1079,17 +1851,11 @@ Data type: Geometry.
 
 The output geometry.
 
-##### Guide Index
-
-Data type: Integer.
-
-The guide index map that was used for the operation.
-
 ##### Flare Parameter
 
 Data type: Float.
 
-Parameter between 0 and 1 along the flare.
+Parameter from 0 to 1 along the flare.
 
 ##### Strand Index
 
@@ -1097,67 +1863,49 @@ Data type: Integer.
 
 Index of the strand within a braid that each curve belongs to.
 
+##### Guide Index
+
+Data type: Integer.
+
+The guide index map that was used for the operation. In the Guide Map panel.
+
 ### Clump Hair Curves
 
 ![Clump Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/clump-hair-curves.png)
 
 Clumps together existing hair curves.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-The input geometry.
-
-##### Guide Index
-
-Data type: Integer.
-
-Index map input. This input has priority.
-
-##### Guide Distance
-
-Data type: Float (distance).
-
-Minimum distance between two guides for new guide map.
-
-##### Guide Mask
-
-Data type: Float.
-
-Mash for which curve are eligible to be selected as guides.
-
-##### Existing Guide Map
-
-Data type: Boolean.
-
-Use the existing guide map attribute if available.
+The input geometry. It can also hold other data than curves.
 
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to blend the overall effect.
 
 ##### Shape
 
 Data type: Float.
 
-Shape of the influence along curves. 0 means constant. 0.5 means linear.
+Shape of the influence along the curves. 0 means constant. 0.5 means linear.
 
 ##### Tip Spread
 
 Data type: Float.
 
-Distance of random sread at the curve tips
+Distance of the random spread at the curve tips.
 
 ##### Clump Offset
 
 Data type: Float (distance).
 
-Offset of clump in a random direction.
+Offset of each clump in a random direction.
 
 ##### Distance Falloff
 
@@ -1169,7 +1917,13 @@ Falloff distance for the clumping effect. 0 means no falloff.
 
 Data type: Float (distance).
 
-Distance threshold for the clumping effect. 0 means no falloff.
+Distance threshold for the falloff around the guide.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
 
 ##### Preserve Length
 
@@ -1177,7 +1931,35 @@ Data type: Boolean.
 
 Preserve the length of each curve during deformation.
 
-#### Output
+##### Guide Map
+
+Settings for the guide index map.
+
+###### Guide Index
+
+Data type: Integer.
+
+The guide index map to use. This input has priority.
+
+###### Guide Distance
+
+Data type: Float (distance).
+
+Minimum distance between two guides for a new guide map.
+
+###### Guide Mask
+
+Data type: Float.
+
+Mask for which curves can be selected as guides.
+
+###### Existing Guide Map
+
+Data type: Boolean.
+
+Use the existing guide map attribute if available.
+
+#### Outputs
 
 ##### Geometry
 
@@ -1189,7 +1971,7 @@ The output geometry.
 
 Data type: Integer.
 
-The guide index map that was used for the operation.
+The guide index map that was used for the operation. In the Guide Map panel.
 
 ### Create Guide Index Map
 
@@ -1197,21 +1979,7 @@ The guide index map that was used for the operation.
 
 Creates an attribute that maps each curve to its nearest guide via index.
 
-#### Input
-
-**Geometry**: The input geometry. · **Guides**: Index map input. This input has priority. · **Guide Distance**: Minimum distance between two guides for new guide map. · **Guide Mask**: Mash for which curve are eligible to be selected as guides. · **Group ID**: The id that is used to group curves togethert for guide map creation.
-
-#### Output
-
-**Geometry**: The output geometry. · **Guide Curves**: The output guides · **Guide Index**: The guide index map that was used for the operation. · **Guide Selection**: The output guide selection.
-
-### Curl Hair Curves
-
-![Curl Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/curl-hair-curves.png)
-
-Deform existing hair curves into curls.
-
-#### Input
+#### Inputs
 
 ##### Geometry
 
@@ -1219,35 +1987,75 @@ Data type: Geometry.
 
 The input geometry.
 
-##### Guide Index
+##### Guides
 
-Data type: Integer.
+Data type: Geometry.
 
-Index map input. This input has priority.
+Guide curves or points used to select the guide curves.
 
 ##### Guide Distance
 
 Data type: Float (distance).
 
-Minimum distance between two guides for new guide map.
+Minimum distance between two guides.
 
 ##### Guide Mask
 
 Data type: Float.
 
-Mash for which curve are eligible to be selected as guides.
+Mask for which curves can be selected as guides.
 
-##### Existing Guide Map
+##### Group ID
+
+Data type: Integer.
+
+ID to group curves together for the guide map creation.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
+
+##### Guide Curves
+
+Data type: Geometry.
+
+The guide curves.
+
+##### Guide Index
+
+Data type: Integer.
+
+The guide index map that was created.
+
+##### Guide Selection
 
 Data type: Boolean.
 
-Use the existing guide map attribute if available.
+The selection of the curves that are guides.
+
+### Curl Hair Curves
+
+![Curl Hair Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/curl-hair-curves.png)
+
+Deforms existing hair curves into curls.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The input geometry.
 
 ##### Factor
 
 Data type: Float (factor).
 
-Factor to blend overall effect.
+Factor to blend the overall effect.
 
 ##### Subdivision
 
@@ -1255,23 +2063,23 @@ Data type: Integer.
 
 Subdivision level applied before deformation.
 
-##### Curl start
+##### Curl Start
 
 Data type: Float.
 
-—
+Percentage along each curve to blend the deformation from the root.
 
 ##### Radius
 
 Data type: Float (distance).
 
-—
+Overall radius of the curls.
 
 ##### Factor Start
 
 Data type: Float.
 
-Form where to blend deformation in percent, starting from the root.
+Factor for the radius at the curl start.
 
 ##### Factor End
 
@@ -1297,13 +2105,47 @@ Data type: Integer.
 
 Random seed for the operation.
 
-#### Output
+##### Guide Map
+
+Settings for the guide index map.
+
+###### Guide Index
+
+Data type: Integer.
+
+The guide index map to use. This input has priority.
+
+###### Guide Distance
+
+Data type: Float (distance).
+
+Minimum distance between two guides for a new guide map.
+
+###### Guide Mask
+
+Data type: Float.
+
+Mask for which curves can be selected as guides.
+
+###### Existing Guide Map
+
+Data type: Boolean.
+
+Use the existing guide map attribute if available.
+
+#### Outputs
 
 ##### Geometry
 
 Data type: Geometry.
 
 The output geometry.
+
+##### Guide Index
+
+Data type: Integer.
+
+The guide index map that was used for the operation. In the Guide Map panel.
 
 # Hair › Read
 
@@ -1333,7 +2175,7 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Reads information about each curve.
 
-#### Output
+#### Outputs
 
 ##### Curve Index
 
@@ -1357,13 +2199,13 @@ Length of each curve.
 
 Data type: Vector.
 
-Direction of each curve.
+Direction from the root to the tip of each curve.
 
 ##### Random
 
 Data type: Float.
 
-Random Vector of each curve.
+A random value for each curve.
 
 ##### Surface UV
 
@@ -1377,19 +2219,19 @@ Attachment surface UV coordinate of each curve.
 
 Reads information about the root point of each curve.
 
-#### Output
+#### Outputs
 
 ##### Root Selection
 
 Data type: Boolean.
 
-Boolean selection of curve root points.
+Boolean selection of the curve root points.
 
 ##### Root Position
 
 Data type: Vector.
 
-The position of a root point of a curve.
+The position of the root point of a curve.
 
 ##### Root Direction
 
@@ -1409,21 +2251,25 @@ Index of the root point of a curve.
 
 Reads the information of the curve segment before the current point.
 
-#### Output
+#### Outputs
 
-—
+##### Segment Length
 
-#### Segment Length
+Data type: Float.
 
-Length of the segment
+Distance to the previous point on the curve.
 
-#### Segment Direction
+##### Segment Direction
 
-Direction of the segment
+Data type: Vector.
 
-#### Neighbor Index
+Direction from the previous neighboring point on the segment.
 
-Index of the neighbouring point on segment.
+##### Neighbor Index
+
+Data type: Integer.
+
+Index of the previous neighboring point on the segment.
 
 ### Curve Tip
 
@@ -1431,39 +2277,77 @@ Index of the neighbouring point on segment.
 
 Reads information about the tip point of each curve.
 
-#### Output
+#### Outputs
 
-—
+##### Tip Selection
 
-#### Tip Selection
+Data type: Boolean.
 
-Boolean selection of the tip points.
+Boolean selection of the curve tip points.
 
-#### Tip Position
+##### Tip Position
+
+Data type: Vector.
 
 Position of the tip point of a curve.
 
-#### Tip Direction
+##### Tip Direction
 
-Direction of the segment of the tip point of a curve.
+Data type: Vector.
 
-#### Tip Index
+Direction of the tip segment of a curve.
+
+##### Tip Index
+
+Data type: Integer.
 
 Index of the tip point of a curve.
 
-### Hair Attachment Info
+### Attachment Info
 
-![Hair Attachment Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/hair-attachment-info.png)
+![Attachment Info](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/hair-attachment-info.png)
 
-Reads attatchment information regarding a surface mesh.
+Reads the attachment information of hair curves on a surface mesh.
 
-#### Input
+#### Inputs
 
-**Surface Geometry**: Surface geometry of the curve attachment. · **Surface UV Map**: Surface UV map used for attachment.
+##### Hair Curves
 
-#### Output
+Data type: Geometry.
 
-**Attachment UV**: Surface attachment UV coordinate stored on each curve. · **Attachment is Valid**: Is the attached UV coordinate valid? · **Surface Normal**: The normal direction of the surface mesh at the attachment point.
+The hair curves to read the attachment from.
+
+#### Outputs
+
+##### Surface Geometry
+
+Data type: Geometry.
+
+The surface geometry that the curves are attached to.
+
+##### Surface Exists
+
+Data type: Boolean.
+
+True when a surface geometry is found.
+
+##### Attachment UV
+
+Data type: Vector.
+
+Surface attachment UV coordinate stored on each curve.
+
+##### Attachment is Valid
+
+Data type: Boolean.
+
+Whether the stored attachment UV coordinate is valid.
+
+##### Surface Normal
+
+Data type: Vector.
+
+The normal direction of the surface mesh at the attachment point.
 
 # Hair › Utility
 
@@ -1493,57 +2377,73 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Attaches hair curves to a surface mesh.
 
-#### Input
+#### Inputs
 
 ##### Geometry
 
 Data type: Geometry.
 
-The input geometry.
+The input geometry. It can also hold other data than curves.
+
+##### Surface Source
+
+Data type: Menu.
+
+Choose where the surface comes from. **Attached** uses the surface that the hair is attached to. **Input** uses the Surface Geometry input. **Object** uses the Surface Object.
+
+##### Surface Geometry
+
+Data type: Geometry.
+
+Surface geometry to attach the hair curves to.
 
 ##### Surface Object
 
 Data type: Object.
 
-A surface object to attach to. It needs to have matching transforms.
-
-##### Surface
-
-Surface geometry to attach hair curves to.
+A surface object to attach to. It needs matching transforms.
 
 ##### Surface UV Map
 
 Data type: Vector.
 
-Surface UV Map used to attach hairs to.
+Surface UV map used for attachment.
 
-##### Surface Rest Position
+##### Resting Surface
 
-Set the surface into rest position before attachment.
+Data type: Boolean.
 
-##### Sample Attachment UV
+Use the resting state of the surface, so the hair stays stable when the surface deforms.
 
-Sample the surface UV mapp at the attachment point.
+##### Use Existing Attachment
+
+Data type: Boolean.
+
+Use the existing attachment of the curves, and sample the surface UV map at that attachment point.
 
 ##### Snap to Surface
 
-Data type: Boolean.
+Settings to snap the curves to the surface.
 
-Snap the root of the curve to the closest surface point.
-
-##### Align to Surface Normal
+###### Snap to Surface
 
 Data type: Boolean.
 
-Align the curves to surface normals. Needs a guide as reference.
+Snap the root of each curve to the closest surface point.
 
-##### Blend along Curve
+###### Blend along Curve
 
 Data type: Float (factor).
 
-Blend deformation along eacah curve from the root.
+Blend the deformation along each curve from the root.
 
-#### Output
+###### Align to Surface Normal
+
+Data type: Boolean.
+
+Align the curves to the surface normal. This needs a guide as reference.
+
+#### Outputs
 
 ##### Geometry
 
@@ -1555,13 +2455,13 @@ The output geometry.
 
 Data type: Vector.
 
-Surface UV Coordinate at the attachment point.
+Surface UV coordinate at the attachment point.
 
 ##### Surface Normal
 
 Data type: Vector.
 
-Surface Normal at the attachment point.
+Surface normal at the attachment point.
 
 ### Redistribute Curve Points
 
@@ -1569,25 +2469,79 @@ Surface Normal at the attachment point.
 
 Redistributes existing control points evenly along each curve.
 
-#### Input
+#### Inputs
 
-**Curves**: The input curve. · **Factor**: Factor to blend overall effect. · **Feature Awareness**: Use simple feature awareness to keep feature definition.
+##### Curves
 
-#### Output
+Data type: Geometry.
 
-**Curves**: The output curves.
+The input curves.
+
+##### Factor
+
+Data type: Float (factor).
+
+Factor to blend the overall effect.
+
+##### Feature Awareness
+
+Data type: Boolean.
+
+Use simple feature awareness to keep the feature definition.
+
+#### Outputs
+
+##### Curves
+
+Data type: Geometry.
+
+The output curves.
 
 ### Restore Curve Segment Length
 
 ![Restore Curve Segment Length](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/restore-curve-segment-length.png)
 
-#### Input
+Restores the length of each curve segment after a deformation. It uses a reference position from before the deformation.
 
-**Curves**: The input curve. · **Selection**: A selection of the input curve. · **Factor**: Factor to blend overall effect. · **Reference Position**: Reference position before deformation. · **Pin at Parameter**: Pin each curve at a certain point for the operation.
+#### Inputs
 
-#### Output
+##### Curves
 
-**Curves**: The output curves.
+Data type: Geometry.
+
+The input curves.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected elements are affected.
+
+##### Factor
+
+Data type: Float (factor).
+
+Factor to blend the overall effect.
+
+##### Reference Position
+
+Data type: Vector.
+
+The reference position before the deformation.
+
+##### Pin at Parameter
+
+Data type: Float (factor).
+
+Pin each curve at a certain point for the operation.
+
+#### Outputs
+
+##### Curves
+
+Data type: Geometry.
+
+The output curves.
 
 # Hair › Write
 
@@ -1615,15 +2569,53 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Set Hair Curve Profile](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/set-hair-curve-profile.png)
 
-Set the radius attribute of hair curces according to a profile shape.
+Sets the radius attribute of hair curves according to a profile shape.
 
-#### Input
+#### Inputs
 
-**Geometry**: The input geometry. · **Replace Radius**: Replace the original radius. · **Radius**: Base radius to be set when replace radius is enabled. · **Shape**: Shape of the radius along the curve. · **Factor Min**: Factor of the radius at the minimum. · **Factor Max**: Factor of the radius at the maximum.
+##### Geometry
 
-#### Output
+Data type: Geometry.
 
-**Geometry**: The output geometry.
+The input geometry.
+
+##### Replace Radius
+
+Data type: Boolean.
+
+Replace the original radius.
+
+##### Radius
+
+Data type: Float (distance).
+
+Base radius to set when Replace Radius is on.
+
+##### Shape
+
+Data type: Float.
+
+Shape of the radius along the curve.
+
+##### Factor Min
+
+Data type: Float.
+
+Factor of the radius at the minimum.
+
+##### Factor Max
+
+Data type: Float.
+
+Factor of the radius at the maximum.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The output geometry.
 
 # Instances
 
@@ -1653,11 +2645,245 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Create copies of referenced geometry on geometry elements.
 
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to put the instances on.
+
+##### Instance On
+
+Data type: Menu.
+
+The elements to put the instances on: **Points**, **Edges**, **Faces** or **Corners**.
+
+##### Mask
+
+Data type: Float (factor).
+
+The chance that an element gets an instance. At 1, every element gets one.
+
+##### Input Type
+
+Data type: Menu.
+
+Choose where the instances come from. **Data-Block** uses an object or a collection. **Geometry** uses the Instance input.
+
+##### Instance Type
+
+Data type: Menu.
+
+Choose the type of data-block: **Object** or **Collection**. Used when Input Type is Data-Block.
+
+##### Collection
+
+Data type: Collection.
+
+The collection to instance.
+
+##### Object
+
+Data type: Object.
+
+The object to instance.
+
+##### Instance
+
+Data type: Geometry.
+
+The geometry to instance. Used when Input Type is Geometry.
+
+##### Realize Instances
+
+Data type: Boolean.
+
+Turn the instances into real geometry.
+
+##### Keep Surface
+
+Data type: Boolean.
+
+Keep the original geometry of the object.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
+
+##### Pick Instance
+
+Settings to pick single instances from the Instance input.
+
+###### Pick Instance
+
+Data type: Boolean.
+
+Choose instances from the Instance input at each point, instead of instancing the whole geometry.
+
+###### Instance Index
+
+Data type: Menu.
+
+How the instances are picked: **Random**, **Sequence** or **Input**.
+
+###### Instance Index
+
+Data type: Integer.
+
+The index of the instance to pick. Used when the Instance Index menu is set to Input.
+
+##### Transform
+
+Settings for the position, rotation and scale of the instances.
+
+###### Surface Offset
+
+Data type: Float (distance).
+
+Moves the instances away from the surface by this distance.
+
+###### Align Rotation
+
+Data type: Boolean.
+
+Rotate the instances to follow the surface.
+
+###### Scale
+
+Data type: Vector (XYZ).
+
+The scale of the instances.
+
+##### Scale by Face Area
+
+Settings to scale the instances by the size of the faces.
+
+###### Scale by Face Area
+
+Data type: Boolean.
+
+Scale the instances by the area of the faces.
+
+###### Scale by Face Area Multiplier
+
+Data type: Float.
+
+Multiplies the scale that comes from the face area.
+
+##### Corner Offset
+
+Settings to move the instances on the corners.
+
+###### Corner Offset Method
+
+Data type: Menu.
+
+Choose how the corner instances are offset: **Face Center** or **Corner Center**.
+
+###### Corner Offset Factor
+
+Data type: Float (factor).
+
+Move the instances towards the center of the face.
+
+###### Corner Offset Distance
+
+Data type: Float (distance).
+
+The distance to move the instances.
+
+###### Even Edge Distance
+
+Data type: Boolean.
+
+Keep an even distance to the edges.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry with the instances.
+
 ### Randomize Transforms
 
 ![Randomize Transforms](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/randomize-transforms.png)
 
 Randomize the transform of instances.
+
+#### Inputs
+
+##### Instances
+
+Data type: Geometry.
+
+The instances to transform one by one.
+
+##### Selection
+
+Data type: Boolean.
+
+Only the selected instances change.
+
+##### Local Space
+
+Data type: Boolean.
+
+Transform each instance in its own local space.
+
+##### Offset
+
+Data type: Vector (XYZ).
+
+The largest random offset along each axis.
+
+##### Rotation
+
+Data type: Vector (euler).
+
+The largest random rotation around each axis.
+
+##### Scale Axes
+
+Data type: Menu.
+
+**Uniform** scales all axes by the same random value. **Axes** uses a random value for each axis.
+
+##### Scale
+
+Data type: Vector.
+
+The highest random scale for each axis. Used when Scale Axes is Axes.
+
+##### Scale
+
+Data type: Float (factor).
+
+The highest random scale for all axes. Used when Scale Axes is Uniform.
+
+##### Flipping
+
+Data type: Vector (factor).
+
+The chance to flip each instance along each axis.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
+
+#### Outputs
+
+##### Instances
+
+Data type: Geometry.
+
+The transformed instances.
 
 # Material
 
@@ -1687,6 +2913,34 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Applies an existing material from the source geometry at the target geometry.
 
+#### Inputs
+
+##### Source Geometry
+
+Data type: Geometry.
+
+The source geometry with the original materials.
+
+##### Target Geometry
+
+Data type: Geometry.
+
+The target geometry to pass the materials to.
+
+##### Material Index
+
+Data type: Integer.
+
+The material index to set on the target geometry.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The target geometry with the materials.
+
 # Mesh
 
 ## Add menu - Geometry nodes - Mesh
@@ -1713,7 +2967,253 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Mesh Lines and Silhouette](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png)
 
-Creates a Inverses Hull lines with a mesh silhouette. This also contains overrides, randomizatoin and other settings.
+Creates inverted hull lines with a mesh silhouette. It also contains overrides, randomization and other settings.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The mesh to draw the lines and the silhouette for.
+
+##### Screenspace Radius
+
+Data type: Boolean.
+
+Keep the line thickness the same on screen. The thickness is based on the camera.
+
+##### Overall Width
+
+Data type: Float.
+
+Controls both the silhouette width and the line width.
+
+##### Randomization
+
+In the Variation panel. Settings to vary the line width with noise.
+
+###### Randomization
+
+Data type: Boolean.
+
+Turns the randomization on or off.
+
+###### Factor
+
+Data type: Float (factor).
+
+Intensity of the variation.
+
+###### Scale
+
+Data type: Float.
+
+Fine-tunes the procedural noise by scale.
+
+###### Detail
+
+Data type: Float.
+
+The number of noise octaves. Higher values give more detailed noise, but take longer to render.
+
+###### Lacunarity
+
+Data type: Float.
+
+The difference between the scale of two octaves that follow each other. Larger values give a larger scale for higher octaves.
+
+###### Distortion
+
+Data type: Float.
+
+Amount of distortion.
+
+###### Roughness
+
+Data type: Float (factor).
+
+Blend factor between an octave and the one before it. 0 means no detail.
+
+##### Weight Map
+
+In the Variation panel. Settings to vary the line width with a vertex group.
+
+###### Weight Map
+
+Data type: Boolean.
+
+Turns the weight map on or off.
+
+###### Vertex Group
+
+Data type: Float.
+
+The vertex group that influences the lines.
+
+###### Offset
+
+Data type: Float.
+
+Shifts the vertex group weight and offsets the width of the inverted hull lines.
+
+##### Inner Lines
+
+Settings for the lines inside the mesh.
+
+###### Inner Lines
+
+Data type: Boolean.
+
+Turns the inner lines on or off.
+
+###### Width
+
+Data type: Float.
+
+Controls the thickness of the inner lines.
+
+##### Silhouette
+
+Settings for the silhouette backdrop mesh.
+
+###### Silhouette
+
+Data type: Boolean.
+
+Turns the silhouette on or off.
+
+###### Width
+
+Data type: Float.
+
+Sets the thickness of the silhouette line.
+
+###### Flatten Factor
+
+Data type: Float (factor).
+
+Compresses and flattens the silhouette backdrop shape.
+
+###### Camera Offset
+
+Data type: Float.
+
+Moves the silhouette backdrop mesh closer to or further from the camera, relative to the object position.
+
+##### Polygonize
+
+In the Silhouette panel. Settings to give the silhouette a polygonal look.
+
+###### Polygonize
+
+Data type: Boolean.
+
+Turns the polygonize effect on or off.
+
+###### Factor
+
+Data type: Float.
+
+Controls how strongly the welding polygonizes the shape.
+
+##### Intersections
+
+In the Silhouette panel. Settings for lines where the mesh meets other objects.
+
+###### Intersections
+
+Data type: Boolean.
+
+Turns the intersection lines on or off.
+
+###### Width Offset
+
+Data type: Float.
+
+Sets the thickness of the silhouette intersection line.
+
+###### Object
+
+Data type: Object.
+
+The object to draw intersection lines with.
+
+###### Use Collection
+
+Data type: Boolean.
+
+Use a collection instead of an object for the intersections.
+
+###### Collection
+
+Data type: Collection.
+
+The collection to draw intersection lines with.
+
+##### Weight Map Override
+
+In the Silhouette panel. Settings to let the weight map change the silhouette.
+
+###### Weight Map Override
+
+Data type: Boolean.
+
+Turns the weight map override on or off.
+
+###### Factor
+
+Data type: Float (factor).
+
+Strength of the effect of the weight map.
+
+##### Color
+
+Settings for the colors and the material overrides.
+
+###### Silhouette
+
+Data type: Color.
+
+The color of the silhouette backdrop mesh.
+
+###### Inner Lines
+
+Data type: Color.
+
+The color of the inner lines.
+
+###### Use Silhouette Color
+
+Data type: Boolean.
+
+The inner lines use the silhouette color.
+
+###### Material Override
+
+Data type: Material.
+
+A custom material for the material overrides.
+
+###### Line Override
+
+Data type: Boolean.
+
+Applies the material override to the inner mesh lines.
+
+###### Silhouette Override
+
+Data type: Boolean.
+
+Applies the material override to the silhouette backdrop mesh.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The mesh with the lines and the silhouette.
 
 # Mesh › Read
 
@@ -1743,11 +3243,33 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Returns the length of an edge.
 
+#### Outputs
+
+##### Length
+
+Data type: Float.
+
+The length of each edge.
+
 ### Face Corner Angle
 
 ![Face Corner Angle](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/face-corner-angle.png)
 
 Returns the angle between two edges.
+
+#### Outputs
+
+##### Corner Angle
+
+Data type: Float.
+
+The angle between the two edges at each face corner.
+
+##### Bisector
+
+Data type: Vector.
+
+The direction that splits the corner angle in half.
 
 ### Is Edge Boundary
 
@@ -1755,11 +3277,27 @@ Returns the angle between two edges.
 
 Returns a selection of boundary edges.
 
+#### Outputs
+
+##### Is Edge Boundary
+
+Data type: Boolean.
+
+True for edges that have only one face.
+
 ### Is Edge Loose
 
 ![Is Edge Loose](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-loose.png)
 
 Returns a selection of loose edges.
+
+#### Outputs
+
+##### Is Edge Loose
+
+Data type: Boolean.
+
+True for edges that have no faces.
 
 ### Is Edge Manifold
 
@@ -1767,11 +3305,35 @@ Returns a selection of loose edges.
 
 Returns a selection of manifold edges.
 
+#### Outputs
+
+##### Is Edge Manifold
+
+Data type: Boolean.
+
+True for edges that have exactly two faces.
+
 ### Is UV Split
 
 ![Is UV Split](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-uv-split.png)
 
 Returns a selection of seam edges at the border of UV patches.
+
+#### Inputs
+
+##### UV Map
+
+Data type: Vector.
+
+The UV map to check. It also supports 3D vectors.
+
+#### Outputs
+
+##### Is UV Split
+
+Data type: Boolean.
+
+True for edges where the UV map is split, at the border of UV islands.
 
 # Normals
 
@@ -1801,6 +3363,28 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 Passes normal smoothness of the parent object.
 
+#### Inputs
+
+##### Source Geometry
+
+Data type: Geometry.
+
+The geometry to take the smooth shading from.
+
+##### Target Geometry
+
+Data type: Geometry.
+
+The geometry to pass the smooth shading to.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The target geometry with the smooth shading.
+
 # Utilities
 
 ## Add menu - Geometry nodegroups - Utilities
@@ -1827,7 +3411,41 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Random Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/random-rotation.png)
 
-Returns a uniformly distributed random rotation
+Returns a random rotation with an even spread.
+
+#### Inputs
+
+##### Min Zenith
+
+Data type: Float (angle).
+
+The smallest angle away from the up axis.
+
+##### Max Zenith
+
+Data type: Float (angle).
+
+The largest angle away from the up axis.
+
+##### ID
+
+Data type: Integer.
+
+The ID used for the random value.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the operation.
+
+#### Outputs
+
+##### Rotation
+
+Data type: Rotation.
+
+A random rotation with an even spread.
 
 # Utilities › Vector
 
@@ -1851,29 +3469,141 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![Add menu - Geometry nodegroups - Utilities - Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png)
 
-### Combined Cylindrical
+### Combine Cylindrical
 
-![Combined Cylindrical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-cylindrical.png)
+![Combine Cylindrical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-cylindrical.png)
 
 Create a vector from its cylindrical components.
 
-### Combined Spherical
+#### Inputs
 
-![Combined Spherical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-spherical.png)
+##### R
+
+Data type: Float.
+
+The radius, the distance from the up axis.
+
+##### Phi
+
+Data type: Float (angle).
+
+The azimuth, the angle around the up axis.
+
+##### Z
+
+Data type: Float.
+
+The distance from the ground plane.
+
+#### Outputs
+
+##### Vector
+
+Data type: Vector.
+
+The combined vector.
+
+### Combine Spherical
+
+![Combine Spherical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-spherical.png)
 
 Create a vector from its spherical components.
+
+#### Inputs
+
+##### R
+
+Data type: Float.
+
+The radius, the length of the vector.
+
+##### Phi
+
+Data type: Float (angle).
+
+The azimuth, the angle around the up axis.
+
+##### Theta
+
+Data type: Float (angle).
+
+The zenith, the angle from the ground plane.
+
+#### Outputs
+
+##### Vector
+
+Data type: Vector.
+
+The combined vector.
 
 ### Separate Cylindrical
 
 ![Separate Cylindrical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png)
 
-Decompose into its cylindrical components.
+Splits a vector into its cylindrical components.
+
+#### Inputs
+
+##### Vector
+
+Data type: Vector.
+
+The vector to split into its cylindrical components.
+
+#### Outputs
+
+##### R
+
+Data type: Float.
+
+The radius, the distance from the up axis.
+
+##### Phi
+
+Data type: Float (angle).
+
+The azimuth, the angle around the up axis.
+
+##### Z
+
+Data type: Float.
+
+The distance from the ground plane.
 
 ### Separate Spherical
 
 ![Separate Spherical](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png)
 
-Decompose into its spherical components.
+Splits a vector into its spherical components.
+
+#### Inputs
+
+##### Vector
+
+Data type: Vector.
+
+The vector to split into its spherical components.
+
+#### Outputs
+
+##### R
+
+Data type: Float.
+
+The radius, the length of the vector.
+
+##### Phi
+
+Data type: Float (angle).
+
+The azimuth, the angle around the up axis.
+
+##### Theta
+
+Data type: Float (angle).
+
+The zenith, the angle from the ground plane.
 
 # Utility
 
@@ -1901,4 +3631,74 @@ To leave the group you can use the breadcrumb up left in the header. These bread
 
 ![G Index Mask U](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/g-index-mask-u.png)
 
-Selects an indicy by using various functions.
+Selects indices by using various functions.
+
+#### Inputs
+
+##### Masking Method
+
+Data type: Menu.
+
+The method to mask and select indices: **Every N-th Index**, **Individual Index** or **Random Indicies**.
+
+##### Evaluated Domain
+
+Data type: Menu.
+
+The domain of the evaluated indices: **Point**, **Edge**, **Face**, **Face Corner**, **Spline**, **Instance** or **Layer**.
+
+##### Selection Interval
+
+Data type: Integer.
+
+The interval of the selection.
+
+##### Selection Range
+
+Data type: Menu.
+
+The range of the selection: **Single Index**, **All Indicies** or **First - Last Index**.
+
+##### Selection Index
+
+Data type: Integer.
+
+The index to select.
+
+##### Start Index
+
+Data type: Boolean.
+
+Use the start of the selection index.
+
+##### End Index
+
+Data type: Boolean.
+
+Use the end of the selection index.
+
+##### Selection Width
+
+Data type: Integer.
+
+How many indices around the selection index are selected.
+
+##### Probability
+
+Data type: Float (factor).
+
+The probability bias of the random selection.
+
+##### Seed
+
+Data type: Integer.
+
+Random seed for the random selection.
+
+#### Outputs
+
+##### Selection Mask
+
+Data type: Boolean.
+
+The selection of the masked indices.

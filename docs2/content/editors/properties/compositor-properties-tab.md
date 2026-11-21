@@ -18,7 +18,7 @@ order: 45
 
 The **Compositor** tab holds the **scene effects** of the scene. A scene effect is a compositor node group that works on the rendered picture, for example to add a vignette, film grain or a color look. The effects form a stack, like the modifiers of an object: they work from top to bottom, and each effect gets the result of the one above it.
 
-So you can build up a look from ready-made effects and tweak them here with a few values, without opening the Compositor editor at all. When you need more, each effect is a normal node group that you can open and change in the Compositor.
+So you can build up a look from ready-made effects and tweak them here with a few values, without opening the Compositor editor at all. When you need more, each effect is a normal node group that you can open and change in the Compositor, with the **Open Scene Effect Compositor Editor** button.
 
 In a new file the stack has one effect, **Scene Effect**, that uses the **Compositing Nodetree** of the scene.
 
@@ -44,9 +44,9 @@ Adds an empty effect with a node group selector, so you can pick a node group of
 
 ## Scene effects
 
-![Two scene effects: the default Scene Effect with its node group selector, and Dithering with its inputs](/docs2/images/editors/properties/compositor-properties-tab/compositor-tab-effects.png)
+![Two scene effects: the default Scene Effect with its node group selector, and Vignette with its inputs](/docs2/images/editors/properties/compositor-properties-tab/compositor-tab-effects.png)
 
-Each effect is a panel in the stack. Its header holds the buttons, and the panel shows the **inputs** of the node group as properties, like the Geometry Nodes modifier does. In the picture, the Dithering effect shows its Type, Intensity, Pixelate and Color Amount inputs. Inputs that the node group doesn't use with the current settings are hidden or greyed out.
+Each effect is a panel in the stack. Its header holds the buttons, and the panel shows the **inputs** of the node group as properties, like the Geometry Nodes modifier does. At the bottom, the **Open Scene Effect Compositor Editor** button opens the node group in the Compositor. In the picture, the Vignette effect shows its Amount and Softness inputs. Inputs that the node group doesn't use with the current settings are hidden or greyed out.
 
 ### Header
 
@@ -105,6 +105,12 @@ Drag the grip at the right end of the header to move the effect up or down in th
 ### Node group selector
 
 The row with the node group of the effect, when it shows. Pick another node group from the list, keep it with the fake user (shield), make a new one with **+**, or unlink it with **X**.
+
+### Open Scene Effect Compositor Editor
+
+The button at the bottom of the panel opens a **Compositor** editor in a new window, with the node group of this effect loaded. Use it when the inputs in the panel are not enough and you want to change the nodes of the effect itself. The button shows only when the effect has a node group.
+
+The window is a temporary Compositor editor. Close it when you are done; the effect keeps your changes. The button does not add a step to the undo history.
 
 ## Order of the effects
 
