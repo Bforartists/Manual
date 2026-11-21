@@ -1719,6 +1719,18 @@ Extend Parent requires to have a parent or child relationship. It selects the pa
 
 Extend Child requires to have a parent or child relationship. It selects the child object(s) of the currently selected object(s). But keeps the active object in the selection, even when it's not currently selected.
 
+## Deform
+
+Selects the bones that have the Deform option turned on, or turned off. Use it to select only the bones that move the mesh, or to find helper bones that do not. The Deform option of a bone is in the Bone tab of the Properties editor.
+
+### Adjust Last Operation - Select Deform Bones
+
+Change the settings of **Select Deform Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Deform | **Enabled** selects bones that have Deform on. **Disabled** selects bones that have Deform off. |
+
 #### Sub menu More / Less
 
 **More**: More requires to have a parent or child relationship. It expands the selection. · **Less**: Less requires to have a parent or child relationship. It reduces the selection.
@@ -1771,13 +1783,41 @@ Invert the current selection.
 
 Select grouped bones by type. Items should be self explaining.
 
-### Linked
+## Linked
 
 Select all bones that are either parent or child of the selected bone.
 
-### Constraint Targets
+## Constraint Targets
 
-Select the bones used as targets for the currently selected bone.
+Select the bones that are used as targets by the constraints of the currently selected bones. Use it to find the bones a rig follows or points at. This entry was called Constraint Target before.
+
+## Constraint Owners
+
+Select the bones that have a constraint which targets one of the currently selected bones. It is the reverse of Constraint Targets. Use it to find out which bones are controlled by a bone, for example to see everything that follows a control bone.
+
+## Scaled
+
+Selects bones that have a scale other than 1. Use it to find bones that stretch the mesh by accident. The check uses the final scale of the bone, including scale that comes from the parent, from constraints and from drivers.
+
+### Adjust Last Operation - Select Scaled Bones
+
+Change the settings of **Select Scaled Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Scale | **Non-Uniform** selects bones whose scale is not the same on all axes. **Non-Unit** selects bones whose scale is not 1 on at least one axis. |
+
+## Deform
+
+Selects the bones that have the Deform option turned on, or turned off. Use it to select only the bones that move the mesh, or to find helper bones that do not. The Deform option of a bone is in the Bone tab of the Properties editor.
+
+### Adjust Last Operation - Select Deform Bones
+
+Change the settings of **Select Deform Bones** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
+
+| Property | Description |
+|---|---|
+| Deform | **Enabled** selects bones that have Deform on. **Disabled** selects bones that have Deform off. |
 
 ## By Pattern
 
