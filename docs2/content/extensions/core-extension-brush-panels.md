@@ -7,7 +7,7 @@ path:
   - Bforartists Extensions
   - Core Extension - Brush Panels
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 35.1 Core Extension - Brush Panels.odt
