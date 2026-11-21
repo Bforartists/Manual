@@ -1,6 +1,7 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html"
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/generate.md": "editors/geometry-node-editor/header/add-menu/generate.html"
  },
- "images": 264
+ "images": 271
 }
