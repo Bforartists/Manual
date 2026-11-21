@@ -572,17 +572,21 @@ Automatically optimizes the precision dynamically.
 
 Final quality precision.
 
-### Cache Frames
+### Cache
 
-Keeps the result of each frame in memory, so playing back or scrubbing frames that are already done is faster. Only for the scene compositor.
+Settings for the cache of the compositor. Only for the scene compositor.
+
+#### Frames
+
+Keeps the result of each frame in memory, so playing back or scrubbing frames that are already done is faster.
 
 ### Proxy
 
-Settings that make the compositor faster while you work. Only for the scene compositor.
+These settings make the compositor faster while you work. Only for the scene compositor.
 
-#### Preview Scale
+#### Scale
 
-Tick it and set a percentage to work on smaller images while you preview the compositor interactively. Input media and values in pixels are scaled down by this amount. The final render always uses the full size.
+Tick the checkbox, then set a percentage in the slider on its right, to work on smaller images while you preview the compositor interactively. Input media and values in pixels are scaled down by this amount. The slider is greyed out while the checkbox is off. The final render always uses the full size.
 
 #### Adapt To Render Scale
 
@@ -805,6 +809,10 @@ List of available input and output sockets.
 #### List
 
 The list of input and output sockets.
+
+Click an item to select it.
+
+> **Tip:** **Ctrl+click** adds an item to the selection (**Cmd+click** on macOS). **Shift+click** selects all items between the active item and the clicked one.
 
 ##### Socket Name
 

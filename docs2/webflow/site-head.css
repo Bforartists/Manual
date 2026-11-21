@@ -1,4 +1,4 @@
-/* Bforartists website · site-head.css · @version 1.0.0 · Site-wide head code (Webflow Site settings, Custom code, Head). Moved out of the page so browsers cache it (Nov 2026). */
+/* Bforartists website · site-head.css · @version 1.0.1 · Site-wide head code (Webflow Site settings, Custom code, Head). Moved out of the page so browsers cache it (Nov 2026). */
 /* ---- block ---- */
 /*width*/
 ::-webkit-scrollbar {
@@ -42,7 +42,8 @@ html.bfa-nt .ui-nav-menu>.ui-nav-item>.ui-nav-link{padding-left:5px!important;pa
 html.bfa-nt2 .ui-nav-menu>.ui-nav-item>.ui-nav-link{padding-left:4px!important;padding-right:7px!important}
 /* smooth scroll (off when motion is reduced); anchors stop below the pinned header */
 html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
-html.motion-reduced{scroll-behavior:auto}
+/* 1.0.1: smooth scrolling only follows the reader's own Motion choice (View menu) and the system setting, not the automatic lite mode: it costs nothing until a jump */
+html.motion-reduced:not(.perf-auto){scroll-behavior:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* ---- bfa-paper ---- */
 /* BFA Paper 1.2 - a very fine grain over everything (below the lightbox) that dithers the card sheens and rim lights so they stop banding.

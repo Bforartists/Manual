@@ -1609,6 +1609,10 @@ Change the settings of **Curve Edge Loops Between Selected** right after you use
 
 Moves the selected vertices onto the active annotation stroke. Use it to shape a loop by drawing it: draw an annotation stroke where the edges should go, select the loop, then run the tool. The vertices are spread along the stroke.
 
+The tool is in the **Mesh > Transform** menu. It is also in the tool shelf, in the **Transform** panel of the **Object** tab, after Curve Edge Loops Between Selected. The tool shelf tabs show up when they are switched on in the View menu.
+
+![The Transform panel of the Object tab in the tool shelf, in Edit Mode](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/tool-shelf-tab-object-transform.png)
+
 #### Adjust Last Operation - Fit Edge Loops To Annotation
 
 Change the settings of **Fit Edge Loops To Annotation** right after you use it, in the Adjust Last Operation panel at the bottom left of the editor.
