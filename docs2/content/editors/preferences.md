@@ -293,9 +293,17 @@ Choose between the 24-hour clock and the 12-hour clock for times shown in the in
 
 ![Accessibility Panel](/docs2/images/editors/preferences/accessibility-panel.png)
 
-#### Reduced Motion
+#### Reduce Motion
 
 The **Reduce Motion** option is designed to improve usability for users sensitive to motion effects. When enabled, the interface minimizes or disables non-essential animations in the interface.
+
+#### Tooltip Align Cursor Size
+
+Moves tooltips so that the mouse cursor never covers them. Turn it on when you use a large mouse cursor, for example with a bigger cursor size in your system settings, and the tooltip text ends up hidden under it. Bforartists checks the size of the cursor and, when the tooltip would overlap it, moves the tooltip just past the cursor: down, right, left or up, whichever is the shortest move that stays inside the window. It is off by default.
+
+#### Tooltip Offset
+
+Moves every tooltip by an extra number of pixels. The first value moves it to the right, the second value moves it up. Use negative values to move it left or down. Good for a slight adjustment of where tooltips appear, together with Tooltip Align Cursor Size or on its own. Both values are 0 by default.
 
 ### Text Rendering Panel
 
