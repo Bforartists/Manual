@@ -582,13 +582,50 @@ The subdivision per segment.
 
 Smooth the normals of the surface or a beveled curve.
 
-## Item tab - Grease Pencil Object - Active Spline Panel
+## Item tab - Grease Pencil Object - Curve Data Panel
+
+![Curve Data panel](/docs2/images/editors/3d-viewport/sidebar/item-tab/grease-pencil-curve-data.png)
+
+The Curve Data panel shows in Edit Mode when strokes are selected. It changes the attributes of all selected strokes at once. A field is shown as mixed when the selected strokes have different values.
+
+### Stroke Type
+
+![Stroke Type](/docs2/images/editors/3d-viewport/sidebar/item-tab/grease-pencil-stroke-type.png)
+
+Sets what the selected strokes are made of. It does the same as **Stroke > Set Stroke Type**, and it is faster when the sidebar is open.
+
+- **Stroke**: Only the line is drawn. Existing fills of the selected strokes are removed.
+- **Fill**: Only the fill is drawn. The line is hidden.
+- **Both**: The line and the fill are drawn.
 
 ### Cyclic
 
 ![Cyclic](/docs2/images/editors/3d-viewport/sidebar/item-tab/cyclic.png)
 
 The checkbox is labeled **U**, like the Cyclic checkbox in the Active Spline panel of curves. Turn it on to make the selected stroke (or curve, for a Curves object) a closed loop. Hover over the checkbox to see the tooltip "Make the stroke a closed loop".
+
+### Fill Opacity
+
+Opacity of the fill of the selected strokes.
+
+### Start Cap / End Cap
+
+The shape of the start and the end of the stroke. Each entry has its own icon in the list.
+
+- **Round**: The end is a half circle.
+- **Flat**: The end is cut straight.
+
+### Softness
+
+Softens the edge of the stroke.
+
+### U Scale
+
+Scales the stroke texture along the stroke.
+
+### Aspect Ratio
+
+Changes the aspect ratio of the stroke texture.
 
 # View Tab
 
