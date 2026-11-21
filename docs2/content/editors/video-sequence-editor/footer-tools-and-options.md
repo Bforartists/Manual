@@ -7,7 +7,7 @@ path:
   - Video Sequence Editor
   - Footer tools and options
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 14.4 Editors - Video Sequence Editor - Footer tools and options.odt

@@ -7,7 +7,7 @@ path:
   - Dope Sheet
   - Footer tools and options
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 16.4 Editors - Dope Sheet - Footer tools and options.odt

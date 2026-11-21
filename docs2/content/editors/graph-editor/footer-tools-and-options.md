@@ -7,7 +7,7 @@ path:
   - Graph Editor
   - Footer tools and options
 version: "5.3"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 18.4 Editors - Graph Editor - Footer tools and options.odt
