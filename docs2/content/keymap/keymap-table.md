@@ -66,6 +66,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Subdivision set | Ctrl + 4 |
 | Subdivision set | Ctrl + 5 |
 | Texture paint mode | `6` |
+| Transfer mode | `Z` |
 | Vertex grease pencil mode | `4` |
 | Vertex paint mode | `4` |
 | Weight grease pencil mode | `5` |
@@ -308,7 +309,9 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select circle tool | `G` |
 | Select less | Ctrl + Numpad - |
 | Select linked pick | `L` |
+| Select linked pick | Shift + Left mouse (double-click) |
 | Select linked pick: deselect | Shift + L |
+| Select linked pick: extend | Shift + Ctrl + Left mouse (double-click) |
 | Select mode: Edge | `C` |
 | Select mode: Face | `V` |
 | Select mode: Vert | `X` |
@@ -432,10 +435,8 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select all: Deselect | `A` (double-click) |
 | Select all: Invert | Ctrl + I |
 | Select all: Select | `A` |
-| Select fill | Ctrl + L |
 | Select less | Ctrl + Numpad - |
-| Select linked | `L` |
-| Select linked: deselect | Shift + L |
+| Select linked | Ctrl + L |
 | Select more | Ctrl + Numpad + |
 | Select similar | Shift + G |
 
@@ -496,6 +497,8 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select circle tool | `G` |
 | Select less | Ctrl + Numpad - |
 | Select linked | Ctrl + L |
+| Select linked pick | `L` |
+| Select linked pick: deselect | Shift + L |
 | Select more | Ctrl + Numpad + |
 | Select tool | `D` |
 | Set selection mode: Point | `X` |
@@ -1456,7 +1459,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Action | Keys |
 |---|---|
 | Clear filter | Alt + F |
-| Collection new | `C` |
+| Collection new: nested | `C` |
 | Collection objects select | Shift + Left mouse (double-click) |
 | Delete | `Del` |
 | Drivers add selected | Ctrl + D |
@@ -1803,7 +1806,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Reset default button: all | `Backspace` |
 | View item rename | `F2` |
 | View item select | `Left mouse` |
-| View item select: extend | Cmd + Left mouse |
+| View item select: extend | Ctrl + Left mouse |
 | View item select: extend | Shift + Left mouse |
 | View scroll | `Wheel down` |
 | View scroll | `Wheel up` |
