@@ -8,7 +8,7 @@ path:
   - Object Data Properties Tab
   - Grease Pencil Object
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 26.14.8 Editors - Properties Editor - Object Data Properties Tab - Grease Pencil Object.odt
@@ -21,6 +21,8 @@ summary: "Grease Pencil objects each have a list of 2D layers for grouping and a
 Grease Pencil objects each have a list of 2D layers for grouping and arranging strokes in a List view. Any stroke can only belong to a single 2D layer. There is always only one active layer in the list (the selected one). When you draw, the new strokes are added to the active layer. By default the view order of the layers in the viewport is top to bottom.
 
 Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode). Layers can also be used together with Modifiers to only affects part of your drawing.
+
+> **Note:** The list has filter options to search, sort and reverse the order of its items. See [Tree Lists](../../../interface/properties.md#tree-lists).
 
 ### Layer list
 
