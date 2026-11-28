@@ -7,7 +7,7 @@ section: editors
 path:
   - Editors
   - File browser
-version: "5.1"
+version: "5.3"
 status: needs-review
 screenshots: "5.1"
 source:
@@ -175,17 +175,23 @@ Toggles the sidebar at the right. The sidebar contains various im- and export se
 
 The Tool Shelf at the left provides you with some panels for quick access to files and bookmarks.
 
-### System Panel
+### Volumes
 
-![System Panel](/docs2/images/editors/file-browser/system-panel.png)
+![Volumes panel](/docs2/images/editors/file-browser/system-panel.png)
 
-Lists your drives.
+Lists your drives and mounted volumes. Click one to jump to its top folder.
 
-### System Bookmarks
+### System
 
-![System Bookmarks](/docs2/images/editors/file-browser/system-bookmarks.png)
+![System panel](/docs2/images/editors/file-browser/system-bookmarks.png)
 
-Lists some system libraries.
+Lists the common folders of your operating system, such as Home, Documents, Downloads and Desktop. Click one to jump there.
+
+#### Current File
+
+The first entry in the System panel. It takes you to the folder that holds the blend file you have open. Use it to reach textures, renders or other files that sit next to your project without browsing for them.
+
+> **Note:** Current File only appears once the blend file is saved. A new, unsaved file has no folder yet.
 
 ### Bookmarks
 
