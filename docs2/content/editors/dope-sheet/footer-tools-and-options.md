@@ -6,8 +6,8 @@ path:
   - Editors
   - Dope Sheet
   - Footer tools and options
-version: "5.1"
-status: draft
+version: "5.3"
+status: needs-review
 screenshots: "5.1"
 source:
   - 16.4 Editors - Dope Sheet - Footer tools and options.odt
@@ -220,6 +220,10 @@ Don't allow frame selection with the mouse outside of the play range.
 
 Follow current frame in editors.
 
+#### Use Scene Strip Range
+
+When this scene is used as a scene strip in the sequencer scene, playback stays inside the frame range of the strip under the playhead. Handy when you animate a shot that is cut into an edit: you only play the frames the edit uses. It only limits playback in the active workspace and changes no scene data. The Scene Strip Gizmo options **Set Preview Range** and **Set Frame Range** in the Dope Sheet overlays change the ranges of the scene instead.
+
 ### Play in
 
 ![Play in](/docs2/images/editors/dope-sheet/footer-tools-and-options/play-in.png)
@@ -318,7 +322,7 @@ Show the overlays.
 
 #### Dope Sheet Overlays
 
-##### Show Scene Strip Range
+##### Scene Strip Gizmo
 
-Show the scene strip range when synchronizing the time with the sequencer.
+The scene strip options, including **Show Frame Range**, are described on the [Dope Sheet header](/docs2/content/editors/dope-sheet/header/index.md) page.
 
