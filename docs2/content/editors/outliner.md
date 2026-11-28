@@ -837,7 +837,7 @@ Using this option, nothing is shared. This option creates a fully independent sc
 
 ### Filter
 
-Options and filter settings.
+The **Filter** button with the funnel icon, at the right of the header, opens a popover with the options and filter settings of this mode.
 
 #### Restriction Toggles
 
@@ -845,9 +845,13 @@ Options and filter settings.
 
 Enable or disable further level restrictions. Note that these toggles shows when you expand a scene hierarchy. Scenes itself have no such toggles.
 
-##### Sort Alphabetically
+##### Sort
 
-Sorts the content of the outliner in alphabetically order.
+Chooses the order of the items in the list:
+
+- **Alphabetical**: Orders the items by name, from A to Z.
+- **Custom**: Keeps the order you set by hand, so you can arrange items the way you like.
+- **No Sorting**: Shows the items in the order Bforartists stores them. This is also the order in which operators usually work through collections and objects.
 
 ##### Sync Selection
 
@@ -863,6 +867,10 @@ Synchronize the selection between the outliner and the other editors, like the 3
 ![Show Mode Column](/docs2/images/editors/outliner/show-mode-column.png)
 
 Display the Mode column at the left. When you are not in object mode, but in edit mode, or in vertex paint mode etc. , then a mode icon is displayed at the left of the object that you currently edit.
+
+#### Show Users Column
+
+Shows a column with the number of users of each data-block, so you can see at a glance how many places use the same mesh, material or other data.
 
 #### Search
 
@@ -932,15 +940,19 @@ Adds a new collection and moves the objects that are selected in the Outliner in
 
 ![Filter](/docs2/images/editors/outliner/filter.png)
 
-Options and filter settings.
+The **Filter** button with the funnel icon, at the right of the header, opens a popover with the options and filter settings of this mode.
 
 #### Restriction Toggles
 
 Enable or disable further level restrictions. To make the changes permanent you would have to save the startup file. This settings is part of the layout. · **Exclude from View Layer**: include / Exclude the collection from the view layer. · **Selectable**: Make the object selectable / unselectable. · **Hide in Viewport**: Show or hide the object in the viewport. · **Disable in Viewport**: Enable or disable the object in the viewport. · **Disable in Renders**: Enable or disable the object in the rendered result. · **Holdout**: Mask out objects in the collection from view layer. · **Indirect only**: Make the objects in the collection just distribute indirect lighting to the layer.
 
-#### Sort Alphabetically
+#### Sort
 
-Sorts the content of the outliner in alphabetically order.
+Chooses the order of the items in the list:
+
+- **Alphabetical**: Orders the items by name, from A to Z.
+- **Custom**: Keeps the order you set by hand, so you can arrange items the way you like.
+- **No Sorting**: Shows the items in the order Bforartists stores them. This is also the order in which operators usually work through collections and objects.
 
 #### Sync Selection
 
@@ -956,6 +968,10 @@ Synchronize the selection between the outliner and the other editors, like the 3
 ![Show Mode Column](/docs2/images/editors/outliner/show-mode-column.png)
 
 Display the Mode column at the left. When you are not in object mode, but in edit mode, or in vertex paint mode etc. , then a mode icon is displayed at the left of the object that you currently edit.
+
+#### Show Users Column
+
+Shows a column with the number of users of each data-block, so you can see at a glance how many places use the same mesh, material or other data.
 
 #### Search
 
@@ -1029,7 +1045,7 @@ Pack only shows when you right-click an image. The Render Result and Viewer imag
 
 ![Filter](/docs2/images/editors/outliner/filter-3.png)
 
-Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden.
+Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden. The funnel icon of the toggle is crossed out while the filter is off.
 
 #### Filter ID Type
 
@@ -1135,9 +1151,11 @@ Show the objects with library overrides in a hierarchical way.
 
 ![Filter options](/docs2/images/editors/outliner/filter-options.png)
 
-#### Sort alphabetically
+The **Filter** button with the funnel icon, at the right of the header, opens these options.
 
-Sorts the library overrides in alphabetical order in the outliner list.
+#### Sort
+
+Chooses the order of the library overrides in the list: **Alphabetical**, **Custom** (the order you set by hand) or **No Sorting** (the order Bforartists stores them).
 
 #### Search
 
@@ -1189,7 +1207,7 @@ Recursively removes unused local data. Means the child objects gets removed too.
 
 ![Filter](/docs2/images/editors/outliner/filter-4.png)
 
-Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden.
+Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden. The funnel icon of the toggle is crossed out while the filter is off.
 
 #### Filter ID Type
 
