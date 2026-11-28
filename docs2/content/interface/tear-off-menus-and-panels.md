@@ -99,6 +99,15 @@ When tear-offs overlap, the one you clicked last is on top, as with windows. Any
 
 A tear-off belongs to the **workspace**, the **editor** and the **mode** where you made it. Switch to another workspace, change the editor or leave the mode, and it hides. Come back, and it shows again where you left it. So a tear-off from Edit Mode doesn't get in your way in Object Mode, and a tear-off of the 3D View doesn't float over the Shader Editor.
 
+### Panels of the Properties editor
+
+A panel that you tear off the **Properties editor** stays when the editor switches to another tab. Tear off the Light panel from the Object Data tab, switch the editor to the Modifiers tab, and the floating Light panel still shows and works. So you can keep the settings of one tab at hand while you work in another.
+
+- The tear-off still belongs to its workspace, and it needs a Properties editor on the screen.
+- It shows as **unavailable** when its data isn't there, for example the Light panel while a mesh is active. Make a light active again, and the panel comes back.
+
+> **Note:** A button that first opens its own window, such as a confirmation or a File Browser, runs with the tab that the Properties editor shows. If that tool needs the data of the panel's own tab, it may not run. Switch the editor to that tab first.
+
 ## Saved with the file
 
 Tear-offs are saved with their workspace, in the .blend file and in the startup file, with their position, size and collapsed state.
